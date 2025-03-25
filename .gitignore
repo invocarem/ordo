@@ -5,3 +5,6 @@ Pods/
 
 # macOS
 .DS_Store
+
+#dock
+.build/

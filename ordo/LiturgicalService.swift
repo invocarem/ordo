@@ -7,16 +7,16 @@
 
 import Foundation
 
-class LiturgicalService {
+public class LiturgicalService {
     private let calendar: Calendar
     
-    init(calendar: Calendar = .current) {
+    public init(calendar: Calendar = .current) {
         self.calendar = calendar
     }
     
     // MARK: - Public Interface
     
-    func getLiturgicalInfo(for date: Date) -> String {
+    public func getLiturgicalInfo(for date: Date) -> String {
         let dateString = DateFormatter.localizedString(from: date, dateStyle: .medium, timeStyle: .none)
         
         if isEaster(date) {
@@ -164,7 +164,7 @@ class LiturgicalService {
         return calendar.date(byAdding: .day, value: -daysToSubtract, to: christmas)
     }
     
-    private func getChristmas(year: Int) -> Date? {
+    public func getChristmas(year: Int) -> Date? {
         var components = DateComponents()
         components.year = year
         components.month = 12
@@ -172,12 +172,12 @@ class LiturgicalService {
         return calendar.date(from: components)
     }
     
-    private func getAshWednesday(year: Int) -> Date? {
+    public func getAshWednesday(year: Int) -> Date? {
         guard let easter = getEaster(year: year) else { return nil }
         return calendar.date(byAdding: .day, value: -46, to: easter)
     }
     
-    private func getEaster(year: Int) -> Date? {
+    public func getEaster(year: Int) -> Date? {
         // Anonymous Gregorian algorithm
         let a = year % 19
         let b = year / 100
@@ -212,7 +212,7 @@ class LiturgicalService {
         return components.month == 12 && components.day == 25
     }
 }
-extension LiturgicalService {
+public extension LiturgicalService {
     func getPsalmsForPrime(for date: Date) -> [String] {
         let weekday = calendar.component(.weekday, from: date)
         let (season, _) = getLiturgicalSeasonAndWeek(for: date)
@@ -251,4 +251,3 @@ extension LiturgicalService {
         return "Psalm \(psalm)"
     }
 }
-
