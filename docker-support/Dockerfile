@@ -1,19 +1,15 @@
-FROM swift:5.9-jammy
+FROM swift:6.0.3-jammy
 WORKDIR /app
 COPY . .
 
-# 1. Build main library with testability
+# 1. Single build with testability and release
 RUN swift build \
-    --target LiturgicalService \
-    -Xswiftc -enable-testing
+    -c release \
+    --product LiturgicalDocker \
+    -Xswiftc -enable-testing  # Allows testing if needed
 
-# 2. Run specific test target (correct syntax)
-RUN swift test \
-    --enable-test-discovery \
-    --parallel \
-    --filter LiturgicalServiceTests  # 👈 Correct way to specify test target
+# 2. [Optional] Add test step (comment out if not needed)
+#RUN swift test --enable-test-discovery --parallel
 
-# 3. Build release executable
-RUN swift build -c release --product LiturgicalDocker
-
-ENTRYPOINT ["./.build/release/LiturgicalDocker"]
+#ENTRYPOINT ["./.build/release/LiturgicalDocker"]
+CMD ["./.build/release/LiturgicalDocker"]

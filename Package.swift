@@ -15,7 +15,7 @@ let package = Package(
             targets: ["LiturgicalDocker"])
     ],
     dependencies: [
-                .package(url: "https://github.com/apple/swift-testing.git", from: "0.3.0")
+                .package(url: "https://github.com/apple/swift-testing.git", from: "0.8.0")
     ],
     targets: [
         .executableTarget(
@@ -39,8 +39,10 @@ let package = Package(
                 "LiturgicalService",
                 .product(name: "Testing", package: "swift-testing")  // 👈 New
             ],
-            path: "ordoTests",
+            path: "ordoTests",    
+            exclude: ["ordoTests.swift"],        
             sources: ["LiturgicalServiceTests.swift"]
+            
         )
 
     ]

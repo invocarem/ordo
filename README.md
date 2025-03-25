@@ -15,5 +15,9 @@ docker build -f docker-support/Dockerfile -t liturgical-service .
 ```
 docker run -it --rm --entrypoint bash liturgical-service
 # /app/.build/release/LiturgicalDocker
+
+# Enter container to debug:
+docker run -it --rm --entrypoint bash liturgical-service
+
 ```
 
