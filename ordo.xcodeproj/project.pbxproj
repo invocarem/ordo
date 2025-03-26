@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		33281BDD2D93999B0081E218 /* Testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33281BDC2D93999B0081E218 /* Testing.framework */; };
+		33281BDE2D93999B0081E218 /* Testing.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 33281BDC2D93999B0081E218 /* Testing.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		33EC02EB2D9237E2003A1593 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -23,7 +28,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		33281BDF2D93999B0081E218 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				33281BDE2D93999B0081E218 /* Testing.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		33281BDC2D93999B0081E218 /* Testing.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Testing.framework; path = Platforms/MacOSX.platform/Developer/Library/Frameworks/Testing.framework; sourceTree = DEVELOPER_DIR; };
 		33EC02D92D9237E0003A1593 /* ordo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ordo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		33EC02EA2D9237E2003A1593 /* ordoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ordoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		33EC02F42D9237E2003A1593 /* ordoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ordoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33281BDD2D93999B0081E218 /* Testing.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +93,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		33281BDB2D93999B0081E218 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33281BDC2D93999B0081E218 /* Testing.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		33EC02D02D9237E0003A1593 = {
 			isa = PBXGroup;
 			children = (
 				33EC02DB2D9237E0003A1593 /* ordo */,
 				33EC02ED2D9237E2003A1593 /* ordoTests */,
 				33EC02F72D9237E2003A1593 /* ordoUITests */,
+				33281BDB2D93999B0081E218 /* Frameworks */,
 				33EC02DA2D9237E0003A1593 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -124,6 +154,7 @@
 				33EC02E62D9237E2003A1593 /* Sources */,
 				33EC02E72D9237E2003A1593 /* Frameworks */,
 				33EC02E82D9237E2003A1593 /* Resources */,
+				33281BDF2D93999B0081E218 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

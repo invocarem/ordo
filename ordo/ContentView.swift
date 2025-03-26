@@ -49,7 +49,9 @@ struct ContentView: View {
                 Spacer()
             }
             .padding()
+            #if os(iOS)
             .navigationBarTitle("Liturgical Calendar")
+            #endif
             .background(
                 NavigationLink(
                     destination: PrayerView(
@@ -63,6 +65,9 @@ struct ContentView: View {
             )
             .onAppear {
                 updateLiturgicalInfo()
+                #if os(macOS)
+                NSApp.mainWindow?.title = "Liturgical Calendar"
+                #endif
             }
         }
     }
@@ -110,13 +115,7 @@ struct ContentViewOld: View {
     }
 }
 
-extension Int {
-    func ordinalString() -> String {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = .ordinal
-        return formatter.string(from: NSNumber(value: self)) ?? "\(self)"
-    }
-}
+
 
 #Preview {
     ContentView()

@@ -30,7 +30,9 @@ struct PrayerView: View {
                             .padding(.vertical, 4)
                     }
                     .padding()
+                    #if os(iOS)
                     .background(Color(.systemGray6))
+                    #endif
                     .cornerRadius(8)
                 }
                 
