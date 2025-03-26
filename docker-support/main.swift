@@ -17,7 +17,15 @@ if CommandLine.arguments.count > 1,
 // 2. Get and print liturgical info
 
 print(service.getLiturgicalInfo(for: date))
-print("Psalms: \(service.getPsalmsForPrime(for: date))")
+
+let psalmKeys = service.getPsalmsForPrime(for: date)
+
+print("Psalms: \(psalmKeys)")
+ for key in psalmKeys {
+    let psalmText = service.getPsalmText(for: key)  
+    print(psalmText)
+    
+}
 
 // Helper function to parse date strings
 func parseDate(_ string: String) -> Date? {

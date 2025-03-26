@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import PsalmService
 
 public class LiturgicalService {
     private let calendar: Calendar
@@ -222,7 +223,7 @@ public extension LiturgicalService {
         
         switch weekday {
         case 1: // Sunday
-            psalms = ["119Aleph", "119Beta", "119C", "119D"]
+            psalms = ["118Aleph", "118Beth", "118Gimel", "118Daleth"]
         case 2: // Monday
             psalms = ["1", "2", "6"]
         case 3: // Tuesday
@@ -242,7 +243,10 @@ public extension LiturgicalService {
         
         return psalms
     }
-    
+
+    func getPsalmText(for key: String ) -> String? {
+        return PsalmService.shared.getPsalmText(for: key)
+    }
     // Helper to get psalm display name
     func getPsalmDisplayName(_ psalm: String) -> String {
         if psalm.contains("A") || psalm.contains("B") {

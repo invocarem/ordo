@@ -1,0 +1,109 @@
+{
+    "prime": {
+        "introit": "Deus in adjutorium...",
+        "hymn": "Iam lucis orto sidere...",
+        "chapter": "1 Thess 5:17",
+        "versicle" : "",
+        "closing": "md 8-9",
+        "antiphons": {
+            "default": "Regi saeculorum...",
+            "seasons": {
+              "lent": "Panem caeli dedit eis...",
+              "advent": "Ecce Dominus veniet..."
+            },
+            "feasts": {
+              "christmas": "Hodie Christus natus est..."
+            }
+        },
+        "psalms": {
+            "sunday": [
+                {
+                    "number": "118",
+                    "catergory": "aleph"
+                },
+                {
+                    "number": "118",
+                    "category": "beth"
+                },
+                {
+                    "number": "118",
+                    "category": "gimel"
+                },
+                {
+                    "number": "118",
+                    "category": "daleth"
+                }
+            ],
+            "monday": [
+                {
+                    "number": "1"
+                },
+                {
+                    "number": "2"
+                },
+                {
+                    "number": "6"
+                }
+            ],
+            "tuesday": [
+                {
+                    "number": "7"
+                },
+                {
+                    "number": "8"
+                },
+                {
+                    "number": "9",
+                    "category": "A"
+                }
+            ],
+            "wednesday": [
+                {
+                    "number": "9",
+                    "catergory": "B"
+                },
+                {
+                    "number": "10"
+                },
+                {
+                    "number": "11"
+                }
+            ],
+            "thursday": [
+                {
+                    "number": "12"
+                },
+                {
+                    "number": "13"
+                },
+                {
+                    "number": "14"
+                }
+            ],
+            "friday": [
+                {
+                    "number": "15"
+                },
+                {
+                    "number": "16"
+                },
+                {
+                    "number": "17",
+                    "category": "A"
+                }
+            ],
+            "saturday": [
+                {
+                    "number": "17",
+                    "category": "B"
+                },
+                {
+                    "number": "18"
+                },
+                {
+                    "number": "19"
+                }
+            ]
+        }
+    }
+}

@@ -20,19 +20,51 @@ let package = Package(
     targets: [
         .executableTarget(
             name: "LiturgicalDocker",
-            dependencies: ["LiturgicalService"],
+            dependencies: ["LiturgicalService", "HoursService"],
             path: "docker-support",
             sources:["main.swift"]
         ),
 
         
-        .target( // Library target (for xcode
+        .target( 
             name: "LiturgicalService",
+            dependencies: ["PsalmService"],  
             path: "ordo",
             sources:["LiturgicalService.swift", "Extensions.swift"]
         ),
 
-        
+        .target(
+            name: "HoursService",
+            path: "ordo",
+            sources:["HoursService.swift"],
+            resources: [  
+                .process("horas.json")
+            ]
+        ),
+
+        .target(
+            name: "PsalmService",
+            path: "ordo",
+            sources:["PsalmService.swift"],
+            resources: [  
+                .process("psalms.json")
+            ]
+        ),
+
+        .testTarget(  // TDD
+            name: "PsalmServiceTests", 
+            dependencies: [
+                "PsalmService",
+                  .product(name: "Testing", package: "swift-testing")  // 👈 New
+            ],           
+            path: "ordoTests",    
+            sources: ["PsalmServiceTests.swift"],
+            resources: [  
+               .copy("../ordo/psalms.json")  // For test target
+            ]
+            
+        ),
+
         .testTarget(  // TDD
             name: "LiturgicalServiceTests",            
             dependencies: [
