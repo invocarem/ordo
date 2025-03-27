@@ -19,10 +19,7 @@ struct TestHelper {
 
 //T @testable import ordo
 
-@Test 
-func testVerification() throws {
-    #expect(1 == 2, "TESTS ARE RUNNING! (This is an intentional failure)")
-}
+
 
 @Test 
 func easterDateCalculation() throws {

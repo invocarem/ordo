@@ -1,4 +1,4 @@
-mport Testing
+import Testing
 @testable import HoursService // Replace with your module
 
 struct HoursServiceTests {
@@ -9,11 +9,9 @@ struct HoursServiceTests {
         hoursService = HoursService.shared
     }
 
-    // Teardown (like XCTest's tearDown)
-    deinit {
-        hoursService = nil
+    @Test func verify() {
+        #expect(1== 2, "intended to fail")
     }
-
     // MARK: - Tests
     @Test func hoursAreLoaded() {
         let prime = hoursService.getHour(for: "prime")

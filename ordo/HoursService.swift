@@ -37,16 +37,24 @@ public final class HoursService {
     }
     
     private func loadHours() {
-        guard let url = Bundle.main.url(forResource: "horas", withExtension: "json") else {
-            fatalError("horas.json not found in bundle.")
+         let bundlesToCheck = [
+            Bundle.module,          // For SwiftPM resources
+            Bundle(for: Self.self), // For test targets
+            Bundle.main            // For production
+        ]
+        
+        for bundle in bundlesToCheck {
+            if let url = bundle.url(forResource: "psalms", withExtension: "json") {
+                do {
+                    let data = try Data(contentsOf: url)
+                    horas = try JSONDecoder().decode([String: Hour].self, from: data)
+                    return
+                } catch {
+                    print("Found psalms.json but failed to load: \(error)")
+                }
+            }
         }
         
-        do {
-            let data = try Data(contentsOf: url)
-            horas = try JSONDecoder().decode([String: Hour].self, from: data)
-        } catch {
-            fatalError("Failed to load horas.json: \(error)")
-        }
     }
     
     public func getHour(for key: String) -> Hour? {

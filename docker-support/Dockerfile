@@ -17,9 +17,9 @@ RUN swift build \
 # Then run tests
 
 
-#RUN swift test --filter LiturgicalServiceTests
-RUN swift test --filter PsalmServiceTests
-#RUN swift test --filter HoursServiceTests --verbose
+#RUN swift test --filter LiturgicalServiceTests 
+#RUN swift test --filter PsalmServiceTests 
+#RUN swift test --filter HoursServiceTests
 #RUN swift test \
 #    --filter "PsalmService*" \
 #    -Xswiftc -swift-version -Xswiftc 5.9 

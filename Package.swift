@@ -10,6 +10,13 @@ let package = Package(
         .library(
             name: "LiturgicalService",
             targets: ["LiturgicalService"]),
+        .library(
+            name: "HoursService",
+            targets: ["HoursService"]),
+        .library(
+            name: "PsalmService",
+            targets: ["PsalmService"]),
+
         .executable(
             name: "LiturgicalDocker",
             targets: ["LiturgicalDocker"])
@@ -20,7 +27,7 @@ let package = Package(
     targets: [
         .executableTarget(
             name: "LiturgicalDocker",
-            dependencies: ["LiturgicalService", "HoursService"],
+            dependencies: ["LiturgicalService", "HoursService", "PsalmService"],
             path: "docker-support",
             sources:["main.swift"]
         ),
@@ -57,10 +64,25 @@ let package = Package(
                 "PsalmService",
                   .product(name: "Testing", package: "swift-testing")  // 👈 New
             ],           
-            path: "ordoTests",    
+            path: "ordoTests/PsalmService",    
             sources: ["PsalmServiceTests.swift"],
             resources: [  
                .copy("../ordo/psalms.json")  // For test target
+            ]
+            
+        ),
+         .testTarget(  
+            name: "HoursServiceTests", 
+            dependencies: [
+                "HoursService",
+                  .product(name: "Testing", package: "swift-testing")  // 👈 New
+            ],           
+            path: "ordoTests/HoursService",    
+            
+            sources: ["HoursServiceTests.swift"],
+            
+            resources: [  
+               .copy("../ordo/horas.json")  // For test target
             ]
             
         ),
@@ -71,7 +93,7 @@ let package = Package(
                 "LiturgicalService",
                 .product(name: "Testing", package: "swift-testing")  // 👈 New
             ],
-            path: "ordoTests",    
+            path: "ordoTests/LiturgicalService",    
             exclude: ["ordoTests.swift"],        
             sources: ["LiturgicalServiceTests.swift"]
             
