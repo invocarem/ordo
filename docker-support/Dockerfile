@@ -1,44 +1,24 @@
-# Stage 1: Build and test
-#FROM swift:5.9-jammy as builder  
-FROM swift:6.0.3-jammy as builder
-WORKDIR /app
+# Stage 1: Builder (ARM-aware)
+FROM --platform=linux/amd64 swift:6.0.3-jammy as builder
 COPY . .
 
-# First build dependencies (faster rebuilds when only code changes)
-# RUN swift build --product LiturgicalDocker --build-tests
+# Build for Linux explicitly (Intel binary via Rosetta 2)
+RUN swift build -c release --product LiturgicalDocker --static-swift-stdlib
 
+# Stage 2: Runtime (ARM-compatible base image)
+FROM ubuntu:22.04
+WORKDIR /app
 
-RUN swift build \
-    -c release \
-    --product LiturgicalDocker \
-    -Xswiftc -enable-testing  # Allows testing if needed
+# Install dependencies
+RUN apt-get update && apt-get install -y libatomic1 && rm -rf /var/lib/apt/lists/*
 
+# Copy Intel binary (works via Rosetta 2)
+COPY --from=builder /app/.build/x86_64-unknown-linux-gnu/release/LiturgicalDocker .
+COPY --from=builder /app/.build/x86_64-unknown-linux-gnu/release/LiturgicalService_*.resources .
 
-# Then run tests
+CMD ["./LiturgicalDocker"]
 
 
 #RUN swift test --filter LiturgicalServiceTests 
 #RUN swift test --filter PsalmServiceTests 
 #RUN swift test --filter HoursServiceTests
-#RUN swift test \
-#    --filter "PsalmService*" \
-#    -Xswiftc -swift-version -Xswiftc 5.9 
-    
-
-# Production build
-RUN swift build -c release --product LiturgicalDocker
-
-# Copy resources to release directory
-RUN mkdir -p .build/release/ && \
-    cp ordo/psalms.json .build/release/ && \
-    cp ordo/horas.json .build/release/
-
-# Stage 2: Production image
-FROM swift:6.0.3-jammy
-WORKDIR /app
-COPY --from=builder /app/.build/release/LiturgicalDocker .
-COPY --from=builder /app/.build/release/psalms.json .
-COPY --from=builder /app/.build/release/horas.json .
-
-CMD ["./LiturgicalDocker"]
-

@@ -1,13 +1,13 @@
-import Testing
+import XCTest
 import Foundation
 #if canImport(ordo)
-  @testable import ordo  // Used in Xcode
+@testable import ordo  // Used in Xcode
 #else
-  import LiturgicalService
-  // (Docker will use the module's original name, e.g., LiturgicalService)
+import LiturgicalService
+// (Docker will use the module's original name, e.g., LiturgicalService)
 #endif
 
-struct TestHelper {
+final class TestHelper {
     static func getLiturgicalService() -> LiturgicalService {
         #if canImport(ordo)
             return LiturgicalService() // From @testable import ordo
@@ -17,35 +17,31 @@ struct TestHelper {
     }
 }
 
-//T @testable import ordo
-
-
-
-@Test 
-func easterDateCalculation() throws {
-    let service = TestHelper.getLiturgicalService()
-    let date = try #require(service.getEaster(year: 2024))
+final class LiturgicalServiceTests: XCTestCase {
     
-    let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy-MM-dd"
-    #expect(formatter.string(from: date) == "2024-03-31")
-}
-
-@Test 
-func christmasDayLabel() throws {
-    let service = LiturgicalService()
-    let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy-MM-dd"
-    let date = try #require(formatter.date(from: "2023-12-25"))
+    func testEasterDateCalculation() throws {
+        let service = TestHelper.getLiturgicalService()
+        let date = try XCTUnwrap(service.getEaster(year: 2024))
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        XCTAssertEqual(formatter.string(from: date), "2024-03-31")
+    }
     
-    #expect(service.getLiturgicalInfo(for: date).contains("Christmas Day"))
-}
-
-@Test 
-func AshWedDayLabel() throws {
-    let service = LiturgicalService()
-    let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy-MM-dd"
-    let date = try #require(formatter.date(from: "2025-03-05"))
-    #expect(service.getLiturgicalInfo(for: date).contains("Ash Wednesday"))
+    func testChristmasDayLabel() throws {
+        let service = LiturgicalService()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let date = try XCTUnwrap(formatter.date(from: "2023-12-25"))
+        
+        XCTAssertTrue(service.getLiturgicalInfo(for: date).contains("Christmas Day"))
+    }
+    
+    func testAshWednesdayDayLabel() throws {
+        let service = LiturgicalService()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let date = try XCTUnwrap(formatter.date(from: "2025-03-05"))
+        XCTAssertTrue(service.getLiturgicalInfo(for: date).contains("Ash Wednesday"))
+    }
 }

@@ -1,103 +1,71 @@
 // swift-tools-version:5.9
-
 import PackageDescription
 
 let package = Package(
     name: "LiturgicalService",
- 
+    platforms: [.macOS(.v10_15)],  // Required for XCTest
 
     products: [
-        .library(
-            name: "LiturgicalService",
-            targets: ["LiturgicalService"]),
-        .library(
-            name: "HoursService",
-            targets: ["HoursService"]),
-        .library(
-            name: "PsalmService",
-            targets: ["PsalmService"]),
-
-        .executable(
-            name: "LiturgicalDocker",
-            targets: ["LiturgicalDocker"])
+        .library(name: "LiturgicalService", targets: ["LiturgicalService"]),
+        .library(name: "HoursService", targets: ["HoursService"]),
+        .library(name: "PsalmService", targets: ["PsalmService"]),
+        .executable(name: "LiturgicalDocker", targets: ["LiturgicalDocker"])
     ],
-    dependencies: [
-                .package(url: "https://github.com/apple/swift-testing.git", from: "0.8.0")
-    ],
+  
     targets: [
         .executableTarget(
             name: "LiturgicalDocker",
             dependencies: ["LiturgicalService", "HoursService", "PsalmService"],
             path: "docker-support",
-            sources:["main.swift"]
+            exclude: ["Dockerfile"],
+            sources: ["main.swift"]
         ),
-
         
         .target( 
             name: "LiturgicalService",
-            dependencies: ["PsalmService"],  
-            path: "ordo",
-            sources:["LiturgicalService.swift", "Extensions.swift"]
+            dependencies: [],  
+            path: "ordo/Services/LiturgicalService",
+            sources: ["LiturgicalService.swift", "Extensions.swift"]
         ),
 
         .target(
             name: "HoursService",
-            path: "ordo",
-            sources:["HoursService.swift"],
-            resources: [  
-                .process("horas.json")
-            ]
+            dependencies: [],  
+            path: "ordo/Services/HoursService",
+            sources: ["HoursService.swift"],
+            resources: [.process("horas.json")]
         ),
 
         .target(
             name: "PsalmService",
-            path: "ordo",
-            sources:["PsalmService.swift"],
-            resources: [  
-                .process("psalms.json")
-            ]
+            dependencies: [],  
+            path: "ordo/Services/PsalmService",  
+            sources: ["PsalmService.swift"],
+            resources: [.process("psalms.json")]
         ),
 
-        .testTarget(  // TDD
-            name: "PsalmServiceTests", 
-            dependencies: [
-                "PsalmService",
-                  .product(name: "Testing", package: "swift-testing")  // 👈 New
-            ],           
-            path: "ordoTests/PsalmService",    
+        .testTarget(
+            name: "PsalmServiceTests",    
+            dependencies: ["PsalmService"],  // Removed explicit XCTest
+            path: "ordoTests/PsalmService",
             sources: ["PsalmServiceTests.swift"],
-            resources: [  
-               .copy("../ordo/psalms.json")  // For test target
-            ]
-            
+            resources: [.copy("../../ordo/Services/PsalmService/psalms.json")]
         ),
-         .testTarget(  
+
+        .testTarget(  
             name: "HoursServiceTests", 
-            dependencies: [
-                "HoursService",
-                  .product(name: "Testing", package: "swift-testing")  // 👈 New
-            ],           
+            dependencies: ["HoursService"],  // Removed explicit XCTest
             path: "ordoTests/HoursService",    
-            
             sources: ["HoursServiceTests.swift"],
-            
-            resources: [  
-               .copy("../ordo/horas.json")  // For test target
-            ]
-            
+            resources: [.copy("../../ordo/Services/HoursService/horas.json")]
         ),
 
-        .testTarget(  // TDD
+        .testTarget(
             name: "LiturgicalServiceTests",            
-            dependencies: [
-                "LiturgicalService",
-                .product(name: "Testing", package: "swift-testing")  // 👈 New
-            ],
+            dependencies: ["LiturgicalService"],  // Removed explicit XCTest
             path: "ordoTests/LiturgicalService",    
-            exclude: ["ordoTests.swift"],        
             sources: ["LiturgicalServiceTests.swift"]
-            
         )
-
     ]
 )
+

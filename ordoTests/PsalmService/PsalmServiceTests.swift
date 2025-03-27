@@ -1,55 +1,65 @@
-import Testing
-@testable import PsalmService 
+import XCTest
+@testable import PsalmService
 
-struct PsalmServiceTests {
+final class PsalmServiceTests: XCTestCase {
     private var psalmService: PsalmService!
-
-    // Setup (like XCTest's setUp)
-    init() {
+    
+    override func setUp() {
+        super.setUp()
         psalmService = PsalmService.shared
     }
-
-
-    @Test 
-    func verify() {        
-        #expect(2 == 2, "verify (intend to pass)")
+    
+    override func tearDown() {
+        psalmService = nil
+        super.tearDown()
     }
-
+    
     // MARK: - Tests
-    @Test 
-    func psalmsAreLoaded() {
-        let psalm1 = psalmService.getPsalmText(for: "1")        
-        #expect(psalm1 != nil, "Psalm 1 should exist")
-        #expect(!psalm1!.isEmpty, "Psalm 1 should not be empty")
-        
+    
+    func testPsalmsAreLoaded() {
+        let allPsalms = psalmService.getAllPsalms()
+        XCTAssertFalse(allPsalms.isEmpty, "Should have loaded psalms")
     }
-
-    @Test func getPsalmText_validKey() {
-        let expectedText = "Beatus vir qui non abiit..." // Replace with real text
-        let actualText = psalmService.getPsalmText(for: "1")
-        #expect(actualText == expectedText)
+    
+    func testGetPsalm_validNumber() {
+        let psalm1 = psalmService.getPsalm(number: 1)
+        XCTAssertNotNil(psalm1, "Psalm 1 should exist")
+        XCTAssertFalse(psalm1!.text.isEmpty, "Psalm 1 should have verses")
     }
-
-    @Test func getPsalmText_invalidKey() {
-        let text = psalmService.getPsalmText(for: "999")
-        #expect(text == nil, "Non-existent key should return nil")
+    
+    func testGetPsalm_withSection() {
+        let psalm118Aleph = psalmService.getPsalm(number: 118, section: "Aleph")
+        XCTAssertNotNil(psalm118Aleph, "Psalm 118 Aleph should exist")
+        XCTAssertFalse(psalm118Aleph!.text.isEmpty, "Psalm 118 Aleph should have verses")
     }
-
-    @Test func getPsalmTexts_validKeys() {
-        let keys = ["1", "2", "118Aleph"]
-        let texts = psalmService.getPsalmTexts(for: keys)
-        #expect(texts.count == keys.count)
-        #expect(!texts.isEmpty)
+    
+    func testGetPsalm_invalidNumber() {
+        let psalm999 = psalmService.getPsalm(number: 999)
+        XCTAssertNil(psalm999, "Non-existent psalm should return nil")
     }
-
-    @Test func getPsalmTexts_mixedValidAndInvalidKeys() {
-        let keys = ["1", "999", "118Aleph"] // "999" is invalid
-        let texts = psalmService.getPsalmTexts(for: keys)
-        #expect(texts.count == 2, "Should skip invalid keys")
+    
+    func testGetPsalms_multipleSections() {
+        let psalm9Sections = psalmService.getPsalms(number: 9)
+        XCTAssertEqual(psalm9Sections.count, 2, "Psalm 9 should have A and B sections")
     }
-
-    @Test func getPsalmTexts_emptyKeys() {
-        let texts = psalmService.getPsalmTexts(for: [])
-        #expect(texts.isEmpty)
+    
+    func testGetFormattedText_validPsalm() {
+        let formattedText = psalmService.getFormattedText(number: 1)
+        XCTAssertNotNil(formattedText)
+        XCTAssertTrue(formattedText!.contains("\n"), "Formatted text should contain newlines")
+    }
+    
+    func testGetAllPsalms_containsExpectedPsalms() {
+        let allPsalms = psalmService.getAllPsalms()
+        let psalmNumbers = allPsalms.map { $0.number }
+        XCTAssertTrue(psalmNumbers.contains(1), "Should contain Psalm 1")
+        XCTAssertTrue(psalmNumbers.contains(118), "Should contain Psalm 118")
+    }
+    
+    // Performance test
+    func testPerformanceGetPsalm() {
+        measure {
+            _ = psalmService.getPsalm(number: 1)
+        }
     }
 }

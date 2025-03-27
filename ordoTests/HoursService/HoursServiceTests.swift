@@ -1,27 +1,40 @@
-import Testing
-@testable import HoursService // Replace with your module
 
-struct HoursServiceTests {
+import XCTest
+@testable import HoursService
+
+final class HoursServiceTests: XCTestCase {
     var hoursService: HoursService!
 
-    // Setup (like XCTest's setUp)
-    init() {
+    // Replaces init() for setup
+    override func setUp() {
+        super.setUp()
         hoursService = HoursService.shared
     }
 
-    @Test func verify() {
-        #expect(1== 2, "intended to fail")
-    }
-    // MARK: - Tests
-    @Test func hoursAreLoaded() {
-        let prime = hoursService.getHour(for: "prime")
-        #expect(prim?.isEmpty == false, "prime should be loaded")
+    // Cleanup after each test
+    override func tearDown() {
+        hoursService = nil
+        super.tearDown()
     }
 
-    @Test func getPsalmText_validKey() {
-        let expectedText = "Beatus vir qui non abiit..." // Replace with real text
-        let actualText = hourService.getPsalmText(for: "1")
-       #expect(1 == 2)
-        #expect(actualText == expectedText)
+    // MARK: - Tests
+    
+    func testVerify() {
+        XCTAssertEqual(1, 2, "intended to fail")
     }
+    
+    func testHoursAreLoaded() {
+        let prime = hoursService.getHour(for: "prime")
+        XCTAssertNotNil(prime, "Prime hour should exist")
+        
+        // Test the structure of the returned Hour object
+        XCTAssertFalse(prime!.introit.isEmpty)
+        XCTAssertFalse(prime!.hymn.isEmpty)
+        XCTAssertFalse(prime!.chapter.isEmpty)
+        XCTAssertFalse(prime!.closing.isEmpty)
+        
+        // Test psalm rules structure
+        XCTAssertFalse(prime!.psalms.sunday.isEmpty, "sunday of psalms should exist")        
+    }
+    
 }

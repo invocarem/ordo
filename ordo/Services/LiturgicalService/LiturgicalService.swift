@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import PsalmService
+//import PsalmService
 
 public class LiturgicalService {
     private let calendar: Calendar
@@ -213,6 +213,7 @@ public class LiturgicalService {
         return components.month == 12 && components.day == 25
     }
 }
+/*
 public extension LiturgicalService {
     func getPsalmsForPrime(for date: Date) -> [String] {
         let weekday = calendar.component(.weekday, from: date)
@@ -245,7 +246,8 @@ public extension LiturgicalService {
     }
 
     func getPsalmText(for key: String ) -> String? {
-        return PsalmService.shared.getPsalmText(for: key)
+        return ""
+        //return PsalmService.shared.getPsalmText(for: key)
     }
     // Helper to get psalm display name
     func getPsalmDisplayName(_ psalm: String) -> String {
@@ -254,4 +256,4 @@ public extension LiturgicalService {
         }
         return "Psalm \(psalm)"
     }
-}
+} */

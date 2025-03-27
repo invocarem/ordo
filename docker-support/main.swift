@@ -1,10 +1,13 @@
 // docker-support/main.swift
 import Foundation
 import LiturgicalService
+import PsalmService
+import HoursService
 
 // Direct top-level code
 let service = LiturgicalService()
-
+let psalm_service = PsalmService.shared
+let hours_service = HoursService.shared
 
 let date: Date
 if CommandLine.arguments.count > 1, 
@@ -18,6 +21,20 @@ if CommandLine.arguments.count > 1,
 
 print(service.getLiturgicalInfo(for: date))
 
+// Safely get the psalm
+guard let psalmAleph = psalm_service.getPsalm(number: 118, section: "Aleph") else {
+    print("Psalm 118 Aleph not found")
+    exit(1)
+}
+
+// Print with formatting
+print("""
+=== Psalm 118:Aleph ===
+\(psalmAleph.text.joined(separator: "\n"))
+""")
+
+
+/*
 let psalmKeys = service.getPsalmsForPrime(for: date)
 
 print("Psalms: \(psalmKeys)")
@@ -26,7 +43,7 @@ print("Psalms: \(psalmKeys)")
     print(psalmText)
     
 }
-
+*/
 // Helper function to parse date strings
 func parseDate(_ string: String) -> Date? {
     let formatter = DateFormatter()
