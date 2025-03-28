@@ -1,13 +1,123 @@
 {
     "psalms": [
         {
-            "number": 1,
+            "number": 1,            
             "text": [
                 "Beatus vir qui non abiit in consilio impiorum,",
                 "et in via peccatorum non stetit,",
-                "et in cathedra pestilentiae non sedit."
+                "et in cathedra pestilentiae non sedit;",
+                "sed in lege Domini voluntas ejus,",
+                "et in lege ejus meditabitur die ac nocte.",
+                "Et erit tamquam lignum quod plantatum est secus decursus aquarum,",
+                "quod fructum suum dabit in tempore suo:",
+                "et folium ejus non defluet,",
+                "et omnia quaecumque faciet prosperabuntur.",
+                "Non sic impii, non sic;",
+                "sed tamquam pulvis quem projicit ventus a facie terrae.",
+                "Ideo non resurgent impii in judicio,",
+                "neque peccatores in concilio justorum.",
+                "Quoniam novit Dominus viam justorum,",
+                "et iter impiorum peribit."
             ]
         },
+        {
+            "number": 2,
+            "text": [
+                "Quare fremuerunt gentes, et populi meditati sunt inania?",
+                "Astiterunt reges terrae, et principes convenerunt in unum,",
+                "adversus Dominum et adversus christum ejus.",
+                "Dirumpamus vincula eorum, et projiciamus a nobis jugum ipsorum!",
+                "Qui habitat in caelis irridebit eos, et Dominus subsannabit eos.",
+                "Tunc loquetur ad eos in ira sua, et in furore suo conturbabit eos:",
+                "Ego autem constitui regem meum super Sion, montem sanctum meum.",
+                "Praedicabo decretum Domini: Dominus dixit ad me:",
+                "Filius meus es tu, ego hodie genui te.",
+                "Postula a me, et dabo tibi gentes hereditatem tuam,",
+                "et possessionem tuam terminos terrae.",
+                "Reges eos in virga ferrea, et tamquam vas figuli confringes eos.",
+                "Et nunc, reges, intelligite; erudimini, qui judicatis terram.",
+                "Servite Domino in timore, et exsultate ei cum tremore.",
+                "Apprehendite disciplinam, ne quando irascatur, et pereatis de via justa.",
+                "Cum exarserit in brevi ira ejus, beati omnes qui confidunt in eo."
+            ]
+        },
+        {
+            "number": 6,
+            "text": [
+                "Domine, ne in furore tuo arguas me,",
+                "neque in ira tua corripias me.",
+                "Miserere mei, Domine, quoniam infirmus sum;",
+                "sana me, Domine, quoniam conturbata sunt ossa mea.",
+                "Et anima mea turbata est valde:",
+                "sed tu, Domine, usquequo?",
+                "Convertere, Domine, eripe animam meam;",
+                "salvum me fac propter misericordiam tuam.",
+                "Quoniam non est in morte qui memor sit tui;",
+                "in inferno autem quis confitebitur tibi?",
+                "Laboravi in gemitu meo,",
+                "lavabo per singulas noctes lectum meum;",
+                "lacrimis meis stratum meum rigabo.",
+                "Turbatus est a furore oculus meus,",
+                "inveteravi inter omnes inimicos meos.",
+                "Discedite a me, omnes qui operamini iniquitatem,",
+                "quoniam exaudivit Dominus vocem fletus mei.",
+                "Exaudivit Dominus deprecationem meam,",
+                "Dominus orationem meam suscepit.",
+                "Erubescant et conturbentur vehementer omnes inimici mei;",
+                "convertantur et erubescant valde velociter."
+            ]
+        },
+        {
+            "number": 7,            
+            "text": [
+                "Psalmus David, quem cantavit Domino pro verbis Chusi filii Jemini",
+                "Domine Deus meus, in te speravi; salvum me fac ex omnibus persequentibus me, et libera me.",
+                "Nequando rapiat ut leo animam meam, dum non est qui redimat, neque qui salvum faciat.",
+                "Domine Deus meus, si feci istud, si est iniquitas in manibus meis,",
+                "si reddidi retribuentibus mihi mala, decidam merito ab inimicis meis inanis.",
+                "Persequatur inimicus animam meam, et comprehendat, et conculcet in terra vitam meam, et gloriam meam in pulverem deducat.",
+                "Exsurge, Domine, in ira tua; exaltare in finibus inimicorum meorum.",
+                "Et exsurge, Domine Deus meus, in praecepto quod mandasti, et synagoga populorum circumdabit te.",
+                "Et propter hanc in altum regredere; Dominus judicat populos.",
+                "Judica me, Domine, secundum justitiam meam, et secundum innocentiam meam super me.",
+                "Consumetur nequitia peccatorum, et diriges justum, scrutans corda et renes, Deus.",
+                "Justum adjutorium meum a Domino, qui salvos facit rectos corde.",
+                "Deus judex justus, fortis, et patiens; numquid irascitur per singulos dies?",
+                "Nisi conversi fueritis, gladium suum vibrabit; arcum suum tetendit, et paravit illum.",
+                "Et in eo paravit vasa mortis; sagittas suas ardentibus effecit.",
+                "Ecce parturiit injustitiam, concepit dolorem, et peperit iniquitatem.",
+                "Lacum aperuit, et effodit eum, et incidit in foveam quam fecit.",
+                "Convertetur dolor ejus in caput ejus, et in verticem ipsius iniquitas ejus descendet.",
+                "Confitebor Domino secundum justitiam ejus, et psallam nomini Domini altissimi."
+            ]
+        },
+        {
+            "number": 8,
+            "text": [
+              "Domine, Dominus noster,",
+              "quam admirabile est nomen tuum in universa terra!",
+              "Quoniam elevata est magnificentia tua,",
+              "super caelos.",
+              "Ex ore infantium et lactentium perfecisti laudem",
+              "propter inimicos tuos,",
+              "ut destruas inimicum et ultorem.",
+              "Cum videam caelos tuos, opera digitorum tuorum,",
+              "lunam et stellas, quae tu fundasti,",
+              "quid est homo, quod memor es eius?",
+              "aut filius hominis, quod curas eum?",
+              "Eum fecisti paulo minus Deo,",
+              "gloria et honore coronasti eum.",
+              "Dedisti ei potestatem super opera manuum tuarum,",
+              "omnia subiecisti sub pedibus eius,",
+              "oves et boves universas,",
+              "insuper et pecora campi,",
+              "volucres caeli et pisces maris,",
+              "quae percurrunt semitas maris.",
+              "Domine, Dominus noster,",
+              "quam admirabile est nomen tuum in universa terra!"
+            ]
+          },
+        
         {
             "number": 9,
             "section": "A",
@@ -27,6 +137,52 @@
                 "paraverunt sagittas suas in pharetra,",
                 "ut sagittent in obscuro rectos corde.",
                 "... (remaining verses)"
+            ]
+        },
+        {
+            "number": 10,
+            "text": [
+                "In Domino confido: quomodo dicitis animae meae:",
+                "\"Transvola in montem sicut passer?\"",
+                "Quoniam ecce peccatores intenderunt arcum,",
+                "paraverunt sagittas suas in pharetra,",
+                "ut sagittent in obscuro rectos corde.",
+                "Quae perfecisti, destruxerunt:",
+                "justus autem quid fecit?",
+                "Dominus in templo sancto suo,",
+                "Dominus in caelo sedes ejus.",
+                "Oculi ejus in pauperem respiciunt,",
+                "palpebrae ejus interrogant filios hominum.",
+                "Dominus interrogat justum et impium:",
+                "qui autem diligit iniquitatem, odit animam suam.",
+                "Pluet super peccatores laqueos:",
+                "ignis, sulphur, et spiritus procellarum,",
+                "pars calicis eorum.",
+                "Quoniam justus Dominus, et justitias dilexit:",
+                "aequitatem vidit vultus ejus."
+            ]
+        },
+        {
+            "number": 11,
+            "text": [
+                "Salvum me fac, Domine, quoniam defecit sanctus,",
+                "quoniam diminutae sunt veritates a filiis hominum.",
+                "Vana locuti sunt unusquisque ad proximum suum,",
+                "labia dolosa, in corde et corde locuti sunt.",
+                "Disperdat Dominus universa labia dolosa,",
+                "et linguam magniloquam.",
+                "Qui dixerunt: Linguam nostram magnificabimus,",
+                "labia nostra a nobis sunt, quis noster dominus est?",
+                "Propter miseriam inopum, et gemitum pauperum,",
+                "nunc exsurgam, dicit Dominus.",
+                "Ponam in salutari, fiducialiter agam in eo.",
+                "Eloquia Domini, eloquia casta,",
+                "argentum igne examinatum,",
+                "probatum terrae, purgatum septuplum.",
+                "Tu, Domine, servabis nos, et custodies nos",
+                "a generatione hac in aeternum.",
+                "In circuitu impii ambulant;",
+                "secundum altitudinem tuam multiplicasti filios hominum."
             ]
         },
         {
