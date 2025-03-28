@@ -9,6 +9,8 @@ FROM swift:6.0.3-jammy as builder
 
 # Handle line endings across platforms
 RUN apt-get update && apt-get install -y dos2unix
+# Install Linux XCTest dependencies (silent fail if already exists)
+RUN apt-get update -qq && apt-get install -y libxml2-dev 2>/dev/null || true
 
 WORKDIR /app
 COPY . .
@@ -23,7 +25,7 @@ RUN swift build -c release --product LiturgicalDocker --static-swift-stdlib
 FROM swift:6.0.3-jammy
 
 WORKDIR /app
-COPY --from=builder /app/.build/x86_64-unknown-linux-gnu/release/LiturgicalDocker .
+COPY --from=builder /app/.build/*/release/LiturgicalDocker .
 
 # Create resource directory structure
 RUN mkdir -p /app/LiturgicalService_PsalmService.resources

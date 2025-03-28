@@ -46,7 +46,7 @@ let package = Package(
 
         .testTarget(
             name: "PsalmServiceTests",    
-            dependencies: ["PsalmService"],  // Removed explicit XCTest
+            dependencies: ["PsalmService"],
             path: "ordoTests/PsalmService",
             sources: ["PsalmServiceTests.swift"],
             resources: [.copy("../../ordo/Services/PsalmService/psalms.json")]

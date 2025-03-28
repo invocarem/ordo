@@ -38,11 +38,14 @@ final class PsalmServiceTests: XCTestCase {
         XCTAssertNil(psalm999, "Non-existent psalm should return nil")
     }
     
-    func testGetPsalms_multipleSections() {
+    func testGetPsalm_noSections() {
+        let psalm15 = psalmService.getPsalm(number: 15)
+        XCTAssertNotNil(psalm15, "Psalm 15 should no sections")
+    }
+     func testGetPsalms_multipleSections() {
         let psalm9Sections = psalmService.getPsalms(number: 9)
         XCTAssertEqual(psalm9Sections.count, 2, "Psalm 9 should have A and B sections")
     }
-    
     func testGetFormattedText_validPsalm() {
         let formattedText = psalmService.getFormattedText(number: 1)
         XCTAssertNotNil(formattedText)

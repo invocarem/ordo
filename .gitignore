@@ -8,3 +8,5 @@ Pods/
 
 #dock
 .build/
+.vscode/
+
