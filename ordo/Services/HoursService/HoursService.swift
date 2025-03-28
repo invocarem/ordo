@@ -23,7 +23,7 @@ public struct PsalmRules: Codable {
     public let thursday: [PsalmUsage]?
     public let friday: [PsalmUsage]?
     public let saturday: [PsalmUsage]?
-    public let default: [PsalmUsage]?
+    public let `default`: [PsalmUsage]?
 }
 
 

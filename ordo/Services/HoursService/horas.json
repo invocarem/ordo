@@ -75,9 +75,9 @@
             "Noctemque sors reduxerit,",
             "Mundi per abstinentiam",
             "Ipsi canamus gloriam."
-        ]
-      
-    },
+        ],
+    "_dummy" :  {
+
 
     "terce": {
         "introit": [
@@ -205,4 +205,6 @@
         "capitulum": "1 Pet 5:8 (Sobrii estote, vigilate, quia adversarius vester diabolus tamquam leo rugiens circuit, quaerens quem devoret.)",
         "oratio": "Visita, quaesumus, Domine, habitationem istam, et omnes insidias inimici ab ea longe repelle: angeli tui sancti habitent in ea, qui nos in pace custodiant; et benedictio tua sit super nos semper. Per Christum Dominum nostrum. Amen."
     }
+    }
+}
 }
