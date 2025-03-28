@@ -1,7 +1,30 @@
 {
     "prime": {
-        "introit": "Deus in adjutorium...",
-        "hymn": "Iam lucis orto sidere...",
+        "introit":  [
+            "Deus in adjutorium meum intende.",
+            "Domine ad adjuvandum me festina."          
+        ],
+        "hymn": [
+            "Iam lucis orto sidere,",
+            "Deum precemur supplices,",
+            "Ut in diurnis actibus",
+            "Nos servet a nocentibus.",
+            "",
+            "Linguam refrenans temperet,",
+            "Ne litis horror insonet:",
+            "Visum fovendo contegat,",
+            "Ne vanitates hauriat.",
+            "",
+            "Sint pura cordis intima,",
+            "Absistat et vecordia:",
+            "Carnis terat superbiam",
+            "Potus cibique parcitas.",
+            "",
+            "Ut cum dies abscesserit,",
+            "Noctemque sors reduxerit,",
+            "Mundi per abstinentiam",
+            "Ipsi canamus gloriam."
+        ],
         "chapter": "1 Thess 5:17",
         "versicle": "",
         "closing": "md 8-9",

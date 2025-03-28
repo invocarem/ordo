@@ -1,8 +1,8 @@
 import Foundation
 
 public struct Hour: Codable {
-    public let introit: String
-    public let hymn: String
+    public let introit: [String]
+    public let hymn: [String]
     public let chapter: String
     public let versicle: String?
     public let closing: String

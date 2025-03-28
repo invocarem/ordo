@@ -33,9 +33,13 @@ guard let weekday_info = extractWeekday(from: info) else {
 }
 
 if let hour = HoursService.shared.getHour(for: "prime") {
-    print(hour.introit)
-    print(hour.hymn)
-
+    for line in hour.introit {
+        print(line)
+    }
+    for line in hour.hymn {
+        print(line)
+    }
+    
     // Get today's weekday or specify one
     let weekday = weekday_info
 
@@ -81,9 +85,7 @@ if let hour = HoursService.shared.getHour(for: "prime") {
                 print("📖 Psalm \(psalmNumber) | Section: \(section!)")
             }
 
-            guard
-                let psalmVerses = try psalm_service.getPsalm(number: psalmNumber, section: section)
-            else {
+            guard let psalmVerses = try psalm_service.getPsalm(number: psalmNumber, section: section) else {
                 throw PsalmError.versesNotFound(psalmNumber)
             }
 
