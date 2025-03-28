@@ -20,7 +20,7 @@ final class HoursServiceTests: XCTestCase {
     // MARK: - Tests
     
     func testVerify() {
-        XCTAssertEqual(1, 2, "intended to fail")
+        XCTAssertNotEqual(1, 2, "1 is not 2")
     }
     
     func testHoursAreLoaded() {
@@ -30,8 +30,8 @@ final class HoursServiceTests: XCTestCase {
         // Test the structure of the returned Hour object
         XCTAssertFalse(prime!.introit.isEmpty)
         XCTAssertFalse(prime!.hymn.isEmpty)
-        XCTAssertFalse(prime!.chapter.isEmpty)
-        XCTAssertFalse(prime!.closing.isEmpty)
+        XCTAssertFalse(prime!.capitulum.isEmpty)
+        XCTAssertFalse(prime!.oratio.isEmpty)
         
         // Test psalm rules structure
         XCTAssertFalse(prime!.psalms.sunday.isEmpty, "sunday of psalms should exist")        

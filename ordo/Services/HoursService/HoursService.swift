@@ -3,9 +3,9 @@ import Foundation
 public struct Hour: Codable {
     public let introit: [String]
     public let hymn: [String]
-    public let chapter: String
-    public let versicle: String?
-    public let closing: String
+    public let capitulum: String
+    public let versicle: [String?]
+    public let oratio: String
     public let antiphons: AntiphonRules
     public let psalms: PsalmRules
 }
@@ -16,13 +16,14 @@ public struct AntiphonRules: Codable {
     public let feasts: [String: String]?
 }
 public struct PsalmRules: Codable {
-    public let sunday: [PsalmUsage]
-    public let monday: [PsalmUsage]
-    public let tuesday: [PsalmUsage]
-    public let wednesday: [PsalmUsage]
-    public let thursday: [PsalmUsage]
-    public let friday: [PsalmUsage]
-    public let saturday: [PsalmUsage]
+    public let sunday: [PsalmUsage]?
+    public let monday: [PsalmUsage]?
+    public let tuesday: [PsalmUsage]?
+    public let wednesday: [PsalmUsage]?
+    public let thursday: [PsalmUsage]?
+    public let friday: [PsalmUsage]?
+    public let saturday: [PsalmUsage]?
+    public let default: [PsalmUsage]?
 }
 
 

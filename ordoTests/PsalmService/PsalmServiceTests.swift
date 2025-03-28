@@ -46,6 +46,83 @@ final class PsalmServiceTests: XCTestCase {
         let psalm9Sections = psalmService.getPsalms(number: 9)
         XCTAssertEqual(psalm9Sections.count, 2, "Psalm 9 should have A and B sections")
     }
+     func testGetPsalms_multipleSectionsPsalm17() {
+        let psalm1Sections = psalmService.getPsalms(number: 1)
+        XCTAssertEqual(psalm1Sections.count, 1, "Psalm 1 have one section")
+
+        let psalm17Sections = psalmService.getPsalms(number: 17)
+        XCTAssertEqual(psalm17Sections.count, 2, "Psalm 17 should have A and B sections")
+
+        let sectionA = psalm17Sections.first { $0.section == "A" }
+        let sectionB = psalm17Sections.first { $0.section == "B" }
+    
+        XCTAssertNotNil(sectionA, "Missing Psalm 17A")
+        XCTAssertNotNil(sectionB, "Missing Psalm 17B")
+        if let psalm17A = sectionA, let psalm17B = sectionB {        
+            XCTAssertFalse(psalm17A.text.isEmpty, "Psalm 17A has empty text")
+            XCTAssertFalse(psalm17B.text.isEmpty, "Psalm 17B has empty text")
+        
+            XCTAssertNotEqual(psalm17A.text.first, psalm17B.text.first,
+                         "First verses should differ between sections")
+                         
+            // Print a few verses from each section
+            print("\nSample from Psalm 17A:")
+            psalm17A.text.prefix(3).forEach { print($0) }
+        
+            print("\nSample from Psalm 17B:")
+            psalm17B.text.prefix(3).forEach { print($0) }           
+        }
+    }
+    func testGetPsalms_multipleSectionsPsalm118() {
+        let sections = psalmService.getPsalms(number: 118)
+        
+        // Test total number of sections (22)
+        XCTAssertEqual(sections.count, 22, "Psalm 118 should have 22 sections (8 verses each)")
+        
+        // Test each section has exactly 8 verses
+        for section in sections {
+            XCTAssertEqual(section.text.count, 8, "Each section should have exactly 8 verses")
+        }
+        
+        // Test section names (Douay-Rheims style)
+        let expectedSectionIdentifiers = [
+            "Aleph", "Beth", "Gimel", "Daleth", "He", "Vau", "Zain", "Heth",
+            "Teth", "Jod", "Caph", "Lamed", "Mem", "Nun", "Samech", "Ain",
+            "Pe", "Sade", "Coph", "Res", "Sin", "Thau"
+        ]
+        
+        for (index, section) in sections.enumerated() {
+            XCTAssertEqual(section.section, expectedSectionIdentifiers[index], 
+                        "Section \(index) should be \(expectedSectionIdentifiers[index])")
+        }
+    }
+
+ 
+    func testGetPsalms_psalmsOfDegrees() {
+           [119, 120, 128, 133].forEach { psalmNumber in
+        let sections = psalmService.getPsalms(number: psalmNumber)
+        
+        // Basic checks
+        XCTAssertGreaterThanOrEqual(sections.count, 1, "Psalm \(psalmNumber) should have at least 1 section")
+        
+        // Optional: Verify section name
+        if let firstSection = sections.first {
+            XCTAssertEqual(
+                firstSection.section, 
+                "Psalms of Ascent", 
+                "Psalm \(psalmNumber) should be in the 'Psalms of Ascent' section"
+            )
+        }
+        
+        // Optional: Check first verse exists
+        if let firstVerse = sections.first?.text.first {
+            XCTAssertFalse(firstVerse.isEmpty, "Psalm \(psalmNumber) should have non-empty text")
+        }
+        }
+    }   
+
+ 
+
     func testGetFormattedText_validPsalm() {
         let formattedText = psalmService.getFormattedText(number: 1)
         XCTAssertNotNil(formattedText)

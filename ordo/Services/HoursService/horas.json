@@ -4,40 +4,6 @@
             "Deus in adjutorium meum intende.",
             "Domine ad adjuvandum me festina."          
         ],
-        "hymn": [
-            "Iam lucis orto sidere,",
-            "Deum precemur supplices,",
-            "Ut in diurnis actibus",
-            "Nos servet a nocentibus.",
-            "",
-            "Linguam refrenans temperet,",
-            "Ne litis horror insonet:",
-            "Visum fovendo contegat,",
-            "Ne vanitates hauriat.",
-            "",
-            "Sint pura cordis intima,",
-            "Absistat et vecordia:",
-            "Carnis terat superbiam",
-            "Potus cibique parcitas.",
-            "",
-            "Ut cum dies abscesserit,",
-            "Noctemque sors reduxerit,",
-            "Mundi per abstinentiam",
-            "Ipsi canamus gloriam."
-        ],
-        "chapter": "1 Thess 5:17",
-        "versicle": "",
-        "closing": "md 8-9",
-        "antiphons": {
-            "default": "Regi saeculorum...",
-            "seasons": {
-                "lent": "Panem caeli dedit eis...",
-                "advent": "Ecce Dominus veniet..."
-            },
-            "feasts": {
-                "christmas": "Hodie Christus natus est..."
-            }
-        },
         "psalms": {
             "sunday": [
                 {"number": "118", "category": "aleph"},
@@ -75,6 +41,168 @@
                 {"number": "18"},
                 {"number": "19"}
             ]
+        },
+        "capitulum": "1 Thess 5:17 (Sine intermissione orate.)",
+        "versicle": ["℣. Deus auctor pacis...", "℟. Quem nosse vivere..."],
+        "oratio": "md 8-9",
+        "antiphons": {
+            "default": "Regi saeculorum...",
+            "seasons": {
+                "lent": "Panem caeli dedit eis...",
+                "advent": "Ecce Dominus veniet..."
+            },
+            "feasts": {
+                "christmas": "Hodie Christus natus est..."
+            }
+        },
+        "hymn": [
+            "Iam lucis orto sidere,",
+            "Deum precemur supplices,",
+            "Ut in diurnis actibus",
+            "Nos servet a nocentibus.",
+            "",
+            "Linguam refrenans temperet,",
+            "Ne litis horror insonet:",
+            "Visum fovendo contegat,",
+            "Ne vanitates hauriat.",
+            "",
+            "Sint pura cordis intima,",
+            "Absistat et vecordia:",
+            "Carnis terat superbiam",
+            "Potus cibique parcitas.",
+            "",
+            "Ut cum dies abscesserit,",
+            "Noctemque sors reduxerit,",
+            "Mundi per abstinentiam",
+            "Ipsi canamus gloriam."
+        ]
+      
+    },
+
+    "terce": {
+        "introit": [
+            "℣. Deus in adjutorium meum intende.",
+            "℟. Domine ad adjuvandum me festina."
+        ],
+        "hymn": [
+            "Nunc Sancte nobis Spiritus,",
+            "Unum Patri cum Filio,",
+            "Imple superna gratia,",
+            "Quae tu creasti pectora."
+        ],
+        "psalms": {
+            "sunday":[
+                {"number": "119"},
+                {"number": "120"},
+                {"number": "121"}
+            ]
+        },
+        "capitulum": "Ps 36:31 (Lex Dei ejus in corde ipsius)",
+        "versicle": ["Dirigatur oratio mea","Sicut incensum in conspectu tuo"],
+        "oratio": "Deus, qui corda fidelium...",
+        "antiphons": {
+            "default": "Regi saeculorum...",
+            "seasons": {
+                "lent": "Panem caeli dedit eis...",
+                "advent": "Ecce Dominus veniet..."
+            },
+            "feasts": {
+                "christmas": "Hodie Christus natus est..."
+            }
         }
+
+    },
+    
+    "sext": {
+            "introit": [
+                "℣. Deus in adjutorium meum intende.",
+                "℟. Domine ad adjuvandum me festina."
+            ],
+            "hymn": [
+                "Rector potens, verax Deus,",
+                "Qui temperas rerum vices,",
+                "Splendore mane instruis,",
+                "Et ignibus meridiem."
+            ],
+            "psalms": [
+                {"number": "122"},
+                {"number": "123"},
+                {"number": "124"}
+            ],
+            "capitulum": "Ps 120:7 (Dominus custodit te ab omni malo)",
+            "versicle": ["Dirigatur oratio mea","Sicut incensum in conspectu tuo"],
+            "oratio": "Deus, qui corda fidelium...",
+            "antiphons": {
+            "default": "Regi saeculorum...",
+            "seasons": {
+                "lent": "Panem caeli dedit eis...",
+                "advent": "Ecce Dominus veniet..."
+            },
+            "feasts": {
+                "christmas": "Hodie Christus natus est..."
+            }
+        }
+        },
+        "none": {
+            "introit": [
+                "℣. Deus in adjutorium meum intende.",
+                "℟. Domine ad adjuvandum me festina."
+            ],
+            "hymn": [
+                "Rerum Deus tenax vigor,",
+                "Immotus in te permanens,",
+                "Lucis diurnae tempora",
+                "Successibus determinans."
+            ],
+            "psalms": [
+                {"number": "125"},
+                {"number": "126"},
+                {"number": "127"}
+            ],
+            "capitulum": "Ps 88:2 (Misericordias Domini in aeternum cantabo)",
+            "versicle": {
+                "versus": "Ad te Domine levavi animam meam",
+                "responsum": "Deus meus in te confido"
+            },
+            "oratio": "Deus, a quo sancta desideria...",
+            "antiphons": {
+            "default": "Regi saeculorum...",
+            "seasons": {
+                "lent": "Panem caeli dedit eis...",
+                "advent": "Ecce Dominus veniet..."
+            },
+            "feasts": {
+                "christmas": "Hodie Christus natus est..."
+            }
+            }
+        },
+    "compline": {
+        "introit": [
+            "℣. Deus in adjutorium meum intende.",
+            "℟. Domine ad adjuvandum me festina."
+        ],
+        "psalms": [
+            {"number": "4", "title": "Cum invocarem"},
+            {"number": "90", "title": "Qui habitat"},
+            {"number": "133", "title": "Ecce nunc"}
+        ],
+        "hymn": [
+            "Te lucis ante terminum,",
+            "Rerum Creator, poscimus,",
+            "Ut solita clementia",
+            "Sis praesul et custodia.",
+            "",
+            "Procul recedant somnia,",
+            "Et noctium phantasmata:",
+            "Hostemque nostrum comprime,",
+            "Ne polluantur corpora."
+        ],
+
+        "versicle": {
+            "versus": "Custodi nos, Domine",
+            "responsum": "Ut pupillam oculi"
+        },
+        "capitulum": "1 Pet 5:8 (Sobrii estote, vigilate, quia adversarius vester diabolus tamquam leo rugiens circuit, quaerens quem devoret.)",
+        "oratio": "Visita, quaesumus, Domine, habitationem istam, et omnes insidias inimici ab ea longe repelle: angeli tui sancti habitent in ea, qui nos in pace custodiant; et benedictio tua sit super nos semper. Per Christum Dominum nostrum. Amen."
     }
 }

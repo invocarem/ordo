@@ -264,7 +264,7 @@
                 "Saturati sunt filiis, et dimiserunt reliquias suas parvulis suis.",
                 "Ego autem in justitia apparebo conspectui tuo; satiabor cum apparuerit gloria tua."
             ]
-        },
+        },        
         {
             "number": 17,
             "section": "A",
@@ -293,13 +293,7 @@
                 "fulgura multiplicavit, et conturbavit eos.",
                 "Et apparuerunt fontes aquarum, et revelata sunt fundamenta orbis terrarum",
                 "ab increpatione tua, Domine, ab inspiratione spiritus irae tuae.",
-                "Misit de summo, et accepit me; assumpsit me de aquis multis."
-            ]
-        },
-        {
-            "number": 17,
-            "section": "B",
-            "text": [
+                "Misit de summo, et accepit me; assumpsit me de aquis multis.",
                 "Eripuit me de inimico meo potentissimo, et ab his qui oderunt me:",
                 "quoniam confortati sunt super me.",
                 "Praevenerunt me in die afflictionis meae, et factus est Dominus protector meus.",
@@ -308,7 +302,13 @@
                 "Quia custodivi vias Domini, nec impie gessi a Deo meo.",
                 "Quoniam omnia judicia ejus in conspectu meo, et justitias ejus non repuli a me.",
                 "Et ero immaculatus cum eo, et observabo me ab iniquitate mea.",
-                "Et retribuet mihi Dominus secundum justitiam meam, et secundum puritatem manuum mearum in conspectu oculorum ejus.",
+                "Et retribuet mihi Dominus secundum justitiam meam, et secundum puritatem manuum mearum in conspectu oculorum ejus."
+            ]
+        },
+        {
+            "number": 17,
+            "section": "B",
+            "text": [
                 "Cum sancto sanctus eris, et cum viro innocente innocens eris,",
                 "et cum electo electus eris, et cum perverso perverteris.",
                 "Quoniam tu populum humilem salvum facies, et oculos superborum humiliabis.",
@@ -379,57 +379,516 @@
                 "Domine, salvum fac regem, et exaudi nos in die qua invocaverimus te."
             ]
         },
-        
-        {
-            "number": 118,
-            "section": "Aleph",
-            "text": [
-                "Beati immaculati in via,",
-                "qui ambulant in lege Domini.",
-                "Beati qui scrutantur testimonia ejus,",
-                "in toto corde exquirunt eum."
-            ]
-        },
-        {
-            "number": 118,
-            "section": "Beth",
-            "text": [
-                "In quo corrigit adolescentior viam suam?",
-                "In custodiendo sermones tuos.",
-                "In toto corde meo exquisivi te;",
-                "ne repellas me a mandatis tuis."
-            ]
-        },
-        {
-            "number": 118,
-            "section": "Gimel",
-            "text": [
-                "Retribue servo tuo, vivifica me;",
-                "et custodiam sermones tuos.",
-                "Revela oculos meos,",
-                "et considerabo mirabilia de lege tua."
-            ]
-        },
-        {
-            "number": 118,
-            "section": "Daleth",
-            "text": [
-                "Advena ego sum in terra;",
-                "ne abscondas a me mandata tua.",
-                "Concupivit anima mea desiderare justificationes tuas,",
-                "in omni tempore."
-            ]
-        },
-        {
-            "number": 118,
-            "section": "He",
-            "text": [
-                "Portio mea, Domine,",
-                "dixi custodire legem tuam.",
-                "Deprecatus sum faciem tuam in toto corde meo;",
-                "miserere mei secundum eloquium tuum."
-            ]
-        },
+
+                {
+                    "number": 118,
+                    "section": "Aleph",
+                    "text": [
+                        "Beati immaculati in via, qui ambulant in lege Domini.",
+                        "Beati qui scrutantur testimonia ejus, in toto corde exquirunt eum.",
+                        "Non enim qui operantur iniquitatem, in viis ejus ambulaverunt.",
+                        "Tu mandasti mandata tua custodiri nimis.",
+                        "Utinam dirigantur viae meae, ad custodiendas justificationes tuas!",
+                        "Tunc non confundar, cum perspexero in omnibus praeceptis tuis.",
+                        "Confitebor tibi in directione cordis, in eo quod didici judicia justitiae tuae.",
+                        "Justificationes tuas custodiam, non me derelinquas usquequaque."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Beth",
+                    "text": [
+                        "In quo corrigit adolescentior viam suam? In custodiendo sermones tuos.",
+                        "In toto corde meo exquisivi te, ne repellas me a mandatis tuis.",
+                        "In corde meo abscondi eloquia tua, ut non peccem tibi.",
+                        "Benedictus es, Domine, doce me justificationes tuas.",
+                        "In labiis meis pronuntiavi omnia judicia oris tui.",
+                        "In via testimoniorum tuorum delectatus sum, sicut in omnibus divitiis.",
+                        "In mandatis tuis exercebor, et considerabo vias tuas.",
+                        "In justificationibus tuis meditabor, non obliviscar sermones tuos."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Gimel",
+                    "text": [
+                        "Retribue servo tuo, vivifica me, et custodiam sermones tuos.",
+                        "Revela oculos meos, et considerabo mirabilia de lege tua.",
+                        "Incola ego sum in terra, non abscondas a me mandata tua.",
+                        "Concupivit anima mea desiderare justificationes tuas in omni tempore.",
+                        "Increpasti superbos, maledicti qui declinant a mandatis tuis.",
+                        "Aufer a me opprobrium et contemptum, quia testimonia tua exquisivi.",
+                        "Etenim sederunt principes, et adversum me loquebantur; servus autem tuus exercebatur in justificationibus tuis.",
+                        "Nam et testimonia tua meditatio mea est, et consilium meum justificationes tuae."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Daleth",
+                    "text": [
+                        "Adhaesit pavimento anima mea, vivifica me secundum verbum tuum.",
+                        "Vias meas enuntiavi, et exaudisti me; doce me justificationes tuas.",
+                        "Viam justificationum tuarum instrue me, et exercebor in mirabilibus tuis.",
+                        "Dormitavit anima mea prae taedio, confirma me in verbis tuis.",
+                        "Viam iniquitatis amove a me, et de lege tua miserere mei.",
+                        "Viam veritatis elegi, judicia tua non sum oblitus.",
+                        "Adhaesi testimoniis tuis, Domine, noli me confundere.",
+                        "Viam mandatorum tuorum cucurri, cum dilatasti cor meum."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "He",
+                    "text": [
+                        "Legem pone mihi, Domine, viam justificationum tuarum, et exquiram eam semper.",
+                        "Da mihi intellectum, et scrutabor legem tuam, et custodiam illam in toto corde meo.",
+                        "Deduc me in semitam mandatorum tuorum, quia ipsam volui.",
+                        "Inclina cor meum in testimonia tua, et non in avaritiam.",
+                        "Averte oculos meos ne videant vanitatem, in via tua vivifica me.",
+                        "Statue servo tuo eloquium tuum in timore tuo.",
+                        "Amputa opprobrium meum quod suspicatus sum, quia judicia tua jucunda.",
+                        "Ecce concupivi mandata tua, in aequitate tua vivifica me."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Vau",
+                    "text": [
+                        "Et veniat super me misericordia tua, Domine, salutare tuum secundum eloquium tuum.",
+                        "Et respondebo exprobrantibus mihi verbum, quia speravi in sermonibus tuis.",
+                        "Et ne auferas de ore meo verbum veritatis usquequaque, quia in judiciis tuis supersperavi.",
+                        "Et custodiam legem tuam semper, in saeculum et in saeculum saeculi.",
+                        "Et ambulabam in latitudine, quia mandata tua exquisivi.",
+                        "Et loquebar de testimoniis tuis in conspectu regum, et non confundebar.",
+                        "Et meditabar in mandatis tuis, quae dilexi.",
+                        "Et levavi manus meas ad mandata tua quae dilexi, et exercebar in justificationibus tuis."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Zain",
+                    "text": [
+                        "Memor esto verbi tui servo tuo, in quo mihi spem dedisti.",
+                        "Haec me consolata est in humilitate mea, quia eloquium tuum vivificavit me.",
+                        "Superbi inique agebant usquequaque, a lege autem tua non declinavi.",
+                        "Memor fui judiciorum tuorum a saeculo, Domine, et consolatus sum.",
+                        "Defectio tenuit me, pro peccatoribus derelinquentibus legem tuam.",
+                        "Cantabiles mihi erant justificationes tuae in loco peregrinationis meae.",
+                        "Memor fui nocte nominis tui, Domine, et custodivi legem tuam.",
+                        "Hoc factum est mihi, quia justificationes tuas exquisivi."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Heth",
+                    "text": [
+                        "Portio mea, Domine, dixi custodire legem tuam.",
+                        "Deprecatus sum faciem tuam in toto corde meo, miserere mei secundum eloquium tuum.",
+                        "Cogitavi vias meas, et converti pedes meos in testimonia tua.",
+                        "Paratus sum, et non sum turbatus, ut custodiam mandata tua.",
+                        "Funes peccatorum circumplexi sunt me, et legem tuam non sum oblitus.",
+                        "Media nocte surgebam ad confitendum tibi, super judicia justitiae tuae.",
+                        "Particeps ego sum omnium timentium te, et custodientium mandata tua.",
+                        "Misericordia tua, Domine, plena est terra, justificationes tuas doce me."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Teth",
+                    "text": [
+                        "Bonitatem fecisti cum servo tuo, Domine, secundum verbum tuum.",
+                        "Bonitatem et disciplinam et scientiam doce me, quia mandatis tuis credidi.",
+                        "Priusquam humiliarer ego deliqui, propterea eloquium tuum custodivi.",
+                        "Bonus es tu, et in bonitate tua doce me justificationes tuas.",
+                        "Multiplicata est super me iniquitas superborum, ego autem in toto corde meo scrutabor mandata tua.",
+                        "Coagulatum est sicut lac cor eorum, ego vero legem tuam meditatus sum.",
+                        "Bonum mihi quia humiliasti me, ut discam justificationes tuas.",
+                        "Bonum mihi lex oris tui, super millia auri et argenti."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Jod",
+                    "text": [
+                        "Manus tuae fecerunt me, et plasmaverunt me, da mihi intellectum, et discam mandata tua.",
+                        "Qui timent te videbunt me et laetabuntur, quia in verba tua supersperavi.",
+                        "Cognovi, Domine, quia aequitas judicia tua, et in veritate tua humiliasti me.",
+                        "Fiat misericordia tua ut consoletur me, secundum eloquium tuum servo tuo.",
+                        "Veniant mihi miserationes tuae et vivam, quia lex tua meditatio mea est.",
+                        "Confundantur superbi, quia injuste iniquitatem fecerunt in me; ego autem exercebor in mandatis tuis.",
+                        "Convertantur mihi timentes te, et qui noverunt testimonia tua.",
+                        "Fiat cor meum immaculatum in justificationibus tuis, ut non confundar."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Caph",
+                    "text": [
+                        "Defecit in salutare tuum anima mea, et in verbum tuum supersperavi.",
+                        "Defecerunt oculi mei in eloquium tuum, dicentes: Quando consolaberis me?",
+                        "Quia factus sum sicut uter in pruina, justificationes tuas non sum oblitus.",
+                        "Quot sunt dies servi tui? quando facies de persequentibus me judicium?",
+                        "Narraverunt mihi iniqui fabulationes, sed non ut lex tua.",
+                        "Omnia mandata tua veritas; inique persecuti sunt me, adjuva me.",
+                        "Paulo minus consummaverunt me in terra, ego autem non dereliqui mandata tua.",
+                        "Secundum misericordiam tuam vivifica me, et custodiam testimonia oris tui."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Lamed",
+                    "text": [
+                        "In aeternum, Domine, verbum tuum permanet in caelo.",
+                        "In generationem et generationem veritas tua; fundasti terram, et permanet.",
+                        "Ordinatione tua perseverat dies, quoniam omnia serviunt tibi.",
+                        "Nisi quod lex tua meditatio mea est, tunc forte periissem in humilitate mea.",
+                        "In aeternum non obliviscar justificationes tuas, quia in ipsis vivificasti me.",
+                        "Tuus sum ego, salvum me fac, quoniam justificationes tuas exquisivi.",
+                        "Me exspectaverunt peccatores ut perderent me; testimonia tua intellexi.",
+                        "Omnis consummationis vidi finem, latum mandatum tuum nimis."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Mem",
+                    "text": [
+                        "Quomodo dilexi legem tuam, Domine! tota die meditatio mea est.",
+                        "Super inimicos meos prudentem me fecisti mandato tuo, quia in aeternum mihi est.",
+                        "Super omnes docentes me intellexi, quia testimonia tua meditatio mea est.",
+                        "Super senes intellexi, quia mandata tua quaesivi.",
+                        "In omni via mala prohibui pedes meos, ut custodiam verba tua.",
+                        "A judiciis tuis non declinavi, quia tu legem posuisti mihi.",
+                        "Quam dulcia faucibus meis eloquia tua! super mel ori meo.",
+                        "A mandatis tuis intellexi, propterea odivi omnem viam iniquitatis."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Nun",
+                    "text": [
+                        "Lucerna pedibus meis verbum tuum, et lumen semitis meis.",
+                        "Juravi et statui custodire judicia justitiae tuae.",
+                        "Humiliatus sum usquequaque, Domine, vivifica me secundum verbum tuum.",
+                        "Voluntaria oris mei beneplacita fac, Domine, et judicia tua doce me.",
+                        "Anima mea in manibus tuis semper, et legem tuam non sum oblitus.",
+                        "Posuerunt peccatores laqueum mihi, et de mandatis tuis non erravi.",
+                        "Hereditate acquisivi testimonia tua in aeternum, quia exsultatio cordis mei sunt.",
+                        "Inclinavi cor meum ad faciendas justificationes tuas in aeternum, propter retributionem."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Samech",
+                    "text": [
+                        "Iniquos odio habui, et legem tuam dilexi.",
+                        "Adjutor et susceptor meus es tu, et in verbum tuum supersperavi.",
+                        "Declinate a me, maligni, et scrutabor mandata Dei mei.",
+                        "Suscita me secundum verbum tuum, et vivam, et non confundas me ab exspectatione mea.",
+                        "Adjuva me, et salvus ero, et meditabor in justificationibus tuis semper.",
+                        "Sprevisti omnes discedentes a judiciis tuis, quia injusta cogitatio eorum.",
+                        "Praevari cantes reputavi omnes peccatores terrae, ideo dilexi testimonia tua.",
+                        "Confige timore tuo carnes meas, a judiciis enim tuis timui."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Ain",
+                    "text": [
+                        "Feci judicium et justitiam, non tradas me calumniantibus me.",
+                        "Suscipe servum tuum in bonum, non calumnientur me superbi.",
+                        "Oculi mei defecerunt in salutare tuum, et in eloquium justitiae tuae.",
+                        "Fac cum servo tuo secundum misericordiam tuam, et justificationes tuas doce me.",
+                        "Servus tuus sum ego, da mihi intellectum, ut sciam testimonia tua.",
+                        "Tempus faciendi, Domine, dissipaverunt legem tuam.",
+                        "Ideo dilexi mandata tua super aurum et topazion.",
+                        "Propterea ad omnia mandata tua dirigebar, omnem viam iniquam odio habui."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Pe",
+                    "text": [
+                        "Mirabilia testimonia tua, ideo scrutata est ea anima mea.",
+                        "Declaratio sermonum tuorum illuminat, et intellectum dat parvulis.",
+                        "Os meum aperui et attraxi spiritum, quia mandata tua desiderabam.",
+                        "Aspice in me et miserere mei, secundum judicium diligentium nomen tuum.",
+                        "Gressus meos dirige secundum eloquium tuum, et non dominetur mei omnis iniquitas.",
+                        "Redime me a calumniis hominum, ut custodiam mandata tua.",
+                        "Faciem tuam illumina super servum tuum, et doce me justificationes tuas.",
+                        "Exitius aquae deduxerunt oculi mei, quia non custodierunt legem tuam."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Sade",
+                    "text": [
+                        "Justus es, Domine, et rectum judicium tuum.",
+                        "Mandasti justitiam testimonia tua, et veritatem tuam nimis.",
+                        "Tabescere me fecit zelus meus, quia obliti sunt verba tua inimici mei.",
+                        "Igneus sermo tuus vehementer, et servus tuus dilexit eum.",
+                        "Adolescentulus sum ego et contemptus, justificationes tuas non sum oblitus.",
+                        "Justitia tua justitia in aeternum, et lex tua veritas.",
+                        "Tribulatio et angustia invenerunt me, mandata tua meditatio mea est.",
+                        "Aequitas testimonia tua in aeternum, intellectum da mihi, et vivam."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Coph",
+                    "text": [
+                        "Clamavi in toto corde meo, exaudi me, Domine; justificationes tuas requiram.",
+                        "Clamavi ad te, salvum me fac, ut custodiam mandata tua.",
+                        "Praeveni in maturitate, et clamavi, quia in verba tua supersperavi.",
+                        "Praevenerunt oculi mei ad te diluculo, ut meditarer eloquia tua.",
+                        "Vocem meam audi secundum misericordiam tuam, Domine, et secundum judicium tuum vivifica me.",
+                        "Appropinquaverunt persequentes me iniquitatem, a lege autem tua longe facti sunt.",
+                        "Prope es tu, Domine, et omnes viae tuae veritas.",
+                        "Initio cognovi de testimoniis tuis, quia in aeternum fundasti ea."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Res",
+                    "text": [
+                        "Vide humilitatem meam, et eripe me, quia legem tuam non sum oblitus.",
+                        "Judica judicium meum, et redime me, propter eloquium tuum vivifica me.",
+                        "Longe a peccatoribus salus, quia justificationes tuas non exquisierunt.",
+                        "Misericordiae tuae multae, Domine, secundum judicium tuum vivifica me.",
+                        "Multi qui persequuntur me, et tribulant me; a testimoniis tuis non declinavi.",
+                        "Vidi praevaricantes, et tabescebam, quia eloquia tua non custodierunt.",
+                        "Vide quoniam mandata tua dilexi, Domine, in misericordia tua vivifica me.",
+                        "Principium verborum tuorum veritas, in aeternum omnia judicia justitiae tuae."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Sin",
+                    "text": [
+                        "Principes persecuti sunt me gratis, et a verbis tuis formidavit cor meum.",
+                        "Laetabor ego super eloquia tua, sicut qui invenit spolia multa.",
+                        "Iniquitatem odio habui et abominatus sum, legem autem tuam dilexi.",
+                        "Septies in die laudem dixi tibi, super judicia justitiae tuae.",
+                        "Pax multa diligentibus legem tuam, et non est illis scandalum.",
+                        "Exspectabam salutare tuum, Domine, et mandata tua dilexi.",
+                        "Custodivit anima mea testimonia tua, et dilexit ea vehementer.",
+                        "Servavi mandata tua et testimonia tua, quia omnes viae meae in conspectu tuo."
+                    ]
+                },
+                {
+                    "number": 118,
+                    "section": "Thau",
+                    "text": [
+                        "Appropinquet deprecatio mea in conspectu tuo, Domine; juxta eloquium tuum da mihi intellectum.",
+                        "Intret postulatio mea in conspectu tuo; secundum eloquium tuum eripe me.",
+                        "Eructabunt labia mea hymnum, cum docueris me justificationes tuas.",
+                        "Pronuntiabit lingua mea eloquium tuum, quia omnia mandata tua aequitas.",
+                        "Fiat manus tua ut salvet me, quoniam mandata tua elegi.",
+                        "Concupivi salutare tuum, Domine, et lex tua meditatio mea est.",
+                        "Vivet anima mea, et laudabit te, et judicia tua adjuvabunt me.",
+                        "Erravi sicut ovis quae periit; quaere servum tuum, quia mandata tua non sum oblitus."
+                    ]
+                },
+            
+                    {
+                        "number": 119,
+                        "section": "Psalms of Ascent",
+                        "text": [
+                            "Beati immaculati in via, qui ambulant in lege Domini.",
+                            "Beati qui scrutantur testimonia ejus; in toto corde exquirunt eum.",
+                            "Non enim qui operantur iniquitatem, in viis ejus ambulaverunt.",
+                            "Tu mandasti mandata tua custodire nimis.",
+                            "Utinam dirigantur viae meae ad custodiendas justificationes tuas!",
+                            "Tunc non confundar, cum perspexero in omnibus mandatis tuis.",
+                            "Confitebor tibi in directione cordis, in eo quod didici judicia justitiae tuae.",
+                            "Justificationes tuas custodiam; non me derelinquas usquequaque."
+                        ]
+                    },
+                    {
+                        "number": 120,
+                        "section": "Psalms of Ascent",
+                        "text": [
+                            "Ad Dominum cum tribularer clamavi, et exaudivit me.",
+                            "Domine, libera animam meam a labiis iniquis et a lingua dolosa.",
+                            "Quid detur tibi, aut quid apponatur tibi ad linguam dolosam?",
+                            "Sagittae potentis acutae, cum carbonibus desolatoriis.",
+                            "Heu mihi, quia incolatus meus prolongatus est! Habitavi cum habitantibus Cedar;",
+                            "multum incola fuit anima mea.",
+                            "Cum his qui oderunt pacem, eram pacificus; cum loquebar illis, impugnabant me gratis."
+                        ]
+                    },
+                    {
+                        "number": 121,
+                        "section": "Psalms of Ascent",
+                        "text": [
+                            "Levavi oculos meos in montes, unde veniet auxilium mihi.",
+                            "Auxilium meum a Domino, qui fecit caelum et terram.",
+                            "Non det in commotionem pedem tuum, neque dormitet qui custodit te.",
+                            "Ecce non dormitabit neque dormiet, qui custodit Israel.",
+                            "Dominus custodit te; Dominus protectio tua super manum dexteram tuam.",
+                            "Per diem sol non uret te, neque luna per noctem.",
+                            "Dominus custodit te ab omni malo; custodiat animam tuam Dominus.",
+                            "Dominus custodiat introitum tuum et exitum tuum, ex hoc nunc et usque in saeculum."
+                        ]
+                    },
+                    {
+                        "number": 122,
+                        "section": "Psalms of Ascent",
+                        "text": [
+                            "Laetatus sum in his quae dicta sunt mihi: In domum Domini ibimus.",
+                            "Stantes erant pedes nostri in atriis tuis, Jerusalem.",
+                            "Jerusalem, quae aedificatur ut civitas, cujus participatio ejus in idipsum.",
+                            "Illuc enim ascenderunt tribus, tribus Domini, testimonium Israel, ad confitendum nomini Domini.",
+                            "Quia illic sederunt sedes in judicio, sedes super domum David.",
+                            "Rogate quae ad pacem sunt Jerusalem, et abundantia diligentibus te.",
+                            "Fiat pax in virtute tua, et abundantia in turribus tuis.",
+                            "Propter fratres meos et proximos meos, loquebar pacem de te.",
+                            "Propter domum Domini Dei nostri, quaesivi bona tibi."
+                        ]
+                    },
+                    {
+                        "number": 123,
+                        "section": "Psalms of Ascent",
+                        "text": [
+                            "Ad te levavi oculos meos, qui habitas in caelis.",
+                            "Ecce sicut oculi servorum in manibus dominorum suorum,",
+                            "sicut oculi ancillae in manibus dominae suae: ita oculi nostri ad Dominum Deum nostrum, donec misereatur nostri.",
+                            "Miserere nostri, Domine, miserere nostri, quia multum repleti sumus despectione;",
+                            "quia multum repleta est anima nostra opprobrium abundantibus et despectio superbis."
+                        ]
+                    },
+                    {
+                        "number": 124,
+                        "section": "Psalms of Ascent",
+                        "text": [
+                            "Nisi quia Dominus erat in nobis, dicat nunc Israel,",
+                            "nisi quia Dominus erat in nobis, cum exsurgerent homines in nos,",
+                            "forsitan vivos deglutissent nos.",
+                            "Cum irasceretur furor eorum in nos, forsitan aqua absorbuisset nos.",
+                            "Torrentem pertransivit anima nostra; forsitan pertransisset anima nostra aquam intolerabilem.",
+                            "Benedictus Dominus, qui non dedit nos in captionem dentibus eorum.",
+                            "Anima nostra sicut passer erepta est de laqueo venantium; laqueus contritus est, et nos liberati sumus.",
+                            "Adjutorium nostrum in nomine Domini, qui fecit caelum et terram."
+                        ]
+                    },
+                    {
+                        "number": 125,
+                        "section": "Psalms of Ascent",
+                        "text": [
+                            "Qui confidunt in Domino, sicut mons Sion: non commovebitur in aeternum, qui habitat in Jerusalem.",
+                            "Montes in circuitu ejus, et Dominus in circuitu populi sui, ex hoc nunc et usque in saeculum.",
+                            "Quia non relinquet Dominus virgam peccatorum super sortem justorum, ut non extendant justi ad iniquitatem manus suas.",
+                            "Benefac, Domine, bonis, et rectis corde.",
+                            "Declinantes autem in obligationes, adducet Dominus cum operantibus iniquitatem. Pax super Israel!"
+                        ]
+                    },
+                    {
+                        "number": 126,
+                        "section": "Psalms of Ascent",
+                        "text": [
+                            "In convertendo Dominus captivitatem Sion, facti sumus sicut consolati.",
+                            "Tunc repletum est gaudio os nostrum, et lingua nostra exsultatione; tunc dicent inter gentes: Magnificavit Dominus facere cum eis.",
+                            "Magnificavit Dominus facere nobiscum; facti sumus laetantes.",
+                            "Converte, Domine, captivitatem nostram, sicut torrens in austro.",
+                            "Qui seminant in lacrimis, in exsultatione metent.",
+                            "Euntes ibant et flebant, mittentes semina sua; venientes autem venient cum exsultatione, portantes manipulos suos."
+                        ]
+                    },
+                    {
+                        "number": 127,
+                        "section": "Psalms of Ascent",
+                        "text": [
+                            "Nisi Dominus aedificaverit domum, in vanum laboraverunt qui aedificant eam; nisi Dominus custodierit civitatem, in vanum vigilat qui custodit eam.",
+                            "Vanum est vobis ante lucem surgere; surgite postquam sederitis, qui manducatis panem doloris.",
+                            "Cum dederit dilectis suis somnum: ecce hereditas Domini, filii; merces, fructus ventris.",
+                            "Sicut sagittae in manu potentis, ita filii excussorum.",
+                            "Beatus vir qui implevit desiderium suum ex ipsis; non confundetur cum loquetur inimicis suis in porta."
+                        ]
+                    },
+                    {
+                        "number": 128,
+                        "section": "Psalms of Ascent",
+                        "text": [
+                            "Beati omnes qui timent Dominum, qui ambulant in viis ejus.",
+                            "Labores fructuum tuorum manducabis; beatus es, et bene tibi erit.",
+                            "Uxor tua sicut vitis abundans in lateribus domus tuae; filii tui sicut novellae olivarum in circuitu mensae tuae.",
+                            "Ecce sic benedicetur homo qui timet Dominum.",
+                            "Benedicat tibi Dominus ex Sion, et videas bona Jerusalem omnibus diebus vitae tuae.",
+                            "Et videas filios filiorum tuorum. Pax super Israel!"
+                        ]
+                    },
+                    {
+                        "number": 129,
+                        "section": "Psalms of Ascent",
+                        "text": [
+                            "Saepe expugnaverunt me a juventute mea, dicat nunc Israel;",
+                            "saepe expugnaverunt me a juventute mea, etenim non potuerunt mihi.",
+                            "Supra dorsum meum fabricaverunt peccatores; prolongaverunt iniquitatem suam.",
+                            "Dominus justus concidit cervices peccatorum.",
+                            "Confundantur et convertantur retrorsum omnes qui oderunt Sion.",
+                            "Fiant sicut foenum tectorum, quod priusquam evellatur exaruit,",
+                            "de quo non implevit manum suam qui metit, et sinum suum qui manipulos colligit.",
+                            "Et non dixerunt qui praeteribant: Benedictio Domini super vos; benediximus vobis in nomine Domini."
+                        ]
+                    },
+                    {
+                        "number": 130,
+                        "section": "Psalms of Ascent",
+                        "text": [
+                            "De profundis clamavi ad te, Domine;",
+                            "Domine, exaudi vocem meam. Fiant aures tuae intendentes in vocem deprecationis meae.",
+                            "Si iniquitates observaveris, Domine, Domine, quis sustinebit?",
+                            "Quia apud te propitiatio est, et propter legem tuam sustinui te, Domine.",
+                            "Sustinuit anima mea in verbo ejus; speravit anima mea in Domino.",
+                            "A custodia matutina usque ad noctem, speret Israel in Domino.",
+                            "Quia apud Dominum misericordia, et copiosa apud eum redemptio.",
+                            "Et ipse redimet Israel ex omnibus iniquitatibus ejus."
+                        ]
+                    },
+                    {
+                        "number": 131,
+                        "section": "Psalms of Ascent",
+                        "text": [
+                            "Domine, non est exaltatum cor meum, neque elati sunt oculi mei; neque ambulavi in magnis, neque in mirabilibus super me.",
+                            "Si non humiliter sentiebam, sed exaltavi animam meam; sicut ablactatus est super matre sua, ita retributio in anima mea.",
+                            "Speret Israel in Domino, ex hoc nunc et usque in saeculum."
+                        ]
+                    },
+                    {
+                        "number": 132,
+                        "section": "Psalms of Ascent",
+                        "text": [
+                            "Memento, Domine, David et omnis mansuetudinis ejus;",
+                            "quomodo juravit Domino, votum vovit Deo Jacob:",
+                            "Si introiero in tabernaculum domus meae, si ascendero in lectum strati mei,",
+                            "si dedero somnum oculis meis, aut palpebris meis dormitationem,",
+                            "aut requiem temporibus meis, donec inveniam locum Domino, tabernaculum Deo Jacob.",
+                            "Ecce audivimus eam in Ephrata; invenimus eam in campis silvae.",
+                            "Introibimus in tabernaculum ejus; adorabimus in loco ubi steterunt pedes ejus.",
+                            "Surge, Domine, in requiem tuam, tu et arca sanctificationis tuae.",
+                            "Sacerdotes tui induantur justitiam, et sancti tui exsultent.",
+                            "Propter David servum tuum, non avertas faciem christi tui.",
+                            "Juravit Dominus David veritatem, et non frustrabitur eam: De fructu ventris tui ponam super sedem tuam.",
+                            "Si custodierint filii tui testamentum meum, et testimonia mea haec quae docebo eos, et filii eorum usque in saeculum sedebunt super sedem tuam.",
+                            "Quoniam elegit Dominus Sion; elegit eam in habitationem sibi:",
+                            "Haec requies mea in saeculum saeculi; hic habitabo quoniam elegi eam.",
+                            "Victum ejus benedicens benedicam; pauperes ejus saturabo panibus.",
+                            "Sacerdotes ejus induam salutari, et sancti ejus exsultatione exsultabunt.",
+                            "Illuc producam cornu David; paravi lucernam christo meo.",
+                            "Inimicos ejus induam confusione; super ipsum autem florebit sanctificatio mea."
+                        ]
+                    },
+                    {
+                        "number": 133,
+                        "section": "Psalms of Ascent",
+                        "text": [
+                            "Ecce quam bonum et quam jucundum habitare fratres in unum!",
+                            "Sicut unguentum in capite, quod descendit in barbam, barbam Aaron,",
+                            "quod descendit in oram vestimenti ejus; sicut ros Hermon, qui descendit in montem Sion.",
+                            "Quoniam illic mandavit Dominus benedictionem, et vitam usque in saeculum."
+                        ]
+                    },
+                
+       
         {
             "number": 150,
             "text": [

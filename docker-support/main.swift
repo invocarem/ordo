@@ -55,53 +55,61 @@ if let hour = HoursService.shared.getHour(for: "prime") {
     case "saturday": psalms = hour.psalms.saturday
     default: psalms = []
     }
-
-    // Print each psalm
-    for psalm in psalms {
-        print("Psalm \(psalm.number)", terminator: "")
-
-        if let category = psalm.category, !category.isEmpty {
-            print(" (\(category))", terminator: "")
-        }
-
-        if let startVerse = psalm.startVerse, startVerse != 1 {
-            print(" starting at verse \(startVerse)", terminator: "")
-        }
-
-        if let verses = psalm.verses {
-            print(" specific verses: \(verses)", terminator: "")
-        }
-
-        do {
-            let section = psalm.category
-
-            guard let psalmNumber = Int(psalm.number) else {
-                throw PsalmError.invalidNumberFormat(psalm.number)
-            }
-
-            if section?.isEmpty ?? true {
-                print("📖 Psalm \(psalmNumber) (no section)")
-            } else {
-                print("📖 Psalm \(psalmNumber) | Section: \(section!)")
-            }
-
-            guard let psalmVerses = try psalm_service.getPsalm(number: psalmNumber, section: section) else {
-                throw PsalmError.versesNotFound(psalmNumber)
-            }
-
-            print(psalmVerses.text.joined(separator: "\n"))
-
-        } catch PsalmError.invalidNumberFormat(let number) {
-            print("⚠️ Invalid psalm number format: '\(number)'")
-        } catch PsalmError.versesNotFound(let number) {
-            print("❌ No verses found for Psalm \(number)")
-        } catch {
-            print("⛔ Error: \(error.localizedDescription)")
-        }
-
-        print()  // New line
+for psalm in psalms {
+    print("Psalm \(psalm.number)", terminator: "")
+    
+    if let category = psalm.category, !category.isEmpty {
+        print(" (\(category))", terminator: "")
     }
+    
+    if let startVerse = psalm.startVerse, startVerse != 1 {
+        print(" starting at verse \(startVerse)", terminator: "")
+    }
+    
+    if let verses = psalm.verses {
+        print(" specific verses: \(verses)", terminator: "")
+    }
+    
+    do {
+        let section = psalm.category
+        
+        guard let psalmNumber = Int(psalm.number) else {
+            throw PsalmError.invalidNumberFormat(psalm.number)
+        }
+        
+        if section?.isEmpty ?? true {
+            print("📖 Psalm \(psalmNumber)")
+        } else {
+            print("📖 Psalm \(psalmNumber) | Section: \(section!)")
+        }
+        let psalmSections = try psalm_service.getPsalms(number: psalmNumber)
+        
+        if psalmSections.isEmpty {
+            throw PsalmError.versesNotFound(psalmNumber)
+        }
 
+        if psalmSections.count == 1 {
+            // Fixed variable name from psalmVerses to psalmSections
+            print(psalmSections.first?.text.joined(separator: "\n") ?? "")
+        } else {
+            guard let section = section, 
+                  let psalmSection = psalmSections.first(where: { $0.section == section }) else {
+                throw PsalmError.versesNotFound(psalmNumber)    
+            }
+            print(psalmSection.text.joined(separator: "\n"))
+        }
+        
+    } catch PsalmError.invalidNumberFormat(let number) {
+        print("⚠️ Invalid psalm number format: '\(number)'")
+    } catch PsalmError.versesNotFound(let number) {
+        print("❌ No verses found for Psalm \(number)")
+    } catch {
+        print("⛔ Error: \(error.localizedDescription)")
+    }
+    
+    print()  // New line
+}
+ 
 } else {
     print("Prime hour not found")
 }
