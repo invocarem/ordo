@@ -4,14 +4,14 @@ import PackageDescription
 let package = Package(
     name: "LiturgicalService",
     platforms: [.macOS(.v10_15)],  // Required for XCTest
-
+    
     products: [
         .library(name: "LiturgicalService", targets: ["LiturgicalService"]),
         .library(name: "HoursService", targets: ["HoursService"]),
         .library(name: "PsalmService", targets: ["PsalmService"]),
         .executable(name: "LiturgicalDocker", targets: ["LiturgicalDocker"])
     ],
-  
+   
     targets: [
         .executableTarget(
             name: "LiturgicalDocker",
@@ -62,7 +62,7 @@ let package = Package(
 
         .testTarget(
             name: "LiturgicalServiceTests",            
-            dependencies: ["LiturgicalService"],  // Removed explicit XCTest
+            dependencies: ["LiturgicalService"],
             path: "ordoTests/LiturgicalService",    
             sources: ["LiturgicalServiceTests.swift"]
         )

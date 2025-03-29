@@ -14,14 +14,33 @@ enum PsalmError: Error {
 let service = LiturgicalService()
 let psalm_service = PsalmService.shared
 let hours_service = HoursService.shared
+let dateFormatter = DateFormatter()
+dateFormatter.dateFormat = "yyyy-MM-dd"
 
+// Parse arguments
 let date: Date
-if CommandLine.arguments.count > 1,
-    let inputDate = parseDate(CommandLine.arguments[1])
-{
-    date = inputDate
+let hourType: String  // "prime" (default) or "compline"
+
+if CommandLine.arguments.count > 1 {
+    // Check if first argument is a date or hour type
+    if let inputDate = parseDate(CommandLine.arguments[1]) {
+        date = inputDate
+        hourType = CommandLine.arguments.indices.contains(2) ? CommandLine.arguments[2].lowercased() : "prime"
+    } else {
+        // First argument is hour type (e.g., "compline")
+        hourType = CommandLine.arguments[1].lowercased()
+        date = CommandLine.arguments.indices.contains(2) ? parseDate(CommandLine.arguments[2]) ?? Date() : Date()
+    }
 } else {
+    // Default to today's Prime
     date = Date()
+    hourType = "prime"
+}
+
+// Validate hour type
+guard ["prime", "compline"].contains(hourType) else {
+    print("Error: Invalid hour type. Use 'prime' or 'compline'")
+    exit(1)
 }
 
 // Get and print liturgical info
@@ -33,7 +52,7 @@ guard let weekday_info = extractWeekday(from: info) else {
     fatalError()
 }
 
-if let hour = HoursService.shared.getHour(for: "prime") {
+if let hour = HoursService.shared.getHour(for: hourType) {
     printHourIntro(hour: hour)
 
     let weekday = weekday_info
@@ -62,6 +81,28 @@ if let hour = HoursService.shared.getHour(for: "prime") {
         }
     }
 
+    if !hour.oratio.isEmpty {
+    print("\n🙏 Oratio:")
+    // Split at "Per Christum" if present
+    if let perChristumRange = hour.oratio.range(of: "Per Christum") {
+        let mainPrayer = hour.oratio[..<perChristumRange.lowerBound]
+        let conclusion = hour.oratio[perChristumRange.lowerBound...]
+        
+        // Print main prayer with sentence formatting
+        let sentences = mainPrayer.components(separatedBy: ". ").filter { !$0.isEmpty }
+        for (index, sentence) in sentences.enumerated() {
+            let formatted = index < sentences.count - 1 ? "\(sentence)." : sentence
+            print("  \(formatted)")
+        }
+        
+        // Print conclusion with special formatting
+        print("  \(conclusion)".trimmingCharacters(in: .whitespacesAndNewlines))
+    } else {
+        // Fallback if "Per Christum" isn't found
+        print("  \(hour.oratio)")
+    }
+}
+
 } else {
     print("Prime hour not found")
 }
@@ -74,15 +115,29 @@ func parseDate(_ string: String) -> Date? {
     formatter.timeZone = TimeZone(secondsFromGMT: 0)
     return formatter.date(from: string)
 }
-
 func extractWeekday(from liturgicalInfo: String) -> String? {
     let components = liturgicalInfo.components(separatedBy: .whitespaces)
-    if let isIndex = components.firstIndex(of: "is"),
-        let afterIndex = components.firstIndex(of: "after"),
-        isIndex + 1 < afterIndex
+    
+    // Check for format like "29 Mar 2025 is Saturday after the 3rd Sunday of Lent"
+    if let isIndex = components.firstIndex(of: "is"), 
+       isIndex + 1 < components.count,
+       let afterIndex = components.firstIndex(of: "after"),
+       afterIndex > isIndex + 1 
     {
+        // Return the weekday name (e.g., "Saturday")
         return components[isIndex + 1].capitalized
     }
+    // Check for format like "30 Mar 2025 is the 4th Sunday of Lent"
+    else if let isIndex = components.firstIndex(of: "is"), 
+            isIndex + 1 < components.count,
+            components[isIndex + 1] == "the" 
+    {
+        // Return the day description (e.g., "4th Sunday of Lent")
+        let startIndex = isIndex + 2
+        guard startIndex < components.count else { return nil }
+        return Array(components[startIndex..<components.count]).joined(separator: " ")
+    }
+    
     return nil
 }
 
@@ -107,13 +162,13 @@ func printHourIntro(hour: Hour) {
 
 func getPsalmsForWeekday(_ weekday: String, hour: Hour) -> [PsalmUsage]? {
     switch weekday.lowercased() {
-    case "sunday": return hour.psalms.sunday
-    case "monday": return hour.psalms.monday
-    case "tuesday": return hour.psalms.tuesday
-    case "wednesday": return hour.psalms.wednesday
-    case "thursday": return hour.psalms.thursday
-    case "friday": return hour.psalms.friday
-    case "saturday": return hour.psalms.saturday
+    case "sunday": return hour.psalms.sunday ?? []
+    case "monday": return hour.psalms.monday ?? []
+    case "tuesday": return hour.psalms.tuesday ?? []
+    case "wednesday": return hour.psalms.wednesday  ?? []
+    case "thursday": return hour.psalms.thursday ?? []
+    case "friday": return hour.psalms.friday ?? []
+    case "saturday": return hour.psalms.saturday ?? []        
     default: return nil
     }
 }

@@ -42,11 +42,15 @@ public final class HoursService {
         loadHours()
     }
     private func loadHours() {
-        let bundlesToCheck = [
-            Bundle.module,          // For SwiftPM resources
-            Bundle(for: Self.self), // For test targets
-            Bundle.main            // For production
-        ]
+        let bundlesToCheck: [Bundle] = {
+                #if SWIFT_PACKAGE
+                // Docker/SwiftPM environment (uses Bundle.module)
+                return [Bundle.module]
+                #else
+                // Xcode environment (uses Bundle.main or Bundle(for:))
+                return [Bundle.main, Bundle(for: Self.self)]
+                #endif
+            }()
         
         for bundle in bundlesToCheck {
             if let url = bundle.url(forResource: "horas", withExtension: "json") { // Changed from "psalms" to "horas"
