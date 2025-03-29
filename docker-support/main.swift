@@ -8,7 +8,9 @@ enum PsalmError: Error {
     case invalidNumberFormat(String)
     case versesNotFound(Int)
 }
-// Direct top-level code
+
+// MARK: - Main Execution
+
 let service = LiturgicalService()
 let psalm_service = PsalmService.shared
 let hours_service = HoursService.shared
@@ -22,119 +24,168 @@ if CommandLine.arguments.count > 1,
     date = Date()
 }
 
-// 2. Get and print liturgical info
-
+// Get and print liturgical info
 let info = service.getLiturgicalInfo(for: date)
 print(info)
 
 guard let weekday_info = extractWeekday(from: info) else {
-    print("could not determin weekday from LiturgicalInfo")
+    print("Could not determine weekday from LiturgicalInfo")
     fatalError()
 }
 
 if let hour = HoursService.shared.getHour(for: "prime") {
-    for line in hour.introit {
-        print(line)
-    }
-    for line in hour.hymn {
-        print(line)
-    }
-    
-    // Get today's weekday or specify one
+    printHourIntro(hour: hour)
+
     let weekday = weekday_info
+    guard let psalms = getPsalmsForWeekday(weekday, hour: hour) else {
+        print("No psalms found for \(weekday)")
+        exit(1)
+    }
 
-    // Get the psalms for the specified day
-    let psalms: [PsalmUsage]
-    switch weekday.lowercased() {
-    case "sunday": psalms = hour.psalms.sunday
-    case "monday": psalms = hour.psalms.monday
-    case "tuesday": psalms = hour.psalms.tuesday
-    case "wednesday": psalms = hour.psalms.wednesday
-    case "thursday": psalms = hour.psalms.thursday
-    case "friday": psalms = hour.psalms.friday
-    case "saturday": psalms = hour.psalms.saturday
-    default: psalms = []
+    print("Psalms for \(weekday):")
+    for psalm in psalms {
+        printPsalm(psalm, using: psalm_service)
     }
-for psalm in psalms {
-    print("Psalm \(psalm.number)", terminator: "")
-    
-    if let category = psalm.category, !category.isEmpty {
-        print(" (\(category))", terminator: "")
-    }
-    
-    if let startVerse = psalm.startVerse, startVerse != 1 {
-        print(" starting at verse \(startVerse)", terminator: "")
-    }
-    
-    if let verses = psalm.verses {
-        print(" specific verses: \(verses)", terminator: "")
-    }
-    
-    do {
-        let section = psalm.category
-        
-        guard let psalmNumber = Int(psalm.number) else {
-            throw PsalmError.invalidNumberFormat(psalm.number)
-        }
-        
-        if section?.isEmpty ?? true {
-            print("📖 Psalm \(psalmNumber)")
-        } else {
-            print("📖 Psalm \(psalmNumber) | Section: \(section!)")
-        }
-        let psalmSections = try psalm_service.getPsalms(number: psalmNumber)
-        
-        if psalmSections.isEmpty {
-            throw PsalmError.versesNotFound(psalmNumber)
-        }
 
-        if psalmSections.count == 1 {
-            // Fixed variable name from psalmVerses to psalmSections
-            print(psalmSections.first?.text.joined(separator: "\n") ?? "")
-        } else {
-            guard let section = section, 
-                  let psalmSection = psalmSections.first(where: { $0.section == section }) else {
-                throw PsalmError.versesNotFound(psalmNumber)    
+    if !hour.capitulum.isEmpty {
+        print("\n📖 Capitulum:")
+        print("  \(hour.capitulum)")
+    }
+
+    // Print versicles with proper formatting
+    if !hour.versicle.compactMap({ $0 }).isEmpty {
+        print("\n🕊️ Versicle:")
+        hour.versicle.forEach {
+            if let verse = $0 {
+                print(verse.starts(with: "℣") ? "  \(verse)" : "  \(verse)")
             }
-            print(psalmSection.text.joined(separator: "\n"))
         }
-        
-    } catch PsalmError.invalidNumberFormat(let number) {
-        print("⚠️ Invalid psalm number format: '\(number)'")
-    } catch PsalmError.versesNotFound(let number) {
-        print("❌ No verses found for Psalm \(number)")
-    } catch {
-        print("⛔ Error: \(error.localizedDescription)")
     }
-    
-    print()  // New line
-}
- 
+
 } else {
     print("Prime hour not found")
 }
 
-// Helper function to parse date strings
+// MARK: - Helper Functions
+
 func parseDate(_ string: String) -> Date? {
     let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy-MM-dd"  // ISO format
-    formatter.timeZone = TimeZone(secondsFromGMT: 0)  // UTC
+    formatter.dateFormat = "yyyy-MM-dd"
+    formatter.timeZone = TimeZone(secondsFromGMT: 0)
     return formatter.date(from: string)
 }
 
 func extractWeekday(from liturgicalInfo: String) -> String? {
-    // Split the string by spaces and look for the weekday
     let components = liturgicalInfo.components(separatedBy: .whitespaces)
-
-    // The weekday should be after "is" and before "after"
     if let isIndex = components.firstIndex(of: "is"),
         let afterIndex = components.firstIndex(of: "after"),
         isIndex + 1 < afterIndex
     {
-
-        // Get the word after "is" (which should be the weekday)
         return components[isIndex + 1].capitalized
     }
-
     return nil
+}
+
+func printHourIntro(hour: Hour) {
+    // Print Introit if it exists
+    if !hour.introit.isEmpty {
+        print("\n🎵 Introit:")
+        hour.introit.forEach { print("  \($0)") }
+    }
+
+    // Print Hymn if it exists
+    if !hour.hymn.isEmpty {
+        print("\n🎶 Hymn:")
+        hour.hymn.forEach { print("  \($0)") }
+    }
+
+    // Only add extra space if we printed something
+    if !hour.introit.isEmpty || !hour.hymn.isEmpty {
+        print()
+    }
+}
+
+func getPsalmsForWeekday(_ weekday: String, hour: Hour) -> [PsalmUsage]? {
+    switch weekday.lowercased() {
+    case "sunday": return hour.psalms.sunday
+    case "monday": return hour.psalms.monday
+    case "tuesday": return hour.psalms.tuesday
+    case "wednesday": return hour.psalms.wednesday
+    case "thursday": return hour.psalms.thursday
+    case "friday": return hour.psalms.friday
+    case "saturday": return hour.psalms.saturday
+    default: return nil
+    }
+}
+func printPsalm(_ psalm: PsalmUsage, using service: PsalmService) {
+    // Print psalm header with better spacing
+    var headerParts = [String]()
+    headerParts.append("Psalm \(psalm.number)")
+    
+    if let category = psalm.category, !category.isEmpty {
+        headerParts.append("(\(category))")
+    }
+    
+    if let startVerse = psalm.startVerse, startVerse != 1 {
+        headerParts.append("starting at verse \(startVerse)")
+    }
+    
+    if let verses = psalm.verses {
+        headerParts.append("specific verses: \(verses)")
+    }
+    
+    print("\n" + headerParts.joined(separator: " "))
+    
+    // Print psalm content with better formatting
+    do {
+        let section = psalm.category
+        guard let psalmNumber = Int(psalm.number) else {
+            throw PsalmError.invalidNumberFormat(psalm.number)
+        }
+
+        // Print section header with emoji
+        let sectionHeader: String
+        if section?.isEmpty ?? true {
+            sectionHeader = "📖 Psalm \(psalmNumber)"
+        } else {
+            sectionHeader = "📖 Psalm \(psalmNumber) | Section: \(section!)"
+        }
+        print(sectionHeader)
+        print(String(repeating: "─", count: sectionHeader.count))  // Divider line
+        
+        let psalmSections = try service.getPsalms(number: psalmNumber)
+        
+        if psalmSections.isEmpty {
+            throw PsalmError.versesNotFound(psalmNumber)
+        }
+        
+        let versesToPrint: [String]
+        if psalmSections.count == 1 {
+            versesToPrint = psalmSections.first?.text ?? []
+        } else {
+            guard let section = section,
+                  let psalmSection = psalmSections.first(where: { $0.section == section }) 
+            else {
+                throw PsalmError.versesNotFound(psalmNumber)
+            }
+            versesToPrint = psalmSection.text
+        }
+        
+        // Print verses with proper spacing
+        versesToPrint.forEach { verse in
+            let trimmedVerse = verse.trimmingCharacters(in: .whitespacesAndNewlines)
+            if !trimmedVerse.isEmpty {
+                print("  \(trimmedVerse)")  // Indent each verse
+            }
+        }
+        
+    } catch PsalmError.invalidNumberFormat(let number) {
+        print("\n⚠️ Invalid psalm number format: '\(number)'")
+    } catch PsalmError.versesNotFound(let number) {
+        print("\n❌ No verses found for Psalm \(number)")
+    } catch {
+        print("\n⛔ Error: \(error.localizedDescription)")
+    }
+    
+    print()  // Extra new line after each psalm
 }
