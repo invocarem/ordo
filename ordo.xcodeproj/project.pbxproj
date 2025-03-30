@@ -65,6 +65,11 @@
 			path = ordoUITests;
 			sourceTree = "<group>";
 		};
+		33FA6F0B2D99DC180016AA3C /* PsalmTrackerLibrary */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PsalmTrackerLibrary;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +109,7 @@
 		33EC02D02D9237E0003A1593 = {
 			isa = PBXGroup;
 			children = (
+				33FA6F0B2D99DC180016AA3C /* PsalmTrackerLibrary */,
 				33EC02DB2D9237E0003A1593 /* ordo */,
 				33EC02ED2D9237E2003A1593 /* ordoTests */,
 				33EC02F72D9237E2003A1593 /* ordoUITests */,
@@ -139,6 +145,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				33EC02DB2D9237E0003A1593 /* ordo */,
+				33FA6F0B2D99DC180016AA3C /* PsalmTrackerLibrary */,
 			);
 			name = ordo;
 			packageProductDependencies = (

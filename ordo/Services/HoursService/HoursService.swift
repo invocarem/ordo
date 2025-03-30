@@ -2,12 +2,58 @@ import Foundation
 
 public struct Hour: Codable {
     public let introit: [String]
-    public let hymn: [String]
+    public let hymn: HymnUnion
     public let capitulum: String
     public let versicle: [String?]
     public let oratio: String
     public let antiphons: AntiphonRules
     public let psalms: PsalmRules
+    public let magnificat: Magnificat?
+}
+public enum HymnUnion: Codable {
+    case lines([String])       // For plain text (6th-century)
+    case structured(HymnData)  // For later traditions
+    
+    public struct HymnData: Codable {
+        public let defaultText: String
+        public let seasons: [String: String]?
+        public let feasts: [String: String]?
+    }
+    
+    // Custom decoding to handle both formats
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        if let lines = try? container.decode([String].self) {
+            self = .lines(lines)
+        } else {
+            let data = try container.decode(HymnData.self)
+            self = .structured(data)
+        }
+    }
+    public var isEmpty: Bool {
+        switch self {
+        case .lines(let array): return array.isEmpty
+        case .structured: return false
+        }
+    }
+}
+// for six century no need this
+public struct Magnificat: Codable {
+    public let antiphon: String  // The framing antiphon text
+    public let text: String      // Fixed Latin text of Luke 1:46-55
+    
+    // For seasonal variations (Advent, Lent, etc.)
+    public let seasonalAntiphons: [String: String]?
+    
+    // Default implementation for the standard text
+    public static let standard = Magnificat(
+        antiphon: "Deposuit potentes de sede",
+        text: "Magnificat anima mea Dominum...", // Full Latin text here
+        seasonalAntiphons: [
+            "Advent": "Ecce ancilla Domini",
+            "Lent": "Misericordias Domini"
+        ]
+    )
 }
 
 public struct AntiphonRules: Codable {
@@ -30,8 +76,13 @@ public struct PsalmRules: Codable {
 public struct PsalmUsage: Codable {
     public let number: String
     public let category: String?
+    public let antiphon: String?   // Defaults to nil if omitted, required for vespers
     public let startVerse: Int?     // Defaults to 1 if omitted
     public let verses: [Int]?       // If nil, assume all verses
+    
+    var id: String {
+           "\(number)-\(category ?? "default")"
+       }
 }
 
 public final class HoursService {

@@ -44,7 +44,14 @@ public class PsalmService {
     
     // Get by number (and optional section)
     public func getPsalm(number: Int, section: String? = nil) -> Psalm? {
-        return psalms.first { $0.number == number && $0.section == section }
+ if let section = section {
+        return psalms.first { 
+            $0.number == number && 
+            $0.section?.caseInsensitiveCompare(section) == .orderedSame
+        }
+    } else {
+        return psalms.first { $0.number == number }
+    }
     }
     
     // Get all sections of a psalm number

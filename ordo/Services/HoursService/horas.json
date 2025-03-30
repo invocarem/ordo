@@ -1,9 +1,9 @@
-{
+{    
     "prime": {
         "introit": [
-            "Deus in adjutorium meum intende.",
-            "Domine ad adjuvandum me festina."
-        ],
+                "℣. Deus in adjutorium meum intende.",
+                "℟. Domine ad adjuvandum me festina."
+            ],
         "psalms": {
             "sunday": [
                 {"number": "118", "category": "aleph"},
@@ -44,23 +44,199 @@
         },
         "capitulum": "Sine intermissione orate.",
         "versicle": [
-            "℣. Benedicámus Patrem et Filium cum Sancto Spíritu.",
-            "℟. Laudámus et superexaltámus eum in sǽcula."
+            "℣. Deus, in nomine tuo salvum me fac.",
+            "℟. Et in virtute tua libera me."
         ],
-        "oratio": "domine deus omnipotens, qui ad principium hujus diei nos pervenire fecisti: tua nos hodie salva virtute; ut in hac die ad nullum declinemus peccatum, sed semper ad tuam justitiam faciendam nostra procedant eloquia, dirigantur cogitationes et opera. per christum dominum nostrum. amen.",
+        "oratio": "Dirigere et sanctificare, regere et gubernare digneris, Domine, Deus, corda et corpora nostra in viam pacis et salutis. Per Christum Dominum nostrum. Amen.",
         "antiphons": {
             "default": "",
             "seasons": null,
             "feasts": null
         },
         "hymn": []
-    },
-    "compline": {
+    }
+    , "terce": {
+        "introit": [
+          "Deus in adjutorium meum intende.",
+          "Domine ad adjuvandum me festina.",
+          "Gloria Patri, et Filio, et Spiritui Sancto.",
+          "Sicut erat in principio, et nunc, et semper, et in saecula saeculorum. Amen."
+        ],
+        "psalms": {
+            "sunday": [
+                    {"number": "118", "category": "heth"},
+                    {"number": "118", "category": "teth"},
+                    {"number": "118", "category": "jod"}
+                  ],
+          "monday": [
+            {"number": "118", "category": "caph"},
+            {"number": "118", "category": "lamed"},
+            {"number": "118", "category": "mem"}
+                  ],
+          "default": [
+            {"number": "119"},
+            {"number": "120"},
+            {"number": "121"}
+          ]
+        },
+        "capitulum": "Dirigatur oratio mea sicut incensum in conspectu tuo, Domine.",
+        "versicle": [
+          "℣. Dirigere et sanctificare, custodire et gubernare digneris, Domine.",
+          "℟. Corda et corpora nostra."
+        ],
+        "oratio": "Actiones nostras, quaesumus, Domine, aspirando praeveni et adjuvando prosequere, ut cuncta nostra oratio et operatio a te semper incipiat, et per te coepta finiatur. Per Christum Dominum nostrum. Amen.",
+        "antiphons": {
+          "default": "Miserere mei, Deus, secundum magnam misericordiam tuam."
+        },
+        "hymn": [
+          "Nunc, Sancte, nobis Spiritus",
+          "Unum Patri cum Filio",
+          "Spiritus alme, illustrator hominum..."
+        ]
+      }, "sext": {
+          "introit": [
+            "Deus in adjutorium meum intende.",
+            "Domine ad adjuvandum me festina.",
+            "Gloria Patri, et Filio, et Spiritui Sancto.",
+            "Sicut erat in principio, et nunc, et semper, et in saecula saeculorum. Amen."
+          ],
+          "psalms": {
+              "sunday": [
+                     {"number": "118", "category": "nun"},
+                     {"number": "118", "category": "samech"},
+                     {"number": "118", "category": "ain"}
+                   ],
+                   "monday": [
+                     {"number": "118", "category": "phe"},
+                     {"number": "118", "category": "sade"},
+                     {"number": "118", "category": "coph"}
+                   ],
+            "default": [
+              {"number": "122"},
+              {"number": "123"},
+              {"number": "124"}
+            ]
+          },
+          "capitulum": "Fiat misericordia tua, Domine, super nos, quemadmodum speravimus in te.",
+          "versicle": [
+            "℣. Angelis suis Deus mandavit de te.",
+            "℟. Ut custodiant te in omnibus viis tuis."
+          ],
+          "oratio": "Deus, qui caritatis dona per gratiam Sancti Spiritus tuorum cordibus infudisti: da famulis tuis, pro quibus tuam deprecamur clementiam, salutem mentis et corporis; ut te tota virtute diligant, et quae tibi placita sunt, tota dilectione perficiant. Per Dominum nostrum Iesum Christum. Amen.",
+          "antiphons": {
+            "default": "Meditabor in mandatis tuis, quae dilexi valde."
+          },
+          "hymn": [
+            "Rector potens, verax Deus",
+            "Qui temperas rerum vices",
+            "Splendore mane instruis..."
+          ]
+        },
+        "none": {
+          "introit": [
+            "Deus in adjutorium meum intende.",
+            "Domine ad adjuvandum me festina.",
+            "Gloria Patri, et Filio, et Spiritui Sancto.",
+            "Sicut erat in principio, et nunc, et semper, et in saecula saeculorum. Amen."
+          ],
+          "psalms": {
+              "sunday": [
+                    {"number": "118", "category": "nun"},
+                    {"number": "118", "category": "samech"},
+                    {"number": "118", "category": "ain"}
+                  ],
+            "monday": null,
+            "default": [
+              {"number": "125"},
+              {"number": "126"},
+              {"number": "127"}
+            ]
+          },
+          "capitulum": "Tu autem, Domine, miserere nobis.",
+          "versicle": [
+            "℣. Adjutorium nostrum in nomine Domini.",
+            "℟. Qui fecit caelum et terram."
+          ],
+          "oratio": "Respice, quaesumus, Domine, super hanc familiam tuam, pro qua Dominus noster Iesus Christus non dubitavit manibus tradi nocentium, et crucis subire tormentum. Qui tecum vivit et regnat in unitate Spiritus Sancti, Deus, per omnia saecula saeculorum. Amen.",
+          "antiphons": {
+            "default": "Ego dixi: Domine, miserere mei; sana animam meam, quia peccavi tibi."
+          },
+          "hymn": [
+            "Rerum, Deus, tenax vigor",
+            "Immotus in te permanens",
+            "Lucis diurnae tempora..."
+          ]
+        },
+        "vespers": {
             "introit": [
-                "Deus in adjutorium meum intende.",
-                "Domine ad adjuvandum me festina.",
-                "Gloria Patri, et Filio, et Spiritui Sancto.",
-                "Sicut erat in principio, et nunc, et semper, et in saecula saeculorum. Amen."
+                "℣. Deus in adjutorium meum intende.",
+                "℟. Domine ad adjuvandum me festina."
+            ],
+            "psalms": {
+                "sunday": [
+                    {"number": "109", "antiphon": "Dixit Dominus Domino meo."},
+                    {"number": "110", "antiphon": "Confitebor tibi, Domine."},
+                    {"number": "111", "antiphon": "Beatus vir qui timet Dominum."},
+                    {"number": "112", "antiphon": "Laudate, pueri, Dominum."}
+                ],
+                "monday": [
+                    {"number": "113", "antiphon": "In exitu Israel de Aegypto."},
+                    {"number": "114", "antiphon": "Dilexi quoniam exaudiet Dominus."},
+                    {"number": "115", "antiphon": "Credidi propter quod locutus sum."},
+                    {"number": "116", "antiphon": "Laudate Dominum, omnes gentes."}
+                ],
+                "tuesday": [
+                    {"number": "119", "antiphon": "Ad Dominum cum tribularer clamavi."},
+                    {"number": "120", "antiphon": "Levavi oculos meos in montes."},
+                    {"number": "121", "antiphon": "Laetatus sum in his quae dicta sunt mihi."},
+                    {"number": "122", "antiphon": "Ad te levavi oculos meos."}
+                ],
+                "wednesday": [
+                    {"number": "123", "antiphon": "Nisi quia Dominus erat in nobis."},
+                    {"number": "124", "antiphon": "Qui confidunt in Domino."},
+                    {"number": "125", "antiphon": "In convertendo Dominus captivitatem Sion."},
+                    {"number": "126", "antiphon": "Nisi Dominus aedificaverit domum."}
+                ],
+                "thursday": [
+                    {"number": "127", "antiphon": "Beati omnes qui timent Dominum."},
+                    {"number": "128", "antiphon": "Saepe expugnaverunt me a juventute mea."},
+                    {"number": "129", "antiphon": "De profundis clamavi ad te, Domine."},
+                    {"number": "130", "antiphon": "Domine, non est exaltatum cor meum."}
+                ],
+                "friday": [
+                    {"number": "131", "antiphon": "Memento, Domine, David."},
+                    {"number": "132", "antiphon": "Ecce quam bonum et quam jucundum."},
+                    {"number": "134", "antiphon": "Laudate nomen Domini."},
+                    {"number": "135", "antiphon": "Confitemini Domino quoniam bonus."}
+                ],
+                "saturday": [
+                    {"number": "136", "antiphon": "Super flumina Babylonis."},
+                    {"number": "137", "antiphon": "Confitebor tibi, Domine."},
+                    {"number": "138", "antiphon": "Domine, probasti me et cognovisti me."},
+                    {"number": "139", "antiphon": "Eripe me, Domine, ab homine malo."}
+                ]
+            },
+            "capitulum": "Tu autem, Domine, miserere nobis.",
+            "versicle": [
+              "℣. Dirigatur oratio mea sicut incensum in conspectu tuo, Domine.",
+              "℟. Elevatio manuum mearum sacrificium vespertinum."
+          ],
+           "oratio": "Dirigere et sanctificare, regere et gubernare digneris, Domine, Deus, corda et corpora nostra in viam pacis et salutis. Per Christum Dominum nostrum. Amen.",
+            "hymn": {
+                "defaultText": "Lucis creator optime (later addition, optional)",
+                "seasons": null
+            },
+            "antiphons": {
+              "default": "",
+              "seasons": null,
+              "feasts": null
+          },
+            "magnificat": null
+          },
+    "compline": {
+        "introit": [
+                "℣. Deus in adjutorium meum intende.",
+                "℟. Domine ad adjuvandum me festina."
             ],
             "psalms": {
                 "default": [

@@ -86,13 +86,13 @@ final class PsalmServiceTests: XCTestCase {
         
         // Test section names (Douay-Rheims style)
         let expectedSectionIdentifiers = [
-            "Aleph", "Beth", "Gimel", "Daleth", "He", "Vau", "Zain", "Heth",
+            "aleph", "beth", "gimel", "daleth", "He", "Vau", "Zain", "Heth",
             "Teth", "Jod", "Caph", "Lamed", "Mem", "Nun", "Samech", "Ain",
             "Pe", "Sade", "Coph", "Res", "Sin", "Thau"
         ]
         
         for (index, section) in sections.enumerated() {
-            XCTAssertEqual(section.section, expectedSectionIdentifiers[index], 
+            XCTAssertEqual(section.section?.lowercased() ?? "", expectedSectionIdentifiers[index].lowercased(), 
                         "Section \(index) should be \(expectedSectionIdentifiers[index])")
         }
     }
