@@ -42,6 +42,28 @@
             ]
         },
         {
+                "number": 4,
+                "text": [
+                    "Cum invocarem exaudivit me Deus justitiae meae:",
+                    "in tribulatione dilatasti mihi.",
+                    "Miserere mei, et exaudi orationem meam.",
+                    "Filii hominum, usquequo gravi corde?",
+                    "Ut quid diligitis vanitatem, et quaeritis mendacium?",
+                    "Et scitote quoniam mirificavit Dominus sanctum suum:",
+                    "Dominus exaudiet me cum clamavero ad eum.",
+                    "Irascimini, et nolite peccare:",
+                    "quae dicitis in cordibus vestris,",
+                    "in cubilibus vestris compungimini.",
+                    "Sacrificate sacrificium justitiae, et sperate in Domino.",
+                    "Multi dicunt: Quis ostendit nobis bona?",
+                    "Signatum est super nos lumen vultus tui, Domine:",
+                    "dedisti laetitiam in corde meo.",
+                    "A fructu frumenti, vini et olei sui multiplicati sunt.",
+                    "In pace in idipsum dormiam et requiescam;",
+                    "quoniam tu, Domine, singulariter in spe constituisti me."
+                ]
+            },
+        {
             "number": 6,
             "text": [
                 "Domine, ne in furore tuo arguas me,",
@@ -364,6 +386,7 @@
                 "Domine, adjutor meus, et redemptor meus."
             ]
         },
+        
         {
             "number": 19,
             "text": [
@@ -379,7 +402,40 @@
                 "Domine, salvum fac regem, et exaudi nos in die qua invocaverimus te."
             ]
         },
-
+        {
+               "number": 90,
+               "text": [
+                   "Qui habitat in adjutorio Altissimi,",
+                   "in protectione Dei caeli commorabitur.",
+                   "Dicet Domino: Susceptor meus es tu, et refugium meum;",
+                   "Deus meus, sperabo in eum.",
+                   "Quoniam ipse liberavit me de laqueo venantium,",
+                   "et a verbo aspero.",
+                   "Scapulis suis obumbrabit tibi,",
+                   "et sub pennis ejus sperabis.",
+                   "Scuto circumdabit te veritas ejus:",
+                   "non timebis a timore nocturno,",
+                   "a sagitta volante in die,",
+                   "a negotio perambulante in tenebris,",
+                   "ab incursu et daemonio meridiano.",
+                   "Cadent a latere tuo mille,",
+                   "et decem millia a dextris tuis:",
+                   "tibi autem non appropinquabit.",
+                   "Quoniam angelis suis mandavit de te,",
+                   "ut custodiant te in omnibus viis tuis.",
+                   "In manibus portabunt te,",
+                   "ne forte offendas ad lapidem pedem tuum.",
+                   "Super aspidem et basiliscum ambulabis,",
+                   "et conculcabis leonem et draconem.",
+                   "Quoniam in me speravit, liberabo eum;",
+                   "protegam eum quoniam cognovit nomen meum.",
+                   "Clamabit ad me, et ego exaudiam eum;",
+                   "cum ipso sum in tribulatione:",
+                   "eripiam eum et glorificabo eum.",
+                   "Longitudine dierum replebo eum,",
+                   "et ostendam illi salutare meum."
+               ]
+           },
                 {
                     "number": 118,
                     "section": "Aleph",

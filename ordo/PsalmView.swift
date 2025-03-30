@@ -58,6 +58,8 @@ struct PsalmView: View {
     }
     
     private func loadPsalmContent() {
+        print("Loading psalm \(psalm.number) for category: \(psalm.category ?? "none")")
+          
         do {
             guard let psalmNumber = Int(psalm.number) else {
                 throw PsalmError.invalidNumberFormat(psalm.number)
@@ -73,7 +75,7 @@ struct PsalmView: View {
                 psalmContent = psalmSections.first?.text ?? []
             } else {
                 guard let section = psalm.category,
-                      let psalmSection = psalmSections.first(where: { $0.section == section })
+                      let psalmSection = psalmSections.first(where: { $0.section?.lowercased() == section.lowercased() })
                 else {
                     throw PsalmError.versesNotFound(psalmNumber)
                 }

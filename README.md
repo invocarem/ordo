@@ -4,6 +4,8 @@
 # remove all images
 ```
 docker system prune -af
+rm -rf .build
+swift package clean
 ```
 
 # build docker images

@@ -3,6 +3,9 @@ struct PrayerView: View {
     let date: Date
     let liturgicalInfo: String
     let hour: Hour?
+    
+    let hourName: String  // Explicit hour name
+    
     let weekday: String
     let psalmService: PsalmService
     
@@ -21,38 +24,36 @@ struct PrayerView: View {
                     
                     // Display Hymn if it exists
                     if !hour.hymn.isEmpty {
-                        PrayerSectionView(title: "🎶 Hymn", content: hour.hymn)
+                        PrayerSectionView(title: "🎶 Hymn", content: getHymnContent(hymn: hour.hymn))
                     }
                     
-                    // Display Psalms
-                    if let psalms = getPsalmsForWeekday(weekday, hour: hour) {
+                    // Display Psalms - updated logic
+                    if let psalms = getPsalms(hour: hour) {
                         VStack(alignment: .leading, spacing: 16) {
-                            Text("📖 Psalms for \(weekday)")
+                            Text(psalmSectionTitle(hour: hour))
                                 .font(.headline)
                                 .padding(.bottom, 4)
                             
-                            ForEach(psalms, id: \.number) { psalm in
+                            ForEach(psalms.indices, id: \.self) { index in
+                                let psalm = psalms[index]
                                 PsalmView(psalm: psalm, psalmService: psalmService)
+                                    .id("\(psalm.id)-\(index)")  // Add index as fallback
                             }
+                           
                         }
                     }
-                    
-                    // Display Capitulum if it exists
                     if !hour.capitulum.isEmpty {
                         PrayerSectionView(title: "📖 Capitulum", content: [hour.capitulum])
                     }
-                    
-                    // Display Versicles if they exist
-                    if !hour.versicle.compactMap({ $0 }).isEmpty {
-                        PrayerSectionView(title: "🕊️ Versicle", content: hour.versicle.compactMap { $0 })
+                    if !hour.versicle.isEmpty {
+                        PrayerSectionView(title: "🕊️ Versicles", content: hour.versicle.map { $0 ?? "" }) // Replace nil with ""
                     }
-                    
-                    // Display Oratio if it exists
                     if !hour.oratio.isEmpty {
                         PrayerSectionView(title: "🙏 Oratio", content: [hour.oratio])
                     }
+                    
                 } else {
-                    Text("Prime hour not found")
+                    Text("Hour not found")
                         .foregroundColor(.red)
                 }
                 
@@ -60,27 +61,59 @@ struct PrayerView: View {
             }
             .padding()
         }
-        .navigationTitle("Prime Hour")
+        .navigationTitle(hourName) // Dynamic title
     }
+    
+    // Add this helper function to your PrayerView
+    private func getHymnContent(hymn: HymnUnion) -> [String] {
+        switch hymn {
+        case .lines(let lines):
+            return lines
+        case .structured(let data):
+            // Here you could add logic to check liturgicalInfo for seasons/feasts
+            // and return the appropriate text
+            return [data.defaultText]
+        }
+    }
+
+    
+    // New helper methods
+    private func getPsalms(hour: Hour) -> [PsalmUsage]? {
+        if hour.psalms.default != nil {
+            return hour.psalms.default
+        } else {
+            return getPsalmsForWeekday(weekday, hour: hour)
+        }
+    }
+    
+    private func psalmSectionTitle(hour: Hour) -> String {
+        if hour.psalms.default != nil {
+            return "📖 Psalms"
+        } else {
+            return "📖 Psalms for \(weekday)"
+        }
+    }
+    
     
     private var formattedDate: String {
         let formatter = DateFormatter()
         formatter.dateStyle = .long
         return formatter.string(from: date)
     }
-    
-    private func getPsalmsForWeekday(_ weekday: String, hour: Hour) -> [PsalmUsage]? {
+   
+    func getPsalmsForWeekday(_ weekday: String, hour: Hour) -> [PsalmUsage]? {
         switch weekday.lowercased() {
-        case "sunday": return hour.psalms.sunday
-        case "monday": return hour.psalms.monday
-        case "tuesday": return hour.psalms.tuesday
-        case "wednesday": return hour.psalms.wednesday
-        case "thursday": return hour.psalms.thursday
-        case "friday": return hour.psalms.friday
-        case "saturday": return hour.psalms.saturday
+        case "sunday": return hour.psalms.sunday ?? []
+        case "monday": return hour.psalms.monday ?? []
+        case "tuesday": return hour.psalms.tuesday ?? []
+        case "wednesday": return hour.psalms.wednesday  ?? []
+        case "thursday": return hour.psalms.thursday ?? []
+        case "friday": return hour.psalms.friday ?? []
+        case "saturday": return hour.psalms.saturday ?? []
         default: return nil
         }
     }
+    
 }
 
 

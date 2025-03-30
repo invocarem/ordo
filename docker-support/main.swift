@@ -1,8 +1,8 @@
 // docker-support/main.swift
 import Foundation
-import HoursService
 import LiturgicalService
 import PsalmService
+import HoursService
 
 enum PsalmError: Error {
     case invalidNumberFormat(String)
@@ -38,7 +38,7 @@ if CommandLine.arguments.count > 1 {
 }
 
 // Validate hour type
-guard ["prime", "compline"].contains(hourType) else {
+guard ["prime", "vespers", "compline"].contains(hourType) else {
     print("Error: Invalid hour type. Use 'prime' or 'compline'")
     exit(1)
 }
@@ -124,7 +124,6 @@ func extractWeekday(from liturgicalInfo: String) -> String? {
        let afterIndex = components.firstIndex(of: "after"),
        afterIndex > isIndex + 1 
     {
-        // Return the weekday name (e.g., "Saturday")
         return components[isIndex + 1].capitalized
     }
     // Check for format like "30 Mar 2025 is the 4th Sunday of Lent"
@@ -132,10 +131,13 @@ func extractWeekday(from liturgicalInfo: String) -> String? {
             isIndex + 1 < components.count,
             components[isIndex + 1] == "the" 
     {
-        // Return the day description (e.g., "4th Sunday of Lent")
-        let startIndex = isIndex + 2
-        guard startIndex < components.count else { return nil }
-        return Array(components[startIndex..<components.count]).joined(separator: " ")
+        // Check if the description contains "Sunday"
+        let description = Array(components[isIndex + 2..<components.count]).joined(separator: " ")
+        if description.lowercased().contains("sunday") {
+            return "Sunday"
+        } else {
+            return description
+        }
     }
     
     return nil
@@ -151,8 +153,19 @@ func printHourIntro(hour: Hour) {
     // Print Hymn if it exists
     if !hour.hymn.isEmpty {
         print("\n🎶 Hymn:")
-        hour.hymn.forEach { print("  \($0)") }
+        
+        switch hour.hymn {
+        case .lines(let hymnLines):
+            hymnLines.forEach { print("  \($0)") }
+            
+        case .structured(let hymnData):
+            print("  \(hymnData.defaultText)")
+            if let seasonal = hymnData.seasons?.values.first {
+                print("  (Seasonal variant: \(seasonal))")
+            }
+        }
     }
+    
 
     // Only add extra space if we printed something
     if !hour.introit.isEmpty || !hour.hymn.isEmpty {
