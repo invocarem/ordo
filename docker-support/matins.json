@@ -111,37 +111,36 @@
         },
         "oratio": "Aperi, Domine, os meum ad benedicendum nomen sanctum tuum, munda quoque cor meum ab omnibus vanis, perversis et alienis cogitationibus, ut digne, attente ac devote hoc officium recitare valeam. Per Christum Dominum nostrum. Amen."
     },
-        "lauds": {
-            "introit": [
-                "℣. Deus in adjutorium meum intende.",
-                "℟. Domine ad adjuvandum me festina."
+    "lauds": {
+        "introit": [
+            "℣. Deus in adjutorium meum intende.",
+            "℟. Domine ad adjuvandum me festina."
+        ],
+        "psalms": {
+            "default": [
+                {"number": "66", "antiphon": "Deus misereatur nostri, et benedicat nobis."},
+                {"number": "50", "antiphon": "Miserere mei, Deus, secundum magnam misericordiam tuam."},
+                {"number": "117", "antiphon": "Confitemini Domino, quoniam bonus."},
+                {"number": "62", "antiphon": "Deus, Deus meus, ad te de luce vigilo."},
+                {"number": "Benedicite", "antiphon": "Benedicite omnia opera Domini Domino."},
+                {"number": "148", "antiphon": "Laudate Dominum de caelis."},
+                {"number": "149", "antiphon": "Cantate Domino canticum novum."},
+                {"number": "150", "antiphon": "Laudate Dominum in sanctis eius."}
             ],
-            "psalms": {
-                "default": [
-                    {"number": "66", "antiphon": "Deus misereatur nostri, et benedicat nobis."},
-                    {"number": "50", "antiphon": "Miserere mei, Deus, secundum magnam misericordiam tuam."},
-                    {"number": "117", "antiphon": "Confitemini Domino, quoniam bonus."},
-                    {"number": "62", "antiphon": "Deus, Deus meus, ad te de luce vigilo."},
-                    {"number": "Benedicite", "antiphon": "Benedicite omnia opera Domini Domino."},
-                    {"number": "148", "antiphon": "Laudate Dominum de caelis."},
-                    {"number": "149", "antiphon": "Cantate Domino canticum novum."},
-                    {"number": "150", "antiphon": "Laudate Dominum in sanctis eius."}
-                ],
-                "sunday": null,
-                "weekdays": null
-            },
-            "capitulum": "Dominus regit me, et nihil mihi deerit.",
-            "hymn": {
-                "default": "Aeterne rerum conditor (later addition, optional for 6th century)",
-                "seasons": null
-            },
-            "benedictus": {
-                "antiphon": "Per viscera misericordiae Dei nostri, visitavit nos oriens ex alto.",
-                "text": "Benedictus Dominus Deus Israel..."
-            },
-            "oratio": "Domine Deus omnipotens, qui ad principium huius diei nos pervenire fecisti, tua nos hodie salva virtute, ut in hac die ad nullum declinemus peccatum. Per Christum Dominum nostrum. Amen."
-        }
-    },
-
-
+            "sunday": null,
+            "weekdays": null
+        },
+        "capitulum": "Dominus regit me, et nihil mihi deerit.",
+        "hymn": {
+            "default": "Aeterne rerum conditor (later addition, optional for 6th century)",
+            "seasons": null
+        },
+        "benedictus": {
+            "antiphon": "Per viscera misericordiae Dei nostri, visitavit nos oriens ex alto.",
+            "text": "Benedictus Dominus Deus Israel..."
+        },
+        "oratio": "Domine Deus omnipotens, qui ad principium huius diei nos pervenire fecisti, tua nos hodie salva virtute, ut in hac die ad nullum declinemus peccatum. Per Christum Dominum nostrum. Amen."
+    }
 }
+
+

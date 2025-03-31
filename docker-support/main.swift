@@ -3,6 +3,7 @@ import Foundation
 import LiturgicalService
 import PsalmService
 import HoursService
+import PsalmProgressTracker
 
 enum PsalmError: Error {
     case invalidNumberFormat(String)
@@ -10,6 +11,8 @@ enum PsalmError: Error {
 }
 
 // MARK: - Main Execution
+
+let tracker = PsalmProgressTracker(savePath: "/app/data/psalm_progress.json")
 
 let service = LiturgicalService()
 let psalm_service = PsalmService.shared
@@ -64,6 +67,10 @@ if let hour = HoursService.shared.getHour(for: hourType) {
     print("Psalms for \(weekday):")
     for psalm in psalms {
         printPsalm(psalm, using: psalm_service)
+        guard let psalmNumber = Int(psalm.number) else {
+            throw PsalmError.invalidNumberFormat(psalm.number)
+        }
+        tracker.markPsalm(number: psalmNumber, section: psalm.category)
     }
 
     if !hour.capitulum.isEmpty {
@@ -101,6 +108,17 @@ if let hour = HoursService.shared.getHour(for: hourType) {
         // Fallback if "Per Christum" isn't found
         print("  \(hour.oratio)")
     }
+
+    let overall = tracker.overallProgress()
+    print("Overall: \(overall.completed)/\(overall.total)") // ex: "3/180"
+
+    let weekly = tracker.weeklyProgress()
+    print("This week: \(weekly.completed) completed, \(weekly.newlyRead) read")
+
+    print(tracker.completedPsalmsReport())
+    print("\n=== Overall ===\n")
+    print(tracker.fullProgressReport())
+
 }
 
 } else {

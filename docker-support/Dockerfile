@@ -5,10 +5,15 @@ FROM swift:6.0.3-jammy as builder
 RUN apt-get update && apt-get install -y dos2unix libxml2-dev
 
 WORKDIR /app
+RUN mkdir -p /app/psalm_progress
+
 COPY . .
 
 # Fix line endings
 RUN find . -type f -name "*.swift" -exec dos2unix {} \; && dos2unix Package.swift
+
+
+
 
 # ✅ Step 1: Build for testing (with testability)
 # New syntax for enabling testability
