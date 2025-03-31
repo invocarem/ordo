@@ -13,21 +13,25 @@ struct ContentView: View {
     @State private var selectedDate = Date()
     @State private var liturgicalInfo = ""
     @State private var showingPrayerView = false
+    
+    
     private let liturgicalService = LiturgicalService()
     private let hoursService = HoursService.shared
-    private let psalmService = PsalmService.shared
     
+    @Environment(\.psalmService) private var psalmService
+    @EnvironmentObject private var progressTracker: PsalmProgressTracker
     @State private var selectedHour = "prime"
+    
     var body: some View {
         TabView(selection: $selectedTab) {
             NavigationView {
-                VStack(spacing: 20) {
+                VStack(spacing: 16) {
                     DatePicker("Select a date",
                                selection: $selectedDate,
                                displayedComponents: .date)
                     .datePickerStyle(.graphical)
                     .padding()
-                    .onChange(of: selectedDate) { _ in
+                    .onChange(of: selectedDate) {
                         updateLiturgicalInfo()
                     }
                     
@@ -60,6 +64,7 @@ struct ContentView: View {
                 .navigationBarTitle("Liturgical Calendar")
 #endif
                 .background(
+                    
                     NavigationLink(
                         destination: PrayerView(
                             date: selectedDate,
@@ -86,7 +91,9 @@ struct ContentView: View {
             .tag(0)
             
             // New Psalm Tracker
-            PsalmTrackerView(psalmService: psalmService)
+            ProgressSummaryView(
+                psalmService: psalmService,
+                tracker: progressTracker)
                 .tabItem {
                     Label("Psalms", systemImage: "book")
                 }
