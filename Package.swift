@@ -9,13 +9,14 @@ let package = Package(
         .library(name: "LiturgicalService", targets: ["LiturgicalService"]),
         .library(name: "HoursService", targets: ["HoursService"]),
         .library(name: "PsalmService", targets: ["PsalmService"]),
+         .library(name: "PsalmProgressTracker", targets: ["PsalmProgressTracker"]),
         .executable(name: "LiturgicalDocker", targets: ["LiturgicalDocker"])
     ],
    
     targets: [
         .executableTarget(
             name: "LiturgicalDocker",
-            dependencies: ["LiturgicalService", "HoursService", "PsalmService"],
+            dependencies: ["LiturgicalService", "HoursService", "PsalmService" ,"PsalmProgressTracker" ],
             path: "docker-support",
             exclude: ["Dockerfile", "matins.json"],
             sources: ["main.swift"]
@@ -35,6 +36,13 @@ let package = Package(
             sources: ["HoursService.swift"],
             resources: [.process("horas.json")]
         ),
+         .target(
+            name: "PsalmProgressTracker",
+            dependencies: [],
+            path: "ordo/PsalmProgressTracker",
+            sources: ["PsalmProgressTracker.swift"]
+        ),
+         
 
         .target(
             name: "PsalmService",
@@ -58,6 +66,15 @@ let package = Package(
             path: "ordoTests/HoursService",    
             sources: ["HoursServiceTests.swift"],
             resources: [.copy("../../ordo/Services/HoursService/horas.json")]
+        ),
+
+         .testTarget(
+            name: "PsalmProgressTrackerTests",
+            dependencies: ["PsalmProgressTracker", "PsalmService"],
+            path: "ordoTests/PsalmProgressTracker",
+            
+            sources: ["PsalmProgressTrackerTests.swift"],
+            resources: [.copy("../../ordo/Services/PsalmService/psalms.json")]
         ),
 
         .testTarget(
