@@ -1,4 +1,144 @@
 {    
+"matins": {
+  "introit": [
+      "℣. Domine, labia mea aperies.",
+      "℟. Et os meum annuntiabit laudem tuam."
+  ],
+  "psalms": {
+      "default": [
+          {"number": "3"},
+          {"number": "94"} 
+      ],
+      "sunday": [
+          {"number": "20"},
+          {"number": "21"},
+          {"number": "22"},
+          {"number": "23"},
+          {"number": "24"},
+          {"number": "25"},
+          {"number": "26"},
+          {"number": "27"},
+          {"number": "28"},
+          {"number": "29"},
+          {"number": "30"},
+          {"number": "31"}
+      ],
+      "monday": [
+          {"number": "32"},
+          {"number": "33"},
+          {"number": "34"},
+          {"number": "35"},
+          {"number": "36"}
+      ],
+      "tuesday": [
+          {"number": "37"},
+          {"number": "38"},
+          {"number": "39"},
+          {"number": "40"},
+          {"number": "41"}
+      ],
+      "wednesday": [
+          {"number": "42"},
+          {"number": "43"},
+          {"number": "44"},
+          {"number": "45"},
+          {"number": "46"}
+      ],
+      "thursday": [
+          {"number": "47"},
+          {"number": "48"},
+          {"number": "49"},
+          {"number": "51"},
+          {"number": "52"}
+      ],
+      "friday": [
+          {"number": "53"},
+          {"number": "54"},
+          {"number": "55"},
+          {"number": "57"},
+          {"number": "58"}
+      ],
+      "saturday": [
+          {"number": "59"},
+          {"number": "60"},
+          {"number": "61"},
+          {"number": "63"},
+          {"number": "64"},
+          {"number": "65"},
+          {"number": "67"}
+      ]
+  },
+  "capitulum": "Tu autem, Domine, miserere nobis.",
+  "hymn": {
+      "defaultText": "Te Deum laudamus (on Sundays and feasts)",
+      "seasons": {
+          "Lent": "Audi benigne Conditor"
+      }
+  },
+  "oratio": "Aperi, Domine, os meum ad benedicendum nomen sanctum tuum...",
+  "dismissal": [
+      "℣. Benedicamus Domino.",
+      "℟. Deo gratias."
+  ],
+  "notes": {
+      "structure": "Invitatory (Ps 94) + 12 psalms on Sunday, 5 on weekdays",
+      "readings": "Scripture lessons after first 6 psalms on Sunday",
+      "style": "Psalms sung straight through with Gloria Patri at end"
+  }
+  },  
+  "lauds": {
+    "introit": [
+      "℣. Deus in adjutorium meum intende.",
+      "℟. Domine ad adjuvandum me festina."
+    ],
+    "psalms": {
+      "default": [
+        {"number": "66"},
+        {"number": "50"}, 
+        {"number": "117"},
+        {"number": "62"}
+      ],
+      "sunday": [
+        {"number": "148"},
+        {"number": "149"},
+        {"number": "150"}
+      ],
+      "monday": [
+        {"number": "5"}
+      ],
+      "tuesday": [
+        {"number": "42"}
+      ],
+      "wednesday": [
+        {"number": "56"}
+      ],
+      "thursday": [
+        {"number": "89"}
+      ],
+      "friday": [
+        {"number": "142"}
+      ],
+      "saturday": [
+        {"number": "91"}
+      ]
+    },
+    "capitulum": "Dominus regit me, et nihil mihi deerit.",
+    "benedictus": {
+      "antiphon": "", 
+      "text": "Luke 1:68-79 Benedictus Dominus Deus Israel...", 
+      "gloria": "Gloria Patri..." 
+    },
+    "oratio": "Domine Deus omnipotens, qui ad principium huius diei nos pervenire fecisti, tua nos hodie salva virtute. Per Christum Dominum nostrum. Amen.",
+    "dismissal": [
+      "℣. Benedicamus Domino.",
+      "℟. Deo gratias."
+    ],
+    "notes": {
+      "hymn": "None in 6th century",
+      "alleluia": "Omitted in Lent",
+      "style": "Psalms sung straight through, no antiphons, simple monotone"
+    }
+    },
     "prime": {
         "introit": [
                 "℣. Deus in adjutorium meum intende.",
@@ -53,7 +193,8 @@
             "seasons": null,
             "feasts": null
         },
-        "hymn": []
+        "hymn": [],
+        "dismissal": null 
     }
     , "terce": {
         "introit": [
@@ -216,21 +357,23 @@
                     {"number": "139", "antiphon": "Eripe me, Domine, ab homine malo."}
                 ]
             },
-            "capitulum": "Tu autem, Domine, miserere nobis.",
+            "capitulum": "Fratres: Sobrii estote et vigilate.",
             "versicle": [
-              "℣. Dirigatur oratio mea sicut incensum in conspectu tuo, Domine.",
-              "℟. Elevatio manuum mearum sacrificium vespertinum."
-          ],
-           "oratio": "Dirigere et sanctificare, regere et gubernare digneris, Domine, Deus, corda et corpora nostra in viam pacis et salutis. Per Christum Dominum nostrum. Amen.",
-            "hymn": {
-                "defaultText": "Lucis creator optime (later addition, optional)",
-                "seasons": null
-            },
+                "℣. Deus, in nomine tuo salvum me fac.",
+                "℟. Et in virtute tua libera me."
+            ],
+            "oratio": "Dirigere et sanctificare, regere et gubernare digneris, Domine, corda et corpora nostra. Per Christum Dominum nostrum. Amen.",
+            "hymn": [], 
             "antiphons": {
-              "default": "",
-              "seasons": null,
-              "feasts": null
-          },
+               "default": "", 
+               "seasons": {
+                  "easter": "Alleluia", 
+                  "lent": "Miserere mei, Deus"
+                },
+                "feasts": {
+                  "solemnities": "Alleluia" 
+              }
+            },
             "magnificat": null
           },
     "compline": {

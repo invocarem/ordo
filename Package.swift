@@ -18,7 +18,7 @@ let package = Package(
             name: "LiturgicalDocker",
             dependencies: ["LiturgicalService", "HoursService", "PsalmService" ,"PsalmProgressTracker" ],
             path: "docker-support",
-            exclude: ["Dockerfile", "matins.json"],
+            exclude: ["Dockerfile"],
             sources: ["main.swift"]
         ),
         

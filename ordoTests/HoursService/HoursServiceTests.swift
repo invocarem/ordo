@@ -33,7 +33,7 @@ final class HoursServiceTests: XCTestCase {
         // Test the structure of the returned Hour object
         XCTAssertFalse(prime.introit.isEmpty)
         // I want hymn to be empty for prime
-        XCTAssertTrue(prime.hymn.isEmpty)
+        XCTAssertTrue(prime.hymn?.isEmpty ?? true)
         XCTAssertFalse(prime.capitulum.isEmpty)
         XCTAssertFalse(prime.oratio.isEmpty)
 

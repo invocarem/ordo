@@ -2,13 +2,15 @@ import Foundation
 
 public struct Hour: Codable {
     public let introit: [String]
-    public let hymn: HymnUnion
+    public let hymn: HymnUnion?
     public let capitulum: String
-    public let versicle: [String?]
+    public let versicle: [String?]?
     public let oratio: String
-    public let antiphons: AntiphonRules
+    public let canticle: Canticle?
+    public let antiphons: AntiphonRules?
     public let psalms: PsalmRules
     public let magnificat: Magnificat?
+    public let benedictus: Benedictus?
 }
 public enum HymnUnion: Codable {
     case lines([String])       // For plain text (6th-century)
@@ -37,6 +39,14 @@ public enum HymnUnion: Codable {
         }
     }
 }
+
+public struct Canticle: Codable {
+    public let number: String
+    public let title: String
+    public let source: String
+    public let antiphon: String?
+    public let verses: String? // "full" or could be array of Ints if needed
+}
 // for six century no need this
 public struct Magnificat: Codable {
     public let antiphon: String  // The framing antiphon text
@@ -54,6 +64,11 @@ public struct Magnificat: Codable {
             "Lent": "Misericordias Domini"
         ]
     )
+}
+public struct Benedictus: Codable {
+    public let antiphon: String?
+    public let text: String
+    public let gloria: String?
 }
 
 public struct AntiphonRules: Codable {
