@@ -55,7 +55,7 @@ let package = Package(
         .testTarget(
             name: "PsalmServiceTests",    
             dependencies: ["PsalmService"],
-            path: "ordoTests/PsalmService",
+            path: "Tests/PsalmService",
             sources: ["PsalmServiceTests.swift"],
             resources: [.copy("../../ordo/Services/PsalmService/psalms.json")]
         ),
@@ -63,7 +63,7 @@ let package = Package(
         .testTarget(  
             name: "HoursServiceTests", 
             dependencies: ["HoursService"],  // Removed explicit XCTest
-            path: "ordoTests/HoursService",    
+            path: "Tests/HoursService",    
             sources: ["HoursServiceTests.swift"],
             resources: [.copy("../../ordo/Services/HoursService/horas.json")]
         ),
@@ -71,7 +71,7 @@ let package = Package(
          .testTarget(
             name: "PsalmProgressTrackerTests",
             dependencies: ["PsalmProgressTracker", "PsalmService"],
-            path: "ordoTests/PsalmProgressTracker",
+            path: "Tests/PsalmProgressTracker",
             
             sources: ["PsalmProgressTrackerTests.swift"],
             resources: [.copy("../../ordo/Services/PsalmService/psalms.json")]
@@ -80,7 +80,7 @@ let package = Package(
         .testTarget(
             name: "LiturgicalServiceTests",            
             dependencies: ["LiturgicalService"],
-            path: "ordoTests/LiturgicalService",    
+            path: "Tests/LiturgicalService",    
             sources: ["LiturgicalServiceTests.swift"]
         )
     ]

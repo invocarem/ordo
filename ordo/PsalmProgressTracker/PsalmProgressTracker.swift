@@ -40,6 +40,17 @@ public final class PsalmProgressTracker {
     }
     
     // MARK: - Public Methods
+    public func isRead(number: Int, section: String? = nil) -> Bool {
+        return getProgress(number: number, section: section)?.isCompleted ?? false
+    }
+
+    public func markAsRead(number: Int, section: String? = nil) {
+        markPsalm(number: number, section: section, completed: true)
+    }
+
+    public func resetProgress() {
+        progress = []
+    }
     
     /// Marks a psalm as completed or not completed
     public func markPsalm(number: Int, section: String? = nil, completed: Bool = true) {
@@ -119,7 +130,7 @@ public final class PsalmProgressTracker {
         let completedCount = progress.filter { $0.isCompleted }.count
         let completionPercentage = Double(completedCount) / Double(totalPsalmCount) * 100
         
-        var report = [
+        let report = [
             "PROGRESS SUMMARY",
             "---------------",
             "Completed: \(completedCount)/\(totalPsalmCount)",

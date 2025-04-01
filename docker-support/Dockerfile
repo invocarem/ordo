@@ -12,9 +12,6 @@ COPY . .
 # Fix line endings
 RUN find . -type f -name "*.swift" -exec dos2unix {} \; && dos2unix Package.swift
 
-
-
-
 # ✅ Step 1: Build for testing (with testability)
 # New syntax for enabling testability
 RUN swift build -Xswiftc -enable-testing

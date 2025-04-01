@@ -271,7 +271,7 @@ func printPsalm(_ psalm: PsalmUsage, using service: PsalmService) {
         print(sectionHeader)
         print(String(repeating: "─", count: sectionHeader.count))  // Divider line
         
-        let psalmSections = try service.getPsalms(number: psalmNumber)
+        let psalmSections = service.getPsalms(number: psalmNumber)
         
         if psalmSections.isEmpty {
             throw PsalmError.versesNotFound(psalmNumber)
