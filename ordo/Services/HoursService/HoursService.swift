@@ -1,17 +1,57 @@
 import Foundation
+public struct LiturgicalRule<T: Codable>: Codable {
+    public let `default`: T
+    public let feasts: [String: T]?
+    public let seasons: [String: T]?
+    public let weekdays: [String: T]?  // Keys like "monday", "tuesday", etc.
+    
+    public func getText(
+        for feast: String? = nil,
+        season: String? = nil,
+        weekday: String? = nil
+    ) -> T {
+        // Check feast first (highest priority)
+        if let feast = feast, let feastText = feasts?[feast] {
+            return feastText
+        }
+        
+        // Then check season
+        if let season = season, let seasonText = seasons?[season] {
+            return seasonText
+        }
+        
+        // Then check weekday
+        if let weekday = weekday?.lowercased(), 
+           let weekdayText = weekdays?[weekday] {
+            return weekdayText
+        }
+        
+        // Fall back to default
+        return `default`
+    }
+}
 
+// Typealiases for specific uses
+public typealias Capitulum = LiturgicalRule<String>
+public typealias Oratio = LiturgicalRule<String>
+public typealias AntiphonRule = LiturgicalRule<String>  // Could replace AntiphonRules
+public typealias Dismissal = LiturgicalRule<String>
+
+// Updated Hour struct
 public struct Hour: Codable {
     public let introit: [String]
     public let hymn: HymnUnion?
-    public let capitulum: String
+    public let capitulum: Capitulum
     public let versicle: [String?]?
-    public let oratio: String
+    public let oratio: Oratio
     public let canticle: Canticle?
-    public let antiphons: AntiphonRules?
+    public let antiphons: AntiphonRule?  // Now using the new type
     public let psalms: PsalmRules
     public let magnificat: Magnificat?
     public let benedictus: Benedictus?
+    public let dismissal: Dismissal?
 }
+
 public enum HymnUnion: Codable {
     case lines([String])       // For plain text (6th-century)
     case structured(HymnData)  // For later traditions

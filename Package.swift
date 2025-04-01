@@ -26,7 +26,8 @@ let package = Package(
             name: "LiturgicalService",
             dependencies: [],  
             path: "ordo/Services/LiturgicalService",
-            sources: ["LiturgicalService.swift", "Extensions.swift"]
+            sources: ["LiturgicalService.swift", "Extensions.swift"],
+            resources: [.process("office.json")]
         ),
 
         .target(
@@ -81,7 +82,8 @@ let package = Package(
             name: "LiturgicalServiceTests",            
             dependencies: ["LiturgicalService"],
             path: "Tests/LiturgicalService",    
-            sources: ["LiturgicalServiceTests.swift"]
+            sources: ["LiturgicalServiceTests.swift"],
+            resources: [.copy("../../ordo/Services/LiturgicalService/office.json")]
         )
     ]
 )

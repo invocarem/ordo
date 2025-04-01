@@ -28,6 +28,7 @@ WORKDIR /app
 COPY --from=builder /app/.build/*/release/LiturgicalDocker .
 COPY --from=builder /app/ordo/Services/PsalmService/psalms.json /app/LiturgicalService_PsalmService.resources/
 COPY --from=builder /app/ordo/Services/HoursService/horas.json /app/LiturgicalService_HoursService.resources/
+COPY --from=builder /app/ordo/Services/LitergicalService/office.json /app/LiturgicalService_HoursService.resources/
 CMD ["./LiturgicalDocker"]
 
 #RUN swift test --filter LiturgicalServiceTests 

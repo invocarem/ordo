@@ -34,12 +34,20 @@ final class HoursServiceTests: XCTestCase {
         XCTAssertFalse(prime.introit.isEmpty)
         // I want hymn to be empty for prime
         XCTAssertTrue(prime.hymn?.isEmpty ?? true)
-        XCTAssertFalse(prime.capitulum.isEmpty)
-        XCTAssertFalse(prime.oratio.isEmpty)
 
+        // Test Capitulum
+        XCTAssertFalse(prime.capitulum.default.isEmpty, "Default capitulum should not be empty")
+        XCTAssertNotNil(prime.capitulum.feasts?["pascha"], "Easter capitulum should exist")
+
+        // Test Oratio
+        XCTAssertFalse(prime.oratio.default.isEmpty, "Default oratio should not be empty")
+        XCTAssertNotNil(prime.oratio.feasts?["pascha"], "Easter oratio should exist")
+    
+        
         XCTAssertNotNil(prime.psalms.sunday, "Sunday psalms should exist")
         XCTAssertFalse(prime.psalms.sunday!.isEmpty, "Sunday psalms should not be empty")
     }
+
     func testHoursCompline() {
          let compline = hoursService.getHour(for: "compline")
         XCTAssertNotNil(compline, "Compline hour should exist")

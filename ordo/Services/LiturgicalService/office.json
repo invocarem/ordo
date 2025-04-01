@@ -1,0 +1,171 @@
+{
+  "description": "6th-century Benedictine Divine Office (Rule of St. Benedict, c. 530 AD)",
+  "temporal_cycle": {
+    "advent": {
+      "start": "4th Sunday before Christmas",
+      "character": "Penitential (no Gloria in Mass)",
+      "notes": "Roman practice; Gaul had 40-day 'St. Martin's Lent' from Nov 11"
+    },
+    "christmas": {
+      "12-25": { 
+        "name": "Nativity of the Lord", 
+        "type": "nativity",
+        "notes": "3 Masses (Roman custom)"
+      },
+      "01-06": { 
+        "name": "Epiphany", 
+        "type": "theophany",
+        "notes": "Older than Christmas in some traditions"
+      }
+    },
+    "lent": {
+      "start": "Quadragesima Sunday (6 weeks before Easter)",
+      "fasting": "36 days (excluding Sundays)",
+      "holy_week": {
+        "palm_sunday": "Simple blessing of palms (no procession)",
+        "good_friday": "Veneration of the Cross (Roman practice)"
+      },
+      "notes": "No Ash Wednesday (8th-century Gallican innovation)"
+    },
+    "pascha": {
+      "easter": { 
+        "name": "Resurrection of the Lord", 
+        "type": "resurrection",
+        "octave": "8 days of celebration"
+      },
+      "pentecost": { 
+        "name": "Pentecost", 
+        "type": "pentecost",
+        "notes": "No octave in 6th century"
+      }
+    },
+    "ordinary_time": {
+      "post_epiphany": {
+        "start": "Jan 7",
+        "end": "Lent",
+        "notes": "Called 'post Epiphaniam'"
+      },
+      "post_pentecost": {
+        "start": "Monday after Pentecost",
+        "end": "Advent",
+        "notes": "Called 'post Pentecosten'; longest season"
+      }
+    }
+  },
+  "sanctoral_cycle": {
+  "12-26": { 
+    "name": "St. Stephen", 
+    "type": "martyr",
+    "rank": "Major",
+    "notes": "Roman feast by 400 AD; mentioned in Acts 6–7. First martyr, proto-monastic (served 'tables' like later monks)."
+  },
+  "12-27": { 
+    "name": "St. John the Apostle", 
+    "type": "apostle",
+    "notes": "Venerated in Rome by 6th c.; Benedict cites 1 John 1 in RB 7. Not considered a martyr in early tradition."
+  },
+  "12-28": { 
+    "name": "Holy Innocents", 
+    "type": "martyr",
+    "scripture": "Matthew 2:16-18",
+    "notes": "Roman calendar by 485; seen as 'infant monks' (virgin martyrs)."
+  },
+  "01-20": { 
+    "name": "St. Sebastian", 
+    "type": "martyr",
+    "notes": "Roman soldier-martyr; cult attested by 350 AD but absent from Benedict's Rule."
+  },
+  "01-21": { 
+    "name": "St. Agnes", 
+    "type": "virgin-martyr",
+    "notes": "Roman basilica built c. 350; Prudentius' 'Peristephanon' (405 AD) praises her. Model for monastic chastity."
+  },
+ 
+  "03-21": { 
+    "name": "St. Benedict", 
+    "type": "abbot",
+    "notes": "Death date; formal veneration began post-6th c. (Gregory the Great's 'Dialogues', 593 AD)."
+  },
+  "05-01": { 
+    "name": "Sts. Philip & James", 
+    "type": "apostle",
+    "notes": "Roman 'Basilica Apostolorum' (6th c.); relics venerated jointly."
+  },
+  "06-24": { 
+    "name": "Nativity of St. John the Baptist", 
+    "type": "prophet",
+    "notes": "Luke 1:36; Roman feast by 500 AD. Model for monastic asceticism (desert ascetic)."
+  },
+  "06-29": { 
+    "name": "Sts. Peter & Paul", 
+    "type": "apostle-martyr",
+    "rank": "Solemnity",
+    "notes": "'Depositio Martyrum' (354 AD); Rome's patronal feast. Peter = model for abbots; Paul = hermit prototype."
+  },
+  "08-10": { 
+    "name": "St. Lawrence", 
+    "type": "martyr",
+    "notes": "Roman deacon; universal cult by 6th c. Patron of monks (served the 'treasury' like cellerars)."
+  },
+  "09-29": { 
+    "name": "St. Michael the Archangel", 
+    "type": "angel",
+    "notes": "Byzantine influence; entered Roman calendar by 600 AD. Protector of monasteries (RB 9: angels present at Offices)."
+  },
+  "11-22": { 
+    "name": "St. Cecilia", 
+    "type": "virgin-martyr",
+    "notes": "Roman church built c. 500; popular among monastic women."
+  },
+  "11-30": { 
+    "name": "St. Andrew", 
+    "type": "apostle",
+    "notes": "Gregory the Great preached on him (591 AD). Model for missionary monks."
+  }
+},
+  
+  "seasons": {
+    "winter": {
+      "dates": "Nov 1 to Easter",
+      "matins": {
+        "psalms": [
+          ["3", "94+Venite", "100", "62"],
+          ["5", "35", "42", "56"],
+          ["6", "24", "25", "28"]          
+        ],
+        "readings": {
+          "sunday": "3 lessons per nocturn (OT, NT, Gospel homily)",
+          "weekday": "1 lesson (RB 11)"
+        },
+        "rising_time": "8th hour of night (∼2–3 AM, RB 8)"
+      },
+      "meals": 1,
+      "vespers_time": "Before dark (RB 41)",
+      "notes": "Long nights allow extended Vigils"
+    },
+    "summer": {
+      "dates": "Easter to Oct 31",
+      "matins": {
+        "psalms": [["3", "94+Venite", "100", "62", "66", "5"]],
+        "readings": "1 lesson (RB 10)",
+        "rising_time": "Shortly after midnight (RB 10)"
+      },
+      "meals": 2,
+      "vespers_time": "Earlier (to allow for evening meal, RB 41)",
+      "notes": "Short nights → abbreviated Vigils"
+    }
+  },
+  "notes": {
+    "historical_accuracy": "Based strictly on Rule of St. Benedict (c. 530) and 6th-century Roman practice.",
+    "later_additions": {
+      "warning": "Avoid these for 6th-century purity:",
+      "list": [
+        "Ash Wednesday",
+        "Trinity Sunday",
+        "Assumption of Mary",
+        "All Saints' Day",
+        "Corpus Christi"
+      ]
+    }
+  }
+}

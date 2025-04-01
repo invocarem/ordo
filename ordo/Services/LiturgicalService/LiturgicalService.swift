@@ -9,150 +9,168 @@ import Foundation
 
 public class LiturgicalService {
     private let calendar: Calendar
+    private let officeData: OfficeData
     
     public init(calendar: Calendar = .current) {
         self.calendar = calendar
+
+        // Load the office.json data
+        guard let url = Bundle.module.url(forResource: "office", withExtension: "json"),
+              let data = try? Data(contentsOf: url) else {
+            fatalError("Failed to load office.json")
+        }
+        self.officeData = try! JSONDecoder().decode(OfficeData.self, from: data)
     }
     
     // MARK: - Public Interface
     
-    public func getLiturgicalInfo(for date: Date) -> String {
-        let dateString = DateFormatter.localizedString(from: date, dateStyle: .medium, timeStyle: .none)
+    public func getLiturgicalInfo(for date: Date) -> LiturgicalDay {
+        let dateComponents = calendar.dateComponents([.year, .month, .day], from: date)
+        let weekday = calendar.component(.weekday, from: date)
+        let weekdayName = calendar.weekdaySymbols[weekday - 1]
         
-        if isEaster(date) {
-            return "\(dateString) is Easter Sunday"
+        // Check for fixed-date feasts first
+        if let feast = getSanctoralFeast(for: dateComponents) {
+            return LiturgicalDay(
+                date: date,
+                season: getSeason(for: date),
+                feast: feast,
+                weekday: weekdayName,
+                isVigil: false,
+                isSunday: weekday == 1
+            )
         }
         
-        if isChristmas(date) {
-            return "\(dateString) is Christmas Day"
+        // Check temporal cycle (movable feasts)
+        if let temporalFeast = getTemporalFeast(for: date) {
+            return LiturgicalDay(
+                date: date,
+                season: getSeason(for: date),
+                feast: temporalFeast,
+                weekday: weekdayName,
+                isVigil: false,
+                isSunday: weekday == 1
+            )
         }
         
-        let (season, week) = getLiturgicalSeasonAndWeek(for: date)
-        let weekdayName = calendar.weekdaySymbols[calendar.component(.weekday, from: date) - 1]
-        
-        switch season {
-        case "Ash Wednesday":
-            return "\(dateString) is Ash Wednesday"
-            
-        case "Lent":
-            return getLentInfo(date: date, dateString: dateString, week: week, weekdayName: weekdayName)
-            
-        case "Advent":
-            return getAdventInfo(date: date, dateString: dateString, week: week, weekdayName: weekdayName)
-            
-        case "Easter":
-            return getEasterInfo(date: date, dateString: dateString, week: week, weekdayName: weekdayName)
-            
-        case "Christmas":
-            return "\(dateString) is \(weekdayName) in the Christmas Season"
-            
-        default: // Ordinary Time
-            return getOrdinaryTimeInfo(date: date, dateString: dateString, week: week, weekdayName: weekdayName)
-        }
+        // Ordinary day
+        return LiturgicalDay(
+            date: date,
+            season: getSeason(for: date),
+            feast: nil,
+            weekday: weekdayName,
+            isVigil: false,
+            isSunday: weekday == 1
+        )
     }
     
-    // MARK: - Season Calculations
+    // MARK: - Season Determination
     
-    private func getLiturgicalSeasonAndWeek(for date: Date) -> (String, Int) {
-        let year = calendar.component(.year, from: date)
+    private func getSeason(for date: Date) -> LiturgicalSeason {
+        let dateComponents = calendar.dateComponents([.year, .month, .day], from: date)
+        let year = dateComponents.year ?? 0
         
         guard let adventStart = getAdventStart(year: year),
               let christmas = getChristmas(year: year),
-              let ordinaryTimeAfterChristmas = calendar.date(byAdding: .day, value: 7, to: christmas),
-              let ashWednesday = getAshWednesday(year: year),
+              let epiphany = getEpiphany(year: year),
+              let lentStart = getLentStart(year: year),
               let easter = getEaster(year: year),
-              let pentecost = calendar.date(byAdding: .day, value: 49, to: easter),
-              let ordinaryTimeAfterPentecost = calendar.date(byAdding: .day, value: 1, to: pentecost) else {
-            return ("Ordinary Time", 1)
+              let pentecost = calendar.date(byAdding: .day, value: 49, to: easter) else {
+            return .ordinaryTime(.postPentecost)
         }
         
         if date >= adventStart && date < christmas {
-            let components = calendar.dateComponents([.weekOfYear], from: adventStart, to: date)
-            let week = (components.weekOfYear ?? 0) + 1
-            return ("Advent", min(week, 4))
-        }
-        else if date >= christmas && date < ordinaryTimeAfterChristmas {
-            return ("Christmas", 1)
-        }
-        else if date >= ordinaryTimeAfterChristmas && date < ashWednesday {
-            let components = calendar.dateComponents([.weekOfYear], from: ordinaryTimeAfterChristmas, to: date)
-            let week = (components.weekOfYear ?? 0) + 1
-            return ("Ordinary Time", week)
-        }
-        else if date >= ashWednesday && date < easter {
-            return calculateLentPeriod(date: date, ashWednesday: ashWednesday)
-        }
-        else if date >= easter && date < pentecost {
-            let components = calendar.dateComponents([.weekOfYear], from: easter, to: date)
-            let week = (components.weekOfYear ?? 0) + 1
-            return ("Easter", min(week, 7))
-        }
-        else {
-            let components = calendar.dateComponents([.weekOfYear], from: ordinaryTimeAfterPentecost, to: date)
-            let week = (components.weekOfYear ?? 0) + 1
-            return ("Ordinary Time", week)
+            return .advent
+        } else if date >= christmas && date <= epiphany {
+            return .christmas
+        } else if date > epiphany && date < lentStart {
+            return .ordinaryTime(.postEpiphany)
+        } else if date >= lentStart && date < easter {
+            return .lent
+        } else if date >= easter && date <= pentecost {
+            return .pascha
+        } else {
+            return .ordinaryTime(.postPentecost)
         }
     }
     
-    // MARK: - Season-specific Helpers
+    // MARK: - Feast Determination
     
-    private func calculateLentPeriod(date: Date, ashWednesday: Date) -> (String, Int) {
-        if calendar.isDate(date, inSameDayAs: ashWednesday) {
-            return ("Ash Wednesday", 0)
+    private func getSanctoralFeast(for dateComponents: DateComponents) -> Feast? {
+        guard let month = dateComponents.month, let day = dateComponents.day else { return nil }
+        
+        let monthStr = String(format: "%02d", month)
+        let dayStr = String(format: "%02d", day)
+        let key = "\(monthStr)-\(dayStr)"
+        
+        if let feastData = officeData.sanctoral_cycle[key] {
+            return Feast(
+                name: feastData.name,
+                type: feastData.type,
+                rank: feastData.rank ?? "Minor",
+                notes: feastData.notes ?? ""
+            )
         }
         
-        var currentDate = ashWednesday
-        var sundayCount = 0
+        return nil
+    }
+    
+    private func getTemporalFeast(for date: Date) -> Feast? {
+        let dateComponents = calendar.dateComponents([.year, .month, .day], from: date)
+        let year = dateComponents.year ?? 0
         
-        while currentDate < date {
-            currentDate = calendar.date(byAdding: .day, value: 1, to: currentDate)!
-            if calendar.component(.weekday, from: currentDate) == 1 {
-                sundayCount += 1
-            }
+        guard let christmas = getChristmas(year: year),
+              let epiphany = getEpiphany(year: year),
+              let easter = getEaster(year: year),
+              let pentecost = calendar.date(byAdding: .day, value: 49, to: easter) else {
+            return nil
         }
         
-        return sundayCount == 0 ? ("Lent", 0) : ("Lent", sundayCount)
-    }
-    
-    private func getLentInfo(date: Date, dateString: String, week: Int, weekdayName: String) -> String {
-        if week == 0 {
-            return "\(dateString) is \(weekdayName) after Ash Wednesday"
-        } else if calendar.component(.weekday, from: date) == 1 {
-            return "\(dateString) is the \(week.ordinalString()) Sunday of Lent"
-        } else {
-            return "\(dateString) is \(weekdayName) after the \(week.ordinalString()) Sunday of Lent"
+        // Check Christmas feasts
+        if calendar.isDate(date, inSameDayAs: christmas) {
+            return Feast(
+                name: officeData.temporal_cycle.christmas["12-25"]?.name ?? "Nativity of the Lord",
+                type: "nativity",
+                rank: "Solemnity",
+                notes: officeData.temporal_cycle.christmas["12-25"]?.notes ?? ""
+            )
         }
-    }
-    
-    private func getAdventInfo(date: Date, dateString: String, week: Int, weekdayName: String) -> String {
-        if calendar.component(.weekday, from: date) == 1 {
-            return "\(dateString) is the \(week.ordinalString()) Sunday of Advent"
-        } else {
-            return "\(dateString) is \(weekdayName) after the \(week.ordinalString()) Sunday of Advent"
+        
+        if calendar.isDate(date, inSameDayAs: epiphany) {
+            return Feast(
+                name: officeData.temporal_cycle.christmas["01-06"]?.name ?? "Epiphany",
+                type: "theophany",
+                rank: "Solemnity",
+                notes: officeData.temporal_cycle.christmas["01-06"]?.notes ?? ""
+            )
         }
-    }
-    
-    private func getEasterInfo(date: Date, dateString: String, week: Int, weekdayName: String) -> String {
-        if week == 1 {
-            return "\(dateString) is \(weekdayName) in the Octave of Easter"
-        } else if calendar.component(.weekday, from: date) == 1 {
-            return "\(dateString) is the \(week.ordinalString()) Sunday of Easter"
-        } else {
-            return "\(dateString) is \(weekdayName) of the \(week.ordinalString()) Week of Easter"
+        
+        // Check Easter feasts
+        if calendar.isDate(date, inSameDayAs: easter) {
+            return Feast(
+                name: officeData.temporal_cycle.pascha.easter.name,
+                type: "resurrection",
+                rank: "Solemnity",
+                notes: officeData.temporal_cycle.pascha.easter.notes ?? ""
+            )
         }
-    }
-    
-    private func getOrdinaryTimeInfo(date: Date, dateString: String, week: Int, weekdayName: String) -> String {
-        if calendar.component(.weekday, from: date) == 1 {
-            return "\(dateString) is the \(week.ordinalString()) Sunday in Ordinary Time"
-        } else {
-            return "\(dateString) is \(weekdayName) of the \(week.ordinalString()) Week in Ordinary Time"
+        
+        if calendar.isDate(date, inSameDayAs: pentecost) {
+            return Feast(
+                name: officeData.temporal_cycle.pascha.pentecost.name,
+                type: "pentecost",
+                rank: "Solemnity",
+                notes: officeData.temporal_cycle.pascha.pentecost.notes ?? ""
+            )
         }
+        
+        return nil
     }
     
-    // MARK: - Key Date Calculations
+    // MARK: - Key Date Calculations (6th century version)
     
     private func getAdventStart(year: Int) -> Date? {
+        // 4th Sunday before Christmas (6th century Roman practice)
         var components = DateComponents()
         components.year = year
         components.month = 12
@@ -160,11 +178,11 @@ public class LiturgicalService {
         guard let christmas = calendar.date(from: components) else { return nil }
         
         let weekday = calendar.component(.weekday, from: christmas)
-        let daysToSubtract = (weekday - 1) + 7 * 3
+        let daysToSubtract = (weekday - 1) + 7 * 3 // 3 full weeks plus days to previous Sunday
         return calendar.date(byAdding: .day, value: -daysToSubtract, to: christmas)
     }
     
-    public func getChristmas(year: Int) -> Date? {
+    private func getChristmas(year: Int) -> Date? {
         var components = DateComponents()
         components.year = year
         components.month = 12
@@ -172,13 +190,22 @@ public class LiturgicalService {
         return calendar.date(from: components)
     }
     
-    public func getAshWednesday(year: Int) -> Date? {
-        guard let easter = getEaster(year: year) else { return nil }
-        return calendar.date(byAdding: .day, value: -46, to: easter)
+    private func getEpiphany(year: Int) -> Date? {
+        var components = DateComponents()
+        components.year = year
+        components.month = 1
+        components.day = 6
+        return calendar.date(from: components)
     }
     
-    public func getEaster(year: Int) -> Date? {
-        // Anonymous Gregorian algorithm
+    private func getLentStart(year: Int) -> Date? {
+        // Quadragesima Sunday (6 weeks before Easter, excluding Sundays)
+        guard let easter = getEaster(year: year) else { return nil }
+        return calendar.date(byAdding: .day, value: -42, to: easter) // 6 weeks * 7 days
+    }
+    
+    private func getEaster(year: Int) -> Date? {
+        // Using the same calculation as before (valid for both Julian and Gregorian)
         let a = year % 19
         let b = year / 100
         let c = year % 100
@@ -200,15 +227,180 @@ public class LiturgicalService {
         components.day = day
         return calendar.date(from: components)
     }
+}
+
+// MARK: - Data Models
+
+public struct LiturgicalDay {
+    public let date: Date
+    public let season: LiturgicalSeason
+    public let feast: Feast?
+    public let weekday: String
+    public let isVigil: Bool
+    public let isSunday: Bool
+    public init(date: Date, season: LiturgicalSeason, feast: Feast?, weekday: String, isVigil: Bool, isSunday: Bool) {
+        self.date = date
+        self.season = season
+        self.feast = feast
+        self.weekday = weekday
+        self.isVigil = isVigil
+        self.isSunday = isSunday
+    }
+}
+
+public enum LiturgicalSeason {
+    case advent
+    case christmas
+    case lent
+    case pascha
+    case ordinaryTime(OrdinaryTimePeriod)
     
-    private func isEaster(_ date: Date) -> Bool {
-        let year = calendar.component(.year, from: date)
-        guard let easter = getEaster(year: year) else { return false }
-        return calendar.isDate(date, inSameDayAs: easter)
+    public enum OrdinaryTimePeriod {
+        case postEpiphany
+        case postPentecost
+    }
+}
+
+public struct Feast {
+    public let name: String
+    public let type: String
+    public let rank: String
+    public let notes: String
+    
+    public init(name: String, type: String, rank: String, notes: String) {
+        self.name = name
+        self.type = type
+        self.rank = rank
+        self.notes = notes
+    }
+}
+
+// MARK: - JSON Decoding
+
+public struct OfficeData: Codable {
+    let description: String
+    let temporal_cycle: TemporalCycle
+    let sanctoral_cycle: [String: SanctoralFeast]
+    let seasons: [String: SeasonData]
+    let notes: OfficeNotes
+    
+    public struct TemporalCycle: Codable {
+        let advent: Advent
+        let christmas: [String: ChristmasFeast]
+        let lent: Lent
+        let pascha: Pascha
+        let ordinary_time: OrdinaryTime
+        
+        struct Advent: Codable {
+            let start: String
+            let character: String
+            let notes: String
+        }
+        
+        struct ChristmasFeast: Codable {
+            let name: String
+            let type: String
+            let notes: String?
+        }
+        
+        struct Lent: Codable {
+            let start: String
+            let fasting: String
+            let holy_week: HolyWeek?
+            let notes: String?
+            
+            struct HolyWeek: Codable {
+                let palm_sunday: String
+                let good_friday: String
+            }
+        }
+        
+        struct Pascha: Codable {
+            let easter: Easter
+            let pentecost: Pentecost
+            
+            struct Easter: Codable {
+                let name: String
+                let type: String
+                let octave: String?
+                let notes: String?
+            }
+            
+            struct Pentecost: Codable {
+                let name: String
+                let type: String
+                let notes: String?
+            }
+        }
+        
+        struct OrdinaryTime: Codable {
+            let post_epiphany: Period
+            let post_pentecost: Period
+            
+            struct Period: Codable {
+                let start: String
+                let end: String
+                let notes: String
+            }
+        }
     }
     
-    private func isChristmas(_ date: Date) -> Bool {
-        let components = calendar.dateComponents([.month, .day], from: date)
-        return components.month == 12 && components.day == 25
+    struct SanctoralFeast: Codable {
+        let name: String
+        let type: String
+        let rank: String?
+        let scripture: String?
+        let notes: String?
+    }
+    
+    struct SeasonData: Codable {
+        let dates: String
+        let matins: Matins
+        let meals: Int?
+        let vespers_time: String?
+        let notes: String?
+        
+        struct Matins: Codable {
+            let psalms: [[String]]?
+            let readings: StringOrDict?
+            let rising_time: String?
+        }
+    }
+    
+    struct OfficeNotes: Codable {
+        let historical_accuracy: String
+        let later_additions: LaterAdditions
+        
+        struct LaterAdditions: Codable {
+            let warning: String
+            let list: [String]
+        }
+    }
+}
+
+// Helper for flexible JSON decoding
+public enum StringOrDict: Codable {
+    case string(String)
+    case dict([String: String])
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        if let str = try? container.decode(String.self) {
+            self = .string(str)
+        } else if let dict = try? container.decode([String: String].self) {
+            self = .dict(dict)
+        } else {
+            throw DecodingError.typeMismatch(StringOrDict.self, DecodingError.Context(codingPath: decoder.codingPath, debugDescription: "Expected string or dictionary"))
+        }
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        switch self {
+        case .string(let str):
+            try container.encode(str)
+        case .dict(let dict):
+            try container.encode(dict)
+        }
     }
 }

@@ -74,38 +74,7 @@ if let hour = HoursService.shared.getHour(for: hourType) {
         tracker.markPsalm(number: psalmNumber, section: psalm.category)
     }
 
-    if !hour.capitulum.isEmpty {
-        print("\n📖 Capitulum:")
-        print("  \(hour.capitulum)")
-    }
-
-    // Print versicles with proper formatting
- if let verses = hour.versicle?.compactMap({ $0 }), !verses.isEmpty {
-    print("\n🕊️ Versicle:")
-    verses.forEach { verse in
-        print("  \(verse)")
-    }
-}
-    if !hour.oratio.isEmpty {
-    print("\n🙏 Oratio:")
-    // Split at "Per Christum" if present
-    if let perChristumRange = hour.oratio.range(of: "Per Christum") {
-        let mainPrayer = hour.oratio[..<perChristumRange.lowerBound]
-        let conclusion = hour.oratio[perChristumRange.lowerBound...]
-        
-        // Print main prayer with sentence formatting
-        let sentences = mainPrayer.components(separatedBy: ". ").filter { !$0.isEmpty }
-        for (index, sentence) in sentences.enumerated() {
-            let formatted = index < sentences.count - 1 ? "\(sentence)." : sentence
-            print("  \(formatted)")
-        }
-        
-        // Print conclusion with special formatting
-        print("  \(conclusion)".trimmingCharacters(in: .whitespacesAndNewlines))
-    } else {
-        // Fallback if "Per Christum" isn't found
-        print("  \(hour.oratio)")
-    }
+    printPrayers(hour: hour, feast: "", season: "", weekday: "")
 
     let overall = tracker.overallProgress()
     print("Overall: \(overall.completed)/\(overall.total)") // ex: "3/180"
@@ -119,7 +88,7 @@ if let hour = HoursService.shared.getHour(for: hourType) {
 
 }
 
-} else {
+else {
     print("Prime hour not found")
 }
 
@@ -131,7 +100,11 @@ func parseDate(_ string: String) -> Date? {
     formatter.timeZone = TimeZone(secondsFromGMT: 0)
     return formatter.date(from: string)
 }
-func extractWeekday(from liturgicalInfo: String) -> String? {
+// Option 1: Modify the function to accept LiturgicalDay
+func extractWeekday(from liturgicalInfo: LiturgicalDay) -> String? {
+    return liturgicalInfo.weekday
+}
+func extractWeekdayold(from liturgicalInfo: String) -> String? {
     let components = liturgicalInfo.components(separatedBy: .whitespaces)
     
     // Check for format like "29 Mar 2025 is Saturday after the 3rd Sunday of Lent"
@@ -306,4 +279,27 @@ func printPsalm(_ psalm: PsalmUsage, using service: PsalmService) {
     }
     
     print()  // Extra new line after each psalm
+}
+
+func printPrayers(hour: Hour, feast: String? = nil, season: String? = nil, weekday: String? = nil) {
+    // Print Capitulum
+    print("\n📖 Capitulum:")
+    let capitulumText = hour.capitulum.getText(for: feast, season: season, weekday: weekday)
+    print("  \(capitulumText)")
+    
+    // Print Versicle if it exists
+    if let versicles = hour.versicle?.compactMap({ $0 }), !versicles.isEmpty {
+        print("\n🕯️ Versicle:")
+        versicles.forEach { print("  \($0)") }
+    }
+    
+    // Print Oratio
+    print("\n🙏 Oratio:")
+    let oratioText = hour.oratio.getText(for: feast, season: season, weekday: weekday)
+    // Split into sentences for better readability
+    oratioText.components(separatedBy: ". ").forEach {
+        print("  \($0)\($0.hasSuffix(".") ? "" : ".")")
+    }
+    
+    print() // Add final newline
 }
