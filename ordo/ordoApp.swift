@@ -9,8 +9,9 @@ import SwiftUI
 
 @main
 struct ordoApp: App {
+    
     // Shared instances
-        @StateObject private var progressTracker = PsalmProgressTracker()
+    @StateObject private var progressTracker = PsalmObservableTracker()
         let psalmService = PsalmService.shared
         
     var body: some Scene {

@@ -78,6 +78,11 @@ public final class PsalmProgressTracker {
         
         return (completed, newlyRead)
     }
+    public func getCompletedPsalms() -> [PsalmProgress] {
+            return progress
+                .filter { $0.isCompleted }
+                .sorted { $0.number < $1.number || ($0.number == $1.number && ($0.section ?? "") < ($1.section ?? "")) }
+        }
     
      /// Returns formatted string with all completed psalms
     public func completedPsalmsReport() -> String {

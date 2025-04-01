@@ -9,6 +9,8 @@ struct PrayerView: View {
     let weekday: String
     let psalmService: PsalmService
     
+    @EnvironmentObject private var observableTracker: PsalmObservableTracker
+    
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
@@ -23,8 +25,8 @@ struct PrayerView: View {
                     }
                     
                     // Display Hymn if it exists
-                    if !hour.hymn.isEmpty {
-                        PrayerSectionView(title: "🎶 Hymn", content: getHymnContent(hymn: hour.hymn))
+                    if let hymn = hour.hymn, !hymn.isEmpty {
+                        PrayerSectionView(title: "🎶 Hymn", content: getHymnContent(hymn: hymn))
                     }
                     
                     // Display Psalms - updated logic
@@ -33,10 +35,14 @@ struct PrayerView: View {
                             Text(psalmSectionTitle(hour: hour))
                                 .font(.headline)
                                 .padding(.bottom, 4)
-                            
+                            if allPsalmsCompleted(psalms) {
+                                                                Image(systemName: "checkmark.circle.fill")
+                                                                    .foregroundColor(.green)
+                                                            }
                             ForEach(psalms.indices, id: \.self) { index in
                                 let psalm = psalms[index]
                                 PsalmView(psalm: psalm, psalmService: psalmService)
+                                    .environmentObject(observableTracker) // Pass the tracker
                                     .id("\(psalm.id)-\(index)")  // Add index as fallback
                             }
                            
@@ -45,8 +51,8 @@ struct PrayerView: View {
                     if !hour.capitulum.isEmpty {
                         PrayerSectionView(title: "📖 Capitulum", content: [hour.capitulum])
                     }
-                    if !hour.versicle.isEmpty {
-                        PrayerSectionView(title: "🕊️ Versicles", content: hour.versicle.map { $0 ?? "" }) // Replace nil with ""
+                    if let versicle = hour.versicle, !versicle.isEmpty {
+                        PrayerSectionView(title: "🕊️ Versicles", content: versicle.map { $0 ?? "" }) // Replace nil with ""
                     }
                     if !hour.oratio.isEmpty {
                         PrayerSectionView(title: "🙏 Oratio", content: [hour.oratio])
@@ -100,19 +106,59 @@ struct PrayerView: View {
         formatter.dateStyle = .long
         return formatter.string(from: date)
     }
-   
     func getPsalmsForWeekday(_ weekday: String, hour: Hour) -> [PsalmUsage]? {
-        switch weekday.lowercased() {
-        case "sunday": return hour.psalms.sunday ?? []
-        case "monday": return hour.psalms.monday ?? []
-        case "tuesday": return hour.psalms.tuesday ?? []
-        case "wednesday": return hour.psalms.wednesday  ?? []
-        case "thursday": return hour.psalms.thursday ?? []
-        case "friday": return hour.psalms.friday ?? []
-        case "saturday": return hour.psalms.saturday ?? []
-        default: return nil
+        var psalms = [PsalmUsage]()
+        
+        // Add default psalms first (for Lauds, these are 66, 50, 117, 62)
+        if let defaultPsalms = hour.psalms.default {
+            psalms.append(contentsOf: defaultPsalms)
         }
+        
+        // Add weekday-specific psalms
+        switch weekday.lowercased() {
+        case "sunday":
+            if let sundayPsalms = hour.psalms.sunday {
+                psalms.append(contentsOf: sundayPsalms)
+            }
+        case "monday":
+            if let mondayPsalms = hour.psalms.monday {
+                psalms.append(contentsOf: mondayPsalms)
+            }
+        case "tuesday":
+            if let tuesdayPsalms = hour.psalms.tuesday {
+                psalms.append(contentsOf: tuesdayPsalms)
+            }
+        case "wednesday":
+            if let wednesdayPsalms = hour.psalms.wednesday {
+                psalms.append(contentsOf: wednesdayPsalms)
+            }
+        case "thursday":
+            if let thursdayPsalms = hour.psalms.thursday {
+                psalms.append(contentsOf: thursdayPsalms)
+            }
+        case "friday":
+            if let fridayPsalms = hour.psalms.friday {
+                psalms.append(contentsOf: fridayPsalms)
+            }
+        case "saturday":
+            if let saturdayPsalms = hour.psalms.saturday {
+                psalms.append(contentsOf: saturdayPsalms)
+            }
+        default:
+            break
+        }
+        
+        return psalms.isEmpty ? nil : psalms
     }
+
+    private func allPsalmsCompleted(_ psalms: [PsalmUsage]) -> Bool {
+           return psalms.allSatisfy { psalm in
+               if let number = Int(psalm.number) {
+                   return observableTracker.getProgress(number: number, section: psalm.category)?.isCompleted ?? false
+               }
+               return false
+           }
+       }
     
 }
 

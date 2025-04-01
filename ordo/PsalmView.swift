@@ -9,15 +9,26 @@ import SwiftUI
 struct PsalmView: View {
     let psalm: PsalmUsage
     let psalmService: PsalmService
+    @EnvironmentObject private var observableTracker: PsalmObservableTracker
     
     @State private var psalmContent: [String] = []
     @State private var errorMessage: String?
+    @State private var isCompleted: Bool = false
     
     var body: some View {
         VStack(alignment: .leading) {
-            Text(psalmHeader)
-                .font(.headline)
-            
+            HStack {
+                Text(psalmHeader)
+                    .font(.headline)
+                Spacer()
+                // Completion toggle button
+                Button(action: toggleCompletion) {
+                    Image(systemName: isCompleted ? "checkmark.circle.fill" : "circle")
+                        .foregroundColor(isCompleted ? .green : .gray)
+                        .imageScale(.large)
+                }
+                .buttonStyle(.plain)
+            }
             if let errorMessage = errorMessage {
                 Text(errorMessage)
                     .foregroundColor(.red)
@@ -35,6 +46,7 @@ struct PsalmView: View {
         .shadow(radius: 2)
         .onAppear {
             loadPsalmContent()
+            loadCompletionState()
         }
     }
     
@@ -65,7 +77,7 @@ struct PsalmView: View {
                 throw PsalmError.invalidNumberFormat(psalm.number)
             }
             
-            let psalmSections = try psalmService.getPsalms(number: psalmNumber)
+            let psalmSections = psalmService.getPsalms(number: psalmNumber)
             
             if psalmSections.isEmpty {
                 throw PsalmError.versesNotFound(psalmNumber)
@@ -89,6 +101,23 @@ struct PsalmView: View {
             errorMessage = "Error: \(error.localizedDescription)"
         }
     }
+    private func toggleCompletion() {
+            isCompleted.toggle()
+            observableTracker.markPsalm( // Now using wrapper's method
+                number: Int(psalm.number) ?? 0,
+                section: psalm.category,
+                completed: isCompleted
+            )
+        }
+        
+        private func loadCompletionState() {
+            if let progress = observableTracker.getProgress( // Now using wrapper
+                number: Int(psalm.number) ?? 0,
+                section: psalm.category
+            ) {
+                isCompleted = progress.isCompleted
+            }
+        }
 }
 
 enum PsalmError: Error {

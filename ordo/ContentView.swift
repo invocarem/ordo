@@ -19,7 +19,7 @@ struct ContentView: View {
     private let hoursService = HoursService.shared
     
     @Environment(\.psalmService) private var psalmService
-    @EnvironmentObject private var progressTracker: PsalmProgressTracker
+    @EnvironmentObject private var progressTracker: PsalmObservableTracker
     @State private var selectedHour = "prime"
     
     var body: some View {
