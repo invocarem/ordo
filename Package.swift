@@ -26,7 +26,7 @@ let package = Package(
             name: "LiturgicalService",
             dependencies: [],  
             path: "ordo/Services/LiturgicalService",
-            sources: ["LiturgicalService.swift", "Extensions.swift"],
+            sources: ["LiturgicalService.swift", "Extensions.swift", "PsalterService.swift"],
             resources: [.process("office.json")]
         ),
 

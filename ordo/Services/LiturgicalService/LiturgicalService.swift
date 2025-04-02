@@ -10,15 +10,14 @@ import Foundation
 public class LiturgicalService {
     private let calendar: Calendar
     private let officeData: OfficeData
-    
+    public let psalterService: PsalterService
     public init(calendar: Calendar = .current) {
         self.calendar = calendar
-        do{
+        do {
             self.officeData = try BundleChecker.loadJSON(forResource: "office", as: OfficeData.self)
-        }catch {
-            print("load office data failed")
-            fatalError(error.localizedDescription)
-            
+            self.psalterService = PsalterService(officeData: officeData, calendar: calendar)
+        } catch {
+            fatalError("Failed to load office data: \(error)")
         }
     }
     
@@ -41,7 +40,7 @@ public class LiturgicalService {
             )
         }
         
-        // Check temporal cycle (movable feasts)
+        // Check temporal cycle feasts
         if let temporalFeast = getTemporalFeast(for: date) {
             return LiturgicalDay(
                 date: date,
@@ -63,149 +62,111 @@ public class LiturgicalService {
             isSunday: weekday == 1
         )
     }
-    
-    // MARK: - Season Determination
-    
+    private let verbose : Bool = true
+
+
     private func getSeason(for date: Date) -> LiturgicalSeason {
-        let dateComponents = calendar.dateComponents([.year, .month, .day], from: date)
-        let year = dateComponents.year ?? 0
-        
-        guard let adventStart = getAdventStart(year: year),
-              let christmas = getChristmas(year: year),
-              let epiphany = getEpiphany(year: year),
-              let lentStart = getLentStart(year: year),
-              let easter = getEaster(year: year),
-              let pentecost = calendar.date(byAdding: .day, value: 49, to: easter) else {
-            return .ordinaryTime(.postPentecost)
-        }
-        
-        if date >= adventStart && date < christmas {
-            return .advent
-        } else if date >= christmas && date <= epiphany {
-            return .christmas
-        } else if date > epiphany && date < lentStart {
-            return .ordinaryTime(.postEpiphany)
-        } else if date >= lentStart && date < easter {
-            return .lent
-        } else if date >= easter && date <= pentecost {
-            return .pascha
-        } else {
-            return .ordinaryTime(.postPentecost)
-        }
+    let normalizedDate = calendar.startOfDay(for: date)
+    let year = calendar.component(.year, from: date)
+    
+    // Get all key dates first
+    let adventStart = getNormalizedAdventStart(year: year)
+    let christmas = getNormalizedChristmas(year: year)
+    let epiphany = getNormalizedEpiphany(year: year, forChristmasSeason: true)
+    let lentStart = getNormalizedLentStart(year: year)
+    let easter = getNormalizedEaster(year: year)
+    let pentecost = easter.flatMap { getNormalizedPentecost(easter: $0) }
+
+    if verbose {
+        print("\n=== Liturgical Date Calculations ===")
+        print("Advent Start: \(adventStart?.description ?? "nil")")
+        print("Christmas: \(christmas?.description ?? "nil")")
+        print("Epiphany: \(epiphany?.description ?? "nil")")
+        print("Lent Start: \(lentStart?.description ?? "nil")")
+        print("Easter: \(easter?.description ?? "nil")")
+        print("Pentecost: \(pentecost?.description ?? "nil")")
+        print("Current Date: \(normalizedDate)")
+        print("=================================\n")
+    }
+
+    // 1. First check for Christmas season (Dec 25-Jan 5)
+    if let christmas = christmas,
+       let epiphany = epiphany,
+       normalizedDate >= christmas && normalizedDate <= epiphany {
+        if verbose { print("Season: Christmas (Dec 25-Jan 6)") }
+        return .christmas
+    }
+
+    // 2. Check other seasons
+    guard let adventStart = adventStart,
+          let christmas = christmas,
+          let lentStart = lentStart,
+          let easter = easter,
+          let pentecost = pentecost else {
+        if verbose { print("Season: Defaulting to Ordinary Time (Post-Pentecost)") }
+        return .ordinaryTime(.postPentecost)
     }
     
-    // MARK: - Feast Determination
-    
-    private func getSanctoralFeast(for dateComponents: DateComponents) -> Feast? {
-        guard let month = dateComponents.month, let day = dateComponents.day else { return nil }
-        
-        let monthStr = String(format: "%02d", month)
-        let dayStr = String(format: "%02d", day)
-        let key = "\(monthStr)-\(dayStr)"
-        
-        if let feastData = officeData.sanctoral_cycle[key] {
-            return Feast(
-                name: feastData.name,
-                type: feastData.type,
-                rank: feastData.rank ?? "Minor",
-                notes: feastData.notes ?? ""
-            )
-        }
-        
-        return nil
+    if normalizedDate >= adventStart && normalizedDate < christmas {
+        if verbose { print("Season: Advent (until Christmas)") }
+        return .advent
+    } else if normalizedDate >= lentStart && normalizedDate < easter {
+        if verbose { print("Season: Lent (until Easter)") }
+        return .lent
+    } else if normalizedDate >= easter && normalizedDate <= pentecost {
+        if verbose { print("Season: Pascha (Easter to Pentecost)") }
+        return .pascha
+    } else {
+        if verbose { print("Season: Ordinary Time (Post-Pentecost)") }
+        return .ordinaryTime(.postPentecost)
     }
+}
+ 
+   
     
-    private func getTemporalFeast(for date: Date) -> Feast? {
-        let dateComponents = calendar.dateComponents([.year, .month, .day], from: date)
-        let year = dateComponents.year ?? 0
-        
-        guard let christmas = getChristmas(year: year),
-              let epiphany = getEpiphany(year: year),
-              let easter = getEaster(year: year),
-              let pentecost = calendar.date(byAdding: .day, value: 49, to: easter) else {
-            return nil
-        }
-        
-        // Check Christmas feasts
-        if calendar.isDate(date, inSameDayAs: christmas) {
-            return Feast(
-                name: officeData.temporal_cycle.christmas["12-25"]?.name ?? "Nativity of the Lord",
-                type: "nativity",
-                rank: "Solemnity",
-                notes: officeData.temporal_cycle.christmas["12-25"]?.notes ?? ""
-            )
-        }
-        
-        if calendar.isDate(date, inSameDayAs: epiphany) {
-            return Feast(
-                name: officeData.temporal_cycle.christmas["01-06"]?.name ?? "Epiphany",
-                type: "theophany",
-                rank: "Solemnity",
-                notes: officeData.temporal_cycle.christmas["01-06"]?.notes ?? ""
-            )
-        }
-        
-        // Check Easter feasts
-        if calendar.isDate(date, inSameDayAs: easter) {
-            return Feast(
-                name: officeData.temporal_cycle.pascha.easter.name,
-                type: "resurrection",
-                rank: "Solemnity",
-                notes: officeData.temporal_cycle.pascha.easter.notes ?? ""
-            )
-        }
-        
-        if calendar.isDate(date, inSameDayAs: pentecost) {
-            return Feast(
-                name: officeData.temporal_cycle.pascha.pentecost.name,
-                type: "pentecost",
-                rank: "Solemnity",
-                notes: officeData.temporal_cycle.pascha.pentecost.notes ?? ""
-            )
-        }
-        
-        return nil
-    }
+    // MARK: - Date Calculations
     
-    // MARK: - Key Date Calculations (6th century version)
-    
-    private func getAdventStart(year: Int) -> Date? {
-        // 4th Sunday before Christmas (6th century Roman practice)
-        var components = DateComponents()
-        components.year = year
-        components.month = 12
-        components.day = 25
-        guard let christmas = calendar.date(from: components) else { return nil }
-        
+    private func getNormalizedAdventStart(year: Int) -> Date? {
+        guard let christmas = getNormalizedChristmas(year: year) else { return nil }
         let weekday = calendar.component(.weekday, from: christmas)
         let daysToSubtract = (weekday - 1) + 7 * 3 // 3 full weeks plus days to previous Sunday
         return calendar.date(byAdding: .day, value: -daysToSubtract, to: christmas)
+            .map { calendar.startOfDay(for: $0) }
     }
     
-    private func getChristmas(year: Int) -> Date? {
-        var components = DateComponents()
-        components.year = year
-        components.month = 12
-        components.day = 25
-        return calendar.date(from: components)
+    private func getNormalizedChristmas(year: Int) -> Date? {
+        guard let components = officeData.christmasDateComponents else {
+            assertionFailure("Christmas date configuration missing in office.json")
+            return nil
+        }
+        return calendar.date(from: DateComponents(
+            year: year,
+            month: components.month,
+            day: components.day
+        )).map { calendar.startOfDay(for: $0) }
     }
     
-    private func getEpiphany(year: Int) -> Date? {
-        var components = DateComponents()
-        components.year = year
-        components.month = 1
-        components.day = 6
-        return calendar.date(from: components)
+    private func getNormalizedEpiphany(year: Int, forChristmasSeason: Bool = false) -> Date? {
+        guard let components = officeData.epiphanyDateComponents else {
+            assertionFailure("Epiphany date configuration missing in office.json")
+            return nil
+        }
+        let targetYear = forChristmasSeason ? year + 1: year
+        return calendar.date(from: DateComponents(
+            year: targetYear,
+            month: components.month,
+            day: components.day
+        )).map { calendar.startOfDay(for: $0) }
     }
     
-    private func getLentStart(year: Int) -> Date? {
-        // Quadragesima Sunday (6 weeks before Easter, excluding Sundays)
-        guard let easter = getEaster(year: year) else { return nil }
-        return calendar.date(byAdding: .day, value: -42, to: easter) // 6 weeks * 7 days
+    private func getNormalizedLentStart(year: Int) -> Date? {
+        guard let easter = getNormalizedEaster(year: year) else { return nil }
+        return calendar.date(byAdding: .day, value: -42, to: easter)
+            .map { calendar.startOfDay(for: $0) }
     }
     
-    private func getEaster(year: Int) -> Date? {
-        // Using the same calculation as before (valid for both Julian and Gregorian)
+    private func getNormalizedEaster(year: Int) -> Date? {
+        // (Keep your existing Easter calculation logic)
         let a = year % 19
         let b = year / 100
         let c = year % 100
@@ -221,11 +182,86 @@ public class LiturgicalService {
         let month = (h + l - 7 * m + 114) / 31
         let day = ((h + l - 7 * m + 114) % 31) + 1
         
-        var components = DateComponents()
-        components.year = year
-        components.month = month
-        components.day = day
-        return calendar.date(from: components)
+        return calendar.date(from: DateComponents(
+            year: year,
+            month: month,
+            day: day
+        )).map { calendar.startOfDay(for: $0) }
+    }
+    
+    private func getNormalizedPentecost(easter: Date) -> Date? {
+        calendar.date(byAdding: .day, value: 49, to: easter)
+            .map { calendar.startOfDay(for: $0) }
+    }
+    
+    // MARK: - Feast Determination (unchanged)
+    private func getSanctoralFeast(for dateComponents: DateComponents) -> Feast? {
+        guard let month = dateComponents.month, let day = dateComponents.day else { return nil }
+        let key = String(format: "%02d-%02d", month, day)
+        
+        return officeData.sanctoral_cycle[key].map {
+            Feast(
+                name: $0.name,
+                type: $0.type,
+                rank: $0.rank ?? "Minor",
+                notes: $0.notes ?? ""
+            )
+        }
+    }
+    
+    private func getTemporalFeast(for date: Date) -> Feast? {
+        let year = calendar.component(.year, from: date)
+        
+
+
+        if let christmas = getNormalizedChristmas(year: year),
+           calendar.isDate(date, inSameDayAs: christmas),
+           let feastData = officeData.temporal_cycle.christmas.first(where: { $0.value.name.lowercased().contains("nativity") })?.value {
+            return Feast(
+                name: feastData.name,
+                type: feastData.type,
+                rank: "Solemnity",
+                notes: feastData.notes ?? ""
+            )
+        }
+        
+        if let epiphany = getNormalizedEpiphany(year: year),
+           calendar.isDate(date, inSameDayAs: epiphany),
+           let feastData = officeData.temporal_cycle.christmas.first(where: { $0.value.name.lowercased().contains("epiphany") })?.value {
+            return Feast(
+                name: feastData.name,
+                type: feastData.type,
+                rank: "Solemnity",
+                notes: feastData.notes ?? ""
+            )
+        }
+
+
+        if let easter = getNormalizedEaster(year: year),
+            calendar.isDate(date, inSameDayAs: easter) {
+                return Feast(
+                name: officeData.temporal_cycle.pascha.easter.name,
+                type: "resurrection",
+                rank: "Solemnity",
+                notes: officeData.temporal_cycle.pascha.easter.notes ?? ""
+            )
+         }
+
+        // Check Pentecost
+        if  let easter = getNormalizedEaster(year: year),
+            let pentecost = getNormalizedPentecost(easter: easter),
+            calendar.isDate(date, inSameDayAs: pentecost) {
+                return Feast(
+                name: officeData.temporal_cycle.pascha.pentecost.name,
+                type: "pentecost",
+                rank: "Solemnity",
+                notes: officeData.temporal_cycle.pascha.pentecost.notes ?? ""
+            )
+        }
+    
+        
+        
+        return nil
     }
 }
 
@@ -288,6 +324,8 @@ public struct Feast {
     }
 }
 
+
+ 
 // MARK: - JSON Decoding
 
 public struct OfficeData: Codable {
@@ -296,7 +334,69 @@ public struct OfficeData: Codable {
     let sanctoral_cycle: [String: SanctoralFeast]
     let seasons: [String: SeasonData]
     let notes: OfficeNotes
-    
+    let psalter: Psalter
+      
+   
+
+    // MARK: - Psalter Structure
+    public struct Psalter: Codable {
+        public let hours: Hours
+        
+        public struct Hours: Codable {
+            public let matins: Matins
+            public let lauds: Lauds
+            public let prime: HourRule
+            public let terce: HourRule
+            public let sext: HourRule
+            public let none: HourRule
+            public let vespers: HourRule
+            public let compline: HourRule
+            
+            // Matins structure
+            public struct Matins: Codable {
+                public let winter: SeasonPsalms
+                public let summer: SeasonPsalms
+                
+                public struct SeasonPsalms: Codable {
+                    public let sunday: [String]
+                    public let weekday: [String]
+                }
+            }
+            
+            // Lauds structure
+            public struct Lauds: Codable {
+                public let sunday: [String]
+                public let weekday: WeekdayPsalms
+                public let notes: LaudsNotes?
+                
+                public struct WeekdayPsalms: Codable {
+                    public let winter: [String]
+                    public let summer: [String]
+                }
+                
+                public struct LaudsNotes: Codable {
+                    public let canticles: String?
+                    public let alleluia: String?
+                }
+            }
+            
+            public struct HourRule: Codable {
+                public let sunday: [String]?
+                public let monday: [String]?
+                public let tuesday: [String]?
+                public let wednesday: [String]?
+                public let thursday: [String]?
+                public let friday: [String]?
+                public let saturday: [String]?
+                public let weekday: [String]?
+                public let `default`: [String]?
+                public let notes: String?
+              }
+          
+            
+        }
+    }
+
     public struct TemporalCycle: Codable {
         let advent: Advent
         let christmas: [String: ChristmasFeast]
@@ -388,6 +488,34 @@ public struct OfficeData: Codable {
             let warning: String
             let list: [String]
         }
+    }
+
+     var christmasDateComponents: DateComponents? {
+        for (dateString, feast) in temporal_cycle.christmas {
+            if feast.name.lowercased().contains("nativity") {
+                return parseDateComponents(from: dateString)
+            }
+        }
+        return nil
+    }
+    
+    var epiphanyDateComponents: DateComponents? {
+        for (dateString, feast) in temporal_cycle.christmas {
+            if feast.name.lowercased().contains("epiphany") {
+                return parseDateComponents(from: dateString)
+            }
+        }
+        return nil
+    }
+    
+    private func parseDateComponents(from dateString: String) -> DateComponents? {
+        let parts = dateString.components(separatedBy: "-")
+        guard parts.count == 2,
+              let month = Int(parts[0]),
+              let day = Int(parts[1]) else {
+            return nil
+        }
+        return DateComponents(month: month, day: day)
     }
 }
 
