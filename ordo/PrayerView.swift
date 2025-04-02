@@ -1,7 +1,7 @@
 import SwiftUI
 struct PrayerView: View {
     let date: Date
-    let liturgicalInfo: String
+    let liturgicalInfo: LiturgicalDay
     let hour: Hour?
     
     let hourName: String  // Explicit hour name
@@ -48,14 +48,21 @@ struct PrayerView: View {
                            
                         }
                     }
-                    if !hour.capitulum.isEmpty {
-                        PrayerSectionView(title: "📖 Capitulum", content: [hour.capitulum])
+                    let feast = liturgicalInfo.feast?.name
+                    let season = liturgicalInfo.season
+                    let weekday = liturgicalInfo.weekday
+                    let capitulumText = hour.capitulum.getText(for: feast, season: season.description , weekday: weekday)
+                      
+                    if !capitulumText.isEmpty {
+                        PrayerSectionView(title: "📖 Capitulum", content: [capitulumText])
                     }
                     if let versicle = hour.versicle, !versicle.isEmpty {
                         PrayerSectionView(title: "🕊️ Versicles", content: versicle.map { $0 ?? "" }) // Replace nil with ""
                     }
-                    if !hour.oratio.isEmpty {
-                        PrayerSectionView(title: "🙏 Oratio", content: [hour.oratio])
+                    let oratioText = hour.oratio.getText(for: feast, season: season.description , weekday: weekday)
+                      
+                    if !oratioText.isEmpty {
+                        PrayerSectionView(title: "🙏 Oratio", content: [oratioText])
                     }
                     
                 } else {

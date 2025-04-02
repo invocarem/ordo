@@ -1,19 +1,12 @@
-//
-//  ContentView.swift
-//  ordo
-//
-//  Created by Chen Chen on 2025-03-24.
-//
-
 import SwiftUI
-
 struct ContentView: View {
     @State private var selectedTab = 0
-    
     @State private var selectedDate = Date()
-    @State private var liturgicalInfo = ""
+    @State private var liturgicalInfo: LiturgicalDay?
     @State private var showingPrayerView = false
-    
+    @State private var isLoading = false
+    @State private var errorMessage: String?
+    @State private var liturgicalUpdateTask: Task<Void, Never>?
     
     private let liturgicalService = LiturgicalService()
     private let hoursService = HoursService.shared
@@ -24,126 +17,153 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selectedTab) {
-            NavigationView {
-                VStack(spacing: 16) {
-                    DatePicker("Select a date",
-                               selection: $selectedDate,
-                               displayedComponents: .date)
-                    .datePickerStyle(.graphical)
-                    .padding()
-                    .onChange(of: selectedDate) {
-                        updateLiturgicalInfo()
-                    }
-                    
-                    CanonicalHourPicker(selectedHour: $selectedHour)
-                        .frame(height: 70)
-                    
-                    
-                    
-                    Text(liturgicalInfo)
-                        .font(.headline)
-                        .multilineTextAlignment(.center)
-                        .padding()
-                    
-                    Button(action: {
-                        showingPrayerView = true
-                    }) {
-                        Text("Show Prayer for Selected Date")
+            NavigationStack {
+                ScrollView {
+                    VStack(spacing: 16) {
+                        DatePicker("Select a date",
+                                  selection: $selectedDate,
+                                  displayedComponents: .date)
+                            .datePickerStyle(.graphical)
                             .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(Color.blue)
-                            .foregroundColor(.white)
-                            .cornerRadius(10)
+                            .frame(maxHeight: 400)
+                            .onChange(of: selectedDate) {
+                                
+                                triggerLiturgicalUpdate()
+                                
+                            }
+                        
+                        CanonicalHourPicker(selectedHour: $selectedHour)
+                            .frame(height: 70)
+                        
+                        //LiturgicalInfoView(info: liturgicalInfo, isLoading: isLoading)
+                        
+                        if let errorMessage = errorMessage {
+                            Text(errorMessage)
+                                .foregroundColor(.red)
+                        }
+                        
+                        Button(action: { showingPrayerView = true }) {
+                            Text("Show Prayer for Selected Date")
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .background(Color.blue)
+                                .foregroundColor(.white)
+                                .cornerRadius(10)
+                        }
+                        .padding(.horizontal)
+                        .disabled(liturgicalInfo == nil || isLoading)
+                        
+                        Spacer()
                     }
-                    .padding(.horizontal)
-                    
-                    Spacer()
+                    .padding()
                 }
-                .padding()
-#if os(iOS)
-                .navigationBarTitle("Liturgical Calendar")
-#endif
-                .background(
-                    
-                    NavigationLink(
-                        destination: PrayerView(
-                            date: selectedDate,
-                            liturgicalInfo: liturgicalInfo,
-                            hour: hoursService.getHour(for: selectedHour),
-                            hourName: selectedHour.capitalized,
-                            weekday: extractWeekday(from: liturgicalInfo) ?? "Unknown",
-                            psalmService: psalmService
-                        ),
-                        isActive: $showingPrayerView,
-                        label: { EmptyView() }
-                    )
-                )
+                .navigationTitle("Liturgical Calendar")
+                .navigationDestination(isPresented: $showingPrayerView) {
+                    destinationView
+                }
+                .task {
+                                   await updateLiturgicalInfo()
+                               }
                 .onAppear {
-                    updateLiturgicalInfo()
-#if os(macOS)
+                    
+                    #if os(macOS)
                     NSApp.mainWindow?.title = "Liturgical Calendar"
-#endif
+                    #endif
                 }
+                .animation(.easeInOut, value: liturgicalInfo?.weekday)
+                .animation(.easeInOut, value: isLoading)
             }
             .tabItem {
                 Label("Liturgical Calendar", systemImage: "calendar")
             }
             .tag(0)
             
-            // New Psalm Tracker
             ProgressSummaryView(
                 psalmService: psalmService,
-                tracker: progressTracker)
-                .tabItem {
-                    Label("Psalms", systemImage: "book")
-                }
-                .tag(1)
+                tracker: progressTracker
+            )
+            .tabItem {
+                Label("Psalms", systemImage: "book")
+            }
+            .tag(1)
         }
     }
-    
-    private func updateLiturgicalInfo() {
-        liturgicalInfo = liturgicalService.getLiturgicalInfo(for: selectedDate)
-        let calendar = Calendar.current
-           let weekdayNumber = calendar.component(.weekday, from: selectedDate) // 1-7 (Sun-Sat)
-           let weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-           print("Actual calendar weekday: \(weekdays[weekdayNumber-1])")
-           print("Extracted weekday: \(extractWeekday(from: liturgicalInfo) ?? "nil")")
-    }
-    func extractWeekday(from liturgicalInfo: String) -> String? {
-        let components = liturgicalInfo.components(separatedBy: .whitespaces)
-        
-        // Check for format like "29 Mar 2025 is Saturday after the 3rd Sunday of Lent"
-        if let isIndex = components.firstIndex(of: "is"),
-           isIndex + 1 < components.count,
-           let afterIndex = components.firstIndex(of: "after"),
-           afterIndex > isIndex + 1
-        {
-            return components[isIndex + 1].capitalized
-        }
-        // Check for format like "30 Mar 2025 is the 4th Sunday of Lent"
-        else if let isIndex = components.firstIndex(of: "is"),
-                isIndex + 1 < components.count,
-                components[isIndex + 1] == "the"
-        {
-            // Check if the description contains "Sunday"
-            let description = Array(components[isIndex + 2..<components.count]).joined(separator: " ")
-            if description.lowercased().contains("sunday") {
-                return "Sunday"
-            } else {
-                return description
+    private func triggerLiturgicalUpdate() {
+            liturgicalUpdateTask?.cancel()
+            liturgicalUpdateTask = Task {
+                // Add small delay to handle rapid date changes
+                try? await Task.sleep(nanoseconds: 200_000_000) // 0.2 seconds
+                guard !Task.isCancelled else { return }
+                await updateLiturgicalInfo()
             }
         }
+
+        @MainActor
+    private func updateLiturgicalInfo() async {
+        isLoading = true
+        errorMessage = nil
+        defer { isLoading = false } // Ensure isLoading is always reset
         
-        return nil
+        do {
+            liturgicalInfo = try liturgicalService.getLiturgicalInfo(for: selectedDate)
+            let calendar = Calendar.current
+            let weekdayNumber = calendar.component(.weekday, from: selectedDate)
+            let weekdays = calendar.weekdaySymbols
+            
+            if let info = liturgicalInfo {
+                print("Actual calendar weekday: \(weekdays[weekdayNumber-1])")
+                print("Extracted weekday: \(info.weekday)")
+            }
+            // ... (keep your logging code) ...
+        } catch {
+            errorMessage = "Failed to load liturgical information"
+            print("Error: \(error.localizedDescription)")
+        }
     }
-        
-        
+   
     
+    @ViewBuilder
+    private var destinationView: some View {
+        if let liturgicalInfo = liturgicalInfo {
+            PrayerView(
+                date: selectedDate,
+                liturgicalInfo: liturgicalInfo,
+                hour: hoursService.getHour(for: selectedHour),
+                hourName: selectedHour.capitalized,
+                weekday: liturgicalInfo.weekday,
+                psalmService: psalmService
+            )
+        } else {
+            VStack {
+                Text("Liturgical information not available")
+                Text("Please select another date")
+            }
+        }
     }
-
-
-
-
-#Preview {
-    ContentView()
+}
+struct LiturgicalInfoView: View {
+    let info: LiturgicalDay?
+    let isLoading: Bool
+    
+    var body: some View {
+        if isLoading {
+            ProgressView()
+        } else if let info = info {
+            VStack {
+                Text(info.weekday)
+                    .font(.headline)
+                if let feast = info.feast {
+                    Text(feast.name)
+                        .font(.subheadline)
+                }
+                Text(info.season.description)
+                    .font(.subheadline)
+            }
+            .multilineTextAlignment(.center)
+            .padding()
+        } else {
+            Text("Loading liturgical information...")
+                .foregroundColor(.secondary)
+        }
+    }
 }

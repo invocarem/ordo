@@ -13,13 +13,13 @@ public class LiturgicalService {
     
     public init(calendar: Calendar = .current) {
         self.calendar = calendar
-
-        // Load the office.json data
-        guard let url = Bundle.module.url(forResource: "office", withExtension: "json"),
-              let data = try? Data(contentsOf: url) else {
-            fatalError("Failed to load office.json")
+        do{
+            self.officeData = try BundleChecker.loadJSON(forResource: "office", as: OfficeData.self)
+        }catch {
+            print("load office data failed")
+            fatalError(error.localizedDescription)
+            
         }
-        self.officeData = try! JSONDecoder().decode(OfficeData.self, from: data)
     }
     
     // MARK: - Public Interface
@@ -231,7 +231,7 @@ public class LiturgicalService {
 
 // MARK: - Data Models
 
-public struct LiturgicalDay {
+public struct LiturgicalDay  {
     public let date: Date
     public let season: LiturgicalSeason
     public let feast: Feast?
@@ -259,6 +259,19 @@ public enum LiturgicalSeason {
         case postEpiphany
         case postPentecost
     }
+    public var description: String {
+            switch self {
+            case .advent: return "Advent"
+            case .christmas: return "Christmas"
+            case .lent: return "Lent"
+            case .pascha: return "Pascha"
+            case .ordinaryTime(let period):
+                switch period {
+                case .postEpiphany: return "Ordinary Time (Post-Epiphany)"
+                case .postPentecost: return "Ordinary Time (Post-Pentecost)"
+                }
+            }
+        }
 }
 
 public struct Feast {
@@ -402,5 +415,28 @@ public enum StringOrDict: Codable {
         case .dict(let dict):
             try container.encode(dict)
         }
+    }
+}
+struct BundleChecker {
+    static func url(forResource name: String,
+                      withExtension ext: String?) -> URL? {
+           #if SWIFT_PACKAGE
+           return Bundle.module.url(forResource: name, withExtension: ext)
+           #else
+           return Bundle.main.url(forResource: name, withExtension: ext)
+           #endif
+       }
+   
+    
+    static func loadJSON<T: Decodable>(forResource name: String,
+                                     withExtension ext: String? = "json",
+                                     as type: T.Type) throws -> T {
+        guard let url = url(forResource: name, withExtension: ext) else {
+            throw NSError(domain: "BundleChecker", code: 404,
+                         userInfo: [NSLocalizedDescriptionKey: "Resource not found: \(name).\(ext ?? "")"])
+        }
+        
+        let data = try Data(contentsOf: url)
+        return try JSONDecoder().decode(type, from: data)
     }
 }

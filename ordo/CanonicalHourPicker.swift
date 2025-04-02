@@ -5,18 +5,19 @@
 //  Created by Chen Chen on 2025-03-29.
 //
 import SwiftUI
+
 struct CanonicalHourPicker: View {
     @Binding var selectedHour: String
     private let hours = ["matins", "lauds", "prime", "terce", "sext", "none", "vespers", "compline"]
     
-    private var hourBinding: Binding<Double> {
-        Binding(
-            get: { Double(hours.firstIndex(of: selectedHour) ?? 0) },
-            set: { newValue in
-                let index = Int(round(newValue)).clamped(to: 0...hours.count-1)
-                selectedHour = hours[index]
-            }
-        )
+    @State private var sliderValue: Double
+    @State private var lastSelectedIndex: Int
+    
+    init(selectedHour: Binding<String>) {
+        self._selectedHour = selectedHour
+        let initialIndex = hours.firstIndex(of: selectedHour.wrappedValue) ?? 0
+        self._sliderValue = State(initialValue: Double(initialIndex))
+        self._lastSelectedIndex = State(initialValue: initialIndex)
     }
     
     var body: some View {
@@ -25,49 +26,79 @@ struct CanonicalHourPicker: View {
             Text(selectedHour.capitalized)
                 .font(.headline)
                 .padding(.bottom, 4)
+                .transition(.opacity)
+                .id("hourTitle-\(selectedHour)")
             
-            // Custom slider
+            // Interactive slider
             Slider(
-                value: hourBinding,
+                value: $sliderValue,
                 in: 0...Double(hours.count - 1),
                 step: 1
             )
             .padding(.horizontal)
-            
-            // Hour labels
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 12) {
-                    ForEach(Array(hours.enumerated()), id: \.offset) { index, hour in
-                        VStack(spacing: 2) {
-                            Text(hour.prefix(2).uppercased())
-                                .font(.caption2)
-                                .fontWeight(.medium)
-                            Circle()
-                                .fill(selectedHour == hour ? Color.blue : Color.clear)
-                                .frame(width: 4, height: 4)
-                        }
-                        .frame(width: 24)
-                        .foregroundColor(selectedHour == hour ? .blue : .gray)
-                        .onTapGesture {
-                            selectedHour = hour
-                        }
-                    }
-                }
-                .padding(.horizontal)
+            .onChange(of: sliderValue) { newValue in
+                updateSelectedHour(from: newValue)
             }
-            .frame(height: 30)
+            
+            // Equally distributed hour indicators
+            hourIndicators
+        }
+        .padding(.vertical, 8)
+    }
+    
+    private var hourIndicators: some View {
+        GeometryReader { geometry in
+            HStack(spacing: 0) {
+                ForEach(Array(hours.enumerated()), id: \.offset) { index, hour in
+                    hourIndicator(hour: hour, index: index)
+                        .frame(width: geometry.size.width / CGFloat(hours.count))
+                }
+            }
+        }
+        .frame(height: 30)
+    }
+    
+    private func hourIndicator(hour: String, index: Int) -> some View {
+        Button(action: {
+            selectHour(index: index)
+        }) {
+            VStack(spacing: 2) {
+                Text(hour.prefix(2).uppercased())
+                    .font(.caption2)
+                    .fontWeight(.medium)
+                Circle()
+                    .fill(selectedHour == hour ? Color.blue : Color.gray.opacity(0.3))
+                    .frame(width: 4, height: 4)
+            }
+            .frame(maxWidth: .infinity)
+            .foregroundColor(selectedHour == hour ? .blue : .gray)
+        }
+        .buttonStyle(.plain)
+    }
+    
+    private func updateSelectedHour(from sliderValue: Double) {
+        let newIndex = Int(round(sliderValue)).clamped(to: 0...hours.count-1)
+        
+        if newIndex != lastSelectedIndex {
+            lastSelectedIndex = newIndex
+            let newHour = hours[newIndex]
+            
+            DispatchQueue.main.async {
+                withAnimation {
+                    selectedHour = newHour
+                }
+            }
         }
     }
     
-    init(selectedHour: Binding<String>) {
-        self._selectedHour = selectedHour
+    private func selectHour(index: Int) {
+        sliderValue = Double(index)
+        let newHour = hours[index]
         
-        // Validate and set default if needed
-        if !hours.contains(selectedHour.wrappedValue.lowercased()) {
-            selectedHour.wrappedValue = "prime"
-        } else {
-            // Ensure case matches our internal representation
-            selectedHour.wrappedValue = selectedHour.wrappedValue.lowercased()
+        DispatchQueue.main.async {
+            withAnimation {
+                selectedHour = newHour
+            }
         }
     }
 }
