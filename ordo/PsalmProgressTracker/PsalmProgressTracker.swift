@@ -1,6 +1,7 @@
 import Foundation
 
-public struct PsalmProgress: Codable, CustomStringConvertible  {
+public struct PsalmProgress: Codable, Identifiable, CustomStringConvertible  {
+    public let id : UUID = UUID()
     public let number: Int
     public let section: String?     // Optional (e.g., "A", "Aleph")
     public var dateRead: Date
@@ -89,12 +90,7 @@ public final class PsalmProgressTracker {
         
         return (completed, newlyRead)
     }
-    public func getCompletedPsalms() -> [PsalmProgress] {
-            return progress
-                .filter { $0.isCompleted }
-                .sorted { $0.number < $1.number || ($0.number == $1.number && ($0.section ?? "") < ($1.section ?? "")) }
-        }
-    
+  
      /// Returns formatted string with all completed psalms
     public func completedPsalmsReport() -> String {
         let completed = progress
@@ -110,7 +106,18 @@ public final class PsalmProgressTracker {
         report.append("Total: \(completed.count)/\(totalPsalmCount)")
         return report.joined(separator: "\n")
     }
+    public func getCompletedPsalms() -> [PsalmProgress] {
+            return progress
+                .filter { $0.isCompleted }
+                .sorted { $0.number < $1.number || ($0.number == $1.number && ($0.section ?? "") < ($1.section ?? "")) }
+        }
     
+    public func getIncompletedPsams() ->[PsalmProgress] {
+       return progress
+            .filter { !$0.isCompleted }
+            .sorted { $0.number < $1.number || ($0.number == $1.number && ($0.section ?? "") < ($1.section ?? "")) }
+        
+    }
     /// Returns formatted string with all incomplete psalms
     public func incompletePsalmsReport() -> String {
         let incomplete = progress

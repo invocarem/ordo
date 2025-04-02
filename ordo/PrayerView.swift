@@ -32,13 +32,13 @@ struct PrayerView: View {
                     // Display Psalms - updated logic
                     if let psalms = getPsalms(hour: hour) {
                         VStack(alignment: .leading, spacing: 16) {
-                            Text(psalmSectionTitle(hour: hour))
-                                .font(.headline)
-                                .padding(.bottom, 4)
-                            if allPsalmsCompleted(psalms) {
-                                                                Image(systemName: "checkmark.circle.fill")
-                                                                    .foregroundColor(.green)
-                                                            }
+                            //Text(psalmSectionTitle(hour: hour))
+                            //    .font(.headline)
+                            //    .padding(.bottom, 4)
+                            //if allPsalmsCompleted(psalms) {
+                            //                                    Image(systemName: "checkmark.circle.fill")
+                            //                                        .foregroundColor(.green)
+                            //                                }
                             ForEach(psalms.indices, id: \.self) { index in
                                 let psalm = psalms[index]
                                 PsalmView(psalm: psalm, psalmService: psalmService)
@@ -170,22 +170,40 @@ struct PrayerView: View {
 }
 
 
+
 struct PrayerSectionView: View {
     let title: String
     let content: [String]
+    var showToggle: Bool
+    var isCompleted: Binding<Bool>?
+    
+    init(title: String, content: [String], showToggle: Bool = false, isCompleted: Binding<Bool>? = nil) {
+        self.title = title
+        self.content = content
+        self.showToggle = showToggle
+        self.isCompleted = isCompleted
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(title)
-                .font(.headline)
-                .padding(.bottom, 2)
+            HStack {
+                Text(title)
+                    .font(.headline)
+                
+                if showToggle, let binding = isCompleted {
+                    Spacer()
+                    Toggle("", isOn: binding)
+                        .labelsHidden()
+                }
+            }
+            .padding(.bottom, 2)
             
             ForEach(content, id: \.self) { line in
                 Text(line)
-                    .fixedSize(horizontal: false, vertical: true) // Allow text to wrap
+                    .fixedSize(horizontal: false, vertical: true)
             }
         }
-        .frame(maxWidth: .infinity, alignment: .leading) // Match width to PsalmView
+        .frame(maxWidth: .infinity, alignment: .leading)
         .padding()
         .background(Color(.systemBackground))
         .cornerRadius(8)

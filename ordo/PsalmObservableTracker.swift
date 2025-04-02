@@ -47,6 +47,12 @@ public final class PsalmObservableTracker: ObservableObject {
             }
             .store(in: &cancellables)
     }
+    public func getCompletedPsalms() -> [PsalmProgress] {
+        tracker.getCompletedPsalms()
+    }
+    public func getIncompletedPsalms() -> [PsalmProgress] {
+        tracker.getIncompletedPsams()
+    }
     
     // Mirror all public methods
     public func markPsalm(number: Int, section: String? = nil, completed: Bool = true) {
@@ -60,10 +66,7 @@ public final class PsalmObservableTracker: ObservableObject {
     public func overallProgress() -> (completed: Int, total: Int) {
         tracker.overallProgress()
     }
-    private func getCompletedPsalms() -> [PsalmProgress] {
-        
-        tracker.getCompletedPsalms()
-    }
+    
     // Add other public methods as needed...
     private static func ensureDirectoryExists(for filePath: String) -> Bool {
             let url = URL(fileURLWithPath: filePath)
