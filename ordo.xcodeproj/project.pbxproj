@@ -55,11 +55,6 @@
 			path = ordo;
 			sourceTree = "<group>";
 		};
-		33EC02ED2D9237E2003A1593 /* ordoTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ordoTests;
-			sourceTree = "<group>";
-		};
 		33EC02F72D9237E2003A1593 /* ordoUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = ordoUITests;
@@ -105,7 +100,6 @@
 			isa = PBXGroup;
 			children = (
 				33EC02DB2D9237E0003A1593 /* ordo */,
-				33EC02ED2D9237E2003A1593 /* ordoTests */,
 				33EC02F72D9237E2003A1593 /* ordoUITests */,
 				33281BDB2D93999B0081E218 /* Frameworks */,
 				33EC02DA2D9237E0003A1593 /* Products */,
@@ -160,9 +154,6 @@
 			);
 			dependencies = (
 				33EC02EC2D9237E2003A1593 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				33EC02ED2D9237E2003A1593 /* ordoTests */,
 			);
 			name = ordoTests;
 			packageProductDependencies = (

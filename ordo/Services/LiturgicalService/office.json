@@ -26,7 +26,7 @@
       "vespers": {
         "sunday": ["109", "110", "111", "112", "113"],
         "monday": ["114", "115", "116", "117", "118 (short)"],
-        "tuesday": ["119 (1-32)", "120", "121", "122", "123"],
+        "tuesday": ["128", "129", "130", "131", "132"],
         "wednesday": ["124", "125", "126", "127", "128"],
         "thursday": ["129", "130", "131", "132", "133"],
         "friday": ["134", "135", "136", "137", "138"],
@@ -45,20 +45,20 @@
       },
       "terce" : {
         "sunday": ["118 (he)", "118 (vau)", "118 (zain)"],
-        "monday": ["118 (heth)", "118 (teth)", "118 (iod)"],
+        "monday": ["118 (nun)", "118 (samech)", "118 (ain)"],
   
         "default": ["119", "120", "121"],
         "notes": "Sunday uses fixed Ps 118 segments; weekdays use Gradual Psalms per RB 17"
       },
       "sext": {
-       "sunday": ["118 (nun)", "118 (samech)", "118 (ain)"  ],
-       "monday": ["118 (phe)", "118 (sade)", "118 (sade)"], 
+       "sunday": ["118 (heth)", "118 (teth)", "118 (iod)"  ],
+       "monday": ["118 (phe)", "118 (sade)", "118 (coph)"], 
        "default": ["122", "123", "124"]
       },        
       "none": {
-        "sunday": ["118 (nun)", "118 (samech)", "118 (ain)"  ],
-        "monday": ["118 (phe)", "118 (sade)", "118 (sade)"], 
-        "default": ["122", "123", "124"]
+        "sunday": ["118 (caph)", "118 (lamed)", "118 (mem)"  ],
+        "monday": ["118 (res)", "118 (sin)", "118 (tau)"], 
+        "default": ["125", "126", "127"]
        },        
  
       "compline": {

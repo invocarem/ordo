@@ -1,13 +1,14 @@
 import Foundation
 
 public struct PsalmProgress: Codable, Identifiable, CustomStringConvertible  {
-    public let id : UUID = UUID()
+    public let id : UUID
     public let number: Int
     public let section: String?     // Optional (e.g., "A", "Aleph")
     public var dateRead: Date
     public var isCompleted: Bool
     
-    public init(number: Int, section: String? = nil, dateRead: Date = Date(), isCompleted: Bool = true) {
+    public init(id: UUID = UUID(), number: Int, section: String? = nil, dateRead: Date = Date(), isCompleted: Bool = true) {
+        self.id = id
         self.number = number
         self.section = section
         self.dateRead = dateRead
@@ -16,7 +17,10 @@ public struct PsalmProgress: Codable, Identifiable, CustomStringConvertible  {
     public var description: String {
         let sectionDisplay = section != nil ? " \(section!)" : ""
         let status = isCompleted ? "✓" : "✗"
-        return "Psalm \(number)\(sectionDisplay): \(status) (\(dateRead.formatted()))"
+        let formatter = DateFormatter()
+        formatter.dateStyle = .short
+        formatter.timeStyle = .short
+        return "Psalm \(number)\(sectionDisplay): \(status) (\(formatter.string(from: dateRead)))"
     }
     // Helper to match a psalm by number and section
     func matches(number: Int, section: String?) -> Bool {

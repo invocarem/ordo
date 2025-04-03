@@ -62,7 +62,7 @@ public class LiturgicalService {
             isSunday: weekday == 1
         )
     }
-    private let verbose : Bool = true
+    private let verbose : Bool = false
 
 
     private func getSeason(for date: Date) -> LiturgicalSeason {

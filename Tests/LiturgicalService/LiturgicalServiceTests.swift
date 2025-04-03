@@ -18,6 +18,10 @@ final class TestHelper {
 }
 
 final class LiturgicalServiceTests: XCTestCase {
+    override class func setUp() {
+       super.setUp()
+       print("✅ Test class initialized")
+    }
     private var calendar: Calendar = {
         var cal = Calendar(identifier: .gregorian)
         cal.timeZone = TimeZone(secondsFromGMT: 0)!
@@ -184,7 +188,7 @@ final class LiturgicalServiceTests: XCTestCase {
        XCTAssertEqual(complinePsalms, expectedPsalmsCompline)
     }
     func testTerce() throws {
-
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         let service = TestHelper.getLiturgicalService()
@@ -201,22 +205,46 @@ final class LiturgicalServiceTests: XCTestCase {
 
     }
 
-    func testNone() throws {
-
+    func testSext() throws {
+        
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy-MM-dd"
         let service = TestHelper.getLiturgicalService()
         
         let date = try XCTUnwrap(formatter.date(from: "2025-03-23"))
-        let nonePsalms = service.psalterService.getPsalms(for: .terce, on: date)
-        let expectedPsalmsNone = ["118 (he)", "118 (vau)", "118 (zain)"]
-        XCTAssertEqual(nonePsalms, expectedPsalmsNone)
+        let sextPsalms = service.psalterService.getPsalms(for: .sext, on: date)
+        let expectedPsalmsSext = ["118 (heth)", "118 (teth)", "118 (iod)"]
+        XCTAssertEqual(sextPsalms, expectedPsalmsSext)
     
         let lent_wednesday = try XCTUnwrap(formatter.date(from: "2025-04-02"))
-        let nonePsalmsWed = service.psalterService.getPsalms(for: .terce, on: lent_wednesday)
-        let expectedPsalmsNoneWed = ["119", "120", "121"]
-        XCTAssertEqual(nonePsalmsWed, expectedPsalmsNoneWed)
+        let sextPsalmsWed = service.psalterService.getPsalms(for: .sext, on: lent_wednesday)
+        let expectedPsalmsSextWed = ["122", "123", "124"]
+        XCTAssertEqual(sextPsalmsWed, expectedPsalmsSextWed)
 
     }
+
+func testNone() throws {
+    
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd"
+    let service = TestHelper.getLiturgicalService()
+    
+    // First test case
+    let date1 = try XCTUnwrap(formatter.date(from: "2025-03-23"))
+    let nonePsalms1 = service.psalterService.getPsalms(for: .none, on: date1)
+    
+    let expectedPsalmsNone1 = ["118 (caph)", "118 (lamed)", "118 (mem)"]
+    XCTAssertEqual(nonePsalms1, expectedPsalmsNone1)
+    
+    // Second test case
+    let date2 = try XCTUnwrap(formatter.date(from: "2025-04-02"))
+    let nonePsalms2 = service.psalterService.getPsalms(for: .none, on: date2)
+        let expectedPsalmsNone2 = ["125", "126", "127"]
+    
+    XCTAssertEqual(nonePsalms2[0], expectedPsalmsNone2[0])
+    
+    
+}
+    
 
 }
