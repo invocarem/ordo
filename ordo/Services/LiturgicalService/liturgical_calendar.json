@@ -1,72 +1,5 @@
 {
   "description": "6th-century Benedictine Divine Office (Rule of St. Benedict, c. 530 AD)",
-  "psalter": {
-    "hours": {
-      "matins": {
-        "winter": {
-          "sunday": ["3", "94+Venite", "100", "62", "5", "35", "42", "56", "6", "24", "25", "28"],
-          "weekday": ["3", "94+Venite", "100", "62", "5", "35", "42", "56"]
-        },
-        "summer": {
-          "sunday": ["3", "94+Venite", "100", "62", "66", "5"],
-          "weekday": ["3", "94+Venite", "100", "62", "66", "5"]
-        }
-      },    
-      "lauds": {
-        "sunday": ["66", "50", "117", "62", "Benedicite (Dan 3:57-88)", "148", "149", "150"],
-        "weekday": {
-            "winter": ["50", "66", "62", "Canticle (OT)", "148", "149", "150"],
-            "summer": ["50", "66", "Canticle (OT)", "148", "149", "150"]
-        },
-        "notes": {
-            "canticles": "Alternate OT Canticles (RB 13): Exodus 15, Deuteronomy 32, Isaiah 38, etc.",
-            "alleluia": "Omitted in Lent (RB 15)"
-        }
-      },
-      "vespers": {
-        "sunday": ["109", "110", "111", "112", "113"],
-        "monday": ["114", "115", "116", "117", "118 (short)"],
-        "tuesday": ["128", "129", "130", "131", "132"],
-        "wednesday": ["124", "125", "126", "127", "128"],
-        "thursday": ["129", "130", "131", "132", "133"],
-        "friday": ["134", "135", "136", "137", "138"],
-        "saturday": ["139", "140", "141", "142", "143"],
-        "notes": "4 psalms in summer (RB 18: fewer 'due to summer evenings')"
-      },
-
-      "prime": {
-        "sunday": ["118 (aleph)", "118 (beth)", "118 (gimel)", "118 (daleth)"],
-        "monday": ["1", "2", "6"],
-        "tuesday": ["7", "8", "9 (a)"],
-        "wednesday": ["9 (b)", "10", "11"],
-        "thursday": ["12", "13", "14"],
-        "friday": ["15", "16", "17 (a)"],
-        "saturday": ["17 (b)", "18","19"]
-      },
-      "terce" : {
-        "sunday": ["118 (he)", "118 (vau)", "118 (zain)"],
-        "monday": ["118 (nun)", "118 (samech)", "118 (ain)"],
-  
-        "default": ["119", "120", "121"],
-        "notes": "Sunday uses fixed Ps 118 segments; weekdays use Gradual Psalms per RB 17"
-      },
-      "sext": {
-       "sunday": ["118 (heth)", "118 (teth)", "118 (iod)"  ],
-       "monday": ["118 (phe)", "118 (sade)", "118 (coph)"], 
-       "default": ["122", "123", "124"]
-      },        
-      "none": {
-        "sunday": ["118 (caph)", "118 (lamed)", "118 (mem)"  ],
-        "monday": ["118 (res)", "118 (sin)", "118 (tau)"], 
-        "default": ["125", "126", "127"]
-       },        
- 
-      "compline": {
-        "default": ["4", "90", "133"]
-        
-      }
-    }
-  },
   "temporal_cycle": {
     "advent": {
       "start": "4th Sunday before Christmas",
@@ -191,33 +124,6 @@
   }
 },
   
-  "seasons": {
-    "winter": {
-      "dates": "Nov 1 to Easter",
-      "matins": {
-        "readings": {
-          "sunday": "3 lessons per nocturn (OT, NT, Gospel homily)",
-          "weekday": "1 lesson (RB 11)"
-        },
-        "rising_time": "8th hour of night (∼2–3 AM, RB 8)",
-        "psalms_per_nocturn": 4
-      },
-      "meals": 1,
-      "vespers_time": "Before dark (RB 41)",
-      "notes": "Long nights allow extended Vigils"
-    },
-    "summer": {
-      "dates": "Easter to Oct 31",
-      "matins": {
-        "readings": "1 lesson (RB 10)",
-        "rising_time": "Shortly after midnight (RB 10)",
-        "psalms_per_nocturn": 6
-      },
-      "meals": 2,
-      "vespers_time": "Earlier (to allow for evening meal, RB 41)",
-      "notes": "Short nights → abbreviated Vigils"
-    }
-  },
   "notes": {
     "historical_accuracy": "Based strictly on Rule of St. Benedict (c. 530) and 6th-century Roman practice.",
     "later_additions": {

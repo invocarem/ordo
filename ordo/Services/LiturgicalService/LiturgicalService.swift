@@ -10,17 +10,31 @@ import Foundation
 public class LiturgicalService {
     private let calendar: Calendar
     private let officeData: OfficeData
-    public let psalterService: PsalterService
+    
     public init(calendar: Calendar = .current) {
         self.calendar = calendar
         do {
-            self.officeData = try BundleChecker.loadJSON(forResource: "office", as: OfficeData.self)
-            self.psalterService = PsalterService(officeData: officeData, calendar: calendar)
+            self.officeData = try BundleChecker.loadJSON(forResource: "liturgical_calendar", as: OfficeData.self)            
         } catch {
             fatalError("Failed to load office data: \(error)")
         }
     }
+    public func getBenedictineSeason(for date: Date) -> String {
+        let year = calendar.component(.year, from: date)
+        let month = calendar.component(.month, from: date)
     
+        // Winter runs from October 1 to Easter
+        if month >= 10 {
+            return "winter"
+        }
+        
+        if let easter = getNormalizedEaster(year: year), date < easter {
+            return "winter"
+        }
+    
+        return "summer"
+    }
+
     // MARK: - Public Interface
     
     public func getLiturgicalInfo(for date: Date) -> LiturgicalDay {
@@ -212,8 +226,6 @@ public class LiturgicalService {
     private func getTemporalFeast(for date: Date) -> Feast? {
         let year = calendar.component(.year, from: date)
         
-
-
         if let christmas = getNormalizedChristmas(year: year),
            calendar.isDate(date, inSameDayAs: christmas),
            let feastData = officeData.temporal_cycle.christmas.first(where: { $0.value.name.lowercased().contains("nativity") })?.value {
@@ -235,7 +247,6 @@ public class LiturgicalService {
                 notes: feastData.notes ?? ""
             )
         }
-
 
         if let easter = getNormalizedEaster(year: year),
             calendar.isDate(date, inSameDayAs: easter) {
@@ -259,8 +270,6 @@ public class LiturgicalService {
             )
         }
     
-        
-        
         return nil
     }
 }
@@ -296,18 +305,18 @@ public enum LiturgicalSeason {
         case postPentecost
     }
     public var description: String {
-            switch self {
-            case .advent: return "Advent"
-            case .christmas: return "Christmas"
-            case .lent: return "Lent"
-            case .pascha: return "Pascha"
-            case .ordinaryTime(let period):
-                switch period {
-                case .postEpiphany: return "Ordinary Time (Post-Epiphany)"
-                case .postPentecost: return "Ordinary Time (Post-Pentecost)"
-                }
+        switch self {
+        case .advent: return "Advent"
+        case .christmas: return "Christmas"
+        case .lent: return "Lent"
+        case .pascha: return "Pascha"
+        case .ordinaryTime(let period):
+            switch period {
+            case .postEpiphany: return "Ordinary Time (Post-Epiphany)"
+            case .postPentecost: return "Ordinary Time (Post-Pentecost)"
             }
         }
+    }
 }
 
 public struct Feast {
@@ -331,72 +340,9 @@ public struct Feast {
 public struct OfficeData: Codable {
     let description: String
     let temporal_cycle: TemporalCycle
-    let sanctoral_cycle: [String: SanctoralFeast]
-    let seasons: [String: SeasonData]
+    let sanctoral_cycle: [String: SanctoralFeast]    
     let notes: OfficeNotes
-    let psalter: Psalter
-      
-   
-
-    // MARK: - Psalter Structure
-    public struct Psalter: Codable {
-        public let hours: Hours
-        
-        public struct Hours: Codable {
-            public let matins: Matins
-            public let lauds: Lauds
-            public let prime: HourRule
-            public let terce: HourRule
-            public let sext: HourRule
-            public let none: HourRule
-            public let vespers: HourRule
-            public let compline: HourRule
-            
-            // Matins structure
-            public struct Matins: Codable {
-                public let winter: SeasonPsalms
-                public let summer: SeasonPsalms
-                
-                public struct SeasonPsalms: Codable {
-                    public let sunday: [String]
-                    public let weekday: [String]
-                }
-            }
-            
-            // Lauds structure
-            public struct Lauds: Codable {
-                public let sunday: [String]
-                public let weekday: WeekdayPsalms
-                public let notes: LaudsNotes?
-                
-                public struct WeekdayPsalms: Codable {
-                    public let winter: [String]
-                    public let summer: [String]
-                }
-                
-                public struct LaudsNotes: Codable {
-                    public let canticles: String?
-                    public let alleluia: String?
-                }
-            }
-            
-            public struct HourRule: Codable {
-                public let sunday: [String]?
-                public let monday: [String]?
-                public let tuesday: [String]?
-                public let wednesday: [String]?
-                public let thursday: [String]?
-                public let friday: [String]?
-                public let saturday: [String]?
-                public let weekday: [String]?
-                public let `default`: [String]?
-                public let notes: String?
-              }
-          
-            
-        }
-    }
-
+    
     public struct TemporalCycle: Codable {
         let advent: Advent
         let christmas: [String: ChristmasFeast]
@@ -466,19 +412,7 @@ public struct OfficeData: Codable {
         let notes: String?
     }
     
-    struct SeasonData: Codable {
-        let dates: String
-        let matins: Matins
-        let meals: Int?
-        let vespers_time: String?
-        let notes: String?
-        
-        struct Matins: Codable {
-            let psalms: [[String]]?
-            let readings: StringOrDict?
-            let rising_time: String?
-        }
-    }
+    
     
     struct OfficeNotes: Codable {
         let historical_accuracy: String

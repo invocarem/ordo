@@ -49,7 +49,7 @@ guard ["matins", "lauds", "prime", "terce", "sext", "none", "vespers", "compline
 // Get and print liturgical info
 let info = service.getLiturgicalInfo(for: date)
 print(info)
-
+let season = service.getBenedictineSeason(for: date)
 guard let weekday_info = extractWeekday(from: info) else {
     print("Could not determine weekday from LiturgicalInfo")
     fatalError()
@@ -60,7 +60,7 @@ if let hour = HoursService.shared.getHour(for: hourType) {
     printHourIntro(hour: hour)
 
     let weekday = weekday_info
-    guard let psalms = getPsalmsForWeekday(weekday, hour: hour) else {
+    guard let psalms = HoursService.shared.getPsalmsForWeekday(weekday, hourKey: hourType, season: season) else {
         print("No psalms found for \(weekday)")
         exit(1)
     }
@@ -147,7 +147,7 @@ func printHourIntro(hour: Hour) {
         hymnLines.forEach { print("  \($0)") }
         
     case .structured(let hymnData):
-        print("  \(hymnData.defaultText)")
+        print("  \(hymnData.default)")
         if let seasonal = hymnData.seasons?.values.first {
             print("  (Seasonal variant: \(seasonal))")
         }
@@ -162,51 +162,6 @@ func printHourIntro(hour: Hour) {
 }
 
 
-func getPsalmsForWeekday(_ weekday: String, hour: Hour) -> [PsalmUsage]? {
-    var psalms = [PsalmUsage]()
-    
-    // Add default psalms first (for Lauds, these are 66, 50, 117, 62)
-    if let defaultPsalms = hour.psalms.default {
-        psalms.append(contentsOf: defaultPsalms)
-    }
-    
-    // Add weekday-specific psalms
-    switch weekday.lowercased() {
-    case "sunday": 
-        if let sundayPsalms = hour.psalms.sunday {
-            psalms.append(contentsOf: sundayPsalms)
-        }
-    case "monday": 
-        if let mondayPsalms = hour.psalms.monday {
-            psalms.append(contentsOf: mondayPsalms)
-        }
-    case "tuesday": 
-        if let tuesdayPsalms = hour.psalms.tuesday {
-            psalms.append(contentsOf: tuesdayPsalms)
-        }
-    case "wednesday": 
-        if let wednesdayPsalms = hour.psalms.wednesday {
-            psalms.append(contentsOf: wednesdayPsalms)
-        }
-    case "thursday": 
-        if let thursdayPsalms = hour.psalms.thursday {
-            psalms.append(contentsOf: thursdayPsalms)
-        }
-    case "friday": 
-        if let fridayPsalms = hour.psalms.friday {
-            psalms.append(contentsOf: fridayPsalms)
-        }
-    case "saturday": 
-        if let saturdayPsalms = hour.psalms.saturday {
-            psalms.append(contentsOf: saturdayPsalms)
-        }
-    default: 
-        break
-    }
-    
-    return psalms.isEmpty ? nil : psalms
-}
-
 
 func printPsalm(_ psalm: PsalmUsage, using service: PsalmService) {
     // Print psalm header with better spacing
@@ -217,13 +172,7 @@ func printPsalm(_ psalm: PsalmUsage, using service: PsalmService) {
         headerParts.append("(\(category))")
     }
     
-    if let startVerse = psalm.startVerse, startVerse != 1 {
-        headerParts.append("starting at verse \(startVerse)")
-    }
-    
-    if let verses = psalm.verses {
-        headerParts.append("specific verses: \(verses)")
-    }
+   
     
     print("\n" + headerParts.joined(separator: " "))
     

@@ -26,8 +26,8 @@ let package = Package(
             name: "LiturgicalService",
             dependencies: [],  
             path: "ordo/Services/LiturgicalService",
-            sources: ["LiturgicalService.swift", "Extensions.swift", "PsalterService.swift"],
-            resources: [.process("office.json")]
+            sources: ["LiturgicalService.swift", "Extensions.swift"],
+            resources: [.process("liturgical_calendar.json")]
         ),
 
         .target(
@@ -37,6 +37,7 @@ let package = Package(
             sources: ["HoursService.swift"],
             resources: [.process("horas.json")]
         ),
+
          .target(
             name: "PsalmProgressTracker",
             dependencies: [],
@@ -63,7 +64,7 @@ let package = Package(
 
         .testTarget(  
             name: "HoursServiceTests", 
-            dependencies: ["HoursService"],  // Removed explicit XCTest
+            dependencies: ["HoursService"],  
             path: "Tests/HoursService",    
             sources: ["HoursServiceTests.swift"],
             resources: [.copy("../../ordo/Services/HoursService/horas.json")]
@@ -83,7 +84,7 @@ let package = Package(
             dependencies: ["LiturgicalService"],
             path: "Tests/LiturgicalService",    
             sources: ["LiturgicalServiceTests.swift"],
-            resources: [.copy("../../ordo/Services/LiturgicalService/office.json")]
+            resources: [.copy("../../ordo/Services/LiturgicalService/liturgical_calendar.json")]
         )
     ]
 )
