@@ -87,7 +87,7 @@ final class HoursServiceTests: XCTestCase {
         ]
         
         for testCase in testCases {
-            guard let psalms = hoursService.getPsalmsForWeekday(testCase.weekday, 
+            guard let psalms = hoursService.getPsalmsForWeekday(weekday: testCase.weekday, 
                                             hourKey: "prime", 
                                             season: "lent") else {
                 XCTFail("Failed to get psalms for Prime on \(testCase.weekday)")
@@ -188,7 +188,7 @@ func testVespersPsalms() {
     func testMondayLaudsPsalmsSummer() {
         let expectedPsalms = [ "66","50", "Canticle", "148", "149", "150"]    
         let season = "summer"
-            guard let psalms = hoursService.getPsalmsForWeekday("monday", 
+            guard let psalms = hoursService.getPsalmsForWeekday(weekday: "monday", 
                                             hourKey: "lauds", 
                                             season: season) else {
                 XCTFail("Missing Monday Lauds psalms (\(season))")
@@ -204,7 +204,7 @@ func testVespersPsalms() {
     func testMondayLaudsPsalmsWinter() {
         let expectedPsalms = ["66","50",  "62", "Canticle", "148", "149", "150"]    
         let season = "winter"
-        guard let psalms = hoursService.getPsalmsForWeekday("monday", 
+        guard let psalms = hoursService.getPsalmsForWeekday(weekday: "monday", 
                                         hourKey: "lauds", 
                                         season: season) else {
             XCTFail("Missing Monday Lauds psalms (\(season))")
@@ -224,7 +224,7 @@ func testVespersPsalms() {
         let seasons = ["winter", "summer"]
         
         for season in seasons {
-            guard let psalms = hoursService.getPsalmsForWeekday("friday", 
+            guard let psalms = hoursService.getPsalmsForWeekday(weekday: "friday", 
                                             hourKey: "lauds", 
                                             season: season) else {
                 XCTFail("Failed to get Friday Lauds psalms for season: \(season)")
@@ -252,7 +252,7 @@ func testVespersPsalms() {
     }
 
     private func verifyPsalmSections(weekday: String, hourKey: String, expectedNumbers: [String], expectedCategories: [String]) {        
-        guard let psalms = hoursService.getPsalmsForWeekday(weekday, hourKey: hourKey, season: "ordinary") else {
+        guard let psalms = hoursService.getPsalmsForWeekday(weekday: weekday, hourKey: hourKey, season: "ordinary") else {
             XCTFail("Failed to get psalms for \(weekday) \(hourKey)")
             return
         }
@@ -300,7 +300,7 @@ func testVespersPsalms() {
     let season = "lent"
     
     // 2. Fetch the psalms
-    guard let psalms = hoursService.getPsalmsForWeekday(weekday, 
+    guard let psalms = hoursService.getPsalmsForWeekday(weekday: weekday, 
                                                   hourKey: hourKey, 
                                                   season: season) else {
         XCTFail("Failed to get psalms for None on Wednesday")
@@ -325,7 +325,7 @@ func testVespersPsalms() {
     let season = "lent"
     
     // When
-    guard let psalms = hoursService.getPsalmsForWeekday(weekday, 
+    guard let psalms = hoursService.getPsalmsForWeekday(weekday: weekday, 
                                             hourKey: hourKey, 
                                             season: season) else {
         XCTFail("Failed to get psalms for Sext on Sunday")
@@ -358,7 +358,7 @@ func testMatinsPsalmsInWinter() {
     let season = "winter"
     
     // When
-    guard let psalms = hoursService.getPsalmsForWeekday(weekday, 
+    guard let psalms = hoursService.getPsalmsForWeekday(weekday: weekday, 
                                             hourKey: hourKey, 
                                             season: season) else {
         XCTFail("Failed to get psalms for Matins in winter")
@@ -402,31 +402,27 @@ func testMatinsPsalmsInWinter() {
     XCTAssertEqual(canticle?.verses?[1], "Benedicite, angeli Domini, Domino...") 
     XCTAssertEqual(canticle?.verses?[2], "Laudate Dominum de caelis")
 }
-
-    func testSundayMatinsInSummer() {
-    // Given
-    let weekday = "sunday"
-    let hourKey = "matins"
-    let season = "summer"
-    
-    // When
-    guard let psalms = hoursService.getPsalmsForWeekday(weekday, 
-                                             hourKey: hourKey, 
-                                             season: season) else {
-        XCTFail("Sunday Matins in summer should exist")
-        return
+    func testSundaySummerLaud() {
+        let psalms = hoursService.getPsalmsForWeekday(weekday: "sunday", hourKey: "lauds", season: "summer")
+        let expectedNumbers = ["66", "50", "117", "62", "148", "149", "150"]
+        XCTAssertEqual(psalms?.map { $0.number }, expectedNumbers)
     }
-    
-    // Then
-    // 1. Verify 12 psalms for the night office
-    XCTAssertEqual(psalms.count, 12, 
-                 "Sunday Matins in summer should have 12 psalms according to RB 10. Got: \(psalms.count)")
 
+    func testWeekdaySummerMatin() {
+        let psalms = hoursService.getPsalmsForWeekday(weekday: "tuesday", hourKey: "matins", season: "summer")
+        let expectedNumbers = ["3", "94", "100", "62", "66", "5"]
+        XCTAssertEqual(psalms?.map { $0.number }, expectedNumbers)
+    }
 
-                     
-    
-
-}
-
+    func testSundaySummerMatin() {
+        let psalms = hoursService.getPsalmsForWeekday(weekday: "sunday", hourKey: "matins", season: "summer")
+        let expectedNumbers = ["3", "94", "100", "62", "66", "5", "35", "42", "56", "6", "24", "25"]
+        XCTAssertEqual(psalms?.map { $0.number }, expectedNumbers)
+    }
+    func testSundayWinterMatin() {
+        let psalms = hoursService.getPsalmsForWeekday(weekday: "sunday", hourKey: "matins", season: "winter")        
+        let expectedNumbers = ["3", "94", "100", "62", "5", "35", "42", "56", "6", "24", "25", "28"]
+        XCTAssertEqual(psalms?.map { $0.number }, expectedNumbers)
+    }
 
 }

@@ -60,7 +60,7 @@ if let hour = HoursService.shared.getHour(for: hourType) {
     printHourIntro(hour: hour)
 
     let weekday = weekday_info
-    guard let psalms = HoursService.shared.getPsalmsForWeekday(weekday, hourKey: hourType, season: season) else {
+    guard let psalms = HoursService.shared.getPsalmsForWeekday(weekday: weekday, hourKey: hourType, season: season) else {
         print("No psalms found for \(weekday)")
         exit(1)
     }

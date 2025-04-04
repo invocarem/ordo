@@ -251,14 +251,14 @@ public final class HoursService {
     }
    
     public  func  getPsalmsForWeekday(
-        _  weekday:  String, 
+        weekday:  String, 
         hourKey:  String,  //  e.g.,  "matins",  "lauds"
         season:  String?  =  nil  //  "winter",  "summer",  or  nil
     )  ->  [PsalmUsage]?  {
         guard  let  hour  =  horas[hourKey]  else  {  return  nil  }
-        return  getPsalmsForWeekday(weekday,  hour:  hour,  season:  season)
+        return  getPsalmsForWeekday(weekday: weekday,  hour:  hour,  season:  season)
     }
-private func getPsalmsForWeekday(_ weekday: String, hour: Hour, season: String? = nil) -> [PsalmUsage]? {
+private func getPsalmsForWeekday(weekday: String, hour: Hour, season: String? = nil) -> [PsalmUsage]? {
     var psalms = [PsalmUsage]()
     let lowercaseWeekday = weekday.lowercased()
 
