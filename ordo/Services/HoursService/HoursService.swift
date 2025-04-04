@@ -124,7 +124,7 @@ public struct AntiphonRules: Codable {
 }
 public struct SeasonPsalmGroups: Codable {
     public let sunday: [PsalmUsage]
-    public let weekday: [PsalmUsage]
+    public let weekday: [PsalmUsage]?
     public let monday: [PsalmUsage]?
     public let tuesday: [PsalmUsage]?
     public let wednesday: [PsalmUsage]?
@@ -288,17 +288,16 @@ private func getPsalmsForWeekday(weekday: String, hour: Hour, season: String? = 
         case "saturday":
             specificDayPsalms = seasonGroups.saturday
         default:
-            specificDayPsalms = nil
+            specificDayPsalms = seasonGroups.weekday
         }
         
         if let specificDayPsalms = specificDayPsalms {
             psalms.append(contentsOf: specificDayPsalms)
-        } else {
-            // Fall back to sunday/weekday structure
-            psalms.append(contentsOf: lowercaseWeekday == "sunday" ? 
-                seasonGroups.sunday : 
-                seasonGroups.weekday
-            )
+        } else if lowercaseWeekday != "sunday" {
+            // Fall back to weekday structure only if it's not sunday
+            if let weekdayPsalms = seasonGroups.weekday {
+                psalms.append(contentsOf: weekdayPsalms)
+            }
         }
     }
 

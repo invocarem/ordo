@@ -186,7 +186,7 @@ func testVespersPsalms() {
 }
 
     func testMondayLaudsPsalmsSummer() {
-        let expectedPsalms = [ "66","50", "Canticle", "148", "149", "150"]    
+        let expectedPsalms = [ "66","50", "5", "42", "148", "149", "150"]    
         let season = "summer"
             guard let psalms = hoursService.getPsalmsForWeekday(weekday: "monday", 
                                             hourKey: "lauds", 
@@ -218,7 +218,7 @@ func testVespersPsalms() {
     }
     func testFridayLauds() {
         // 1. Define the expected psalm sequence for Friday Lauds
-        let expectedPsalms = ["66", "50", "75", "Canticle", "148", "149", "150"]
+        let expectedPsalms = ["66", "50", "75", "99", "148", "149", "150"]
         
         // 2. Test across all seasons (winter/summer/Lent/Easter)
         let seasons = ["winter", "summer"]
