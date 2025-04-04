@@ -2,7 +2,7 @@
     "psalms": [
         {
             "number": 1,
-            "section": "The Two Ways",
+            "section": "",
             "text": [
               "Beatus vir qui non abiit in consilio impiorum, et in via peccatorum non stetit, et in cathedra pestilentiae non sedit;",
               "Sed in lege Domini voluntas ejus, et in lege ejus meditabitur die ac nocte.",
@@ -22,7 +22,7 @@
           },
           {
             "number": 2,
-            "section": "The Reign of God's Anointed",
+            "section": "",
             "text": [
               "Quare fremuerunt gentes, et populi meditati sunt inania? Astiterunt reges terrae, et principes convenerunt in unum adversus Dominum, et adversus christum ejus.",
               "Dirumpamus vincula eorum, et projiciamus a nobis jugum ipsorum. Qui habitat in caelis irridebit eos, et Dominus subsannabit eos.",
@@ -43,7 +43,7 @@
         
         {
             "number": 3,
-            "section": "Morning Prayer (Trust in God amid Adversity)",
+            "section": "",
             "text": [
                 "Domine, quid multiplicati sunt qui tribulant me? multi insurgunt adversum me.",
                 "Multi dicunt animae meae: Non est salus ipsi in Deo ejus.",
@@ -57,7 +57,7 @@
         },
         {
             "number": 4,
-            "section": "Evening Prayer (Confidence in God's Justice)",
+            "section": "",
             "text": [
                 "Cum invocarem exaudivit me Deus justitiae meae; in tribulatione dilatasti mihi.",
                 "Miserere mei, et exaudi orationem meam.",
@@ -73,7 +73,7 @@
         },
         {
             "number": 5,
-            "section": "Morning Prayer (Prayer for Guidance)",
+            "section": "",
             "text": [
                 "Verba mea auribus percipe, Domine, intellige clamorem meum.",
                 "Intende voci orationis meae, Rex meus et Deus meus.",

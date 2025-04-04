@@ -125,9 +125,15 @@ public struct AntiphonRules: Codable {
 public struct SeasonPsalmGroups: Codable {
     public let sunday: [PsalmUsage]
     public let weekday: [PsalmUsage]
+    public let monday: [PsalmUsage]?
+    public let tuesday: [PsalmUsage]?
+    public let wednesday: [PsalmUsage]?
+    public let thursday: [PsalmUsage]?
+    public let friday: [PsalmUsage]?
+    public let saturday: [PsalmUsage]?
     
     private enum CodingKeys: String, CodingKey {
-        case sunday, weekday
+        case sunday, weekday, monday,tuesday,wednesday,thursday,friday,saturday
     }
 }
 public struct PsalmRules: Codable {
@@ -177,14 +183,15 @@ public struct PsalmRules: Codable {
     }
 }
 
-public struct PsalmUsage: Codable {
+public struct PsalmUsage: Codable, Equatable {
     public let number: String
     public let category: String?
 
-     public  init(number:  String,  category:  String?  =  nil)  {
-        self.number  =  number
-        self.category  =  category
+    public init(number: String, category: String? = nil) {
+        self.number = number
+        self.category = category ?? ""
     }
+
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let value = try container.decode(String.self)
@@ -204,6 +211,10 @@ public struct PsalmUsage: Codable {
             try container.encode(number)
         }
     }
+    public static func == (lhs: PsalmUsage, rhs: PsalmUsage) -> Bool {
+        return lhs.number == rhs.number && lhs.category == rhs.category
+    }
+ 
 }
 
 
@@ -239,7 +250,7 @@ public final class HoursService {
         print("Error: horas.json not found in any bundle")
     }
    
-public  func  getPsalmsForWeekday(
+    public  func  getPsalmsForWeekday(
         _  weekday:  String, 
         hourKey:  String,  //  e.g.,  "matins",  "lauds"
         season:  String?  =  nil  //  "winter",  "summer",  or  nil
@@ -247,33 +258,57 @@ public  func  getPsalmsForWeekday(
         guard  let  hour  =  horas[hourKey]  else  {  return  nil  }
         return  getPsalmsForWeekday(weekday,  hour:  hour,  season:  season)
     }
+private func getPsalmsForWeekday(_ weekday: String, hour: Hour, season: String? = nil) -> [PsalmUsage]? {
+    var psalms = [PsalmUsage]()
+    let lowercaseWeekday = weekday.lowercased()
 
-    private  func  getPsalmsForWeekday(
-        _  weekday:  String, 
-        hour:  Hour, 
-        season:  String?  =  nil
-    )  ->  [PsalmUsage]?  {
-        var  psalms  =  [PsalmUsage]()
-        let  lowercaseWeekday  =  weekday.lowercased()
+    // 1. First check for specific weekday psalms (e.g., "monday", "tuesday")
+    if let weekdayPsalms = hour.psalms.weekdays?[lowercaseWeekday], !weekdayPsalms.isEmpty {
+        return weekdayPsalms
+    }
 
-        // 1. Check  seasonal  psalms  (for  Matins/Lauds)
-        if  let  season  =  season?.lowercased(),
-           let  seasonGroups  =  hour.psalms.seasons?[season]  {
-            psalms.append(contentsOf:  lowercaseWeekday  ==  "sunday"  ?  
-                seasonGroups.sunday  :  seasonGroups.weekday
+    // 2. Enhanced seasonal psalms check (for Matins/Lauds)
+    if let season = season?.lowercased(), let seasonGroups = hour.psalms.seasons?[season] {
+        // Try to find a direct match for the weekday (like "friday" in winter)
+        let specificDayPsalms: [PsalmUsage]?
+        
+        switch lowercaseWeekday {
+        case "sunday":
+            specificDayPsalms = seasonGroups.sunday
+        case "monday":
+            specificDayPsalms = seasonGroups.monday
+        case "tuesday":
+            specificDayPsalms = seasonGroups.tuesday
+        case "wednesday":
+            specificDayPsalms = seasonGroups.wednesday
+        case "thursday":
+            specificDayPsalms = seasonGroups.thursday
+        case "friday":
+            specificDayPsalms = seasonGroups.friday
+        case "saturday":
+            specificDayPsalms = seasonGroups.saturday
+        default:
+            specificDayPsalms = nil
+        }
+        
+        if let specificDayPsalms = specificDayPsalms {
+            psalms.append(contentsOf: specificDayPsalms)
+        } else {
+            // Fall back to sunday/weekday structure
+            psalms.append(contentsOf: lowercaseWeekday == "sunday" ? 
+                seasonGroups.sunday : 
+                seasonGroups.weekday
             )
         }
-        // 2. Check  weekday  psalms  (Prime,  Terce,  etc.)
-        else  if  let  weekdayPsalms  =  hour.psalms.weekdays?[lowercaseWeekday]  {
-            psalms.append(contentsOf:  weekdayPsalms)
-        }
-        // 3. Fall  back  to  default
-        else  if  let  defaultPsalms  =  hour.psalms.default  {
-            psalms.append(contentsOf:  defaultPsalms)
-        }
-
-        return  psalms.isEmpty  ?  nil  :  psalms
     }
+
+    // 3. Fall back to default if we still have nothing
+    if psalms.isEmpty, let defaultPsalms = hour.psalms.default {
+        psalms.append(contentsOf: defaultPsalms)
+    }
+
+    return psalms.isEmpty ? nil : psalms
+}
     
     
     public func getHour(for key: String) -> Hour? {
@@ -281,8 +316,3 @@ public  func  getPsalmsForWeekday(
     }
 }
 
-extension PsalmUsage: Equatable {
-    public static func == (lhs: PsalmUsage, rhs: PsalmUsage) -> Bool {
-        return lhs.number == rhs.number && lhs.category == rhs.category
-    }
-}

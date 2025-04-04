@@ -50,11 +50,13 @@
       "psalms": {
         "winter": {
           "sunday": ["66", "50", "117", "62", "Benedicite", "148", "149", "150"],
-          "weekday": ["50", "66", "62", "Canticle", "148", "149", "150"]
+          "friday": ["66", "50", "75", "Canticle", "148", "149", "150"],
+          "weekday": ["66", "50", "62", "Canticle", "148", "149", "150"]
         },
         "summer": {
           "sunday": ["66", "50", "117", "62", "148", "149", "150"],
-          "weekday": ["50", "66", "Canticle", "148", "149", "150"]
+          "friday": ["66", "50", "75", "Canticle", "148", "149", "150"],
+          "weekday": ["66", "50", "Canticle", "148", "149", "150"]
         }
       },
       "benedictus": {
@@ -123,7 +125,7 @@
         "℟. Domine ad adjuvandum me festina."
       ],
       "psalms": {
-        "sunday": ["118 heth", "118 teth", "118 iod"],
+        "sunday": ["118 he", "118 vau", "118 zain"],
         "monday": ["118 nun", "118 samech", "118 ain"],
         "default": ["119", "120", "121"]
       },
@@ -142,8 +144,8 @@
         "℟. Domine ad adjuvandum me festina."
       ],
       "psalms": {        
-        "sunday": ["118 heth", "118 teth", "118 iod"],
-        "monday": ["118 res", "118 sin", "118 tau"],
+        "sunday": ["118 heth", "118 teth", "118 jod"],
+        "monday": ["118 pe", "118 sade", "118 coph"],
         "default": ["122", "123", "124"]
       },
       "capitulum": {
@@ -162,6 +164,7 @@
       ],
       "psalms": {
         "sunday": ["118 caph", "118 lamed", "118 mem"],
+        "monday": ["118 res", "118 sin", "118 thau"],
         "default": ["125", "126", "127"]
       },
       "capitulum": {
@@ -179,13 +182,15 @@
         "℟. Domine ad adjuvandum me festina."
       ],
       "psalms": {
-        "sunday": ["109", "110", "111", "112"],
-        "monday": ["113", "114", "115", "116"],
-        "tuesday": ["119", "120", "121", "122"],
-        "wednesday": ["123", "124", "125", "126"],
-        "thursday": ["127", "128", "129", "130"],
-        "friday": ["131", "132", "134", "135"],
-        "saturday": ["136", "137", "138", "139"]
+        "sunday": ["109", "110", "111", "112", "113"],
+  
+        "monday": ["114", "115", "116"],
+        "tuesday": ["128", "129", "130", "131", "132"],
+
+        "wednesday": ["134", "135", "136"],
+        "thursday": ["137", "138", "139"],
+        "friday": ["140", "141", "142"],
+        "saturday": ["143", "144", "145", "146", "147"]      
       },
       "capitulum": {
         "default": "Fratres: Sobrii estote et vigilate.",
@@ -194,7 +199,8 @@
       "oratio": {
         "default": "Dirigere et sanctificare...",
         "advent": "Excita, quaesumus, Domine..."
-      }
+      },
+      "notes": "5 christological(sun), 3 Exodos(mon), 5 degrees(tue), 3 temple (wed), 3 exile (thur), 3 lament(fri) and 5 praise(sat)"
     },
     "compline": {
       "introit": [
