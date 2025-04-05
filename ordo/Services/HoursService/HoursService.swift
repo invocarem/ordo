@@ -137,20 +137,28 @@ public struct SeasonPsalmGroups: Codable {
     }
 }
 public struct PsalmRules: Codable {
+    public let notes: String? 
+    public let prefix: [PsalmUsage]?  // Add this line
     public let seasons: [String: SeasonPsalmGroups]?
     public let weekdays: [String: [PsalmUsage]]?
     public let `default`: [PsalmUsage]?
     
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: DynamicCodingKey.self)
-        
+        var prefixArray: [PsalmUsage]?
         var seasonsDict = [String: SeasonPsalmGroups]()
         var weekdaysDict = [String: [PsalmUsage]]()
         var defaultArray: [PsalmUsage]?
-        
+        var notesValue: String?
+
         for key in container.allKeys {
             let keyString = key.stringValue
-            if keyString == "default" {
+            if keyString == "prefix" {
+                prefixArray = try container.decode([PsalmUsage].self, forKey: key)
+            } else if keyString == "notes" {
+                notesValue = try container.decode(String.self, forKey: key)
+            }
+            else if keyString == "default" {
                 defaultArray = try container.decode([PsalmUsage].self, forKey: key)
             } else if ["winter", "summer"].contains(keyString) {
                 let seasonGroup = try container.decode(SeasonPsalmGroups.self, forKey: key)
@@ -162,10 +170,11 @@ public struct PsalmRules: Codable {
                 throw DecodingError.dataCorruptedError(forKey: key, in: container, debugDescription: "Unexpected key \(keyString)")
             }
         }
-        
+        prefix = prefixArray
         seasons = seasonsDict.isEmpty ? nil : seasonsDict
         weekdays = weekdaysDict.isEmpty ? nil : weekdaysDict
         `default` = defaultArray
+        notes = notesValue ?? ""
     }
     
     private struct DynamicCodingKey: CodingKey {
@@ -224,6 +233,7 @@ public final class HoursService {
     
     private init() {
         loadHours()
+        
     }
     private func loadHours() {
         let bundlesToCheck: [Bundle] = {
@@ -240,6 +250,8 @@ public final class HoursService {
             if let url = bundle.url(forResource: "horas", withExtension: "json") { // Changed from "psalms" to "horas"
                 do {
                     let data = try Data(contentsOf: url)
+
+                    print("\(data)")
                     horas = try JSONDecoder().decode([String: Hour].self, from: data)
                     return
                 } catch {
@@ -262,6 +274,9 @@ private func getPsalmsForWeekday(weekday: String, hour: Hour, season: String? = 
     var psalms = [PsalmUsage]()
     let lowercaseWeekday = weekday.lowercased()
 
+    if let prefixPsalms = hour.psalms.prefix {
+        psalms.append(contentsOf: prefixPsalms)
+    }
     // 1. First check for specific weekday psalms (e.g., "monday", "tuesday")
     if let weekdayPsalms = hour.psalms.weekdays?[lowercaseWeekday], !weekdayPsalms.isEmpty {
         return weekdayPsalms
@@ -314,4 +329,5 @@ private func getPsalmsForWeekday(weekday: String, hour: Hour, season: String? = 
         return horas[key]
     }
 }
+
 

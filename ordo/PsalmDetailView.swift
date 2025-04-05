@@ -18,19 +18,7 @@ struct PsalmDetailView: View {
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
-                // Header with completion toggle
-                //HStack {
-                //    Text(psalmHeader)
-                //        .font(.headline)
-                //    Spacer()
-                //    Button(action: toggleCompletion) {
-                //        Image(systemName: isCompleted ? "checkmark.circle.fill" : "circle")
-                //            .foregroundColor(isCompleted ? .green : .gray)
-                //            .imageScale(.large)
-                //    }
-                //    .buttonStyle(.plain)
-                //}
-                //.padding(.horizontal)
+               
                 
                 // Content using PrayerSectionView
                 if let errorMessage = errorMessage {
@@ -44,7 +32,12 @@ struct PsalmDetailView: View {
                         title: "Psalm \(number) \(section ?? "")",
                         content: psalmContent,
                         showToggle: true,
-                        isCompleted: $isCompleted
+                        isCompleted: $isCompleted,
+                        onToggle: { newValue in
+                            // Update your tracker when toggled
+                            tracker.markPsalm(number: number, section: section, completed: newValue)
+                           
+                        }
                     )
                     .padding(.top, 0)
                 } else {

@@ -8,6 +8,7 @@ struct PrayerView: View {
     
     let weekday: String
     let psalmService: PsalmService
+    private let hoursService = HoursService.shared
     
     @EnvironmentObject private var observableTracker: PsalmObservableTracker
     
@@ -32,20 +33,13 @@ struct PrayerView: View {
                     // Display Psalms - updated logic
                     if let psalms = getPsalms(hour: hour) {
                         VStack(alignment: .leading, spacing: 16) {
-                            //Text(psalmSectionTitle(hour: hour))
-                            //    .font(.headline)
-                            //    .padding(.bottom, 4)
-                            //if allPsalmsCompleted(psalms) {
-                            //                                    Image(systemName: "checkmark.circle.fill")
-                            //                                        .foregroundColor(.green)
-                            //                                }
-                            ForEach(psalms.indices, id: \.self) { index in
-                                let psalm = psalms[index]
+                            
+                            ForEach(psalms, id: \.number) { psalm in
+                                //print("\(psalm\)")
                                 PsalmView(psalm: psalm, psalmService: psalmService)
-                                    .environmentObject(observableTracker) // Pass the tracker
-                                    .id("\(psalm.id)-\(index)")  // Add index as fallback
+                                    .environmentObject(observableTracker)
+                                    .debugPrint(psalm)
                             }
-                           
                         }
                     }
                     let feast = liturgicalInfo.feast?.name
@@ -85,18 +79,18 @@ struct PrayerView: View {
         case .structured(let data):
             // Here you could add logic to check liturgicalInfo for seasons/feasts
             // and return the appropriate text
-            return [data.defaultText]
+            return [data.default]
         }
     }
 
     
     // New helper methods
     private func getPsalms(hour: Hour) -> [PsalmUsage]? {
-        if hour.psalms.default != nil {
-            return hour.psalms.default
-        } else {
-            return getPsalmsForWeekday(weekday, hour: hour)
-        }
+        print("⏳ Starting getPsalms for \(hourName) \(weekday)")
+        
+        return hoursService.getPsalmsForWeekday(weekday: weekday, hourKey: hourName.lowercased(), season: "winter")
+            
+        
     }
     
     private func psalmSectionTitle(hour: Hour) -> String {
@@ -113,50 +107,7 @@ struct PrayerView: View {
         formatter.dateStyle = .long
         return formatter.string(from: date)
     }
-    func getPsalmsForWeekday(_ weekday: String, hour: Hour) -> [PsalmUsage]? {
-        var psalms = [PsalmUsage]()
-        
-        // Add default psalms first (for Lauds, these are 66, 50, 117, 62)
-        if let defaultPsalms = hour.psalms.default {
-            psalms.append(contentsOf: defaultPsalms)
-        }
-        
-        // Add weekday-specific psalms
-        switch weekday.lowercased() {
-        case "sunday":
-            if let sundayPsalms = hour.psalms.sunday {
-                psalms.append(contentsOf: sundayPsalms)
-            }
-        case "monday":
-            if let mondayPsalms = hour.psalms.monday {
-                psalms.append(contentsOf: mondayPsalms)
-            }
-        case "tuesday":
-            if let tuesdayPsalms = hour.psalms.tuesday {
-                psalms.append(contentsOf: tuesdayPsalms)
-            }
-        case "wednesday":
-            if let wednesdayPsalms = hour.psalms.wednesday {
-                psalms.append(contentsOf: wednesdayPsalms)
-            }
-        case "thursday":
-            if let thursdayPsalms = hour.psalms.thursday {
-                psalms.append(contentsOf: thursdayPsalms)
-            }
-        case "friday":
-            if let fridayPsalms = hour.psalms.friday {
-                psalms.append(contentsOf: fridayPsalms)
-            }
-        case "saturday":
-            if let saturdayPsalms = hour.psalms.saturday {
-                psalms.append(contentsOf: saturdayPsalms)
-            }
-        default:
-            break
-        }
-        
-        return psalms.isEmpty ? nil : psalms
-    }
+   
 
     private func allPsalmsCompleted(_ psalms: [PsalmUsage]) -> Bool {
            return psalms.allSatisfy { psalm in
@@ -176,12 +127,14 @@ struct PrayerSectionView: View {
     let content: [String]
     var showToggle: Bool
     var isCompleted: Binding<Bool>?
+    var onToggle: ((Bool) -> Void)?
     
-    init(title: String, content: [String], showToggle: Bool = false, isCompleted: Binding<Bool>? = nil) {
+    init(title: String, content: [String], showToggle: Bool = false, isCompleted: Binding<Bool>? = nil, onToggle: ((Bool) -> Void)? = nil) {
         self.title = title
         self.content = content
         self.showToggle = showToggle
         self.isCompleted = isCompleted
+        self.onToggle = onToggle
     }
     
     var body: some View {
@@ -193,7 +146,11 @@ struct PrayerSectionView: View {
                 if showToggle, let binding = isCompleted {
                     Spacer()
                     Toggle("", isOn: binding)
+                        .toggleStyle(CircleToggleStyle())
                         .labelsHidden()
+                        .onChange(of: binding.wrappedValue) { oldValue, newValue in
+                            onToggle?(newValue) // Execute action when value changes
+                        }
                 }
             }
             .padding(.bottom, 2)
@@ -212,5 +169,26 @@ struct PrayerSectionView: View {
             RoundedRectangle(cornerRadius: 8)
                 .stroke(Color.gray.opacity(0.2), lineWidth: 1)
         )
+    }
+}
+struct CircleToggleStyle: ToggleStyle {
+    func makeBody(configuration: Configuration) -> some View {
+        Button {
+            configuration.isOn.toggle()
+        } label: {
+            Image(systemName: configuration.isOn ? "checkmark.circle.fill" : "circle")
+                .resizable()
+                .frame(width: 20, height: 20)
+                .foregroundColor(configuration.isOn ? .blue : .gray)
+        }
+        .buttonStyle(.plain)
+    }
+}
+extension View {
+    func debugPrint(_ value: Any) -> some View {
+        #if DEBUG
+        print("DEBUG:", value)
+        #endif
+        return self
     }
 }

@@ -113,6 +113,8 @@ struct ContentView: View {
             if let info = liturgicalInfo {
                 print("Actual calendar weekday: \(weekdays[weekdayNumber-1])")
                 print("Extracted weekday: \(info.weekday)")
+                print("season: \(info.season)")
+                
             }
             // ... (keep your logging code) ...
         } catch {

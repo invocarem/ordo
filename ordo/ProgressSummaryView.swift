@@ -103,23 +103,25 @@ struct ProgressSummaryView: View {
             }
             
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 60))], spacing: 8) {
-                ForEach(psalms, id: \.number) { psalm in
+                ForEach(psalms) { psalm in
                     Button {
-                        selectedPsalm = psalm
-                    } label: {
-                        VStack {
-                            Text("\(psalm.number)")
-                                .font(.subheadline)
-                            if let section = psalm.section {
-                                Text(section)
-                                    .font(.caption2)
-                            }
-                        }
-                        .padding(6)
-                        .background(color.opacity(0.2))
-                        .cornerRadius(6)
-                    }
-                    .buttonStyle(.plain)
+                                       selectedPsalm = psalm
+                                   } label: {
+                                       VStack(spacing: 2) {
+                                           Text("\(psalm.number)")
+                                               .font(.subheadline.weight(.medium))
+                                           if let section = psalm.section {
+                                                               Text(section)
+                                                                   .font(.caption2.weight(.bold))
+                                                           }
+                                       }
+                                       .frame(width: 60, height: 40)
+                                       .background(color.opacity(0.2))
+                                       .cornerRadius(6)
+                                   }
+                                   .buttonStyle(.plain)
+                                   .debugPrint(psalm)
+                  
                 }
             }
         }

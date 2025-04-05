@@ -19,7 +19,7 @@ public final class PsalmObservableTracker: ObservableObject {
     public init() {
         let savePath: String
                if let documentsDir = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first {
-                   let customPath = documentsDir.appendingPathComponent("ordo_psalm_progress.json").path
+                   let customPath = documentsDir.appendingPathComponent("ordo_psalm_progress0.json").path
                    _ = Self.ensureDirectoryExists(for: customPath)
                    savePath = customPath
                } else {
@@ -48,7 +48,8 @@ public final class PsalmObservableTracker: ObservableObject {
             .store(in: &cancellables)
     }
     public func getCompletedPsalms() -> [PsalmProgress] {
-        tracker.getCompletedPsalms()
+        print("Filtered completed:", tracker.getCompletedPsalms())
+        return tracker.getCompletedPsalms()
     }
     public func getIncompletedPsalms() -> [PsalmProgress] {
         tracker.getIncompletedPsams()

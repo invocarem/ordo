@@ -1,18 +1,23 @@
 import Foundation
 
 public struct PsalmProgress: Codable, Identifiable, CustomStringConvertible  {
-    public let id : UUID
+    public var id: String
+    
     public let number: Int
     public let section: String?     // Optional (e.g., "A", "Aleph")
     public var dateRead: Date
     public var isCompleted: Bool
     
-    public init(id: UUID = UUID(), number: Int, section: String? = nil, dateRead: Date = Date(), isCompleted: Bool = true) {
-        self.id = id
+    public init(number: Int, section: String? = nil, dateRead: Date = Date(), isCompleted: Bool = true) {
         self.number = number
         self.section = section
         self.dateRead = dateRead
         self.isCompleted = isCompleted
+        if let section = section, !section.isEmpty {
+                   self.id = "\(number)-\(section)"
+               } else {
+                   self.id = "\(number)"
+               }
     }
     public var description: String {
         let sectionDisplay = section != nil ? " \(section!)" : ""
@@ -111,9 +116,13 @@ public final class PsalmProgressTracker {
         return report.joined(separator: "\n")
     }
     public func getCompletedPsalms() -> [PsalmProgress] {
-            return progress
+        return progress
                 .filter { $0.isCompleted }
-                .sorted { $0.number < $1.number || ($0.number == $1.number && ($0.section ?? "") < ($1.section ?? "")) }
+                .sorted {
+                    $0.number < $1.number ||
+                    ($0.number == $1.number && ($0.section ?? "") < ($1.section ?? ""))
+                }
+          
         }
     
     public func getIncompletedPsams() ->[PsalmProgress] {

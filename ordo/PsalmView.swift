@@ -58,13 +58,7 @@ struct PsalmView: View {
             headerParts.append("(\(category))")
         }
         
-        if let startVerse = psalm.startVerse, startVerse != 1 {
-            headerParts.append("starting at verse \(startVerse)")
-        }
         
-        if let verses = psalm.verses {
-            headerParts.append("specific verses: \(verses)")
-        }
         
         return headerParts.joined(separator: " ")
     }
