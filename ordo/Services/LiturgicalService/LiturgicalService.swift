@@ -19,20 +19,46 @@ public class LiturgicalService {
             fatalError("Failed to load office data: \(error)")
         }
     }
-    public func getBenedictineSeason(for date: Date) -> String {
+    private func getBenedictineSeason(for date: Date) -> BenedictineSeason {
         let year = calendar.component(.year, from: date)
         let month = calendar.component(.month, from: date)
     
         // Winter runs from October 1 to Easter
         if month >= 10 {
-            return "winter"
+            return .winter
         }
         
         if let easter = getNormalizedEaster(year: year), date < easter {
-            return "winter"
+            return .winter
         }
     
-        return "summer"
+        return .summer
+    }
+    private func isVigil(for date: Date, feast: Feast?) -> Bool {
+       
+        let vigilData = officeData.vigils ?? OfficeData.VigilData.benedictineDefault
+            
+        // 1. Sunday Vigil (Saturday evening)
+        if vigilData.sundayVigil {
+            let tomorrow = calendar.date(byAdding: .day, value: 1, to: date)!
+            if calendar.component(.weekday, from: tomorrow) == 1 { // Saturday → Sunday
+                return true
+            }
+        }
+        
+        // 2. Major Feast Vigils
+        if let feast = feast, vigilData.majorFeastVigils.contains(feast.name) {
+            return true
+        }
+        
+        // 3. Fixed Date Vigils (e.g., Christmas Eve)
+        let dateComponents = calendar.dateComponents([.month, .day], from: date)
+        let dateString = String(format: "%02d-%02d", dateComponents.month!, dateComponents.day!)
+        if vigilData.fixedVigilDates.contains(dateString) {
+            return true
+        }
+        
+        return false
     }
 
     // MARK: - Public Interface
@@ -41,15 +67,15 @@ public class LiturgicalService {
         let dateComponents = calendar.dateComponents([.year, .month, .day], from: date)
         let weekday = calendar.component(.weekday, from: date)
         let weekdayName = calendar.weekdaySymbols[weekday - 1]
-        
         // Check for fixed-date feasts first
         if let feast = getSanctoralFeast(for: dateComponents) {
             return LiturgicalDay(
                 date: date,
                 season: getSeason(for: date),
+                benedictineSeason: getBenedictineSeason(for: date),
                 feast: feast,
                 weekday: weekdayName,
-                isVigil: false,
+                isVigil: isVigil(for: date, feast: feast),
                 isSunday: weekday == 1
             )
         }
@@ -59,9 +85,10 @@ public class LiturgicalService {
             return LiturgicalDay(
                 date: date,
                 season: getSeason(for: date),
+                benedictineSeason: getBenedictineSeason(for: date),
                 feast: temporalFeast,
                 weekday: weekdayName,
-                isVigil: false,
+                isVigil: isVigil(for: date, feast: temporalFeast),
                 isSunday: weekday == 1
             )
         }
@@ -70,9 +97,10 @@ public class LiturgicalService {
         return LiturgicalDay(
             date: date,
             season: getSeason(for: date),
+            benedictineSeason: getBenedictineSeason(for: date),
             feast: nil,
             weekday: weekdayName,
-            isVigil: false,
+            isVigil: isVigil(for: date, feast: nil),
             isSunday: weekday == 1
         )
     }
@@ -279,17 +307,32 @@ public class LiturgicalService {
 public struct LiturgicalDay  {
     public let date: Date
     public let season: LiturgicalSeason
+    public let benedictineSeason: BenedictineSeason
     public let feast: Feast?
     public let weekday: String
     public let isVigil: Bool
     public let isSunday: Bool
-    public init(date: Date, season: LiturgicalSeason, feast: Feast?, weekday: String, isVigil: Bool, isSunday: Bool) {
+    public init(date: Date, season: LiturgicalSeason, benedictineSeason: BenedictineSeason, feast: Feast?, weekday: String, isVigil: Bool, isSunday: Bool) {
         self.date = date
         self.season = season
         self.feast = feast
+        self.benedictineSeason = benedictineSeason
         self.weekday = weekday
         self.isVigil = isVigil
         self.isSunday = isSunday
+    }
+    
+    
+}
+public enum BenedictineSeason: String {
+    case winter
+    case summer
+    
+    public var description: String {
+        switch self {
+        case .winter: return "Winter"
+        case .summer: return "Summer"
+        }
     }
 }
 
@@ -342,6 +385,24 @@ public struct OfficeData: Codable {
     let temporal_cycle: TemporalCycle
     let sanctoral_cycle: [String: SanctoralFeast]    
     let notes: OfficeNotes
+    let vigils: VigilData?
+    
+    struct VigilData: Codable {
+       let sundayVigil: Bool // Saturday evening observance
+       let majorFeastVigils: [String] // Names of feasts with vigils (e.g., "Nativity of the Lord")
+       let fixedVigilDates: [String] // MM-DD format dates (e.g., "12-24")
+       
+       // 6th-century specific defaults
+       static let benedictineDefault: VigilData = {
+           VigilData(
+               sundayVigil: true,
+               majorFeastVigils: ["Nativity of the Lord", "Pentecost"],
+               fixedVigilDates: ["12-24"] // Christmas Eve
+           )
+       }()
+   }
+   
+       
     
     public struct TemporalCycle: Codable {
         let advent: Advent

@@ -1,5 +1,11 @@
 {
   "description": "6th-century Benedictine Divine Office (Rule of St. Benedict, c. 530 AD)",
+  "vigils": {
+      "sundayVigil": true,
+      "majorFeastVigils": ["Nativity of the Lord", "Pentecost"],
+      "fixedVigilDates": ["12-24"],
+      "notes" : "every saturday evening, christmas vigil dec24, pentecost vigil, easter vigil; no saints day, marian,advent,lent vigils"
+  },
   "temporal_cycle": {
     "advent": {
       "start": "4th Sunday before Christmas",

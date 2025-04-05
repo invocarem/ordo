@@ -49,7 +49,7 @@ guard ["matins", "lauds", "prime", "terce", "sext", "none", "vespers", "compline
 // Get and print liturgical info
 let info = service.getLiturgicalInfo(for: date)
 print(info)
-let season = service.getBenedictineSeason(for: date)
+let season = info.benedictineSeason.description.lowercased()
 guard let weekday_info = extractWeekday(from: info) else {
     print("Could not determine weekday from LiturgicalInfo")
     fatalError()

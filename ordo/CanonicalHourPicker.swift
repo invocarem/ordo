@@ -36,7 +36,7 @@ struct CanonicalHourPicker: View {
                 step: 1
             )
             .padding(.horizontal)
-            .onChange(of: sliderValue) { newValue in
+            .onChange(of: sliderValue) { oldValue, newValue in
                 updateSelectedHour(from: newValue)
             }
             

@@ -104,23 +104,19 @@ struct ContentView: View {
         errorMessage = nil
         defer { isLoading = false } // Ensure isLoading is always reset
         
-        do {
-            liturgicalInfo = try liturgicalService.getLiturgicalInfo(for: selectedDate)
-            let calendar = Calendar.current
-            let weekdayNumber = calendar.component(.weekday, from: selectedDate)
-            let weekdays = calendar.weekdaySymbols
+        
+        liturgicalInfo = liturgicalService.getLiturgicalInfo(for: selectedDate)
+        let calendar = Calendar.current
+        let weekdayNumber = calendar.component(.weekday, from: selectedDate)
+        let weekdays = calendar.weekdaySymbols
+        
+        if let info = liturgicalInfo {
+            print("Actual calendar weekday: \(weekdays[weekdayNumber-1])")
+            print("Extracted weekday: \(info.weekday)")
+            print("season: \(info.season)")
             
-            if let info = liturgicalInfo {
-                print("Actual calendar weekday: \(weekdays[weekdayNumber-1])")
-                print("Extracted weekday: \(info.weekday)")
-                print("season: \(info.season)")
-                
-            }
-            // ... (keep your logging code) ...
-        } catch {
-            errorMessage = "Failed to load liturgical information"
-            print("Error: \(error.localizedDescription)")
         }
+    
     }
    
     
