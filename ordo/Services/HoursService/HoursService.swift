@@ -192,14 +192,21 @@ public struct PsalmRules: Codable {
     }
 }
 
-public struct PsalmUsage: Codable, Equatable {
+public struct PsalmUsage: Codable, Identifiable, Equatable {
     public let number: String
     public let category: String?
-
+    public let id: String
     public init(number: String, category: String? = nil) {
         self.number = number
         self.category = category ?? ""
+        
+        if let section = category, !section.isEmpty {
+            self.id = "\(number)-\(section)"
+        } else {
+            self.id = "\(number)"
+        }
     }
+    
 
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
@@ -210,6 +217,13 @@ public struct PsalmUsage: Codable, Equatable {
         }
         number = parts[0]
         category = parts.count > 1 ? parts[1...].joined(separator: " ") : nil
+        
+        
+        if let section = category, !section.isEmpty {
+            self.id = "\(number)-\(section)"
+        } else {
+            self.id = "\(number)"
+        }
     }
     
     public func encode(to encoder: Encoder) throws {

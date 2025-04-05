@@ -34,7 +34,7 @@ struct PrayerView: View {
                     if let psalms = getPsalms(hour: hour) {
                         VStack(alignment: .leading, spacing: 16) {
                             
-                            ForEach(psalms, id: \.number) { psalm in
+                            ForEach(psalms) { psalm in
                                 //print("\(psalm\)")
                                 PsalmView(psalm: psalm, psalmService: psalmService)
                                     .environmentObject(observableTracker)
