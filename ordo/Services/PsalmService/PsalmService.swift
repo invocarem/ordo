@@ -4,6 +4,7 @@ public struct Psalm: Codable {
     public let number: Int
     public let section: String?     // Optional (e.g., "A", "Aleph")
     public let text: [String]       // Array of verses
+    public let englishText: [String]?
 }
 
 public class PsalmService {
@@ -63,6 +64,11 @@ public class PsalmService {
     public func getAllPsalms() -> [Psalm] {
         return psalms
     }
+    public func getEnglishText(number: Int, section: String? = nil) -> [String]? {
+          guard let psalm = getPsalm(number: number, section: section) else { return nil }
+          return psalm.englishText
+      }
+      
     
     // Get formatted text (joined verses)
     public func getFormattedText(number: Int, section: String? = nil) -> String? {

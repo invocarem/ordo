@@ -119,19 +119,25 @@ struct PrayerView: View {
        }
     
 }
-
-
-
 struct PrayerSectionView: View {
     let title: String
     let content: [String]
+    let contentB: [String]?
     var showToggle: Bool
     var isCompleted: Binding<Bool>?
     var onToggle: ((Bool) -> Void)?
     
-    init(title: String, content: [String], showToggle: Bool = false, isCompleted: Binding<Bool>? = nil, onToggle: ((Bool) -> Void)? = nil) {
+    @State private var expandedLines: Set<Int> = []
+    
+    init(title: String,
+         content: [String],
+         contentB: [String]? = nil,
+         showToggle: Bool = false,
+         isCompleted: Binding<Bool>? = nil,
+         onToggle: ((Bool) -> Void)? = nil) {
         self.title = title
         self.content = content
+        self.contentB = contentB
         self.showToggle = showToggle
         self.isCompleted = isCompleted
         self.onToggle = onToggle
@@ -139,25 +145,14 @@ struct PrayerSectionView: View {
     
     var body: some View {
         VStack(alignment: .leading, spacing: 8) {
-            HStack {
-                Text(title)
-                    .font(.headline)
-                
-                if showToggle, let binding = isCompleted {
-                    Spacer()
-                    Toggle("", isOn: binding)
-                        .toggleStyle(CircleToggleStyle())
-                        .labelsHidden()
-                        .onChange(of: binding.wrappedValue) { oldValue, newValue in
-                            onToggle?(newValue) // Execute action when value changes
-                        }
-                }
-            }
-            .padding(.bottom, 2)
+            // Header with title and toggle
+            headerView
             
-            ForEach(content, id: \.self) { line in
-                Text(line)
-                    .fixedSize(horizontal: false, vertical: true)
+            // Main content with tap-to-reveal functionality
+            if let contentB = contentB {
+                bilingualContentView(contentB: contentB)
+            } else {
+                simpleContentView
             }
         }
         .frame(maxWidth: .infinity, alignment: .leading)
@@ -170,7 +165,75 @@ struct PrayerSectionView: View {
                 .stroke(Color.gray.opacity(0.2), lineWidth: 1)
         )
     }
+    
+    // MARK: - Subviews
+    
+    private var headerView: some View {
+        HStack {
+            Text(title)
+                .font(.headline)
+            
+            if showToggle, let binding = isCompleted {
+                Spacer()
+                Toggle("", isOn: binding)
+                    .toggleStyle(CircleToggleStyle())
+                    .labelsHidden()
+                    .onChange(of: binding.wrappedValue) { oldValue, newValue in
+                        onToggle?(newValue)
+                    }
+            }
+        }
+        .padding(.bottom, 2)
+    }
+    
+    private var simpleContentView: some View {
+        VStack(alignment: .leading) {
+            ForEach(content, id: \.self) { line in
+                Text(line)
+                    .fixedSize(horizontal: false, vertical: true)
+            }
+        }
+    }
+    
+    private func bilingualContentView(contentB: [String]) -> some View {
+        VStack(alignment: .leading) {
+            ForEach(0..<content.count, id: \.self) { index in
+                VStack(alignment: .leading) {
+                    // Latin text (always shown)
+                    Text(content[index])
+                        .fontWeight(.medium) // Latin slightly bolder
+                        .foregroundColor(.primary)
+                        .onTapGesture {
+                            withAnimation {
+                                toggleLineExpansion(index)
+                            }
+                        }
+                    
+                    // English translation (shown when expanded)
+                    if expandedLines.contains(index) {
+                        Text(contentB[index])
+                            .fontWeight(.regular)
+                            .foregroundColor(.secondary)
+                            .padding(.top, 2)
+                            .transition(.opacity)
+                    }
+                }
+            }
+        }
+    }
+    
+    // MARK: - Helper Methods
+    
+    private func toggleLineExpansion(_ index: Int) {
+        if expandedLines.contains(index) {
+            expandedLines.remove(index)
+        } else {
+            expandedLines.insert(index)
+        }
+    }
 }
+
+// Your existing CircleToggleStyle remains the same
 struct CircleToggleStyle: ToggleStyle {
     func makeBody(configuration: Configuration) -> some View {
         Button {
@@ -184,6 +247,9 @@ struct CircleToggleStyle: ToggleStyle {
         .buttonStyle(.plain)
     }
 }
+
+
+
 extension View {
     func debugPrint(_ value: Any) -> some View {
         #if DEBUG

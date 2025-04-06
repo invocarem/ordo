@@ -14,7 +14,7 @@ struct PsalmDetailView: View {
     @State private var psalmContent: [String] = []
     @State private var errorMessage: String?
     @State private var isCompleted: Bool = false
-    
+    @State private var psalmEnglishContent: [String]? = []
     var body: some View {
         ScrollView {
             VStack(spacing: 16) {
@@ -31,6 +31,7 @@ struct PsalmDetailView: View {
                     PrayerSectionView(
                         title: "Psalm \(number) \(section ?? "")",
                         content: psalmContent,
+                        contentB: psalmEnglishContent,
                         showToggle: true,
                         isCompleted: $isCompleted,
                         onToggle: { newValue in
@@ -40,6 +41,7 @@ struct PsalmDetailView: View {
                         }
                     )
                     .padding(.top, 0)
+                    .debugPrint(psalmEnglishContent)
                 } else {
                     PrayerSectionView(
                         title: "Loading",
@@ -75,8 +77,11 @@ struct PsalmDetailView: View {
                 guard let psalmSection = psalmSections.first(where: { $0.section?.lowercased() == section.lowercased() }) else {
                     throw PsalmError.versesNotFound(number)
                 }
+                psalmEnglishContent = psalmSection.englishText
                 psalmContent = psalmSection.text
+                
             } else {
+                psalmEnglishContent = psalmSections.first?.englishText ?? []
                 psalmContent = psalmSections.first?.text ?? []
             }
         } catch {
