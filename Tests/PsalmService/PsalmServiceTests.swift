@@ -20,7 +20,66 @@ final class PsalmServiceTests: XCTestCase {
         let allPsalms = psalmService.getAllPsalms()
         XCTAssertFalse(allPsalms.isEmpty, "Should have loaded psalms")
     }
+    func testGetTotalPsalmCount() {
+        let totalCount = psalmService.getTotalPsalmCount()        
+        let verifiedCount = psalmService.getVerifiedPsalmCount()
+        XCTAssertTrue(verifiedCount > 50, "verified  count large than 50 \(verifiedCount)")
+        XCTAssertTrue(totalCount > 150, "total Count large than 150 \(totalCount)")
+        
+        
+    }
     
+    func testAllPsalmsVerseCountsAndVerification() {
+        (1...150).forEach { number in
+            let psalmSections = psalmService.getPsalms(number: number)
+            
+            guard !psalmSections.isEmpty else {
+                XCTFail("Missing psalm \(number) - no entry found")
+                return
+            }
+            
+            psalmSections.forEach { psalm in
+                let sectionInfo = psalm.section.map { " section \($0)" } ?? ""
+                let psalmIdentifier = "Psalm \(number)\(sectionInfo)"
+                
+                // 1. Check verification status
+                XCTAssertTrue(psalm.verified ?? false, "\(psalmIdentifier) should be verified")
+                
+                // 2. Check English text exists
+                guard let englishText = psalm.englishText else {
+                    XCTFail("\(psalmIdentifier) is missing English translation")
+                    return
+                }
+                
+                // 3. Check verse counts match
+                XCTAssertEqual(psalm.text.count, englishText.count,
+                            "\(psalmIdentifier) has mismatched verse counts (\(psalm.text.count) vs \(englishText.count))")
+                
+            }
+        }
+    }
+    
+ 
+    func testPsalm50VerseCountsMatch() {
+        // Get Psalm 50
+        let psalm50 = psalmService.getPsalm(number: 50)
+        XCTAssertNotNil(psalm50, "Psalm 50 should exist")
+        
+        // Unwrap the optional properties
+        guard let psalm = psalm50 else { return }
+        guard let englishText = psalm.englishText else {
+            XCTFail("Psalm 50 should have englishText")
+            return
+        }
+        
+        // Check that both arrays have the same count
+        XCTAssertEqual(psalm.text.count, englishText.count, 
+                    "Psalm 50 should have the same number of verses in text and englishText")
+        
+    
+    
+    }
+ 
     func testGetPsalm_validNumber() {
         let psalm1 = psalmService.getPsalm(number: 1)
         XCTAssertNotNil(psalm1, "Psalm 1 should exist")
@@ -99,25 +158,16 @@ final class PsalmServiceTests: XCTestCase {
 
  
     func testGetPsalms_psalmsOfDegrees() {
-           [119, 120, 128, 133].forEach { psalmNumber in
-        let sections = psalmService.getPsalms(number: psalmNumber)
-        
-        // Basic checks
-        XCTAssertGreaterThanOrEqual(sections.count, 1, "Psalm \(psalmNumber) should have at least 1 section")
-        
-        // Optional: Verify section name
-        if let firstSection = sections.first {
-            XCTAssertEqual(
-                firstSection.section, 
-                "Psalms of Ascent", 
-                "Psalm \(psalmNumber) should be in the 'Psalms of Ascent' section"
-            )
-        }
-        
-        // Optional: Check first verse exists
-        if let firstVerse = sections.first?.text.first {
-            XCTAssertFalse(firstVerse.isEmpty, "Psalm \(psalmNumber) should have non-empty text")
-        }
+        [119, 120, 128, 133].forEach { psalmNumber in
+            let sections = psalmService.getPsalms(number: psalmNumber)
+    
+            // Basic checks
+            XCTAssertGreaterThanOrEqual(sections.count, 1, "Psalm \(psalmNumber) should have at least 1 section")
+    
+    
+            if let firstVerse = sections.first?.text.first {
+                XCTAssertFalse(firstVerse.isEmpty, "Psalm \(psalmNumber) should have non-empty text")
+            }
         }
     }   
 

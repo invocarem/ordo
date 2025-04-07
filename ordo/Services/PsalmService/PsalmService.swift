@@ -6,6 +6,7 @@ public struct Psalm: Codable {
     public let title: String?
     public let text: [String]       // Array of verses
     public let englishText: [String]?
+    public let verified: Bool?
 }
 
 public class PsalmService {
@@ -75,6 +76,14 @@ public class PsalmService {
     public func getFormattedText(number: Int, section: String? = nil) -> String? {
         guard let psalm = getPsalm(number: number, section: section) else { return nil }
         return psalm.text.joined(separator: "\n")
+    }
+    public func getTotalPsalmCount() -> Int {
+        return psalms.count
+    }
+    
+    // Count how many psalms are verified
+    public func getVerifiedPsalmCount() -> Int {
+        return psalms.filter { $0.verified == true }.count
     }
 }
 
