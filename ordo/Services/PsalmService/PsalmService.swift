@@ -3,6 +3,7 @@ import Foundation
 public struct Psalm: Codable {
     public let number: Int
     public let section: String?     // Optional (e.g., "A", "Aleph")
+    public let title: String?
     public let text: [String]       // Array of verses
     public let englishText: [String]?
 }

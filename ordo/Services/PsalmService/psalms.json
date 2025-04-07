@@ -40,21 +40,31 @@
               "Serve ye the Lord with fear: and rejoice unto him with trembling. Embrace discipline, lest at any time the Lord be angry, and you perish from the just way. When his wrath shall be kindled in a short time, blessed are all they that trust in him."
             ]
           },
-        
-        {
-            "number": 3,
-            "section": "",
-            "text": [
-                "Domine, quid multiplicati sunt qui tribulant me? multi insurgunt adversum me.",
-                "Multi dicunt animae meae: Non est salus ipsi in Deo ejus.",
-                "Tu autem, Domine, susceptor meus es, gloria mea, et exaltans caput meum.",
-                "Voce mea ad Dominum clamavi, et exaudivit me de monte sancto suo.",
-                "Ego dormivi, et soporatus sum; et exsurrexi, quia Dominus suscipit me.",
-                "Non timebo millia populi circumdantis me: exsurge, Domine; salvum me fac, Deus meus.",
-                "Quoniam tu percussisti omnes adversantes mihi sine causa; dentes peccatorum contrivisti.",
-                "Domini est salus; et super populum tuum benedictio tua."
-            ]
-        },
+          {
+              "number": 3,
+              "section": "",
+              "text": [
+                  "Domine, quid multiplicati sunt qui tribulant me? multi insurgunt adversum me.",
+                  "Multi dicunt animae meae: Non est salus ipsi in Deo ejus.",
+                  "Tu autem, Domine, susceptor meus es, gloria mea, et exaltans caput meum.",
+                  "Voce mea ad Dominum clamavi, et exaudivit me de monte sancto suo.",
+                  "Ego dormivi, et soporatus sum; et exsurrexi, quia Dominus suscepit me.",
+                  "Non timebo millia populi circumdantis me: exsurge, Domine; salvum me fac, Deus meus.",
+                  "Quoniam tu percussisti omnes adversantes mihi sine causa; dentes peccatorum contrivisti.",
+                  "Domini est salus; et super populum tuum benedictio tua."
+              ],
+              "englishText": [
+                  "O Lord, how are they multiplied that trouble me? Many rise up against me.",
+                  "Many say to my soul: There is no salvation for him in his God.",
+                  "But thou, O Lord, art my protector, my glory, and the lifter up of my head.",
+                  "I have cried to the Lord with my voice: and he hath heard me from his holy hill.",
+                  "I have slept and have taken my rest: and I have risen up, because the Lord hath sustained me.",
+                  "I will not fear thousands of the people surrounding me: arise, O Lord; save me, O my God.",
+                  "For thou hast struck all them who are my adversaries without cause: thou hast broken the teeth of sinners.",
+                  "Salvation is of the Lord: and thy blessing is upon thy people."
+              ]
+          },
+       
         {
             "number": 4,
             "section": "",
@@ -69,6 +79,17 @@
                 "Dedisti laetitiam in corde meo, a tempore frumenti et vini sui multiplicati sunt.",
                 "In pace in idipsum dormiam et requiescam;",
                 "Quoniam tu, Domine, singulariter in spe constituisti me."
+            ], "englishText": [
+                "When I called upon him, the God of my justice heard me: when I was in distress, thou hast enlarged me.",
+                "Have mercy on me: and hear my prayer.",
+                "O ye sons of men, how long will ye be dull of heart? why do ye love vanity, and seek after lying?",
+                "Know ye also that the Lord hath made his holy one wonderful: the Lord will hear me when I shall cry unto him.",
+                "Be ye angry, and sin not: the things ye say in your hearts, be sorry for them upon your beds.",
+                "Offer up the sacrifice of justice, and trust in the Lord: many say, Who sheweth us good things?",
+                "The light of thy countenance, O Lord, is signed upon us: thou hast given gladness in my heart.",
+                "By the fruit of their corn, their wine, and oil: they are multiplied.",
+                "In peace in the selfsame: I will sleep, and I will rest.",
+                "For thou, O Lord, singularly hast settled me in hope."
             ]
         },
         {
@@ -90,34 +111,53 @@
                 "Et laetentur omnes qui sperant in te, in aeternum exsultabunt; et habitabis in eis.",
                 "Et gloriabuntur in te omnes qui diligunt nomen tuum, quoniam tu benedices justo.",
                 "Domine, ut scuto bonae voluntatis tuae coronasti nos."
+            ],
+            "englishText": [
+              "Give ear, O Lord, to my words, understand my cry.",
+              "Hearken to the voice of my prayer, O my King and my God.",
+              "For to thee will I pray, O Lord: in the morning thou shalt hear my voice.",
+              "In the morning I will stand before thee, and will see: because thou art not a God that willest iniquity.",
+              "Neither shall the wicked dwell near thee, nor shall the unjust abide before thy eyes.",
+              "Thou hatest all the workers of iniquity: thou wilt destroy all that speak a lie.",
+              "The bloody and the deceitful man the Lord will abhor.",
+              "But as for me in the multitude of thy mercy, I will come into thy house; I will worship towards thy holy temple in thy fear.",
+              "Conduct me, O Lord, in thy justice: because of my enemies, direct my way in thy sight.",
+              "For there is no truth in their mouth: their heart is vain.",
+              "Their throat is an open sepulchre: they dealt deceitfully with their tongues: judge them, O God.",
+              "Let them fall from their devices: according to the multitude of their wickednesses cast them out: for they have provoked thee, O Lord.",
+              "But let all them be glad that hope in thee: they shall rejoice for ever, and thou shalt dwell in them.",
+              "And all they that love thy name shall glory in thee, for thou wilt bless the just.",
+              "O Lord, thou hast crowned us as with a shield of thy good will."
             ]
         },
         {
-            "number": 6,
-            "text": [
-                "Domine, ne in furore tuo arguas me,",
-                "neque in ira tua corripias me.",
-                "Miserere mei, Domine, quoniam infirmus sum;",
-                "sana me, Domine, quoniam conturbata sunt ossa mea.",
-                "Et anima mea turbata est valde:",
-                "sed tu, Domine, usquequo?",
-                "Convertere, Domine, eripe animam meam;",
-                "salvum me fac propter misericordiam tuam.",
-                "Quoniam non est in morte qui memor sit tui;",
-                "in inferno autem quis confitebitur tibi?",
-                "Laboravi in gemitu meo,",
-                "lavabo per singulas noctes lectum meum;",
-                "lacrimis meis stratum meum rigabo.",
-                "Turbatus est a furore oculus meus,",
-                "inveteravi inter omnes inimicos meos.",
-                "Discedite a me, omnes qui operamini iniquitatem,",
-                "quoniam exaudivit Dominus vocem fletus mei.",
-                "Exaudivit Dominus deprecationem meam,",
-                "Dominus orationem meam suscepit.",
-                "Erubescant et conturbentur vehementer omnes inimici mei;",
-                "convertantur et erubescant valde velociter."
-            ]
-        },
+             "number": 6,
+             "section": "",
+             "text": [
+               "Domine, ne in furore tuo arguas me, neque in ira tua corripias me.",
+               "Miserere mei, Domine, quoniam infirmus sum; sana me, Domine, quoniam conturbata sunt ossa mea.",
+               "Et anima mea turbata est valde; sed tu, Domine, usquequo?",
+               "Convertere, Domine, et eripe animam meam; salvum me fac propter misericordiam tuam.",
+               "Quoniam non est in morte qui memor sit tui; in inferno autem quis confitebitur tibi?",
+               "Laboravi in gemitu meo, lavabo per singulas noctes lectum meum; lacrimis meis stratum meum rigabo.",
+               "Turbatus est a furore oculus meus; inveteravi inter omnes inimicos meos.",
+               "Discedite a me, omnes qui operamini iniquitatem, quoniam exaudivit Dominus vocem fletus mei.",
+               "Exaudivit Dominus deprecationem meam; Dominus orationem meam suscepit.",
+               "Erubescant et conturbentur vehementer omnes inimici mei; convertantur et erubescant valde velociter."
+             ],
+             "englishText": [
+               "O Lord, rebuke me not in thy indignation, nor chastise me in thy wrath.",
+               "Have mercy on me, O Lord, for I am weak; heal me, O Lord, for my bones are troubled.",
+               "And my soul is troubled exceedingly; but thou, O Lord, how long?",
+               "Turn to me, O Lord, and deliver my soul; O save me for thy mercy's sake.",
+               "For there is no one in death that is mindful of thee: and who shall confess to thee in hell?",
+               "I have laboured in my groanings, every night I will wash my bed: I will water my couch with my tears.",
+               "My eye is troubled through indignation: I have grown old amongst all my enemies.",
+               "Depart from me, all ye workers of iniquity: for the Lord hath heard the voice of my weeping.",
+               "The Lord hath heard my supplication: the Lord hath received my prayer.",
+               "Let all my enemies be ashamed, and be very much troubled: let them be turned back, and be ashamed very speedily."
+             ]
+           },
         {
             "number": 7,
             "text": [
@@ -140,33 +180,54 @@
                 "Lacum aperuit, et effodit eum, et incidit in foveam quam fecit.",
                 "Convertetur dolor ejus in caput ejus, et in verticem ipsius iniquitas ejus descendet.",
                 "Confitebor Domino secundum justitiam ejus, et psallam nomini Domini altissimi."
+            ], "englishText": [
+                "O Lord my God, in thee have I put my trust: save me from all them that persecute me, and deliver me.",
+                "Lest at any time he seize upon my soul like a lion, while there is no one to redeem me, nor to save.",
+                "O Lord my God, if I have done this thing, if there be iniquity in my hands:",
+                "If I have rendered to them that repaid me evils, let me deservedly fall empty before my enemies.",
+                "Let the enemy pursue my soul, and take it, and tread down my life on the earth, and bring down my glory to the dust.",
+                "Rise up, O Lord, in thy wrath: and be thou exalted in the borders of my enemies.",
+                "And arise, O Lord my God, in the precept which thou hast commanded: and a congregation of people shall surround thee.",
+                "And for their sakes return thou on high: the Lord judgeth the people.",
+                "Judge me, O Lord, according to my justice, and according to my innocence in me.",
+                "The wickedness of sinners shall be consumed, and thou shalt direct the just: O God, who searchest the hearts and reins.",
+                "My just help is from the Lord: who saveth the upright of heart.",
+                "God is a just judge, strong and patient: is he angry every day?",
+                "Except ye be converted, he will brandish his sword: he hath bent his bow, and made it ready.",
+                "And in it he hath prepared the instruments of death: he hath made ready his arrows for them that burn.",
+                "Behold he hath been in labour with injustice: he hath conceived sorrow, and brought forth iniquity.",
+                "He hath opened a pit and dug it: and he is fallen into the hole he made.",
+                "His sorrow shall be turned on his own head: and his iniquity shall come down upon his crown.",
+                "I will give glory to the Lord according to his justice: and will sing to the name of the Lord the most high."
             ]
         },
         {
             "number": 8,
             "text": [
-                "Domine, Dominus noster,",
-                "quam admirabile est nomen tuum in universa terra!",
-                "Quoniam elevata est magnificentia tua,",
-                "super caelos.",
-                "Ex ore infantium et lactentium perfecisti laudem",
-                "propter inimicos tuos,",
-                "ut destruas inimicum et ultorem.",
-                "Cum videam caelos tuos, opera digitorum tuorum,",
-                "lunam et stellas, quae tu fundasti,",
-                "quid est homo, quod memor es eius?",
-                "aut filius hominis, quod curas eum?",
-                "Eum fecisti paulo minus Deo,",
-                "gloria et honore coronasti eum.",
-                "Dedisti ei potestatem super opera manuum tuarum,",
-                "omnia subiecisti sub pedibus eius,",
-                "oves et boves universas,",
-                "insuper et pecora campi,",
-                "volucres caeli et pisces maris,",
-                "quae percurrunt semitas maris.",
-                "Domine, Dominus noster,",
-                "quam admirabile est nomen tuum in universa terra!"
+                "Domine, Dominus noster, quam admirabile est nomen tuum in universa terra!",
+                "Quoniam elevata est magnificentia tua super caelos.",
+                "Ex ore infantium et lactentium perfecisti laudem propter inimicos tuos: ut destruas inimicum et ultorem.",
+                "Quoniam videbo caelos tuos, opera digitorum tuorum: lunam et stellas quae tu fundasti.",
+                "Quid est homo quod memor es ejus? aut filius hominis, quoniam visitas eum?",
+                "Minuisti eum paulo minus ab angelis: gloria et honore coronasti eum.",
+                "Et constituisti eum super opera manuum tuarum: omnia subjecisti sub pedibus ejus.",
+                "Oves et boves universas: insuper et pecora campi.",
+                "Volucres caeli, et pisces maris: qui perambulant semitas maris.",
+                "Domine, Dominus noster: quam admirabile est nomen tuum in universa terra!"
+            ],
+            "englishText": [
+                "O Lord, our Lord, how admirable is thy name in the whole earth!",
+                "For thy magnificence is elevated above the heavens.",
+                "Out of the mouth of infants and of sucklings thou hast perfected praise, because of thy enemies: that thou mayst destroy the enemy and the avenger.",
+                "For I will behold thy heavens, the works of thy fingers: the moon and the stars which thou hast founded.",
+                "What is man, that thou art mindful of him? or the son of man, that thou visitest him?",
+                "Thou hast made him a little less than the angels: thou hast crowned him with glory and honour.",
+                "And hast set him over the works of thy hands: thou hast put all things in subjection under his feet.",
+                "All sheep and oxen: moreover the beasts also of the fields.",
+                "The birds of the air, and the fishes of the sea: that pass through the paths of the sea.",
+                "O Lord, our Lord: how admirable is thy name in all the earth!"
             ]
+           
         },
         {
             "number": 9,
@@ -191,6 +252,25 @@
               "Convertantur peccatores in infernum, omnes gentes quae obliviscuntur Deum.",
               "Quoniam non in finem oblivio erit pauperis; patientia pauperum non peribit in finem."
               
+            ],  "englishText": [
+                "I will give praise to thee, O Lord, with my whole heart: I will relate all thy wonders.",
+                "I will be glad and rejoice in thee: I will sing to thy name, O thou most high.",
+                "When my enemy shall be turned back: they shall be weakened, and perish before thy face.",
+                "For thou hast maintained my judgment and my cause: thou hast sat on the throne, who judgest justice.",
+                "Thou hast rebuked the Gentiles, and the wicked one hath perished: thou hast blotted out their name for ever and ever.",
+                "The swords of the enemy have failed unto the end: and their cities thou hast destroyed; their memory hath perished with a noise.",
+                "But the Lord remaineth for ever: he hath prepared his throne in judgment.",
+                "And he shall judge the world in equity: he shall judge the people in justice.",
+                "And the Lord is become a refuge for the poor: a helper in due time in tribulation.",
+                "And let them trust in thee who know thy name: for thou hast not forsaken them that seek thee, O Lord.",
+                "Sing ye to the Lord, who dwelleth in Sion: declare his ways among the Gentiles:",
+                "For he that requireth blood of them hath remembered: he hath not forgotten the cry of the poor.",
+                "Have mercy on me, O Lord: see my humiliation which I suffer from my enemies,",
+                "Thou that liftest me up from the gates of death, that I may declare all thy praises in the gates of the daughter of Sion.",
+                "I will rejoice in thy salvation: the Gentiles have stuck fast in the destruction which they prepared; their foot hath been taken in the very snare which they hid.",
+                "The Lord shall be known when he executeth judgments: the sinner hath been caught in the works of his own hands.",
+                "Let sinners be turned into hell: all the nations that forget God.",
+                "For the poor man shall not be forgotten to the end: the patience of the poor shall not perish for ever."
             ]
           },
           {
@@ -220,12 +300,37 @@
               "Dominus regnabit in aeternum, et in saeculum saeculi; peribitis, gentes, de terra illius.",
               "Desiderium pauperum exaudivit Dominus; praeparationem cordis eorum audivit auris tua,",
               "Judicare pupillo et humili, ut non apponat ultra magnificare se homo super terram."
+            ],
+            "englishText": [
+                "Arise, O Lord, let not man be strengthened: let the Gentiles be judged in thy sight.",
+                "Appoint, O Lord, a lawgiver over them: that the Gentiles may know themselves to be but men.",
+                "Why, O Lord, hast thou retired afar off? why dost thou slight us in our wants, in the time of trouble?",
+                "Whilst the wicked man is proud, the poor is set on fire: they are caught in the counsels which they devise.",
+                "For the sinner is praised in the desires of his soul: and the unjust man is blessed.",
+                "The sinner hath provoked the Lord: according to the multitude of his wrath he will not seek him:",
+                "God is not before his eyes: his ways are filthy at all times.",
+                "Thy judgments are removed from his sight: he shall rule over all his enemies.",
+                "For he hath said in his heart: I shall not be moved from generation to generation, and shall be without evil.",
+                "His mouth is full of cursing, and of bitterness, and of deceit: under his tongue are labour and sorrow.",
+                "He sitteth in ambush with the rich in private places, that he may kill the innocent;",
+                "His eyes are upon the poor man: he lieth in wait in secret like a lion in his den.",
+                "He lieth in wait that he may catch the poor man: to catch the poor, whilst he draweth him to him.",
+                "In his net he will bring him down: he will crouch and fall, when he shall have power over the poor.",
+                "For he hath said in his heart: God hath forgotten, he hath turned away his face not to see to the end.",
+                "Arise, O Lord God, let thy hand be exalted: forget not the poor.",
+                "Wherefore hath the wicked provoked God? for he hath said in his heart: He will not require it.",
+                "Thou seest it, for thou considerest labour and sorrow: that thou mayst deliver them into thy hands.",
+                "To thee is the poor man left: thou wilt be a helper to the orphan.",
+                "Break thou the arm of the sinner and of the malignant: his sin shall be sought, and shall not be found.",
+                "The Lord shall reign to eternity, yea, for ever and ever: ye Gentiles shall perish from his land.",
+                "The Lord hath heard the desire of the poor: thy ear hath heard the preparation of their heart,",
+                "To judge for the fatherless and for the humble: that man may no more presume to magnify himself upon earth."
             ]
           },
 
           {
             "number": 10,
-            "section": "Trust in God's Righteous Judgment",
+            "section": "",
             "text": [
               "In Domino confido; quomodo dicitis animae meae: Transvola in montem sicut passer?",
               "Quoniam ecce peccatores intenderunt arcum, paraverunt sagittas suas in pharetra, ut sagittent in obscuro rectos corde.",
@@ -235,11 +340,20 @@
               "Dominus interrogat justum et impium; qui autem diligit iniquitatem, odit animam suam.",
               "Pluet super peccatores laqueos; ignis, et sulphur, et spiritus procellarum pars calicis eorum.",
               "Quoniam justus Dominus, et justitias dilexit; aequitatem vidit vultus ejus."
-            ]
+            ],
+            "englishText": [
+                "In the Lord I put my trust: how then do you say to my soul: Get thee away from hence to the mountain like a sparrow?",
+                "For lo the wicked have bent their bow; they have prepared their arrows in the quiver, to shoot in the dark the upright of heart.",
+                "For they have destroyed the things which thou hast made: but what has the just man done?",
+                "The Lord is in his holy temple, the Lord's throne is in heaven. His eyes look on the poor man: his eyelids examine the sons of men.",
+                "The Lord trieth the just and the wicked: but he that loveth iniquity hateth his own soul.",
+                "He shall rain snares upon sinners: fire and brimstone and storms of winds shall be the portion of their cup.",
+                "For the Lord is just, and hath loved justice: his countenance hath beheld righteousness."
+              ]
           },
           {
             "number": 11,
-            "section": "A Prayer Against Deceitful Tongues",
+            "section": "",
             "text": [
               "Salvum me fac, Domine, quoniam defecit sanctus, quoniam diminutae sunt veritates a filiis hominum.",
               "Vana locuti sunt unusquisque ad proximum suum; labia dolosa, in corde et corde locuti sunt.",
@@ -250,11 +364,21 @@
               "Eloquia Domini, eloquia casta: argentum igne examinatum, probatum terrae, purgatum septuplum.",
               "Tu, Domine, servabis nos: et custodies nos a generatione hac in aeternum.",
               "In circuitu impii ambulant; secundum altitudinem tuam multiplicasti filios hominum."
-            ]
+            ],
+            "englishText": [
+                "Save me, O Lord, for there is now no saint: truths are decayed from among the children of men.",
+                "They have spoken vain things every one to his neighbour: with deceitful lips, and with a double heart have they spoken.",
+                "May the Lord destroy all deceitful lips, and the tongue that speaketh proud things.",
+                "Who have said: We will magnify our tongue; our lips are our own; who is Lord over us?",
+                "By reason of the misery of the needy, and the groans of the poor, now will I arise, saith the Lord. I will set him in safety; I will deal confidently in his regard.",
+                "The words of the Lord are pure words: as silver tried by the fire, purged from the earth, refined seven times.",
+                "Thou, O Lord, wilt preserve us: and keep us from this generation for ever.",
+                "The wicked walk round about: according to thy highness, thou hast multiplied the children of men."
+              ]
           },
         {
             "number": 12,
-            "section": "Prayer for Deliverance",
+            "section": "",
             "text": [
               "Usquequo, Domine, oblivisceris me in finem? usquequo avertis faciem tuam a me?",
               "Quandiu ponam consilia in anima mea, dolorem in corde meo per diem?",
@@ -262,11 +386,19 @@
               "Respice, et exaudi me, Domine Deus meus. Illumina oculos meos, ne umquam obdormiam in morte;",
               "Nequando dicat inimicus meus: Praevalui adversus eum. Qui tribulant me, exsultabunt si motus fuero;",
               "Ego autem in misericordia tua speravi. Exsultabit cor meum in salutari tuo; cantabo Domino qui bona tribuit mihi, et psallam nomini Domini altissimi."
-            ]
+            ],
+            "englishText": [
+                "How long, O Lord, wilt thou forget me unto the end? how long dost thou turn away thy face from me?",
+                "How long shall I take counsels in my soul, sorrow in my heart all the day?",
+                "How long shall my enemy be exalted over me?",
+                "Consider, and hear me, O Lord my God. Enlighten my eyes, that I never sleep in death:",
+                "Lest at any time my enemy say: I have prevailed against him. They that trouble me will rejoice when I am moved:",
+                "But I have trusted in thy mercy. My heart shall rejoice in thy salvation: I will sing to the Lord, who giveth me good things: yea I will sing to the name of the Lord the most high."
+              ]
           },
           {
             "number": 13,
-            "section": "Folly of the Godless",
+            "section": "",
             "text": [
               "Dixit insipiens in corde suo: Non est Deus.",
               "Corrupti sunt, et abominabiles facti sunt in studiis suis; non est qui faciat bonum, non est usque ad unum.",
@@ -276,11 +408,21 @@
               "Dominum non invocaverunt; illic trepidaverunt timore, ubi non erat timor.",
               "Quoniam Dominus in generatione justa est, consilium inopis confudistis, quoniam Dominus spes ejus est.",
               "Quis dabit ex Sion salutare Israel? cum averterit Dominus captivitatem plebis suae, exsultabit Jacob, et laetabitur Israel."
-            ]
+            ],
+            "englishText": [
+               "The fool hath said in his heart: There is no God.",
+               "They are corrupt, and are become abominable in their ways: there is none that doth good, no not one.",
+               "The Lord hath looked down from heaven upon the children of men, to see if there be any that understand and seek God.",
+               "They are all gone aside, they are become unprofitable together: there is none that doth good, no not one.",
+               "Shall not all the workers of iniquity know, who eat up my people as they eat bread?",
+               "They have not called upon the Lord: there have they trembled for fear, where there was no fear.",
+               "For the Lord is in the just generation: you have confounded the counsel of the poor man, but the Lord is his hope.",
+               "Who shall give out of Sion the salvation of Israel? when the Lord shall have turned away the captivity of his people, Jacob shall rejoice, and Israel shall be glad."
+             ]
           },
           {
             "number": 14,
-            "section": "The Righteous Worshipper",
+            "section": "",
             "text": [
               "Domine, quis habitabit in tabernaculo tuo? aut quis requiescet in monte sancto tuo?",
               "Qui ingreditur sine macula, et operatur justitiam;",
@@ -290,37 +432,47 @@
               "Qui jurat proximo suo, et non decipit;",
               "Qui pecuniam suam non dedit ad usuram, et munera super innocentem non accepit.",
               "Qui facit haec, non movebitur in aeternum."
-            ]
+            ],
+            "englishText": [
+                "Lord, who shall dwell in thy tabernacle? or who shall rest in thy holy hill?",
+                "He that walketh without blemish, and worketh justice;",
+                "He that speaketh truth in his heart, who hath not used deceit in his tongue: nor hath done evil to his neighbour, nor taken up a reproach against his neighbours.",
+                "In his sight the malignant is brought to nothing: but he glorifieth them that fear the Lord. He that sweareth to his neighbour, and deceiveth not;",
+                "He that hath not put out his money to usury, nor taken bribes against the innocent. He that doth these things shall not be moved for ever."
+              ]
           },
         
         {
             "number": 15,
             "text": [
                 "Conserva me, Domine, quoniam in te speravi;",
-                "dixi Domino: Deus meus es tu,",
-                "quoniam bonorum meorum non eges.",
-                "Sanctis qui sunt in terra ejus,",
-                "mirificavit omnes voluntates meas in eis.",
-                "Multiplicatae sunt infirmitates eorum;",
-                "postea acceleraverunt.",
-                "Non congregabo conventicula eorum de sanguinibus,",
-                "nec memor ero nominum eorum per labia mea.",
-                "Dominus pars hereditatis meae et calicis mei;",
-                "tu es qui restitues hereditatem meam mihi.",
-                "Funes ceciderunt mihi in praeclaris;",
-                "etenim hereditas mea praeclara est mihi.",
-                "Benedicam Dominum qui tribuit mihi intellectum;",
-                "insuper et usque ad noctem increpuerunt me renes mei.",
-                "Providebam Dominum in conspectu meo semper;",
-                "quoniam a dextris est mihi, ne commovear.",
-                "Propter hoc laetatum est cor meum, et exsultavit lingua mea;",
-                "insuper et caro mea requiescet in spe.",
-                "Quoniam non derelinques animam meam in inferno;",
-                "nec dabis sanctum tuum videre corruptionem.",
-                "Notas mihi fecisti vias vitae;",
-                "adimplebis me laetitia cum vultu tuo;",
-                "delectationes in dextera tua usque in finem."
-            ]
+                "Dixi Domino: Deus meus es tu, quoniam bonorum meorum non eges.",
+                "Sanctis qui sunt in terra ejus, mirificavit omnes voluntates meas in eis.",
+                "Multiplicatae sunt infirmitates eorum; postea acceleraverunt.",
+                "Non congregabo conventicula eorum de sanguinibus, nec memor ero nominum eorum per labia mea.",
+                "Dominus pars haereditatis meae, et calicis mei: tu es qui restitues haereditatem meam mihi.",
+                "Funes ceciderunt mihi in praeclaris; etenim haereditas mea praeclara est mihi.",
+                "Benedicam Dominum qui tribuit mihi intellectum; insuper et usque ad noctem increpuerunt me renes mei.",
+                "Providebam Dominum in conspectu meo semper: quoniam a dextris est mihi, ne commovear.",
+                "Propter hoc laetatum est cor meum, et exsultavit lingua mea: insuper et caro mea requiescet in spe.",
+                "Quoniam non derelinques animam meam in inferno, nec dabis sanctum tuum videre corruptionem.",
+                "Notas mihi fecisti vias vitae; adimplebis me laetitia cum vultu tuo: delectationes in dextera tua usque in finem."
+              ],
+          "englishText": [
+                "Preserve me, O Lord, for I have put my trust in thee.",
+                "I have said to the Lord: Thou art my God, for thou hast no need of my goods.",
+                "To the saints, who are in his land, he hath made wonderful all my desires in them.",
+                "Their infirmities were multiplied: afterwards they made haste.",
+                "I will not gather together their meetings for blood offerings: nor will I be mindful of their names by my lips.",
+                "The Lord is the portion of my inheritance and of my cup: it is thou that wilt restore my inheritance to me.",
+                "The lines are fallen unto me in goodly places: for my inheritance is goodly to me.",
+                "I will bless the Lord, who hath given me understanding: moreover my reins also have corrected me even till night.",
+                "I set the Lord always in my sight: for he is at my right hand, that I be not moved.",
+                "Therefore my heart hath been glad, and my tongue hath rejoiced: moreover my flesh also shall rest in hope.",
+                "Because thou wilt not leave my soul in hell; nor wilt thou give thy holy one to see corruption.",
+                "Thou hast made known to me the ways of life, thou shalt fill me with joy with thy countenance: at thy right hand are delights even to the end."
+          ]
+        
         },
         {
             "number": 16,
@@ -344,6 +496,27 @@
                 "Domine, a paucis de terra divide eos in vita eorum; de absconditis tuis adimpletus est venter eorum.",
                 "Saturati sunt filiis, et dimiserunt reliquias suas parvulis suis.",
                 "Ego autem in justitia apparebo conspectui tuo; satiabor cum apparuerit gloria tua."
+            ],
+            "englishText": [
+                "Hear, O Lord, my justice; attend to my supplication.",
+                "Give ear unto my prayer, which proceedeth not from deceitful lips.",
+                "Let my judgment come forth from thy countenance; let thy eyes behold the things that are equitable.",
+                "Thou hast proved my heart, and visited it by night; thou hast tried me by fire, and iniquity hath not been found in me.",
+                "That my mouth may not speak the works of men; for the sake of the words of thy lips, I have kept hard ways.",
+                "Perfect thou my goings in thy paths, that my footsteps be not moved.",
+                "I have cried to thee, for thou, O God, hast heard me; incline thy ear unto me, and hear my words.",
+                "Show forth thy wonderful mercies, thou who savest them that trust in thee.",
+                "From them that resist thy right hand keep me, as the apple of thy eye.",
+                "Protect me under the shadow of thy wings,",
+                "from the face of the wicked who have afflicted me.",
+                "My enemies have surrounded my soul; they have shut up their fat, their mouth hath spoken proudly.",
+                "They have cast me forth, and now they have surrounded me; they have set their eyes bowing down to the earth.",
+                "They have taken me as a lion prepared for the prey, and as a young lion dwelling in secret places.",
+                "Arise, O Lord, prevent them, and cast them down.",
+                "Deliver my soul from the wicked, thy sword from the enemies of thy hand.",
+                "O Lord, from the few of the earth divide them in their life; their belly is filled from thy hidden stores.",
+                "They are filled with children, and they have left their remnants to their little ones.",
+                "But as for me, I will appear before thy sight in justice; I shall be satisfied when thy glory shall appear."
             ]
         },
         {
@@ -448,59 +621,71 @@
         {
             "number": 19,
             "text": [
-                "Exaudiat te Dominus in die tribulationis; protegat te nomen Dei Jacob.",
-                "Mittat tibi auxilium de sancto, et de Sion tueatur te.",
-                "Memor sit omnis sacrificii tui, et holocaustum tuum pingue fiat.",
-                "Tribuat tibi secundum cor tuum, et omne consilium tuum confirmet.",
-                "Laetabimur in salutari tuo; et in nomine Dei nostri magnificabimur.",
-                "Impleat Dominus omnes petitiones tuas; nunc cognovi quoniam salvum fecit Dominus christum suum.",
-                "Exaudiet illum de caelo sancto suo; in potentatibus salus dexterae ejus.",
-                "Hi in curribus, et hi in equis; nos autem in nomine Domini Dei nostri invocabimus.",
-                "Ipsi obligati sunt, et ceciderunt; nos autem surreximus et erecti sumus.",
-                "Domine, salvum fac regem, et exaudi nos in die qua invocaverimus te."
-            ]
+                   "Exaudiat te Dominus in die tribulationis; protegat te nomen Dei Jacob.",
+                   "Mittat tibi auxilium de sancto, et de Sion tueatur te.",
+                   "Memor sit omnis sacrificii tui, et holocaustum tuum pingue fiat.",
+                   "Tribuat tibi secundum cor tuum, et omne consilium tuum confirmet.",
+                   "Laetabimur in salutari tuo; et in nomine Dei nostri magnificabimur.",
+                   "Impleat Dominus omnes petitiones tuas; nunc cognovi quoniam salvum fecit Dominus christum suum.",
+                   "Exaudiet illum de caelo sancto suo; in potentatibus salus dexterae ejus.",
+                   "Hi in curribus, et hi in equis; nos autem in nomine Domini Dei nostri invocabimus.",
+                   "Ipsi obligati sunt, et ceciderunt; nos autem surreximus et erecti sumus.",
+                   "Domine, salvum fac regem, et exaudi nos in die qua invocaverimus te."
+               ],
+               "englishText": [
+                   "May the Lord hear thee in the day of tribulation: may the name of the God of Jacob protect thee.",
+                   "May he send thee help from the sanctuary: and defend thee out of Sion.",
+                   "May he be mindful of all thy sacrifices: and may thy whole burnt offering be made fat.",
+                   "May he give thee according to thy own heart; and confirm all thy counsels.",
+                   "We will rejoice in thy salvation; and in the name of our God we shall be exalted.",
+                   "The Lord fulfill all thy petitions: now have I known that the Lord hath saved his anointed.",
+                   "He will hear him from his holy heaven: the salvation of his right hand is in powers.",
+                   "Some trust in chariots, and some in horses: but we will call upon the name of the Lord our God.",
+                   "They are bound, and have fallen; but we are risen, and are set upright.",
+                   "O Lord, save the king: and hear us in the day that we shall call upon thee."
+               ]
+           
         },
         {
             "number": 20,
             "section": "Royal Victory Psalm",
             "text": [
-                "Domine, in virtute tua laetabitur rex, et super salutare tuum exsultabit vehementer.",
-                "Desiderium cordis ejus tribuisti ei, et voluntate labiorum ejus non fraudasti eum.",
-                "Quoniam praevenisti eum in benedictionibus dulcedinis; posuisti in capite ejus coronam de lapide pretioso.",
-                "Vitam petiit a te, et tribuisti ei longitudinem dierum in saeculum saeculi.",
-                "Magna est gloria ejus in salutari tuo; gloriam et magnum decorem impones super eum.",
-                "Quoniam dabis eum in benedictionem in saeculum saeculi; laetificabis eum in gaudio cum vultu tuo.",
-                "Quoniam rex sperat in Domino, et in misericordia Altissimi non commovebitur.",
-                "Inveniatur manus tua omnibus inimicis tuis; dextera tua inveniat omnes qui te oderunt.",
-                "Pones eos ut clibanum ignis in tempore vultus tui; Dominus in ira sua conturbabit eos, et devorabit eos ignis.",
-                "Fructum eorum de terra perdes, et semen eorum a filiis hominum.",
-                "Quoniam declinaverunt in te mala; cogitaverunt consilia quae non potuerunt stabilire.",
-                "Quoniam pones eos dorsum; in reliquiis tuis praeparabis vultum eorum.",
-                "Exaltare, Domine, in virtute tua; cantabimus et psallemus virtutes tuas."
-            ]
+                    "Domine, in virtute tua laetabitur rex, et super salutare tuum exsultabit vehementer.",
+                    "Desiderium cordis ejus tribuisti ei, et voluntate labiorum ejus non fraudasti eum.",
+                    "Quoniam praevenisti eum in benedictionibus dulcedinis; posuisti in capite ejus coronam de lapide pretioso.",
+                    "Vitam petiit a te, et tribuisti ei longitudinem dierum in saeculum saeculi.",
+                    "Magna est gloria ejus in salutari tuo; gloriam et magnum decorem impones super eum.",
+                    "Quoniam dabis eum in benedictionem in saeculum saeculi; laetificabis eum in gaudio cum vultu tuo.",
+                    "Quoniam rex sperat in Domino, et in misericordia Altissimi non commovebitur.",
+                    "Inveniatur manus tua omnibus inimicis tuis; dextera tua inveniat omnes qui te oderunt.",
+                    "Pones eos ut clibanum ignis in tempore vultus tui; Dominus in ira sua conturbabit eos, et devorabit eos ignis.",
+                    "Fructum eorum de terra perdes, et semen eorum a filiis hominum.",
+                    "Quoniam declinaverunt in te mala; cogitaverunt consilia quae non potuerunt stabilire.",
+                    "Quoniam pones eos dorsum; in reliquiis tuis praeparabis vultum eorum.",
+                    "Exaltare, Domine, in virtute tua; cantabimus et psallemus virtutes tuas."
+                ],
+                "englishText": [
+                    "O Lord, the king shall joy in thy strength, and in thy salvation he shall rejoice exceedingly.",
+                    "Thou hast given him his heart’s desire: and hast not withholden from him the will of his lips.",
+                    "For thou hast prevented him with blessings of sweetness: thou hast set on his head a crown of precious stones.",
+                    "He asked life of thee: and thou hast given him length of days for ever and ever.",
+                    "His glory is great in thy salvation: glory and great beauty shalt thou lay upon him.",
+                    "For thou shalt give him to be a blessing for ever and ever: thou shalt make him joyful in gladness with thy countenance.",
+                    "For the king hopeth in the Lord: and in the mercy of the most High he shall not be moved.",
+                    "Let thy hand be found by all thy enemies: let thy right hand find out all them that hate thee.",
+                    "Thou shalt make them as an oven of fire, in the time of thy countenance: the Lord shall trouble them in his wrath, and fire shall devour them.",
+                    "Their fruit shalt thou destroy from the earth: and their seed from among the children of men.",
+                    "For they have intended evils against thee: they have devised counsels which they have not been able to establish.",
+                    "For thou shalt make them turn their back: in thy remnants thou shalt prepare their face.",
+                    "Be thou exalted, O Lord, in thy own strength: we will sing and praise thy power."
+                ]
+            
         },
+       
         {
             "number": 21,
-            "section": "Messianic Psalm",
-            "text": [
-                "Domine, in virtute tua laetabitur rex, et super salutare tuum exsultabit vehementer.",
-                "Desiderium cordis ejus tribuisti ei, et voluntate labiorum ejus non fraudasti eum.",
-                "Quoniam praevenisti eum in benedictionibus dulcedinis; posuisti in capite ejus coronam de lapide pretioso.",
-                "Vitam petiit a te, et tribuisti ei longitudinem dierum in saeculum saeculi.",
-                "Magna est gloria ejus in salutari tuo; gloriam et magnum decorem impones super eum.",
-                "Quoniam dabis eum in benedictionem in saeculum saeculi; laetificabis eum in gaudio cum vultu tuo.",
-                "Quoniam rex sperat in Domino, et in misericordia Altissimi non commovebitur.",
-                "Inveniatur manus tua omnibus inimicis tuis; dextera tua inveniat omnes qui te oderunt.",
-                "Pones eos ut clibanum ignis in tempore vultus tui; Dominus in ira sua conturbabit eos, et devorabit eos ignis.",
-                "Fructum eorum de terra perdes, et semen eorum a filiis hominum.",
-                "Quoniam declinaverunt in te mala; cogitaverunt consilia quae non potuerunt stabilire.",
-                "Quoniam pones eos dorsum; in reliquiis tuis praeparabis vultum eorum.",
-                "Exaltare, Domine, in virtute tua; cantabimus et psallemus virtutes tuas."
-            ]
-        },
-        {
-            "number": 22,
-            "section": "Passion Psalm",
+            "section": "",
+            "title": "Passion Psalm",
             "text": [
                 "Deus, Deus meus, respice in me: quare me dereliquisti? longe a salute mea verba delictorum meorum.",
                 "Deus meus, clamabo per diem, et non exaudies; et nocte, et non ad insipientiam mihi.",
@@ -533,25 +718,64 @@
                 "Manducaverunt et adoraverunt omnes pingues terrae; in conspectu ejus cadent omnes qui descendunt in terram.",
                 "Et anima mea illi vivet; et semen meum serviet ipsi.",
                 "Annuntiabitur Domino generatio ventura; et annuntiabunt justitiam ejus populo qui nascetur, quem fecit Dominus."
+            ],"englishText": [
+                "My God, my God, look upon me: why hast thou forsaken me? Far from my salvation are the words of my sins.",
+                "O my God, I shall cry by day, and thou wilt not hear: and by night, and it shall not be reputed as folly in me.",
+                "But thou dwellest in the holy place, the praise of Israel.",
+                "In thee have our fathers hoped: they have hoped, and thou hast delivered them.",
+                "They cried to thee, and they were saved: they trusted in thee, and were not confounded.",
+                "But I am a worm, and no man: the reproach of men, and the outcast of the people.",
+                "All they that saw me have laughed me to scorn: they have spoken with the lips, and wagged the head.",
+                "He hoped in the Lord, let him deliver him: let him save him, seeing he delighteth in him.",
+                "For thou art he that hast drawn me out of the womb: my hope from the breasts of my mother.",
+                "I was cast upon thee from the womb. From my mother’s womb thou art my God,",
+                "Depart not from me. For tribulation is very near: for there is none to help me.",
+                "Many calves have surrounded me: fat bulls have besieged me.",
+                "They have opened their mouths against me, as a lion ravening and roaring.",
+                "I am poured out like water; and all my bones are scattered. My heart is become like wax melting in the midst of my bowels.",
+                "My strength is dried23 up like a potsherd, and my tongue hath cleaved to my jaws: and thou hast brought me down into the dust of death.",
+                "For many dogs have encompassed me: the council of the malignant hath besieged me.",
+                "They have dug my hands and feet: they have numbered all my bones.",
+                "And they have looked and stared upon me: they parted my garments amongst them; and upon my vesture they cast lots.",
+                "But thou, O Lord, remove not thy help to a distance from me: look towards my defence.",
+                "Deliver my soul from the sword: my only one from the hand of the dog.",
+                "Save me from the lion’s mouth; and my lowness from the horns of the unicorns.",
+                "I will declare thy name to my brethren: in the midst of the church will I praise thee.",
+                "Ye that fear the Lord, praise him: all ye the seed of Jacob, glorify him.",
+                "Let all the seed of Israel fear him: because he hath not slighted nor despised the supplication of the poor man. Neither hath he turned away his face from me: and when I cried to him he heard me.",
+                "With thee is my praise in a great church: I will pay my vows in the sight of them that fear him.",
+                "The poor shall eat and shall be filled: and they shall praise the Lord that seek him: their hearts shall live for ever and ever.",
+                "All the ends of the earth shall remember, and shall be converted to the Lord: And all the kindreds of the Gentiles shall adore in his sight.",
+                "For the kingdom is the Lord’s; and he shall have dominion over the nations.",
+                "All the fat ones of the earth have eaten and have adored: all they that go down to the earth shall fall before him.",
+                "And to him my soul shall live: and my seed shall serve him.",
+                "There shall be declared to the Lord a generation to come: and the heavens shall show forth his justice to a people that shall be born, which the Lord hath made."
             ]
+        },
+        {
+            "number": 22,
+            "section": "",
+            "title": "The Good Shepherd",
+            "text": [
+                "Dominus regit me, et nihil mihi deerit:",
+                "in loco pascuae ibi me collocavit; super aquam refectionis educavit me.",
+                "Animam meam convertit; deduxit me super semitas justitiae propter nomen suum.",
+                "Nam etsi ambulavero in medio umbrae mortis, non timebo mala, quoniam tu mecum es; virga tua et baculus tuus, ipsa me consolata sunt.",
+                "Parasti in conspectu meo mensam adversus eos qui tribulant me; impinguasti in oleo caput meum, et calix meus inebrians quam praeclarus est!",
+                "Et misericordia tua subsequetur me omnibus diebus vitae meae; et ut inhabitem in domo Domini in longitudinem dierum."
+            ],
+            "englishText": [
+                "The Lord ruleth me: and I shall want nothing.",
+                "He hath set me in a place of pasture. He hath brought me up, on the water of refreshment:",
+                "He hath converted my soul. He hath led me on the paths of justice, for his own name’s sake.",
+                "For though I should walk in the midst of the shadow of death, I will fear no evils, for thou art with me. Thy rod and thy staff, they have comforted me.",
+                "Thou hast prepared a table before me against them that afflict me. Thou hast anointed my head with oil; and my chalice which inebriateth me, how goodly is it!",
+                "And thy mercy will follow me all the days of my life. And that I may dwell in the house of the Lord unto length of days."
+            ]
+            
         },
         {
             "number": 23,
-            "section": "The Good Shepherd",
-            "text": [
-                "Dominus regit me, et nihil mihi deerit:",
-                "In loco pascuae ibi me collocavit. Super aquam refectionis educavit me;",
-                "Animam meam convertit. Deduxit me super semitas justitiae propter nomen suum.",
-                "Nam et si ambulavero in medio umbrae mortis, non timebo mala, quoniam tu mecum es.",
-                "Virga tua et baculus tuus, ipsa me consolata sunt.",
-                "Parasti in conspectu meo mensam adversus eos qui tribulant me.",
-                "Impinguasti in oleo caput meum; et calix meus inebrians quam praeclarus est!",
-                "Et misericordia tua subsequetur me omnibus diebus vitae meae;",
-                "Et ut inhabitem in domo Domini in longitudinem dierum."
-            ]
-        },
-        {
-            "number": 24,
             "section": "The King of Glory",
             "text": [
                 "Domini est terra et plenitudo ejus, orbis terrarum et universi qui habitant in eo.",
@@ -2052,7 +2276,17 @@
                 "Tunc non confundar, cum perspexero in omnibus praeceptis tuis.",
                 "Confitebor tibi in directione cordis, in eo quod didici judicia justitiae tuae.",
                 "Justificationes tuas custodiam, non me derelinquas usquequaque."
-            ]
+            ],
+            "englishText": [
+                "Blessed are the undefiled in the way, who walk in the law of the Lord.",
+                "Blessed are they that search his testimonies, that seek him with their whole heart.",
+                "For they that work iniquity have not walked in his ways.",
+                "Thou hast commanded thy commandments to be kept most diligently.",
+                "O that my ways may be directed to keep thy justifications!",
+                "Then shall I not be confounded, when I shall look into all thy commandments.",
+                "I will praise thee with uprightness of heart, when I shall have learned the judgments of thy justice.",
+                "I will keep thy justifications: O do not thou utterly forsake me."
+              ]
         },
         {
             "number": 118,
@@ -2066,7 +2300,17 @@
                 "In via testimoniorum tuorum delectatus sum, sicut in omnibus divitiis.",
                 "In mandatis tuis exercebor, et considerabo vias tuas.",
                 "In justificationibus tuis meditabor, non obliviscar sermones tuos."
-            ]
+            ],
+            "englishText": [
+                "Wherewith shall a young man correct his way? By observing thy words.",
+                "With my whole heart have I sought after thee: let me not stray from thy commandments.",
+                "Thy words have I hidden in my heart, that I may not sin against thee.",
+                "Blessed art thou, O Lord: teach me thy justifications.",
+                "With my lips I have pronounced all the judgments of thy mouth.",
+                "I have been delighted in the way of thy testimonies, as in all riches.",
+                "I will meditate on thy commandments, and I will consider thy ways.",
+                "I will think of thy justifications: I will not forget thy words."
+              ]
         },
         {
             "number": 118,
@@ -2080,11 +2324,21 @@
                 "Aufer a me opprobrium et contemptum, quia testimonia tua exquisivi.",
                 "Etenim sederunt principes, et adversum me loquebantur; servus autem tuus exercebatur in justificationibus tuis.",
                 "Nam et testimonia tua meditatio mea est, et consilium meum justificationes tuae."
+            ],
+            "englishText": [
+                "Deal bountifully with thy servant, that I may live and keep thy words.",
+                "Open thou mine eyes, that I may behold the wondrous things of thy law.",
+                "I am a stranger on the earth: hide not thy commandments from me.",
+                "My soul breaketh for the longing it hath unto thy judgments at all times.",
+                "Thou hast rebuked the proud that are cursed, which do err from thy commandments.",
+                "Remove from me reproach and contempt; for I have kept thy testimonies.",
+                "Princes also did sit and speak against me: but thy servant did meditate in thy statutes.",
+                "Thy testimonies also are my delight and my counsellors."
             ]
         },
         {
             "number": 118,
-            "section": "Daleth",
+            "section": "daleth",
             "text": [
                 "Adhaesit pavimento anima mea, vivifica me secundum verbum tuum.",
                 "Vias meas enuntiavi, et exaudisti me; doce me justificationes tuas.",
@@ -2094,6 +2348,15 @@
                 "Viam veritatis elegi, judicia tua non sum oblitus.",
                 "Adhaesi testimoniis tuis, Domine, noli me confundere.",
                 "Viam mandatorum tuorum cucurri, cum dilatasti cor meum."
+            ], "englishText": [
+                "My soul cleaveth unto the dust: quicken thou me according to thy word.",
+                "I have declared my ways, and thou heardest me: teach me thy statutes.",
+                "Make me to understand the way of thy precepts: so shall I meditate on thy wondrous works.",
+                "My soul melteth away for heaviness: strengthen thou me according unto thy word.",
+                "Remove from me the way of lying: and grant me thy law graciously.",
+                "I have chosen the way of truth: thy judgments have I not forgotten.",
+                "I have stuck unto thy testimonies: O Lord, put me not to shame.",
+                "I will run the way of thy commandments, when thou shalt enlarge my heart."
             ]
         },
         {
@@ -2108,6 +2371,16 @@
                 "Statue servo tuo eloquium tuum in timore tuo.",
                 "Amputa opprobrium meum quod suspicatus sum, quia judicia tua jucunda.",
                 "Ecce concupivi mandata tua, in aequitate tua vivifica me."
+            ],
+            "englishText": [
+                "Teach me, O Lord, the way of thy statutes: and I shall keep it unto the end.",
+                "Give me understanding, and I shall search thy law: yea, I shall keep it with my whole heart.",
+                "Lead me in the path of thy commandments: for therein do I delight.",
+                "Incline my heart unto thy testimonies: and not to covetousness.",
+                "Turn away mine eyes from beholding vanity: and quicken thou me in thy way.",
+                "Establish thy word unto thy servant: who is devoted to thy fear.",
+                "Turn away my reproach which I dread: for thy judgments are good.",
+                "Behold, I have longed after thy precepts: quicken me in thy righteousness."
             ]
         },
         {
@@ -2122,6 +2395,15 @@
                 "Et loquebar de testimoniis tuis in conspectu regum, et non confundebar.",
                 "Et meditabar in mandatis tuis, quae dilexi.",
                 "Et levavi manus meas ad mandata tua quae dilexi, et exercebar in justificationibus tuis."
+            ],  "englishText": [
+                "Let thy mercies come also unto me, O Lord: even thy salvation, according to thy word.",
+                "And I will answer them that reproach me in word: for I have trusted in thy words.",
+                "And take not thou the word of truth utterly out of my mouth: for in thy judgments I have hoped exceedingly.",
+                "And I will keep thy law always: for ever and ever.",
+                "And I walked at large: because I have sought after thy commandments.",
+                "And I spoke of thy testimonies before kings: and I was not ashamed.",
+                "And I meditated on thy commandments: which I loved.",
+                "And I lifted up my hands to thy commandments, which I loved: and I was exercised in thy justifications."
             ]
         },
         {
@@ -2136,6 +2418,15 @@
                 "Cantabiles mihi erant justificationes tuae in loco peregrinationis meae.",
                 "Memor fui nocte nominis tui, Domine, et custodivi legem tuam.",
                 "Hoc factum est mihi, quia justificationes tuas exquisivi."
+            ], "englishText": [
+                "Be thou mindful of thy word to thy servant: in which thou hast given me hope.",
+                "This hath comforted me in my humiliation: because thy word hath enlivened me.",
+                "The proud did iniquitously altogether: but I declined not from thy law.",
+                "I remembered, O Lord, thy judgments of old: and I was comforted.",
+                "A fainting hath taken hold of me: because of the wicked that forsake thy law.",
+                "Thy justifications were the subject of my song: in the place of my pilgrimage.",
+                "In the night I have remembered thy name, O Lord: and have kept thy law.",
+                "This happened to me: because I sought after thy justifications."
             ]
         },
         {
@@ -2150,11 +2441,20 @@
                 "Media nocte surgebam ad confitendum tibi, super judicia justitiae tuae.",
                 "Particeps ego sum omnium timentium te, et custodientium mandata tua.",
                 "Misericordia tua, Domine, plena est terra, justificationes tuas doce me."
+            ] , "englishText": [
+                "O Lord, my portion: I have said, I would keep thy law.",
+                "I entreated thy face with my whole heart: have mercy on me according to thy word.",
+                "I have thought on my ways: and turned my feet unto thy testimonies.",
+                "I am ready, and am not troubled: that I may keep thy commandments.",
+                "The cords of the wicked have encompassed me: but I have not forgotten thy law.",
+                "At midnight I rose to give praise to thee: for the judgments of thy justice.",
+                "I am a partaker with all them that fear thee: and that keep thy commandments.",
+                "The earth, O Lord, is full of thy mercy: teach me thy justifications."
             ]
         },
         {
             "number": 118,
-            "section": "Teth",
+            "section": "teth",
             "text": [
                 "Bonitatem fecisti cum servo tuo, Domine, secundum verbum tuum.",
                 "Bonitatem et disciplinam et scientiam doce me, quia mandatis tuis credidi.",
@@ -2164,11 +2464,20 @@
                 "Coagulatum est sicut lac cor eorum, ego vero legem tuam meditatus sum.",
                 "Bonum mihi quia humiliasti me, ut discam justificationes tuas.",
                 "Bonum mihi lex oris tui, super millia auri et argenti."
+            ], "englishText": [
+                "Thou hast done good to thy servant, O Lord: according to thy word.",
+                "Teach me goodness and discipline and knowledge: for I have believed thy commandments.",
+                "Before I was humbled I offended: therefore have I kept thy word.",
+                "Thou art good: and in thy goodness teach me thy justifications.",
+                "The iniquity of the proud hath been multiplied over me: but I will seek thy commandments with my whole heart.",
+                "Their heart is curdled like milk: but I have meditated on thy law.",
+                "It is good for me that thou hast humbled me: that I may learn thy justifications.",
+                "The law of thy mouth is good to me: above thousands of gold and silver."
             ]
         },
         {
             "number": 118,
-            "section": "Jod",
+            "section": "jod",
             "text": [
                 "Manus tuae fecerunt me, et plasmaverunt me, da mihi intellectum, et discam mandata tua.",
                 "Qui timent te videbunt me et laetabuntur, quia in verba tua supersperavi.",
@@ -2178,11 +2487,20 @@
                 "Confundantur superbi, quia injuste iniquitatem fecerunt in me; ego autem exercebor in mandatis tuis.",
                 "Convertantur mihi timentes te, et qui noverunt testimonia tua.",
                 "Fiat cor meum immaculatum in justificationibus tuis, ut non confundar."
+            ], "englishText": [
+                "Thy hands have made me and formed me: give me understanding, and I will learn thy commandments.",
+                "They that fear thee shall see me, and shall be glad: because I have greatly hoped in thy words.",
+                "I know, O Lord, that thy judgments are equity: and in thy truth thou hast humbled me.",
+                "O let thy mercy be for my comfort: according to thy word unto thy servant.",
+                "Let thy tender mercies come unto me, and I shall live: for thy law is my meditation.",
+                "Let the proud be ashamed, because they have done unjustly towards me: but I will be employed in thy commandments.",
+                "Let them that fear thee turn to me: and they that know thy testimonies.",
+                "Let my heart be undefiled in thy justifications: that I may not be confounded."
             ]
         },
         {
             "number": 118,
-            "section": "Caph",
+            "section": "caph",
             "text": [
                 "Defecit in salutare tuum anima mea, et in verbum tuum supersperavi.",
                 "Defecerunt oculi mei in eloquium tuum, dicentes: Quando consolaberis me?",
@@ -2192,11 +2510,20 @@
                 "Omnia mandata tua veritas; inique persecuti sunt me, adjuva me.",
                 "Paulo minus consummaverunt me in terra, ego autem non dereliqui mandata tua.",
                 "Secundum misericordiam tuam vivifica me, et custodiam testimonia oris tui."
+            ] , "englishText": [
+                "My soul hath fainted after thy salvation: and in thy word I have hoped exceedingly.",
+                "My eyes have failed for thy word, saying: When wilt thou comfort me?",
+                "For I am become like a bottle in the frost: I have not forgotten thy justifications.",
+                "How many are the days of thy servant? When wilt thou execute judgment on them that persecute me?",
+                "The wicked have told me fables: but not as thy law.",
+                "All thy commandments are truth: they have persecuted me unjustly, do thou help me.",
+                "They had almost made an end of me upon earth: but I have not forsaken thy commandments.",
+                "Quicken thou me according to thy mercy: and I shall keep the testimonies of thy mouth."
             ]
         },
         {
             "number": 118,
-            "section": "Lamed",
+            "section": "lamed",
             "text": [
                 "In aeternum, Domine, verbum tuum permanet in caelo.",
                 "In generationem et generationem veritas tua; fundasti terram, et permanet.",
@@ -2206,6 +2533,15 @@
                 "Tuus sum ego, salvum me fac, quoniam justificationes tuas exquisivi.",
                 "Me exspectaverunt peccatores ut perderent me; testimonia tua intellexi.",
                 "Omnis consummationis vidi finem, latum mandatum tuum nimis."
+            ],  "englishText": [
+                "For ever, O Lord, thy word standeth firm in heaven.",
+                "Thy truth unto all generations: thou hast founded the earth, and it continueth.",
+                "By thy ordinance the day goeth on: for all things serve thee.",
+                "Unless thy law had been my meditation: I had then perhaps perished in my abjection.",
+                "Thy justifications I will never forget: for by them thou hast given me life.",
+                "I am thine, save thou me: for I have sought thy justifications.",
+                "The wicked have waited for me to destroy me: but I have understood thy testimonies.",
+                "I have seen an end of all perfection: thy commandment is exceeding broad."
             ]
         },
         {
@@ -2220,6 +2556,15 @@
                 "A judiciis tuis non declinavi, quia tu legem posuisti mihi.",
                 "Quam dulcia faucibus meis eloquia tua! super mel ori meo.",
                 "A mandatis tuis intellexi, propterea odivi omnem viam iniquitatis."
+            ], "englishText": [
+                "O how have I loved thy law, O Lord: it is my meditation all the day.",
+                "Through thy commandment thou hast made me wiser than my enemies: for it is ever with me.",
+                "I have understood more than all my teachers: because thy testimonies are my meditation.",
+                "I have had understanding above ancients: because I have sought thy commandments.",
+                "I have restrained my feet from every evil way: that I may keep thy words.",
+                "I have not declined from thy judgments: because thou hast set me a law.",
+                "How sweet are thy words to my palate! more than honey to my mouth.",
+                "By thy commandments I have had understanding: therefore have I hated every way of iniquity."
             ]
         },
         {
@@ -2234,8 +2579,16 @@
                 "Posuerunt peccatores laqueum mihi, et de mandatis tuis non erravi.",
                 "Hereditate acquisivi testimonia tua in aeternum, quia exsultatio cordis mei sunt.",
                 "Inclinavi cor meum ad faciendas justificationes tuas in aeternum, propter retributionem."
-            ]
-        },
+            ], "englishText": [
+                "Thy word is a lamp to my feet: and a light to my paths.",
+                "I have sworn and am determined to keep the judgments of thy justice.",
+                "I have been humbled, O Lord, exceedingly: quicken thou me according to thy word.",
+                "The free offerings of my mouth make thou acceptable, O Lord: and teach me thy judgments.",
+                "My soul is continually in my hands: and I have not forgotten thy law.",
+                "The wicked have laid a snare for me: but I have not strayed from thy commandments.",
+                "I have purchased thy testimonies for an inheritance for ever: because they are the joy of my heart.",
+                "I have inclined my heart to do thy justifications for ever: for the reward."
+            ]        },
         {
             "number": 118,
             "section": "Samech",
@@ -2248,6 +2601,15 @@
                 "Sprevisti omnes discedentes a judiciis tuis, quia injusta cogitatio eorum.",
                 "Praevari cantes reputavi omnes peccatores terrae, ideo dilexi testimonia tua.",
                 "Confige timore tuo carnes meas, a judiciis enim tuis timui."
+            ], "englishText": [
+                "I have hated the unjust: and I have loved thy law.",
+                "Thou art my helper and my protector: and in thy word I have greatly hoped.",
+                "Depart from me, ye malignant: and I will search the commandments of my God.",
+                "Uphold me according to thy word, and I shall live: and let me not be confounded in my expectation.",
+                "Help me, and I shall be saved: and I will meditate always on thy justifications.",
+                "Thou hast despised all them that fall off from thy judgments: for their thought is unjust.",
+                "I have counted all the sinners of the earth prevaricators: therefore have I loved thy testimonies.",
+                "Pierce thou my flesh with thy fear: for I am afraid of thy judgments."
             ]
         },
         {
@@ -2262,6 +2624,15 @@
                 "Tempus faciendi, Domine, dissipaverunt legem tuam.",
                 "Ideo dilexi mandata tua super aurum et topazion.",
                 "Propterea ad omnia mandata tua dirigebar, omnem viam iniquam odio habui."
+            ] ,"englishText": [
+                "I have done judgment and justice: give me not up to them that slander me.",
+                "Uphold thy servant unto good: let not the proud calumniate me.",
+                "My eyes have fainted after thy salvation, and for the word of thy justice.",
+                "Deal with thy servant according to thy mercy, and teach me thy justifications.",
+                "I am thy servant: give me understanding, that I may know thy testimonies.",
+                "It is time to do, O Lord: they have dissipated thy law.",
+                "Therefore have I loved thy commandments above gold and the topaz.",
+                "For this cause was I directed to all thy commandments: I have hated every way of iniquity."
             ]
         },
         {
@@ -2276,6 +2647,15 @@
                 "Redime me a calumniis hominum, ut custodiam mandata tua.",
                 "Faciem tuam illumina super servum tuum, et doce me justificationes tuas.",
                 "Exitius aquae deduxerunt oculi mei, quia non custodierunt legem tuam."
+            ], "englishText": [
+                "Thy testimonies are wonderful: therefore my soul hath sought them.",
+                "The declaration of thy words giveth light: and giveth understanding to little ones.",
+                "I opened my mouth, and panted: because I longed for thy commandments.",
+                "Look thou upon me, and have mercy on me, according to the judgment of them that love thy name.",
+                "Direct my steps according to thy word: and let no iniquity have dominion over me.",
+                "Deliver me from the calumnies of men: that I may keep thy commandments.",
+                "Make thy face to shine upon thy servant: and teach me thy justifications.",
+                "My eyes have sent forth springs of water: because they have not kept thy law."
             ]
         },
         {
@@ -2290,6 +2670,16 @@
                 "Justitia tua justitia in aeternum, et lex tua veritas.",
                 "Tribulatio et angustia invenerunt me, mandata tua meditatio mea est.",
                 "Aequitas testimonia tua in aeternum, intellectum da mihi, et vivam."
+            ],
+            "englishText": [
+                "Thou art just, O Lord: and thy judgment is right.",
+                "Thou hast commanded justice thy testimonies: and thy truth exceedingly.",
+                "My zeal hath consumed me: because my enemies have forgotten thy words.",
+                "Thy word is exceedingly refined: and thy servant hath loved it.",
+                "I am young and despised: yet have I not forgotten thy justifications.",
+                "Thy justice is justice for ever: and thy law is the truth.",
+                "Tribulation and anguish have found me: thy commandments are my meditation.",
+                "Thy testimonies are justice for ever: give me understanding, and I shall live."
             ]
         },
         {
@@ -2304,6 +2694,16 @@
                 "Appropinquaverunt persequentes me iniquitatem, a lege autem tua longe facti sunt.",
                 "Prope es tu, Domine, et omnes viae tuae veritas.",
                 "Initio cognovi de testimoniis tuis, quia in aeternum fundasti ea."
+            ],
+            "englishText": [
+                "I cried with my whole heart, hear me, O Lord: I will seek thy justifications.",
+                "I cried unto thee, save me: that I may keep thy commandments.",
+                "I prevented the dawning of the day, and cried: because in thy words I greatly hoped.",
+                "My eyes have prevented the morning to thee: that I might meditate on thy words.",
+                "Hear my voice according to thy mercy, O Lord: and quicken me according to thy judgment.",
+                "They that persecute me have drawn nigh to iniquity: but they are gone far from thy law.",
+                "Thou art near, O Lord: and all thy commandments are truth.",
+                "From the beginning I have known of thy testimonies: that thou hast founded them for ever."
             ]
         },
         {
@@ -2318,6 +2718,15 @@
                 "Vidi praevaricantes, et tabescebam, quia eloquia tua non custodierunt.",
                 "Vide quoniam mandata tua dilexi, Domine, in misericordia tua vivifica me.",
                 "Principium verborum tuorum veritas, in aeternum omnia judicia justitiae tuae."
+            ] ,"englishText": [
+                "See my humiliation, and deliver me: for I have not forgotten thy law.",
+                "Judge my judgment, and redeem me: quicken me for thy word’s sake.",
+                "Salvation is far from sinners: because they have not sought thy justifications.",
+                "Many are thy mercies, O Lord: quicken me according to thy judgment.",
+                "Many are they that persecute me, and afflict me: but I have not declined from thy testimonies.",
+                "I beheld the transgressors, and I pined away: because they kept not thy words.",
+                "Behold that I have loved thy commandments, O Lord: in thy mercy quicken me.",
+                "The beginning of thy words is truth: all the judgments of thy justice are for ever."
             ]
         },
         {
@@ -2332,6 +2741,15 @@
                 "Exspectabam salutare tuum, Domine, et mandata tua dilexi.",
                 "Custodivit anima mea testimonia tua, et dilexit ea vehementer.",
                 "Servavi mandata tua et testimonia tua, quia omnes viae meae in conspectu tuo."
+            ],"englishText": [
+                "Princes have persecuted me without cause: and my heart hath feared at thy words.",
+                "I will rejoice at thy words: as one that hath found great spoil.",
+                "I have hated and abhorred iniquity: but I have loved thy law.",
+                "Seven times a day I have given praise to thee: for the judgments of thy justice.",
+                "Much peace have they that love thy law: and to them there is no stumbling block.",
+                "I looked for thy salvation, O Lord: and I loved thy commandments.",
+                "My soul hath kept thy testimonies: and I have loved them exceedingly.",
+                "I have kept thy commandments and thy testimonies: because all my ways are in thy sight."
             ]
         },
         {
@@ -2346,24 +2764,43 @@
                 "Concupivi salutare tuum, Domine, et lex tua meditatio mea est.",
                 "Vivet anima mea, et laudabit te, et judicia tua adjuvabunt me.",
                 "Erravi sicut ovis quae periit; quaere servum tuum, quia mandata tua non sum oblitus."
-            ]
+            ],
+            "englishText": [
+                    "Let my supplication come near in thy sight, O Lord: give me understanding according to thy word.",
+                    "Let my request come in before thee: deliver me according to thy word.",
+                    "My lips shall utter a hymn: when thou hast taught me thy justifications.",
+                    "My tongue shall pronounce thy word: because all thy commandments are justice.",
+                    "Let thy hand be to save me: for I have chosen thy commandments.",
+                    "I have longed for thy salvation, O Lord: and thy law is my meditation.",
+                    "My soul shall live, and shall praise thee: and thy judgments shall help me.",
+                    "I have gone astray like a sheep that is lost: seek thy servant, because I have not forgotten thy commandments."
+                ]
         },
         {
             "number": 119,
-            "section": "Psalms of Ascent",
+            "section": "",
             "text": [
                 "Ad Dominum cum tribularer clamavi, et exaudivit me.",
-                "Domine, libera animam meam a labiis iniquis et a lingua dolosa.",
+                "Domine, libera anima mea a labiis iniquis, et a lingua dolosa.",
                 "Quid detur tibi, aut quid apponatur tibi ad linguam dolosam?",
                 "Sagittae potentis acutae, cum carbonibus desolatoriis.",
-                "Heu mihi, quia incolatus meus prolongatus est! Habitavi cum habitantibus Cedar;",
-                "multum incola fuit anima mea.",
-                "Cum his qui oderunt pacem, eram pacificus; cum loquebar illis, impugnabant me gratis."
+                "Heu mihi, quia incolatus meus prolongatus est: habitavi cum habitantibus Cedar.",
+                "Multum incola fuit anima mea cum his qui oderunt pacem.",
+                "Ego pacem quaerebam: et cum loquerer illis, impugnabant me gratis."
+            ],
+            "englishText": [
+                "To the Lord, when I was in tribulation, I cried out: and he heard me.",
+                "O Lord, deliver my soul from wicked lips, and a deceitful tongue.",
+                "What shall be given to thee, or what shall be added to thee, against a deceitful tongue?",
+                "The sharp arrows of the mighty, with coals that lay waste.",
+                "Woe is me, that my sojourning is prolonged: I have dwelt with the inhabitants of Cedar.",
+                "Long hath my soul been a sojourner with them that hate peace.",
+                "I sought peace: and when I spoke thereof to them, they fought against me without cause."
             ]
         },
         {
             "number": 120,
-            "section": "Psalms of Ascent",
+            "section": "",
             "text": [
                 "Levavi oculos meos in montes, unde veniet auxilium mihi.",
                 "Auxilium meum a Domino, qui fecit caelum et terram.",
@@ -2373,11 +2810,20 @@
                 "Per diem sol non uret te, neque luna per noctem.",
                 "Dominus custodit te ab omni malo; custodiat animam tuam Dominus.",
                 "Dominus custodiat introitum tuum et exitum tuum, ex hoc nunc et usque in saeculum."
+            ], "englishText": [
+                "I have lifted up mine eyes to the mountains, from whence help shall come to me.",
+                "My help is from the Lord, who made heaven and earth.",
+                "May he not suffer thy foot to be moved: neither let him slumber that keepeth thee.",
+                "Behold he shall neither slumber nor sleep, that keepeth Israel.",
+                "The Lord keepeth thee, the Lord is thy protection, upon thy right hand.",
+                "The sun shall not burn thee by day: nor the moon by night.",
+                "The Lord keepeth thee from all evil: may the Lord keep thy soul.",
+                "The Lord keep thy coming in and thy going out, from henceforth now and for ever."
             ]
         },
         {
             "number": 121,
-            "section": "Psalms of Ascent",
+            "section": "",
             "text": [
                 "Laetatus sum in his quae dicta sunt mihi: In domum Domini ibimus.",
                 "Stantes erant pedes nostri in atriis tuis, Jerusalem.",
@@ -2388,6 +2834,16 @@
                 "Fiat pax in virtute tua, et abundantia in turribus tuis.",
                 "Propter fratres meos et proximos meos, loquebar pacem de te.",
                 "Propter domum Domini Dei nostri, quaesivi bona tibi."
+            ],  "englishText": [
+                "I rejoiced at the things that were said to me: We shall go into the house of the Lord.",
+                "Our feet were standing in thy courts, O Jerusalem.",
+                "Jerusalem, which is built as a city, which is compact together.",
+                "For thither did the tribes go up, the tribes of the Lord: the testimony of Israel, to praise the name of the Lord.",
+                "Because their seats have sat in judgment, seats upon the house of David.",
+                "Pray ye for the things that are for the peace of Jerusalem: and abundance for them that love thee.",
+                "Let peace be in thy strength: and abundance in thy towers.",
+                "For the sake of my brethren, and of my neighbours, I spoke peace of thee.",
+                "Because of the house of the Lord our God, I have sought good things for thee."
             ]
         },
         {
@@ -2399,6 +2855,12 @@
                 "sicut oculi ancillae in manibus dominae suae: ita oculi nostri ad Dominum Deum nostrum, donec misereatur nostri.",
                 "Miserere nostri, Domine, miserere nostri, quia multum repleti sumus despectione;",
                 "quia multum repleta est anima nostra opprobrium abundantibus et despectio superbis."
+            ], "englishText": [
+                "To thee have I lifted up mine eyes, who dwellest in heaven.",
+                "Behold as the eyes of servants are on the hands of their masters,",
+                "As the eyes of the handmaid are on the hands of her mistress: so are our eyes unto the Lord our God, until he have mercy on us.",
+                "Have mercy on us, O Lord, have mercy on us: for we are greatly filled with contempt.",
+                "For our soul is greatly filled: we are a reproach to the rich, and contempt to the proud."
             ]
         },
         {
@@ -2413,6 +2875,16 @@
                 "Benedictus Dominus, qui non dedit nos in captionem dentibus eorum.",
                 "Anima nostra sicut passer erepta est de laqueo venantium; laqueus contritus est, et nos liberati sumus.",
                 "Adjutorium nostrum in nomine Domini, qui fecit caelum et terram."
+            ],  "englishText": [
+                "If it had not been that the Lord was with us, let Israel now say:",
+                "If it had not been that the Lord was with us, when men rose up against us,",
+                "Perhaps they had swallowed us up alive: when their fury was enkindled against us,",
+                "Perhaps the waters had swallowed us up.",
+                "Our soul hath passed through a torrent: perhaps our soul had passed through a water insupportable.",
+                "Blessed be the Lord, who hath not given us to be a prey to their teeth.",
+                "Our soul hath been delivered as a sparrow out of the snare of the fowlers.",
+                "The snare is broken, and we are delivered.",
+                "Our help is in the name of the Lord, who made heaven and earth."
             ]
         },
         {
@@ -2424,30 +2896,60 @@
                 "Quia non relinquet Dominus virgam peccatorum super sortem justorum, ut non extendant justi ad iniquitatem manus suas.",
                 "Benefac, Domine, bonis, et rectis corde.",
                 "Declinantes autem in obligationes, adducet Dominus cum operantibus iniquitatem. Pax super Israel!"
+            ], "englishText": [
+                "They that trust in the Lord shall be as mount Sion: he shall not be moved for ever that dwelleth in Jerusalem.",
+                "Mountains are round about it: so the Lord is round about his people from henceforth now and for ever.",
+                "For the Lord will not leave the rod of sinners upon the lot of the just: that the just may not stretch forth their hands to iniquity.",
+                "Do good, O Lord, to those that are good, and to the upright of heart.",
+                "But such as turn aside into bonds, the Lord shall lead out with the workers of iniquity: peace upon Israel."
             ]
         },
         {
             "number": 125,
             "section": "Psalms of Ascent",
+            "title": "A song of the return from Babylon",
             "text": [
-                "In convertendo Dominus captivitatem Sion, facti sumus sicut consolati.",
-                "Tunc repletum est gaudio os nostrum, et lingua nostra exsultatione; tunc dicent inter gentes: Magnificavit Dominus facere cum eis.",
-                "Magnificavit Dominus facere nobiscum; facti sumus laetantes.",
-                "Converte, Domine, captivitatem nostram, sicut torrens in austro.",
-                "Qui seminant in lacrimis, in exsultatione metent.",
-                "Euntes ibant et flebant, mittentes semina sua; venientes autem venient cum exsultatione, portantes manipulos suos."
+                "In convertendo Dominus captivitatem Sion: facti sumus sicut consolati.",
+                "Tunc repletum est gaudio os nostrum: et lingua nostra exsultatione.",
+                "Tunc dicent inter gentes: Magnificavit Dominus facere cum eis.",
+                "Magnificavit Dominus facere nobiscum: facti sumus lætantes.",
+                "Converte, Domine, captivitatem nostram: sicut torrens in austro.",
+                "Qui seminant in lacrimis: in exsultatione metent.",
+                "Euntes ibant et flebant: mittentes semina sua.",
+                "Venientes autem venient cum exsultatione: portantes manipulos suos."
+       
+            ], "englishText": [
+                "When the Lord brought back the captivity of Sion, we became like men comforted.",
+                "Then was our mouth filled with gladness, and our tongue with joy.",
+                "Then shall they say among the Gentiles: The Lord hath done great things for them.",
+                "The Lord hath done great things for us: we are become joyful.",
+                "Turn again our captivity, O Lord, as a stream in the south.",
+                "They that sow in tears shall reap in joy.",
+                "Going they went and wept, casting their seeds.",
+                "But coming they shall come with joyfulness, carrying their sheaves."
             ]
         },
         {
             "number": 126,
-            "section": "Psalms of Ascent",
+            "section": "",
+            "title": "The builder's psalm",
             "text": [
-                "Nisi Dominus aedificaverit domum, in vanum laboraverunt qui aedificant eam; nisi Dominus custodierit civitatem, in vanum vigilat qui custodit eam.",
-                "Vanum est vobis ante lucem surgere; surgite postquam sederitis, qui manducatis panem doloris.",
-                "Cum dederit dilectis suis somnum: ecce hereditas Domini, filii; merces, fructus ventris.",
-                "Sicut sagittae in manu potentis, ita filii excussorum.",
-                "Beatus vir qui implevit desiderium suum ex ipsis; non confundetur cum loquetur inimicis suis in porta."
-            ]
+                   "Nisi Dominus ædificaverit domum: in vanum laboraverunt qui ædificant eam.",
+                   "Nisi Dominus custodierit civitatem: frustra vigilat qui custodit eam.",
+                   "Vanum est vobis ante lucem surgere: surgite postquam sederitis, qui manducatis panem doloris.",
+                   "Cum dederit dilectis suis somnum: ecce hæreditas Domini, filii; merces, fructus ventris.",
+                   "Sicut sagittæ in manu potentis: ita filii excussorum.",
+                   "Beatus vir qui implevit desiderium suum ex ipsis: non confundetur cum loquetur inimicis suis in porta."
+               ],
+               "englishText": [
+                   "Unless the Lord build the house: they labour in vain that build it.",
+                   "Unless the Lord keep the city: he watcheth in vain that keepeth it.",
+                   "It is vain for you to rise before light: rise ye after you have sitten, you that eat the bread of sorrow.",
+                   "When he shall give sleep to his beloved: behold the inheritance of the Lord, children; the reward, the fruit of the womb.",
+                   "As arrows in the hand of the mighty: so the children of them that have been shaken.",
+                   "Blessed is the man that hath filled his desire with them: he shall not be confounded when he shall speak to his enemies in the gate."
+               ]
+           
         },
         {
             "number": 127,
@@ -2459,6 +2961,14 @@
                 "Ecce sic benedicetur homo qui timet Dominum.",
                 "Benedicat tibi Dominus ex Sion, et videas bona Jerusalem omnibus diebus vitae tuae.",
                 "Et videas filios filiorum tuorum. Pax super Israel!"
+            ] , "englishText": [
+                "Blessed are all they that fear the Lord: that walk in his ways.",
+                "For thou shalt eat the labours of thy hands: blessed art thou, and it shall be well with thee.",
+                "Thy wife as a fruitful vine, on the sides of thy house.",
+                "Thy children as olive plants, round about thy table.",
+                "Behold, thus shall the man be blessed that feareth the Lord.",
+                "May the Lord bless thee out of Sion: and mayest thou see the good things of Jerusalem all the days of thy life.",
+                "And mayest thou see thy children’s children, peace upon Israel."
             ]
         },
         {
@@ -2473,6 +2983,14 @@
                 "Fiant sicut foenum tectorum, quod priusquam evellatur exaruit,",
                 "de quo non implevit manum suam qui metit, et sinum suum qui manipulos colligit.",
                 "Et non dixerunt qui praeteribant: Benedictio Domini super vos; benediximus vobis in nomine Domini."
+            ], "englishText": [
+                "Often have they fought against me from my youth, let Israel now say.",
+                "Often have they fought against me from my youth: yet they could not prevail over me.",
+                "The wicked have wrought upon my back: they have lengthened their iniquity.",
+                "The just Lord hath hewn the necks of sinners: let them all be confounded and turned back that hate Sion.",
+                "Let them be as grass upon the tops of houses, which withereth before it be plucked up.",
+                "Wherewith the mower filleth not his hand: nor he that gathereth sheaves his bosom.",
+                "And they that passed by have not said: The blessing of the Lord be upon you: we have blessed you in the name of the Lord."
             ]
         },
         {
@@ -2487,462 +3005,689 @@
                 "A custodia matutina usque ad noctem, speret Israel in Domino.",
                 "Quia apud Dominum misericordia, et copiosa apud eum redemptio.",
                 "Et ipse redimet Israel ex omnibus iniquitatibus ejus."
+            ] ,"englishText": [
+                "Out of the depths I have cried to thee, O Lord: Lord, hear my voice.",
+                "Let thine ears be attentive to the voice of my supplication.",
+                "If thou, O Lord, wilt mark iniquities: Lord, who shall stand it?",
+                "For with thee there is merciful forgiveness: and by reason of thy law, I have waited for thee, O Lord.",
+                "My soul hath relied on his word: my soul hath hoped in the Lord.",
+                "From the morning watch even until night: let Israel hope in the Lord.",
+                "Because with the Lord there is mercy: and with him plentiful redemption.",
+                "And he shall redeem Israel from all his iniquities."
             ]
         },
         {
             "number": 130,
-            "section": "Psalms of Ascent",
+            "section": "",
             "text": [
                 "Domine, non est exaltatum cor meum, neque elati sunt oculi mei; neque ambulavi in magnis, neque in mirabilibus super me.",
                 "Si non humiliter sentiebam, sed exaltavi animam meam; sicut ablactatus est super matre sua, ita retributio in anima mea.",
                 "Speret Israel in Domino, ex hoc nunc et usque in saeculum."
+            ],  "englishText": [
+                "Lord, my heart is not exalted: nor are mine eyes lofty.",
+                "Neither have I walked in great matters, nor in wonders above me.",
+                "If I was not humbly minded, but exalted my soul:",
+                "As a child that is weaned is towards his mother, so reward in my soul.",
+                "Let Israel hope in the Lord, from henceforth now and for ever."
             ]
         },
         {
             "number": 131,
-            "section": "Psalms of Ascent",
+            "section": "",
             "text": [
-                "Memento, Domine, David et omnis mansuetudinis ejus;",
-                "quomodo juravit Domino, votum vovit Deo Jacob:",
-                "Si introiero in tabernaculum domus meae, si ascendero in lectum strati mei,",
-                "si dedero somnum oculis meis, aut palpebris meis dormitationem,",
-                "aut requiem temporibus meis, donec inveniam locum Domino, tabernaculum Deo Jacob.",
-                "Ecce audivimus eam in Ephrata; invenimus eam in campis silvae.",
-                "Introibimus in tabernaculum ejus; adorabimus in loco ubi steterunt pedes ejus.",
+                "Memento, Domine, David, et omnis mansuetudinis ejus.",
+                "Sicut juravit Domino, votum vovit Deo Jacob:",
+                "Si introiero in tabernaculum domus meae, si ascendero in lectum strati mei:",
+                "Si dedero somnum oculis meis, et palpebris meis dormitationem:",
+                "Et requiem temporibus meis: donec inveniam locum Domino, tabernaculum Deo Jacob.",
+                "Ecce audivimus eam in Ephrata: invenimus eam in campis silvae.",
+                "Introibimus in tabernaculum ejus: adorabimus in loco ubi steterunt pedes ejus.",
                 "Surge, Domine, in requiem tuam, tu et arca sanctificationis tuae.",
-                "Sacerdotes tui induantur justitiam, et sancti tui exsultent.",
-                "Propter David servum tuum, non avertas faciem christi tui.",
+                "Sacerdotes tui induantur justitiam: et sancti tui exsultent.",
+                "Propter David servum tuum, non avertas faciem Christi tui.",
                 "Juravit Dominus David veritatem, et non frustrabitur eam: De fructu ventris tui ponam super sedem tuam.",
-                "Si custodierint filii tui testamentum meum, et testimonia mea haec quae docebo eos, et filii eorum usque in saeculum sedebunt super sedem tuam.",
-                "Quoniam elegit Dominus Sion; elegit eam in habitationem sibi:",
-                "Haec requies mea in saeculum saeculi; hic habitabo quoniam elegi eam.",
-                "Victum ejus benedicens benedicam; pauperes ejus saturabo panibus.",
-                "Sacerdotes ejus induam salutari, et sancti ejus exsultatione exsultabunt.",
-                "Illuc producam cornu David; paravi lucernam christo meo.",
-                "Inimicos ejus induam confusione; super ipsum autem florebit sanctificatio mea."
+                "Si custodierint filii tui testamentum meum, et testimonia mea haec, quae docebo eos:",
+                "Et filii eorum usque in saeculum, sedebunt super sedem tuam.",
+                "Quoniam elegit Dominus Sion: elegit eam in habitationem sibi.",
+                "Haec requies mea in saeculum saeculi: hic habitabo, quoniam elegi eam.",
+                "Viduam ejus benedicens benedicam: pauperes ejus saturabo panibus.",
+                "Sacerdotes ejus induam salutari: et sancti ejus exsultatione exsultabunt.",
+                "Illuc producam cornu David: paravi lucernam Christo meo.",
+                "Inimicos ejus induam confusione: super ipsum autem efflorebit sanctificatio mea."
+            ],
+            "englishText": [
+                "Remember, O Lord, David, and all his meekness.",
+                "How he swore to the Lord, he vowed a vow to the God of Jacob:",
+                "If I shall enter into the tabernacle of my house: if I shall go up into the bed wherein I lie:",
+                "If I shall give sleep to mine eyes, or slumber to mine eyelids,",
+                "Or rest to my temples: until I find out a place for the Lord, a tabernacle for the God of Jacob.",
+                "Behold we have heard of it in Ephrata: we have found it in the fields of the wood.",
+                "We will go into his tabernacle: we will adore in the place where his feet stood.",
+                "Arise, O Lord, into thy resting place: thou and the ark of thy sanctification.",
+                "Let thy priests be clothed with justice: and let thy saints rejoice.",
+                "For thy servant David’s sake, turn not away the face of thy anointed.",
+                "The Lord hath sworn truth to David, and he will not make it void: Of the fruit of thy womb I will set upon thy throne.",
+                "If thy children will keep my covenant, and these my testimonies which I shall teach them:",
+                "Their children also for evermore shall sit upon thy throne.",
+                "For the Lord hath chosen Sion: he hath chosen it for his dwelling.",
+                "This is my rest for ever and ever: here will I dwell, for I have chosen it.",
+                "Blessing I will bless her widow: I will satisfy her poor with bread.",
+                "I will clothe her priests with salvation: and her saints shall rejoice with exceeding joy.",
+                "There will I bring forth a horn to David: I have prepared a lamp for my anointed.",
+                "His enemies I will clothe with confusion: but upon him shall my sanctification flourish."
             ]
         },
         {
             "number": 132,
-            "section": "Psalms of Ascent",
+            "section": "",
             "text": [
-                "Ecce quam bonum et quam jucundum habitare fratres in unum!",
+                "Ecce quam bonum, et quam jucundum habitare fratres in unum.",
                 "Sicut unguentum in capite, quod descendit in barbam, barbam Aaron,",
-                "quod descendit in oram vestimenti ejus; sicut ros Hermon, qui descendit in montem Sion.",
+                "Quod descendit in oram vestimenti ejus: sicut ros Hermon, qui descendit in montem Sion.",
                 "Quoniam illic mandavit Dominus benedictionem, et vitam usque in saeculum."
+            ],
+            "englishText": [
+                "Behold how good and how pleasant it is for brethren to dwell together in unity.",
+                "Like the precious ointment on the head, that ran down upon the beard, the beard of Aaron,",
+                "Which ran down to the skirt of his garment: as the dew of Hermon, which descendeth upon mount Sion.",
+                "For there the Lord hath commanded blessing, and life for evermore."
             ]
         },
         {
             "number": 133,
-            "section": "Psalms of Ascent",
+            "section": "",
             "text": [
-                "Ecce nunc benedicite Dominum, omnes servi Domini;",
+                "Ecce nunc benedicite Dominum, omnes servi Domini:",
                 "Qui statis in domo Domini, in atriis domus Dei nostri.",
                 "In noctibus extollite manus vestras in sancta, et benedicite Dominum.",
                 "Benedicat te Dominus ex Sion, qui fecit caelum et terram."
+            ],
+            "englishText": [
+                "Behold now bless ye the Lord, all ye servants of the Lord:",
+                "Who stand in the house of the Lord, in the courts of the house of our God.",
+                "In the nights lift up your hands to the holy places, and bless ye the Lord.",
+                "May the Lord out of Sion bless thee, he that made heaven and earth."
             ]
         },
-        {
-            "number": 134,
-            "section": "Hymn of Praise",
-            "text": [
-                "Laudate nomen Domini, laudate servi Dominum.",
-                "Qui statis in domo Domini, in atriis domus Dei nostri.",
-                "Laudate Dominum, quia bonus Dominus; psallite nomini ejus, quoniam suave.",
-                "Quoniam Jacob elegit sibi Dominus, Israel in possessionem sibi.",
-                "Quia ego cognovi quod magnus est Dominus, et Deus noster prae omnibus diis.",
-                "Omnia quaecumque voluit Dominus fecit, in caelo et in terra, in mari et in omnibus abyssis.",
-                "Educens nubes ab extremo terrae, fulgura in pluviam fecit; qui producit ventos de thesauris suis.",
-                "Qui percussit primogenita Aegypti ab homine usque ad pecus.",
-                "Misit signa et prodigia in medio tui, Aegypte, in Pharaonem et in omnes servos ejus.",
-                "Qui percussit gentes multas, et occidit reges fortes:",
-                "Sehon regem Amorrhaeorum, et Og regem Basan, et omnia regna Chanaan.",
-                "Et dedit terram eorum haereditatem, haereditatem Israel populo suo.",
-                "Domine, nomen tuum in aeternum; Domine, memoria tua in generationem et generationem.",
-                "Quia judicabit Dominus populum suum, et in servis suis deprecabitur.",
-                "Simulacra gentium argentum et aurum, opera manuum hominum.",
-                "Os habent et non loquentur; oculos habent et non videbunt.",
-                "Aures habent et non audient; neque enim est spiritus in ore ipsorum.",
-                "Similes illis fiant qui faciunt ea, et omnes qui confidunt in eis.",
-                "Domus Israel, benedicite Domino; domus Aaron, benedicite Domino.",
-                "Domus Levi, benedicite Domino; qui timetis Dominum, benedicite Domino.",
-                "Benedictus Dominus ex Sion, qui habitat in Jerusalem."
-            ]
-        },
-        {
-            "number": 135,
-            "section": "Great Hallel",
-            "text": [
-                "Confitemini Domino quoniam bonus, quoniam in saeculum misericordia ejus.",
-                "Confitemini Deo deorum, quoniam in saeculum misericordia ejus.",
-                "Confitemini Domino dominorum, quoniam in saeculum misericordia ejus.",
-                "Qui facit mirabilia magna solus, quoniam in saeculum misericordia ejus.",
-                "Qui fecit caelos in intellectu, quoniam in saeculum misericordia ejus.",
-                "Qui firmavit terram super aquas, quoniam in saeculum misericordia ejus.",
-                "Qui fecit luminaria magna, quoniam in saeculum misericordia ejus:",
-                "Solem in potestatem diei, quoniam in saeculum misericordia ejus,",
-                "Lunam et stellas in potestatem noctis, quoniam in saeculum misericordia ejus.",
-                "Qui percussit Aegyptum cum primogenitis eorum, quoniam in saeculum misericordia ejus.",
-                "Qui eduxit Israel de medio eorum, quoniam in saeculum misericordia ejus.",
-                "In manu forti et brachio extento, quoniam in saeculum misericordia ejus.",
-                "Qui divisit mare Rubrum in divisiones, quoniam in saeculum misericordia ejus.",
-                "Et traduxit Israel per medium ejus, quoniam in saeculum misericordia ejus.",
-                "Et excussit Pharaonem et virtutem ejus in mari Rubro, quoniam in saeculum misericordia ejus.",
-                "Qui traduxit populum suum per desertum, quoniam in saeculum misericordia ejus.",
-                "Qui percussit reges magnos, quoniam in saeculum misericordia ejus.",
-                "Et occidit reges fortes, quoniam in saeculum misericordia ejus:",
-                "Sehon regem Amorrhaeorum, quoniam in saeculum misericordia ejus,",
-                "Et Og regem Basan, quoniam in saeculum misericordia ejus.",
-                "Et dedit terram eorum haereditatem, quoniam in saeculum misericordia ejus:",
-                "Haereditatem Israel servo suo, quoniam in saeculum misericordia ejus.",
-                "Quia in humilitate nostra memor fuit nostri, quoniam in saeculum misericordia ejus.",
-                "Et redemit nos ab inimicis nostris, quoniam in saeculum misericordia ejus.",
-                "Qui dat escam omni carni, quoniam in saeculum misericordia ejus.",
-                "Confitemini Deo caeli, quoniam in saeculum misericordia ejus."
-            ]
-        },
-        {
-            "number": 136,
-            "section": "By the Rivers of Babylon",
-            "text": [
-                "Super flumina Babylonis illic sedimus et flevimus, cum recordaremur Sion.",
-                "In salicibus in medio ejus suspendimus organa nostra.",
-                "Quia illic interrogaverunt nos qui captivos duxerunt nos, verba cantionum.",
-                "Et qui abduxerunt nos: Hymnum cantate nobis de canticis Sion.",
-                "Quomodo cantabimus canticum Domini in terra aliena?",
-                "Si oblitus fuero tui, Jerusalem, oblivioni detur dextera mea.",
-                "Adhaereat lingua mea faucibus meis, si non meminero tui,",
-                "Si non proposuero Jerusalem in principio laetitiae meae.",
-                "Memor esto, Domine, filiorum Edom in die Jerusalem,",
-                "Qui dicunt: Exinanite, exinanite usque ad fundamentum in ea.",
-                "Filia Babylonis misera! beatus qui retribuet tibi retributionem tuam quam retribuisti nobis.",
-                "Beatus qui tenebit et allidet parvulos tuos ad petram."
-            ]
-        },
-        {
-            "number": 137,
-            "section": "Thanksgiving for Deliverance",
-            "text": [
-                "Confitebor tibi, Domine, in toto corde meo, quoniam audisti verba oris mei.",
-                "In conspectu angelorum psallam tibi, adorabo ad templum sanctum tuum.",
-                "Et confitebor nomini tuo propter misericordiam tuam et veritatem tuam,",
-                "Quoniam magnificasti super omne nomen sanctum tuum.",
-                "In quacumque die invocavero te, exaudi me; multiplicabis in anima mea virtutem.",
-                "Confiteantur tibi, Domine, omnes reges terrae, quia audierunt verba oris tui.",
-                "Et cantent in viis Domini, quoniam magna est gloria Domini.",
-                "Quoniam excelsus Dominus et humilia respicit, et alta a longe cognoscit.",
-                "Si ambulavero in medio tribulationis, vivificabis me;",
-                "Et super iram inimicorum meorum extendes manum tuam, et salvum me faciet dextera tua.",
-                "Dominus retribuet pro me; Domine, misericordia tua in saeculum:",
-                "Opera manuum tuarum ne despicias."
-            ]
-        },
-        {
-            "number": 138,
-            "section": "God's Omniscience",
-            "text": [
-                "Domine, probasti me et cognovisti me:",
-                "Tu cognovisti sessionem meam et resurrectionem meam.",
-                "Intellexisti cogitationes meas de longe;",
-                "Semitam meam et funiculum meum investigasti,",
-                "Et omnes vias meas praevidisti.",
-                "Quia non est sermo in lingua mea,",
-                "Ecce, Domine, tu cognovisti omnia novissima et antiqua:",
-                "Tu formasti me, et posuisti super me manum tuam.",
-                "Mirabilis facta est scientia tua ex me:",
-                "Confortata est, et non potero ad eam.",
-                "Quo ibo a spiritu tuo? et quo a facie tua fugiam?",
-                "Si ascendero in caelum, tu illic es; si descendero in infernum, ades.",
-                "Si sumpsero pennas meas diluculo, et habitavero in extremis maris:",
-                "Etenim illuc manus tua deducet me, et tenebit me dextera tua.",
-                "Et dixi: Forsitan tenebrae conculcabunt me;",
-                "Et nox illuminatio mea in deliciis meis.",
-                "Quia tenebrae non obscurabuntur a te,",
-                "Et nox sicut dies illuminabitur; sicut tenebrae ejus, ita et lumen ejus.",
-                "Quia tu possedisti renes meos;",
-                "Suscepisti me de utero matris meae.",
-                "Confitebor tibi quia terribiliter magnificatus es;",
-                "Mirabilia opera tua, et anima mea cognoscit nimis.",
-                "Non est occultatum os meum a te, quod fecisti in occulto;",
-                "Et substantia mea in inferioribus terrae.",
-                "Imperfectum meum viderunt oculi tui,",
-                "Et in libro tuo omnes scribentur;",
-                "Dies formabuntur, et nemo in eis.",
-                "Mihi autem nimis honorificati sunt amici tui, Deus;",
-                "Nimis confortatus est principatus eorum.",
-                "Dinumerabo eos, et super arenam multiplicabuntur;",
-                "Exsurrexi, et adhuc sum tecum.",
-                "Si occideris, Deus, peccatores:",
-                "Virique sanguinum, declinate a me.",
-                "Quia dicitis in cogitatione:",
-                "Accipient in vanitate civitates tuas.",
-                "Nonne qui oderunt te, Domine, oderam?",
-                "Et super inimicos tuos tabescebam?",
-                "Perfecto odio oderam illos;",
-                "Et inimici facti sunt mihi.",
-                "Proba me, Deus, et scito cor meum;",
-                "Interroga me, et cognosce semitas meas.",
-                "Et vide si via iniquitatis in me est;",
-                "Et deduc me in via aeterna."
-            ]
-        },
-        {
-            "number": 139,
-            "section": "Prayer for Deliverance",
-            "text": [
-                "Eripe me, Domine, ab homine malo;",
-                "A viro iniquo libera me.",
-                "Qui cogitaverunt malitias in corde,",
-                "Tota die constituebant praelia.",
-                "Acuerunt linguas suas sicut serpentis;",
-                "Venenum aspidum sub labiis eorum.",
-                "Custodi me, Domine, de manu peccatoris;",
-                "Et ab hominibus iniquis libera me.",
-                "Qui cogitaverunt supplantare gressus meos.",
-                "Absconderunt superbi laqueum mihi;",
-                "Et funes extenderunt in laqueum;",
-                "Juxta iter scandalum posuerunt mihi.",
-                "Dixi Domino: Deus meus es tu;",
-                "Exaudi, Domine, vocem deprecationis meae.",
-                "Domine, Domine, virtus salutis meae,",
-                "Obumbra caput meum in die belli.",
-                "Ne tradas me a desiderio meo peccatori;",
-                "Cogitaverunt adversum me, ne derelinquas me,",
-                "Ne forte exaltentur.",
-                "Caput circuitus eorum,",
-                "Labor labiorum ipsorum operiet eos.",
-                "Cadent super eos carbones,",
-                "In ignem deicies eos,",
-                "In miseriis non subsistent.",
-                "Vir linguosus non dirigetur in terra;",
-                "Virum injustum mala capient in interitu.",
-                "Cognovi quia faciet Dominus judicium inopis,",
-                "Et vindictam pauperum.",
-                "Verumtamen justi confitebuntur nomini tuo,",
-                "Et habitabunt recti cum vultu tuo."
-            ]
-        },
-        {
-            "number": 140,
-            "section": "Evening Prayer",
-            "text": [
-                "Domine, clamavi ad te, exaudi me;",
-                "Intende voci meae cum clamero ad te.",
-                "Dirigatur oratio mea sicut incensum in conspectu tuo;",
-                "Elevatio manuum mearum sacrificium vespertinum.",
-                "Pone, Domine, custodiam ori meo,",
-                "Et ostium circumstantiae labiis meis.",
-                "Non declines cor meum in verba malitiae,",
-                "Ad excusandas excusationes in peccatis.",
-                "Cum hominibus operantibus iniquitatem,",
-                "Et non communicabo cum electis eorum.",
-                "Corripiet me justus in misericordia, et increpabit me;",
-                "Oleum autem peccatoris non impinguet caput meum.",
-                "Quoniam adhuc et oratio mea in beneplacitis eorum;",
-                "Absorpti sunt juncti petrae judices eorum.",
-                "Audient verba mea quoniam potuerunt;",
-                "Sicut crassitudo terrae erumpens in terra.",
-                "Dissipata sunt ossa nostra secus infernum;",
-                "Quia ad te, Domine, Domine, oculi mei;",
-                "In te speravi, non auferas animam meam.",
-                "Custodi me a laqueo quem statuerunt mihi,",
-                "Et a scandalis operantium iniquitatem.",
-                "Cadent in retiaculo ejus peccatores;",
-                "Singulariter sum ego donec transeam."
-            ]
-        },
-        {
-            "number": 141,
-            "section": "Prayer for Protection",
-            "text": [
-                "Voce mea ad Dominum clamavi;",
-                "Voce mea ad Dominum deprecatus sum.",
-                "Effundo in conspectu ejus orationem meam;",
-                "Tribulationem meam ante ipsum pronuntio.",
-                "In deficiendo ex me spiritum meum,",
-                "Et tu cognovisti semitas meas.",
-                "In via hac qua ambulabam,",
-                "Absconderunt laqueum mihi.",
-                "Considerabam ad dexteram, et videbam,",
-                "Et non erat qui cognosceret me.",
-                "Periit fuga a me,",
-                "Et non est qui requirat animam meam.",
-                "Clamavi ad te, Domine;",
-                "Dixi: Tu es spes mea,",
-                "Portio mea in terra viventium.",
-                "Intende ad deprecationem meam,",
-                "Quia humiliatus sum nimis.",
-                "Libera me a persequentibus me,",
-                "Quia confortati sunt super me.",
-                "Educ de custodia animam meam,",
-                "Ad confitendum nomini tuo.",
-                "Me exspectant justi,",
-                "Donec retribuas mihi."
-            ]
-        },
-        {
-            "number": 142,
-            "section": "Prayer in Distress",
-            "text": [
-                "Domine, exaudi orationem meam; auribus percipe obsecrationem meam in veritate tua; exaudi me in tua justitia.",
-                "Et non intres in judicium cum servo tuo, quia non justificabitur in conspectu tuo omnis vivens.",
-                "Quia persecutus est inimicus animam meam; humiliavit in terra vitam meam.",
-                "Collocavit me in obscuris sicut mortuos saeculi; et anxiatus est super me spiritus meus, in me turbatum est cor meum.",
-                "Memor fui dierum antiquorum; meditatus sum in omnibus operibus tuis, in factis manuum tuarum meditabar.",
-                "Expandi manus meas ad te; anima mea sicut terra sine aqua tibi.",
-                "Velociter exaudi me, Domine; defecit spiritus meus.",
-                "Non avertas faciem tuam a me, et similis ero descendentibus in lacum.",
-                "Auditam fac mihi mane misericordiam tuam, quia in te speravi.",
-                "Notam fac mihi viam in qua ambulem, quia ad te levavi animam meam.",
-                "Eripe me de inimicis meis, Domine, ad te confugi;",
-                "Doce me facere voluntatem tuam, quia Deus meus es tu.",
-                "Spiritus tuus bonus deducet me in terra recta; propter nomen tuum, Domine, vivificabis me, in aequitate tua.",
-                "Educes de tribulatione animam meam, et in misericordia tua disperdes inimicos meos.",
-                "Et perdes omnes qui tribulant animam meam, quoniam ego servus tuus sum."
-            ]
-        },
-        {
-            "number": 143,
-            "section": "Prayer for Victory",
-            "text": [
-                "Benedictus Dominus Deus meus, qui docet manus meas ad praelium, et digitos meos ad bellum.",
-                "Misericordia mea et refugium meum, susceptor meus et liberator meus,",
-                "Protector meus, et in eo speravi; qui subdit populum meum sub me.",
-                "Domine, quid est homo quia innotuisti ei? aut filius hominis, quia reputas eum?",
-                "Homo vanitati similis factus est; dies ejus sicut umbra praetereunt.",
-                "Domine, inclina caelos tuos et descende; tange montes, et fumigabunt.",
-                "Fulgora coruscationem et disperges eos; emitte sagittas tuas et conturbabis eos.",
-                "Emite manum tuam de alto, eripe me et libera me de aquis multis, de manu filiorum alienorum.",
-                "Quorum os locutum est vanitatem, et dextera eorum dextera iniquitatis.",
-                "Deus, canticum novum cantabo tibi; in psalterio decachordo psallam tibi.",
-                "Qui das salutem regibus, qui redemisti David servum tuum de gladio maligno:",
-                "Eripe me, et erue me de manu filiorum alienorum, quorum os locutum est vanitatem, et dextera eorum dextera iniquitatis.",
-                "Quorum filii sicut novellae plantationes in juventute sua; filiae eorum compositae, circumornatae ut similitudo templi.",
-                "Promptuaria eorum plena, eructantia ex hoc in illud; oves eorum foetosae, abundantes in egressibus suis.",
-                "Boves eorum crassi; non est ruina maceriae, neque transitus, neque clamor in plateis eorum.",
-                "Beatum dixerunt populum cui haec sunt; beatus populus cujus Dominus Deus ejus."
-            ]
-        },
-        {
-            "number": 144,
-            "section": "Royal Psalm of Praise",
-            "text": [
-                "Exaltabo te, Deus meus rex; et benedicam nomini tuo in saeculum, et in saeculum saeculi.",
-                "Per singulos dies benedicam tibi; et laudabo nomen tuum in saeculum, et in saeculum saeculi.",
-                "Magnus Dominus, et laudabilis nimis; et magnitudinis ejus non est finis.",
-                "Generatio et generatio laudabit opera tua, et potentiam tuam pronuntiabunt.",
-                "Magnificentiam gloriae sanctitatis tuae loquentur, et mirabilia tua narrabunt.",
-                "Et virtutem terribilium tuorum dicent, et magnitudinem tuam narrabunt.",
-                "Memoriam abundantiae suavitatis tuae eructabunt, et justitia tua exsultabunt.",
-                "Miserator et misericors Dominus, patiens et multum misericors.",
-                "Suavis Dominus universis, et miserationes ejus super omnia opera ejus.",
-                "Confiteantur tibi, Domine, omnia opera tua, et sancti tui benedicant tibi.",
-                "Gloriam regni tui dicent, et potentiam tuam loquentur:",
-                "Ut notam faciant filiis hominum potentiam tuam, et gloriam magnificentiae regni tui.",
-                "Regnum tuum regnum omnium saeculorum, et dominatio tua in omni generatione et generationem.",
-                "Fidelis Dominus in omnibus verbis suis, et sanctus in omnibus operibus suis.",
-                "Allevat Dominus omnes qui corruunt, et erigit omnes elisos.",
-                "Oculi omnium in te sperant, Domine; et tu das escam illorum in tempore opportuno.",
-                "Aperis tu manum tuam, et imples omne animal benedictione.",
-                "Justus Dominus in omnibus viis suis, et sanctus in omnibus operibus suis.",
-                "Prope est Dominus omnibus invocantibus eum, omnibus qui invocant eum in veritate.",
-                "Voluntatem timentium se faciet, et deprecationem eorum exaudiet, et salvos faciet eos.",
-                "Custodit Dominus omnes diligentes se, et omnes peccatores disperdet.",
-                "Laudationem Domini loquetur os meum, et benedicat omnis caro nomini sancto ejus in saeculum, et in saeculum saeculi."
-            ]
-        },
-        {
-            "number": 145,
-            "section": "Hymn of Praise",
-            "text": [
-                "Lauda, anima mea, Dominum; laudabo Dominum in vita mea, psallam Deo meo quamdiu fuero.",
-                "Nolite confidere in principibus, in filiis hominum, in quibus non est salus.",
-                "Exibit spiritus ejus, et revertetur in terram suam; in illa die peribunt omnes cogitationes eorum.",
-                "Beatus cujus Deus Jacob adjutor ejus, spes ejus in Domino Deo ipsius:",
-                "Qui fecit caelum et terram, mare et omnia quae in eis sunt; qui custodit veritatem in saeculum,",
-                "Facit judicium injuriam patientibus, dat escam esurientibus.",
-                "Dominus solvit compeditos; Dominus illuminat caecos.",
-                "Dominus erigit elisos; Dominus diligit justos.",
-                "Dominus custodit advenas, pupillum et viduam suscipiet, et vias peccatorum disperdet.",
-                "Regnabit Dominus in saecula, Deus tuus, Sion, in generationem et generationem."
-            ]
-        },
-        {
-            "number": 146,
-            "section": "God's Care for His People",
-            "text": [
-                "Laudate Dominum quoniam bonus est psalmus; Deo nostro sit jucunda laus.",
-                "Aedificans Jerusalem Dominus, dispersiones Israel congregabit.",
-                "Qui sanat contritos corde, et alligat contritiones eorum.",
-                "Qui numerat multitudinem stellarum, et omnibus eis nomina vocat.",
-                "Magnus Dominus noster, et magna virtus ejus, et sapientiae ejus non est numerus.",
-                "Suscipiens mansuetos Dominus, humilians autem peccatores usque ad terram.",
-                "Praecinite Domino in confessione; psallite Deo nostro in cithara.",
-                "Qui operit caelum nubibus, et parat terrae pluviam; qui producit in montibus fenum, et herbam servituti hominum.",
-                "Qui dat jumentis escam ipsorum, et pullis corvorum invocantibus eum.",
-                "Non in fortitudine equi voluntatem habebit, nec in tibiis viri beneplacitum erit ei.",
-                "Beneplacitum est Domino super timentes eum, et in eis qui sperant super misericordia ejus."
-            ]
-        },
-        {
-            "number": 147,
-            "section": "Praise for Restoration",
-            "text": [
-                "Lauda Jerusalem Dominum; lauda Deum tuum Sion.",
-                "Quoniam confortavit seras portarum tuarum, benedixit filiis tuis in te.",
-                "Qui posuit fines tuos pacem, et adipe frumenti satiat te.",
-                "Qui emittit eloquium suum terrae, velociter currit sermo ejus.",
-                "Qui dat nivem sicut lanam, nebulam sicut cinerem spargit.",
-                "Mittit crystallum suam sicut buccellas; ante faciem frigoris ejus quis sustinebit?",
-                "Emittet verbum suum et liquefaciet ea; flabit spiritus ejus, et fluent aquae.",
-                "Qui annuntiat verbum suum Jacob, justitias et judicia sua Israel.",
-                "Non fecit taliter omni nationi, et judicia sua non manifestavit eis."
-            ]
-        },
-        {
-            "number": 148,
-            "section": "Universal Praise",
-            "text": [
-                "Laudate Dominum de caelis; laudate eum in excelsis.",
-                "Laudate eum omnes angeli ejus; laudate eum omnes virtutes ejus.",
-                "Laudate eum sol et luna; laudate eum omnes stellae et lumen.",
-                "Laudate eum caeli caelorum, et aquae quae super caelos sunt laudent nomen Domini.",
-                "Quia ipse dixit, et facta sunt; ipse mandavit, et creata sunt.",
-                "Statuit ea in aeternum et in saeculum saeculi; praeceptum posuit, et non praeteribit.",
-                "Laudate Dominum de terra, dracones et omnes abyssi;",
-                "Ignis, grando, nix, glacies, spiritus procellarum, quae faciunt verbum ejus;",
-                "Montes et omnes colles, ligna fructifera et omnes cedri;",
-                "Bestiae et universa pecora, serpentes et volucres pennatae;",
-                "Reges terrae et omnes populi, principes et omnes judices terrae;",
-                "Juvenes et virgines, senes cum junioribus laudent nomen Domini,",
-                "Quia exaltatum est nomen ejus solius.",
-                "Confessio ejus super caelum et terram; et exaltavit cornu populi sui.",
-                "Hymnus omnibus sanctis ejus, filiis Israel, populo appropinquanti sibi."
-            ]
-        },
-        {
-            "number": 149,
-            "section": "Song of Victory",
-            "text": [
-                "Cantate Domino canticum novum; laus ejus in ecclesia sanctorum.",
-                "Laetetur Israel in eo qui fecit eum; et filii Sion exsultent in rege suo.",
-                "Laudent nomen ejus in choro; in tympano et psalterio psallant ei.",
-                "Quia beneplacitum est Domino in populo suo; et exaltabit mansuetos in salutem.",
-                "Exsultabunt sancti in gloria; laetabuntur in cubilibus suis.",
-                "Exaltationes Dei in gutture eorum, et gladii ancipites in manibus eorum,",
-                "Ad faciendam vindictam in nationibus, increpationes in populis,",
-                "Ad alligandos reges eorum in compedibus, et nobiles eorum in manicis ferreis,",
-                "Ut faciant in eis judicium conscriptum. Gloria haec est omnibus sanctis ejus."
-            ]
-        },
-        {
-            "number": 150,
-            "text": [
-                "Laudate Dominum in sanctis ejus;",
-                "laudate eum in firmamento virtutis ejus.",
-                "Laudate eum in virtutibus ejus;",
-                "laudate eum secundum multitudinem magnitudinis ejus."
-            ]
-        }
+        
+        
+            {
+                "number": 134,
+                "section": "Laudate nomen",
+                "text": [
+                    "Laudate nomen Domini, laudate servi Dominum.",
+                    "Qui statis in domo Domini, in atriis domus Dei nostri.",
+                    "Laudate Dominum, quia bonus Dominus: psallite nomini ejus, quoniam suave.",
+                    "Quoniam Jacob elegit sibi Dominus, Israel in possessionem sibi.",
+                    "Quia ego cognovi quod magnus est Dominus, et Deus noster prae omnibus diis.",
+                    "Omnia quaecumque voluit, Dominus fecit in caelo, et in terra, in mari, et in omnibus abyssis.",
+                    "Educens nubes ab extremo terrae, fulgura in pluviam fecit.",
+                    "Qui producit ventos de thesauris suis, qui percussit primogenita Aegypti ab homine usque ad pecus.",
+                    "Et misit signa et prodigia in medio tui, Agypte: in Pharaonem, et in omnes servos ejus.",
+                    "Qui percussit gentes multas, et occidit reges fortes:",
+                    "Sehon, regem Amorrhaeorum, et Og, regem Basan, et omnia regna Chanaan.",
+                    "Et dedit terram eorum haereditatem, haereditatem Israel, populo suo.",
+                    "Domine, nomen tuum in aeternum: Domine, memoriale tuum in generationem et generationem.",
+                    "Quia judicabit Dominus populum suum, et in servis suis deprecabitur.",
+                    "Simulacra gentium argentum et aurum, opera manuum hominum.",
+                    "Os habent, et non loquentur: oculos habent, et non videbunt.",
+                    "Aures habent, et non audient: neque enim est spiritus in ore ipsorum.",
+                    "Similes illis fiant qui faciunt ea, et omnes qui confidunt in eis.",
+                    "Domus Israel benedicite Domino: domus Aaron benedicite Domino.",
+                    "Domus Levi benedicite Domino: qui timetis Dominum, benedicite Domino.",
+                    "Benedictus Dominus ex Sion, qui habitat in Jerusalem."
+                ],
+                "englishText": [
+                    "Praise ye the name of the Lord: O you his servants, praise the Lord:",
+                    "You that stand in the house of the Lord, in the courts of the house of our God.",
+                    "Praise ye the Lord, for the Lord is good: sing ye to his name, for it is sweet.",
+                    "For the Lord hath chosen Jacob unto himself: Israel for his own possession.",
+                    "For I have known that the Lord is great, and our God is above all gods.",
+                    "Whatsoever the Lord hath pleased he hath done, in heaven, in earth, in the sea, and in all the deeps.",
+                    "He bringeth up clouds from the end of the earth: he hath made lightnings for the rain.",
+                    "He bringeth forth winds out of his stores, he smote the firstborn of Egypt from man even unto beast.",
+                    "He sent forth signs and wonders in the midst of thee, O Egypt: upon Pharao, and upon all his servants.",
+                    "He smote many nations, and slew mighty kings:",
+                    "Sehon, king of the Amorrhites, and Og, king of Basan, and all the kingdoms of Chanaan.",
+                    "And he gave their land for an inheritance, an inheritance to Israel, his people.",
+                    "O Lord, thy name is for ever: O Lord, thy memorial is unto generation and generation.",
+                    "For the Lord will judge his people, and will be entreated in favour of his servants.",
+                    "The idols of the Gentiles are silver and gold, the works of the hands of men.",
+                    "They have mouths and speak not: they have eyes and see not.",
+                    "They have ears and hear not: neither is there any breath in their mouths.",
+                    "Let them that make them be like to them: and all such as trust in them.",
+                    "Bless the Lord, O house of Israel: bless the Lord, O house of Aaron.",
+                    "Bless the Lord, O house of Levi: you that fear the Lord, bless the Lord.",
+                    "Blessed be the Lord out of Sion, who dwelleth in Jerusalem."
+                ]
+            },
+            {
+                "number": 135,
+                "section": "Confitebor tibi",
+                "text": [
+                    "Confitebor tibi, Domine, in toto corde meo: quoniam audisti verba oris mei.",
+                    "In conspectu angelorum psallam tibi: adorabo ad templum sanctum tuum, et confitebor nomini tuo.",
+                    "Super misericordia tua et veritate tua: quoniam magnificasti super omnia, nomen sanctum tuum.",
+                    "In quacumque die invocavero te, exaudi me: multiplicabis in anima mea virtutem.",
+                    "Confiteantur tibi, Domine, omnes reges terrae: quia audierunt omnia verba oris tui.",
+                    "Et cantent in viis Domini: quoniam magna est gloria Domini.",
+                    "Quoniam excelsus Dominus, et humilia respicit: et alta a longe cognoscit.",
+                    "Si ambulavero in medio tribulationis, vivificabis me: et super iram inimicorum meorum extendisti manum tuam, et salvum me fecit dextera tua.",
+                    "Dominus retribuet pro me: Domine, misericordia tua in saeculum: opera manuum tuarum ne despicias."
+                ],
+                "englishText": [
+                    "I will praise thee, O Lord, with my whole heart: for thou hast heard the words of my mouth.",
+                    "I will sing praise to thee in the sight of the angels: I will worship towards thy holy temple, and I will give glory to thy name.",
+                    "For thy mercy, and for thy truth: for thou hast magnified thy holy name above all.",
+                    "In what day soever I shall call upon thee, hear me: thou shalt multiply strength in my soul.",
+                    "May all the kings of the earth give glory to thee, O Lord: for they have heard all the words of thy mouth.",
+                    "And let them sing in the ways of the Lord: for great is the glory of the Lord.",
+                    "For the Lord is high, and looketh on the low: and the high he knoweth afar off.",
+                    "If I shall walk in the midst of tribulation, thou wilt quicken me: and thou hast stretched forth thy hand against the wrath of my enemies, and thy right hand hath saved me.",
+                    "The Lord will repay for me: thy mercy, O Lord, endureth for ever: O despise not the works of thy hands."
+                ]
+            },
+            {
+                "number": 136,
+                "section": "Super flumina",
+                "text": [
+                    "Super flumina Babylonis, illic sedimus et flevimus: cum recordaremur Sion.",
+                    "In salicibus in medio ejus, suspendimus organa nostra.",
+                    "Quia illic interrogaverunt nos, qui captivos duxerunt nos, verba cantionum.",
+                    "Et qui abduxerunt nos: Hymnum cantate nobis de canticis Sion.",
+                    "Quomodo cantabimus canticum Domini in terra aliena?",
+                    "Si oblitus fuero tui, Jerusalem, oblivioni detur dextera mea.",
+                    "Adhaereat lingua mea faucibus meis, si non meminero tui: si non proposuero Jerusalem, in principio laetitiae meae.",
+                    "Memor esto, Domine, filiorum Edom, in die Jerusalem: qui dicunt: Exinanite, exinanite usque ad fundamentum in ea.",
+                    "Filia Babylonis misera: beatus qui retribuet tibi retributionem tuam, quam retribuisti nobis.",
+                    "Beatus qui tenebit, et allidet parvulos tuos ad petram."
+                ],
+                "englishText": [
+                    "Upon the rivers of Babylon, there we sat and wept: when we remembered Sion.",
+                    "On the willows in the midst thereof we hung up our instruments.",
+                    "For there they that led us into captivity required of us the words of songs.",
+                    "And they that carried us away, said: Sing ye to us a hymn of the songs of Sion.",
+                    "How shall we sing the song of the Lord in a strange land?",
+                    "If I forget thee, O Jerusalem, let my right hand be forgotten.",
+                    "Let my tongue cleave to my jaws, if I do not remember thee: if I make not Jerusalem the beginning of my joy.",
+                    "Be mindful, O Lord, of the children of Edom, in the day of Jerusalem: who say: Rase it, rase it, even to the foundation thereof.",
+                    "O daughter of Babylon, miserable: blessed shall he be who shall repay thee thy payment which thou hast paid us.",
+                    "Blessed be he that shall take and dash thy little ones against the rock."
+                ]
+            },
+            {
+                "number": 137,
+                "section": "Confitebor tibi",
+                "text": [
+                    "Confitebor tibi, Domine, in toto corde meo: quoniam audisti verba oris mei.",
+                    "Coram angelis psallam tibi: adorabo ad templum sanctum tuum, et confitebor nomini tuo.",
+                    "Super misericordia tua, et veritate tua: quoniam magnificasti super omnia nomen sanctum tuum.",
+                    "In quacumque die invocavero te, velociter exaudi me: multiplicabis in anima mea virtutem.",
+                    "Confiteantur tibi, Domine, omnes reges terrae: quia audierunt omnia verba oris tui.",
+                    "Et cantent in viis Domini: quoniam magna est gloria Domini.",
+                    "Quoniam excelsus Dominus, et humilia respicit: et alta a longe cognoscit.",
+                    "Si ambulavero in medio tribulationis, vivificabis me: et super iram inimicorum meorum extendisti manum tuam, et salvum me fecit dextera tua.",
+                    "Dominus retribuet pro me: Domine, misericordia tua in saeculum: opera manuum tuarum ne despicias."
+                ],
+                "englishText": [
+                    "I will praise thee, O Lord, with my whole heart: for thou hast heard the words of my mouth.",
+                    "I will sing praise to thee before the angels: I will worship towards thy holy temple, and I will give glory to thy name.",
+                    "For thy mercy, and for thy truth: for thou hast magnified thy holy name above all.",
+                    "In what day soever I shall call upon thee, hear me speedily: thou shalt multiply strength in my soul.",
+                    "Let all the kings of the earth give glory to thee, O Lord: for they have heard all the words of thy mouth.",
+                    "And let them sing in the ways of the Lord: for great is the glory of the Lord.",
+                    "For the Lord is high, and looketh on the low: and the high he knoweth afar off.",
+                    "If I shall walk in the midst of tribulation, thou wilt quicken me: and thou hast stretched forth thy hand against the wrath of my enemies, and thy right hand hath saved me.",
+                    "The Lord will repay for me: thy mercy, O Lord, endureth for ever: O despise not the works of thy hands."
+                ]
+            },
+            {
+                "number": 138,
+                "section": "Domine, probasti",
+                "text": [
+                    "Domine, probasti me, et cognovisti me: tu cognovisti sessionem meam, et resurrectionem meam.",
+                    "Intellexisti cogitationes meas de longe: semitam meam, et funiculum meum investigasti.",
+                    "Et omnes vias meas praevidisti: quia non est sermo in lingua mea.",
+                    "Ecce, Domine, tu cognovisti omnia, novissima et antiqua: tu formasti me, et posuisti super me manum tuam.",
+                    "Mirabilis facta est scientia tua ex me: confortata est, et non potero ad eam.",
+                    "Quo ibo a spiritu tuo? et quo a facie tua fugiam?",
+                    "Si ascendero in caelum, tu illic es: si descendero in infernum, ades.",
+                    "Si sumpsero pennas meas diluculo, et habitavero in extremis maris:",
+                    "Etenim illic manus tua deducet me: et tenebit me dextera tua.",
+                    "Et dixi: Forsitan tenebrae conculcabunt me: et nox illuminatio mea in deliciis meis.",
+                    "Quia tenebrae non obscurabuntur a te, et nox sicut dies illuminabitur: sicut tenebrae ejus, ita et lumen ejus.",
+                    "Quia tu possedisti renes meos: suscepisti me de utero matris meae.",
+                    "Confitebor tibi, quia terribiliter magnificatus es: mirabilia opera tua, et anima mea cognoscit nimis.",
+                    "Non est occultatum os meum a te, quod fecisti in occulto: et substantia mea in inferioribus terrae.",
+                    "Imperfectum meum viderunt oculi tui, et in libro tuo omnia scribentur: dies formabuntur, et nemo in eis.",
+                    "Mihi autem nimis honorati sunt amici tui, Deus: nimis confortatus est principatus eorum.",
+                    "Dinumerabo eos, et super arenam multiplicabuntur: exsurrexi, et adhuc sum tecum.",
+                    "Si occideris, Deus, peccatores: viri sanguinum, declinate a me.",
+                    "Quia dicitis in cogitatione: Accipient in vanitate civitates tuas.",
+                    "Nonne qui oderunt te, Domine, oderam? et super inimicos tuos tabescebam?",
+                    "Perfecto odio oderam illos: inimici facti sunt mihi.",
+                    "Proba me, Deus, et scito cor meum: interroga me, et cognosce semitas meas.",
+                    "Et vide si via iniquitatis in me est: et deduc me in via aeterna."
+                ],
+                "englishText": [
+                    "Lord, thou hast proved me, and known me: thou hast known my sitting down, and my rising up.",
+                    "Thou hast understood my thoughts afar off: my path and my line thou hast searched out.",
+                    "And thou hast foreseen all my ways: for there is no speech in my tongue.",
+                    "Behold, O Lord, thou hast known all things, the last and those of old: thou hast formed me, and hast laid thy hand upon me.",
+                    "Thy knowledge is become wonderful to me: it is high, and I cannot reach to it.",
+                    "Whither shall I go from thy spirit? or whither shall I flee from thy face?",
+                    "If I ascend into heaven, thou art there: if I descend into hell, thou art present.",
+                    "If I take my wings early in the morning, and dwell in the uttermost parts of the sea:",
+                    "Even there also shall thy hand lead me: and thy right hand shall hold me.",
+                    "And I said: Perhaps darkness shall cover me: and night shall be my light in my pleasures.",
+                    "But darkness shall not be dark to thee, and night shall be light as the day: the darkness thereof, and the light thereof are alike to thee.",
+                    "For thou hast possessed my reins: thou hast protected me from my mother’s womb.",
+                    "I will praise thee, for thou art fearfully magnified: wonderful are thy works, and my soul knoweth right well.",
+                    "My bone is not hidden from thee, which thou hast made in secret: and my substance in the lower parts of the earth.",
+                    "Thy eyes did see my imperfect being, and in thy book all shall be written: days shall be formed, and no one in them.",
+                    "But to me thy friends, O God, are made exceedingly honourable: their principality is exceedingly strengthened.",
+                    "I will number them, and they shall be multiplied above the sand: I rose up and am still with thee.",
+                    "If thou wilt kill the wicked, O God: ye men of blood, depart from me:",
+                    "Because you say in thought: They shall receive thy cities in vain.",
+                    "Have I not hated them, O Lord, that hated thee: and pined away because of thy enemies?",
+                    "I have hated them with a perfect hatred: and they are become to me as enemies.",
+                    "Prove me, O God, and know my heart: examine me, and know my paths.",
+                    "And see if there be in me the way of iniquity: and lead me in the eternal way."
+                ]
+            },
+            {
+                "number": 139,
+                "section": "Eripe me",
+                "text": [
+                    "Eripe me, Domine, ab homine malo: a viro iniquo eripe me.",
+                    "Qui cogitaverunt iniquitates in corde: tota die constituebant praelia.",
+                    "Acuerunt linguas suas sicut serpens: venenum aspidum sub labiis eorum.",
+                    "Custodi me, Domine, de manu peccatoris: et ab hominibus iniquis eripe me.",
+                    "Qui cogitaverunt supplantare gressus meos: absconderunt superbi laqueum mihi.",
+                    "Et funes extenderunt in laqueum: juxta iter scandalum posuerunt mihi.",
+                    "Dixi Domino: Deus meus es tu: exaudi, Domine, vocem deprecationis meae.",
+                    "Domine, Domine, virtus salutis meae: obumbrasti super caput meum in die belli.",
+                    "Ne tradas me, Domine, a desiderio meo peccatori: cogitaverunt contra me, ne derelinquas me, ne forte exaltentur.",
+                    "Caput circuitus eorum: labor labiorum ipsorum operiet eos.",
+                    "Cadant super eos carbones, in ignem dejicies eos: in miseriis non subsistent.",
+                    "Vir linguosus non dirigetur in terra: virum injustum mala capient in interitu.",
+                    "Cognovi quia faciet Dominus judicium inopis: et vindictam pauperum.",
+                    "Verumtamen justi confitebuntur nomini tuo: et habitabunt recti cum vultu tuo."
+                ],
+                "englishText": [
+                    "Deliver me, O Lord, from the evil man: rescue me from the unjust man.",
+                    "Who have devised iniquities in their hearts: all the day long they designed battles.",
+                    "They have sharpened their tongues like a serpent: the venom of asps is under their lips.",
+                    "Keep me, O Lord, from the hand of the wicked: and from unjust men deliver me.",
+                    "Who have proposed to supplant my steps: the proud have hidden a net for me.",
+                    "And they have stretched out cords for a snare: they have laid for me a stumblingblock by the wayside.",
+                    "I said to the Lord: Thou art my God: hear, O Lord, the voice of my supplication.",
+                    "O Lord, Lord, the strength of my salvation: thou hast overshadowed my head in the day of battle.",
+                    "Give me not up, O Lord, from my desire to the wicked: they have plotted against me, forsake me not, lest they should triumph.",
+                    "The head of their compassing me about: the labour of their lips shall overwhelm them.",
+                    "Burning coals shall fall upon them, thou wilt cast them down into the fire: in miseries they shall not be able to stand.",
+                    "A man full of tongue shall not be established in the earth: evil shall catch the unjust man unto destruction.",
+                    "I know that the Lord will do justice to the needy: and will revenge the poor.",
+                    "But as for the just, they shall give glory to thy name: and the upright shall dwell with thy countenance."
+                ]
+            },
+            {
+                "number": 140,
+                "section": "Domine, clamavi",
+                "text": [
+                    "Domine, clamavi ad te, exaudi me: intende voci meae, cum clamavero ad te.",
+                    "Dirigatur oratio mea sicut incensum in conspectu tuo: elevatio manuum mearum sacrificium vespertinum.",
+                    "Pone, Domine, custodiam ori meo: et ostium circumstantiae labiis meis.",
+                    "Non declines cor meum in verba malitiae: ad excusandas excusationes in peccatis.",
+                    "Cum hominibus operantibus iniquitatem: et non communicabo cum electis eorum.",
+                    "Corripiet me justus in misericordia, et increpabit me: oleum autem peccatoris non impinguet caput meum.",
+                    "Quoniam adhuc et oratio mea in beneplacitis eorum: absorpti sunt juncti petrae judices eorum.",
+                    "Audient verba mea quoniam potuerunt: sicut grossitudo terrae erupta est super terram.",
+                    "Dissipata sunt ossa nostra secus infernum: quia ad te, Domine, Domine, oculi mei: in te speravi, non auferas animam meam.",
+                    "Custodi me a laqueo, quem statuerunt mihi: et a scandalis operantium iniquitatem.",
+                    "Cadent in retiaculo ejus peccatores: singulariter sum ego donec transeam."
+                ],
+                "englishText": [
+                    "I have cried to thee, O Lord, hear me: hearken to my voice, when I cry to thee.",
+                    "Let my prayer be directed as incense in thy sight: the lifting up of my hands, as evening sacrifice.",
+                    "Set a watch, O Lord, before my mouth: and a door round about my lips.",
+                    "Incline not my heart to evil words: to make excuses in sins.",
+                    "With men that work iniquity: and I will not communicate with the choicest of them.",
+                    "The just man shall correct me in mercy, and shall reprove me: but let not the oil of the sinner fatten my head.",
+                    "For my prayer also shall still be against the things with which they are well pleased: their judges have been swallowed up near the rock.",
+                    "They shall hear my words, for they have prevailed: as when the thickness of the earth is broken up upon the ground.",
+                    "Our bones are scattered by the side of hell: but to thee, O Lord, Lord, are my eyes: in thee have I put my trust, take not away my soul.",
+                    "Keep me from the snare, which they have laid for me: and from the stumblingblocks of them that work iniquity.",
+                    "The wicked shall fall in his net: I am alone until I pass."
+                ]
+            },
+            {
+                "number": 141,
+                "section": "Voce mea",
+                "text": [
+                    "Voce mea ad Dominum clamavi: voce mea ad Dominum deprecatus sum:",
+                    "Effundo in conspectu ejus orationem meam, et tribulationem meam ante ipsum pronuntio.",
+                    "In deficiendo ex me spiritum meum, et tu cognovisti semitas meas.",
+                    "In via hac qua ambulabam, absconderunt laqueum mihi.",
+                    "Considerabam ad dexteram, et videbam: et non erat qui cognosceret me.",
+                    "Periit fuga a me, et non est qui requirat animam meam.",
+                    "Clamavi ad te, Domine, dixi: Tu es spes mea, portio mea in terra viventium.",
+                    "Intende ad deprecationem meam: quia humiliatus sum nimis.",
+                    "Libera me a persequentibus me: quia confortati sunt super me.",
+                    "Educ de custodia animam meam ad confitendum nomini tuo: me exspectant justi, donec retribuas mihi."
+                ],
+                "englishText": [
+                    "I cried to the Lord with my voice: with my voice I made supplication to the Lord.",
+                    "In his sight I pour out my prayer, and before him I declare my trouble.",
+                    "When my spirit failed me, then thou knewest my paths.",
+                    "In this way wherein I walked, they have hidden a snare for me.",
+                    "I looked on my right hand, and beheld, and there was no one that would know me.",
+                    "Flight hath failed me: and there is no one that hath regard to my soul.",
+                    "I cried to thee, O Lord: I said: Thou art my hope, my portion in the land of the living.",
+                    "Attend to my supplication: for I am brought very low.",
+                    "Deliver me from my persecutors: for they are stronger than I.",
+                    "Bring my soul out of prison, that I may praise thy name: the just wait for me, until thou reward me."
+                ]
+            },
+            {
+                "number": 142,
+                "section": "Domine, exaudi",
+                "text": [
+                    "Domine, exaudi orationem meam: auribus percipe obsecrationem meam in veritate tua: exaudi me in tua justitia.",
+                    "Et non intres in judicium cum servo tuo: quia non justificabitur in conspectu tuo omnis vivens.",
+                    "Quia persecutus est inimicus animam meam: humiliavit in terra vitam meam.",
+                    "Collocavit me in obscuris sicut mortuos saeculi: et anxiatus est super me spiritus meus, in me turbatum est cor meum.",
+                    "Memor fui dierum antiquorum, meditatus sum in omnibus operibus tuis: in factis manuum tuarum meditabar.",
+                    "Expandi manus meas ad te: anima mea sicut terra sine aqua tibi.",
+                    "Velociter exaudi me, Domine: defecit spiritus meus.",
+                    "Non avertas faciem tuam a me: et similis ero descendentibus in lacum.",
+                    "Auditam fac mihi mane misericordiam tuam: quia in te speravi.",
+                    "Notum fac mihi viam, in qua ambulem: quia ad te levavi animam meam.",
+                    "Eripe me de inimicis meis, Domine, ad te confugi:",
+                    "Doce me facere voluntatem tuam, quia Deus meus es tu.",
+                    "Spiritus tuus bonus deducet me in terram rectam: propter nomen tuum, Domine, vivificabis me, in aequitate tua.",
+                    "Educes de tribulatione animam meam: et in misericordia tua disperdes inimicos meos.",
+                    "Et perdes omnes qui tribulant animam meam, quoniam ego servus tuus sum."
+                ],
+                "englishText": [
+                    "Hear, O Lord, my prayer: give ear to my supplication in thy truth: hear me in thy justice.",
+                    "And enter not into judgment with thy servant: for in thy sight no man living shall be justified.",
+                    "For the enemy hath persecuted my soul: he hath brought down my life to the earth.",
+                    "He hath made me to dwell in darkness as those that have been dead of old: and my spirit is in anguish within me, my heart within me is troubled.",
+                    "I remembered the days of old, I meditated on all thy works: I mused upon the works of thy hands.",
+                    "I stretched forth my hands to thee: my soul is as earth without water unto thee.",
+                    "Hear me speedily, O Lord: my spirit hath fainted away.",
+                    "Turn not away thy face from me: lest I be like unto them that go down into the pit.",
+                    "Cause me to hear thy mercy in the morning: for in thee have I hoped.",
+                    "Make the way known to me, wherein I should walk: for I have lifted up my soul to thee.",
+                    "Deliver me from my enemies, O Lord, to thee have I fled:",
+                    "Teach me to do thy will, for thou art my God.",
+                    "Thy good spirit shall lead me into the right land: for thy name’s sake, O Lord, thou wilt quicken me in thy justice.",
+                    "Thou wilt bring my soul out of trouble: and in thy mercy thou wilt destroy my enemies.",
+                    "And thou wilt cut off all them that afflict my soul: for I am thy servant."
+                ]
+            },
+            {
+                "number": 143,
+                "section": "Benedictus Dominus",
+                "text": [
+                    "Benedictus Dominus Deus meus, qui docet manus meas ad praelium, et digitos meos ad bellum.",
+                    "Misericordia mea, et refugium meum: susceptor meus, et liberator meus:",
+                    "Protector meus, et in ipso speravi: qui subdit populum meum sub me.",
+                    "Domine, quid est homo, quia innotuisti ei? aut filius hominis, quia reputas eum?",
+                    "Homo vanitati similis factus est: dies ejus sicut umbra praetereunt.",
+                    "Domine, inclina caelos tuos, et descende: tange montes, et fumigabunt.",
+                    "Fulgura coruscationem, et dissipabis eos: emitte sagittas tuas, et conturbabis eos.",
+                    "Emitte manum tuam de alto, eripe me, et libera me de aquis multis: de manu filiorum alienorum.",
+                    "Quorum os locutum est vanitatem: et dextera eorum, dextera iniquitatis.",
+                    "Deus, canticum novum cantabo tibi: in psalterio decachordo psallam tibi.",
+                    "Qui das salutem regibus: qui redemisti David, servum tuum, de gladio nequissimo:",
+                    "Eripe me, et libera me de manu filiorum alienorum: quorum os locutum est vanitatem, et dextera eorum dextera iniquitatis.",
+                    "Quorum filii sicut novellae plantationes in juventute sua: filiae eorum compositae, circumornatae ut similitudo templi:",
+                    "Promptuaria eorum plena, eructantia ex hoc in illud: oves eorum foetosae, abundantes in egressibus suis:",
+                    "Boves eorum crassi: non est ruina parietis, neque transitorium, neque clamor in plateis eorum.",
+                    "Beatum dixerunt populum, cui haec sunt: beatus populus, cujus Dominus Deus ejus."
+                ],
+                "englishText": [
+                    "Blessed be the Lord my God, who teacheth my hands to fight, and my fingers to war.",
+                    "My mercy, and my refuge: my upholder, and my deliverer:",
+                    "My protector, and in him have I trusted: who subdueth my people under me.",
+                    "Lord, what is man, that thou art made known unto him? or the son of man, that thou makest account of him?",
+                    "Man is like to vanity: his days pass away like a shadow.",
+                    "Lord, bow down thy heavens and descend: touch the mountains, and they shall smoke.",
+                    "Send forth lightning, and thou shalt scatter them: shoot out thy arrows, and thou shalt trouble them.",
+                    "Put forth thy hand from on high, take me out, and deliver me from many waters: from the hand of strange children.",
+                    "Whose mouth hath spoken vanity: and their right hand is the right hand of iniquity.",
+                    "To thee, O God, will I sing a new song: on the psaltery and an instrument of ten strings I will sing praises to thee.",
+                    "Who givest salvation to kings: who hast redeemed thy servant David from the wicked sword:",
+                    "Deliver me, and rescue me out of the hand of strange children: whose mouth hath spoken vanity, and their right hand is the right hand of iniquity.",
+                    "Whose sons are as new plants in their youth: their daughters decked out, adorned round about after the similitude of a temple:",
+                    "Their storehouses full, flowing out of this into that: their sheep fruitful in young, abounding in their goings forth:",
+                    "Their oxen fat: there is no breach of wall, nor passage, nor crying out in their streets.",
+                    "They have called the people happy, that hath these things: but happy is that people whose God is the Lord."
+                ]
+            },
+            {
+                "number": 144,
+                "section": "Exaltabo te",
+                "text": [
+                    "Exaltabo te, Deus meus, rex meus: et benedicam nomini tuo in saeculum, et in saeculum saeculi.",
+                    "Per singulos dies benedicam tibi: et laudabo nomen tuum in saeculum, et in saeculum saeculi.",
+                    "Magnus Dominus, et laudabilis nimis: et magnitudinis ejus non est finis.",
+                    "Generatio et generatio laudabit opera tua: et potentiam tuam pronuntiabunt.",
+                    "Magnificentiam gloriae sanctitatis tuae loquentur: et mirabilia tua narrabunt.",
+                    "Et virtutem terribilium tuorum dicent: et magnitudinem tuam narrabunt.",
+                    "Memoriam abundantiae suavitatis tuae eructabunt: et justitia tua exsultabunt.",
+                    "Miserator, et misericors Dominus: patiens, et multum misericors.",
+                    "Suavis Dominus universis: et miserationes ejus super omnia opera ejus.",
+                    "Confiteantur tibi, Domine, omnia opera tua: et sancti tui benedicant tibi.",
+                    "Gloriam regni tui dicent: et potentiam tuam loquentur:",
+                    "Ut notam faciant filiis hominum potentiam tuam: et gloriam magnificentiae regni tui.",
+                    "Regnum tuum regnum omnium saeculorum: et dominatio tua in omni generatione et generatione.",
+                    "Fidelis Dominus in omnibus verbis suis: et sanctus in omnibus operibus suis.",
+                    "Allevat Dominus omnes qui corruunt: et erigit omnes elisos.",
+                    "Oculi omnium in te sperant, Domine: et tu das escam illorum in tempore opportuno.",
+                    "Aperis tu manum tuam: et imples omne animal benedictione.",
+                    "Justus Dominus in omnibus viis suis: et sanctus in omnibus operibus suis.",
+                    "Prope est Dominus omnibus invocantibus eum: omnibus qui invocant eum in veritate.",
+                    "Voluntatem timentium se faciet: et deprecationem eorum exaudiet, et salvos faciet eos.",
+                    "Custodit Dominus omnes diligentes se: et omnes peccatores disperdet.",
+                    "Laudationem Domini loquetur os meum: et benedicat omnis caro nomini sancto ejus in saeculum, et in saeculum saeculi."
+                ],
+                "englishText": [
+                    "I will extol thee, O God my king: and I will bless thy name for ever; yea, for ever and ever.",
+                    "Every day will I bless thee: and I will praise thy name for ever; yea, for ever and ever.",
+                    "Great is the Lord, and greatly to be praised: and of his greatness there is no end.",
+                    "Generation and generation shall praise thy works: and they shall declare thy power.",
+                    "They shall speak of the magnificence of the glory of thy holiness: and shall tell thy wondrous works.",
+                    "And they shall speak of the might of thy terrible acts: and shall declare thy greatness.",
+                    "They shall publish the memory of the abundance of thy sweetness: and shall rejoice in thy justice.",
+                    "The Lord is gracious and merciful: patient and plenteous in mercy.",
+                    "The Lord is sweet to all: and his tender mercies are over all his works.",
+                    "Let all thy works, O Lord, praise thee: and let thy saints bless thee.",
+                    "They shall speak of the glory of thy kingdom: and shall tell of thy power:",
+                    "To make thy might known to the sons of men: and the glory of the magnificence of thy kingdom.",
+                    "Thy kingdom is a kingdom of all ages: and thy dominion endureth throughout all generations.",
+                    "The Lord is faithful in all his words: and holy in all his works.",
+                    "The Lord lifteth up all that fall: and setteth up all that are cast down.",
+                    "The eyes of all hope in thee, O Lord: and thou givest them meat in due season.",
+                    "Thou openest thy hand: and fillest with blessing every living creature.",
+                    "The Lord is just in all his ways: and holy in all his works.",
+                    "The Lord is nigh unto all them that call upon him: to all that call upon him in truth.",
+                    "He will do the will of them that fear him: and he will hear their prayer, and save them.",
+                    "The Lord keepeth all them that love him: but all the wicked he will destroy.",
+                    "My mouth shall speak the praise of the Lord: and let all flesh bless his holy name for ever; yea, for ever and ever."
+                ]
+            },
+            {
+                "number": 145,
+                "section": "Lauda, anima",
+                "text": [
+                    "Lauda, anima mea, Dominum: laudabo Dominum in vita mea: psallam Deo meo quamdiu fuero.",
+                    "Nolite confidere in principibus: in filiis hominum, in quibus non est salus.",
+                    "Exibit spiritus ejus, et revertetur in terram suam: in illa die peribunt omnes cogitationes eorum.",
+                    "Beatus cujus Deus Jacob adjutor ejus, spes ejus in Domino Deo ipsius:",
+                    "Qui fecit caelum et terram, mare, et omnia quae in eis sunt.",
+                    "Qui custodit veritatem in saeculum, facit judicium injuriam patientibus: dat escam esurientibus.",
+                    "Dominus solvit compeditos: Dominus illuminat caecos.",
+                    "Dominus erigit elisos: Dominus diligit justos.",
+                    "Dominus custodit advenas, pupillum et viduam suscipiet: et vias peccatorum disperdet.",
+                    "Regnabit Dominus in saecula, Deus tuus, Sion, in generatione et generationem."
+                ],
+                "englishText": [
+                    "Praise the Lord, O my soul: in my life I will praise the Lord: I will sing to my God as long as I shall be.",
+                    "Put not your trust in princes: in the children of men, in whom there is no salvation.",
+                    "His spirit shall go forth, and he shall return into his earth: in that day all their thoughts shall perish.",
+                    "Blessed is he who hath the God of Jacob for his helper, whose hope is in the Lord his God:",
+                    "Who made heaven and earth, the sea, and all things that are in them.",
+                    "Who keepeth truth for ever: who executeth judgment for them that suffer wrong: who giveth food to the hungry.",
+                    "The Lord looseth them that are fettered: the Lord enlighteneth the blind.",
+                    "The Lord lifteth up them that are cast down: the Lord loveth the just.",
+                    "The Lord keepeth the strangers, he will support the fatherless and the widow: and the ways of sinners he will destroy.",
+                    "The Lord shall reign for ever: thy God, O Sion, unto generation and generation."
+                ]
+            },
+            {
+                "number": 146,
+                "section": "Laudate Dominum",
+                "text": [
+                    "Laudate Dominum, quoniam bonus est psalmus: Deo nostro sit jucunda, decoraque laudatio.",
+                    "Aedificans Jerusalem Dominus: dispersiones Israel congregabit.",
+                    "Qui sanat contritos corde: et alligat contritiones eorum.",
+                    "Qui numerat multitudinem stellarum: et omnibus eis nomina vocat.",
+                    "Magnus Dominus noster, et magna virtus ejus: et sapientiae ejus non est numerus.",
+                    "Suscipiens mansuetos Dominus: humilians autem peccatores usque ad terram.",
+                    "Praecinite Domino in confessione: psallite Deo nostro in cithara.",
+                    "Qui operit caelum nubibus: et parat terrae pluviam.",
+                    "Qui producit in montibus foenum: et herbam servituti hominum.",
+                    "Qui dat jumentis escam ipsorum: et pullis corvorum invocantibus eum.",
+                    "Non in fortitudine equi voluntatem habebit: nec in tibias viri beneplacitum erit ei.",
+                    "Beneplacitum est Domino super timentes eum: et in eis qui sperant super misericordia ejus."
+                ],
+                "englishText": [
+                    "Praise ye the Lord, because psalm is good: to our God be joyful and comely praise.",
+                    "The Lord buildeth up Jerusalem: he will gather together the dispersed of Israel.",
+                    "Who healeth the broken of heart: and bindeth up their bruises.",
+                    "Who numbereth the multitude of the stars: and calleth them all by their names.",
+                    "Great is our Lord, and great is his power: and of his wisdom there is no number.",
+                    "The Lord lifteth up the meek: and bringeth the wicked down even to the ground.",
+                    "Sing ye to the Lord with praise: sing to our God upon the harp.",
+                    "Who covereth the heaven with clouds: and prepareth rain for the earth.",
+                    "Who maketh grass to grow on the mountains: and herbs for the service of men.",
+                    "Who giveth to beasts their food: and to the young ravens that call upon him.",
+                    "He shall not delight in the strength of the horse: nor take pleasure in the legs of a man.",
+                    "The Lord taketh pleasure in them that fear him: and in them that hope in his mercy."
+                ]
+            },
+            {
+                "number": 147,
+                "section": "Lauda, Jerusalem",
+                "text": [
+                    "Lauda, Jerusalem, Dominum: lauda Deum tuum, Sion.",
+                    "Quoniam confortavit seras portarum tuarum: benedixit filiis tuis in te.",
+                    "Qui posuit fines tuos pacem: et adipe frumenti satiat te.",
+                    "Qui emittit eloquium suum terrae: velociter currit sermo ejus.",
+                    "Qui dat nivem sicut lanam: nebulam sicut cinerem spargit.",
+                    "Mittit crystallum suum sicut buccellas: ante faciem frigoris ejus quis sustinebit?",
+                    "Emittet verbum suum, et liquefaciet ea: flabit spiritus ejus, et fluent aquae.",
+                    "Qui annuntiat verbum suum Jacob: justitias, et judicia sua Israel.",
+                    "Non fecit taliter omni nationi: et judicia sua non manifestavit eis."
+                ],
+                "englishText": [
+                    "Praise the Lord, O Jerusalem: praise thy God, O Sion.",
+                    "Because he hath strengthened the bolts of thy gates: he hath blessed thy children within thee.",
+                    "Who hath placed peace in thy borders: and filleth thee with the fat of corn.",
+                    "Who sendeth forth his speech to the earth: his word runneth swiftly.",
+                    "Who giveth snow like wool: scattereth mists like ashes.",
+                    "He sendeth his crystal like morsels: who shall stand before the face of his cold?",
+                    "He shall send out his word, and shall melt them: his wind shall blow, and the waters shall run.",
+                    "Who declareth his word to Jacob: his justices and his judgments to Israel.",
+                    "He hath not done in like manner to every nation: and his judgments he hath not made manifest to them."
+                ]
+            },
+            {
+                "number": 148,
+                "section": "Laudate Dominum",
+                "text": [
+                    "Laudate Dominum de caelis: laudate eum in excelsis.",
+                    "Laudate eum, omnes angeli ejus: laudate eum, omnes virtutes ejus.",
+                    "Laudate eum, sol et luna: laudate eum, omnia astra et lumen.",
+                    "Laudate eum, caeli caelorum: et aquae omnes, quae super caelos sunt, laudent nomen Domini.",
+                    "Quia ipse dixit, et facta sunt: ipse mandavit, et creata sunt.",
+                    "Statuit ea in aeternum, et in saeculum saeculi: praeceptum posuit, et non praeteribit.",
+                    "Laudate Dominum de terra, dracones, et omnia abyssorum:",
+                    "Ignis, grando, nix, glacies, spiritus procellarum: quae faciunt verbum ejus:",
+                    "Montes, et omnes colles: ligna fructifera, et omnes cedri:",
+                    "Bestiae, et universa pecora: serpentes, et volucres pennatae:",
+                    "Reges terrae, et omnes populi: principes, et omnes judices terrae:",
+                    "Juvenes, et virgines: senes cum junioribus laudent nomen Domini:",
+                    "Quia exaltatum est nomen ejus solius: confessio ejus super caelum et terram.",
+                    "Et exaltabit cornu populi sui: hymnus omnibus sanctis ejus, filiis Israel, populo appropinquanti sibi."
+                ],
+                "englishText": [
+                    "Praise ye the Lord from the heavens: praise ye him in the high places.",
+                    "Praise ye him, all his angels: praise ye him, all his hosts.",
+                    "Praise ye him, O sun and moon: praise him, all ye stars and light.",
+                    "Praise him, ye heavens of heavens: and let all the waters that are above the heavens praise the name of the Lord.",
+                    "For he spoke, and they were made: he commanded, and they were created.",
+                    "He hath established them for ever, and for ages of ages: he hath made a decree, and it shall not pass away.",
+                    "Praise the Lord from the earth, ye dragons, and all ye deeps:",
+                    "Fire, hail, snow, ice, stormy winds, which fulfil his word:",
+                    "Mountains and all hills, fruitful trees and all cedars:",
+                    "Beasts and all cattle: serpents and feathered fowls:",
+                    "Kings of the earth and all people: princes and all judges of the earth:",
+                    "Young men and maidens: let the old with the younger praise the name of the Lord:",
+                    "For his name alone is exalted: the praise of him is above heaven and earth.",
+                    "And he shall exalt the horn of his people: a hymn to all his saints, to the children of Israel, a people approaching to him."
+                ]
+            },
+            {
+                "number": 149,
+                "section": "Cantate Domino",
+                "text": [
+                    "Cantate Domino canticum novum: laus ejus in ecclesia sanctorum.",
+                    "Laetetur Israel in eo qui fecit eum: et filii Sion exsultent in rege suo.",
+                    "Laudent nomen ejus in choro: in tympano, et psalterio psallant ei.",
+                    "Quia beneplacitum est Domino in populo suo: et exaltabit mansuetos in salutem.",
+                    "Exsultabunt sancti in gloria: laetabuntur in cubilibus suis.",
+                    "Exaltationes Dei in gutture eorum: et gladii ancipites in manibus eorum:",
+                    "Ad faciendam vindictam in nationibus: increpationes in populis.",
+                    "Ad alligandos reges eorum in compedibus: et nobiles eorum in manicis ferreis.",
+                    "Ut faciant in eis judicium conscriptum: gloria haec est omnibus sanctis ejus."
+                ],
+                "englishText": [
+                    "Sing ye to the Lord a new song: let his praise be in the church of the saints.",
+                    "Let Israel rejoice in him that made him: and let the children of Sion be joyful in their king.",
+                    "Let them praise his name in choir: let them sing to him with the timbrel and the psaltery.",
+                    "For the Lord is well pleased with his people: and he will exalt the meek unto salvation.",
+                    "The saints shall rejoice in glory: they shall be joyful in their beds.",
+                    "The high praises of God shall be in their mouth: and two-edged swords in their hands:",
+                    "To execute vengeance upon the nations: chastisements among the people:",
+                    "To bind their kings with fetters: and their nobles with manacles of iron.",
+                    "To execute upon them the judgment that is written: this glory is to all his saints."
+                ]
+            },
+            {
+                "number": 150,
+                "section": "Laudate Dominum",
+                "text": [
+                    "Laudate Dominum in sanctis ejus: laudate eum in firmamento virtutis ejus.",
+                    "Laudate eum in virtutibus ejus: laudate eum secundum multitudinem magnitudinis ejus.",
+                    "Laudate eum in sono tubae: laudate eum in psalterio, et cithara.",
+                    "Laudate eum in tympano, et choro: laudate eum in chordis, et organo.",
+                    "Laudate eum in cymbalis benesonantibus: laudate eum in cymbalis jubilationis.",
+                    "Omnis spiritus laudet Dominum."
+                ],
+                "englishText": [
+                    "Praise ye the Lord in his holy places: praise ye him in the firmament of his power.",
+                    "Praise ye him for his mighty acts: praise ye him according to the multitude of his greatness.",
+                    "Praise him with sound of trumpet: praise him with psaltery and harp.",
+                    "Praise him with timbrel and choir: praise him with strings and organs.",
+                    "Praise him on high sounding cymbals: praise him on cymbals of joy.",
+                    "Let every spirit praise the Lord."
+                ]
+            }
+      
+      
     ]
 }

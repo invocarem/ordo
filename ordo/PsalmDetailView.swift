@@ -15,12 +15,26 @@ struct PsalmDetailView: View {
     @State private var errorMessage: String?
     @State private var isCompleted: Bool = false
     @State private var psalmEnglishContent: [String]? = []
+    
+    // Alternative initializer for PsalmUsage
+       init(psalm: PsalmUsage, psalmService: PsalmService, tracker: PsalmObservableTracker) {
+           self.number = Int(psalm.number) ?? 0
+           self.section = psalm.category
+           self.psalmService = psalmService
+           self.tracker = tracker
+       }
+       
+       // Original initializer
+       init(number: Int, section: String?, psalmService: PsalmService, tracker: PsalmObservableTracker) {
+           self.number = number
+           self.section = section
+           self.psalmService = psalmService
+           self.tracker = tracker
+       }
+    
     var body: some View {
-        ScrollView {
             VStack(spacing: 16) {
                
-                
-                // Content using PrayerSectionView
                 if let errorMessage = errorMessage {
                     PrayerSectionView(
                         title: "Error",
@@ -35,13 +49,10 @@ struct PsalmDetailView: View {
                         showToggle: true,
                         isCompleted: $isCompleted,
                         onToggle: { newValue in
-                            // Update your tracker when toggled
                             tracker.markPsalm(number: number, section: section, completed: newValue)
-                           
                         }
                     )
-                    .padding(.top, 0)
-                    .debugPrint(psalmEnglishContent)
+                    .debugPrint("number: \(number) section: \(section ?? "")")
                 } else {
                     PrayerSectionView(
                         title: "Loading",
@@ -49,13 +60,15 @@ struct PsalmDetailView: View {
                     )
                 }
             }
-            .padding()
+            .frame(alignment: .leading)
+            .padding(.horizontal)
+            .onAppear {
+                loadPsalmContent()
+                loadCompletionState()
+            }
         }
-        .onAppear {
-            loadPsalmContent()
-            loadCompletionState()
-        }
-    }
+
+    
     
     private var psalmHeader: String {
         var header = "Psalm \(number)"
