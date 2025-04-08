@@ -804,7 +804,7 @@
         },
         {
             "number": 20,
-            "section": "Royal Victory Psalm",
+            "section": "",
             "text": [
                 "Domine, in virtute tua laetabitur rex, et super salutare tuum exsultabit vehementer.",
                 "Desiderium cordis ejus tribuisti ei, et voluntatem labiorum ejus non fraudasti eum.",
@@ -964,7 +964,7 @@
         
         {
             "number": 24,
-            "section": "Prayer for Guidance",
+            "section": "",
             "text": [
                 "Ad te, Domine, levavi animam meam: Deus meus, in te confido, non erubescam.",
                 "Neque irrideant me inimici mei: etenim universi qui te exspectant non confundentur.",
@@ -1090,7 +1090,7 @@
         
         {
             "number": 27,
-            "section": "Prayer for Help",
+            "section": "",
             "title": "Prayer for Deliverance and Blessing",
             "text": [
                 "Ad te, Domine, clamabo, Deus meus, ne sileas a me: ne quando taceas a me, et assimilabor descendentibus in lacum.",
@@ -1124,7 +1124,7 @@
         },
         {
             "number": 28,
-            "section": "The Voice of the Lord",
+            "section": "",
             "title": "The Majesty of God’s Voice",
             "text": [
                 "Afferte Domino, filii Dei, afferte Domino filios arietum.",
@@ -1157,7 +1157,7 @@
         ,
         {
             "number": 29,
-            "section": "Hymn of Deliverance",
+            "section": "",
             "title": "Thanksgiving for Deliverance from Death",
             "text": [
                 "Exaltabo te, Domine, quoniam suscepisti me, nec delectasti inimicos meos super me.",
@@ -1191,7 +1191,7 @@
         },
         {
             "number": 30,
-            "section": "Thanksgiving for Deliverance",
+            "section": "",
             "title": "A Prayer of Trust and Deliverance",
             "text": [
                 "In te, Domine, speravi, non confundar in aeternum: in justitia tua libera me.",
@@ -1257,7 +1257,7 @@
         },
         {
             "number": 31,
-            "section": "Penitential Psalms",
+            "section": "",
             "title": "Blessedness of Forgiveness",
             "text": [
                 "Beati quorum remissae sunt iniquitates, et quorum tecta sunt peccata.",
@@ -1295,7 +1295,7 @@
         },
         {
             "number": 32,
-            "section": "Hymn of Praise",
+            "section": "",
             "title": "Praise for God’s Providence",
             "text": [
                 "Exultate, justi, in Domino; rectos decet collaudatio.",
@@ -1349,7 +1349,7 @@
         },
         {
             "number": 33,
-            "section": "Prayer for Deliverance",
+            "section": "",
             "title": "Praise for God’s Protection",
             "text": [
                 "Benedicam Dominum in omni tempore; semper laus ejus in ore meo.",
@@ -1403,7 +1403,7 @@
         },
         {
             "number": 34,
-            "section": "Prayer for Vindication",
+            "section": "",
             "title": "A Plea for Judgment Against Enemies",
             "text": [
                 "Judica, Domine, nocentes me; expugna impugnantes me.",
@@ -1471,7 +1471,7 @@
         },
         {
             "number": 35,
-            "section": "Contrast of Good and Evil",
+            "section": "",
             "title": "The Wickedness of Man and the Mercy of God",
             "text": [
                 "Dixit injustus ut delinquat in semetipso; non est timor Dei ante oculos ejus.",
@@ -1507,7 +1507,7 @@
         },
         {
             "number": 36,
-            "section": "Trust in the Lord",
+            "section": "",
             "title": "The Fate of the Wicked and the Reward of the Just",
             "text": [
                 "Noli aemulari in malignantibus; neque zelaveris facientes iniquitatem.",
@@ -1599,7 +1599,7 @@
         },
         {
             "number": 37,
-            "section": "Penitential Psalms",
+            "section": "",
             "title": "A Lament in Sickness and Sin",
             "text": [
                 "Domine, ne in furore tuo arguas me, neque in ira tua corripias me.",
@@ -1653,7 +1653,7 @@
         },
         {
             "number": 38,
-            "section": "Penitential Psalms",
+            "section": "",
             "title": "A Prayer for Relief from Suffering",
             "text": [
                 "Dixi: Custodiam vias meas, ut non delinquam in lingua mea;",
@@ -1785,7 +1785,7 @@
         },
         {
             "number": 40,
-            "section": "Prayer in Sickness",
+            "section": "",
             "title": "A Lament in Sickness and Betrayal",
             "text": [
                 "Beatus qui intelligit super egenum et pauperem; in die mala liberabit eum Dominus.",
@@ -2051,7 +2051,7 @@
         
         {
             "number": 47,
-            "section": "Zion Exalted",
+            "section": "",
             "text": [
                 "Magnus Dominus, et laudabilis nimis in civitate Dei nostri, in monte sancto ejus.",
                 "Fundatur exsultatione universae terrae, mons Sion; latera aquilonis, civitas regis magni.",
@@ -2089,7 +2089,7 @@
 
         {
             "number": 48,
-            "section": "The Folly of Wealth",
+            "section": "",
             "text": [
                 "Psalmus filiis Core. Audite haec, omnes gentes; auribus percipite, omnes qui habitatis orbem:",
                 "Quique terrigenae et filii hominum, simul in unum dives et pauper.",
@@ -2145,7 +2145,7 @@
         
 {
     "number": 49,
-    "section": "God as Judge",
+    "section": "",
     "text": [
         "Psalmus Asaph. Deus deorum, Dominus, locutus est, et vocavit terram a solis ortu usque ad occasum.",
         "Ex Sion species decoris ejus: Deus manifeste veniet.",
@@ -2200,7 +2200,7 @@
 },
          {
             "number": 50,
-            "section": "Penitential Psalms",
+            "section": "",
             "title": "Prayer for Mercy and Renewal",
             "text": [
                 "Miserere mei, Deus, secundum magnam misericordiam tuam;",
@@ -2589,7 +2589,7 @@
 
         {
             "number": 62,
-            "section": "Morning Prayer",
+            "section": "",
             "title": "Longing for God at Dawn",
             "text": [
                 "Deus, Deus meus, ad te de luce vigilo.",
@@ -2850,7 +2850,7 @@
 },
 {
     "number": 68,
-    "section": "Prayer in Distress",
+    "section": "",
     "title": "A Cry for Deliverance from Persecution",
     "text": [
         "Salvum me fac, Deus, quoniam intraverunt aquae usque ad animam meam.",
@@ -2961,7 +2961,7 @@
         
         {
             "number": 70,
-            "section": "Prayer of the Aged",
+            "section": "",
             "title": "Hope in God in Old Age",
             "text": [
                 "In te, Domine, speravi, non confundar in aeternum; in justitia tua libera me.",
@@ -4078,7 +4078,7 @@
         },
         {
             "number": 91,
-            "section": "Psalm of Thanksgiving",
+            "section": "",
             "title": "A Song of Praise for God’s Righteousness",
             "text": [
                 "Bonum est confiteri Domino, et psallere nomini tuo, Altissime.",
@@ -4119,7 +4119,7 @@
         
         {
             "number": 92,
-            "section": "God's Eternal Kingship",
+            "section": "",
             "text": [
               "Dominus regnavit, decorem indutus est; indutus est Dominus fortitudinem, et praecinxit se.",
               "Etenim firmavit orbem terrae, qui non commovebitur.",
@@ -4140,7 +4140,7 @@
           },
           {
             "number": 93,
-            "section": "Prayer for Justice",
+            "section": "",
             "text": [
               "Deus ultionum Dominus, Deus ultionum libere egit.",
               "Exaltare, qui judicas terram; redde retributionem superbis.",
@@ -4196,7 +4196,7 @@
 
         {
             "number": 94,
-            "section": "Venite",
+            "section": "",
             "text": [
                 "Venite, exsultemus Domino; jubilemus Deo salutari nostro.",
                 "Praeveniamus faciem ejus in confessione, et in psalmis jubilemus ei.",
@@ -4327,7 +4327,7 @@
         
         {
             "number": 98,
-            "section": "God's Holy Reign",
+            "section": "",
             "title": "The Lord’s Reign and Justice",
             "text": [
                 "Dominus regnavit, irascantur populi; qui sedet super cherubim, moveatur terra.",
@@ -4355,7 +4355,7 @@
         },
         {
             "number": 99,
-            "section": "Call to Worship",
+            "section": "",
             "title": "A Call to Praise and Serve the Lord",
             "text": [
                 "Jubilate Deo, omnis terra;",
@@ -4384,7 +4384,7 @@
       
         {
             "number": 100,
-            "section": "Promise of Just Rule",
+            "section": "",
             "title": "A Vow of Integrity and Justice",
             "text": [
                 "Misericordiam et judicium cantabo; tibi, Domine, psallam.",
@@ -4424,7 +4424,7 @@
         },
         {
             "number": 101,
-            "section": "Prayer of the Afflicted",
+            "section": "",
             "title": "A Lament and Hope for Restoration",
             "text": [
                 "Domine, exaudi orationem meam, et clamor meus ad te veniat.",
@@ -4494,7 +4494,7 @@
         },
         {
             "number": 102,
-            "section": "Thanksgiving for God's Mercy",
+            "section": "",
             "title": "Praise for God’s Mercy and Forgiveness",
             "text": [
                 "Benedic, anima mea, Domino, et omnia quae intra me sunt nomini sancto ejus.",
@@ -4554,7 +4554,7 @@
         },
         {
             "number": 103,
-            "section": "God the Creator",
+            "section": "",
             "title": "Praise for God’s Creation and Providence",
             "text": [
                 "Benedic, anima mea, Domino. Domine Deus meus, magnificatus es vehementer.",
@@ -4646,7 +4646,7 @@
         },
         {
             "number": 104,
-            "section": "God's Faithfulness to Israel",
+            "section": "",
             "title": "God’s Covenant with Israel",
             "text": [
                 "Confitemini Domino, et invocate nomen ejus; annuntiate inter gentes opera ejus.",
@@ -4746,7 +4746,7 @@
         },
         {
             "number": 105,
-            "section": "Israel's Rebellion and God's Mercy",
+            "section": "",
             "title": "Israel’s Sin and God’s Mercy",
             "text": [
                 "Alleluia. Confitemini Domino quoniam bonus, quoniam in saeculum misericordia ejus.",
@@ -5014,7 +5014,7 @@
         },
         {
             "number": 109,
-            "section": "Imprecatory Psalm",
+            "section": "",
             "title": "A Prayer Against a Deceitful Enemy",
             "text": [
                 "Deus, laudem meam ne tacueris,",
@@ -5088,7 +5088,7 @@
         },
         {
             "number": 110,
-            "section": "Messianic Psalm",
+            "section": "",
             "title": "The Messiah’s Reign and Priesthood",
             "text": [
                 "Dixit Dominus Domino meo: Sede a dextris meis, donec ponam inimicos tuos scabellum pedum tuorum.",
@@ -6120,7 +6120,7 @@
         
             {
                 "number": 127,
-                "section": "Psalms of Ascent",
+                "section": "",
                 "title": "The Blessings of the God-Fearing",
                 "text": [
                     "Beati omnes qui timent Dominum, qui ambulant in viis ejus.",
@@ -6142,7 +6142,7 @@
             },
             {
                 "number": 128,
-                "section": "Psalms of Ascent",
+                "section": "",
                 "title": "Deliverance from Persecutors",
                 "text": [
                     "Saepe expugnaverunt me a juventute mea, dicat nunc Israel;",
@@ -6171,7 +6171,7 @@
             
         {
             "number": 129,
-            "section": "Psalms of Ascent",
+            "section": "",
             "title": "A Cry from the Depths",
             "text": [
                 "De profundis clamavi ad te, Domine;",
@@ -6198,7 +6198,7 @@
                 
         {
             "number": 130,
-            "section": "Psalms of Ascent",
+            "section": "",
             "title": "Childlike Trust in the Lord",
             "text": [
                 "Domine, non est exaltatum cor meum, neque elati sunt oculi mei; neque ambulavi in magnis, neque in mirabilibus super me.",
@@ -6215,7 +6215,7 @@
      
         {
             "number": 131,
-            "section": "Psalms of Ascent",
+            "section": "",
             "title": "The Lord's Covenant with David",
             "text": [
                 "Memento, Domine, David, et omnis mansuetudinis ejus.",
@@ -6448,7 +6448,7 @@
             },
             {
                 "number": 137,
-                "section": "Confitebor tibi",
+                "section": "",
                 "title": "Thanksgiving for God’s Mercy",
                 "text": [
                     "Confitebor tibi, Domine, in toto corde meo: quoniam audisti verba oris mei.",
@@ -6474,7 +6474,7 @@
             },
             {
                 "number": 138,
-                "section": "Domine, probasti",
+                "section": "",
                 "text": [
                     "Domine, probasti me, et cognovisti me: tu cognovisti sessionem meam, et resurrectionem meam.",
                     "Intellexisti cogitationes meas de longe: semitam meam, et funiculum meum investigasti.",
@@ -6529,7 +6529,7 @@
             },
             {
                 "number": 139,
-                "section": "Eripe me",
+                "section": "",
                 "text": [
                     "Eripe me, Domine, ab homine malo: a viro iniquo eripe me.",
                     "Qui cogitaverunt iniquitates in corde: tota die constituebant praelia.",
@@ -6566,7 +6566,7 @@
             },
             {
                 "number": 140,
-                "section": "Domine, clamavi",
+                "section": "",
                 "text": [
                     "Domine, clamavi ad te, exaudi me: intende voci meae, cum clamavero ad te.",
                     "Dirigatur oratio mea sicut incensum in conspectu tuo: elevatio manuum mearum sacrificium vespertinum.",
@@ -6597,7 +6597,7 @@
             },
             {
                 "number": 141,
-                "section": "Voce mea",
+                "section": "",
                 "text": [
                     "Voce mea ad Dominum clamavi: voce mea ad Dominum deprecatus sum:",
                     "Effundo in conspectu ejus orationem meam, et tribulationem meam ante ipsum pronuntio.",
@@ -6626,7 +6626,7 @@
             },
             {
                 "number": 142,
-                "section": "Domine, exaudi",
+                "section": "",
                 "text": [
                     "Domine, exaudi orationem meam: auribus percipe obsecrationem meam in veritate tua: exaudi me in tua justitia.",
                     "Et non intres in judicium cum servo tuo: quia non justificabitur in conspectu tuo omnis vivens.",
@@ -6707,7 +6707,7 @@
             },
             {
                 "number": 144,
-                "section": "Exaltabo te",
+                "section": "",
                 "text": [
                     "Exaltabo te, Deus meus, rex meus: et benedicam nomini tuo in saeculum, et in saeculum saeculi.",
                     "Per singulos dies benedicam tibi: et laudabo nomen tuum in saeculum, et in saeculum saeculi.",
@@ -6760,7 +6760,7 @@
             },
             {
                 "number": 145,
-                "section": "Lauda, anima",
+                "section": "",
                 "text": [
                     "Lauda, anima mea, Dominum: laudabo Dominum in vita mea: psallam Deo meo quamdiu fuero.",
                     "Nolite confidere in principibus: in filiis hominum, in quibus non est salus.",
@@ -6883,7 +6883,7 @@
             },
             {
                 "number": 148,
-                "section": "Laudate Dominum",
+                "section": "",
                 "text": [
                     "Laudate Dominum de caelis: laudate eum in excelsis.",
                     "Laudate eum, omnes angeli ejus: laudate eum, omnes virtutes ejus.",
@@ -6920,7 +6920,7 @@
             },
             {
                 "number": 149,
-                "section": "Cantate Domino",
+                "section": "",
                 "text": [
                     "Cantate Domino canticum novum: laus ejus in ecclesia sanctorum.",
                     "Laetetur Israel in eo qui fecit eum: et filii Sion exsultent in rege suo.",
@@ -6947,7 +6947,7 @@
             },
             {
                 "number": 150,
-                "section": "Laudate Dominum",
+                "section": "",
                 "text": [
                     "Laudate Dominum in sanctis ejus: laudate eum in firmamento virtutis ejus.",
                     "Laudate eum in virtutibus ejus: laudate eum secundum multitudinem magnitudinis ejus.",
