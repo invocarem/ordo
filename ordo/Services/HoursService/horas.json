@@ -202,13 +202,13 @@
       ],
       "psalms": {
           "sunday": ["109", "110", "111", "112"],
-          "monday": ["113", "114", "115", "116"],
+          "monday": ["113 A", "114", "115", "116"],
           "tuesday": ["129", "130", "131", "132"],
           "wednesday": ["134", "135", "136", "137"],
           "thursday": ["138", "139", "140", "141"],
           "friday": ["143", "144", "145", "146"],
-          "saturday": ["147 (1)", "147 (12)", "110", "113"],        
-          "notes": "four psalms pray every night"  
+          "saturday": ["147 A", "147 B", "110", "113 B"],
+          "notes": "four psalms pray every night"
       },
       "capitulum": {
         "default": "Fratres: Sobrii estote et vigilate.",

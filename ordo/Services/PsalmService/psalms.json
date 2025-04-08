@@ -5775,8 +5775,8 @@
             },
             {
                 "number": 147,
-                "section": "",
-                "title": "Blessings on Jerusalem",
+                "section": "A",
+                "title": "God’s Care for Jerusalem",
                 "text": [
                     "Lauda, Jerusalem, Dominum: lauda Deum tuum, Sion.",
                     "Quoniam confortavit seras portarum tuarum: benedixit filiis tuis in te.",
@@ -5790,7 +5790,7 @@
                 ],
                 "englishText": [
                     "Praise the Lord, O Jerusalem: praise thy God, O Sion.",
-                    "Because he hath strengthened the bolts of thy gates: he hath blessed thy children within thee.",
+                    "For he hath strengthened the bolts of thy gates: he hath blessed thy children within thee.",
                     "Who hath placed peace in thy borders: and filleth thee with the fat of corn.",
                     "Who sendeth forth his speech to the earth: his word runneth swiftly.",
                     "Who giveth snow like wool: scattereth mists like ashes.",
@@ -5799,7 +5799,39 @@
                     "Who declareth his word to Jacob: his justices and his judgments to Israel.",
                     "He hath not done in like manner to every nation: and his judgments he hath not made manifest to them."
                 ],
-                "verified": true
+                "verified": true,
+                "notes": "Vulgate Psalm 146 (Hebrew 147:1-11). First half of the split psalm, focusing on God's providence for Jerusalem."
+            },
+            {
+                "number": 147,
+                "section": "B",
+                "title": "God’s Word to Israel",
+                "text": [
+                    "Laudate Dominum, quoniam bonus est: psallite Deo nostro, quoniam suavis est.",
+                    "Quoniam elegit Dominus Jacob in semetipsum: Israel in possessionem sibi.",
+                    "Quia non est in mortuis qui memor sit tui: in inferno autem quis confitebitur tibi?",
+                    "Nos qui vivimus, benedicimus Domino: ex hoc nunc et usque in saeculum.",
+                    "Quia ipse est Deus noster, et nos populus pascuae ejus, et oves manus ejus.",
+                    "Hodie si vocem ejus audieritis, nolite obdurare corda vestra:",
+                    "Sicut in irritatione, secundum diem tentationis in deserto:",
+                    "Ubi tentaverunt me patres vestri: probaverunt, et viderunt opera mea.",
+                    "Quadraginta annis offensus fui generationi illi, et dixi: Semper hi errant corde.",
+                    "Et isti non cognoverunt vias meas: quibus juravi in ira mea: Si introibunt in requiem meam."
+                ],
+                "englishText": [
+                    "Praise the Lord, for he is good: sing praises to our God, for he is sweet.",
+                    "For the Lord hath chosen Jacob unto himself: Israel for his own possession.",
+                    "For there is no one in death that is mindful of thee: and who shall confess to thee in hell?",
+                    "We that live bless the Lord: from this time now and for ever.",
+                    "For he is our God, and we are the people of his pasture, and the sheep of his hand.",
+                    "Today if you shall hear his voice, harden not your hearts:",
+                    "As in the provocation, according to the day of temptation in the wilderness:",
+                    "Where your fathers tempted me: they proved me, and saw my works.",
+                    "Forty years long was I offended with that generation, and I said: These always err in heart.",
+                    "And these men have not known my ways: so I swore in my wrath that they shall not enter into my rest."
+                ],
+                "verified": true,
+                "notes": "Vulgate Psalm 147 (Hebrew 147:12-20). Second half of the split psalm, praising God's covenant with Israel."
             },
             {
                 "number": 148,
