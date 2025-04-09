@@ -85,7 +85,26 @@ let package = Package(
             path: "Tests/LiturgicalService",    
             sources: ["LiturgicalServiceTests.swift"],
             resources: [.copy("../../ordo/Services/LiturgicalService/liturgical_calendar.json")]
+        ),
+
+        .testTarget(
+           name: "IntegrationTests",  
+           dependencies: [
+            "LiturgicalService",
+            "HoursService",
+            "PsalmService",
+            "PsalmProgressTracker"
+           ],
+           path: "Tests/IntegrationTests",  
+           sources: ["DailyPrayerFlowTests.swift", "DailyPsalmsProgressTests.swift"],
+           resources: [
+                .copy("../../ordo/Services/LiturgicalService/liturgical_calendar.json"),
+                .copy("../../ordo/Services/PsalmService/psalms.json")
+            ]
         )
+
+
+
     ]
 )
 

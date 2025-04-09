@@ -167,12 +167,20 @@ final class HoursServiceTests: XCTestCase {
 
 func testVespersPsalms() {
     let expectedPsalms = [
-        "sunday": ["109", "110", "111", "112", "113"],
-        "monday": ["114", "115", "116"],
-        "wednesday": ["134", "135", "136"],
-        "thursday": ["137", "138", "139"],
-        "friday": ["140", "141", "142"],
-        "saturday": ["143", "144", "145", "146", "147"]
+        "sunday": ["109", "110", "111", "112"],
+        "monday": ["113", "114", "115", "116", "128"],
+        "wednesday": ["134", "135", "136", "137"],
+        "thursday": ["138", "138", "139", "140"],
+        "friday": ["141", "143", "143", "144"],
+        "saturday": ["144", "145", "146", "147"]
+    ]
+    let expectedCategories = [
+        "sunday": ["", "", "", ""],
+        "monday": ["full", "", "", "", ""],
+        "wednesday": ["", "", "", ""],
+        "thursday": ["A", "B", "", ""],
+        "friday": ["", "A", "B", "A"],
+        "saturday": ["b", "", "", ""]
     ]
     
     for (weekday, expected) in expectedPsalms {
@@ -180,7 +188,7 @@ func testVespersPsalms() {
             weekday: weekday,
             hourKey: "vespers",
             expectedNumbers: expected,
-            expectedCategories: Array(repeating: "", count: expected.count)
+            expectedCategories: expectedCategories[weekday] ?? []
         )
     }
 }
@@ -252,17 +260,17 @@ func testVespersPsalms() {
     }
 
     private func verifyPsalmSections(weekday: String, hourKey: String, expectedNumbers: [String], expectedCategories: [String]) {        
-        guard let psalms = hoursService.getPsalmsForWeekday(weekday: weekday, hourKey: hourKey, season: "ordinary") else {
+        guard let psalms = hoursService.getPsalmsForWeekday(weekday: weekday, hourKey: hourKey, season: "winter") else {
             XCTFail("Failed to get psalms for \(weekday) \(hourKey)")
             return
         }
-       // print("\(psalms)")
+        //print("\(psalms)")
 
         let actualNumbers = psalms.map { $0.number }
         XCTAssertEqual(actualNumbers, expectedNumbers,
                  "Psalm number mismatch for \(weekday) \(hourKey)")
 
-        let actualCategories = psalms.compactMap { $0.category ?? ""}
+        let actualCategories = psalms.compactMap { ($0.category ?? "").lowercased() }
         let expectedLowercased = expectedCategories.map { $0.lowercased() }
         
         XCTAssertEqual(actualCategories, expectedLowercased,

@@ -125,7 +125,7 @@ public final class PsalmProgressTracker {
           
         }
     
-    public func getIncompletedPsams() ->[PsalmProgress] {
+    public func getIncompletedPsalms() ->[PsalmProgress] {
        return progress
             .filter { !$0.isCompleted }
             .sorted { $0.number < $1.number || ($0.number == $1.number && ($0.section ?? "") < ($1.section ?? "")) }
