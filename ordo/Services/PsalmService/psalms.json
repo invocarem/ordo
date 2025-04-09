@@ -4876,10 +4876,9 @@
             "verified": true
         },
 
-
-        {
+   {
             "number": 105,
-            "section": "",
+            "section": "A",
             "title": "Israel’s Sin and God’s Mercy",
             "text": [
                 "Alleluia. Confitemini Domino quoniam bonus, quoniam in saeculum misericordia ejus.",
@@ -4912,28 +4911,8 @@
                 "Et initiati sunt Beelphegor, et comederunt sacrificia mortuorum.",
                 "Et irritaverunt eum in adinventionibus suis, et multiplicata est in eis ruina.",
                 "Et stetit Phinees, et placavit, et cessavit quassatio.",
-                "Et reputatum est ei ad justitiam in generationem et generationem usque in aeternum.",
-                "Et irritaverunt eum ad aquas contradictionis, et vexatus est Moyses propter eos;",
-                "quia exacerbaverunt spiritum ejus, et distinxit in labiis suis.",
-                "Non disperdiderunt gentes quas dixit Dominus illis,",
-                "et commisti sunt inter gentes, et didicerunt opera eorum.",
-                "Et servierunt sculptilibus eorum, et factum est illis in scandalum.",
-                "Et immolaverunt filios suos et filias suas daemoniis.",
-                "Et effuderunt sanguinem innocentem, sanguinem filiorum suorum et filiarum suarum,",
-                "quas sacrificaverunt sculptilibus Chanaan. Et infecta est terra in sanguinibus,",
-                "et contaminata est in operibus eorum, et fornicati sunt in adinventionibus suis.",
-                "Et iratus est furore Dominus in populum suum, et abominatus est haereditatem suam.",
-                "Et tradidit eos in manus gentium, et dominati sunt eorum qui oderunt eos.",
-                "Et tribulaverunt eos inimici eorum, et humiliati sunt sub manibus eorum.",
-                "Saepe liberavit eos; ipsi autem exacerbaverunt eum in consilio suo,",
-                "et humiliati sunt in iniquitatibus suis. Et vidit cum tribularentur,",
-                "et audivit orationem eorum. Et memor fuit testamenti sui,",
-                "et poenituit eum secundum multitudinem misericordiae suae.",
-                "Et dedit eos in misericordias in conspectu omnium qui ceperant eos.",
-                "Salva nos, Domine Deus noster, et congrega nos de nationibus,",
-                "ut confiteamur nomini sancto tuo, et gloriemur in laude tua.",
-                "Benedictus Dominus Deus Israel a saeculo et usque in saeculum;",
-                "et dicet omnis populus: Fiat, fiat."
+                "Et reputatum est ei ad justitiam in generationem et generationem usque in aeternum."
+               
             ],
             "englishText": [
                 "Alleluia. Give glory to the Lord, for he is good: for his mercy endureth for ever.",
@@ -4966,7 +4945,43 @@
                 "They also were initiated to Beelphegor: and ate the sacrifices of the dead.",
                 "And they provoked him with their inventions: and destruction was multiplied among them.",
                 "Then Phinees stood up, and pacified him: and the slaughter ceased.",
-                "And it was reputed to him unto justice, to generation and generation for evermore.",
+                "And it was reputed to him unto justice, to generation and generation for evermore."
+               
+               
+            ],
+            "verified": true
+        },
+        
+
+
+        {
+            "number": 105,
+            "section": "B",
+            "title": "Israel’s Sin and God’s Mercy",
+            "text": [
+                "Et irritaverunt eum ad aquas contradictionis, et vexatus est Moyses propter eos;",
+                "quia exacerbaverunt spiritum ejus, et distinxit in labiis suis.",
+                "Non disperdiderunt gentes quas dixit Dominus illis,",
+                "et commisti sunt inter gentes, et didicerunt opera eorum.",
+                "Et servierunt sculptilibus eorum, et factum est illis in scandalum.",
+                "Et immolaverunt filios suos et filias suas daemoniis.",
+                "Et effuderunt sanguinem innocentem, sanguinem filiorum suorum et filiarum suarum,",
+                "quas sacrificaverunt sculptilibus Chanaan. Et infecta est terra in sanguinibus,",
+                "et contaminata est in operibus eorum, et fornicati sunt in adinventionibus suis.",
+                "Et iratus est furore Dominus in populum suum, et abominatus est haereditatem suam.",
+                "Et tradidit eos in manus gentium, et dominati sunt eorum qui oderunt eos.",
+                "Et tribulaverunt eos inimici eorum, et humiliati sunt sub manibus eorum.",
+                "Saepe liberavit eos; ipsi autem exacerbaverunt eum in consilio suo,",
+                "et humiliati sunt in iniquitatibus suis. Et vidit cum tribularentur,",
+                "et audivit orationem eorum. Et memor fuit testamenti sui,",
+                "et poenituit eum secundum multitudinem misericordiae suae.",
+                "Et dedit eos in misericordias in conspectu omnium qui ceperant eos.",
+                "Salva nos, Domine Deus noster, et congrega nos de nationibus,",
+                "ut confiteamur nomini sancto tuo, et gloriemur in laude tua.",
+                "Benedictus Dominus Deus Israel a saeculo et usque in saeculum;",
+                "et dicet omnis populus: Fiat, fiat."
+            ],
+            "englishText": [               
                 "They provoked him also at the waters of contradiction: and Moses was afflicted for their sakes;",
                 "Because they exasperated his spirit, and he distinguished with his lips.",
                 "They did not destroy the nations of which the Lord spoke unto them,",
@@ -4996,8 +5011,8 @@
 
         {
             "number": 106,
-            "section": "",
-            "title": "Thanksgiving for Deliverance from Distress",
+            "section": "A",
+            "title": "1-24;25-43",
             "text": [
                 "Confitemini Domino quoniam bonus, quoniam in aeternum misericordia ejus.",
                 "Dicant qui redempti sunt a Domino, quos redemit de manu inimici, et de regionibus congregavit eos:",
@@ -5006,6 +5021,7 @@
                 "Esurientes et sitientes; anima eorum in ipsis defecti.",
                 "Et clamaverunt ad Dominum cum tribularentur, et de necessitatibus eorum eripuit eos.",
                 "Et deduxit eos in viam rectam, ut irent in civitatem habitationis.",
+                
                 "Confiteantur Domino misericordiae ejus, et mirabilia ejus filiis hominum.",
                 "Quia satiavit animam inanem, et animam esurientem satiavit bonis.",
                 "Sedentes in tenebris et umbra mortis, vinctos in mendicitate et ferro.",
