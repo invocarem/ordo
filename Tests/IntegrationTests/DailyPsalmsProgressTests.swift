@@ -133,8 +133,8 @@ final class DailyPsalmsProgressTests: XCTestCase {
             ("terce", winter_or_summer, 3),
             ("sext", winter_or_summer, 3),
             ("none", winter_or_summer, 3),
-            ("vespers", winter_or_summer, 4),
-            ("compline", winter_or_summer, nil)
+            ("vespers", winter_or_summer, nil),
+            ("compline", winter_or_summer, 3)
         ]
         
         var totalPsalms = 0
