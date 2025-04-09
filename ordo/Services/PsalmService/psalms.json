@@ -1507,7 +1507,7 @@
         },
         {
             "number": 36,
-            "section": "",
+            "section": "A",
             "title": "The Fate of the Wicked and the Reward of the Just",
             "text": [
                 "Noli aemulari in malignantibus; neque zelaveris facientes iniquitatem.",
@@ -1535,22 +1535,9 @@
                 "Apud Dominum gressus hominis dirigentur; et viam ejus volet.",
                 "Cum ceciderit, non collidetur, quia Dominus supponit manum suam.",
                 "Junior fui, etenim senui; et non vidi justum derelictum, nec semen ejus quaerens panem.",
-                "Tota die miseretur et commodat; et semen ejus in benedictione erit.",
-                "Declina a malo, et fac bonum; et inhabita in saeculum saeculi.",
-                "Quia Dominus amat judicium, et non derelinquet sanctos suos; in aeternum conservabuntur.",
-                "Injusti punientur, et semen impiorum peribit.",
-                "Justi autem haereditabunt terram, et inhabitabunt in saeculum saeculi super eam.",
-                "Os justi meditabitur sapientiam, et lingua ejus loquetur judicium.",
-                "Lex Dei ejus in corde ipsius; et non supplantabuntur gressus ejus.",
-                "Considerat peccator justum, et quaerit mortificare eum.",
-                "Dominus autem non derelinquet eum in manibus ejus, nec damnabit eum cum judicabitur illi.",
-                "Exspecta Dominum, et custodi viam ejus; et exaltabit te ut haereditate capias terram: cum perierint peccatores, videbis.",
-                "Vidi impium superexaltatum, et elevatum sicut cedros Libani.",
-                "Et transivi, et ecce non erat; et quaesivi eum, et non est inventus locus ejus.",
-                "Custodi innocentiam, et vide aequitatem, quoniam sunt reliquiae homini pacifico.",
-                "Injusti autem disperibunt simul; reliquiae impiorum interibunt.",
-                "Salus autem justorum a Domino; et protector eorum est in tempore tribulationis.",
-                "Et adjuvabit eos Dominus, et liberabit eos; et eripiet eos a peccatoribus, et salvabit eos, quia speraverunt in eo."
+                "Tota die miseretur et commodat; et semen ejus in benedictione erit."
+               
+               
             ],
             "englishText": [
                 "Be not emulous of evildoers; nor envy them that work iniquity.",
@@ -1578,17 +1565,46 @@
                 "With the Lord shall the steps of a man be directed; and he shall like well his way.",
                 "When he shall fall he shall not be bruised; for the Lord putteth his hand under him.",
                 "I have been young, and now am old; and I have not seen the just forsaken, nor his seed seeking bread.",
-                "He sheweth mercy, and lendeth all the day long; and his seed shall be in blessing.",
+                "He sheweth mercy, and lendeth all the day long; and his seed shall be in blessing."                
+            ],
+            "verified": true
+        },
+        {
+            "number": 36,
+            "section": "B",
+            "title": "The Fate of the Wicked and the Reward of the Just",
+            "text": [               
+                "Declina a malo, et fac bonum; et inhabita in saeculum saeculi.",
+                "Quia Dominus amat judicium, et non derelinquet sanctos suos; in aeternum conservabuntur.",
+                "Injusti punientur, et semen impiorum peribit.",
+                "Justi autem haereditabunt terram, et inhabitabunt in saeculum saeculi super eam.",
+                "Os justi meditabitur sapientiam, et lingua ejus loquetur judicium.",
+                
+                "Lex Dei ejus in corde ipsius; et non supplantabuntur gressus ejus.",                
+                "Considerat peccator justum, et quaerit mortificare eum.",
+                "Dominus autem non derelinquet eum in manibus ejus, nec damnabit eum cum judicabitur illi.",
+                "Exspecta Dominum, et custodi viam ejus; et exaltabit te ut haereditate capias terram: cum perierint peccatores, videbis.",
+                "Vidi impium superexaltatum, et elevatum sicut cedros Libani.",
+
+                "Et transivi, et ecce non erat; et quaesivi eum, et non est inventus locus ejus.",
+                "Custodi innocentiam, et vide aequitatem, quoniam sunt reliquiae homini pacifico.",
+                "Injusti autem disperibunt simul; reliquiae impiorum interibunt.",
+                "Salus autem justorum a Domino; et protector eorum est in tempore tribulationis.",
+                "Et adjuvabit eos Dominus, et liberabit eos; et eripiet eos a peccatoribus, et salvabit eos, quia speraverunt in eo."
+            ],
+            "englishText": [                
                 "Decline from evil and do good; and dwell for ever and ever.",
                 "For the Lord loveth judgment, and will not forsake his saints; they shall be preserved for ever.",
                 "The unjust shall be punished, and the seed of the wicked shall perish.",
                 "But the just shall inherit the land, and dwell therein for evermore.",
                 "The mouth of the just shall meditate wisdom; and his tongue shall speak judgment.",
+                
                 "The law of his God is in his heart; and his steps shall not be supplanted.",
                 "The wicked watcheth the just man, and seeketh to put him to death.",
                 "But the Lord will not leave him in his hands; nor condemn him when he shall be judged.",
                 "Expect the Lord and keep his way; and he will exalt thee to inherit the land; when the sinners shall perish, thou shalt see.",
                 "I have seen the wicked highly exalted, and lifted up like the cedars of Libanus.",
+                
                 "And I passed by, and lo, he was not; and I sought him and his place was not found.",
                 "Keep innocence, and behold justice; for there are remnants for the peaceable man.",
                 "But the unjust shall be destroyed together; the remnants of the wicked shall perish.",
@@ -1597,6 +1613,7 @@
             ],
             "verified": true
         },
+
         {
             "number": 37,
             "section": "",
@@ -2770,7 +2787,7 @@
 },
 {
     "number": 67,
-    "section": "",
+    "section": "A",
     "title": "God Arises and Scatters His Enemies",
     "text": [
         "Exsurgat Deus, et dissipentur inimici ejus; et fugiant qui oderunt eum a facie ejus.",
@@ -2778,19 +2795,55 @@
         "Et justi laetentur, exsultent coram Deo, et delectentur in laetitia.",
         "Cantate Deo, psalmum dicite nomini ejus; iter facite ei qui ascendit super occasum; Dominus nomen illi.",
         "Exsultate in conspectu ejus; turbabuntur a facie ejus, patris orphanorum et judicis viduarum; Deus in loco sancto suo.",
+       
         "Deus qui inhabitare facit unius moris in domo; qui educit vinctos in fortitudine, similiter eos qui exasperant, qui habitant in sepulchris.",
         "Deus, cum egredereris in conspectu populi tui, cum pertransires in deserto,",
         "Terra mota est, etiam caeli distillaverunt a facie Dei Sinai, a facie Dei Israel.",
         "Pluviam voluntariam segregasti, Deus, haereditati tuae; et infirmata est, tu vero perfecisti eam.",
         "Animalia tua habitaverunt in ea; parasti in dulcedine tua pauperi, Deus.",
+       
         "Dominus dabit verbum evangelizantibus, virtute multa.",
         "Rex virtutum dilecti dilecti; et speciei domus dividere spolia.",
         "Si dormiatis inter medios cleros, pennae columbae deargentatae, et posteriora dorsi ejus in pallore auri.",
         "Dum discernit caelestis reges super eam, nive dealbabuntur in Salmon.",
         "Mons Dei, mons pinguis; mons coagulatus, mons pinguis.",
+       
         "Ut quid suspicamini montes coagulatos? Mons in quo beneplacitum est Deo habitare in eo; etenim Dominus habitabit in finem.",
         "Currus Dei decem millibus multiplex, millia laetantium; Dominus in eis in Sina, in sancto.",
-        "Ascendisti in altum, cepisti captivitatem; accepisti dona in hominibus; etenim non credentes inhabitare Dominum Deum.",
+        "Ascendisti in altum, cepisti captivitatem; accepisti dona in hominibus; etenim non credentes inhabitare Dominum Deum."       
+    ],
+    "englishText": [
+        "Let God arise, and let his enemies be scattered; and let them that hate him flee from before his face.",
+        "As smoke vanisheth, so let them vanish away; as wax melteth before the fire, so let the wicked perish at the presence of God.",
+        "And let the just rejoice, let them be glad before God, and let them rejoice with gladness.",
+        "Sing ye to God, sing a psalm to his name; make a way for him who ascendeth upon the west; the Lord is his name.",
+        "Rejoice ye before him; they shall be troubled at his presence, who is the father of orphans and the judge of widows; God in his holy place.",
+       
+        "God who maketh men of one mind to dwell in a house; who bringeth out them that were bound in strength, in like manner them that provoke, that dwell in sepulchres.",
+        "O God, when thou didst go forth in the sight of thy people, when thou didst pass through the desert,",
+        "The earth was moved, and the heavens dropped at the presence of the God of Sinai, at the presence of the God of Israel.",
+        "Thou hast given a free rain, O God, to thy inheritance; and it was weakened, but thou hast made it perfect.",
+        "Thy animals dwelt therein; thou hast prepared it in thy sweetness for the poor, O God.",
+       
+        "The Lord shall give the word to them that preach good tidings with great power.",
+        "The king of powers is of the beloved, of the beloved; and the beauty of the house shall divide spoils.",
+        "If you sleep among the midst of lots, the wings of a dove are covered with silver, and the hinder parts of her back with the paleness of gold.",
+        "When he that is in heaven appointeth kings over her, they shall be whited with snow in Salmon.",
+        "The mountain of God is a fat mountain; a curdled mountain, a fat mountain.",
+       
+        "Why suspect ye curdled mountains? A mountain in which God is well pleased to dwell; for there the Lord shall dwell unto the end.",
+        "The chariot of God is attended by ten thousands, thousands of them that rejoice; the Lord is among them in Sinai, in the holy place.",
+        "Thou hast ascended on high, thou hast led captivity captive; thou hast received gifts in men; yea, even for those who believed not, that the Lord God might dwell there."
+      
+       
+    ],
+    "verified": true
+},
+{
+    "number": 67,
+    "section": "B",
+    "title": "God Arises and Scatters His Enemies",
+    "text": [       
         "Benedictus Dominus die quotidie; prosperum iter faciet nobis Deus salutarium nostrorum.",
         "Deus noster, Deus salvos faciendi; et Domini Domini exitus mortis.",
         "Verumtamen Deus confringet capita inimicorum suorum, verticem capilli perambulantium in delictis suis.",
@@ -2810,24 +2863,6 @@
         "Mirabilis Deus in sanctis suis; Deus Israel, ipse dabit virtutem et fortitudinem plebi suae; benedictus Deus."
     ],
     "englishText": [
-        "Let God arise, and let his enemies be scattered; and let them that hate him flee from before his face.",
-        "As smoke vanisheth, so let them vanish away; as wax melteth before the fire, so let the wicked perish at the presence of God.",
-        "And let the just rejoice, let them be glad before God, and let them rejoice with gladness.",
-        "Sing ye to God, sing a psalm to his name; make a way for him who ascendeth upon the west; the Lord is his name.",
-        "Rejoice ye before him; they shall be troubled at his presence, who is the father of orphans and the judge of widows; God in his holy place.",
-        "God who maketh men of one mind to dwell in a house; who bringeth out them that were bound in strength, in like manner them that provoke, that dwell in sepulchres.",
-        "O God, when thou didst go forth in the sight of thy people, when thou didst pass through the desert,",
-        "The earth was moved, and the heavens dropped at the presence of the God of Sinai, at the presence of the God of Israel.",
-        "Thou hast given a free rain, O God, to thy inheritance; and it was weakened, but thou hast made it perfect.",
-        "Thy animals dwelt therein; thou hast prepared it in thy sweetness for the poor, O God.",
-        "The Lord shall give the word to them that preach good tidings with great power.",
-        "The king of powers is of the beloved, of the beloved; and the beauty of the house shall divide spoils.",
-        "If you sleep among the midst of lots, the wings of a dove are covered with silver, and the hinder parts of her back with the paleness of gold.",
-        "When he that is in heaven appointeth kings over her, they shall be whited with snow in Salmon.",
-        "The mountain of God is a fat mountain; a curdled mountain, a fat mountain.",
-        "Why suspect ye curdled mountains? A mountain in which God is well pleased to dwell; for there the Lord shall dwell unto the end.",
-        "The chariot of God is attended by ten thousands, thousands of them that rejoice; the Lord is among them in Sinai, in the holy place.",
-        "Thou hast ascended on high, thou hast led captivity captive; thou hast received gifts in men; yea, even for those who believed not, that the Lord God might dwell there.",
         "Blessed be the Lord day by day; the God of our salvation will make our journey prosperous to us.",
         "Our God is the God of salvation; and of the Lord, of the Lord are the issues from death.",
         "But God shall break the heads of his enemies, the hairy crown of them that walk on in their sins.",
@@ -2848,9 +2883,10 @@
     ],
     "verified": true
 },
+
 {
     "number": 68,
-    "section": "",
+    "section": "A",
     "title": "A Cry for Deliverance from Persecution",
     "text": [
         "Salvum me fac, Deus, quoniam intraverunt aquae usque ad animam meam.",
@@ -2858,18 +2894,56 @@
         "Laboravi clamans, raucae factae sunt fauces meae; defecerunt oculi mei, dum spero in Deum meum.",
         "Multiplicati sunt super capillos capitis mei qui oderunt me gratis; confortati sunt qui persecuti sunt me inimici mei injuste.",
         "Quae non rapui, tunc exsolvebam.",
+        
         "Deus, tu scis insipientiam meam, et delicta mea a te non sunt abscondita.",
         "Non erubescant in me qui exspectant te, Domine, Domine virtutum; non confundantur super me qui quaerunt te, Deus Israel.",
         "Quoniam propter te sustinui opprobrium; operuit confusio faciem meam.",
         "Extraneus factus sum fratribus meis, et peregrinus filiis matris meae.",
         "Quoniam zelus domus tuae comedit me, et opprobria exprobrantium tibi ceciderunt super me.",
+        
         "Et operui in jejunio animam meam, et factum est in opprobrium mihi.",
         "Et posui vestimentum meum cilicium; et factus sum illis in parabolam.",
         "Adversum me loquebantur qui sedebant in porta, et in me psallebant qui bibebant vinum.",
         "Ego vero orationem meam ad te, Domine; tempus beneplaciti, Deus.",
         "In multitudine misericordiae tuae exaudi me in veritate salutis tuae.",
-        "Eripe me de luto, ut non infigar; libera me ab iis qui oderunt me, et de profundis aquarum.",
-        "Non me demergat tempestas aquae, neque absorbeat me profundum, neque urgeat super me puteus os suum.",
+        
+        "Eripe me de luto, ut non infigar; libera me ab iis qui oderunt me, et de profundis aquarum.",        
+        "Non me demergat tempestas aquae, neque absorbeat me profundum, neque urgeat super me puteus os suum."
+       
+    ],
+    "englishText": [
+        "Save me, O God, for the waters have come up to my neck.",
+        "I sink in deep mire where there is no foothold; I have come into deep waters, and the flood sweeps over me.",
+        "I am weary with my crying; my throat is parched. My eyes grow dim waiting for my God.",
+        "More numerous than the hairs of my head are those who hate me without cause; mighty are those who would destroy me, those who attack me with lies.",
+        "What I did not steal must I now restore?",
+        
+        "O God, you know my folly; the wrongs I have done are not hidden from you.",        
+        "Let not those who hope in you be put to shame through me, O Lord God of hosts; let not those who seek you be brought to dishonor through me, O God of Israel.",
+        "For it is for your sake that I have borne reproach; dishonor has covered my face.",
+        "I have become a stranger to my brothers, an alien to my mother's sons.",
+        "For zeal for your house has consumed me, and the reproaches of those who reproach you have fallen on me.",
+        
+        "When I wept and humbled my soul with fasting, it became my reproach.",
+        "When I made sackcloth my clothing, I became a byword to them.",
+        "Those who sit in the gate talk about me, and drunkards make songs about me.",
+        "But as for me, my prayer is to you, O Lord. At an acceptable time, O God,",
+        "in the abundance of your steadfast love answer me in your saving faithfulness.",
+        
+        "Deliver me from sinking in the mire; let me be delivered from my enemies and from the deep waters.",
+        "Let not the flood sweep over me, nor the deep swallow me up, nor the pit close its mouth over me."
+        
+        
+    ],
+    "verified": true
+},
+
+
+{
+    "number": 68,
+    "section": "B",
+    "title": "A Cry for Deliverance from Persecution",
+    "text": [        
         "Exaudi me, Domine, quoniam benigna est misericordia tua; secundum multitudinem miserationum tuarum respice in me.",
         "Et ne avertas faciem tuam a puero tuo; quoniam tribulor, velociter exaudi me.",
         "Intende animae meae, et libera eam; propter inimicos meos eripe me.",
@@ -2892,24 +2966,7 @@
         "Quoniam Deus salvam faciet Sion, et aedificabuntur civitates Juda; et inhabitabunt ibi, et haereditate acquirent eam.",
         "Et semen servorum ejus possidebit eam; et qui diligunt nomen ejus habitabunt in ea."
     ],
-    "englishText": [
-        "Save me, O God, for the waters have come up to my neck.",
-        "I sink in deep mire where there is no foothold; I have come into deep waters, and the flood sweeps over me.",
-        "I am weary with my crying; my throat is parched. My eyes grow dim waiting for my God.",
-        "More numerous than the hairs of my head are those who hate me without cause; mighty are those who would destroy me, those who attack me with lies.",
-        "What I did not steal must I now restore?",
-        "O God, you know my folly; the wrongs I have done are not hidden from you.",
-        "Let not those who hope in you be put to shame through me, O Lord God of hosts; let not those who seek you be brought to dishonor through me, O God of Israel.",
-        "For it is for your sake that I have borne reproach; dishonor has covered my face.",
-        "I have become a stranger to my brothers, an alien to my mother's sons.",
-        "For zeal for your house has consumed me, and the reproaches of those who reproach you have fallen on me.",
-        "When I wept and humbled my soul with fasting, it became my reproach.",
-        "When I made sackcloth my clothing, I became a byword to them.",
-        "Those who sit in the gate talk about me, and drunkards make songs about me.",
-        "But as for me, my prayer is to you, O Lord. At an acceptable time, O God,",
-        "in the abundance of your steadfast love answer me in your saving faithfulness.",
-        "Deliver me from sinking in the mire; let me be delivered from my enemies and from the deep waters.",
-        "Let not the flood sweep over me, nor the deep swallow me up, nor the pit close its mouth over me.",
+    "englishText": [       
         "Answer me, O Lord, for your steadfast love is good; according to your abundant mercy, turn to me.",
         "Hide not your face from your servant, for I am in distress; make haste to answer me.",
         "Draw near to my soul, redeem me; ransom me because of my enemies!",
@@ -3312,7 +3369,7 @@
         },
         {
             "number": 77,
-            "section": "",
+            "section": "A",
             "title": "A Recital of God’s Deeds and Israel’s Rebellion",
             "text": [
                 "Attendite, populus meus, legem meam; inclinate aurem vestram in verba oris mei.",
@@ -3320,11 +3377,13 @@
                 "Quanta audivimus et cognovimus ea, et patres nostri narraverunt nobis.",
                 "Non sunt occultata a filiis eorum in generatione altera, narrantes laudes Domini, et virtutes ejus, et mirabilia ejus quae fecit.",
                 "Et suscitavit testimonium in Jacob, et legem posuit in Israel; quanta mandavit patribus nostris nota facere ea filiis suis;",
+                
                 "Ut cognoscat generatio altera, filii qui nascentur et exsurgent, et narrabunt filiis suis;",
                 "Ut ponant in Deo spem suam, et non obliviscantur operum Dei, et mandata ejus exquirant;",
                 "Ne fiant sicut patres eorum, generatio prava et exasperans; generatio quae non direxit cor suum, et non est creditus cum Deo spiritus ejus.",
                 "Filii Ephrem intendentes et mittentes arcum, conversi sunt in die belli.",
                 "Non custodierunt testamentum Dei, et in lege ejus noluerunt ambulare.",
+                
                 "Et obliti sunt benefactorum ejus, et mirabilium ejus quae ostendit eis.",
                 "Coram patribus eorum fecit mirabilia in terra Aegypti, in campo Taneos.",
                 "Interrupit mare, et perduxit eos; et statuit aquas quasi in utre.",
@@ -3334,22 +3393,79 @@
                 "Et apposuerunt adhuc peccare ei; in iram excitaverunt Altissimum in inaquoso.",
                 "Et tentaverunt Deum in cordibus suis, ut peterent escas animabus suis.",
                 "Et locuti sunt mala de Deo; dixerunt: Numquid poterit Deus parare mensam in deserto?",
+                
                 "Ecce percussit petram, et fluxerunt aquae, et torrentes inundaverunt; numquid et panem poterit dare, aut parare mensam populo suo?",
                 "Ideo audivit Dominus, et distulit; et ignis accensus est in Jacob, et ira ascendit in Israel.",
                 "Quia non crediderunt in Deo, nec speraverunt in salutari ejus.",
                 "Et mandavit nubibus desuper, et januas caeli aperuit.",
                 "Et pluit illis manna ad manducandum, et panem caeli dedit eis.",
+                
                 "Panem angelorum manducavit homo; cibaria misit eis in abundantia.",
                 "Transtulit Austrum de caelo, et induxit in virtute sua Africum.",
                 "Et pluit super eos sicut pulverem carnes, et sicut arenam maris volatilia pennata.",
                 "Et ceciderunt in medio castrorum eorum, circa tabernacula eorum.",
                 "Et manducaverunt, et saturati sunt nimis; et desiderium eorum attulit eis.",
+               
                 "Non sunt fraudati a desiderio suo; adhuc escae eorum erant in ore ipsorum;",
                 "Et ira Dei ascendit super eos, et occidit pingues eorum, et electos Israel impedivit.",
                 "In omnibus his peccaverunt adhuc, et non crediderunt in mirabilibus ejus.",
                 "Et defecerunt in vanitate dies eorum, et anni eorum cum festinatione.",
                 "Cum occideret eos, quaerebant eum; et revertebantur, et diluculo veniebant ad Deum.",
-                "Et recordati sunt quia Deus adjutor est eorum, et Deus excelsus redemptor eorum est.",
+                "Et recordati sunt quia Deus adjutor est eorum, et Deus excelsus redemptor eorum est."
+
+            ],
+            "englishText": [
+                "Attend, O my people, to my law; incline your ears to the words of my mouth.",
+                "I will open my mouth in parables; I will utter propositions from the beginning.",
+                "How great things have we heard and known, and our fathers have told us.",
+                "They have not been hidden from their children, in another generation; declaring the praises of the Lord, and his powers, and his wonders which he hath done.",
+                "And he set up a testimony in Jacob, and made a law in Israel; how great things he commanded our fathers, that they should make the same known to their children;",
+                
+                "That another generation might know them, the children that should be born and should rise up, and declare them to their children;",                
+                "That they may put their hope in God, and may not forget the works of God, and may seek his commandments;",
+                "That they may not become like their fathers, a perverse and exasperating generation; a generation that set not their heart aright, and whose spirit was not faithful to God.",
+                "The sons of Ephraim who bend and shoot with the bow, they turned back in the day of battle.",
+                "They kept not the covenant of God, and in his law they would not walk.",
+                
+                "And they forgot his benefits, and his wonders that he had shewn them.",
+                "Wonderful things did he do in the sight of their fathers, in the land of Egypt, in the field of Tanis.",
+                "He divided the sea and brought them through; and he made the waters to stand as in a vessel.",
+                "And he led them with a cloud by day, and all the night with a light of fire.",
+                "He struck the rock in the desert, and gave them to drink as out of the great deep.",
+                "And he brought forth water out of the rock, and made waters run down like rivers.",
+                "And they added yet more to sin against him; they provoked the most High to wrath in the place without water.",
+                "And they tempted God in their hearts, by asking meat for their souls.",
+                "And they spoke ill of God; they said: Can God furnish a table in the wilderness?",
+               
+                "Because he struck the rock, and the waters gushed out, and the streams overflowed; can he also give bread, or provide a table for his people?",
+                "Therefore the Lord heard, and was angry; and a fire was kindled against Jacob, and wrath came up against Israel.",
+                "Because they believed not in God, nor trusted in his salvation.",
+                "And he commanded the clouds from above, and opened the doors of heaven.",
+                "And he rained upon them manna to eat, and gave them the bread of heaven.",
+               
+                "Man ate the bread of angels; he sent them provisions in abundance.",                
+                "He removed the south wind from heaven, and by his power brought in the southwest wind.",
+                "And he rained upon them flesh as dust, and feathered fowls like as the sand of the sea.",
+                "And they fell in the midst of their camp, round about their pavilions.",
+                "And they did eat, and were filled exceedingly; and he gave them their desire.",
+               
+                "They were not defrauded of that which they craved; as yet their meat was in their mouth,",
+                "And the wrath of God came upon them, and slew the fattest of them, and brought down the chosen men of Israel.",
+                "In all these things they sinned still, and believed not for his wondrous works.",
+                "And their days were consumed in vanity, and their years in haste.",
+                "When he slew them, then they sought him; and they returned, and came to him early in the morning.",
+                "And they remembered that God was their helper, and the most high God their redeemer."
+                
+                
+            ],
+            "verified": true
+        },
+        
+        {
+            "number": 77,
+            "section": "B",
+            "title": "A Recital of God’s Deeds and Israel’s Rebellion",
+            "text": [                
                 "Et dilexerunt eum in ore suo, et lingua sua mentiti sunt ei.",
                 "Cor autem eorum non erat rectum cum eo; nec fideles habiti sunt in testamento ejus.",
                 "Ipse autem est misericors, et propitius fiet peccatis eorum, et non destruet eos.",
@@ -3390,42 +3506,7 @@
                 "Pascere Jacob servum suum, et Israel haereditatem suam;",
                 "Et pavit eos in innocentia cordis sui, et in intellectu manuum suarum deduxit eos."
             ],
-            "englishText": [
-                "Attend, O my people, to my law; incline your ears to the words of my mouth.",
-                "I will open my mouth in parables; I will utter propositions from the beginning.",
-                "How great things have we heard and known, and our fathers have told us.",
-                "They have not been hidden from their children, in another generation; declaring the praises of the Lord, and his powers, and his wonders which he hath done.",
-                "And he set up a testimony in Jacob, and made a law in Israel; how great things he commanded our fathers, that they should make the same known to their children;",
-                "That another generation might know them, the children that should be born and should rise up, and declare them to their children;",
-                "That they may put their hope in God, and may not forget the works of God, and may seek his commandments;",
-                "That they may not become like their fathers, a perverse and exasperating generation; a generation that set not their heart aright, and whose spirit was not faithful to God.",
-                "The sons of Ephraim who bend and shoot with the bow, they turned back in the day of battle.",
-                "They kept not the covenant of God, and in his law they would not walk.",
-                "And they forgot his benefits, and his wonders that he had shewn them.",
-                "Wonderful things did he do in the sight of their fathers, in the land of Egypt, in the field of Tanis.",
-                "He divided the sea and brought them through; and he made the waters to stand as in a vessel.",
-                "And he led them with a cloud by day, and all the night with a light of fire.",
-                "He struck the rock in the desert, and gave them to drink as out of the great deep.",
-                "And he brought forth water out of the rock, and made waters run down like rivers.",
-                "And they added yet more to sin against him; they provoked the most High to wrath in the place without water.",
-                "And they tempted God in their hearts, by asking meat for their souls.",
-                "And they spoke ill of God; they said: Can God furnish a table in the wilderness?",
-                "Because he struck the rock, and the waters gushed out, and the streams overflowed; can he also give bread, or provide a table for his people?",
-                "Therefore the Lord heard, and was angry; and a fire was kindled against Jacob, and wrath came up against Israel.",
-                "Because they believed not in God, nor trusted in his salvation.",
-                "And he commanded the clouds from above, and opened the doors of heaven.",
-                "And he rained upon them manna to eat, and gave them the bread of heaven.",
-                "Man ate the bread of angels; he sent them provisions in abundance.",
-                "He removed the south wind from heaven, and by his power brought in the southwest wind.",
-                "And he rained upon them flesh as dust, and feathered fowls like as the sand of the sea.",
-                "And they fell in the midst of their camp, round about their pavilions.",
-                "And they did eat, and were filled exceedingly; and he gave them their desire.",
-                "They were not defrauded of that which they craved; as yet their meat was in their mouth,",
-                "And the wrath of God came upon them, and slew the fattest of them, and brought down the chosen men of Israel.",
-                "In all these things they sinned still, and believed not for his wondrous works.",
-                "And their days were consumed in vanity, and their years in haste.",
-                "When he slew them, then they sought him; and they returned, and came to him early in the morning.",
-                "And they remembered that God was their helper, and the most high God their redeemer.",
+            "englishText": [                
                 "And they loved him with their mouth, and with their tongue they lied unto him.",
                 "But their heart was not right with him; nor were they counted faithful in his covenant.",
                 "But he is merciful, and will forgive their sins, and will not destroy them.",
@@ -3469,6 +3550,7 @@
             "verified": true
         },
         
+
 
         {
             "number": 78,
@@ -3872,7 +3954,7 @@
         },
         {
             "number": 88,
-            "section": "",
+            "section": "A",
             "title": "God’s Mercy and the Davidic Covenant",
             "text": [
                 "Misericordias Domini in aeternum cantabo; in generationem et generationem annuntiabo veritatem tuam in ore meo.",
@@ -3892,7 +3974,41 @@
                 "Beatus populus qui scit jubilationem; Domine, in lumine vultus tui ambulabunt,",
                 "et in nomine tuo exsultabunt tota die, et in justitia tua exaltabuntur.",
                 "Quoniam gloria virtutis eorum tu es, et in beneplacito tuo exaltabitur cornu nostrum.",
-                "Quia Domini est assumptio nostra, et Sancti Israel regis nostri.",
+                "Quia Domini est assumptio nostra, et Sancti Israel regis nostri."
+
+                
+            ],
+            "englishText": [
+                "The mercies of the Lord I will sing for ever; I will shew forth thy truth with my mouth to generation and generation.",
+                "For thou hast said: Mercy shall be built up for ever in the heavens; thy truth shall be prepared in them.",
+                "I have made a covenant with my elect; I have sworn to David my servant:",
+                "Thy seed will I settle for ever, and I will build up thy throne unto generation and generation.",
+                "The heavens shall confess thy wonders, O Lord; and thy truth in the church of the saints.",
+                "For who in the clouds can be compared to the Lord; or who among the sons of God shall be like to the Lord?",
+                "God, who is glorified in the assembly of the saints; great and terrible above all them that are about him.",
+                "O Lord God of hosts, who is like to thee? thou art mighty, O Lord, and thy truth is round about thee.",
+                "Thou rulest the power of the sea; and appeasest the motion of the waves thereof.",
+                "Thou hast humbled the proud one, as one that is slain; with the arm of thy strength thou hast scattered thy enemies.",
+                "Thine are the heavens, and thine is the earth; the world and the fulness thereof thou hast founded.",
+                "The north and the sea thou hast created; Thabor and Hermon shall rejoice in thy name.",
+                "Thy arm is with might; let thy hand be strengthened, and thy right hand exalted.",
+                "Justice and judgment are the preparation of thy throne; mercy and truth shall go before thy face.",
+                "Blessed is the people that knoweth jubilation; they shall walk, O Lord, in the light of thy countenance,",
+                "and in thy name they shall rejoice all the day, and in thy justice they shall be exalted.",
+                "For thou art the glory of their strength, and in thy good pleasure shall our horn be exalted.",
+                "For our protection is of the Lord, and of our king the holy one of Israel."
+
+            ],
+            "verified": true
+        },
+
+
+
+        {
+            "number": 88,
+            "section": "B",
+            "title": "God’s Mercy and the Davidic Covenant",
+            "text": [
                 "Tunc locutus es in visione sanctis tuis, et dixisti: Posui adjutorium in potente, et exaltavi electum de plebe mea.",
                 "Inveni David, servum meum; oleo sancto meo unxi eum.",
                 "Manus enim mea auxiliabitur ei, et brachium meum confortabit eum.",
@@ -3929,24 +4045,6 @@
                 "Benedictus Dominus in aeternum; fiat, fiat."
             ],
             "englishText": [
-                "The mercies of the Lord I will sing for ever; I will shew forth thy truth with my mouth to generation and generation.",
-                "For thou hast said: Mercy shall be built up for ever in the heavens; thy truth shall be prepared in them.",
-                "I have made a covenant with my elect; I have sworn to David my servant:",
-                "Thy seed will I settle for ever, and I will build up thy throne unto generation and generation.",
-                "The heavens shall confess thy wonders, O Lord; and thy truth in the church of the saints.",
-                "For who in the clouds can be compared to the Lord; or who among the sons of God shall be like to the Lord?",
-                "God, who is glorified in the assembly of the saints; great and terrible above all them that are about him.",
-                "O Lord God of hosts, who is like to thee? thou art mighty, O Lord, and thy truth is round about thee.",
-                "Thou rulest the power of the sea; and appeasest the motion of the waves thereof.",
-                "Thou hast humbled the proud one, as one that is slain; with the arm of thy strength thou hast scattered thy enemies.",
-                "Thine are the heavens, and thine is the earth; the world and the fulness thereof thou hast founded.",
-                "The north and the sea thou hast created; Thabor and Hermon shall rejoice in thy name.",
-                "Thy arm is with might; let thy hand be strengthened, and thy right hand exalted.",
-                "Justice and judgment are the preparation of thy throne; mercy and truth shall go before thy face.",
-                "Blessed is the people that knoweth jubilation; they shall walk, O Lord, in the light of thy countenance,",
-                "and in thy name they shall rejoice all the day, and in thy justice they shall be exalted.",
-                "For thou art the glory of their strength, and in thy good pleasure shall our horn be exalted.",
-                "For our protection is of the Lord, and of our king the holy one of Israel.",
                 "Then thou spokest in a vision to thy saints, and saidst: I have laid help upon one that is mighty, and have exalted one chosen out of my people.",
                 "I have found David my servant; with my holy oil I have anointed him.",
                 "For my hand shall help him, and my arm shall strengthen him.",
@@ -3984,6 +4082,7 @@
             ],
             "verified": true
         },
+
         {
             "number": 89,
             "section": "",
@@ -4554,7 +4653,7 @@
         },
         {
             "number": 103,
-            "section": "",
+            "section": "A",
             "title": "Praise for God’s Creation and Providence",
             "text": [
                 "Benedic, anima mea, Domino. Domine Deus meus, magnificatus es vehementer.",
@@ -4583,21 +4682,8 @@
                 "Ortus est sol, et congregati sunt, et in cubilibus suis collocabuntur.",
                 "Exibit homo ad opus suum, et ad operationem suam usque ad vesperum.",
                 "Quam magnificata sunt opera tua, Domine! omnia in sapientia fecisti;",
-                "impleta est terra possessione tua.",
-                "Hoc mare magnum et spatiosum manibus; illic reptilia quorum non est numerus,",
-                "animalia pusilla cum magnis.",
-                "Illic naves pertransibunt, draco iste quem formasti ad illudendum ei.",
-                "Omnia a te exspectant ut des illis escam in tempore.",
-                "Dante te illis colligent; aperiente te manum tuam omnia implebuntur bonitate.",
-                "Avertente te faciem tuam turbabuntur; auferes spiritum eorum, et deficient,",
-                "et in pulverem suum revertentur.",
-                "Emittes spiritum tuum, et creabuntur, et renovabis faciem terrae.",
-                "Sit gloria Domini in saeculum; laetabitur Dominus in operibus suis.",
-                "Qui respicit terram, et facit eam tremere; qui tangit montes, et fumigant.",
-                "Cantabo Domino in vita mea; psallam Deo meo quamdiu sum.",
-                "Jucundum sit ei eloquium meum; ego vero delectabor in Domino.",
-                "Deficiat peccator de terra, et iniquus ita ut non sit.",
-                "Benedic, anima mea, Domino."
+                "impleta est terra possessione tua."
+
             ],
             "englishText": [
                 "Bless the Lord, O my soul: O Lord my God, thou art exceedingly great.",
@@ -4626,7 +4712,33 @@
                 "The sun ariseth, and they are gathered together: and they shall lie down in their dens.",
                 "Man shall go forth to his work, and to his labour until the evening.",
                 "How great are thy works, O Lord! thou hast made all things in wisdom:",
-                "the earth is filled with thy riches.",
+                "the earth is filled with thy riches."
+            ],
+            "verified": true
+        },
+
+
+        {
+            "number": 103,
+            "section": "B",
+            "title": "Praise for God’s Creation and Providence",
+            "text": [                
+                "Hoc mare magnum et spatiosum manibus; illic reptilia quorum non est numerus,",
+                "animalia pusilla cum magnis.",
+                "Illic naves pertransibunt, draco iste quem formasti ad illudendum ei.",
+                "Omnia a te exspectant ut des illis escam in tempore.",
+                "Dante te illis colligent; aperiente te manum tuam omnia implebuntur bonitate.",
+                "Avertente te faciem tuam turbabuntur; auferes spiritum eorum, et deficient,",
+                "et in pulverem suum revertentur.",
+                "Emittes spiritum tuum, et creabuntur, et renovabis faciem terrae.",
+                "Sit gloria Domini in saeculum; laetabitur Dominus in operibus suis.",
+                "Qui respicit terram, et facit eam tremere; qui tangit montes, et fumigant.",
+                "Cantabo Domino in vita mea; psallam Deo meo quamdiu sum.",
+                "Jucundum sit ei eloquium meum; ego vero delectabor in Domino.",
+                "Deficiat peccator de terra, et iniquus ita ut non sit.",
+                "Benedic, anima mea, Domino."
+            ],
+            "englishText": [                
                 "So is this great sea, which stretcheth wide its arms: there are creeping things without number,",
                 "Creatures little and great.",
                 "There the ships shall go. This sea dragon which thou hast formed to play therein.",
@@ -4644,9 +4756,11 @@
             ],
             "verified": true
         },
+
+
         {
             "number": 104,
-            "section": "",
+            "section": "A",
             "title": "God’s Covenant with Israel",
             "text": [
                 "Confitemini Domino, et invocate nomen ejus; annuntiate inter gentes opera ejus.",
@@ -4670,7 +4784,46 @@
                 "donec veniret verbum ejus. Eloquium Domini inflammavit eum.",
                 "Misit rex, et solvit eum; princeps populorum, et dimisit eum.",
                 "Constituit eum dominum domus suae, et principem omnis possessionis suae,",
-                "ut erudiret principes ejus sicut semetipsum, et senes ejus prudentiam doceret.",
+                "ut erudiret principes ejus sicut semetipsum, et senes ejus prudentiam doceret."
+                
+                
+            ],
+            "englishText": [
+                "Give glory to the Lord, and call upon his name: declare his deeds among the Gentiles.",
+                "Sing to him, yea sing praises to him: relate all his wondrous works.",
+                "Glory ye in his holy name: let the heart of them rejoice that seek the Lord.",
+                "Seek ye the Lord, and be strengthened: seek his face evermore.",
+                "Remember his marvellous works which he hath done; his wonders, and the judgments of his mouth,",
+                "O ye seed of Abraham his servant, ye sons of Jacob his chosen.",
+                "He is the Lord our God: his judgments are in all the earth.",
+                "He hath remembered his covenant for ever: the word which he commanded to a thousand generations,",
+                "Which he made to Abraham; and his oath to Isaac:",
+                "And he appointed the same to Jacob for a law, and to Israel for an everlasting testament,",
+                "Saying: To thee will I give the land of Chanaan, the lot of your inheritance.",
+                "When they were but a small number: yea very few, and sojourners therein,",
+                "And they passed from nation to nation, and from one kingdom to another people.",
+                "He suffered no man to hurt them: and he reproved kings for their sakes.",
+                "Touch ye not my anointed: and do no evil to my prophets.",
+                "And he called a famine upon the land: and he broke in pieces all the support of bread.",
+                "He sent a man before them: Joseph, who was sold for a slave.",
+                "They humbled his feet in fetters: the iron pierced his soul,",
+                "Until his word came. The word of the Lord inflamed him.",
+                "The king sent, and he released him: the ruler of the people, and he set him at liberty.",
+                "He made him master of his house, and ruler of all his possession,",
+                "That he might instruct his princes as himself, and teach his ancients wisdom."
+
+            ],
+            "verified": true
+        },
+
+
+        {
+            "number": 104,
+            "section": "B",
+            "title": "God’s Covenant with Israel",
+            "text": [
+                
+
                 "Et intravit Israel in Aegyptum, et Jacob accola fuit in terra Cham.",
                 "Et auxit populum suum vehementer, et firmavit eum super inimicos ejus.",
                 "Convertit cor eorum ut odirent populum ejus, et dolum facerent in servos ejus.",
@@ -4695,29 +4848,7 @@
                 "Et dedit illis regiones gentium, et labores populorum possederunt,",
                 "ut custodiant justificationes ejus, et legem ejus requirant."
             ],
-            "englishText": [
-                "Give glory to the Lord, and call upon his name: declare his deeds among the Gentiles.",
-                "Sing to him, yea sing praises to him: relate all his wondrous works.",
-                "Glory ye in his holy name: let the heart of them rejoice that seek the Lord.",
-                "Seek ye the Lord, and be strengthened: seek his face evermore.",
-                "Remember his marvellous works which he hath done; his wonders, and the judgments of his mouth,",
-                "O ye seed of Abraham his servant, ye sons of Jacob his chosen.",
-                "He is the Lord our God: his judgments are in all the earth.",
-                "He hath remembered his covenant for ever: the word which he commanded to a thousand generations,",
-                "Which he made to Abraham; and his oath to Isaac:",
-                "And he appointed the same to Jacob for a law, and to Israel for an everlasting testament,",
-                "Saying: To thee will I give the land of Chanaan, the lot of your inheritance.",
-                "When they were but a small number: yea very few, and sojourners therein,",
-                "And they passed from nation to nation, and from one kingdom to another people.",
-                "He suffered no man to hurt them: and he reproved kings for their sakes.",
-                "Touch ye not my anointed: and do no evil to my prophets.",
-                "And he called a famine upon the land: and he broke in pieces all the support of bread.",
-                "He sent a man before them: Joseph, who was sold for a slave.",
-                "They humbled his feet in fetters: the iron pierced his soul,",
-                "Until his word came. The word of the Lord inflamed him.",
-                "The king sent, and he released him: the ruler of the people, and he set him at liberty.",
-                "He made him master of his house, and ruler of all his possession,",
-                "That he might instruct his princes as himself, and teach his ancients wisdom.",
+            "englishText": [                
                 "And Israel went into Egypt: and Jacob was a sojourner in the land of Cham.",
                 "And he increased his people exceedingly, and strengthened them over their enemies.",
                 "He turned their heart to hate his people: and to deal deceitfully with his servants.",
@@ -4744,6 +4875,8 @@
             ],
             "verified": true
         },
+
+
         {
             "number": 105,
             "section": "",
