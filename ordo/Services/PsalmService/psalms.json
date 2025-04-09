@@ -6167,34 +6167,34 @@
                 "verified": true
             },
         
-       
-            
         {
-            "number": 129,
-            "section": "",
-            "title": "A Cry from the Depths",
-            "text": [
-                "De profundis clamavi ad te, Domine;",
-                "Domine, exaudi vocem meam. Fiant aures tuae intendentes in vocem deprecationis meae.",
-                "Si iniquitates observaveris, Domine, Domine, quis sustinebit?",
-                "Quia apud te propitiatio est, et propter legem tuam sustinui te, Domine.",
-                "Sustinuit anima mea in verbo ejus; speravit anima mea in Domino.",
-                "A custodia matutina usque ad noctem, speret Israel in Domino.",
-                "Quia apud Dominum misericordia, et copiosa apud eum redemptio.",
-                "Et ipse redimet Israel ex omnibus iniquitatibus ejus."
-            ],
-            "englishText": [
-                "Out of the depths I have cried to thee, O Lord: Lord, hear my voice.",
-                "Let thine ears be attentive to the voice of my supplication.",
-                "If thou, O Lord, wilt mark iniquities: Lord, who shall stand it?",
-                "For with thee there is merciful forgiveness: and by reason of thy law, I have waited for thee, O Lord.",
-                "My soul hath relied on his word: my soul hath hoped in the Lord.",
-                "From the morning watch even until night: let Israel hope in the Lord.",
-                "Because with the Lord there is mercy: and with him plentiful redemption.",
-                "And he shall redeem Israel from all his iniquities."
-            ],
-            "verified": true
+          "number": 129,
+          "section": "",
+          "title": "De Profundis (A Cry from the Depths)",
+          "text": [
+            "De profundis clamavi ad te, Domine;",
+            "Domine, exaudi vocem meam. Fiant aures tuae intendentes in vocem deprecationis meae.",
+            "Si iniquitates observaveris, Domine, Domine, quis sustinebit?",
+            "Quia apud te propitiatio est, et propter legem tuam sustinui te, Domine.",
+            "Sustinuit anima mea in verbo ejus; speravit anima mea in Domino.",
+            "A custodia matutina usque ad noctem, speret Israel in Domino.",
+            "Quia apud Dominum misericordia, et copiosa apud eum redemptio.",
+            "Et ipse redimet Israel ex omnibus iniquitatibus ejus."
+          ],
+          "englishText": [
+            "Out of the depths I have cried to thee, O Lord;",
+            "Lord, hear my voice. Let thine ears be attentive to the voice of my supplication.",
+            "If thou, O Lord, wilt mark iniquities: Lord, who shall stand it?",
+            "For with thee there is merciful forgiveness: and by reason of thy law, I have waited for thee, O Lord.",
+            "My soul hath relied on his word: my soul hath hoped in the Lord.",
+            "From the morning watch even until night: let Israel hope in the Lord.",
+            "Because with the Lord there is mercy: and with him plentiful redemption.",
+            "And he shall redeem Israel from all his iniquities."
+          ],
+          "verified": true,
+          "notes": "Psalm 129 in the Vulgate (Psalm 130 in Hebrew/Masoretic numbering). Latin text follows the Clementine Vulgate; English translation aligns with the Douay-Rheims version."
         },
+     
                 
         {
             "number": 130,
@@ -6819,7 +6819,8 @@
                     "He shall not delight in the strength of the horse: nor take pleasure in the legs of a man.",
                     "The Lord taketh pleasure in them that fear him: and in them that hope in his mercy."
                 ],
-                "verified": true
+                "verified": true,
+                "notes": "vulgate 11 verses, but it's better to be 12 verses"
             },
             {
                 "number": 147,
