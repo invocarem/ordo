@@ -248,8 +248,7 @@
           "133"
         ]
       },
-      "hymn": {
-        "default": [
+      "hymn":  [
           "Te lucis ante terminum,",
           "Rerum Creator, poscimus,",
           "Ut pro tua clementia",
@@ -264,18 +263,17 @@
           "Patrique compar Unice,",
           "Cum Spiritu Paraclito",
           "Regnans per omne saeculum. Amen."
-        ]
-      },
+        ],
+      
       "capitulum": {
         "default": "Sobrii estote et vigilate, quia adversarius vester diabolus tamquam leo rugiens circuit, quaerens quem devoret: cui resistite fortes in fide. (1 Pet 5:8-9)",
         "friday": "Vigilate et orate, ut non intretis in tentationem. Spiritus quidem promptus est, caro autem infirma. (Mk 14:38)"
       },
-      "versicle": {
-        "default": [
+      "versicle":  [
           "℣. In manus tuas, Domine, commendo spiritum meum.",
           "℟. Redemisti nos, Domine, Deus veritatis."
-        ]
-      },
+        ],
+      
       "oratio": {
         "default": "Visita, quaesumus, Domine, habitationem istam, et omnes insidias inimici ab ea longe repelle: angeli tui sancti habitent in ea, qui nos in pace custodiant, et benedictio tua sit super nos semper. Per Christum Dominum nostrum. ℟. Amen.",
         "lent": "Protege nos, Domine, vigilantes, custodi nos dormientes: ut vigilemus cum Christo, et requiescamus in pace. ℟. Amen."
