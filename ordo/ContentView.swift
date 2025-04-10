@@ -80,7 +80,8 @@ struct ContentView: View {
             
             ProgressSummaryView(
                 psalmService: psalmService,
-                tracker: progressTracker
+                tracker: progressTracker,
+                liturgicalDay: liturgicalInfo
             )
             .tabItem {
                 Label("Psalms", systemImage: "book")

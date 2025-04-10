@@ -3,9 +3,12 @@ import SwiftUI
 
 struct ProgressSummaryView: View {
     let psalmService: PsalmService
+    private let hoursService = HoursService.shared
     @ObservedObject var tracker: PsalmObservableTracker
     @State private var selectedPsalm: PsalmProgress?
-    
+    let liturgicalDay: LiturgicalDay?
+    @State private var dayPsalms: [String: [PsalmUsage]] = [:] // Hour key to psalms mapping
+
     var body: some View {
         let overall = tracker.overallProgress()
         let completionPercentage = Double(overall.completed) / Double(overall.total) * 100
@@ -15,6 +18,17 @@ struct ProgressSummaryView: View {
         NavigationStack {
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
+                    if let liturgicalDay = liturgicalDay {
+                                Text(liturgicalDay.weekday)
+                                    .font(.caption)
+                                    .padding(.top, 8)
+                            }
+
+                    if !dayPsalms.isEmpty {
+                        psalmsOfTheDaySection()
+                    }
+                    
+                            
                     // Weekly Progress Section
                     Text("Weekly Progress")
                         .font(.headline)
@@ -62,6 +76,10 @@ struct ProgressSummaryView: View {
                     }
                 }
             }
+            .onAppear {
+                loadDayPsalms()
+            }
+            
         }
     }
     
@@ -129,5 +147,112 @@ struct ProgressSummaryView: View {
         .background(Color(.secondarySystemBackground))
         .cornerRadius(10)
     }
+     private func loadDayPsalms() {
+        guard let liturgicalDay = liturgicalDay else { return }
+        
+        let canonicalHours = [
+            ("matins", liturgicalDay.benedictineSeason.description),
+            ("lauds", liturgicalDay.benedictineSeason.description),
+            ("prime", liturgicalDay.benedictineSeason.description),
+            ("terce", liturgicalDay.benedictineSeason.description),
+            ("sext", liturgicalDay.season.description),
+            ("none", liturgicalDay.season.description),
+            ("vespers", liturgicalDay.season.description),
+            ("compline", liturgicalDay.season.description)
+        ]
+        
+        var newDayPsalms: [String: [PsalmUsage]] = [:]
+        
+        for (hourKey, season) in canonicalHours {
+            if let psalms = hoursService.getPsalmsForWeekday(
+                weekday: liturgicalDay.weekday,
+                hourKey: hourKey,
+                season: season
+            ) {
+                newDayPsalms[hourKey] = psalms
+            }
+        }
+        
+        dayPsalms = newDayPsalms
+    }
+    
+    private func psalmsOfTheDaySection() -> some View {
+        VStack(alignment: .leading, spacing: 16) {
+            Text("Psalms of the Day")
+                .font(.headline)
+            
+            ForEach(dayPsalms.keys.sorted(), id: \.self) { hourKey in
+                hourPsalmsSection(hourKey: hourKey)
+            }
+        }
+    }
+
+    private func hourPsalmsSection(hourKey: String) -> some View {
+        Group {
+            if let psalms = dayPsalms[hourKey], !psalms.isEmpty {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text(hourKey.capitalized)
+                        .font(.subheadline.weight(.semibold))
+                    
+                    psalmGrid(psalms: psalms)
+                }
+                .padding()
+                .background(Color(.tertiarySystemBackground))
+                .cornerRadius(8)
+            }
+        }
+    }
+
+    private func psalmGrid(psalms: [PsalmUsage]) -> some View {
+        LazyVGrid(columns: [GridItem(.adaptive(minimum: 60))], spacing: 8) {
+            ForEach(psalms, id: \.number) { psalm in
+                psalmButton(psalm: psalm)
+            }
+            .debugPrint(psalms)
+        }
+    }
+    private func psalmButton(psalm: PsalmUsage) -> some View {
+        // Attempt conversion
+        if let psalmNumber = Int(psalm.number) {
+            return AnyView(
+                Button {
+                    selectedPsalm = PsalmProgress(
+                        number: psalmNumber,
+                        section: psalm.category,
+                        dateRead: Date(),
+                        isCompleted: tracker.isRead(number: psalmNumber, section: psalm.category)
+                    )
+                } label: {
+                    // ... same label view as above
+                }
+                .buttonStyle(.plain)
+            )
+        } else {
+            return AnyView(
+                Text("Invalid")
+                    .frame(width: 60, height: 40)
+                    .background(Color.red.opacity(0.2))
+            )
+        }
+    }
+    
+    
+
+    private func psalmBackground(psalm: PsalmUsage) -> some View {
+        guard let number = Int(psalm.number) else {
+               return Color.red.opacity(0.2) // Return a simple Color view for invalid case
+           }
+           
+           return tracker.isRead(number: number, section: psalm.category) ?
+               Color.green.opacity(0.2) :
+               Color.blue.opacity(0.2)
+    }
+    
 }
 
+// Helper extension for error handling
+extension View {
+    func eraseToAnyView() -> AnyView {
+        AnyView(self)
+    }
+}

@@ -52,7 +52,7 @@ public final class PsalmObservableTracker: ObservableObject {
         return tracker.getCompletedPsalms()
     }
     public func getIncompletedPsalms() -> [PsalmProgress] {
-        tracker.getIncompletedPsams()
+        tracker.getIncompletedPsalms()
     }
     
     // Mirror all public methods
@@ -66,6 +66,10 @@ public final class PsalmObservableTracker: ObservableObject {
     
     public func overallProgress() -> (completed: Int, total: Int) {
         tracker.overallProgress()
+    }
+    public func isRead(number: Int, section: String? = nil) -> Bool {
+    
+        tracker.isRead(number: number, section: section)
     }
     
     // Add other public methods as needed...
