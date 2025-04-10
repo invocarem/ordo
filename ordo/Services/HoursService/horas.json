@@ -236,26 +236,65 @@
       },
       "notes": "4 Psalms nightly, followed by capitulum, hymn (not specified), versicle, and Magnificat."
     },
-
-
     "compline": {
       "introit": [
-        "℣. Deus in adjutorium meum intende.",
-        "℟. Domine ad adjuvandum me festina."
+        "℣Deus in adjutorium meum intende.",
+        "℟Domine ad adjuvandum me festina."
       ],
       "psalms": {
-        "default": ["4", "90", "133"]
+        "default": [
+          "4",
+          "90",
+          "133"
+        ]
+      },
+      "hymn": {
+        "default": [
+          "Te lucis ante terminum,",
+          "Rerum Creator, poscimus,",
+          "Ut pro tua clementia",
+          "Sis praesul et custodia.",
+          "",
+          "Procul recedant somnia,",
+          "Et noctium phantasmata;",
+          "Hostemque nostrum comprime,",
+          "Ne polluantur corpora.",
+          "",
+          "Praesta, Pater piissime,",
+          "Patrique compar Unice,",
+          "Cum Spiritu Paraclito",
+          "Regnans per omne saeculum. Amen."
+        ]
       },
       "capitulum": {
-        "default": "Sobrii estote et vigilate...",
-        "friday": "Vigilate et orate..."
+        "default": "Sobrii estote et vigilate, quia adversarius vester diabolus tamquam leo rugiens circuit, quaerens quem devoret: cui resistite fortes in fide. (1 Pet 5:8-9)",
+        "friday": "Vigilate et orate, ut non intretis in tentationem. Spiritus quidem promptus est, caro autem infirma. (Mk 14:38)"
+      },
+      "versicle": {
+        "default": [
+          "℣. In manus tuas, Domine, commendo spiritum meum.",
+          "℟. Redemisti nos, Domine, Deus veritatis."
+        ]
       },
       "oratio": {
-        "default": "Visita, quaesumus, Domine...",
-        "lent": "Protege nos, Domine..."
+        "default": "Visita, quaesumus, Domine, habitationem istam, et omnes insidias inimici ab ea longe repelle: angeli tui sancti habitent in ea, qui nos in pace custodiant, et benedictio tua sit super nos semper. Per Christum Dominum nostrum. ℟. Amen.",
+        "lent": "Protege nos, Domine, vigilantes, custodi nos dormientes: ut vigilemus cum Christo, et requiescamus in pace. ℟. Amen."
       },
-      "dismissal": { 
-        "default": "℣. Benedicamus Domino. ℟. Deo gratias." 
-      }
+      "kyrie": {
+        "default": [
+          "℣. Kyrie eleison.",
+          "℟. Kyrie eleison.",
+          "℣. Christe eleison.",
+          "℟. Christe eleison.",
+          "℣. Kyrie eleison.",
+          "℟. Kyrie eleison."
+        ]
+      },
+      "dismissal": {
+        "default": "℣. Benedicamus Domino. ℟. Deo gratias."
+      },
+      "notes": "psalms, hymn, lesson (capitulumn), versicle, kyrie, oratio(blessing), end"
     }
+
+    
   }
