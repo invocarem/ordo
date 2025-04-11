@@ -15,10 +15,10 @@ struct PrayerView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
-            //VStack(){
-                Text("Prayer for \(formattedDate)")
-                    .font(.title)
-                    .padding(.bottom)
+            
+                //Text("Prayer for \(formattedDate)")
+                //    .font(.title)
+                //    .padding(.bottom)
                 
                 if let hour = hour {
                     // Display Introit if it exists
@@ -28,29 +28,27 @@ struct PrayerView: View {
                             
                     }
                     
-                    // Display Hymn if it exists
-                    if let hymn = hour.hymn, !hymn.isEmpty {
-                        PrayerSectionView(title: "🎶 Hymn", content: getHymnContent(hymn: hymn))
-                    }
                     
                     // Display Psalms - updated logic
                     if let psalms = getPsalms(hour: hour) {
                         
                             ForEach(psalms) { psalm in
-
-                                //print("\(psalm\)")
                                 PsalmView(psalm: psalm, psalmService: psalmService)
                                     .environmentObject(observableTracker)
-                                    //.debugPrint(psalm)
+                                    .debugPrint(psalm)
                                     .background(Color.gray.opacity(0.1))
                                     
-                                    //.frame(maxWidth: .infinity)  // 1. Force full width
-                                             //  .background(Color.clear)     // 2. Override any inherited background
-                                              //.padding(.horizontal)        // 3. Match parent padding
-                                             //  .padding(.vertical, 4)       // 4. Optional vertical spacing
+                                    
                             }
                         
                     }
+                    
+                    // Display Hymn if it exists
+                    if let hymn = hour.hymn, !hymn.isEmpty {
+                        PrayerSectionView(title: "🎶 Hymn", content: getHymnContent(hymn: hymn))
+                    }
+                    
+                    
                     let feast = liturgicalInfo.feast?.name
                     let season = liturgicalInfo.season
                     let weekday = liturgicalInfo.weekday
@@ -61,6 +59,7 @@ struct PrayerView: View {
                             .frame(alignment: .leading)
                             .padding(.bottom)
                     }
+                    
                     if let versicle = hour.versicle, !versicle.isEmpty {
                         PrayerSectionView(title: "🕊️ Versicles", content: versicle.map { $0 ?? "" })
                             .frame(alignment: .leading)

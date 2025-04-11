@@ -101,6 +101,19 @@ struct PsalmView: View {
         }
     }
 }
+struct StandalonePsalmView: View {
+    let psalm: PsalmUsage
+    let psalmService: PsalmService
+    
+    var body: some View {
+        ScrollView {
+            PsalmView(psalm: psalm, psalmService: psalmService)
+                .frame(maxWidth: .infinity, alignment: .topLeading)
+                .padding()
+        }
+        .background(Color(.systemBackground))
+    }
+}
 
 enum PsalmError: Error {
     case invalidNumberFormat(String)
