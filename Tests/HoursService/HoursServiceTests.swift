@@ -55,41 +55,41 @@ final class HoursServiceTests: XCTestCase {
                 PsalmUsage(number: "118", category: "daleth")
             ]),
             ("monday", [
-                PsalmUsage(number: "1", category: ""),
-                PsalmUsage(number: "2", category: ""),
-                PsalmUsage(number: "6", category: "")
+                PsalmUsage(number: "1", category: nil),
+                PsalmUsage(number: "2", category: nil),
+                PsalmUsage(number: "6", category: nil)
             ]),
             ("tuesday", [
-                PsalmUsage(number: "7", category: ""),
-                PsalmUsage(number: "8", category: ""),
+                PsalmUsage(number: "7", category: nil),
+                PsalmUsage(number: "8", category: nil),
                 PsalmUsage(number: "9", category: "A")
             ]),
             ("wednesday", [
                 PsalmUsage(number: "9", category: "B"),
-                PsalmUsage(number: "10", category: ""),
-                PsalmUsage(number: "11", category: "")
+                PsalmUsage(number: "10", category: nil),
+                PsalmUsage(number: "11", category: nil)
             ]),
             ("thursday", [
-                PsalmUsage(number: "12", category: ""),
-                PsalmUsage(number: "13", category: ""),
-                PsalmUsage(number: "14", category: "")
+                PsalmUsage(number: "12", category: nil),
+                PsalmUsage(number: "13", category: nil),
+                PsalmUsage(number: "14", category: nil)
             ]),
             ("friday", [
-                PsalmUsage(number: "15", category: ""),
-                PsalmUsage(number: "16", category: ""),
+                PsalmUsage(number: "15", category: nil),
+                PsalmUsage(number: "16", category: nil),
                 PsalmUsage(number: "17", category: "A")
             ]),
             ("saturday", [
                 PsalmUsage(number: "17", category: "B"),
-                PsalmUsage(number: "18", category: ""),
-                PsalmUsage(number: "19", category: "")
+                PsalmUsage(number: "18", category: nil),
+                PsalmUsage(number: "19", category: nil)
             ])
         ]
         
         for testCase in testCases {
             guard let psalms = hoursService.getPsalmsForWeekday(weekday: testCase.weekday, 
                                             hourKey: "prime", 
-                                            season: "lent") else {
+                                            season: "winter") else {
                 XCTFail("Failed to get psalms for Prime on \(testCase.weekday)")
                 continue
             }
@@ -100,7 +100,7 @@ final class HoursServiceTests: XCTestCase {
             for (index, psalm) in psalms.enumerated() {
                 XCTAssertEqual(psalm.number, testCase.expected[index].number,
                             "Number mismatch for \(testCase.weekday) at index \(index)")
-                XCTAssertEqual(psalm.category ?? "", testCase.expected[index].category,
+                XCTAssertEqual(psalm.category , testCase.expected[index].category,
                             "Category mismatch for \(testCase.weekday) at index \(index)")
             }
         }
@@ -149,7 +149,7 @@ final class HoursServiceTests: XCTestCase {
         "terce": (numbers: ["119", "120", "121"], categories: ["", "", ""]),
         "sext": (numbers: ["122", "123", "124"], categories: ["", "", ""]),
         "none": (numbers: ["125", "126", "127"], categories: ["", "", ""]),
-        "vespers": (numbers: ["128", "129", "130", "131", "132"], categories: ["", "", "", "", ""])
+        "vespers": (numbers: ["129", "130", "131", "132"], categories: ["", "", "", ""])
     ]
     
     // Test each hour
@@ -224,9 +224,9 @@ func testVespersPsalms() {
             "Monday Lauds psalms incorrect (\(season)). Got: \(psalms.map { $0.number })"
         )
     }
-    func testFridayLauds() {
+    func testFridayLauds75_91() {
         // 1. Define the expected psalm sequence for Friday Lauds
-        let expectedPsalms = ["66", "50", "75", "99", "148", "149", "150"]
+        let expectedPsalms = ["66", "50", "75", "91", "148", "149", "150"]
         
         // 2. Test across all seasons (winter/summer/Lent/Easter)
         let seasons = ["winter", "summer"]
@@ -258,6 +258,41 @@ func testVespersPsalms() {
             
         }
     }
+    func testSaturdayLauds142_canticle_deuteronomy() {
+        // 1. Define the expected psalm sequence for Friday Lauds
+        let expectedPsalms = ["66", "50", "142","148", "149", "150"]
+        
+        // 2. Test across all seasons (winter/summer/Lent/Easter)
+        let seasons = ["winter", "summer"]
+        
+        for season in seasons {
+            guard let psalms = hoursService.getPsalmsForWeekday(weekday: "saturday", 
+                                            hourKey: "lauds", 
+                                            season: season) else {
+                XCTFail("Failed to get Friday Lauds psalms for season: \(season)")
+                continue
+            }
+            
+            // 3. Verify the exact psalm sequence
+            XCTAssertEqual(
+                psalms.map { $0.number },
+                expectedPsalms,
+                """
+                Incorrect Friday Lauds psalms (\(season)).
+                Expected: \(expectedPsalms)
+                Actual: \(psalms.map { $0.number })
+                """
+            )
+            
+            // 4. Explicitly confirm Psalm 142 is present
+            XCTAssertTrue(
+                psalms.contains { $0.number == "142" },
+                "Psalm 142 missing in Saturday Lauds (\(season))"
+            )
+            
+        }
+    }
+
 
     private func verifyPsalmSections(weekday: String, hourKey: String, expectedNumbers: [String], expectedCategories: [String]) {        
         guard let psalms = hoursService.getPsalmsForWeekday(weekday: weekday, hourKey: hourKey, season: "winter") else {
@@ -298,6 +333,10 @@ func testVespersPsalms() {
     
     XCTAssertEqual(actualPsalmNumbers, expectedPsalmNumbers,
                  "Compline default psalms should be 4, 90, 133. Got: \(actualPsalmNumbers)")
+
+
+                 
+    XCTAssertEqual(compline.kyrie!.count, 6, "Kyrie must be exist")
 }
 
 

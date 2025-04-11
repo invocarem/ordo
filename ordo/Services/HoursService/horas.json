@@ -60,23 +60,25 @@
           "℟. Domine ad adjuvandum me festina."
         ],
         "psalms": {
+          "prefix" : ["66", "50"],
+          "suffix" : ["148", "149", "150 :Alleluia"],
           "winter": {
-            "sunday": ["66", "50", "117", "62", "148", "149", "150"],
-            "monday": ["66", "50", "5", "35", "148", "149", "150"],
-            "tuesday": ["66", "50", "42", "56", "148", "149", "150"],
-            "wednesday": ["66", "50", "63", "64", "148", "149", "150"],
-            "thursday": ["66", "50", "87", "89", "148", "149", "150"],
-            "friday": ["66", "50", "75", "91", "148", "149", "150"],
-            "saturday": ["66", "50", "119", "142", "148", "149", "150"]
+            "sunday": ["117", "62"],
+            "monday": ["5", "35" ],
+            "tuesday": ["42", "56"],
+            "wednesday": [ "63", "64"],
+            "thursday": [ "87", "89"],
+            "friday": ["75", "91"],
+            "saturday": ["142"]
           },
           "summer": {
-            "sunday": ["66", "50", "117", "62", "148", "149", "150"],
-            "monday": ["66", "50", "5", "35", "148", "149", "150"],
-            "tuesday": ["66", "50", "42", "56", "148", "149", "150"],
-            "wednesday": ["66", "50", "63", "64", "148", "149", "150"],
-            "thursday": ["66", "50", "87", "89", "148", "149", "150"],
-            "friday": ["66", "50", "75", "91", "148", "149", "150"],
-            "saturday": ["66", "50", "119", "142", "148", "149", "150"]
+            "sunday": [ "117", "62"],
+            "monday": [ "5", "35" ],
+            "tuesday": [ "42", "56"],
+            "wednesday": ["63", "64"],
+            "thursday": [ "87", "89"],
+            "friday": [ "75", "91"],
+            "saturday": ["142"]
           }
         },
         "benedictus": {
@@ -278,8 +280,7 @@
         "default": "Visita, quaesumus, Domine, habitationem istam, et omnes insidias inimici ab ea longe repelle: angeli tui sancti habitent in ea, qui nos in pace custodiant, et benedictio tua sit super nos semper. Per Christum Dominum nostrum. ℟. Amen.",
         "lent": "Protege nos, Domine, vigilantes, custodi nos dormientes: ut vigilemus cum Christo, et requiescamus in pace. ℟. Amen."
       },
-      "kyrie": {
-        "default": [
+      "kyrie":  [
           "℣. Kyrie eleison.",
           "℟. Kyrie eleison.",
           "℣. Christe eleison.",
@@ -287,7 +288,7 @@
           "℣. Kyrie eleison.",
           "℟. Kyrie eleison."
         ]
-      },
+      ,
       "dismissal": {
         "default": "℣. Benedicamus Domino. ℟. Deo gratias."
       },

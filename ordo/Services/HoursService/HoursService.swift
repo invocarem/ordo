@@ -44,6 +44,7 @@ public struct Hour: Codable {
     public let capitulum: Capitulum
     public let versicle: [String?]?
     public let oratio: Oratio
+    public let kyrie: [String?]?
     public let canticle: Canticle?
     public let antiphons: AntiphonRule?  // Now using the new type
     public let psalms: PsalmRules
@@ -136,9 +137,11 @@ public struct SeasonPsalmGroups: Codable {
         case sunday, weekday, monday,tuesday,wednesday,thursday,friday,saturday
     }
 }
+
 public struct PsalmRules: Codable {
-    public let notes: String? 
-    public let prefix: [PsalmUsage]?  // Add this line
+    public let notes: String?
+    public let prefix: [PsalmUsage]?
+    public let suffix: [PsalmUsage]?
     public let seasons: [String: SeasonPsalmGroups]?
     public let weekdays: [String: [PsalmUsage]]?
     public let `default`: [PsalmUsage]?
@@ -146,6 +149,7 @@ public struct PsalmRules: Codable {
     public init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: DynamicCodingKey.self)
         var prefixArray: [PsalmUsage]?
+        var suffixArray: [PsalmUsage]?
         var seasonsDict = [String: SeasonPsalmGroups]()
         var weekdaysDict = [String: [PsalmUsage]]()
         var defaultArray: [PsalmUsage]?
@@ -155,10 +159,11 @@ public struct PsalmRules: Codable {
             let keyString = key.stringValue
             if keyString == "prefix" {
                 prefixArray = try container.decode([PsalmUsage].self, forKey: key)
+            } else if keyString == "suffix" {
+                suffixArray = try container.decode([PsalmUsage].self, forKey: key)
             } else if keyString == "notes" {
                 notesValue = try container.decode(String.self, forKey: key)
-            }
-            else if keyString == "default" {
+            } else if keyString == "default" {
                 defaultArray = try container.decode([PsalmUsage].self, forKey: key)
             } else if ["winter", "summer"].contains(keyString) {
                 let seasonGroup = try container.decode(SeasonPsalmGroups.self, forKey: key)
@@ -166,15 +171,15 @@ public struct PsalmRules: Codable {
             } else if ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"].contains(keyString) {
                 let psalms = try container.decode([PsalmUsage].self, forKey: key)
                 weekdaysDict[keyString] = psalms
-            } else {
-                throw DecodingError.dataCorruptedError(forKey: key, in: container, debugDescription: "Unexpected key \(keyString)")
             }
         }
+        
         prefix = prefixArray
+        suffix = suffixArray
         seasons = seasonsDict.isEmpty ? nil : seasonsDict
         weekdays = weekdaysDict.isEmpty ? nil : weekdaysDict
         `default` = defaultArray
-        notes = notesValue ?? ""
+        notes = notesValue
     }
     
     private struct DynamicCodingKey: CodingKey {
@@ -183,7 +188,6 @@ public struct PsalmRules: Codable {
         
         init?(stringValue: String) {
             self.stringValue = stringValue
-            self.intValue = nil
         }
         
         init?(intValue: Int) {
@@ -192,53 +196,63 @@ public struct PsalmRules: Codable {
     }
 }
 
+
 public struct PsalmUsage: Codable, Identifiable, Equatable {
     public let number: String
     public let category: String?
+    public let antiphon: String?
     public let id: String
-    public init(number: String, category: String? = nil) {
+    
+    public init(number: String, category: String? = nil, antiphon: String? = nil) {
         self.number = number
-        self.category = category ?? ""
-        
-        if let section = category, !section.isEmpty {
-            self.id = "\(number)-\(section)"
-        } else {
-            self.id = "\(number)"
-        }
+        self.category = category?.isEmpty ?? true ? nil : category
+        self.antiphon = antiphon?.isEmpty ?? true ? nil : antiphon
+        self.id = [number, self.category].compactMap { $0 }.joined(separator: "-")
     }
     
-
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         let value = try container.decode(String.self)
-        let parts = value.components(separatedBy: " ")
+        
+        let antiphonSplit = value.components(separatedBy: ":")
+        let mainPart = antiphonSplit[0].trimmingCharacters(in: .whitespaces)
+        let potentialAntiphon = antiphonSplit.count > 1 ? 
+            antiphonSplit[1].trimmingCharacters(in: .whitespaces) : nil
+        
+        let parts = mainPart.components(separatedBy: .whitespaces)
         guard !parts.isEmpty else {
-            throw DecodingError.dataCorruptedError(in: container, debugDescription: "Empty psalm string")
+            throw DecodingError.dataCorruptedError(
+                in: container, 
+                debugDescription: "Psalm string must contain at least a number"
+            )
         }
-        number = parts[0]
-        category = parts.count > 1 ? parts[1...].joined(separator: " ") : nil
         
-        
-        if let section = category, !section.isEmpty {
-            self.id = "\(number)-\(section)"
-        } else {
-            self.id = "\(number)"
-        }
+        self.number = parts[0]
+        self.category = parts.count > 1 ? parts.dropFirst().joined(separator: " ") : nil
+        self.antiphon = potentialAntiphon?.isEmpty ?? true ? nil : potentialAntiphon
+        self.id = [number, category].compactMap { $0 }.joined(separator: "-")
     }
     
     public func encode(to encoder: Encoder) throws {
         var container = encoder.singleValueContainer()
-        if let category = category {
-            try container.encode("\(number) \(category)")
-        } else {
-            try container.encode(number)
+        var encodedString = number
+        
+        if let category = category, !category.isEmpty {
+            encodedString += " \(category)"
         }
+        
+        if let antiphon = antiphon, !antiphon.isEmpty {
+            encodedString += ":\(antiphon)"
+        }
+        
+        try container.encode(encodedString)
     }
+
     public static func == (lhs: PsalmUsage, rhs: PsalmUsage) -> Bool {
-        return lhs.number == rhs.number && lhs.category == rhs.category
+        return lhs.id == rhs.id
     }
- 
 }
+
 
 
 public final class HoursService {
@@ -333,6 +347,10 @@ private func getPsalmsForWeekday(weekday: String, hour: Hour, season: String? = 
     // 3. Fall back to default if we still have nothing
     if psalms.isEmpty, let defaultPsalms = hour.psalms.default {
         psalms.append(contentsOf: defaultPsalms)
+    }
+
+    if let suffixPsalms = hour.psalms.suffix {
+        psalms.append(contentsOf: suffixPsalms)
     }
 
     return psalms.isEmpty ? nil : psalms
