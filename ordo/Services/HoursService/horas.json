@@ -315,15 +315,87 @@
         "saturday": ["144 B", "145", "146", "147"],
         "notes": "per Rule Ch. 18. 113A (1-8), 113B (9-26); 138 split at 1-11/12-23; 143 at 1-9/10-15; 144 at 1-9/10-18; 115+116 combined."
       },
+      "hymn": {
+        "default": [
+          "Lucis Creator optime,",
+          "Lucem dierum proferens,",
+          "Primordiis lucis novae",
+          "Mundi parans originem."
+        ],
+        "feasts": {
+          "natal": [
+            "A solis ortus cardine,",
+            "Et usque terrae limitem,",
+            "Christum canamus principem,",
+            "Natum Maria virgine."
+          ],
+          "epiphany": [
+            "Hostis Herodes impie,",
+            "Christum venire quid times?",
+            "Non eripit mortalia",
+            "Qui regna dat caelestia."
+          ],
+          "pascha": [
+            "Ad cenam Agni providi,",
+            "Et stolis albis candidi,",
+            "Post transitum maris Rubri",
+            "Christo canamus principi."
+          ],
+          "pentecost": [
+            "Beata nobis gaudia,",
+            "Anni redemit orbita,",
+            "Cum Spiritus Paraclitus",
+            "Illapsus est apostolis."
+          ]
+        }
+      },
       "capitulum": {
         "default": "Fratres: Sobrii estote et vigilate, quia adversarius vester diabolus tamquam leo rugiens circuit, quaerens quem devoret. (1 Peter 5:8)",
-        "sunday": "Gaudete in Domino semper: iterum dico, gaudete. (Philippians 4:4)",
-        "monday": "Omnia in caritate fiant apud vos. (1 Corinthians 16:14)",
-        "tuesday": "Esto fidelis usque ad mortem, et dabo tibi coronam vitae. (Revelation 2:10)",
-        "wednesday": "Dominus illuminatio mea et salus mea, quem timebo? (Psalm 26:1)",
-        "thursday": "Benedicite Domino omnia opera ejus, in omni loco dominationis ejus. (Daniel 3:57)",
-        "friday": "Christus factus est pro nobis obediens usque ad mortem, mortem autem crucis. (Philippians 2:8)",
-        "saturday": "Beatus vir qui timet Dominum, in mandatis ejus volet nimis. (Psalm 111:1)"
+        "feasts": {
+          "natal": "Gloria in excelsis Deo, et in terra pax hominibus bonae voluntatis.",
+          "epiphany": "Surge, illuminare, Jerusalem, quia venit lumen tuum, et gloria Domini super te orta est.",
+          "pascha": "Christus factus est pro nobis obediens usque ad mortem, mortem autem crucis.",
+          "pentecost": "Cum venisset dies Pentecostes, erant omnes pariter in eodem loco: et factus est repente de caelo sonus.",
+          "apostle": "Vos estis lux mundi, et sal terrae.",
+          "martyr": "Justorum animae in manu Dei sunt, et non tanget illos tormentum malitiae.",
+          "virgin": "Haec est virgo sapiens, quam Dominus vigilantem invenit."
+        }
+      },
+      "versicle": {
+        "default": [
+          "℣. Vespertina oratio ascendat ad te, Domine.",
+          "℟. Et descendat super nos misericordia tua."
+        ],
+        "feasts": {
+              "natal": [
+                "℣. Natus est nobis hodie Salvator.",
+                "℟. Qui est Christus Dominus."
+              ],
+              "epiphany": [
+                "℣. Stella ista sicut flamma coruscat.",
+                "℟. Et Regem regum demonstrat."
+              ],
+              "pascha": [
+                "℣. Surrexit Dominus vere.",
+                "℟. Alleluia, alleluia."
+              ],
+              "pentecost": [
+                "℣. Spiritus Domini replevit orbem terrarum.",
+                "℟. Et hoc quod continet omnia scientiam habet vocis."
+              ],
+              "apostle": [
+                "℣. Constitues eos principes super omnem terram.",
+                "℟. Memores erunt nominis tui, Domine."
+              ],
+              "martyr": [
+                "℣. Exsultabunt sancti in gloria.",
+                "℟. Laetabuntur in cubilibus suis."
+              ],
+              "virgin": [
+                "℣. Specie tua et pulchritudine tua.",
+                "℟. Intende, prospere procede, et regna."
+              ]
+        }
       },
       "oratio": {
         "default": "Dirigere et sanctificare, regere et gubernare dignare, Domine Deus, opera nostra, ut in tuo servitio perfecte ambulare valeamus.",
@@ -360,12 +432,7 @@
           "Procul recedant somnia,",
           "Et noctium phantasmata;",
           "Hostemque nostrum comprime,",
-          "Ne polluantur corpora.",
-          "",
-          "Praesta, Pater piissime,",
-          "Patrique compar Unice,",
-          "Cum Spiritu Paraclito",
-          "Regnans per omne saeculum. Amen."
+          "Ne polluantur corpora."
         ],
       "feasts": {
           "pascha": [
