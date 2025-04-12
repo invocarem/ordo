@@ -93,7 +93,7 @@ struct PrayerView: View {
         case .structured(let data):
             // Here you could add logic to check liturgicalInfo for seasons/feasts
             // and return the appropriate text
-            return [data.default]
+            return data.default
         }
     }
 

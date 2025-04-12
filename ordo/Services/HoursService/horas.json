@@ -60,8 +60,8 @@
           "℟. Domine ad adjuvandum me festina."
         ],
         "psalms": {
-          "prefix" : ["66", "50"],
-          "suffix" : ["148", "149", "150 :Alleluia"],
+          "prefix" : ["66", "50 :Alleluia"],
+          "suffix" : ["148 :Alleluia", "149 :Alleluia", "150 :Alleluia"],
           "winter": {
             "sunday": ["117", "62"],
             "monday": ["5", "35" ],
@@ -143,63 +143,163 @@
 
     }
   },
+    
     "terce": {
       "introit": [
         "℣. Deus in adjutorium meum intende.",
         "℟. Domine ad adjuvandum me festina."
       ],
+      "hymn": [
+          "Nunc Sancte nobis Spiritus,",
+               "Unum Patri cum Filio,",
+               "Dignare promptus ingeri",
+               "Nostro refusus pectori."
+      ],
       "psalms": {
         "sunday": ["118 he", "118 vau", "118 zain"],
         "monday": ["118 nun", "118 samech", "118 ain"],
-        "default": ["119", "120", "121"]
+        "default": ["119", "120", "121"],
+        "notes": "Each psalm ends with Gloria Patri."
       },
       "capitulum": {
-        "default": "Dirigatur oratio mea sicut incensum...",
-        "friday": "Deus, in adjutorium meum intende..."
+        "default": "Et repleti sunt omnes Spiritu Sancto, et coeperunt loqui prout Spiritus dabat eloqui illis.",
+        "feasts": {
+            "natal": "Puer natus est nobis, et filius datus est nobis, cuius imperium super humerum eius.",
+            "epiphany": "Ecce advenit dominator Dominus, et regnum in manu eius.",
+            "pascha": "Christus resurgens ex mortuis iam non moritur, mors illi ultra non dominabitur.",
+            "pentecost": "Spiritus Domini replevit orbem terrarum, et hoc quod continet omnia scientiam habet vocis.",
+            "apostle": "Vos estis lux mundi, et sal terrae.",
+            "martyr": "Justorum animae in manu Dei sunt, et non tanget illos tormentum malitiae.",
+            "virgin": "Haec est virgo sapiens, quam Dominus vigilantem invenit."
+          }
       },
+      "versicle": [
+        "℣. Domine, exaudi orationem meam.",
+        "℟. Et clamor meus ad te veniat."
+      ],
+      "kyrie": ["Kyrie eleison."],
       "oratio": {
-        "default": "Actiones nostras, quaesumus, Domine...",
-        "lent": "Praesta, quaesumus, omnipotens Deus..."
-      }
+        "default": "Actiones nostras, quaesumus Domine, aspirando praeveni et adjuvando prosequere, ut cuncta nostra operatio a te semper incipiat, et per te coepta finiatur. Per Christum Dominum nostrum. Amen.",
+        "feasts": {
+             "natal": "Concede, quaesumus, omnipotens Deus, ut Unigeniti tui nova per carnem nativitas nos liberet, quos sub peccati iugo vetusta servitus tenet. Per eundem Dominum.",
+             "epiphany": "Deus, qui hodierna die Unigenitum tuum gentibus stella duce revelasti, concede propitius, ut qui iam te ex fide cognovimus, usque ad contemplandam speciem tuae celsitudinis perducamur. Per eundem Dominum.",
+             "pascha": "Deus, qui hodierna die per Unigenitum tuum aeternitatis nobis aditum devicta morte reserasti, vota nostra benigno prosequere. Per eundem Dominum.",
+             "pentecost": "Deus, qui hodierna die corda fidelium Sancti Spiritus illustratione docuisti, da nobis in eodem Spiritu recta sapere, et de eius semper consolatione gaudere. Per Dominum.",
+             "apostle": "Praesta, quaesumus, Domine, ut per apostolicas institutiones eruditi, eorum gloriosis actibus instruamur et exemplis. Per Dominum.",
+             "martyr": "Deus, qui nos sanctorum Martyrum tuorum confessione gloriosa circumdas, praesta nobis ex eorum imitatione proficere. Per Dominum.",
+             "virgin": "Deus, qui inter cetera potentiae tuae miracula etiam in sexu fragili victoriam contulisti, concede ut per beatae Virginis exempla ad te gradiamur. Per Dominum."
+           }
+      },
+      "dismissal": [
+        "℣. Benedicamus Domino.",
+        "℟. Deo gratias."
+      ],
+      "notes": "Simplified introit, no Gloria Patri or Alleluia. Hymn invokes Holy Spirit."
     },
     "sext": {
       "introit": [
         "℣. Deus in adjutorium meum intende.",
         "℟. Domine ad adjuvandum me festina."
       ],
-      "psalms": {        
+      "hymn": [
+          "Rector potens, verax Deus",
+               "Qui temperas rerum vices,",
+               "Splendore mane instruis,",
+               "Et ignibus meridiem."
+      ],
+      "psalms": {
         "sunday": ["118 heth", "118 teth", "118 jod"],
         "monday": ["118 pe", "118 sade", "118 coph"],
-        "default": ["122", "123", "124"]
+        "default": ["122", "123", "124"],
+        "notes": "Each psalm ends with Gloria Patri."
       },
       "capitulum": {
-        "default": "Fiat misericordia tua, Domine...",
-        "apostle": "Vos estis lux mundi..."
+        "default": "Ego autem ad Deum clamavi, et Dominus salvabit me.",
+        "feasts": {
+             "natal": "Puer natus est nobis, et filius datus est nobis.",
+             "epiphany": "Ecce advenit dominator Dominus, et regnum in manu eius.",
+             "pascha": "Christus resurgens ex mortuis iam non moritur.",
+             "pentecost": "Spiritus Domini replevit orbem terrarum.",
+             "apostle": "Vos estis lux mundi, et sal terrae.",
+             "martyr": "Justorum animae in manu Dei sunt.",
+             "virgin": "Haec est virgo sapiens, quam Dominus vigilantem invenit."
+           }
       },
+      "versicle": [
+        "℣. Adjuva nos, Deus salutaris noster.",
+        "℟. Et propter gloriam nominis tui, libera nos."
+      ],
+      "kyrie": ["Kyrie eleison."],
       "oratio": {
-        "default": "Deus, qui caritatis dona...",
-        "wednesday": "Deus, a quo sancta desideria..."
-      }
+        "default": "Deus, qui caritatis dona per gratiam Sancti Spiritus tuorum fidelium cordibus infudisti, concede famulis tuis, pro quibus tuam deprecamur clementiam, salutem mentis et corporis, ut te tota virtute diligant, et quae tibi placent tota devotione perficiant. Per Christum Dominum nostrum. Amen.",
+        "feasts": {
+              "natal": "Concede, quaesumus, omnipotens Deus, ut Unigeniti tui nativitas nos liberet. Per eundem Dominum.",
+              "epiphany": "Deus, qui hodierna die Unigenitum tuum gentibus revelasti, concede ut usque ad tuae celsitudinis speciem perducamur. Per eundem Dominum.",
+              "pascha": "Deus, qui hodierna die aeternitatis aditum reserasti, vota nostra benigno prosequere. Per eundem Dominum.",
+              "pentecost": "Deus, qui corda fidelium Sancti Spiritus illustratione docuisti, da nobis recta sapere. Per Dominum.",
+              "apostle": "Praesta, Domine, ut per apostolicas institutiones eruditi, eorum exemplis instruamur. Per Dominum.",
+              "martyr": "Deus, qui nos sanctorum Martyrum confessione protegis, praesta ex eorum imitatione proficere. Per Dominum.",
+              "virgin": "Deus, qui in sexu fragili victoriam contulisti, concede ut per Virginis exempla ad te gradiamur. Per Dominum."
+            }
+      },
+      "dismissal": [
+        "℣. Benedicamus Domino.",
+        "℟. Deo gratias."
+      ],
+      "notes": "Simplified introit, no Gloria Patri or Alleluia. Hymn reflects God’s order."
     },
     "none": {
       "introit": [
         "℣. Deus in adjutorium meum intende.",
         "℟. Domine ad adjuvandum me festina."
       ],
+      "hymn": ["Rerum Deus tenax vigor",
+          "Immotus in te permanens,",
+               "Lucis diurnae tempora",
+               "Successibus determinans."
+      ],
       "psalms": {
         "sunday": ["118 caph", "118 lamed", "118 mem"],
         "monday": ["118 res", "118 sin", "118 thau"],
-        "default": ["125", "126", "127"]
+        "default": ["125", "126", "127"],
+        "notes": "Each psalm ends with Gloria Patri."
       },
       "capitulum": {
-        "default": "Tu autem, Domine, miserere nobis.",
-        "pentecost": "Spiritus Domini replevit orbem terrarum..."
+        "default": "Bonum certamen certavi, cursum consummavi, fidem servavi.",
+        "feasts": {
+             "natal": "Puer natus est nobis, et filius datus est nobis.",
+             "epiphany": "Ecce advenit dominator Dominus, et regnum in manu eius.",
+             "pascha": "Christus resurgens ex mortuis iam non moritur.",
+             "pentecost": "Spiritus Domini replevit orbem terrarum.",
+             "apostle": "Vos estis lux mundi, et sal terrae.",
+             "martyr": "Justorum animae in manu Dei sunt.",
+             "virgin": "Haec est virgo sapiens, quam Dominus vigilantem invenit."
+           }
       },
+      "versicle": [
+        "℣. Salvum me fac, Domine.",
+        "℟. Quoniam in te speravi."
+      ],
+      "kyrie": ["Kyrie eleison."],
       "oratio": {
-        "default": "Respice, quaesumus, Domine...",
-        "martyr": "Deus, qui nos sanctorum Martyrum tuorum..."
-      }
+        "default": "Respice, quaesumus, Domine, super hanc familiam tuam, pro qua Dominus noster Jesus Christus non dubitavit manibus tradere nocentium, et crucis subire tormentum. Qui tecum vivit et regnat in unitate Spiritus Sancti, Deus, per omnia saecula saeculorum. Amen.",
+        "feasts": {
+             "natal": "Concede, quaesumus, omnipotens Deus, ut Unigeniti tui nativitas nos liberet. Per eundem Dominum.",
+             "epiphany": "Deus, qui hodierna die Unigenitum tuum gentibus revelasti, concede ut tuae celsitudinis speciem contemplemur. Per eundem Dominum.",
+             "pascha": "Deus, qui hodierna die aeternitatis aditum reserasti, vota nostra prosequere. Per eundem Dominum.",
+             "pentecost": "Deus, qui corda fidelium Sancti Spiritus illustratione docuisti, da nobis recta sapere. Per Dominum.",
+             "apostle": "Praesta, Domine, ut per apostolicas institutiones, eorum exemplis instruamur. Per Dominum.",
+             "martyr": "Deus, qui nos sanctorum Martyrum confessione protegis, praesta ex eorum imitatione proficere. Per Dominum.",
+             "virgin": "Deus, qui in sexu fragili victoriam contulisti, concede ut per Virginis exempla ad te gradiamur. Per Dominum."
+           }
+      },
+      "dismissal": [
+        "℣. Benedicamus Domino.",
+        "℟. Deo gratias."
+      ],
+      "notes": "Simplified introit, no Gloria Patri or Alleluia. Hymn reflects completion."
     },
+    
     "vespers": {
       "introit": [
         "℣. Deus in adjutorium meum intende.",
@@ -250,7 +350,8 @@
           "133"
         ]
       },
-      "hymn":  [
+      "hymn":  {
+          "default": [
           "Te lucis ante terminum,",
           "Rerum Creator, poscimus,",
           "Ut pro tua clementia",
@@ -266,10 +367,27 @@
           "Cum Spiritu Paraclito",
           "Regnans per omne saeculum. Amen."
         ],
-      
+      "feasts": {
+          "pascha": [
+            "Ad cenam Agni providi,",
+            "Et stolis albis candidi,",
+            "Post transitum maris Rubri",
+            "Christo canamus principi."
+          ]
+      }
+    },
       "capitulum": {
         "default": "Sobrii estote et vigilate, quia adversarius vester diabolus tamquam leo rugiens circuit, quaerens quem devoret: cui resistite fortes in fide. (1 Pet 5:8-9)",
-        "friday": "Vigilate et orate, ut non intretis in tentationem. Spiritus quidem promptus est, caro autem infirma. (Mk 14:38)"
+        "feasts": {
+              "natal": "Gloria in excelsis Deo, et in terra pax hominibus bonae voluntatis.",
+              "epiphany": "Surge, illuminare, Jerusalem, quia venit lumen tuum, et gloria Domini super te orta est.",
+              "pascha": "Christus factus est pro nobis obediens usque ad mortem, mortem autem crucis.",
+              "pentecost": "Cum venisset dies Pentecostes, erant omnes pariter in eodem loco: et factus est repente de caelo sonus.",
+              "apostle": "Vos estis lux mundi, et sal terrae.",
+              "martyr": "Justorum animae in manu Dei sunt, et non tanget illos tormentum malitiae.",
+              "virgin": "Haec est virgo sapiens, quam Dominus vigilantem invenit."
+            }
+       
       },
       "versicle":  [
           "℣. In manus tuas, Domine, commendo spiritum meum.",
@@ -278,20 +396,25 @@
       
       "oratio": {
         "default": "Visita, quaesumus, Domine, habitationem istam, et omnes insidias inimici ab ea longe repelle: angeli tui sancti habitent in ea, qui nos in pace custodiant, et benedictio tua sit super nos semper. Per Christum Dominum nostrum. ℟. Amen.",
-        "lent": "Protege nos, Domine, vigilantes, custodi nos dormientes: ut vigilemus cum Christo, et requiescamus in pace. ℟. Amen."
+        "lent": "Protege nos, Domine, vigilantes, custodi nos dormientes: ut vigilemus cum Christo, et requiescamus in pace. ℟. Amen.",
+        "feasts": {
+             "natal": "Domine Deus, qui hanc noctem Unigeniti tui nativitate illustrasti, custodi nos in pace tua, et angeli tui sancti nos protegant. Per eundem Dominum.",
+             "epiphany": "Illumina, quaesumus, Domine, noctem nostram, ut qui per stellam Unigenitum tuum cognovimus, in pace tua requiescamus. Per eundem Dominum.",
+             "pascha": "Deus, qui nos resurrectione Filii tui de morte liberasti, custodi nos hac nocte, ut in pace tua dormiamus. Per eundem Dominum.",
+             "pentecost": "Deus, qui Sanctum Spiritum tuum hac nocte effudisti, concede nobis in pace requiescere, et Spiritus tuus nos custodiat. Per Dominum.",
+             "apostle": "Domine, qui apostolos tuos elegisti, concede ut eorum intercessione hac nocte in pace protegamur. Per Dominum.",
+             "martyr": "Deus, qui sanctorum martyrum fortitudine nos protegis, custodi nos hac nocte in pace tua. Per Dominum.",
+             "virgin": "Deus, qui virginum castitate glorificaris, concede ut hac nocte in pace tua sub earum intercessione dormiamus. Per Dominum."
+           }
       },
       "kyrie":  [
-          "℣. Kyrie eleison.",
-          "℟. Kyrie eleison.",
-          "℣. Christe eleison.",
-          "℟. Christe eleison.",
-          "℣. Kyrie eleison.",
-          "℟. Kyrie eleison."
+          "℣. Kyrie eleison."
         ]
       ,
-      "dismissal": {
-        "default": "℣. Benedicamus Domino. ℟. Deo gratias."
-      },
+      "dismissal": [
+        "℣. Benedicamus Domino." ,
+        " ℟. Deo gratias."]
+      ,
       "notes": "psalms, hymn, lesson (capitulumn), versicle, kyrie, oratio(blessing), end"
     }
 

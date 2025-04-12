@@ -35,7 +35,7 @@ public struct LiturgicalRule<T: Codable>: Codable {
 public typealias Capitulum = LiturgicalRule<String>
 public typealias Oratio = LiturgicalRule<String>
 public typealias AntiphonRule = LiturgicalRule<String>  // Could replace AntiphonRules
-public typealias Dismissal = LiturgicalRule<String>
+
 
 // Updated Hour struct
 public struct Hour: Codable {
@@ -50,26 +50,47 @@ public struct Hour: Codable {
     public let psalms: PsalmRules
     public let magnificat: Magnificat?
     public let benedictus: Benedictus?
-    public let dismissal: Dismissal?
+    public let dismissal: [String?]?
 }
-
 public enum HymnUnion: Codable {
-    case lines([String])       // For plain text (6th-century)
-    case structured(HymnData)  // For later traditions
+    case lines([String])
+    case structured(HymnData)
     
     public struct HymnData: Codable {
-        public let `default`: String
-        public let seasons: [String: String]?
-        public let feasts: [String: String]?
+        public let `default`: [String]
+        public let seasons: [String: [String]]?
+        public let feasts: [String: [String]]?
 
-         private enum CodingKeys: String, CodingKey {
+        private enum CodingKeys: String, CodingKey {
             case `default` = "default"
             case seasons
             case feasts
         }
+
+        // Custom decoding to handle both String and [String] for `default`
+        public init(from decoder: Decoder) throws {
+            let container = try decoder.container(keyedBy: CodingKeys.self)
+            
+            // Try decoding as [String] first, fall back to String if needed
+            if let array = try? container.decode([String].self, forKey: .default) {
+                self.default = array
+            } else if let singleString = try? container.decode(String.self, forKey: .default) {
+                self.default = [singleString] // Convert String to [String]
+            } else {
+                throw DecodingError.typeMismatch(
+                    [String].self,
+                    DecodingError.Context(
+                        codingPath: [CodingKeys.default],
+                        debugDescription: "Expected `default` to be either String or [String]"
+                    )
+                )
+            }
+            
+            self.seasons = try container.decodeIfPresent([String: [ String]].self, forKey: .seasons)
+            self.feasts = try container.decodeIfPresent([String: [String]].self, forKey: .feasts)
+        }
     }
     
-    // Custom decoding to handle both formats
     public init(from decoder: Decoder) throws {
         let container = try decoder.singleValueContainer()
         if let lines = try? container.decode([String].self) {
@@ -79,6 +100,7 @@ public enum HymnUnion: Codable {
             self = .structured(data)
         }
     }
+    
     public var isEmpty: Bool {
         switch self {
         case .lines(let array): return array.isEmpty
