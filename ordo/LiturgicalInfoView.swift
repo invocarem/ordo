@@ -36,16 +36,11 @@ struct LiturgicalInfoView: View {
                         weekdayView(info)
                     }
                     
+                    
                     // Second row: Feast day if available
                     if let feast = info.feast {
-                        HStack {
-                            Text(feast.name)
-                                .font(.subheadline)
-                                .lineLimit(2)
-                                .minimumScaleFactor(0.7)
-                            Spacer()
-                        }
-                        .padding(.top, 4)
+                        feastPill(feast)
+                            .padding(.top, 4)
                     }
                 }
                 .padding(.horizontal, 12)
@@ -62,25 +57,31 @@ struct LiturgicalInfoView: View {
             }
         }
     }
-    
     private func weekdayView(_ info: LiturgicalDay) -> some View {
         HStack(spacing: 6) {
             Text(info.weekday)
-                .font(.headline)
-                .fontWeight(.regular)
+                .font(.caption) // Smaller font size
+                .fontWeight(.medium)
+                .foregroundColor(.primary)
             
             if info.isSunday {
                 Image(systemName: "sun.max.fill")
+                    .font(.caption2) // Even smaller for icons
                     .foregroundColor(.yellow)
-                    .font(.caption)
             }
             
             if info.isVigil {
                 Image(systemName: "moon.stars.fill")
+                    .font(.caption2)
                     .foregroundColor(.blue)
-                    .font(.caption)
             }
         }
+        .padding(.horizontal, 8)
+        .padding(.vertical, 4)
+        .background(
+            Capsule()
+                .fill(Color.gray.opacity(0.15)) // Subtle background
+        )
     }
     
     private func seasonPill(_ season: LiturgicalSeason) -> some View {
@@ -118,6 +119,70 @@ struct LiturgicalInfoView: View {
                 .fill(season.color.opacity(0.15))
         )
     }
+    private func feastPill(_ feast: Feast) -> some View {
+        // Determine styling based on feast type
+        let style = feastStyle(for: feast.type)
+        
+        return HStack(spacing: 5) {
+            Image(systemName: style.icon)
+                .font(.caption)
+                .foregroundColor(style.color)
+            
+            Text(feast.name)
+                .font(.subheadline)
+                .fontWeight(.medium)
+                .foregroundColor(style.color)
+                .lineLimit(2)
+                .minimumScaleFactor(0.7)
+            
+            if feast.rank == "Solemnity" || feast.rank == "Major" {
+                Image(systemName: "star.fill")
+                    .font(.caption)
+                    .foregroundColor(.yellow)
+            }
+        }
+        .padding(.horizontal, 10)
+        .padding(.vertical, 6)
+        .background(
+            Capsule()
+                .fill(style.color.opacity(0.15))
+        )
+    }
+
+    // Helper to centralize feast styling
+    private func feastStyle(for type: String) -> (icon: String, color: Color) {
+        switch type.lowercased() {
+        // Saint types
+        case "martyr", "martyrs":
+            return ("flame.fill", .red)
+        case "virgin", "virgin-martyr":
+            return ("lily", .white)
+        case "apostle", "apostle-martyr":
+            return ("cross.fill", .yellow)
+        case "bishop":
+            return ("mitre.fill", .purple)
+        case "doctor":
+            return ("book.fill", .blue)
+        case "confessor":
+            return ("person.fill", .green)
+            
+        // Temporal feasts
+        case "pentecost":
+            return ("wind", .red)
+        case "epiphany":
+            return ("star.fill", .yellow)
+        case "pascha", "easter", "resurrection":
+            return ("sun.max.fill", .yellow)
+        case "nativity", "christmas":
+            return ("sparkles", .red)
+            
+        // Default case
+        default:
+            print("Unrecognized feast type: \(type)")
+            return ("star.fill", .gray)
+        }
+    }
+    
 }
                     
 extension LiturgicalSeason {
@@ -157,3 +222,4 @@ extension BenedictineSeason {
         }
     }
 }
+

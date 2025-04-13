@@ -8,70 +8,96 @@ import SwiftUI
 
 struct CanonicalHourPicker: View {
     @Binding var selectedHour: String
-    private let hours = ["matins", "lauds", "prime", "terce", "sext", "none", "vespers", "compline"]
+    
+    private let hours = [
+        ("matins", "moon.fill"),
+        ("lauds", "sunrise.fill"),
+        ("prime", "sun.max.fill"),
+        ("terce", "sun.haze.fill"),
+        ("sext", "sun.dust.fill"),
+        ("none", "sun.min.fill"),
+        ("vespers", "sunset.fill"),
+        ("compline", "moon.stars.fill")
+    ]
     
     @State private var sliderValue: Double
     @State private var lastSelectedIndex: Int
     
     init(selectedHour: Binding<String>) {
         self._selectedHour = selectedHour
-        let initialIndex = hours.firstIndex(of: selectedHour.wrappedValue) ?? 0
+        let initialIndex = hours.firstIndex(where: { $0.0 == selectedHour.wrappedValue }) ?? 0
         self._sliderValue = State(initialValue: Double(initialIndex))
         self._lastSelectedIndex = State(initialValue: initialIndex)
     }
     
     var body: some View {
-        VStack(spacing: 10) {
-            // Current hour display
-            Text(selectedHour.capitalized)
-                .font(.headline)
-                .padding(.bottom, 4)
-                .transition(.opacity)
-                .id("hourTitle-\(selectedHour)")
+        VStack(spacing: 12) {
+            // Current hour display with icon
+            currentHourDisplay
             
             // Interactive slider
-            Slider(
-                value: $sliderValue,
-                in: 0...Double(hours.count - 1),
-                step: 1
-            )
-            .padding(.horizontal)
-            .onChange(of: sliderValue) { oldValue, newValue in
-                updateSelectedHour(from: newValue)
-            }
+            hourSlider
             
-            // Equally distributed hour indicators
+            // Hour indicators
             hourIndicators
         }
-        .padding(.vertical, 8)
+        .padding(.vertical, 12)
+        .background(Color(.secondarySystemBackground))
+        .cornerRadius(12)
+        .padding(.horizontal)
+    }
+    
+    private var currentHourDisplay: some View {
+        HStack(spacing: 8) {
+            if let hour = hours.first(where: { $0.0 == selectedHour }) {
+                Image(systemName: hour.1)
+                    .foregroundColor(.blue)
+            }
+            Text(selectedHour.capitalized)
+                .font(.headline)
+        }
+        .padding(.bottom, 4)
+        .transition(.opacity)
+        .id("hourTitle-\(selectedHour)")
+    }
+    
+    private var hourSlider: some View {
+        Slider(
+            value: $sliderValue,
+            in: 0...Double(hours.count - 1),
+            step: 1
+        )
+        .padding(.horizontal)
+        .tint(.blue)
+        .onChange(of: sliderValue) { oldValue, newValue in
+            updateSelectedHour(from: newValue)
+        }
     }
     
     private var hourIndicators: some View {
-        GeometryReader { geometry in
-            HStack(spacing: 0) {
-                ForEach(Array(hours.enumerated()), id: \.offset) { index, hour in
-                    hourIndicator(hour: hour, index: index)
-                        .frame(width: geometry.size.width / CGFloat(hours.count))
-                }
+        HStack(spacing: 0) {
+            ForEach(Array(hours.enumerated()), id: \.offset) { index, hour in
+                hourIndicator(hour: hour, index: index)
+                    .frame(maxWidth: .infinity)
             }
         }
         .frame(height: 30)
+        .padding(.horizontal, 8)
     }
     
-    private func hourIndicator(hour: String, index: Int) -> some View {
+    private func hourIndicator(hour: (String, String), index: Int) -> some View {
         Button(action: {
             selectHour(index: index)
         }) {
-            VStack(spacing: 2) {
-                Text(hour.prefix(2).uppercased())
-                    .font(.caption2)
-                    .fontWeight(.medium)
+            VStack(spacing: 4) {
+                Text(hour.0.prefix(2).uppercased())
+                    .font(.system(size: 10, weight: .medium))
                 Circle()
-                    .fill(selectedHour == hour ? Color.blue : Color.gray.opacity(0.3))
-                    .frame(width: 4, height: 4)
+                    .fill(selectedHour == hour.0 ? Color.blue : Color.gray.opacity(0.3))
+                    .frame(width: 6, height: 6)
             }
             .frame(maxWidth: .infinity)
-            .foregroundColor(selectedHour == hour ? .blue : .gray)
+            .foregroundColor(selectedHour == hour.0 ? .blue : .gray)
         }
         .buttonStyle(.plain)
     }
@@ -81,10 +107,10 @@ struct CanonicalHourPicker: View {
         
         if newIndex != lastSelectedIndex {
             lastSelectedIndex = newIndex
-            let newHour = hours[newIndex]
+            let newHour = hours[newIndex].0
             
             DispatchQueue.main.async {
-                withAnimation {
+                withAnimation(.easeInOut(duration: 0.2)) {
                     selectedHour = newHour
                 }
             }
@@ -93,16 +119,15 @@ struct CanonicalHourPicker: View {
     
     private func selectHour(index: Int) {
         sliderValue = Double(index)
-        let newHour = hours[index]
+        let newHour = hours[index].0
         
         DispatchQueue.main.async {
-            withAnimation {
+            withAnimation(.easeInOut(duration: 0.2)) {
                 selectedHour = newHour
             }
         }
     }
 }
-
 // Helper extension for clamping values
 extension Comparable {
     func clamped(to limits: ClosedRange<Self>) -> Self {
