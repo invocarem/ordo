@@ -105,6 +105,22 @@
         "℣. Deus in adjutorium meum intende.",
         "℟. Domine ad adjuvandum me festina."
       ],
+      "hymn": {
+        "default": [
+          "Jam lucis orto sidere,",
+          "Deum precamur supplices,",
+          "Ut in diurnis actibus",
+          "Nos servet a nocentibus."
+        ],
+        "feasts": {
+          "pascha": [
+            "Aurora lucis rutilat,",
+            "Caelum laudibus intonat,",
+            "Mundus exsultans jubilat,",
+            "Gemitque liber tartarus."
+          ]
+        }
+      },
       "psalms": {
         "sunday": ["118 aleph", "118 beth", "118 gimel", "118 daleth"],
         "monday": ["1", "2", "6"],
@@ -130,6 +146,8 @@
       " Deus, in nomine tuo salvum me fac.",
       " Et in virtute tua libera me."
     ],
+    "kyrie": ["Kyrie eleison."],
+  
     "oratio": {
       "default": "Dirigere et sanctificare, regere et gubernare digneris, Domine, corda et corpora nostra in viam pacis. Per Christum Dominum nostrum. Amen.",
       "feasts": {

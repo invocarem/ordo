@@ -1,4 +1,128 @@
 import Foundation
+
+public protocol EmptyCheckable {
+    var isEmpty: Bool { get }
+}
+
+public struct LiturgicalTextData: Codable, EmptyCheckable {
+    public let `default`: [String]  // Always an array for consistency
+    public let seasons: [String: [String]]?
+    public let feasts: [String: [String]]?
+    
+    public var isEmpty: Bool {
+        return `default`.isEmpty &&
+               (seasons?.isEmpty ?? true) &&
+               (feasts?.isEmpty ?? true)
+    }
+    
+    private enum CodingKeys: String, CodingKey {
+        case `default` = "default"
+        case seasons
+        case feasts
+    }
+
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        
+        // Handle default which can be String, [String], or even [String: String]
+        if let array = try? container.decode([String].self, forKey: .default) {
+            self.default = array
+        } else if let singleString = try? container.decode(String.self, forKey: .default) {
+            self.default = [singleString]
+        } else {
+            throw DecodingError.typeMismatch(
+                [String].self,
+                DecodingError.Context(
+                    codingPath: [CodingKeys.default],
+                    debugDescription: "Expected `default` to be either String or [String]"
+                )
+            )
+        }
+        
+        // Handle seasons and feasts which can be [String] or String
+        self.seasons = try container.decodeIfPresent([String: StringOrArray].self, forKey: .seasons)?.mapValues { $0.array }
+        self.feasts = try container.decodeIfPresent([String: StringOrArray].self, forKey: .feasts)?.mapValues { $0.array }
+    }
+}
+
+// Helper type to handle String or [String] in dictionaries
+private struct StringOrArray: Codable {
+    let array: [String]
+    
+    init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        if let string = try? container.decode(String.self) {
+            array = [string]
+        } else if let array = try? container.decode([String].self) {
+            self.array = array
+        } else {
+            throw DecodingError.typeMismatch(
+                StringOrArray.self,
+                DecodingError.Context(
+                    codingPath: container.codingPath,
+                    debugDescription: "Expected String or [String]"
+                )
+            )
+        }
+    }
+}
+
+public enum LiturgicalText: Codable {
+    case simple([String])
+    case structured(LiturgicalTextData)
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        if let lines = try? container.decode([String].self) {
+            self = .simple(lines)
+        } else if let singleString = try? container.decode(String.self) {
+            self = .simple([singleString])
+        } else {
+            let data = try container.decode(LiturgicalTextData.self)
+            self = .structured(data)
+        }
+    }
+    
+    public func encode(to encoder: Encoder) throws {
+        var container = encoder.singleValueContainer()
+        switch self {
+        case .simple(let lines):
+            if lines.count == 1 {
+                try container.encode(lines[0])
+            } else {
+                try container.encode(lines)
+            }
+        case .structured(let data):
+            try container.encode(data)
+        }
+    }
+    
+    public var isEmpty: Bool {
+        switch self {
+        case .simple(let array):
+            return array.isEmpty
+        case .structured(let data):
+            return data.isEmpty
+        }
+    }
+    
+    // Helper to get all text as an array
+    public var asArray: [String] {
+        switch self {
+        case .simple(let array):
+            return array
+        case .structured(let data):
+            return data.default
+        }
+    }
+}
+
+// Typealiases for semantic meaning
+public typealias Hymn = LiturgicalText
+public typealias Versicle = LiturgicalText
+public typealias Capitulum = LiturgicalText
+public typealias Oratio = LiturgicalText
+
 public struct LiturgicalRule<T: Codable>: Codable {
     public let `default`: T
     public let feasts: [String: T]?
@@ -32,17 +156,17 @@ public struct LiturgicalRule<T: Codable>: Codable {
 }
 
 // Typealiases for specific uses
-public typealias Capitulum = LiturgicalRule<String>
-public typealias Oratio = LiturgicalRule<String>
+//public typealias Capitulum = LiturgicalRule<String>
+//public typealias Oratio = LiturgicalRule<String>
 public typealias AntiphonRule = LiturgicalRule<String>  // Could replace AntiphonRules
 
 
 // Updated Hour struct
 public struct Hour: Codable {
     public let introit: [String]
-    public let hymn: HymnUnion?
+    public let hymn: Hymn?
     public let capitulum: Capitulum
-    public let versicle: [String?]?
+    public let versicle: Versicle?
     public let oratio: Oratio
     public let kyrie: [String?]?
     public let canticle: Canticle?
@@ -383,5 +507,68 @@ private func getPsalmsForWeekday(weekday: String, hour: Hour, season: String? = 
         return horas[key]
     }
 }
-
-
+extension LiturgicalText {
+    
+    public func getText(for feast: String? = nil, season: String? = nil, weekday: String? = nil) -> [String] {
+        switch self {
+        case .simple(let lines):
+            return lines
+            
+        case .structured(let data):
+            // Check feast first (highest priority)
+            if let feast = feast, let feastText = data.feasts?[feast.lowercased()] {
+                return feastText
+            }
+            
+            // Then check season
+            if let season = season, let seasonText = data.seasons?[season.lowercased()] {
+                return seasonText
+            }
+            
+            // Then check weekday (if you add weekday support)
+            // if let weekday = weekday, let weekdayText = data.weekdays?[weekday.lowercased()] {
+            //     return weekdayText
+            // }
+            
+            // Fall back to default
+            return data.default
+        }
+    }
+}
+extension LiturgicalText {
+    func getAppropriateText(for liturgicalInfo: LiturgicalDay) -> [String] {
+        switch self {
+        case .simple(let lines):
+            return lines
+            
+        case .structured(let data):
+            print("feast \(liturgicalInfo.feast)")
+            print("season \(liturgicalInfo.season)")
+            
+            if let feastName = liturgicalInfo.feast?.name.lowercased() {
+                print ("feastname \(feastName)")
+                if let feastText = data.feasts?[feastName] {
+                    
+                    return feastText
+                }
+            }
+            
+            
+            let seasonKey: String
+            switch liturgicalInfo.season {
+                case .advent: seasonKey = "advent"
+                case .lent: seasonKey = "lent"
+                case .pascha: seasonKey = "pascha"
+                case .christmas: seasonKey = "christmas"
+                case .ordinaryTime: seasonKey = "ordinary"
+            }
+                
+            if let seasonText = data.seasons?[seasonKey] {
+                return seasonText
+            }
+            
+            // Fall back to default
+            return data.default
+        }
+    }
+}

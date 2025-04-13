@@ -47,6 +47,11 @@ public final class PsalmObservableTracker: ObservableObject {
             }
             .store(in: &cancellables)
     }
+    
+    public func resetProgress() {
+        tracker.resetProgress()
+    }
+    
     public func getCompletedPsalms() -> [PsalmProgress] {
         print("Filtered completed:", tracker.getCompletedPsalms())
         return tracker.getCompletedPsalms()

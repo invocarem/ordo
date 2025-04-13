@@ -27,7 +27,14 @@ struct PrayerView: View {
                             .padding(.bottom)
                             
                     }
-                    
+                    // Display Hymn if it exists
+                    if let hymn = hour.hymn {
+                        let hymnText = hymn.getAppropriateText(for: liturgicalInfo)
+                        if !hymnText.isEmpty {
+                           PrayerSectionView(title: "🎶 Hymn", content: hymnText)
+                               .padding(.bottom)
+                        }
+                    }
                     
                     // Display Psalms - updated logic
                     if let psalms = getPsalms(hour: hour) {
@@ -43,32 +50,26 @@ struct PrayerView: View {
                         
                     }
                     
-                    // Display Hymn if it exists
-                    if let hymn = hour.hymn, !hymn.isEmpty {
-                        PrayerSectionView(title: "🎶 Hymn", content: getHymnContent(hymn: hymn))
-                    }
+                   
                     
                     
-                    let feast = liturgicalInfo.feast?.name
-                    let season = liturgicalInfo.season
-                    let weekday = liturgicalInfo.weekday
-                    let capitulumText = hour.capitulum.getText(for: feast, season: season.description , weekday: weekday)
-                      
+                    let capitulumText = hour.capitulum.getAppropriateText(for: liturgicalInfo)
                     if !capitulumText.isEmpty {
-                        PrayerSectionView(title: "📖 Capitulum", content: [capitulumText])
+                        PrayerSectionView(title: "📖 Capitulum", content: capitulumText)
                             .frame(alignment: .leading)
                             .padding(.bottom)
                     }
                     
-                    if let versicle = hour.versicle, !versicle.isEmpty {
-                        PrayerSectionView(title: "🕊️ Versicles", content: versicle.map { $0 ?? "" })
+                    if let versicleText = hour.versicle?.getAppropriateText(for: liturgicalInfo), !versicleText.isEmpty {
+                        PrayerSectionView(title: "🕊️ Versicles", content: versicleText )
                             .frame(alignment: .leading)
                             .padding(.bottom)
                     }
-                    let oratioText = hour.oratio.getText(for: feast, season: season.description , weekday: weekday)
+                    let oratioText = hour.oratio.getAppropriateText(for: liturgicalInfo)
+                        //.getText(for: feast, season: season.description , weekday: weekday)
                       
                     if !oratioText.isEmpty {
-                        PrayerSectionView(title: "🙏 Oratio", content: [oratioText])
+                        PrayerSectionView(title: "🙏 Oratio", content: oratioText)
                             .frame(alignment: .leading)
                             .padding(.bottom)
                     }

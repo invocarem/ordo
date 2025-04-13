@@ -8,7 +8,8 @@ struct ProgressSummaryView: View {
     @State private var selectedPsalm: PsalmProgress?
     let liturgicalDay: LiturgicalDay?
     @State private var dayPsalms: [PsalmUsage] = [] // Hour key to psalms mapping
-
+    @State private var showResetConfirmation = false
+    
     var body: some View {
         let overall = tracker.overallProgress()
         let completionPercentage = Double(overall.completed) / Double(overall.total) * 100
@@ -54,6 +55,10 @@ struct ProgressSummaryView: View {
                             color: .gray
                         )
                     }
+                    
+                    if !completedPsalms.isEmpty {
+                        resetButtonSection()
+                    }
                 }
                 .padding()
             }
@@ -79,6 +84,43 @@ struct ProgressSummaryView: View {
                 loadDayPsalms()
             }
             
+        }
+    }
+    private func resetButtonSection() -> some View {
+        VStack {
+            Divider()
+                .padding(.vertical, 8)
+            
+            Button {
+                showResetConfirmation = true
+            } label: {
+                Label("Reset Progress", systemImage: "arrow.clockwise")
+                    .foregroundColor(Color(uiColor: .systemTeal)) // Soft blue-green
+                    .font(.subheadline.weight(.medium))
+                    .padding(12)
+                    .frame(maxWidth: .infinity)
+                    .background(
+                        RoundedRectangle(cornerRadius: 10)
+                            .fill(Color(uiColor: .systemTeal).opacity(0.1))
+                    )
+            }
+            .buttonStyle(.plain)
+            .confirmationDialog(
+                "Reset Progress?",
+                isPresented: $showResetConfirmation,
+                actions: {
+                    // 1. Reset Button (your teal color)
+                           Button("Reset") {
+                               tracker.resetProgress()
+                           }
+                           
+                           // 2. Cancel Button (will be gray automatically)
+                           Button("Cancel", role: .cancel) {}
+                },
+                message: {
+                    Text("Your completed psalms will be cleared.")
+                }
+            )
         }
     }
     

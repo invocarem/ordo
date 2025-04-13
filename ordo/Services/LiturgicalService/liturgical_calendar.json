@@ -35,8 +35,8 @@
     },
     "pascha": {
       "easter": { 
-        "name": "Resurrection of the Lord", 
-        "type": "resurrection",
+        "name": "Pascha",
+        "type": "pascha",
         "octave": "8 days of celebration"
       },
       "pentecost": { 
