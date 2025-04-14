@@ -38,12 +38,24 @@ final class HoursServiceTests: XCTestCase {
         XCTAssertTrue(prime.hymn?.isEmpty ?? true)
 
         // Test Capitulum
-        XCTAssertFalse(prime.capitulum.default.isEmpty, "Default capitulum should not be empty")
-        XCTAssertNotNil(prime.capitulum.feasts?["pascha"], "Easter capitulum should exist")
-
+        switch prime.capitulum {    
+            case .structured(let data):
+                XCTAssertFalse(data.default.isEmpty, "Default capitulum should not be empty")
+                XCTAssertNotNil(data.feasts?["pascha"], "Easter capitulum should exist")
+                
+            case .simple(let lines):
+            XCTAssertFalse(lines.isEmpty, "Simple capitulum should not be empty")
+        }
+         
+        switch prime.oratio {
+        case .structured(let data):
+            XCTAssertFalse(data.default.isEmpty, "Default oratio should not be empty")
+            XCTAssertNotNil(data.feasts?["pascha"], "Easter oratio should exist")
+        case .simple(let lines):
+            XCTAssertFalse(lines.isEmpty, "Simple oratio should not be empty")
+        }
         // Test Oratio
-        XCTAssertFalse(prime.oratio.default.isEmpty, "Default oratio should not be empty")
-        XCTAssertNotNil(prime.oratio.feasts?["pascha"], "Easter oratio should exist")
+       
     
     }
     func testPrimePsalmsForAllDays() {
@@ -336,7 +348,7 @@ func testVespersPsalms() {
 
 
                  
-    XCTAssertEqual(compline.kyrie!.count, 6, "Kyrie must be exist")
+    XCTAssertEqual(compline.kyrie!.count, 1, "Kyrie must be exist")
 }
 
 
@@ -455,9 +467,9 @@ func testMatinsPsalmsInWinter() {
         XCTAssertEqual(psalms?.map { $0.number }, expectedNumbers)
     }
 
-    func testWeekdaySummerMatin() {
+    func testTuesdaySummerMatin() {
         let psalms = hoursService.getPsalmsForWeekday(weekday: "tuesday", hourKey: "matins", season: "summer")
-        let expectedNumbers = ["3", "94", "100", "62", "66", "5"]
+        let expectedNumbers = ["3", "94", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "43"]
         XCTAssertEqual(psalms?.map { $0.number }, expectedNumbers)
     }
 

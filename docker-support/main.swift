@@ -57,7 +57,7 @@ guard let weekday_info = extractWeekday(from: info) else {
 
 if let hour = HoursService.shared.getHour(for: hourType) {
     print ("Hour: \(hourType)")
-    printHourIntro(hour: hour)
+    printHourIntro(hour: hour, liturgicalInfo: info)
 
     let weekday = weekday_info
     guard let psalms = HoursService.shared.getPsalmsForWeekday(weekday: weekday, hourKey: hourType, season: season) else {
@@ -74,7 +74,8 @@ if let hour = HoursService.shared.getHour(for: hourType) {
         tracker.markPsalm(number: psalmNumber, section: psalm.category)
     }
 
-    printPrayers(hour: hour, feast: "", season: "", weekday: "")
+    printPrayers(hour: hour, liturgicalInfo: info)
+    print("\n=== Progress ===\n")
 
     let overall = tracker.overallProgress()
     print("Overall: \(overall.completed)/\(overall.total)") // ex: "3/180"
@@ -132,7 +133,7 @@ func extractWeekdayold(from liturgicalInfo: String) -> String? {
     return nil
 }
 
-func printHourIntro(hour: Hour) {
+func printHourIntro(hour: Hour, liturgicalInfo: LiturgicalDay) {
     // Print Introit if it exists
     if !hour.introit.isEmpty {
         print("\n🎵 Introit:")
@@ -140,24 +141,11 @@ func printHourIntro(hour: Hour) {
     }
 
     // Print Hymn if it exists
-   if let hymn = hour.hymn, !hymn.isEmpty {
-    print("\n🎶 Hymn:")
-    switch hymn {
-    case .lines(let hymnLines):
-        hymnLines.forEach { print("  \($0)") }
+   if let hymn = hour.hymn {
+        print("\n🎶 Hymn:")
+        let hymnText = hymn.getAppropriateText(for: liturgicalInfo)
+        hymnText.forEach { print("  \($0)") }
         
-    case .structured(let hymnData):
-        print("  \(hymnData.default)")
-        if let seasonal = hymnData.seasons?.values.first {
-            print("  (Seasonal variant: \(seasonal))")
-        }
-    }
-}
-    
-
-    // Only add extra space if we printed something
-    if !hour.introit.isEmpty || !(hour.hymn?.isEmpty ?? true) {
-        print()
     }
 }
 
@@ -230,25 +218,61 @@ func printPsalm(_ psalm: PsalmUsage, using service: PsalmService) {
     print()  // Extra new line after each psalm
 }
 
-func printPrayers(hour: Hour, feast: String? = nil, season: String? = nil, weekday: String? = nil) {
+func printPrayers(hour: Hour, liturgicalInfo: LiturgicalDay) {
     // Print Capitulum
     print("\n📖 Capitulum:")
-    let capitulumText = hour.capitulum.getText(for: feast, season: season, weekday: weekday)
+    let capitulumText = hour.capitulum.getAppropriateText(for: liturgicalInfo)
+   
     print("  \(capitulumText)")
     
     // Print Versicle if it exists
-    if let versicles = hour.versicle?.compactMap({ $0 }), !versicles.isEmpty {
+    if let versicles = hour.versicle?.getAppropriateText(for: liturgicalInfo) {
         print("\n🕯️ Versicle:")
         versicles.forEach { print("  \($0)") }
     }
     
     // Print Oratio
     print("\n🙏 Oratio:")
-    let oratioText = hour.oratio.getText(for: feast, season: season, weekday: weekday)
+    let oratioText = hour.oratio.getAppropriateText(for: liturgicalInfo)
     // Split into sentences for better readability
-    oratioText.components(separatedBy: ". ").forEach {
+    oratioText.forEach {
         print("  \($0)\($0.hasSuffix(".") ? "" : ".")")
     }
     
     print() // Add final newline
+}
+
+extension LiturgicalText {
+    func getAppropriateText(for liturgicalInfo: LiturgicalDay) -> [String] {
+        switch self {
+        case .simple(let lines):
+            return lines
+            
+        case .structured(let data):
+            if let feastName = liturgicalInfo.feast?.name.lowercased() {
+                print ("feastname \(feastName)")
+                if let feastText = data.feasts?[feastName] {
+                    
+                    return feastText
+                }
+            }
+            
+            
+            let seasonKey: String
+            switch liturgicalInfo.season {
+                case .advent: seasonKey = "advent"
+                case .lent: seasonKey = "lent"
+                case .pascha: seasonKey = "pascha"
+                case .christmas: seasonKey = "christmas"
+                case .ordinaryTime: seasonKey = "ordinary"
+            }
+                
+            if let seasonText = data.seasons?[seasonKey] {
+                return seasonText
+            }
+            
+            // Fall back to default
+            return data.default
+        }
+    }
 }

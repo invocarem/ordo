@@ -41,6 +41,7 @@ struct ContentView: View {
             ScrollView {
                 VStack(spacing: 16) {
                     LiturgicalInfoView(info: liturgicalInfo, isLoading: isLoading)
+                        .frame(maxWidth: .infinity, alignment: .topLeading)
                     
                     DatePicker("Select a date",
                               selection: $selectedDate,
@@ -51,13 +52,17 @@ struct ContentView: View {
                         .onChange(of: selectedDate) {
                             triggerLiturgicalUpdate()
                         }
+                    //Spacer()
                     
                     CanonicalHourPicker(selectedHour: $selectedHour)
                         .frame(height: 70)
                     
+                    Spacer()
                     if let errorMessage = errorMessage {
                         ErrorMessageView(message: errorMessage)
                     }
+                    
+                    
                     
                     prayerButton
                     
@@ -65,6 +70,7 @@ struct ContentView: View {
                 }
                 .padding()
             }
+           
             .navigationTitle("Liturgical Calendar")
             .navigationDestination(isPresented: $showingPrayerView) {
                 destinationView
@@ -81,10 +87,22 @@ struct ContentView: View {
             .animation(.easeInOut, value: isLoading)
         }
     }
-    
     private var prayerButton: some View {
         Button(action: { showingPrayerView = true }) {
-            Text("Show Prayer for Selected Date")
+            Label("Sine intermissione orate", systemImage: "hands.sparkles.fill")
+                .padding(12)
+                .frame(maxWidth: .infinity)
+                .background(Color.blue)
+                .foregroundColor(.white)
+                .cornerRadius(10)
+                .font(.headline) // More prominent text
+        }
+        .padding(.horizontal)
+        .shadow(radius: 3) // Subtle elevation
+    }
+    private var xprayerButton: some View {
+        Button(action: { showingPrayerView = true }) {
+            Text("Sine intermissione orate")
                 .padding()
                 .frame(maxWidth: .infinity)
                 .background(Color.blue)

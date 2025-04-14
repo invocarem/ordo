@@ -42,7 +42,7 @@ struct CanonicalHourPicker: View {
             hourIndicators
         }
         .padding(.vertical, 12)
-        .background(Color(.secondarySystemBackground))
+        //.background(Color(.secondarySystemBackground))
         .cornerRadius(12)
         .padding(.horizontal)
     }
