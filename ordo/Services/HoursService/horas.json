@@ -205,37 +205,37 @@
         "saturday": ["17 B", "18", "19"]
       },    
       "capitulum": {
-      "default": "Sine intermissione orate.",
-      "feasts": {
-        "natal": "Hodie Christus natus est nobis.",
-        "epiphany": "Ecce advenit dominator Dominus.",
-        "pascha": "Christus resurgens ex mortuis iam non moritur.",
-        "pentecost": "Spiritus Domini replevit orbem terrarum.",
-        "apostle": "Vos estis lux mundi.",
-        "martyr": "Justorum animae in manu Dei sunt.",
-        "virgin": "Haec est virgo sapiens quam Dominus vigilantem invenit."
+        "default": "Sine intermissione orate.",
+        "feasts": {
+          "natal": "Hodie Christus natus est nobis.",
+          "epiphany": "Ecce advenit dominator Dominus.",
+          "pascha": "Christus resurgens ex mortuis iam non moritur.",
+          "pentecost": "Spiritus Domini replevit orbem terrarum.",
+          "apostle": "Vos estis lux mundi.",
+          "martyr": "Justorum animae in manu Dei sunt.",
+          "virgin": "Haec est virgo sapiens quam Dominus vigilantem invenit."
+        }
+      },
+      "versicle": [
+        " Deus, in nomine tuo salvum me fac.",
+        " Et in virtute tua libera me."
+      ],
+      "kyrie": ["Kyrie eleison."],
+    
+      "oratio": {
+        "default": "Dirigere et sanctificare, regere et gubernare digneris, Domine, corda et corpora nostra in viam pacis. Per Christum Dominum nostrum. Amen.",
+        "feasts": {
+          "natal": "Deus, qui hanc sacratissimam noctem veri luminis fecisti illustratione clarescere, da nobis in terra prospera, et in caelis gaudia sempiterna. Per Dominum.",
+          "pascha": "Deus, qui hodierna die per Unigenitum tuum aeternitatis nobis aditum devicta morte reserasti, vota nostra benigno prosequere. Per eundem Dominum.",
+          "pentecost": "Deus, qui hodierna die corda fidelium Sancti Spiritus illustratione docuisti, da nobis in eodem Spiritu recta sapere, et de eius semper consolatione gaudere. Per Dominum.",
+          "apostle": "Deus, qui nos apostolicis institutionibus erudis, praesta quaesumus, ut apostolorum tuorum gloriosis actibus instruamur et exemplis. Per Dominum.",
+          "martyr": "Deus, qui nos sanctorum Martyrum tuorum N. et N. confessione gloriosa circumdas et protegis, praesta nobis ex eorum imitatione proficere, et orationibus sublevari. Per Dominum.",
+          "virgin": "Deus, qui inter cetera potentiae tuae miracula etiam in sexu fragili victoriam martyrii contulisti, concede ut qui beatae N. Virginis et Martyris tuae natalitia celebramus, per eius ad te exempla gradiamur. Per Dominum."
+        }
+
       }
     },
-    "versicle": [
-      " Deus, in nomine tuo salvum me fac.",
-      " Et in virtute tua libera me."
-    ],
-    "kyrie": ["Kyrie eleison."],
-  
-    "oratio": {
-      "default": "Dirigere et sanctificare, regere et gubernare digneris, Domine, corda et corpora nostra in viam pacis. Per Christum Dominum nostrum. Amen.",
-      "feasts": {
-        "natal": "Deus, qui hanc sacratissimam noctem veri luminis fecisti illustratione clarescere, da nobis in terra prospera, et in caelis gaudia sempiterna. Per Dominum.",
-        "pascha": "Deus, qui hodierna die per Unigenitum tuum aeternitatis nobis aditum devicta morte reserasti, vota nostra benigno prosequere. Per eundem Dominum.",
-        "pentecost": "Deus, qui hodierna die corda fidelium Sancti Spiritus illustratione docuisti, da nobis in eodem Spiritu recta sapere, et de eius semper consolatione gaudere. Per Dominum.",
-        "apostle": "Deus, qui nos apostolicis institutionibus erudis, praesta quaesumus, ut apostolorum tuorum gloriosis actibus instruamur et exemplis. Per Dominum.",
-        "martyr": "Deus, qui nos sanctorum Martyrum tuorum N. et N. confessione gloriosa circumdas et protegis, praesta nobis ex eorum imitatione proficere, et orationibus sublevari. Per Dominum.",
-        "virgin": "Deus, qui inter cetera potentiae tuae miracula etiam in sexu fragili victoriam martyrii contulisti, concede ut qui beatae N. Virginis et Martyris tuae natalitia celebramus, per eius ad te exempla gradiamur. Per Dominum."
-      }
-
-    }
-  },
-    
+      
     "terce": {
       "introit": [
         "℣. Deus in adjutorium meum intende.",

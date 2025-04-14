@@ -34,8 +34,8 @@ final class HoursServiceTests: XCTestCase {
 
         // Test the structure of the returned Hour object
         XCTAssertFalse(prime.introit.isEmpty)
-        // I want hymn to be empty for prime
-        XCTAssertTrue(prime.hymn?.isEmpty ?? true)
+        // There's hymn in prime
+        XCTAssertFalse(prime.hymn?.isEmpty ?? true)
 
         // Test Capitulum
         switch prime.capitulum {    
@@ -45,6 +45,19 @@ final class HoursServiceTests: XCTestCase {
                 
             case .simple(let lines):
             XCTAssertFalse(lines.isEmpty, "Simple capitulum should not be empty")
+             
+            default:
+            XCTFail("Unexpected case: \(prime.capitulum)")
+        }
+        switch prime.versicle {    
+            case .structured(let data):
+                XCTAssertFalse(data.default.isEmpty, "Default versicle should not be empty")
+                XCTAssertNotNil(data.feasts?["pascha"], "Easter versicle should exist")
+                
+            case .simple(let lines):
+            XCTAssertFalse(lines.isEmpty, "Simple versicle should not be empty")
+            default:
+            XCTFail("Unexpected case: \(prime.versicle)")
         }
          
         switch prime.oratio {
@@ -54,9 +67,12 @@ final class HoursServiceTests: XCTestCase {
         case .simple(let lines):
             XCTAssertFalse(lines.isEmpty, "Simple oratio should not be empty")
         }
-        // Test Oratio
-       
-    
+        
+        // kyrie is not empty
+        XCTAssertFalse(prime.kyrie?.isEmpty ?? true, "Kyrie is not empty")
+
+        // dismissal is emptry
+        XCTAssertTrue(prime.dismissal?.isEmpty ?? true, "dismissal is empty")
     }
     func testPrimePsalmsForAllDays() {
         let testCases: [(weekday: String, expected: [PsalmUsage])] = [

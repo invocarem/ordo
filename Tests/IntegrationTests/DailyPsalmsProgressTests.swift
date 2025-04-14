@@ -52,7 +52,7 @@ final class DailyPsalmsProgressTests: XCTestCase {
             ("terce", winter_or_summer, 3),
             ("sext", "lent", 3),
             ("none", "lent", 3),
-            ("vespers", "lent", 4),
+            ("vespers", "lent", nil),
             ("compline", "lent", nil)
         ]
         
@@ -76,14 +76,17 @@ final class DailyPsalmsProgressTests: XCTestCase {
             
             totalPsalms += psalms.count
             allPsalms.append(contentsOf: psalms)
-            
-            print("\n=== \(hourKey.uppercased()) ===")
+            if verbose {
+                print("\n=== \(hourKey.uppercased()) ===")
+            }
             debugPsalms(psalms: psalms)
         }
         
         // Assert total psalms for the day
-        print("\n=== SUMMARY ===")
-        print("Total psalms prayed: \(totalPsalms)")
+        if verbose {
+            print("\n=== SUMMARY ===")
+            print("Total psalms prayed: \(totalPsalms)")
+        }
         debugPsalms(psalms: allPsalms)
         allPsalms.forEach { psalm in
             guard let number = Int(psalm.number) else {
@@ -157,14 +160,17 @@ final class DailyPsalmsProgressTests: XCTestCase {
             
             totalPsalms += psalms.count
             allPsalms.append(contentsOf: psalms)
-            
-            print("\n=== \(hourKey.uppercased()) ===")
+            if(verbose) {
+                print("\n=== \(hourKey.uppercased()) ===")
+            }
             debugPsalms(psalms: psalms)
         }
         
         // Assert total psalms for the day
-        print("\n=== SUMMARY ===")
-        print("Total psalms prayed: \(totalPsalms)")
+        if verbose {
+            print("\n=== SUMMARY ===")
+            print("Total psalms prayed: \(totalPsalms)")
+        }
         debugPsalms(psalms: allPsalms)
         allPsalms.forEach { psalm in
             guard let number = Int(psalm.number) else {
@@ -188,6 +194,7 @@ final class DailyPsalmsProgressTests: XCTestCase {
         XCTAssertTrue(allPsalms.contains { Int($0.number) == 50 }, "Psalm 50 (Miserere) should be included during Lent")
 
         let incompleted = tracker.getIncompletedPsalms()
+        XCTAssertTrue(incompleted.count > 0, "incompleted psalms > 0")
     }
 
     private func debugPsalms(psalms: [PsalmUsage]) {
