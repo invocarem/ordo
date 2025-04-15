@@ -9,7 +9,7 @@ struct ProgressSummaryView: View {
     let liturgicalDay: LiturgicalDay?
     @State private var dayPsalms: [PsalmUsage] = [] // Hour key to psalms mapping
     @State private var showResetConfirmation = false
-     @State private var weeklyIncompletePsalms: [PsalmProgress] = []
+     @State private var weeklyIncompletePsalms: [PsalmUsage] = []
     
     var body: some View {
         let overall = tracker.overallProgress()
@@ -25,17 +25,18 @@ struct ProgressSummaryView: View {
                         PsalmsOfDayView(
                             psalms: dayPsalms,
                             tracker: tracker,
-                            onSelect: { selectedPsalm = $0 }
+                            onSelect: { selectedPsalm = $0 },
+                            title: "Psalms of the Day"
                         )
                     }
-
+                   
                     // Weekly Incomplete Psalms Section
                     if !weeklyIncompletePsalms.isEmpty {
-                        psalmsSection(
-                            title: "Weekly Incomplete Psalms",
-                            count: weeklyIncompletePsalms.count,
+                        PsalmsOfDayView(
                             psalms: weeklyIncompletePsalms,
-                            color: .orange
+                            tracker: tracker,
+                            onSelect: { selectedPsalm = $0 },
+                            title: "Weekly Incomplete Psalms"
                         )
                     }
                             
@@ -92,6 +93,7 @@ struct ProgressSummaryView: View {
             }
             .onAppear {
                 loadDayPsalms()
+                print ("load weekly incomplete psalms...")
                 loadWeeklyIncompletePsalms()
             }
             
@@ -207,15 +209,16 @@ struct ProgressSummaryView: View {
             ("lauds", liturgicalDay.benedictineSeason.description),
             ("prime", liturgicalDay.benedictineSeason.description),
             ("terce", liturgicalDay.benedictineSeason.description),
-            ("sext", liturgicalDay.season.description),
-            ("none", liturgicalDay.season.description),
-            ("vespers", liturgicalDay.season.description),
-            ("compline", liturgicalDay.season.description)
+            ("sext", liturgicalDay.benedictineSeason.description),
+            ("none", liturgicalDay.benedictineSeason.description),
+            ("vespers", liturgicalDay.benedictineSeason.description),
+            ("compline", liturgicalDay.benedictineSeason.description)
         ]
          var allPsalms: [PsalmUsage] = []
        
         
         for (hourKey, season) in canonicalHours {
+            print ("hourKey: \(hourKey) benedictineSeason: \(season) liturgicalDay.weekday: \(liturgicalDay.weekday)")
             if let psalms = hoursService.getPsalmsForWeekday(
                 weekday: liturgicalDay.weekday,
                 hourKey: hourKey,
@@ -229,48 +232,65 @@ struct ProgressSummaryView: View {
          dayPsalms = allPsalms
     }
     private func loadWeeklyIncompletePsalms() {
-    guard let currentDay = liturgicalDay else { return }
-    let currentWeekday = currentDay.weekday
-    
-    var weeklyIncomplete: [PsalmProgress] = []
-    
-    for day in 0...currentWeekday {
-        let canonicalHours = [
-            ("matins", currentDay.benedictineSeason.description),
-            ("lauds", currentDay.benedictineSeason.description),
-            ("prime", currentDay.benedictineSeason.description),
-            ("terce", currentDay.benedictineSeason.description),
-            ("sext", currentDay.season.description),
-            ("none", currentDay.season.description),
-            ("vespers", currentDay.season.description),
-            ("compline", currentDay.season.description)
-        ]
+        guard let currentDay = liturgicalDay else { return }
         
-        for (hourKey, season) in canonicalHours {
-            if let psalms = hoursService.getPsalmsForWeekday(
-                weekday: day,
-                hourKey: hourKey,
-                season: season
-            ) {
-                for psalm in psalms {
-                    let (baseNumber, section) = parsePsalmNumber(psalm.number)
-                    
-                    // Check if this psalm is incomplete using the tracker
-                    if let progress = tracker.getProgress(number: baseNumber, section: section) {
-                        if !progress.isCompleted {
-                            weeklyIncomplete.append(progress)
+        let currentWeekday = currentDay.weekday // This is a string like "Sunday", "Monday", etc.
+        
+        var weeklyIncomplete: [PsalmUsage] = []
+        
+        // Define weekday names in order (Sunday to Saturday)
+        let weekdayNames = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+        
+        // Find the index of the current weekday
+        guard let currentWeekdayIndex = weekdayNames.firstIndex(of: currentWeekday) else {
+            return // Exit if currentWeekday is invalid
+        }
+        
+        // Iterate over days from Sunday (0) to currentWeekday
+        for day in 0...currentWeekdayIndex {
+            let weekdayName = weekdayNames[day] // Get the weekday name for this day
+            
+            let canonicalHours = [
+                ("matins", currentDay.benedictineSeason.description),
+                ("lauds", currentDay.benedictineSeason.description),
+                ("prime", currentDay.benedictineSeason.description),
+                ("terce", currentDay.benedictineSeason.description),
+                ("sext", currentDay.benedictineSeason.description),
+                ("none", currentDay.benedictineSeason.description),
+                ("vespers", currentDay.benedictineSeason.description),
+                ("compline", currentDay.benedictineSeason.description)
+            ]
+            
+            for (hourKey, season) in canonicalHours {
+                if let psalms = hoursService.getPsalmsForWeekday(
+                    weekday: weekdayName,
+                    hourKey: hourKey,
+                    season: season
+                ) {
+                    for psalm in psalms {
+                        print("psalm \(psalm.number) \(psalm.category ?? "unknown")")
+                        // Check if this psalm is incomplete using the tracker
+                        if let progress = tracker.getProgress(number: Int(psalm.number)!,
+                                                             section: psalm.category) {
+                            print("progress \(progress.isCompleted)")
+                            if !progress.isCompleted {
+                                weeklyIncomplete.append(psalm)
+                            }
+                        } else {
+                            // If no progress exists, it's considered incomplete
+                            weeklyIncomplete.append(psalm)
                         }
-                    } else {
-                        // If no progress exists, it's considered incomplete
-                        weeklyIncomplete.append(PsalmProgress(number: baseNumber, section: section))
                     }
                 }
             }
         }
+        
+        weeklyIncompletePsalms = weeklyIncomplete
     }
+   
+        
+        
     
-    weeklyIncompletePsalms = weeklyIncomplete
-}
     
     
 

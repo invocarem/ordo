@@ -11,6 +11,7 @@ struct PsalmsOfDayView: View {
     let psalms: [PsalmUsage]
     @ObservedObject var tracker: PsalmObservableTracker
     let onSelect: (PsalmProgress) -> Void
+    let title: String
     
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -23,7 +24,7 @@ struct PsalmsOfDayView: View {
     }
     
     private var headerView: some View {
-        Text("Psalms of the Day")
+        Text(title)
             .font(.headline)
     }
     
