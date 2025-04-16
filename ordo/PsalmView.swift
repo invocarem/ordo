@@ -16,11 +16,16 @@ struct PsalmView: View {
     @State private var errorMessage: String?
     @State private var isCompleted: Bool = false
     
+    // Gloria Patri configuration
+    private var shouldShowGloria: Bool {        
+        !(Int(psalm.number) == 115)
+    }
+    
     var body: some View {
         PrayerSectionView(
             title: psalmHeader,
-            content: psalmContent,
-            contentB: englishContent.isEmpty ? nil : englishContent,
+            content: psalmContent + (shouldShowGloria ? LiturgicalConstants.gloriaPatri : []),
+            contentB: englishContent.isEmpty ? nil : (englishContent + (shouldShowGloria ? LiturgicalConstants.gloriaPatriEnglish : [])),
             showToggle: true,
             isCompleted: Binding<Bool>(
                 get: { isCompleted },
@@ -101,6 +106,22 @@ struct PsalmView: View {
         }
     }
 }
+
+// MARK: - Constants
+private enum LiturgicalConstants {
+    static let gloriaPatri = [
+        "𝄆 Gloria Patri, et Filio, et Spiritui Sancto.",
+        "Sicut erat in principio, et nunc, et semper,",
+        "et in saecula saeculorum. Amen. 𝄇"
+    ]
+    
+    static let gloriaPatriEnglish = [
+        "𝄆 Glory be to the Father, and to the Son, and to the Holy Spirit.",
+        "As it was in the beginning, is now, and ever shall be,",
+        "world without end. Amen. 𝄇"
+    ]
+}
+
 struct StandalonePsalmView: View {
     let psalm: PsalmUsage
     let psalmService: PsalmService

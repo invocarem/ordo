@@ -504,15 +504,11 @@
     },
     "compline": {
       "introit": [
-        "℣Deus in adjutorium meum intende.",
-        "℟Domine ad adjuvandum me festina."
+        "℣. Deus in adjutorium meum intende.",
+        "℟. Domine ad adjuvandum me festina."
       ],
       "psalms": {
-        "default": [
-          "4",
-          "90",
-          "133"
-        ]
+        "default": [ "4", "90", "133" ]
       },
       "hymn":  {
           "default": [
@@ -574,7 +570,7 @@
         "℣. Benedicamus Domino." ,
         " ℟. Deo gratias."]
       ,
-      "notes": "psalms, hymn, lesson (capitulumn), versicle, kyrie, oratio(blessing), end"
+      "notes": "psalms (no antiphons), hymn, lesson (capitulumn), versicle, kyrie, oratio(blessing), end"
     }
 
     

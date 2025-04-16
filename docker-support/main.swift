@@ -149,8 +149,6 @@ func printHourIntro(hour: Hour, liturgicalInfo: LiturgicalDay) {
     }
 }
 
-
-
 func printPsalm(_ psalm: PsalmUsage, using service: PsalmService) {
     // Print psalm header with better spacing
     var headerParts = [String]()
@@ -159,8 +157,6 @@ func printPsalm(_ psalm: PsalmUsage, using service: PsalmService) {
     if let category = psalm.category, !category.isEmpty {
         headerParts.append("(\(category))")
     }
-    
-   
     
     print("\n" + headerParts.joined(separator: " "))
     
@@ -207,6 +203,16 @@ func printPsalm(_ psalm: PsalmUsage, using service: PsalmService) {
             }
         }
         
+        // ===== ADDED: GLORIA PATRI =====       
+        let isCombinedPsalm115_116 = psalmNumber == 115 
+        
+        if !isCombinedPsalm115_116 {
+            LiturgicalConstants.gloriaPatri.forEach { line in
+                print("  \(line)")  // Maintain consistent indentation
+            }
+        }
+        // ===============================
+        
     } catch PsalmError.invalidNumberFormat(let number) {
         print("\n⚠️ Invalid psalm number format: '\(number)'")
     } catch PsalmError.versesNotFound(let number) {
@@ -217,6 +223,7 @@ func printPsalm(_ psalm: PsalmUsage, using service: PsalmService) {
     
     print()  // Extra new line after each psalm
 }
+
 
 func printPrayers(hour: Hour, liturgicalInfo: LiturgicalDay) {
     // Print Capitulum
@@ -275,4 +282,18 @@ extension LiturgicalText {
             return data.default
         }
     }
+}
+public enum LiturgicalConstants {
+    public static let gloriaPatri = [
+        "𝄆 Gloria Patri, et Filio, et Spiritui Sancto.", 
+        "Sicut erat in principio, et nunc, et semper,",  
+        "et in saecula saeculorum. Amen. 𝄇"                          
+    ]
+    
+    // Optional: English translation version
+    public static let gloriaPatriEnglish = [
+        "𝄆 Glory be to the Father, and to the Son, and to the Holy Spirit.",
+        "As it was in the beginning, is now, and ever shall be,",
+        "world without end. Amen. 𝄇"
+    ]
 }
