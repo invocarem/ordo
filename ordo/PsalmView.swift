@@ -15,30 +15,40 @@ struct PsalmView: View {
     @State private var englishContent: [String] = []
     @State private var errorMessage: String?
     @State private var isCompleted: Bool = false
-    
+    private var shouldShowAlleuia: Bool{
+        (Int(psalm.number) == 50 || Int(psalm.number) == 148 || Int(psalm.number) == 150)
+    }
     // Gloria Patri configuration
     private var shouldShowGloria: Bool {        
         !(Int(psalm.number) == 115)
     }
     
     var body: some View {
-        PrayerSectionView(
-            title: psalmHeader,
-            content: psalmContent + (shouldShowGloria ? LiturgicalConstants.gloriaPatri : []),
-            contentB: englishContent.isEmpty ? nil : (englishContent + (shouldShowGloria ? LiturgicalConstants.gloriaPatriEnglish : [])),
-            showToggle: true,
-            isCompleted: Binding<Bool>(
-                get: { isCompleted },
-                set: { newValue in
-                    isCompleted = newValue
-                    observableTracker.markPsalm(
-                        number: Int(psalm.number) ?? 0,
-                        section: psalm.category,
-                        completed: newValue
-                    )
-                }
+        VStack(alignment: .leading) {
+            PrayerSectionView(
+                title: psalmHeader,
+                content: psalmContent + (shouldShowGloria ? LiturgicalConstants.gloriaPatri : []),
+                contentB: englishContent.isEmpty ? nil : (englishContent + (shouldShowGloria ? LiturgicalConstants.gloriaPatriEnglish : [])),
+                showToggle: true,
+                isCompleted: Binding<Bool>(
+                    get: { isCompleted },
+                    set: { newValue in
+                        isCompleted = newValue
+                        observableTracker.markPsalm(
+                            number: Int(psalm.number) ?? 0,
+                            section: psalm.category,
+                            completed: newValue
+                        )
+                    }
+                )
             )
-        )
+            if shouldShowAlleuia {
+                Text("Alleluia")
+                    .italic()
+                    .foregroundColor(.orange)
+                    .padding(.top, 4)
+            }
+        }
         .onAppear {
             loadPsalmContent()
             loadCompletionState()
@@ -108,17 +118,13 @@ struct PsalmView: View {
 }
 
 // MARK: - Constants
-private enum LiturgicalConstants {
+public enum LiturgicalConstants {
     static let gloriaPatri = [
-        "𝄆 Gloria Patri, et Filio, et Spiritui Sancto.",
-        "Sicut erat in principio, et nunc, et semper,",
-        "et in saecula saeculorum. Amen. 𝄇"
+        "Gloria Patri, et Filio, et Spiritui Sancto. Sicut erat in principio, et nunc, et semper, et in saecula saeculorum. Amen."
     ]
     
     static let gloriaPatriEnglish = [
-        "𝄆 Glory be to the Father, and to the Son, and to the Holy Spirit.",
-        "As it was in the beginning, is now, and ever shall be,",
-        "world without end. Amen. 𝄇"
+        "Glory be to the Father, and to the Son, and to the Holy Spirit. As it was in the beginning, is now, and ever shall be, world without end. Amen."
     ]
 }
 

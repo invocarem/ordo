@@ -44,10 +44,9 @@ final class HoursServiceTests: XCTestCase {
                 XCTAssertNotNil(data.feasts?["pascha"], "Easter capitulum should exist")
                 
             case .simple(let lines):
-            XCTAssertFalse(lines.isEmpty, "Simple capitulum should not be empty")
-             
+            XCTAssertFalse(lines.isEmpty, "Simple capitulum should not be empty")            
             default:
-            XCTFail("Unexpected case: \(prime.capitulum)")
+            XCTFail("Unexpected case for prime capitulum")
         }
         switch prime.versicle {    
             case .structured(let data):
@@ -57,7 +56,7 @@ final class HoursServiceTests: XCTestCase {
             case .simple(let lines):
             XCTAssertFalse(lines.isEmpty, "Simple versicle should not be empty")
             default:
-            XCTFail("Unexpected case: \(prime.versicle)")
+            XCTFail("Unexpected case for prime versicale)")
         }
          
         switch prime.oratio {

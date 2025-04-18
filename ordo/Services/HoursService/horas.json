@@ -26,31 +26,137 @@
           }
       },
       "hymn": {
-        "default": "Te Deum laudamus",
-        "lent": "Audi benigne Conditor"
-      },
-      "capitulum": {
-        "default": "Tu autem, Domine, miserere nobis.",
-        "advent": "Excita, Domine, potentiam tuam, et veni."
-      },
-      "oratio": {
-        "default": "Aperi, Domine, os meum ad benedicendum nomen sanctum tuum...",
+        "default": ["Primo dierum omnium",
+            "Quo mundus exstat conditus",
+            "Vel quo resurgens conditor",
+            "Nos morte victa liberat."],
+        "lent": "Audi benigne Conditor",
         "feasts": {
-          "natal": "Deus, qui hanc sacratissimam noctem veri luminis fecisti illustratione clarescere..."
+            "natal": [
+                
+                "Jesu, redemptor omnium",
+                "Quem lucis ante originem",
+                "Parem paternae gloriae",
+                "Pater supremus edidit."
+            ],
+            "epiphany":[
+                "Illuminans Altissimus",
+                "Stella duce visi magi",
+                "Offerunt aurum, tus, myrrham",
+                "Regi nato in Bethlehem."
+                
+            ],
+            "pascha": [
+                "Rex aeterna domine",
+                "Rerum creator omnium",
+                "Qui eras ante saecula",
+                "Semper cum patre filius."
+            ],
+            "pentecost" :[
+                "Jam Christus astra ascenderat",
+                "Rediens post victoriam",
+                "Spiritum sanctum emittens",
+                "Patris promissa gloria."
+                
+            ],
+            "martyr": [
+                "Primo dierum omnium,",
+                "Quo mundus exstat conditus,",
+                "Vel quo resurgens conditor,",
+                "Nos morte victa liberat."
+            ],
+            "virgin": [
+                "Primo dierum omnium,",
+                "Quo mundus exstat conditus,",
+                "Vel quo resurgens conditor,",
+                "Nos morte victa liberat."
+            ]
         }
       },
-      "canticle": {
-        "number": "Dan3:56-57,Dan3:58-88,PS148-150",
-        "title": "Sunday Canticles",
-        "source": "Daniel 3 + Psalm 148-150",
-        "antiphon": "In sanctis ejus laudate Deum",
-        "verses": [
-          "Benedicite, omnia opera Domini, Domino...", 
-          "Benedicite, angeli Domini, Domino...", 
-          "Laudate Dominum de caelis"
-        ]
-      }
-      ,
+      "lessons": {
+        "default": [
+          {
+            "source": "1 John 1:1-7",
+            "text": "Quod fuit ab initio..."
+          }
+        ],
+        "feasts": {
+          "pascha": [
+            {
+              "source": "Mark 16:1-8",
+              "text": "Maria Magdalene venit..."
+            }
+          ]
+        }
+      },
+      "capitulum": {
+          "default": "Scio cui credidi, et certus sum quia potens est depositum meum servare in illum diem.",
+          "advent": "Excita, Domine, potentiam tuam, et veni.",
+          "feasts": {
+            "natal": "Hodie Christus natus est nobis.",
+            "epiphany": "Ecce advenit dominator Dominus.",
+            "pascha": "Christus resurgens ex mortuis iam non moritur.",
+            "pentecost": "Spiritus Domini replevit orbem terrarum.",
+            "apostle": "Vos estis lux mundi.",
+            "martyr": "Justorum animae in manu Dei sunt.",
+            "virgin": "Haec est virgo sapiens quam Dominus vigilantem invenit."
+          }
+        },
+      "versicle": {
+         "default": [
+           "℣. Surrexit Dominus vere",
+           "℟. Alleluia"
+         ],
+         "feasts": {
+           "pascha": [
+             "℣. Haec dies quam fecit Dominus",
+             "℟. Exsultemus et laetemur in ea"
+           ]
+         }
+       },
+      "oratio": {
+         "default": "Aperi, Domine, os meum ad benedicendum nomen sanctum tuum, et custodi cor meum et corpus meum, ut in tua voluntate permaneam nocte hac et semper. Per Christum Dominum nostrum. Amen.",
+         "lent": "Domine Deus, qui per quadragesimale jejunium corda nostra purificas, concede ut in tua voluntate nocte hac vigilantes laudemus te. Per Christum Dominum nostrum. Amen.",
+         "feasts": {
+           "natal": "Deus, qui hanc sacratissimam noctem veri luminis fecisti illustratione clarescere, da nobis in nocte hac laudem tuam resonare. Per eundem Dominum.",
+           "epiphany": "Deus, qui hodierna die Unigenitum tuum gentibus stella duce revelasti, concede ut in nocte hac te laudemus. Per eundem Dominum.",
+           "pascha": "Deus, qui resurrectione Filii tui mundum illuminasti, concede ut in nocte hac gloriam tuam celebremus. Per eundem Dominum.",
+           "pentecost": "Deus, qui hodierna die corda fidelium Sancti Spiritus illustratione docuisti, da nobis in nocte hac in eodem Spiritu te laudare. Per Dominum.",
+           "apostle": "Domine, qui apostolos tuos elegisti, concede ut eorum intercessione nocte hac tua misericordia nos protegat. Per Dominum.",
+           "martyr": "Deus, qui sanctorum martyrum fortitudine nos protegis, fac ut in nocte hac eorum exempla laudemus. Per Dominum.",
+           "virgin": "Deus, qui virginum castitate glorificaris, concede ut in nocte hac earum intercessione te magnificemus. Per Dominum."
+         }
+       },
+     
+     "canticle": {
+        "sunday": {
+          "number": "Dan3:57-88,PS148-150",
+          "title": "Sunday Canticles",
+          "source": "Daniel 3:57-88, Psalms 148-150",
+          "antiphon": "In sanctis ejus laudate Deum",
+          "verses": [
+            "Benedicite, omnia opera Domini, Domino...",
+            "Benedicite, angeli Domini, Domino...",
+            "Laudate Dominum de caelis..."
+          ]
+        },
+        "feasts": {
+          "pascha": {
+            
+              "number": "Ex15:1-19,PS148-150",
+              "title": "Easter Sunday Canticle",
+              "source": "Exodus 15:1-19, Psalms 148-150",
+              "antiphon": "Cantemus Domino gloriam",
+              "verses": [
+                "Cantemus Domino: gloriose enim magnificatus est...",
+                "Laudate Dominum de caelis..."
+              ]
+          }
+          
+        },
+        "notes": "Sunday and Pascha Sunday only; weekdays use psalms only."
+      },
+      
       "notes" : ""
     },
     

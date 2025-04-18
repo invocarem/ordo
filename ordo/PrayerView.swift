@@ -28,7 +28,8 @@ struct PrayerView: View {
                             
                     }
                     // Display Hymn if it exists
-                    if let hymn = hour.hymn {
+                    
+                    if let hymn = hour.hymn,  hourName != "Compline" {
                         let hymnText = hymn.getAppropriateText(for: liturgicalInfo)
                         if !hymnText.isEmpty {
                            PrayerSectionView(title: "🎶 Hymn", content: hymnText)
@@ -42,14 +43,20 @@ struct PrayerView: View {
                             ForEach(psalms) { psalm in
                                 PsalmView(psalm: psalm, psalmService: psalmService)
                                     .environmentObject(observableTracker)
-                                    .debugPrint(psalm)
+                                    //.debugPrint(psalm)
                                     .background(Color.gray.opacity(0.1))
                                     
                                     
                             }
                         
                     }
-                    
+                    if let hymn = hour.hymn,  hourName == "Compline" {
+                        let hymnText = hymn.getAppropriateText(for: liturgicalInfo)
+                        if !hymnText.isEmpty {
+                           PrayerSectionView(title: "🎶 Hymn", content: hymnText)
+                               .padding(.bottom)
+                        }
+                    }
                    
                     
                     
@@ -85,19 +92,6 @@ struct PrayerView: View {
         }
         .navigationTitle(hourName) // Dynamic title
     }
-    
-    // Add this helper function to your PrayerView
-    private func getHymnContent(hymn: HymnUnion) -> [String] {
-        switch hymn {
-        case .lines(let lines):
-            return lines
-        case .structured(let data):
-            // Here you could add logic to check liturgicalInfo for seasons/feasts
-            // and return the appropriate text
-            return data.default
-        }
-    }
-
     
     // New helper methods
     private func getPsalms(hour: Hour) -> [PsalmUsage]? {

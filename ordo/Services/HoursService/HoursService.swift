@@ -122,6 +122,7 @@ public typealias Hymn = LiturgicalText
 public typealias Versicle = LiturgicalText
 public typealias Capitulum = LiturgicalText
 public typealias Oratio = LiturgicalText
+public typealias Lesson = LiturgicalText
 
 public struct LiturgicalRule<T: Codable>: Codable {
     public let `default`: T
@@ -167,6 +168,7 @@ public struct Hour: Codable {
     public let hymn: Hymn?
     public let capitulum: Capitulum
     public let versicle: Versicle?
+    public let lesson: Lesson?
     public let oratio: Oratio
     public let kyrie: [String?]?
     public let canticle: Canticle?
@@ -176,70 +178,31 @@ public struct Hour: Codable {
     public let benedictus: Benedictus?
     public let dismissal: [String?]?
 }
-public enum HymnUnion: Codable {
-    case lines([String])
-    case structured(HymnData)
-    
-    public struct HymnData: Codable {
-        public let `default`: [String]
-        public let seasons: [String: [String]]?
-        public let feasts: [String: [String]]?
-
-        private enum CodingKeys: String, CodingKey {
-            case `default` = "default"
-            case seasons
-            case feasts
-        }
-
-        // Custom decoding to handle both String and [String] for `default`
-        public init(from decoder: Decoder) throws {
-            let container = try decoder.container(keyedBy: CodingKeys.self)
-            
-            // Try decoding as [String] first, fall back to String if needed
-            if let array = try? container.decode([String].self, forKey: .default) {
-                self.default = array
-            } else if let singleString = try? container.decode(String.self, forKey: .default) {
-                self.default = [singleString] // Convert String to [String]
-            } else {
-                throw DecodingError.typeMismatch(
-                    [String].self,
-                    DecodingError.Context(
-                        codingPath: [CodingKeys.default],
-                        debugDescription: "Expected `default` to be either String or [String]"
-                    )
-                )
-            }
-            
-            self.seasons = try container.decodeIfPresent([String: [ String]].self, forKey: .seasons)
-            self.feasts = try container.decodeIfPresent([String: [String]].self, forKey: .feasts)
-        }
-    }
-    
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.singleValueContainer()
-        if let lines = try? container.decode([String].self) {
-            self = .lines(lines)
-        } else {
-            let data = try container.decode(HymnData.self)
-            self = .structured(data)
-        }
-    }
-    
-    public var isEmpty: Bool {
-        switch self {
-        case .lines(let array): return array.isEmpty
-        case .structured: return false
-        }
-    }
-}
-
 public struct Canticle: Codable {
-    public let number: String
-    public let title: String?
-    public let source: String?
-    public let antiphon: String?
-    public let verses: [String?]? 
+    public let sunday: CanticleDetails?
+    public let feasts: [String: CanticleDetails]?
+    public let notes: String?
+    public struct CanticleDetails: Codable {
+        public let number: String
+        public let title: String?
+        public let source: String?
+        public let antiphon: String?
+        public let verses: [String]?
+    }
+    public func getCanticle(for feast: String? = nil, weekday: String? = nil) -> CanticleDetails? {
+          if let feast = feast, let feastCanticle = feasts?[feast] {
+              return feastCanticle
+          }
+          
+          if let weekday = weekday?.lowercased(), weekday == "sunday" {
+              return sunday
+          }
+          
+          return nil
+      }
 }
+
+
 // for six century no need this
 public struct Magnificat: Codable {
     public let antiphon: String  // The framing antiphon text
