@@ -45,8 +45,7 @@ final class HoursServiceTests: XCTestCase {
                 
             case .simple(let lines):
             XCTAssertFalse(lines.isEmpty, "Simple capitulum should not be empty")            
-            default:
-            XCTFail("Unexpected case for prime capitulum")
+            
         }
         switch prime.versicle {    
             case .structured(let data):
