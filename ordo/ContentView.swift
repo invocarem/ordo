@@ -14,7 +14,7 @@ struct ContentView: View {
     
     @Environment(\.psalmService) private var psalmService
     @EnvironmentObject private var progressTracker: PsalmObservableTracker
-    @State private var selectedHour = "prime"
+    @State private var selectedHour = getCurrentHour()
     
     var body: some View {
         TabView(selection: $selectedTab) {
@@ -161,6 +161,31 @@ struct ContentView: View {
                 .multilineTextAlignment(.center)
         }
     }
+    private static func getCurrentHour() -> String {
+           let calendar = Calendar.current
+           let now = Date()
+           let components = calendar.dateComponents([.hour, .minute], from: now)
+           let totalMinutes = (components.hour ?? 0) * 60 + (components.minute ?? 0)
+           
+           switch totalMinutes {
+           case 150..<300:     // 2:30 AM–5:00 AM: Matins
+               return "matins"
+           case 300..<420:     // 5:00 AM–7:00 AM: Lauds
+               return "lauds"
+           case 420..<540:     // 7:00 AM–9:00 AM: Prime
+               return "prime"
+           case 540..<720:     // 9:00 AM–12:00 PM: Terce
+               return "terce"
+           case 720..<900:     // 12:00 PM–3:00 PM: Sext
+               return "sext"
+           case 900..<1140:    // 3:00 PM–7:00 PM: None
+               return "none"
+           case 1140..<1260:   // 7:00 PM–9:00 PM: Vespers
+               return "vespers"
+           default:            // 9:00 PM–2:30 AM: Compline
+               return "compline"
+           }
+       }
 }
 
 struct ErrorMessageView: View {

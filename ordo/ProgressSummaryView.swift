@@ -47,29 +47,11 @@ struct ProgressSummaryView: View {
                     // Overall Progress Card
                     overallProgressCard(completed: overall.completed, total: overall.total, percentage: completionPercentage)
                     
-                    // Completed Psalms Section
-                    if !completedPsalms.isEmpty {
-                        psalmsSection(
-                            title: "Completed Psalms",
-                            count: completedPsalms.count,
-                            psalms: completedPsalms,
-                            color: .blue
-                        )
-                    }
                     
-                    // Incomplete Psalms Section
-                    if !incompletePsalms.isEmpty {
-                        psalmsSection(
-                            title: "Incomplete Psalms",
-                            count: incompletePsalms.count,
-                            psalms: incompletePsalms,
-                            color: .gray
-                        )
-                    }
                     
-                    if !completedPsalms.isEmpty {
-                        resetButtonSection()
-                    }
+                    
+                    resetButtonSection()
+                    
                 }
                 .padding()
             }
@@ -268,24 +250,23 @@ struct ProgressSummaryView: View {
                     season: season
                 ) {
                     for psalm in psalms {
-                        print("psalm \(psalm.number) \(psalm.category ?? "unknown")")
-                        // Check if this psalm is incomplete using the tracker
-                        if let progress = tracker.getProgress(number: Int(psalm.number)!,
-                                                             section: psalm.category) {
-                            print("progress \(progress.isCompleted)")
-                            if !progress.isCompleted {
-                                weeklyIncomplete.append(psalm)
-                            }
-                        } else {
-                            // If no progress exists, it's considered incomplete
+                        let isCompleted = tracker.getProgress(
+                            number: Int(psalm.number)!,
+                            section: psalm.category
+                        )?.isCompleted ?? false
+                        
+                        if !isCompleted && !weeklyIncomplete.contains(where: { $0.uniqueID == psalm.uniqueID }) {
                             weeklyIncomplete.append(psalm)
                         }
                     }
+                    
                 }
             }
         }
         
-        weeklyIncompletePsalms = weeklyIncomplete
+        weeklyIncompletePsalms = weeklyIncomplete.sorted {
+                Int($0.number) ?? 0 < Int($1.number) ?? 0
+            }
     }
    
         
