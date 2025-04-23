@@ -5089,80 +5089,9 @@
             ],
             "verified": true
         },
+       
         {
             "number": 108,
-            "section": "",
-            "title": "Prayer Against False Accusers",
-            "text": [
-                "Deus, laudem meam ne tacueris, quia os peccatoris et os dolosi super me apertum est.",
-                "Locuti sunt adversum me lingua dolosa, et sermonibus odii circumdederunt me, et expugnaverunt me gratis.",
-                "Pro eo ut me diligerent, detrahebant mihi; ego autem orabam.",
-                "Et posuerunt adversum me mala pro bonis, et odium pro dilectione mea.",
-                "Constitue super eum peccatorem, et diabolus stet a dextris ejus.",
-                "Cum judicatur, exeat condemnatus; et oratio ejus fiat in peccatum.",
-                "Fiant dies ejus pauci, et episcopatum ejus accipiat alter.",
-                "Fiant filii ejus orphani, et uxor ejus vidua.",
-                "Nutantes transferantur filii ejus, et mendicent; ejiciantur de habitationibus suis.",
-                "Scrutetur fenerator omnem substantiam ejus, et diripiant alieni labores ejus.",
-                "Non sit illi adjutor, nec sit qui misereatur pupillis ejus.",
-                "Fiant nati ejus in interitum; in generatione una deleatur nomen ejus.",
-                "Memor sit iniquitatum patrum ejus in conspectu Domini, et peccatum matris ejus non deleatur.",
-                "Fiant contra Dominum semper, et dispereat de terra memoria eorum:",
-                "Pro eo quod non est recordatus facere misericordiam,",
-                "Et persecutus est hominem inopem et mendicum, et compunctum corde mortificare.",
-                "Et dilexit maledictionem, et veniet ei; et noluit benedictionem, et elongabitur ab eo.",
-                "Et induit maledictionem sicut vestimentum, et intravit sicut aqua in interiora ejus, et sicut oleum in ossibus ejus.",
-                "Fiat ei sicut vestimentum quo operitur, et sicut zona qua semper praecingitur.",
-                "Hoc opus eorum qui detrahunt mihi apud Dominum, et qui loquuntur mala adversus animam meam.",
-                "Et tu, Domine, Domine, fac mecum propter nomen tuum; quia suavis est misericordia tua.",
-                "Libera me quia egenus et pauper sum ego, et cor meum conturbatum est intra me.",
-                "Sicut umbra cum declinat, ablatus sum; et excussus sum sicut locusta.",
-                "Genua mea infirmata sunt a jejunio, et caro mea immutata est propter oleum.",
-                "Et ego factus sum opprobrium illis; videntes me moverunt capita sua.",
-                "Adjuva me, Domine Deus meus; salvum me fac secundum misericordiam tuam.",
-                "Et sciant quia manus tua haec, et tu, Domine, fecisti eam.",
-                "Maledicent illi, et tu benedices; qui insurgunt in me, confundantur, servus autem tuus laetabitur.",
-                "Induantur qui detrahunt mihi pudore, et operiantur sicut diploide confusione sua.",
-                "Confitebor Domino nimis in ore meo, et in medio multorum laudabo eum.",
-                "Quia astitit a dextris pauperis, ut salvam faceret a persequentibus animam meam."
-            ],
-            "englishText": [
-                "O God, be not thou silent in my praise: for the mouth of the wicked and the mouth of the deceitful man is opened against me.",
-                "They have spoken against me with deceitful tongues; and they have compassed me about with words of hatred; and have fought against me without cause.",
-                "Instead of making me a return of love, they detracted me: but I gave myself to prayer.",
-                "And they repaid me evil for good: and hatred for my love.",
-                "Set thou the sinner over him: and may the devil stand at his right hand.",
-                "When he is judged, may he go out condemned; and may his prayer be turned to sin.",
-                "May his days be few: and may another take his bishopric.",
-                "May his children be fatherless, and his wife a widow.",
-                "Let his children be carried about vagabonds, and beg; and let them be cast out of their dwellings.",
-                "May the usurer search all his substance: and let strangers plunder his labours.",
-                "May there be none to help him: nor none to pity his fatherless offspring.",
-                "May his posterity be cut off; in one generation may his name be blotted out.",
-                "May the iniquity of his fathers be remembered in the sight of the Lord: and let not the sin of his mother be blotted out.",
-                "May they be before the Lord continually, and let the memory of them perish from the earth:",
-                "Because he remembered not to show mercy,",
-                "But persecuted the poor man and the beggar; and the broken in heart, to put him to death.",
-                "And he loved cursing, and it shall come unto him: and he would not have blessing, and it shall be far from him.",
-                "And he put on cursing, like a garment: and it went in like water into his entrails, and like oil in his bones.",
-                "May it be unto him like a garment which covereth him; and like a girdle with which he is girded continually.",
-                "This is the work of them who detract me before the Lord; and who speak evils against my soul.",
-                "But thou, O Lord, do with me for thy name's sake: because thy mercy is sweet.",
-                "Deliver me, for I am poor and needy, and my heart is troubled within me.",
-                "I am taken away like the shadow when it declineth: and I am shaken off as locusts.",
-                "My knees are weakened through fasting: and my flesh is changed for oil.",
-                "And I am become a reproach to them: they saw me and they shaked their heads.",
-                "Help me, O Lord my God; save me according to thy mercy.",
-                "And let them know that this is thy hand: and that thou, O Lord, hast done it.",
-                "They will curse and thou wilt bless: let them that rise up against me be confounded: but thy servant shall rejoice.",
-                "Let them that detract me be clothed with shame: and let them be covered with their confusion as with a double cloak.",
-                "I will give great thanks to the Lord with my mouth: and in the midst of many I will praise him.",
-                "Because he hath stood at the right hand of the poor, to save my soul from persecutors."
-            ],
-            "verified": true
-        },
-        {
-            "number": 109,
             "section": "",
             "title": "A Prayer Against a Deceitful Enemy",
             "text": [
@@ -5236,7 +5165,7 @@
             "verified": true
         },
         {
-            "number": 110,
+            "number": 109,
             "section": "",
             "title": "The Messiah’s Reign and Priesthood",
             "text": [
@@ -5262,7 +5191,7 @@
         
         
         {
-            "number": 111,
+            "number": 110,
             "section": "",
             "title": "The Blessings of the Just",
             "text": [
@@ -5294,7 +5223,36 @@
             "verified": true            
         },
 
-        
+        {
+            "number": 111,
+            "section": "",
+            "title": "Blessed the Man Who Fears the Lord",
+            "text": [
+                "Beatus vir, qui timet Dominum; in mandatis ejus volet nimis.",
+                "Potens in terra erit semen ejus; generatio rectorum benedicetur.",
+                "Gloria et divitiae in domo ejus; et justitia ejus manet in saeculum saeculi.",
+                "Exortum est in tenebris lumen rectis; misericors, et miserator, et justus.",
+                "Jucundus homo, qui miseretur et commodat, disponet sermones suos in judicio:",
+                "Quia in aeternum non commovebitur.",
+                "In memoria aeterna erit justus; ab auditione mala non timebit.",
+                "Paratum cor ejus sperare in Domino, confirmatum est cor ejus; non commovebitur, donec despiciat inimicos suos.",
+                "Dispersit, dedit pauperibus; justitia ejus manet in saeculum saeculi, cornu ejus exaltabitur in gloria.",
+                "Peccator videbit, et irascetur; dentibus suis fremet et tabescet. Desiderium peccatorum peribit."
+            ],
+            "englishText": [
+                "Blessed is the man who fears the Lord, who greatly delights in his commandments!",
+                "His offspring will be mighty in the land; the generation of the upright will be blessed.",
+                "Wealth and riches are in his house, and his righteousness endures forever.",
+                "Light dawns in the darkness for the upright; he is gracious, merciful, and righteous.",
+                "It is well with the man who deals generously and lends, who conducts his affairs with justice.",
+                "For the righteous will never be moved; he will be remembered forever.",
+                "He is not afraid of bad news; his heart is firm, trusting in the Lord.",
+                "His heart is steady; he will not be afraid, until he looks in triumph on his adversaries.",
+                "He has distributed freely; he has given to the poor; his righteousness endures forever; his horn is exalted in honor.",
+                "The wicked man sees it and is angry; he gnashes his teeth and melts away; the desire of the wicked will perish!"
+            ],
+            "verified": true
+        },
         {
             "number": 112,
             "section": "",
