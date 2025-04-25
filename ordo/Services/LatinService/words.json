@@ -1,5 +1,24 @@
 [
     {
+        "lemma": "sum",
+        "part_of_speech": "verb",
+        "principal_parts": ["sum", "esse", "fui", "futurum"],
+        "forms": {
+          "present": ["sum", "es", "est", "sumus", "estis", "sunt"],
+          "imperative": ["es", "este"]
+        },
+        "translations": {"en": "be"}
+      },
+      {
+        "lemma": "facio",
+        "part_of_speech": "verb",
+        "principal_parts": ["facio", "facere", "feci", "factum"],
+        "forms": {
+          "imperative": ["fac", "facite"]  
+        },
+        "translations": {"en": "do, make"}
+      },
+    {
         "lemma": "laudo",
         "part_of_speech": "verb",
         "principal_parts": ["laudo", "laudare", "laudavi", "laudatum"],
