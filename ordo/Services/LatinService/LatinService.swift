@@ -2,6 +2,10 @@ import Foundation
 public struct LatinWordEntity: Codable {
     public let lemma: String
     public let partOfSpeech: String?  // New field: "noun", "verb", "pronoun" etc.
+ 
+    public let declension: Int? // 1-5
+    public let gender: String? // "masculine", "feminine", "neuter"
+
     public let nominative: String?
     public let dative: String?
     public let accusative: String?
@@ -14,13 +18,15 @@ public struct LatinWordEntity: Codable {
     public let infinitive: String?             // Principal part
     public let forms: [String: [String]]?      // Dictionary of form types to arrays
     
-
+    
     public let translations: [String: String]?
     
     
     public init(
         lemma: String,
         partOfSpeech: String? = nil,
+        declension: Int? = nil,
+        gender: String? = nil,
         nominative: String? = nil,
         dative: String? = nil,
         accusative: String? = nil,
@@ -29,10 +35,13 @@ public struct LatinWordEntity: Codable {
         possessive: [String: String]? = nil,
         perfect: String? = nil,
         infinitive: String? = nil,
-        forms: [String: [String]]? = nil
+        forms: [String: [String]]? = nil,
+        translations: [String: String]? = nil 
     ) {
         self.lemma = lemma
         self.partOfSpeech = partOfSpeech
+        self.gender = gender
+        self.declension = declension
         self.nominative = nominative
         self.dative = dative
         self.accusative = accusative
@@ -42,20 +51,135 @@ public struct LatinWordEntity: Codable {
         self.perfect = perfect
         self.infinitive = infinitive
         self.forms = forms
+        self.translations = translations
     }
     
     // CodingKeys for backward compatibility
     private enum CodingKeys: String, CodingKey {
         case lemma
         case partOfSpeech = "part_of_speech"
+        case gender
+        case declension
         case nominative, dative, accusative, genitive, ablative
         case possessive
         case perfect, infinitive, forms
+        case translations
     }
 
     public func getTranslation(_ language: String = "en") -> String? {
         return translations?[language] ?? translations?["la"] ?? lemma
     }
+    public var generatedForms: [String: String] {
+        guard let declension = declension, let nominative = nominative else { return [:] }
+        var forms = [String: String]()
+        let stem: String
+        
+        switch declension {
+        case 1: // -a (feminine)
+            let stem = String(nominative.dropLast())
+            forms["genitive"] = stem + "ae"
+            forms["dative"] = stem + "ae"
+            forms["accusative"] = stem + "am"
+            forms["ablative"] = stem + "ā"
+            
+        case 2 where gender == "neuter": // -um (neuter)
+            let stem = String(nominative.dropLast(2))
+            forms["genitive"] = stem + "i"
+            forms["dative"] = stem + "o"
+            forms["accusative"] = nominative // Same as nominative for neuters
+            forms["ablative"] = stem + "o"
+            forms["nominative_plural"] = stem + "a"
+            forms["genitive_plural"] = stem + "orum"
+
+             forms["nominative_plural"] = stem + "a"
+            forms["genitive_plural"] = stem + "orum"
+            forms["dative_plural"] = stem + "is"
+            forms["accusative_plural"] = stem + "a"
+            forms["ablative_plural"] = stem + "is"
+            
+        case 2: // -us (masculine)
+            let stem = String(nominative.dropLast())
+            forms["genitive"] = stem + "i"
+            forms["dative"] = stem + "o"
+            forms["accusative"] = stem + "um"
+            forms["ablative"] = stem + "o"
+        
+            forms["nominative_plural"] = stem + "i"
+            forms["genitive_plural"] = stem + "orum"
+            forms["dative_plural"] = stem + "is"
+            forms["accusative_plural"] = stem + "os"
+            forms["ablative_plural"] = stem + "is"
+            
+            
+        case 3 where gender == "neuter":
+            stem = String(nominative.dropLast(2)) // e.g. "nomen" -> "nomin"
+            forms["genitive"] = stem + "is"
+            forms["dative"] = stem + "i"
+            forms["accusative"] = nominative
+            forms["ablative"] = stem + "e"
+            forms["nominative_plural"] = stem + "a"
+            forms["genitive_plural"] = stem + "um"
+
+           // Plural
+            forms["nominative_plural"] = stem + "a"
+            forms["genitive_plural"] = stem + "um"
+            forms["dative_plural"] = stem + "ibus"
+            forms["accusative_plural"] = stem + "a"
+            forms["ablative_plural"] = stem + "ibus"
+            
+        case 3: // Masculine/Feminine
+            let genitive = self.genitive ?? "" // Require genitive to find stem
+            guard genitive.count > 2 else { break }
+            stem = String(genitive.dropLast(2)) // e.g. "regis" -> "reg"
+            forms["genitive"] = genitive
+            forms["dative"] = stem + "i"
+            forms["accusative"] = stem + "em"
+            forms["ablative"] = stem + "e"
+            forms["nominative_plural"] = stem + "es"
+            forms["genitive_plural"] = stem + "um"
+            
+        case 4 where gender == "neuter": // -u
+            stem = String(nominative.dropLast())
+            forms["genitive"] = stem + "ūs"
+            forms["dative"] = stem + "ū"
+            forms["accusative"] = nominative
+            forms["ablative"] = stem + "ū"
+            forms["nominative_plural"] = stem + "ua"
+            forms["genitive_plural"] = stem + "uum"
+
+             
+            forms["dative_plural"] = stem + "ibus"
+            forms["accusative_plural"] = stem + "ua"
+            forms["ablative_plural"] = stem + "ibus"
+            
+        case 4: // Masculine/Feminine -us
+            stem = String(nominative.dropLast(2))
+            forms["genitive"] = stem + "ūs"
+            forms["dative"] = stem + "uī"
+            forms["accusative"] = stem + "um"
+            forms["ablative"] = stem + "ū"
+            forms["nominative_plural"] = stem + "ūs"
+            forms["genitive_plural"] = stem + "uum"
+
+
+            forms["dative_plural"] = stem + "ibus"
+            forms["accusative_plural"] = stem + "ūs"
+            forms["ablative_plural"] = stem + "ibus"
+            
+        case 5:
+            stem = String(nominative.dropLast(2)) // "res" -> "r"
+             forms["nominative"] = nominative
+            forms["genitive"] = stem + "i"  // Simplified from "eī"
+            forms["dative"] = stem + "i"    // Simplified from "eī"
+            forms["accusative"] = stem + "em"
+            forms["ablative"] = stem + "e"  // Note: This one is truly just "e"
+                    
+        default:
+            break
+        }
+        return forms
+    }
+    
 }
 
 
@@ -174,12 +298,12 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
         .replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression)
         .trimmingCharacters(in: .whitespaces)
     
-    print("Normalized Text:", normalizedText) // Debug log
+    //print("Normalized Text:", normalizedText) // Debug log
     
     let words = normalizedText.components(separatedBy: .whitespaces)
         .filter { !$0.isEmpty }
     
-    print("Split Words:", words)
+    //print("Split Words:", words)
 
     // Rest of the method remains the same...
     let formToLemma = createFormToLemmaMapping()
@@ -200,9 +324,10 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
     // Build results
     var resultDictionary: [String: PsalmAnalysisResult.LemmaInfo] = [:]
     for (lemma, count) in lemmaCounts {
+        let entity = wordEntities.first { $0.lemma == lemma }
         resultDictionary[lemma] = PsalmAnalysisResult.LemmaInfo(
             count: count,
-            translation: translations[lemma],
+            translation: entity?.getTranslation() ?? translations[lemma],
             forms: formCounts[lemma] ?? [:],
             entity: wordEntities.first { $0.lemma == lemma }
         )
@@ -229,8 +354,22 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
         var mapping: [String: String] = [:]
         for entity in wordEntities {
             let lemma = entity.lemma
-            
-            // 1. Map all case forms (nouns/pronouns/adjectives)
+
+            if entity.partOfSpeech == "verb" {
+                // Imperative (like "sede")
+                if let imperative = entity.forms?["imperative_singular"] {
+                    imperative.forEach { mapping[$0.lowercased()] = lemma }
+                }
+                
+                // Principal parts
+                [entity.infinitive, entity.perfect].compactMap { $0 }
+                    .forEach { mapping[$0.lowercased()] = lemma }
+                
+                // All other verb forms
+                entity.forms?.values.flatMap { $0 }
+                    .forEach { mapping[$0.lowercased()] = lemma }
+            }
+                // 1. Add explicitly declared forms
             [entity.nominative, entity.dative, entity.accusative, 
             entity.genitive, entity.ablative].forEach {
                 if let form = $0 {
@@ -238,6 +377,12 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
                 }
             }
             
+            // 2. Add generated forms
+            let generated = entity.generatedForms
+            generated.values.forEach { form in
+                mapping[form.lowercased()] = lemma
+            }
+ 
             // 2. Map all possessive forms (pronouns)
             entity.possessive?.values.forEach {
                 mapping[$0.lowercased()] = lemma
@@ -260,7 +405,7 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
             }
         }
         
-        print("Final Mapping:", mapping.sorted(by: { $0.key < $1.key })) // Alphabetized debug
+        //print("Final Mapping:", mapping.sorted(by: { $0.key < $1.key })) // Alphabetized debug
         return mapping
     }
 

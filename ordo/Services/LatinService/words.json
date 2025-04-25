@@ -1,5 +1,45 @@
 [
     {
+        "lemma": "laudo",
+        "part_of_speech": "verb",
+        "principal_parts": ["laudo", "laudare", "laudavi", "laudatum"],
+        "translations": {"en": "praise"}
+      },
+      {
+        "lemma": "confiteor",
+        "part_of_speech": "verb",
+        "principal_parts": ["confiteor", "confiteri", "confessus sum"],
+        "deponent": true,
+        "translations": {"en": "confess, thank"}
+      },
+      {
+        "lemma": "venio",
+        "part_of_speech": "verb",
+        "principal_parts": ["venio", "venire", "veni", "ventum"],
+        "translations": {"en": "come"}
+      },
+    {
+        "lemma": "exsulto",
+        "part_of_speech": "verb",
+        "principal_parts": ["exsulto", "exsultare", "exsultavi", "exsultatum"],
+        "translations": {"en": "rejoice"}
+      },
+      {
+        "lemma": "clamor",
+        "part_of_speech": "verb",
+        "principal_parts": ["clamo", "clamare", "clamavi", "clamatum"],
+        "translations": {"en": "cry out"}
+      },
+
+
+    {
+        "lemma": "a",
+        "part_of_speech": "preposition",
+        "translations": {
+            "en": "from"
+        }
+    },
+    {
         "lemma": "meus",
         "part_of_speech": "possessive adjective",
         "nominative": "meus",
@@ -44,7 +84,11 @@
       "dative": "deo",
       "accusative": "deum",
       "genitive": "dei",
-      "ablative": "deo"
+      "ablative": "deo",
+      "translations": {
+        "en": "god"
+        
+      }
     },
     {
         "lemma": "dominus",
@@ -53,6 +97,55 @@
         "accusative": "dominum",
         "genitive": "domini",
         "ablative": "domino"
+    },
+    {
+        "lemma": "juro",
+        "part_of_speech": "verb",
+        "perfect": "juravi",
+        "infinitive": "jurare",
+        "forms": {
+            "perfect": ["juravi", "juravisti", "juravit", "juravimus", "juravistis", "juraverunt"],
+            "present": ["juro", "juras", "jurat", "juramus", "juratis", "jurant"]
+        },
+        "translations": {
+            "en": "swear, take an oath",
+            "la": "juro"
+        }
+        
+    },
+    {
+        "lemma": "pes",
+        "part_of_speech": "noun",
+        "declension": 3,
+        "gender": "masculine",
+        "nominative": "pes",
+        "genitive": "pedis",
+        "dative": "pedi",
+        "accusative": "pedem",
+        "ablative": "pede",
+        "translations": {
+            "en": "foot",
+            "la": "pes"
+        },
+        "forms": {
+            "nominative_plural": ["pedes"],
+            "genitive_plural": ["pedum"],
+            "dative_plural": ["pedibus"],
+            "accusative_plural": ["pedes"],
+            "ablative_plural": ["pedibus"]
+        }
+    },
+    {
+        "lemma": "pono",
+        "part_of_speech": "verb",
+        "translations": {
+            "en": "put, place, set"
+        },
+        "principal_parts": ["pono", "ponere", "posui", "positum"],
+        "forms": {
+            "future": ["ponam", "pones", "ponet", "ponemus", "ponetis", "ponent"],
+            "perfect": ["posui", "posuisti", "posuit", "posuimus", "posuistis", "posuerunt"]
+        }
     },
     {
       "lemma": "populus",
@@ -77,6 +170,33 @@
       "accusative": "gentem",
       "genitive": "gentis",
       "ablative": "gente"
+    },
+    {
+        "lemma": "rex",
+        "declension": 3,
+        "gender": "masculine",
+        "nominative": "rex",
+        "genitive": "regis" 
+    },
+    {
+        "lemma": "scabellum",
+        "part_of_speech": "noun",
+        "declension": 2,
+        "gender": "neuter",
+        "nominative": "scabellum",
+        "translations": {
+          "en": "footstool"
+        }        
+      },
+      {
+        "lemma": "sedeo",
+        "part_of_speech": "verb",
+        "forms": {
+            "imperative_singular": ["sede"]
+        },
+        "translations": {
+            "en": "sit"
+        }
     },
     {
         "lemma": "virtus",

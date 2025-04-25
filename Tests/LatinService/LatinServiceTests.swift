@@ -106,6 +106,53 @@ final class LatinServiceTests: XCTestCase {
     } else {
         XCTFail("Missing 'dico' in analysis")
     }
+
+    if let virtusInfo = analysis.dictionary["virtus"] {
+        XCTAssertEqual(virtusInfo.count, 2, "Should find 2 occurrences in Psalm 109")
+        XCTAssertTrue(virtusInfo.forms.keys.contains("virtutis"), "Should have genitive form")
+        XCTAssertEqual(virtusInfo.forms["virtutis"], 2, "Two genitive occurrences")
+    } else {
+        XCTFail("Missing 'virtus' in analysis")
+    }
+
+     if let scabellumInfo = analysis.dictionary["scabellum"] {
+        XCTAssertEqual(scabellumInfo.count, 1, "'scabellum' should appear once")
+        XCTAssertEqual(scabellumInfo.translation, "footstool", "Check translation")
+        XCTAssertTrue(scabellumInfo.forms.keys.contains("scabellum"), "Should have nominative form")
+    } else {
+        XCTFail("Missing 'scabellum' in analysis")
+    }
+    if let pesInfo = analysis.dictionary["pes"] {
+        print("DEBUG - Actual 'pes' forms:", pesInfo.forms)
+        
+        XCTAssertEqual(pesInfo.count, 1, "Should find 'pedum' form")
+        XCTAssertEqual(pesInfo.translation, "foot", "Check translation")
+        XCTAssertTrue(pesInfo.forms.keys.contains("pedum"), "Should have genitive plural form")
+        XCTAssertEqual(pesInfo.forms["pedum"], 1, "Should appear once in 'scabellum pedum tuorum'")
+    } else {
+        XCTFail("Missing 'pes' in analysis")
+    }
+
+    if let juroInfo = analysis.dictionary["juro"] {
+        XCTAssertEqual(juroInfo.count, 1, "Should find 'juravit' once")
+        XCTAssertEqual(juroInfo.translation, "swear, take an oath")
+        XCTAssertTrue(juroInfo.forms.keys.contains("juravit"), "Should recognize perfect tense")
+    } else {
+        XCTFail("Missing 'juro' in analysis")
+    }
+
+    func assertPrepositionA() {
+            guard let aInfo = analysis.dictionary["a"] else {
+                XCTFail("Preposition 'a' missing in analysis")
+                return
+            }
+            
+            XCTAssertEqual(aInfo.count, 2, "Should appear twice for psalm 109")
+            XCTAssertEqual(aInfo.translation, "from", "Should translate to 'from'")
+            XCTAssertEqual(aInfo.entity?.partOfSpeech, "preposition", "Should be tagged as preposition")
+        }
+        
+    assertPrepositionA()
 }
  
     func testAnalyzePsalm66() {
@@ -123,8 +170,9 @@ final class LatinServiceTests: XCTestCase {
         
         // Verify forms and counts
         if let deusInfo = analysis.dictionary["deus"] {
+            print(deusInfo.translation)
             XCTAssertGreaterThan(deusInfo.count, 0, "'deus' should appear multiple times")
-            XCTAssertEqual(deusInfo.translation, "God", "Translation should match")
+            XCTAssertEqual(deusInfo.translation, "god", "Translation should match")
             XCTAssertTrue(deusInfo.forms.keys.contains("deus"), "Should have 'deus' form")
         } else {
             XCTFail("Missing 'deus' in analysis")
