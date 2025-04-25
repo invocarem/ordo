@@ -53,7 +53,13 @@ let package = Package(
             sources: ["PsalmService.swift"],
             resources: [.process("psalms.json")]
         ),
-
+        .target(
+            name: "LatinService",
+            dependencies: [],  
+            path: "ordo/Services/LatinService",  
+            sources: ["LatinService.swift"],
+            resources: [.process("words.json"), .process("translations.json")]
+        ),
         .testTarget(
             name: "PsalmServiceTests",    
             dependencies: ["PsalmService"],
@@ -61,6 +67,16 @@ let package = Package(
             sources: ["PsalmServiceTests.swift"],
             resources: [.copy("../../ordo/Services/PsalmService/psalms.json")]
         ),
+
+
+        .testTarget(
+            name: "LatinServiceTests",    
+            dependencies: ["LatinService"],
+            path: "Tests/LatinService",
+            sources: ["LatinServiceTests.swift"],
+            resources: [.copy("../../ordo/Services/LatinService/words.json"), .copy("../../ordo/Services/LatinService/translations.json")]
+        ),
+
 
         .testTarget(  
             name: "HoursServiceTests", 

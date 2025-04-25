@@ -2760,7 +2760,6 @@
     ],
     "verified": true
 },     
-
 {
     "number": 66,
     "section": "",
@@ -2769,7 +2768,7 @@
         "Deus misereatur nostri, et benedicat nobis; illuminet vultum suum super nos, et misereatur nostri.",
         "Ut cognoscamus in terra viam tuam, in omnibus gentibus salutare tuum.",
         "Confiteantur tibi populi, Deus; confiteantur tibi populi omnes.",
-        "Laetentur et exsultent gentes, quoniam judicas populos in aLaborequitate, et gentes in terra dirigis.",
+        "Laetentur et exsultent gentes, quoniam judicas populos in aequitate, et gentes in terra dirigis.",
         "Confiteantur tibi populi, Deus; confiteantur tibi populi omnes.",
         "Terra dedit fructum suum; benedicat nos Deus, Deus noster.",
         "Benedicat nos Deus; et metuant eum omnes fines terrae."
@@ -2785,6 +2784,7 @@
     ],
     "verified": true
 },
+
 {
     "number": 67,
     "section": "A",

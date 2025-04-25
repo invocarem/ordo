@@ -1,0 +1,94 @@
+[
+    {
+        "lemma": "meus",
+        "part_of_speech": "possessive adjective",
+        "nominative": "meus",
+        "genitive": "mei",
+        "dative": "meo",
+        "accusative": "meum",
+        "ablative": "meo",
+        "possessive": {
+          "dative_plural": "meis",
+          "ablative_plural": "meis",
+          "feminine_nom_sg": "mea",
+          "feminine_dat_sg": "meae"
+        }
+    },
+    {   
+        "lemma": "tu",
+        "nominative": "tu",
+        "dative": "tibi",
+        "accusative": "te",
+        "genitive": "tui",
+        "ablative": "te",
+       "possessive": {
+            "masculine": "tuus",
+            "feminine": "tua",
+            "neuter": "tuum",
+            "masculine_acc_pl": "tuos",
+            "feminine_nom_sg": "tuae", 
+            "dative_pl": "tuis",       
+            "genitive_pl": "tuorum"
+        }
+    },
+    {
+        "lemma": "dico",
+        "perfect": "dixit",
+        "forms": {
+          "perfect": ["dixit"]
+        }
+    },
+    {
+      "lemma": "deus",
+      "nominative": "deus",
+      "dative": "deo",
+      "accusative": "deum",
+      "genitive": "dei",
+      "ablative": "deo"
+    },
+    {
+        "lemma": "dominus",
+        "nominative": "dominus",
+        "dative": "domino",
+        "accusative": "dominum",
+        "genitive": "domini",
+        "ablative": "domino"
+    },
+    {
+      "lemma": "populus",
+      "nominative": "populus",
+      "dative": "populo",
+      "accusative": "populum",
+      "genitive": "populi",
+      "ablative": "populo"
+    },
+    {
+      "lemma": "noster",
+      "nominative": "noster",
+      "dative": "nostro",
+      "accusative": "nostrum",
+      "genitive": "nostri",
+      "ablative": "nostro"
+    },
+    {
+      "lemma": "gens",
+      "nominative": "gens",
+      "dative": "genti",
+      "accusative": "gentem",
+      "genitive": "gentis",
+      "ablative": "gente"
+    },
+    {
+        "lemma": "virtus",
+        "part_of_speech": "noun",
+        "gender": "feminine",
+        "nominative": "virtus",
+        "genitive": "virtutis",
+        "dative": "virtuti",
+        "accusative": "virtutem",
+        "ablative": "virtute",
+        "translations": {
+          "en": "virtue, strength, courage"
+        }
+      }
+  ]
