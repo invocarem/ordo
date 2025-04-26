@@ -33,6 +33,14 @@ struct ContentView: View {
                 Label("Psalms", systemImage: "book")
             }
             .tag(1)
+            
+            NavigationStack {
+                       PsalmAnalysisSelectionView(latinService: LatinService.shared)
+                   }
+                   .tabItem {
+                       Label("Analysis", systemImage: "text.magnifyingglass")
+                   }
+                   .tag(2)
         }
     }
     
