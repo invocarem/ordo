@@ -6,13 +6,29 @@ public struct LatinWordEntity: Codable {
     public let declension: Int? // 1-5
     public let gender: String? // "masculine", "feminine", "neuter"
 
+    public let vocative: String?
+    
     public let nominative: String?
     public let dative: String?
     public let accusative: String?
     public let genitive: String?
     public let ablative: String?
-    public let possessive: [String: String]?
+
+    public let nominative_plural: String?
+    public let genitive_plural: String?
+    public let dative_plural: String?
+    public let accusative_plural: String?
+    public let ablative_plural: String?
+
     
+    
+    public struct PossessiveForms: Codable {
+        public let singular: [String: [String: String]]?
+        public let plural: [String: [String: String]]?
+    }
+    
+    public let possessive: PossessiveForms?
+
     // Verb-specific properties
     public let perfect: String?                // Principal part
     public let infinitive: String?             // Principal part
@@ -27,12 +43,21 @@ public struct LatinWordEntity: Codable {
         partOfSpeech: String? = nil,
         declension: Int? = nil,
         gender: String? = nil,
+        
+        vocative: String? = nil,
+        
         nominative: String? = nil,
         dative: String? = nil,
         accusative: String? = nil,
         genitive: String? = nil,
         ablative: String? = nil,
-        possessive: [String: String]? = nil,
+        
+        nominative_plural: String? = nil,
+        genitive_plural: String? = nil,
+        dative_plural: String? = nil,
+        accusative_plural: String? = nil,
+        ablative_plural: String? = nil,
+        possessive: PossessiveForms? = nil,
         perfect: String? = nil,
         infinitive: String? = nil,
         forms: [String: [String]]? = nil,
@@ -42,11 +67,18 @@ public struct LatinWordEntity: Codable {
         self.partOfSpeech = partOfSpeech
         self.gender = gender
         self.declension = declension
+        self.vocative = vocative
+        
         self.nominative = nominative
         self.dative = dative
         self.accusative = accusative
         self.genitive = genitive
         self.ablative = ablative
+        self.nominative_plural = nominative_plural
+        self.genitive_plural = genitive_plural
+        self.dative_plural = dative_plural
+        self.accusative_plural = accusative_plural
+        self.ablative_plural = ablative_plural
         self.possessive = possessive
         self.perfect = perfect
         self.infinitive = infinitive
@@ -60,7 +92,13 @@ public struct LatinWordEntity: Codable {
         case partOfSpeech = "part_of_speech"
         case gender
         case declension
+        case vocative
         case nominative, dative, accusative, genitive, ablative
+        case nominative_plural = "nominative_plural"
+        case genitive_plural = "genitive_plural"
+        case dative_plural = "dative_plural"
+        case accusative_plural = "accusative_plural"
+        case ablative_plural = "ablative_plural"
         case possessive
         case perfect, infinitive, forms
         case translations
@@ -68,6 +106,164 @@ public struct LatinWordEntity: Codable {
 
     public func getTranslation(_ language: String = "en") -> String? {
         return translations?[language] ?? translations?["la"] ?? lemma
+    }
+    func analyzeFormWithMeaning(_ form: String) -> String {
+        let formLower = form.lowercased()
+        let translation = getTranslation() ?? lemma.lowercased()
+        if partOfSpeech == "adverb" {
+               return "\(translation) (adverb)"
+           }
+           
+        
+        // 0. Handle vocative first
+        if let vocativeForm = vocative?.lowercased(), vocativeForm == formLower {
+               if partOfSpeech == "pronoun" {
+                   let pronounMap: [String: String] = [
+                       "tu": "you",
+                       "vos": "you all"
+                   ]
+                   return "O \(pronounMap[lemma.lowercased()] ?? translation)! (vocative)"
+               }
+               return "O \(translation)! (vocative)"
+           }
+        // 1. Handle Pronouns
+        if partOfSpeech == "pronoun" {
+            let pronounMap: [String: String] = [
+                "tu": "you (sg)",
+                "ego": "I",
+                "nos": "we",
+                "vos": "you (pl)",
+                "is": "he",
+                "ea": "she",
+                "id": "it"
+            ]
+            
+            let pronounText = pronounMap[lemma.lowercased()] ?? translation
+            
+            switch formLower {
+            case vocative?.lowercased(): return "O \(pronounText)! (vocative)"
+            case nominative?.lowercased(): return "\(pronounText) (nominative)"
+            case dative?.lowercased(): return "to/for \(pronounText) (dative)"
+            case accusative?.lowercased(): return "\(pronounText) (accusative)"
+            case genitive?.lowercased(): return "of \(pronounText) (genitive)"
+            case ablative?.lowercased(): return "by/with \(pronounText) (ablative)"
+            default: break
+            }
+        }
+        
+        // 2. Enhanced Verb Analysis
+        if partOfSpeech == "verb" {
+            // Handle principal parts first
+            if let infinitive = infinitive, infinitive.lowercased() == formLower {
+                return "to \(translation) (infinitive)"
+            }
+            if let perfect = perfect, perfect.lowercased() == formLower {
+                return "has/have \(translation)ed (perfect)"
+            }
+            
+            if let analysis = analyzeVerbForm(form: formLower, translation: translation) {
+                        return analysis
+                    }
+            
+        }
+        
+        // 3. Possessive Forms (Improved)
+        if let possessive = possessive {
+            let possessorMap: [String: String] = [
+                "meus": "my",
+                "tuus": "your",
+                "suus": "his/her/its",
+                "noster": "our",
+                "vester": "your (pl)"
+            ]
+            
+            let possessor = possessorMap[lemma.lowercased()] ?? "your"
+            
+            // Check both singular and plural forms
+            let allForms = [(possessive.singular, "sg"), (possessive.plural, "pl")]
+            for (forms, number) in allForms {
+                for (gender, cases) in forms ?? [:] {
+                    for (caseName, form) in cases {
+                        if form.lowercased() == formLower {
+                            return "\(possessor) \(gender) (\(number) \(caseName))"
+                        }
+                    }
+                }
+            }
+        }
+        
+        // 4. Noun/Adjective Analysis
+        let isPlural = [nominative_plural, genitive_plural, dative_plural,
+                       accusative_plural, ablative_plural].contains { $0?.lowercased() == formLower }
+        
+        let pluralSuffix = isPlural ? " (pl)" : ""
+        let pluralTranslation = isPlural ? translation + "s" : translation
+        
+        switch formLower {
+        case nominative?.lowercased(), nominative_plural?.lowercased():
+            return "\(pluralTranslation)\(pluralSuffix)"
+        case genitive?.lowercased(), genitive_plural?.lowercased():
+            return "of \(pluralTranslation)\(pluralSuffix)"
+        case dative?.lowercased(), dative_plural?.lowercased():
+            return "to/for \(pluralTranslation)\(pluralSuffix)"
+        case accusative?.lowercased(), accusative_plural?.lowercased():
+            return "\(pluralTranslation)\(pluralSuffix) (direct object)"
+        case ablative?.lowercased(), ablative_plural?.lowercased():
+            return "with/by \(pluralTranslation)\(pluralSuffix)"
+        default:
+            return "[unknown form: \(form)]"
+        }
+    }
+    
+   
+    private func analyzeVerbForm(form: String, translation: String) -> String? {
+        guard let forms = forms else { return nil }
+        
+        for (tense, formArray) in forms {
+            for (index, formVariants) in formArray.enumerated() {
+                guard matchesVariant(form: form, target: formVariants) else { continue }
+                
+                let (person, number) = getPersonAndNumber(index: index)
+                
+                switch tense {
+                case "present":
+                    return "\(person) \(translation)\(number)"
+                case "imperfect":
+                    return "\(person) was \(translation)ing\(number)"
+                case "future":
+                    return "\(person) will \(translation)\(number)"
+                case "perfect":
+                    return "\(person) has \(translation)ed\(number)"
+                case "pluperfect":
+                    return "\(person) had \(translation)ed\(number)"
+                case "imperative_singular":
+                    return "\(translation.capitalized)! (command)"
+                case "imperative_plural":
+                    return "\(translation.capitalized)! (pl command)"
+                default:
+                    return "\(translation) (\(tense))"
+                }
+            }
+        }
+        return nil
+    }
+
+    private func matchesVariant(form: String, target: String) -> Bool {
+        return target.lowercased()
+            .components(separatedBy: "/")
+            .contains { $0 == form }
+    }
+
+    private func getPersonAndNumber(index: Int) -> (person: String, number: String) {
+        switch index {
+        case 0: return ("I", "")
+        case 1: return ("you", " (sg)")
+        case 2: return ("he/she/it", "")
+        case 3: return ("we", "")
+        case 4: return ("you", " (pl)")
+        case 5: return ("they", "")
+        default: return ("", "")
+        }
     }
     public var generatedForms: [String: String] {
         guard let declension = declension, let nominative = nominative else { return [:] }
@@ -194,6 +390,7 @@ public struct PsalmAnalysisResult: Codable {
         public let translation: String?
         public let forms: [String: Int]
         public let entity: LatinWordEntity?
+        public let generatedForms: [String]
     }
 }
 
@@ -259,12 +456,10 @@ public class LatinService {
         print("Error: translations.json not found in any bundle")
     }
     private init() {
-        do {
-            try loadWords()
-            try loadTranslations()
-        } catch {
-           print("Error loading resources: \(error)")
-        }
+        
+            loadWords()
+            loadTranslations()
+       
 
     }
     public func getWordEntities() -> [LatinWordEntity]{
@@ -288,60 +483,69 @@ public class LatinService {
     public func addTranslation(latin: String, english: String) {
         translations[latin] = english
     }
-
-public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
-
-     let combinedText = text.joined(separator: " ")
-    let normalizedText = combinedText.lowercased()
-        .replacingOccurrences(of: "[.,:;!?]", with: " ", options: .regularExpression)
-        .replacingOccurrences(of: "[']", with: "", options: .regularExpression)
-        .replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression)
-        .trimmingCharacters(in: .whitespaces)
-    
-    //print("Normalized Text:", normalizedText) // Debug log
-    
-    let words = normalizedText.components(separatedBy: .whitespaces)
-        .filter { !$0.isEmpty }
-    
-    //print("Split Words:", words)
-
-    // Rest of the method remains the same...
-    let formToLemma = createFormToLemmaMapping()
-    
-    // Count occurrences by lemma and track forms
-    var lemmaCounts: [String: Int] = [:]
-    var formCounts: [String: [String: Int]] = [:]
-    
-    for word in words {
-        // Map word to its lemma
-        let lemma = formToLemma[word] ?? word
+    public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
+        let combinedText = text.joined(separator: " ")
+        let normalizedText = combinedText.lowercased()
+            .replacingOccurrences(of: "[.,:;!?]", with: " ", options: .regularExpression)
+            .replacingOccurrences(of: "[']", with: "", options: .regularExpression)
+            .replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression)
+            .trimmingCharacters(in: .whitespaces)
         
-        // Update counts
-        lemmaCounts[lemma, default: 0] += 1
-        formCounts[lemma, default: [:]][word, default: 0] += 1
-    }
-    
-    // Build results
-    var resultDictionary: [String: PsalmAnalysisResult.LemmaInfo] = [:]
-    for (lemma, count) in lemmaCounts {
-        let entity = wordEntities.first { $0.lemma == lemma }
-        resultDictionary[lemma] = PsalmAnalysisResult.LemmaInfo(
-            count: count,
-            translation: entity?.getTranslation() ?? translations[lemma],
-            forms: formCounts[lemma] ?? [:],
-            entity: wordEntities.first { $0.lemma == lemma }
+        let words = normalizedText.components(separatedBy: .whitespaces)
+            .filter { !$0.isEmpty }
+        
+        let formToLemma = createFormToLemmaMapping()
+        
+        var lemmaCounts: [String: Int] = [:]
+        var formCounts: [String: [String: Int]] = [:]
+        var lemmaEntities: [String: LatinWordEntity] = [:] // Track entities for lemmas
+        
+        // First pass: count actual occurrences
+        for word in words {
+            let lemma = formToLemma[word] ?? word
+            lemmaCounts[lemma, default: 0] += 1
+            formCounts[lemma, default: [:]][word, default: 0] += 1
+            
+            // Store entity reference if not already stored
+            if lemmaEntities[lemma] == nil {
+                lemmaEntities[lemma] = wordEntities.first { $0.lemma.lowercased() == lemma.lowercased() }
+            }
+        }
+        
+        // Build results - only include forms with count > 0
+        var resultDictionary: [String: PsalmAnalysisResult.LemmaInfo] = [:]
+        for (lemma, count) in lemmaCounts {
+            let entity = lemmaEntities[lemma]
+            let translation = entity?.getTranslation() ?? translations[lemma] ?? lemma
+            
+            // Filter out forms with 0 counts
+            let filteredForms = (formCounts[lemma] ?? [:]).filter { $0.value > 0 }
+            
+            // Get generated forms but only for display purposes
+            let generatedForms = entity?.generatedForms.values.filter { form in
+                // Exclude forms that already appear in the text
+                !filteredForms.keys.contains(form) &&
+                // Exclude forms that are the same as the lemma
+                form.lowercased() != lemma.lowercased()
+            } ?? []
+            
+            resultDictionary[lemma] = PsalmAnalysisResult.LemmaInfo(
+                count: count,
+                translation: translation,
+                forms: filteredForms,
+                entity: entity,
+                generatedForms: Array(generatedForms) // Pass as array for display
+            )
+        }
+        
+        return PsalmAnalysisResult(
+            totalWords: words.count,
+            uniqueWords: Set(words).count,
+            uniqueLemmas: lemmaCounts.count,
+            dictionary: resultDictionary
         )
     }
     
-    return PsalmAnalysisResult(
-        totalWords: words.count,
-        uniqueWords: Set(words).count,
-        uniqueLemmas: lemmaCounts.count,
-        dictionary: resultDictionary
-    )
-}
-
-
     // Keep original String version for backward compatibility
     public func analyzePsalm(text: String) -> PsalmAnalysisResult {
         let lines = text.components(separatedBy: .newlines)
@@ -354,8 +558,62 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
         var mapping: [String: String] = [:]
         for entity in wordEntities {
             let lemma = entity.lemma
-
+            // 1. Map ALL case forms (both singular and plural)
+            let caseForms = [
+                entity.nominative,
+                entity.vocative,
+                entity.dative,
+                entity.accusative,
+                entity.genitive,
+                entity.ablative,
+                entity.nominative_plural,
+                entity.genitive_plural,
+                entity.dative_plural,
+                entity.accusative_plural,
+                entity.ablative_plural
+            ]
+            
+            caseForms.compactMap { $0?.lowercased() }
+                    .forEach { mapping[$0] = lemma }
+            
+            // 2. Map generated forms (from generatedForms)
+            entity.generatedForms.values
+                .map { $0.lowercased() }
+                .forEach { mapping[$0] = lemma }
+            
+            // 3. Map possessive forms (now properly structured)
+            if let possessive = entity.possessive {
+                // Singular forms
+                possessive.singular?.values.forEach { genderForms in
+                    genderForms.values.forEach { form in
+                        mapping[form.lowercased()] = lemma
+                    }
+                }
+                
+                // Plural forms
+                possessive.plural?.values.forEach { genderForms in
+                    genderForms.values.forEach { form in
+                        mapping[form.lowercased()] = lemma
+                    }
+                }
+            }
+           
+            
             if entity.partOfSpeech == "verb" {
+                
+                if let verbForms = entity.forms {
+                            for (_, formArray) in verbForms {
+                                for formVariants in formArray {
+                                    // Split variants and map each one
+                                    formVariants.lowercased()
+                                        .components(separatedBy: "/")
+                                        .forEach { variant in
+                                            mapping[variant] = lemma
+                                        }
+                                }
+                            }
+                        }
+                
                 // Imperative (like "sede")
                 if let imperative = entity.forms?["imperative_singular"] {
                     imperative.forEach { mapping[$0.lowercased()] = lemma }
@@ -369,25 +627,7 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
                 entity.forms?.values.flatMap { $0 }
                     .forEach { mapping[$0.lowercased()] = lemma }
             }
-                // 1. Add explicitly declared forms
-            [entity.nominative, entity.dative, entity.accusative, 
-            entity.genitive, entity.ablative].forEach {
-                if let form = $0 {
-                    mapping[form.lowercased()] = lemma
-                }
-            }
-            
-            // 2. Add generated forms
-            let generated = entity.generatedForms
-            generated.values.forEach { form in
-                mapping[form.lowercased()] = lemma
-            }
- 
-            // 2. Map all possessive forms (pronouns)
-            entity.possessive?.values.forEach {
-                mapping[$0.lowercased()] = lemma
-            }
-            
+               
             // 3. Map verb forms (new)
             if let verbForms = entity.forms {
                 // Handle perfect tense array

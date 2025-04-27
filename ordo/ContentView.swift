@@ -35,7 +35,7 @@ struct ContentView: View {
             .tag(1)
             
             NavigationStack {
-                       PsalmAnalysisSelectionView(latinService: LatinService.shared)
+                PsalmAnalysisSelectionView(latinService: LatinService.shared, psalmService: psalmService)
                    }
                    .tabItem {
                        Label("Analysis", systemImage: "text.magnifyingglass")

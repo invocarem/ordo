@@ -1,4 +1,1087 @@
 [
+    
+        {
+            "lemma": "odi",
+            "part_of_speech": "verb",
+            "perfect": "odi",
+            "infinitive": "odisse",
+            "forms": {
+                "perfect": ["odi", "odisti", "odit", "odimus", "odistis", "oderunt"],
+                "pluperfect": ["oderam", "oderas", "oderat", "oderamus", "oderatis", "oderant"],
+                "future_perfect": ["odero", "oderis", "oderit", "oderimus", "oderitis", "oderint"]
+            },
+            "translations": {
+                "en": "hate",
+                "la": "odi"
+            }
+        },
+        {
+            "lemma": "os",
+            "part_of_speech": "noun",
+            "declension": 3,
+            "gender": "neuter",
+            "nominative": "os",
+            "genitive": "oris",
+            "dative": "ori",
+            "accusative": "os",
+            "ablative": "ore",
+            "nominative_plural": "ora",
+            "genitive_plural": "orum",
+            "dative_plural": "oribus",
+            "accusative_plural": "ora",
+            "ablative_plural": "oribus",
+            "translations": {
+                "en": "mouth",
+                "la": "os"
+            }
+        },
+    
+        {
+            "lemma": "conscientia",
+            "part_of_speech": "noun",
+            "declension": 1,
+            "gender": "feminine",
+            "nominative": "conscientia",
+            "genitive": "conscientiae",
+            "dative": "conscientiae",
+            "accusative": "conscientiam",
+            "ablative": "conscientia",
+            "nominative_plural": "conscientiae",
+            "genitive_plural": "conscientiarum",
+            "dative_plural": "conscientiis",
+            "accusative_plural": "conscientias",
+            "ablative_plural": "conscientiis",
+            "translations": {
+                "en": "conscience, consciousness",
+                "la": "conscientia"
+            },
+            "notes": "Psalm 37:19: 'Quoniam iniquitatem meam annuntiabo, et cogitabo pro peccato meo' (implied moral consciousness)"
+        },
+        {
+            "lemma": "refugium",
+            "part_of_speech": "noun",
+            "declension": 2,
+            "gender": "neuter",
+            "nominative": "refugium",
+            "genitive": "refugii",
+            "dative": "refugio",
+            "accusative": "refugium",
+            "ablative": "refugio",
+            "nominative_plural": "refugia",
+            "genitive_plural": "refugiorum",
+            "dative_plural": "refugiis",
+            "accusative_plural": "refugia",
+            "ablative_plural": "refugiis",
+            "translations": {
+                "en": "refuge, shelter",
+                "la": "refugium"
+            },
+            "notes": "Psalm 37:23: 'Domine, salutare meum...' (implied context of divine refuge)"
+        },
+        {
+            "lemma": "nimis",
+            "part_of_speech": "adverb",
+            "translations": {
+                "en": "exceedingly, too much",
+                "la": "nimis"
+            },
+            "notes": "Psalm 37:9: 'Infirmatus sum et humiliatus sum nimis' ('I am weakened and humbled exceedingly')"
+        },
+        {
+            "lemma": "salutare",
+            "part_of_speech": "noun",
+            "declension": 3,
+            "gender": "neuter",
+            "nominative": "salutare",
+            "genitive": "salutaris",
+            "dative": "salutari",
+            "accusative": "salutare",
+            "ablative": "salutari",
+            "nominative_plural": "salutaria",
+            "genitive_plural": "salutarium",
+            "dative_plural": "salutaribus",
+            "accusative_plural": "salutaria",
+            "ablative_plural": "salutaribus",
+            "translations": {
+                "en": "salvation, deliverance",
+                "la": "salutare"
+            },
+            "notes": "Psalm 37:23: 'Domine, salutare meum' ('Lord, my salvation')"
+        },
+        {
+            "lemma": "humilio",
+            "part_of_speech": "verb",
+            "perfect": "humiliavi",
+            "infinitive": "humiliare",
+            "forms": {
+                "perfect_passive": ["humiliatus"],
+                "present": ["humilio", "humilias", "humiliat", "humiliamus", "humiliatis", "humiliant"]
+            },
+            "translations": {
+                "en": "humble, bring low",
+                "la": "humilio"
+            },
+            "notes": "Psalm 37:9: 'humiliatus sum nimis' ('I am humbled exceedingly')"
+        },
+        {
+            "lemma": "infirmo",
+            "part_of_speech": "verb",
+            "perfect": "infirmavi",
+            "infinitive": "infirmare",
+            "forms": {
+                "perfect_passive": ["infirmatus"],
+                "present": ["infirmo", "infirmas", "infirmat", "infirmamus", "infirmatis", "infirmant"]
+            },
+            "translations": {
+                "en": "weaken, enfeeble",
+                "la": "infirmo"
+            },
+            "notes": "Psalm 37:9: 'Infirmatus sum...' ('I am weakened...')"
+        },
+        {
+            "lemma": "peccatum",
+            "part_of_speech": "noun",
+            "declension": 2,
+            "gender": "neuter",
+            "nominative": "peccatum",
+            "genitive": "peccati",
+            "dative": "peccato",
+            "accusative": "peccatum",
+            "ablative": "peccato",
+            "nominative_plural": "peccata",
+            "genitive_plural": "peccatorum",
+            "dative_plural": "peccatis",
+            "accusative_plural": "peccata",
+            "ablative_plural": "peccatis",
+            "translations": {
+                "en": "sin, fault",
+                "la": "peccatum"
+            },
+            "notes": "Psalm 37:19: 'cogitabo pro peccato meo' ('I will be anxious for my sin')"
+        },
+    
+        {
+            "lemma": "desero",
+            "part_of_speech": "verb",
+            "perfect": "deserui",
+            "infinitive": "deserere",
+            "forms": {
+                "perfect": ["deserui", "deseruisti", "deseruit", "deseruimus", "deseruistis", "deseruerunt"],
+                "perfect_passive": ["desertus"]
+            },
+            "translations": {
+                "en": "abandon, forsake",
+                "la": "desero"
+            }
+           
+        },
+        {
+            "lemma": "derelinquo",
+            "part_of_speech": "verb",
+            "perfect": "dereliqui",
+            "infinitive": "derelinquere",
+            "forms": {
+                "perfect": ["dereliqui", "dereliquisti", "dereliquit", "dereliquimus", "dereliquistis", "dereliquerunt"],
+                "present": ["derelinquo", "derelinquis", "derelinquit", "derelinquimus", "derelinquitis", "derelinquunt"],
+                "imperfect": ["derelinquebam", "derelinquebas", "derelinquebat", "derelinquebamus", "derelinquebatis", "derelinquebant"]
+            },
+            "translations": {
+                "en": "abandon, forsake, leave",
+                "la": "derelinquo"
+            },
+            "notes": "Psalm 37:10: 'dereliquit me virtus mea' ('my strength hath left me'); Psalm 37:21: 'Ne derelinquas me' ('Forsake me not')."
+        },
+        {
+            "lemma": "clamor",
+            "part_of_speech": "noun",
+            "declension": 3,
+            "gender": "masculine",
+            "nominative": "clamor",
+            "genitive": "clamoris",
+            "dative": "clamori",
+            "accusative": "clamorem",
+            "ablative": "clamore",
+            "nominative_plural": "clamores",
+            "genitive_plural": "clamorum",
+            "dative_plural": "clamoribus",
+            "accusative_plural": "clamores",
+            "ablative_plural": "clamoribus",
+            "translations": {
+                "en": "outcry, shout",
+                "la": "clamor"
+            },
+            "notes": "Psalm 37:9: 'Domine, ante te omne desiderium meum, et gemitus meus a te non est absconditus...' (implied context of clamor)"
+        },
+        {
+            "lemma": "opprobrium",
+            "part_of_speech": "noun",
+            "declension": 2,
+            "gender": "neuter",
+            "nominative": "opprobrium",
+            "genitive": "opprobrii",
+            "dative": "opprobrio",
+            "accusative": "opprobrium",
+            "ablative": "opprobrio",
+            "nominative_plural": "opprobria",
+            "genitive_plural": "opprobriorum",
+            "dative_plural": "opprobriis",
+            "accusative_plural": "opprobria",
+            "ablative_plural": "opprobriis",
+            "translations": {
+                "en": "reproach, disgrace",
+                "la": "opprobrium"
+            },
+            "notes": "Psalm 37:8: 'Quoniam lumbi mei impleti sunt illusionibus...' (context of reproach)"
+        },
+        {
+            "lemma": "gemitus",
+            "part_of_speech": "noun",
+            "declension": 4,
+            "gender": "masculine",
+            "nominative": "gemitus",
+            "genitive": "gemitus",
+            "dative": "gemitui",
+            "accusative": "gemitum",
+            "ablative": "gemitu",
+            "nominative_plural": "gemitus",
+            "genitive_plural": "gemituum",
+            "dative_plural": "gemitibus",
+            "accusative_plural": "gemitus",
+            "ablative_plural": "gemitibus",
+            "translations": {
+                "en": "groaning, sigh",
+                "la": "gemitus"
+            },
+            "notes": "Psalm 37:9: 'et gemitus meus a te non est absconditus' ('and my groaning is not hidden from you')"
+        },
+        {
+            "lemma": "illusio",
+            "part_of_speech": "noun",
+            "declension": 3,
+            "gender": "feminine",
+            "nominative": "illusio",
+            "genitive": "illusionis",
+            "dative": "illusioni",
+            "accusative": "illusionem",
+            "ablative": "illusionem",
+            "nominative_plural": "illusiones",
+            "genitive_plural": "illusionum",
+            "dative_plural": "illusionibus",
+            "accusative_plural": "illusiones",
+            "ablative_plural": "illusionibus",
+            "translations": {
+                "en": "mockery, derision",
+                "la": "illusio"
+            },
+            "notes": "Psalm 37:8: 'Quoniam lumbi mei impleti sunt illusionibus' ('For my loins are filled with mockeries')"
+        },
+        {
+            "lemma": "lumbus",
+            "part_of_speech": "noun",
+            "declension": 2,
+            "gender": "masculine",
+            "nominative": "lumbus",
+            "genitive": "lumbi",
+            "dative": "lumbo",
+            "accusative": "lumbum",
+            "ablative": "lumbo",
+            "nominative_plural": "lumbi",
+            "genitive_plural": "lumborum",
+            "dative_plural": "lumbis",
+            "accusative_plural": "lumbos",
+            "ablative_plural": "lumbis",
+            "translations": {
+                "en": "loins (as seat of strength)",
+                "la": "lumbus"
+            },
+            "notes": "Psalm 37:8: 'lumbi mei impleti sunt illusionibus' ('my loins are filled with mockeries')"
+        },
+        {
+            "lemma": "prope",
+            "part_of_speech": "adverb",
+            "translations": {
+                "en": "near, close",
+                "la": "prope"
+            },
+            "notes": "Psalm 37:12: 'et qui iuxta me erant, de longe steterunt' ('and those near me stood afar off')"
+        },
+        {
+            "lemma": "retribuo",
+            "part_of_speech": "verb",
+            "perfect": "retribui",
+            "infinitive": "retribuere",
+            "forms": {
+                "present": ["retribuo", "retribuis", "retribuit", "retribuimus", "retribuitis", "retribuunt"],
+                "perfect": ["retribui", "retribuisti", "retribuit", "retribuimus", "retribuistis", "retribuerunt"]
+            },
+            "translations": {
+                "en": "repay, requite, render",
+                "la": "retribuo"
+            },
+            "notes": "Psalm 37:21: 'qui retribuunt mala pro bonis' ('who repay evil for good')"
+        },
+    
+        {
+            "lemma": "corripio",
+            "part_of_speech": "verb",
+            "perfect": "corripui",
+            "infinitive": "corripere",
+            "forms": {
+                "present": ["corripio", "corripis", "corripit", "corripimus", "corripitis", "corripiunt"],
+                "subjunctive_present": ["corripiam", "corripias", "corripiat", "corripiamus", "corripiatis", "corripiant"]
+            },
+            "translations": {
+                "en": "rebuke, correct, seize",
+                "la": "corripio"
+            },
+            "notes": "Psalm 37:2: 'Domine, ne in furore tuo arguas me, neque in ira tua corripias me' ('Lord, do not rebuke me in your fury, nor correct me in your anger')"
+        },
+        {
+            "lemma": "facies",
+            "part_of_speech": "noun",
+            "declension": 5,
+            "gender": "feminine",
+            "nominative": "facies",
+            "genitive": "faciei",
+            "dative": "faciei",
+            "accusative": "faciem",
+            "ablative": "facie",
+            "nominative_plural": "facies",
+            "genitive_plural": "facierum",
+            "dative_plural": "faciebus",
+            "accusative_plural": "facies",
+            "ablative_plural": "faciebus",
+            "translations": {
+                "en": "face, appearance",
+                "la": "facies"
+            },
+            "notes": "Psalm 37:12: 'et qui iuxta me erant, de longe steterunt' ('and those near me stood afar off') - implied facial expression"
+        },
+        {
+            "lemma": "furor",
+            "part_of_speech": "noun",
+            "declension": 3,
+            "gender": "masculine",
+            "nominative": "furor",
+            "genitive": "furoris",
+            "dative": "furori",
+            "accusative": "furorem",
+            "ablative": "furore",
+            "nominative_plural": "furores",
+            "genitive_plural": "furorum",
+            "dative_plural": "furoribus",
+            "accusative_plural": "furores",
+            "ablative_plural": "furoribus",
+            "translations": {
+                "en": "rage, fury, madness",
+                "la": "furor"
+            },
+            "notes": "Psalm 37:2: 'ne in furore tuo arguas me' ('do not rebuke me in your fury')"
+        },
+        {
+            "lemma": "iniquus",
+            "part_of_speech": "adjective",
+            "nominative": "iniquus",
+            "genitive": "iniqui",
+            "dative": "iniquo",
+            "accusative": "iniquum",
+            "ablative": "iniquo",
+            "nominative_plural": "iniqui",
+            "genitive_plural": "iniquorum",
+            "dative_plural": "iniquis",
+            "accusative_plural": "iniquos",
+            "ablative_plural": "iniquis",
+            "translations": {
+                "en": "unjust, wicked, iniquitous",
+                "la": "iniquus"
+            },
+            "notes": "Psalm 37:21: 'qui retribuunt mala pro bonis' ('who return evil for good') - implied context of iniquity"
+        },
+        {
+            "lemma": "flagellum",
+            "part_of_speech": "noun",
+            "declension": 2,
+            "gender": "neuter",
+            "nominative": "flagellum",
+            "genitive": "flagelli",
+            "dative": "flagello",
+            "accusative": "flagellum",
+            "ablative": "flagello",
+            "nominative_plural": "flagella",
+            "genitive_plural": "flagellorum",
+            "dative_plural": "flagellis",
+            "accusative_plural": "flagella",
+            "ablative_plural": "flagellis",
+            "translations": {
+                "en": "whip, scourge, affliction",
+                "la": "flagellum"
+            },
+            "notes": "Psalm 37:18: 'in flagella paratus sum' ('I am ready for scourging')"
+        },
+        {
+            "lemma": "confiteor",
+            "part_of_speech": "verb",
+            "perfect": "confessus sum",
+            "infinitive": "confiteri",
+            "forms": {
+                "present": ["confiteor", "confiteris", "confitetur", "confitemur", "confitemini", "confitentur"],
+                "imperative_present": ["confitere", "confitemini"]
+            },
+            "translations": {
+                "en": "confess, acknowledge, praise",
+                "la": "confiteor"
+            },
+            "notes": "Psalm 37:19: 'quoniam iniquitatem meam annuntiabo' ('for I will declare my iniquity') - related to confession"
+        },
+    
+        {
+            "lemma": "abscondo",
+            "part_of_speech": "verb",
+            "perfect": "abscondi",
+            "infinitive": "abscondere",
+            "forms": {
+                "perfect_participle": ["absconditus", "abscondita", "absconditum"],
+                "present_passive": ["abscondor", "absconderis", "absconditur", "abscondimur", "abscondimini", "absconduntur"]
+            },
+            "translations": {
+                "en": "hide, conceal",
+                "la": "abscondo"
+            },
+            "notes": "Psalm 37:10: 'Domine, ante te omne desiderium meum... non est absconditum a te' ('...is not hidden from you')"
+        },
+        {
+            "lemma": "adjutorium",
+            "part_of_speech": "noun",
+            "declension": 2,
+            "gender": "neuter",
+            "nominative": "adjutorium",
+            "genitive": "adjutorii",
+            "dative": "adjutorio",
+            "accusative": "adjutorium",
+            "ablative": "adjutorio",
+            "nominative_plural": "adjutoria",
+            "genitive_plural": "adjutoriorum",
+            "dative_plural": "adjutoriis",
+            "accusative_plural": "adjutoria",
+            "ablative_plural": "adjutoriis",
+            "translations": {
+                "en": "help, aid",
+                "la": "adjutorium"
+            },
+            "notes": "Psalm 37:23: 'Ad adjutorium meum respice' ('Look to my help')"
+        },
+        {
+            "lemma": "amicus",
+            "part_of_speech": "noun",
+            "declension": 2,
+            "gender": "masculine",
+            "nominative": "amicus",
+            "genitive": "amici",
+            "dative": "amico",
+            "accusative": "amicum",
+            "ablative": "amico",
+            "vocative": "amice",
+            "nominative_plural": "amici",
+            "genitive_plural": "amicorum",
+            "dative_plural": "amicis",
+            "accusative_plural": "amicos",
+            "ablative_plural": "amicis",
+            "translations": {
+                "en": "friend",
+                "la": "amicus"
+            },
+            "notes": "Psalm 37:12: 'Amici mei et proximi mei... adversum me appropinquaverunt' ('My friends and neighbors... drew near against me')"
+        },
+        {
+            "lemma": "anima",
+            "part_of_speech": "noun",
+            "declension": 1,
+            "gender": "feminine",
+            "nominative": "anima",
+            "genitive": "animae",
+            "dative": "animae",
+            "accusative": "animam",
+            "ablative": "anima",
+            "nominative_plural": "animae",
+            "genitive_plural": "animarum",
+            "dative_plural": "animis",
+            "accusative_plural": "animas",
+            "ablative_plural": "animis",
+            "translations": {
+                "en": "soul, life",
+                "la": "anima"
+            },
+            "notes": "Psalm 37:9: 'quoniam in te est anima mea' ('for my soul is in you')"
+        },
+        {
+            "lemma": "arguo",
+            "part_of_speech": "verb",
+            "perfect": "argui",
+            "infinitive": "arguere",
+            "forms": {
+                "present": ["arguo", "arguis", "arguit", "arguimus", "arguitis", "arguunt"],
+                "subjunctive_present": ["arguam", "arguas", "arguat", "arguamus", "arguatis", "arguant"]
+            },
+            "translations": {
+                "en": "prove, accuse, rebuke",
+                "la": "arguo"
+            },
+            "notes": "Psalm 37:2: 'Domine, ne in furore tuo arguas me' ('Lord, do not rebuke me in your anger')"
+        },
+        {
+            "lemma": "dolor",
+            "part_of_speech": "noun",
+            "declension": 3,
+            "gender": "masculine",
+            "nominative": "dolor",
+            "genitive": "doloris",
+            "dative": "dolori",
+            "accusative": "dolorem",
+            "ablative": "dolore",
+            "nominative_plural": "dolores",
+            "genitive_plural": "dolorum",
+            "dative_plural": "doloribus",
+            "accusative_plural": "dolores",
+            "ablative_plural": "doloribus",
+            "translations": {
+                "en": "pain, grief",
+                "la": "dolor"
+            },
+            "notes": "Psalm 37:18: 'Quoniam ego in flagella paratus sum, et dolor meus in conspectu meo semper' ('For I am ready for scourging, and my pain is ever before me')"
+        },
+    
+    {
+           "lemma": "compungo",
+           "part_of_speech": "verb",
+           "perfect": "compunxi",
+           "infinitive": "compungere",
+           "forms": {
+               "present_passive": ["compungor", "compungeris", "compungitur", "compungimur", "compungimini", "compunguntur"],
+               "imperative_passive_plural": ["compungimini"]
+           },
+           "translations": {
+               "en": "prick, sting; (fig.) convict, grieve",
+               "la": "compungo"
+           },
+           "notes": "Psalm 4:5: 'compungimini' ('be convicted' or 'be contrite')"
+       },
+       {
+           "lemma": "vinum",
+           "part_of_speech": "noun",
+           "declension": 2,
+           "gender": "neuter",
+           "nominative": "vinum",
+           "genitive": "vini",
+           "dative": "vino",
+           "accusative": "vinum",
+           "ablative": "vino",
+           "nominative_plural": "vina",
+           "genitive_plural": "vinorum",
+           "dative_plural": "vinis",
+           "accusative_plural": "vina",
+           "ablative_plural": "vinis",
+           "translations": {
+               "en": "wine",
+               "la": "vinum"
+           }
+       },
+       {
+           "lemma": "ira",
+           "part_of_speech": "noun",
+           "declension": 1,
+           "gender": "feminine",
+           "nominative": "ira",
+           "genitive": "irae",
+           "dative": "irae",
+           "accusative": "iram",
+           "ablative": "ira",
+           "nominative_plural": "irae",
+           "genitive_plural": "irarum",
+           "dative_plural": "iris",
+           "accusative_plural": "iras",
+           "ablative_plural": "iris",
+           "translations": {
+               "en": "anger, wrath",
+               "la": "ira"
+           }
+       },
+        {
+            "lemma": "separo",
+            "part_of_speech": "verb",
+            "perfect": "separavi",
+            "infinitive": "separare",
+            "forms": {
+                "present": ["separo", "separas", "separat", "separamus", "separatis", "separant"],
+                "perfect": ["separavi", "separavisti", "separavit", "separavimus", "separavistis", "separaverunt"],
+                "imperative_singular": ["separate"],
+                "imperative_plural": ["separate"]
+            },
+            "translations": {
+                "en": "separate, divide",
+                "la": "separo"
+            }
+        },
+        {
+            "lemma": "signo",
+            "part_of_speech": "verb",
+            "perfect": "signavi",
+            "infinitive": "signare",
+            "forms": {
+                "perfect": ["signavi", "signavisti", "signavit", "signavimus", "signavistis", "signaverunt"],
+                "perfect_participle": ["signatum"]
+            },
+            "translations": {
+                "en": "sign, seal, mark",
+                "la": "signo"
+            }
+        },
+        {
+            "lemma": "quoniam",
+            "part_of_speech": "conjunction",
+            "translations": {
+                "en": "because, since, for",
+                "la": "quoniam"
+            }
+        },
+    
+    {
+            "lemma": "dormio",
+            "part_of_speech": "verb",
+            "perfect": "dormivi",
+            "infinitive": "dormire",
+            "forms": {
+                "present": ["dormio", "dormis", "dormit", "dormimus", "dormitis", "dormiunt"],
+                "imperfect": ["dormiebam", "dormiebas", "dormiebat", "dormiebamus", "dormiebatis", "dormiebant"],
+                "future": ["dormiam", "dormies", "dormiet", "dormiemus", "dormietis", "dormient"],
+                "perfect": ["dormivi", "dormivisti", "dormivit", "dormivimus", "dormivistis", "dormiverunt"],
+                "imperative_singular": ["dormi"],
+                "imperative_plural": ["dormite"]
+            },
+            "translations": {
+                "en": "sleep",
+                "la": "dormio"
+            }
+        },
+        {
+            "lemma": "misereor",
+            "part_of_speech": "verb",
+            "perfect": "miseritus sum",
+            "infinitive": "misereri",
+            "forms": {
+                "present": ["misereor", "misereris", "miseretur", "miseremur", "miseremini", "miserentur"],
+                "imperative_singular": ["miserere"],
+                "imperative_plural": ["miseremini"]
+            },
+            "translations": {
+                "en": "have mercy, pity",
+                "la": "misereor"
+            }
+        },
+    {
+      "lemma": "quid",
+      "part_of_speech": "pronoun",
+      "type": "interrogative",
+      "gender": "neuter",
+      "nominative": "quid",
+      "genitive": "cuius",
+      "dative": "cui",
+      "accusative": "quid",
+      "ablative": "quo",
+      "translations": {
+        "en": "what",
+        "la": "quid"
+      }
+    },
+    {
+      "lemma": "quis",
+      "part_of_speech": "pronoun",
+      "type": "interrogative",
+      "gender": "masculine/feminine",
+      "nominative": "quis",
+      "genitive": "cuius",
+      "dative": "cui",
+      "accusative": "quem",
+      "ablative": "quo",
+      "translations": {
+        "en": "who, what",
+        "la": "quis, quae"
+      }
+    },
+    {
+            "lemma": "sacrifico",
+            "part_of_speech": "verb",
+            "infinitive": "sacrificare",
+            "perfect": "sacrificavi",
+            "forms": {
+                "imperative": ["sacrifica", "sacrificate"],
+                "present": ["sacrifico", "sacrificas", "sacrificat", "sacrificamus", "sacrificatis", "sacrificant"],
+                "perfect": ["sacrificavi", "sacrificavisti", "sacrificavit", "sacrificavimus", "sacrificavistis", "sacrificaverunt"]
+            },
+            "translations": {
+                "en": "to sacrifice, offer"
+            }
+        },
+        {
+            "lemma": "pax",
+            "part_of_speech": "noun",
+            "declension": 3,
+            "gender": "feminine",
+            "nominative": "pax",
+            "genitive": "pacis",
+            "accusative": "pacem",
+            "ablative": "pace",
+            "vocative": "pax",
+            "translations": {
+                "en": "peace",
+                "la": "pax"
+            },
+            "notes": "Psalm 4:9 'in pace' (in peace)"
+        },
+        {
+            "lemma": "requiesco",
+            "part_of_speech": "verb",
+            "infinitive": "requiescere",
+            "perfect": "requievi",
+            "forms": {
+                "present": ["requiesco", "requiescis", "requiescit", "requiescimus", "requiescitis", "requiescunt"],
+                "future": ["requiescam", "requiesces", "requiescet", "requiescemus", "requiescetis", "requiescent"],
+                "perfect": ["requievi", "requievisti", "requievit", "requievimus", "requievistis", "requieverunt"]
+            },
+            "translations": {
+                "en": "to rest, repose",
+                "la": "requiesco"
+            },
+            "notes": "Psalm 4:9 'dormiam et requiescam' (I will sleep and rest)"
+        },
+        {
+               "lemma": "spero",
+               "part_of_speech": "verb",
+               "perfect": "speravi",
+               "infinitive": "sperare",
+               "forms": {
+                   "present": ["spero", "speras", "sperat", "speramus", "speratis", "sperant"],
+                   "imperative_singular": ["spera"],
+                   "imperative_plural": ["sperate"]
+               },
+               "translations": {
+                   "en": "hope, expect",
+                   "la": "spero"
+               }
+           },
+        {
+            "lemma": "spes",
+            "part_of_speech": "noun",
+            "declension": 5,
+            "gender": "feminine",
+            "nominative": "spes",
+            "genitive": "spei",
+            "dative": "spei",
+            "accusative": "spem",
+            "ablative": "spe",
+            "vocative": "spes",
+            "translations": {
+                "en": "hope",
+                "la": "spes"
+            },
+            "notes": "Psalm 4:10 'in spe' (in hope)"
+        },
+        {
+            "lemma": "constituo",
+            "part_of_speech": "verb",
+            "infinitive": "constituere",
+            "perfect": "constitui",
+            "forms": {
+                "perfect": ["constitui", "constituisti/constituisti", "constituit", "constituimus", "constituistis", "constituerunt"],
+                "present": ["constituo", "constituis", "constituit", "constituimus", "constituitis", "constituunt"]
+            },
+            "translations": {
+                "en": "to establish, determine",
+                "la": "constituo"
+            },
+            "notes": "Psalm 4:9 'Dominum constituisti' (you have established the Lord)"
+        },
+    
+    {
+           "lemma": "nos",
+           "part_of_speech": "pronoun",
+           "nominative": "nos",
+           "vocative": "nos",
+           "dative": "nobis",
+           "accusative": "nos",
+           "genitive": "nostri",
+           "ablative": "nobis",
+           "translations": {
+               "en": "we, us",
+               "la": "nos"
+           }
+       },
+    {
+          "lemma": "terra",
+          "part_of_speech": "noun",
+          "declension": 1,
+          "gender": "feminine",
+          "nominative": "terra",
+          "genitive": "terrae",
+          "translations": {
+              "en": "earth, land",
+              "la": "terra"
+          }
+      },
+      {
+            "lemma": "cubile",
+            "part_of_speech": "noun",
+            "declension": 3,
+            "gender": "neuter",
+            "nominative": "cubile",
+            "genitive": "cubilis",
+            "dative": "cubili",
+            "accusative": "cubile",
+            "ablative": "cubili",
+            "nominative_plural": "cubilia",
+            "genitive_plural": "cubilium",
+            "dative_plural": "cubilibus",
+            "accusative_plural": "cubilia",
+            "ablative_plural": "cubilibus",
+            "translations": {
+                "en": "bed, couch",
+                "la": "cubile, cubilis"
+            },
+            "notes": "Psalm 4:9 - 'in cubilibus vestris' (in your beds)"
+        },
+        {
+            "lemma": "dilato",
+            "part_of_speech": "verb",
+            "infinitive": "dilatare",
+            "perfect": "dilatavi",
+            "supine": "dilatatum",
+            "translations": {
+                "en": "to enlarge, spread out",
+                "la": "dilato, dilatare, dilatavi, dilatatum"
+            },
+            "forms": {
+                "perfect": ["dilatavi", "dilatavisti/dilatasti", "dilatavit", "dilatavimus", "dilatavistis", "dilaverunt"],
+                "present": ["dilato", "dilatas", "dilatat", "dilatamus", "dilatatis", "dilatant"],
+                "imperative": ["dilata", "dilatate"]
+            },
+           
+            "notes": "Psalm 4:2 - 'dilatasti mihi' (you have enlarged for me)"
+        },
+        {
+            "lemma": "exaudio",
+            "part_of_speech": "verb",
+            "infinitive": "exaudire",
+            "perfect": "exaudivi",
+            "supine": "exauditum",
+            "translations": {
+                "en": "to hear, heed",
+                "la": "exaudio, exaudire, exaudivi, exauditum"
+            },
+            "forms": {
+                "imperative": ["exaudi", "exaudite"],
+                "perfect": ["exaudivi", "exaudivisti", "exaudivit", "exaudivimus", "exaudivistis", "exaudiverunt"],
+                "future": ["exaudiam", "exaudies", "exaudiet", "exaudiemus", "exaudietis", "exaudient"],
+                "present": ["exaudio", "exaudis", "exaudit", "exaudimus", "exauditis", "exaudiunt"]
+            },
+            "notes": "Psalm 4:2 - 'exaudi me' (hear me)"
+        },
+        {
+            "lemma": "frumentum",
+            "part_of_speech": "noun",
+            "declension": 2,
+            "gender": "neuter",
+            "nominative": "frumentum",
+            "genitive": "frumenti",
+            "dative": "frumento",
+            "accusative": "frumentum",
+            "ablative": "frumento",
+            "nominative_plural": "frumenta",
+            "genitive_plural": "frumentorum",
+            "dative_plural": "frumentis",
+            "accusative_plural": "frumenta",
+            "ablative_plural": "frumentis",
+            "translations": {
+                "en": "grain, corn",
+                "la": "frumentum, -i"
+            },
+            "notes": "Psalm 4:8 - 'frumenti et vini' (of grain and wine)"
+        },
+        {
+            "lemma": "irascor",
+            "part_of_speech": "verb",
+            "infinitive": "irasci",
+            "perfect": "iratus sum",
+            "translations": {
+                "en": "to be angry",
+                "la": "irascor, irasci, iratus sum"
+            },
+            "forms": {
+                "present": ["irascor", "irasciris", "irascitur", "irascimur", "irascimini", "irascuntur"],
+                "imperative": ["irascere", "irascimini"]
+            },
+            "notes": "Psalm 4:5 - 'irascimini' (be angry - plural imperative)"
+        },
+        {
+            "lemma": "justitia",
+            "part_of_speech": "noun",
+            "declension": 1,
+            "gender": "feminine",
+            "nominative": "justitia",
+            "genitive": "justitiae",
+            "dative": "justitiae",
+            "accusative": "justitiam",
+            "ablative": "justitia",
+            "nominative_plural": "justitiae",
+            "genitive_plural": "justitiarum",
+            "dative_plural": "justitiis",
+            "accusative_plural": "justitias",
+            "ablative_plural": "justitiis",
+            "translations": {
+                "en": "justice, righteousness",
+                "la": "justitia, -ae"
+            },
+            "notes": "Psalm 4:2 - 'justitiae meae' (of my righteousness)"
+        },
+        {
+            "lemma": "lumen",
+            "part_of_speech": "noun",
+            "declension": 3,
+            "gender": "neuter",
+            "nominative": "lumen",
+            "genitive": "luminis",
+            "dative": "lumini",
+            "accusative": "lumen",
+            "ablative": "lumine",
+            "nominative_plural": "lumina",
+            "genitive_plural": "luminum",
+            "dative_plural": "luminibus",
+            "accusative_plural": "lumina",
+            "ablative_plural": "luminibus",
+            "translations": {
+                "en": "light",
+                "la": "lumen, luminis"
+            },
+            "notes": "Psalm 4:7 - 'signatum est super nos lumen' (the light of your face has shone upon us)"
+        },
+    
+    {
+        "lemma": "filius",
+        "part_of_speech": "noun",
+       
+        "nominative": "filius",
+        "genitive": "filii",
+        "dative": "filio",
+        "accusative": "filium",
+        "ablative": "filio",
+        "vocative": "fili",
+        "nominative_plural": "filii",
+        "genitive_plural": "filiorum",
+        "dative_plural": "filiis",
+        "accusative_plural": "filios",
+        "ablative_plural": "filiis",
+        "translations": {
+            "en": "son",
+            "la": "filius, -i"
+        },
+        "notes": "'filii' can be either genitive singular or nominative plural"
+    },
+    {
+        "lemma": "gravis",
+        "part_of_speech": "adjective",
+       
+        "nominative": "gravis",
+        "genitive": "gravis",
+        "dative": "gravi",
+        "accusative": "gravem", 
+        "ablative": "gravi",
+        "nominative_plural": "graves",  
+        "genitive_plural": "gravium",
+        "dative_plural": "gravibus",
+        "accusative_plural": "graves", 
+        "ablative_plural": "gravibus",
+        "translations": {
+            "en": "heavy, serious, important",
+            "la": "gravis, grave"
+        },
+        "notes": "'gravi' is the dative/ablative singular form"
+    },
+    
+    {
+        "lemma": "homo",
+        "part_of_speech": "noun",
+        "declension": 3,
+        "gender": "masculine",
+        "nominative": "homo",
+        "genitive": "hominis",
+        "dative": "homini",
+        "accusative": "hominem",
+        "ablative": "homine",
+        "nominative_plural": "homines",
+        "genitive_plural": "hominum",
+        "dative_plural": "hominibus",
+        "accusative_plural": "homines",
+        "ablative_plural": "hominibus",
+        "translations": {
+            "en": "man, human being",
+            "la": "homo, hominis"
+        },
+        "notes": "'hominum' is the genitive plural form meaning 'of men' or 'of people'"
+    },
+    {
+        "lemma": "invoco",
+        "part_of_speech": "verb",
+        "infinitive": "invocare",
+        "perfect": "invocavi",
+        "supine": "invocatum",
+        "translations": {
+            "en": "to call upon, invoke",
+            "la": "invoco, invocare, invocavi, invocatum"
+        },
+        "forms": {
+            "present": ["invoco", "invocas", "invocat", "invocamus", "invocatis", "invocant"],
+            "imperfect": ["invocabam", "invocabas", "invocabat", "invocabamus", "invocabatis", "invocabant"],
+            "future": ["invocabo", "invocabis", "invocabit", "invocabimus", "invocabitis", "invocabunt"],
+            "perfect": ["invocavi", "invocavisti", "invocavit", "invocavimus", "invocavistis", "invocaverunt"],
+            "pluperfect": ["invocaveram", "invocaveras", "invocaverat", "invocaveramus", "invocaveratis", "invocaverant"],
+            "subjunctive_present": ["invocem", "invoces", "invocet", "invochemus", "invocetis", "invocent"],
+            "subjunctive_imperfect": ["invocarem", "invocares", "invocaret", "invocaremus", "invocaretis", "invocarent"]
+        },
+        "notes": "'invocarem' is the first person singular imperfect subjunctive form meaning 'I might call upon'"
+    },
+    {
+        "lemma": "idipsum",
+        "part_of_speech": "pronoun",
+        "nominative": "idipsum",
+        "genitive": "ejusdem",
+        "dative": "eidem",
+        "accusative": "idipsum",
+        "ablative": "eodem",
+        "translations": {
+            "en": "the very same, the selfsame",
+            "la": "idipsum"
+        },
+        "notes": "Compound of 'id' (it) + 'ipsum' (self), often found in Vulgate Latin"
+    },
+   
+    {
+        "lemma": "inimicus",
+        "part_of_speech": "noun",
+        "declension": 2,
+        "gender": "masculine",
+        "nominative": "inimicus",
+        "genitive": "inimici",
+        "dative": "inimico",
+        "accusative": "inimicum",
+        "ablative": "inimico",
+        "nominative_plural": "inimici",
+        "genitive_plural": "inimicorum",
+        "dative_plural": "inimicis",
+        "accusative_plural": "inimicos",
+        "ablative_plural": "inimicis",
+        "translations": {
+            "en": "enemy",
+            "la": "inimicus, -i"
+        }
+    },
     {
         "lemma": "sum",
         "part_of_speech": "verb",
@@ -24,13 +1107,7 @@
         "principal_parts": ["laudo", "laudare", "laudavi", "laudatum"],
         "translations": {"en": "praise"}
       },
-      {
-        "lemma": "confiteor",
-        "part_of_speech": "verb",
-        "principal_parts": ["confiteor", "confiteri", "confessus sum"],
-        "deponent": true,
-        "translations": {"en": "confess, thank"}
-      },
+    
       {
         "lemma": "venio",
         "part_of_speech": "verb",
@@ -43,12 +1120,7 @@
         "principal_parts": ["exsulto", "exsultare", "exsultavi", "exsultatum"],
         "translations": {"en": "rejoice"}
       },
-      {
-        "lemma": "clamor",
-        "part_of_speech": "verb",
-        "principal_parts": ["clamo", "clamare", "clamavi", "clamatum"],
-        "translations": {"en": "cry out"}
-      },
+     
 
 
     {
@@ -59,43 +1131,167 @@
         }
     },
     {
-        "lemma": "meus",
-        "part_of_speech": "possessive adjective",
-        "nominative": "meus",
-        "genitive": "mei",
-        "dative": "meo",
-        "accusative": "meum",
-        "ablative": "meo",
-        "possessive": {
-          "dative_plural": "meis",
-          "ablative_plural": "meis",
-          "feminine_nom_sg": "mea",
-          "feminine_dat_sg": "meae"
-        }
-    },
-    {   
-        "lemma": "tu",
-        "nominative": "tu",
-        "dative": "tibi",
-        "accusative": "te",
-        "genitive": "tui",
-        "ablative": "te",
-       "possessive": {
-            "masculine": "tuus",
-            "feminine": "tua",
-            "neuter": "tuum",
-            "masculine_acc_pl": "tuos",
-            "feminine_nom_sg": "tuae", 
-            "dative_pl": "tuis",       
-            "genitive_pl": "tuorum"
+        "lemma": "aeternum",
+        "part_of_speech": "noun",
+        "declension": 2,
+        "gender": "neuter",
+        "translations": {
+            "en": "eternity, everlastingness",
+            "la": "aeternum"
         }
     },
     {
-        "lemma": "dico",
-        "perfect": "dixit",
-        "forms": {
-          "perfect": ["dixit"]
+        "lemma": "caput",
+        "part_of_speech": "noun",
+        "declension": 3,
+        "gender": "neuter",
+        "translations": {
+            "en": "head, leader, chapter",
+            "la": "caput"
+        },"forms": {
+            "nominative_plural": ["capita"],
+            "genitive_plural": ["capitum"],
+            "accusative_plural": ["capita"]
         }
+       
+    },
+    
+    {
+           "lemma": "meus",
+           "part_of_speech": "adjective",
+           "declension": 2,
+           "gender": "feminine",
+           "nominative": "mea",
+           "genitive": "meae",
+           "dative": "meae",
+           "accusative": "meam",
+           "ablative": "mea",
+           "vocative": "mea",
+           "translations": {
+               "en": "my",
+               "la": "meus"
+           },
+           "notes": "Psalm 4:8 'fructum frumenti, vini et olei sui' (the fruit of their grain, wine and oil)"
+       },
+    
+    {
+        "lemma": "bonus",
+        "part_of_speech": "adjective",
+        "nominative": "bonum",
+        "genitive": "boni",
+        "dative": "bono",
+        "accusative": "bonum",
+        "ablative": "bono",
+        "nominative_plural": "bona",
+        "genitive_plural": "bonorum",
+        "dative_plural": "bonis",
+        "accusative_plural": "bona",
+        "ablative_plural": "bonis",
+        "translations": {
+            "en": "good",
+            "la": "bonus"
+        },
+        "forms": {
+            "nominative_plural": ["bona"],
+            "accusative_plural": ["bona"]
+        }
+    },
+    {
+        "lemma": "claudico",
+        "part_of_speech": "verb",
+        "perfect": "claudicavi",
+        "infinitive": "claudicare",
+        "forms": {
+            "perfect": ["claudicavi", "claudicavisti", "claudicavit", "claudicavimus", "claudicavistis", "claudicaverunt"]
+        },
+        "translations": {
+            "en": "limp, halt, falter",
+            "la": "claudico"
+        },
+        "notes": "From Psalm 17:46 - 'filii alieni claudicaverunt' (foreign children limped/haltered)"
+    },
+    {
+        "lemma": "cor",
+        "part_of_speech": "noun",
+       
+        "nominative": "cor",
+        "genitive": "cordis",
+        "dative": "cordi",
+        "accusative": "cor",
+        "ablative": "corde",
+        "vocative": "cor",
+        "nominative_plural": "corda",
+        "genitive_plural": "cordum",
+        "dative_plural": "cordibus",
+        "accusative_plural": "corda",
+        "ablative_plural": "cordibus",
+        "translations": {
+            "en": "heart",
+            "la": "cor"
+        },
+        "forms": {
+            "ablative_singular": ["corde"],
+            "nominative_plural": ["corda"],
+            "genitive_plural": ["cordum"],
+            "dative_plural": ["cordibus"],
+            "accusative_plural": ["corda"],
+            "ablative_plural": ["cordibus"]
+        }
+    },
+    {
+        "lemma": "do",
+        "part_of_speech": "verb",
+        "perfect": "dedi",
+        "infinitive": "dare",
+        "forms": {
+            "perfect": ["dedi", "dedisti", "dedit", "dedimus", "dedistis", "dederunt"]
+        },
+        "translations": {
+            "en": "give, offer, grant"
+        },
+        "notes": "Irregular verb. Perfect stem: ded-"
+    },
+    {
+        "lemma": "dico",
+        "part_of_speech": "verb",
+        "conjugation": 3,
+        "translations": {
+            "en": "say, speak, tell",
+            "la": "dico"
+        },
+        "principal_parts": ["dico", "dicere", "dixi", "dictum"],
+        "forms": {
+            "present": [
+                "dico", "dicis", "dicit", 
+                "dicimus", "dicitis", "dicunt"
+            ],
+            "imperfect": [
+                "dicebam", "dicebas", "dicebat",
+                "dicebamus", "dicebatis", "dicebant"
+            ],
+            "future": [
+                "dicam", "dices", "dicet",
+                "dicemus", "dicetis", "dicent"
+            ],
+            "perfect": [
+                "dixi", "dixisti", "dixit",
+                "diximus", "dixistis", "dixerunt"
+            ]
+        }
+    },
+    
+    {
+        "lemma": "disperdo",
+        "part_of_speech": "verb",
+        "perfect": "disperdidi",
+        "infinitive": "disperdere",
+        "forms": {
+            "perfect": ["disperdidi", "disperdidisti", "disperdidit", "disperdidimus", "disperdidistis", "disperdiderunt"]
+        },
+        "translations": {
+            "en": "destroy utterly, ruin, waste"
+        },
+        "notes": "Compound of 'dis-' (apart) + 'perdo' (destroy). Psalm 17:39: 'odientes me disperdidisti' (you destroyed those who hated me)"
     },
     {
       "lemma": "deus",
@@ -110,13 +1306,137 @@
       }
     },
     {
+        "lemma": "dominor",
+        "part_of_speech": "verb",
+        "infinitive": "dominari",
+        "present": "dominor",
+        "perfect": "dominatus sum",
+        "translations": {
+            "en": "to rule, dominate, master",
+            "la": "dominor, dominari, dominatus sum"
+        },
+        "forms": {
+            "present": [
+                "dominor",
+                "dominaris",
+                "dominatur",
+                "dominamur",
+                "dominamini",
+                "dominantur"
+            ],
+            "imperfect": [
+                "dominarer",
+                "dominareris",
+                "dominaretur",
+                "dominaremur",
+                "dominaremini",
+                "dominarentur"
+            ],
+            "future": [
+                "dominabor",
+                "dominaberis",
+                "dominabitur",
+                "dominabimur",
+                "dominabimini",
+                "dominabuntur"
+            ],
+            "perfect": [
+                "dominatus sum",
+                "dominatus es",
+                "dominatus est",
+                "dominati sumus",
+                "dominati estis",
+                "dominati sunt"
+            ],
+            "imperative": [
+                "dominare",
+                "dominamini"
+            ]
+        },
+        "notes": "Deponent verb (passive form with active meaning)"
+    },
+    {
         "lemma": "dominus",
+        "part_of_speech": "noun",
         "nominative": "dominus",
+        "vocative": "domine",
         "dative": "domino",
         "accusative": "dominum",
         "genitive": "domini",
-        "ablative": "domino"
+        "ablative": "domino",
+        "nominative_plural": "domini",
+        "genitive_plural": "dominorum",
+        "dative_plural": "dominis",
+        "accusative_plural": "dominos",
+        "ablative_plural": "dominis",
+        "translations": {
+            "en": "lord, master",
+            "la": "dominus, -i"
+        }
     },
+    {
+           "lemma": "ego",
+           "part_of_speech": "pronoun",
+           "nominative": "ego",
+           "genitive": "mei",
+           "dative": "mihi",
+           "accusative": "me",
+           "ablative": "me",
+           "translations": {
+               "en": "I",
+               "la": "ego"
+           }
+       },
+    {
+        "lemma": "gressus",
+        "part_of_speech": "noun",
+        "declension": 4,
+        "gender": "masculine",
+        "nominative": "gressus",
+        "genitive": "gressus",
+        "dative": "gressui",
+        "accusative": "gressum",
+        "ablative": "gressu",
+        "translations": {
+            "en": "step, pace, gait",
+            "la": "gressus, -us"
+        },
+        "notes": "From Psalm 17:37 - 'dilatasti gressus meos' (you have enlarged my steps)"
+    },
+    {
+        "lemma": "humilis",
+        "part_of_speech": "adjective",
+        "declension": 3,
+        "gender": "masculine/feminine",
+        "nominative": "humilis",
+        "genitive": "humilis",
+        "dative": "humili",
+        "accusative": "humilem",
+        "ablative": "humili",
+        "translations": {
+            "en": "humble, lowly, modest",
+            "la": "humilis, humile"
+        },
+        "notes": "The form 'humilem' is the accusative singular"
+    },
+    
+    {
+        "lemma": "illumino",
+        "part_of_speech": "verb",
+        "perfect": "illuminavi",
+        "infinitive": "illuminare",
+        "forms": {
+            "imperative_singular": ["illumina"],
+            "perfect": ["illuminavi", "illuminavisti", "illuminavit", "illuminavimus", "illuminavistis", "illuminaverunt"],
+            "present": ["illumino", "illuminas", "illuminat", "illuminamus", "illuminatis", "illuminant"]
+        },
+        "translations": {
+            "en": "light up, illuminate, enlighten",
+            "la": "illumino"
+        },
+        "notes": "From Psalm 18:29 - 'illumina tenebras meas' (light up my darkness)"
+    },
+  
     {
         "lemma": "juro",
         "part_of_speech": "verb",
@@ -133,6 +1453,57 @@
         
     },
     {
+           "lemma": "laetitia",
+           "part_of_speech": "noun",
+           "declension": 1,
+           "gender": "feminine",
+           "nominative": "laetitia",
+           "genitive": "laetitiae",
+           "dative": "laetitiae",
+           "accusative": "laetitiam",
+           "ablative": "laetitia",
+           "vocative": "laetitia",
+           "translations": {
+               "en": "joy, gladness",
+               "la": "laetitia"
+           },
+           "notes": "Psalm 4:7 'signatum est super nos lumen vultus tui, Domine: dedisti laetitiam in corde meo' (the light of your face, O Lord, is signed upon us: you have given joy in my heart)"
+       },
+    {
+            "lemma": "multus",
+            "part_of_speech": "adjective",
+            "declension": 1,
+            "gender": "masculine",
+            "nominative": "multus",
+            "genitive": "multi",
+            "dative": "multo",
+            "accusative": "multum",
+            "ablative": "multo",
+            "nominative_plural": "multi",
+            "genitive_plural": "multorum",
+            "dative_plural": "multis",
+            "accusative_plural": "multos",
+            "ablative_plural": "multis",
+            "translations": {
+                "en": "many, much",
+                "la": "multus"
+            }
+        },
+    {
+            "lemma": "nolo",
+            "part_of_speech": "verb",
+            "perfect": "nolui",
+            "infinitive": "nolle",
+            "forms": {
+                "present": ["nolo", "non vis", "non vult", "nolumus", "non vultis", "nolunt"],
+                "imperative_plural": ["nolite"]
+            },
+            "translations": {
+                "en": "be unwilling, not want",
+                "la": "nolo"
+            }
+        },
+    {
         "lemma": "pes",
         "part_of_speech": "noun",
         "declension": 3,
@@ -142,6 +1513,11 @@
         "dative": "pedi",
         "accusative": "pedem",
         "ablative": "pede",
+        "nominative_plural": "pedes",
+        "genitive_plural": "pedum",
+        "dative_plural": "pedibus",
+        "accusative_plural": "pedes",
+        "ablative_plural": "pedibus",
         "translations": {
             "en": "foot",
             "la": "pes"
@@ -190,13 +1566,19 @@
       "genitive": "gentis",
       "ablative": "gente"
     },
+   
     {
-        "lemma": "rex",
-        "declension": 3,
-        "gender": "masculine",
-        "nominative": "rex",
-        "genitive": "regis" 
-    },
+           "lemma": "rex",
+           "part_of_speech": "noun",
+           "declension": 3,
+           "gender": "masculine",
+           "nominative": "rex",
+           "genitive": "regis",
+           "translations": {
+               "en": "king",
+               "la": "rex"
+           }
+       },
     {
         "lemma": "scabellum",
         "part_of_speech": "noun",
@@ -217,6 +1599,132 @@
             "en": "sit"
         }
     },
+      {
+          "lemma": "suus",
+          "part_of_speech": "adjective",
+          "translations": {
+              "en": "his/her/its/their own",
+              "la": "suus, -a, -um"
+          },
+          "possessive": {
+              "singular": {
+                  "masculine": {
+                      "nominative": "suus",
+                      "genitive": "sui",
+                      "dative": "suo",
+                      "accusative": "suum",
+                      "ablative": "suo"
+                  },
+                  "feminine": {
+                      "nominative": "sua",
+                      "genitive": "suae",
+                      "dative": "suae",
+                      "accusative": "suam",
+                      "ablative": "sua"
+                  },
+                  "neuter": {
+                      "nominative": "suum",
+                      "genitive": "sui",
+                      "dative": "suo",
+                      "accusative": "suum",
+                      "ablative": "suo"
+                  }
+              },
+              "plural": {
+                  "masculine": {
+                      "nominative": "sui",
+                      "genitive": "suorum",
+                      "dative": "suis",
+                      "accusative": "suos",
+                      "ablative": "suis"
+                  },
+                  "feminine": {
+                      "nominative": "suae",
+                      "genitive": "suarum",
+                      "dative": "suis",
+                      "accusative": "suas",
+                      "ablative": "suis"
+                  },
+                  "neuter": {
+                      "nominative": "sua",
+                      "genitive": "suorum",
+                      "dative": "suis",
+                      "accusative": "sua",
+                      "ablative": "suis"
+                  }
+              }
+          }
+      },
+      
+      {
+          "lemma": "tu",
+          "part_of_speech": "pronoun",
+          "nominative": "tu",
+          "dative": "tibi",
+          "accusative": "te",
+          "genitive": "tui",
+          "ablative": "te",
+          "translations": {
+              "en": "you",
+              "la": "tu, tui"
+          },
+          "possessive": {
+              "singular": {
+                  "masculine": {
+                      "nominative": "tuus",
+                      "genitive": "tui",
+                      "dative": "tuo",
+                      "accusative": "tuum",
+                      "ablative": "tuo"
+                  },
+                  "feminine": {
+                      "nominative": "tua",
+                      "genitive": "tuae",
+                      "dative": "tuae",
+                      "accusative": "tuam",
+                      "ablative": "tua"
+                  },
+                  "neuter": {
+                      "nominative": "tuum",
+                      "genitive": "tui",
+                      "dative": "tuo",
+                      "accusative": "tuum",
+                      "ablative": "tuo"
+                  }
+              },
+              "plural": {
+                  "masculine": {
+                      "nominative": "tui",
+                      "genitive": "tuorum",
+                      "dative": "tuis",
+                      "accusative": "tuos",
+                      "ablative": "tuis"
+                  },
+                  "feminine": {
+                      "nominative": "tuae",
+                      "genitive": "tuarum",
+                      "dative": "tuis",
+                      "accusative": "tuas",
+                      "ablative": "tuis"
+                  },
+                  "neuter": {
+                      "nominative": "tua",
+                      "genitive": "tuorum",
+                      "dative": "tuis",
+                      "accusative": "tua",
+                      "ablative": "tuis"
+                  }
+              }
+          }
+      },
+      {
+         "lemma": "ut",
+         "part_of_speech": "conjunction",
+         "translations": {
+             "en": "that, so that, as",
+             "la": "ut"
+         }
+     },
     {
         "lemma": "virtus",
         "part_of_speech": "noun",
@@ -229,5 +1737,14 @@
         "translations": {
           "en": "virtue, strength, courage"
         }
+      },
+    {
+          "lemma": "inique",
+          "part_of_speech": "adverb",
+          "translations": {
+              "en": "unjustly, wrongfully",
+              "la": "inique"
+          },
+          "notes": "Psalm 37:19: 'qui oderunt me inique' ('who hate me wrongfully')"
       }
   ]

@@ -7,53 +7,95 @@
 import SwiftUI
 struct PsalmAnalysisSelectionView: View {
     let latinService: LatinService
-    @State private var selectedPsalm: String = "Psalm 109"
-    
-    let psalms = [
-        "Psalm 109": [
-            "Dixit Dominus Domino meo: Sede a dextris meis, donec ponam inimicos tuos scabellum pedum tuorum.",
-            "Virgam virtutis tuae emittet Dominus ex Sion: dominare in medio inimicorum tuorum.",
-            "Tecum principium in die virtutis tuae in splendoribus sanctorum: ex utero ante luciferum genui te.",
-            "Juravit Dominus, et non poenitebit eum: Tu es sacerdos in aeternum secundum ordinem Melchisedech.",
-            "Dominus a dextris tuis; confregit in die irae suae reges.",
-            "Judicabit in nationibus, implebit ruinas; conquassabit capita in terra multorum.",
-            "De torrente in via bibet; propterea exaltabit caput."
-        ],
-        "Psalm 66": [
-            "Deus misereatur nostri, et benedicat nobis; illuminet vultum suum super nos, et misereatur nostri.",
-            "Ut cognoscamus in terra viam tuam, in omnibus gentibus salutare tuum.",
-            "Confiteantur tibi populi, Deus; confiteantur tibi populi omnes.",
-            "Laetentur et exsultent gentes, quoniam judicas populos in aequitate, et gentes in terra dirigis.",
-            "Confiteantur tibi populi, Deus; confiteantur tibi populi omnes.",
-            "Terra dedit fructum suum; benedicat nos Deus, Deus noster.",
-            "Benedicat nos Deus; et metuant eum omnes fines terrae."
-        ]
+    let psalmService: PsalmService
+    let psalmIdentifiers = [
+        ("37", nil),
+        ("38", nil),
+        ("119", nil),
+        ("120", nil),
+        ("4", nil) ,
+        ("90", nil),
+        ("133", nil),
+           
+        ("17", "B"), // Psalm 17 (B)
+        ("109", nil), // Psalm 109
+        ("66", nil)  // Psalm 66
     ]
+    
+    @State private var psalms: [String: [String]] = [:]
+    @State private var selectedPsalmIdentifier = "37"
+    
+    
+    
     
     var body: some View {
         List {
             Section {
-                Picker("Select Psalm", selection: $selectedPsalm) {
-                    ForEach(Array(psalms.keys.sorted()), id: \.self) { psalm in
-                        Text(psalm).tag(psalm)
-                    }
-                }
-                .pickerStyle(.menu)
-            }
-            
+               Picker("Select Psalm", selection: $selectedPsalmIdentifier) {
+                   ForEach(psalmIdentifiers, id: \.0) { (number, section) in
+                       Text(formatPsalmTitle(number: number, section: section))
+                           .tag(number + (section ?? ""))
+                   }
+               }
+               .pickerStyle(.menu)
+           }
             Section {
-                NavigationLink {
-                    if let psalmText = psalms[selectedPsalm] {
-                        let analysis = latinService.analyzePsalm(text: psalmText)
-                        PsalmAnalysisView(analysis: analysis, psalmTitle: selectedPsalm)
-                    }
-                } label: {
-                    Text("Analyze \(selectedPsalm)")
-                }
-            }
+                            NavigationLink {
+                                if let psalmText = psalms[selectedPsalmIdentifier] {
+                                    let analysis = latinService.analyzePsalm(text: psalmText)
+                                    let title = formatPsalmTitle(for: selectedPsalmIdentifier)
+                                    PsalmAnalysisView(analysis: analysis, psalmTitle: title)
+                                }
+                            } label: {
+                                Text("Analyze \(formatPsalmTitle(for: selectedPsalmIdentifier))")
+                            }
+                            .disabled(psalms[selectedPsalmIdentifier] == nil)
+                        }
+            
+           
         }
         .navigationTitle("Psalm Analysis")
+        .task {
+                    await loadPsalms()
+                }
     }
+    private func loadPsalms() async {
+        for (numberStr, section) in psalmIdentifiers {
+            // Safely convert string to Int
+            guard let number = Int(numberStr) else {
+                print("Invalid psalm number: \(numberStr)")
+                continue
+            }
+            
+            // Create a more robust identifier
+            let identifier = "\(number)" + (section.map { $0 } ?? "")
+            
+            // Get the psalm - no need to unwrap text since it's non-optional
+            if let psalm = psalmService.getPsalm(number: number, section: section) {
+                psalms[identifier] = psalm.text
+            } else {
+                print("Failed to load Psalm \(number)\(section.map { "(\($0))" } ?? "")")
+            }
+        }
+    }
+    
+    private func formatPsalmTitle(number: String, section: String? = nil) -> String {
+           if let section = section {
+               return "Psalm \(number) (\(section))"
+           }
+           return "Psalm \(number)"
+       }
+       
+       private func formatPsalmTitle(for identifier: String) -> String {
+           // This assumes identifiers are in format "number" or "numberSection" (like "17B")
+           if identifier.count > 3 && identifier.last?.isLetter == true {
+               let number = String(identifier.dropLast())
+               let section = String(identifier.last!)
+               return formatPsalmTitle(number: number, section: section)
+           }
+           return formatPsalmTitle(number: identifier)
+       }
+        
 }
 struct PsalmAnalysisView: View {
     let analysis: PsalmAnalysisResult
@@ -186,17 +228,3 @@ struct WordRow: View {
     }
 }
 
-// Full word list view
-struct FullWordListView: View {
-    let analysis: PsalmAnalysisResult
-    
-    var body: some View {
-        List {
-            ForEach(analysis.dictionary.sorted { $0.key < $1.key }, id: \.key) { lemma, info in
-                WordRow(lemma: lemma, info: info)
-            }
-        }
-        .listStyle(.plain)
-        .navigationTitle("All Words")
-    }
-}

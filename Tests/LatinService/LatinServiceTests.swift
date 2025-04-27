@@ -48,7 +48,7 @@ final class LatinServiceTests: XCTestCase {
     
     // Test basic statistics
     XCTAssertEqual(analysis.totalWords, 84, "Psalm 109 should have 84 words")
-    XCTAssertEqual(analysis.uniqueLemmas, 60, "Should identify 60 unique lemmas") 
+    XCTAssertEqual(analysis.uniqueLemmas, 60, "Should identify unique lemmas") 
     
     // Test specific word counts
     func assertCount(_ lemma: String, _ expected: Int, file: StaticString = #file, line: UInt = #line) {
@@ -153,8 +153,26 @@ final class LatinServiceTests: XCTestCase {
         }
         
     assertPrepositionA()
+      
+        
+    
+    assertInimicusForms(from: analysis)
 }
- 
+ func testPart2ForPsalm109() {
+    let psalm109 = [
+        "Dixit Dominus Domino meo: Sede a dextris meis, donec ponam inimicos tuos scabellum pedum tuorum.",
+        "Virgam virtutis tuae emittet Dominus ex Sion: dominare in medio inimicorum tuorum.",
+        "Tecum principium in die virtutis tuae in splendoribus sanctorum: ex utero ante luciferum genui te.",
+        "Juravit Dominus, et non poenitebit eum: Tu es sacerdos in aeternum secundum ordinem Melchisedech.",
+        "Dominus a dextris tuis; confregit in die irae suae reges.",
+        "Judicabit in nationibus, implebit ruinas; conquassabit capita in terra multorum.",
+        "De torrente in via bibet; propterea exaltabit caput."
+    ]
+    
+    let analysis = latinService.analyzePsalm(text: psalm109)
+    assertInimicusForms(from: analysis)
+ }
+
     func testAnalyzePsalm66() {
         let analysis = latinService.analyzePsalm(text: psalm66)
         
@@ -170,7 +188,7 @@ final class LatinServiceTests: XCTestCase {
         
         // Verify forms and counts
         if let deusInfo = analysis.dictionary["deus"] {
-            print(deusInfo.translation)
+           
             XCTAssertGreaterThan(deusInfo.count, 0, "'deus' should appear multiple times")
             XCTAssertEqual(deusInfo.translation, "god", "Translation should match")
             XCTAssertTrue(deusInfo.forms.keys.contains("deus"), "Should have 'deus' form")
@@ -182,6 +200,7 @@ final class LatinServiceTests: XCTestCase {
             XCTAssertTrue(populusInfo.forms.keys.contains("populi"), "Should have 'populi' form")
         }
     }
+    
     
     func testPsalm66WordCounts() {
         let analysis = latinService.analyzePsalm(text: psalm66)
@@ -220,4 +239,23 @@ final class LatinServiceTests: XCTestCase {
             print("  Forms: \(info.forms)")
         }
     }
+
+    func assertInimicusForms(from analysis: PsalmAnalysisResult) {
+    // CORRECT: Check for the LEMMA ("inimicus"), not the form ("inimicos")
+    guard let inimicusInfo = analysis.dictionary["inimicus"] else {
+        XCTFail("""
+            Missing lemma 'inimicus' in analysis. 
+            Found words: \(analysis.dictionary.keys.sorted())
+            This means 'inimicos'/'inimicorum' didn't map to 'inimicus'.
+            """)
+        return
+    }
+
+    // Now verify the forms are grouped under the lemma
+    XCTAssertEqual(inimicusInfo.count, 2, "Should find 2 total occurrences (inimicos + inimicorum)")
+    XCTAssertEqual(inimicusInfo.forms["inimicos"], 1, "Should find 'inimicos' once")
+    XCTAssertEqual(inimicusInfo.forms["inimicorum"], 1, "Should find 'inimicorum' once")
+}
+
+   
 }
