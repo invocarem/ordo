@@ -9,6 +9,7 @@ struct PsalmAnalysisSelectionView: View {
     let latinService: LatinService
     let psalmService: PsalmService
     let psalmIdentifiers = [
+        ("118", "aleph"),
         ("37", nil),
         ("38", nil),
         ("119", nil),
