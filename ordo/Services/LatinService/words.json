@@ -1,5 +1,220 @@
 [
-    
+    {
+        "lemma": "protectio",
+        "part_of_speech": "noun",
+        "declension": 3,
+        "gender": "feminine",
+        "nominative": "protectio",
+        "genitive": "protectionis",
+        "dative": "protectioni",
+        "accusative": "protectionem",
+        "ablative": "protectione",
+        "nominative_plural": "protectiones",
+        "genitive_plural": "protectionum",
+        "dative_plural": "protectionibus",
+        "accusative_plural": "protectiones",
+        "ablative_plural": "protectionibus",
+        "translations": {
+            "en": "protection, defense, covering",
+            "la": "protectio, -onis"
+        },
+        "notes": "Appears in biblical contexts (e.g., Ecclesiasticus 34:19); related to themes of divine protection in the Psalms (e.g., Psalm 90:4 - 'Scuto circumdabit te veritas ejus' - His truth shall compass thee with a shield)"
+    },{
+        "lemma": "scapula",
+        "part_of_speech": "noun",
+        "declension": 1,
+        "gender": "feminine",
+        "nominative": "scapula",
+        "genitive": "scapulae",
+        "dative": "scapulae",
+        "accusative": "scapulam",
+        "ablative": "scapula",
+        "nominative_plural": "scapulae",
+        "genitive_plural": "scapularum",
+        "dative_plural": "scapulis",
+        "accusative_plural": "scapulas",
+        "ablative_plural": "scapulis",
+        "translations": {
+            "en": "shoulder, shoulder blade",
+            "la": "scapula, -ae"
+        },
+        "notes": "Appears in biblical contexts (e.g., Job 31:22 - 'Scapula mea a junctura sua cadat' - Let my shoulder fall from its joint)"
+    }, {
+        "lemma": "angelus",
+        "part_of_speech": "noun",
+        "declension": 2,
+        "gender": "masculine",
+        "nominative": "angelus",
+        "genitive": "angeli",
+        "dative": "angelo",
+        "accusative": "angelum",
+        "ablative": "angelo",
+        "nominative_plural": "angeli",
+        "genitive_plural": "angelorum",
+        "dative_plural": "angelis",
+        "accusative_plural": "angelos",
+        "ablative_plural": "angelis",
+        "translations": {
+            "en": "angel, messenger",
+            "la": "angelus, -i"
+        },
+        "notes": "Frequent in the Psalms (e.g., Psalm 90:11 - 'Quoniam angelis suis mandavit de te' - For he has given his angels charge over you)"
+    },{
+        "lemma": "altissimus",
+        "part_of_speech": "adjective",
+        "declension": 2,
+        "gender": "masculine",
+        "nominative": "altissimus",
+        "genitive": "altissimi",
+        "dative": "altissimo",
+        "accusative": "altissimum",
+        "ablative": "altissimo",
+        "nominative_plural": "altissimi",
+        "genitive_plural": "altissimorum",
+        "dative_plural": "altissimis",
+        "accusative_plural": "altissimos",
+        "ablative_plural": "altissimis",
+        "translations": {
+            "en": "most high, highest",
+            "la": "altissimus, -i"
+        },
+        "notes": "Common in the Psalms as a title for God (e.g., Psalm 90:1 - 'Qui habitat in adjutorio Altissimi' - He who dwells in the help of the Most High)"
+    },{
+        "lemma": "vivifico",
+        "part_of_speech": "verb",
+        "conjugation": 1,
+        "perfect": "vivificavi",
+        "infinitive": "vivificare",
+        "forms": {
+            "present": ["vivifico", "vivificas", "vivificat", "vivificamus", "vivificatis", "vivificant"],
+            "imperfect": ["vivificabam", "vivificabas", "vivificabat", "vivificabamus", "vivificabatis", "vivificabant"],
+            "future": ["vivificabo", "vivificabis", "vivificabit", "vivificabimus", "vivificabitis", "vivificabunt"],
+            "perfect": ["vivificavi", "vivificavisti", "vivificavit", "vivificavimus", "vivificavistis", "vivificaverunt"],
+            "present_subjunctive": ["vivificem", "vivifices", "vivificet", "vivificemus", "vivificetis", "vivificent"],
+            "imperative": ["vivifica", "vivificate"]
+        },
+        "translations": {
+            "en": "to vivify, give life, quicken",
+            "la": "vivifico"
+        },
+        "notes": "From Psalm 118:25 - 'Vivifica me in via tua' (Quicken me in your way)"
+    },
+    {
+        "lemma": "obliviscor",
+        "part_of_speech": "verb",
+        "conjugation": 3,
+        "perfect": "oblitus sum",
+        "infinitive": "oblivisci",
+        "forms": {
+            "present": ["obliviscor", "oblivisceris", "obliviscitur", "obliviscimur", "obliviscimini", "obliviscuntur"],
+            "imperfect": ["obliviscebar", "obliviscebaris", "obliviscebatur", "obliviscebamur", "obliviscebamini", "obliviscebantur"],
+            "future": ["obliviscar", "oblivisceris", "obliviscetur", "obliviscemur", "obliviscemini", "obliviscentur"],
+            "perfect": ["oblitus sum", "oblitus es", "oblitus est", "obliti sumus", "obliti estis", "obliti sunt"],
+            "present_subjunctive": ["obliviscar", "obliviscaris", "obliviscatur", "obliviscamur", "obliviscamini", "obliviscantur"],
+            "imperative": ["obliviscere", "obliviscimini"]
+        },
+        "translations": {
+            "en": "to forget",
+            "la": "obliviscor"
+        },
+        "notes": "From Psalm 118:30 - 'Mandata tua non sum oblitus' (I have not forgotten your commandments)"
+    },{
+        "lemma": "eligo",
+        "part_of_speech": "verb",
+        "conjugation": 3,
+        "perfect": "elegi",
+        "infinitive": "eligere",
+        "forms": {
+            "present": ["eligo", "eligis", "eligit", "eligimus", "eligitis", "eligunt"],
+            "imperfect": ["eligebam", "eligebas", "eligebat", "eligebamus", "eligebatis", "eligebant"],
+            "future": ["eligam", "eliges", "eliget", "eligemus", "eligetis", "eligent"],
+            "perfect": ["elegi", "elegisti", "elegit", "elegimus", "elegistis", "elegerunt"],
+            "present_subjunctive": ["eligam", "eligas", "eligat", "eligamus", "eligatis", "eligant"],
+            "imperative": ["elige", "eligite"]
+        },
+        "translations": {
+            "en": "to choose, select",
+            "la": "eligo"
+        },
+        "notes": "From Psalm 118:30 - 'Viam veritatis elegi' (I have chosen the way of truth)"
+    }, {
+        "lemma": "curro",
+        "part_of_speech": "verb",
+        "conjugation": 3,
+        "perfect": "cucurri",
+        "infinitive": "currere",
+        "forms": {
+            "present": ["curro", "curris", "currit", "currimus", "curritis", "currunt"],
+            "imperfect": ["currebam", "currebas", "currebat", "currebamus", "currebatis", "currebant"],
+            "future": ["curram", "curres", "curret", "curremus", "curretis", "current"],
+            "perfect": ["cucurri", "cucurristi", "cucurrit", "cucurrimus", "cucurristis", "cucurrerunt"],
+            "present_subjunctive": ["curram", "curras", "currat", "curramus", "curratis", "currant"],
+            "imperative": ["curre", "currite"]
+        },
+        "translations": {
+            "en": "to run, hasten",
+            "la": "curro"
+        },
+        "notes": "From Psalm 118:32 - 'Viam mandatorum tuorum cucurri' (I have run the way of your commandments)"
+    },{
+        "lemma": "doceo",
+        "part_of_speech": "verb",
+        "conjugation": 2,
+        "perfect": "docui",
+        "infinitive": "docere",
+        "forms": {
+            "present": ["doceo", "doces", "docet", "docemus", "docetis", "docent"],
+            "imperfect": ["docebam", "docebas", "docebat", "docebamus", "docebatis", "docebant"],
+            "future": ["docebo", "docebis", "docebit", "docebimus", "docebitis", "docebunt"],
+            "perfect": ["docui", "docuisti", "docuit", "docuimus", "docuistis", "docuerunt"],
+            "present_subjunctive": ["doceam", "doceas", "doceat", "doceamus", "doceatis", "doceant"],
+            "imperative": ["doce", "docete"]
+        },
+        "translations": {
+            "en": "to teach, instruct",
+            "la": "doceo"
+        },
+        "notes": "From Psalm 118:26 - 'Domine, doce me iustificationes tuas' (Lord, teach me your justifications)"
+    }, {
+        "lemma": "adhaereo",
+        "part_of_speech": "verb",
+        "conjugation": 2,
+        "perfect": "adhaesi",
+        "infinitive": "adhaerere",
+        "forms": {
+            "present": ["adhaereo", "adhaeres", "adhaeret", "adhaeremus", "adhaeretis", "adhaerent"],
+            "imperfect": ["adhaerebam", "adhaerebas", "adhaerebat", "adhaerebamus", "adhaerebatis", "adhaerebant"],
+            "future": ["adhaerebo", "adhaerebis", "adhaerebit", "adhaerebimus", "adhaerebitis", "adhaerebunt"],
+            "perfect": ["adhaesi", "adhaesisti", "adhaesit", "adhaesimus", "adhaesistis", "adhaeserunt"],
+            "present_subjunctive": ["adhaeream", "adhaereas", "adhaereat", "adhaereamus", "adhaereatis", "adhaereant"],
+            "imperative": ["adhaere", "adhaerete"]
+        },
+        "translations": {
+            "en": "to cling, stick, adhere",
+            "la": "adhaereo"
+        },
+        "notes": "From Psalm 118:25 - 'Adhaesit pavimento anima mea' (My soul has clung to the pavement)"
+    },   {
+        "lemma": "pavimentum",
+        "part_of_speech": "noun",
+        "declension": 2,
+        "gender": "neuter",
+        "nominative": "pavimentum",
+        "genitive": "pavimenti",
+        "dative": "pavimento",
+        "accusative": "pavimentum",
+        "ablative": "pavimento",
+        "nominative_plural": "pavimenta",
+        "genitive_plural": "pavimentorum",
+        "dative_plural": "pavimentis",
+        "accusative_plural": "pavimenta",
+        "ablative_plural": "pavimentis",
+        "translations": {
+            "en": "pavement, floor, ground",
+            "la": "pavimentum, -i"
+        },
+        "notes": "From Psalm 118:25 - 'Adhaesit pavimento anima mea' (My soul has clung to the pavement), often interpreted as dust or ground symbolizing lowliness"
+    },
         {
             "lemma": "adolescens",
             "part_of_speech": "noun",

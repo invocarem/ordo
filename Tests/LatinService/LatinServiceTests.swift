@@ -279,8 +279,8 @@ func testAnalyzePsalm118Aleph() {
 
     
     // Test specific words
-    XCTAssertNotNil(analysis.dictionary["ambulant"], "Should have 'ambulant' in dictionary")
-    XCTAssertNotNil(analysis.dictionary["ambulaverunt"], "Should have 'ambulaverunt' in dictionary")
+    XCTAssertNotNil(analysis.dictionary["ambulo"], "Should have 'ambulo' in dictionary")
+   
     
      guard let ambuloEntry = analysis.dictionary["ambulo"] else {
         XCTFail("Dictionary should contain 'ambulo' lemma")
@@ -319,5 +319,97 @@ func testAnalyzePsalm118Aleph() {
     XCTAssertNotNil(analysis.dictionary["mandatum"], "Should have 'mandatum' in dictionary")
 
 }
+   func testAnalyzePsalm118Daleth() {
+    let psalm119Daleth = [
+        "Adhaesit pavimento anima mea: vivifica me secundum verbum tuum.",
+        "Vias meas enuntiavi et exaudisti me: doce me iustificationes tuas.",
+        "Viam mandatorum tuorum instrue me: et meditabor in mirabilibus tuis.",
+        "Dormitavit anima mea prae taedio: confirma me in verbis tuis.",
+        "Viam iniquitatis amove a me: et de lege tua miserere mei.",
+        "Viam veritatis elegi: iudicia tua non sum oblitus.",
+        "Adhaesi testimoniis tuis Domine: noli me confundere.",
+        "Viam mandatorum tuorum cucurri: cum dilatasti cor meum."
+    ]
+    
+    let analysis = latinService.analyzePsalm(text: psalm119Daleth)
+    
+    // Debug print if needed
+    // print("All words in analysis dictionary:")
+    // analysis.dictionary.keys.sorted().forEach { print($0) }
+    
+    // 1. Basic statistics
+    XCTAssertGreaterThan(analysis.totalWords, 0, "Should have words in psalm")
+    XCTAssertGreaterThan(analysis.uniqueWords, 0, "Should have unique words")
+    XCTAssertGreaterThan(analysis.uniqueLemmas, 0, "Should have unique lemmas")
+    
+    // 2. Test specific important words in Daleth section
+    XCTAssertNotNil(analysis.dictionary["adhaereo"], "Should have 'adhaereo' in dictionary")
+    XCTAssertNotNil(analysis.dictionary["vivifico"], "Should have 'vivifico' in dictionary")
+    XCTAssertNotNil(analysis.dictionary["verbum"], "Should have 'verbum' in dictionary")
+    XCTAssertNotNil(analysis.dictionary["via"], "Should have 'via' in dictionary")
+    XCTAssertNotNil(analysis.dictionary["iustificatio"], "Should have 'iustificatio' in dictionary")
+    XCTAssertNotNil(analysis.dictionary["mandatum"], "Should have 'mandatum' in dictionary")
+    XCTAssertNotNil(analysis.dictionary["dominus"], "Should have 'dominus' in dictionary")
+    
+    // 3. Detailed test for 'vivifico' (to give life) as sample verb
+    guard let vivificoEntry = analysis.dictionary["vivifico"] else {
+        XCTFail("Dictionary should contain 'vivifico' lemma")
+        return
+    }
+    
+    // Verify basic properties
+    XCTAssertEqual(vivificoEntry.entity?.partOfSpeech?.rawValue, "verb", "Should be a verb")
    
+    
+    // Verify forms and counts
+    if let vivificoInfo = analysis.dictionary["vivifico"] {
+        // Check imperative form "vivifica" appears
+        if let vivificaCount = vivificoInfo.forms["vivifica"] {
+            XCTAssertGreaterThan(vivificaCount, 0, "'vivifica' should appear at least once")
+        } else {
+            XCTFail("Missing 'vivifica' form in analysis")
+        }
+    } else {
+        XCTFail("Missing 'vivifico' in analysis")
+    }
+    
+    
+}
+func testAnalyzePsalm90() {
+    let psalm90 = [
+        "Qui habitat in adjutorio Altissimi, in protectione Dei caeli commorabitur.",
+        "Dicet Domino: Susceptor meus es tu, et refugium meum; Deus meus, sperabo in eum.",
+        "Quoniam ipse liberavit me de laqueo venantium, et a verbo aspero.",
+        "Scapulis suis obumbrabit tibi, et sub pennis ejus sperabis.",
+        "Scuto circumdabit te veritas ejus; non timebis a timore nocturno,",
+        "A sagitta volante in die, a negotio perambulante in tenebris, ab incursu et daemonio meridiano.",
+        "Cadent a latere tuo mille, et decem millia a dextris tuis; ad te autem non appropinquabit.",
+        "Verumtamen oculis tuis considerabis, et retributionem peccatorum videbis.",
+        "Quoniam tu es, Domine, spes mea; Altissimum posuisti refugium tuum.",
+        "Non accedet ad te malum, et flagellum non appropinquabit tabernaculo tuo.",
+        "Quoniam angelis suis mandavit de te, ut custodiant te in omnibus viis tuis.",
+        "In manibus portabunt te, ne forte offendas ad lapidem pedem tuum.",
+        "Super aspidem et basiliscum ambulabis, et conculcabis leonem et draconem.",
+        "Quoniam in me speravit, liberabo eum; protegam eum, quoniam cognovit nomen meum.",
+        "Clamabit ad me, et ego exaudiam eum; cum ipso sum in tribulatione, eripiam eum et glorificabo eum.",
+        "Longitudine dierum replebo eum, et ostendam illi salutare meum."
+    ]
+    
+    let analysis = latinService.analyzePsalm(text: psalm90)
+    
+    // 1. Basic statistics
+    XCTAssertGreaterThan(analysis.totalWords, 0, "Should have words in psalm")
+    XCTAssertGreaterThan(analysis.uniqueWords, 0, "Should have unique words")
+    XCTAssertGreaterThan(analysis.uniqueLemmas, 0, "Should have unique lemmas")
+    
+    // 2. Test key theological words
+    XCTAssertNotNil(analysis.dictionary["altissimus"], "Should have 'altissimus' (Most High)")
+    XCTAssertNotNil(analysis.dictionary["dominus"], "Should have 'dominus' (Lord)")
+    XCTAssertNotNil(analysis.dictionary["refugium"], "Should have 'refugium' (refuge)")
+    XCTAssertNotNil(analysis.dictionary["protectio"], "Should have 'protectio' (protection)")
+    XCTAssertNotNil(analysis.dictionary["angelus"], "Should have 'angelus' (angel)")
+    
+    // 3. Test protection imagery words
+    XCTAssertNotNil(analysis.dictionary["scapula"], "Should have 'scapula' (shoulder/wings)")
+}
 }

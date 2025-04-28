@@ -8,96 +8,93 @@ import SwiftUI
 struct PsalmAnalysisSelectionView: View {
     let latinService: LatinService
     let psalmService: PsalmService
-    let psalmIdentifiers = [
-        ("118", "aleph"),
-        ("37", nil),
-        ("38", nil),
-        ("119", nil),
-        ("120", nil),
-        ("4", nil) ,
-        ("90", nil),
-        ("133", nil),
-           
-        ("17", "B"), // Psalm 17 (B)
-        ("109", nil), // Psalm 109
-        ("66", nil)  // Psalm 66
+    
+    // Using PsalmUsage for identifiers
+    let psalmUsages: [PsalmUsage] = [
+        PsalmUsage(number: "118", category: "aleph"),
+        PsalmUsage(number: "118", category: "daleth"),
+        PsalmUsage(number: "118", category: "he"),
+        PsalmUsage(number: "118", category: "vau"),
+        PsalmUsage(number: "37"),
+        PsalmUsage(number: "38"),
+        PsalmUsage(number: "119"),
+        PsalmUsage(number: "120"),
+        PsalmUsage(number: "4"),
+        PsalmUsage(number: "90"),
+        PsalmUsage(number: "133"),
+        PsalmUsage(number: "17", category: "B"),
+        PsalmUsage(number: "109"),
+        PsalmUsage(number: "66")
     ]
     
     @State private var psalms: [String: [String]] = [:]
-    @State private var selectedPsalmIdentifier = "37"
+    @State private var selectedPsalmId: String  // Now tracking by ID
+   
     
-    
-    
+    init(latinService: LatinService, psalmService: PsalmService) {
+        self.latinService = latinService
+        self.psalmService = psalmService
+        // Default to Psalm 37
+        self._selectedPsalmId = State(initialValue: PsalmUsage(number: "90").id)
+    }
     
     var body: some View {
         List {
             Section {
-               Picker("Select Psalm", selection: $selectedPsalmIdentifier) {
-                   ForEach(psalmIdentifiers, id: \.0) { (number, section) in
-                       Text(formatPsalmTitle(number: number, section: section))
-                           .tag(number + (section ?? ""))
-                   }
-               }
-               .pickerStyle(.menu)
-           }
+                Picker("Select Psalm", selection: $selectedPsalmId) {
+                    ForEach(psalmUsages) { usage in
+                        Text(usage.displayTitle)
+                            .tag(usage.id)
+                    }
+                }
+                .pickerStyle(.menu)
+            }
             Section {
-                            NavigationLink {
-                                if let psalmText = psalms[selectedPsalmIdentifier] {
-                                    let analysis = latinService.analyzePsalm(text: psalmText)
-                                    let title = formatPsalmTitle(for: selectedPsalmIdentifier)
-                                    PsalmAnalysisView(analysis: analysis, psalmTitle: title)
-                                }
-                            } label: {
-                                Text("Analyze \(formatPsalmTitle(for: selectedPsalmIdentifier))")
-                            }
-                            .disabled(psalms[selectedPsalmIdentifier] == nil)
+                NavigationLink {
+                    if let selectedUsage = psalmUsages.first(where: { $0.id == selectedPsalmId }),
+                       let psalmText = psalms[selectedUsage.id] {
+                        let analysis = latinService.analyzePsalm(text: psalmText)
+                        PsalmAnalysisView(analysis: analysis, psalmTitle: selectedUsage.displayTitle)
+                    }
+                } label: {
+                    if let selectedUsage = psalmUsages.first(where: { $0.id == selectedPsalmId }) {
+                        Text("Analyze \(selectedUsage.displayTitle)")
+                    }
+                }
+                .disabled(psalms[selectedPsalmId] == nil)
                         }
-            
-           
+          
         }
         .navigationTitle("Psalm Analysis")
         .task {
-                    await loadPsalms()
-                }
-    }
-    private func loadPsalms() async {
-        for (numberStr, section) in psalmIdentifiers {
-            // Safely convert string to Int
-            guard let number = Int(numberStr) else {
-                print("Invalid psalm number: \(numberStr)")
-                continue
-            }
-            
-            // Create a more robust identifier
-            let identifier = "\(number)" + (section.map { $0 } ?? "")
-            
-            // Get the psalm - no need to unwrap text since it's non-optional
-            if let psalm = psalmService.getPsalm(number: number, section: section) {
-                psalms[identifier] = psalm.text
-            } else {
-                print("Failed to load Psalm \(number)\(section.map { "(\($0))" } ?? "")")
-            }
+            await loadPsalms()
         }
     }
     
-    private func formatPsalmTitle(number: String, section: String? = nil) -> String {
-           if let section = section {
-               return "Psalm \(number) (\(section))"
-           }
-           return "Psalm \(number)"
-       }
-       
-       private func formatPsalmTitle(for identifier: String) -> String {
-           // This assumes identifiers are in format "number" or "numberSection" (like "17B")
-           if identifier.count > 3 && identifier.last?.isLetter == true {
-               let number = String(identifier.dropLast())
-               let section = String(identifier.last!)
-               return formatPsalmTitle(number: number, section: section)
-           }
-           return formatPsalmTitle(number: identifier)
-       }
-        
+    private func loadPsalms() async {
+        for usage in psalmUsages {
+            guard let number = Int(usage.number) else {
+                print("Invalid psalm number: \(usage.number)")
+                continue
+            }
+            
+            if let psalm = psalmService.getPsalm(number: number, section: usage.category) {
+                psalms[usage.id] = psalm.text
+            }
+        }
+    }
 }
+
+// Extension for display formatting
+extension PsalmUsage {
+    var displayTitle: String {
+        if let category = category {
+            return "Psalm \(number) (\(category))"
+        }
+        return "Psalm \(number)"
+    }
+}
+
 struct PsalmAnalysisView: View {
     let analysis: PsalmAnalysisResult
     let psalmTitle: String
@@ -228,4 +225,5 @@ struct WordRow: View {
         }
     }
 }
+
 
