@@ -104,7 +104,7 @@ struct VerbFormAnalysisView: View {
     }
     
     private func analyzeVerbForm() -> String {
-        guard entity.partOfSpeech == "verb" else { return "" }
+        guard entity.partOfSpeech == .verb else { return "" }
         
         // Check perfect forms
         if let perfectForms = entity.forms?["perfect"], perfectForms.contains(form) {
@@ -128,7 +128,7 @@ struct GrammaticalInfoView: View {
     
     var body: some View {
         HStack(spacing: 8) {
-            if let pos = entity.partOfSpeech {
+            if let pos = entity.partOfSpeech?.rawValue {
                 Text(pos)
                     .font(.caption)
                     .padding(.horizontal, 6)
@@ -146,7 +146,7 @@ struct GrammaticalInfoView: View {
                     .cornerRadius(4)
             }
             
-            if let gender = entity.gender {
+            if let gender = entity.gender?.rawValue {
                 Text(gender.prefix(3))
                     .font(.caption)
                     .padding(.horizontal, 6)

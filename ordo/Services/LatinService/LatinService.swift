@@ -1,220 +1,17 @@
 import Foundation
-public struct LatinWordEntity: Codable {
-    public let lemma: String
-    public let partOfSpeech: String?  // New field: "noun", "verb", "pronoun" etc.
- 
-    public let declension: Int? // 1-5
-    public let gender: String? // "masculine", "feminine", "neuter"
-
-    public let vocative: String?
+extension LatinWordEntity{
+   
     
-    public let nominative: String?
-    public let dative: String?
-    public let accusative: String?
-    public let genitive: String?
-    public let ablative: String?
-
-    public let nominative_plural: String?
-    public let genitive_plural: String?
-    public let dative_plural: String?
-    public let accusative_plural: String?
-    public let ablative_plural: String?
-
-    
-    
-    public struct PossessiveForms: Codable {
-        public let singular: [String: [String: String]]?
-        public let plural: [String: [String: String]]?
-    }
-    
-    public let possessive: PossessiveForms?
-
-    // Verb-specific properties
-    public let perfect: String?                // Principal part
-    public let infinitive: String?             // Principal part
-    public let forms: [String: [String]]?      // Dictionary of form types to arrays
-    
-    
-    public let translations: [String: String]?
-    
-    
-    public init(
-        lemma: String,
-        partOfSpeech: String? = nil,
-        declension: Int? = nil,
-        gender: String? = nil,
-        
-        vocative: String? = nil,
-        
-        nominative: String? = nil,
-        dative: String? = nil,
-        accusative: String? = nil,
-        genitive: String? = nil,
-        ablative: String? = nil,
-        
-        nominative_plural: String? = nil,
-        genitive_plural: String? = nil,
-        dative_plural: String? = nil,
-        accusative_plural: String? = nil,
-        ablative_plural: String? = nil,
-        possessive: PossessiveForms? = nil,
-        perfect: String? = nil,
-        infinitive: String? = nil,
-        forms: [String: [String]]? = nil,
-        translations: [String: String]? = nil 
-    ) {
-        self.lemma = lemma
-        self.partOfSpeech = partOfSpeech
-        self.gender = gender
-        self.declension = declension
-        self.vocative = vocative
-        
-        self.nominative = nominative
-        self.dative = dative
-        self.accusative = accusative
-        self.genitive = genitive
-        self.ablative = ablative
-        self.nominative_plural = nominative_plural
-        self.genitive_plural = genitive_plural
-        self.dative_plural = dative_plural
-        self.accusative_plural = accusative_plural
-        self.ablative_plural = ablative_plural
-        self.possessive = possessive
-        self.perfect = perfect
-        self.infinitive = infinitive
-        self.forms = forms
-        self.translations = translations
-    }
-    
-    // CodingKeys for backward compatibility
-    private enum CodingKeys: String, CodingKey {
-        case lemma
-        case partOfSpeech = "part_of_speech"
-        case gender
-        case declension
-        case vocative
-        case nominative, dative, accusative, genitive, ablative
-        case nominative_plural = "nominative_plural"
-        case genitive_plural = "genitive_plural"
-        case dative_plural = "dative_plural"
-        case accusative_plural = "accusative_plural"
-        case ablative_plural = "ablative_plural"
-        case possessive
-        case perfect, infinitive, forms
-        case translations
-    }
-
     public func getTranslation(_ language: String = "en") -> String? {
         return translations?[language] ?? translations?["la"] ?? lemma
     }
-    func analyzeFormWithMeaning(_ form: String) -> String {
-        let formLower = form.lowercased()
-        let translation = getTranslation() ?? lemma.lowercased()
-        if partOfSpeech == "adverb" {
-               return "\(translation) (adverb)"
-           }
-           
-        
-        // 0. Handle vocative first
-        if let vocativeForm = vocative?.lowercased(), vocativeForm == formLower {
-               if partOfSpeech == "pronoun" {
-                   let pronounMap: [String: String] = [
-                       "tu": "you",
-                       "vos": "you all"
-                   ]
-                   return "O \(pronounMap[lemma.lowercased()] ?? translation)! (vocative)"
-               }
-               return "O \(translation)! (vocative)"
-           }
-        // 1. Handle Pronouns
-        if partOfSpeech == "pronoun" {
-            let pronounMap: [String: String] = [
-                "tu": "you (sg)",
-                "ego": "I",
-                "nos": "we",
-                "vos": "you (pl)",
-                "is": "he",
-                "ea": "she",
-                "id": "it"
-            ]
-            
-            let pronounText = pronounMap[lemma.lowercased()] ?? translation
-            
-            switch formLower {
-            case vocative?.lowercased(): return "O \(pronounText)! (vocative)"
-            case nominative?.lowercased(): return "\(pronounText) (nominative)"
-            case dative?.lowercased(): return "to/for \(pronounText) (dative)"
-            case accusative?.lowercased(): return "\(pronounText) (accusative)"
-            case genitive?.lowercased(): return "of \(pronounText) (genitive)"
-            case ablative?.lowercased(): return "by/with \(pronounText) (ablative)"
-            default: break
-            }
-        }
-        
-        // 2. Enhanced Verb Analysis
-        if partOfSpeech == "verb" {
-            // Handle principal parts first
-            if let infinitive = infinitive, infinitive.lowercased() == formLower {
-                return "to \(translation) (infinitive)"
-            }
-            if let perfect = perfect, perfect.lowercased() == formLower {
-                return "has/have \(translation)ed (perfect)"
-            }
-            
-            if let analysis = analyzeVerbForm(form: formLower, translation: translation) {
-                        return analysis
-                    }
-            
-        }
-        
-        // 3. Possessive Forms (Improved)
-        if let possessive = possessive {
-            let possessorMap: [String: String] = [
-                "meus": "my",
-                "tuus": "your",
-                "suus": "his/her/its",
-                "noster": "our",
-                "vester": "your (pl)"
-            ]
-            
-            let possessor = possessorMap[lemma.lowercased()] ?? "your"
-            
-            // Check both singular and plural forms
-            let allForms = [(possessive.singular, "sg"), (possessive.plural, "pl")]
-            for (forms, number) in allForms {
-                for (gender, cases) in forms ?? [:] {
-                    for (caseName, form) in cases {
-                        if form.lowercased() == formLower {
-                            return "\(possessor) \(gender) (\(number) \(caseName))"
-                        }
-                    }
-                }
-            }
-        }
-        
-        // 4. Noun/Adjective Analysis
-        let isPlural = [nominative_plural, genitive_plural, dative_plural,
-                       accusative_plural, ablative_plural].contains { $0?.lowercased() == formLower }
-        
-        let pluralSuffix = isPlural ? " (pl)" : ""
-        let pluralTranslation = isPlural ? translation + "s" : translation
-        
-        switch formLower {
-        case nominative?.lowercased(), nominative_plural?.lowercased():
-            return "\(pluralTranslation)\(pluralSuffix)"
-        case genitive?.lowercased(), genitive_plural?.lowercased():
-            return "of \(pluralTranslation)\(pluralSuffix)"
-        case dative?.lowercased(), dative_plural?.lowercased():
-            return "to/for \(pluralTranslation)\(pluralSuffix)"
-        case accusative?.lowercased(), accusative_plural?.lowercased():
-            return "\(pluralTranslation)\(pluralSuffix) (direct object)"
-        case ablative?.lowercased(), ablative_plural?.lowercased():
-            return "with/by \(pluralTranslation)\(pluralSuffix)"
-        default:
-            return "[unknown form: \(form)]"
-        }
-    }
     
+        
+        
+            
+       
+     
+     
    
     private func analyzeVerbForm(form: String, translation: String) -> String? {
         guard let forms = forms else { return nil }
@@ -273,7 +70,7 @@ public struct LatinWordEntity: Codable {
         let stem: String
         
         switch declension {
-        case 1 where partOfSpeech == "adjective" && gender == "masculine":
+        case 1 where partOfSpeech == .adjective && gender == .masculine:
                // Handle first-declension masculine adjectives like "beatus"
                stem = String(nominative.dropLast(2)) // e.g., "beatus" -> "beat"
                forms["nominative"] = nominative // "beatus"
@@ -299,7 +96,7 @@ public struct LatinWordEntity: Codable {
             forms["accusative_plural"] = stem + "as" // "puellas"
             forms["ablative_plural"] = stem + "is" // "puellis"
             
-        case 2 where gender == "neuter": // -um (neuter)
+        case 2 where gender == .neuter: // -um (neuter)
             
             let stem = String(nominative.dropLast(2)) // e.g., "bellum" -> "bell"
                    forms["genitive"] = stem + "i" // "belli"
@@ -326,7 +123,7 @@ public struct LatinWordEntity: Codable {
                     forms["ablative_plural"] = stem + "is" // "dominis"
             
             
-        case 3 where gender == "neuter":
+        case 3 where gender == .neuter:
             stem = String(nominative.dropLast(2)) // e.g. "nomen" -> "nomin"
             forms["genitive"] = stem + "is"
             forms["dative"] = stem + "i"
@@ -353,7 +150,7 @@ public struct LatinWordEntity: Codable {
             forms["nominative_plural"] = stem + "es"
             forms["genitive_plural"] = stem + "um"
             
-        case 4 where gender == "neuter": // -u
+        case 4 where gender == .neuter: // -u
             stem = String(nominative.dropLast())
             forms["genitive"] = stem + "ūs"
             forms["dative"] = stem + "ū"
@@ -618,7 +415,7 @@ public class LatinService {
             }
            
             
-            if entity.partOfSpeech == "verb" {
+            if entity.partOfSpeech == .verb {
                 
                 if let verbForms = entity.forms {
                             for (_, formArray) in verbForms {
@@ -650,7 +447,7 @@ public class LatinService {
             // 3. Map verb forms (new)
             if let verbForms = entity.forms {
                 // Handle perfect tense array
-                if let perfectForms = verbForms["perfect"] as? [String] {
+                if let perfectForms = verbForms["perfect"]  {
                     perfectForms.forEach { mapping[$0.lowercased()] = lemma }
                 }
                 

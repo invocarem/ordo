@@ -149,7 +149,7 @@ final class LatinServiceTests: XCTestCase {
             
             XCTAssertEqual(aInfo.count, 2, "Should appear twice for psalm 109")
             XCTAssertEqual(aInfo.translation, "from", "Should translate to 'from'")
-            XCTAssertEqual(aInfo.entity?.partOfSpeech, "preposition", "Should be tagged as preposition")
+            XCTAssertEqual(aInfo.entity?.partOfSpeech?.rawValue, "preposition", "Should be tagged as preposition")
         }
         
     assertPrepositionA()
@@ -288,8 +288,8 @@ func testAnalyzePsalm118Aleph() {
     }
     
     // 3. Verify basic properties of the ambulo entry
-    XCTAssertEqual(ambuloEntry.part_of_speech, "verb", "Should be a verb")
-    XCTAssertEqual(ambuloEntry.translations["en"], "walk", "English translation should be 'walk'")
+    XCTAssertEqual(ambuloEntry.entity?.partOfSpeech?.rawValue, "verb", "Should be a verb")
+    XCTAssertEqual(ambuloEntry.translation, "walk", "English translation should be 'walk'")
     // Verify forms and counts for 'ambulo' (lemma)
     if let ambuloInfo = analysis.dictionary["ambulo"] {
         XCTAssertEqual(ambuloInfo.translation, "walk", "Translation should match")

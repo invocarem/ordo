@@ -1,5 +1,65 @@
 [
-    {
+    
+        {
+            "lemma": "adolescens",
+            "part_of_speech": "noun",
+            "declension": 3,
+            "gender": "masculine",
+            "nominative": "adolescens",
+            "genitive": "adolescentis",
+            "dative": "adolescenti",
+            "accusative": "adolescentem",
+            "ablative": "adolescente",
+            "vocative": "adolescens",
+            "nominative_plural": "adolescentes",
+            "genitive_plural": "adolescentium",
+            "dative_plural": "adolescentibus",
+            "accusative_plural": "adolescentes",
+            "ablative_plural": "adolescentibus",
+            "translations": {
+                "en": "youth, young man",
+                "la": "adolescens"
+            }
+        },
+        {
+            "lemma": "custodio",
+            "part_of_speech": "verb",
+            "conjugation": 4,
+            "perfect": "custodivi",
+            "infinitive": "custodire",
+            "forms": {
+                "present": ["custodio", "custodis", "custodit", "custodimus", "custoditis", "custodiunt"],
+                "imperfect": ["custodiebat", "custodiebas", "custodiebat", "custodiebamus", "custodiebatis", "custodiebant"],
+                "future": ["custodiam", "custodies", "custodiet", "custodiemus", "custodietis", "custodient"],
+                "perfect": ["custodivi", "custodivisti", "custodivit", "custodivimus", "custodivistis", "custodiverunt"],
+                "present_subjunctive": ["custodiam", "custodias", "custodiat", "custodiamus", "custodiatis", "custodiant"],
+                "imperative": ["custodi", "custodite"]
+            },
+            "translations": {
+                "en": "to guard, protect, watch over",
+                "la": "custodio"
+            }
+        },
+        {
+            "lemma": "benedico",
+            "part_of_speech": "verb",
+            "conjugation": 3,
+            "perfect": "benedixi",
+            "infinitive": "benedicere",
+            "forms": {
+                "present": ["benedico", "benedicis", "benedicit", "benedicimus", "benedicitis", "benedicunt"],
+                "imperfect": ["benedicebam", "benedicebas", "benedicebat", "benedicebamus", "benedicebatis", "benedicebant"],
+                "future": ["benedicam", "benedices", "benedicet", "benedicemus", "benedicetis", "benedicent"],
+                "perfect": ["benedixi", "benedixisti", "benedixit", "benediximus", "benedixistis", "benedixerunt"],
+                "present_subjunctive": ["benedicam", "benedicas", "benedicat", "benedicamus", "benedicatis", "benedicant"],
+                "imperative": ["benedic", "benedicite"]
+            },
+            "translations": {
+                "en": "to bless, speak well of, praise",
+                "la": "benedico"
+            }
+        },
+       {
         "lemma": "via",
         "part_of_speech": "noun",
         "declension": 1,
@@ -179,29 +239,7 @@
                 "la": "tunc"
             }
         },
-        {
-               "lemma": "custodio",
-               "part_of_speech": "verb",
-               "perfect": "custodivi",
-               "infinitive": "custodire",
-               "forms": {
-                   "present": ["custodio", "custodis", "custodit", "custodimus", "custoditis", "custodiunt"],
-                   "imperfect": ["custodiebam", "custodiebas", "custodiebat", "custodiebamus", "custodiebatis", "custodiebant"],
-                   "future": ["custodiam", "custodies", "custodiet", "custodiemus", "custodietis", "custodient"],
-                   "perfect": ["custodivi", "custodivisti", "custodivit", "custodivimus", "custodivistis", "custodiverunt"],
-                   "imperative_singular": ["custodi"],
-                   "imperative_plural": ["custodite"],
-                   "present_infinitive_passive": ["custodiri"],
-                   "present_subjunctive": ["custodiam", "custodias", "custodiat", "custodiamus", "custodiatis", "custodiant"],
-                   "present_subjunctive_passive": ["custodiar", "custodiaris", "custodiatur", "custodiamur", "custodiamini", "custodiantur"],
-                          
-                   "gerundive_feminine_accusative_plural": ["custodiendas"]
-               },
-               "translations": {
-                   "en": "guard, protect",
-                   "la": "custodio"
-               }
-           },
+     
            {
             "lemma": "disco",
             "part_of_speech": "verb",
@@ -1362,12 +1400,12 @@
         "nominative": "gravis",
         "genitive": "gravis",
         "dative": "gravi",
-        "accusative": "gravem", 
+        "accusative": "gravem",
         "ablative": "gravi",
-        "nominative_plural": "graves",  
+        "nominative_plural": "graves",
         "genitive_plural": "gravium",
         "dative_plural": "gravibus",
-        "accusative_plural": "graves", 
+        "accusative_plural": "graves",
         "ablative_plural": "gravibus",
         "translations": {
             "en": "heavy, serious, important",
@@ -1468,7 +1506,7 @@
         "part_of_speech": "verb",
         "principal_parts": ["facio", "facere", "feci", "factum"],
         "forms": {
-          "imperative": ["fac", "facite"]  
+          "imperative": ["fac", "facite"]
         },
         "translations": {"en": "do, make"}
       },
@@ -1633,7 +1671,7 @@
         "principal_parts": ["dico", "dicere", "dixi", "dictum"],
         "forms": {
             "present": [
-                "dico", "dicis", "dicit", 
+                "dico", "dicis", "dicit",
                 "dicimus", "dicitis", "dicunt"
             ],
             "imperfect": [
@@ -1778,7 +1816,7 @@
         "lemma": "humilis",
         "part_of_speech": "adjective",
         "declension": 3,
-        "gender": "masculine/feminine",
+        "gender": "masculine",
         "nominative": "humilis",
         "genitive": "humilis",
         "dative": "humili",
@@ -1913,43 +1951,68 @@
             "perfect": ["posui", "posuisti", "posuit", "posuimus", "posuistis", "posuerunt"]
         }
     },
-    {
-      "lemma": "populus",
-      "nominative": "populus",
-      "dative": "populo",
-      "accusative": "populum",
-      "genitive": "populi",
-      "ablative": "populo"
-    },
-    {
-      "lemma": "noster",
-      "nominative": "noster",
-      "dative": "nostro",
-      "accusative": "nostrum",
-      "genitive": "nostri",
-      "ablative": "nostro"
-    },
-    {
-      "lemma": "gens",
-      "nominative": "gens",
-      "dative": "genti",
-      "accusative": "gentem",
-      "genitive": "gentis",
-      "ablative": "gente"
-    },
-   
-    {
-           "lemma": "rex",
-           "part_of_speech": "noun",
-           "declension": 3,
-           "gender": "masculine",
-           "nominative": "rex",
-           "genitive": "regis",
-           "translations": {
-               "en": "king",
-               "la": "rex"
-           }
-       },
+    
+        {
+            "lemma": "populus",
+            "part_of_speech": "noun",
+            "declension": 2,
+            "gender": "masculine",
+            "nominative": "populus",
+            "genitive": "populi",
+            "dative": "populo",
+            "accusative": "populum",
+            "ablative": "populo",
+            "translations": {
+                "en": "people, nation",
+                "la": "populus"
+            }
+        },
+        {
+            "lemma": "noster",
+            "part_of_speech": "adjective",
+            "declension": 2,
+            "gender": "masculine",
+            "nominative": "noster",
+            "genitive": "nostri",
+            "dative": "nostro",
+            "accusative": "nostrum",
+            "ablative": "nostro",
+            "translations": {
+                "en": "our",
+                "la": "noster"
+            }
+        },
+        {
+            "lemma": "gens",
+            "part_of_speech": "noun",
+            "declension": 3,
+            "gender": "feminine",
+            "nominative": "gens",
+            "genitive": "gentis",
+            "dative": "genti",
+            "accusative": "gentem",
+            "ablative": "gente",
+            "translations": {
+                "en": "clan, tribe, nation",
+                "la": "gens"
+            }
+        },
+        {
+            "lemma": "rex",
+            "part_of_speech": "noun",
+            "declension": 3,
+            "gender": "masculine",
+            "nominative": "rex",
+            "genitive": "regis",
+            "dative": "regi",
+            "accusative": "regem",
+            "ablative": "rege",
+            "translations": {
+                "en": "king",
+                "la": "rex"
+            }
+        },
+    
     {
         "lemma": "scabellum",
         "part_of_speech": "noun",
@@ -1958,7 +2021,7 @@
         "nominative": "scabellum",
         "translations": {
           "en": "footstool"
-        }        
+        }
       },
       {
         "lemma": "sedeo",
@@ -2386,5 +2449,231 @@
             "en": "whole, entire",
             "la": "totus"
         }
+    } ,
+    {
+        "lemma": "sermo",
+        "part_of_speech": "noun",
+        "declension": 3,
+        "gender": "masculine",
+        "vocative": "sermo",
+        "nominative": "sermo",
+        "genitive": "sermonis",
+        "dative": "sermoni",
+        "accusative": "sermonem",
+        "ablative": "sermone",
+        "nominative_plural": "sermones",
+        "genitive_plural": "sermonum",
+        "dative_plural": "sermonibus",
+        "accusative_plural": "sermones",
+        "ablative_plural": "sermonibus",
+        "translations": {
+            "en": "word, speech, conversation",
+            "la": "sermo"
+        }
+    },
+    {
+        "lemma": "eloquium",
+        "part_of_speech": "noun",
+        "declension": 2,
+        "gender": "neuter",
+        "vocative": "eloquium",
+        "nominative": "eloquium",
+        "genitive": "eloquii",
+        "dative": "eloquio",
+        "accusative": "eloquium",
+        "ablative": "eloquio",
+        "nominative_plural": "eloquia",
+        "genitive_plural": "eloquiorum",
+        "dative_plural": "eloquiis",
+        "accusative_plural": "eloquia",
+        "ablative_plural": "eloquiis",
+        "translations": {
+            "en": "utterance, expression",
+            "la": "eloquium"
+        }
+    },
+    {
+        "lemma": "considero",
+        "part_of_speech": "verb",
+        "perfect": "consideravi",
+        "infinitive": "considerare",
+        "forms": {
+            "present": ["considero", "consideras", "considerat", "consideramus", "consideratis", "considerant"],
+            "imperfect": ["considerabam", "considerabas", "considerabat", "considerabamus", "considerabatis", "considerabant"],
+            "future": ["considerabo", "considerabis", "considerabit", "considerabimus", "considerabitis", "considerabunt"],
+            "perfect": ["consideravi", "consideravisti", "consideravit", "consideravimus", "consideravistis", "consideraverunt"],
+            "present_subjunctive": ["considerem", "consideres", "consideret", "consideremus", "consideretis", "considerent"]
+        },
+        "translations": {
+            "en": "examine, consider",
+            "la": "considero"
+        }
+    },
+    
+    {
+        "lemma": "corrigo",
+        "part_of_speech": "verb",
+        "perfect": "correxi",
+        "infinitive": "corrigere",
+        "forms": {
+            "present": ["corrigo", "corrigis", "corrigit", "corrigimus", "corrigitis", "corrigunt"],
+            "imperfect": ["corrigebam", "corrigebas", "corrigebat", "corrigebamus", "corrigebatis", "corrigebant"],
+            "future": ["corrigam", "corriges", "corriget", "corrigemus", "corrigetis", "corrigent"],
+            "perfect": ["correxi", "correxisti", "correxit", "correximus", "correxistis", "correxerunt"],
+            "present_subjunctive": ["corrigam", "corrigas", "corrigat", "corrigamus", "corrigatis", "corrigant"],
+            "imperative": ["corrige", "corrigite"]
+        },
+        "translations": {
+            "en": "correct, make straight",
+            "la": "corrigo"
+        }
+    },
+   
+    {
+        "lemma": "adolescenta",
+        "part_of_speech": "adjective",
+        "declension": 1,
+        "gender": "feminine",
+        "positive": "adolescenta",
+        "comparative": "adolescentior",
+        "superlative": "adolescentissima",
+        "nominative": "adolescenta",
+        "genitive": "adolescentae",
+        "dative": "adolescentae",
+        "accusative": "adolescentam",
+        "ablative": "adolescentā",
+        "vocative": "adolescenta",
+        "nominative_plural": "adolescentae",
+        "genitive_plural": "adolescentārum",
+        "dative_plural": "adolescentis",
+        "accusative_plural": "adolescentās",
+        "ablative_plural": "adolescentis",
+        "translations": {
+            "en": "youthful, growing (fem)",
+            "la": "adolescenta"
+        }
+    },
+    
+        {
+            "lemma": "meditor",
+            "part_of_speech": "verb",
+            "conjugation": 1,
+            "deponent": true,
+            "perfect": "meditatus sum",
+            "infinitive": "meditari",
+            "forms": {
+                "present": ["meditor", "meditaris", "meditatur", "meditamur", "meditamini", "meditantur"],
+                "imperfect": ["meditabar", "meditabaris", "meditabatur", "meditabamur", "meditabamini", "meditabantur"],
+                "future": ["meditabor", "meditaberis", "meditabitur", "meditabimur", "meditabimini", "meditabuntur"],
+                "perfect": ["meditatus sum", "meditatus es", "meditatus est", "meditati sumus", "meditati estis", "meditati sunt"],
+                "present_subjunctive": ["mediter", "mediteris", "meditetur", "meditemur", "meditemini", "meditentur"]
+            },
+            "translations": {
+                "en": "ponder, meditate, practice",
+                "la": "meditor"
+            }
+        },
+        {
+            "lemma": "obliviscor",
+            "part_of_speech": "verb",
+            "conjugation": 3,
+            "deponent": true,
+            "perfect": "oblitus sum",
+            "infinitive": "oblivisci",
+            "forms": {
+                "present": ["obliviscor", "oblivisceris", "obliviscitur", "obliviscimur", "obliviscimini", "obliviscuntur"],
+                "future": ["obliviscar", "oblivisceris", "obliviscetur", "obliviscemur", "obliviscemini", "obliviscentur"],
+                "perfect": ["oblitus sum", "oblitus es", "oblitus est", "obliti sumus", "obliti estis", "obliti sunt"]
+            },
+            "translations": {
+                "en": "forget",
+                "la": "obliviscor"
+            }
+        },
+        {
+            "lemma": "iustificatio",
+            "part_of_speech": "noun",
+            "declension": 3,
+            "gender": "feminine",
+            "nominative": "iustificatio",
+            "genitive": "iustificationis",
+            "dative": "iustificationi",
+            "accusative": "iustificationem",
+            "ablative": "iustificatione",
+            "vocative": "iustificatio",
+            "nominative_plural": "iustificationes",
+            "genitive_plural": "iustificationum",
+            "dative_plural": "iustificationibus",
+            "accusative_plural": "iustificationes",
+            "ablative_plural": "iustificationibus",
+            "translations": {
+                "en": "justification, vindication",
+                "la": "iustificatio"
+            }
+        },
+        
+            {
+                "lemma": "pecco",
+                "part_of_speech": "verb",
+                "conjugation": 1,
+                "perfect": "peccavi",
+                "infinitive": "peccare",
+                "forms": {
+                    "present": ["pecco", "peccas", "peccat", "peccamus", "peccatis", "peccant"],
+                    "imperfect": ["peccabam", "peccabas", "peccabat", "peccabamus", "peccabatis", "peccabant"],
+                    "future": ["peccabo", "peccabis", "peccabit", "peccabimus", "peccabitis", "peccabunt"],
+                    "perfect": ["peccavi", "peccavisti", "peccavit", "peccavimus", "peccavistis", "peccaverunt"],
+                    "present_subjunctive": ["peccem", "pecces", "peccet", "peccemus", "peccetis", "peccent"],
+                    "imperative": ["pecca", "peccate"]
+                },
+                "translations": {
+                    "en": "to sin, err, go wrong",
+                    "la": "pecco"
+                }
+            },
+          
+            {
+                "lemma": "repello",
+                "part_of_speech": "verb",
+                "conjugation": 3,
+                "perfect": "reppuli",
+                "infinitive": "repellere",
+                "forms": {
+                    "present": ["repello", "repellis", "repellit", "repellimus", "repellitis", "repellunt"],
+                    "imperfect": ["repellebam", "repellebas", "repellebat", "repellebamus", "repellebatis", "repellebant"],
+                    "future": ["repellam", "repelles", "repellet", "repellemus", "repelletis", "repellent"],
+                    "perfect": ["reppuli", "reppulisti", "reppulit", "reppulimus", "reppulistis", "reppulerunt"],
+                    "present_subjunctive": ["repellam", "repellas", "repellat", "repellamus", "repellatis", "repellant"],
+                    "imperative": ["repelle", "repellite"]
+                },
+                "translations": {
+                    "en": "to drive back, repel, reject",
+                    "la": "repello"
+                }
+            },
+
+    {
+        "lemma": "divitiae",
+        "part_of_speech": "noun",
+        "declension": 1,
+        "gender": "feminine",
+        "vocative": "divitiae",
+        "nominative": "divitiae",
+        "genitive": "divitiarum",
+        "dative": "divitiis",
+        "accusative": "divitias",
+        "ablative": "divitiis",
+        "nominative_plural": "divitiae",
+        "genitive_plural": "divitiarum",
+        "dative_plural": "divitiis",
+        "accusative_plural": "divitias",
+        "ablative_plural": "divitiis",
+        "translations": {
+            "en": "riches, wealth",
+            "la": "divitiae"
+        }
     }
-  ]
+
+]
+
+
