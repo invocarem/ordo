@@ -388,7 +388,7 @@ public final class HoursService {
                 do {
                     let data = try Data(contentsOf: url)
 
-                    print("\(data)")
+                    print("!!!! \(data)")
                     horas = try JSONDecoder().decode([String: Hour].self, from: data)
                     return
                 } catch {

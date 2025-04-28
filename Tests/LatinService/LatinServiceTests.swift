@@ -256,125 +256,8 @@ final class LatinServiceTests: XCTestCase {
     XCTAssertEqual(inimicusInfo.forms["inimicos"], 1, "Should find 'inimicos' once")
     XCTAssertEqual(inimicusInfo.forms["inimicorum"], 1, "Should find 'inimicorum' once")
 }
-func testAnalyzePsalm118Aleph() {
-    let psalm119Aleph = [
-        "Beati immaculati in via, qui ambulant in lege Domini.",
-        "Beati qui scrutantur testimonia eius, in toto corde exquirunt eum.",
-        "Non enim qui operantur iniquitatem, in viis eius ambulaverunt.",
-        "Tu mandasti mandata tua custodire nimis.",
-        "Utinam dirigantur viae meae ad custodiendas iustificationes tuas!",
-        "Tunc non confundar, cum perspexero in omnibus mandatis tuis.",
-        "Confitebor tibi in directione cordis, in eo quod didici iudicia iustitiae tuae.",
-        "Iustificationes tuas custodiam; non me derelinquas usquequaque."
-    ]
-    
-    let analysis = latinService.analyzePsalm(text: psalm119Aleph)
-    // print("All words in analysis dictionary:")
-    //analysis.dictionary.keys.sorted().forEach { print($0) }
-    
-    // Basic statistics
-    XCTAssertGreaterThan(analysis.totalWords, 0, "Should have words in psalm")
-    XCTAssertGreaterThan(analysis.uniqueWords, 0, "Should have unique words")
-    XCTAssertGreaterThan(analysis.uniqueLemmas, 0, "Should have unique lemmas")
 
-    
-    // Test specific words
-    XCTAssertNotNil(analysis.dictionary["ambulo"], "Should have 'ambulo' in dictionary")
    
-    
-     guard let ambuloEntry = analysis.dictionary["ambulo"] else {
-        XCTFail("Dictionary should contain 'ambulo' lemma")
-        return
-    }
-    
-    // 3. Verify basic properties of the ambulo entry
-    XCTAssertEqual(ambuloEntry.entity?.partOfSpeech?.rawValue, "verb", "Should be a verb")
-    XCTAssertEqual(ambuloEntry.translation, "walk", "English translation should be 'walk'")
-    // Verify forms and counts for 'ambulo' (lemma)
-    if let ambuloInfo = analysis.dictionary["ambulo"] {
-        XCTAssertEqual(ambuloInfo.translation, "walk", "Translation should match")
-        
-        // Check that the forms exist and have counts > 0
-        if let ambulantCount = ambuloInfo.forms["ambulant"] {
-            XCTAssertGreaterThan(ambulantCount, 0, "'ambulant' should appear at least once")
-        } else {
-            XCTFail("Missing 'ambulant' form in analysis")
-        }
-        
-        if let ambulaveruntCount = ambuloInfo.forms["ambulaverunt"] {
-            XCTAssertGreaterThan(ambulaveruntCount, 0, "'ambulaverunt' should appear at least once")
-        } else {
-            XCTFail("Missing 'ambulaverunt' form in analysis")
-        }
-    } else {
-        XCTFail("Missing 'ambulo' in analysis")
-    }
-    
-    // Additional checks for other important words in this psalm
-    XCTAssertNotNil(analysis.dictionary["beati"], "Should have 'beati' in dictionary")
-    XCTAssertNotNil(analysis.dictionary["via"], "Should have 'via' in dictionary")
-    XCTAssertNotNil(analysis.dictionary["lege"], "Should have 'lege' in dictionary")
-     XCTAssertNotNil(analysis.dictionary["immaculatus"], "Should have 'immaculatus' in dictionary")
-    XCTAssertNotNil(analysis.dictionary["dominus"], "Should have 'dominus' in dictionary")
-    XCTAssertNotNil(analysis.dictionary["mandatum"], "Should have 'mandatum' in dictionary")
-
-}
-   func testAnalyzePsalm118Daleth() {
-    let psalm119Daleth = [
-        "Adhaesit pavimento anima mea: vivifica me secundum verbum tuum.",
-        "Vias meas enuntiavi et exaudisti me: doce me iustificationes tuas.",
-        "Viam mandatorum tuorum instrue me: et meditabor in mirabilibus tuis.",
-        "Dormitavit anima mea prae taedio: confirma me in verbis tuis.",
-        "Viam iniquitatis amove a me: et de lege tua miserere mei.",
-        "Viam veritatis elegi: iudicia tua non sum oblitus.",
-        "Adhaesi testimoniis tuis Domine: noli me confundere.",
-        "Viam mandatorum tuorum cucurri: cum dilatasti cor meum."
-    ]
-    
-    let analysis = latinService.analyzePsalm(text: psalm119Daleth)
-    
-    // Debug print if needed
-    // print("All words in analysis dictionary:")
-    // analysis.dictionary.keys.sorted().forEach { print($0) }
-    
-    // 1. Basic statistics
-    XCTAssertGreaterThan(analysis.totalWords, 0, "Should have words in psalm")
-    XCTAssertGreaterThan(analysis.uniqueWords, 0, "Should have unique words")
-    XCTAssertGreaterThan(analysis.uniqueLemmas, 0, "Should have unique lemmas")
-    
-    // 2. Test specific important words in Daleth section
-    XCTAssertNotNil(analysis.dictionary["adhaereo"], "Should have 'adhaereo' in dictionary")
-    XCTAssertNotNil(analysis.dictionary["vivifico"], "Should have 'vivifico' in dictionary")
-    XCTAssertNotNil(analysis.dictionary["verbum"], "Should have 'verbum' in dictionary")
-    XCTAssertNotNil(analysis.dictionary["via"], "Should have 'via' in dictionary")
-    XCTAssertNotNil(analysis.dictionary["iustificatio"], "Should have 'iustificatio' in dictionary")
-    XCTAssertNotNil(analysis.dictionary["mandatum"], "Should have 'mandatum' in dictionary")
-    XCTAssertNotNil(analysis.dictionary["dominus"], "Should have 'dominus' in dictionary")
-    
-    // 3. Detailed test for 'vivifico' (to give life) as sample verb
-    guard let vivificoEntry = analysis.dictionary["vivifico"] else {
-        XCTFail("Dictionary should contain 'vivifico' lemma")
-        return
-    }
-    
-    // Verify basic properties
-    XCTAssertEqual(vivificoEntry.entity?.partOfSpeech?.rawValue, "verb", "Should be a verb")
-   
-    
-    // Verify forms and counts
-    if let vivificoInfo = analysis.dictionary["vivifico"] {
-        // Check imperative form "vivifica" appears
-        if let vivificaCount = vivificoInfo.forms["vivifica"] {
-            XCTAssertGreaterThan(vivificaCount, 0, "'vivifica' should appear at least once")
-        } else {
-            XCTFail("Missing 'vivifica' form in analysis")
-        }
-    } else {
-        XCTFail("Missing 'vivifico' in analysis")
-    }
-    
-    
-}
 func testAnalyzePsalm90() {
     let psalm90 = [
         "Qui habitat in adjutorio Altissimi, in protectione Dei caeli commorabitur.",
@@ -412,4 +295,126 @@ func testAnalyzePsalm90() {
     // 3. Test protection imagery words
     XCTAssertNotNil(analysis.dictionary["scapula"], "Should have 'scapula' (shoulder/wings)")
 }
+func testAnalyzeAdolescens() {
+    // Setup test data
+    let testText = [
+        "Adolescens sum ego et contemptus", // Psalm 119:141
+        "Vide adolescentem currentem",      // Example sentence
+        "Da intellectum adolescentibus"     // Plural example
+    ]
+    
+    // Create analysis
+    let analysis = latinService.analyzePsalm(text: testText)
+    
+    // Verify lemma exists
+    guard let entry = analysis.dictionary["adolescens"] else {
+        XCTFail("Missing 'adolescens' lemma")
+        return
+    }
+    
+    print("\n=== adolescens Forms ===")
+    
+    // Check expected forms
+    let expectedForms = [
+        ("adolescens", "nominative", 1),  // Verse 141
+        ("adolescentem", "accusative", 1),
+        ("adolescentibus", "dative_plural", 1)
+    ]
+    
+    for (form, caseName, minCount) in expectedForms {
+        let count = entry.forms[form] ?? 0
+        print("\(form.padding(toLength: 15, withPad: " ", startingAt: 0)) | \(caseName.padding(toLength: 15, withPad: " ", startingAt: 0)) | \(count >= minCount ? "✅" : "❌")")
+        XCTAssertGreaterThanOrEqual(count, minCount, "Missing form '\(form)' (\(caseName))")
+    }
+    
+    // Verify noun properties
+    XCTAssertEqual(entry.entity?.partOfSpeech, .noun)
+    XCTAssertEqual(entry.translation?.contains("youth"), true)
+}
+
+    func testAnalyzeCustodio() {
+        // Setup test data
+        let testText = [
+            "Custodiam mandata tua",          // Future tense
+            "Custodi verba haec",             // Imperative
+            "Custodiebant testamentum"        // Imperfect
+        ]
+        
+        // Create analysis
+        let analysis = latinService.analyzePsalm(text: testText)
+        
+        // Verify lemma exists
+        guard let entry = analysis.dictionary["custodio"] else {
+            XCTFail("Missing 'custodio' lemma")
+            return
+        }
+        
+        print("\n=== custodio Forms ===")
+        
+        // Check expected forms
+        let expectedForms = [
+            ("custodiam", "future", 1),
+            ("custodi", "imperative", 1),
+            ("custodiebant", "imperfect", 1)
+        ]
+        
+        for (form, tense, minCount) in expectedForms {
+            let count = entry.forms[form] ?? 0
+            print("\(form.padding(toLength: 15, withPad: " ", startingAt: 0)) | \(tense.padding(toLength: 15, withPad: " ", startingAt: 0)) | \(count >= minCount ? "✅" : "❌")")
+            XCTAssertGreaterThanOrEqual(count, minCount, "Missing form '\(form)' (\(tense))")
+        }
+        
+        // Verify verb properties
+        XCTAssertEqual(entry.entity?.partOfSpeech, .verb)
+        XCTAssertEqual(entry.translation?.contains("guard"), true)
+    }
+    func testAnalyzeJustus() {
+        let psalm119Sade = [
+            "Justus es, Domine",        // verse 137 (masc.nom)
+            "Mandasti justitiam",       // verse 138 (fem.acc)
+            "Justitiae tuae"           // verse 138 (fem.gen)
+            
+        ]
+        
+        let analysis = latinService.analyzePsalm(text: psalm119Sade)
+        
+        // 1. Validate lemma exists        
+        guard let justusEntry = analysis.dictionary["justus"], 
+              let entity = justusEntry.entity else {
+            XCTFail("Missing 'justus' lemma or entity")
+            return
+        }
+    
+        // 4. Debug output
+        print("\nAll forms detected:")
+        justusEntry.forms.forEach { 
+            print("- \($0.key): \($0.value)") 
+            
+            }
+
+
+        let testCases = [
+        ("justus", "should be nominative masculine"),
+        ("justitiam", "should be accusative feminine"),
+        ("justitiae", "should be genitive feminine")
+    ]
+    
+    for (form, description) in testCases {
+        let analysis = entity.analyzeFormWithMeaning(form)
+        print("\(form): \(analysis)")
+        
+        // Verify the analysis contains key words
+        switch form {
+        case "justus":
+            XCTAssertTrue(analysis.contains("nominative"), description)
+        case "justitiam":
+            XCTAssertTrue(analysis.lowercased().contains("accusative"), description)
+        case "justitiae":
+            XCTAssertTrue(analysis.lowercased().contains("genitive"), description)
+        default:
+            break
+        }
+    }
+    }
+
 }

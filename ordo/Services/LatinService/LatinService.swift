@@ -6,12 +6,6 @@ extension LatinWordEntity{
         return translations?[language] ?? translations?["la"] ?? lemma
     }
     
-        
-        
-            
-       
-     
-     
    
     private func analyzeVerbForm(form: String, translation: String) -> String? {
         guard let forms = forms else { return nil }
@@ -392,6 +386,24 @@ public class LatinService {
             caseForms.compactMap { $0?.lowercased() }
                     .forEach { mapping[$0] = lemma }
             
+            
+            if let additionalForms = entity.forms {
+
+
+                for (formKey, formValue) in additionalForms {
+                    
+                    // Only process keys ending with _f or _n
+                    if formKey.hasSuffix("_f") || formKey.hasSuffix("_n") {
+                        if let stringArray = formValue as? [String] {
+                            stringArray.forEach { form in
+                                mapping[form.lowercased()] = lemma
+                            }
+                        } else if let string = formValue as? String {
+                            mapping[string.lowercased()] = lemma
+                        }
+                    }
+                }
+            }
             // 2. Map generated forms (from generatedForms)
             entity.generatedForms.values
                 .map { $0.lowercased() }
