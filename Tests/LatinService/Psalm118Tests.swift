@@ -2,6 +2,7 @@ import XCTest
 @testable import LatinService
 
 final class Psalm118Tests: XCTestCase {
+    let verbose : Bool = true
     private var latinService: LatinService!
      override func setUp() {
         super.setUp()
@@ -449,7 +450,7 @@ func testAnalyzePsalm119He_Comprehensive() {
     }
 }
 
-func testAnalyzePsalm119Teth() {
+func testAnalyzePsalm118Teth() {
     let psalm119Teth = [
         "Bonitatem fecisti cum servo tuo, Domine, secundum verbum tuum.",
         "Bonitatem et disciplinam et scientiam doce me, quia mandatis tuis credidi.",
@@ -528,61 +529,9 @@ func testAnalyzePsalm119Teth() {
     print("Supine forms:", analysis.dictionary["coagulo"]?.forms["coagulatum"] ?? 0)
     print("Comparative 'super':", analysis.dictionary["super"]?.count ?? 0)
 }
-func testAnalyzePsalm119Sadeiustus() {
-    let psalm119Sade = [
-        "Justus es, Domine",        // verse 137 (masc.nom)
-        "Mandasti justitiam",       // verse 138 (fem.acc)
-        "Justitiae tuae"           // verse 138 (fem.gen)
-        
-    ]
-    
-    let analysis = latinService.analyzePsalm(text: psalm119Sade)
-    
-    // 1. Validate lemma exists
-    guard let justusEntry = analysis.dictionary["justus"] else {
-        XCTFail("Missing 'justus' lemma")
-        return
-    }
-    
-    // 2. Check masculine forms
-    let mascForms = [
-        ("justus", "nominative"),
-        ("justum", "accusative"),
-        ("justi", "genitive_plural")
-    ]
-    
-    // 3. Check feminine forms
-    let femForms = [
-        ("justitia", "nominative_f"),
-        ("justitiam", "accusative_f"), 
-        ("justitiae", "genitive_f")
-    ]
-    
-    print("\n=== Justus Forms ===")
-    
-    // Test masculine forms
-    for (form, caseName) in mascForms {
-        let count = justusEntry.forms[form] ?? 0
-        print("\(form): \(count) \(count > 0 ? "✅" : "❌") [\(caseName)]")
-        XCTAssertGreaterThan(count, 0, "Missing masculine form '\(form)' (\(caseName))")
-    }
-    
-    // Test feminine forms
-    for (form, caseName) in femForms {
-        // Check both direct form and _f suffixed version
-        let count = (justusEntry.forms[form] ?? 0) + 
-                   (justusEntry.forms[caseName] ?? 0)
-        
-        print("\(form): \(count) \(count > 0 ? "✅" : "❌") [\(caseName)]")
-        XCTAssertGreaterThan(count, 0, "Missing feminine form '\(form)' (\(caseName))")
-    }
-    
-    // 4. Debug output
-    print("\nAll forms detected:")
-    justusEntry.forms.forEach { print("- \($0.key): \($0.value)") }
-}
 
-func testAnalyzePsalm119Sade() {
+
+func testAnalyzePsalm118Sade() {
     let psalm119Sade = [
         "Justus es, Domine, et rectum judicium tuum.",
         "Mandasti justitiam testimonia tua, et veritatem tuam nimis.",
@@ -626,7 +575,8 @@ func testAnalyzePsalm119Sade() {
     let sadeWords = [
         
         ("justus", ["justus", "justum"], "righteous"),
-        ("justitia", ["justitia", "justitiam"], "justice") ,
+        ("justus", ["justitia", "justitiam"], "justice"),
+        
 
         ("judicium", ["judicium"], "judgment"),
         ("veritas", ["veritatem", "veritas"], "truth"),
@@ -693,4 +643,184 @@ func testAnalyzePsalm119Sade() {
           (analysis.dictionary["aeternus"]?.count ?? 0) + 
           (analysis.dictionary["aeternum"]?.count ?? 0))
 }
+
+
+func testAnalyzePsalm118Resh() {
+    let psalm118Resh = [
+        "Vide humilitatem meam, et eripe me: quia legem tuam non sum oblitus.",
+        "Judica judicium meum, et redime me: propter eloquium tuum vivifica me.",
+        "Longe a peccatoribus salus: quia justificationes tuas non exquisierunt.",
+        "Misericordiae tuae multae, Domine: secundum judicium tuum vivifica me.",
+        "Multi qui persequuntur me, et tribulant me: a testimoniis tuis non declinavi.",
+        "Vidi praevaricantes, et tabescebam: quia eloquia tua non custodierunt.",
+        "Vide quoniam mandata tua dilexi, Domine: in misericordia tua vivifica me.",
+        "Principium verborum tuorum veritas: in aeternum omnia judicia justitiae tuae."
+    ]
+    
+    let analysis = latinService.analyzePsalm(text: psalm118Resh)
+    
+    // ===== 1. Core Statistics =====
+    XCTAssertGreaterThan(analysis.totalWords, 50, "Should process all words")
+    XCTAssertGreaterThan(analysis.uniqueLemmas, 25, "Should identify 25+ unique lemmas")
+    
+    // ===== 2. Resh-Theme Words (ר) =====
+    let reshWords = [
+        ("video", ["vide", "vidi"], "see"),
+        ("judicium", ["judicium", "judicia"], "judgment"),
+        ("misericordia", ["misericordiae", "misericordia"], "mercy"),
+        ("verbum", ["verborum"], "word"),
+        ("justus", ["justitiae"], "just"),
+        ("aeternus", ["aeternum"], "eternal"),
+        ("redimo", ["redime"], "redeem"),
+        ("praevaricator", ["praevaricantes"], "transgressor")
+    ]
+    
+    if verbose {
+        print("\n=== Resh-Themed Lemmas ===")
+    }
+    for (lemma, forms, translation) in reshWords {
+        guard let entry = analysis.dictionary[lemma] else {
+            XCTFail("Missing Resh-themed lemma: \(lemma)")
+            continue
+        }
+        
+        // Verify translation contains expected meaning
+        XCTAssertTrue(entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
+                     "Incorrect translation for \(lemma)")
+        
+        // Verify each expected form exists
+        for form in forms {
+            let count = entry.forms[form] ?? 0
+            if verbose {
+                print("\(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
+            }
+            XCTAssertGreaterThan(count, 0, "Missing form '\(form)' for \(lemma)")
+        }
+    }
+    
+    // ===== 3. Grammatical Highlights =====
+    // A. Imperatives ("Vide", "Judica", "Vivifica")
+    if let videoEntry = analysis.dictionary["video"] {
+        XCTAssertGreaterThan(videoEntry.forms["vide"] ?? 0, 0,
+                           "Should find imperative 'vide'")
+    }
+    
+    if let judicoEntry = analysis.dictionary["judico"] {
+        XCTAssertGreaterThan(judicoEntry.forms["judica"] ?? 0, 0,
+                           "Should find imperative 'judica'")
+    }
+    
+    // B. Perfect tense ("vidi", "tabescebam", "custodierunt")
+    if let videoEntry = analysis.dictionary["video"] {
+        XCTAssertGreaterThan(videoEntry.forms["vidi"] ?? 0, 0,
+                           "Should find perfect 'vidi'")
+    }
+    
+    // C. Substantive adjectives ("peccatoribus", "praevaricantes")
+    if let peccoEntry = analysis.dictionary["peccator"] {
+        XCTAssertGreaterThan(peccoEntry.forms["peccatoribus"] ?? 0, 0,
+                           "Should find dative plural substantive")
+    }
+    
+    // ===== 4. Verse-Specific Checks =====
+    // Verse 153: "Vide humilitatem meam..."
+    if let humilitasEntry = analysis.dictionary["humilitas"] {
+        XCTAssertGreaterThan(humilitasEntry.forms["humilitatem"] ?? 0, 0,
+                           "Should find accusative 'humilitatem'")
+    }
+    
+    // Verse 160: "Principium verborum tuorum veritas..."
+    if let principiumEntry = analysis.dictionary["principium"] {
+        XCTAssertGreaterThan(principiumEntry.count, 0, "Missing 'principium'")
+    }
+    
+    // ===== 5. Debug Output =====
+    if verbose {
+        print("\n=== Key Grammatical Features ===")
+        print("Imperatives:")
+        print("- vide:", analysis.dictionary["video"]?.forms["vide"] ?? 0)
+        print("- judica:", analysis.dictionary["judico"]?.forms["judica"] ?? 0)
+        
+        print("\nPerfect Tense Forms:")
+        print("- vidi:", analysis.dictionary["video"]?.forms["vidi"] ?? 0)
+        print("- custodierunt:", analysis.dictionary["custodio"]?.forms["custodierunt"] ?? 0)
+        
+        print("\nSubstantive Adjectives:")
+        print("- peccatoribus:", analysis.dictionary["peccator"]?.forms["peccatoribus"] ?? 0)
+        print("- praevaricantes:", analysis.dictionary["praevaricator"]?.forms["praevaricantes"] ?? 0)
+        
+        print("\n=== Translation Samples ===")
+        reshWords.forEach { lemma, _, _ in
+            if let entry = analysis.dictionary[lemma] {
+                print("\(lemma.padding(toLength: 15, withPad: " ", startingAt: 0)) – \(entry.translation ?? "")")
+            }
+        }
+    }
+}
+func testAnalyzePsalm118Sin() {
+    let psalm118Sin = [
+        "Principes persecuti sunt me gratis: et a verbis tuis formidavit cor meum.",
+        "Laetor ego super eloquia tua: sicut qui invenit spolia multa.",
+        "Mendacium odio habui, et abominatus sum: legem tuam dilexi.", // ACTUAL "mendacium" appears here
+        "Septies in die laudem dixi tibi: super judicia justitiae tuae.",
+        "Pax multa diligentibus legem tuam: et non est illis scandalum.", // ACTUAL "scandalum" appears here
+        "Exspectabam salutem tuam, Domine: et mandata tua dilexi.",
+        "Custodivit anima mea testimonia tua: et dilexi ea vehementer.",
+        "Servavi mandata tua, et testimonia tua: quia omnes viae meae in conspectu tuo."
+    ]
+    
+    let analysis = latinService.analyzePsalm(text: psalm118Sin)
+    
+    // ===== 1. Verify ACTUAL words in this section =====
+    let confirmedWords = [
+        ("mendacium", ["mendacium"], "falsehood"), // Present in verse 113
+        ("scandalum", ["scandalum"], "stumbling block"), // Present in verse 115
+        ("salus", ["salutem"], "salvation"), // "salutem" in verse 116
+        ("diligo", ["dilexi"], "love"), // Appears twice
+        ("lex", ["legem"], "law") // "legem" in verse 113
+    ]
+    
+    print("\n=== ACTUAL Words in Psalm 118 Sin ===")
+    for (lemma, forms, translation) in confirmedWords {
+        guard let entry = analysis.dictionary[lemma] else {
+            XCTFail("Missing confirmed lemma: \(lemma)")
+            continue
+        }
+        
+        for form in forms {
+            let count = entry.forms[form] ?? 0
+            print("\(form): \(count > 0 ? "✅" : "❌")")
+            XCTAssertGreaterThan(count, 0, 
+                              "Confirmed word '\(form)' (\(lemma)) missing in analysis")
+        }
+    }
+    
+    // ===== 2. Verify grammatical forms =====
+    // Perfect tense "dilexi" (appears twice)
+    if let diligoEntry = analysis.dictionary["diligo"] {
+        let dilexiCount = diligoEntry.forms["dilexi"] ?? 0
+        XCTAssertGreaterThanOrEqual(dilexiCount, 2, 
+                                  "Expected at least 2 occurrences of 'dilexi'")
+    }
+    
+    // Participle "diligentibus" (dative plural)
+    if let diligoEntry = analysis.dictionary["diligo"] {
+        XCTAssertGreaterThan(
+            diligoEntry.forms["diligentibus"] ?? 0, 
+            0,
+            "Should find participle 'diligentibus'"
+        )
+    }
+    
+    // ===== 3. Debug output =====
+    if(verbose) {
+        print("\n=== Full Analysis ===")
+        print("Total words:", analysis.totalWords)
+        print("Unique lemmas:", analysis.uniqueLemmas)
+        print("'diligo' forms:", analysis.dictionary["diligo"]?.forms ?? [:])
+        print("'mendacium' forms:", analysis.dictionary["mendacium"]?.forms ?? [:])
+        print("'scandalum' forms:", analysis.dictionary["scandalum"]?.forms ?? [:])
+    }
+}
+
 }

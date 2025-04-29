@@ -393,7 +393,7 @@ public class LatinService {
                 for (formKey, formValue) in additionalForms {
                     
                     // Only process keys ending with _f or _n
-                    if formKey.hasSuffix("_f") || formKey.hasSuffix("_n") {
+                    if formKey.hasSuffix("_f") || formKey.hasSuffix("_n") || formKey.hasSuffix("_participle") {
                         if let stringArray = formValue as? [String] {
                             stringArray.forEach { form in
                                 mapping[form.lowercased()] = lemma
@@ -472,7 +472,8 @@ public class LatinService {
                 mapping[perfectForm.lowercased()] = lemma
             }
         }
-        
+        print("Mapped forms for 'mendacium':", 
+      mapping.filter { $0.value == "mendacium" }.keys.sorted())
         //print("Final Mapping:", mapping.sorted(by: { $0.key < $1.key })) // Alphabetized debug
         return mapping
     }
