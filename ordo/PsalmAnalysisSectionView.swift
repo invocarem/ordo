@@ -8,17 +8,13 @@ import SwiftUI
 struct PsalmAnalysisSelectionView: View {
     let latinService: LatinService
     let psalmService: PsalmService
+    let hoursService = HoursService.shared
+    let liturgicalDay: LiturgicalDay?
+    let hourKey: String?
     
-    // Using PsalmUsage for identifiers
+    // Hardcoded psalms as fallback
     let psalmUsages: [PsalmUsage] = [
         PsalmUsage(number: "118", category: "aleph"),
-        PsalmUsage(number: "118", category: "daleth"),
-        PsalmUsage(number: "118", category: "he"),
-        PsalmUsage(number: "118", category: "vau"),
-        PsalmUsage(number: "37"),
-        PsalmUsage(number: "38"),
-        PsalmUsage(number: "119"),
-        PsalmUsage(number: "120"),
         PsalmUsage(number: "4"),
         PsalmUsage(number: "90"),
         PsalmUsage(number: "133"),
@@ -28,55 +24,107 @@ struct PsalmAnalysisSelectionView: View {
     ]
     
     @State private var psalms: [String: [String]] = [:]
-    @State private var selectedPsalmId: String  // Now tracking by ID
-   
+    @State private var availablePsalms: [PsalmUsage] = []
+    @State private var selectedPsalmId: String
+    @State private var isLoading = true
     
-    init(latinService: LatinService, psalmService: PsalmService) {
+    init(latinService: LatinService, psalmService: PsalmService, liturgicalDay: LiturgicalDay?, hourKey: String?) {
         self.latinService = latinService
         self.psalmService = psalmService
-        // Default to Psalm 37
-        self._selectedPsalmId = State(initialValue: PsalmUsage(number: "90").id)
+        self.liturgicalDay = liturgicalDay
+        self.hourKey = hourKey
+        self._selectedPsalmId = State(initialValue: "")
     }
     
     var body: some View {
-        List {
-            Section {
-                Picker("Select Psalm", selection: $selectedPsalmId) {
-                    ForEach(psalmUsages) { usage in
-                        Text(usage.displayTitle)
-                            .tag(usage.id)
-                    }
+        Group {
+            if isLoading {
+                ProgressView()
+            } else {
+                List {
+                    psalmSelectionSection
+                    analysisSection
                 }
-                .pickerStyle(.menu)
             }
-            Section {
-                NavigationLink {
-                    if let selectedUsage = psalmUsages.first(where: { $0.id == selectedPsalmId }),
-                       let psalmText = psalms[selectedUsage.id] {
-                        let analysis = latinService.analyzePsalm(text: psalmText)
-                        PsalmAnalysisView(analysis: analysis, psalmTitle: selectedUsage.displayTitle)
-                    }
-                } label: {
-                    if let selectedUsage = psalmUsages.first(where: { $0.id == selectedPsalmId }) {
-                        Text("Analyze \(selectedUsage.displayTitle)")
-                    }
-                }
-                .disabled(psalms[selectedPsalmId] == nil)
-                        }
-          
         }
-        .navigationTitle("Psalm Analysis")
+        .navigationTitle(hourKey != nil ? "\(hourKey!.capitalized) Analysis" : "Psalm Analysis")
         .task {
-            await loadPsalms()
+            await loadData()
         }
     }
     
-    private func loadPsalms() async {
-        for usage in psalmUsages {
-            guard let number = Int(usage.number) else {
-                print("Invalid psalm number: \(usage.number)")
-                continue
+    private var psalmSelectionSection: some View {
+        Section {
+            Picker("Select Psalm", selection: $selectedPsalmId) {
+                ForEach(availablePsalms) { usage in
+                    Text(usage.displayTitle)
+                        .tag(usage.id)
+                }
             }
+            .pickerStyle(.menu)
+        }
+    }
+    
+    private var analysisSection: some View {
+        Section {
+            if let selectedUsage = availablePsalms.first(where: { $0.id == selectedPsalmId }) {
+                if psalms[selectedPsalmId] != nil {
+                    NavigationLink {
+                        if let psalmText = psalms[selectedUsage.id] {
+                            let analysis = latinService.analyzePsalm(text: psalmText)
+                            PsalmAnalysisView(analysis: analysis, psalmTitle: selectedUsage.displayTitle)
+                        }
+                    } label: {
+                        Text("Analyze \(selectedUsage.displayTitle)")
+                    }
+                } else {
+                    HStack {
+                        Text("Loading text...")
+                        Spacer()
+                        ProgressView()
+                    }
+                }
+            }
+        }
+    }
+    
+    private func loadData() async {
+        // Load either hour-specific psalms or fallback to hardcoded list
+        if let hourKey = hourKey, let liturgicalDay = liturgicalDay {
+            await loadHourPsalms(hourKey: hourKey, liturgicalDay: liturgicalDay)
+        } else {
+            availablePsalms = psalmUsages
+        }
+        
+        // Load psalm texts
+        await loadPsalmTexts()
+        
+        // Set initial selection if none exists
+        if selectedPsalmId.isEmpty {
+            selectedPsalmId = availablePsalms.first?.id ?? ""
+        }
+        
+        isLoading = false
+    }
+    
+    private func loadHourPsalms(hourKey: String, liturgicalDay: LiturgicalDay) async {
+        if let hourPsalms = hoursService.getPsalmsForWeekday(
+            weekday: liturgicalDay.weekday,
+            hourKey: hourKey,
+            season: liturgicalDay.benedictineSeason.description
+        ) {
+            availablePsalms = hourPsalms
+        } else {
+            // Fallback to hardcoded psalms if hour-specific loading fails
+            availablePsalms = psalmUsages
+        }
+    }
+    
+    private func loadPsalmTexts() async {
+        psalms = [:]
+        
+        for usage in availablePsalms {
+            guard let number = Int(usage.number) else { continue }
             
             if let psalm = psalmService.getPsalm(number: number, section: usage.category) {
                 psalms[usage.id] = psalm.text
@@ -84,6 +132,7 @@ struct PsalmAnalysisSelectionView: View {
         }
     }
 }
+
 
 // Extension for display formatting
 extension PsalmUsage {
