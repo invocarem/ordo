@@ -2,6 +2,7 @@ import XCTest
 @testable import LatinService
 
 class PsalmDegreesTests: XCTestCase {
+    let verbose : Bool = true
     private var latinService: LatinService!
     
     override func setUp() {
@@ -52,7 +53,9 @@ class PsalmDegreesTests: XCTestCase {
             
             for form in forms {
                 let count = entry.forms[form] ?? 0
-                print("\(form): \(count > 0 ? "✅" : "❌")")
+                if(verbose) {
+                    print("\(form): \(count > 0 ? "✅" : "❌")")
+                }
                 XCTAssertGreaterThan(count, 0, 
                                    "Confirmed word '\(form)' (\(lemma)) missing in analysis")
             }
@@ -133,7 +136,7 @@ class PsalmDegreesTests: XCTestCase {
         }
         
         // ===== 3. Debug output =====
-        let verbose = false // Set to false to suppress debug output
+       
         if verbose {
             print("\n=== Full Analysis ===")
             print("Total words:", analysis.totalWords)
@@ -191,7 +194,10 @@ class PsalmDegreesTests: XCTestCase {
             
             for form in forms {
                 let count = entry.forms[form] ?? 0
-                print("\(form): \(count > 0 ? "✅" : "❌")")
+                if(verbose) {
+                    print("\(form): \(count > 0 ? "✅" : "❌")")
+                }
+              
                 XCTAssertGreaterThan(count, 0, 
                                    "Confirmed word '\(form)' (\(lemma)) missing in analysis")
             }
@@ -275,7 +281,7 @@ class PsalmDegreesTests: XCTestCase {
         }
         
         // ===== 3. Debug output =====
-        let verbose = true // Set to false to suppress debug output
+        
         if verbose {
             print("\n=== Full Analysis ===")
             print("Total words:", analysis.totalWords)
@@ -321,8 +327,10 @@ class PsalmDegreesTests: XCTestCase {
             ("abundantia", ["abundantia"], "abundance"),
             ("loquor", ["loquebar"], "speak")
         ]
+        if(verbose) {
+            print("=== ACTUAL Words in Psalm 121 ===")
+        }
         
-        print("\n=== ACTUAL Words in Psalm 121 ===")
         for (lemma, forms, translation) in confirmedWords {
             guard let entry = analysis.dictionary[lemma] else {
                 XCTFail("Missing confirmed lemma: \(lemma)")
@@ -335,7 +343,9 @@ class PsalmDegreesTests: XCTestCase {
             
             for form in forms {
                 let count = entry.forms[form] ?? 0
-                print("\(form): \(count > 0 ? "✅" : "❌")")
+                if(verbose) {
+                    print("\(form): \(count > 0 ? "✅" : "❌")") 
+                }
                 XCTAssertGreaterThan(count, 0, 
                                    "Confirmed word '\(form)' (\(lemma)) missing in analysis")
             }
@@ -413,7 +423,7 @@ class PsalmDegreesTests: XCTestCase {
         }
         
         // ===== 3. Debug output =====
-        let verbose = true // Set to false to suppress debug output
+       
         if verbose {
             print("\n=== Full Analysis ===")
             print("Total words:", analysis.totalWords)
@@ -464,7 +474,9 @@ class PsalmDegreesTests: XCTestCase {
             
             for form in forms {
                 let count = entry.forms[form] ?? 0
-                print("\(form): \(count > 0 ? "✅" : "❌")")
+                if(verbose) {
+                    print("\(form): \(count > 0 ? "✅" : "❌")")
+                }
                 XCTAssertGreaterThan(count, 0, 
                                    "Confirmed word '\(form)' (\(lemma)) missing in analysis")
             }
@@ -493,7 +505,7 @@ class PsalmDegreesTests: XCTestCase {
         }
         
         // Present subjunctive "misereatur" (appears once), imperative "miserere" (appears twice)
-        if let miserereEntry = analysis.dictionary["miserere"] {
+        if let miserereEntry = analysis.dictionary["misereri"] {
             let misereaturCount = miserereEntry.forms["misereatur"] ?? 0
             XCTAssertEqual(misereaturCount, 1, 
                          "Expected exactly 1 occurrence of 'misereatur'")
@@ -537,7 +549,7 @@ class PsalmDegreesTests: XCTestCase {
         }
         
         // ===== 3. Debug output =====
-        let verbose = true // Set to false to suppress debug output
+       
         if verbose {
             print("\n=== Full Analysis ===")
             print("Total words:", analysis.totalWords)
@@ -545,11 +557,414 @@ class PsalmDegreesTests: XCTestCase {
             print("'levo' forms:", analysis.dictionary["levo"]?.forms ?? [:])
             print("'ancilla' forms:", analysis.dictionary["ancilla"]?.forms ?? [:])
             print("'domina' forms:", analysis.dictionary["domina"]?.forms ?? [:])
-            print("'miserere' forms:", analysis.dictionary["miserere"]?.forms ?? [:])
+            print("'misereri' forms:", analysis.dictionary["misereri"]?.forms ?? [:])
             print("'repleo' forms:", analysis.dictionary["repleo"]?.forms ?? [:])
             print("'despectio' forms:", analysis.dictionary["despectio"]?.forms ?? [:])
             print("'opprobrium' forms:", analysis.dictionary["opprobrium"]?.forms ?? [:])
             print("'abundo' forms:", analysis.dictionary["abundo"]?.forms ?? [:])
         }
     }
+
+    func testAnalyzePsalm123() {
+    let psalm123 = [
+        "Nisi quia Dominus erat in nobis, dicat nunc Israel;",
+        "nisi quia Dominus erat in nobis, cum exsurgerent homines in nos,",
+        "forsitan vivos deglutissent nos.",
+        "Cum irasceretur furor eorum in nos, forsitan aqua absorbuisset nos.",
+        "Torrentem pertransivit anima nostra; forsitan pertransisset anima nostra aquam intolerabilem.",
+        "Benedictus Dominus, qui non dedit nos in captionem dentibus eorum.",
+        "Anima nostra sicut passer erepta est de laqueo venantium;",
+        "laqueus contritus est, et nos liberati sumus.",
+        "Adjutorium nostrum in nomine Domini, qui fecit caelum et terram."
+    ]
+    
+    let analysis = latinService.analyzePsalm(text: psalm123)
+    
+    // Key words to verify
+    let confirmedWords = [
+        ("deglutio", ["deglutissent"], "swallow"),
+        ("absorbeo", ["absorbuisset"], "overwhelm"),
+        ("pertranso", ["pertransivit", "pertransisset"], "pass through"),
+        ("eripio", ["erepta"], "rescue"),
+        ("contundo", ["contritus"], "break")
+    ]
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: confirmedWords)
+    
+    // Specific form checks
+    XCTAssertEqual(analysis.dictionary["deglutio"]?.forms["deglutissent"], 1)
+    XCTAssertEqual(analysis.dictionary["absorbeo"]?.forms["absorbuisset"], 1)
+    XCTAssertEqual(analysis.dictionary["eripio"]?.forms["erepta"], 1)
+}
+
+func testAnalyzePsalm124() {
+    let psalm124 = [
+        "Qui confidunt in Domino, sicut mons Sion: non commovebitur in aeternum, qui habitat in Jerusalem.",
+        "Montes in circuitu ejus, et Dominus in circuitu populi sui, ex hoc nunc et usque in saeculum.",
+        "Quia non relinquet Dominus virgam peccatorum super sortem justorum, ut non extendant justi ad iniquitatem manus suas.",
+        "Benefac, Domine, bonis, et rectis corde.",
+        "Declinantes autem in obligationes, adducet Dominus cum operantibus iniquitatem. Pax super Israel!"
+    ]
+    
+    let analysis = latinService.analyzePsalm(text: psalm124)
+    
+    let confirmedWords = [
+        ("confido", ["confidunt"], "trust"),
+        ("commoveo", ["commovebitur"], "move"),
+        ("relinquo", ["relinquet"], "leave"),
+        ("extendo", ["extendant"], "stretch"),
+        ("benefacio", ["benefac"], "do good")
+    ]
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: confirmedWords)
+    
+    // Check repeated words
+    XCTAssertGreaterThan(analysis.dictionary["circuitus"]?.forms["circuitu"] ?? 0, 1)
+    XCTAssertEqual(analysis.dictionary["mons"]?.forms["mons"], 1)
+}
+
+func testAnalyzePsalm125() {
+    let psalm125 = [
+        "In convertendo Dominus captivitatem Sion: facti sumus sicut consolati.",
+        "Tunc repletum est gaudio os nostrum: et lingua nostra exsultatione.",
+        "Tunc dicent inter gentes: Magnificavit Dominus facere cum eis.",
+        "Magnificavit Dominus facere nobiscum: facti sumus lætantes.",
+        "Converte, Domine, captivitatem nostram: sicut torrens in austro.",
+        "Qui seminant in lacrimis: in exsultatione metent.",
+        "Euntes ibant et flebant: mittentes semina sua.",
+        "Venientes autem venient cum exsultatione: portantes manipulos suos."
+    ]
+    
+    let analysis = latinService.analyzePsalm(text: psalm125)
+    
+    let confirmedWords = [
+        ("converto", ["convertendo", "converte"], "turn"),
+        ("consolor", ["consolati"], "comfort"),
+        ("exsulto", ["exsultatione"], "rejoice"),
+        ("magnifico", ["magnificavit"], "magnify"),
+        ("semo", ["seminant"], "sow")
+    ]
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: confirmedWords)
+    
+    // Check agricultural metaphors
+    XCTAssertEqual(analysis.dictionary["semo"]?.forms["seminant"], 1)
+    XCTAssertEqual(analysis.dictionary["meto"]?.forms["metent"], 1)
+    XCTAssertEqual(analysis.dictionary["manipulus"]?.forms["manipulos"], 1)
+}
+
+func testAnalyzePsalm126() {
+    let psalm126 = [
+        "Nisi Dominus ædificaverit domum: in vanum laboraverunt qui ædificant eam.",
+        "Nisi Dominus custodierit civitatem: frustra vigilat qui custodit eam.",
+        "Vanum est vobis ante lucem surgere: surgite postquam sederitis, qui manducatis panem doloris.",
+        "Cum dederit dilectis suis somnum: ecce hæreditas Domini, filii; merces, fructus ventris.",
+        "Sicut sagittæ in manu potentis: ita filii excussorum.",
+        "Beatus vir qui implevit desiderium suum ex ipsis: non confundetur cum loquetur inimicis suis in porta."
+    ]
+    
+    let analysis = latinService.analyzePsalm(text: psalm126)
+    
+    let confirmedWords = [
+        ("aedifico", ["aedificaverit", "aedificant"], "build"),
+        ("custodio", ["custodierit", "custodit"], "guard"),
+        ("vanus", ["vanum", "vanum"], "vain"),
+        ("surgere", ["surgere", "surgite"], "rise"),
+        ("sagitta", ["sagittae"], "arrow")
+    ]
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: confirmedWords)
+    
+    // Check conditional clauses
+    XCTAssertEqual(analysis.dictionary["nisi"]?.count, 2)
+}
+
+func testAnalyzePsalm127() {
+    let psalm127 = [
+        "Beati omnes qui timent Dominum, qui ambulant in viis ejus.",
+        "Labores fructuum tuorum manducabis; beatus es, et bene tibi erit.",
+        "Uxor tua sicut vitis abundans in lateribus domus tuae; filii tui sicut novellae olivarum in circuitu mensae tuae.",
+        "Ecce sic benedicetur homo qui timet Dominum.",
+        "Benedicat tibi Dominus ex Sion, et videas bona Jerusalem omnibus diebus vitae tuae.",
+        "Et videas filios filiorum tuorum. Pax super Israel!"
+    ]
+    
+    let analysis = latinService.analyzePsalm(text: psalm127)
+    
+    let confirmedWords = [
+        ("beatus", ["beati", "beatus", "benedicetur"], "blessed"),
+        ("timeo", ["timent", "timet"], "fear"),
+        ("ambulo", ["ambulant"], "walk"),
+        ("vitis", ["vitis"], "vine"),
+        ("oliva", ["olivarum"], "olive")
+    ]
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: confirmedWords)
+    
+    // Check family imagery
+    XCTAssertEqual(analysis.dictionary["uxor"]?.forms["uxor"], 1)
+    XCTAssertEqual(analysis.dictionary["filius"]?.forms["filii"], 2)
+}
+
+func testAnalyzePsalm128() {
+    let psalm128 = [
+        "Saepe expugnaverunt me a juventute mea, dicat nunc Israel;",
+        "saepe expugnaverunt me a juventute mea, etenim non potuerunt mihi.",
+        "Supra dorsum meum fabricaverunt peccatores; prolongaverunt iniquitatem suam.",
+        "Dominus justus concidit cervices peccatorum.",
+        "Confundantur et convertantur retrorsum omnes qui oderunt Sion.",
+        "Fiant sicut foenum tectorum, quod priusquam evellatur exaruit,",
+        "de quo non implevit manum suam qui metit, et sinum suum qui manipulos colligit.",
+        "Et non dixerunt qui praeteribant: Benedictio Domini super vos; benediximus vobis in nomine Domini."
+    ]
+    
+    let analysis = latinService.analyzePsalm(text: psalm128)
+    
+    let confirmedWords = [
+        ("expugno", ["expugnaverunt"], "attack"),
+        ("fabricor", ["fabricaverunt"], "weave"),
+        ("concido", ["concidit"], "cut"),
+        ("confundo", ["confundantur"], "confuse"),
+        ("foenum", ["foenum"], "hay")
+    ]
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: confirmedWords)
+    
+    // Check agricultural metaphors
+    XCTAssertEqual(analysis.dictionary["meto"]?.forms["metit"], 1)
+    XCTAssertEqual(analysis.dictionary["colligo"]?.forms["colligit"], 1)
+}
+
+func testAnalyzePsalm129() {
+    let psalm129 = [
+        "De profundis clamavi ad te, Domine;",
+        "Domine, exaudi vocem meam. Fiant aures tuae intendentes in vocem deprecationis meae.",
+        "Si iniquitates observaveris, Domine, Domine, quis sustinebit?",
+        "Quia apud te propitiatio est, et propter legem tuam sustinui te, Domine.",
+        "Sustinuit anima mea in verbo ejus; speravit anima mea in Domino.",
+        "A custodia matutina usque ad noctem, speret Israel in Domino.",
+        "Quia apud Dominum misericordia, et copiosa apud eum redemptio.",
+        "Et ipse redimet Israel ex omnibus iniquitatibus ejus."
+    ]
+    
+    let analysis = latinService.analyzePsalm(text: psalm129)
+    
+    let confirmedWords = [
+        ("profundum", ["profundis"], "depth"),
+        ("deprecatio", ["deprecationis"], "supplication"),
+        ("propitiatio", ["propitiatio"], "forgiveness"),
+        ("redemptio", ["redemptio", "redimet"], "redemption"),
+        ("custodia", ["custodia"], "watch")
+    ]
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: confirmedWords)
+    
+    // Check repeated words
+    XCTAssertEqual(analysis.dictionary["sustinui"]?.count, 2)
+    XCTAssertEqual(analysis.dictionary["spero"]?.forms["speravit"], 1)
+    XCTAssertEqual(analysis.dictionary["spero"]?.forms["speret"], 2)
+}
+
+func testAnalyzePsalm130() {
+    let psalm130 = [
+        "Domine, non est exaltatum cor meum, neque elati sunt oculi mei; neque ambulavi in magnis, neque in mirabilibus super me.",
+        "Si non humiliter sentiebam, sed exaltavi animam meam; sicut ablactatus est super matre sua, ita retributio in anima mea.",
+        "Speret Israel in Domino, ex hoc nunc et usque in saeculum."
+    ]
+    
+    let analysis = latinService.analyzePsalm(text: psalm130)
+    
+    let confirmedWords = [
+        ("exalto", ["exaltatum", "exaltavi"], "exalt"),
+        ("humilis", ["humiliter"], "humble"),
+        ("ablacto", ["ablactatus"], "wean"),
+        ("retributio", ["retributio"], "reward"),
+        ("spero", ["speret"], "hope")
+    ]
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: confirmedWords)
+    
+    // Check humility theme
+    XCTAssertEqual(analysis.dictionary["humilis"]?.count, 1)
+    XCTAssertEqual(analysis.dictionary["magnus"]?.count, 1)
+}
+
+func testAnalyzePsalm131() {
+    let psalm131 = [
+        "Memento, Domine, David, et omnis mansuetudinis ejus.",
+        "Sicut juravit Domino, votum vovit Deo Jacob:",
+        "Si introiero in tabernaculum domus meae, si ascendero in lectum strati mei:",
+        "Si dedero somnum oculis meis, et palpebris meis dormitationem:",
+        "Et requiem temporibus meis: donec inveniam locum Domino, tabernaculum Deo Jacob.",
+        "Ecce audivimus eam in Ephrata: invenimus eam in campis silvae.",
+        "Introibimus in tabernaculum ejus: adorabimus in loco ubi steterunt pedes ejus.",
+        "Surge, Domine, in requiem tuam, tu et arca sanctificationis tuae.",
+        "Sacerdotes tui induantur justitiam: et sancti tui exsultent.",
+        "Propter David servum tuum, non avertas faciem Christi tui.",
+        "Juravit Dominus David veritatem, et non frustrabitur eam: De fructu ventris tui ponam super sedem tuam.",
+        "Si custodierint filii tui testamentum meum, et testimonia mea haec, quae docebo eos:",
+        "Et filii eorum usque in saeculum, sedebunt super sedem tuam.",
+        "Quoniam elegit Dominus Sion: elegit eam in habitationem sibi.",
+        "Haec requies mea in saeculum saeculi: hic habitabo, quoniam elegi eam.",
+        "Viduam ejus benedicens benedicam: pauperes ejus saturabo panibus.",
+        "Sacerdotes ejus induam salutari: et sancti ejus exsultatione exsultabunt.",
+        "Illuc producam cornu David: paravi lucernam Christo meo.",
+        "Inimicos ejus induam confusione: super ipsum autem efflorebit sanctificatio mea."
+    ]
+    
+    let analysis = latinService.analyzePsalm(text: psalm131)
+    
+    let confirmedWords = [
+        ("memento", ["memento"], "remember"),
+        ("juro", ["juravit"], "swear"),
+        ("votum", ["votum"], "vow"),
+        ("tabernaculum", ["tabernaculum"], "tabernacle"),
+        ("sanctificatio", ["sanctificationis"], "sanctification")
+    ]
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: confirmedWords)
+    
+    // Check Davidic covenant references
+    XCTAssertEqual(analysis.dictionary["David"]?.count, 3)
+    XCTAssertEqual(analysis.dictionary["Sion"]?.count, 2)
+    XCTAssertEqual(analysis.dictionary["testamentum"]?.count, 1)
+}
+
+func testAnalyzePsalm132() {
+    let psalm132 = [
+        "Ecce quam bonum, et quam jucundum habitare fratres in unum.",
+        "Sicut unguentum in capite, quod descendit in barbam, barbam Aaron,",
+        "Quod descendit in oram vestimenti ejus: sicut ros Hermon, qui descendit in montem Sion.",
+        "Quoniam illic mandavit Dominus benedictionem, et vitam usque in saeculum."
+    ]
+    
+    let analysis = latinService.analyzePsalm(text: psalm132)
+    
+    let confirmedWords = [
+        ("jucundus", ["jucundum"], "pleasant"),
+        ("unguentum", ["unguentum"], "ointment"),
+        ("ros", ["ros"], "dew"),
+        ("benedictio", ["benedictionem"], "blessing"),
+        ("mando", ["mandavit"], "command")
+    ]
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: confirmedWords)
+    
+    // Check imagery
+    XCTAssertEqual(analysis.dictionary["descendo"]?.count, 3)
+    XCTAssertEqual(analysis.dictionary["fratres"]?.count, 1)
+}
+
+
+// Helper function to verify words in analysis
+private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
+    for (lemma, forms, translation) in confirmedWords {
+        guard let entry = analysis.dictionary[lemma] else {
+            XCTFail("Missing confirmed lemma: \(lemma)")
+            continue
+        }
+        
+        // Verify translation
+        XCTAssertTrue(entry.translation?.contains(translation) ?? false,
+                     "Incorrect translation for \(lemma): expected '\(translation)', got '\(entry.translation ?? "nil")'")
+        
+        for form in forms {
+            let count = entry.forms[form] ?? 0
+            XCTAssertGreaterThan(count, 0, 
+                               "Confirmed word '\(form)' (\(lemma)) missing in analysis")
+        }
+    }
+}
+func testAnalyzePsalm133() {
+    let psalm133 = [
+        "Ecce nunc benedicite Dominum, omnes servi Domini:",
+        "Qui statis in domo Domini, in atriis domus Dei nostri.",
+        "In noctibus extollite manus vestras in sancta, et benedicite Dominum.",
+        "Benedicat te Dominus ex Sion, qui fecit caelum et terram."
+    ]
+    
+    let analysis = latinService.analyzePsalm(text: psalm133)
+    
+    // ===== 1. Verify ACTUAL words in this psalm =====
+    let confirmedWords = [
+        ("benedico", ["benedicite", "benedicat"], "bless"),
+        ("atrium", ["atriis"], "court"),
+        ("extollo", ["extollite"], "lift"),
+        ("sanctus", ["sancta"], "holy")
+    ]
+    
+    print("\n=== ACTUAL Words in Psalm 133 ===")
+    for (lemma, forms, translation) in confirmedWords {
+        guard let entry = analysis.dictionary[lemma] else {
+            XCTFail("Missing confirmed lemma: \(lemma)")
+            continue
+        }
+        
+        // Verify translation
+        XCTAssertTrue(entry.translation?.contains(translation) ?? false,
+                     "Incorrect translation for \(lemma): expected '\(translation)', got '\(entry.translation ?? "nil")'")
+        
+        for form in forms {
+            let count = entry.forms[form] ?? 0
+            if verbose {
+                print("\(form): \(count > 0 ? "✅" : "❌")")
+            }
+            XCTAssertGreaterThan(count, 0, 
+                               "Confirmed word '\(form)' (\(lemma)) missing in analysis")
+        }
+    }
+    
+    // ===== 2. Verify grammatical forms =====
+    // Imperative plural "benedicite" (appears twice)
+    if let benedicoEntry = analysis.dictionary["benedico"] {
+        let benediciteCount = benedicoEntry.forms["benedicite"] ?? 0
+        XCTAssertEqual(benediciteCount, 2, 
+                      "Expected exactly 2 occurrences of 'benedicite'")
+        
+        // Present subjunctive "benedicat" (appears once)
+        let benedicatCount = benedicoEntry.forms["benedicat"] ?? 0
+        XCTAssertEqual(benedicatCount, 1, 
+                      "Expected exactly 1 occurrence of 'benedicat'")
+    }
+    
+    // Ablative plural "atriis" (appears once)
+    if let atriumEntry = analysis.dictionary["atrium"] {
+        let atriisCount = atriumEntry.forms["atriis"] ?? 0
+        XCTAssertEqual(atriisCount, 1, 
+                      "Expected exactly 1 occurrence of 'atriis'")
+    }
+    
+    // Imperative plural "extollite" (appears once)
+    if let extolloEntry = analysis.dictionary["extollo"] {
+        let extolliteCount = extolloEntry.forms["extollite"] ?? 0
+        XCTAssertEqual(extolliteCount, 1, 
+                      "Expected exactly 1 occurrence of 'extollite'")
+    }
+    
+    // Ablative plural "noctibus" (appears once)
+    if let noxEntry = analysis.dictionary["nox"] {
+        let noctibusCount = noxEntry.forms["noctibus"] ?? 0
+        XCTAssertEqual(noctibusCount, 1, 
+                      "Expected exactly 1 occurrence of 'noctibus'")
+    }
+    
+    // ===== 3. Debug output =====
+    if verbose {
+        print("\n=== Full Analysis ===")
+        print("Total words:", analysis.totalWords)
+        print("Unique lemmas:", analysis.uniqueLemmas)
+        print("'benedico' forms:", analysis.dictionary["benedico"]?.forms ?? [:])
+        print("'atrium' forms:", analysis.dictionary["atrium"]?.forms ?? [:])
+        print("'extollo' forms:", analysis.dictionary["extollo"]?.forms ?? [:])
+        print("'nox' forms:", analysis.dictionary["nox"]?.forms ?? [:])
+        print("'sanctus' forms:", analysis.dictionary["sanctus"]?.forms ?? [:])
+        print("'dominus' forms:", analysis.dictionary["dominus"]?.forms ?? [:])
+        print("'domus' forms:", analysis.dictionary["domus"]?.forms ?? [:])
+        print("'manus' forms:", analysis.dictionary["manus"]?.forms ?? [:])
+        print("'sion' forms:", analysis.dictionary["sion"]?.forms ?? [:])
+        print("'caelus' forms:", analysis.dictionary["caelus"]?.forms ?? [:])
+    }
+    
+   
+}
 }

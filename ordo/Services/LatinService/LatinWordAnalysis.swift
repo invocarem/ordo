@@ -114,7 +114,7 @@ extension LatinWordEntity {
         if let perfect = perfect, perfect.lowercased() == form {
             return "has/have \(translation)ed (perfect)"
         }
-
+         
         if let gerundResult = analyzeGerund(form: lowerForm, translation: translation) {
             return gerundResult
         }
@@ -151,6 +151,10 @@ extension LatinWordEntity {
         for (tense, formArray) in forms {
             for (index, formVariants) in formArray.enumerated() {
                 guard matchesVariant(form: form, target: formVariants) else { continue }
+                if tense == "perfect_passive" {
+                    let genderNumber = getGenderAndNumber(form: form, in: formArray)
+                    return "having been \(translation)ed (\(genderNumber))"
+                }
                 
                 let (person, number) = getPersonAndNumber(index: index)
                 
@@ -264,6 +268,18 @@ extension LatinWordEntity {
         default: return ("", "")
         }
     }
+    private func getGenderAndNumber(form: String, in forms: [String]) -> String {
+    // Assuming forms array order: [masc_sg, fem_sg, neut_sg, masc_pl, fem_pl, neut_pl]
+    switch form {
+    case forms[0]: return "masc sg"
+    case forms[1]: return "fem sg"
+    case forms[2]: return "neut sg"
+    case forms[3]: return "masc pl"
+    case forms[4]: return "fem pl"
+    case forms[5]: return "neut pl"
+    default: return "unknown"
+    }
+}
 }
 
 

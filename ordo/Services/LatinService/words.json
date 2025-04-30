@@ -1,5 +1,93 @@
 
-[
+
+    [
+        {
+          "lemma": "extollo",
+          "part_of_speech": "verb",
+          "conjugation": 3,
+          "infinitive": "extollere",
+          "perfect": "extuli",
+          "supine": "exlatum",
+          "translations": {
+            "en": "to raise, lift up, exalt",
+            "la": "extollo"
+          },
+          "forms": {
+            "imperative": ["extollite"]
+          }
+        },
+        {
+            "lemma": "sanctus",
+            "part_of_speech": "adjective",
+            "declension": 1,
+            "gender": "masculine",
+            "nominative": "sanctus",
+            "genitive": "sancti",
+            "dative": "sancto",
+            "accusative": "sanctum",
+            "ablative": "sancto",
+            "vocative": "sancte",
+            "nominative_plural": "sancti",
+            "genitive_plural": "sanctorum",
+            "dative_plural": "sanctis",
+            "accusative_plural": "sanctos",
+            "ablative_plural": "sanctis",
+            "forms": {
+              "nominative_f": ["sancta"],
+              "accusative_f": ["sanctam"],
+              "ablative_f": ["sancta"],
+              "nominative_n": ["sanctum"],
+              "accusative_n": ["sanctum"],
+              "ablative_n": ["sancto"]
+            },
+            "translations": {
+              "en": "holy, sacred, saintly",
+              "la": "sanctus"
+            }
+          },
+        {
+          "lemma": "nox",
+          "part_of_speech": "noun",
+          "gender": "feminine",
+          "declension": 3,
+          "nominative": "nox",
+          "genitive": "noctis",
+          "dative": "nocti",
+          "accusative": "noctem",
+          "ablative": "nocte",
+          "vocative": "nox",
+
+          "ablative_plural": "noctibus",
+          "translations": {
+            "en": "night, darkness",
+            "la": "nox"
+          }
+          
+        },
+      
+    {
+    "lemma": "despectio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "despectio",
+    "genitive": "despectionis",
+    "dative": "despectioni",
+    "accusative": "despectionem",
+    "ablative": "despectione",
+    "vocative": "despectio",
+    "nominative_plural": "despectiones",
+    "genitive_plural": "despectionum",
+    "dative_plural": "despectionibus",
+    "accusative_plural": "despectiones",
+    "ablative_plural": "despectionibus",
+    "vocative_plural": "despectiones",
+    "translations": {
+        "en": "contempt, scorn, despising",
+        "la": "despectio"
+    },
+    "notes": "Psalm 122:3-4 often uses 'despectione' (ablative singular) in liturgical Latin."
+},
     {
         "lemma": "misereri",
         "part_of_speech": "verb",
@@ -73,21 +161,6 @@
             "en": "mistress",
             "la": "domina"
         }
-    },
-    {
-        "lemma": "miserere",
-        "part_of_speech": "verb",
-        "conjugation": 2,
-        "infinitive": "misereri",
-        "forms": {
-            "present": ["misereor", "misereris", "miseretur", "miseremur", "miseremini", "miserentur"],
-            "imperative": ["miserere"]
-        },
-        "translations": {
-            "en": "have mercy",
-            "la": "miserere"
-        }
-      
     },
     
     
@@ -3118,21 +3191,7 @@
                 "la": "dormio"
             }
         },
-        {
-            "lemma": "misereor",
-            "part_of_speech": "verb",
-            "perfect": "miseritus sum",
-            "infinitive": "misereri",
-            "forms": {
-                "present": ["misereor", "misereris", "miseretur", "miseremur", "miseremini", "miserentur"],
-                "imperative_singular": ["miserere"],
-                "imperative_plural": ["miseremini"]
-            },
-            "translations": {
-                "en": "have mercy, pity",
-                "la": "misereor"
-            }
-        },
+      
         {
             "lemma": "qui",
             "part_of_speech": "pronoun",
@@ -3911,24 +3970,57 @@
         "notes": "Deponent verb (passive form with active meaning)"
     },
     {
+        "lemma": "domus",
+        "part_of_speech": "noun",
+        "gender": "feminine",
+        "declension": 4,
+        "nominative": "domus",
+        "genitive": "domus",
+        "dative": "domui",
+        "accusative": "domum",
+        "ablative": "domu",
+        "vocative": "domus",
+        "ablative_plural": "domibus",
+        "translations": {
+          "en": "house, home, household",
+          "la": "domus"
+        }
+      },
+    {
         "lemma": "dominus",
         "part_of_speech": "noun",
+        "declension": 2,
+        "gender": "masculine",
         "nominative": "dominus",
-        "vocative": "domine",
+        "genitive": "domini",
         "dative": "domino",
         "accusative": "dominum",
-        "genitive": "domini",
         "ablative": "domino",
+        "vocative": "domine",
         "nominative_plural": "domini",
         "genitive_plural": "dominorum",
         "dative_plural": "dominis",
         "accusative_plural": "dominos",
         "ablative_plural": "dominis",
+        "forms": {
+          "nominative_f": ["domina"],
+          "genitive_f": ["dominae"],
+          "dative_f": ["dominae"],
+          "accusative_f": ["dominam"],
+          "ablative_f": ["domina"],
+          "vocative_f": ["domina"],
+          "nominative_plural_f": ["dominae"],
+          "genitive_plural_f": ["dominarum"],
+          "dative_plural_f": ["dominis"],
+          "accusative_plural_f": ["dominas"],
+          "ablative_plural_f": ["dominis"]
+        },
         "translations": {
-            "en": "lord, master",
-            "la": "dominus, -i"
+          "en": "master, lord; lady, mistress",
+          "la": "dominus, domina"
         }
-    },
+      },
+    
     {
            "lemma": "ego",
            "part_of_speech": "pronoun",
@@ -4711,7 +4803,40 @@
             "la": "considero"
         }
     },
-    
+    {
+        "lemma": "sion",
+        "part_of_speech": "noun",
+        "declension": 2,
+        "gender": "masculine",
+        "nominative": "sion",
+        "genitive": "sionis",
+        "dative": "sioni",
+        "accusative": "Sionem",
+        "ablative": "Sione",
+        "vocative": "Sion",
+        "nominative_plural": "Siones",
+        "genitive_plural": "Sionum",
+        "dative_plural": "Sionibus",
+        "accusative_plural": "Siones",
+        "ablative_plural": "Sionibus",
+        "forms": {
+          "nominative_f": ["Siona"],
+          "genitive_f": ["Sionae"],
+          "dative_f": ["Sionae"],
+          "accusative_f": ["Sionam"],
+          "ablative_f": ["Siona"],
+          "vocative_f": ["Siona"],
+          "nominative_plural_f": ["Sionae"],
+          "genitive_plural_f": ["Sionarum"],
+          "dative_plural_f": ["Sionis"],
+          "accusative_plural_f": ["Sionas"],
+          "ablative_plural_f": ["Sionis"]
+        },
+        "translations": {
+          "en": "citizen of Zion, protector of Zion; lady of Zion",
+          "la": "Sion, Siona"
+        }
+      },
     {
         "lemma": "corrigo",
         "part_of_speech": "verb",
@@ -4873,6 +4998,40 @@
                     "la": "repello"
                 }
             },
+            {
+                "lemma": "caelus",
+                "part_of_speech": "noun",
+                "declension": 2,
+                "gender": "masculine",
+                "nominative": "caelus",
+                "genitive": "caeli",
+                "dative": "caelo",
+                "accusative": "caelum",
+                "ablative": "caelo",
+                "vocative": "caele",
+                "nominative_plural": "caeli",
+                "genitive_plural": "caelorum",
+                "dative_plural": "caelis",
+                "accusative_plural": "caelos",
+                "ablative_plural": "caelis",
+                "forms": {
+                  "nominative_f": ["caela"],
+                  "genitive_f": ["caelae"],
+                  "dative_f": ["caelae"],
+                  "accusative_f": ["caelam"],
+                  "ablative_f": ["caela"],
+                  "vocative_f": ["caela"],
+                  "nominative_plural_f": ["caelae"],
+                  "genitive_plural_f": ["caelarum"],
+                  "dative_plural_f": ["caelis"],
+                  "accusative_plural_f": ["caelas"],
+                  "ablative_plural_f": ["caelis"]
+                },
+                "translations": {
+                  "en": "sky-dweller, heavenly one; lady of the sky",
+                  "la": "caelus, caela"
+                }
+              },
 
     {
         "lemma": "divitiae",

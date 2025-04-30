@@ -82,7 +82,7 @@ class Psalm36ATests: XCTestCase {
         
         
         print("\n=== ACTUAL Words in Psalm 36 ===")
-        for (lemma, forms, translation) in confirmedWords {
+        for (lemma, forms, _) in confirmedWords {
             guard let entry = analysis.dictionary[lemma] else {
                 XCTFail("Missing confirmed lemma: \(lemma)")
                 continue

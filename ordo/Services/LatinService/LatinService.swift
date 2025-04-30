@@ -462,7 +462,9 @@ public class LatinService {
                 if let perfectForms = verbForms["perfect"]  {
                     perfectForms.forEach { mapping[$0.lowercased()] = lemma }
                 }
-                
+                if let perfectPassiveForms = verbForms["perfect_passive"] { 
+                    perfectPassiveForms.forEach { mapping[$0.lowercased()] = lemma }
+                }
                 // Handle other verb forms if present in future
                 // (Add similar blocks for other tenses/moods)
             }
@@ -472,8 +474,8 @@ public class LatinService {
                 mapping[perfectForm.lowercased()] = lemma
             }
         }
-        print("Mapped forms for 'mendacium':", 
-      mapping.filter { $0.value == "mendacium" }.keys.sorted())
+       // print("Mapped forms for 'mendacium':", 
+        // mapping.filter { $0.value == "mendacium" }.keys.sorted())
         //print("Final Mapping:", mapping.sorted(by: { $0.key < $1.key })) // Alphabetized debug
         return mapping
     }
