@@ -57,7 +57,11 @@ let package = Package(
             name: "LatinService",
             dependencies: [],  
             path: "ordo/Services/LatinService",  
-            sources: ["LatinService.swift", "LatinWordEntity.swift", "LatinWordAnalysis.swift"],
+            sources: ["LatinService.swift", 
+                "LatinWordEntity.swift", 
+                "LatinWordAnalysis.swift",
+                "LemmaMapping.swift"
+            ],
             resources: [.process("words.json"), .process("translations.json")]
         ),
         .testTarget(

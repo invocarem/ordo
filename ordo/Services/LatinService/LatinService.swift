@@ -6,58 +6,7 @@ extension LatinWordEntity{
         return translations?[language] ?? translations?["la"] ?? lemma
     }
     
-   
-    private func analyzeVerbForm(form: String, translation: String) -> String? {
-        guard let forms = forms else { return nil }
-        
-        for (tense, formArray) in forms {
-            for (index, formVariants) in formArray.enumerated() {
-                guard matchesVariant(form: form, target: formVariants) else { continue }
-                
-                let (person, number) = getPersonAndNumber(index: index)
-                
-                switch tense {
-                case "present":
-                    return "\(person) \(translation)\(number)"
-                case "imperfect":
-                    return "\(person) was \(translation)ing\(number)"
-                case "future":
-                    return "\(person) will \(translation)\(number)"
-                case "perfect":
-                    return "\(person) has \(translation)ed\(number)"
-                case "pluperfect":
-                    return "\(person) had \(translation)ed\(number)"
-                case "imperative_singular":
-                    return "\(translation.capitalized)! (command)"
-                case "imperative_plural":
-                    return "\(translation.capitalized)! (pl command)"
-                case "present_subjunctive":
-                               return "\(person) may \(translation)\(number) (subjunctive)"
-                default:
-                    return "\(translation) (\(tense))"
-                }
-            }
-        }
-        return nil
-    }
 
-    private func matchesVariant(form: String, target: String) -> Bool {
-        return target.lowercased()
-            .components(separatedBy: "/")
-            .contains { $0 == form }
-    }
-
-    private func getPersonAndNumber(index: Int) -> (person: String, number: String) {
-        switch index {
-        case 0: return ("I", "")
-        case 1: return ("you", " (sg)")
-        case 2: return ("he/she/it", "")
-        case 3: return ("we", "")
-        case 4: return ("you", " (pl)")
-        case 5: return ("they", "")
-        default: return ("", "")
-        }
-    }
     public var generatedForms: [String: String] {
         guard let declension = declension, let nominative = nominative else { return [:] }
         var forms = [String: String]()
@@ -194,6 +143,7 @@ public struct PsalmAnalysisResult: Codable {
     public let uniqueWords: Int
     public let uniqueLemmas: Int
     public let dictionary: [String: LemmaInfo]
+    public let unknownWords: [String]
     
     public struct LemmaInfo: Codable {
         public let count: Int
@@ -211,6 +161,7 @@ public class LatinService {
     // Stored entities and translations
     private var wordEntities: [LatinWordEntity] = []
     private var translations: [String: String] = [:]
+    private lazy var lemmaMapping = LemmaMapping(wordEntities: wordEntities)
 
      private func loadWords() {
         let bundlesToCheck: [Bundle] = {
@@ -304,21 +255,33 @@ public class LatinService {
         let words = normalizedText.components(separatedBy: .whitespaces)
             .filter { !$0.isEmpty }
         
-        let formToLemma = createFormToLemmaMapping()
+        let formToLemma = lemmaMapping.createFormToLemmaMapping()
         
+        var unknownWords: [String] = []
         var lemmaCounts: [String: Int] = [:]
         var formCounts: [String: [String: Int]] = [:]
         var lemmaEntities: [String: LatinWordEntity] = [:] // Track entities for lemmas
         
         // First pass: count actual occurrences
         for word in words {
-            let lemma = formToLemma[word] ?? word
-            lemmaCounts[lemma, default: 0] += 1
-            formCounts[lemma, default: [:]][word, default: 0] += 1
-            
-            // Store entity reference if not already stored
-            if lemmaEntities[lemma] == nil {
-                lemmaEntities[lemma] = wordEntities.first { $0.lemma.lowercased() == lemma.lowercased() }
+           // Check if word is a known form or lemma
+            if let lemma = formToLemma[word] {
+                // Known form mapped to a lemma
+                lemmaCounts[lemma, default: 0] += 1
+                formCounts[lemma, default: [:]][word, default: 0] += 1
+                
+                // Store entity if not already stored
+                if lemmaEntities[lemma] == nil {
+                    lemmaEntities[lemma] = wordEntities.first { $0.lemma.lowercased() == lemma.lowercased() }
+                }
+            } else if wordEntities.contains(where: { $0.lemma.lowercased() == word.lowercased() }) {
+                // Word is itself a lemma
+                lemmaCounts[word, default: 0] += 1
+                formCounts[word, default: [:]][word, default: 0] += 1
+                lemmaEntities[word] = wordEntities.first { $0.lemma.lowercased() == word.lowercased() }
+            } else {
+                // Unknown word: no lemma or entity
+                unknownWords.append(word)
             }
         }
         
@@ -326,8 +289,8 @@ public class LatinService {
         var resultDictionary: [String: PsalmAnalysisResult.LemmaInfo] = [:]
         for (lemma, count) in lemmaCounts {
             let entity = lemmaEntities[lemma]
-            let translation = entity?.getTranslation() ?? translations[lemma] ?? lemma
-            
+            let translation = entity?.getTranslation() ?? translations[lemma]
+
             // Filter out forms with 0 counts
             let filteredForms = (formCounts[lemma] ?? [:]).filter { $0.value > 0 }
             
@@ -352,7 +315,8 @@ public class LatinService {
             totalWords: words.count,
             uniqueWords: Set(words).count,
             uniqueLemmas: lemmaCounts.count,
-            dictionary: resultDictionary
+            dictionary: resultDictionary,
+            unknownWords: unknownWords.sorted() 
         )
     }
     
@@ -362,125 +326,6 @@ public class LatinService {
         return analyzePsalm(text: lines)
     }
     
-    
-    // MARK: - Helper Methods  
-     private func createFormToLemmaMapping() -> [String: String] {
-        var mapping: [String: String] = [:]
-        for entity in wordEntities {
-            let lemma = entity.lemma
-            // 1. Map ALL case forms (both singular and plural)
-            let caseForms = [
-                entity.nominative,
-                entity.vocative,
-                entity.dative,
-                entity.accusative,
-                entity.genitive,
-                entity.ablative,
-                entity.nominative_plural,
-                entity.genitive_plural,
-                entity.dative_plural,
-                entity.accusative_plural,
-                entity.ablative_plural
-            ]
-            
-            caseForms.compactMap { $0?.lowercased() }
-                    .forEach { mapping[$0] = lemma }
-            
-            
-            if let additionalForms = entity.forms {
-
-
-                for (formKey, formValue) in additionalForms {
-                    
-                    // Only process keys ending with _f or _n
-                    if formKey.hasSuffix("_f") || formKey.hasSuffix("_n") || formKey.hasSuffix("_participle") {
-                        if let stringArray = formValue as? [String] {
-                            stringArray.forEach { form in
-                                mapping[form.lowercased()] = lemma
-                            }
-                        } else if let string = formValue as? String {
-                            mapping[string.lowercased()] = lemma
-                        }
-                    }
-                }
-            }
-            // 2. Map generated forms (from generatedForms)
-            entity.generatedForms.values
-                .map { $0.lowercased() }
-                .forEach { mapping[$0] = lemma }
-            
-            // 3. Map possessive forms (now properly structured)
-            if let possessive = entity.possessive {
-                // Singular forms
-                possessive.singular?.values.forEach { genderForms in
-                    genderForms.values.forEach { form in
-                        mapping[form.lowercased()] = lemma
-                    }
-                }
-                
-                // Plural forms
-                possessive.plural?.values.forEach { genderForms in
-                    genderForms.values.forEach { form in
-                        mapping[form.lowercased()] = lemma
-                    }
-                }
-            }
-           
-            
-            if entity.partOfSpeech == .verb {
-                
-                if let verbForms = entity.forms {
-                            for (_, formArray) in verbForms {
-                                for formVariants in formArray {
-                                    // Split variants and map each one
-                                    formVariants.lowercased()
-                                        .components(separatedBy: "/")
-                                        .forEach { variant in
-                                            mapping[variant] = lemma
-                                        }
-                                }
-                            }
-                        }
-                
-                // Imperative (like "sede")
-                if let imperative = entity.forms?["imperative_singular"] {
-                    imperative.forEach { mapping[$0.lowercased()] = lemma }
-                }
-                
-                // Principal parts
-                [entity.infinitive, entity.perfect].compactMap { $0 }
-                    .forEach { mapping[$0.lowercased()] = lemma }
-                
-                // All other verb forms
-                entity.forms?.values.flatMap { $0 }
-                    .forEach { mapping[$0.lowercased()] = lemma }
-            }
-               
-            // 3. Map verb forms (new)
-            if let verbForms = entity.forms {
-                // Handle perfect tense array
-                if let perfectForms = verbForms["perfect"]  {
-                    perfectForms.forEach { mapping[$0.lowercased()] = lemma }
-                }
-                if let perfectPassiveForms = verbForms["perfect_passive"] { 
-                    perfectPassiveForms.forEach { mapping[$0.lowercased()] = lemma }
-                }
-                // Handle other verb forms if present in future
-                // (Add similar blocks for other tenses/moods)
-            }
-            
-            // 4. Map principal parts (verbs)
-            if let perfectForm = entity.perfect {
-                mapping[perfectForm.lowercased()] = lemma
-            }
-        }
-       // print("Mapped forms for 'mendacium':", 
-        // mapping.filter { $0.value == "mendacium" }.keys.sorted())
-        //print("Final Mapping:", mapping.sorted(by: { $0.key < $1.key })) // Alphabetized debug
-        return mapping
-    }
-
-   
     
     // MARK: - Export Methods
     
