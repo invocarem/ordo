@@ -73,7 +73,12 @@ let package = Package(
             name: "LatinServiceTests",    
             dependencies: ["LatinService"],
             path: "Tests/LatinService",
-            sources: ["LatinServiceTests.swift", "Psalm118Tests.swift", "Psalm36Tests.swift"],
+            sources: ["LatinServiceTests.swift", 
+                "Psalm118Tests.swift", 
+                "PsalmDegreesTests.swift", 
+                "Psalm36ATests.swift",                    
+                "Psalm36BTests.swift"
+            ],
             resources: [.copy("../../ordo/Services/LatinService/words.json"), .copy("../../ordo/Services/LatinService/translations.json")]
         ),
 

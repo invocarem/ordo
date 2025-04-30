@@ -1,7 +1,7 @@
 import XCTest
 @testable import LatinService 
 
-class Psalm36Tests: XCTestCase {
+class Psalm36ATests: XCTestCase {
      private var latinService: LatinService!
      override func setUp() {
         super.setUp()
@@ -14,7 +14,7 @@ class Psalm36Tests: XCTestCase {
         latinService = nil
         super.tearDown()
     }
-    func testAnalyzePsalm36() {
+    func testAnalyzePsalm36A() {
         let psalm36 = [
             "Noli aemulari in malignantibus; neque zelaveris facientes iniquitatem.",
             "Quoniam tamquam fenum velociter arescent; et quemadmodum olera herbarum cito decident.",
