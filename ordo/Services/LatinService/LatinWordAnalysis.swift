@@ -20,11 +20,6 @@ extension LatinWordEntity {
             return analysis
         }
        
-        // Handle possessive forms if no match yet
-        if let possessiveAnalysis = analyzePossessiveForm(form: formLower, translation: translation) {
-            return possessiveAnalysis
-        }
-       
         // Default case analysis for nouns/adjectives
         return analyzeNounAdjectiveForm(form: formLower, translation: translation)
     }
@@ -70,6 +65,18 @@ extension LatinWordEntity {
                             .replacingOccurrences(of: "_n", with: " (neuter)")
                             .replacingOccurrences(of: "_", with: " ")
                         return "\(translation) (\(caseName))"
+                    }
+                }
+            }
+        }
+
+         // 3. Check gendered forms in "forms_plural" dictionary (plural)
+        if let formsPlural = formsPlural {
+            for (key, formVariants) in formsPlural {
+                for formVariant in formVariants {
+                    if formVariant.lowercased() == lowerForm {
+                        let (caseName, gender) = parseFormKey(key)
+                        return "\(translation) (\(caseName) plural \(gender))"
                     }
                 }
             }
@@ -144,64 +151,77 @@ extension LatinWordEntity {
         }
         return nil
     }
-    
-    private func analyzeVerbConjugation(form: String, translation: String) -> String? {
-        guard let forms = forms else { return nil }
+     private func analyzeConjugation(tense: String, index: Int, translation: String, isPlural: Bool) -> String? {
+        if tense == "perfect_passive" {
+            let genderNumber = getGenderAndNumber(index: index, isPlural: isPlural)
+            return "having been \(translation)ed (\(genderNumber))"
+        }
         
-        for (tense, formArray) in forms {
-            for (index, formVariants) in formArray.enumerated() {
-                guard matchesVariant(form: form, target: formVariants) else { continue }
-                if tense == "perfect_passive" {
-                    let genderNumber = getGenderAndNumber(form: form, in: formArray)
-                    return "having been \(translation)ed (\(genderNumber))"
-                }
-                
-                let (person, number) = getPersonAndNumber(index: index)
-                
-                switch tense {
-                case "present": return "\(person) \(translation)\(number)"
-                case "imperfect": return "\(person) was \(translation)ing\(number)"
-                case "future": return "\(person) will \(translation)\(number)"
-                case "perfect": return "\(person) has \(translation)ed\(number)"
-                case "pluperfect": return "\(person) had \(translation)ed\(number)"
-                case "imperative_singular": return "\(translation.capitalized)! (command)"
-                case "imperative_plural": return "\(translation.capitalized)! (pl command)"
-                case "present_subjunctive": return "\(person) may \(translation)\(number) (subjunctive)"
-                case "imperfect_subjunctive": return "\(person) might \(translation)\(number)"
-                default: return "\(translation) (\(tense))"
+        let (person, number) = getPersonAndNumber(index: index)
+        let effectiveNumber = isPlural ? " (pl)" : number
+        
+        switch tense {
+        case "present_active_indicative":
+            return "\(person) \(translation)\(effectiveNumber)"
+        case "present_passive_indicative":
+            return "\(person) \(isPlural ? "are" : "is") \(translation)ed\(effectiveNumber)"
+        case "imperfect_active_indicative":
+            return "\(person) was \(translation)ing\(effectiveNumber)"
+        case "imperfect_passive_indicative":
+            return "\(person) was being \(translation)ed\(effectiveNumber)"
+        case "future_active_indicative":
+            return "\(person) will \(translation)\(effectiveNumber)"
+        case "future_passive_indicative":
+            return "\(person) will be \(translation)ed\(effectiveNumber)"
+        case "perfect_active_indicative":
+            return "\(person) has \(translation)ed\(effectiveNumber)"
+        case "perfect_passive_indicative":
+            return "\(person) has been \(translation)ed\(effectiveNumber)"
+        case "pluperfect_active_indicative":
+            return "\(person) had \(translation)ed\(effectiveNumber)"
+        case "pluperfect_passive_indicative":
+            return "\(person) had been \(translation)ed\(effectiveNumber)"
+        case "present_active_subjunctive":
+            return "\(person) may \(translation)\(effectiveNumber) (subjunctive)"
+        case "present_passive_subjunctive":
+            return "\(person) may be \(translation)ed\(effectiveNumber) (subjunctive)"
+        case "imperfect_active_subjunctive":
+            return "\(person) might \(translation)\(effectiveNumber) (subjunctive)"
+        case "imperfect_passive_subjunctive":
+            return "\(person) might be \(translation)ed\(effectiveNumber) (subjunctive)"
+        case "imperative_active":
+            return "\(translation.capitalized)! (\(isPlural ? "plural" : "singular") command)"
+        case "present_participle":
+            return "\(translation)ing (participle)"
+        default:
+            return "\(translation) (\(tense) \(isPlural ? "plural" : "singular"))"
+        }
+    }
+      private func analyzeVerbConjugation(form: String, translation: String) -> String? {
+        // Check singular forms
+        if let forms = forms {
+            for (tense, formArray) in forms {
+                for (index, formVariants) in formArray.enumerated() {
+                    guard matchesVariant(form: form, target: formVariants) else { continue }
+                    return analyzeConjugation(tense: tense, index: index, translation: translation, isPlural: false)
                 }
             }
         }
-        return nil
-    }
-    
-    private func analyzePossessiveForm(form: String, translation: String) -> String? {
-        guard let possessive = possessive else { return nil }
         
-        let possessorMap: [String: String] = [
-            "meus": "my",
-            "tuus": "your",
-            "suus": "his/her/its",
-            "noster": "our",
-            "vester": "your (pl)"
-        ]
-        
-        let possessor = possessorMap[lemma.lowercased()] ?? "your"
-        
-        // Check both singular and plural forms
-        let allForms = [(possessive.singular, "sg"), (possessive.plural, "pl")]
-        for (forms, number) in allForms {
-            for (gender, cases) in forms ?? [:] {
-                for (caseName, formValue) in cases {
-                    if formValue.lowercased() == form {
-                        return "\(possessor) \(gender) (\(number) \(caseName))"
-                    }
+        // Check plural forms
+        if let formsPlural = formsPlural {
+            for (tense, formArray) in formsPlural {
+                for (index, formVariants) in formArray.enumerated() {
+                    guard matchesVariant(form: form, target: formVariants) else { continue }
+                    return analyzeConjugation(tense: tense, index: index, translation: translation, isPlural: true)
                 }
             }
         }
         
         return nil
     }
+   
+   
     private func analyzeNounAdjectiveForm(form: String, translation: String) -> String {
         let lowerForm = form.lowercased()
         
@@ -242,6 +262,18 @@ extension LatinWordEntity {
                 }
             }
         }
+
+         // 3. Check forms_plural dictionary (plural)
+        if let formsPlural = formsPlural {
+            for (caseKey, formVariants) in formsPlural {
+                for formVariant in formVariants {
+                    if formVariant.lowercased() == lowerForm {
+                        let (caseName, gender) = parseFormKey(caseKey)
+                        return "\(translation) (\(caseName) plural \(gender))"
+                    }
+                }
+            }
+        }
         if lowerForm == lemma.lowercased() {
             return translation
         }
@@ -250,6 +282,17 @@ extension LatinWordEntity {
     }
         
     // MARK: - Helper Methods
+     private func parseFormKey(_ key: String) -> (caseName: String, gender: String) {
+        let gender = key.contains("_f") ? "feminine" :
+                     key.contains("_n") ? "neuter" :
+                     key.contains("_m") ? "masculine" : "unknown"
+        let caseName = key
+            .replacingOccurrences(of: "_f", with: "")
+            .replacingOccurrences(of: "_n", with: "")
+            .replacingOccurrences(of: "_m", with: "")
+            .replacingOccurrences(of: "_", with: " ")
+        return (caseName, gender)
+    }
     
     private func matchesVariant(form: String, target: String) -> Bool {
         return target.lowercased()
@@ -268,18 +311,13 @@ extension LatinWordEntity {
         default: return ("", "")
         }
     }
-    private func getGenderAndNumber(form: String, in forms: [String]) -> String {
-    // Assuming forms array order: [masc_sg, fem_sg, neut_sg, masc_pl, fem_pl, neut_pl]
-    switch form {
-    case forms[0]: return "masc sg"
-    case forms[1]: return "fem sg"
-    case forms[2]: return "neut sg"
-    case forms[3]: return "masc pl"
-    case forms[4]: return "fem pl"
-    case forms[5]: return "neut pl"
-    default: return "unknown"
+    private func getGenderAndNumber(index: Int, isPlural: Bool) -> String {
+        // Assuming forms array order: [masc_sg, fem_sg, neut_sg, masc_pl, fem_pl, neut_pl]
+        let gender = index % 3 == 0 ? "masc" : index % 3 == 1 ? "fem" : "neut"
+        let number = isPlural ? "pl" : "sg"
+        return "\(gender) \(number)"
     }
-}
+   
 }
 
 

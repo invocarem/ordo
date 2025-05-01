@@ -35,7 +35,11 @@ public struct LatinWordEntity: Codable {
     public let perfect: String?
     public let infinitive: String?
     public let forms: [String: [String]]?
+    public let formsPlural: [String: [String]]?
     
+    public let baseForm: String?
+    public let derivedFrom: DerivedFrom?
+
     // Translations
     public let translations: [String: String]?
     
@@ -43,6 +47,17 @@ public struct LatinWordEntity: Codable {
         public let singular: [String: [String: String]]?
         public let plural: [String: [String: String]]?
     }
+
+    public struct DerivedFrom: Codable {
+        public let lemma: String
+        public let partOfSpeech: PartOfSpeech
+        
+        private enum CodingKeys: String, CodingKey {
+            case lemma
+            case partOfSpeech = "part_of_speech"
+        }
+    }
+
     public init(
         lemma: String,
         partOfSpeech: PartOfSpeech? = nil,
@@ -66,6 +81,9 @@ public struct LatinWordEntity: Codable {
         perfect: String? = nil,
         infinitive: String? = nil,
         forms: [String: [String]]? = nil,
+        formsPlural: [String: [String]]? = nil,
+        baseForm: String? = nil,
+        derivedFrom: DerivedFrom? = nil,
         translations: [String: String]? = nil
     ) {
         self.lemma = lemma
@@ -88,6 +106,9 @@ public struct LatinWordEntity: Codable {
         self.perfect = perfect
         self.infinitive = infinitive
         self.forms = forms
+        self.formsPlural = formsPlural
+        self.baseForm = baseForm
+        self.derivedFrom = derivedFrom
         self.translations = translations
     }
     
@@ -107,6 +128,9 @@ public struct LatinWordEntity: Codable {
         case ablative_plural = "ablative_plural"
         case possessive
         case perfect, infinitive, forms
+        case formsPlural = "forms_plural"
+        case baseForm = "base_form"
+        case derivedFrom = "derived_from"
         case translations
     }
 
