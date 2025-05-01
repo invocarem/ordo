@@ -1,6 +1,400 @@
  [
+  {
+    "lemma": "illuminatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",    
+    "forms": {
+      "nominative_f": ["illuminatio"],
+      "genitive_f": ["illuminationis"],
+      "dative_f": ["illuminationi"],
+      "accusative_f": ["illuminationem"],
+      "ablative_f": ["illuminatione"],
+      "vocative_f": ["illuminatio"]
+    },
+    "forms_plural": {
+      "nominative_f": ["illuminationes"],
+      "genitive_f": ["illuminationum"],
+      "dative_f": ["illuminationibus"],
+      "accusative_f": ["illuminationes"],
+      "ablative_f": ["illuminationibus"],
+      "vocative_f": ["illuminationes"]
+    },
+    "translations": {
+      "en": "illumination, light",
+      "la": "illuminatio"
+    }
+  },
+  {
+    "lemma": "mansuetudo",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+
+    "forms": {
+      "nominative_f": ["mansuetudo"],
+      "genitive_f": ["mansuetudinis"],
+      "dative_f": ["mansuetudini"],
+      "accusative_f": ["mansuetudinem"],
+      "ablative_f": ["mansuetudine"],
+      "vocative_f": ["mansuetudo"]
+    },
+    "forms_plural": {
+      "nominative_f": ["mansuetudines"],
+      "genitive_f": ["mansuetudinum"],
+      "dative_f": ["mansuetudinibus"],
+      "accusative_f": ["mansuetudines"],
+      "ablative_f": ["mansuetudinibus"]
+    },
+    "translations": {
+      "en": "gentleness",
+      "la": "mansuetudo"
+    }
+  },
+  {
+    "lemma": "mille",
+    "part_of_speech": "noun",
+    "declension": 0, 
+    "gender": "neuter", 
+    "nominative": "mille",
+    "genitive": "mille",
+    "dative": "mille",
+    "accusative": "mille",
+    "ablative": "mille",
+    "nominative_plural": "milia",
+    "genitive_plural": "milium",
+    "dative_plural": "milibus",
+    "accusative_plural": "milia",
+    "ablative_plural": "milibus",
+    "forms": {
+      "nominative": ["mille"],
+      "genitive": ["mille"],
+      "dative": ["mille"],
+      "accusative": ["mille"],
+      "ablative": ["mille"]
+    },
+    "forms_plural": {
+      "nominative_n": ["milia"],
+      "genitive_n": ["milium"],
+      "dative_n": ["milibus"],
+      "accusative_n": ["milia"],
+      "ablative_n": ["milibus"]
+    },
+    "translations": {
+      "en": "thousand",
+      "la": "mille"
+    }
+  },
+  {
+    "lemma": "floreo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "florere",
+    "perfect": "florui",
+    "supine": "floritum",
+    "translations": {
+      "en": "to bloom, flourish",
+      "la": "floreo"
+    },
+    "forms": {
+      "present": ["floreo", "flores", "floret", "floremus", "floretis", "florent"],
+      "imperfect": ["florebam", "florebas", "florebat", "florebamus", "florebatis", "florebant"],
+      "future": ["florebo", "florebis", "florebit", "florebimus", "florebitis", "florebunt"],
+      "perfect": ["florui", "floruisti", "floruit", "floruimus", "floruitis", "floruerunt"],
+      "present_subjunctive_active": ["floream", "floreas", "floreat", "floreamus", "floreatis", "floreant"],
+      "imperative": ["flore"],
+      "present_passive": ["floreor", "fleris", "fletur", "flemur", "flemini", "flentur"]
+    },
+    "forms_plural": {
+      "imperative": ["florete"]
+    }
+  },
+  {
+    "lemma": "flos",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "flos",
+    "forms": {
+      "nominative_m": ["flos"],
+      "genitive_m": ["floris"],
+      "dative_m": ["flori"],
+      "accusative_m": ["florem"],
+      "ablative_m": ["flore"],
+      "vocative_m": ["flos"]
+    },
+    "forms_plural": {
+      "nominative_m": ["flores"],
+      "genitive_m": ["florum"],
+      "dative_m": ["floribus"],
+      "accusative_m": ["flores"],
+      "ablative_m": ["floribus"],
+      "vocative_m": ["flores"]
+    },
+    "translations": {
+      "en": "flower, blossom",
+      "la": "flos"
+    }
+  }, 
+  {
+    "lemma": "dextera",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "dextera",
+    "genitive": "dexterae",
+    "dative": "dexterae",
+    "accusative": "dexteram",
+    "ablative": "dextera",
+    "vocative": "dextera",
+    "nominative_plural": "dexterae",
+    "genitive_plural": "dexterarum",
+    "dative_plural": "dexteris",
+    "accusative_plural": "dexteras",
+    "ablative_plural": "dexteris",
+    "forms": {
+      "nominative_f": ["dextera"],
+      "genitive_f": ["dexterae"],
+      "dative_f": ["dexterae"],
+      "accusative_f": ["dexteram"],
+      "ablative_f": ["dextera"],
+      "vocative_f": ["dextera"]
+    },
+    "forms_plural": {
+      "nominative_f": ["dexterae"],
+      "genitive_f": ["dexterarum"],
+      "dative_f": ["dexteris"],
+      "accusative_f": ["dexteras"],
+      "ablative_f": ["dexteris"],
+      "vocative_f": ["dexterae"]
+    },
+    "translations": {
+      "en": "right hand",
+      "la": "dextera"
+    },
+    "notes" : "add dexter 'a' does not make it femine form, here it need a femine noun"
+  },
+  
+      {
+        "lemma": "generatio",
+        "part_of_speech": "noun",
+        "declension": 3,
+        "gender": "feminine",
+        "nominative": "generatio",
+        "genitive": "generationis",
+        "dative": "generationi",
+        "accusative": "generationem",
+        "ablative": "generatione",
+        "vocative": "generatio",
+        "nominative_plural": "generationes",
+        "genitive_plural": "generationum",
+        "dative_plural": "generationibus",
+        "accusative_plural": "generationes",
+        "ablative_plural": "generationibus",
+        "forms": {
+          "nominative_f": ["generatio"],
+          "genitive_f": ["generationis"],
+          "dative_f": ["generationi"],
+          "accusative_f": ["generationem"],
+          "ablative_f": ["generatione"],
+          "vocative_f": ["generatio"]
+        },
+        "forms_plural": {
+          "nominative_f": ["generationes"],
+          "genitive_f": ["generationum"],
+          "dative_f": ["generationibus"],
+          "accusative_f": ["generationes"],
+          "ablative_f": ["generationibus"],
+          "vocative_f": ["generationes"]
+        },
+        "translations": {
+          "en": "generation",
+          "la": "generatio"
+        }
+      },
+      {
+        "lemma": "progenies",
+        "part_of_speech": "noun",
+        "declension": 5,
+        "gender": "feminine",
+        "nominative": "progenies",
+        "genitive": "progeniei",
+        "dative": "progeniei",
+        "accusative": "progeniem",
+        "ablative": "progenie",
+        "vocative": "progenies",
+        "nominative_plural": "progenies",
+        "genitive_plural": "progenierum",
+        "dative_plural": "progeniebus",
+        "accusative_plural": "progenies",
+        "ablative_plural": "progeniebus",
+        "forms": {
+          "nominative_f": ["progenies"],
+          "genitive_f": ["progeniei"],
+          "dative_f": ["progeniei"],
+          "accusative_f": ["progeniem"],
+          "ablative_f": ["progenie"],
+          "vocative_f": ["progenies"]
+        },
+        "forms_plural": {
+          "nominative_f": ["progenies"],
+          "genitive_f": ["progenierum"],
+          "dative_f": ["progeniebus"],
+          "accusative_f": ["progenies"],
+          "ablative_f": ["progeniebus"],
+          "vocative_f": ["progenies"]
+        },
+        "translations": {
+          "en": "offspring, descendants",
+          "la": "progenies"
+        }
+      },
+     
+      {
+        "lemma": "millennium",
+        "part_of_speech": "noun",
+        "declension": 2,
+        "gender": "neuter",
+        "nominative": "millennium",
+        "genitive": "millennii",
+        "dative": "millennio",
+        "accusative": "millennium",
+        "ablative": "millennio",
+        "vocative": "millennium",
+        "nominative_plural": "millennia",
+        "genitive_plural": "millenniorum",
+        "dative_plural": "millenniis",
+        "accusative_plural": "millennia",
+        "ablative_plural": "millenniis",
+        "forms": {
+          "nominative_n": ["millennium"],
+          "genitive_n": ["millennii"],
+          "dative_n": ["millennio"],
+          "accusative_n": ["millennium"],
+          "ablative_n": ["millennio"],
+          "vocative_n": ["millennium"]
+        },
+        "forms_plural": {
+          "nominative_n": ["millennia"],
+          "genitive_n": ["millenniorum"],
+          "dative_n": ["millenniis"],
+          "accusative_n": ["millennia"],
+          "ablative_n": ["millenniis"],
+          "vocative_n": ["millennia"]
+        },
+        "translations": {
+          "en": "thousand years",
+          "la": "millennium"
+        }
+      },
   
 
+      {
+        "lemma": "formo",
+        "part_of_speech": "verb",
+        "infinitive": "formare",
+        "perfect": "formavi",
+        "supine": "formatus",
+        "translations": {
+          "en": "to form, shape",
+          "la": "formo"
+        },
+        "forms": {
+          "present": ["formo", "formas", "format", "formamus", "formatis", "formant"],
+          "imperfect": ["formabam", "formabas", "formabat", "formabamus", "formabatis", "formabant"],
+          "future": ["formabo", "formabis", "formabit", "formabimus", "formabitis", "formabunt"],
+          "perfect": ["formavi", "formavisti", "formavit", "formavimus", "formavistis", "formaverunt"],
+          "imperative": ["forma"],
+          "present_passive": ["formor", "formaris", "formatur", "formamur", "formamini", "formantur"],
+          "imperfect_subjunctive_passive": ["formarer", "formareris", "formaretur", "formaremur", "formaremini", "formarentur"]
+        },
+        "forms_plural": {
+          "imperative": ["formate"]
+        }
+      },
+      {
+        "lemma": "deficio",
+        "part_of_speech": "verb",
+        "infinitive": "deficere",
+        "perfect": "defeci",
+        "supine": "defectum",
+        "translations": {
+          "en": "to fail, cease",
+          "la": "deficio"
+        },
+        "forms": {
+          "present": ["deficio", "deficis", "deficit", "deficimus", "deficitis", "deficiunt"],
+          "imperfect": ["deficiebam", "deficiebas", "deficiebat", "deficiebamus", "deficiebatis", "deficiebant"],
+          "future": ["deficiam", "deficies", "deficiet", "deficiemus", "deficietis", "deficient"],
+          "perfect": ["defeci", "defecisti", "defecit", "defecimus", "defecistis", "defecerunt"],
+          "imperative": ["defice"],
+          "present_passive": ["deficior", "deficeris", "deficitur", "deficimur", "deficimini", "deficiuntur"]
+        },
+        "forms_plural": {
+          "imperative": ["deficite"]
+        }
+      },
+      {
+        "lemma": "dinumero",
+        "part_of_speech": "verb",
+        "infinitive": "dinumerare",
+        "perfect": "dinumeravi",
+        "supine": "dinumeratus",
+        "translations": {
+          "en": "to reckon, count",
+          "la": "dinumero"
+        },
+        "forms": {
+          "present": ["dinumero", "dinumeras", "dinumerat", "dinumeramus", "dinumeratis", "dinumerant"],
+          "imperfect": ["dinumerabam", "dinumerabas", "dinumerabat", "dinumerabamus", "dinumerabatis", "dinumerabant"],
+          "future": ["dinumerabo", "dinumerabis", "dinumerabit", "dinumerabimus", "dinumerabitis", "dinumerabunt"],
+          "perfect": ["dinumeravi", "dinumeravisti", "dinumeravit", "dinumeravimus", "dinumeravistis", "dinumeraverunt"],
+          "imperative": ["dinumera"],
+          "present_passive": ["dinumeror", "dinumeraris", "dinumeratur", "dinumeramur", "dinumeramini", "dinumerantur"],
+          "infinitive": ["dinumerare"]
+        },
+        "forms_plural": {
+          "imperative": ["dinumerate"]
+        }
+      },
+      {
+        "lemma": "aranea",
+        "part_of_speech": "noun",
+        "declension": 1,
+        "gender": "feminine",
+        "nominative": "aranea",
+        "genitive": "araneae",
+        "dative": "araneae",
+        "accusative": "araneam",
+        "ablative": "aranea",
+        "vocative": "aranea",
+        "nominative_plural": "araneae",
+        "genitive_plural": "aranearum",
+        "dative_plural": "araneis",
+        "accusative_plural": "araneas",
+        "ablative_plural": "araneis",
+        "forms": {
+          "nominative_f": ["aranea"],
+          "genitive_f": ["araneae"],
+          "dative_f": ["araneae"],
+          "accusative_f": ["araneam"],
+          "ablative_f": ["aranea"],
+          "vocative_f": ["aranea"]
+        },
+        "forms_plural": {
+          "nominative_f": ["araneae"],
+          "genitive_f": ["aranearum"],
+          "dative_f": ["araneis"],
+          "accusative_f": ["araneas"],
+          "ablative_f": ["araneis"],
+          "vocative_f": ["araneae"]
+        },
+        "translations": {
+          "en": "spider's web, spider",
+          "la": "aranea"
+        }
+      },
+      
       {
         "lemma": "cathedra",
         "part_of_speech": "noun",

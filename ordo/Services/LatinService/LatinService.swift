@@ -256,10 +256,10 @@ public class LatinService {
             .filter { !$0.isEmpty }
         
         let formToLemma = lemmaMapping.createFormToLemmaMapping()
-        print("Dominus forms in mapping:")
-            print(formToLemma.filter { $0.value == "dominus" }.keys)
-        print("Dominium forms in mapping:")
-            print(formToLemma.filter { $0.value == "dominium" }.keys)
+        print("flos forms in mapping:")
+            print(formToLemma.filter { $0.value == "flos" }.keys)
+        /*print("Dominium forms in mapping:")
+            print(formToLemma.filter { $0.value == "dominium" }.keys)*/
 
 
         var unknownWords: [String] = []
