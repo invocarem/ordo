@@ -1,4 +1,323 @@
  [
+    {
+        "lemma": "custodia",
+        "part_of_speech": "noun",
+        "gender": "feminine",
+        "declension": 1,
+        "nominative": "custodia",
+        "genitive": "custodiae",
+        "dative": "custodiae",
+        "accusative": "custodiam",
+        "ablative": "custodia",
+        "vocative": "custodia",
+        "nominative_plural": "custodiae",
+        "genitive_plural": "custodiarum",
+        "dative_plural": "custodiis",
+        "accusative_plural": "custodias",
+        "ablative_plural": "custodiis",
+        "translations": {
+          "en": "watch, guard, protection",
+          "la": "custodia"
+        }
+      },{
+        "lemma": "redemptio",
+        "part_of_speech": "noun",
+        "gender": "feminine",
+        "declension": 3,
+        "nominative": "redemptio",
+        "genitive": "redemptionis",
+        "dative": "redemptioni",
+        "accusative": "redemptionem",
+        "ablative": "redemptione",
+        "vocative": "redemptio",
+        "nominative_plural": "redemptiones",
+        "genitive_plural": "redemptionum",
+        "dative_plural": "redemptionibus",
+        "accusative_plural": "redemptiones",
+        "ablative_plural": "redemptionibus",
+        "translations": {
+          "en": "redemption, buying back",
+          "la": "redemptio"
+        }
+      },
+    {
+        "lemma": "propitiatio",
+        "part_of_speech": "noun",
+        "gender": "feminine",
+        "declension": 3,
+        "nominative": "propitiatio",
+        "genitive": "propitiationis",
+        "dative": "propitiationi",
+        "accusative": "propitiationem",
+        "ablative": "propitiatione",
+        "vocative": "propitiatio",
+        "nominative_plural": "propitiationes",
+        "genitive_plural": "propitiationum",
+        "dative_plural": "propitiationibus",
+        "accusative_plural": "propitiationes",
+        "ablative_plural": "propitiationibus",
+        "translations": {
+          "en": "forgiveness",
+          "la": "propitiatio"
+        }
+      },
+      {
+        "lemma": "sustineo",
+        "part_of_speech": "verb",
+        "conjugation": 2,
+        "infinitive": "sustinere",
+        "forms": {
+          "present": ["sustineo", "sustines", "sustinet", "sustinemus", "sustinetis", "sustinent"],
+          "future": ["sustinebo", "sustinebis", "sustinebit", "sustinebimus", "sustinebitis", "sustinebunt"],
+          "perfect": ["sustinui", "sustinuisti", "sustinuit", "sustinuimus", "sustinuistis", "sustinuierunt"],
+          "present_passive": ["sustineor", "sustineris", "sustinetur", "sustinemur", "sustinemini", "sustinentur"]
+        },
+        "translations": {
+          "en": "endure, sustain",
+          "la": "sustineo"
+        }
+      },
+    {
+        "lemma": "deprecatio",
+        "part_of_speech": "noun",
+        "gender": "feminine",
+        "declension": 3,  
+        
+        "nominative": "deprecatio",
+        "genitive": "deprecationis",
+        "dative": "deprecationi",
+        "accusative": "deprecationem",
+        "ablative": "deprecatione",
+        "vocative": "deprecatio",
+        
+        "nominative_plural": "deprecationes",
+        "genitive_plural": "deprecationum",
+        "dative_plural": "deprecationibus",
+        "accusative_plural": "deprecationes",
+        "ablative_plural": "deprecationibus",
+        
+        "translations": {
+          "en": "supplication, plea, entreaty",
+          "la": "deprecatio"
+        }
+      },
+    {
+        "lemma": "magnus",
+        "part_of_speech": "adjective",
+        "gender": "masculine",
+        "declension": 2,  
+        
+        "nominative": "magnus",
+        "genitive": "magni",
+        "dative": "magno",
+        "accusative": "magnum",
+        "ablative": "magno",
+        "vocative": "magne",
+        
+        "nominative_plural": "magni",
+        "genitive_plural": "magnorum",
+        "dative_plural": "magnis",
+        "accusative_plural": "magnos",
+        "ablative_plural": "magnis",
+        
+        "forms": {
+          "nominative_f": ["magna"],
+          "genitive_f": ["magnae"],
+          "dative_f": ["magnae"],
+          "accusative_f": ["magnam"],
+          "ablative_f": ["magna"],
+          "vocative_f": ["magna"],
+          
+          "nominative_n": ["magnum"],
+          "genitive_n": ["magni"],
+          "dative_n": ["magno"],
+          "accusative_n": ["magnum"],
+          "ablative_n": ["magno"],
+          "vocative_n": ["magnum"],
+          
+          "nominative_plural_f": ["magnae"],
+          "genitive_plural_f": ["magnarum"],
+          "dative_plural_f": ["magnis"],
+          "accusative_plural_f": ["magnas"],
+          "ablative_plural_f": ["magnis"],
+          
+          "nominative_plural_n": ["magna"],
+          "genitive_plural_n": ["magnorum"],
+          "dative_plural_n": ["magnis"],
+          "accusative_plural_n": ["magna"],
+          "ablative_plural_n": ["magnis"]
+        },
+        
+        "translations": {
+          "en": "great, large, big",
+          "la": "magnus"
+        }
+        
+      },
+    {
+        "lemma": "humiliter",
+        "part_of_speech": "adverb",
+        "derived_from": "humilis",
+        "translations": {
+          "en": "humbly",
+          "la": "humiliter"
+        }
+      },
+        {
+          "lemma": "exalto",
+          "part_of_speech": "verb",
+          "conjugation": 1,
+          "deponent": false,
+          "infinitive": "exaltare",
+          "forms": {
+            "present": ["exalto", "exaltas", "exaltat", "exaltamus", "exaltatis", "exaltant"],
+            "imperative": ["exalta", "exaltate"],
+            "subjunctive": ["exaltem", "exaltes", "exaltet", "exaltemus", "exaltetis", "exaltent"],
+            "perfect": ["exaltavi"],
+            "participle": ["exaltatum"]
+          },
+          "translations": {
+            "en": "to exalt, raise up",
+            "la": "exalto"
+          }
+        },
+        {
+          "lemma": "humilis",
+          "part_of_speech": "adjective",
+          "declension": 3,
+          "gender": "masculine",
+          "nominative": "humilis",
+          "genitive": "humilis",
+          "dative": "humili",
+          "accusative": "humilem",
+          "ablative": "humili",
+          "vocative": "humilis",
+          "nominative_plural": "humiles",
+          "genitive_plural": "humilium",
+          "dative_plural": "humilibus",
+          "accusative_plural": "humiles",
+          "ablative_plural": "humilibus",
+          "forms": {
+            "nominative_f": ["humilis"],
+            "genitive_f": ["humilis"],
+            "dative_f": ["humili"],
+            "accusative_f": ["humilem"],
+            "ablative_f": ["humili"],
+            "vocative_f": ["humilis"],
+            "nominative_plural_f": ["humiles"],
+            "genitive_plural_f": ["humilium"],
+            "dative_plural_f": ["humilibus"],
+            "accusative_plural_f": ["humiles"],
+            "ablative_plural_f": ["humilibus"],
+            "adverb": ["humiliter"]
+          },
+          "translations": {
+            "en": "humble, lowly; humbly (adverb)",
+            "la": "humilis, humiliter"
+          }
+        },
+        {
+          "lemma": "ablacto",
+          "part_of_speech": "verb",
+          "conjugation": 1,
+          "deponent": false,
+          "infinitive": "ablactare",
+          "forms": {
+            "present": ["ablacto", "ablactas", "ablactat", "ablactamus", "ablactatis", "ablactant"],
+            "imperative": ["ablacta", "ablactate"],
+            "subjunctive": ["ablactem", "ablactes", "ablactet", "ablactemus", "ablactetis", "ablactent"],
+            "participle": ["ablactatus"]
+          },
+          "translations": {
+            "en": "to wean",
+            "la": "ablacto"
+          }
+        },
+        {
+          "lemma": "retributio",
+          "part_of_speech": "noun",
+          "gender": "feminine",
+          "declension": 3,
+          "nominative": "retributio",
+          "genitive": "retributionis",
+          "dative": "retributioni",
+          "accusative": "retributionem",
+          "ablative": "retributione",
+          "vocative": "retributio",
+          "nominative_plural": "retributiones",
+          "translations": {
+            "en": "reward, repayment",
+            "la": "retributio"
+          }
+        },
+        {
+          "lemma": "spero",
+          "part_of_speech": "verb",
+          "conjugation": 1,
+          "deponent": false,
+          "infinitive": "sperare",
+          "forms": {
+            "present": ["spero", "speras", "sperat", "speramus", "speratis", "sperant"],
+            "imperative": ["spera", "sperate"],
+            "subjunctive": ["sperem", "speres", "speret", "speremus", "speretis", "sperent"]
+          },
+          "translations": {
+            "en": "to hope",
+            "la": "spero"
+          }
+        },
+          
+        {
+          "lemma": "prolongo",
+          "part_of_speech": "verb",
+          "conjugation": 1,
+          "deponent": false,
+          "infinitive": "prolongare",
+          "forms": {
+            "present": ["prolongo", "prolongas", "prolongat", "prolongamus", "prolongatis", "prolongant"],
+            "imperative": ["prolonga", "prolongate"],
+            "subjunctive": ["prolongem", "prolonges", "prolonget", "prolongemus", "prolongetis", "prolongent"],
+            "perfect": ["prolongaverunt"]
+          },
+          "translations": {
+            "en": "to prolong, extend",
+            "la": "prolongo"
+          }
+        },
+        {
+          "lemma": "concido",
+          "part_of_speech": "verb",
+          "conjugation": 3,
+          "deponent": false,
+          "infinitive": "concidere",
+          "forms": {
+            "present": ["concido", "concidis", "concidit", "concidimus", "conciditis", "concidunt"],
+            "imperative": ["concide", "concidite"],
+            "subjunctive": ["concidam", "concidas", "concidat", "concidamus", "concidatis", "concidant"]
+          },
+          "translations": {
+            "en": "to cut down, strike down",
+            "la": "concido"
+          }
+        },
+        {
+          "lemma": "cervix",
+          "part_of_speech": "noun",
+          "gender": "feminine",
+          "declension": 3,
+          "nominative": "cervix",
+          "genitive": "cervicis",
+          "dative": "cervici",
+          "accusative": "cervicem",
+          "ablative": "cervice",
+          "vocative": "cervix",
+          "nominative_plural": "cervices",
+          "translations": {
+            "en": "neck",
+            "la": "cervix"
+          }
+        },
+      
     
         {
           "lemma": "converto",
@@ -4763,22 +5082,7 @@
         },
         "notes": "From Psalm 17:37 - 'dilatasti gressus meos' (you have enlarged my steps)"
     },
-    {
-        "lemma": "humilis",
-        "part_of_speech": "adjective",
-        "declension": 3,
-        "gender": "masculine",
-        "nominative": "humilis",
-        "genitive": "humilis",
-        "dative": "humili",
-        "accusative": "humilem",
-        "ablative": "humili",
-        "translations": {
-            "en": "humble, lowly, modest",
-            "la": "humilis, humile"
-        },
-        "notes": "The form 'humilem' is the accusative singular"
-    },
+   
     
     {
         "lemma": "illumino",
@@ -5898,75 +6202,6 @@
             "la": "tu"
         }
     },
-    {
-        "lemma": "meus",
-        "part_of_speech": "pronoun",
-        "gender": "masculine", 
-        
-        "nominative": "meus",
-        "genitive": "mei",
-        "dative": "meo",
-        "accusative": "meum",
-        "ablative": "meo",
-        "vocative": "mee",
-     
-        "nominative_plural": "mei",
-        "genitive_plural": "meorum",
-        "dative_plural": "meis",
-        "accusative_plural": "meos",
-        "ablative_plural": "meis",
-        
-     
-        "forms": {
-            "nominative_f": ["mea"],
-            "genitive_f": ["meae"],
-            "dative_f": ["meae"],
-            "accusative_f": ["meam"],
-            "ablative_f": ["mea"],
-            "vocative_f": ["mea"],
-            
-            
-            "nominative_n": ["meum"],
-            "genitive_n": ["mei"],
-            "dative_n": ["meo"],
-            "accusative_n": ["meum"],
-            "ablative_n": ["meo"],
-            "vocative_n": ["meum"],
-            
-            
-            "nominative_plural_f": ["meae"],
-            "genitive_plural_f": ["mearum"],
-            "accusative_plural_f": ["meas"],
-            
-            
-            "nominative_plural_n": ["mea"],
-            "accusative_plural_n": ["mea"]
-           
-        },
-        
-        "translations": {
-            "en": "my",
-            "la": "meus"
-        }
-    },
-    
-        {
-          "lemma": "uxor",
-          "part_of_speech": "noun",
-          "gender": "feminine",
-          "declension": 3,
-          "nominative": "uxor",
-          "genitive": "uxoris",
-          "dative": "uxori",
-          "accusative": "uxorem",
-          "ablative": "uxore",
-          "vocative": "uxor",
-          "nominative_plural": "uxores",
-          "translations": {
-            "en": "wife",
-            "la": "uxor"
-          }
-        },
             {
               "lemma": "vitis",
               "part_of_speech": "noun",
@@ -6001,7 +6236,76 @@
               }
             },
           
+            {
+                "lemma": "meus",
+                "part_of_speech": "pronoun",
+                "gender": "masculine", 
+                
+                "nominative": "meus",
+                "genitive": "mei",
+                "dative": "meo",
+                "accusative": "meum",
+                "ablative": "meo",
+                "vocative": "mee",
+             
+                "nominative_plural": "mei",
+                "genitive_plural": "meorum",
+                "dative_plural": "meis",
+                "accusative_plural": "meos",
+                "ablative_plural": "meis",
+                
+             
+                "forms": {
+                    "nominative_f": ["mea"],
+                    "genitive_f": ["meae"],
+                    "dative_f": ["meae"],
+                    "accusative_f": ["meam"],
+                    "ablative_f": ["mea"],
+                    "vocative_f": ["mea"],
+                    
+                    
+                    "nominative_n": ["meum"],
+                    "genitive_n": ["mei"],
+                    "dative_n": ["meo"],
+                    "accusative_n": ["meum"],
+                    "ablative_n": ["meo"],
+                    "vocative_n": ["meum"],
+                    
+                    
+                    "nominative_plural_f": ["meae"],
+                    "genitive_plural_f": ["mearum"],
+                    "accusative_plural_f": ["meas"],
+                    
+                    
+                    "nominative_plural_n": ["mea"],
+                    "accusative_plural_n": ["mea"]
+                   
+                },
+                
+                "translations": {
+                    "en": "my",
+                    "la": "meus"
+                }
+            },
             
+                {
+                  "lemma": "uxor",
+                  "part_of_speech": "noun",
+                  "gender": "feminine",
+                  "declension": 3,
+                  "nominative": "uxor",
+                  "genitive": "uxoris",
+                  "dative": "uxori",
+                  "accusative": "uxorem",
+                  "ablative": "uxore",
+                  "vocative": "uxor",
+                  "nominative_plural": "uxores",
+                  "translations": {
+                    "en": "wife",
+                    "la": "uxor"
+                  }
+                },
+                    
                 {
                   "lemma": "benedico",
                   "part_of_speech": "verb",
