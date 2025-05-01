@@ -1,4 +1,222 @@
  [
+  
+
+      {
+        "lemma": "cathedra",
+        "part_of_speech": "noun",
+        "declension": 1,
+        "gender": "feminine",
+        "nominative": "cathedra",
+        "genitive": "cathedrae",
+        "dative": "cathedrae",
+        "accusative": "cathedram",
+        "ablative": "cathedra",
+        "vocative": "cathedra",
+        "nominative_plural": "cathedrae",
+        "genitive_plural": "cathedrarum",
+        "dative_plural": "cathedris",
+        "accusative_plural": "cathedras",
+        "ablative_plural": "cathedris",
+        "forms": {
+          "nominative_f": ["cathedra"],
+          "genitive_f": ["cathedrae"],
+          "dative_f": ["cathedrae"],
+          "accusative_f": ["cathedram"],
+          "ablative_f": ["cathedra"],
+          "vocative_f": ["cathedra"]
+        },
+        "forms_plural": {
+          "nominative_f": ["cathedrae"],
+          "genitive_f": ["cathedrarum"],
+          "dative_f": ["cathedris"],
+          "accusative_f": ["cathedras"],
+          "ablative_f": ["cathedris"],
+          "vocative_f": ["cathedrae"]
+        },
+        "translations": {
+          "en": "seat, throne",
+          "la": "cathedra"
+        }
+      },
+      {
+        "lemma": "pulvis",
+        "part_of_speech": "noun",
+        "declension": 3,
+        "gender": "masculine",
+        "nominative": "pulvis",
+        "genitive": "pulveris",
+        "dative": "pulveri",
+        "accusative": "pulverem",
+        "ablative": "pulvere",
+        "vocative": "pulvis",
+        "nominative_plural": "pulveres",
+        "genitive_plural": "pulverum",
+        "dative_plural": "pulveribus",
+        "accusative_plural": "pulveres",
+        "ablative_plural": "pulveribus",
+        "forms": {
+          "nominative_m": ["pulvis"],
+          "genitive_m": ["pulveris"],
+          "dative_m": ["pulveri"],
+          "accusative_m": ["pulverem"],
+          "ablative_m": ["pulvere"],
+          "vocative_m": ["pulvis"]
+        },
+        "forms_plural": {
+          "nominative_m": ["pulveres"],
+          "genitive_m": ["pulverum"],
+          "dative_m": ["pulveribus"],
+          "accusative_m": ["pulveres"],
+          "ablative_m": ["pulveribus"],
+          "vocative_m": ["pulveres"]
+        },
+        "translations": {
+          "en": "dust",
+          "la": "pulvis"
+        }
+      },
+      {
+        "lemma": "folium",
+        "part_of_speech": "noun",
+        "declension": 2,
+        "gender": "neuter",
+        "nominative": "folium",
+        "genitive": "folii",
+        "dative": "folio",
+        "accusative": "folium",
+        "ablative": "folio",
+        "vocative": "folium",
+        "nominative_plural": "folia",
+        "genitive_plural": "foliorum",
+        "dative_plural": "foliis",
+        "accusative_plural": "folia",
+        "ablative_plural": "foliis",
+        "forms": {
+          "nominative_n": ["folium"],
+          "genitive_n": ["folii"],
+          "dative_n": ["folio"],
+          "accusative_n": ["folium"],
+          "ablative_n": ["folio"],
+          "vocative_n": ["folium"]
+        },
+        "forms_plural": {
+          "nominative_n": ["folia"],
+          "genitive_n": ["foliorum"],
+          "dative_n": ["foliis"],
+          "accusative_n": ["folia"],
+          "ablative_n": ["foliis"],
+          "vocative_n": ["folia"]
+        },
+        "translations": {
+          "en": "leaf",
+          "la": "folium"
+        }
+      },
+      {
+        "lemma": "decursus",
+        "part_of_speech": "noun",
+        "declension": 4,
+        "gender": "masculine",
+        "nominative": "decursus",
+        "genitive": "decursus",
+        "dative": "decursui",
+        "accusative": "decursum",
+        "ablative": "decursu",
+        "vocative": "decursus",
+        "nominative_plural": "decursus",
+        "genitive_plural": "decursuum",
+        "dative_plural": "decursibus",
+        "accusative_plural": "decursus",
+        "ablative_plural": "decursibus",
+        "forms": {
+          "nominative_m": ["decursus"],
+          "genitive_m": ["decursus"],
+          "dative_m": ["decursui"],
+          "accusative_m": ["decursum"],
+          "ablative_m": ["decursu"],
+          "vocative_m": ["decursus"]
+        },
+        "forms_plural": {
+          "nominative_m": ["decursus"],
+          "genitive_m": ["decursuum"],
+          "dative_m": ["decursibus"],
+          "accusative_m": ["decursus"],
+          "ablative_m": ["decursibus"],
+          "vocative_m": ["decursus"]
+        },
+        "translations": {
+          "en": "flow, course",
+          "la": "decursus"
+        }
+      },
+      {
+        "lemma": "defluo",
+        "part_of_speech": "verb",
+        "infinitive": "defluere",
+        "perfect": "defluxi",
+        "supine": "defluxum",
+        "translations": {
+          "en": "to wither, flow down",
+          "la": "defluo"
+        },
+        "forms": {
+          "present": ["defluo", "defluis", "defluit", "defluimus", "defluitis", "defluunt"],
+          "imperfect": ["defluebam", "defluebas", "defluebat", "defluebamus", "defluebatis", "defluebant"],
+          "future": ["defluam", "deflues", "defluet", "defluemus", "defluetis", "defluent"],
+          "perfect": ["defluxi", "defluxisti", "defluxit", "defluximus", "defluxistis", "defluxerunt"],
+          "imperative": ["deflue"],
+          "present_passive": ["defluor", "deflueris", "defluitur", "defluimur", "defluimini", "defluuntur"]
+        },
+        "forms_plural": {
+          "imperative": ["defluite"]
+        }
+      },
+      {
+        "lemma": "proicio",
+        "part_of_speech": "verb",
+        "infinitive": "proicere",
+        "perfect": "proieci",
+        "supine": "proiectum",
+        "translations": {
+          "en": "to scatter, throw forth",
+          "la": "proicio"
+        },
+        "forms": {
+          "present": ["proicio", "proicis", "proicit", "proicimus", "proicitis", "proiciunt"],
+          "imperfect": ["proiciebam", "proiciebas", "proiciebat", "proiciebamus", "proiciebatis", "proiciebant"],
+          "future": ["proiciam", "proicies", "proiciet", "proiciemus", "proicietis", "proicient"],
+          "perfect": ["proieci", "proiecisti", "proiecit", "proiecimus", "proiecistis", "proiecerunt"],
+          "imperative": ["proice"],
+          "present_passive": ["proicior", "proiceris", "proicitur", "proicimur", "proicimini", "proiciuntur"]
+        },
+        "forms_plural": {
+          "imperative": ["proicite"]
+        }
+      },
+      {
+        "lemma": "resurgo",
+        "part_of_speech": "verb",
+        "infinitive": "resurgere",
+        "perfect": "resurrexi",
+        "supine": "resurrectum",
+        "translations": {
+          "en": "to rise up, resurrect",
+          "la": "resurgo"
+        },
+        "forms": {
+          "present": ["resurgo", "resurgis", "resurgit", "resurgimus", "resurgitis", "resurgunt"],
+          "imperfect": ["resurgebam", "resurgebas", "resurgebat", "resurgebamus", "resurgebatis", "resurgebant"],
+          "future": ["resurgam", "resurges", "resurget", "resurgemus", "resurgetis", "resurgent"],
+          "perfect": ["resurrexi", "resurrexisti", "resurrexit", "resurreximus", "resurrexistis", "resurrexerunt"],
+          "imperative": ["resurge"],
+          "present_passive": ["resurgor", "resurgeris", "resurgitur", "resurgimur", "resurgimini", "resurguntur"]
+        },
+        "forms_plural": {
+          "imperative": ["resurgite"]
+        }
+      },
+  
+
   {
     "lemma": "ostendo",
     "part_of_speech": "verb",
@@ -7413,7 +7631,33 @@
       "forms_plural": {
           "imperative": ["bibite"]
       }
-  }                  
+  },  
+  {
+    "lemma": "impius",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",    
+    "forms": {
+      "nominative_m": ["impius"],
+      "genitive_m": ["impii"],
+      "dative_m": ["impio"],
+      "accusative_m": ["impium"],
+      "ablative_m": ["impio"],
+      "vocative_m": ["impie"]
+    },
+    "forms_plural": {
+      "nominative_m": ["impii"],
+      "genitive_m": ["impiorum"],
+      "dative_m": ["impiis"],
+      "accusative_m": ["impios"],
+      "ablative_m": ["impiis"],
+      "vocative_m": ["impii"]
+    },
+    "translations": {
+      "en": "the wicked, impious",
+      "la": "impius"
+    }
+  }
 ]
 
 

@@ -17,8 +17,8 @@ class Psalm1Tests: XCTestCase {
         "Et erit tamquam lignum quod plantatum est secus decursus aquarum, quod fructum suum dabit in tempore suo:",
         "Et folium eius non defluet, et omnia quaecumque faciet prosperabuntur.",
         "Non sic impii, non sic: sed tamquam pulvis quem proicit ventus a facie terrae.",
-        "Ideo non resurgent impii in iudicio, neque peccatores in concilio iustorum;",
-        "Quoniam novit Dominus viam iustorum, et iter impiorum peribit."
+        "Ideo non resurgent impii in judicio, neque peccatores in concilio iustorum;",
+        "Quoniam novit Dominus viam justorum, et iter impiorum peribit."
     ]
     
     // MARK: - Test Cases
@@ -54,7 +54,7 @@ class Psalm1Tests: XCTestCase {
         let thematicWords = [
             ("beatus", ["beatus"], "blessed"),
             ("impius", ["impiorum", "impii"], "wicked"),
-            ("iustus", ["iustorum", "iustorum"], "righteous")
+            ("justus", ["justorum", "justorum"], "righteous")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: thematicWords)
