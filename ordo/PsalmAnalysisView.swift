@@ -1,19 +1,39 @@
 //
+//  PsalmAnalysisView.swift
+//  ordo
+//
+//  Created by Chen Chen on 2025-04-30.
+//
+
+//
 //  PsalmAnalysisSectionView.swift
 //  ordo
 //
 //  Created by Chen Chen on 2025-04-25.
 //
+//
+//  PsalmAnalysisSectionView.swift
+//  ordo
+//
+
 import SwiftUI
+
 struct PsalmAnalysisSelectionView: View {
+    // MARK: - Dependencies
     let latinService: LatinService
     let psalmService: PsalmService
     let hoursService = HoursService.shared
     let liturgicalDay: LiturgicalDay?
     let hourKey: String?
     
-    // Hardcoded psalms as fallback
-    let psalmUsages: [PsalmUsage] = [
+    // MARK: - State
+    @State private var psalms: [String: [String]] = [:]
+    @State private var availablePsalms: [PsalmUsage] = []
+    @State private var selectedPsalm: PsalmUsage?
+    @State private var isLoading = true
+    
+    // MARK: - Constants
+    private let psalmUsages: [PsalmUsage] = [
         PsalmUsage(number: "118", category: "aleph"),
         PsalmUsage(number: "4"),
         PsalmUsage(number: "90"),
@@ -23,88 +43,117 @@ struct PsalmAnalysisSelectionView: View {
         PsalmUsage(number: "66")
     ]
     
-    @State private var psalms: [String: [String]] = [:]
-    @State private var availablePsalms: [PsalmUsage] = []
-    @State private var selectedPsalmId: String
-    @State private var isLoading = true
-    
-    init(latinService: LatinService, psalmService: PsalmService, liturgicalDay: LiturgicalDay?, hourKey: String?) {
+    // MARK: - Initialization
+    init(latinService: LatinService,
+         psalmService: PsalmService,
+         liturgicalDay: LiturgicalDay?,
+         hourKey: String?) {
         self.latinService = latinService
         self.psalmService = psalmService
         self.liturgicalDay = liturgicalDay
         self.hourKey = hourKey
-        self._selectedPsalmId = State(initialValue: "")
     }
     
+    // MARK: - Main View
     var body: some View {
         Group {
             if isLoading {
-                ProgressView()
+                loadingView
             } else {
-                List {
-                    psalmSelectionSection
-                    analysisSection
-                }
+                contentView
             }
         }
-        .navigationTitle(hourKey != nil ? "\(hourKey!.capitalized) Analysis" : "Psalm Analysis")
-        .task {
-            await loadData()
+        .navigationTitle(navigationTitle)
+        .task { await loadData() }
+    }
+    
+    // MARK: - Subviews
+    private var loadingView: some View {
+        ProgressView()
+    }
+    
+    private var contentView: some View {
+        ScrollView {
+            VStack(alignment: .leading, spacing: 16) {
+                hourHeader
+                psalmGrid
+                analysisView
+            }
+            .padding(.vertical)
         }
     }
     
-    private var psalmSelectionSection: some View {
-        Section {
-            Picker("Select Psalm", selection: $selectedPsalmId) {
-                ForEach(availablePsalms) { usage in
-                    Text(usage.displayTitle)
-                        .tag(usage.id)
-                }
+    private var hourHeader: some View {
+        Group {
+            if let hourKey = hourKey {
+                Text(hourKey.capitalized)
+                    .font(.title2.bold())
+                    .padding(.horizontal)
             }
-            .pickerStyle(.menu)
         }
     }
     
-    private var analysisSection: some View {
-        Section {
-            if let selectedUsage = availablePsalms.first(where: { $0.id == selectedPsalmId }) {
-                if psalms[selectedPsalmId] != nil {
-                    NavigationLink {
-                        if let psalmText = psalms[selectedUsage.id] {
-                            let analysis = latinService.analyzePsalm(text: psalmText)
-                            PsalmAnalysisView(analysis: analysis, psalmTitle: selectedUsage.displayTitle)
-                        }
-                    } label: {
-                        Text("Analyze \(selectedUsage.displayTitle)")
+    private var psalmGrid: some View {
+        LazyVGrid(
+            columns: [GridItem(.adaptive(minimum: 80)),
+                     GridItem(.adaptive(minimum: 80))],
+            spacing: 12
+        ) {
+            ForEach(availablePsalms) { psalm in
+                PsalmGridItem(
+                    psalm: psalm,
+                    isLoading: psalms[psalm.id] == nil,
+                    isSelected: selectedPsalm?.id == psalm.id
+                ) {
+                    withAnimation {
+                        togglePsalmSelection(psalm)
                     }
-                } else {
-                    HStack {
-                        Text("Loading text...")
-                        Spacer()
-                        ProgressView()
-                    }
                 }
             }
         }
+        .padding(.horizontal)
     }
     
+    @ViewBuilder
+    private var analysisView: some View {
+        if let selectedPsalm = selectedPsalm,
+           let psalmText = psalms[selectedPsalm.id] {
+            let analysis = latinService.analyzePsalm(text: psalmText)
+            PsalmAnalysisView(
+                analysis: analysis,
+                psalmTitle: selectedPsalm.displayTitle
+            )
+            .padding(.horizontal)
+            .transition(.opacity.combined(with: .move(edge: .bottom)))
+        }
+    }
+    
+    private var navigationTitle: String {
+        hourKey != nil ? "\(hourKey!.capitalized) Analysis" : "Psalm Analysis"
+    }
+    
+    // MARK: - Helper Methods
+    private func togglePsalmSelection(_ psalm: PsalmUsage) {
+        if selectedPsalm?.id == psalm.id {
+            selectedPsalm = nil
+        } else {
+            selectedPsalm = psalm
+        }
+    }
+    
+    // MARK: - Data Loading
     private func loadData() async {
-        // Load either hour-specific psalms or fallback to hardcoded list
+        await loadAvailablePsalms()
+        await loadPsalmTexts()
+        isLoading = false
+    }
+    
+    private func loadAvailablePsalms() async {
         if let hourKey = hourKey, let liturgicalDay = liturgicalDay {
             await loadHourPsalms(hourKey: hourKey, liturgicalDay: liturgicalDay)
         } else {
             availablePsalms = psalmUsages
         }
-        
-        // Load psalm texts
-        await loadPsalmTexts()
-        
-        // Set initial selection if none exists
-        if selectedPsalmId.isEmpty {
-            selectedPsalmId = availablePsalms.first?.id ?? ""
-        }
-        
-        isLoading = false
     }
     
     private func loadHourPsalms(hourKey: String, liturgicalDay: LiturgicalDay) async {
@@ -115,7 +164,6 @@ struct PsalmAnalysisSelectionView: View {
         ) {
             availablePsalms = hourPsalms
         } else {
-            // Fallback to hardcoded psalms if hour-specific loading fails
             availablePsalms = psalmUsages
         }
     }
@@ -133,14 +181,48 @@ struct PsalmAnalysisSelectionView: View {
     }
 }
 
-
-// Extension for display formatting
-extension PsalmUsage {
-    var displayTitle: String {
-        if let category = category {
-            return "Psalm \(number) (\(category))"
+// MARK: - Grid Item View
+struct PsalmGridItem: View {
+    let psalm: PsalmUsage
+    let isLoading: Bool
+    let isSelected: Bool
+    let action: () -> Void
+    
+    var body: some View {
+        Button(action: action) {
+            VStack(spacing: 4) {
+                if isLoading {
+                    ProgressView()
+                        .frame(height: 20)
+                } else {
+                    Text(psalm.number)
+                        .font(.headline)
+                }
+                
+                if let category = psalm.category {
+                    Text(category)
+                        .font(.caption)
+                        .foregroundColor(.secondary)
+                }
+            }
+            .frame(maxWidth: .infinity, minHeight: 60)
+            .padding(8)
+            .background(background)
+            .cornerRadius(8)
+            .overlay(
+                RoundedRectangle(cornerRadius: 8)
+                    .stroke(borderColor, lineWidth: 1)
+            )
         }
-        return "Psalm \(number)"
+        .buttonStyle(.plain)
+    }
+    
+    private var background: Color {
+        isSelected ? Color.accentColor.opacity(0.2) : Color(.secondarySystemBackground)
+    }
+    
+    private var borderColor: Color {
+        isSelected ? .accentColor : Color(.separator)
     }
 }
 
@@ -205,7 +287,6 @@ struct PsalmAnalysisView: View {
         .navigationBarTitleDisplayMode(.inline)
     }
 }
-
 // Helper view for statistics
 struct StatView: View {
     let value: String
@@ -225,10 +306,9 @@ struct StatView: View {
 }
 
 // Helper view for sections
-
 struct LatinSectionView<Content: View>: View {
     let title: String
-    let content: Content  // Changed from closure to direct Content
+    let content: Content
     
     init(title: String, @ViewBuilder content: () -> Content) {
         self.title = title
@@ -242,7 +322,7 @@ struct LatinSectionView<Content: View>: View {
                 .foregroundColor(.secondary)
             
             VStack(alignment: .leading, spacing: 12) {
-                content  // Now using the content directly
+                content
             }
             .padding()
             .background(Color(.systemBackground))
@@ -251,6 +331,7 @@ struct LatinSectionView<Content: View>: View {
         }
     }
 }
+
 // Word row view
 struct WordRow: View {
     let lemma: String
@@ -274,5 +355,22 @@ struct WordRow: View {
         }
     }
 }
+   
+                  
+                           
+                      
+    
+  
+   
 
+
+// Extension for display formatting
+extension PsalmUsage {
+    var displayTitle: String {
+        if let category = category {
+            return "Psalm \(number) (\(category))"
+        }
+        return "Psalm \(number)"
+    }
+}
 
