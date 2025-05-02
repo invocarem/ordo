@@ -256,39 +256,37 @@ public class LatinService {
             .filter { !$0.isEmpty }
         
         let formToLemma = lemmaMapping.createFormToLemmaMapping()
-        print("flos forms in mapping:")
-            print(formToLemma.filter { $0.value == "flos" }.keys)
-        /*print("Dominium forms in mapping:")
-            print(formToLemma.filter { $0.value == "dominium" }.keys)*/
-
+      
+//print("!!!mandatum forms in mapping:")
+//        print(formToLemma.filter { $0.value.contains("mandatum") }.keys.sorted())
+   
 
         var unknownWords: [String] = []
         var lemmaCounts: [String: Int] = [:]
         var formCounts: [String: [String: Int]] = [:]
         var lemmaEntities: [String: LatinWordEntity] = [:] // Track entities for lemmas
-        
-        // First pass: count actual occurrences
         for word in words {
-           // Check if word is a known form or lemma
-            if let lemma = formToLemma[word] {
-                // Known form mapped to a lemma
+            if let lemmas = formToLemma[word] {
+                // Form maps to one or more lemmas
+                let selectedLemma = selectLemma(for: word, lemmas: lemmas)
+                lemmaCounts[selectedLemma, default: 0] += 1
+                formCounts[selectedLemma, default: [:]][word, default: 0] += 1
+                
+                if lemmaEntities[selectedLemma] == nil {
+                    lemmaEntities[selectedLemma] = wordEntities.first { $0.lemma.lowercased() == selectedLemma.lowercased() }
+                }
+            } else if let entity = wordEntities.first(where: { $0.lemma.lowercased() == word.lowercased() }) {
+                // Word is itself a lemma
+                let lemma = entity.lemma.lowercased()
                 lemmaCounts[lemma, default: 0] += 1
                 formCounts[lemma, default: [:]][word, default: 0] += 1
-                
-                // Store entity if not already stored
-                if lemmaEntities[lemma] == nil {
-                    lemmaEntities[lemma] = wordEntities.first { $0.lemma.lowercased() == lemma.lowercased() }
-                }
-            } else if wordEntities.contains(where: { $0.lemma.lowercased() == word.lowercased() }) {
-                // Word is itself a lemma
-                lemmaCounts[word, default: 0] += 1
-                formCounts[word, default: [:]][word, default: 0] += 1
-                lemmaEntities[word] = wordEntities.first { $0.lemma.lowercased() == word.lowercased() }
+                lemmaEntities[lemma] = entity
             } else {
-                // Unknown word: no lemma or entity
+                // Unknown word
                 unknownWords.append(word)
             }
         }
+        
         
         // Build results - only include forms with count > 0
         var resultDictionary: [String: PsalmAnalysisResult.LemmaInfo] = [:]
@@ -324,7 +322,26 @@ public class LatinService {
             unknownWords: unknownWords.sorted() 
         )
     }
-    
+    // Helper to select a lemma when a form maps to multiple lemmas
+    private func selectLemma(for word: String, lemmas: [String]) -> String {
+        // If only one lemma, return it
+        if lemmas.count == 1 {
+            return lemmas[0]
+        }
+        
+        // Prioritize based on part of speech or context
+        for lemma in lemmas {
+            if let entity = wordEntities.first(where: { $0.lemma.lowercased() == lemma }) {
+                // Example: Prefer nouns over verbs for ambiguous forms like "mandatum"
+                if entity.partOfSpeech == .noun {
+                    return lemma
+                }
+            }
+        }
+        
+        // Fallback: Return the first lemma
+        return lemmas[0]
+    }
     // Keep original String version for backward compatibility
     public func analyzePsalm(text: String) -> PsalmAnalysisResult {
         let lines = text.components(separatedBy: .newlines)

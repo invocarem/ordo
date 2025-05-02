@@ -70,7 +70,7 @@ class Psalm36ATests: XCTestCase {
     
     // ===== TEST METRICS =====
     let totalWords = 170  // Actual word count in Psalm 36
-    let minimumLemmas = 30
+    
     let testedLemmas = 45 // Number of lemmas we're testing
     let testedForms = 58  // Number of word forms we're verifying
     

@@ -396,7 +396,7 @@ func testAnalyzePsalm119He_Comprehensive() {
         XCTAssertEqual(entry.entity?.partOfSpeech, .verb, "\(lemma) should be verb")
         
         for form in forms {
-            print("translation verb: \(lemma) \(form) \(entry.translation) vs \(translation)")
+            print("translation verb: \(lemma) \(form) \(String(describing: entry.translation)) vs \(translation)")
             XCTAssertGreaterThan(entry.forms[form] ?? 0, 0,
                               "Missing form '\(form)' for \(lemma)")
         }
@@ -417,7 +417,7 @@ func testAnalyzePsalm119He_Comprehensive() {
 
         
         for form in forms {
-            print("translation: \(lemma) \(form) \(entry.translation) vs \(translation)")
+            print("translation: \(lemma) \(form) \(String(describing: entry.translation)) vs \(translation)")
             XCTAssertTrue(entry.translation?.contains(translation) != nil, "Incorrect translation for \(lemma) \(entry.translation)")
         }
     }
@@ -593,7 +593,7 @@ func testAnalyzePsalm118Sade() {
         XCTAssertTrue(entry.translation?.contains(translation) != nil, "Incorrect translation for \(lemma)")
         
         for form in forms {
-            print ("check: \(form) \(lemma) \(entry.forms[form])")
+            print ("check: \(form) \(lemma) \(String(describing: entry.forms[form]))")
             XCTAssertGreaterThan(entry.forms[form] ?? 0, 0,
                               "Missing Sade form '\(form)' for \(lemma)")
         }
@@ -781,7 +781,7 @@ func testAnalyzePsalm118Sin() {
     ]
     
     print("\n=== ACTUAL Words in Psalm 118 Sin ===")
-    for (lemma, forms, translation) in confirmedWords {
+    for (lemma, forms, _) in confirmedWords {
         guard let entry = analysis.dictionary[lemma] else {
             XCTFail("Missing confirmed lemma: \(lemma)")
             continue

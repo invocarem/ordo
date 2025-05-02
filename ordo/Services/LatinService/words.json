@@ -1,4 +1,127 @@
  [
+    {
+        "lemma": "intellectus",
+        "part_of_speech": "noun",
+        "declension": 4,
+        "gender": "masculine",
+        "translations": {
+          "en": "understanding, intellect, perception",
+          "la": "intellectus"
+        },
+        "forms": {
+          "nominative": ["intellectus"],
+          "genitive": ["intellectus"],
+          "dative": ["intellectui"],
+          "accusative": ["intellectum"],
+          "ablative": ["intellectu"],
+          "vocative": ["intellectus"]
+        },
+        "forms_plural": {
+          "nominative": ["intellectus"],
+          "genitive": ["intellectuum"],
+          "dative": ["intellectibus"],
+          "accusative": ["intellectus"],
+          "ablative": ["intellectibus"],
+          "vocative": ["intellectus"]
+        }
+      },
+      {
+      "lemma": "pono",
+      "part_of_speech": "verb",
+      "infinitive": "ponere",
+      "perfect": "posui",
+      "supine": "positum",
+      "translations": {
+        "en": "set before, place, put",
+        "la": "pono"
+      },
+      "forms": {
+        "present": ["pono", "ponis", "ponit", "ponimus", "ponitis", "ponunt"],
+        "imperfect": ["ponebam", "ponebas", "ponebat", "ponebamus", "ponebatis", "ponebant"],
+        "future": ["ponam", "pones", "ponet", "ponemus", "ponetis", "ponent"],
+        "perfect": ["posui", "posuisti", "posuit", "posuimus", "posuistis", "posuerunt"],
+        "imperative": ["pone"],
+        "present_passive": ["ponor", "poneris", "ponitur", "ponimur", "ponimini", "ponuntur"],
+        "imperfect_passive": ["ponebar", "ponebaris", "ponebatur", "ponebamur", "ponebamini", "ponebantur"],
+        "future_passive": ["ponar", "poneris", "ponetur", "ponemur", "ponemini", "ponentur"]
+      },
+      "forms_plural": {
+        "imperative": ["ponite"]
+      }
+    },
+    {
+      "lemma": "deduco",
+      "part_of_speech": "verb",
+      "infinitive": "deducere",
+      "perfect": "deduxi",
+      "supine": "deductum",
+      "translations": {
+        "en": "lead, bring down, escort",
+        "la": "deduco"
+      },
+      "forms": {
+        "present": ["deduco", "deducis", "deducit", "deducimus", "deducitis", "deducunt"],
+        "imperfect": ["deducebam", "deducebas", "deducebat", "deducebamus", "deducebatis", "deducebant"],
+        "future": ["deducam", "deduces", "deducet", "deducemus", "deducetis", "deducent"],
+        "perfect": ["deduxi", "deduxisti", "deduxit", "deduximus", "deduxistis", "deduxerunt"],
+        "imperative": ["deduc"],
+        "present_passive": ["deducor", "deduceris", "deducitur", "deducimur", "deducimini", "deducuntur"],
+        "imperfect_passive": ["deducebar", "deducebaris", "deducebatur", "deducebamur", "deducebamini", "deducebantur"],
+        "future_passive": ["deducar", "deduceris", "deducetur", "deducemur", "deducemini", "deducentur"]
+      },
+      "forms_plural": {
+        "imperative": ["deducite"]
+      }
+    },
+    {
+      "lemma": "inclino",
+      "part_of_speech": "verb",
+      "infinitive": "inclinare",
+      "perfect": "inclinavi",
+      "supine": "inclinatum",
+      "translations": {
+        "en": "incline, bend, lean",
+        "la": "inclino"
+      },
+      "forms": {
+        "present": ["inclino", "inclinas", "inclinat", "inclinamus", "inclinatis", "inclinant"],
+        "imperfect": ["inclinabam", "inclinabas", "inclinabat", "inclinabamus", "inclinabatis", "inclinabant"],
+        "future": ["inclinabo", "inclinabis", "inclinabit", "inclinabimus", "inclinabitis", "inclinabunt"],
+        "perfect": ["inclinavi", "inclinavisti", "inclinavit", "inclinavimus", "inclinavistis", "inclinaverunt"],
+        "imperative": ["inclina"],
+        "present_passive": ["inclinor", "inclinaris", "inclinatur", "inclinamur", "inclinamini", "inclinantur"],
+        "imperfect_passive": ["inclinabar", "inclinabaris", "inclinabatur", "inclinabamur", "inclinabamini", "inclinabantur"],
+        "future_passive": ["inclinabor", "inclinaberis", "inclinabitur", "inclinabimur", "inclinabimini", "inclinabuntur"]
+      },
+      "forms_plural": {
+        "imperative": ["inclinate"]
+      }
+    },
+    {
+      "lemma": "averto",
+      "part_of_speech": "verb",
+      "infinitive": "avertere",
+      "perfect": "averti",
+      "supine": "aversum",
+      "translations": {
+        "en": "turn away, avert, divert",
+        "la": "averto"
+      },
+      "forms": {
+        "present": ["averto", "avertis", "avertit", "avertimus", "avertitis", "avertunt"],
+        "imperfect": ["avertebam", "avertebas", "avertebat", "avertebamus", "avertebatis", "avertebant"],
+        "future": ["avertam", "averes", "avertet", "avertemus", "avertetis", "avertent"],
+        "perfect": ["averti", "avertisti", "avertit", "avertimus", "avertistis", "averterunt"],
+        "imperative": ["averte"],
+        "present_passive": ["avertor", "averteris", "avertitur", "avertimur", "avertimini", "avertuntur"],
+        "imperfect_passive": ["avertebar", "avertebaris", "avertebatur", "avertebamur", "avertebamini", "avertebantur"],
+        "future_passive": ["avertar", "averteris", "avertetur", "avertemur", "avertemini", "avertentur"]
+      },
+      "forms_plural": {
+        "imperative": ["avertite"]
+      }
+    },
+  
   {
     "lemma": "illuminatio",
     "part_of_speech": "noun",
@@ -7203,27 +7326,56 @@
             "en": "go",
             "la": "eo"
         }
-    },{
+    },
+    {
         "lemma": "mandatum",
         "part_of_speech": "noun",
         "declension": 2,
         "gender": "neuter",
-        "nominative": "mandatum",
-        "genitive": "mandati",
-        "dative": "mandato",
-        "accusative": "mandatum",
-        "ablative": "mandato",
-        "vocative": "mandatum",
-        "nominative_plural": "mandata",
-        "genitive_plural": "mandatorum",
-        "dative_plural": "mandatis",
-        "accusative_plural": "mandata",
-        "ablative_plural": "mandatis",
         "translations": {
-            "en": "commandment, precept",
-            "la": "mandatum"
+          "en": "commandment, precept, order",
+          "la": "mandatum"
+        },
+        "forms": {
+          "nominative": ["mandatum"],
+          "genitive": ["mandati"],
+          "dative": ["mandato"],
+          "accusative": ["mandatum"],
+          "ablative": ["mandato"],
+          "vocative": ["mandatum"]
+        },
+        "forms_plural": {
+          "nominative": ["mandata"],
+          "genitive": ["mandatorum"],
+          "dative": ["mandatis"],
+          "accusative": ["mandata"],
+          "ablative": ["mandatis"],
+          "vocative": ["mandata"]
         }
-    },
+      },
+      
+      {
+        "lemma": "lex",
+        "part_of_speech": "noun",
+        "declension": 3,
+        "gender": "feminine",
+        "nominative": "lex",
+        "genitive": "legis",
+        "dative": "legi",
+        "accusative": "legem",
+        "ablative": "lege",
+        "vocative": "lex",
+        "nominative_plural": "leges",
+        "genitive_plural": "legum",
+        "dative_plural": "legibus",
+        "accusative_plural": "leges",
+        "ablative_plural": "legibus",
+        "translations": {
+            "en": "law",
+            "la": "lex"
+        }
+    }
+    ,
     {
         "lemma": "mando",
         "part_of_speech": "verb",
@@ -7261,26 +7413,6 @@
         "translations": {
             "en": "judgment, decision",
             "la": "judicium"
-        }
-    },{
-        "lemma": "lex",
-        "part_of_speech": "noun",
-        "declension": 3,
-        "gender": "feminine",
-        "nominative": "lex",
-        "genitive": "legis",
-        "dative": "legi",
-        "accusative": "legem",
-        "ablative": "lege",
-        "vocative": "lex",
-        "nominative_plural": "leges",
-        "genitive_plural": "legum",
-        "dative_plural": "legibus",
-        "accusative_plural": "leges",
-        "ablative_plural": "legibus",
-        "translations": {
-            "en": "law",
-            "la": "lex"
         }
     },{
         "lemma": "omnis",
