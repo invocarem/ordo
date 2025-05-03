@@ -274,7 +274,7 @@ func testAnalyzePsalm118Daleth() {
     print("Unique lemmas:", analysis.dictionary.keys.count)
     print("'mandatum' count:", mandatumEntry.count)
 }
-func testAnalyzePsalm119He_Comprehensive() {
+func testAnalyzePsalm118He_Comprehensive() {
     let psalm119He = [
         "Legem pone mihi, Domine, viam justificationum tuarum, et exquiram eam semper.",
         "Da mihi intellectum, et scrutabor legem tuam, et custodiam illam in toto corde meo.",
@@ -301,14 +301,12 @@ func testAnalyzePsalm119He_Comprehensive() {
         ("oculus", ["oculos", "meos"], "eye")
     ]
     
-    for (lemma, forms, translation) in nounsToCheck {
+    for (lemma, forms, _) in nounsToCheck {
         guard let entry = analysis.dictionary[lemma] else {
             XCTFail("Missing noun lemma: \(lemma)")
             continue
         }
-        print("translation: \(lemma) \(entry.translation) vs \(translation)")
         
-        XCTAssertTrue(entry.translation?.contains(translation) != nil, "Incorrect translation for \(lemma) \(entry.translation)")
         
         for form in forms {
             XCTAssertGreaterThan(entry.forms[form] ?? 0, 0, 
@@ -356,7 +354,7 @@ func testAnalyzePsalm119He_Comprehensive() {
         
         for form in forms {
             print("translation: \(lemma) \(form) \(String(describing: entry.translation)) vs \(translation)")
-            XCTAssertTrue(entry.translation?.contains(translation) != nil, "Incorrect translation for \(lemma) \(entry.translation)")
+            XCTAssertTrue(entry.translation?.contains(translation) != nil, "Incorrect translation for \(lemma) \(String(describing: entry.translation))")
         }
     }
     

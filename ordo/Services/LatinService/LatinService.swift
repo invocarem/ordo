@@ -250,10 +250,12 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
     var lemmaEntities: [String: LatinWordEntity] = [:]
     let formToLemma = lemmaMapping.createFormToLemmaMapping()
      //print("All lemma mappings for 'adolescentior':", formToLemma["adolescentior"] ?? "none")
-     //   print("!!!adolescens forms in mapping:")
-     //   print(formToLemma.filter { $0.value.contains("adolescens") }.keys.sorted())
+        print("!!!multiplio forms in mapping:")
+      print(formToLemma.filter { $0.value.contains("multiplio") }.keys.sorted())
 
-
+ let multiplioForms = formToLemma.filter { $0.value.contains("multiplio") }.keys.sorted()
+    print("Debug - Forms mapping to 'multiplio': \(multiplioForms)")
+    print("Does 'multiplicati' map to multiplio?: \(multiplioForms.contains("multiplicati"))")
      
     for line in text {
         let normalizedLine = line.lowercased()
@@ -266,12 +268,13 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
             .filter { !$0.isEmpty }
         
         allWords.append(contentsOf: words)
-        
         for word in words {
             if let lemmas = formToLemma[word] {
-                // Count ALL possible lemmas for this word form
-                for lemma in lemmas {
+                // Deduplicate lemmas to avoid double-counting
+                let uniqueLemmas = Set(lemmas) // Ensures we don't count the same lemma twice
+                for lemma in uniqueLemmas {
                     lemmaCounts[lemma, default: 0] += 1
+                    // Only increment form count once per unique (lemma, word) pair
                     formCounts[lemma, default: [:]][word, default: 0] += 1
                     
                     if lemmaEntities[lemma] == nil {
@@ -285,6 +288,7 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
                 lemmaEntities[lemma] = entity
             }
         }
+        
     }
     
     // Build final dictionary
@@ -296,7 +300,8 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
         let generatedForms = entity?.generatedForms.values.filter {
             !filteredForms.keys.contains($0) && $0.lowercased() != lemma.lowercased()
         } ?? []
-        
+       
+
         resultDictionary[lemma] = PsalmAnalysisResult.LemmaInfo(
             count: count,
             translation: translation,

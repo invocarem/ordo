@@ -87,7 +87,7 @@ class Psalm4Tests: XCTestCase {
             ("dominus", ["dominus", "domine"], "lord"),
             ("justus", ["justitiae", "justitiae"], "justice"),
             ("tribulatio", ["tribulatione"], "tribulation"),
-            ("cor", ["corde", "cordibus", "corde"], "heart"),
+            ("cor", ["corde", "cordibus"], "heart"),
             ("sanctus", ["sanctum"], "holy"),
             ("cubile", ["cubilibus"], "bed"),
             ("sacrificium", ["sacrificium"], "sacrifice"),
@@ -135,6 +135,7 @@ class Psalm4Tests: XCTestCase {
             print("\n=== Key Terms ===")
             print("'exaudio' forms:", analysis.dictionary["exaudio"]?.forms ?? [:])
             print("'cor' forms:", analysis.dictionary["cor"]?.forms ?? [:])
+            print("'multiplio' forms:", analysis.dictionary["multiplio"]?.forms ?? [:])
             print("'dominus' forms:", analysis.dictionary["dominus"]?.forms ?? [:])
         }
     }

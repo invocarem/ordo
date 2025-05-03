@@ -34,6 +34,7 @@ public struct LatinWordEntity: Codable {
     // Verb-specific properties
     public let perfect: String?
     public let infinitive: String?
+    
     public let forms: [String: [String]]?
     public let formsPlural: [String: [String]]?
     

@@ -1,5 +1,26 @@
  [
   {
+    "lemma": "mirifico",
+    "part_of_speech": "verb",
+    "infinitive": "mirificare",
+    "perfect": "mirificavi",
+    "supine": "mirificatum",
+    "translations": {
+        "en": "to make wonderful",
+        "la": "mirifico, mirificare, mirificavi, mirificatum"
+    },
+    "forms": {
+        "present": ["mirifico", "mirificas", "mirificat", "mirificamus", "mirificatis", "mirificant"],
+        "imperfect": ["mirificabam", "mirificabas", "mirificabat", "mirificabamus", "mirificabatis", "mirificabant"],
+        "future": ["mirificabo", "mirificabis", "mirificabit", "mirificabimus", "mirificabitis", "mirificabunt"],
+        "perfect": ["mirificavi", "mirificavisti", "mirificavit", "mirificavimus", "mirificavistis", "mirificaverunt"],
+        "pluperfect": ["mirificaveram", "mirificaveras", "mirificaverat", "mirificaveramus", "mirificaveratis", "mirificaverant"],
+        "subjunctive_present": ["mirificem", "mirifices", "mirificet", "mirificemus", "mirificetis", "mirificent"],
+        "subjunctive_imperfect": ["mirificarem", "mirificares", "mirificaret", "mirificaremus", "mirificaretis", "mirificarent"]
+    }
+},
+
+  {
     "lemma": "illumino",
     "part_of_speech": "verb",
     "conjugation": 1,
@@ -6828,17 +6849,7 @@
             "part_of_speech": "noun",
             "declension": 3,
             "gender": "neuter",
-            "nominative": "cor",
-            "genitive": "cordis",
-            "dative": "cordi",
-            "accusative": "cor",
-            "ablative": "corde",
-            "vocative": "cor",
-            "nominative_plural": "corda",
-            "genitive_plural": "cordium",
-            "dative_plural": "cordibus",
-            "accusative_plural": "corda",
-            "ablative_plural": "cordibus",
+            
             "forms": {
               "nominative_n": ["cor"],
               "genitive_n": ["cordis"],
@@ -6858,6 +6869,29 @@
             "translations": {
               "en": "heart",
               "la": "cor"
+            }
+          },
+          {
+            "lemma": "multiplio",
+            "part_of_speech": "verb",
+            "conjugation": 1,  
+            "deponent": false,
+            "infinitive": "multiplicare",
+            "forms": {
+              "present": ["multiplio", "multiplicas", "multiplicat", "multiplicamus", "multiplicatis", "multiplicant"],
+              "present_passive": ["multiplicor", "multiplicaris", "multiplicatur", "multiplicamur", "multiplicamini", "multiplicantur"],
+              "imperative": ["multiplica", "multiplicate"], 
+              "subjunctive": ["multiplicem", "multiplices", "multiplicet", "multiplicemus", "multiplicetis", "multiplicent"],
+              "future_passive": ["multiplicabor", "multiplicaberis", "multiplicabitur", "multiplicabimur", "multiplicabimini", "multiplicabuntur"],
+              "present_participle": ["multiplicans"],  
+              "perfect_passive_participle": ["multiplicatus", "multiplicata", "multiplicatum"]  
+            },
+            "forms_plural" :{
+                "perfect_passive_participle": ["multiplicati", "multiplicatae", "multiplicata"]
+            }, 
+            "translations": {
+              "en": "to multiply",
+              "la": "multiplio, multiplicare, multiplicavi, multiplicatum"
             }
           },
     
