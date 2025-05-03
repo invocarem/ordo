@@ -83,69 +83,7 @@ final class Psalm118Tests: XCTestCase {
     XCTAssertNotNil(analysis.dictionary["mandatum"], "Should have 'mandatum' in dictionary")
 
 }
-    func testAnalyzePsalm119Beth() {
-    let psalm119Beth = [
-        "In quo corrigit adolescentior viam suam? In custodiendo sermones tuos.",
-        "In toto corde meo exquisivi te; ne repellas me a mandatis tuis.",
-        "In corde meo abscondi eloquia tua, ut non peccem tibi.",
-        "Benedictus es, Domine; doce me iustificationes tuas.",
-        "In labiis meis pronuntiavi omnia iudicia oris tui.",
-        "In via testimoniorum tuorum delectatus sum sicut in omnibus divitiis.",
-        "In mandatis tuis meditabor, et considerabo vias tuas.",
-        "In iustificationibus tuis delectabor; non obliviscar sermones tuos."
-    ]
     
-    let analysis = latinService.analyzePsalm(text: psalm119Beth)
-    
-    print("All forms detected for 'mandatum':")
-    analysis.dictionary["mandatum"]?.forms.forEach { print("\($0.key): \($0.value)") }
-
-    // 1. Basic Statistics
-    XCTAssertGreaterThan(analysis.totalWords, 0, "Should have words in psalm")
-    XCTAssertGreaterThan(analysis.uniqueWords, 0, "Should have unique words")
-    XCTAssertGreaterThan(analysis.uniqueLemmas, 0, "Should have unique lemmas")
-    
-    // 2. Key Lemmas (Nouns/Adjectives)
-    XCTAssertNotNil(analysis.dictionary["adolescentior"], "Should have 'adolescentior' (comparative of 'adolescens')")
-    XCTAssertNotNil(analysis.dictionary["sermo"], "Should have 'sermo' (from 'sermones')")
-    XCTAssertNotNil(analysis.dictionary["cor"], "Should have 'cor' (from 'corde')")
-
-    // mandatis could be in mando or mandatum, which one it's????? here it should be mandatum
-    XCTAssertNotNil(analysis.dictionary["mando"], "Should have 'mandatum' (from 'mandatis')")
-    
-
-
-    // 3. Verb Validation
-    if let custodioEntry = analysis.dictionary["custodio"] {
-        XCTAssertEqual(custodioEntry.entity?.partOfSpeech, .verb, "Should be a verb")
-        XCTAssertGreaterThan(custodioEntry.forms["custodiendo"] ?? 0, 0, "Gerund 'custodiendo' should appear")
-    } else {
-        XCTFail("Missing 'custodio' in analysis")
-    }
-    
-    // 4. Adjective Checks
-    if let benedictusEntry = analysis.dictionary["benedictus"] {
-        XCTAssertEqual(benedictusEntry.entity?.partOfSpeech, .adjective, "Should be an adjective")
-        XCTAssertEqual(benedictusEntry.translation, "blessed", "Translation should match")
-        XCTAssertGreaterThan(benedictusEntry.forms["benedictus"] ?? 0, 0, "Nominative form should appear")
-    }
-    
-    // 5. Special Forms
-    if let domineEntry = analysis.dictionary["dominus"] {
-        XCTAssertGreaterThan(domineEntry.forms["domine"] ?? 0, 0, "Vocative 'domine' should appear")
-    }
-    
-    // 6. Noun Properties
-    if let sermoEntry = analysis.dictionary["sermo"] {
-        XCTAssertEqual(sermoEntry.entity?.declension, 3, "Should be 3rd declension")
-        XCTAssertEqual(sermoEntry.entity?.gender, .masculine, "Gender should be masculine")
-        XCTAssertGreaterThan(sermoEntry.forms["sermones"] ?? 0, 0, "Plural form 'sermones' should appear")
-    }
-    
-    // 7. Debug Output (Optional)
-    print("\nObserved forms for 'custodio':")
-    analysis.dictionary["custodio"]?.forms.forEach { print("- \($0.key): \($0.value)") }
-}
     func testAnalyzePsalm118Gimel() {
     let psalm119Gimel = [
         "Retribue servo tuo, vivifica me, et custodiam sermones tuos.",

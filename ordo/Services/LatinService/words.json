@@ -1,4 +1,206 @@
  [
+  {
+    "lemma": "illumino",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "perfect": "illuminavi",
+    "infinitive": "illuminare",
+    "forms": {
+        "present": ["illumino", "illuminas", "illuminat", "illuminamus", "illuminatis", "illuminant"],
+        "imperfect": ["illuminabam", "illuminabas", "illuminabat", "illuminabamus", "illuminabatis", "illuminabant"],
+        "future": ["illuminabo", "illuminabis", "illuminabit", "illuminabimus", "illuminabitis", "illuminabunt"],
+        "perfect": ["illuminavi", "illuminavisti", "illuminavit", "illuminavimus", "illuminavistis", "illuminaverunt"],
+        "present_subjunctive": ["illuminem", "illumines", "illuminet", "illuminemus", "illuminetis", "illuminent"],
+        "imperative": ["illumina", "illuminate"],
+        "gerund_dative": ["illuminando"],
+        "gerund_accusative": ["illuminandum"],
+        "gerundive_masc_nom": ["illuminandus"]
+  
+    },
+    "translations": {
+        "en": "shine, light up, illuminate",
+        "la": "illumino"
+    }
+},
+  {
+    "lemma": "laetor",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "perfect": "laetatus",
+    "infinitive": "laetari",
+    "forms": {
+        "present": ["laetor", "laetaris", "laetatur"],
+        "imperfect": ["laetabar", "laetabaris", "laetabatur"],
+        "future": ["laetabor", "laetaberis", "laetabitur"],
+        "perfect": ["laetatus", "laetatus", "laetatus"],
+        "present_subjunctive": ["laeter", "laeteris", "laetetur"],
+        "imperative": ["laetare"],
+        "gerund_dative": ["laetando"],
+        "gerund_accusative": ["laetandum"],
+        "gerundive_masc_nom": ["laetandus"]
+    },
+    "forms_plural": {
+        "present": ["laetamur", "laetamini", "laetantur"],
+        "imperfect": ["laetabamur", "laetabamini", "laetabantur"],
+        "future": ["laetabimur", "laetabimini", "laetabuntur"],
+        "perfect": ["laetati", "laetati", "laetati"],
+        "present_subjunctive": ["laetemur", "laetemini", "laetentur"],
+        "imperative": ["laetamini"]  
+    },
+    "translations": {
+        "en": "to rejoice, be glad",
+        "la": "laetor"
+    },
+    "notes": "Deponent verb (passive forms with active meaning). Present subjunctive 'laetentur' is 3rd plural."
+},
+  {
+    "lemma": "finis",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "finis",
+    "genitive": "finis",
+    "dative": "fini",
+    "accusative": "finem",
+    "ablative": "fine",
+    "vocative": "finis",
+    "nominative_plural": "fines",
+    "genitive_plural": "finium",
+    "dative_plural": "finibus",
+    "accusative_plural": "fines",
+    "ablative_plural": "finibus",
+    "translations": {
+        "en": "end, limit, boundary",
+        "la": "finis, -is (m)"
+    },
+    "notes": "Often plural (fines) = 'territory'."
+},
+  {
+  "lemma": "gens",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "gens",
+  "genitive": "gentis",
+  "dative": "genti",
+  "accusative": "gentem",
+  "ablative": "gente",
+  "vocative": "gens",
+  "nominative_plural": "gentes",
+  "genitive_plural": "gentium",
+  "dative_plural": "gentibus",
+  "accusative_plural": "gentes",
+  "ablative_plural": "gentibus",
+  "translations": {
+      "en": "nation, tribe, clan",
+      "la": "gens, gentis (f)"
+  }
+},
+
+  {
+    "lemma": "omnis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "positive": "omnis",
+    "nominative": "omnis",
+    "genitive": "omnis",
+    "dative": "omni",
+    "accusative": "omnem",
+    "ablative": "omni",
+    "vocative": "omnis",
+    "nominative_plural": "omnes",
+    "genitive_plural": "omnium",
+    "dative_plural": "omnibus",
+    "accusative_plural": "omnes",
+    "ablative_plural": "omnibus",
+    "forms": {
+        "nominative_f": ["omnis"],
+        "genitive_f": ["omnis"],
+        "accusative_f": ["omnem"],
+        "ablative_f": ["omni"],
+        "nominative_n": ["omne"],
+        "accusative_n": ["omne"],
+        "nominative_plural_f": ["omnes"],
+        "nominative_plural_n": ["omnia"]
+    },
+    "translations": {
+        "en": "all, every",
+        "la": "omnis, -e"
+    }
+},
+
+ {
+  "lemma": "delector",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "perfect": "delectatus",
+  "infinitive": "delectari",
+  "forms": {
+      "present": ["delector", "delectaris", "delectatur", "delectamur", "delectamini", "delectantur"],
+      "imperfect": ["delectabar", "delectabaris", "delectabatur", "delectabamur", "delectabamini", "delectabantur"],
+      "future": ["delectabor", "delectaberis", "delectabitur", "delectabimur", "delectabimini", "delectabuntur"],
+      "perfect": ["delectatus sum", "delectatus es", "delectatus est", "delectati sumus", "delectati estis", "delectati sunt"],
+      "perfect_subjunctive": ["delectatus sim"],
+      "present_subjunctive": ["delecter", "delecteris", "delectetur", "delectemur", "delectemini", "delectentur"],
+      "imperative": ["delectare", "delectamini"],
+      "gerund_dative": ["delectando"],
+      "gerund_accusative": ["delectandum"],
+      "gerundive_masc_nom": ["delectandus"]
+  },
+  "translations": {
+      "en": "to delight, enjoy, take pleasure in",
+      "la": "delector"
+  },
+  "notes": "Deponent verb (passive forms with active meaning)."
+},{
+  "lemma": "exerceo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "perfect": "exercui",
+  "infinitive": "exercere",
+  "forms": {
+      "present": ["exerceo", "exerces", "exercet", "exercemus", "exercetis", "exercent"],
+      "imperfect": ["exercebam", "exercebas", "exercebat", "exercebamus", "exercebatis", "exercebant"],
+      "future": ["exercebo", "exercebis", "exercebit", "exercebimus", "exercebitis", "exercebunt"],
+      "perfect": ["exercui", "exercuisti", "exercuit", "exercuimus", "exercuistis", "exercuerunt"],
+      "perfect_subjunctive": ["exercuerit"],
+      "present_subjunctive": ["exerceam", "exerceas", "exerceat", "exerceamus", "exerceatis", "exerceant"],
+      "imperative": ["exerce", "exercete"],
+      "gerund_dative": ["exercendo"],
+      "gerund_accusative": ["exercendum"],
+      "gerundive_masc_nom": ["exercendus"],
+      "present_passive": ["exerceor", "exerceris", "exercetur", "exercemur", "exercemini", "exercentur"],
+      "future_passive": ["exercebor", "exerceberis", "exercebitur", "exercebimur", "exercebimini", "exercebuntur"]
+  },
+  "translations": {
+      "en": "to exercise, train, practice, keep busy",
+      "la": "exerceo"
+  }
+},
+  {
+    "lemma": "pronuntio",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "perfect": "pronuntiavi",
+    "infinitive": "pronuntiare",
+    "forms": {
+        "present": ["pronuntio", "pronuntias", "pronuntiat", "pronuntiamus", "pronuntiatis", "pronuntiant"],
+        "imperfect": ["pronuntiabam", "pronuntiabas", "pronuntiabat", "pronuntiabamus", "pronuntiabatis", "pronuntiabant"],
+        "future": ["pronuntiabo", "pronuntiabis", "pronuntiabit", "pronuntiabimus", "pronuntiabitis", "pronuntiabunt"],
+        "perfect": ["pronuntiavi", "pronuntiavisti", "pronuntiavit", "pronuntiavimus", "pronuntiavistis", "pronuntiaverunt"],
+        "perfect_subjunctive": ["pronuntiaverit"],
+        "present_subjunctive": ["pronuntiem", "pronunties", "pronuntiet", "pronuntiemus", "pronuntietis", "pronuntient"],
+        "imperative": ["pronuntia", "pronuntiate"],
+        "gerund_dative": ["pronuntiando"],
+        "gerund_accusative": ["pronuntianum"],
+        "gerundive_masc_nom": ["pronuntiandus"]
+    },
+    "translations": {
+        "en": "declare, proclaim, announce",
+        "la": "pronuntio"
+    }
+},
     {
         "lemma": "intellectus",
         "part_of_speech": "noun",
@@ -4856,27 +5058,7 @@
         },
         "notes": "From Psalm 118:25 - 'Adhaesit pavimento anima mea' (My soul has clung to the pavement), often interpreted as dust or ground symbolizing lowliness"
     },
-        {
-            "lemma": "adolescens",
-            "part_of_speech": "noun",
-            "declension": 3,
-            "gender": "masculine",
-            "nominative": "adolescens",
-            "genitive": "adolescentis",
-            "dative": "adolescenti",
-            "accusative": "adolescentem",
-            "ablative": "adolescente",
-            "vocative": "adolescens",
-            "nominative_plural": "adolescentes",
-            "genitive_plural": "adolescentium",
-            "dative_plural": "adolescentibus",
-            "accusative_plural": "adolescentes",
-            "ablative_plural": "adolescentibus",
-            "translations": {
-                "en": "youth, young man",
-                "la": "adolescens"
-            }
-        },
+       
         {
             "lemma": "custodio",
             "part_of_speech": "verb",
@@ -4896,7 +5078,7 @@
                 "gerundive_masc_nom": ["custodiendus"]                
             },
             "translations": {
-                "en": "to guard, protect, watch over",
+                "en": "to guard, protect, watch over, keep",
                 "la": "custodio"
             }
         },
@@ -6884,22 +7066,7 @@
     },
    
     
-    {
-        "lemma": "illumino",
-        "part_of_speech": "verb",
-        "perfect": "illuminavi",
-        "infinitive": "illuminare",
-        "forms": {
-            "imperative_singular": ["illumina"],
-            "perfect": ["illuminavi", "illuminavisti", "illuminavit", "illuminavimus", "illuminavistis", "illuminaverunt"],
-            "present": ["illumino", "illuminas", "illuminat", "illuminamus", "illuminatis", "illuminant"]
-        },
-        "translations": {
-            "en": "light up, illuminate, enlighten",
-            "la": "illumino"
-        },
-        "notes": "From Psalm 18:29 - 'illumina tenebras meas' (light up my darkness)"
-    },
+   
   
     {
         "lemma": "juro",
@@ -7089,22 +7256,30 @@
             "perfect": ["posui", "posuisti", "posuit", "posuimus", "posuistis", "posuerunt"]
         }
     },
-    
-        {
-            "lemma": "populus",
-            "part_of_speech": "noun",
-            "declension": 2,
-            "gender": "masculine",
-            "nominative": "populus",
-            "genitive": "populi",
-            "dative": "populo",
-            "accusative": "populum",
-            "ablative": "populo",
-            "translations": {
-                "en": "people, nation",
-                "la": "populus"
-            }
-        },
+    {
+      "lemma": "populus",
+      "part_of_speech": "noun",
+      "declension": 2,
+      "gender": "masculine",
+      "nominative": "populus",
+      "genitive": "populi",
+      "dative": "populo",
+      "accusative": "populum",
+      "ablative": "populo",
+      "vocative": "popule",
+      "nominative_plural": "populi",
+      "genitive_plural": "populorum",
+      "dative_plural": "populis",
+      "accusative_plural": "populos",
+      "ablative_plural": "populis",
+      "vocative_plural": "populi",
+      "translations": {
+          "en": "people, nation, community",
+          "la": "populus, -i (m)"
+      },
+      "notes": "Often refers to a citizen body or state in classical Latin."
+  },
+        
         {
             "lemma": "noster",
             "part_of_speech": "adjective",
@@ -7685,7 +7860,56 @@
             "la": "corrigo"
         }
     },
-   
+    {
+      "lemma": "adolescens",
+      "part_of_speech": "adjective",
+      "declension": 3,
+      "gender": "masculine",
+      "positive": "adolescens",
+      "comparative": "adolescentior",
+      "superlative": "adolescentissimus",
+      "nominative": "adolescens",
+      "genitive": "adolescentis",
+      "dative": "adolescenti",
+      "accusative": "adolescentem",
+      "ablative": "adolescente",
+      "vocative": "adolescens",
+      "nominative_plural": "adolescentes",
+      "genitive_plural": "adolescentium",
+      "dative_plural": "adolescentibus",
+      "accusative_plural": "adolescentes",
+      "ablative_plural": "adolescentibus",
+      "forms": {
+          "comparative_m": ["adolescentior"],
+
+          "nominative_f": ["adolescens"],
+          "genitive_f": ["adolescentis"],
+          "dative_f": ["adolescenti"],
+          "accusative_f": ["adolescentem"],
+          "ablative_f": ["adolescente"],
+          "vocative_f": ["adolescens"],
+          "nominative_n": ["adolescens"],
+          "genitive_n": ["adolescentis"],
+          "dative_n": ["adolescenti"],
+          "accusative_n": ["adolescens"],
+          "ablative_n": ["adolescente"],
+          "vocative_n": ["adolescens"],
+          "nominative_plural_f": ["adolescentes"],
+          "genitive_plural_f": ["adolescentium"],
+          "dative_plural_f": ["adolescentibus"],
+          "accusative_plural_f": ["adolescentes"],
+          "ablative_plural_f": ["adolescentibus"],
+          "nominative_plural_n": ["adolescentia"],
+          "genitive_plural_n": ["adolescentium"],
+          "dative_plural_n": ["adolescentibus"],
+          "accusative_plural_n": ["adolescentia"],
+          "ablative_plural_n": ["adolescentibus"]
+      },
+      "translations": {
+          "en": "young, growing, adolescent",
+          "la": "adolescens, -entis"
+      }
+  },
     {
         "lemma": "adolescenta",
         "part_of_speech": "adjective",
@@ -8108,7 +8332,8 @@
                     "imperative": ["benedic", "benedicite"],
                     "subjunctive": ["benedicam", "benedicas", "benedicat", "benedicamus", "benedicatis", "benedicant"],
                     "future_passive": ["benedicar", "benediceris", "benedicetur", "benedicemur", "benedicemini", "benedicentur"],
-                    "present_participle": ["benedicens"]
+                    "present_participle": ["benedicens"],
+                    "perfect_passive_participle": ["benedictus", "benedicta", "benedictum"]
                   },
                   "translations": {
                     "en": "to bless, speak well of",

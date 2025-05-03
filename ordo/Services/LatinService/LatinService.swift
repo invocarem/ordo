@@ -143,8 +143,7 @@ public struct PsalmAnalysisResult: Codable {
     public let uniqueWords: Int
     public let uniqueLemmas: Int
     public let dictionary: [String: LemmaInfo]
-    public let unknownWords: [String]
-    
+   
     public struct LemmaInfo: Codable {
         public let count: Int
         public let translation: String?
@@ -244,104 +243,76 @@ public class LatinService {
     public func addTranslation(latin: String, english: String) {
         translations[latin] = english
     }
-    public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
-        let combinedText = text.joined(separator: " ")
-        let normalizedText = combinedText.lowercased()
+public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
+    var allWords: [String] = []
+    var lemmaCounts: [String: Int] = [:]
+    var formCounts: [String: [String: Int]] = [:]
+    var lemmaEntities: [String: LatinWordEntity] = [:]
+    let formToLemma = lemmaMapping.createFormToLemmaMapping()
+     //print("All lemma mappings for 'adolescentior':", formToLemma["adolescentior"] ?? "none")
+     //   print("!!!adolescens forms in mapping:")
+     //   print(formToLemma.filter { $0.value.contains("adolescens") }.keys.sorted())
+
+
+     
+    for line in text {
+        let normalizedLine = line.lowercased()
             .replacingOccurrences(of: "[.,:;!?]", with: " ", options: .regularExpression)
             .replacingOccurrences(of: "[']", with: "", options: .regularExpression)
             .replacingOccurrences(of: "\\s+", with: " ", options: .regularExpression)
             .trimmingCharacters(in: .whitespaces)
         
-        let words = normalizedText.components(separatedBy: .whitespaces)
+        let words = normalizedLine.components(separatedBy: .whitespaces)
             .filter { !$0.isEmpty }
         
-        let formToLemma = lemmaMapping.createFormToLemmaMapping()
-      
-//print("!!!mandatum forms in mapping:")
-//        print(formToLemma.filter { $0.value.contains("mandatum") }.keys.sorted())
-   
-
-        var unknownWords: [String] = []
-        var lemmaCounts: [String: Int] = [:]
-        var formCounts: [String: [String: Int]] = [:]
-        var lemmaEntities: [String: LatinWordEntity] = [:] // Track entities for lemmas
+        allWords.append(contentsOf: words)
+        
         for word in words {
             if let lemmas = formToLemma[word] {
-                // Form maps to one or more lemmas
-                let selectedLemma = selectLemma(for: word, lemmas: lemmas)
-                lemmaCounts[selectedLemma, default: 0] += 1
-                formCounts[selectedLemma, default: [:]][word, default: 0] += 1
-                
-                if lemmaEntities[selectedLemma] == nil {
-                    lemmaEntities[selectedLemma] = wordEntities.first { $0.lemma.lowercased() == selectedLemma.lowercased() }
+                // Count ALL possible lemmas for this word form
+                for lemma in lemmas {
+                    lemmaCounts[lemma, default: 0] += 1
+                    formCounts[lemma, default: [:]][word, default: 0] += 1
+                    
+                    if lemmaEntities[lemma] == nil {
+                        lemmaEntities[lemma] = wordEntities.first { $0.lemma.lowercased() == lemma.lowercased() }
+                    }
                 }
             } else if let entity = wordEntities.first(where: { $0.lemma.lowercased() == word.lowercased() }) {
-                // Word is itself a lemma
                 let lemma = entity.lemma.lowercased()
                 lemmaCounts[lemma, default: 0] += 1
                 formCounts[lemma, default: [:]][word, default: 0] += 1
                 lemmaEntities[lemma] = entity
-            } else {
-                // Unknown word
-                unknownWords.append(word)
             }
         }
-        
-        
-        // Build results - only include forms with count > 0
-        var resultDictionary: [String: PsalmAnalysisResult.LemmaInfo] = [:]
-        for (lemma, count) in lemmaCounts {
-            let entity = lemmaEntities[lemma]
-            let translation = entity?.getTranslation() ?? translations[lemma]
-
-            // Filter out forms with 0 counts
-            let filteredForms = (formCounts[lemma] ?? [:]).filter { $0.value > 0 }
-            
-            // Get generated forms but only for display purposes
-            let generatedForms = entity?.generatedForms.values.filter { form in
-                // Exclude forms that already appear in the text
-                !filteredForms.keys.contains(form) &&
-                // Exclude forms that are the same as the lemma
-                form.lowercased() != lemma.lowercased()
-            } ?? []
-            
-            resultDictionary[lemma] = PsalmAnalysisResult.LemmaInfo(
-                count: count,
-                translation: translation,
-                forms: filteredForms,
-                entity: entity,
-                generatedForms: Array(generatedForms) // Pass as array for display
-            )
-        }
-        
-        return PsalmAnalysisResult(
-            totalWords: words.count,
-            uniqueWords: Set(words).count,
-            uniqueLemmas: lemmaCounts.count,
-            dictionary: resultDictionary,
-            unknownWords: unknownWords.sorted() 
-        )
     }
-    // Helper to select a lemma when a form maps to multiple lemmas
-    private func selectLemma(for word: String, lemmas: [String]) -> String {
-        // If only one lemma, return it
-        if lemmas.count == 1 {
-            return lemmas[0]
-        }
+    
+    // Build final dictionary
+    var resultDictionary: [String: PsalmAnalysisResult.LemmaInfo] = [:]
+    for (lemma, count) in lemmaCounts {
+        let entity = lemmaEntities[lemma]
+        let translation = entity?.getTranslation() ?? translations[lemma]
+        let filteredForms = (formCounts[lemma] ?? [:]).filter { $0.value > 0 }
+        let generatedForms = entity?.generatedForms.values.filter {
+            !filteredForms.keys.contains($0) && $0.lowercased() != lemma.lowercased()
+        } ?? []
         
-        // Prioritize based on part of speech or context
-        for lemma in lemmas {
-            if let entity = wordEntities.first(where: { $0.lemma.lowercased() == lemma }) {
-                // Example: Prefer nouns over verbs for ambiguous forms like "mandatum"
-                if entity.partOfSpeech == .noun {
-                    return lemma
-                }
-            }
-        }
-        
-        // Fallback: Return the first lemma
-        return lemmas[0]
+        resultDictionary[lemma] = PsalmAnalysisResult.LemmaInfo(
+            count: count,
+            translation: translation,
+            forms: filteredForms,
+            entity: entity,
+            generatedForms: Array(generatedForms))
     }
+    
+    return PsalmAnalysisResult(
+        totalWords: allWords.count,
+        uniqueWords: Set(allWords).count,
+        uniqueLemmas: lemmaCounts.count,
+        dictionary: resultDictionary
+    )
+}
+    
     // Keep original String version for backward compatibility
     public func analyzePsalm(text: String) -> PsalmAnalysisResult {
         let lines = text.components(separatedBy: .newlines)
