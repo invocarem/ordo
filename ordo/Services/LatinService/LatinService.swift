@@ -249,13 +249,12 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
     var formCounts: [String: [String: Int]] = [:]
     var lemmaEntities: [String: LatinWordEntity] = [:]
     let formToLemma = lemmaMapping.createFormToLemmaMapping()
-     //print("All lemma mappings for 'adolescentior':", formToLemma["adolescentior"] ?? "none")
-        print("!!!multiplio forms in mapping:")
-      print(formToLemma.filter { $0.value.contains("multiplio") }.keys.sorted())
+     //   print("!!!multiplio forms in mapping:")
+     // print(formToLemma.filter { $0.value.contains("multiplio") }.keys.sorted())
 
  let multiplioForms = formToLemma.filter { $0.value.contains("multiplio") }.keys.sorted()
-    print("Debug - Forms mapping to 'multiplio': \(multiplioForms)")
-    print("Does 'multiplicati' map to multiplio?: \(multiplioForms.contains("multiplicati"))")
+    //print("Debug - Forms mapping to 'multiplio': \(multiplioForms)")
+    //print("Does 'multiplicati' map to multiplio?: \(multiplioForms.contains("multiplicati"))")
      
     for line in text {
         let normalizedLine = line.lowercased()

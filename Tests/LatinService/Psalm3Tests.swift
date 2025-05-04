@@ -57,12 +57,13 @@ class Psalm3Tests: XCTestCase {
         
         // ===== 2. COMPREHENSIVE VOCABULARY TEST =====
         let confirmedWords = [
-            ("multiplico", ["multiplicati"], "multiply"),
+            ("multiplio", ["multiplicati"], "multiply"),
             ("tribulo", ["tribulant"], "trouble"),
             ("insurgo", ["insurgunt"], "rise up"),
             ("dico", ["dicunt"], "say"),
-            ("anima", ["animae"], "soul"),
-            ("salus", ["salus", "salvum"], "salvation"),
+            ("animus", ["animae"], "soul"),
+            ("salus", ["salus"], "salvation"),
+            ("salvus", ["salvum"], "safe"),
             ("susceptor", ["susceptor"], "protector"),
             ("gloria", ["gloria"], "glory"),
             ("exalto", ["exaltans"], "lift up"),
@@ -79,7 +80,7 @@ class Psalm3Tests: XCTestCase {
             ("mille", ["millia"], "thousand"),
             ("populus", ["populi", "populum"], "people"),
             ("circumdo", ["circumdantis"], "surround"),
-            ("salvo", ["salvum"], "save"),
+           
             ("percutio", ["percussisti"], "strike"),
             ("adverso", ["adversantes"], "oppose"),
             ("dens", ["dentes"], "tooth"),

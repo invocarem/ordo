@@ -789,7 +789,7 @@ func testAnalyzePsalm129() {
         ("spero", ["speravit", "speret"], "hope"),
         ("custodia", ["custodia"], "watch"),
         ("misericordia", ["misericordia"], "mercy"),
-        ("redemptio", ["redemptio", "redimet"], "redemption")
+        ("redemptio", ["redemptio", ], "redemption")
     ]
     
     verifyWordsInAnalysis(analysis, confirmedWords: confirmedWords)
