@@ -32,7 +32,7 @@ extension LatinWordEntity{
             forms["genitive"] = stem + "ae" // "puellae"
             forms["dative"] = stem + "ae" // "puellae"
             forms["accusative"] = stem + "am" // "puellam"
-            forms["ablative"] = stem + "ā" // "puellā"
+            forms["ablative"] = stem + "a" // "puellā"
             forms["nominative_plural"] = stem + "ae" // "puellae"
             forms["genitive_plural"] = stem + "arum" // "puellarum"
             forms["dative_plural"] = stem + "is" // "puellis"
@@ -90,15 +90,18 @@ extension LatinWordEntity{
             forms["dative"] = stem + "i"
             forms["accusative"] = stem + "em"
             forms["ablative"] = stem + "e"
+
             forms["nominative_plural"] = stem + "es"
             forms["genitive_plural"] = stem + "um"
+            forms["dative_plural"] = stem + "ibus"
+            forms["ablative_plural"] = stem + "ibus"
             
         case 4 where gender == .neuter: // -u
             stem = String(nominative.dropLast())
-            forms["genitive"] = stem + "ūs"
-            forms["dative"] = stem + "ū"
+            forms["genitive"] = stem + "us"
+            forms["dative"] = stem + "u"
             forms["accusative"] = nominative
-            forms["ablative"] = stem + "ū"
+            forms["ablative"] = stem + "u"
             forms["nominative_plural"] = stem + "ua"
             forms["genitive_plural"] = stem + "uum"
 
@@ -109,16 +112,16 @@ extension LatinWordEntity{
             
         case 4: // Masculine/Feminine -us
             stem = String(nominative.dropLast(2))
-            forms["genitive"] = stem + "ūs"
-            forms["dative"] = stem + "uī"
+            forms["genitive"] = stem + "us"
+            forms["dative"] = stem + "ui"
             forms["accusative"] = stem + "um"
-            forms["ablative"] = stem + "ū"
-            forms["nominative_plural"] = stem + "ūs"
+            forms["ablative"] = stem + "u"
+            forms["nominative_plural"] = stem + "us"
             forms["genitive_plural"] = stem + "uum"
 
 
             forms["dative_plural"] = stem + "ibus"
-            forms["accusative_plural"] = stem + "ūs"
+            forms["accusative_plural"] = stem + "us"
             forms["ablative_plural"] = stem + "ibus"
             
         case 5:
@@ -251,8 +254,10 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
     let formToLemma = lemmaMapping.createFormToLemmaMapping()
      //   print("!!!multiplio forms in mapping:")
      // print(formToLemma.filter { $0.value.contains("multiplio") }.keys.sorted())
+   let debugForms = formToLemma.filter { $0.value.contains("pascuum") }.keys.sorted()
+    print("Debug - Forms mapping to 'pascuum': \(debugForms)")
 
- let multiplioForms = formToLemma.filter { $0.value.contains("multiplio") }.keys.sorted()
+    //let multiplioForms = formToLemma.filter { $0.value.contains("multiplio") }.keys.sorted()
     //print("Debug - Forms mapping to 'multiplio': \(multiplioForms)")
     //print("Does 'multiplicati' map to multiplio?: \(multiplioForms.contains("multiplicati"))")
      

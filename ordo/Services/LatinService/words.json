@@ -1,27 +1,524 @@
  [
-  
   {
-  "lemma": "circumdo",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "circumdare",
-  "perfect": "circumdedi",
-  "supine": "circumdatum",
-  "present_participle": ["circumdans", "circumdantis"],
-  "translations": {
-    "en": "to surround, encircle, encompass",
-    "la": "circumdo, circumdare, circumdedi, circumdatum"
+    "lemma": "regere",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "deponent": false,
+    "infinitive": "regere",
+    "forms": {
+      "present": ["rego", "regis", "regit", "regimus", "regitis", "regunt"],
+      "present_passive": ["regor", "regeris", "regitur", "regimur", "regimini", "reguntur"],
+      "imperative": ["rege", "regite"],
+      "subjunctive": ["regam", "regas", "regat", "regamus", "regatis", "regant"],
+      "future_passive": ["regar", "regeris", "regetur", "regemur", "regemini", "regentur"],
+      "present_participle": ["regens"],
+      "perfect_passive_participle": ["rectus", "recta", "rectum"],
+      "perfect_indicative_active": ["rexi", "rexisti", "rexit", "reximus", "rexistis", "rexerunt"]
+    },
+    "translations": {
+      "en": "to shepherd, to guide",
+      "la": "rego"
+    }
+  },{
+    "lemma": "baculus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "baculus",
+    "genitive": "baculi",
+   
+    "translations": {
+      "en": "staff",
+      "la": "baculus"
+    }
   },
-  "forms": {
-    "present": ["circumdo", "circumdas", "circumdat", "circumdamus", "circumdatis", "circumdant"],
-    "imperfect": ["circumdabam", "circumdabas", "circumdabat", "circumdabamus", "circumdabatis", "circumdabant"],
-    "future": ["circumdabo", "circumdabis", "circumdabit", "circumdabimus", "circumdabitis", "circumdabunt"],
-    "perfect": ["circumdedi", "circumdedisti", "circumdedit", "circumdedimus", "circumdedistis", "circumdederunt"],
-    "pluperfect": ["circumdederam", "circumdederas", "circumdederat", "circumdederamus", "circumdederatis", "circumdederant"],
-    "subjunctive_present": ["circumdem", "circumdes", "circumdet", "circumdemus", "circumdetis", "circumdent"],
-    "subjunctive_imperfect": ["circumdarem", "circumdares", "circumdaret", "circumdaremus", "circumdaretis", "circumdarent"]
+  {
+    "lemma": "subsequi",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "deponent": true,
+    "infinitive": "subsequi",
+    "forms": {
+      "present": ["subsequor", "subsequeris", "subsequitur", "subsequimur", "subsequimini", "subsequuntur"],
+      "present_passive": ["subsequor", "subsequeris", "subsequitur", "subsequimur", "subsequimini", "subsequuntur"],
+      "imperative": ["subsequere", "subsequimini"],
+      "subjunctive": ["subsequar", "subsequaris", "subsequatur", "subsequamur", "subsequamini", "subsequantur"],
+      "future_indicative_active": ["subsequar", "subsequeris", "subsequetur", "subsequemur", "subsequemini", "subsequentur"],
+      "present_participle": ["subsequens"],
+      "perfect_passive_participle": ["subsecutus", "subsecuta", "subsecutum"],
+      "perfect_indicative_active": ["subsecutus sum", "subsecutus es", "subsecutus est", "subsecuti sumus", "subsecuti estis", "subsecuti sunt"]
+    },
+    "translations": {
+      "en": "to follow after, to pursue",
+      "la": "subsequor"
+    }
+  },
+  {
+    "lemma": "consolari",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "deponent": true,
+    "infinitive": "consolari",
+    "forms": {
+      "present": ["consolor", "consolaris", "consolatur", "consolamur", "consolamini", "consolantur"],
+      "present_passive": ["consolor", "consolaris", "consolatur", "consolamur", "consolamini", "consolantur"],
+      "imperative": ["consolare", "consolamini"],
+      "subjunctive": ["consoler", "consoleris", "consoletur", "consolemur", "consolemini", "consolentur"],
+      "future_passive": ["consolabor", "consolaberis", "consolabitur", "consolabimur", "consolabimini", "consolabuntur"],
+      "present_participle": ["consolans"],
+      "perfect_passive_participle": ["consolatus", "consolata", "consolatum"],
+      "perfect_indicative_active": ["consolatus sum", "consolatus es", "consolatus est", "consolati sumus", "consolati estis", "consolati sunt"]
+    },
+    "translations": {
+      "en": "to comfort, to console",
+      "la": "consolor"
+    }
+  },
+  {
+    "lemma": "refectio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "forms": {
+      "nominative_f": ["refectio"],
+      "genitive_f": ["refectionis"],
+      "dative_f": ["refectioni"],
+      "accusative_f": ["refectionem"],
+      "ablative_f": ["refectione"],
+      "vocative_f": ["refectio"]
+    },
+    "forms_plural": {
+      "nominative_f": ["refectiones"],
+      "genitive_f": ["refectionum"],
+      "dative_f": ["refectionibus"],
+      "accusative_f": ["refectiones"],
+      "ablative_f": ["refectionibus"],
+      "vocative_f": ["refectiones"]
+    },
+    "translations": {
+      "en": "refreshment, restoration",
+      "la": "refectio"
+    }
+  },
+  {
+  "lemma": "mensa",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "mensa",
+  "genitive": "mensae",
+ 
+  "translations": {
+    "en": "table",
+    "la": "mensa"
   }
 },
+  {
+    "lemma": "oleum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "oleum",
+    "genitive": "olei",
+  
+    "translations": {
+      "en": "oil",
+      "la": "oleum"
+    }
+  },
+  
+  {
+    "lemma": "pascuum",
+    "part_of_speech": "noun",
+    
+    "declension": 2,
+    "gender": "neuter",
+    "forms": {
+      "nominative": ["pascuum"],
+      "genitive": ["pascui", "pascuae"], 
+      "dative": ["pascuo"],
+      "accusative": ["pascuum"],
+      "ablative": ["pascuo"],
+      "vocative": ["pascuum"]
+    },
+    "translations": {
+      "en": "pasture, grazing land",
+      "la": "pascuum"
+    },
+    "notes": "pascuae older/poetic form"
+
+  },
+  {
+    "lemma": "calix",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "forms": {
+      "nominative_m": ["calix"],
+      "genitive_m": ["calicis"],
+      "dative_m": ["calici"],
+      "accusative_m": ["calicem"],
+      "ablative_m": ["calice"],
+      "vocative_m": ["calix"]
+    },
+    "forms_plural": {
+      "nominative_m": ["calices"],
+      "genitive_m": ["calicum"],
+      "dative_m": ["calicibus"],
+      "accusative_m": ["calices"],
+      "ablative_m": ["calicibus"],
+      "vocative_m": ["calices"]
+    },
+    "translations": {
+      "en": "cup, chalice",
+      "la": "calix"
+    }
+  },
+  {
+    "lemma": "impinguare",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "deponent": false,
+    "infinitive": "impinguare",
+    "forms": {
+      "present": ["impinguo", "impinguas", "impinguat", "impinguamus", "impinguatis", "impinguant"],
+      "present_passive": ["impinguor", "impinguaris", "impinguatur", "impinguamur", "impinguamini", "impinguantur"],
+      "imperative": ["impingua", "impinguate"],
+      "subjunctive": ["impinguem", "impingues", "impinguet", "impinguemus", "impinguetis", "impinguent"],
+      "future_passive": ["impinguabor", "impinguaberis", "impinguabitur", "impinguabimur", "impinguabimini", "impinguabuntur"],
+      "present_participle": ["impinguans"],
+      "perfect_passive_participle": ["impinguatus", "impinguata", "impinguatum"],
+      "perfect_indicative_active": ["impinguavi", "impinguavisti", "impinguavit/impinguasti", "impinguavimus", "impinguavistis", "impinguaverunt"]
+    },
+    "translations": {
+      "en": "to anoint, to fatten",
+      "la": "impinguare"
+    }
+  },
+  {
+    "lemma": "educere",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "deponent": false,
+    "infinitive": "educere",
+    "forms": {
+      "present": ["educo", "educis", "educit", "educimus", "educitis", "educunt"],
+      "present_passive": ["educor", "educeris", "educitur", "educimur", "educimini", "educuntur"],
+      "imperative": ["educe", "educite"],
+      "subjunctive": ["educam", "educas", "educat", "educamus", "educatis", "educant"],
+      "future_passive": ["educar", "educeris", "educetur", "educemur", "educemini", "educentur"],
+      "present_participle": ["educens"],
+      "perfect_passive_participle": ["eductus", "educta", "eductum"],
+      "perfect_indicative_active": ["educavi", "educavisti", "educavit", "educavimus", "educavistis", "educaverunt"]
+    },
+    "translations": {
+      "en": "to lead forth, to bring out",
+      "la": "educere"
+    }
+  },
+  {
+    "lemma": "collocare",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "deponent": false,
+    "infinitive": "collocare",
+    "forms": {
+      "present": ["colloco", "collocas", "collocat", "collocamus", "collocatis", "collocant"],
+      "present_passive": ["collocor", "collocaris", "collocatur", "collocamur", "collocamini", "collocantur"],
+      "imperative": ["colloca", "collocate"],
+      "subjunctive": ["collocem", "colloces", "collocet", "collocemus", "collocetis", "collocent"],
+      "future_passive": ["collocabor", "collocaberis", "collocabitur", "collocabimur", "collocabimini", "collocabuntur"],
+      "present_participle": ["collocans"],
+      "perfect_passive_participle": ["collocatus", "collocata", "collocatum"],
+      "perfect_indicative_active": ["collocavi", "collocavisti", "collocavit", "collocavimus", "collocavistis", "collocaverunt"]
+    },
+    "translations": {
+      "en": "to place, to settle",
+      "la": "collocare"
+    }
+  },
+  {
+    "lemma": "mors",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "mors",
+    "genitive": "mortis",
+    "translations": {
+      "en": "death",
+      "la": "mors"
+    }
+  },
+
+  {
+    "lemma": "aqua",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "aqua",
+    "genitive": "aquae",
+    
+    "translations": {
+      "en": "water",
+      "la": "aqua"
+    }
+  },
+  {
+    "lemma": "innocentia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "innocentia",
+    "genitive": "innocentiae",
+  
+    "translations": {
+      "en": "innocence, harmlessness",
+      "la": "innocentia"
+    }
+  },
+  {
+    "lemma": "arcus",
+    "part_of_speech": "noun",
+    "declension": 4,
+    "gender": "masculine",
+    "nominative": "arcus",
+    "genitive": "arcus",
+    "translations": {
+      "en": "bow, arc, rainbow",
+      "la": "arcus"
+    }
+  },
+  {
+    "lemma": "persequor",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "deponent": true,
+    "infinitive": "persequi",
+    "forms": {
+      "present": ["persequor", "persequeris", "persequitur", "persequimur", "persequimini", "persequuntur"],
+      "imperative": ["persequere", "persequimini"],
+      "subjunctive": ["persequar", "persequaris", "persequatur", "persequamur", "persequamini", "persequantur"],
+      "present_participle": ["persequens"],
+      "present_participle_forms": ["persequens", "persequentibus"],
+      "perfect_indicative_active": ["persecutus sum", "persecutus es", "persecutus est", "persecuti sumus", "persecuti estis", "persecuti sunt"]
+    },
+    "translations": {
+      "en": "to pursue, to follow, to persecute",
+      "la": "persequor"
+    }
+  },
+  {
+    "lemma": "incido",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "deponent": false,
+    "infinitive": "incidere",
+    "forms": {
+      "present": ["incido", "incidis", "incidit", "incidimus", "inciditis", "incidunt"],
+      "present_passive": ["incidor", "incideris", "inciditur", "incidimur", "incidimini", "inciduntur"],
+      "imperative": ["incide", "incidite"],
+      "subjunctive": ["incidam", "incidas", "incidat", "incidamus", "incidatis", "incidant"],
+      "future_passive": ["incidar", "incideris", "incidetur", "incidemur", "incidemini", "incidentur"],
+      "present_participle": ["incidens"],
+      "perfect_passive_participle": ["incisus", "incisa", "incisum"],
+      "perfect_indicative_active": ["incidi", "incidisti", "incidit", "incidimus", "incidistis", "inciderunt"]
+    },
+    "translations": {
+      "en": "to fall upon, to happen, to cut into",
+      "la": "incido"
+    }
+  },
+  {
+    "lemma": "conculco",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "deponent": false,
+    "infinitive": "conculcare",
+    "forms": {
+      "present": ["conculco", "conculcas", "conculcat", "conculcamus", "conculcatis", "conculcant"],
+      "present_passive": ["conculcor", "conculcaris", "conculcatur", "conculcamur", "conculcamini", "conculcantur"],
+      "imperative": ["conculca", "conculcate"],
+      "subjunctive": ["conculcem", "conculces", "conculcet", "conculcemus", "conculcetis", "conculcent"],
+      "future_passive": ["conculcar", "conculcaris", "conculcabitur", "conculcabimur", "conculcabimini", "conculcabuntur"],
+      "present_participle": ["conculcans"],
+      "perfect_passive_participle": ["conculcatus", "conculcata", "conculcatum"]
+    },
+    "translations": {
+      "en": "to trample, to tread upon",
+      "la": "conculco"
+    }
+  },  {
+    "lemma": "lacus",
+    "part_of_speech": "noun",
+    "declension": 4,
+    "gender": "masculine",
+    "nominative": "lacus",
+    "genitive": "lacus",
+    "translations": {
+      "en": "pit, snare, lake",
+      "la": "lacus"
+    }
+  },
+  {
+    "lemma": "fovea",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "fovea",
+    "genitive": "foveae",
+ 
+    "translations": {
+      "en": "pit, trap",
+      "la": "fovea"
+    }
+  },
+  {
+    "lemma": "pario",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "deponent": false,
+    "infinitive": "parere",
+    "forms": {
+      "present": ["pario", "paris", "parit", "parimus", "paritis", "pariunt"],
+      "present_passive": ["parior", "pareris", "paritur", "parimur", "parimini", "pariuntur"],
+      "imperative": ["pare", "parite"],
+      "subjunctive": ["pariam", "parias", "pariat", "pariamus", "pariatis", "pariant"],
+      "future_passive": ["pariar", "pareris", "parietur", "pariemur", "pariemini", "parientur"],
+      "present_participle": ["pariens"],
+      "perfect_passive_participle": ["partus", "parta", "partum"],
+      "perfect_indicative_active": ["peperi", "peperisti", "peperit", "peperimus", "peperistis", "pepererunt"]
+    },
+    "translations": {
+      "en": "to bring forth, to produce",
+      "la": "pario"
+    }
+  },
+  {
+  "lemma": "parturio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "deponent": false,
+  "infinitive": "parturire",
+  "forms": {
+    "present": ["parturio", "parturis", "parturit", "parturimus", "parturitis", "parturiunt"],
+    "present_passive": ["parturior", "parturiris", "parturitur", "parturimur", "parturimini", "parturiuntur"],
+    "imperative": ["parturi", "parturite"],
+    "subjunctive": ["parturiam", "parturias", "parturiat", "parturiamus", "parturiatis", "parturiant"],
+    "future_passive": ["parturiar", "parturiaris", "parturietur", "parturiemur", "parturiemini", "parturientur"],
+    "present_participle": ["parturiens"],
+    "perfect_passive_participle": ["parturitus", "parturita", "parturitum"],
+    "perfect_indicative_active": ["parturiit", "parturivisti", "parturiit", "parturivimus", "parturivistis", "parturiverunt"]
+  },
+  "translations": {
+    "en": "to give birth, to be in labor",
+    "la": "parturio"
+  }
+},
+  {
+    "lemma": "causa",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "causa",
+    "genitive": "causae",
+   
+    "translations": {
+      "en": "cause, reason, case",
+      "la": "causa"
+    }
+  },
+  {
+    "lemma": "vox",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "vox",
+    "genitive": "vocis",
+    "translations": {
+      "en": "voice, word, speech",
+      "la": "vox"
+    }
+  },
+  {
+    "lemma": "dens",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "dens",
+    "genitive": "dentis",
+    "translations": {
+      "en": "tooth",
+      "la": "dens"
+    }
+  },
+  {
+    "lemma": "insurgo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "insurgere",
+    "perfect": "insurrexi",
+    "supine": "insurrectum",
+    "translations": {
+      "en": "rise up, rebel, arise",
+      "la": "insurgo, insurgere, insurrexi, insurrectum"
+    },
+    "forms": {
+      "present": ["insurgo", "insurgis", "insurgit", "insurgimus", "insurgitis", "insurgunt"],
+      "imperfect": ["insurgebam", "insurgebas", "insurgebat", "insurgebamus", "insurgebatis", "insurgebant"],
+      "future": ["insurgam", "insurges", "insurget", "insurgemus", "insurgetis", "insurgent"],
+      "perfect": ["insurrexi", "insurrexisti", "insurrexit", "insurreximus", "insurrexistis", "insurrexerunt"],
+      "pluperfect": ["insurrexeram", "insurrexeras", "insurrexerat", "insurrexeramus", "insurrexeratis", "insurrexerant"],
+      "subjunctive_present": ["insurgam", "insurgas", "insurgat", "insurgamus", "insurgatis", "insurgant"],
+      "subjunctive_imperfect": ["insurgerem", "insurgeres", "insurgeret", "insurgeremus", "insurgeretis", "insurgerent"]
+    }
+  },
+  {
+    "lemma": "susceptor",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+   
+    "translations": {
+      "en": "protector, receiver, undertaker",
+      "la": "susceptor"
+    }
+  },
+  {
+    "lemma": "gloria",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+   
+    "translations": {
+      "en": "glory, fame, renown",
+      "la": "gloria, gloriae"
+    }
+    
+  },
+  {
+    "lemma": "circumdo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "circumdare",
+    "perfect": "circumdedi",
+    "supine": "circumdatum",
+    "translations": {
+      "en": "surround, encircle",
+      "la": "circumdo, circumdare, circumdedi, circumdatum"
+    },
+    "forms": {
+      "present": ["circumdo", "circumdas", "circumdat", "circumdamus", "circumdatis", "circumdant"],
+      "imperfect": ["circumdabam", "circumdabas", "circumdabat", "circumdabamus", "circumdabatis", "circumdabant"],
+      "future": ["circumdabo", "circumdabis", "circumdabit", "circumdabimus", "circumdabitis", "circumdabunt"],
+      "perfect": ["circumdedi", "circumdedisti", "circumdedit", "circumdedimus", "circumdedistis", "circumdederunt"],
+      "pluperfect": ["circumdederam", "circumdederas", "circumdederat", "circumdederamus", "circumdederatis", "circumdederant"],
+      "subjunctive_present": ["circumdem", "circumdes", "circumdet", "circumdemus", "circumdetis", "circumdent"],
+      "subjunctive_imperfect": ["circumdarem", "circumdares", "circumdaret", "circumdaremus", "circumdaretis", "circumdarent"],
+      "present_participles": ["circumdans", "circumdantis"]
+    }
+    
+  },
+  
   {
     "lemma": "soporo",
     "part_of_speech": "verb",
@@ -1285,7 +1782,27 @@
         }
       },
     
-  
+      {
+        "lemma": "inhabitare",
+        "part_of_speech": "verb",
+        "conjugation": 1,
+        "deponent": false,
+        "infinitive": "inhabitare",
+        "forms": {
+          "present": ["inhabito", "inhabitas", "inhabitat", "inhabitamus", "inhabitatis", "inhabitant"],
+          "present_passive": ["inhabitor", "inhabitaris", "inhabitatur", "inhabitamur", "inhabitamini", "inhabitantur"],
+          "imperative": ["inhabita", "inhabitate"],
+          "subjunctive": ["inhabitem", "inhabites", "inhabitet", "inhabitemus", "inhabitetis", "inhabitent"],
+          "future_passive": ["inhabitabor", "inhabitaberis", "inhabitabitur", "inhabitabimur", "inhabitabimini", "inhabitabuntur"],
+          "present_participle": ["inhabitans"],
+          "perfect_passive_participle": ["inhabitatus", "inhabitata", "inhabitatum"],
+          "perfect_indicative_active": ["inhabitavi", "inhabitavisti", "inhabitavit", "inhabitavimus", "inhabitavistis", "inhabitaverunt"]
+        },
+        "translations": {
+          "en": "to dwell, to inhabit",
+          "la": "inhabito"
+        }
+      },
   {
     "lemma": "habito",
     "part_of_speech": "verb",
@@ -1327,6 +1844,18 @@
   },
   "forms_plural": {
       "imperative": ["conculcate"]
+  }
+},
+{
+  "lemma": "umbra",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "umbra",
+  "genitive": "umbrae",
+  "translations": {
+    "en": "shadow, shade, ghost",
+    "la": "umbra"
   }
 },
   {
@@ -2360,17 +2889,35 @@
           }
         },
         {
+          "lemma": "retribuere",
+          "part_of_speech": "verb",
+          "conjugation": 2,
+          "deponent": false,
+          "infinitive": "retribuere",
+          "forms": {
+            "present": ["retribuo", "retribuis", "retribuit", "retribuimus", "retribuitis", "retribuunt"],
+            "present_passive": ["retribuor", "retribueris", "retribuitur", "retribuimur", "retribuimini", "retribuuntur"],
+            "imperative": ["retribue", "retribuite"],
+            "subjunctive": ["retribuam", "retribuas", "retribuat", "retribuamus", "retribuatis", "retribuant"],
+            "future_passive": ["retribuar", "retribueris", "retribuetur", "retribuemur", "retribuemini", "retribuentur"],
+            "present_participle": ["retribuens"],
+            "present_participle_forms": ["retribuens", "retribuentibus"],
+            "perfect_passive_participle": ["retributus", "retributa", "retributum"],
+            "perfect_indicative_active": ["retribui", "retribuisti", "retribuit", "retribuimus", "retribuistis", "retribuerunt"]
+          },
+          "translations": {
+            "en": "to repay, to recompense",
+            "la": "retribuere"
+          }
+        },
+        {
           "lemma": "retributio",
           "part_of_speech": "noun",
           "gender": "feminine",
           "declension": 3,
           "nominative": "retributio",
           "genitive": "retributionis",
-          "dative": "retributioni",
-          "accusative": "retributionem",
-          "ablative": "retributione",
-          "vocative": "retributio",
-          "nominative_plural": "retributiones",
+        
           "translations": {
             "en": "reward, repayment",
             "la": "retributio"
@@ -2411,6 +2958,27 @@
           }
         },
         {
+          "lemma": "concipio",
+          "part_of_speech": "verb",
+          "conjugation": 3,
+          "deponent": false,
+          "infinitive": "concipere",
+          "forms": {
+            "present": ["concipio", "concipis", "concipit", "concipimus", "concipitis", "concipiunt"],
+            "present_passive": ["concipior", "conciperis", "concipitur", "concipimur", "concipimini", "concipiuntur"],
+            "imperative": ["concipe", "concipite"],
+            "subjunctive": ["concipiam", "concipias", "concipiat", "concipiamus", "concipiatis", "concipiant"],
+            "future_passive": ["concipiar", "conciperis", "concipietur", "concipiemur", "concipiemini", "concipientur"],
+            "present_participle": ["concipiens"],
+            "perfect_passive_participle": ["conceptus", "concepta", "conceptum"],
+            "perfect_indicative_active": ["concepi", "concepisti", "concepit", "concepimus", "concepistis", "conceperunt"]
+          },
+          "translations": {
+            "en": "to conceive, to take in, to devise",
+            "la": "concipio"
+          }
+        },
+        {
           "lemma": "concido",
           "part_of_speech": "verb",
           "conjugation": 3,
@@ -2444,7 +3012,6 @@
           }
         },
       
-    
         {
           "lemma": "converto",
           "part_of_speech": "verb",
@@ -2453,16 +3020,22 @@
           "infinitive": "convertere",
           "forms": {
             "present": ["converto", "convertis", "convertit", "convertimus", "convertitis", "convertunt"],
+            "present_passive": ["convertor", "converteris", "convertitur", "convertimur", "convertimini", "convertuntur"],
             "imperative": ["converte", "convertite"],
             "subjunctive": ["convertam", "convertas", "convertat", "convertamus", "convertatis", "convertant"],
+            "future_passive": ["convertar", "converteris", "convertetur", "convertemur", "convertemini", "convertentur"],
+            "present_participle": ["convertens"],
+            "perfect_passive_participle": ["conversus", "conversa", "conversum"],
+            "perfect_indicative_active": ["converti", "convertisti", "convertit", "convertimus", "convertistis", "converterunt"],
             "subjunctive_passive": ["convertantur"],
             "gerund": ["convertendo"]
           },
           "translations": {
-            "en": "to turn, convert; be turned (passive)",
+            "en": "to convert, to turn back, to change",
             "la": "converto"
           }
         },
+       
         
         {
           "lemma": "retrorsum",
@@ -3327,7 +3900,53 @@
             "imperative": ["extollite"]
           }
         },
-      
+        {
+          "lemma": "contero",
+          "part_of_speech": "verb",
+          "conjugation": 3,
+          "infinitive": "conterere",
+          "perfect": "contrivi",
+          "supine": "contritum",
+          "translations": {
+            "en": "crush, grind, wear out",
+            "la": "contero, conterere, contrivi, contritum"
+          },
+          "forms": {
+            "present": ["contero", "conteris", "conterit", "conterimus", "conteritis", "conterunt"],
+            "imperfect": ["conterebam", "conterebas", "conterebat", "conterebamus", "conterebatis", "conterebant"],
+            "future": ["conteram", "conteres", "conteret", "conteremus", "conteretis", "conterent"],
+            "perfect": ["contrivi", "contrivisti", "contrivit", "contrivimus", "contrivistis", "contriverunt"],
+            "pluperfect": ["contriveram", "contriveras", "contriverat", "contriveramus", "contriveratis", "contriverant"],
+            "subjunctive_present": ["conteram", "conteras", "conterat", "conteramus", "conteratis", "conterant"],
+            "subjunctive_imperfect": ["contererem", "contereres", "contereret", "contereremus", "contereretis", "contererent"]
+          }
+        },
+        {
+          "lemma": "adverso",
+          "part_of_speech": "verb",
+          "conjugation": 1,
+          "infinitive": "adversare",
+          "perfect": "adversavi",
+          "supine": "adversatum",
+          "translations": {
+            "en": "oppose, resist, withstand",
+            "la": "adverso, adversare, adversavi, adversatum"
+          },
+          "forms": {
+            "present": ["adverso", "adversas", "adversat", "adversamus", "adversatis", "adversant"],
+            "imperfect": ["adversabam", "adversabas", "adversabat", "adversabamus", "adversabatis", "adversabant"],
+            "future": ["adversabo", "adversabis", "adversabit", "adversabimus", "adversabitis", "adversabunt"],
+            "perfect": ["adversavi", "adversavisti", "adversavit", "adversavimus", "adversavistis", "adversaverunt"],
+            "pluperfect": ["adversaveram", "adversaveras", "adversaverat", "adversaveramus", "adversaveratis", "adversaverant"],
+            "subjunctive_present": ["adversem", "adverses", "adverset", "adversemus", "adversetis", "adversent"],
+            "subjunctive_imperfect": ["adversarem", "adversares", "adversaret", "adversaremus", "adversaretis", "adversarent"],
+            "present_participle": ["adversans", "adversantis"]
+          },
+          "forms_plural": {
+            "perfect_participle":["adversantes"]
+          }
+          
+        },
         {
           "lemma": "nox",
           "part_of_speech": "noun",
@@ -3891,7 +4510,32 @@
         "imperfect": ["quaerebam", "quaerebas", "quaerebat", "quaerebamus", "quaerebatis", "quaerebant"]
       }
     },
-  
+    {
+      "lemma": "judex",
+      "part_of_speech": "noun",
+      "declension": 3,
+      "gender": "masculine",
+      "forms": {
+        "nominative_m": ["judex"],
+        "genitive_m": ["judicis"],
+        "dative_m": ["judici"],
+        "accusative_m": ["judicem"],
+        "ablative_m": ["judice"],
+        "vocative_m": ["judex"]
+      },
+      "forms_plural": {
+        "nominative_m": ["judices"],
+        "genitive_m": ["judicum"],
+        "dative_m": ["judicibus"],
+        "accusative_m": ["judices"],
+        "ablative_m": ["judicibus"],
+        "vocative_m": ["judices"]
+      },
+      "translations": {
+        "en": "judge, juror",
+        "la": "judex"
+      }
+    },
     {
         "lemma": "judico",
         "part_of_speech": "verb",
@@ -4745,31 +5389,22 @@
               "declension": 2,
               "nominative": "filius",
               "genitive": "filii",
-              "dative": "filio",
-              "accusative": "filium",
-              "ablative": "filio",
               "vocative": "fili",
-              "nominative_plural": "filii",
-              "genitive_plural": "filiorum",
-              "dative_plural": "filiis",
-              "accusative_plural": "filios",
-              "ablative_plural": "filiis",
-              "forms": {
-                "nominative_f": ["filia"],
-                "genitive_f": ["filiae"],
-                "dative_f": ["filiae"],
-                "accusative_f": ["filiam"],
-                "ablative_f": ["filia"],
-                "vocative_f": ["filia"],
-                "nominative_plural_f": ["filiae"],
-                "genitive_plural_f": ["filiarum"],
-                "dative_plural_f": ["filiis"],
-                "accusative_plural_f": ["filias"],
-                "ablative_plural_f": ["filiis"]
-              },
               "translations": {
-                "en": "son; daughter",
+                "en": "son",
                 "la": "filius, filia"
+              }
+            },
+            {
+              "lemma": "filia",
+              "part_of_speech": "noun",
+              "gender": "feminine",
+              "declension": 1,
+              "nominative": "filia",
+              "genitive": "filiae",
+              "translations": {
+                "en": "daughter",
+                "la": "filia"
               }
             },
           
@@ -6863,27 +7498,7 @@
             "notes": "Psalm 4:7 - 'signatum est super nos lumen' (the light of your face has shone upon us)"
         },
     
-    {
-        "lemma": "filius",
-        "part_of_speech": "noun",
-       
-        "nominative": "filius",
-        "genitive": "filii",
-        "dative": "filio",
-        "accusative": "filium",
-        "ablative": "filio",
-        "vocative": "fili",
-        "nominative_plural": "filii",
-        "genitive_plural": "filiorum",
-        "dative_plural": "filiis",
-        "accusative_plural": "filios",
-        "ablative_plural": "filiis",
-        "translations": {
-            "en": "son",
-            "la": "filius, -i"
-        },
-        "notes": "'filii' can be either genitive singular or nominative plural"
-    },
+   
     {
         "lemma": "gravis",
         "part_of_speech": "adjective",
@@ -7765,6 +8380,27 @@
                 "en": "clan, tribe, nation",
                 "la": "gens"
             }
+        },
+        {
+          "lemma": "educare",
+          "part_of_speech": "verb",
+          "conjugation": 1,
+          "deponent": false,
+          "infinitive": "educare",
+          "forms": {
+            "present": ["educo", "educas", "educat", "educamus", "educatis", "educant"],
+            "present_passive": ["educor", "educaris", "educatur", "educamur", "educamini", "educantur"],
+            "imperative": ["educa", "educate"],
+            "subjunctive": ["educem", "educes", "educet", "educemus", "educetis", "educent"],
+            "future_passive": ["educabor", "educaberis", "educabitur", "educabimur", "educabimini", "educabuntur"],
+            "present_participle": ["educans"],
+            "perfect_passive_participle": ["educatus", "educata", "educatum"],
+            "perfect_indicative_active": ["educavi", "educavisti", "educavit", "educavimus", "educavistis", "educaverunt"]
+          },
+          "translations": {
+            "en": "to educate, to rear, lead forth",
+            "la": "educare"
+          }
         },
         {
             "lemma": "rex",
@@ -8946,54 +9582,86 @@
   },{
     "lemma": "salvus",
     "part_of_speech": "adjective",
+    "gender": "masculine",
     "declension": 1,
-    "forms": {
-      "nominative_m": ["salvus"],
-      "genitive_m": ["salvi"],
-      "dative_m": ["salvo"],
-      "accusative_m": ["salvum"],
-      "ablative_m": ["salvo"],
-      "vocative_m": ["salve"],
-      
-      "nominative_f": ["salva"],
-      "genitive_f": ["salvae"],
-      "dative_f": ["salvae"],
-      "accusative_f": ["salvam"],
-      "ablative_f": ["salva"],
-      "vocative_f": ["salva"],
-      
-      "nominative_n": ["salvum"],
-      "genitive_n": ["salvi"],
-      "dative_n": ["salvo"],
-      "accusative_n": ["salvum"],
-      "ablative_n": ["salvo"],
-      "vocative_n": ["salvum"]
-    },
-    "forms_plural": {
-      "nominative_m": ["salvi"],
-      "genitive_m": ["salvorum"],
-      "dative_m": ["salvis"],
-      "accusative_m": ["salvos"],
-      "ablative_m": ["salvis"],
-      "vocative_m": ["salvi"],
-      
-      "nominative_f": ["salvae"],
-      "genitive_f": ["salvarum"],
-      "dative_f": ["salvis"],
-      "accusative_f": ["salvas"],
-      "ablative_f": ["salvis"],
-      "vocative_f": ["salvae"],
-      
-      "nominative_n": ["salva"],
-      "genitive_n": ["salvorum"],
-      "dative_n": ["salvis"],
-      "accusative_n": ["salva"],
-      "ablative_n": ["salvis"],
-      "vocative_n": ["salva"]
-    },
+    "nominative": "salvus",
+    "genitive": "salvi",
+    
     "translations": {
       "en": "safe, unharmed, saved",
       "la": "salvus, -a, -um"
+    }
+  },
+  {
+    "lemma": "salvare",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "deponent": false,
+    "infinitive": "salvare",
+    "forms": {
+      "present": ["salvo", "salvas", "salvat", "salvamus", "salvatis", "salvant"],
+      "present_passive": ["salvor", "salvaris", "salvatur", "salvamur", "salvamini", "salvantur"],
+      "imperative": ["salva", "salvate"],
+      "subjunctive": ["salvem", "salves", "salvet", "salvemus", "salvetis", "salvent"],
+      "future_passive": ["salvabar", "salvaberis", "salvabitur", "salvabimur", "salvabimini", "salvabuntur"],
+      "present_participle": ["salvans"],
+      "perfect_passive_participle": ["salvatus", "salvata", "salvatum"],
+      "perfect_indicative_active": ["salvavi", "salvavisti", "salvavit", "salvavimus", "salvavistis", "salvaverunt"]
+    },
+    "translations": {
+      "en": "to save, to preserve",
+      "la": "salvare"
+    }
+  },
+  {
+    "lemma": "desum",
+    "part_of_speech": "verb",
+    "conjugation": "irregular",  
+    "forms": {
+      "present": ["desum", "deses", "dest", "desumus", "destis", "desunt"],
+      "future": ["deero", "deeris", "deerit", "deerimus", "deeritis", "deerunt"],
+      "perfect": ["defui", "defuisti", "defuit"]
+    },
+    "translations": {
+      "en": "to be lacking",
+      "la": "deesse"
+    }
+  },
+
+  {
+    "lemma": "ambulare",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "deponent": false,
+    "infinitive": "ambulare",
+    "forms": {
+      "present": ["ambulo", "ambulas", "ambulat", "ambulamus", "ambulatis", "ambulant"],
+      "present_passive": ["ambolor", "ambularis", "ambulatur", "ambulamur", "ambulamini", "ambulantur"],
+      "imperative": ["ambula", "ambulate"],
+      "subjunctive": ["ambulem", "ambules", "ambulet", "ambulemus", "ambuletis", "ambulent"],
+      "future": ["ambulabo", "ambulabis", "ambulabit", "ambulabimus", "ambulabitis", "ambulabunt"],
+      "future_passive": ["ambulabor", "ambulaberis", "ambulabitur", "ambulabimur", "ambulabimini", "ambulabuntur"],
+      "present_participle": ["ambulans"],
+      "perfect_passive_participle": ["ambulatus", "ambulata", "ambulatum"],
+      "perfect_indicative_active": ["ambulavi", "ambulavisti", "ambulavit", "ambulavimus", "ambulavistis", "ambulaverunt"],
+      "future_perfect_indicative_active": ["ambulavero", "ambulaveris", "ambulaverit", "ambulaverimus", "ambulaveritis", "ambulaverint"]
+    },
+    "translations": {
+      "en": "to walk, to go",
+      "la": "ambulare"
+    }
+  },
+  {
+    "lemma": "semita",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "semita",
+    "genitive": "semitae",
+    
+    "translations": {
+      "en": "path, way",
+      "la": "semita"
     }
   }
 ]

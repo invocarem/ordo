@@ -277,7 +277,35 @@ extension LatinWordEntity {
         if lowerForm == lemma.lowercased() {
             return translation
         }
-        
+         let caseDescriptions: [String: String] = [
+        "nominative": translation,
+        "genitive": "of \(translation)",
+        "dative": "to/for \(translation)",
+        "accusative": translation, // Direct object doesn't need preposition in English
+        "ablative": "by/with/from \(translation)",
+        "vocative": "O \(translation)!",
+        "nominative plural": "\(translation)s",
+        "genitive plural": "of \(translation)s",
+        "dative plural": "to/for \(translation)s",
+        "accusative plural": "\(translation)s",
+        "ablative plural": "by/with/from \(translation)s"
+    ]
+        for (caseName, caseForm) in rootCases {
+        if caseForm?.lowercased() == lowerForm {
+            return caseDescriptions[caseName] ?? "\(translation) (\(caseName))"
+        }
+    }
+
+    if let formsDict = forms {
+        for (caseKey, formVariants) in formsDict {
+            for formVariant in formVariants where formVariant.lowercased() == lowerForm {
+                let (cleanCase, gender) = parseFormKey(caseKey)
+                let genderText = gender == "unknown" ? "" : " (\(gender))"
+                return caseDescriptions[cleanCase] ?? "\(translation) (\(cleanCase)\(genderText))"
+            }
+        }
+    }
+    
         return "[unknown form: \(form)]"
     }
         

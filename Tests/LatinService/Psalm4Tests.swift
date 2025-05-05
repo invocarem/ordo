@@ -35,7 +35,50 @@ class Psalm4Tests: XCTestCase {
             }
         }
     }
+ func testFiliusInPsalm4() {
+        // Setup
+        let psalm4Text = """
+        Filii hominum usquequo gravi corde?
+        """
+        
+        // Analyze
+        let result = latinService.analyzePsalm(text: psalm4Text)
+        
+        // 1. Verify "filius" is detected (plural "filii" appears in text)
+        XCTAssertNotNil(result.dictionary["filius"], "Lemma 'filius' should be detected")
+        
+        // 2. Verify translation
+        let filiusInfo = result.dictionary["filius"]!
+        guard let translation = filiusInfo.translation else {
+            XCTFail("Translation for 'filius' should not be nil")
+            return
+        }
+       
+        XCTAssertTrue(translation.contains("son"), "Incorrect translation for 'filius'")
+        
+        // 3. Verify forms
+        XCTAssertTrue(filiusInfo.forms.keys.contains("filii"), "Plural nominative 'filii' should be found")
+        XCTAssertEqual(filiusInfo.forms["filii"], 1, "'filii' should appear once")
+         
+        print("=== Debug: Generated Forms for 'filius' ===")
+        print(filiusInfo.generatedForms.sorted())
 
+        // 4. Check generated forms
+        let expectedGeneratedForms = [
+            "filium", "filio", "filios", "filiorum", "filiis"
+        ]
+        for form in expectedGeneratedForms {
+            XCTAssertTrue(
+                filiusInfo.generatedForms.contains(form),
+                "Generated form '\(form)' is missing"
+            )
+        }
+        
+        // 5. Verify grammatical info
+        XCTAssertEqual(filiusInfo.entity?.partOfSpeech, .noun)
+        XCTAssertEqual(filiusInfo.entity?.gender, .masculine)
+        XCTAssertEqual(filiusInfo.entity?.declension, 2)
+    }
     func testAnalyzePsalm4() {
         let psalm4 = [
             "Cum invocarem exaudivit me Deus justitiae meae; in tribulatione dilatasti mihi.",

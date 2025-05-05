@@ -27,8 +27,38 @@ struct LemmaMapping {
         
         return mapping
     }
-   
     private func mapStandardForms(from entity: LatinWordEntity, to mapping: inout [String: [String]]) {
+    let lemma = entity.lemma.lowercased()
+    
+    // Original case forms array (keeping the same variable name)
+    let caseForms = [
+        entity.nominative,
+        entity.vocative,
+        entity.dative,
+        entity.accusative,
+        entity.genitive,
+        entity.ablative,
+        entity.nominative_plural,
+        entity.genitive_plural,
+        entity.dative_plural,
+        entity.accusative_plural,
+        entity.ablative_plural
+    ]
+    
+    // Get generated forms
+    let generatedForms = Array(entity.generatedForms.values)
+    
+    // Combine both sets of forms (compactMap filters out nil values)
+    let allForms = caseForms.compactMap { $0 } + generatedForms
+    
+    // Map all forms to the lemma
+    allForms.forEach { form in
+        let lowerForm = form.lowercased()
+        mapping[lowerForm, default: []].append(lemma)
+    }
+}
+   
+    private func mapStandardFormsOrig(from entity: LatinWordEntity, to mapping: inout [String: [String]]) {
         let lemma = entity.lemma.lowercased()
         let caseForms = [
             entity.nominative,
