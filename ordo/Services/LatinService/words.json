@@ -1,5 +1,309 @@
  [
   {
+    "lemma": "usura",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "usura",
+    "genitive": "usurae",
+
+    "translations": {
+      "en": "interest, usury",
+      "la": "usura"
+    }
+  },
+  {
+    "lemma": "pecunia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "pecunia",
+    "genitive": "pecuniae",
+
+    "translations": {
+      "en": "money, property",
+      "la": "pecunia"
+    }
+  },
+  {
+    "lemma": "munus",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "munus",
+    "genitive": "muneris",
+   
+    "translations": {
+      "en": "bribe, gift, service",
+      "la": "munus"
+    }
+  },
+  {
+    "lemma": "innocens",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "innocens",
+    "genitive": "innocentis",
+
+    "translations": {
+      "en": "innocent, blameless",
+      "la": "innocens"
+    }
+  },
+  {
+    "lemma": "macula",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "macula",
+    "genitive": "maculae",
+
+    "translations": {
+      "en": "blemish, stain, spot",
+      "la": "macula"
+    }
+  },
+  {
+    "lemma": "malum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "malum",
+    "genitive": "mali",
+    "translations": {
+      "en": "evil, harm, misfortune",
+      "la": "malum"
+    }
+  },
+  {
+    "lemma": "proximus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "proximus",
+    "genitive": "proximi",
+    "translations": {
+      "en": "neighbor, nearest, closest",
+      "la": "proximus"
+    }
+  },
+  {
+    "lemma": "longe",
+    "part_of_speech": "adverb",
+    "translations": {
+      "en": "far, at a distance",
+      "la": "longe"
+    }
+  },
+  {
+    "lemma": "appropinquo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "appropinquare",
+    "perfect": "appropinquavi",
+    "supine": "appropinquatum",
+    "translations": {
+      "en": "draw near, approach",
+      "la": "appropinquo, appropinquare, appropinquavi, appropinquatum"
+    },
+    "forms": {
+      "perfect": ["appropinquavi", "appropinquavisti", "appropinquavit", "appropinquavimus", "appropinquavistis", "appropinquaverunt"]
+    }
+    
+    
+  },
+  {
+    "lemma": "praevenio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "praevenire",
+    "perfect": "praeveni",
+    "supine": "praeventum",
+    "translations": {
+      "en": "come before, anticipate",
+      "la": "praevenio, praevenire, praeveni, praeventum"
+    },
+    "forms": {
+      "perfect": ["praeveni", "praevenisti", "praevenit", "praevenimus", "praevenistis", "praevenerunt"]
+    }
+  },
+  {
+    "lemma": "maturitas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "forms": {
+      "nominative": ["maturitas"],
+      "genitive": ["maturitatis"],
+      "dative": ["maturitati"],
+      "accusative": ["maturitatem"],
+      "ablative": ["maturitate"],
+      "vocative": ["maturitas"]
+    },
+    "translations": {
+      "en": "dawn, ripeness, maturity",
+      "la": "maturitas"
+    }
+  },
+  {
+    "lemma": "diluculum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "forms": {
+      "nominative": ["diluculum"],
+      "genitive": ["diluculi"],
+      "dative": ["diluculo"],
+      "accusative": ["diluculum"],
+      "ablative": ["diluculo"],
+      "vocative": ["diluculum"]
+    },
+    "translations": {
+      "en": "daybreak, dawn",
+      "la": "diluculum"
+    }
+  },
+  {
+    "lemma": "initium",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "forms": {
+      "nominative": ["initium"],
+      "genitive": ["initii"],
+      "dative": ["initio"],
+      "accusative": ["initium"],
+      "ablative": ["initio"],
+      "vocative": ["initium"]
+    },
+    "translations": {
+      "en": "beginning, commencement",
+      "la": "initium"
+    }
+  },
+  {
+    "lemma": "exitus",
+    "part_of_speech": "noun",
+    "declension": 4,
+    "gender": "masculine",
+    "forms": {
+      "nominative": ["exitus"],
+      "genitive": ["exitus"],
+      "dative": ["exitui"],
+      "accusative": ["exitum"],
+      "ablative": ["exitu"],
+      "vocative": ["exitus"]
+    },
+    "forms_plural": {
+      "nominative": ["exitus", "exitius"],  
+      "genitive": ["exituum"],
+      "dative": ["exitibus"],
+      "accusative": ["exitus"],
+      "ablative": ["exitibus"],
+      "vocative": ["exitus"]
+    },
+    "translations": {
+      "en": "outflow, streams (figurative), outcome",
+      "la": "exitus"
+    }
+  },
+  {
+    "lemma": "spiritus",
+    "part_of_speech": "noun",
+    "declension": 4,
+    "gender": "masculine",
+    "nominative": "spiritus",
+    "genitive": "spiritus",
+  
+    
+    "translations": {
+      "en": "spirit, breath, air",
+      "la": "spiritus"
+    }
+  },
+  {
+    "lemma": "declaratio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "declaratio",
+    "genitive": "declarationis",
+    "translations": {
+      "en": "declaration, proclamation",
+      "la": "declaratio"
+    }
+  },
+  {
+    "lemma": "fructus",
+    "part_of_speech": "noun",
+    "declension": 4,
+    "gender": "masculine",
+    "nominative": "fructus",
+    "genitive": "fructus",
+
+    "translations": {
+      "en": "fruit, benefit, produce",
+      "la": "fructus"
+    }
+  },
+  {
+    "lemma": "finis",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "finis",
+    "genitive": "finis",
+
+   
+    "translations": {
+      "en": "end, boundary, limit",
+      "la": "finis"
+    }
+  },
+  {
+    "lemma": "metuo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "metuere",
+    "perfect": "metui",
+    "supine": "metutum",
+    "translations": {
+      "en": "fear, dread",
+      "la": "metuo, metuere, metui, metutum"
+    },
+    "forms": {
+      "present": ["metuo", "metuis", "metuit", "metuimus", "metuitis", "metuunt"],
+      "imperfect": ["metuebam", "metuebas", "metuebat", "metuebamus", "metuebatis", "metuebant"],
+      "future": ["metuam", "metues", "metuet", "metuemus", "metuetis", "metuent"],
+      "perfect": ["metui", "metuisti", "metuit", "metuimus", "metuistis", "metuerunt"],
+      "pluperfect": ["metueram", "metueras", "metuerat", "metueramus", "metueratis", "metuerant"],
+      "subjunctive_present": ["metuam", "metuas", "metuat", "metuamus", "metuatis", "metuant"],
+      "subjunctive_imperfect": ["metuerem", "metueres", "metueret", "metueremus", "metueretis", "metuerent"]
+    }
+  },
+  {
+    "lemma": "exsulto",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "exsultare",
+    "perfect": "exsultavi",
+    "supine": "exsultatum",
+    "translations": {
+      "en": "exult, leap for joy",
+      "la": "exsulto, exsultare, exsultavi, exsultatum"
+    },
+    "forms": {
+      "present": ["exsulto", "exsultas", "exsultat", "exsultamus", "exsultatis", "exsultant"],
+      "imperfect": ["exsultabam", "exsultabas", "exsultabat", "exsultabamus", "exsultabatis", "exsultabant"],
+      "future": ["exsultabo", "exsultabis", "exsultabit", "exsultabimus", "exsultabitis", "exsultabunt"],
+      "perfect": ["exsultavi", "exsultavisti", "exsultavit", "exsultavimus", "exsultavistis", "exsultaverunt"],
+      "pluperfect": ["exsultaveram", "exsultaveras", "exsultaverat", "exsultaveramus", "exsultaveratis", "exsultaverant"],
+      "subjunctive_present": ["exsultem", "exsultes", "exsultet", "exsultemus", "exsultetis", "exsultent"],
+      "subjunctive_imperfect": ["exsultarem", "exsultares", "exsultaret", "exsultaremus", "exsultaretis", "exsultarent"]
+    }
+  },
+  {
     "lemma": "regere",
     "part_of_speech": "verb",
     "conjugation": 3,
@@ -3519,6 +3823,7 @@
         "present": ["eripio", "eripis", "eripit", "eripimus", "eripitis", "eriipiunt"],
         "imperative": ["eripe", "eripite"],
         "subjunctive": ["eripiam", "eripias", "eripiat", "eripiamus", "eripiatis", "eripiant"],
+        "future": ["eripiam", "eripies", "eripiet", "eripiemus", "eripietis", "eripient"],
         "participle": ["erepta"]
       },
       "translations": {
@@ -3585,14 +3890,31 @@
               "declension": 2,
               "nominative": "tabernaculum",
               "genitive": "tabernaculi",
-              "dative": "tabernaculo",
-              "accusative": "tabernaculum",
-              "ablative": "tabernaculo",
-              "vocative": "tabernaculum",
-              "ablative_plural": "tabernaculis",
+             
               "translations": {
                 "en": "tabernacle, tent",
                 "la": "tabernaculum"
+              }
+            },
+            {
+              "lemma": "tabesco",
+              "part_of_speech": "verb",
+              "conjugation": 3,
+              "infinitive": "tabescere",
+              "perfect": "tabui",
+              "supine": null,
+              "translations": {
+                "en": "languish, waste away, melt",
+                "la": "tabesco, tabescere, tabui"
+              },
+              "forms": {
+                "present": ["tabesco", "tabescis", "tabescit", "tabescimus", "tabescitis", "tabescunt"],
+                "imperfect": ["tabescebam", "tabescebas", "tabescebat", "tabescebamus", "tabescebatis", "tabescebant"],
+                "future": ["tabescam", "tabesces", "tabescet", "tabescemus", "tabescetis", "tabescent"],
+                "perfect": ["tabui", "tabuisti", "tabuit", "tabuimus", "tabuistis", "tabuerunt"],
+                "pluperfect": ["tabueram", "tabueras", "tabuerat", "tabueramus", "tabueratis", "tabuerant"],
+                "subjunctive_present": ["tabescam", "tabescas", "tabescat", "tabescamus", "tabescatis", "tabescant"],
+                "subjunctive_imperfect": ["tabescerem", "tabesceres", "tabesceret", "tabesceremus", "tabesceretis", "tabescerent"]
               }
             },
 
@@ -3912,6 +4234,7 @@
             "la": "contero, conterere, contrivi, contritum"
           },
           "forms": {
+            "imperative": ["contere", "conterite"],
             "present": ["contero", "conteris", "conterit", "conterimus", "conteritis", "conterunt"],
             "imperfect": ["conterebam", "conterebas", "conterebat", "conterebamus", "conterebatis", "conterebant"],
             "future": ["conteram", "conteres", "conteret", "conteremus", "conteretis", "conterent"],
@@ -3990,23 +4313,30 @@
     },
     "notes": "Psalm 122:3-4 often uses 'despectione' (ablative singular) in liturgical Latin."
 },
-    {
-        "lemma": "misereri",
-        "part_of_speech": "verb",
-        "conjugation": 2,
-        "deponent": true,
-        "infinitive": "misereri",
-        "forms": {
-            "present": ["misereor", "misereris", "miseretur", "miseremur", "miseremini", "miserentur"],
-            "imperative": ["miserere", "miseremini"],
-            "subjunctive": ["miserear", "miserearis", "misereatur", "misereamur", "misereamini", "misereantur"]
-        },
-        "translations": {
-            "en": "to have mercy, pity (deponent)",
-            "la": "misereri"
-        }
-       
-    },
+{
+  "lemma": "misereor",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "deponent": true,
+  "infinitive": "misereri",
+  "perfect": "miseritus sum",
+  "supine": "miseritum",
+  "translations": {
+    "en": "have mercy, pity, compassionate",
+    "la": "misereor, misereri, miseritus sum"
+  },
+  "forms": {
+    "present": ["misereor", "misereris", "miseretur", "miseremur", "miseremini", "miserentur"],
+    "imperfect": ["miserebar", "miserebaris", "miserebatur", "miserebamur", "miserebamini", "miserebantur"],
+    "future": ["miserebor", "miserēberis", "miserēbitur", "miserēbimur", "miserēbiminī", "miserēbuntur"],
+    "perfect": ["miseritus sum", "miseritus es", "miseritus est", "miseriti sumus", "miseriti estis", "miseriti sunt"],
+    "pluperfect": ["miseritus eram", "miseritus erās", "miseritus erat", "miseriti erāmus", "miseriti erātis", "miseriti erant"],
+    "subjunctive_present": ["miserear", "miserearis", "misereatur", "misereamur", "misereamini", "misereantur"],
+    "subjunctive_imperfect": ["miserērer", "miserērēris", "miserērētur", "miserērēmur", "miserērēminī", "miserērentur"],
+    "imperative": ["miserere", "miseremini"]
+  }
+},
+  
     {
         "lemma": "abundo",
         "part_of_speech": "verb",
@@ -4348,6 +4678,18 @@
       },
       "forms": {
         "perfect": ["clamavi", "clamavisti", "clamavit", "clamavimus", "clamavistis", "clamaverunt"]
+      }
+    },
+    {
+      "lemma": "dolus",
+      "part_of_speech": "noun",
+      "declension": 2,
+      "gender": "masculine",
+      "nominative": "dolus",
+      "genitive": "doli",
+      "translations": {
+        "en": "deceit, trickery, fraud",
+        "la": "dolus"
       }
     },
     {
@@ -4845,21 +5187,6 @@
       "translations": {
         "en": "tribulation, distress, suffering",
         "la": "tribulatio"
-      }
-    },
-    {
-      "lemma": "eripio",
-      "part_of_speech": "verb",
-      "conjugation": 3,
-      "infinitive": "eripere",
-      "perfect": "eripui",
-      "supine": "ereptum",
-      "translations": {
-        "en": "to snatch away, rescue, deliver",
-        "la": "eripio"
-      },
-      "forms": {
-        "future": ["eripiam", "eripies", "eripiet", "eripiemus", "eripietis", "eripient"]
       }
     },
   
@@ -5381,20 +5708,51 @@
             "la": "oliva"
           }
         },
-        
-            {
-              "lemma": "filius",
-              "part_of_speech": "noun",
-              "gender": "masculine",
-              "declension": 2,
-              "nominative": "filius",
-              "genitive": "filii",
-              "vocative": "fili",
-              "translations": {
-                "en": "son",
-                "la": "filius, filia"
-              }
-            },
+
+        {
+          "lemma": "filius",
+          "part_of_speech": "noun",
+          "gender": "masculine",   
+          "declension": 2,       
+          "nominative": "filius",
+          "genitive": "filii",
+
+          "translations": {
+            "en": "son",
+            "la": "filius"
+          }
+        },
+
+        {
+          "lemma": "xfilius",
+          "part_of_speech": "noun",
+          "gender": "masculine",   
+          "declension": 2,       
+          "forms": {
+          
+              "nominative_m": ["filius"],
+              "genitive": ["filii"],
+              "dative": ["filio"],
+              "accusative_m":[ "filium"],
+              "ablative": ["filio"],
+              "vocative": ["fili"]
+          },
+          "forms_plural": {
+              "nominative_m": ["filii"],
+              "genitive_m": ["filiorum"],
+              "dative": ["filiis"],
+              "accusative": ["filios"],
+              "ablative": ["filiis"],
+              "vocative": ["filii"]
+            
+          },
+          "translations": {
+            "en": "son",
+            "la": "filius"
+          },
+          "notes": "special handling"
+        },
+          
             {
               "lemma": "filia",
               "part_of_speech": "noun",
@@ -6178,6 +6536,28 @@
         }
     },
     {
+      "lemma": "aspicio",
+      "part_of_speech": "verb",
+      "conjugation": 3,
+      "infinitive": "aspicere",
+      "perfect": "aspexi",
+      "supine": "aspectum",
+      "translations": {
+        "en": "look upon, behold, observe",
+        "la": "aspicio, aspicere, aspexi, aspectum"
+      },
+      "forms": {
+        "present": ["aspicio", "aspicis", "aspicit", "aspicimus", "aspicitis", "aspiciunt"],
+        "imperfect": ["aspiciebam", "aspiciebas", "aspiciebat", "aspiciebamus", "aspiciebatis", "aspiciebant"],
+        "future": ["aspiciam", "aspicies", "aspiciet", "aspiciemus", "aspicietis", "aspicient"],
+        "perfect": ["aspexi", "aspexisti", "aspexit", "aspeximus", "aspexistis", "aspexerunt"],
+        "pluperfect": ["aspexeram", "aspexeras", "aspexerat", "aspexeramus", "aspexeratis", "aspexerant"],
+        "subjunctive_present": ["aspiciam", "aspicias", "aspiciat", "aspiciamus", "aspiciatis", "aspiciant"],
+        "subjunctive_imperfect": ["aspicerem", "aspiceres", "aspiceret", "aspiceremus", "aspiceretis", "aspicerent"],
+        "imperative": ["aspice", "aspicite"]
+      }
+    },
+    {
         "lemma": "scrutor",
         "part_of_speech": "verb",
         "perfect": "scrutatus sum",
@@ -6189,7 +6569,8 @@
             "perfect": ["scrutatus sum", "scrutatus es", "scrutatus est", "scrutati sumus", "scrutati estis", "scrutati sunt"],
             "imperative_singular": ["scrutare"],
             "imperative_plural": ["scrutamini"],
-            "present_subjunctive": ["scruter", "scruteris", "scrutetur", "scrutemur", "scrutemini", "scrutentur"]
+            "present_subjunctive": ["scruter", "scruteris", "scrutetur", "scrutemur", "scrutemini", "scrutentur"],
+            "perfect_participle": ["scrutatus", "scrutata", "scrutatum"]
         },
         "translations": {
             "en": "search, examine",
@@ -6777,7 +7158,7 @@
             "accusative_plural": "iniquitates",
             "ablative_plural": "iniquitatibus",
             "translations": {
-                "en": "iniquity, injustice",
+                "en": "iniquity, injustice, wickedness",
                 "la": "iniquitas"
             }
         },
@@ -7256,20 +7637,28 @@
             "notes": "Psalm 4:10 'in spe' (in hope)"
         },
         {
-            "lemma": "constituo",
-            "part_of_speech": "verb",
-            "infinitive": "constituere",
-            "perfect": "constitui",
-            "forms": {
-                "perfect": ["constitui", "constituisti/constituisti", "constituit", "constituimus", "constituistis", "constituerunt"],
-                "present": ["constituo", "constituis", "constituit", "constituimus", "constituitis", "constituunt"]
-            },
-            "translations": {
-                "en": "to establish, determine",
-                "la": "constituo"
-            },
-            "notes": "Psalm 4:9 'Dominum constituisti' (you have established the Lord)"
+          "lemma": "constituo",
+          "part_of_speech": "verb",
+          "conjugation": 3,
+          "infinitive": "constituere",
+          "perfect": "constitui",
+          "supine": "constitutum",
+          "translations": {
+            "en": "appoint, establish, decide",
+            "la": "constituo, constituere, constitui, constitutum"
+          },
+          "forms": {
+            "perfect": ["constitui", "constituisti/constituisti", "constituit", "constituimus", "constituistis", "constituerunt"],
+            "present": ["constituo", "constituis", "constituit", "constituimus", "constituitis", "constituunt"],
+            "imperfect": ["constituebam", "constituebas", "constituebat", "constituebamus", "constituebatis", "constituebant"],
+            "future": ["constituam", "constituēs", "constituet", "constituēmus", "constituētis", "constituent"],
+            "pluperfect": ["constitueram", "constituerās", "constituerat", "constituerāmus", "constituerātis", "constituerant"],
+            "subjunctive_present": ["constituam", "constituās", "constituat", "constituāmus", "constituātis", "constituant"],
+            "subjunctive_imperfect": ["constituerem", "constituerēs", "constitueret", "constituerēmus", "constituerētis", "constituerent"],
+            "imperative": ["constitue", "constituite"]
+          }
         },
+        
     
     {
            "lemma": "nos",
@@ -7421,6 +7810,28 @@
             },
            
             "notes": "Psalm 4:2 - 'dilatasti mihi' (you have enlarged for me)"
+        },
+        {
+          "lemma": "audio",
+          "part_of_speech": "verb",
+          "conjugation": 4,
+          "infinitive": "audire",
+          "perfect": "audivi",
+          "supine": "auditum",
+          "translations": {
+            "en": "hear, listen",
+            "la": "audio, audire, audivi, auditum"
+          },
+          "forms": {
+            "present": ["audio", "audis", "audit", "audimus", "auditis", "audiunt"],
+            "imperfect": ["audiebam", "audiebas", "audiebat", "audiebamus", "audiebatis", "audiebant"],
+            "future": ["audiam", "audies", "audiet", "audiemus", "audietis", "audient"],
+            "perfect": ["audivi", "audivisti", "audivit", "audivimus", "audivistis", "audiverunt"],
+            "pluperfect": ["audiveram", "audiveras", "audiverat", "audiveramus", "audiveratis", "audiverant"],
+            "subjunctive_present": ["audiam", "audias", "audiat", "audiamus", "audiatis", "audiant"],
+            "subjunctive_imperfect": ["audirem", "audires", "audiret", "audiremus", "audiretis", "audirent"],
+            "imperative": ["audi", "audite"]
+          }
         },
         {
             "lemma": "exaudio",
@@ -7932,20 +8343,30 @@
             }
           },
     
-    {
-        "lemma": "do",
-        "part_of_speech": "verb",
-        "perfect": "dedi",
-        "infinitive": "dare",
-        "forms": {
-            "present": ["do", "das", "dat", "damus", "datis", "dant"],
-            "perfect": ["dedi", "dedisti", "dedit", "dedimus", "dedistis", "dederunt"]
-        },
-        "translations": {
-            "en": "give, offer, grant"
-        },
-        "notes": "Irregular verb. Perfect stem: ded-"
-    },
+          {
+            "lemma": "do",
+            "part_of_speech": "verb",
+            "conjugation": 1,
+            "infinitive": "dare",
+            "perfect": "dedi",
+            "supine": "datum",
+            "translations": {
+              "en": "give, offer",
+              "la": "do, dare, dedi, datum"
+            },
+            "forms": {
+              "present": ["do", "das", "dat", "damus", "datis", "dant"],
+              "imperfect": ["dabam", "dabas", "dabat", "dabamus", "dabatis", "dabant"],
+              "future": ["dabo", "dabis", "dabit", "dabimus", "dabitis", "dabunt"],
+              "perfect": ["dedi", "dedisti", "dedit", "dedimus", "dedistis", "dederunt"],
+              "pluperfect": ["dederam", "dederas", "dederat", "dederamus", "dederatis", "dederant"],
+              "subjunctive_present": ["dem", "des", "det", "demus", "detis", "dent"],
+              "subjunctive_imperfect": ["darem", "dares", "daret", "daremus", "daretis", "darent"],
+              "imperative": ["da", "date"]
+            }
+          },
+
+         
     {
         "lemma": "dico",
         "part_of_speech": "verb",
@@ -8772,7 +9193,7 @@
         "accusative_plural": "justificationes",
         "ablative_plural": "justificationibus",
         "translations": {
-            "en": "statute, justification",
+            "en": "statute, justification, ordinance",
             "la": "justificatio"
         }
     },
@@ -8848,19 +9269,25 @@
         "gender": "masculine",
         "vocative": "sermo",
         "nominative": "sermo",
-        "genitive": "sermonis",
-        "dative": "sermoni",
-        "accusative": "sermonem",
-        "ablative": "sermone",
-        "nominative_plural": "sermones",
-        "genitive_plural": "sermonum",
-        "dative_plural": "sermonibus",
-        "accusative_plural": "sermones",
-        "ablative_plural": "sermonibus",
+        "genitive": "sermonis",       
         "translations": {
             "en": "word, speech, conversation",
             "la": "sermo"
         }
+    },
+    {
+      "lemma": "elogium",
+      "part_of_speech": "noun",
+      "declension": 2,
+      "gender": "neuter",
+      "nominative": "elogium",
+      "genitive": "elogii",
+
+      
+      "translations": {
+        "en": "short saying, maxim, epitaph",
+        "la": "elogium"
+      }
     },
     {
         "lemma": "eloquium",
@@ -8870,16 +9297,9 @@
         "vocative": "eloquium",
         "nominative": "eloquium",
         "genitive": "eloquii",
-        "dative": "eloquio",
-        "accusative": "eloquium",
-        "ablative": "eloquio",
-        "nominative_plural": "eloquia",
-        "genitive_plural": "eloquiorum",
-        "dative_plural": "eloquiis",
-        "accusative_plural": "eloquia",
-        "ablative_plural": "eloquiis",
+        
         "translations": {
-            "en": "utterance, expression",
+            "en": "utterance, expression, word",
             "la": "eloquium"
         }
     },
@@ -9662,6 +10082,19 @@
     "translations": {
       "en": "path, way",
       "la": "semita"
+    }
+  },
+  {
+    "lemma": "humilitas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "humilitas",
+    "genitive": "humilitatis",
+    
+    "translations": {
+      "en": "affliction, humility, lowliness",
+      "la": "humilitas"
     }
   }
 ]

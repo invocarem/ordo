@@ -84,6 +84,12 @@ let package = Package(
                 "Psalm4Tests.swift",
                 "Psalm6Tests.swift",
                 "Psalm7Tests.swift",
+                "Psalm9Tests.swift",
+                                
+                "Psalm12Tests.swift",
+                "Psalm13Tests.swift",
+                "Psalm14Tests.swift",
+
                 "Psalm22Tests.swift",
                 "Psalm66Tests.swift",
                 "Psalm89Tests.swift",
@@ -93,6 +99,10 @@ let package = Package(
                 "118/Psalm118AlephTests.swift", 
                 "118/Psalm118BethTests.swift", 
                 "118/Psalm118HeTests.swift", 
+                "118/Psalm118PeTests.swift", 
+                "118/Psalm118SadeTests.swift", 
+                "118/Psalm118CophTests.swift", 
+                "118/Psalm118ResTests.swift", 
                 "Psalm119Tests.swift", 
 
                 "Psalm129Tests.swift", 

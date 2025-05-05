@@ -6,7 +6,6 @@ extension LatinWordEntity{
         return translations?[language] ?? translations?["la"] ?? lemma
     }
     
-
     public var generatedForms: [String: String] {
         guard let declension = declension, let nominative = nominative else { return [:] }
         var forms = [String: String]()
@@ -14,89 +13,108 @@ extension LatinWordEntity{
         
         switch declension {
         case 1 where partOfSpeech == .adjective && gender == .masculine:
-               // Handle first-declension masculine adjectives like "beatus"
-               stem = String(nominative.dropLast(2)) // e.g., "beatus" -> "beat"
-               forms["nominative"] = nominative // "beatus"
-               forms["genitive"] = stem + "i" // "beati"
-               forms["dative"] = stem + "o" // "beato"
-               forms["accusative"] = stem + "um" // "beatum"
-               forms["ablative"] = stem + "o" // "beato"
-               forms["vocative"] = stem + "e" // "beate"
-               forms["nominative_plural"] = stem + "i" // "beati"
-               forms["genitive_plural"] = stem + "orum" // "beatorum"
-               forms["dative_plural"] = stem + "is" // "beatis"
-               forms["accusative_plural"] = stem + "os" // "beatos"
-               forms["ablative_plural"] = stem + "is" // "beatis"
+            // Handle first-declension masculine adjectives like "beatus"
+            stem = String(nominative.dropLast(2)) // e.g., "beatus" -> "beat"
+            forms["nominative"] = nominative
+            forms["genitive"] = stem + "i"
+            forms["dative"] = stem + "o"
+            forms["accusative"] = stem + "um"
+            forms["ablative"] = stem + "o"
+            forms["vocative"] = stem + "e"
+            forms["nominative_plural"] = stem + "i"
+            forms["genitive_plural"] = stem + "orum"
+            forms["dative_plural"] = stem + "is"
+            forms["accusative_plural"] = stem + "os"
+            forms["ablative_plural"] = stem + "is"
+
         case 1: // -a (feminine)
             let stem = String(nominative.dropLast())
-            forms["genitive"] = stem + "ae" // "puellae"
-            forms["dative"] = stem + "ae" // "puellae"
-            forms["accusative"] = stem + "am" // "puellam"
-            forms["ablative"] = stem + "a" // "puellā"
-            forms["nominative_plural"] = stem + "ae" // "puellae"
-            forms["genitive_plural"] = stem + "arum" // "puellarum"
-            forms["dative_plural"] = stem + "is" // "puellis"
-            forms["accusative_plural"] = stem + "as" // "puellas"
-            forms["ablative_plural"] = stem + "is" // "puellis"
-            
-        case 2 where gender == .neuter: // -um (neuter)
-            
-            let stem = String(nominative.dropLast(2)) // e.g., "bellum" -> "bell"
-                   forms["genitive"] = stem + "i" // "belli"
-                   forms["dative"] = stem + "o" // "bello"
-                   forms["accusative"] = nominative // "bellum"
-                   forms["ablative"] = stem + "o" // "bello"
-                   forms["nominative_plural"] = stem + "a" // "bella"
-                   forms["genitive_plural"] = stem + "orum" // "bellorum"
-                   forms["dative_plural"] = stem + "is" // "bellis"
-                   forms["accusative_plural"] = stem + "a" // "bella"
-                   forms["ablative_plural"] = stem + "is" // "bellis"
-            
-        case 2: // -us (masculine)
-           
-            let stem = String(nominative.dropLast()) // e.g., "dominus" -> "domin"
-                    forms["genitive"] = stem + "i" // "domini"
-                    forms["dative"] = stem + "o" // "domino"
-                    forms["accusative"] = stem + "um" // "dominum"
-                    forms["ablative"] = stem + "o" // "domino"
-                    forms["nominative_plural"] = stem + "i" // "domini"
-                    forms["genitive_plural"] = stem + "orum" // "dominorum"
-                    forms["dative_plural"] = stem + "is" // "dominis"
-                    forms["accusative_plural"] = stem + "os" // "dominos"
-                    forms["ablative_plural"] = stem + "is" // "dominis"
-            
-            
-        case 3 where gender == .neuter:
-            stem = String(nominative.dropLast(2)) // e.g. "nomen" -> "nomin"
-            forms["genitive"] = stem + "is"
-            forms["dative"] = stem + "i"
-            forms["accusative"] = nominative
-            forms["ablative"] = stem + "e"
-            forms["nominative_plural"] = stem + "a"
-            forms["genitive_plural"] = stem + "um"
+            forms["genitive"] = stem + "ae"
+            forms["dative"] = stem + "ae"
+            forms["accusative"] = stem + "am"
+            forms["ablative"] = stem + "a"
+            forms["nominative_plural"] = stem + "ae"
+            forms["genitive_plural"] = stem + "arum"
+            forms["dative_plural"] = stem + "is"
+            forms["accusative_plural"] = stem + "as"
+            forms["ablative_plural"] = stem + "is"
 
-           // Plural
-            forms["nominative_plural"] = stem + "a"
-            forms["genitive_plural"] = stem + "um"
-            forms["dative_plural"] = stem + "ibus"
-            forms["accusative_plural"] = stem + "a"
-            forms["ablative_plural"] = stem + "ibus"
+        case 2: // Handles all 2nd declension (-us, -um, -ius)
+            let stem: String
+            
+            // Special -ius handling (filius, genius)
+            if nominative.hasSuffix("ius") {
+                stem = String(nominative.dropLast(3)) + "i" // "filius" → "fili"
+                forms["vocative"] = stem // "fili" (special vocative)
+            } 
+            // Regular -us/-um handling
+            else {
+                stem = String(nominative.dropLast(2)) // "dolus" → "dol", "bellum" → "bell"
+                if !nominative.hasSuffix("um") { // Masculine -us gets vocative
+                    forms["vocative"] = stem + "e" // "dole"
+                }
+            }
+            
+            // Common forms for all subtypes
+            forms["genitive"] = stem + "i"
+            forms["dative"] = stem + "o"
+            forms["ablative"] = stem + "o"
+            forms["genitive_plural"] = stem + "orum"
+            forms["dative_plural"] = stem + "is"
+            forms["ablative_plural"] = stem + "is"
+            
+            // Gender/type specific forms
+            if nominative.hasSuffix("um") { // Neuter
+                forms["nominative"] = nominative
+                forms["accusative"] = nominative
+                forms["nominative_plural"] = stem + "a"
+                forms["accusative_plural"] = stem + "a"
+            } else { // Masculine (-us or -ius)
+                forms["nominative"] = nominative
+                forms["accusative"] = stem + "um"
+                forms["nominative_plural"] = stem + "i"
+                forms["accusative_plural"] = stem + "os"
+            }
+
+       
+
+        // ... (remaining cases 3, 4, 5 stay unchanged)
+       case 3 where gender == .neuter:
+        // 1. Get the genitive form (essential for 3rd declension)
+        guard let genitive = self.genitive else { break }
+        
+        // 2. Extract the true stem (muneris → muner)
+        let stem = String(genitive.dropLast(2)) // Drops "-is" from genitive
+        
+        // 3. Build all forms
+        forms["nominative"] = nominative          // munus
+        forms["genitive"] = genitive              // muneris
+        forms["dative"] = stem + "i"              // muneri
+        forms["accusative"] = nominative          // munus
+        forms["ablative"] = stem + "e"            // munere
+        
+        // 4. Plural forms
+        forms["nominative_plural"] = stem + "a"   // munera
+        forms["genitive_plural"] = stem + "um"    // munerum
+        forms["dative_plural"] = stem + "ibus"    // muneribus
+        forms["accusative_plural"] = stem + "a"   // munera
+        forms["ablative_plural"] = stem + "ibus"  // muneribus
             
         case 3: // Masculine/Feminine
-            let genitive = self.genitive ?? "" // Require genitive to find stem
+            let genitive = self.genitive ?? ""
             guard genitive.count > 2 else { break }
-            stem = String(genitive.dropLast(2)) // e.g. "regis" -> "reg"
+            stem = String(genitive.dropLast(2))
             forms["genitive"] = genitive
             forms["dative"] = stem + "i"
             forms["accusative"] = stem + "em"
             forms["ablative"] = stem + "e"
-
             forms["nominative_plural"] = stem + "es"
             forms["genitive_plural"] = stem + "um"
             forms["dative_plural"] = stem + "ibus"
+            forms["accusative_plural"] = stem + "es"
             forms["ablative_plural"] = stem + "ibus"
-            
-        case 4 where gender == .neuter: // -u
+
+        case 4 where gender == .neuter:
             stem = String(nominative.dropLast())
             forms["genitive"] = stem + "us"
             forms["dative"] = stem + "u"
@@ -104,12 +122,10 @@ extension LatinWordEntity{
             forms["ablative"] = stem + "u"
             forms["nominative_plural"] = stem + "ua"
             forms["genitive_plural"] = stem + "uum"
-
-             
             forms["dative_plural"] = stem + "ibus"
             forms["accusative_plural"] = stem + "ua"
             forms["ablative_plural"] = stem + "ibus"
-            
+
         case 4: // Masculine/Feminine -us
             stem = String(nominative.dropLast(2))
             forms["genitive"] = stem + "us"
@@ -118,26 +134,29 @@ extension LatinWordEntity{
             forms["ablative"] = stem + "u"
             forms["nominative_plural"] = stem + "us"
             forms["genitive_plural"] = stem + "uum"
-
-
             forms["dative_plural"] = stem + "ibus"
             forms["accusative_plural"] = stem + "us"
             forms["ablative_plural"] = stem + "ibus"
-            
+
         case 5:
-            stem = String(nominative.dropLast(2)) // "res" -> "r"
-             forms["nominative"] = nominative
-            forms["genitive"] = stem + "i"  // Simplified from "eī"
-            forms["dative"] = stem + "i"    // Simplified from "eī"
+            stem = String(nominative.dropLast(2))
+            forms["nominative"] = nominative
+            forms["genitive"] = stem + "i"
+            forms["dative"] = stem + "i"
             forms["accusative"] = stem + "em"
-            forms["ablative"] = stem + "e"  // Note: This one is truly just "e"
-                    
+            forms["ablative"] = stem + "e"
+            // Add plural forms if needed
+            forms["nominative_plural"] = stem + "es"
+            forms["genitive_plural"] = stem + "erum"
+            forms["dative_plural"] = stem + "ebus"
+            forms["accusative_plural"] = stem + "es"
+            forms["ablative_plural"] = stem + "ebus"
+
         default:
             break
         }
         return forms
-    }
-    
+    }    
 }
 
 
@@ -254,8 +273,13 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
     let formToLemma = lemmaMapping.createFormToLemmaMapping()
      //   print("!!!multiplio forms in mapping:")
      // print(formToLemma.filter { $0.value.contains("multiplio") }.keys.sorted())
-   let debugForms = formToLemma.filter { $0.value.contains("pascuum") }.keys.sorted()
-    print("Debug - Forms mapping to 'pascuum': \(debugForms)")
+      //("elogium", ["elogia"], "expression"),
+      // ("eloquium", ["eloquium"], "word")
+   let debugForms = formToLemma.filter { $0.value.contains("munus") }.keys.sorted()
+    print("Debug - Forms mapping to 'munus': \(debugForms)")
+
+   //let debugForms2 = formToLemma.filter { $0.value.contains("eloquium") }.keys.sorted()
+    //print("Debug - Forms mapping to 'eloquium': \(debugForms2)")
 
     //let multiplioForms = formToLemma.filter { $0.value.contains("multiplio") }.keys.sorted()
     //print("Debug - Forms mapping to 'multiplio': \(multiplioForms)")

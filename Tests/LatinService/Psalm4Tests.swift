@@ -55,11 +55,14 @@ class Psalm4Tests: XCTestCase {
         }
        
         XCTAssertTrue(translation.contains("son"), "Incorrect translation for 'filius'")
+        print(filiusInfo.forms.keys.sorted())
         
         // 3. Verify forms
         XCTAssertTrue(filiusInfo.forms.keys.contains("filii"), "Plural nominative 'filii' should be found")
         XCTAssertEqual(filiusInfo.forms["filii"], 1, "'filii' should appear once")
          
+        
+
         print("=== Debug: Generated Forms for 'filius' ===")
         print(filiusInfo.generatedForms.sorted())
 
@@ -106,7 +109,7 @@ class Psalm4Tests: XCTestCase {
             ("invoco", ["invocarem"], "call upon"),
             ("exaudio", ["exaudivit", "exaudiet", "exaudi"], "hear"),
             ("dilato", ["dilatasti"], "relieve"),
-            ("misereri", ["miserere"], "have mercy"),
+            ("misereor", ["miserere"], "have mercy"),
             ("oratio", ["orationem"], "prayer"),
             ("vanitas", ["vanitatem"], "vanity"),
             ("mendacium", ["mendacium"], "falsehood"),

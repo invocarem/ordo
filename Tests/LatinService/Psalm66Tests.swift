@@ -46,7 +46,7 @@ class Psalm66Tests: XCTestCase {
         let agrarianTerms = [
             ("terra", ["terra", "terrae"], "earth"),
             ("fructus", ["fructum"], "fruit"),
-            ("fines", ["fines"], "ends/regions")
+            ("finis", ["fines"], "end")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: agrarianTerms)
