@@ -7127,14 +7127,7 @@
             "gender": "masculine",
             "nominative": "furor",
             "genitive": "furoris",
-            "dative": "furori",
-            "accusative": "furorem",
-            "ablative": "furore",
-            "nominative_plural": "furores",
-            "genitive_plural": "furorum",
-            "dative_plural": "furoribus",
-            "accusative_plural": "furores",
-            "ablative_plural": "furoribus",
+           
             "translations": {
                 "en": "rage, fury, madness",
                 "la": "furor"
@@ -10127,6 +10120,110 @@
       "la": "sic"
     },
     "invariable": true
+  },{
+    "lemma": "vinculum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "vinculum",
+    "genitive": "vinculi",
+    "translations": {
+      "en": "chain, bond, fetter",
+      "la": "vinculum"
+    }
+  },
+  {
+    "lemma": "ferreus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "ferreus",
+    "genitive":  "ferrei",
+    "forms": {
+      "nominative_f": ["ferrea"],
+      "genitive_f": ["ferreae"],
+      "dative_f": ["ferreae"],
+      "accusative_f": ["ferream"],
+      "ablative_f": ["ferrea"],
+      "vocative_f": ["ferrea"],
+      
+      "nominative_n": ["ferreum"],
+      "genitive_n": ["ferrei"],
+      "dative_n": ["ferreo"],
+      "accusative_n": ["ferreum"],
+      "ablative_n": ["ferreo"],
+      "vocative_n": ["ferreum"]
+    },
+    "forms_plural": {
+      "nominative_f": ["ferreae"],
+      "genitive_f": ["ferrearum"],
+      "dative_f": ["ferreis"],
+      "accusative_f": ["ferreas"],
+      "ablative_f": ["ferreis"],
+      "vocative_f": ["ferreae"],
+      
+      "nominative_n": ["ferrea"],
+      "genitive_n": ["ferreorum"],
+      "dative_n": ["ferreis"],
+      "accusative_n": ["ferrea"],
+      "ablative_n": ["ferreis"],
+      "vocative_n": ["ferrea"]
+    },
+      
+    "translations": {
+      "en": "iron, iron-like",
+      "la": "ferreus"
+    }
+  },{
+    "lemma": "hereditas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "hereditas",
+    "genitive": "hereditatis",
+    "translations": {
+      "en": "inheritance, heritage",
+      "la": "hereditas"
+    }
+  },{
+    "lemma": "adversus",
+    "part_of_speech": "preposition",
+    "case_government": "accusative",
+    "translations": {
+      "en": "against, opposite to",
+      "la": "adversus"
+    },
+    "invariable": true
+  },
+  {
+    "lemma": "dirumpo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "diripere",
+    "perfect": "dirupi",
+    "supine": "diruptum",
+    "translations": {
+      "en": "break apart, burst, shatter",
+      "la": "dirumpo, diripere, dirupi, diruptum"
+    },"forms": {
+      "present_subjunctive": ["dirumpam", "dirumpas", "dirumpat", "dirumpamus", "dirumpatis", "dirumpant"],
+      "present_active": ["dirumpo", "dirumpis", "dirumpit", "dirumpimus", "dirumpitis", "dirumpunt"]
+    }
+  },{
+    "lemma": "projicio",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "proicere",
+    "perfect": "proieci",
+    "supine": "proiectum",
+    "forms": {
+        "present_subjunctive": ["projiciam", "projicias", "projiciat", "projiciamus", "projiciatis", "projiciant"],
+        "present_active": ["projicio", "projicis", "projicit", "projicimus", "projicitis", "projiciunt"]
+      },
+    "translations": {
+      "en": "throw forth, cast out, abandon",
+      "la": "projicio, proicere, proieci, proiectum"
+    }
   },
   {
     "lemma": "humilitas",

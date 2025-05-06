@@ -71,6 +71,63 @@ class Psalm2Tests: XCTestCase {
         
         verifyWordsInAnalysis(analysis, confirmedWords: uniqueWords)
     }
+
+    func testRebellionTheme() {
+        let analysis = latinService.analyzePsalm(text: psalm2)
+        
+        let rebellionWords = [
+            ("fremo", ["fremuerunt"], "rage"),
+            ("adversus", ["adversus"], "against"),
+            ("dirumpo", ["dirumpamus"], "break apart"),
+            ("projicio", ["projiciamus"], "cast off")
+        ]
+        
+        verifyWordsInAnalysis(analysis, confirmedWords: rebellionWords)
+        
+     
+    }
+    func testMetaphoricalLanguage() {
+    let analysis = latinService.analyzePsalm(text: psalm2)
+    
+    // Key components of metaphors in Psalm 2
+    let metaphoricalElements = [
+        ("bondage_imagery", ["vincula", "jugum"], ["chain", "yoke"]),
+        ("pottery_imagery", ["vas", "figuli"], ["vessel", "potter"]),
+        ("rulership_imagery", ["virga", "ferrea"], ["rod", "iron"]),
+        ("anger_imagery", ["ira", "furore"], ["wrath", "fury"]),
+        ("inheritance_imagery", ["hereditatem", "terminos"], ["inheritance", "boundary"])
+    ]
+    
+    for (imageryName, latinWords, englishWords) in metaphoricalElements {
+        // Verify Latin words exist in analysis
+        for word in latinWords {
+            let found = analysis.dictionary.contains { (_, entry) in
+                entry.forms.keys.contains(word.lowercased())
+            }
+            
+            XCTAssertTrue(found, "Word '\(word)' for \(imageryName) imagery should be present in analysis")
+            
+            if verbose && !found {
+                print("Missing word for \(imageryName) imagery: \(word)")
+            }
+        }
+        
+        // Verify English translations contain expected concepts
+        for (latinWord, englishWord) in zip(latinWords, englishWords) {
+            if let entry = analysis.dictionary.first(where: { (_, entry) in
+                entry.forms.keys.contains(latinWord.lowercased())
+            })?.value {
+                let translationContains = entry.translation?.lowercased().contains(englishWord.lowercased()) ?? false
+                XCTAssertTrue(translationContains,
+                             "Translation for \(latinWord) should include concept '\(englishWord)' for \(imageryName) imagery")
+                
+                if verbose && !translationContains {
+                    print("Translation for \(latinWord) (\(entry.translation ?? "")) missing concept: \(englishWord)")
+                }
+            }
+        }
+    }
+}
     
     
     private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
