@@ -274,6 +274,16 @@ extension LatinWordEntity {
                 }
             }
         }
+        
+        for (caseKey, formVariant) in generatedForms {
+                if formVariant.lowercased() == lowerForm {
+                    let (caseName, gender) = parseFormKey(caseKey)
+                    let plurality = caseKey.contains("plural") ? "plural " : ""
+                    return "\(translation) (\(caseName) \(plurality)\(gender))"
+                }
+            }
+        
+        
         if lowerForm == lemma.lowercased() {
             return translation
         }

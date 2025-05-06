@@ -22,6 +22,32 @@ class Psalm1Tests: XCTestCase {
     ]
     
     // MARK: - Test Cases
+    func testChaffMetaphor() {
+        let analysis = latinService.analyzePsalm(text: psalm1)
+        
+        let chaffMetaphorWords = [
+            ("pulvis", ["pulvis"], "dust"),
+            ("ventus", ["ventus"], "wind")
+        ]
+        
+        verifyWordsInAnalysis(analysis, confirmedWords: chaffMetaphorWords)
+        
+        // Verify contrast with tree metaphor
+        let treeCount = analysis.dictionary["lignum"]?.forms.values.reduce(0, +) ?? 0
+        let chaffCount = analysis.dictionary["pulvis"]?.forms.values.reduce(0, +) ?? 0
+        XCTAssertGreaterThan(treeCount, 0, "Tree metaphor should be present")
+        XCTAssertGreaterThan(chaffCount, 0, "Chaff metaphor should be present")
+    }
+    func testJudgmentTheme() {
+        let analysis = latinService.analyzePsalm(text: psalm1)
+        
+        let judgmentWords = [
+            ("judicium", ["judicio"], "judgment"),
+            ("concilium", ["concilio"], "assembly")
+        ]
+        
+        verifyWordsInAnalysis(analysis, confirmedWords: judgmentWords)
+    }
     
     func testRareNouns() {
         let analysis = latinService.analyzePsalm(text: psalm1)

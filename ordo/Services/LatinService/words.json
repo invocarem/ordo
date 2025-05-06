@@ -10085,6 +10085,50 @@
     }
   },
   {
+    "lemma": "ventus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "ventus",
+    "genitive": "venti",
+    "vocative": "vente",
+    "translations": {
+      "en": "wind, breeze",
+      "la": "ventus"
+    }
+  },
+  {
+    "lemma": "lignum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "lignum",
+    "genitive": "ligni",
+    "translations": {
+      "en": "wood, tree, timber",
+      "la": "lignum"
+    }
+  },{
+    "lemma": "concilium",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "concilium",
+    "genitive": "concilii",
+    "translations": {
+      "en": "assembly, council, meeting",
+      "la": "concilium"
+    }
+  },{
+    "lemma": "sic",
+    "part_of_speech": "adverb",
+    "translations": {
+      "en": "thus, so, in this way",
+      "la": "sic"
+    },
+    "invariable": true
+  },
+  {
     "lemma": "humilitas",
     "part_of_speech": "noun",
     "declension": 3,
