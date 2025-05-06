@@ -1,5 +1,319 @@
  [
   {
+    "lemma": "deleo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "delere",
+    "perfect": "delevi",
+    "supine": "deletum",    
+    "forms": {
+      "future": ["delebo", "delebis", "delebit"]
+    },
+    "translations": {
+      "en": "to wipe out, destroy, erase",
+      "la": "deleo"
+    }
+  },
+  {
+    "lemma": "auditus",
+    "part_of_speech": "noun",
+    "gender": "masculine",
+    "declension": 4,
+    "nominative": "auditus",
+    "genitive": "auditus",
+    
+    "translations": {
+      "en": "hearing, listening; sense of hearing",
+      "la": "auditus"
+    }
+  },
+  {
+    "lemma": "auris",
+    "part_of_speech": "noun",
+    "gender": "feminine",
+    "declension": 3,
+    "nominative": "auris",
+    "genitive": "auris",
+    
+    
+    "translations": {
+      "en": "ear (anatomy); hearing, attention",
+      "la": "auris"
+    }
+  },
+
+  {
+    "lemma": "supplanto",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "supplantare",
+    "perfect": "supplantavi",
+    "supine": "supplantatum",
+    "translations": {
+      "en": "to trip up, overthrow, supplant",
+      "la": "supplanto"
+    },
+    "notes": "Literally 'to trip by the sole' (sub + planta). Used both literally and metaphorically."
+  },
+  {
+    "lemma": "christus",
+    "part_of_speech": "noun",
+    "gender": "masculine",
+    "declension": 2,
+    "nominative": "christus",
+    "genitive": "christi",
+    
+    "translations": {
+      "en": "anointed one, christ",
+      "la": "christus"
+    },
+    "notes": "Greek loanword (Χριστός). In Christian Latin, always capitalized."
+  },
+  {
+    "lemma": "semen",
+    "part_of_speech": "noun",
+    "gender": "neuter",
+    "declension": 3,
+    "nominative": "semen",
+    "genitive": "seminis",
+    
+    "translations": {
+      "en": "seed, offspring, origin",
+      "la": "semen"
+    },
+    "notes": "Often used metaphorically for descendants or the Word of God in Scripture."
+  },
+    {
+      "lemma": "praecingo",
+      "part_of_speech": "verb",
+      "conjugation": 3,
+      "infinitive": "praecingere",
+      "perfect": "praecinxi",
+      "supine": "praecinctum",
+      "forms": {
+        "perfect": ["praecinxit", "praecinxisti"]
+      },
+      "translations": {
+        "en": "to gird, surround, encircle",
+        "la": "praecingo"
+      },
+      "notes": "Literally 'to gird before' (prae + cingo). Often used for putting on armor."
+    },
+    {
+      "lemma": "praelium",
+      "part_of_speech": "noun",
+      "gender": "neuter",
+      "declension": 2,
+      "nominative": "praelium",
+      "genitive": "praelii",
+      "translations": {
+        "en": "battle, combat",
+        "la": "praelium"
+      },
+      "notes": "Frequently used in military contexts. Not to be confused with 'proelium' (alternative spelling)."
+    },
+  {
+    "lemma": "vindicta",
+    "part_of_speech": "noun",
+    "gender": "feminine",
+    "declension": 1,
+    "nominative": "vindicta",
+    "genitive": "vindictae",
+    
+    "translations": {
+      "en": "vengeance, punishment, retribution",
+      "la": "vindicta"
+    }
+    
+  },
+  {
+    "lemma": "passer",
+    "part_of_speech": "noun",
+    "gender": "masculine",
+    "declension": 3,
+    "nominative": "passer",
+    "genitive": "passeris",
+    
+    "translations": {
+      "en": "sparrow, small bird",
+      "la": "passer"
+    }
+  },
+  {
+    "lemma": "requiro",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "requirere",
+    "perfect": "requisivi",
+    "supine": "requisitum",
+    "translations": {
+      "en": "to seek, demand, require",
+      "la": "requiro"
+    },
+    "notes": "Often implies a forceful or legal demand (cf. English 'requisition'). Present participle 'requirens' agrees in case/number with its subject."
+  },
+  
+  {
+  "lemma": "adjutor",
+  "part_of_speech": "noun",
+  "gender": "masculine",
+  "declension": 3,
+  "nominative": "adjutor",
+  "genitive": "adjutoris",
+  "translations": {
+    "en": "helper, assistant, ally",
+    "la": "adjutor"
+  },
+  "notes": "Derived from 'adjuvare' (to help). Often used in Christian Latin for divine helpers (e.g., 'Adjutor meus es tu' = 'You are my helper')."
+},
+  {
+    "lemma": "salutor",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "deponent": true,
+    "infinitive": "salutari",
+    "perfect": "salutatus",
+    "supine": "salutatum",
+    
+    "translations": {
+      "en": "to greet, be greeted",
+      "la": "salutor"
+    },
+    "notes": "Deponent verb (passive forms with active meaning). Common in formal greetings."
+  },
+  {
+    "lemma": "permaneo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "permanere",
+    "perfect": "permansi",
+    "supine": "permansum",
+    
+    "translations": {
+      "en": "to endure, remain, persist",
+      "la": "permaneo"
+    },
+    "notes": "From 'per-' (through) + 'maneo' (stay). Often implies lasting through time."
+  },
+  {
+    "lemma": "psallo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "psallere",
+    "perfect": "psalli",
+    "supine": "psallitum",
+    
+    "translations": {
+      "en": "to sing praises (esp. with harp), chant",
+      "la": "psallo"
+    },
+    "forms": {
+    "future": ["psallam"],
+    "imperative": ["psallite"]
+  },
+    "notes": "Biblical/Liturgical Latin; often refers to musical worship."
+  },
+  {
+    "lemma": "narro",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "narrare",
+    "perfect": "narravi",
+    "supine": "narratum",
+    
+    "translations": {
+      "en": "to tell, declare, narrate",
+      "la": "narro"
+    },
+    "notes": "Often used for formal storytelling or reporting."
+  },
+  {
+    "lemma": "legislator",
+    "part_of_speech": "noun",
+    "gender": "masculine",
+    "declension": 3,
+    "nominative": "legislator",
+    "genitive": "legislatoris",
+
+    "translations": {
+      "en": "lawgiver, legislator",
+      "la": "legislator"
+    },
+    "notes": "Derived from 'lex' (law) + 'lator' (bringer)."
+  },
+  {
+    "lemma": "pereo",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "perire",
+    "perfect": "perii",
+    "supine": "peritum",
+    "forms": {
+        "present": ["pereo", "peris", "perit"],
+        "imperfect": ["peribam", "peribas", "peribat"],
+        "future": ["peribo", "peribis", "peribit"],
+        "perfect": ["periī", "periistī", "periit"],
+        "present_subjunctive": ["peream", "pereas", "pereat"],
+        "imperative": ["pere", "perite"],
+        "gerund_dative": ["periendō"],
+        "gerund_accusative": ["periendum"],
+        "gerundive_masc_nom": ["periendus"]
+    },
+    "forms_plural": {
+        "present": ["perīmus", "perītis", "pereunt"],
+        "imperfect": ["perībāmus", "perībātis", "perībant"],
+        "future": ["peribimus", "peribitis", "peribunt"],
+        "perfect": ["periimus", "periistis", "periērunt"],
+        "present_subjunctive": ["pereāmus", "pereātis", "pereant"],
+        "imperative": ["perīte"]
+    },
+    "translations": {
+        "en": "perish, be destroyed",
+        "la": "pereo"
+    },
+    "notes": "Imperative singular is 'pere' (not 'per')."
+},
+  {
+    "lemma": "insidia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "insidia",
+    "genitive": "insidiae",
+    "translations": {
+      "en": "ambush (singular), plot",
+      "la": "insidia"
+    }
+  },
+  {
+    "lemma": "insidior",
+    "part_of_speech": "verb",
+    "infinitive": "insidiari",
+    "perfect": "insidiatus sum",
+    "supine": "insidiatum",
+
+    "translations": {
+      "en": "lie in ambush, plot against",
+      "la": "insidior"
+    },
+    "forms": {
+      "present_3sg": ["insidiatur"]  
+    }
+  },
+  {
+    "lemma": "pupillus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "pupillus",
+    "genitive": "pupilli",
+    "translations": {
+      "en": "orphan, ward",
+      "la": "pupillus"
+    }
+    
+  },
+  {
     "lemma": "infernus",
     "part_of_speech": "noun",
     "declension": 2,
@@ -2642,17 +2956,6 @@
         "translations": {
             "en": "to judge, decide",
             "la": "judico"
-        },
-        "forms": {
-            "present": ["judico", "judicas", "judicat", "judicamus", "judicatis", "judicant"],
-            "imperfect": ["judicabam", "judicabas", "judicabat", "judicabamus", "judicabatis", "judicabant"],
-            "future": ["judicabo", "judicabis", "judicabit", "judicabimus", "judicabitis", "judicabunt"],
-            "perfect": ["judicavi", "judicavisti", "judicavit", "judicavimus", "judicavistis", "judicaverunt"],
-            "imperative": ["judica"],
-            "present_passive": ["judicor", "judicaris", "judicatur", "judicamur", "judicamini", "judicantur"]
-        },
-        "forms_plural": {
-            "imperative": ["judicate"]
         }
     },
 
@@ -3624,15 +3927,6 @@
       "declension": 1,
       "nominative": "sagitta",
       "genitive": "sagittae",
-      "dative": "sagittae",
-      "accusative": "sagittam",
-      "ablative": "sagitta",
-      "vocative": "sagitta",
-      "nominative_plural": "sagittae",
-      "genitive_plural": "sagittarum",
-      "dative_plural": "sagittis",
-      "accusative_plural": "sagittas",
-      "ablative_plural": "sagittis",
       "translations": {
         "en": "arrow",
         "la": "sagitta"
@@ -4746,11 +5040,7 @@
       "gender": "neuter",
       "declension": 2,
       "nominative": "saeculum",
-      "genitive": "saeculi",
-      "dative": "saeculo",
-      "accusative": "saeculum",
-      "ablative": "saeculo",
-      "vocative": "saeculum",
+      "genitive": "saeculi",     
       "translations": {
         "en": "age, eternity, world",
         "la": "saeculum"
@@ -6940,22 +7230,9 @@
           "part_of_speech": "noun",
           "declension": 3,
           "gender": "feminine",
-          "forms": {
-            "nominative": ["salus"],
-            "genitive": ["salutis"],
-            "dative": ["saluti"],
-            "accusative": ["salutem"],
-            "ablative": ["salute"],
-            "vocative": ["salus"]
-          },
-          "forms_plural": {
-            "nominative": ["salutes"],
-            "genitive": ["salutum"],
-            "dative": ["salutibus"],
-            "accusative": ["salutes"],
-            "ablative": ["salutibus"],
-            "vocative": ["salutes"]
-          },
+          "nominative": "salus",
+          "genitive": "salutis",
+
           "translations": {
             "en": "salvation, safety, health, greeting",
             "la": "salus, salutis"
@@ -8317,7 +8594,7 @@
             "ablative_n": ["aeterno"]
         },
         "translations": {
-            "en": "eternal, everlasting",
+            "en": "eternal, everlasting, forever",
             "la": "aeternus"
         }
     },

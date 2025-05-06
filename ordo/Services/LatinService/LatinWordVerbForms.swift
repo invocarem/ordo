@@ -7,6 +7,7 @@ extension LatinWordEntity {
         
         // Get principal parts with nil checks
         let lemma = lemma.lowercased()
+        
         guard  let infinitive = infinitive?.lowercased() else { return [:] }
         let perfect = perfect?.lowercased() ?? ""
         let supine = supine?.lowercased() ?? ""
@@ -155,6 +156,12 @@ extension LatinWordEntity {
             presentStem + "erem", presentStem + "eres", presentStem + "eret",
             presentStem + "eremus", presentStem + "eretis", presentStem + "erent"
         ])
+        if conjugation == 1 {
+           addForm("present_passive_subjunctive", values: [
+                presentStem + "er", presentStem + "eris", presentStem + "etur",
+                presentStem + "emur", presentStem + "emini", presentStem + "entur"
+            ])
+        }
         
         return forms
     }

@@ -38,11 +38,11 @@ class Psalm9ATests: XCTestCase {
         let analysis = latinService.analyzePsalm(text: psalm9A)
         
         let praiseTerms = [
-            ("confiteor", ["confitebor"], "give thanks"), // v.1
+            ("confiteor", ["confitebor"], "confess"), // v.1
             ("narro", ["narrabo"], "declare"), // v.1
             ("laetor", ["laetabor"], "rejoice"), // v.2
             ("exsulto", ["exsultabo", "exsultabo"], "exult"), // v.2, v.14
-            ("psallo", ["psallam", "psallite"], "sing praises") // v.2, v.11
+            ("psallo", ["psallam", "psallite"], "praise") // v.2, v.11
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: praiseTerms)
@@ -53,9 +53,9 @@ class Psalm9ATests: XCTestCase {
         
         let justiceTerms = [
             ("judicium", ["judicium", "judicio", "judicia"], "judgment"), // v.4, v.7, v.16
-            ("justitia", ["justitiam", "justitia"], "justice"), // v.4, v.8
+            ("justus", ["justitiam", "justitia"], "justice"), // v.4, v.8
             ("aequitas", ["aequitate"], "equity"), // v.8
-            ("vindicta", ["requirens"], "vengeance") // v.12
+            ("requiro", ["requirens"], "seek") // v.12
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: justiceTerms)
@@ -68,7 +68,7 @@ class Psalm9ATests: XCTestCase {
             ("inimicus", ["inimicum", "inimici", "inimicis"], "enemy"), // v.3, v.6, v.13
             ("impius", ["impius"], "wicked"), // v.5
             ("peccator", ["peccator", "peccatores"], "sinner"), // v.16, v.17
-            ("peribit", ["peribunt", "periit", "peribit"], "perish") // v.3, v.5, v.18
+            ("pereo", ["peribunt", "periit", "peribit"], "perish") // v.3, v.5, v.18
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: enemyTerms)
@@ -80,8 +80,8 @@ class Psalm9ATests: XCTestCase {
         let protectionTerms = [
             ("refugium", ["refugium"], "refuge"), // v.9
             ("adjutor", ["adjutor"], "helper"), // v.9
-            ("salus", ["salutari"], "salvation"), // v.14
-            ("exalto", ["exaltas"], "lift up") // v.13
+            ("salutor", ["salutari"], "greet"), // v.14
+            ("exalto", ["exaltas"], "raise up") // v.13
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: protectionTerms)
@@ -91,7 +91,7 @@ class Psalm9ATests: XCTestCase {
         let analysis = latinService.analyzePsalm(text: psalm9A)
         
         let eternalTerms = [
-            ("aeternum", ["aeternum", "aeternum"], "forever"), // v.5, v.7
+            ("aeternus", ["aeternum", "aeternum"], "forever"), // v.5, v.7
             ("saeculum", ["saeculum"], "age"), // v.5
             ("permaneo", ["permanet"], "endure"), // v.7
             ("finis", ["finem", "finem"], "end") // v.6, v.18
@@ -189,7 +189,8 @@ class Psalm9BTests: XCTestCase {
             ("peccator", ["peccator", "peccatoris"], "sinner"), // v.5, v.20
             ("iniquus", ["iniquus"], "unjust"), // v.5
             ("dolus", ["dolo"], "deceit"), // v.10
-            ("insidiae", ["insidiis", "insidiatur", "insidiatur"], "ambush") // v.11, v.12, v.13
+            ("insidia", ["insidiis" ], "ambush"), // v.11, v.12, v.13
+            ("insidior", ["insidiatur", "insidiatur"], "ambush") // v.12, v.13
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: wickedTerms)
@@ -225,9 +226,9 @@ class Psalm9BTests: XCTestCase {
         let analysis = latinService.analyzePsalm(text: psalm9B)
         
         let hopeTerms = [
-            ("aeternum", ["aeternum"], "forever"), // v.21
+            ("aeternus", ["aeternum"], "forever"), // v.21
             ("saeculum", ["saeculum"], "age"), // v.21
-            ("peribit", ["peribitis"], "perish"), // v.21
+            ("pereo", ["peribitis"], "perish"), // v.21
             ("exaudio", ["exaudivit"], "hear") // v.22
         ]
         

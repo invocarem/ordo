@@ -277,8 +277,8 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
      // print(formToLemma.filter { $0.value.contains("multiplio") }.keys.sorted())
       //("elogium", ["elogia"], "expression"),
       // ("eloquium", ["eloquium"], "word")
-   let debugForms = formToLemma.filter { $0.value.contains("confessio") }.keys.sorted()
-    print("Debug - Forms mapping to 'confessio': \(debugForms)")
+   let debugForms = formToLemma.filter { $0.value.contains("salus") }.keys.sorted()
+    print("Debug - Forms mapping to 'salus': \(debugForms)")
 
    //let debugForms2 = formToLemma.filter { $0.value.contains("eloquium") }.keys.sorted()
     //print("Debug - Forms mapping to 'eloquium': \(debugForms2)")

@@ -5,7 +5,7 @@ struct LemmaMapping {
         self.wordEntities = wordEntities
     }
     func dump(entity: LatinWordEntity) {
-        let dumpkey = "deprecor"
+        let dumpkey = "insidiae"
         if entity.lemma.lowercased() == dumpkey {
                 print("\n=== Generating forms for \(dumpkey) ===")
                 let forms = entity.generatedVerbForms()
