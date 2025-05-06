@@ -1,5 +1,94 @@
  [
   {
+    "lemma": "infernus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "infernus",
+    "genitive": "inferni",
+    "translations": {
+      "en": "hell, underworld",
+      "la": "infernus"
+    }
+  },
+
+  {
+    "lemma": "erubesco",
+    "part_of_speech": "verb",
+    "infinitive": "erubescere",
+    "perfect": "erubui",
+    "translations": {
+      "en": "be ashamed, blush",
+      "la": "erubesco"
+    },
+    "forms": {
+      "present_subjunctive": ["erubescant"]  
+    }
+  },
+  {
+    "lemma": "rigo",
+    "part_of_speech": "verb",
+    "infinitive": "rigare",
+    "perfect": "rigavi",
+    "future": "rigabo",
+    "translations": {
+      "en": "drench, water, irrigate",
+      "la": "rigo"
+    },
+    "forms": {
+      "future": ["rigabo"]  
+    }
+  },
+  {
+    "lemma": "portio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "portio",
+    "genitive": "portionis",
+    "translations": {
+      "en": "portion, share",
+      "la": "portio"
+    }
+  },
+
+  {
+    "lemma": "effundo",
+    "part_of_speech": "verb",
+    "infinitive": "effundere",
+    "perfect": "effudi",
+    "supine": "effusum",
+    "translations": {
+      "en": "pour out, shed",
+      "la": "effundo"
+    }
+  },
+
+    {
+    "lemma": "laqueus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "laqueus",
+    "genitive": "laquei",
+    "translations": {
+      "en": "snare, trap",
+      "la": "laqueus"
+    }
+  },
+  {
+    "lemma": "fuga",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "fuga",
+    "genitive": "fugae",
+    "translations": {
+      "en": "flight, escape",
+      "la": "fuga"
+    }
+  },
+  {
     "lemma": "usura",
     "part_of_speech": "noun",
     "declension": 1,
@@ -2184,6 +2273,18 @@
         "imperative": ["obumbra"]
     }
 },
+{
+  "lemma": "liber",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "libera",
+  "genitive": "liberae",
+  "translations": {
+    "en": "free",
+    "la": "libera"
+  }
+},
   {
     "lemma": "libero",
     "part_of_speech": "verb",
@@ -2919,17 +3020,8 @@
         "declension": 1,
         "nominative": "custodia",
         "genitive": "custodiae",
-        "dative": "custodiae",
-        "accusative": "custodiam",
-        "ablative": "custodia",
-        "vocative": "custodia",
-        "nominative_plural": "custodiae",
-        "genitive_plural": "custodiarum",
-        "dative_plural": "custodiis",
-        "accusative_plural": "custodias",
-        "ablative_plural": "custodiis",
         "translations": {
-          "en": "watch, guard, protection",
+          "en": "prison, watch, guard, protection",
           "la": "custodia"
         }
       },{
@@ -4664,7 +4756,32 @@
         "la": "saeculum"
       }
     },
-  
+    {
+      "lemma": "educo",
+      "part_of_speech": "verb",
+      "infinitive": "educere",
+      "perfect": "eduxi",
+      "supine": "eductum",
+      "forms": {
+        "imperative": ["educ"]
+      },
+      "translations": {
+        "en": "lead out",
+        "la": "educ"
+      }
+    },
+    {
+      "lemma": "confessio",
+      "part_of_speech": "noun",
+      "declension": 3,
+      "gender": "feminine",
+      "nominative": "confessio",
+      "genitive": "confessionis",
+      "translations": {
+        "en": "confession, acknowledgment",
+        "la": "confessio"
+      }
+    },
     {
       "lemma": "clamo",
       "part_of_speech": "verb",
@@ -10223,6 +10340,39 @@
     "translations": {
       "en": "throw forth, cast out, abandon",
       "la": "projicio, proicere, proieci, proiectum"
+    }
+  },
+  {
+    "lemma": "deprecor",
+    "part_of_speech": "verb",
+    "perfect": "deprecatus",
+    "infinitive": "deprecari",    
+    "supine": "deprecatum",
+    "translations": {
+      "en": "to beg, plead",
+      "la": "deprecari"
+    }
+  },
+  {
+    "lemma": "intende",
+    "part_of_speech": "verb",
+    "perfect": "intendi",
+    "infinitive": "intendere",
+    "supine": "intentum",
+    "translations": {
+      "en": "pay attention",
+      "la": "intende"
+    }
+  },
+  {
+    "lemma": "cognosco",
+    "part_of_speech": "verb",
+    "perfect": "cognovi",
+    "infinitive": "cognoscere",    
+    "supine": "cognitum",
+    "translations": {
+      "en": "know",
+      "la": "cognosco"
     }
   },
   {

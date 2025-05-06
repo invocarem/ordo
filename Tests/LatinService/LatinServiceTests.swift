@@ -33,7 +33,40 @@ final class LatinServiceTests: XCTestCase {
     func testTranslationsAreLoaded() {
         XCTAssertFalse(latinService.getTranslations().isEmpty, "Should have loaded translations")
     }
-   
+    func testIntendeGeneration() {
+        let intende = LatinWordEntity(
+            lemma: "intende",
+            partOfSpeech: .verb,
+            perfect: "intendi",
+            infinitive: "intendere",            
+            supine: "intentum"
+        )
+        
+        let forms = intende.generatedVerbForms()
+         print(forms["present"]!)
+         print(forms["perfect"]!)
+          print(forms["past_participle"]!)
+        // Verify present system
+        XCTAssertEqual(forms["present"], ["intendeo", "intendes", "intendet", "intendemus", "intendetis", "intendent"])
+        XCTAssertEqual(forms["perfect"], ["intendi", "intendisti", "intendit", "intendimus", "intendistis", "intenderunt"])
+        
+        // Verify participle
+        XCTAssertEqual(forms["past_participle"], ["intentus"])
+    }
+    func testCognosco() {
+        let cognosco = LatinWordEntity(
+            lemma: "cognosco",
+            partOfSpeech: .verb,
+            perfect: "cognovi",
+            infinitive: "cognoscere",            
+            supine: "cognitum"
+        )
+
+        let forms = cognosco.generatedVerbForms()
+        print(forms["perfect"]!)  // Includes "cognovisti"
+        //print(forms["present_passive"]!) 
+        print(forms["imperfect_subjunctive"]!)  // Includes "cognosceret"
+    }
     func testAnalyzePsalm66() {
         let analysis = latinService.analyzePsalm(text: psalm66)
         

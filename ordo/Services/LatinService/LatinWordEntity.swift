@@ -34,6 +34,7 @@ public struct LatinWordEntity: Codable {
     // Verb-specific properties
     public let perfect: String?
     public let infinitive: String?
+    public let supine: String?
     
     public let forms: [String: [String]]?
     public let formsPlural: [String: [String]]?
@@ -81,6 +82,7 @@ public struct LatinWordEntity: Codable {
         possessive: PossessiveForms? = nil,
         perfect: String? = nil,
         infinitive: String? = nil,
+        supine: String? = nil,
         forms: [String: [String]]? = nil,
         formsPlural: [String: [String]]? = nil,
         baseForm: String? = nil,
@@ -106,6 +108,7 @@ public struct LatinWordEntity: Codable {
         self.possessive = possessive
         self.perfect = perfect
         self.infinitive = infinitive
+        self.supine = supine
         self.forms = forms
         self.formsPlural = formsPlural
         self.baseForm = baseForm
@@ -129,6 +132,7 @@ public struct LatinWordEntity: Codable {
         case ablative_plural = "ablative_plural"
         case possessive
         case perfect, infinitive, forms
+        case supine
         case formsPlural = "forms_plural"
         case baseForm = "base_form"
         case derivedFrom = "derived_from"

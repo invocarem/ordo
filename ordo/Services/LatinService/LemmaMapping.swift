@@ -4,11 +4,30 @@ struct LemmaMapping {
     init(wordEntities: [LatinWordEntity]) {
         self.wordEntities = wordEntities
     }
+    func dump(entity: LatinWordEntity) {
+        let dumpkey = "deprecor"
+        if entity.lemma.lowercased() == dumpkey {
+                print("\n=== Generating forms for \(dumpkey) ===")
+                let forms = entity.generatedVerbForms()
+
+                print("\nAll forms of \(dumpkey):")
+                print("\(entity)")
+                forms.sorted(by: { $0.key < $1.key }).forEach { formType, forms in
+                    print("- \(formType): \(forms.joined(separator: ", "))")
+                }
+                
+                
+                
+                // Print the lemma mapping being created
+                print("\nResulting mappings:")
+            }
+        }
     
     func createFormToLemmaMapping() -> [String: [String]] {
         var mapping: [String: [String]] = [:]
         
         for entity in wordEntities {
+        
             
             // Map all standard case forms
             mapStandardForms(from: entity, to: &mapping)
@@ -18,6 +37,18 @@ struct LemmaMapping {
             // Map verb forms if applicable
             if entity.partOfSpeech == .verb {
                 mapVerbForms(from: entity, to: &mapping)
+
+                //dump(entity: entity)
+
+                // Then add generated forms (won't override existing entries)
+                let generated = entity.generatedVerbForms()
+                for (_, forms) in generated {
+                    for form in forms {
+                        if !mapping[form, default: []].contains(entity.lemma) {
+                            mapping[form, default: []].append(entity.lemma)
+                        }
+                    }
+                }
             }
             
             
@@ -131,5 +162,8 @@ struct LemmaMapping {
                 }
             }
         }
+        let generatedForms = Array(entity.generatedForms.values)
+    
+       
     }
 }

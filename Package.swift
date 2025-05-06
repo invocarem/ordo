@@ -60,6 +60,7 @@ let package = Package(
             sources: ["LatinService.swift", 
                 "LatinWordEntity.swift", 
                 "LatinWordAnalysis.swift",
+                "LatinWordVerbForms.swift",
                 "LemmaMapping.swift"
             ],
             resources: [.process("words.json"), .process("translations.json")]
@@ -109,6 +110,8 @@ let package = Package(
                  
                 "Psalm133Tests.swift", 
                 "Psalm136Tests.swift", 
+
+                "Psalm141Tests.swift", 
                 "PsalmDegreesTests.swift", 
                 "Psalm36ATests.swift",                    
                 "Psalm36BTests.swift"

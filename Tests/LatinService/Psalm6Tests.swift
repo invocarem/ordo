@@ -30,7 +30,7 @@ class Psalm6Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(text: psalm6)
         
         let penitentialTerms = [
-            ("miserere", ["miserere"], "have mercy"),
+            ("misereor", ["miserere"], "have mercy"),
             ("fletus", ["fletus"], "weeping"),
             ("lacrima", ["lacrimis"], "tears"),
             ("gemitus", ["gemitu"], "groaning"),
@@ -47,7 +47,7 @@ class Psalm6Tests: XCTestCase {
             ("invetero", ["inveteravi"], "grow old"), // Hapax legomenon
             ("rigo", ["rigabo"], "drench"),
             ("erubesco", ["erubescant"], "ashamed"),
-            ("confitear", ["confitebitur"], "confess")
+            ("confiteor", ["confitebitur"], "confess")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: rareVerbs)
