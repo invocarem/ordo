@@ -162,8 +162,7 @@ struct LemmaMapping {
                 }
             }
         }
-        let generatedForms = Array(entity.generatedForms.values)
-    
+        
        
     }
 }

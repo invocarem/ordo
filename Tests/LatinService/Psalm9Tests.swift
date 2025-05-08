@@ -175,7 +175,7 @@ class Psalm9BTests: XCTestCase {
             ("exsurgo", ["exsurge", "exsurge"], "arise"), // v.1, v.16
             ("judico", ["judicentur"], "judge"), // v.1
             ("constituo", ["constitue"], "appoint"), // v.2
-            ("contero", ["contere"], "break") // v.20
+            ("contero", ["contere"], "crush") // v.20
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: interventionTerms)
@@ -215,8 +215,8 @@ class Psalm9BTests: XCTestCase {
         let attributeTerms = [
             ("legislator", ["legislatorem"], "lawgiver"), // v.2
             ("regno", ["regnabit"], "reign"), // v.21
-            ("justitia", ["judicare"], "justice"), // v.23
-            ("memor", ["obliviscaris"], "remember") // v.16 (negative)
+            ("judico", ["judicare"], "judge"), // v.23
+            ("obliviscor", ["obliviscaris"], "forget") // v.16 (negative)
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: attributeTerms)

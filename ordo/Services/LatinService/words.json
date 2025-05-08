@@ -1,4 +1,217 @@
  [
+     {
+       "lemma": "heu",
+       "part_of_speech": "interjection",
+       "translations": {
+         "en": "alas!, oh!, woe!",
+         "la": "heu"
+       }
+      
+      },
+
+      
+        {
+          "lemma": "scutum",
+          "part_of_speech": "noun",
+          "gender": "neuter",
+          "declension": 2,
+          "nominative": "scutum",
+          "genitive": "scuti",
+          "translations": {
+            "en": "shield",
+            "la": "scutum"
+          }
+        },
+        {
+          "lemma": "corono",
+          "part_of_speech": "verb",
+          "perfect": "coronavi",
+          "infinitive": "coronare",
+          "supine": "coronatum",
+          "forms": {
+            
+            "perfect": ["coronavi", "coronavisti/coronasti", "coronavit", "coronavimus", "coronavistis", "coronaverunt"],
+            
+          },
+          "translations": {
+            "en": "to crown",
+            "la": "corono"
+          }
+        },
+      
+      {
+        "lemma": "mane",
+        "part_of_speech": "noun",
+        "gender": "neuter",
+        "genitive": "manis",
+        "nominative": "mane",
+        "translations": {
+          "en": "morning",
+          "la": "mane"
+        }
+      },
+      {
+        "lemma": "vanus",
+        "part_of_speech": "adjective",
+        "declension": 1,
+        "nominative": "vanus",
+        "genitive": "vani",
+        "forms": {
+          "nominative_f": ["vana"],
+          "genitive_f": ["vanae"],
+          "nominative_n": ["vanum"],
+          "genitive_n": ["vani"]
+        },
+        "translations": {
+          "en": "empty, vain, worthless",
+          "la": "vanus"
+        }
+      },
+        {
+          "lemma": "labium",
+          "part_of_speech": "noun",
+          "gender": "neuter",
+          "declension": 2,
+          "nominative": "labium",
+          "genitive": "labii",
+          "translations": {
+            "en": "lip",
+            "la": "labium"
+          }
+        },
+        {
+          "lemma": "dolosus",
+          "part_of_speech": "adjective",
+          "declension": 1,
+          "nominative": "dolosus",
+          "genitive": "dolosi",
+          "translations": {
+            "en": "deceitful, crafty",
+            "la": "dolosus"
+          }
+        },
+        {
+          "lemma": "lingua",
+          "part_of_speech": "noun",
+          "gender": "feminine",
+          "declension": 1,
+          "nominative": "lingua",
+          "genitive": "linguae",
+          "translations": {
+            "en": "tongue, language",
+            "la": "lingua"
+          }
+        },
+        {
+          "lemma": "magniloquus",
+          "part_of_speech": "adjective",
+          "declension": 1,
+          "nominative": "magniloquus",
+          "genitive": "magniloqui",
+          "translations": {
+            "en": "boastful, pompous",
+            "la": "magniloquus"
+          }
+        },
+      
+      
+        {
+          "lemma": "argentum",
+          "part_of_speech": "noun",
+          "gender": "neuter",
+          "declension": 2,
+          "nominative": "argentum",
+          "genitive": "argenti",
+          "translations": {
+            "en": "silver",
+            "la": "argentum"
+          }
+        },
+        {
+          "lemma": "examino",
+          "part_of_speech": "verb",
+          "perfect": "examinavi",
+          "infinitive": "examinare",
+          "supine": "examinatum",
+          "translations": {
+            "en": "to test, examine",
+            "la": "examino"
+          }
+        },
+        {
+          "lemma": "probo",
+          "part_of_speech": "verb",
+          "perfect": "probavi",
+          "infinitive": "probare",
+          "supine": "probatum",
+          "translations": {
+            "en": "to prove, approve, test",
+            "la": "probo"
+          }
+        },
+        {
+          "lemma": "purgo",
+          "part_of_speech": "verb",
+          "perfect": "purgavi",
+          "infinitive": "purgare",
+          "supine": "purgatum",
+          "translations": {
+            "en": "to refine, purify, cleanse",
+            "la": "purgo"
+          }
+        },
+      
+
+
+      {
+        "lemma": "uro",
+        "part_of_speech": "verb",
+        "perfect": "ussi",
+        "infinitive": "urere",
+        "supine": "ustum",
+        "translations": {
+          "en": "to burn, scorch, inflame",
+          "la": "uro"
+        }
+      },
+      {
+        "lemma": "venio",
+        "part_of_speech": "verb",
+        "perfect": "veni",
+        "infinitive": "venire",
+        "supine": "ventum",
+        "translations": {
+          "en": "come, arrive",
+          "la": "venio"
+        }
+      },
+        {
+          "lemma": "sol",
+          "part_of_speech": "noun",
+          "gender": "masculine",
+          "declension": 3,
+          "nominative": "sol",
+          "genitive": "solis",
+         
+          "translations": {
+            "en": "sun",
+            "la": "sol"
+          }
+        },
+        {
+          "lemma": "luna",
+          "part_of_speech": "noun",
+          "gender": "feminine",
+          "declension": 1,
+          "nominative": "luna",
+          "genitive": "lunae",
+         
+          "translations": {
+            "en": "moon",
+            "la": "luna"
+          }
+        },
+      
   {
     "lemma": "deleo",
     "part_of_speech": "verb",
@@ -149,6 +362,9 @@
     "translations": {
       "en": "to seek, demand, require",
       "la": "requiro"
+    },
+    "forms": {
+     "present_participle": ["requirens"]
     },
     "notes": "Often implies a forceful or legal demand (cf. English 'requisition'). Present participle 'requirens' agrees in case/number with its subject."
   },
@@ -704,6 +920,17 @@
       "pluperfect": ["exsultaveram", "exsultaveras", "exsultaverat", "exsultaveramus", "exsultaveratis", "exsultaverant"],
       "subjunctive_present": ["exsultem", "exsultes", "exsultet", "exsultemus", "exsultetis", "exsultent"],
       "subjunctive_imperfect": ["exsultarem", "exsultares", "exsultaret", "exsultaremus", "exsultaretis", "exsultarent"]
+    }
+  },
+  {
+    "lemma": "regno",
+    "part_of_speech": "verb",
+    "perfect": "regnavi",
+    "infinitive": "regnare",
+    "supine": "regnatum",
+    "translations": {
+      "en": "to reign, rule",
+      "la": "regno"
     }
   },
   {
@@ -3747,7 +3974,7 @@
         {
           "lemma": "odi",
           "part_of_speech": "verb",
-          "conjugation": "defective",
+          "conjugation": 2,
           "deponent": false,
           "infinitive": "odisse",
           "forms": {
@@ -4815,16 +5042,8 @@
       "nominative": "atrium",
       "genitive": "atrii",
       "dative": "atrio",
-      "accusative": "atrium",
-      "ablative": "atrio",
-      "vocative": "atrium",
-      "nominative_plural": "atria",
-      "genitive_plural": "atriorum",
-      "dative_plural": "atriis",
-      "accusative_plural": "atria",
-      "ablative_plural": "atriis",
       "translations": {
-        "en": "court, hall, atrium",
+        "en": "central hall, sacred space",
         "la": "atrium"
       }
     },
@@ -4912,7 +5131,7 @@
       "part_of_speech": "verb",
       "conjugation": 3,
       "infinitive": "loqui",
-      "perfect": "locutus sum",
+      "perfect": "locutus",
       "supine": "locutum",
       "translations": {
         "en": "to speak, talk",
@@ -8707,6 +8926,39 @@
             }
           },
           {
+            "lemma": "septuplus",
+            "part_of_speech": "adjective",
+            "declension": 1,
+            "nominative": "septuplus",
+            "genitive": "septupli",
+            "forms": {
+              "nominative_f": ["septupla"],
+              "accusative_f": ["septuplam"],
+              "ablative_f": ["septupla"],
+              "nominative_n": ["septuplum"],
+              "accusative_n": ["septuplum"],
+              "ablative_n": ["septuplo"]
+            },
+            "translations": {
+              "en": "sevenfold",
+              "la": "septuplus"
+            }
+          },
+          {
+            "lemma": "multiplico",
+            "part_of_speech": "verb",
+            "perfect": "multiplicavi",
+            "infinitive": "multiplicare",
+            "supine": "multiplicatum",
+            "forms": {
+                "perfect": ["multiplicavi", "multiplicavisti/multiplicasti", "multiplicavit", "multiplicavimus", "multiplicavistis", "multiplicaverunt"]
+            },
+            "translations": {
+              "en": "multiply, increase",
+              "la": "multiplico"
+            }
+          },
+          {
             "lemma": "multiplio",
             "part_of_speech": "verb",
             "conjugation": 1,  
@@ -8788,8 +9040,10 @@
         "part_of_speech": "verb",
         "perfect": "disperdidi",
         "infinitive": "disperdere",
+
+        "supine": "disperditum",
         "forms": {
-            "perfect": ["disperdidi", "disperdidisti", "disperdidit", "disperdidimus", "disperdidistis", "disperdiderunt"]
+          "present_passive_subjunctive": ["disperdam", "disperdas", "disperdat", "disperdamus", "disperdatis", "disperdant"]
         },
         "translations": {
             "en": "destroy utterly, ruin, waste"
@@ -10420,18 +10674,17 @@
       "la": "salvare"
     }
   },
+  
   {
     "lemma": "desum",
     "part_of_speech": "verb",
-    "conjugation": "irregular",  
-    "forms": {
-      "present": ["desum", "deses", "dest", "desumus", "destis", "desunt"],
-      "future": ["deero", "deeris", "deerit", "deerimus", "deeritis", "deerunt"],
-      "perfect": ["defui", "defuisti", "defuit"]
-    },
+    "conjugation": 1,
+    "perfect": "defui",
+    "infinitive": "deesse",
+    "supine": "defuturum", 
     "translations": {
-      "en": "to be lacking",
-      "la": "deesse"
+      "en": "to be lacking, fail",
+      "la": "desum"
     }
   },
 
@@ -10639,6 +10892,18 @@
     "translations": {
       "en": "pay attention",
       "la": "intende"
+    }
+  },
+  {
+    "lemma": "malus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "malus",
+    "genitive": "mali",
+    "translations": {
+      "en": "bad, evil",
+      "la": "malus"
     }
   },
   {

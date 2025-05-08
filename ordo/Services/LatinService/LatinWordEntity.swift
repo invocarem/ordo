@@ -35,6 +35,8 @@ public struct LatinWordEntity: Codable {
     public let perfect: String?
     public let infinitive: String?
     public let supine: String?
+
+    public let conjugation: Int?
     
     public let forms: [String: [String]]?
     public let formsPlural: [String: [String]]?
@@ -83,6 +85,7 @@ public struct LatinWordEntity: Codable {
         perfect: String? = nil,
         infinitive: String? = nil,
         supine: String? = nil,
+        conjugation: Int? = nil,
         forms: [String: [String]]? = nil,
         formsPlural: [String: [String]]? = nil,
         baseForm: String? = nil,
@@ -109,6 +112,7 @@ public struct LatinWordEntity: Codable {
         self.perfect = perfect
         self.infinitive = infinitive
         self.supine = supine
+        self.conjugation = conjugation
         self.forms = forms
         self.formsPlural = formsPlural
         self.baseForm = baseForm
@@ -133,6 +137,7 @@ public struct LatinWordEntity: Codable {
         case possessive
         case perfect, infinitive, forms
         case supine
+        case conjugation
         case formsPlural = "forms_plural"
         case baseForm = "base_form"
         case derivedFrom = "derived_from"
@@ -143,7 +148,7 @@ public struct LatinWordEntity: Codable {
 
 // Enums for type safety
 public enum PartOfSpeech: String, Codable {
-    case noun, verb, pronoun, adjective, adverb,preposition,conjunction
+    case noun, verb, pronoun, adjective, adverb,preposition,conjunction,interjection
 }
 
 public enum Gender: String, Codable {

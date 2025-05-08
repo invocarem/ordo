@@ -47,7 +47,7 @@ class Psalm11Tests: XCTestCase {
             ("dolosus", ["dolosa"], "deceitful"),
             ("lingua", ["linguam", "lingua"], "tongue"),
             ("magniloquus", ["magniloquam"], "boastful"),
-            ("vanus", ["Vana"], "empty")
+            ("vanus", ["vana"], "empty")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: speechTerms)
@@ -86,7 +86,7 @@ class Psalm11Tests: XCTestCase {
         
         let actionTerms = [
             ("exsurgo", ["exsurgam"], "arise"),
-            ("disperdo", ["Disperdat"], "destroy"),
+            ("disperdo", ["disperdat"], "destroy"),
             ("multiplico", ["multiplicasti"], "multiply"),
             ("facio", ["fac"], "make"),
             ("deficio", ["defecit"], "fail")
