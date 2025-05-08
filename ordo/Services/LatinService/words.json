@@ -1,4 +1,134 @@
  [
+  {
+    "lemma": "corrumpo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "corrumpere",
+    "present": "corrumpo",
+    "perfect": "corrupi",
+    "supine": "corruptum",
+    "translations": {
+      "en": "to corrupt, ruin, destroy",
+      "la": "corrumpo, corrumpere"
+    }
+  },
+  {
+    "lemma": "jacob",
+    "part_of_speech": "noun",
+    "gender": "masculine",
+    "declension": 3,
+    "nominative": "Jacob",
+    "genitive": "Jacobis",
+    
+    "translations": {
+      "en": "Jacob (Biblical patriarch)",
+      "la": "Jacob"
+    
+    },
+    "notes": "Hebrew origin; often appears in Vulgate as 'Jacob' (indeclinable in some texts)"
+  },
+  {
+    "lemma": "israel",
+    "part_of_speech": "noun",
+    "gender": "masculine",    
+    "nominative": "israel",
+    "translations": {
+      "en": "israel (name/nation)",
+      "la": "israel"      
+    },
+    "notes": "Hebrew origin; typically indeclinable in Latin (but some texts use genitive 'Israelis')"
+  },
+  {
+    "lemma": "inutilis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "nominative": "inutilis",
+    "genitive": "inutilis",    
+    "translations": {
+      "en": "worthless, useless, unprofitable",
+      "la": "inutilis"
+    }
+  },
+  {
+    "lemma": "declino",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "declinare",
+    "present": "declino",
+    "perfect": "declinavi",
+    "supine": "declinatum",
+    
+    "translations": {
+      "en": "to turn aside, deviate, avoid",
+      "la": "declino, declinare"
+    }
+  },
+  {
+    "lemma": "panis",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "panis",
+    "genitive": "panis",
+    "translations": {
+      "en": "bread",
+      "la": "panis"
+    }
+  },
+  {
+    "lemma": "plebs",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "plebs",
+    "genitive": "plebis",
+    "translations": {
+      "en": "people, common folk",
+      "la": "plebs, plebis"
+    }
+  },
+  {
+    "lemma": "devoro",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "devorare",
+    "present": "devoro",
+    "perfect": "devoravi",
+    "supine": "devoratum",    
+    "translations": {
+      "en": "to devour, swallow up",
+      "la": "devoro, devorare"
+    }
+  },
+  {
+    "lemma": "canto",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "cantare",
+    "present": "canto",
+    "perfect": "cantavi",
+    "supine": "cantatum",
+    "translations": {
+      "en": "to sing, chant, celebrate",
+      "la": "canto, cantare"
+    }
+    
+    
+  },
+  {    
+    "lemma": "praevaleo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "praevalere",
+    "perfect": "praevalui",
+    "supine": "praevalitum",
+    "present": "praevaleo",
+    "translations": {
+      "en": "to prevail, have superior strength",
+      "la": "praevaleo, praevalēre"
+    }
+    
+  },
      {
        "lemma": "heu",
        "part_of_speech": "interjection",
@@ -8,7 +138,40 @@
        }
       
       },
+      {
+        "lemma": "per",
+        "part_of_speech": "preposition",
+        "translations": {
+          "en": "through, by means of, during",
+          "la": "per"
+        }
+      },
+      {
+        "lemma": "quandiu",
+        "part_of_speech": "adverb",
+        "translations": {
+          "en": "how long",
+          "la": "quandiu"
+        }
+      },
+      {
+        "lemma": "umquam",
+        "part_of_speech": "adverb",
+        "translations": {
+          "en": "ever, at any time",
+          "la": "umquam"
+        }
+      },
 
+      {
+        "lemma": "usquequo",
+        "part_of_speech": "adverb",
+        "translations": {
+          "en": "how long?, until when?, how far?",
+          "la": "usquequo"
+        },
+        "notes": "An interrogative adverb expressing duration or extent of time"
+      },
       
         {
           "lemma": "scutum",
@@ -381,6 +544,19 @@
     "la": "adjutor"
   },
   "notes": "Derived from 'adjuvare' (to help). Often used in Christian Latin for divine helpers (e.g., 'Adjutor meus es tu' = 'You are my helper')."
+},
+{
+  "lemma": "saluto",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "salutare",
+  "present": "saluto",
+  "perfect": "salutavi",
+  "supine": "salutatum",
+  "translations": {
+    "en": "to greet, wish health, save",
+    "la": "saluto, salutare"
+  }
 },
   {
     "lemma": "salutor",
@@ -10915,6 +11091,22 @@
     "translations": {
       "en": "know",
       "la": "cognosco"
+    }
+  },
+  {
+    "lemma": "respicio",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "respicere",
+    "present": "respicio",
+    "perfect": "respexi",
+    "supine": "respectum",
+    "forms": {
+      "imperative": ["respice"]
+      },
+    "translations": {
+      "en": "to look back at, regard, consider",
+      "la": "respicio, respicere"
     }
   },
   {

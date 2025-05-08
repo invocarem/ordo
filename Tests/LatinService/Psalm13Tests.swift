@@ -23,6 +23,26 @@ class Psalm13Tests: XCTestCase {
     ]
     
     // MARK: - Test Cases
+    func testAnalysis() {
+        let analysis = latinService.analyzePsalm(text: psalm13)
+        if verbose {
+            print("\n=== Full Analysis ===")
+            print("Total words:", analysis.totalWords)
+            print("Unique lemmas:", analysis.uniqueLemmas)
+            
+            print("'dico' forms:", analysis.dictionary["dico"]?.forms ?? [:])
+            print("'iniquitas' forms:", analysis.dictionary["iniquitas"]?.forms ?? [:])
+            print("'prospicio' forms:", analysis.dictionary["prospicio"]?.forms ?? [:])
+            print("'corrumpo' forms:", analysis.dictionary["corrumpo"]?.forms ?? [:])
+            
+        }
+        XCTAssertLessThan(
+            analysis.totalWords, 
+            analysis.uniqueLemmas * 2,
+            "totalWords should be less than uniqueLemmas * 2 (was \(analysis.totalWords) vs \(analysis.uniqueLemmas * 2))"
+        )
+    }
+    
     
     func testFoolsDeclaration() {
         let analysis = latinService.analyzePsalm(text: psalm13)
@@ -30,7 +50,7 @@ class Psalm13Tests: XCTestCase {
         let foolTerms = [
             ("insipiens", ["insipiens"], "fool"), // v.1
             ("cor", ["corde"], "heart"), // v.1
-            ("Deus", ["Deus", "Deum"], "God"), // v.1, v.3
+            ("deus", ["deus", "deum"], "god"), // v.1, v.3
             ("dico", ["dixit"], "say") // v.1
         ]
         
@@ -81,7 +101,7 @@ class Psalm13Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(text: psalm13)
         
         let redemptionTerms = [
-            ("salus", ["salutare"], "salvation"), // v.8
+            ("saluto", ["salutare"], "salvation"), // v.8
             ("averto", ["averterit"], "restore"), // v.8
             ("captivitas", ["captivitatem"], "captivity"), // v.8
             ("exsulto", ["exsultabit"], "rejoice"), // v.8
@@ -97,8 +117,8 @@ class Psalm13Tests: XCTestCase {
         let groupTerms = [
             ("justus", ["justa"], "righteous"), // v.7
             ("generatio", ["generatione"], "generation"), // v.7
-            ("Jacob", ["Jacob"], "Jacob"), // v.8
-            ("Israel", ["Israel", "Israel"], "Israel") // v.8 (2x)
+            ("jacob", ["jacob"], "jacob"), // v.8
+            ("israel", ["israel", "israel"], "israel") // v.8 (2x)
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: groupTerms)

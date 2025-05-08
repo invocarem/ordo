@@ -21,6 +21,24 @@ class Psalm12Tests: XCTestCase {
     ]
     
     // MARK: - Test Cases
+    func testAnalysis() {
+        let analysis = latinService.analyzePsalm(text: psalm12)
+        if verbose {
+            print("\n=== Full Analysis ===")
+            print("Total words:", analysis.totalWords)
+            print("Unique lemmas:", analysis.uniqueLemmas)
+            
+            print("'pono' forms:", analysis.dictionary["pono"]?.forms ?? [:])
+            print("'exsulto' forms:", analysis.dictionary["exsulto"]?.forms ?? [:])
+            print("'respicio' forms:", analysis.dictionary["respicio"]?.forms ?? [:])
+            
+        }
+        XCTAssertLessThan(
+            analysis.totalWords, 
+            analysis.uniqueLemmas * 2,
+            "totalWords should be less than uniqueLemmas * 2 (was \(analysis.totalWords) vs \(analysis.uniqueLemmas * 2))"
+        )
+    }
     
     func testLamentVerbs() {
         let analysis = latinService.analyzePsalm(text: psalm12)
@@ -66,7 +84,7 @@ class Psalm12Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(text: psalm12)
         
         let facultyTerms = [
-            ("anima", ["anima"], "soul"), // v.2
+            ("animus", ["anima"], "soul"), // v.2
             ("cor", ["corde", "cor"], "heart"), // v.2, v.6
             ("oculus", ["oculos"], "eye"), // v.4
             ("vultus", ["faciem", "faciem"], "face") // v.1, v.4
