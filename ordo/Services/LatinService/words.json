@@ -1,4 +1,202 @@
- [
+ [ 
+
+ {
+  "lemma": "laetor",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "laetari",
+  "perfect": "laetatus sum",
+  "present": "laetor",
+  "future": "laetabor",
+  "forms_plural": {
+    "present_participle_nominative": ["laetantes"]
+  },
+  "translations": {
+    "en": "rejoice, be glad",
+    "la": "laetor, laetari"
+  },
+  "notes": "Deponent verb, only has passive forms with active meaning"
+},
+  {  "lemma": "auster",
+ "part_of_speech": "noun",
+ "declension": 2,
+ "gender": "masculine",
+ "nominative": "auster",
+ "genitive": "austri",
+ "forms": {
+   "ablative": ["austro"]
+ },
+ "translations": {
+   "en": "south wind",
+   "la": "auster"
+ }
+},
+{
+ "lemma": "inter",
+ "part_of_speech": "preposition",
+ "case": "accusative",
+ "forms": {
+   "preposition": ["inter"]
+ },
+ "translations": {
+   "en": "among, between",
+   "la": "inter"
+ }
+}
+,
+  {
+    "lemma": "conservo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "conservare",
+    "perfect": "conservavi",
+    "present": "conservo",
+    "future": "conservabis",
+    "supine": "conservatum",
+    "translations": {
+      "en": "preserve, maintain",
+      "la": "conservo, conservare"
+    }
+  },
+  {
+    "lemma": "delectatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "delectatio",
+    "genitive": "delectationis",
+    "forms": {
+      "nominative_plural": ["delectationes"]
+    },
+    "translations": {
+      "en": "delight, pleasure",
+      "la": "delectatio"
+    }
+  },
+  {
+    "lemma": "ren",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "ren",
+    "genitive": "renis",
+    
+    "translations": {
+      "en": "kidney, seat of emotions",
+      "la": "ren"
+    }
+  },
+  {
+    "lemma": "adimpleo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "adimplere",
+    "perfect": "adimplevi",
+    "present": "adimpleo",
+    "future": "adimplebis",
+    
+    "translations": {
+      "en": "fulfill, complete, fill up",
+      "la": "adimpleo, adimplere"
+    }
+  },
+  {
+    "lemma": "catulus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "catulus",
+    "genitive": "catuli",
+   
+    "translations": {
+      "en": "cub, young animal",
+      "la": "catulus"
+    }
+  },
+  {
+    "lemma": "pars",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "pars",
+    "genitive": "partis",
+  
+    "translations": {
+      "en": "portion, part",
+      "la": "pars"
+    }
+  },
+  {
+    "lemma": "porto",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "portare",
+    "perfect": "portavi",
+    "present": "porto",
+    "future": "portabo",
+    "supine": "portatum",
+    "forms_plural": {
+      "present_participle_nominative": ["portantes"]
+    },
+    "translations": {
+      "en": "carry, bear",
+      "la": "porto, portare"
+    }
+  },
+  {
+    "lemma": "vita",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "vita",
+    "genitive": "vitae",
+    
+    "translations": {
+      "en": "life",
+      "la": "vita"
+    }
+  },
+  {
+    "lemma": "restituo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "restituere",
+    "perfect": "restitui",
+    "present": "restituo",
+    "future": "restitues",
+    "supine": "restitutum",  
+    "translations": {
+      "en": "restore, rebuild",
+      "la": "restituo, restituere"
+    }
+  },
+  {
+    "lemma": "praeda",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "praeda",
+    "genitive": "praedae",
+   
+    "translations": {
+      "en": "prey, booty",
+      "la": "praeda"
+    }
+  },
+  {
+    "lemma": "abditus",
+    "part_of_speech": "adjective",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "abditus",
+    "genitive": "abditi",
+    
+    "translations": {
+      "en": "hidden, concealed",
+      "la": "abditus"
+    },
+    "notes": "Can refer to a hidden place or something concealed"
+  },
   {
   "lemma": "vestigium",
   "part_of_speech": "noun",
@@ -869,6 +1067,35 @@
       "la": "pupillus"
     }
     
+  },
+  {
+    "lemma": "notus",
+    "part_of_speech": "adjective",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "notus",
+    "genitive": "noti",
+    "forms_plural": {
+      "accusative_f": ["notas"]
+    },
+    "translations": {
+      "en": "known, well-known",
+      "la": "notus"
+    },
+    "notes": "Can imply 'made known' in context, often used as an adjective"
+  },
+  {
+    "lemma": "corruptio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "corruptio",
+    "genitive": "corruptionis",
+    
+    "translations": {
+      "en": "decay, corruption",
+      "la": "corruptio"
+    }
   },
   {
     "lemma": "infernus",
@@ -2387,6 +2614,29 @@
       "la": "flos"
     }
   }, 
+
+  {
+    "lemma": "dexter",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "dexter",
+    "genitive": "dexteri",
+    "forms": {
+      
+      "nominative_f": ["dextera"],
+      "ablative_f": ["dextera"]
+    },
+    "forms_plural":{
+      "ablative_m": ["dextris"]
+    },
+    "translations": {
+      "en": "right hand, right side",
+      "la": "dexter"
+    },
+    "notes": "Often used to refer to the right hand or favorable side"
+  },
+
   {
     "lemma": "dextera",
     "part_of_speech": "noun",
@@ -2498,6 +2748,28 @@
         "translations": {
           "en": "offspring, descendants",
           "la": "progenies"
+        }
+      },
+      {
+        "lemma": "propter",
+        "part_of_speech": "preposition",
+        "case": "accusative",
+        "translations": {
+          "en": "on account of, because of",
+          "la": "propter"
+        }
+      },
+      {
+        "lemma": "caro",
+        "part_of_speech": "noun",
+        "declension": 3,
+        "gender": "feminine",
+        "nominative": "caro",
+        "genitive": "carnis",
+        
+        "translations": {
+          "en": "flesh",
+          "la": "caro"
         }
       },
      
@@ -3315,7 +3587,8 @@
         "present_passive": ["mittor", "mitteris", "mittitur", "mittimur", "mittimini", "mittuntur"]
     },
     "forms_plural": {
-        "imperative": ["mittite"]
+        "imperative": ["mittite"],
+        "nominative_present_particle": ["mittentes"]
     }
 },
 
@@ -7575,6 +7848,19 @@
         }
     },
     {
+      "lemma": "potens",
+      "part_of_speech": "adjective",
+      "declension": 3,
+      "gender": "masculine",
+      "nominative": "potens",
+      "genitive": "potentis",
+     
+      "translations": {
+        "en": "powerful, mighty",
+        "la": "potens"
+      }
+    },
+    {
       "lemma": "aspicio",
       "part_of_speech": "verb",
       "conjugation": 3,
@@ -8609,7 +8895,7 @@
             "en": "there, in that place",
             "la": "illic"
           }
-        },¬
+        },
   
     {
             "lemma": "sacrifico",
@@ -8642,21 +8928,33 @@
             "notes": "Psalm 4:9 'in pace' (in peace)"
         },
         {
-            "lemma": "requiesco",
-            "part_of_speech": "verb",
-            "infinitive": "requiescere",
-            "perfect": "requievi",
-            "forms": {
-                "present": ["requiesco", "requiescis", "requiescit", "requiescimus", "requiescitis", "requiescunt"],
-                "future": ["requiescam", "requiesces", "requiescet", "requiescemus", "requiescetis", "requiescent"],
-                "perfect": ["requievi", "requievisti", "requievit", "requievimus", "requievistis", "requieverunt"]
-            },
-            "translations": {
-                "en": "to rest, repose",
-                "la": "requiesco"
-            },
-            "notes": "Psalm 4:9 'dormiam et requiescam' (I will sleep and rest)"
+          "lemma": "requiesco",
+          "part_of_speech": "verb",
+          "conjugation": 3,
+          "infinitive": "requiescere",
+          "perfect": "requievi",
+          "present": "requiesco",
+          "future": "requiesces",
+         
+          "translations": {
+            "en": "rest, repose, be at peace",
+            "la": "requiesco, requiescere"
+          }
         },
+        {
+          "lemma": "funis",
+          "part_of_speech": "noun",
+          "declension": 3,
+          "gender": "masculine",
+          "nominative": "funis",
+          "genitive": "funis",
+          
+          "translations": {
+            "en": "rope, cord",
+            "la": "funis"
+          }
+        },
+        
         {
                "lemma": "spero",
                "part_of_speech": "verb",
@@ -9154,13 +9452,23 @@
         }
       
     },
-    
-      {
-        "lemma": "venio",
-        "part_of_speech": "verb",
-        "principal_parts": ["venio", "venire", "veni", "ventum"],
-        "translations": {"en": "come"}
+    {
+      "lemma": "venio",
+      "part_of_speech": "verb",
+      "conjugation": 4,
+      "infinitive": "venire",
+      "perfect": "veni",
+      "present": "venio",
+      "future": "veniam",
+      "forms_plural": {
+        "nominative_present_particle": ["venientes"]
       },
+      "translations": {
+        "en": "come, arrive",
+        "la": "venio, venire"
+      }
+    },
+      
     {
         "lemma": "exsulto",
         "part_of_speech": "verb",
@@ -9717,6 +10025,19 @@
         }
       },
       {
+        "lemma": "porta",
+        "part_of_speech": "noun",
+        "declension": 1,
+        "gender": "feminine",
+        "nominative": "porta",
+        "genitive": "portae",
+        
+        "translations": {
+          "en": "gate, door",
+          "la": "porta"
+        }
+      },
+      {
         "lemma": "mansuetus",
         "part_of_speech": "adjective",
         "gender": "masculine",
@@ -9748,7 +10069,22 @@
           "en": "gentle, tame, mild, meek",
           "la": "mansuetus"
         }
-      },{
+      },
+      
+  {
+    "lemma": "haereditas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "haereditas",
+    "genitive": "haereditatis",
+    
+    "translations": {
+      "en": "inheritance, heritage",
+      "la": "haereditas"
+    }
+  },
+      {
         "lemma": "haeredito",
         "part_of_speech": "verb",
         "infinitive": "haereditare",
@@ -9886,6 +10222,11 @@
             "dative": "nostro",
             "accusative": "nostrum",
             "ablative": "nostro",
+            "forms": {
+                "nominative_f": ["nostra"],
+                "accusative_f": ["nostram"]
+               
+            },
             "translations": {
                 "en": "our",
                 "la": "noster"
@@ -10111,8 +10452,12 @@
             "imperfect": ["ibam", "ibas", "ibat", "ibamus", "ibatis", "ibant"],
             "future": ["ibo", "ibis", "ibit", "ibimus", "ibitis", "ibunt"],
             "perfect": ["ii", "isti", "iit", "iimus", "istis", "ierunt"],
-            "imperative_singular": ["i"],
-            "imperative_plural": ["ite"]
+            "imperative": ["i"]
+            
+        },
+        "forms_plural":{
+          "imperative": ["ite"],
+          "nominative_present": ["euntes"]
         },
         "translations": {
             "en": "go",
@@ -11467,6 +11812,35 @@
   "translations": {
     "en": "bone",
     "la": "os, ossis"
+  }
+},
+{
+  "lemma": "os",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "os",
+  "genitive": "oris",
+  "forms": {
+    "nominative_n": ["os"]
+  },
+  "translations": {
+    "en": "mouth",
+    "la": "os, oris"
+  },
+  "notes": "Distinct from 'os, ossis' meaning 'bone'"
+},
+{
+  "lemma": "gaudium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "gaudium",
+  "genitive": "gaudii",
+  
+  "translations": {
+    "en": "joy, delight",
+    "la": "gaudium"
   }
 },
 {
