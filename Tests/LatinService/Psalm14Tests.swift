@@ -83,7 +83,7 @@ class Psalm14Tests: XCTestCase {
             ("malignus", ["malignus"], "wicked"), // v.5
             ("timeo", ["timentes"], "fear"), // v.5
             ("glorifico", ["glorificat"], "honor"), // v.5
-            ("Dominus", ["Dominum", "Dominum"], "Lord") // v.5, v.6
+            ("dominus", ["dominum", "dominum"], "lord") // v.5, v.6
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: divineTerms)
@@ -93,12 +93,30 @@ class Psalm14Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(text: psalm14)
         
         let stabilityTerms = [
-            ("aeternum", ["aeternum"], "forever"), // v.8
+            ("aeternus", ["aeternum"], "forever"), // v.8
             ("moveo", ["movebitur"], "be moved"), // v.8
             ("facio", ["facit"], "do") // v.8
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: stabilityTerms)
+    }
+    func testsAnalysisSummary() {
+        let analysis = latinService.analyzePsalm(text: psalm14)
+        if verbose {
+            print("\n=== Full Analysis ===")
+            print("Total words:", analysis.totalWords)
+            print("Unique lemmas:", analysis.uniqueLemmas)
+            
+            print("'noster' forms:", analysis.dictionary["noster"]?.forms ?? [:])
+            print("'timeo' forms:", analysis.dictionary["timeo"]?.forms ?? [:])
+
+             print("'quis' forms:", analysis.dictionary["quis"]?.forms ?? [:])
+        }
+        XCTAssertLessThan(
+            analysis.totalWords, 
+            analysis.uniqueLemmas * 2,
+            "totalWords should be less than uniqueLemmas * 2 (was \(analysis.totalWords) vs \(analysis.uniqueLemmas * 2))"
+        )
     }
     
     // MARK: - Helper
@@ -118,7 +136,7 @@ class Psalm14Tests: XCTestCase {
             if !missingForms.isEmpty {
                 XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
             }
-            
+            let verbose = false
             if verbose {
                 print("\n\(lemma.uppercased())")
                 print("  Translation: \(entry.translation ?? "?")")

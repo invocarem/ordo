@@ -3225,28 +3225,25 @@
         "imperative": ["sperate"]
     }
 },
-  {
-    "lemma": "timeo",
-    "part_of_speech": "verb",
-    "infinitive": "timere",
-    "perfect": "timui",
-    "supine": "timitum",
-    "translations": {
-        "en": "to fear, be afraid",
-        "la": "timeo"
-    },
-    "forms": {
-        "present": ["timeo", "times", "timet", "timemus", "timetis", "timent"],
-        "imperfect": ["timebam", "timebas", "timebat", "timebamus", "timebatis", "timebant"],
-        "future": ["timebo", "timebis", "timebit", "timebimus", "timebitis", "timebunt"],
-        "perfect": ["timui", "timuisti", "timuit", "timuimus", "timuistis", "timuerunt"],
-        "imperative": ["time"],
-        "present_passive": ["timeor", "timeris", "timetur", "timemur", "timemini", "timentur"]
-    },
-    "forms_plural": {
-        "imperative": ["timete"]
-    }
+{
+  "lemma": "timeo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "timere",
+  "present": "timeo",
+  "future": "timebo",
+  "perfect": "timui",
+  "supine": "timitum",
+  "forms": {
+    "present": ["timeo", "timentes"]
+  },
+  "translations": {
+    "en": "to fear, be afraid",
+    "la": "timeo, timere"
+  },
+  "notes": "Used in Vulgate verse 5"
 },
+  
   {
     "lemma": "draco",
     "part_of_speech": "noun",
@@ -4609,6 +4606,39 @@
       }
     },
     {
+      "lemma": "glorifico",
+      "part_of_speech": "verb",
+      "conjugation": 1,
+      "infinitive": "glorificare",
+      "present": "glorifico",
+      "future": "glorificabo",
+      "perfect": "glorificavi",
+      "supine": "glorificatum",
+      
+      "translations": {
+        "en": "to honor",
+        "la": "glorifico, glorificare"
+      }
+    },
+    {
+      "lemma": "moveo",
+      "part_of_speech": "verb",
+      "conjugation": 2,
+      "infinitive": "movere",
+      "present": "moveo",
+      "future": "movebo",
+      "perfect": "movi",
+      "supine": "motum",
+      "forms": {
+        "future": ["movebitur"]
+      },
+      "translations": {
+        "en": "to move, be moved",
+        "la": "moveo, movēre"
+      },
+      "notes": "Passive form 'movebitur' means 'it will be moved'"
+    },
+    {
       "lemma": "sero",
       "part_of_speech": "verb",
       "conjugation": 3,
@@ -5051,6 +5081,22 @@
             "translations": {
               "en": "yoke",
               "la": "jugum"
+            }
+          },
+          {
+            "lemma": "non",
+            "part_of_speech": "adverb",
+            "translations": {
+              "en": "not",
+              "la": "non"
+            }
+          },
+          {
+            "lemma": "usque",
+            "part_of_speech": "adverb",
+            "translations": {
+              "en": "all the way, continuously, even (to)",
+              "la": "usque"
             }
           },
           {
@@ -6746,13 +6792,25 @@
                 "la": "filia"
               }
             },
+            {
+              "lemma": "malignus",
+              "part_of_speech": "adjective",
+              "declension": 1,
+              "gender": "masculine",
+              "nominative": "malignus",
+              "genitive": "maligni",
+              "translations": {
+                "en": "wicked",
+                "la": "malignus"
+              }
           
+            },
       {
         "lemma": "malignor",
         "part_of_speech": "verb",
         "conjugation": 1,
         "infinitive": "malignari",
-        "perfect": "malignatus sum",
+        "perfect": "malignatus",
         "translations": {
           "en": "to act maliciously, begrudge",
           "la": "malignor"
@@ -8467,6 +8525,28 @@
             }
         },
         {
+          "lemma": "quis",
+          "part_of_speech": "pronoun",
+          "type": "relative",
+          "gender": "masculine",
+          "nominative": "qui",
+          "genitive": "cuius",
+          "dative": "cui",
+          "accusative": "quem",
+          "ablative": "quo",
+          "forms":{
+              "nominative_f": ["quae"]
+             
+
+          },
+          
+          "translations": {
+              "en": "who, which, that",
+              "la": "qui"
+          }
+      },
+         
+        {
             "lemma": "quae",
             "part_of_speech": "pronoun",
             "type": "relative",
@@ -8514,6 +8594,22 @@
                 "la": "quia"
             }
         },
+        {
+          "lemma": "ubi",
+          "part_of_speech": "adverb",
+          "translations": {
+            "en": "where, when",
+            "la": "ubi"
+          }
+        },
+        {
+          "lemma": "illic",
+          "part_of_speech": "adverb",
+          "translations": {
+            "en": "there, in that place",
+            "la": "illic"
+          }
+        },¬
   
     {
             "lemma": "sacrifico",
@@ -8767,6 +8863,22 @@
             },
            
             "notes": "Psalm 4:2 - 'dilatasti mihi' (you have enlarged for me)"
+        },
+        {
+          "lemma": "aut",
+          "part_of_speech": "conjunction",
+          "translations": {
+            "en": "or, either",
+            "la": "aut"
+          }
+        },
+        {
+          "lemma": "nec",
+          "part_of_speech": "conjunction",
+          "translations": {
+            "en": "and not, nor",
+            "la": "nec"
+          }
         },
         {
           "lemma": "audio",
@@ -11384,6 +11496,19 @@
     "la": "laboro, laborare"
   }
 },
+{
+  "lemma": "cibus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "cibus",
+  "genitive": "cibi",
+  "translations": {
+    "en": "food, nourishment",
+    "la": "cibus"
+  }
+},
+
 {
   "lemma": "lavo",
   "part_of_speech": "verb",
