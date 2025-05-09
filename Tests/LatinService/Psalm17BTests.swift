@@ -45,6 +45,75 @@ class Psalm17BTests: XCTestCase {
     ]
     
     // MARK: - Test Cases
+      // MARK: - Test Cases
+    func testAnalysisSummary() {
+        let analysis = latinService.analyzePsalm(text: psalm17B)
+        if verbose {
+            print("\n=== Full Analysis ===")
+            print("Total words:", analysis.totalWords)
+            print("Unique lemmas:", analysis.uniqueLemmas)
+            
+            print("'noster' forms:", analysis.dictionary["noster"]?.forms ?? [:])
+            
+
+            
+        }
+        XCTAssertLessThan(
+            analysis.totalWords, 
+            analysis.uniqueLemmas * 2,
+            "totalWords should be less than uniqueLemmas * 2 (was \(analysis.totalWords) vs \(analysis.uniqueLemmas * 2))"
+        )
+    }
+
+    func testBodyParts() {
+    let analysis = latinService.analyzePsalm(text: psalm17B)
+    
+    let bodyParts = [
+        ("pes", ["pedes", "pedibus"], "foot"),
+        ("manus", ["manus"], "hand"),
+        ("brachium", ["brachia"], "arm"),
+        ("oculus", ["oculos"], "eye"),
+        ("dorsum", ["dorsum"], "back")
+    ]
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: bodyParts)
+}
+
+func testNatureImagery() {
+    let analysis = latinService.analyzePsalm(text: psalm17B)
+    
+    let natureTerms = [
+        ("pulvis", ["pulverem"], "dust"),
+        ("ventus", ["venti"], "wind"),
+        ("lutum", ["lutum"], "mud"),
+        ("murus", ["murum"], "wall"),
+        ("excelsum", ["excelsa"], "heights")
+    ]
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: natureTerms)
+}
+func testMilitaryVicotoryReferences() {
+    let analysis = latinService.analyzePsalm(text: psalm17B)
+    let militaryTerms = [
+    ("praecingo", ["praecinxit", "praecinxisti"], "gird"), // Should be "praecingo" (3rd conj)
+    ("praelium", ["praelium"], "battle"),               // Correct (2nd neuter)
+    ("arcus", ["arcum"], "bow"),                        // Correct (4th masc)
+    ("supplanto", ["supplantasti"], "tripping"),        // Should be "supplanto" (1st conj)
+    ("vindicta", ["vindictas"], "vengeance")            // Correct (1st fem)
+]
+    
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: militaryTerms)
+
+    let victoryTerms = [
+    ("contero", ["Conteram"], "crush"),                 // Correct (3rd conj)
+    ("comminuo", ["comminuam"], "pulverize"),           // Correct (3rd conj)
+    ("deleo", ["delebo"], "wipe out"),                  // Correct (2nd conj)
+    ("persequor", ["persequar"], "pursue"),             // Correct (deponent)
+    ("subicio", ["subjicit"], "subdue")                 // Should be "subicio" (3rd conj)
+]
+   verifyWordsInAnalysis(analysis, confirmedWords: victoryTerms)
+}
     
     func testDivineReciprocity() {
         let analysis = latinService.analyzePsalm(text: psalm17B)
@@ -60,33 +129,7 @@ class Psalm17BTests: XCTestCase {
         verifyWordsInAnalysis(analysis, confirmedWords: reciprocityTerms)
     }
     
-    func testMilitaryEmpowerment() {
-        let analysis = latinService.analyzePsalm(text: psalm17B)
-        
-        let militaryTerms = [
-            ("praecingo", ["praecinxit", "praecinxisti"], "gird"),
-            ("praelium", ["praelium"], "battle"),
-            ("arcus", ["arcum"], "bow"),
-            ("supplanto", ["supplantasti"], "tripping"),
-            ("vindicta", ["vindictas"], "vengeance")
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: militaryTerms)
-    }
-    
-    func testVictoryImagery() {
-        let analysis = latinService.analyzePsalm(text: psalm17B)
-        
-        let victoryTerms = [
-            ("contero", ["Conteram"], "crush"),
-            ("comminuo", ["comminuam"], "pulverize"),
-            ("deleo", ["delebo"], "wipe out"),
-            ("persequor", ["Persequar"], "pursue"),
-            ("subjicio", ["subjicit"], "subdue")
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: victoryTerms)
-    }
+   
     
     func testCovenantalLanguage() {
         let analysis = latinService.analyzePsalm(text: psalm17B)

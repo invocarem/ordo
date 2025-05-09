@@ -75,7 +75,7 @@ class Psalm13Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(text: psalm13)
         
         let observationTerms = [
-            ("prospicio", ["prospexit"], "look down"), // v.3
+            ("prospicio", ["prospexit"], "look forth"), // v.3
             ("video", ["videat"], "see"), // v.3
             ("caelum", ["caelo"], "heaven"), // v.3
             ("requiro", ["requirens"], "seek") // v.3

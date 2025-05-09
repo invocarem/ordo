@@ -1,5 +1,127 @@
  [
   {
+  "lemma": "vestigium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "vestigium",
+  "genitive": "vestigii",
+  
+  "translations": {
+    "en": "footstep, track, trace",
+    "la": "vestigium"
+  }
+},
+  {
+  "lemma": "cervus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "cervus",
+  "genitive": "cervi",
+  
+  "translations": {
+    "en": "deer, stag",
+    "la": "cervus"
+  }
+},
+  {
+  "lemma": "lutum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "lutum",
+  "genitive": "luti",
+  "translations": {
+    "en": "mud, clay",
+    "la": "lutum"
+  }
+},
+{
+  "lemma": "murus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "murus",
+  "genitive": "muri",
+  
+  "translations": {
+    "en": "wall, rampart",
+    "la": "murus"
+  }
+},
+{
+  "lemma": "excelsum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "excelsum",
+  "genitive": "excelsi",
+  "translations": {
+    "en": "heights, lofty places",
+    "la": "excelsum"
+  }
+},
+  {
+  "lemma": "vehementer",
+  "part_of_speech": "adverb",
+  "translations": {
+    "en": "exceedingly, intensely",
+    "la": "vehementer"
+  }
+},
+  {
+  "lemma": "memor",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "memor",
+  "genitive": "memoris",
+  "translations": {
+    "en": "mindful, remembering",
+    "la": "memor"
+  },
+  "notes": "Used with genitive ('memor tui' = 'mindful of you') in Ps 6:5"
+},
+{
+  "lemma": "velox",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "velox",
+  "genitive": "velocis",
+  "forms": {
+    "adverb": ["velociter" ] 
+  },
+  "translations": {
+    "en": "swift, quick",
+    "la": "velox"
+  }
+},
+{
+  "lemma": "valde",
+  "part_of_speech": "adverb",
+  "translations": {
+    "en": "greatly, exceedingly, intensely",
+    "la": "valde"
+  },
+  "notes": "Common intensifier in Biblical Latin (e.g., 'valde mane' = 'very early in the morning')"
+},
+
+  {
+  "lemma": "abominabilis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "nominative": "abominabilis",
+  "genitive": "abominabilis",
+  "translations": {
+    "en": "abominable, detestable (lit. 'to be shunned as an evil omen')",
+    "la": "abominabilis"
+  },
+  "notes": "Stronger than modern 'abominable' - implies religious/moral revulsion"
+},
+
+  {
     "lemma": "corrumpo",
     "part_of_speech": "verb",
     "conjugation": 3,
@@ -7,11 +129,42 @@
     "present": "corrumpo",
     "perfect": "corrupi",
     "supine": "corruptum",
-    "translations": {
-      "en": "to corrupt, ruin, destroy",
-      "la": "corrumpo, corrumpere"
+    "forms_plural": {
+      "perfect": ["corrupti"]
+      
     }
+    
   },
+ 
+  {
+  "lemma": "captivitas",
+  "part_of_speech": "noun",
+  "gender": "feminine",
+  "declension": 3,
+  "nominative": "captivitas",
+  "genitive": "captivitatis",
+  
+  "translations": {
+    "en": "captivity, bondage, imprisonment",
+    "la": "captivitas, captivitatis"
+  }
+},
+  {
+  "lemma": "prospicio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "prospicere",
+  "present": "prospicio",
+  "perfect": "prospexi",
+  "supine": "prospectum",
+  
+  "translations": {
+    "en": "to look forth, gaze into the distance, foresee",
+    "la": "prospicio, prospicere"
+  },
+  "notes": "Literal meaning: 'to look forward'. Often implies looking into the distance (physically or metaphorically), not necessarily 'down'."
+},
+  
   {
     "lemma": "jacob",
     "part_of_speech": "noun",
@@ -193,7 +346,7 @@
           "supine": "coronatum",
           "forms": {
             
-            "perfect": ["coronavi", "coronavisti/coronasti", "coronavit", "coronavimus", "coronavistis", "coronaverunt"],
+            "perfect": ["coronavi", "coronavisti/coronasti", "coronavit", "coronavimus", "coronavistis", "coronaverunt"]
             
           },
           "translations": {
@@ -693,6 +846,18 @@
     }
   },
   {
+  "lemma": "insipiens",
+  "part_of_speech": "noun",
+  "gender": "masculine",
+  "declension": 3,
+  "nominative": "insipiens",
+  "genitive": "insipientis",
+  "translations": {
+    "en": "fool",
+    "la": "insipiens"
+  }
+},
+  {
     "lemma": "pupillus",
     "part_of_speech": "noun",
     "declension": 2,
@@ -734,6 +899,7 @@
   {
     "lemma": "rigo",
     "part_of_speech": "verb",
+     "conjugation": 1,
     "infinitive": "rigare",
     "perfect": "rigavi",
     "future": "rigabo",
@@ -1085,7 +1251,7 @@
     "perfect": "exsultavi",
     "supine": "exsultatum",
     "translations": {
-      "en": "exult, leap for joy",
+      "en": "exult, rejoice, leap for joy",
       "la": "exsulto, exsultare, exsultavi, exsultatum"
     },
     "forms": {
@@ -1582,6 +1748,19 @@
       "subjunctive_imperfect": ["insurgerem", "insurgeres", "insurgeret", "insurgeremus", "insurgeretis", "insurgerent"]
     }
   },
+  {
+  "lemma": "suscipio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "suscipere",
+  "present": "suscipio",
+  "perfect": "suscepi",
+  "supine": "susceptum",
+  "translations": {
+    "en": "to receive, undertake, support",
+    "la": "suscipio, suscipere"
+  }
+},
   {
     "lemma": "susceptor",
     "part_of_speech": "noun",
@@ -4616,7 +4795,7 @@
         "participle": ["erepta"]
       },
       "translations": {
-        "en": "to rescue, snatch away",
+        "en": "to rescue, deliver, snatch away",
         "la": "eripio"
       }
     },
@@ -7490,7 +7669,23 @@
                 "la": "tunc"
             }
         },
-     
+     {
+  "lemma": "discedo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "discedere",
+  "present": "discedo",
+  "perfect": "discessi",
+  "supine": "discessum",
+  "forms_plural": {
+    "imperative": ["discedite"]      
+  },
+  
+  "translations": {
+    "en": "to depart, leave, go away",
+    "la": "discedo, discedere"
+  }
+},
            {
             "lemma": "disco",
             "part_of_speech": "verb",
@@ -7548,27 +7743,7 @@
                 "la": "odi"
             }
         },
-        {
-            "lemma": "os",
-            "part_of_speech": "noun",
-            "declension": 3,
-            "gender": "neuter",
-            "nominative": "os",
-            "genitive": "oris",
-            "dative": "ori",
-            "accusative": "os",
-            "ablative": "ore",
-            "nominative_plural": "ora",
-            "genitive_plural": "orum",
-            "dative_plural": "oribus",
-            "accusative_plural": "ora",
-            "ablative_plural": "oribus",
-            "translations": {
-                "en": "mouth",
-                "la": "os"
-            }
-        },
-    
+        
         {
             "lemma": "conscientia",
             "part_of_speech": "noun",
@@ -11109,6 +11284,138 @@
       "la": "respicio, respicere"
     }
   },
+  {
+  "lemma": "fletus",
+  "part_of_speech": "noun",
+  "declension": 4,
+  "gender": "masculine",
+  "nominative": "fletus",
+  "genitive": "fletus",
+  "translations": {
+    "en": "weeping, lamentation",
+    "la": "fletus"
+  }
+},
+{
+  "lemma": "invetero",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "inveterare",
+  "present": "invetero",
+  "perfect": "inveteravi",
+  "supine": "inveteratum",
+  "translations": {
+    "en": "to grow old, become established",
+    "la": "invetero, inveterare"
+  }
+},
+{
+  "lemma": "lacrima",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "lacrima",
+  "genitive": "lacrimae",
+  "translations": {
+    "en": "tear, grief",
+    "la": "lacrima"
+  }
+},
+
+
+{
+  "lemma": "turbo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "turbare",
+  "present": "turbo",
+  "perfect": "turbavi",
+  "supine": "turbatum",
+  "forms": {
+    "perfect_passive_m": ["turbatus"],
+    "perfect_passive_f": ["turbata"]
+  },
+  "translations": {
+    "en": "to disturb, agitate, throw into confusion",
+    "la": "turbo, turbare"
+  }
+},
+
+{
+  "lemma": "os",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "os",
+  "genitive": "ossis",
+  "forms_plural": {
+      "nominative_n": ["ossa"],
+      "genitive_n": ["ossium"]
+  },
+  "translations": {
+    "en": "bone",
+    "la": "os, ossis"
+  }
+},
+{
+  "lemma": "sano",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "sanare",
+  "present": "sano",
+  "perfect": "sanavi",
+  "supine": "sanatum",
+ 
+  "translations": {
+    "en": "to heal, cure",
+    "la": "sano, sanare"
+  }
+},
+{
+  "lemma": "laboro",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "laborare",
+  "present": "laboro",
+  "perfect": "laboravi", 
+  "supine": "laboratum",
+  "translations": {
+    "en": "to labor, suffer, be weary",
+    "la": "laboro, laborare"
+  }
+},
+{
+  "lemma": "lavo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "lavare",
+  "present": "lavo",
+  "future": "lavabo",  
+  "perfect": "lavi",
+  "supine": "lavatum",
+  "translations": {
+    "en": "to wash, bathe",
+    "la": "lavo, lavare"
+  }
+},
+{
+  "lemma": "fio",
+  "part_of_speech": "verb",  
+  "conjugation": 0,
+  "infinitive": "fieri",      
+  "perfect": "factus",
+  "present": "fio",
+  "future":"fiet",
+  "forms" :{
+    "present": ["fio"],
+    "future": ["fiet"]
+  },
+  "translations": {
+    "en": "to become, happen",
+    "la": "fio, fieri"
+  },
+  "notes": "Irregular verb (suppletive forms from facio)"
+},
   {
     "lemma": "humilitas",
     "part_of_speech": "noun",
