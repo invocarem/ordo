@@ -1,4 +1,27 @@
- [ 
+ [
+  {
+    "lemma": "manduco",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "manducare",
+    "perfect": "manducavi",
+    "present": "manduco",
+    "future": "manducabis",
+    
+    "translations": {
+      "en": "eat, chew",
+      "la": "manduco, manducare"
+    }
+  },
+  {
+    "lemma": "bene",
+    "part_of_speech": "adverb",
+    
+    "translations": {
+      "en": "well, rightly",
+      "la": "bene"
+    }
+  }, 
 
  {
   "lemma": "laetor",
@@ -390,6 +413,51 @@
     "notes": "Hebrew origin; typically indeclinable in Latin (but some texts use genitive 'Israelis')"
   },
   {
+    "lemma": "jerusalem",
+    "part_of_speech": "noun",
+    "declension": 0,
+    "gender": "feminine",
+    "nominative": "jerusalem",
+   
+    "translations": {
+      "en": "Jerusalem",
+      "la": "Jerusalem"
+    }
+   
+  },
+  {
+    "lemma": "evello",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "evellere",
+    "perfect": "evelli",
+    "present": "evello",
+    "future": "evellam",
+    "forms": {
+      "present_subjunctive_third_singular_passive": ["evellatur"]
+    },
+    "translations": {
+      "en": "pluck out, tear out",
+      "la": "evello, evellere"
+    }
+  },
+  {
+    "lemma": "exaresco",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "exarescere",
+    "perfect": "exarui",
+    "present": "exaresco",
+    "future": "exarescam",
+    "forms": {
+      "perfect_indicative": ["exaruit"]
+    },
+    "translations": {
+      "en": "wither, dry up",
+      "la": "exaresco, exarescere"
+    }
+  },
+  {
     "lemma": "inutilis",
     "part_of_speech": "adjective",
     "declension": 3,
@@ -398,6 +466,78 @@
     "translations": {
       "en": "worthless, useless, unprofitable",
       "la": "inutilis"
+    }
+  },
+  {
+    "lemma": "nomen",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "nomen",
+    "genitive": "nominis",
+   
+    "translations": {
+      "en": "name",
+      "la": "nomen"
+    }
+  },
+  {
+    "lemma": "sinus",
+    "part_of_speech": "noun",
+    "declension": 4,
+    "gender": "masculine",
+    "nominative": "sinus",
+    "genitive": "sinus",
+    
+    "translations": {
+      "en": "bosom, fold",
+      "la": "sinus"
+    }
+  },
+  {
+    "lemma": "hic",
+    "part_of_speech": "pronoun",
+    "type": "demonstrative",
+    "gender": "neuter",
+    "nominative": "hoc",
+    "genitive": "huius",
+    
+    "translations": {
+      "en": "this",
+      "la": "hic, haec, hoc"
+    }
+    
+  },
+  {
+    "lemma": "ita",
+    "part_of_speech": "adverb",
+    
+    "translations": {
+      "en": "so, thus",
+      "la": "ita"
+    }
+  },
+  {
+    "lemma": "sicut",
+    "part_of_speech": "adverb",
+    
+    "translations": {
+      "en": "as, just as",
+      "la": "sicut"
+    },
+    "notes": "Often used as a conjunction to introduce comparisons"
+  },
+  {
+    "lemma": "mater",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "mater",
+    "genitive": "matris",
+    
+    "translations": {
+      "en": "mother",
+      "la": "mater"
     }
   },
   {
