@@ -20,6 +20,23 @@ class Psalm1Tests: XCTestCase {
         "Ideo non resurgent impii in judicio, neque peccatores in concilio iustorum;",
         "Quoniam novit Dominus viam justorum, et iter impiorum peribit."
     ]
+    func testTreeMetaphor() {
+        let analysis = latinService.analyzePsalm(text: psalm1)
+        
+        let treeTerms = [
+            ("lignum", ["lignum"], "tree"),
+            ("planto", ["plantatum"], "plant"),
+            ("fructus", ["fructum"], "fruit"),
+            ("folium", ["folium"], "leaf"),
+            ("defluo", ["defluet"], "wither"),
+            ("decursus", ["decursus"], "flow")
+        ]
+        
+        verifyWordsInAnalysis(analysis, confirmedWords: treeTerms)
+        
+        // Verify water connection
+        XCTAssertNotNil(analysis.dictionary["aqua"], "Water imagery missing")
+    }
     
     // MARK: - Test Cases
     func testChaffMetaphor() {
@@ -27,7 +44,10 @@ class Psalm1Tests: XCTestCase {
         
         let chaffMetaphorWords = [
             ("pulvis", ["pulvis"], "dust"),
-            ("ventus", ["ventus"], "wind")
+            ("ventus", ["ventus"], "wind"),
+            
+            ("proicio", ["proicit"], "scatter"),
+            ("facies", ["facie"], "face")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: chaffMetaphorWords)
@@ -85,35 +105,78 @@ class Psalm1Tests: XCTestCase {
         
         verifyWordsInAnalysis(analysis, confirmedWords: thematicWords)
     }
+     func testAnalysisSummary() {
+        let analysis = latinService.analyzePsalm(text: psalm1)
+        if verbose {
+            print("\n=== Full Analysis ===")
+            print("Total words:", analysis.totalWords)
+            print("Unique lemmas:", analysis.uniqueLemmas)
+            
+            print("'corono' forms:", analysis.dictionary["corono"]?.forms ?? [:])
+            print("'humilis' forms:", analysis.dictionary["humilis"]?.forms ?? [:])
+            print("'propitior' forms:", analysis.dictionary["propitior"]?.forms ?? [:])
+        }
+        XCTAssertLessThan(
+            analysis.totalWords, 
+            analysis.uniqueLemmas * 2,
+            "totalWords should be less than uniqueLemmas * 2 (was \(analysis.totalWords) vs \(analysis.uniqueLemmas * 2))"
+        )
+    }
+     func testStructuralFeatures() {
+        let analysis = latinService.analyzePsalm(text: psalm1)
+        
+        // Verify triple negation pattern
+        let negatedVerbs = ["abiit", "stetit", "sedit"]
+        let negationsFound = negatedVerbs.filter { verb in
+            analysis.dictionary.values.contains { entry in
+                entry.forms.keys.contains(verb)
+            }
+        }
+        XCTAssertEqual(negationsFound.count, 3, "Should find all three negated actions")
+        
+        // Verify key repetitions
+        XCTAssertGreaterThan(analysis.dictionary["non"]?.forms.values.reduce(0, +) ?? 0, 3, "Key negation word")
+    }
     
+
     // MARK: - Helper
     private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
+        let caseInsensitiveDict = Dictionary(uniqueKeysWithValues: 
+            analysis.dictionary.map { ($0.key.lowercased(), $0.value) }
+        )
+        
         for (lemma, forms, translation) in confirmedWords {
-            guard let entry = analysis.dictionary[lemma] else {
-                XCTFail("Missing confirmed lemma: \(lemma)")
+            guard let entry = caseInsensitiveDict[lemma.lowercased()] else {
+                XCTFail("Missing lemma: \(lemma)")
                 continue
             }
             
-            // Verify translation
+            // Translation check
             XCTAssertTrue(
                 entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-                "Incorrect translation for \(lemma): expected '\(translation)', got '\(entry.translation ?? "nil")'"
+                "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
             )
             
-            // Verify forms
-            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-            XCTAssertTrue(
-                missingForms.isEmpty,
-                "Lemma \(lemma) missing forms: \(missingForms.joined(separator: ", "))"
+            // Form verification (case-insensitive)
+            let entryFormsLowercased = Dictionary(uniqueKeysWithValues:
+                entry.forms.map { ($0.key.lowercased(), $0.value) }
             )
+            
+            let missingForms = forms.filter { entryFormsLowercased[$0.lowercased()] == nil }
+            if !missingForms.isEmpty {
+                XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
+            }
             
             if verbose {
-                print("\n\(lemma.uppercased()) (\"\(translation)\")")
+                print("\n\(lemma.uppercased())")
+                print("  Translation: \(entry.translation ?? "?")")
                 forms.forEach { form in
-                    let count = entry.forms[form.lowercased()] ?? 0
-                    print("  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count)x")
+                    let count = entryFormsLowercased[form.lowercased()] ?? 0
+                    print("  \(form.padding(toLength: 15, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
                 }
             }
         }
     }
+    
+    
 }

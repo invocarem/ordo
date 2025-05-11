@@ -316,7 +316,7 @@ extension LatinWordEntity {
         }
     }
     
-        return "[unknown form: \(form)]"
+        return "\(translation) [unknown form: \(form)]"
     }
         
     // MARK: - Helper Methods

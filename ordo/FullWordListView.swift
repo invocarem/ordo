@@ -5,7 +5,7 @@ struct FullWordListView: View {
     var body: some View {
         List {
             ForEach(analysis.dictionary.sorted(by: { $0.key < $1.key }), id: \.key) { lemma, info in
-                NavigationLink(destination: WordDetailView(lemmaInfo: info)) {
+                NavigationLink(destination: WordDetailView(lemma: lemma,lemmaInfo: info)) {
                     HStack {
                         Text(lemma)
                         Spacer()
@@ -16,78 +16,6 @@ struct FullWordListView: View {
             }
         }
         .navigationTitle("Word List")
-    }
-}
-struct xFullWordListView: View {
-    let analysis: PsalmAnalysisResult
-    
-    var body: some View {
-        List {
-            Section("DEBUG") {
-                Text("Total words: \(analysis.totalWords)")
-                Text("Unique lemmas: \(analysis.uniqueLemmas)")
-                if let inimicus = analysis.dictionary["inimicus"] {
-                    Text("Found 'inimicus' with \(inimicus.forms.count) forms")
-                } else {
-                    Text("Missing 'inimicus'").foregroundColor(.red)
-                }
-            }
-            ForEach(analysis.dictionary.sorted(by: { $0.key < $1.key }), id: \.key) { lemma, info in
-                Section {
-                    // Main lemma card
-                    VStack(alignment: .leading, spacing: 4) {
-                        HStack {
-                            Text(lemma)
-                                .font(.body.monospaced())
-                                .bold()
-                            
-                            if let translation = info.translation {
-                                Text("• \(translation)")
-                                    .foregroundColor(.secondary)
-                            }
-                        }
-                        
-                        // Add grammatical info if available
-                        if let entity = info.entity {
-                            GrammaticalInfoView(entity: entity)
-                        }
-                    }
-                    .padding(.vertical, 4)
-                    
-                    // Forms list
-                    ForEach(info.forms.sorted(by: { $0.key < $1.key }), id: \.key) { form, count in
-                        if form != lemma { // Skip duplicate lemma entry
-                            HStack {
-                                VStack(alignment: .leading, spacing: 2) {
-                                    Text(form)
-                                        .font(.body.monospaced())
-                                        .lineLimit(1)
-                                        .minimumScaleFactor(0.7)
-                                    
-                                    // Add grammatical analysis for verbs
-                                    if let entity = info.entity, form.count > 6 { // Only for longer forms
-                                        VerbFormAnalysisView(form: form, entity: entity)
-                                            .font(.caption2)
-                                            .foregroundColor(.secondary)
-                                    }
-                                }
-                                
-                                Spacer()
-                                
-                                Text("(x\(count))")
-                                    .foregroundColor(.secondary)
-                            }
-                            .padding(.vertical, 2)
-                        }
-                    }
-                } header: {
-                    Text(lemma.capitalized)
-                        .font(.headline)
-                }
-            }
-        }
-        .listStyle(.grouped)
-        .navigationTitle("Word Analysis")
     }
 }
 
@@ -159,11 +87,32 @@ struct GrammaticalInfoView: View {
 }
 
 struct WordDetailView: View {
+    let lemma: String
     let lemmaInfo: PsalmAnalysisResult.LemmaInfo
     
     var body: some View {
         List {
-            // ... existing lemma header section ...
+            Section {
+                VStack(alignment: .leading, spacing: 8) {
+                    // Lemma and count
+                    HStack {
+                        Text(lemma)
+                            .font(.title2)
+                            .bold()
+                        Spacer()
+                        Text("\(lemmaInfo.count)×")
+                            .foregroundColor(.secondary)
+                    }
+                    
+                    // Translation
+                    if let translation = lemmaInfo.translation {
+                        Text(translation)
+                            .font(.subheadline)
+                            .foregroundColor(.secondary)
+                    }
+                }
+                .padding(.vertical, 8)
+            }
             
             // ACTUAL FORMS SECTION
             if !lemmaInfo.forms.isEmpty {
@@ -220,6 +169,16 @@ struct WordDetailView: View {
         .padding(.vertical, 4)
         .opacity(isGenerated ? 0.8 : 1.0)
     }
+    private func frequencyDescription(count: Int) -> String {
+            switch count {
+            case 1: return "Rare (1 occurrence)"
+            case 2..<5: return "Uncommon (\(count) occurrences)"
+            case 5..<10: return "Frequent (\(count) occurrences)"
+            case 10..<20: return "Very frequent (\(count) occurrences)"
+            case 20...: return "Extremely frequent (\(count) occurrences)"
+            default: return "Not found"
+            }
+        }
 }
 
 

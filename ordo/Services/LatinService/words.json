@@ -1,5 +1,320 @@
  [
   {
+    "lemma": "pestilentia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "pestilentia",
+    "genitive": "pestilentiae",
+    "translations": {
+      "en": "plague, pestilence, pollution",
+      "la": "pestilentia"
+    }
+  },
+  {
+    "lemma": "planto",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "plantare",
+    "perfect": "plantatum",
+    "supine": "plantatum",
+    "translations": {
+      "en": "to plant, fix in place",
+      "la": "planto, plantare, plantatum, plantatum"
+    }
+  },
+     {
+       "lemma": "vir",
+       "part_of_speech": "noun",
+       "declension": 2,
+       "gender": "masculine",
+       "nominative": "vir",
+       "genitive": "viri",
+       "translations": {
+         "en": "man, husband, hero, warrior",
+         "la": "vir"
+       }
+     },
+     {
+       "lemma": "abeo",
+       "part_of_speech": "verb",
+       "conjugation": 0,
+       "infinitive": "abire",
+       "perfect": "abii",
+       "supine": "abitum",
+       "translations": {
+         "en": "to go away, depart",
+         "la": "abeo, abire, abii, abitum"
+       }
+     },
+  {
+    "lemma": "pertransio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "pertransire",
+    "present": "pertranseo",
+    "perfect": "pertransii",
+    "supine": "pertransitum",
+    "forms": {
+      "future": ["pertransibo", "pertransibis", "pertransibit"],
+      "future_passive": ["pertransibor", "pertransiberis", "pertransibitur"]
+    },
+    "translations": {
+      "en": "to pass through",
+      "la": "pertranseo, pertransire"
+    }
+  },
+  {
+  "lemma": "longanimis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "longanimis",
+  "genitive": "longanimis",
+  "translations": {
+    "en": "long-suffering, patient",
+    "la": "longanimis"
+  }
+},
+  {
+  "lemma": "minister",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "minister",
+  "genitive": "ministri",
+  "translations": {
+    "en": "servant, minister",
+    "la": "minister"
+  }
+},
+  {
+    "lemma": "figmentum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "figmentum",
+    "genitive": "figmenti",
+    "translations": {
+      "en": "clay form, creation",
+      "la": "figmentum"
+    }
+  },
+  {
+    "lemma": "effloreo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "efflorere",
+    "present": "effloreo",
+    "perfect": "efflorui",
+    "supine": null,
+    "forms": {
+      "future": ["efflorebo", "efflorebis", "efflorebit"],
+      "future_passive": ["efflorebor", "effloreberis", "efflorebitur"]
+    },
+    "translations": {
+      "en": "to bloom, to fade",
+      "la": "effloreo, efflorere"
+    }
+  },
+  {
+    "lemma": "pertransio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "pertransire",
+    "present": "pertranseo",
+    "perfect": "pertransii",
+    "supine": "pertransitum",
+    "translations": {
+      "en": "to pass through",
+      "la": "pertranseo, pertransire"
+    }
+  },
+  {
+    "lemma": "subsisto",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "subsistere",
+    "present": "subsisto",
+    "perfect": "substiti",
+    "supine": null,
+    "translations": {
+      "en": "to endure, to stand firm",
+      "la": "subsisto, subsistere"
+    }
+  },
+  {
+    "lemma": "comminor",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "comminari",
+    "present": "comminor",
+    "perfect": "comminatus",
+    "supine": "comminatum",
+    "forms": {
+      "future": ["comminabo", "comminabis", "comminabit"],
+      "future_passive": ["comminabor", "comminaberis", "comminabitur"]
+    },
+    "translations": {
+      "en": "to threaten",
+      "la": "comminor, comminari"
+    }
+  },
+  
+  {
+  "lemma": "miserator",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "miserator",
+  "genitive": "miseratoris",
+  "translations": {
+    "en": "compassionate, one who shows mercy",
+    "la": "miserator"
+  }
+},
+  {
+    "lemma": "renovo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "renovare",
+    "present": "renovo",
+    "perfect": "renovavi",
+    "supine": "renovatum",
+    "forms": {
+      "future": ["renovabo", "renovabis", "renovabit"],
+      "future_passive": ["renovabor", "renovaberis", "renovabitur"]
+    },
+    "translations": {
+      "en": "to renew",
+      "la": "renovo, renovare"
+    }
+  },
+  {
+    "lemma": "recordor",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "recordari",
+    "present": "recordor",
+    "perfect": "recordatus",
+    "supine": "recordatum",
+    "translations": {
+      "en": "to remember",
+      "la": "recordor, recordari"
+    }
+  },
+
+  {
+    "lemma": "ortus",
+    "part_of_speech": "noun",
+    "declension": 4,
+    "gender": "masculine",
+    "nominative": "ortus",
+    "genitive": "ortus",
+    "translations": {
+      "en": "rising, sunrise",
+      "la": "ortus"
+    }
+  },
+  {
+    "lemma": "occidens",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "occidens",
+    "genitive": "occidentis",
+    "translations": {
+      "en": "west",
+      "la": "occidens"
+    }
+  },
+  {
+    "lemma": "corroboro",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "corroborare",
+    "present": "corroboro",
+    "perfect": "corroboravi",
+    "supine": "corroboratum",
+    "translations": {
+      "en": "to strengthen",
+      "la": "corroboro, corroborare"
+    }
+  },
+
+  {
+    "lemma": "annuntio",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "annuntiare",
+    "perfect": "annuntiavi",
+    "present": "annuntio",
+    "future": "annuntiabo",
+    "supine": "annuntiatum",
+    "forms_plural": {
+      "present_subjunctive": ["annuntient"]
+    },
+    "translations": {
+      "en": "proclaim, announce",
+      "la": "annuntio, annuntiare"
+    }
+  },
+  {
+    "lemma": "allido",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "allidere",
+    "perfect": "allisi",
+    "present": "allido",
+    "future": "allidam",
+    "forms": {
+      "perfect_indicative": ["allisisti"]
+    },
+    "translations": {
+      "en": "shatter, crush",
+      "la": "allido, allidere"
+    }
+  },
+  {
+    "lemma": "pellicanus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "pellicanus",
+    "genitive": "pellicani",
+    
+    "translations": {
+      "en": "pelican",
+      "la": "pellicanus"
+    }
+  },
+  {
+    "lemma": "cremium",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "cremium",
+    "genitive": "cremii",
+    
+    "translations": {
+      "en": "burning trash, ashes",
+      "la": "cremium"
+    }
+  },
+  {
+    "lemma": "nycticorax",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "nycticorax",
+    "genitive": "nycticoracis",
+    
+    "translations": {
+      "en": "night owl, night raven",
+      "la": "nycticorax"
+    }
+  },
+  {
     "lemma": "manduco",
     "part_of_speech": "verb",
     "conjugation": 1,
@@ -317,6 +632,18 @@
   "translations": {
     "en": "swift, quick",
     "la": "velox"
+  }
+},
+{
+  "lemma": "testamentum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "testamentum",
+  "genitive": "testamenti",
+  "translations": {
+    "en": "covenant, testament",
+    "la": "testamentum"
   }
 },
 {
@@ -1378,6 +1705,20 @@
       "en": "innocent, blameless",
       "la": "innocens"
     }
+  },
+  {
+    "lemma": "potus",
+    "part_of_speech": "noun",
+    "declension": 4,
+    "gender": "masculine",
+    "nominative": "potus",
+    "genitive": "potus",
+   
+    "translations": {
+      "en": "drink, beverage",
+      "la": "potus"
+    },
+    "notes": "Used in Psalm 101:10 to refer to a drink mingled with tears"
   },
   {
     "lemma": "macula",
@@ -5910,6 +6251,18 @@
       }
     },
     {
+      "lemma": "sedeo",
+      "part_of_speech": "verb",
+      "conjugation": 2,
+      "infinitive": "sedere",
+      "perfect": "sedi",
+      "supine": "sessum",
+      "translations": {
+        "en": "to sit, remain seated",
+        "la": "sedeo, sedere, sedi, sessum"
+      }
+    },
+    {
       "lemma": "rogo",
       "part_of_speech": "verb",
       "conjugation": 1,
@@ -6050,6 +6403,24 @@
         "en": "entrance, entry",
         "la": "introitus"
       }
+    },
+    {
+      "lemma": "fio",
+      "part_of_speech": "verb",  
+      "conjugation": 0,
+      "infinitive": "fieri",      
+      "perfect": "factus",
+      "present": "fio",
+      "future":"fiet",
+      "forms" :{
+        "present": ["fio"],
+        "future": ["fiet"]
+      },
+      "translations": {
+        "en": "to become, happen",
+        "la": "fio, fieri"
+      },
+      "notes": "Irregular verb (suppletive forms from facio)"
     },
     {
       "lemma": "exitus",
@@ -8062,25 +8433,23 @@
         }
     },
     {
-        "lemma": "dirigo",
-        "part_of_speech": "verb",
-        "perfect": "direxi",
-        "infinitive": "dirigere",
-        "forms": {
-            "present": ["dirigo", "dirigis", "dirigit", "dirigimus", "dirigitis", "dirigunt"],
-            "imperfect": ["dirigebam", "dirigebas", "dirigebat", "dirigebamus", "dirigebatis", "dirigebant"],
-            "future": ["dirigam", "diriges", "diriget", "dirigemus", "dirigetis", "dirigent"],
-            "perfect": ["direxi", "direxisti", "direxit", "direximus", "direxistis", "direxerunt"],
-            "imperative_singular": ["dirige"],
-            "imperative_plural": ["dirigite"],
-            "present_subjunctive": ["dirigam", "dirigas", "dirigat", "dirigamus", "dirigatis", "dirigant"],
-            "present_subjunctive_passive": ["dirigar", "dirigaris", "dirigatur", "dirigamur", "dirigamini", "dirigantur"]
-        },
-        "translations": {
-            "en": "direct, guide",
-            "la": "dirigo"
-        }
+      "lemma": "dirigo",
+      "part_of_speech": "verb",
+      "conjugation": 3,
+      "infinitive": "dirigere",
+      "perfect": "direxi",
+      "present": "dirigo",
+      "future": "dirigam",
+      "supine": "directum",
+      "forms" :{
+        "future_indicative_passive": ["dirigetur"]
+      },
+      "translations": {
+        "en": "establish, direct",
+        "la": "dirigo, dirigere"
+      }
     },
+    
     {
             "lemma": "testimonium",
             "part_of_speech": "noun",
@@ -9531,11 +9900,15 @@
         "conjugation": 1,
         "deponent": false,
         "infinitive": "stare",
+        "perfect": "steti",
+        "supine": "statum",
+       
         "forms": {
           "present": ["sto", "stas", "stat", "stamus", "statis", "stant"],
           "imperative": ["sta", "state"],
           "subjunctive": ["stem", "stes", "stet", "stemus", "stetis", "stent"],
-          "present_participle": ["stans"]
+          "present_participle": ["stans"],
+          "perfect": ["steti", "stetisti", "stetit", "stetimus", "stetistis", "steterunt"]
         },
         "translations": {
           "en": "to stand, stay",
@@ -9974,54 +10347,29 @@
       }
     },
     {
-        "lemma": "dominor",
-        "part_of_speech": "verb",
-        "infinitive": "dominari",
-        "present": "dominor",
-        "perfect": "dominatus sum",
-        "translations": {
-            "en": "to rule, dominate, master",
-            "la": "dominor, dominari, dominatus sum"
-        },
-        "forms": {
-            "present": [
-                "dominor",
-                "dominaris",
-                "dominatur",
-                "dominamur",
-                "dominamini",
-                "dominantur"
-            ],
-            "imperfect": [
-                "dominarer",
-                "dominareris",
-                "dominaretur",
-                "dominaremur",
-                "dominaremini",
-                "dominarentur"
-            ],
-            "future": [
-                "dominabor",
-                "dominaberis",
-                "dominabitur",
-                "dominabimur",
-                "dominabimini",
-                "dominabuntur"
-            ],
-            "perfect": [
-                "dominatus sum",
-                "dominatus es",
-                "dominatus est",
-                "dominati sumus",
-                "dominati estis",
-                "dominati sunt"
-            ],
-            "imperative": [
-                "dominare",
-                "dominamini"
-            ]
-        },
-        "notes": "Deponent verb (passive form with active meaning)"
+      "lemma": "dominatio",
+      "part_of_speech": "noun",
+      "declension": 3,
+      "gender": "feminine",
+      "nominative": "dominatio",
+      "genitive": "dominationis",
+      "translations": {
+        "en": "dominion, rule",
+        "la": "dominatio"
+      }
+    },
+    {
+      "lemma": "dominor",
+      "part_of_speech": "verb",
+      "conjugation": 1,
+      "infinitive": "dominari",
+      "present": "dominor",
+      "perfect": "dominatus",
+      "supine": "dominatum",
+      "translations": {
+        "en": "to rule, to dominate",
+        "la": "dominor, dominari"
+      }
     },
     {
         "lemma": "domus",
@@ -10493,7 +10841,7 @@
         "la": "suus"
       }
     },
-      
+   
       {
          "lemma": "ut",
          "part_of_speech": "conjunction",
@@ -10502,19 +10850,22 @@
              "la": "ut"
          }
      },
-    {
-        "lemma": "virtus",
-        "part_of_speech": "noun",
-        "gender": "feminine",
-        "nominative": "virtus",
-        "genitive": "virtutis",
-        "dative": "virtuti",
-        "accusative": "virtutem",
-        "ablative": "virtute",
-        "translations": {
-          "en": "virtue, strength, courage"
-        }
+     {
+      "lemma": "virtus",
+      "part_of_speech": "noun",
+      "declension": 3,
+      "gender": "feminine",
+      "nominative": "virtus",
+      "genitive": "virtutis",
+      "forms_plural":{
+        "vocative": ["virtutes"]
       },
+      "translations": {
+        "en": "heavenly host, power, strength",
+        "la": "virtus"
+      }
+    },
+  
     {
           "lemma": "inique",
           "part_of_speech": "adverb",
@@ -10863,6 +11214,24 @@
             "en": "word, speech, conversation",
             "la": "sermo"
         }
+    },
+    {
+      "lemma": "convenio",
+      "part_of_speech": "verb",
+      "conjugation": 4,
+      "infinitive": "convenire",
+      "perfect": "conveni",
+      "present": "convenio",
+      "future": "conveniam",
+      "supine": "conventum",
+      "forms": {
+        "gerund_ablative": ["conveniendo"]
+      },
+      "translations": {
+        "en": "assemble, come together",
+        "la": "convenio, convenire"
+      },
+      "notes": "'conveniendo' is the ablative gerund, often used to express means or manner"
     },
     {
       "lemma": "elogium",
@@ -11420,29 +11789,48 @@
                     "la": "uxor"
                   }
                 },
-                    
-                
                 {
-                  "lemma": "benedico",
+                  "lemma": "propitior",
                   "part_of_speech": "verb",
-                  "conjugation": 3,
-                  "deponent": false,
-                  "infinitive": "benedicere",
-                  "forms": {
-                    "present": ["benedico", "benedicis", "benedicit", "benedicimus", "benedicitis", "benedicunt"],
-                    "present_passive": ["benedicor", "benediceris", "benedicitur", "benedicimur", "benedicimini", "benedicuntur"],
-                    "imperative": ["benedic", "benedicite"],
-                    "subjunctive": ["benedicam", "benedicas", "benedicat", "benedicamus", "benedicatis", "benedicant"],
-                    "future_passive": ["benedicar", "benediceris", "benedicetur", "benedicemur", "benedicemini", "benedicentur"],
-                    "present_participle": ["benedicens"],
-                    "perfect_passive_participle": ["benedictus", "benedicta", "benedictum"],
-                    "perfect_indicative_active": ["benedixi", "benedixisti", "benedixit", "benediximus", "benedixistis", "benedixerunt"]
+                  "conjugation": 1,
+                  "deponent": true,
+                  "infinitive": "propitiari",
+                  "present": "propitior",
+                  "future": "propitiabor",
+                  "perfect": "propitiatus",
+                  "supine": "propitiatum",
+                  "forms":{
+                    "present_passive_indicative": ["propitiatur"]    
                   },
                   "translations": {
-                    "en": "to bless, speak well of",
-                    "la": "benedico"
+                    "en": "to appease, gain favor, propitiate",
+                    "la": "propitior, propitiari"
                   }
                 },
+                    {
+                      "lemma": "benedico",
+                      "part_of_speech": "verb",
+                      "conjugation": 3,
+                      "infinitive": "benedicere",
+                      "present": "benedico",
+                      "future": "benedicam",
+                      "perfect": "benedixi",
+                      "supine": "benedictum",
+                      "forms": {
+                          "imperative": ["benedic", "benedicite"],
+                          "subjunctive": ["benedicam", "benedicas", "benedicat", "benedicamus", "benedicatis", "benedicant"],
+                          "future_passive": ["benedicar", "benediceris", "benedicetur", "benedicemur", "benedicemini", "benedicentur"],
+                          "present_participle": ["benedicens"],
+                          "perfect_passive_participle": ["benedictus", "benedicta", "benedictum"],
+                          "perfect_indicative_active": ["benedixi", "benedixisti", "benedixit", "benediximus", "benedixistis", "benedixerunt"]
+                      },
+                      "translations": {
+                        "en": "to bless, praise, speak well of",
+                        "la": "benedico, benedicere"
+                      },
+                      "notes": "Imperative singular = 'benedic'; plural = 'benedicite'."
+                    },
+                
                 {
                   "lemma": "dominium",
                   "part_of_speech": "noun",
@@ -11673,6 +12061,20 @@
     }
   },
   {
+    "lemma": "venter",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "venter",
+    "genitive": "ventris",
+    
+    "translations": {
+      "en": "womb, belly",
+      "la": "venter"
+    },
+    "notes": "Often used metaphorically for womb or belly"
+  },
+  {
     "lemma": "ventus",
     "part_of_speech": "noun",
     "declension": 2,
@@ -11855,6 +12257,18 @@
     }
   },
   {
+    "lemma": "altitudo",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "altitudo",
+    "genitive": "altitudinis",
+    "translations": {
+      "en": "height",
+      "la": "altitudo"
+    }
+  },
+  {
     "lemma": "cognosco",
     "part_of_speech": "verb",
     "perfect": "cognovi",
@@ -11874,8 +12288,9 @@
     "perfect": "respexi",
     "supine": "respectum",
     "forms": {
-      "imperative": ["respice"]
-      },
+      "imperative": ["respice"],
+      "perfect_indicative": ["respexit"]
+    },
     "translations": {
       "en": "to look back at, regard, consider",
       "la": "respicio, respicere"
@@ -12037,24 +12452,7 @@
     "la": "lavo, lavare"
   }
 },
-{
-  "lemma": "fio",
-  "part_of_speech": "verb",  
-  "conjugation": 0,
-  "infinitive": "fieri",      
-  "perfect": "factus",
-  "present": "fio",
-  "future":"fiet",
-  "forms" :{
-    "present": ["fio"],
-    "future": ["fiet"]
-  },
-  "translations": {
-    "en": "to become, happen",
-    "la": "fio, fieri"
-  },
-  "notes": "Irregular verb (suppletive forms from facio)"
-},
+
   {
     "lemma": "humilitas",
     "part_of_speech": "noun",
