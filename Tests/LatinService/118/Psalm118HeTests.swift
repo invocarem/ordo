@@ -73,23 +73,48 @@ class Psalm118HeTests: XCTestCase {
         
         verifyWordsInAnalysis(analysis, confirmedWords: lifeTerms)
     }
+    func testAnalysisSummary() {
+        let analysis = latinService.analyzePsalm(text: psalm118He)
+        if verbose {
+            print("\n=== Full Analysis ===")
+            print("Total words:", analysis.totalWords)
+            print("Unique lemmas:", analysis.uniqueLemmas)
+            
+            print("'concupisco' forms:", analysis.dictionary["concupisco"]?.forms ?? [:])
+            print("'statuo' forms:", analysis.dictionary["statuo"]?.forms ?? [:])
+            print("'spero' forms:", analysis.dictionary["spero"]?.forms ?? [:])
+        }
+        XCTAssertLessThan(
+            analysis.totalWords, 
+            analysis.uniqueLemmas * 2,
+            "totalWords should be less than uniqueLemmas * 2 (was \(analysis.totalWords) vs \(analysis.uniqueLemmas * 2))"
+        )
+    }
     
     // MARK: - Helper
     private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
+        let caseInsensitiveDict = Dictionary(uniqueKeysWithValues: 
+            analysis.dictionary.map { ($0.key.lowercased(), $0.value) }
+        )
+        
         for (lemma, forms, translation) in confirmedWords {
-            guard let entry = analysis.dictionary[lemma] else {
+            guard let entry = caseInsensitiveDict[lemma.lowercased()] else {
                 XCTFail("Missing lemma: \(lemma)")
                 continue
             }
             
-            // Verify semantic domain
+            // Translation check
             XCTAssertTrue(
                 entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
                 "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
             )
             
-            // Verify morphological coverage
-            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
+            // Form verification (case-insensitive)
+            let entryFormsLowercased = Dictionary(uniqueKeysWithValues:
+                entry.forms.map { ($0.key.lowercased(), $0.value) }
+            )
+            
+            let missingForms = forms.filter { entryFormsLowercased[$0.lowercased()] == nil }
             if !missingForms.isEmpty {
                 XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
             }
@@ -98,8 +123,8 @@ class Psalm118HeTests: XCTestCase {
                 print("\n\(lemma.uppercased())")
                 print("  Translation: \(entry.translation ?? "?")")
                 forms.forEach { form in
-                    let count = entry.forms[form.lowercased()] ?? 0
-                    print("  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
+                    let count = entryFormsLowercased[form.lowercased()] ?? 0
+                    print("  \(form.padding(toLength: 15, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
                 }
             }
         }

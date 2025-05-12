@@ -34,6 +34,25 @@ struct VerbFormAnalysisView: View {
     private func analyzeVerbForm() -> String {
         guard entity.partOfSpeech == .verb else { return "" }
         
+        if let presentForms = entity.forms?["present"], presentForms.contains(form) {
+            if form.hasSuffix("o") || form.hasSuffix("m") { return "1sg present" }
+            if form.hasSuffix("s") { return "2sg present" }
+            if form.hasSuffix("t") { return "3sg present" }
+            if form.hasSuffix("mus") { return "1pl present" }
+            if form.hasSuffix("tis") { return "2pl present" }
+            if form.hasSuffix("nt") { return "3pl present" }
+        }
+        
+        // Check imperfect tense
+        if let imperfectForms = entity.forms?["imperfect"], imperfectForms.contains(form) {
+            if form.hasSuffix("m") { return "1sg imperfect" }
+            if form.hasSuffix("s") { return "2sg imperfect" }
+            if form.hasSuffix("t") { return "3sg imperfect" }
+            if form.hasSuffix("mus") { return "1pl imperfect" }
+            if form.hasSuffix("tis") { return "2pl imperfect" }
+            if form.hasSuffix("nt") { return "3pl imperfect" }
+        }
+        
         // Check perfect forms
         if let perfectForms = entity.forms?["perfect"], perfectForms.contains(form) {
             if form.hasSuffix("i") { return "1sg perfect" }
@@ -44,7 +63,50 @@ struct VerbFormAnalysisView: View {
             if form.hasSuffix("erunt") || form.hasSuffix("erint") { return "3pl perfect" }
         }
         
-        // Add more verb form checks as needed...
+        // Check future perfect
+        if let futurePerfectForms = entity.forms?["future perfect"], futurePerfectForms.contains(form) {
+            if form.hasSuffix("ero") { return "1sg future perfect" }
+            if form.hasSuffix("eris") { return "2sg future perfect" }
+            if form.hasSuffix("erit") { return "3sg future perfect" }
+            if form.hasSuffix("erimus") { return "1pl future perfect" }
+            if form.hasSuffix("eritis") { return "2pl future perfect" }
+            if form.hasSuffix("erint") { return "3pl future perfect" }
+        }
+        
+        // Check pluperfect
+        if let pluperfectForms = entity.forms?["pluperfect"], pluperfectForms.contains(form) {
+            if form.hasSuffix("eram") { return "1sg pluperfect" }
+            if form.hasSuffix("eras") { return "2sg pluperfect" }
+            if form.hasSuffix("erat") { return "3sg pluperfect" }
+            if form.hasSuffix("eramus") { return "1pl pluperfect" }
+            if form.hasSuffix("eratis") { return "2pl pluperfect" }
+            if form.hasSuffix("erant") { return "3pl pluperfect" }
+        }
+        
+        // Check subjunctive forms
+        if let subjunctiveForms = entity.forms?["subjunctive"], subjunctiveForms.contains(form) {
+            // Present subjunctive
+            if form.hasSuffix("em") || form.hasSuffix("m") { return "1sg present subjunctive" }
+            if form.hasSuffix("es") || form.hasSuffix("s") { return "2sg present subjunctive" }
+            if form.hasSuffix("et") || form.hasSuffix("t") { return "3sg present subjunctive" }
+            if form.hasSuffix("emus") { return "1pl present subjunctive" }
+            if form.hasSuffix("etis") { return "2pl present subjunctive" }
+            if form.hasSuffix("ent") { return "3pl present subjunctive" }
+            
+            // Imperfect subjunctive
+            if form.hasSuffix("rem") { return "1sg imperfect subjunctive" }
+            if form.hasSuffix("res") { return "2sg imperfect subjunctive" }
+            if form.hasSuffix("ret") { return "3sg imperfect subjunctive" }
+            if form.hasSuffix("remus") { return "1pl imperfect subjunctive" }
+            if form.hasSuffix("retis") { return "2pl imperfect subjunctive" }
+            if form.hasSuffix("rent") { return "3pl imperfect subjunctive" }
+        }
+        
+        // Check imperative forms
+        if let imperativeForms = entity.forms?["imperative"], imperativeForms.contains(form) {
+            if form == entity.lemma { return "2sg present imperative" }
+            if form.hasSuffix("te") { return "2pl present imperative" }
+        }
         
         return ""
     }

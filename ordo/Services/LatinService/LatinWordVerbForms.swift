@@ -6,7 +6,7 @@ extension LatinWordEntity {
         var forms = [String: [String]]()
         
         // Get principal parts with nil checks
-        let lemma = lemma.lowercased()
+        //let lemma = lemma.lowercased()
         
         guard  let infinitive = infinitive?.lowercased() else { return [:] }
         let perfect = perfect?.lowercased() ?? ""
@@ -41,8 +41,8 @@ extension LatinWordEntity {
             imperativeForms.append(presentStem + "ate")
             
         case 2: // -ēre verbs (monē, monēte)
-            imperativeForms.append(presentStem + "ē")
-            imperativeForms.append(presentStem + "ēte")
+            imperativeForms.append(presentStem + "e")
+            imperativeForms.append(presentStem + "ete")
             
         case 3: // -ere verbs (rege, regite)
             imperativeForms.append(presentStem + "e")
@@ -54,8 +54,8 @@ extension LatinWordEntity {
             //}
             
         case 4: // -ire verbs (audi, audite)
-            imperativeForms.append(presentStem + "ī")
-            imperativeForms.append(presentStem + "īte")
+            imperativeForms.append(presentStem + "i")
+            imperativeForms.append(presentStem + "ite")
             
         default: break
         }

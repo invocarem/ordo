@@ -1,5 +1,105 @@
  [
   {
+    "lemma": "compeditus",
+    "part_of_speech": "adjective",
+    "gender": "masculine",
+    "declension": 1,
+    "nominative": "compeditus",
+    "genitive": "compediti",
+    "translations": {
+      "en": "shackled, fettered",
+      "la": "compeditus, -a, -um"
+    }
+  },
+ 
+  {
+    "lemma": "exprobro",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "exprobrare",
+    "imperfect": "exprobrabant",
+    "perfect": "exprobravi",
+    "supine": "exprobratum",
+    "translations": {
+      "en": "to reproach, taunt, upbraid",
+      "la": "exprobro, exprobrare, exprobravi, exprobratum"
+    }
+  },
+  {
+    "lemma": "interimo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "interimere",
+    "forms_plural": {
+      "genitive": ["interemptorum"]
+    },
+   
+    "perfect": "interemi",
+    "supine": "interemptum",
+    "translations": {
+      "en": "to destroy, kill, annihilate",
+      "la": "interimo, interimere, interemi, interemptum"
+    }
+  },
+  
+  {
+  "lemma": "latitudo",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "latitudo",
+  "genitive": "latitudinis",
+  "translations": {
+    "en": "breadth, width, freedom",
+    "la": "latitudo"
+  }
+},
+{
+  "lemma": "fumus",
+  "part_of_speech": "noun",
+  "gender": "masculine",
+  "declension": 2,
+  "nominative": "fumus",
+  "genitive": "fumi",
+  "translations": {
+    "en": "smoke, vapor",
+    "la": "fumus"
+  }
+},
+{
+  "lemma": "confundor",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "deponent": true,
+  "infinitive": "confundi",
+  "forms" :{
+      "imperfect": ["confundebar"]
+  },
+  "perfect": "confusus",
+  
+  "translations": {
+    "en": "to be confused, ashamed, dismayed",
+    "la": "confundor, confundi, confusus sum"
+  }
+},
+{
+  "lemma": "respondeo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "respondere",
+  "future": "respondebo",
+  "perfect": "respondi",
+  "supine": "responsum",
+  "forms": {
+    "future": ["respondebo", "respondebis", "respondebit"]
+  },
+  "translations": {
+    "en": "to answer, reply",
+    "la": "respondeo, respondere, respondi, responsum"
+  }
+},
+
+  {
     "lemma": "pestilentia",
     "part_of_speech": "noun",
     "declension": 1,
@@ -89,6 +189,17 @@
   }
 },
   {
+    "lemma": "ne",
+    "part_of_speech": "adverb",
+    
+    "translations": {
+      "en": "not (negative), whether (interrogative),lest (subjunctive)",
+      "la": "ne"
+    }
+    
+  },
+  
+  {
     "lemma": "figmentum",
     "part_of_speech": "noun",
     "declension": 2,
@@ -100,6 +211,7 @@
       "la": "figmentum"
     }
   },
+  
   {
     "lemma": "effloreo",
     "part_of_speech": "verb",
@@ -1155,17 +1267,29 @@
           "la": "uro"
         }
       },
+     
       {
         "lemma": "venio",
         "part_of_speech": "verb",
-        "perfect": "veni",
+        "conjugation": 4,
         "infinitive": "venire",
+     
+        "perfect": "veni",
         "supine": "ventum",
+        "forms": {
+            "present_subjunctive": ["veniat"]
+            
+        },
+        "forms_plural": {
+          "nominative_present_particle": ["venientes"]
+        },
         "translations": {
-          "en": "come, arrive",
-          "la": "venio"
+          "en": "to come, arrive",
+          "la": "venio, venire, veni, ventum"
         }
       },
+      
+     
         {
           "lemma": "sol",
           "part_of_speech": "noun",
@@ -6985,6 +7109,46 @@
       }
     },
     {
+      "lemma": "tribulor",
+      "part_of_speech": "verb",
+      "conjugation": 1,
+      "infinitive": "tribulari",
+      
+      "perfect": "tribulatus",
+      "supine": "tribulatum",
+      "forms":{
+        "present_passive": ["tribulor", "tribularis", "tribulatur", "tribulamur", "tribulamini", "tribulantur"]
+        },
+      "translations": {
+        "en": "to afflict, oppress",
+        "la": "tribulor, tribulari, tribulatus sum"
+      }
+    },
+    {
+      "lemma": "solitudo",
+      "part_of_speech": "noun",
+      "gender": "feminine",
+      "declension": 3,
+      "nominative": "solitudo",
+      "genitive": "solitudinis",
+      "translations": {
+        "en": "solitude, loneliness, wilderness",
+        "la": "solitudo, solitudinis"
+      }
+    },
+    {
+      "lemma": "vestimentum",
+      "part_of_speech": "noun",
+      "gender": "neuter",
+      "declension": 2,
+      "nominative": "vestimentum",
+      "genitive": "vestimenti",
+      "translations": {
+        "en": "garment, clothing, vestment",
+        "la": "vestimentum"
+      }
+    },
+    {
       "lemma": "tribulatio",
       "part_of_speech": "noun",
       "gender": "feminine",
@@ -7922,6 +8086,19 @@
                 "en": "want, wish",
                 "la": "volo"
             }
+        },
+        {
+          "lemma": "concupisco",
+          "part_of_speech": "verb",
+          "conjugation": 3,
+          "infinitive": "concupiscere",
+          "perfect": "concupivi",
+          "supine": "concupitum",
+          
+          "translations": {
+            "en": "to long for, desire ardently (esp. spiritually)",
+            "la": "concupisco, concupiscere, concupivi, concupitum"
+          }
         },
         {
             "lemma": "concupio",
@@ -9279,7 +9456,23 @@
                 "la": "quoniam"
             }
         },
-    
+        {
+          "lemma": "aufero",
+          "part_of_speech": "verb",
+          "conjugation": 0,
+          "infinitive": "auferre",
+         
+          "perfect": "abstuli",
+          "supine": "ablatum",
+          "forms":{
+          
+              "present_subjunctive": ["auferam", "auferas", "auferat", "auferamus", "auferatis", "auferant"]
+          },
+          "translations": {
+            "en": "to take away, carry off, remove",
+            "la": "aufero, auferre, abstuli, ablatum"
+          }
+        },
     {
             "lemma": "dormio",
             "part_of_speech": "verb",
@@ -9894,6 +10087,32 @@
         },
         "translations": {"en": "be"}
       },
+    {
+      "lemma": "amputo",
+      "part_of_speech": "verb",
+      "conjugation": 1,
+      "infinitive": "amputare",
+      
+      "perfect": "amputavi",
+      "supine": "amputatum",
+      "translations": {
+        "en": "to prune, cut off, remove",
+        "la": "amputo, amputare, amputavi, amputatum"
+      }
+    },
+    {
+      "lemma": "statuo",
+      "part_of_speech": "verb",
+      "conjugation": 3,
+      "infinitive": "statuere",
+     
+      "perfect": "statui",
+      "supine": "statutum",
+      "translations": {
+        "en": "to set up, establish, decide",
+        "la": "statuo, statuere, statui, statutum"
+      }
+    },
       {
         "lemma": "sto",
         "part_of_speech": "verb",
@@ -9965,22 +10184,7 @@
         }
       
     },
-    {
-      "lemma": "venio",
-      "part_of_speech": "verb",
-      "conjugation": 4,
-      "infinitive": "venire",
-      "perfect": "veni",
-      "present": "venio",
-      "future": "veniam",
-      "forms_plural": {
-        "nominative_present_particle": ["venientes"]
-      },
-      "translations": {
-        "en": "come, arrive",
-        "la": "venio, venire"
-      }
-    },
+   
       
     {
         "lemma": "exsulto",
@@ -12069,7 +12273,7 @@
     "genitive": "ventris",
     
     "translations": {
-      "en": "womb, belly",
+      "en": "womb, belly, stomach",
       "la": "venter"
     },
     "notes": "Often used metaphorically for womb or belly"

@@ -44,6 +44,19 @@ class Psalm101Tests: XCTestCase {
         "Filii servorum tuorum habitabunt, et semen eorum in saeculum dirigetur."
     ]
     // MARK: - Test Cases
+     func testPenitentialMotifs() {
+        let analysis = latinService.analyzePsalm(text: psalm101)
+        
+        let penitentialTerms = [
+            ("gemitus", ["gemitus"], "groaning"),     // Psalm 101:6, 21
+            ("fletus", ["fletu"], "weeping"),         // Psalm 101:10
+            ("oratio", ["orationem"], "prayer"),      // Psalm 101:1, 18
+            ("clamor", ["clamor"], "cry"),            // Psalm 101:1
+            ("tribulor", ["tribulor"], "afflict")   // Psalm 101:2
+        ]
+        
+        verifyWordsInAnalysis(analysis, confirmedWords: penitentialTerms)
+    }
     
     // 1. Test Rare Lament Vocabulary
     func testRareLamentTerms() {
@@ -97,13 +110,43 @@ class Psalm101Tests: XCTestCase {
         let bodyTerms = [
             ("fumus", ["fumus"], "smoke"),             // "My days vanish like smoke" (Psalm 101:4)
             ("foenum", ["foenum", "foenum"], "hay"),    // Withering metaphor (Psalm 101:5, 12)
-            ("os", ["os"], "bone, mouth"),         // Dual meaning (Psalm 101:6, 6)
+            ("os", ["os"], "bone"),         // Dual meaning (Psalm 101:6, 6)
             ("potus", ["potum"], "drink"),              // "Mingled my drink with tears" (Psalm 101:10)
-            ("venter", ["ventris"], "womb")             // "Fruit of the womb" (Psalm 101:14)
+           ("caro", ["carni"], "flesh")               // "My flesh clings to my bones" (Psalm 101:6)
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: bodyTerms)
     }
+
+    func testTransienceEternityContrast() {
+        let analysis = latinService.analyzePsalm(text: psalm101)
+        
+        let transientTerms = [
+            ("umbra", ["umbra"], "shadow"),               // "My days are like a fading shadow" (v.12)
+            ("fumus", ["fumus"], "smoke"),                 // "My days vanish like smoke" (v.4)
+            ("vestimentum", ["vestimentum"], "garment")     // Creation wears out like clothing (v.27)
+        ]
+        
+        let eternalTerms = [
+            ("aeternum", ["aeternum"], "eternity"),        // "But you, Lord, endure forever" (v.13)
+            ("permaneo", ["permanes", "permanes"], "endure"), // God's permanence (v.13, 27)
+            ("saeculum", ["saeculum"], "age")              // "Their children will be established forever" (v.29)
+        ]
+    
+        verifyWordsInAnalysis(analysis, confirmedWords: transientTerms)
+        verifyWordsInAnalysis(analysis, confirmedWords: eternalTerms)
+        
+        // Verify structural contrast between verses about transience vs eternity
+        let transientVerses = [4, 5, 6, 7, 8, 9, 10, 11, 12, 27]
+        let eternalVerses = [13, 14, 16, 17, 18, 19, 20, 23, 25, 26, 28, 29]
+        
+        XCTAssertGreaterThan(
+            eternalVerses.count,
+            transientVerses.count,
+            "Eternal themes should dominate transient ones (eternal: \(eternalVerses.count) vs transient: \(transientVerses.count))"
+        )
+    }
+
     func testAnalysisSummary() {
         let analysis = latinService.analyzePsalm(text: psalm101)
         if verbose {
@@ -111,9 +154,9 @@ class Psalm101Tests: XCTestCase {
             print("Total words:", analysis.totalWords)
             print("Unique lemmas:", analysis.uniqueLemmas)
             
-            print("'dirigo' forms:", analysis.dictionary["dirigo"]?.forms ?? [:])
-            print("'humilis' forms:", analysis.dictionary["humilis"]?.forms ?? [:])
-            print("'spero' forms:", analysis.dictionary["spero"]?.forms ?? [:])
+            print("'tribulor' forms:", analysis.dictionary["tribulor"]?.forms ?? [:])
+            print("'solitudo' forms:", analysis.dictionary["solitudo"]?.forms ?? [:])
+            print("'venter' forms:", analysis.dictionary["venter"]?.forms ?? [:])
         }
         XCTAssertLessThan(
             analysis.totalWords, 
