@@ -713,7 +713,7 @@
     "lemma": "canis",
     "part_of_speech": "noun",
     "declension": 3,
-    "gender": "masculine/feminine",
+    "gender": "masculine",
     "nominative": "canis",
     "genitive": "canis",
     "accusative": "canem",
@@ -1235,7 +1235,7 @@
           "la": "umquam"
         }
       },
-
+      
       {
         "lemma": "usquequo",
         "part_of_speech": "adverb",
