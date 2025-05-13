@@ -1,5 +1,83 @@
  [
   {
+    "lemma": "laudo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "laudare",
+    "present": "laudo",
+    "future": "laudabo",
+    "perfect": "laudavi",
+    "supine": "laudatum",
+    "translations": {
+      "en": "to praise, commend",
+      "la": "laudo, laudare"
+    }
+  },
+{
+  "lemma": "laudatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "laudatio",
+  "genitive": "laudationis",
+  "accusative": "laudationem",
+  "translations": {
+    "en": "praise, commendation",
+    "la": "laudatio"
+  }
+},
+  {
+    "lemma": "fodio",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "fodere",
+    "present": "fodio",
+    "future": "fodiam",
+    "perfect": "fodi",
+    "supine": "fossum",
+    "translations": {
+      "en": "to pierce, dig",
+      "la": "fodio, fodere"
+    }
+  },
+  {
+  "lemma": "cera",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "cera",
+  "genitive": "cerae",
+  "accusative": "ceram",
+  "translations": {
+    "en": "wax",
+    "la": "cera"
+  }
+},{
+  "lemma": "testa",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "testa",
+  "genitive": "testae",
+  "accusative": "testam",
+  "translations": {
+    "en": "potsherd, tile, jug",
+    "la": "testa"
+  }
+},{
+  "lemma": "sors",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "sors",
+  "genitive": "sortis",
+  "accusative": "sortem",
+  "translations": {
+    "en": "lot, fate, chance",
+    "la": "sors"
+  }
+},
+  {
     "lemma": "compeditus",
     "part_of_speech": "adjective",
     "gender": "masculine",
@@ -11,7 +89,45 @@
       "la": "compeditus, -a, -um"
     }
   },
- 
+  {
+    "lemma": "dulcedo",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "dulcedo",
+    "genitive": "dulcedinis",
+    "translations": {
+      "en": "sweetness",
+      "la": "dulcedo, dulcedinis"
+    }
+  },
+  {
+    "lemma": "adoro",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "adorare",
+    "present": "adoro",
+    "future": "adorabo",
+    "perfect": "adoravi",
+    "supine": "adoratum",
+    "translations": {
+      "en": "to worship, adore",
+      "la": "adoro, adorare"
+    }
+  },
+  {
+    "lemma": "vermis",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "vermis",
+    "genitive": "vermis",
+    "accusative": "vermem",
+    "translations": {
+      "en": "worm",
+      "la": "vermis"
+    }
+  },
   {
     "lemma": "exprobro",
     "part_of_speech": "verb",
@@ -594,6 +710,20 @@
     }
   },
   {
+    "lemma": "canis",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine/feminine",
+    "nominative": "canis",
+    "genitive": "canis",
+    "accusative": "canem",
+    "nominative_plural": "canes",
+    "translations": {
+      "en": "dog",
+      "la": "canis"
+    }
+  },
+  {
     "lemma": "vita",
     "part_of_speech": "noun",
     "declension": 1,
@@ -604,6 +734,19 @@
     "translations": {
       "en": "life",
       "la": "vita"
+    }
+  },
+  {
+    "lemma": "vitulus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "vitulus",
+    "genitive": "vituli",
+    "accusative": "vitulum",
+    "translations": {
+      "en": "calf",
+      "la": "vitulus"
     }
   },
   {
@@ -1113,6 +1256,19 @@
           "translations": {
             "en": "shield",
             "la": "scutum"
+          }
+        },
+        {
+          "lemma": "corona",
+          "part_of_speech": "noun",
+          "declension": 1,
+          "gender": "feminine",
+          "nominative": "corona",
+          "genitive": "coronae",
+          "accusative": "coronam",
+          "translations": {
+            "en": "crown",
+            "la": "corona"
           }
         },
         {
@@ -2609,6 +2765,9 @@
     "part_of_speech": "noun",
     "declension": 1,
     "gender": "feminine",
+    "nominative": "gloria",
+    "genitive": "gloriae",
+    "accusative": "gloriam",
    
     "translations": {
       "en": "glory, fame, renown",
@@ -8157,6 +8316,62 @@
         "notes": "Psalm 119:18 - 'Revela oculos meos' (Unveil my eyes)"
     },
     {
+      "lemma": "longitudo",
+      "part_of_speech": "noun",
+      "declension": 3,
+      "gender": "feminine",
+      "nominative": "longitudo",
+      "genitive": "longitudinis",
+      "accusative": "longitudinem",
+      "translations": {
+        "en": "length",
+        "la": "longitudo"
+      }
+    },
+    {
+      "lemma": "clibanus",
+      "part_of_speech": "noun",
+      "declension": 2,
+      "gender": "masculine",
+      "nominative": "clibanus",
+      "genitive": "clibani",
+      "accusative": "clibanum",
+      "translations": {
+        "en": "furnace, oven",
+        "la": "clibanus"
+      }
+    },
+    {
+      "lemma": "decor",
+      "part_of_speech": "noun",
+      "declension": 3,
+      "gender": "masculine",
+      "nominative": "decor",
+      "genitive": "decoris",
+      "accusative": "decorem",
+      "translations": {
+        "en": "splendor, beauty",
+        "la": "decor"
+      }
+    },
+    {
+      "lemma": "tribuo",
+      "part_of_speech": "verb",
+      "conjugation": 3,
+      "infinitive": "tribuere",
+      "present": "tribuo",
+      "future": "tribuam",
+      "imperfect": "tribuebam",
+      "perfect": "tribui",
+      "supine": "tributum",
+      "perfect_second_singular": "tribuisti",
+      "translations": {
+        "en": "to grant, assign, bestow, allot",
+        "la": "tribuo, tribuere, tribui, tributum"
+      }
+    },
+
+    {
         "lemma": "retribuo",
         "part_of_speech": "verb",
         "conjugation": 3,
@@ -10522,6 +10737,21 @@
             ]
         }
     },
+    {
+      "lemma": "perdo",
+      "part_of_speech": "verb",
+      "conjugation": 3,
+      "infinitive": "perdere",
+      "present": "perdo",
+      "future": "perdam",
+      "imperfect": "perdebam",
+      "perfect": "perdidi",
+      "supine": "perditum",
+      "translations": {
+        "en": "to destroy, ruin, lose",
+        "la": "perdo, perdere, perdidi, perditum"
+      }
+    },
     
     {
         "lemma": "disperdo",
@@ -10796,6 +11026,20 @@
         },
         "forms_plural" : {
           "imperative": ["haereditate"]
+        }
+      },
+      {
+        "lemma": "laetifico",
+        "part_of_speech": "verb",
+        "conjugation": 1,
+        "infinitive": "laetificare",
+        "present": "laetifico",
+        "future": "laetificabo",
+        "perfect": "laetificavi",
+        "supine": "laetificatum",
+        "translations": {
+          "en": "to gladden, make joyful",
+          "la": "laetifico, laetificare"
         }
       },
     {
@@ -12523,6 +12767,20 @@
   "translations": {
     "en": "to grow old, become established",
     "la": "invetero, inveterare"
+  }
+},
+{
+  "lemma": "stabilio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "stabilire",
+  "present": "stabilio",
+  "future": "stabiliam",
+  "perfect": "stabilivi",
+  "supine": "stabilitum",
+  "translations": {
+    "en": "to establish, make firm",
+    "la": "stabilio, stabilire"
   }
 },
 {
