@@ -1,7 +1,7 @@
 import XCTest
 @testable import LatinService
 
-class Psalm7ThematicTests: XCTestCase {
+class Psalm7Tests: XCTestCase {
     private var latinService: LatinService!
     let verbose = true
     
@@ -33,6 +33,31 @@ class Psalm7ThematicTests: XCTestCase {
     ]
     
     // MARK: - Thematic Test Cases
+func testMissingWords() {
+    let analysis = latinService.analyzePsalm(text: psalm7)
+    
+    let missingWords = [
+        ("nequando", ["nequando"], "lest ever"),
+        ("rapio", ["rapiat"], "seize"),
+        ("aperio", ["aperuit"], "open"),
+         ("effodio", ["effodit"], "dig"),
+        ("vibro", ["vibrabit"], "brandish")
+    ]
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: missingWords)
+}
+
+    func testPoeticReversals() {
+        let analysis = latinService.analyzePsalm(text: psalm7)
+        let reversalTerms = [
+            ("converto", ["convertetur"], "turn back"),
+            ("incido", ["incidit"], "fall"),
+            ("parturio", ["parturiit"], "give birth"),
+            ("fovea", ["foveam"], "pit"),
+            ("lacus", ["lacum"], "pit")
+        ]
+        verifyWordsInAnalysis(analysis, confirmedWords: reversalTerms)
+    }
     
     func testLegalTrialTheme() {
         let analysis = latinService.analyzePsalm(text: psalm7)
@@ -48,6 +73,21 @@ class Psalm7ThematicTests: XCTestCase {
         
         verifyWordsInAnalysis(analysis, confirmedWords: legalTerms)
     }
+
+   
+
+    func testPurityAndDarkness() {
+        let analysis = latinService.analyzePsalm(text: psalm7)
+        let purityTerms = [
+            // Lemma      | Forms in Psalm 7          | Translation
+            ("innocentia", ["innocentiam"],           "innocence"),  // v. 9
+            ("scrutor",    ["scrutans"],              "examine"),   // v. 10
+            ("iniquitas",  ["iniquitas", "iniquitatem"], "wickedness"), // v. 3, 15
+            ("pulvis",     ["pulverem"],              "dust")        // v. 6
+        ]
+        verifyWordsInAnalysis(analysis, confirmedWords: purityTerms)
+    }
+
     
     func testViolentEnemyMetaphors() {
         let analysis = latinService.analyzePsalm(text: psalm7)
@@ -105,23 +145,47 @@ class Psalm7ThematicTests: XCTestCase {
         
         verifyWordsInAnalysis(analysis, confirmedWords: protectionTerms)
     }
-    
-    // MARK: - Helper (same as Psalm 89)
+    func testAnalysisSummary() {
+        let analysis = latinService.analyzePsalm(text: psalm7)
+        if verbose {
+            print("\n=== Full Analysis ===")
+            print("Total words:", analysis.totalWords)
+            print("Unique lemmas:", analysis.uniqueLemmas)
+            
+            print("'tribulor' forms:", analysis.dictionary["tribulor"]?.forms ?? [:])
+            print("'solitudo' forms:", analysis.dictionary["solitudo"]?.forms ?? [:])
+            print("'venter' forms:", analysis.dictionary["venter"]?.forms ?? [:])
+        }
+        XCTAssertLessThan(
+            analysis.totalWords, 
+            analysis.uniqueLemmas * 2,
+            "totalWords should be less than uniqueLemmas * 2 (was \(analysis.totalWords) vs \(analysis.uniqueLemmas * 2))"
+        )
+    }
+    // MARK: - Helper 
     private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
+        let caseInsensitiveDict = Dictionary(uniqueKeysWithValues: 
+            analysis.dictionary.map { ($0.key.lowercased(), $0.value) }
+        )
+        
         for (lemma, forms, translation) in confirmedWords {
-            guard let entry = analysis.dictionary[lemma] else {
+            guard let entry = caseInsensitiveDict[lemma.lowercased()] else {
                 XCTFail("Missing lemma: \(lemma)")
                 continue
             }
             
-            // Verify semantic domain
+            // Translation check
             XCTAssertTrue(
                 entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
                 "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
             )
             
-            // Verify morphological coverage
-            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
+            // Form verification (case-insensitive)
+            let entryFormsLowercased = Dictionary(uniqueKeysWithValues:
+                entry.forms.map { ($0.key.lowercased(), $0.value) }
+            )
+            
+            let missingForms = forms.filter { entryFormsLowercased[$0.lowercased()] == nil }
             if !missingForms.isEmpty {
                 XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
             }
@@ -130,10 +194,12 @@ class Psalm7ThematicTests: XCTestCase {
                 print("\n\(lemma.uppercased())")
                 print("  Translation: \(entry.translation ?? "?")")
                 forms.forEach { form in
-                    let count = entry.forms[form.lowercased()] ?? 0
-                    print("  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
+                    let count = entryFormsLowercased[form.lowercased()] ?? 0
+                    print("  \(form.padding(toLength: 15, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
                 }
             }
         }
     }
+    
+   
 }

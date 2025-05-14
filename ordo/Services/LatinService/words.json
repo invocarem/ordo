@@ -1,4 +1,91 @@
- [
+ [{
+  "lemma": "effodio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "effodere",
+  "present": "effodio",
+  "perfect": "effodi",
+  "supine": "effossum",
+  "translations": {
+    "en": "to dig out, excavate",
+    "la": "effodio, effodere, effodi, effossum"
+  }
+},
+{
+  "lemma": "vibro",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "vibrare",
+  "present": "vibro",
+  "perfect": "vibravi",
+  "supine": "vibratum",
+  "translations": {
+    "en": "to brandish, wave, hurl",
+    "la": "vibro, vibrare, vibravi, vibratum"
+  }
+},
+  {
+  "lemma": "nequando",
+  "part_of_speech": "adverb",
+  "translations": {
+    "en": "lest ever, lest at any time",
+    "la": "nequando"
+  }
+},
+{
+  "lemma": "rapio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "rapere",
+  "forms": {
+ "present_subjunctive": ["rapiat"]
+  
+  },
+ 
+  "perfect": "rapui",
+  "supine": "raptum",
+  "translations": {
+    "en": "to seize, snatch, carry off",
+    "la": "rapio, rapere, rapui, raptum"
+  }
+},
+{
+  "lemma": "aperio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "aperire",
+  "perfect": "aperuit",
+  "supine": "apertum",
+  "translations": {
+    "en": "to open, uncover, reveal",
+    "la": "aperio, aperire, aperui, apertum"
+  }
+},
+  {
+  "lemma": "scrutor",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "scrutari",
+  "present_participle": "scrutans",
+  "perfect": "scrutatus",
+  "supine": "scrutatum",
+   "forms": {
+            "present": ["scrutor", "scrutaris", "scrutatur", "scrutamur", "scrutamini", "scrutantur"],
+            "imperfect": ["scrutabar", "scrutabaris", "scrutabatur", "scrutabamur", "scrutabamini", "scrutabantur"],
+            "future": ["scrutabor", "scrutaberis", "scrutabitur", "scrutabimur", "scrutabimini", "scrutabuntur"],
+            "perfect": ["scrutatus sum", "scrutatus es", "scrutatus est", "scrutati", "scrutati", "scrutati"],
+            "imperative_singular": ["scrutare"],
+            "imperative_plural": ["scrutamini"],
+            "present_subjunctive": ["scruter", "scruteris", "scrutetur", "scrutemur", "scrutemini", "scrutentur"],
+            "perfect_participle": ["scrutatus", "scrutata", "scrutatum"],
+            "present_participle": ["scrutans", "scrutantis"]
+        },
+  "translations": {
+    "en": "to examine, search, investigate",
+    "la": "scrutor, scrutari, scrutatus sum"
+  }
+},
+ 
   {
     "lemma": "laudo",
     "part_of_speech": "verb",
@@ -115,6 +202,14 @@
       "la": "adoro, adorare"
     }
   },
+  {
+  "lemma": "si",
+  "part_of_speech": "conjunction",
+  "translations": {
+    "en": "if, whether",
+    "la": "si"
+  }
+},
   {
     "lemma": "vermis",
     "part_of_speech": "noun",
@@ -8785,26 +8880,7 @@
         "imperative": ["aspice", "aspicite"]
       }
     },
-    {
-        "lemma": "scrutor",
-        "part_of_speech": "verb",
-        "perfect": "scrutatus sum",
-        "infinitive": "scrutari",
-        "forms": {
-            "present": ["scrutor", "scrutaris", "scrutatur", "scrutamur", "scrutamini", "scrutantur"],
-            "imperfect": ["scrutabar", "scrutabaris", "scrutabatur", "scrutabamur", "scrutabamini", "scrutabantur"],
-            "future": ["scrutabor", "scrutaberis", "scrutabitur", "scrutabimur", "scrutabimini", "scrutabuntur"],
-            "perfect": ["scrutatus sum", "scrutatus es", "scrutatus est", "scrutati sumus", "scrutati estis", "scrutati sunt"],
-            "imperative_singular": ["scrutare"],
-            "imperative_plural": ["scrutamini"],
-            "present_subjunctive": ["scruter", "scruteris", "scrutetur", "scrutemur", "scrutemini", "scrutentur"],
-            "perfect_participle": ["scrutatus", "scrutata", "scrutatum"]
-        },
-        "translations": {
-            "en": "search, examine",
-            "la": "scrutor"
-        }
-    },
+   
     {
         "lemma": "exquiro",
         "part_of_speech": "verb",
