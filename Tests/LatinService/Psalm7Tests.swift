@@ -31,8 +31,179 @@ class Psalm7Tests: XCTestCase {
         "Convertetur dolor ejus in caput ejus, et in verticem ipsius iniquitas ejus descendet.",
         "Confitebor Domino secundum justitiam ejus, et psallam nomini Domini altissimi."
     ]
+    func testLine1() {
+    let line = psalm7[0] // "Domine Deus meus, in te speravi; salvum me fac ex omnibus persequentibus me, et libera me."
+    let analysis = latinService.analyzePsalm(text: line)
     
-    // MARK: - Thematic Test Cases
+    // Key lemmas to verify
+    let testLemmas = [
+        ("dominus", ["domine"], "Lord"),
+        ("deus", ["deus"], "God"),
+        ("spero", ["speravi"], "hope"),
+        ("salvus", ["salvum"], "save"),
+        ("facio", ["fac"], "make"),
+        ("persequor", ["persequentibus"], "pursue"),
+        ("libero", ["libera"], "free")
+    ]
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    
+    // Additional semantic testing
+    if verbose {
+        print("\nLINE 1 ANALYSIS:")
+        print("Original: \(line)")
+        
+        // Print all lemmas in one line
+        let allLemmas = analysis.dictionary.keys.sorted()
+        print("\nALL LEMMAS: " + allLemmas.joined(separator: ", "))
+        
+        // Thematic breakdown
+        print("\nKEY THEMES:")
+        print("1. Divine Address: 'Domine Deus meus' (my Lord and God)")
+        print("2. Trust: 'in te speravi' (in you I have hoped)")
+        print("3. Dual Petition: 'salvum me fac' (make me safe) + 'libera me' (free me)")
+        print("4. Enemy Mention: 'ex omnibus persequentibus me' (from all who pursue me)")
+        
+        // Key term counts
+        print("\nCRUCIAL WORDS:")
+        print("- domine: \(analysis.dictionary["dominus"]?.forms["domine"] ?? 0)")
+        print("- speravi: \(analysis.dictionary["spero"]?.forms["speravi"] ?? 0)")
+        print("- salvum: \(analysis.dictionary["salvus"]?.forms["salvum"] ?? 0)")
+        print("- libera: \(analysis.dictionary["libero"]?.forms["libera"] ?? 0)")
+    }
+    
+    // XCTest Assertions
+    XCTAssertEqual(analysis.dictionary["dominus"]?.forms["domine"], 1, "Should contain 'Domine' address")
+    XCTAssertEqual(analysis.dictionary["spero"]?.forms["speravi"], 1, "Should find 'speravi' (hoped)")
+    XCTAssertGreaterThan(analysis.dictionary["persequor"]?.forms["persequentibus"] ?? 0, 0, 
+                       "Should identify pursuers")
+    
+    // Test combined salvation vocabulary
+    let salvationTerms = ["salvum", "libera"].reduce(0) { count, term in
+        count + (analysis.dictionary["salvus"]?.forms[term] ?? 0)
+             + (analysis.dictionary["libero"]?.forms[term] ?? 0)
+    }
+    XCTAssertEqual(salvationTerms, 2, "Should find two salvation-related terms")
+}
+    
+    func testLine2() {
+        let line = psalm7[1] // "Nequando rapiat ut leo animam meam, dum non est qui redimat, neque qui salvum faciat."
+        let analysis = latinService.analyzePsalm(text: line)
+        
+        // Key lemmas to verify
+        let testLemmas = [
+            ("nequando", ["nequando"], "lest ever"),
+            ("rapio", ["rapiat"], "snatch"),
+            ("leo", ["leo"], "lion"),
+            ("anima", ["animam"], "soul"),
+            ("redimo", ["redimat"], "redeem"),
+            ("salvus", ["salvum"], "save"),
+            ("facio", ["faciat"], "make")
+        ]
+        
+        verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+        
+        // Additional semantic testing
+        if verbose {
+            print("\nLINE 2 ANALYSIS:")
+            print("Original: \(line)")
+            
+            // Print all lemmas in one line
+            let allLemmas = analysis.dictionary.keys.sorted()
+            print("\nALL LEMMAS: " + allLemmas.joined(separator: ", "))
+            
+            // Thematic summary
+            print("\nKEY THEMES:")
+            print("1. Predatory Threat: 'rapiat ut leo' (snatch like a lion)")
+            print("2. Absence of Rescue: 'non est qui redimat' (none to redeem)")
+            print("3. Salvific Contrast: 'salvum faciat' (make safe)")
+            
+            // Word-specific counts
+            print("\nCRUCIAL WORDS:")
+            print("- leo: \(analysis.dictionary["leo"]?.forms["leo"] ?? 0) occurrence(s)")
+            print("- rapiat: \(analysis.dictionary["rapio"]?.forms["rapiat"] ?? 0) occurrence(s)")
+            print("- redimat: \(analysis.dictionary["redimo"]?.forms["redimat"] ?? 0) occurrence(s)")
+        }
+        
+        // XCTest Assertions
+        XCTAssertEqual(analysis.dictionary["leo"]?.forms["leo"], 1, "Lion reference should appear once")
+        XCTAssertGreaterThan(analysis.dictionary["rapio"]?.forms["rapiat"] ?? 0, 0, "Should contain 'snatch' action")
+        XCTAssertTrue(line.contains("non est"), "Should contain negative existential clause")
+    }
+
+    func testLine12() {
+        let line = psalm7[11] 
+        let analysis = latinService.analyzePsalm(text: line)
+        
+        let divineAttributes = [
+            ("judex", ["judex"], "judge"),
+            ("justus", ["justus"], "just"),
+            ("fortis", ["fortis"], "strong"),
+            ("patiens", ["patiens"], "patient"),
+            ("irascor", ["irascitur"], "be angry")
+        ]
+        
+        verifyWordsInAnalysis(analysis, confirmedWords: divineAttributes)
+        
+        // Additional semantic testing
+        if verbose {
+            print("\nLINE 12 ANALYSIS:")
+            print("Original: \(line)")
+
+            // Print all lemmas        
+            let allLemmas = analysis.dictionary.keys.sorted()
+            
+            // Print in single line format
+            print("\nALL LEMMAS: " + allLemmas.joined(separator: ", "))
+
+        }
+    }
+        func testLine13() { 
+        // "Nisi conversi fueritis, gladium suum vibrabit; arcum suum tetendit, et paravit illum."
+        let line = psalm7[12] // Note: Index 12 for line 13 (array is 0-based)
+        let analysis = latinService.analyzePsalm(text: line)
+        
+        // Key words to verify
+        let threatTerms = [
+            ("converto", ["conversi"], "convert"),
+            ("gladius", ["gladium"], "sword"),
+            ("vibro", ["vibrabit"], "brandish"),
+            ("arcus", ["arcum"], "bow"),
+            ("tendo", ["tetendit"], "draw"),
+            ("paro", ["paravit"], "prepare")
+        ]
+        
+        verifyWordsInAnalysis(analysis, confirmedWords: threatTerms)
+        
+        if verbose {
+            print("\nLINE 13 ANALYSIS:")
+            print("Original: \(line)")
+            
+            // Print all lemmas in one line
+            let allLemmas = analysis.dictionary.keys.sorted()
+            print("\nALL LEMMAS: " + allLemmas.joined(separator: ", "))
+            
+            // Thematic breakdown
+            print("\nKey Themes:")
+            print("- Conditional warning ('Nisi conversi fueritis')")
+            print("- Violent imagery (sword/bow preparation)")
+            print("- Divine readiness for judgment")
+
+            if let sum = analysis.dictionary["sum"] {
+                print("- Sum (fueritis): \(sum.forms["fueritis"] ?? 0) occurrences")
+            }
+            
+            // Detailed weapon terms
+            print("\nWeapon Terms:")
+            if let sword = analysis.dictionary["gladius"] {
+                print("- Sword: \(sword.forms["gladium"] ?? 0) occurrences")
+            }
+            if let bow = analysis.dictionary["arcus"] {
+                print("- Bow: \(bow.forms["arcum"] ?? 0) occurrences")
+            }
+        }
+    }
+
 func testMissingWords() {
     let analysis = latinService.analyzePsalm(text: psalm7)
     

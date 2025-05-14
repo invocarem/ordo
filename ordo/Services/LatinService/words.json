@@ -1,4 +1,68 @@
- [{
+ [
+  {
+  "lemma": "anima",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "anima",
+  "genitive": "animae",
+  "accusative": "animam",
+  "translations": {
+    "en": "soul, breath, life-force",
+    "la": "anima, -ae"
+  }
+},
+  {
+  "lemma": "tendo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "tendere",
+  "present": "tendo",
+  "perfect": "tetendi",
+  "supine": "tentum",
+  "translations": {
+    "en": "to stretch, draw, aim",
+    "la": "tendo, tendere, tetendi, tentum"
+  }
+},
+{
+  "lemma": "paro",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "parare",
+  "present": "paro",
+  "perfect": "paravi",
+  "supine": "paratum",
+  "translations": {
+    "en": "to prepare, arrange, provide",
+    "la": "paro, parare, paravi, paratum"
+  }
+},
+  {
+  "lemma": "fortis",
+  "part_of_speech": "adjective",
+  "gender": "masculine",
+  "declension": 3,
+  "nominative": "fortis",
+  "genitive": "fortis",
+  "translations": {
+    "en": "strong, brave, steadfast",
+    "la": "fortis, forte"
+  }
+},
+{
+  "lemma": "patiens",
+  "part_of_speech": "adjective",
+  "gender": "masculine",
+  "declension": 3,
+  "nominative": "patiens",
+  "genitive": "patientis",
+  "translations": {
+    "en": "patient, enduring, tolerant",
+    "la": "patiens, patientis"
+  }
+},
+  {
   "lemma": "effodio",
   "part_of_speech": "verb",
   "conjugation": 3,
@@ -1539,8 +1603,27 @@
           "la": "venio, venire, veni, ventum"
         }
       },
-      
-     
+      {
+    "lemma": "numquid",
+    "part_of_speech": "adverb", 
+    "translations": {
+      "en": "whether? (expecting 'no'), surely not?",
+      "la": "numquid"
+    }
+  },
+     {
+  "lemma": "singulus",
+  "part_of_speech": "adjective",
+  "gender": "masculine",
+  "declension": 1,
+  "nominative": "singulus",
+  "genitive": "singuli",
+  "accusative_plural": "singulos",
+  "translations": {
+    "en": "single, individual, one by one",
+    "la": "singulus, -a, -um"
+  }
+},
         {
           "lemma": "sol",
           "part_of_speech": "noun",
@@ -5439,6 +5522,9 @@
             "perfect_indicative_active": ["converti", "convertisti", "convertit", "convertimus", "convertistis", "converterunt"],
             "subjunctive_passive": ["convertantur"],
             "gerund": ["convertendo"]
+          },
+          "forms_plural": {
+            "perfect_participle": ["conversi"]
           },
           "translations": {
             "en": "to convert, to turn back, to change",
@@ -10375,6 +10461,9 @@
         "forms": {
           "present": ["sum", "es", "est", "sumus", "estis", "sunt"],
           "imperative": ["es", "este"]
+        },
+        "forms_plural":{
+          "future_perfect": ["fueritis"]
         },
         "translations": {"en": "be"}
       },
