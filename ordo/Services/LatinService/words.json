@@ -1,5 +1,111 @@
  [
 {
+  "lemma": "accedo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "accedere",
+  "present": "accedo",
+  "future": "accedet",
+  "perfect": "accessi",
+  "supine": "accessum",
+  "translations": {
+    "en": "to approach, come near, accede",
+    "la": "accedo, accedere, accessi, accessum"
+  }
+},
+
+{
+  "lemma": "cado",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "cadere",
+  "present_participle": "cadens",
+  "future": "cadent",
+  "perfect": "cecidi",
+  "supine": "casum",
+  "translations": {
+    "en": "to fall, perish, die",
+    "la": "cado, cadere, cecidi, casum"
+  }
+},
+{
+  "lemma": "latus",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "latus",
+  "ablative": "latere",
+  "translations": {
+    "en": "side, flank",
+    "la": "latus, lateris"
+  }
+},
+
+  {
+  "lemma": "incursus",
+  "part_of_speech": "noun",
+  "declension": 4,
+  "gender": "masculine",
+  "nominative": "incursus",
+  "ablative": "incursu",
+  "translations": {
+    "en": "attack, assault, incursion",
+    "la": "incursus, -us"
+  }
+},
+{
+  "lemma": "daemonium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "daemonium",
+  "ablative": "daemonio",
+  "translations": {
+    "en": "demon, evil spirit",
+    "la": "daemonium, -ii"
+  }
+},
+{
+  "lemma": "meridianus",
+  "part_of_speech": "adjective",
+  "gender": "masculine",
+  "declension": 1,
+  "nominative": "meridianus",
+  "ablative": "meridiano",
+  "translations": {
+    "en": "noonday, southern, midday",
+    "la": "meridianus, -a, -um"
+  }
+},
+  {
+  "lemma": "penna",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "penna",
+  "genitive": "pennae",
+  "translations": {
+    "en": "feather, wing, quill",
+    "la": "penna, -ae"
+  }
+},
+{
+  "lemma": "commoror",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "deponent": true,
+  "infinitive": "commorari",
+  "perfect": "commoratus",
+  "supine": "commoratum",
+ "forms": {
+    "future_3rd": ["commorabitur"]
+  }, 
+  "translations": {
+    "en": "to abide, remain, stay",
+    "la": "commoror, commorari, commoratus sum"
+  }
+},
+{
   "lemma": "apprehendo",
   "part_of_speech": "verb",
   "conjugation": 3,
@@ -7076,6 +7182,18 @@
           }
           
         },
+        {
+  "lemma": "nocturnus",
+  "part_of_speech": "adjective",
+  "gender": "masculine",
+  "declension": 1,
+  "nominative": "nocturnus",
+  "ablative": "nocturno",
+  "translations": {
+    "en": "nocturnal, of the night",
+    "la": "nocturnus, -a, -um"
+  }
+},
         {
           "lemma": "nox",
           "part_of_speech": "noun",
