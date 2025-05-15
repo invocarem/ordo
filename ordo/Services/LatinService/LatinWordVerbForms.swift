@@ -97,7 +97,29 @@ extension LatinWordEntity {
             
         default: break
         }
-        
+        // MARK: - Imperfect Active Indicative
+ var imperfectActive = [String]()
+        switch conjugation {
+        case 1:
+            imperfectActive = [
+                presentStem + "abam", presentStem + "abas", presentStem + "abat",
+                presentStem + "abamus", presentStem + "abatis", presentStem + "abant"
+            ]
+        case 2, 3: // 2nd and 3rd share the same imperfect pattern
+            imperfectActive = [
+                presentStem + "ebam", presentStem + "ebas", presentStem + "ebat",
+                presentStem + "ebamus", presentStem + "ebatis", presentStem + "ebant"
+            ]
+        case 4:
+            imperfectActive = [
+                presentStem + "iebam", presentStem + "iebas", presentStem + "iebat",
+                presentStem + "iebamus", presentStem + "iebatis", presentStem + "iebant"
+            ]
+        default: break
+        }
+        addForm("imperfect_active", values: imperfectActive)
+
+
         // MARK: - Perfect System (Active)
         if !perfectStem.isEmpty {
             addForm("perfect", values: [
@@ -135,7 +157,34 @@ extension LatinWordEntity {
             default: break
             }
         }
-        
+
+// MARK: - Present Active Participle
+let presentActiveParticipleStem: String
+switch conjugation {
+case 1, 2, 4:
+    presentActiveParticipleStem = presentStem + "a" // For 1st (-a-), 2nd (-e- becomes -a-), 4th (-i- becomes -a-)
+case 3:
+    presentActiveParticipleStem = presentStem + "e" // 3rd conjugation keeps -e-
+default:
+    presentActiveParticipleStem = presentStem
+}
+
+let presentActiveParticiple = [
+    presentActiveParticipleStem + "ns",        // Nominative singular
+    presentActiveParticipleStem + "ntis",       // Genitive singular
+    presentActiveParticipleStem + "nti",        // Dative singular
+    presentActiveParticipleStem + "ntem",       // Accusative singular
+    presentActiveParticipleStem + "nte",        // Ablative singular
+    presentActiveParticipleStem + "ntes",       // Nominative plural
+    presentActiveParticipleStem + "ntium",      // Genitive plural
+    presentActiveParticipleStem + "ntibus",     // Dative/ablative plural
+    presentActiveParticipleStem + "ntis"        // Accusative plural
+]
+addForm("present_active_participle", values: presentActiveParticiple)
+
+
+
+
         // MARK: - Non-Finite Forms
         addForm("infinitive", values: [infinitive])
         if !supine.isEmpty {

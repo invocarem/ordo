@@ -1,4 +1,323 @@
- [
+ [{
+  "lemma": "projicio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "projicere",
+  "present": "projicio",
+  "perfect": "projeci",
+  "supine": "projectum",
+  "forms":{
+    "present_3sg": ["projicit"]
+  },
+  "translations": {
+    "en": "to throw forth, scatter, cast away",
+    "la": "projicio, projicere, projeci, projectum"
+  }
+},
+  {
+  "lemma": "iter",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "iter",
+  "genitive": "itineris",
+  "translations": {
+    "en": "journey, path, route",
+    "la": "iter, itineris"
+  }
+},
+  {
+  "lemma": "nosco",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "noscere",
+  "perfect": "novi",
+  "perfect_3sg": "novit",
+  "supine": "notum",
+  "translations": {
+    "en": "to know, recognize, become acquainted with",
+    "la": "nosco, noscere, novi, notum"
+  }
+},
+{
+  "lemma": "via",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "via",
+  "genitive": "viae",
+  "accusative": "viam",
+  "translations": {
+    "en": "way, road, path",
+    "la": "via, -ae"
+  }
+}, 
+ {
+  "lemma": "subjicio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "subjicere",
+  "perfect": "subjeci",
+  "supine": "subjectum",
+  "translations": {
+    "en": "to subject, submit, place under",
+    "la": "subjicio, subjicere, subjeci, subjectum"
+  }
+}, 
+  {
+  "lemma": "destruo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "destruere",
+  "forms": {
+    "present_subjunctive_2sg": ["destruas"]
+  },
+
+  "perfect": "destruxi",
+  "supine": "destructum",
+  "translations": {
+    "en": "to destroy, tear down",
+    "la": "destruo, destruere, destruxi, destructum"
+  }
+},
+{
+  "lemma": "perficio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "perficere",
+  "perfect": "perfecti",
+  "supine": "perfectum",
+  "forms":{
+    "perfect_2sg": ["perfecisti"]
+  },
+  "translations": {
+    "en": "to complete, perfect, accomplish",
+    "la": "perficio, perficere, perfecti, perfectum"
+  }
+},
+{
+  "lemma": "stella",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "stella",
+  "genitive": "stellae",
+  "translations": {
+    "en": "star",
+    "la": "stella, -ae"
+  }
+},
+{
+  "lemma": "ovis",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "ovis",
+  "nominative_plural": "oves",
+  "genitive": "ovis",
+  "translations": {
+    "en": "sheep",
+    "la": "ovis, ovis"
+  }
+},
+{
+  "lemma": "bos",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "bos",
+  "nominative_plural": "boves",
+  "genitive": "bovis",
+  "translations": {
+    "en": "ox, cow, cattle",
+    "la": "bos, bovis"
+  }
+},
+{
+  "lemma": "pecus",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "pecus",
+  "nominative_plural": "pecora",
+  "genitive": "pecoris",
+  "translations": {
+    "en": "cattle, livestock, herd",
+    "la": "pecus, pecoris"
+  }
+},
+{
+  "lemma": "volucris",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "volucris",
+  "nominative_plural": "volucres",
+  "genitive": "volucris",
+  "translations": {
+    "en": "bird, flying creature",
+    "la": "volucris, volucris"
+  }
+},
+{
+  "lemma": "piscis",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "piscis",
+  "nominative_plural": "pisces",
+  "genitive": "piscis",
+  "translations": {
+    "en": "fish",
+    "la": "piscis, piscis"
+  }
+},
+  {
+  "lemma": "indignatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "indignatio",
+  "genitive": "indignationis",
+  "translations": {
+    "en": "indignation, anger, displeasure",
+    "la": "indignatio, indignationis"
+  }
+},
+{
+  "lemma": "elevo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "elevare",
+  "present_participle": "elevans",
+  "perfect": "elevavi",
+  "supine": "elevatum",
+   "forms": {
+        "perfect_passive": ["elevatus", "elevatus", "elevatus", "elevati", "elevati", "elevati"],
+        "perfect_nominative_participle_f": ["elevata"]
+   },
+
+  "translations": {
+    "en": "to lift up, raise, elevate",
+    "la": "elevo, elevare, elevavi, elevatum"
+  }
+},
+    
+  {
+  "lemma": "misceo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "miscere",
+  "present": "misceo",
+  "perfect": "miscui",
+  "supine": "mixtum",
+  "translations": {
+    "en": "to mix, blend, mingle",
+    "la": "misceo, miscere, miscui, mixtum"
+  }
+},
+  {
+  "lemma": "cinis",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "cinis",
+  "genitive": "cineris",
+  "accusative": "cinerem",
+  "translations": {
+    "en": "ashes, embers",
+    "la": "cinis, cineris"
+  }
+},
+  {
+  "lemma": "domicilium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "domicilium",
+  "genitive": "domicilii",
+  "ablative": "domicilio",
+  "translations": {
+    "en": "dwelling, residence, home",
+    "la": "domicilium, -ii"
+  }
+},
+{
+  "lemma": "similis",
+  "part_of_speech": "adjective",
+  "gender": "masculine",
+  "declension": 3,
+  "nominative": "similis",
+  "genitive": "similis",
+  "translations": {
+    "en": "like, similar, resembling",
+    "la": "similis, simile"
+  }
+},
+  {
+  "lemma": "vigilo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "vigilare",
+  "present": "vigilo",
+  "perfect": "vigilavi",
+  "supine": "vigilatum",
+  "translations": {
+    "en": "to stay awake, keep watch",
+    "la": "vigilo, vigilare, vigilavi, vigilatum"
+  }
+},{
+  "lemma": "solitarius",
+  "part_of_speech": "adjective",
+  "gender": "masculine",
+  "declension": 1,
+  "nominative": "solitarius",
+  "genitive": "solitarii",
+  "translations": {
+    "en": "solitary, lonely, isolated",
+    "la": "solitarius, -a, -um"
+  }
+},
+{
+  "lemma": "solus",
+  "part_of_speech": "adjective",
+  "gender": "masculine",
+  "declension": 1,
+  "nominative": "solus",
+  "genitive": "soli",
+  "translations": {
+    "en": "alone, solitary, only",
+    "la": "solus, sola, solum"
+  }
+},
+  {
+  "lemma": "percutio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "percutere",
+  "present": "percutio",
+  "perfect": "percussi",
+  "forms": {
+    "perfect_participle": [ "percussus" ]
+  },
+  "translations": {
+    "en": "to strike down, pierce, kill",
+    "la": "percutio, percutere, percussi, percussum"
+  }
+},
+
+  {
+  "lemma": "aresco",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "arescere",
+  "present": "aresco",
+  "perfect": "arui",
+  "translations": {
+    "en": "to dry up, become parched",
+    "la": "aresco, arescere, arui"
+  }
+},
   {
   "lemma": "anima",
   "part_of_speech": "noun",
@@ -1121,7 +1440,7 @@
   "supine": "prospectum",
   
   "translations": {
-    "en": "to look forth, gaze into the distance, foresee",
+    "en": "to look forth, look down, gaze into the distance, foresee",
     "la": "prospicio, prospicere"
   },
   "notes": "Literal meaning: 'to look forward'. Often implies looking into the distance (physically or metaphorically), not necessarily 'down'."
@@ -2075,7 +2394,21 @@
       "la": "portio"
     }
   },
-
+{
+  "lemma": "fundo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "fundare",  
+  "perfect": "fundavi",
+  "forms":{
+    "perfect_2sg": ["fundasti"]
+  },
+  "supine": "fundatum",
+  "translations": {
+    "en": "to establish, found",
+    "la": "fundo, fundare, fundavi, fundatum"
+  }
+},
   {
     "lemma": "effundo",
     "part_of_speech": "verb",
@@ -7343,22 +7676,6 @@
         "supine": ["superexaltatum"]
       }
     },
-    {
-      "lemma": "elevo",
-      "part_of_speech": "verb",
-      "conjugation": 1,
-      "infinitive": "elevare",
-      "perfect": "elevavi",
-      "supine": "elevatum",
-      "translations": {
-        "en": "to lift up, elevate, raise",
-        "la": "elevo"
-      },
-      "forms": {
-        "perfect_passive": ["elevatus", "elevatus", "elevatus", "elevati", "elevati", "elevati"],
-        "supine": ["elevatum"]
-      }
-    },
   
     {
       "lemma": "injustus",
@@ -8873,27 +9190,7 @@
             },
             "notes": "Perfect passive participle of 'benedico'"
         },
-       {
-        "lemma": "via",
-        "part_of_speech": "noun",
-        "declension": 1,
-        "gender": "feminine",
-        "nominative": "via",
-        "genitive": "viae",
-        "dative": "viae",
-        "accusative": "viam",
-        "ablative": "via",
-        "vocative": "via",
-        "nominative_plural": "viae",
-        "genitive_plural": "viarum",
-        "dative_plural": "viis",
-        "accusative_plural": "vias",
-        "ablative_plural": "viis",
-        "translations": {
-            "en": "way, path",
-            "la": "via"
-        }
-    },
+     
     {
         "lemma": "usquequaque",
         "part_of_speech": "adverb",
@@ -10109,6 +10406,8 @@
         "part_of_speech": "noun",
         "declension": 2,
         "gender": "neuter",
+        "nominative": "caelus",
+        "genitive": "caeli",
         "forms": {
           "nominative_n": ["caelum"],
           "genitive_n": ["caeli"],
@@ -10684,12 +10983,26 @@
             "en": "eternal, everlasting, forever",
             "la": "aeternus"
         }
-    },
+    }, {
+  "lemma": "comedo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "comedere",
+  "present": "comedo",
+  "perfect": "comedi",
+  "supine": "comesum",
+  "translations": {
+    "en": "to eat up, consume, devour",
+    "la": "comedo, comedere, comedi, comesum"
+  }
+},
     {
         "lemma": "aeternum",
         "part_of_speech": "noun",
-        "declension": 2,
-        "gender": "neuter",
+          "declension": 2,
+          "gender": "neuter",
+          "nominative": "aeternum",
+          "genitive": "aeterni",
         "translations": {
             "en": "eternity, everlastingness",
             "la": "aeternum"
@@ -11696,7 +12009,7 @@
     },{
         "lemma": "operor",
         "part_of_speech": "verb",
-        "perfect": "operatus sum",
+        "perfect": "operatus",
         "infinitive": "operari",
         "forms": {
             "present": ["operor", "operaris", "operatur", "operamur", "operamini", "operantur"],
@@ -11810,6 +12123,9 @@
         "dative_plural": "totis",
         "accusative_plural": "totos",
         "ablative_plural": "totis",
+        "forms": {
+          "nominative_f": ["tota"]
+        },
         "translations": {
             "en": "whole, entire",
             "la": "totus"
@@ -12042,12 +12358,12 @@
             "part_of_speech": "verb",
             "conjugation": 3,
             "deponent": true,
-            "perfect": "oblitus sum",
+            "perfect": "oblitus",
             "infinitive": "oblivisci",
             "forms": {
                 "present": ["obliviscor", "oblivisceris", "obliviscitur", "obliviscimur", "obliviscimini", "obliviscuntur"],
                 "future": ["obliviscar", "oblivisceris", "obliviscetur", "obliviscemur", "obliviscemini", "obliviscentur"],
-                "perfect": ["oblitus sum", "oblitus es", "oblitus est", "obliti sumus", "obliti estis", "obliti sunt"]
+                "perfect": ["oblitus", "oblitus es", "oblitus est", "obliti sumus", "obliti estis", "obliti sunt"]
             },
             "translations": {
                 "en": "forget",
@@ -12796,15 +13112,17 @@
       "la": "hereditas"
     }
   },{
-    "lemma": "adversus",
-    "part_of_speech": "preposition",
-    "case_government": "accusative",
-    "translations": {
-      "en": "against, opposite to",
-      "la": "adversus"
-    },
-    "invariable": true
-  },
+  "lemma": "adversus",
+  "part_of_speech": "adjective",
+  "gender": "masculine",
+  "declension": 1,
+  "nominative": "adversus",
+  "accusative": "adversum",
+  "translations": {
+    "en": "opposed, hostile, against",
+    "la": "adversus, -a, -um"
+  }
+},
   {
     "lemma": "dirumpo",
     "part_of_speech": "verb",
@@ -12819,23 +13137,7 @@
       "present_subjunctive": ["dirumpam", "dirumpas", "dirumpat", "dirumpamus", "dirumpatis", "dirumpant"],
       "present_active": ["dirumpo", "dirumpis", "dirumpit", "dirumpimus", "dirumpitis", "dirumpunt"]
     }
-  },{
-    "lemma": "projicio",
-    "part_of_speech": "verb",
-    "conjugation": 3,
-    "infinitive": "proicere",
-    "perfect": "proieci",
-    "supine": "proiectum",
-    "forms": {
-        "present_subjunctive": ["projiciam", "projicias", "projiciat", "projiciamus", "projiciatis", "projiciant"],
-        "present_active": ["projicio", "projicis", "projicit", "projicimus", "projicitis", "projiciunt"]
-      },
-    "translations": {
-      "en": "throw forth, cast out, abandon",
-      "la": "projicio, proicere, proieci, proiectum"
-    }
-  },
-  {
+  },  {
     "lemma": "deprecor",
     "part_of_speech": "verb",
     "perfect": "deprecatus",

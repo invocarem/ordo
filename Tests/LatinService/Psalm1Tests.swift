@@ -15,8 +15,8 @@ class Psalm1Tests: XCTestCase {
         "Beatus vir qui non abiit in consilio impiorum, et in via peccatorum non stetit, et in cathedra pestilentiae non sedit;",
         "Sed in lege Domini voluntas eius, et in lege eius meditabitur die ac nocte.",
         "Et erit tamquam lignum quod plantatum est secus decursus aquarum, quod fructum suum dabit in tempore suo:",
-        "Et folium eius non defluet, et omnia quaecumque faciet prosperabuntur.",
-        "Non sic impii, non sic: sed tamquam pulvis quem proicit ventus a facie terrae.",
+        "Et folium eius non defluet, et omnia quaecumque faciet prosperabuntur.",        
+        "Non sic impii, non sic: sed tamquam pulvis quem projicit ventus a facie terrae.",
         "Ideo non resurgent impii in judicio, neque peccatores in concilio iustorum;Quoniam novit Dominus viam justorum, et iter impiorum peribit."
     ]
 

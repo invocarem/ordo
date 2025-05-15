@@ -25,7 +25,43 @@ class Psalm8Tests: XCTestCase {
     ]
     
     // MARK: - Test Cases
-    
+    func testConsecutiveLinePairs() {
+    for i in 0..<psalm8.count-1 {
+        let lineA = psalm8[i]
+        let lineB = psalm8[i+1]
+        let combinedText = lineA + " " + lineB
+        let analysis = latinService.analyzePsalm(text: combinedText)
+        
+        if verbose {
+            print("\n\n=== LINES \(i+1) & \(i+2) ===")
+            print("LINE \(i+1): \"\(lineA)\"")
+            print("LINE \(i+2): \"\(lineB)\"")
+            print("\nDETECTED LEMMAS (\(analysis.dictionary.count)):")
+            print(analysis.dictionary.keys.sorted().joined(separator: ", "))
+        }
+        
+        // Basic assertion that we found some lemmas
+        XCTAssertFalse(analysis.dictionary.isEmpty, "Should find lemmas in lines \(i+1)-\(i+2)")
+        
+        // Print any potential missing words (simple check for words not found as lemmas)
+        if verbose {
+            let allWords = combinedText.components(separatedBy: .whitespacesAndNewlines)
+                .map { $0.trimmingCharacters(in: .punctuationCharacters) }
+                .filter { !$0.isEmpty }
+            
+            let missingWords = allWords.filter { word in
+                !analysis.dictionary.keys.contains { lemma in
+                    word.lowercased().contains(lemma.lowercased())
+                }
+            }
+            
+            if !missingWords.isEmpty {
+                print("\nPOTENTIALLY MISSING WORDS:")
+                print(missingWords.joined(separator: ", "))
+            }
+        }
+    }
+}
     func testDivinePraiseVocabulary() {
         let analysis = latinService.analyzePsalm(text: psalm8)
         

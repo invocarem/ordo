@@ -44,6 +44,193 @@ class Psalm101Tests: XCTestCase {
         "Filii servorum tuorum habitabunt, et semen eorum in saeculum dirigetur."
     ]
     // MARK: - Test Cases
+    func testLine5() {
+        let line = psalm101[4] // "Percussus sum ut foenum, et aruit cor meum, quia oblitus sum comedere panem meum."
+        let analysis = latinService.analyzePsalm(text: line)
+        
+        // Key lemmas to verify
+        let testLemmas = [
+            ("percutio", ["percussus"], "strike down"),
+            ("foenum", ["foenum"], "hay"),
+            ("aresco", ["aruit"], "dry up"),
+            ("cor", ["cor"], "heart"),
+            ("obliviscor", ["oblitus"], "forget"),
+            ("comedo", ["comedere"], "eat"),
+            ("panis", ["panem"], "bread")
+        ]
+        
+        verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+        
+        // Additional semantic testing
+        if verbose {
+            print("\nLINE 5 ANALYSIS:")
+            print("Original: \(line)")
+            
+            // Print all lemmas in one line
+            let allLemmas = analysis.dictionary.keys.sorted()
+            print("\nALL LEMMAS: " + allLemmas.joined(separator: ", "))
+            
+            // Thematic breakdown
+            print("\nKEY THEMES:")
+            print("1. Physical Decay: 'Percussus sum ut foenum' (struck down like grass)")
+            print("2. Emotional Withering: 'aruit cor meum' (my heart dried up)")
+            print("3. Neglect Consequences: 'oblitus sum comedere' (I forgot to eat)")
+            
+            // Key term counts
+            print("\nCRUCIAL WORDS:")
+            print("- foenum: \(analysis.dictionary["foenum"]?.forms["foenum"] ?? 0) (grass/hay metaphor)")
+            print("- aruit: \(analysis.dictionary["aresco"]?.forms["aruit"] ?? 0) (drying action)")
+            print("- oblitus: \(analysis.dictionary["obliviscor"]?.forms["oblitus"] ?? 0) (forgetfulness)")
+            print("- panem: \(analysis.dictionary["panis"]?.forms["panem"] ?? 0) (bread as sustenance)")
+        }
+        
+        // XCTest Assertions
+        XCTAssertEqual(analysis.dictionary["foenum"]?.forms["foenum"], 1, "Should contain grass metaphor")
+        XCTAssertEqual(analysis.dictionary["aresco"]?.forms["aruit"], 1, "Should find 'dried up' verb")
+        XCTAssertGreaterThan(analysis.dictionary["obliviscor"]?.forms["oblitus"] ?? 0, 0, 
+                        "Should identify forgetfulness")
+        
+        // Test decay imagery
+        let decayTerms = ["percussus", "aruit", "oblitus"].reduce(0) { count, term in
+            count + (analysis.dictionary["percutio"]?.forms[term] ?? 0)
+                + (analysis.dictionary["aresco"]?.forms[term] ?? 0)
+                + (analysis.dictionary["obliviscor"]?.forms[term] ?? 0)
+        }
+        XCTAssertEqual(decayTerms, 3, "Should find three decay-related terms")
+    }
+    
+    func testLine7and8() {
+    let line7 = psalm101[6] // "Similis factus sum pellicano solitudinis; factus sum sicut nycticorax in domicilio."
+    let line8 = psalm101[7] // "Vigilavi, et factus sum sicut passer solitarius in tecto."
+    let combinedText = line7 + " " + line8
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    // CORRECTED lemma list - now treats solitarius as its own lemma
+    let testLemmas = [
+        ("similis", ["similis"], "like"),
+        ("facio", ["factus"], "become"),
+        ("pellicanus", ["pellicano"], "pelican"),
+        ("solitudo", ["solitudinis"], "wilderness"),
+        ("nycticorax", ["nycticorax"], "night-owl"),
+        ("domicilium", ["domicilio"], "dwelling"),
+        ("vigilo", ["vigilavi"], "stay awake"),
+        ("passer", ["passer"], "sparrow"),
+        ("solitarius", ["solitarius"], "solitary"), // Now separate from solus
+        ("tectum", ["tecto"], "roof")
+    ]
+    
+    if verbose {
+        print("\nLINES 7-8:")
+        print("7: \"\(line7)\"")
+        print("8: \"\(line8)\"")
+        
+        // Print verification results
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌")")
+        }
+        
+        print("\nALL DETECTED LEMMAS: " + analysis.dictionary.keys.sorted().joined(separator: ", "))
+    }
+    
+    // Corrected assertions
+    XCTAssertNotNil(analysis.dictionary["solitarius"], "Should detect 'solitarius' as its own lemma")
+    XCTAssertNil(analysis.dictionary["solus"], "'solus' shouldn't appear in this passage")
+    XCTAssertNotNil(analysis.dictionary["solitudo"], "Should detect 'solitudinis' root")
+}
+func testLine9and10() {
+    let line9 = psalm101[8] // "Tota die exprobrabant mihi inimici mei; et qui laudabant me adversum me jurabant."
+    let line10 = psalm101[9] // "Quia cinerem tamquam panem manducabam, et potum meum cum fletu miscebam."
+    let combinedText = line9 + " " + line10
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("totus", ["tota"], "whole"),
+        ("dies", ["die"], "day"),
+        ("exprobro", ["exprobrabant"], "reproach"),
+        ("inimicus", ["inimici"], "enemy"),
+        ("laudo", ["laudabant"], "praise"),
+        ("adversus", ["adversum"], "against"),
+        ("juro", ["jurabant"], "swear"),
+        ("cinis", ["cinerem"], "ashes"),
+        ("panis", ["panem"], "bread"),
+        ("manduco", ["manducabam"], "eat"),
+        ("potus", ["potum"], "drink"),
+        ("fletus", ["fletu"], "weeping"),
+        ("misceo", ["miscebam"], "mix")
+    ]
+    
+    if verbose {
+        print("\nLINES 9-10:")
+        print("9: \"\(line9)\"")
+        print("10: \"\(line10)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌")")
+        }
+        
+        print("\nALL DETECTED LEMMAS: " + analysis.dictionary.keys.sorted().joined(separator: ", "))
+    }
+    
+    // Key assertions
+    XCTAssertNotNil(analysis.dictionary["exprobro"], "Should detect reproach")
+    XCTAssertNotNil(analysis.dictionary["cinis"], "Should detect ashes imagery")
+    XCTAssertNotNil(analysis.dictionary["misceo"], "Should detect mixing action")
+    
+    // Test contrast between lines
+    let enemiesCount = analysis.dictionary["inimicus"]?.forms["inimici"] ?? 0
+    let weepingCount = analysis.dictionary["fletus"]?.forms["fletu"] ?? 0
+    XCTAssertGreaterThan(enemiesCount, 0, "Should find enemy references")
+    XCTAssertGreaterThan(weepingCount, 0, "Should find weeping reference")
+}
+
+func testLine11and12() {
+    let line11 = psalm101[10] // "A facie irae et indignationis tuae, quia elevans allisisti me."
+    let line12 = psalm101[11] // "Dies mei sicut umbra declinaverunt, et ego sicut foenum arui."
+    let combinedText = line11 + " " + line12
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("facies", ["facie"], "face"),
+        ("ira", ["irae"], "wrath"),
+        ("indignatio", ["indignationis"], "indignation"),
+        ("elevo", ["elevans"], "lift up"),
+        ("allido", ["allisisti"], "cast down"),
+        ("dies", ["die", "dies"], "day"),
+        ("umbra", ["umbra"], "shadow"),
+        ("declino", ["declinaverunt"], "decline"),
+        ("foenum", ["foenum"], "hay"),
+        ("aresco", ["arui"], "dry up")
+    ]
+    
+    if verbose {
+        print("\nLINES 11-12:")
+        print("11: \"\(line11)\"")
+        print("12: \"\(line12)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌")")
+        }
+        
+        print("\nALL DETECTED LEMMAS: " + analysis.dictionary.keys.sorted().joined(separator: ", "))
+    }
+    
+    // Key assertions
+    XCTAssertNotNil(analysis.dictionary["allido"], "Should detect 'cast down' action")
+    XCTAssertNotNil(analysis.dictionary["umbra"], "Should detect shadow metaphor")
+    XCTAssertGreaterThan(analysis.dictionary["dies"]?.forms["dies"] ?? 0, 0, "Should find 'days' reference")
+    
+    // Test contrasting actions
+    let elevationCount = analysis.dictionary["elevo"]?.forms["elevans"] ?? 0
+    let declineCount = analysis.dictionary["declino"]?.forms["declinaverunt"] ?? 0
+    XCTAssertEqual(elevationCount + declineCount, 2, "Should find both elevation and decline")
+}
+
      func testPenitentialMotifs() {
         let analysis = latinService.analyzePsalm(text: psalm101)
         
