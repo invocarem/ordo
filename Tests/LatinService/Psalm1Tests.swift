@@ -17,9 +17,189 @@ class Psalm1Tests: XCTestCase {
         "Et erit tamquam lignum quod plantatum est secus decursus aquarum, quod fructum suum dabit in tempore suo:",
         "Et folium eius non defluet, et omnia quaecumque faciet prosperabuntur.",
         "Non sic impii, non sic: sed tamquam pulvis quem proicit ventus a facie terrae.",
-        "Ideo non resurgent impii in judicio, neque peccatores in concilio iustorum;",
-        "Quoniam novit Dominus viam justorum, et iter impiorum peribit."
+        "Ideo non resurgent impii in judicio, neque peccatores in concilio iustorum;Quoniam novit Dominus viam justorum, et iter impiorum peribit."
     ]
+
+    func testPsalm1Lines1and2() {
+        let line1 = psalm1[0] // "Beatus vir qui non abiit in consilio impiorum, et in via peccatorum non stetit, et in cathedra pestilentiae non sedit;"
+        let line2 = psalm1[1] // "Sed in lege Domini voluntas eius, et in lege eius meditabitur die ac nocte."
+        let combinedText = line1 + " " + line2
+        let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("beatus", ["beatus"], "blessed"),
+        ("vir", ["vir"], "man"),
+        ("abeo", ["abiit"], "go away"),
+        ("consilium", ["consilio"], "counsel"),
+        ("impius", ["impiorum"], "wicked"),
+        ("via", ["via"], "way"),
+        ("peccator", ["peccatorum"], "sinner"),
+        ("sto", ["stetit"], "stand"),
+        ("cathedra", ["cathedra"], "seat"),
+        ("pestilentia", ["pestilentiae"], "pestilence"),
+        ("sedeo", ["sedit"], "sit"),
+        ("lex", ["lege"], "law"),
+        ("dominus", ["domini"], "Lord"),
+        ("voluntas", ["voluntas"], "will"),
+        ("meditor", ["meditabitur"], "meditate"),
+        ("dies", ["die"], "day"),
+        ("nox", ["nocte"], "night")
+    ]
+    
+    if verbose {
+        print("\nPSALM 1:1-2 ANALYSIS:")
+        print("1: \"\(line1)\"")
+        print("2: \"\(line2)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nALL DETECTED LEMMAS: " + analysis.dictionary.keys.sorted().joined(separator: ", "))
+        
+        print("\nKEY CONTRASTS:")
+        print("Negative (v1): abiit (went) → stetit (stood) → sedit (sat)")
+        print("Positive (v2): meditabitur (will meditate)")
+        print("Locations: consilio (counsel) vs lege (law)")
+    }
+    
+    // Key assertions
+    XCTAssertEqual(analysis.dictionary["beatus"]?.forms["beatus"], 1, "Should find 'blessed' opening")
+    XCTAssertEqual(analysis.dictionary["lex"]?.forms["lege"], 2, "Should find double 'law' reference")
+    
+    // Test progression of actions
+    let negativeActions = ["abiit", "stetit", "sedit"].map {
+        analysis.dictionary.values.flatMap { $0.forms.keys }.contains($0)
+    }
+    XCTAssertEqual(negativeActions.filter { $0 }.count, 3, "Should find all three negative actions")
+    
+    // Test day/night merism
+    XCTAssertNotNil(analysis.dictionary["dies"], "Should detect 'day'")
+    XCTAssertNotNil(analysis.dictionary["nox"], "Should detect 'night'")
+}
+
+func testPsalm1Lines3and4() {
+    let line3 = psalm1[2] // "Et erit tamquam lignum quod plantatum est secus decursus aquarum, quod fructum suum dabit in tempore suo:"
+    let line4 = psalm1[3] // "Et folium eius non defluet, et omnia quaecumque faciet prosperabuntur."
+    let combinedText = line3 + " " + line4
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("lignum", ["lignum"], "tree"),
+        ("planto", ["plantatum"], "planted"),
+        ("secus", ["secus"], "beside"),
+        ("decursus", ["decursus"], "course"),
+        ("aqua", ["aquarum"], "waters"),
+        ("fructus", ["fructum"], "fruit"),
+        ("do", ["dabit"], "give"),
+        ("tempus", ["tempore"], "time"),
+        ("folium", ["folium"], "leaf"),
+        ("defluo", ["defluet"], "wither"),
+        ("omnis", ["omnia"], "all"),
+        ("facio", ["faciet"], "do"),
+        ("prospero", ["prosperabuntur"], "prosper")
+    ]
+    
+    if verbose {
+        print("\nPSALM 1:3-4 ANALYSIS:")
+        print("3: \"\(line3)\"")
+        print("4: \"\(line4)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nALL DETECTED LEMMAS: " + analysis.dictionary.keys.sorted().joined(separator: ", "))
+        
+        print("\nKEY THEMES:")
+        print("1. Tree Imagery: plantatum (planted) → fructum (fruit) → folium (leaf)")
+        print("2. Water Source: secus decursus aquarum (by streams of water)")
+        print("3. Perpetual Vitality: non defluet (won't wither) → prosperabuntur (will prosper)")
+    }
+    
+    // Key assertions
+    XCTAssertEqual(analysis.dictionary["lignum"]?.forms["lignum"], 1, "Should find tree reference")
+    XCTAssertEqual(analysis.dictionary["aqua"]?.forms["aquarum"], 1, "Should find waters reference")
+    
+    // Test plant/fruit/leaf sequence
+    let plantTerms = ["plantatum", "fructum", "folium"].map {
+        analysis.dictionary.values.flatMap { $0.forms.keys }.contains($0)
+    }
+    XCTAssertEqual(plantTerms.filter { $0 }.count, 3, "Should find all three plant parts")
+    
+    // Test positive outcomes
+    let positiveTerms = ["dabit", "non defluet", "prosperabuntur"].reduce(0) {
+        $0 + (analysis.dictionary["do"]?.forms[$1] ?? 0)
+        + (analysis.dictionary["defluo"]?.forms[$1] ?? 0)
+        + (analysis.dictionary["prospero"]?.forms[$1] ?? 0)
+    }
+    XCTAssertEqual(positiveTerms, 3, "Should find three positive outcome terms")
+}
+func testPsalm1Lines5and6() {
+    let line5 = psalm1[4] // "Non sic impii, non sic: sed tamquam pulvis quem projicit ventus a facie terrae."
+    let line6 = psalm1[5] // "Ideo non resurgent impii in judicio, neque peccatores in concilio justorum; quoniam novit Dominus viam justorum: et iter impiorum peribit."
+    let combinedText = line5 + " " + line6
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("impius", ["impii", "impiorum"], "wicked"),
+        ("pulvis", ["pulvis"], "dust"),
+        ("projicio", ["projicit"], "scatter"),
+        ("ventus", ["ventus"], "wind"),
+        ("facies", ["facie"], "face"),
+        ("terra", ["terrae"], "earth"),
+        ("resurgo", ["resurgent"], "rise up"),
+        ("judicium", ["judicio"], "judgment"),
+        ("peccator", ["peccatores"], "sinner"),
+        ("concilium", ["concilio"], "assembly"),
+        ("justus", ["justorum", "justorum"], "righteous"),
+        ("nosco", ["novit"], "know"),
+        ("dominus", ["dominus"], "Lord"),
+        ("via", ["viam"], "way"),
+        ("iter", ["iter"], "path"),
+        ("pereo", ["peribit"], "perish")
+    ]
+    
+    if verbose {
+        print("\nPSALM 1:5-6 ANALYSIS:")
+        print("5: \"\(line5)\"")
+        print("6: \"\(line6)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nALL DETECTED LEMMAS: " + analysis.dictionary.keys.sorted().joined(separator: ", "))
+        
+        print("\nKEY CONTRASTS:")
+        print("1. Wicked as Dust: pulvis (dust) vs justorum (righteous)")
+        print("2. Final Destiny: resurgent (rise) vs peribit (perish)")
+        print("3. Divine Knowledge: novit Dominus (the Lord knows)")
+    }
+    
+    // Key assertions
+    XCTAssertEqual(analysis.dictionary["impius"]?.forms["impii"], 2, "Should find two 'wicked' references")
+    XCTAssertEqual(analysis.dictionary["justus"]?.forms["justorum"], 2, "Should find two 'righteous' references")
+    
+    // Test dust/wind imagery
+    let scatteringTerms = ["pulvis", "projicit", "ventus"].map {
+        analysis.dictionary.values.flatMap { $0.forms.keys }.contains($0)
+    }
+    XCTAssertEqual(scatteringTerms.filter { $0 }.count, 3, "Should find all three scattering terms")
+    
+    // Test final destiny contrast
+    let destinyTerms = ["resurgent", "peribit"].reduce(0) {
+        $0 + (analysis.dictionary["resurgo"]?.forms[$1] ?? 0)
+        + (analysis.dictionary["pereo"]?.forms[$1] ?? 0)
+    }
+    XCTAssertEqual(destinyTerms, 2, "Should find both destiny verbs")
+}
     func testTreeMetaphor() {
         let analysis = latinService.analyzePsalm(text: psalm1)
         
