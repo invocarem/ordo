@@ -57,7 +57,7 @@ struct ContentView: View {
                         .datePickerStyle(.graphical)
                         .padding()
                         .frame(maxHeight: 400)
-                        .onChange(of: selectedDate) {
+                        .onChange(of: selectedDate) { _ in
                             triggerLiturgicalUpdate()
                         }
                     //Spacer()

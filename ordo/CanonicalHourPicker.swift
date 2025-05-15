@@ -69,7 +69,7 @@ struct CanonicalHourPicker: View {
         )
         .padding(.horizontal)
         .tint(.blue)
-        .onChange(of: sliderValue) { oldValue, newValue in
+        .valueChanged(of: sliderValue) { oldValue, newValue in
             updateSelectedHour(from: newValue)
         }
     }
@@ -135,3 +135,30 @@ extension Comparable {
     }
 }
 
+extension View {
+    func valueChanged<T: Equatable>(of value: T, initial: Bool = false, action: @escaping (T?, T) -> Void) -> some View {
+        modifier(ValueChangeModifier(value: value, initial: initial, action: action))
+    }
+}
+
+struct ValueChangeModifier<T: Equatable>: ViewModifier {
+    let value: T
+    let initial: Bool
+    let action: (T?, T) -> Void
+    
+    @State private var oldValue: T?
+    
+    func body(content: Content) -> some View {
+        content
+            .onAppear {
+                if initial {
+                    action(nil, value)
+                }
+                oldValue = value
+            }
+            .onChange(of: value) { newValue in
+                action(oldValue, newValue)
+                oldValue = newValue
+            }
+    }
+}

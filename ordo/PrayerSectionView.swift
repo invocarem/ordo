@@ -65,9 +65,10 @@ struct PrayerSectionView: View {
                 Toggle("", isOn: binding)
                     .toggleStyle(CircleToggleStyle())
                     .labelsHidden()
-                    .onChange(of: binding.wrappedValue) { oldValue, newValue in
+                    .valueChanged(of: binding.wrappedValue) { oldValue, newValue in
                         onToggle?(newValue)
                     }
+                   
             }
         }
         .padding(.bottom, 2)
