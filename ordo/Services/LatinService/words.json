@@ -1,4 +1,242 @@
- [{
+ [
+{
+  "lemma": "apprehendo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "apprehendere",
+  "perfect": "apprehendi",
+  "supine": "apprehensum",
+  "translations": {
+    "en": "to seize, grasp, take hold of",
+    "la": "apprehendo, apprehendere, apprehendi, apprehensum"
+  }
+},
+
+{
+  "lemma": "servio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "servire",
+  "perfect": "servivi",
+  "supine": "servitum",
+  "translations": {
+    "en": "to serve, be enslaved to",
+    "la": "servio, servire, servivi, servitum"
+  }
+},
+{
+  "lemma": "timor",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "timor",
+  "ablative": "timore",
+  "translations": {
+    "en": "fear, dread, anxiety",
+    "la": "timor, timoris"
+  }
+},
+  {
+  "lemma": "possessio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "possessio",
+  "genitive": "possessions",
+  "accusative": "possessionem",
+  "translations": {
+    "en": "possession, property, ownership",
+    "la": "possessio, possessionis"
+  }
+},
+  {
+    "lemma": "intelligo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "intelligere",
+  "perfect": "intellexi",
+  "supine": "intellectum",
+  "translations": {
+    "en": "to understand, comprehend, perceive",
+    "la": "intelligo, intelligere, intellexi, intellectum"
+  }
+},
+  {
+  "lemma": "erudio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "erudire",
+  "perfect": "erudivi",
+  "supine": "eruditum",
+  "forms_plural": {
+    "imperative_passive": [
+      "erudimini"
+    ]
+  },
+  "translations": {
+    "en": "to instruct, educate, train (often passive: 'be instructed')",
+    "la": "erudio, erudire, erudivi, eruditum"
+  }
+},
+  {
+  "lemma": "rego",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "regere",
+  "present": "rego",
+  "future_2sg": "reges",
+  "perfect": "rexi",
+  "supine": "rectum",
+  "translations": {
+    "en": "to rule, guide, govern",
+    "la": "rego, regere, rexi, rectum"
+  }
+},
+{
+  "lemma": "ferreus",
+  "part_of_speech": "adjective",
+  "gender": "feminine",
+  "declension": 1,
+  "nominative": "ferrea",
+  "genitive": "ferreae",
+  "translations": {
+    "en": "iron (adj), hard",
+    "la": "ferreus, -a, -um"
+  }
+},
+{
+  "lemma": "ferrum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "ferrum",
+  "genitive": "ferri",
+  "translations": {
+    "en": "iron, sword",
+    "la": "ferrum, -i"
+  }
+},
+  {
+  "lemma": "hodie",
+  "part_of_speech": "adverb",
+  "translations": {
+    "en": "today",
+    "la": "hodie"
+  }
+},
+{
+  "lemma": "postulo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "postulare",
+  "perfect": "postulavi",
+  "supine": "postulatum",
+  "translations": {
+    "en": "to ask, demand, request",
+    "la": "postulo, postulare, postulavi, postulatum"
+  }
+},
+  {
+  "lemma": "sion",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "sion",
+  "genitive": "sionis",
+  "translations": {
+    "en": "zion",
+    "la": "sion, sionis"
+  }
+},
+{
+  "lemma": "praedico",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "praedicare",
+  "perfect": "praedicavi",
+  "supine": "praedicatum",
+  "translations": {
+    "en": "to declare, proclaim, preach",
+    "la": "praedico, praedicare, praedicavi, praedicatum"
+  }
+},
+{
+  "lemma": "praeceptum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "praeceptum",
+  "genitive": "praecepti",
+  "translations": {
+    "en": "decree, precept, command",
+    "la": "praeceptum, -i"
+  }
+},
+  {
+  "lemma": "irrideo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "irridere",
+  "present": "irrideo",
+  "perfect": "irrisi",
+  "supine": "irrisum",
+  "translations": {
+    "en": "to laugh at, mock, deride",
+    "la": "irrideo, irridere, irrisi, irrisum"
+  }
+},
+  {
+  "lemma": "princeps",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "princeps",
+  "genitive": "principis",
+  "nominative_plural": "principes",
+  "translations": {
+    "en": "ruler, leader, prince",
+    "la": "princeps, principis"
+  }
+},
+{
+  "lemma": "unus",
+  "part_of_speech": "adjective",
+  "gender": "masculine",
+  "declension": 1,
+  "nominative": "unus",
+  "genitive": "unius",
+  "accusative": "unum",
+  "translations": {
+    "en": "one, single",
+    "la": "unus, -a, -um"
+  }
+},
+  {
+  "lemma": "asto",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "astare",
+  "perfect": "astiti",
+  "translations": {
+    "en": "to stand by/near, take a stand",
+    "la": "asto, astare, astiti"
+  }
+},
+  {
+  "lemma": "inanis",
+  "part_of_speech": "adjective",
+  "gender": "masculine",
+  "declension": 3,
+  "nominative": "inanis",
+  "forms_plural": {
+    "nominative_n": ["inania"]
+  },
+  "translations": {
+    "en": "vain, empty, meaningless",
+    "la": "inanis, inane"
+  }
+},
+  {
   "lemma": "projicio",
   "part_of_speech": "verb",
   "conjugation": 3,
@@ -8,6 +246,9 @@
   "supine": "projectum",
   "forms":{
     "present_3sg": ["projicit"]
+  },
+  "forms_plural":{
+     "present_subjunctive": ["projiciamus"]
   },
   "translations": {
     "en": "to throw forth, scatter, cast away",
@@ -2250,8 +2491,8 @@
         "present": ["perīmus", "perītis", "pereunt"],
         "imperfect": ["perībāmus", "perībātis", "perībant"],
         "future": ["peribimus", "peribitis", "peribunt"],
-        "perfect": ["periimus", "periistis", "periērunt"],
-        "present_subjunctive": ["pereāmus", "pereātis", "pereant"],
+        "perfect": ["periimus", "periistis", "perierunt"],
+        "present_subjunctive": ["pereamus", "pereatis", "pereant"],
         "imperative": ["perīte"]
     },
     "translations": {
@@ -10207,7 +10448,14 @@
               "la": "qui"
           }
       },
-         
+         {
+  "lemma": "quare",
+  "part_of_speech": "adverb",
+  "translations": {
+    "en": "why, wherefore",
+    "la": "quare"
+  }
+},
         {
             "lemma": "quae",
             "part_of_speech": "pronoun",
@@ -10620,15 +10868,19 @@
         {
             "lemma": "irascor",
             "part_of_speech": "verb",
+            "conjugation": 3,
             "infinitive": "irasci",
-            "perfect": "iratus sum",
+            "perfect": "iratus",
             "translations": {
                 "en": "to be angry",
                 "la": "irascor, irasci, iratus sum"
             },
             "forms": {
                 "present": ["irascor", "irasciris", "irascitur", "irascimur", "irascimini", "irascuntur"],
-                "imperative": ["irascere", "irascimini"]
+                "imperative": ["irascere", "irascimini"],
+                 "present_subjunctive": [
+                    "irascatur"
+                 ]
             },
             "notes": "Psalm 4:5 - 'irascimini' (be angry - plural imperative)"
         },
@@ -12207,41 +12459,7 @@
             "la": "considero"
         }
     },
-    {
-        "lemma": "sion",
-        "part_of_speech": "noun",
-        "declension": 2,
-        "gender": "masculine",
-        "nominative": "sion",
-        "genitive": "sionis",
-        "dative": "sioni",
-        "accusative": "Sionem",
-        "ablative": "Sione",
-        "vocative": "Sion",
-        "nominative_plural": "Siones",
-        "genitive_plural": "Sionum",
-        "dative_plural": "Sionibus",
-        "accusative_plural": "Siones",
-        "ablative_plural": "Sionibus",
-        "forms": {
-          "nominative_f": ["Siona"],
-          "genitive_f": ["Sionae"],
-          "dative_f": ["Sionae"],
-          "accusative_f": ["Sionam"],
-          "ablative_f": ["Siona"],
-          "vocative_f": ["Siona"],
-          "nominative_plural_f": ["Sionae"],
-          "genitive_plural_f": ["Sionarum"],
-          "dative_plural_f": ["Sionis"],
-          "accusative_plural_f": ["Sionas"],
-          "ablative_plural_f": ["Sionis"]
-        },
-        "translations": {
-          "en": "citizen of Zion, protector of Zion; lady of Zion",
-          "la": "Sion, Siona"
-        }
-      },
-    {
+       {
         "lemma": "corrigo",
         "part_of_speech": "verb",
         "perfect": "correxi",
@@ -12339,13 +12557,13 @@
             "part_of_speech": "verb",
             "conjugation": 1,
             "deponent": true,
-            "perfect": "meditatus sum",
+            "perfect": "meditatus",
             "infinitive": "meditari",
             "forms": {
                 "present": ["meditor", "meditaris", "meditatur", "meditamur", "meditamini", "meditantur"],
                 "imperfect": ["meditabar", "meditabaris", "meditabatur", "meditabamur", "meditabamini", "meditabantur"],
                 "future": ["meditabor", "meditaberis", "meditabitur", "meditabimur", "meditabimini", "meditabuntur"],
-                "perfect": ["meditatus sum", "meditatus es", "meditatus est", "meditati sumus", "meditati estis", "meditati sunt"],
+                "perfect": ["meditatus", "meditatus", "meditatus", "meditati", "meditati", "meditati"],
                 "present_subjunctive": ["mediter", "mediteris", "meditetur", "meditemur", "meditemini", "meditentur"]
             },
             "translations": {

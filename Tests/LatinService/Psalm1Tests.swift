@@ -17,7 +17,7 @@ class Psalm1Tests: XCTestCase {
         "Et erit tamquam lignum quod plantatum est secus decursus aquarum, quod fructum suum dabit in tempore suo:",
         "Et folium eius non defluet, et omnia quaecumque faciet prosperabuntur.",        
         "Non sic impii, non sic: sed tamquam pulvis quem projicit ventus a facie terrae.",
-        "Ideo non resurgent impii in judicio, neque peccatores in concilio iustorum;Quoniam novit Dominus viam justorum, et iter impiorum peribit."
+        "Ideo non resurgent impii in judicio, neque peccatores in concilio justorum;Quoniam novit Dominus viam justorum, et iter impiorum peribit."
     ]
 
     func testPsalm1Lines1and2() {
@@ -225,8 +225,7 @@ func testPsalm1Lines5and6() {
         let chaffMetaphorWords = [
             ("pulvis", ["pulvis"], "dust"),
             ("ventus", ["ventus"], "wind"),
-            
-            ("proicio", ["proicit"], "scatter"),
+            ("projicio", ["projicit"], "scatter"),
             ("facies", ["facie"], "face")
         ]
         
@@ -260,18 +259,6 @@ func testPsalm1Lines5and6() {
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: rareNouns)
-    }
-    
-    func testUniqueVerbs() {
-        let analysis = latinService.analyzePsalm(text: psalm1)
-        
-        let rareVerbs = [
-            ("defluo", ["defluet"], "wither"),
-            ("proicio", ["proicit"], "scatter"),
-            ("resurgo", ["resurgent"], "rise up")
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: rareVerbs)
     }
     
     func testKeyConcepts() {

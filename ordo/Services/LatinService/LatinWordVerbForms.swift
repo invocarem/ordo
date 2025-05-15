@@ -3,218 +3,214 @@ import Foundation
 extension LatinWordEntity {
     func generatedVerbForms() -> [String: [String]] {
         guard partOfSpeech == .verb else { return [:] }
+        
+        // Validate required fields
+        guard let infinitive = infinitive?.lowercased(),
+              let conjugation = conjugation else { return [:] }
+        
+        // Prepare stems
+        let stems = VerbStems(
+            present: String(infinitive.dropLast(3)),
+            perfect: perfect != nil ? String(perfect!.lowercased().dropLast(1)) : "",
+            supine: supine != nil ? String(supine!.lowercased().dropLast(2)) : ""
+        )
+        
         var forms = [String: [String]]()
-        
-        // Get principal parts with nil checks
-        //let lemma = lemma.lowercased()
-        
-        guard  let infinitive = infinitive?.lowercased() else { return [:] }
-        let perfect = perfect?.lowercased() ?? ""
-        let supine = supine?.lowercased() ?? ""
-        
-
-        // Determine conjugation (1st-4th)
-        let conjugation: Int
-        if infinitive.hasSuffix("are") { conjugation = 1 }
-        else if infinitive.hasSuffix("ere") { conjugation = 2 }
-        else if infinitive.hasSuffix("ere") { conjugation = 3 }
-        else if infinitive.hasSuffix("ire") { conjugation = 4 }
-        else { return [:] } // Unknown conjugation
-        
-       
-        // Extract stems
-        let presentStem = String(infinitive.dropLast(3))
-        let perfectStem = perfect.isEmpty ? "" : String(perfect.dropLast(1))
-        let supineStem = supine.isEmpty ? "" : String(supine.dropLast(2))
-        
-        // Helper for adding forms with variants
-        func addForm(_ key: String, values: [String]) {
+        let addForm = { (key: String, values: [String]) in
             forms[key] = values.map { $0.lowercased() }
         }
-
-
-         // MARK: - Imperative Mood
-        var imperativeForms = [String]()
-        switch conjugation {
-        case 1: // -are verbs (ama, amate)
-            imperativeForms.append(presentStem + "a")
-            imperativeForms.append(presentStem + "ate")
-            
-        case 2: // -ēre verbs (monē, monēte)
-            imperativeForms.append(presentStem + "e")
-            imperativeForms.append(presentStem + "ete")
-            
-        case 3: // -ere verbs (rege, regite)
-            imperativeForms.append(presentStem + "e")
-            imperativeForms.append(presentStem + "ite")
-            
-            // Special case for "educo" (short form "educ")
-            //if lemma == "educo" {
-            //    imperativeForms.append("educ")
-            //}
-            
-        case 4: // -ire verbs (audi, audite)
-            imperativeForms.append(presentStem + "i")
-            imperativeForms.append(presentStem + "ite")
-            
-        default: break
-        }
-        addForm("imperative", values: imperativeForms)
         
-        // MARK: - Present System (Active)
-        switch conjugation {
-        case 1: // -are verbs
-            addForm("present", values: [
-                presentStem + "o", presentStem + "as", presentStem + "at",
-                presentStem + "amus", presentStem + "atis", presentStem + "ant"
-            ])
-            addForm("imperfect", values: [
-                presentStem + "abam", presentStem + "abas", presentStem + "abat",
-                presentStem + "abamus", presentStem + "abatis", presentStem + "abant"
-            ])
-            addForm("future", values: [
-                presentStem + "abo", presentStem + "abis", presentStem + "abit",
-                presentStem + "abimus", presentStem + "abitis", presentStem + "abunt"
-            ])
-            
-        case 2: // -ēre verbs
-            addForm("present", values: [
-                presentStem + "eo", presentStem + "es", presentStem + "et",
-                presentStem + "emus", presentStem + "etis", presentStem + "ent"
-            ])
-            
-        case 3: // -ere verbs
-            addForm("present", values: [
-                presentStem + "o", presentStem + "is", presentStem + "it",
-                presentStem + "imus", presentStem + "itis", presentStem + "unt"
-            ])
-            
-        case 4: // -ire verbs
-            addForm("present", values: [
-                presentStem + "io", presentStem + "is", presentStem + "it",
-                presentStem + "imus", presentStem + "itis", presentStem + "iunt"
-            ])
-            
-        default: break
-        }
-        // MARK: - Imperfect Active Indicative
- var imperfectActive = [String]()
-        switch conjugation {
-        case 1:
-            imperfectActive = [
-                presentStem + "abam", presentStem + "abas", presentStem + "abat",
-                presentStem + "abamus", presentStem + "abatis", presentStem + "abant"
-            ]
-        case 2, 3: // 2nd and 3rd share the same imperfect pattern
-            imperfectActive = [
-                presentStem + "ebam", presentStem + "ebas", presentStem + "ebat",
-                presentStem + "ebamus", presentStem + "ebatis", presentStem + "ebant"
-            ]
-        case 4:
-            imperfectActive = [
-                presentStem + "iebam", presentStem + "iebas", presentStem + "iebat",
-                presentStem + "iebamus", presentStem + "iebatis", presentStem + "iebant"
-            ]
-        default: break
-        }
-        addForm("imperfect_active", values: imperfectActive)
-
-
-        // MARK: - Perfect System (Active)
-        if !perfectStem.isEmpty {
-            addForm("perfect", values: [
-                perfectStem + "i", perfectStem + "isti", perfectStem + "it",
-                perfectStem + "imus", perfectStem + "istis", perfectStem + "erunt"
-            ])
-            addForm("pluperfect", values: [
-                perfectStem + "eram", perfectStem + "eras", perfectStem + "erat",
-                perfectStem + "eramus", perfectStem + "eratis", perfectStem + "erant"
-            ])
-            addForm("future_perfect", values: [
-                perfectStem + "ero", perfectStem + "eris", perfectStem + "erit",
-                perfectStem + "erimus", perfectStem + "eritis", perfectStem + "erint"
-            ])
-        }
+        // Generate all forms
+        generatePresentSystemForms(conjugation: conjugation, stems: stems, addForm: addForm)
+        generatePerfectSystemForms(stems: stems, addForm: addForm)
+        generateImperativeForms(conjugation: conjugation, stems: stems, addForm: addForm)
+        generateNonFiniteForms(infinitive: infinitive, stems: stems, addForm: addForm)
+        generateParticipleForms(conjugation: conjugation, stems: stems, addForm: addForm)
+        generateSubjunctiveForms(conjugation: conjugation, stems: stems, addForm: addForm)
         
-        // MARK: - Passive Voice
-        if !supineStem.isEmpty {
-            let passiveParticiple = supineStem + "us"
-            addForm("past_participle", values: [passiveParticiple])
-            
-            // Present passive differs by conjugation
-            switch conjugation {
-            case 1:
-                addForm("present_passive", values: [
-                    presentStem + "or", presentStem + "aris", presentStem + "atur",
-                    presentStem + "amur", presentStem + "amini", presentStem + "antur"
-                ])
-            case 3:
-                addForm("present_passive", values: [
-                    presentStem + "or", presentStem + "eris", presentStem + "itur",
-                    presentStem + "imur", presentStem + "imini", presentStem + "untur"
-                ])
-            // Add cases 2 and 4 similarly
-            default: break
-            }
-        }
-
-// MARK: - Present Active Participle
-let presentActiveParticipleStem: String
-switch conjugation {
-case 1, 2, 4:
-    presentActiveParticipleStem = presentStem + "a" // For 1st (-a-), 2nd (-e- becomes -a-), 4th (-i- becomes -a-)
-case 3:
-    presentActiveParticipleStem = presentStem + "e" // 3rd conjugation keeps -e-
-default:
-    presentActiveParticipleStem = presentStem
-}
-
-let presentActiveParticiple = [
-    presentActiveParticipleStem + "ns",        // Nominative singular
-    presentActiveParticipleStem + "ntis",       // Genitive singular
-    presentActiveParticipleStem + "nti",        // Dative singular
-    presentActiveParticipleStem + "ntem",       // Accusative singular
-    presentActiveParticipleStem + "nte",        // Ablative singular
-    presentActiveParticipleStem + "ntes",       // Nominative plural
-    presentActiveParticipleStem + "ntium",      // Genitive plural
-    presentActiveParticipleStem + "ntibus",     // Dative/ablative plural
-    presentActiveParticipleStem + "ntis"        // Accusative plural
-]
-addForm("present_active_participle", values: presentActiveParticiple)
-
-
-
-
-        // MARK: - Non-Finite Forms
-        addForm("infinitive", values: [infinitive])
-        if !supine.isEmpty {
-            addForm("supine", values: [supine])
-            addForm("gerund", values: [presentStem + "andum"])
-            addForm("gerundive", values: [presentStem + "andus"])
-        }
-        
-        // MARK: - Irregular Form Handling
-        // Override with manually specified forms if they exist
+        // Apply manual overrides if any
         if let manualForms = self.forms {
             for (key, values) in manualForms {
                 forms[key] = values.map { $0.lowercased() }
             }
         }
-
-        addForm("imperfect_subjunctive", values: [
-            presentStem + "erem", presentStem + "eres", presentStem + "eret",
-            presentStem + "eremus", presentStem + "eretis", presentStem + "erent"
-        ])
-        if conjugation == 1 {
-           addForm("present_passive_subjunctive", values: [
-                presentStem + "er", presentStem + "eris", presentStem + "etur",
-                presentStem + "emur", presentStem + "emini", presentStem + "entur"
-            ])
-        }
         
         return forms
     }
-   
     
+    // MARK: - Helper Types
+    private struct VerbStems {
+        let present: String
+        let perfect: String
+        let supine: String
+    }
     
+    // MARK: - Form Generators
+    
+    private func generatePresentSystemForms(conjugation: Int, stems: VerbStems, addForm: (String, [String]) -> Void) {
+        // Present Active Indicative
+        let presentActive: [String]
+        switch conjugation {
+        case 1:
+            presentActive = [
+                stems.present + "o", stems.present + "as", stems.present + "at",
+                stems.present + "amus", stems.present + "atis", stems.present + "ant"
+            ]
+        case 2:
+            presentActive = [
+                stems.present + "eo", stems.present + "es", stems.present + "et",
+                stems.present + "emus", stems.present + "etis", stems.present + "ent"
+            ]
+        case 3:
+            presentActive = [
+                stems.present + "o", stems.present + "is", stems.present + "it",
+                stems.present + "imus", stems.present + "itis", stems.present + "unt"
+            ]
+        case 4:
+            presentActive = [
+                stems.present + "io", stems.present + "is", stems.present + "it",
+                stems.present + "imus", stems.present + "itis", stems.present + "iunt"
+            ]
+        default:
+            presentActive = []
+        }
+        addForm("present", presentActive)
+        
+        // Imperfect Active Indicative
+        let imperfectActive: [String]
+        switch conjugation {
+        case 1:
+            imperfectActive = [
+                stems.present + "abam", stems.present + "abas", stems.present + "abat",
+                stems.present + "abamus", stems.present + "abatis", stems.present + "abant"
+            ]
+        case 2, 3:
+            imperfectActive = [
+                stems.present + "ebam", stems.present + "ebas", stems.present + "ebat",
+                stems.present + "ebamus", stems.present + "ebatis", stems.present + "ebant"
+            ]
+        case 4:
+            imperfectActive = [
+                stems.present + "iebam", stems.present + "iebas", stems.present + "iebat",
+                stems.present + "iebamus", stems.present + "iebatis", stems.present + "iebant"
+            ]
+        default:
+            imperfectActive = []
+        }
+        addForm("imperfect_active", imperfectActive)
+        
+        // Future Active Indicative
+        let futureActive: [String]
+        switch conjugation {
+        case 1:
+            futureActive = [
+                stems.present + "abo", stems.present + "abis", stems.present + "abit",
+                stems.present + "abimus", stems.present + "abitis", stems.present + "abunt"
+            ]
+        case 2:
+            futureActive = [
+                stems.present + "ebo", stems.present + "ebis", stems.present + "ebit",
+                stems.present + "ebimus", stems.present + "ebitis", stems.present + "ebunt"
+            ]
+        case 3:
+            futureActive = [
+                stems.present + "am", stems.present + "es", stems.present + "et",
+                stems.present + "emus", stems.present + "etis", stems.present + "ent"
+            ]
+        case 4:
+            futureActive = [
+                stems.present + "iam", stems.present + "ies", stems.present + "iet",
+                stems.present + "iemus", stems.present + "ietis", stems.present + "ient"
+            ]
+        default:
+            futureActive = []
+        }
+        addForm("future", futureActive)
+    }
+    
+    private func generatePerfectSystemForms(stems: VerbStems, addForm: (String, [String]) -> Void) {
+        guard !stems.perfect.isEmpty else { return }
+        
+        addForm("perfect",  [
+            stems.perfect + "i", stems.perfect + "isti", stems.perfect + "it",
+            stems.perfect + "imus", stems.perfect + "istis", stems.perfect + "erunt"
+        ])
+        
+        addForm("pluperfect",  [
+            stems.perfect + "eram", stems.perfect + "eras", stems.perfect + "erat",
+            stems.perfect + "eramus", stems.perfect + "eratis", stems.perfect + "erant"
+        ])
+        
+        addForm("future_perfect",  [
+            stems.perfect + "ero", stems.perfect + "eris", stems.perfect + "erit",
+            stems.perfect + "erimus", stems.perfect + "eritis", stems.perfect + "erint"
+        ])
+    }
+    
+    private func generateImperativeForms(conjugation: Int, stems: VerbStems, addForm: (String, [String]) -> Void) {
+        var imperativeForms = [String]()
+        
+        switch conjugation {
+        case 1:
+            imperativeForms = [stems.present + "a", stems.present + "ate"]
+        case 2:
+            imperativeForms = [stems.present + "e", stems.present + "ete"]
+        case 3:
+            imperativeForms = [stems.present + "e", stems.present + "ite"]
+        case 4:
+            imperativeForms = [stems.present + "i", stems.present + "ite"]
+        default:
+            break
+        }
+        
+        addForm("imperative", imperativeForms)
+    }
+    
+    private func generateNonFiniteForms(infinitive: String, stems: VerbStems, addForm: (String, [String]) -> Void) {
+        addForm("infinitive", [infinitive])
+        
+        if !stems.supine.isEmpty {
+            addForm("supine",  [stems.supine + "um"])
+            addForm("gerund",  [stems.present + "andum"])
+            addForm("gerundive",  [stems.present + "andus"])
+        }
+    }
+    
+    private func generateParticipleForms(conjugation: Int, stems: VerbStems, addForm: (String, [String]) -> Void) {
+        // Present Active Participle
+        let participleStem: String
+        switch conjugation {
+        case 1, 2, 4: participleStem = stems.present + "a"
+        case 3: participleStem = stems.present + "e"
+        default: participleStem = stems.present
+        }
+        
+        let presentActiveParticiple = [
+            participleStem + "ns", participleStem + "ntis", participleStem + "nti",
+            participleStem + "ntem", participleStem + "nte", participleStem + "ntes",
+            participleStem + "ntium", participleStem + "ntibus", participleStem + "ntis"
+        ]
+        addForm("present_active_participle", presentActiveParticiple)
+        
+        // Past Passive Participle
+        if !stems.supine.isEmpty {
+            addForm("past_participle", [stems.supine + "us"])
+        }
+    }
+    
+    private func generateSubjunctiveForms(conjugation: Int, stems: VerbStems, addForm: (String, [String]) -> Void) {
+        // Imperfect Subjunctive
+        addForm("imperfect_subjunctive", [
+            stems.present + "erem", stems.present + "eres", stems.present + "eret",
+            stems.present + "eremus", stems.present + "eretis", stems.present + "erent"
+        ])
+        
+        // Present Passive Subjunctive (1st conjugation only)
+        if conjugation == 1 {
+            addForm("present_passive_subjunctive",  [
+                stems.present + "er", stems.present + "eris", stems.present + "etur",
+                stems.present + "emur", stems.present + "emini", stems.present + "entur"
+            ])
+        }
+    }
 }
