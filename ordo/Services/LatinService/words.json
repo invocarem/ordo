@@ -1,5 +1,276 @@
  [
 {
+  "lemma": "protector",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "protector",
+  "genitive": "protectoris",
+  "translations": {
+    "en": "protector, defender",
+    "la": "protector, protectoris"
+  }
+},
+{
+  "lemma": "praeoccupo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "praeoccupare",
+  "perfect": "praeoccupavi",
+  "supine": "praeoccupatum",
+  "translations": {
+    "en": "to seize beforehand, anticipate, preoccupy",
+    "la": "praeoccupo, praeoccupare, praeoccupavi, praeoccupatum"
+  }
+},
+{
+  "lemma": "cornu",
+  "part_of_speech": "noun",
+  "declension": 4,
+  "gender": "neuter",
+  "nominative": "cornu",
+  "genitive": "cornus",
+  "translations": {
+    "en": "horn, wing (of army), strength",
+    "la": "cornu, -us"
+  }
+},
+
+  {
+  "lemma": "concludo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "concludere",
+  "perfect": "conclusi",
+  "supine": "conclusum",
+  "translations": {
+    "en": "to close up, enclose, conclude",
+    "la": "concludo, concludere, conclusi, conclusum"
+  }
+},
+{
+  "lemma": "affligo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "affligere",
+  "perfect": "afflixi",
+  "perfect_3pl": "afflixerunt",
+  "supine": "afflictum",
+  "translations": {
+    "en": "to afflict, crush, humble",
+    "la": "affligo, affligere, afflixi, afflictum"
+  }
+},
+{
+  "lemma": "superbia",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "superbia",
+  "accusative": "superbiam",
+  "translations": {
+    "en": "pride, arrogance",
+    "la": "superbia, -ae"
+  }
+},
+
+{
+  "lemma": "adeps",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "adeps",
+  "accusative": "adipem",
+  "translations": {
+    "en": "fat, grease (animal); richness (figurative)",
+    "la": "adeps, adipis"
+  }
+},
+{
+  "lemma": "durus",
+  "part_of_speech": "adjective",
+  "gender": "masculine",
+  "declension": 1,
+  "nominative": "durus",
+  "forms_plural" : {
+    "accusative_f": ["duras"]
+  },
+  "translations": {
+    "en": "hard, harsh, tough",
+    "la": "durus, -a, -um"
+  }
+},
+  {
+  "lemma": "visito",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "visitare",
+  "perfect": "visitavi",
+  "forms":{
+    "perfect_2sg": ["visitasti"]
+  },
+  "supine": "visitatum",
+  "translations": {
+    "en": "to visit, go to see",
+    "la": "visito, visitare, visitavi, visitatum"
+  }
+},
+  {
+  "lemma": "opus",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "opus",
+  "genitive": "operis",
+  "translations": {
+    "en": "work, labor, task",
+    "la": "opus, operis"
+  }
+},
+  {
+  "lemma": "justitia",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "justitia",
+  "accusative": "justitiam",
+  "translations": {
+    "en": "justice, righteousness",
+    "la": "justitia, -ae"
+  }
+},
+{
+  "lemma": "intendo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "intendere",
+   "perfect": "intendi",
+  "supine": "intentum",
+  "translations": {
+    "en": "to attend, stretch toward, aim",
+    "la": "intendo, intendere, intendi, intentum"
+  }
+},
+  {
+  "lemma": "resisto",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "resistere",
+  "perfect": "restiti",
+  "supine": "restitum",
+  "translations": {
+    "en": "to resist, withstand, oppose",
+    "la": "resisto, resistere, restiti, restitum"
+  }
+},
+  {
+  "lemma": "ala",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "ala",
+  "genitive_plural": "alarum",
+  "translations": {
+    "en": "wing",
+    "la": "ala, -ae"
+  }
+},
+{
+  "lemma": "protego",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "protegere",
+   "perfect": "protexi",
+  "supine": "protectum",
+  "translations": {
+    "en": "to protect, cover, defend",
+    "la": "protego, protegere, protexi, protectum"
+  }
+},
+{
+  "lemma": "congrego",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "congregare",
+  "perfect": "congregavi",
+  "supine": "congregatum",
+  "translations": {
+    "en": "to assemble, gather together",
+    "la": "congrego, congregare, congregavi, congregatum"
+  }
+},
+{
+  "lemma": "conventiculum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "conventiculum",
+  "genitive": "conventiculi",
+  "translations": {
+    "en": "assembly, meeting (often religious)",
+    "la": "conventiculum, -i"
+  }
+},
+{
+  "lemma": "sanguis",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "sanguis",
+  "genitive": "sanguinis",
+  "translations": {
+    "en": "blood",
+    "la": "sanguis, sanguinis"
+  }
+},
+
+  {
+  "lemma": "voluntas",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "voluntas",
+  "genitive": "voluntatis",
+  "translations": {
+    "en": "will, desire, wish",
+    "la": "voluntas, voluntatis"
+  }
+},
+
+{
+  "lemma": "infirmitas",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "infirmitas",
+  "genitive": "infirmitatis",
+  "translations": {
+    "en": "weakness, sufferings, infirmity",
+    "la": "infirmitas, infirmitatis"
+  }
+},
+{
+  "lemma": "postea",
+  "part_of_speech": "adverb",
+  "translations": {
+    "en": "afterwards, hereafter",
+    "la": "postea"
+  }
+},
+{
+  "lemma": "accelero",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "accelerare",
+  "perfect": "acceleravi",
+  "supine": "acceleratum",
+  "translations": {
+    "en": "to accelerate, hasten",
+    "la": "accelero, accelerare, acceleravi, acceleratum"
+  }
+},
+
+{
   "lemma": "accedo",
   "part_of_speech": "verb",
   "conjugation": 3,
@@ -2204,9 +2475,13 @@
         {
           "lemma": "examino",
           "part_of_speech": "verb",
+          "conjugation": 1,
           "perfect": "examinavi",
           "infinitive": "examinare",
           "supine": "examinatum",
+          "forms": {
+            "perfect_2sg": ["examinasti"]
+          },
           "translations": {
             "en": "to test, examine",
             "la": "examino"
@@ -2218,6 +2493,9 @@
           "perfect": "probavi",
           "infinitive": "probare",
           "supine": "probatum",
+          "forms": {
+            "perfect_2sg": ["probasti"]
+          },
           "translations": {
             "en": "to prove, approve, test",
             "la": "probo"
@@ -2659,6 +2937,18 @@
     }
     
   },
+  {
+  "lemma": "pupilla",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "pupilla",
+  "accusative": "pupillam",
+  "translations": {
+    "en": "pupil (of eye), ward (legal)",
+    "la": "pupilla, -ae"
+  }
+},
   {
     "lemma": "notus",
     "part_of_speech": "adjective",
@@ -3747,6 +4037,7 @@
   {
     "lemma": "mirifico",
     "part_of_speech": "verb",
+    "conjugation": 1,
     "infinitive": "mirificare",
     "perfect": "mirificavi",
     "supine": "mirificatum",
@@ -4246,8 +4537,9 @@
     "genitive": "dexteri",
     "forms": {
       
-      "nominative_f": ["dextera"],
-      "ablative_f": ["dextera"]
+      "nominative_f": ["dextera", "dextra"],
+      "ablative_f": ["dextera"],
+      "dative_f": ["dexterae"]
     },
     "forms_plural":{
       "ablative_m": ["dextris"]
@@ -6530,6 +6822,10 @@
       "forms": {
         "future": ["movebitur"]
       },
+      "forms_plural":{
+         "present_subjunctive_passive": 
+            ["moveantur"]
+      },
       "translations": {
         "en": "to move, be moved",
         "la": "moveo, movēre"
@@ -6571,6 +6867,33 @@
         "la": "circuitus"
       }
     },
+{
+  "lemma": "contremisco",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "contremiscere",
+  "perfect": "contremui",
+  "forms":{
+    "perfect_3sg": ["contremuit"]
+  },
+  "translations": {
+    "en": "to tremble, shake with fear",
+    "la": "contremisco, contremiscere, contremui"
+  }
+},
+    {
+  "lemma": "fundamentum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "fundamentum",
+  "nominative_plural": "fundamenta",
+  "genitive": "fundamenti",
+  "translations": {
+    "en": "foundation, base",
+    "la": "fundamentum, -i"
+  }
+},
     {
       "lemma": "mons",
       "part_of_speech": "noun",
@@ -6582,7 +6905,10 @@
       "accusative": "montem",
       "ablative": "monte",
       "vocative": "mons",
-      "nominative_plural": "montes",
+      "forms_plural":{
+          "nominative": ["montes"],
+          "genitive": ["montium"]
+      },
       "translations": {
         "en": "mountain",
         "la": "mons"
@@ -7461,7 +7787,10 @@
         "la": "loquor"
       },
       "forms": {
-        "imperfect": ["loquebar", "loquebaris", "loquebatur", "loquebamur", "loquebamini", "loquebantur"]
+        "imperfect": ["loquebar", "loquebaris", "loquebatur", "loquebamur", "loquebamini", "loquebantur"],
+         "present_subjunctive": [
+            "loquatur" 
+          ]
       }
     },
   
@@ -7968,21 +8297,6 @@
           }
         },
       
-    {
-      "lemma": "loquor",
-      "part_of_speech": "verb",
-      "conjugation": 3,
-      "infinitive": "loqui",
-      "perfect": "locutus sum",
-      "supine": "locutum",
-      "translations": {
-        "en": "to speak, talk",
-        "la": "loquor"
-      },
-      "forms": {
-        "future": ["loquar", "loqueris", "loquetur", "loquemur", "loquemini", "loquentur"]
-      }
-    },
     {
       "lemma": "sapientia",
       "part_of_speech": "noun",
@@ -11411,7 +11725,18 @@
            },
            "notes": "Psalm 4:8 'fructum frumenti, vini et olei sui' (the fruit of their grain, wine and oil)"
        },
-    
+    {
+  "lemma": "egeo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "egere",
+  "future": "eges",
+  "perfect": "egui",
+  "translations": {
+    "en": "to need, lack, want",
+    "la": "egeo, egere, egui"
+  }
+},
     {
         "lemma": "bonus",
         "part_of_speech": "adjective",
@@ -11498,11 +11823,15 @@
           {
             "lemma": "multiplico",
             "part_of_speech": "verb",
+            "conjugation": 1,
             "perfect": "multiplicavi",
             "infinitive": "multiplicare",
             "supine": "multiplicatum",
             "forms": {
                 "perfect": ["multiplicavi", "multiplicavisti/multiplicasti", "multiplicavit", "multiplicavimus", "multiplicavistis", "multiplicaverunt"]
+            },
+            "forms_plural":{
+                "perfect_participle_f": ["multiplicatae"]
             },
             "translations": {
               "en": "multiply, increase",
