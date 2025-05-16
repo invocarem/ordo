@@ -41,11 +41,13 @@ class Psalm90Tests: XCTestCase {
         "Quoniam ipse liberavit me de laqueo venantium, et a verbo aspero.",
         "Scapulis suis obumbrabit tibi, et sub pennis ejus sperabis.",
         "Scuto circumdabit te veritas ejus; non timebis a timore nocturno,",
+       
         "A sagitta volante in die, a negotio perambulante in tenebris, ab incursu et daemonio meridiano.",
         "Cadent a latere tuo mille, et decem millia a dextris tuis; ad te autem non appropinquabit.",
         "Verumtamen oculis tuis considerabis, et retributionem peccatorum videbis.",
         "Quoniam tu es, Domine, spes mea; Altissimum posuisti refugium tuum.",
         "Non accedet ad te malum, et flagellum non appropinquabit tabernaculo tuo.",
+       
         "Quoniam angelis suis mandavit de te, ut custodiant te in omnibus viis tuis.",
         "In manibus portabunt te, ne forte offendas ad lapidem pedem tuum.",
         "Super aspidem et basiliscum ambulabis, et conculcabis leonem et draconem.",
@@ -119,7 +121,7 @@ func testPsalm90Lines3and4() {
     let analysis = latinService.analyzePsalm(text: combinedText)
     
     let testLemmas = [
-        ("liberare", ["liberavit"], "deliver"),
+        ("libero", ["liberavit"], "deliver"),
         ("laqueus", ["laqueo"], "snare"),
         ("venator", ["venantium"], "hunter"),
         ("verbum", ["verbo"], "word"),
@@ -150,7 +152,7 @@ func testPsalm90Lines3and4() {
     }
     
     // Key assertions
-    XCTAssertEqual(analysis.dictionary["liberare"]?.forms["liberavit"], 1, "Should find deliverance verb")
+    XCTAssertEqual(analysis.dictionary["libero"]?.forms["liberavit"], 1, "Should find deliverance verb")
     XCTAssertEqual(analysis.dictionary["obumbro"]?.forms["obumbrabit"], 1, "Should detect overshadowing")
     
     // Test danger vocabulary
@@ -342,6 +344,165 @@ func testPsalm90Lines9and10() {
     XCTAssertEqual(dangerTerms.filter { $0 }.count, 2, "Should identify both evil and plague")
 }
 
+// MARK: - Grouped Line Tests for Psalm 90:11-16
+func testPsalm90Lines11and12() {
+    let line11 = psalm90[10] // "Quoniam angelis suis mandavit de te, ut custodiant te in omnibus viis tuis."
+    let line12 = psalm90[11] // "In manibus portabunt te, ne forte offendas ad lapidem pedem tuum."
+    let combinedText = line11 + " " + line12
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("angelus", ["angelis"], "angel"),
+        ("mando", ["mandavit"], "command"),
+        ("custodio", ["custodiant"], "guard"),
+        ("via", ["viis"], "way"),
+        ("manus", ["manibus"], "hand"),
+        ("porto", ["portabunt"], "carry"),
+        ("offendo", ["offendas"], "strike"),
+        ("lapis", ["lapidem"], "stone"),
+        ("pes", ["pedem"], "foot")
+    ]
+    
+    if verbose {
+        print("\nPSALM 90:11-12 ANALYSIS:")
+        print("11: \"\(line11)\"")
+        print("12: \"\(line12)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nKEY THEMES:")
+        print("1. Angelic Protection: Divine command to angels for guardianship")
+        print("2. Physical Safeguarding: Carrying in hands to prevent injury")
+        print("3. Comprehensive Care: 'in omnibus viis tuis' (in all your ways)")
+    }
+    
+    // Angelic protection
+    XCTAssertEqual(analysis.dictionary["angelus"]?.forms["angelis"], 1, "Should find angel reference")
+    XCTAssertEqual(analysis.dictionary["mando"]?.forms["mandavit"], 1, "Should find command verb")
+    
+    // Physical protection
+    XCTAssertEqual(analysis.dictionary["porto"]?.forms["portabunt"], 1, "Should find carrying verb")
+    XCTAssertEqual(analysis.dictionary["pes"]?.forms["pedem"], 1, "Should find foot reference")
+    
+    // Test body part metaphors
+    let bodyParts = ["manibus", "pedem"].reduce(0) {
+        $0 + (analysis.dictionary["manus"]?.forms[$1] ?? 0)
+        + (analysis.dictionary["pes"]?.forms[$1] ?? 0)
+    }
+    XCTAssertEqual(bodyParts, 2, "Should find both hand and foot references")
+}
+
+func testPsalm90Lines13and14() {
+    let line13 = psalm90[12] // "Super aspidem et basiliscum ambulabis, et conculcabis leonem et draconem."
+    let line14 = psalm90[13] // "Quoniam in me speravit, liberabo eum; protegam eum, quoniam cognovit nomen meum."
+    let combinedText = line13 + " " + line14
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("aspis", ["aspidem"], "asp"),
+        ("basiliscus", ["basiliscum"], "basilisk"),
+        ("ambulo", ["ambulabis"], "walk"),
+        ("conculco", ["conculcabis"], "trample"),
+        ("leo", ["leonem"], "lion"),
+        ("draco", ["draconem"], "dragon"),
+        ("spero", ["speravit"], "hope"),
+        ("libero", ["liberabo"], "deliver"),
+        ("protego", ["protegam"], "protect"),
+        ("cognosco", ["cognovit"], "know"),
+        ("nomen", ["nomen"], "name")
+    ]
+    
+    if verbose {
+        print("\nPSALM 90:13-14 ANALYSIS:")
+        print("13: \"\(line13)\"")
+        print("14: \"\(line14)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nKEY THEMES:")
+        print("1. Victory Over Evil: Symbolic creatures representing spiritual dangers")
+        print("2. Covenant Relationship: 'cognovit nomen meum' (knew my name)")
+        print("3. Divine Response: Protection conditioned on trust in God")
+    }
+    
+    // Dangerous creatures
+    XCTAssertEqual(analysis.dictionary["aspis"]?.forms["aspidem"], 1, "Should find asp reference")
+    XCTAssertEqual(analysis.dictionary["draco"]?.forms["draconem"], 1, "Should find dragon reference")
+    
+    // Divine promises
+    XCTAssertEqual(analysis.dictionary["libero"]?.forms["liberabo"], 1, "Should find deliverance verb")
+    XCTAssertEqual(analysis.dictionary["protego"]?.forms["protegam"], 1, "Should find protection verb")
+    
+    // Test future tense verbs
+    let futureVerbs = ["ambulabis", "conculcabis", "liberabo", "protegam"].reduce(0) { count, form in
+        let ambuloCount = analysis.dictionary["ambulo"]?.forms[form] ?? 0
+        let conculcoCount = analysis.dictionary["conculco"]?.forms[form] ?? 0
+        let liberoCount = analysis.dictionary["libero"]?.forms[form] ?? 0
+        let protegoCount = analysis.dictionary["protego"]?.forms[form] ?? 0
+        return count + ambuloCount + conculcoCount + liberoCount + protegoCount
+    }
+    XCTAssertEqual(futureVerbs, 4, "Should find all future tense verbs")
+}
+
+func testPsalm90Lines15and16() {
+    let line15 = psalm90[14] // "Clamabit ad me, et ego exaudiam eum; cum ipso sum in tribulatione, eripiam eum et glorificabo eum."
+    let line16 = psalm90[15] // "Longitudine dierum replebo eum, et ostendam illi salutare meum."
+    let combinedText = line15 + " " + line16
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("clamo", ["clamabit"], "cry out"),
+        ("exaudio", ["exaudiam"], "hear"),
+        ("tribulatio", ["tribulatione"], "trouble"),
+        ("eripio", ["eripiam"], "rescue"),
+        ("glorifico", ["glorificabo"], "glorify"),
+        ("longitudo", ["longitudine"], "length"),
+        ("dies", ["dierum"], "day"),
+        ("repleo", ["replebo"], "fill"),
+        ("ostendo", ["ostendam"], "show"),
+        ("salutare", ["salutare"], "salvation")
+    ]
+    
+    if verbose {
+        print("\nPSALM 90:15-16 ANALYSIS:")
+        print("15: \"\(line15)\"")
+        print("16: \"\(line16)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nKEY THEMES:")
+        print("1. Prayer Response: Immediate divine answer to cries")
+        print("2. Presence in Trouble: 'cum ipso sum in tribulatione' (with him in trouble)")
+        print("3. Dual Blessing: Long life and revelation of salvation")
+    }
+    
+    // Prayer dynamics
+    XCTAssertEqual(analysis.dictionary["clamo"]?.forms["clamabit"], 1, "Should find crying verb")
+    XCTAssertEqual(analysis.dictionary["exaudio"]?.forms["exaudiam"], 1, "Should find hearing verb")
+    
+    // Divine presence
+    XCTAssertEqual(analysis.dictionary["tribulatio"]?.forms["tribulatione"], 1, "Should find trouble reference")
+    XCTAssertEqual(analysis.dictionary["eripio"]?.forms["eripiam"], 1, "Should find rescue verb")
+    
+    // Blessing terms
+    let blessingTerms = ["longitudine", "salutare"].reduce(0) {
+        $0 + (analysis.dictionary["longitudo"]?.forms[$1] ?? 0)
+        + (analysis.dictionary["salutare"]?.forms[$1] ?? 0)
+    }
+    XCTAssertEqual(blessingTerms, 2, "Should find both length of days and salvation terms")
+}
     func testAnalyzePsalm90() {
    
     let analysis = latinService.analyzePsalm(text: psalm90)

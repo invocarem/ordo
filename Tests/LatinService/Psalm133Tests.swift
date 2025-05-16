@@ -3,7 +3,7 @@ import XCTest
 
 class Psalm133Tests: XCTestCase {
     private var latinService: LatinService!
-    let verbose = true
+    let verbose = false
     
     override func setUp() {
         super.setUp()
@@ -19,7 +19,110 @@ class Psalm133Tests: XCTestCase {
     ]
     
     // MARK: - Test Cases
+   // MARK: - Grouped Line Tests for Psalm 133
+func testPsalm133Lines1and2() {
+    let line1 = psalm133[0] // "Ecce nunc benedicite Dominum, omnes servi Domini:"
+    let line2 = psalm133[1] // "Qui statis in domo Domini, in atriis domus Dei nostri."
+    let combinedText = line1 + " " + line2
+    let analysis = latinService.analyzePsalm(text: combinedText)
     
+    let testLemmas = [
+        ("ecce", ["ecce"], "behold"),
+        ("nunc", ["nunc"], "now"),
+        ("benedico", ["benedicite"], "bless"),
+        ("dominus", ["dominum", "domini"], "Lord"),
+        ("servus", ["servi"], "servant"),
+        ("sto", ["statis"], "stand"),
+        ("domus", ["domo", "domus"], "house"),
+        ("atrium", ["atriis"], "courtyard"),
+        ("deus", ["dei"], "God"),
+        ("noster", ["nostri"], "our")
+    ]
+    
+    if verbose {
+        print("\nPSALM 133:1-2 ANALYSIS:")
+        print("1: \"\(line1)\"")
+        print("2: \"\(line2)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nKEY THEMES:")
+        print("1. Call to Worship: Urgent 'behold now' imperative")
+        print("2. Temple Service: Standing in God's house and courtyards")
+        print("3. Communal Identity: 'servi Domini' (servants of the Lord) and 'Dei nostri' (our God)")
+    }
+    
+    // Worship imperatives
+    XCTAssertEqual(analysis.dictionary["benedico"]?.forms["benedicite"], 1, "Should find blessing imperative")
+    XCTAssertEqual(analysis.dictionary["ecce"]?.forms["ecce"], 1, "Should find attention-getter")
+    
+    // Temple context
+    XCTAssertEqual(analysis.dictionary["domus"]?.forms["domo"], 1, "Should find house reference")
+    XCTAssertEqual(analysis.dictionary["atrium"]?.forms["atriis"], 1, "Should find courtyard reference")
+    
+    // Test divine titles
+    let lordReferences = ["dominum", "domini"].reduce(0) {
+        $0 + (analysis.dictionary["dominus"]?.forms[$1] ?? 0)
+    }
+    XCTAssertTrue(lordReferences >= 2, "Should find both Lord references")
+}
+
+func testPsalm133Lines3and4() {
+    let line3 = psalm133[2] // "In noctibus extollite manus vestras in sancta, et benedicite Dominum."
+    let line4 = psalm133[3] // "Benedicat te Dominus ex Sion, qui fecit caelum et terram."
+    let combinedText = line3 + " " + line4
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("nox", ["noctibus"], "night"),
+        ("extollo", ["extollite"], "lift up"),
+        ("manus", ["manus"], "hands"),
+        ("sanctus", ["sancta"], "holy place"),
+        ("benedico", ["benedicite", "benedicat"], "bless"),
+        ("sion", ["sion"], "Zion"),
+        ("facio", ["fecit"], "make"),
+        ("caelum", ["caelum"], "heaven"),
+        ("terra", ["terram"], "earth")
+    ]
+    
+    if verbose {
+        print("\nPSALM 133:3-4 ANALYSIS:")
+        print("3: \"\(line3)\"")
+        print("4: \"\(line4)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nKEY THEMES:")
+        print("1. Night Worship: 'In noctibus' (in the nights) as special time for praise")
+        print("2. Physical Posture: Lifted hands in holy place")
+        print("3. Divine Benediction: Reciprocal blessing from Zion's Creator")
+    }
+    
+    // Night worship
+    XCTAssertEqual(analysis.dictionary["nox"]?.forms["noctibus"], 1, "Should find night reference")
+    XCTAssertEqual(analysis.dictionary["extollo"]?.forms["extollite"], 1, "Should find lifting verb")
+    
+    // Creation theology
+    XCTAssertEqual(analysis.dictionary["facio"]?.forms["fecit"], 1, "Should find creation verb")
+    XCTAssertEqual(analysis.dictionary["caelum"]?.forms["caelum"], 1, "Should find heaven reference")
+    
+    // Test blessing forms
+    let blessingForms = ["benedicite", "benedicat"].reduce(0) {
+        $0 + (analysis.dictionary["benedico"]?.forms[$1] ?? 0)
+    }
+    XCTAssertEqual(blessingForms, 2, "Should find both imperative and subjunctive blessing forms")
+    
+    // Test body part metaphor
+    XCTAssertEqual(analysis.dictionary["manus"]?.forms["manus"], 1, "Should find hands reference")
+} 
     func testBlessingVocabulary() {
         let analysis = latinService.analyzePsalm(text: psalm133)
         

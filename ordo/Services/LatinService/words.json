@@ -1,4 +1,227 @@
- [
+[
+  {
+  "lemma": "ecce",
+  "part_of_speech": "interjection",
+  "translations": {
+    "en": "behold, see, look",
+    "la": "ecce"
+  }},
+{
+  "lemma": "venator",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "venator",
+  "genitive_plural": "venantium",
+  "translations": {
+    "en": "hunter",
+    "la": "venator, venatoris"
+  }
+},
+{
+  "lemma": "asper",
+  "part_of_speech": "adjective",
+  "gender": "masculine",
+  "declension": 3,
+  "nominative": "asper",
+  "ablative": "aspero",
+  "translations": {
+    "en": "harsh, rough, severe",
+    "la": "asper, aspera, asperum"
+  }
+},
+
+{
+  "lemma": "offendo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "offendere",
+  "perfect": "offendi",
+  "supine": "offensum",
+   "forms": {
+    "present_subjunctive":  ["offendas"]
+  },
+  "translations": {
+    "en": "to strike, stumble, offend",
+    "la": "offendo, offendere, offendi, offensum"
+  }
+},
+{
+  "lemma": "aspis",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "aspis",
+  "accusative": "aspidem",
+  "translations": {
+    "en": "asp, venomous snake",
+    "la": "aspis, aspidis"
+  }
+},
+{
+  "lemma": "basiliscus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "basiliscus",
+  "accusative": "basiliscum",
+  "translations": {
+    "en": "basilisk, legendary serpent",
+    "la": "basiliscus, -i"
+  }
+},
+{
+  "lemma": "lapis",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "lapis",
+  "accusative": "lapidem",
+  "translations": {
+    "en": "stone, rock",
+    "la": "lapis, lapidis"
+  }
+},
+
+{
+  "lemma": "decem",
+  "part_of_speech": "noun",
+  "declension": 0,
+  "type": "cardinal",
+  "nominative": "decem",
+  "translations": {
+    "en": "ten",
+    "la": "decem"
+  }
+},
+{
+  "lemma": "volo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "volare",
+  "present_participle": "volante",
+  "perfect": "volavi",
+  "supine": "volatum",
+  "translations": {
+    "en": "to fly",
+    "la": "volo, volare, volavi, volatum"
+  }
+},
+{
+  "lemma": "negotium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "negotium",
+  "ablative": "negotio",
+  "translations": {
+    "en": "business, task; pestilence (late ecclesiastical usage)",
+    "la": "negotium, -ii"
+  }
+},
+{
+  "lemma": "perambulo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "perambulare",
+  "present_participle": "perambulante",
+  "perfect": "perambulavi",
+  "supine": "perambulatum",
+  "translations": {
+    "en": "to walk through, stalk, patrol",
+    "la": "perambulo, perambulare, perambulavi, perambulatum"
+  }
+},
+{
+  "lemma": "tenebrae",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "tenebrae",
+  "ablative": "tenebris",
+  "translations": {
+    "en": "darkness, shadows",
+    "la": "tenebrae, -arum"
+  }
+},
+
+{
+  "lemma": "increpatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "increpatio",
+  "ablative": "increpatione",
+  "translations": {
+    "en": "rebuke, reproof, scolding",
+    "la": "increpatio, increpationis"
+  }
+},
+
+{
+  "lemma": "equus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "equus",
+  "accusative_plural": "equos",
+  "translations": {
+    "en": "horse, steed",
+    "la": "equus, -i"
+  }
+},
+{
+  "lemma": "potentia",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "potentia",
+  "accusative_plural": "potentias",
+  "genitive": "potentiae",
+  "translations": {
+    "en": "power, might, force",
+    "la": "potentia, -ae"
+  }
+},
+
+{
+  "lemma": "somnus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "somnus",
+  "accusative": "somnum",
+  "translations": {
+    "en": "sleep, slumber",
+    "la": "somnus, -i"
+  }
+},
+{
+  "lemma": "invenio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "invenire",
+  "perfect": "inveni",
+  "perfect_3pl": "invenerunt",
+  "supine": "inventum",
+  "translations": {
+    "en": "to find, discover",
+    "la": "invenio, invenire, inveni, inventum"
+  }
+},
+{
+  "lemma": "coelum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "coelum",
+  "genitive": "coeli",
+  "translations": {
+    "en": "heaven, sky",
+    "la": "coelum, -i"
+  },
+  "note": "The form 'coelos' is a masculine accusative plural variant (poetic/Late Latin). Standard neuter plural is 'coela'."
+},
 {
   "lemma": "protector",
   "part_of_speech": "noun",
@@ -21,6 +244,18 @@
   "translations": {
     "en": "to seize beforehand, anticipate, preoccupy",
     "la": "praeoccupo, praeoccupare, praeoccupavi, praeoccupatum"
+  }
+},
+{
+  "lemma": "caligo",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "caligo",
+  "genitive": "caliginis",
+  "translations": {
+    "en": "darkness, fog, gloom",
+    "la": "caligo, caliginis"
   }
 },
 {
@@ -5370,6 +5605,7 @@
   {
     "lemma": "libero",
     "part_of_speech": "verb",
+    "conjugation": 1,
     "infinitive": "liberare",
     "perfect": "liberavi",
     "supine": "liberatum",
@@ -7680,7 +7916,7 @@
       "genitive": "atrii",
       "dative": "atrio",
       "translations": {
-        "en": "central hall, sacred space",
+        "en": "court, central hall, sacred space",
         "la": "atrium"
       }
     },
@@ -10823,13 +11059,16 @@
     {
             "lemma": "dormio",
             "part_of_speech": "verb",
+            "conjugation": 4,
             "perfect": "dormivi",
             "infinitive": "dormire",
+            "supine": "dormitum",
             "forms": {
                 "present": ["dormio", "dormis", "dormit", "dormimus", "dormitis", "dormiunt"],
                 "imperfect": ["dormiebam", "dormiebas", "dormiebat", "dormiebamus", "dormiebatis", "dormiebant"],
                 "future": ["dormiam", "dormies", "dormiet", "dormiemus", "dormietis", "dormient"],
                 "perfect": ["dormivi", "dormivisti", "dormivit", "dormivimus", "dormivistis", "dormiverunt"],
+                "perfect_3pl_variants": ["dormierunt", "dormitaverunt"],
                 "imperative_singular": ["dormi"],
                 "imperative_plural": ["dormite"]
             },
@@ -13850,7 +14089,8 @@
   },
   {
     "lemma": "cognosco",
-    "part_of_speech": "verb",
+    "part_of_speech": "verb", 
+    "conjugation": 3,
     "perfect": "cognovi",
     "infinitive": "cognoscere",    
     "supine": "cognitum",
