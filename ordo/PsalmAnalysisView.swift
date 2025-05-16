@@ -2,375 +2,106 @@
 //  PsalmAnalysisView.swift
 //  ordo
 //
-//  Created by Chen Chen on 2025-04-30.
+//  Created by Chen Chen on 2025-05-15.
 //
-
-//
-//  PsalmAnalysisSectionView.swift
-//  ordo
-//
-//  Created by Chen Chen on 2025-04-25.
-//
-//
-//  PsalmAnalysisSectionView.swift
-//  ordo
-//
-
 import SwiftUI
-
-struct PsalmAnalysisSelectionView: View {
-    // MARK: - Dependencies
-    let latinService: LatinService
-    let psalmService: PsalmService
-    let hoursService = HoursService.shared
-    let liturgicalDay: LiturgicalDay?
-    let hourKey: String?
-    
-    // MARK: - State
-    @State private var psalms: [String: [String]] = [:]
-    @State private var availablePsalms: [PsalmUsage] = []
-    @State private var selectedPsalm: PsalmUsage?
-    @State private var isLoading = true
-    
-    // MARK: - Constants
-    private let psalmUsages: [PsalmUsage] = [
-        PsalmUsage(number: "118", category: "aleph"),
-        PsalmUsage(number: "4"),
-        PsalmUsage(number: "90"),
-        PsalmUsage(number: "133"),
-        PsalmUsage(number: "17", category: "B"),
-        PsalmUsage(number: "109"),
-        PsalmUsage(number: "66")
-    ]
-    
-    // MARK: - Initialization
-    init(latinService: LatinService,
-         psalmService: PsalmService,
-         liturgicalDay: LiturgicalDay?,
-         hourKey: String?) {
-        self.latinService = latinService
-        self.psalmService = psalmService
-        self.liturgicalDay = liturgicalDay
-        self.hourKey = hourKey
-    }
-    
-    // MARK: - Main View
-    var body: some View {
-        Group {
-            if isLoading {
-                loadingView
-            } else {
-                contentView
-            }
-        }
-        .navigationTitle(navigationTitle)
-        .task { await loadData() }
-    }
-    
-    // MARK: - Subviews
-    private var loadingView: some View {
-        ProgressView()
-    }
-    
-    private var contentView: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
-                hourHeader
-                psalmGrid
-                analysisView
-            }
-            .padding(.vertical)
-        }
-    }
-    
-    private var hourHeader: some View {
-        Group {
-            if let hourKey = hourKey {
-                Text(hourKey.capitalized)
-                    .font(.title2.bold())
-                    .padding(.horizontal)
-            }
-        }
-    }
-    
-    private var psalmGrid: some View {
-        LazyVGrid(
-            columns: [GridItem(.adaptive(minimum: 80)),
-                     GridItem(.adaptive(minimum: 80))],
-            spacing: 12
-        ) {
-            ForEach(availablePsalms) { psalm in
-                PsalmGridItem(
-                    psalm: psalm,
-                    isLoading: psalms[psalm.id] == nil,
-                    isSelected: selectedPsalm?.id == psalm.id
-                ) {
-                    withAnimation {
-                        togglePsalmSelection(psalm)
-                    }
-                }
-            }
-        }
-        .padding(.horizontal)
-    }
-    
-    @ViewBuilder
-    private var analysisView: some View {
-        if let selectedPsalm = selectedPsalm,
-           let psalmText = psalms[selectedPsalm.id] {
-            let analysis = latinService.analyzePsalm(text: psalmText)
-            PsalmAnalysisView(
-                analysis: analysis,
-                psalmTitle: selectedPsalm.displayTitle
-            )
-            .padding(.horizontal)
-            .transition(.opacity.combined(with: .move(edge: .bottom)))
-        }
-    }
-    
-    private var navigationTitle: String {
-        hourKey != nil ? "\(hourKey!.capitalized) Analysis" : "Psalm Analysis"
-    }
-    
-    // MARK: - Helper Methods
-    private func togglePsalmSelection(_ psalm: PsalmUsage) {
-        if selectedPsalm?.id == psalm.id {
-            selectedPsalm = nil
-        } else {
-            selectedPsalm = psalm
-        }
-    }
-    
-    // MARK: - Data Loading
-    private func loadData() async {
-        await loadAvailablePsalms()
-        await loadPsalmTexts()
-        isLoading = false
-    }
-    
-    private func loadAvailablePsalms() async {
-        if let hourKey = hourKey, let liturgicalDay = liturgicalDay {
-            await loadHourPsalms(hourKey: hourKey, liturgicalDay: liturgicalDay)
-        } else {
-            availablePsalms = psalmUsages
-        }
-    }
-    
-    private func loadHourPsalms(hourKey: String, liturgicalDay: LiturgicalDay) async {
-        if let hourPsalms = hoursService.getPsalmsForWeekday(
-            weekday: liturgicalDay.weekday,
-            hourKey: hourKey,
-            season: liturgicalDay.benedictineSeason.description
-        ) {
-            availablePsalms = hourPsalms
-        } else {
-            availablePsalms = psalmUsages
-        }
-    }
-    
-    private func loadPsalmTexts() async {
-        psalms = [:]
-        
-        for usage in availablePsalms {
-            guard let number = Int(usage.number) else { continue }
-            
-            if let psalm = psalmService.getPsalm(number: number, section: usage.category) {
-                psalms[usage.id] = psalm.text
-            }
-        }
-    }
-}
-
-// MARK: - Grid Item View
-struct PsalmGridItem: View {
-    let psalm: PsalmUsage
-    let isLoading: Bool
-    let isSelected: Bool
-    let action: () -> Void
-    
-    var body: some View {
-        Button(action: action) {
-            VStack(spacing: 4) {
-                if isLoading {
-                    ProgressView()
-                        .frame(height: 20)
-                } else {
-                    Text(psalm.number)
-                        .font(.headline)
-                }
-                
-                if let category = psalm.category {
-                    Text(category)
-                        .font(.caption)
-                        .foregroundColor(.secondary)
-                }
-            }
-            .frame(maxWidth: .infinity, minHeight: 60)
-            .padding(8)
-            .background(background)
-            .cornerRadius(8)
-            .overlay(
-                RoundedRectangle(cornerRadius: 8)
-                    .stroke(borderColor, lineWidth: 1)
-            )
-        }
-        .buttonStyle(.plain)
-    }
-    
-    private var background: Color {
-        isSelected ? Color.accentColor.opacity(0.2) : Color(.secondarySystemBackground)
-    }
-    
-    private var borderColor: Color {
-        isSelected ? .accentColor : Color(.separator)
-    }
-}
-
 struct PsalmAnalysisView: View {
     let analysis: PsalmAnalysisResult
     let psalmTitle: String
+    let psalmText: [String] // Add this to receive the psalm text lines
     
     var body: some View {
         ScrollView {
             VStack(alignment: .leading, spacing: 20) {
                 // Header with basic stats
-                VStack(alignment: .leading, spacing: 8) {
-                    Text(psalmTitle)
-                        .font(.title)
-                        .bold()
-                    
-                    HStack(spacing: 16) {
-                        StatView(value: "\(analysis.totalWords)", label: "Total Words")
-                        StatView(value: "\(analysis.uniqueWords)", label: "Unique Words")
-                        StatView(value: "\(analysis.uniqueLemmas)", label: "Unique Lemmas")
-                    }
-                }
-                .padding(.bottom)
+                headerView
                 
-                // Word frequency section
-                LatinSectionView(title: "Word Frequency") {
-                    let sortedWords = analysis.dictionary.sorted { $0.value.count > $1.value.count }
-                    ForEach(sortedWords.prefix(10), id: \.key) { lemma, info in
-                        WordRow(lemma: lemma, info: info)
-                    }
-                    
-                    if analysis.dictionary.count > 10 {
-                        NavigationLink {
-                            FullWordListView(analysis: analysis)
-                        } label: {
-                            Text("View all \(analysis.dictionary.count) words...")
-                                .font(.subheadline)
-                        }
-                    }
-                }
-                
-                // Most common forms section
-                LatinSectionView(title: "Common Forms") {
-                    let allForms = analysis.dictionary.flatMap { lemma, info in
-                        info.forms.map { (form: $0.key, count: $0.value, lemma: lemma) }
-                    }
-                    let sortedForms = allForms.sorted { $0.count > $1.count }
-                    
-                    ForEach(sortedForms.prefix(5), id: \.form) { form, count, lemma in
-                        HStack {
-                            Text(form).bold()
-                            Text("(\(lemma))")
-                            Spacer()
-                            Text("\(count)×")
-                        }
-                    }
-                }
+                // Display the psalm analysis grouped by line pairs
+                linePairAnalysisView
             }
             .padding()
         }
         .navigationTitle("Psalm Analysis")
         .navigationBarTitleDisplayMode(.inline)
     }
-}
-// Helper view for statistics
-struct StatView: View {
-    let value: String
-    let label: String
     
-    var body: some View {
-        VStack {
-            Text(value)
-                .font(.title2)
-                .bold()
-            Text(label)
-                .font(.caption)
-                .foregroundColor(.secondary)
-        }
-        .frame(maxWidth: .infinity)
-    }
-}
-
-// Helper view for sections
-struct LatinSectionView<Content: View>: View {
-    let title: String
-    let content: Content
-    
-    init(title: String, @ViewBuilder content: () -> Content) {
-        self.title = title
-        self.content = content()
-    }
-    
-    var body: some View {
+    private var headerView: some View {
         VStack(alignment: .leading, spacing: 8) {
-            Text(title)
-                .font(.headline)
-                .foregroundColor(.secondary)
+            Text(psalmTitle)
+                .font(.title)
+                .bold()
             
-            VStack(alignment: .leading, spacing: 12) {
-                content
+            HStack(spacing: 16) {
+                StatView(value: "\(analysis.totalWords)", label: "Total Words")
+                StatView(value: "\(analysis.uniqueWords)", label: "Unique Words")
+                StatView(value: "\(analysis.uniqueLemmas)", label: "Unique Lemmas")
             }
-            .padding()
-            .background(Color(.systemBackground))
-            .cornerRadius(10)
-            .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
         }
+        .padding(.bottom)
     }
-}
-
-// Word row view
-struct WordRow: View {
-    let lemma: String
-    let info: PsalmAnalysisResult.LemmaInfo
     
-    var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text(lemma).bold()
-                if let translation = info.translation {
-                    Text(translation)
-                        .font(.caption)
-                        .foregroundColor(.secondary)
+    private var linePairAnalysisView: some View {
+        VStack(alignment: .leading, spacing: 20) {
+            // Create line pairs (1-2, 3-4, etc.)
+            let linePairs = stride(from: 0, to: psalmText.count, by: 2).map {
+                Array(psalmText[$0..<min($0 + 2, psalmText.count)])
+            }
+            
+            ForEach(Array(linePairs.enumerated()), id: \.offset) { index, pair in
+                LatinSectionView(title: "Lines \(index * 2 + 1)-\(index * 2 + pair.count)") {
+                    // Display the Latin text
+                    VStack(alignment: .leading, spacing: 4) {
+                        
+                        ForEach(pair, id: \.self) { line in
+                            Text(line)
+                                .font(.system(.body, design: .serif)) // Traditional serif font
+                                .italic()
+                                .foregroundColor(.primary)
+                                .padding(.vertical, 4)
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                        }
+                        .padding(.horizontal, 8)
+                        .background(Color(.systemBackground))
+                        .cornerRadius(4)
+                        .shadow(color: Color.black.opacity(0.05), radius: 2, x: 0, y: 1)
+                        
+                    }
+                    .padding(.bottom, 8)
+                    
+                    
+                    // Display words found in these lines
+                    let wordsInLines = analysis.dictionary.filter { entry in
+                        // Only show lemmas whose forms actually appear as whole words
+                        pair.joined(separator: " ").components(separatedBy: .whitespacesAndNewlines)
+                            .map { $0.trimmingCharacters(in: .punctuationCharacters) }
+                            .contains { fullWord in
+                                entry.value.forms.keys.contains { form in
+                                    fullWord == form
+                                }
+                            }
+                    }
+
+                    
+                    ForEach(wordsInLines.sorted(by: { $0.key < $1.key }), id: \.key) { lemma, info in
+                        NavigationLink(destination: WordDetailView(lemma: lemma, lemmaInfo: info)) {
+                            WordRow(lemma: lemma, info: info)
+                        }
+                    }
                 }
             }
             
-            Spacer()
-            
-            Text("\(info.count)×")
-                .font(.headline)
+            // Add a link to view all words if needed
+            if analysis.dictionary.count > 0 {
+                NavigationLink {
+                    FullWordListView(analysis: analysis)
+                } label: {
+                    Text("View all \(analysis.dictionary.count) words...")
+                        .font(.subheadline)
+                }
+            }
         }
     }
 }
-   
-                  
-                           
-                      
-    
-  
-   
 
-
-// Extension for display formatting
-extension PsalmUsage {
-    var displayTitle: String {
-        if let category = category {
-            return "Psalm \(number) (\(category))"
-        }
-        return "Psalm \(number)"
-    }
-}
+// Update the initialization in PsalmAnalysisSelectionView
 
