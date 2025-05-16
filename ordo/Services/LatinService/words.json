@@ -1,5 +1,133 @@
 [
   {
+  "lemma": "induo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "induere",
+  "forms_plural": {
+    "present_subjunctive_passive": ["induantur"]
+  },
+  "perfect": "indui",
+  "supine": "indutum",
+  "translations": {
+    "en": "to clothe, put on",
+    "la": "induo, induere, indui, indutum"
+  }
+},
+  {
+  "lemma": "arca",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "arca",
+  "genitive": "arcae",
+  "translations": {
+    "en": "ark, chest, box",
+    "la": "arca, -ae"
+  }
+},
+  {
+  "lemma": "locus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "locus",
+  "accusative": "locum",
+  "translations": {
+    "en": "place, location",
+    "la": "locus, -i"
+  }
+},
+{
+  "lemma": "ephrata",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "ephrata",
+  "genitive": "ephratae",
+  "translations": {
+    "en": "Ephrathah (ancient name for Bethlehem)",
+    "la": "ephrata, -ae"
+  }
+},
+{
+  "lemma": "campus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "campus",
+  "dative_plural": "campis",
+  "ablative_plural": "campis",
+  "translations": {
+    "en": "field, plain",
+    "la": "campus, -i"
+  }
+},
+{
+  "lemma": "silva",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "silva",
+  "genitive": "silvae",
+  "translations": {
+    "en": "forest, wood",
+    "la": "silva, -ae"
+  }
+},
+  {
+  "lemma": "requies",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "requies",
+  "accusative": "requiem",
+  "genitive": "requiei",
+  "translations": {
+    "en": "rest, repose, peace",
+    "la": "requies, requiei"
+  }
+},
+  {
+  "lemma": "introeo",
+  "part_of_speech": "verb",
+  "conjugation": 0,
+  "infinitive": "introire",
+  "perfect": "introii",
+  "supine": "introituum",
+  "forms": {
+    "future": ["introibimus"]
+  },
+  "translations": {
+    "en": "to enter, go into",
+    "la": "introeo, introire, introii, introituum"
+  }
+},
+  {
+  "lemma": "lectus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "lectus",
+  "accusative": "lectum",
+  "translations": {
+    "en": "bed, couch",
+    "la": "lectus, -i"
+  }
+},
+{
+  "lemma": "stratum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "stratum",
+  "genitive": "strati",
+  "translations": {
+    "en": "bedding, coverlet, spread",
+    "la": "stratum, -i"
+  }
+},
+  {
   "lemma": "ecce",
   "part_of_speech": "interjection",
   "translations": {
@@ -4594,6 +4722,7 @@
     {
       "lemma": "averto",
       "part_of_speech": "verb",
+      "conjugation": 3,
       "infinitive": "avertere",
       "perfect": "averti",
       "supine": "aversum",
@@ -4606,6 +4735,7 @@
         "imperfect": ["avertebam", "avertebas", "avertebat", "avertebamus", "avertebatis", "avertebant"],
         "future": ["avertam", "averes", "avertet", "avertemus", "avertetis", "avertent"],
         "perfect": ["averti", "avertisti", "avertit", "avertimus", "avertistis", "averterunt"],
+        "present_subjunctive": [ "avertas" ],
         "imperative": ["averte"],
         "present_passive": ["avertor", "averteris", "avertitur", "avertimur", "avertimini", "avertuntur"],
         "imperfect_passive": ["avertebar", "avertebaris", "avertebatur", "avertebamur", "avertebamini", "avertebantur"],
@@ -7306,7 +7436,30 @@
         "la": "contundo"
       }
     },
-  
+  {
+  "lemma": "palpebra",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "palpebra",
+  "ablative": "palpebris",
+  "translations": {
+    "en": "eyelid",
+    "la": "palpebra, -ae"
+  }
+},
+{
+  "lemma": "dormitatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "dormitatio",
+  "accusative": "dormitationem",
+  "translations": {
+    "en": "slumber, dozing",
+    "la": "dormitatio, dormitationis"
+  }
+},
 
             {
               "lemma": "memini",
@@ -7341,6 +7494,18 @@
                 "la": "votum"
               }
             },
+            {
+  "lemma": "voveo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "vovere",
+  "perfect": "vovi",
+  "supine": "votum",
+  "translations": {
+    "en": "to vow, promise solemnly",
+    "la": "voveo, vovere, vovi, votum"
+  }
+},
             {
               "lemma": "tabernaculum",
               "part_of_speech": "noun",
@@ -10060,6 +10225,7 @@
             "conjugation": 4,
             "perfect": "custodivi",
             "infinitive": "custodire",
+            "supine": "custoditum",
             "forms": {
                 "present": ["custodio", "custodis", "custodit", "custodimus", "custoditis", "custodiunt"],
                 "imperfect": ["custodiebat", "custodiebas", "custodiebat", "custodiebamus", "custodiebatis", "custodiebant"],
@@ -10070,7 +10236,8 @@
                 "imperative": ["custodi", "custodite"],
                 "gerund_dative": ["custodiendo"],
                 "gerund_accusative": ["custodiendum"],
-                "gerundive_masc_nom": ["custodiendus"]                
+                "gerundive_masc_nom": ["custodiendus"],
+                "future_perfect": ["custodierint"]                
             },
             "translations": {
                 "en": "to guard, protect, watch over, keep",
