@@ -1,5 +1,376 @@
 [
   {
+  "lemma": "hesternus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "hesternus",
+  "genitive": "hesterni",
+  "forms": {
+    "nominative_f": ["hesterna"],
+    "nominative_n": ["hesternum"]
+  },
+  "translations": {
+    "en": "yesterday's, of yesterday",
+    "la": "hesternus, -a, -um"
+  }
+},
+{
+  "lemma": "praetereo",
+  "part_of_speech": "verb",
+  "conjugation": 0,
+  "infinitive": "praeterire",
+  "present": "praetereo",
+  "perfect": "praeterii",
+  "supine": "praeteritum",
+  "forms": {
+    "present_subjunctive": ["praeteream", "praetereas", "praetereat", "praetereamus", "praetereatis", "praeteriant"],
+    "perfect_3sg": ["praeteriit"]
+  },
+  "translations": {
+    "en": "pass by, go past, omit",
+    "la": "praetereo, praeterire"
+  }
+},
+  {
+  "lemma": "transeo",
+  "part_of_speech": "verb",
+  "conjugation": 0,
+  "infinitive": "transire",
+  "present": "transeo",
+  "perfect": "transii",
+  "supine": "transitum",
+  "forms": {
+    "present_subjunctive": ["transeam", "transeas", "transeat", "transeamus", "transeatis", "transeant"]
+  },
+  "translations": {
+    "en": "pass away, cross over, go across",
+    "la": "transeo, transire"
+  }
+},
+  {
+  "lemma": "conspectus",
+  "part_of_speech": "noun",
+  "declension": 4,
+  "gender": "masculine",
+  "nominative": "conspectus",
+  "genitive": "conspectus",
+  "translations": {
+    "en": "sight, view, visibility",
+    "la": "conspectus"
+  }
+},
+  {
+  "lemma": "induro",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "indurare",
+  "present": "induro",
+  "perfect": "induravi",
+  "supine": "induratum",
+  "forms": {
+    "present_subjunctive": ["indurem", "indures", "induret", "induremus", "induretis", "indurent"]
+  },
+  "translations": {
+    "en": "harden, make hard",
+    "la": "induro, indurare"
+  }
+},{
+  "lemma": "aresco",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "arescere",
+  "present": "aresco",
+  "perfect": "arui",
+  "supine": "arutum",
+  "forms": {
+    "present_subjunctive": ["arescam", "arescas", "arescat", "arescamus", "arescatis", "arescant"]
+  },
+  "translations": {
+    "en": "wither, dry up",
+    "la": "aresco, arescere"
+  }
+},
+  {
+  "lemma": "vesper",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "vesper",
+  "genitive": "vesperis",
+  "translations": {
+    "en": "evening, eventide",
+    "la": "vesper"
+  }
+},
+  {
+  "lemma": "decido",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "decidere",
+  "present": "decido",
+  "perfect": "decidi",
+  "supine": "decasum",
+  "forms": {
+    "present_subjunctive": ["decidam", "decidas", "decidat", "decidamus", "decidatis", "decidant"]
+  },
+  "translations": {
+    "en": "fall, sink, perish",
+    "la": "decido, decidere"
+  }
+},
+  {
+  "lemma": "annus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "annus",
+  "genitive": "anni",
+  "translations": {
+    "en": "year",
+    "la": "annus"
+  }
+},
+  {
+  "lemma": "nihil",
+  "part_of_speech": "noun",
+  "declension": 0,
+  "gender": "neuter",
+  "indeclinable": false,
+  "nominative": "nihil",
+  "genitive": "nihili",
+  "ablative": "nihilo",
+  "translations": {
+    "en": "nothing",
+    "la": "nihil"
+  }
+},
+{
+  "lemma": "septuaginta",
+  "part_of_speech": "noun",
+  "declension": 0,  
+  "gender": "feminine",
+  "indeclinable": true,
+  "nominative": "septuaginta",
+  "genitive": "septuaginta",
+  "translations": {
+    "en": "seventy",
+    "la": "septuaginta"
+  },
+  "note": "Indeclinable numeral functioning as a noun (e.g., 'septuaginta anni' = 'seventy years')."
+},
+{
+  "lemma": "octoginta",
+  "part_of_speech": "noun",
+  "declension": 0,  
+  "gender": "feminine",
+  "indeclinable": true,
+  "nominative": "octoginta",
+  "genitive": "octoginta",
+  "translations": {
+    "en": "eighty",
+    "la": "octoginta"
+  }
+},
+
+  {
+  "lemma": "labor",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "labor",
+  "genitive": "laboris",
+  "translations": {
+    "en": "toil, work, suffering",
+    "la": "labor"
+  }
+},
+{
+  "lemma": "potentatus",
+  "part_of_speech": "noun",
+  "declension": 4,
+  "gender": "masculine",
+  "nominative": "potentatus",
+  "genitive": "potentatus",
+  "translations": {
+    "en": "dominion, power",
+    "la": "potentatus"
+  }
+},
+{
+  "lemma": "potestas",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "potestas",
+  "genitive": "potestatis",
+  "translations": {
+    "en": "power, strength, authority",
+    "la": "potestas"
+  },
+  "note": "The form 'potentatibus' is dative/ablative plural of 'potentatus' (a related but distinct noun meaning 'dominion')"
+},
+  {
+  "lemma": "forma",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "forma",
+  "genitive": "formae",
+  "forms": {  
+    "subjunctive_passive": ["formetur"]
+  },
+  "translations": {
+    "en": "form, shape, beauty",
+    "la": "forma"
+  }
+},
+{
+  "lemma": "formo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "formare",
+  "present": "formo",
+  "perfect": "formavi",
+  "supine": "formatum",
+  "translations": {
+    "en": "to form, shape, fashion",
+    "la": "formo, formare"
+  }
+},
+{
+  "lemma": "orbis",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "orbis",
+  "genitive": "orbis",
+  "translations": {
+    "en": "world, circle, orbit",
+    "la": "orbis"
+  }
+},
+  {
+  "lemma": "deprecabilis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "deprecabilis",
+  "genitive": "deprecabilis",
+  "translations": {
+    "en": "appeasable, capable of being entreated",
+    "la": "deprecabilis"
+  },
+  "note": "Third-declension adjective (i-stem), identical forms in masculine/feminine. Neuter form: deprecabile."
+},
+  {
+  "lemma": "nota",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "nota",
+  "genitive": "notae",
+  "translations": {
+    "en": "mark, sign, note",
+    "la": "nota"
+  }
+},{
+  "lemma": "eruditus",
+  "part_of_speech": "adjective",
+  "declension": 1,  
+  "gender": "masculine",
+  "nominative": "eruditus",
+  "genitive": "eruditi",
+  "translations": {
+    "en": "instructed, educated, trained",
+    "la": "eruditus, -a, -um"
+  },
+  "note": "Perfect passive participle of 'erudio' (to instruct), often used as an adjective."
+},
+{
+  "lemma": "erudio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "erudire",
+  "present": "erudio",
+  "perfect": "erudivi",
+  "supine": "eruditum",
+  "forms": {
+    "perfect_participle": ["eruditus"]
+  },
+   "forms_plural": {
+    "imperative_passive": [
+      "erudimini"
+    ]
+  },
+  
+  "translations": {
+    "en": "instruct, educate, train",
+    "la": "erudio, erudire"
+  }
+},
+ 
+  {
+  "lemma": "lucerna",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "lucerna",
+  "genitive": "lucernae",
+  "translations": {
+    "en": "lamp, lantern",
+    "la": "lucerna"
+  }
+},
+  {
+  "lemma": "perversus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+ 
+  "nominative": "perversus",
+  "genitive": "perversi",
+  "translations": {
+    "en": "twisted, perverse, corrupt",
+    "la": "perversus"
+  }
+},
+{
+  "lemma": "electus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+ 
+  "nominative": "electus",
+  "genitive": "electi",
+  "translations": {
+    "en": "chosen, selected, elect",
+    "la": "electus"
+  }
+},
+  
+  {
+  "lemma": "aaron",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "aaron",
+  "genitive": "aaronis",
+  "translations": {
+    "en": "Aaron (Biblical figure)",
+    "la": "aaron"
+  }
+},
+{
+  "lemma": "cum",
+  "part_of_speech": "preposition",
+  "case_government": "ablative",
+  "translations": {
+    "en": "with, together with, when, since",
+    "la": "cum"
+  }
+},
+  {
   "lemma": "induo",
   "part_of_speech": "verb",
   "conjugation": 3,
@@ -801,24 +1172,7 @@
     "la": "intelligo, intelligere, intellexi, intellectum"
   }
 },
-  {
-  "lemma": "erudio",
-  "part_of_speech": "verb",
-  "conjugation": 4,
-  "infinitive": "erudire",
-  "perfect": "erudivi",
-  "supine": "eruditum",
-  "forms_plural": {
-    "imperative_passive": [
-      "erudimini"
-    ]
-  },
-  "translations": {
-    "en": "to instruct, educate, train (often passive: 'be instructed')",
-    "la": "erudio, erudire, erudivi, eruditum"
-  }
-},
-  {
+   {
   "lemma": "rego",
   "part_of_speech": "verb",
   "conjugation": 3,
@@ -1698,6 +2052,21 @@
       "la": "planto, plantare, plantatum, plantatum"
     }
   },
+  {
+  "lemma": "perverto",
+  "part_of_speech": "verb",
+  "declension": 3,
+  "nominative": "perverto",
+  "infinitive": "pervertere",
+  "conjugation": 3,
+  "translations": {
+    "en": "overturn, corrupt",
+    "la": "perverto"
+  },
+  "forms": {
+    "present_passive": ["perverteris"] 
+  }
+},
      {
        "lemma": "vir",
        "part_of_speech": "noun",
@@ -1705,6 +2074,14 @@
        "gender": "masculine",
        "nominative": "vir",
        "genitive": "viri",
+       "forms":{
+         "accusative_m": ["virum"],
+         "ablative_m": ["viro"]
+       },
+       "forms_plural": {
+         "nominative_m": ["viri"],
+         "accusative_m": ["viros"]
+       },
        "translations": {
          "en": "man, husband, hero, warrior",
          "la": "vir"
@@ -6865,7 +7242,7 @@
             "perfect_participle": ["conversi"]
           },
           "translations": {
-            "en": "to convert, to turn back, to change",
+            "en": "to convert, to turn back, to change, return",
             "la": "converto"
           }
         },
@@ -10612,8 +10989,10 @@
         {
             "lemma": "humilio",
             "part_of_speech": "verb",
+            "conjugation": 1,
             "perfect": "humiliavi",
             "infinitive": "humiliare",
+            "supine": "humiliatum",
             "forms": {
                 "perfect_passive": ["humiliatus"],
                 "present": ["humilio", "humilias", "humiliat", "humiliamus", "humiliatis", "humiliant"]
@@ -10627,8 +11006,10 @@
         {
             "lemma": "infirmo",
             "part_of_speech": "verb",
+            "conjugation": 1,
             "perfect": "infirmavi",
             "infinitive": "infirmare",
+            "supine": "infirmatum",
             "forms": {
                 "perfect_passive": ["infirmatus"],
                 "present": ["infirmo", "infirmas", "infirmat", "infirmamus", "infirmatis", "infirmant"]
@@ -14347,6 +14728,10 @@
   "forms": {
     "perfect_passive_m": ["turbatus"],
     "perfect_passive_f": ["turbata"]
+  },
+  "forms_plural": {
+    "perfect_passive_m": ["turbati"],
+    "perfect_passive_f": ["turbatae"]
   },
   "translations": {
     "en": "to disturb, agitate, throw into confusion",

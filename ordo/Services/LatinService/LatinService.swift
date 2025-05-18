@@ -28,6 +28,20 @@ extension LatinWordEntity{
             forms["dative_plural"] = stem + "is"
             forms["accusative_plural"] = stem + "os"
             forms["ablative_plural"] = stem + "is"
+            
+        case 1 where partOfSpeech == .noun && nominative.hasSuffix("ae"):
+            stem = String(nominative.dropLast(2)) // "tenebrae" -> "tenebr"
+            forms["nominative"] = nominative // "tenebrae"
+            forms["genitive"] = stem + "arum" // "tenebrarum"
+            forms["dative"] = stem + "is" // "tenebris"
+            forms["accusative"] = stem + "as" // "tenebras"
+            forms["ablative"] = stem + "is" // "tenebris"
+            forms["vocative"] = nominative // "tenebrae"
+    forms["nominative_plural"] = nominative // "tenebrae"
+    forms["genitive_plural"] = stem + "arum" // "tenebrarum"
+    forms["dative_plural"] = stem + "is" // "tenebris"
+    forms["accusative_plural"] = stem + "as" // "tenebras"
+    forms["ablative_plural"] = stem + "is" // "tenebris"
 
         case 1: // -a (feminine)
             let stem = String(nominative.dropLast())
@@ -280,13 +294,18 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
    //let debugForms = formToLemma.filter { $0.value.contains("sion") }.keys.sorted()
    // print("Debug - Forms mapping to 'sion': \(debugForms)")
 
-   //let debugForms2 = formToLemma.filter { $0.value.contains("eloquium") }.keys.sorted()
-    //print("Debug - Forms mapping to 'eloquium': \(debugForms2)")
+   let debugForms2 = formToLemma.filter { $0.value.contains("tenebrae") }.keys.sorted()
+    print("Debug - Forms mapping to 'tenebrae': \(debugForms2)")
 
     //let multiplioForms = formToLemma.filter { $0.value.contains("multiplio") }.keys.sorted()
     //print("Debug - Forms mapping to 'multiplio': \(multiplioForms)")
     //print("Does 'multiplicati' map to multiplio?: \(multiplioForms.contains("multiplicati"))")
      
+    let debugForms = ["tenebras", "viro", "perverteris", "electo", "electus"]
+        for form in debugForms {
+            print("Form '\(form)' maps to: \(formToLemma[form] ?? [])")
+        }
+    
     for line in text {
         let normalizedLine = line.lowercased()
             .replacingOccurrences(of: "[.,:;!?]", with: " ", options: .regularExpression)

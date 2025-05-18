@@ -45,6 +45,170 @@ class Psalm17BTests: XCTestCase {
     ]
     
     // MARK: - Test Cases
+// MARK: - Grouped Line Tests for Psalm 17B
+func testPsalm17BLines1and2() {
+    let line1 = psalm17B[0] // "Cum sancto sanctus eris, et cum viro innocente innocens eris,"
+    let line2 = psalm17B[1] // "et cum electo electus eris, et cum perverso perverteris."
+    let combinedText = line1 + " " + line2
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("sanctus", ["sancto", "sanctus"], "holy"),
+        ("vir", ["viro"], "man"),
+        ("innocens", ["innocente", "innocens"], "blameless"),
+        ("electus", ["electo", "electus"], "chosen"),
+        ("perversus", ["perverso"], "twisted"),
+        ("perverto", ["perverteris"], "overturn")
+    ]
+   let expectedThemes = [
+        "Divine Reciprocity": [
+            ("sanctus", "God mirrors holiness with the holy"),
+            ("innocens", "God mirrors innocence with the innocent"),
+            ("electus", "God mirrors election with the chosen")
+        ],
+        "Divine Justice": [
+            ("perversus", "God opposes the twisted"),
+            ("perverto", "God overturns the perverse")
+        ]
+    ]
+
+    if verbose {
+        print("\nPSALM 17B:1-2 ANALYSIS:")
+        print("1: \"\(line1)\"")
+        print("2: \"\(line2)\"")
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+    if verbose {
+        print("\nTHEMATIC ELEMENTS:")
+        expectedThemes.forEach { theme, elements in
+            print("\(theme):")
+            elements.forEach { lemma, description in
+                print("  - \(lemma): \(description)")
+            }
+        }
+    }
+
+}
+
+func testPsalm17BLines3and4() {
+    let line3 = psalm17B[2] // "Quoniam tu populum humilem salvum facies, et oculos superborum humiliabis."
+    let line4 = psalm17B[3] // "Quoniam tu illuminas lucernam meam, Domine; Deus meus, illumina tenebras meas."
+    let combinedText = line3 + " " + line4
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("humilis", ["humilem"], "humble"),
+        ("salvus", ["salvum"], "safe"),
+        ("oculus", ["oculos"], "eye"),
+        ("superbus", ["superborum"], "proud"),
+        ("humilio", ["humiliabis"], "humble"),
+        ("illumino", ["illuminas", "illumina"], "light"),
+        ("lucerna", ["lucernam"], "lamp"),
+        ("tenebrae", ["tenebras"], "darkness")
+    ]
+    let expectedThemes = [
+        "Divine Protection": [
+            ("salvus", "God saves the humble"),
+            ("humilio", "God humbles the proud")
+        ],
+        "Divine Illumination": [
+            ("illumino", "God provides light"),
+            ("lucerna", "God as source of guidance"),
+            ("tenebrae", "Transformation of darkness")
+        ],
+        "Social Reversal": [
+            ("humilis", "Elevation of the lowly"),
+            ("superbus", "Humiliation of the proud")
+        ]
+    ]
+    if verbose {
+        print("\nPSALM 17B:3-4 ANALYSIS:")
+        print("3: \"\(line3)\"")
+        print("4: \"\(line4)\"")
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+    if verbose {
+        print("\nTHEMATIC ELEMENTS:")
+        expectedThemes.forEach { theme, elements in
+            print("\(theme):")
+            elements.forEach { lemma, description in
+                print("  - \(lemma): \(description)")
+            }
+        }
+    }
+}
+
+func testPsalm17BLines5and6() {
+    let line5 = psalm17B[4] // "Quoniam in te eripiar a tentatione, et in Deo meo transgrediar murum."
+    let line6 = psalm17B[5] // "Deus meus, impolluta via ejus; eloquia Domini igne examinata;"
+    let combinedText = line5 + " " + line6
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("eripio", ["eripiar"], "rescue"),
+        ("tentatio", ["tentatione"], "temptation"),
+        ("transgredior", ["transgrediar"], "pass over"),
+        ("murus", ["murum"], "wall"),
+        ("impollutus", ["impolluta"], "pure"),
+        ("via", ["via"], "way"),
+        ("eloquium", ["eloquia"], "words"),
+        ("ignis", ["igne"], "fire"),
+        ("examino", ["examinata"], "test")
+    ]
+    
+    if verbose {
+        print("\nPSALM 17B:5-6 ANALYSIS:")
+        print("5: \"\(line5)\"")
+        print("6: \"\(line6)\"")
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+}
+
+func testPsalm17BLines7and8() {
+    let line7 = psalm17B[6] // "protector est omnium sperantium in se."
+    let line8 = psalm17B[7] // "Quoniam quis Deus praeter Dominum? aut quis Deus praeter Deum nostrum?"
+    let combinedText = line7 + " " + line8
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("protector", ["protector"], "protector"),
+        ("omnis", ["omnium"], "all"),
+        ("spero", ["sperantium"], "hope"),
+        ("deus", ["deus", "deum"], "god"),
+        ("dominus", ["dominum"], "lord"),
+        ("noster", ["nostrum"], "our")
+    ]
+    
+    if verbose {
+        print("\nPSALM 17B:7-8 ANALYSIS:")
+        print("7: \"\(line7)\"")
+        print("8: \"\(line8)\"")
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+}
+
       // MARK: - Test Cases
     func testAnalysisSummary() {
         let analysis = latinService.analyzePsalm(text: psalm17B)
@@ -190,4 +354,18 @@ func testMilitaryVicotoryReferences() {
             }
         }
     }
+    private func verifyThematicElements(analysis: PsalmAnalysisResult, expectedThemes: [String: [(lemma: String, description: String)]]) {
+    for (theme, elements) in expectedThemes {
+        for (lemma, description) in elements {
+            guard analysis.dictionary[lemma] != nil else {
+                XCTFail("Missing lemma for theme verification: \(lemma) (theme: \(theme))")
+                continue
+            }
+            
+            if verbose {
+                print("VERIFIED THEME: \(theme) - \(lemma) (\(description))")
+            }
+        }
+    }
+}
 }

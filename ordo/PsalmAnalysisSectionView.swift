@@ -120,6 +120,7 @@ struct PsalmAnalysisSelectionView: View {
            let psalmText = psalms[selectedPsalm.id] {
             let analysis = latinService.analyzePsalm(text: psalmText)
             PsalmAnalysisView(
+                latinService: latinService,
                 analysis: analysis,
                 psalmTitle: selectedPsalm.displayTitle,
                 psalmText: psalmText // Pass the psalm text lines
