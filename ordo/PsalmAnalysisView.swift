@@ -47,7 +47,6 @@ struct PsalmAnalysisView: View {
             psalmTitle: psalmTitle
         )
     }
-   
 }
 
 // Update the initialization in PsalmAnalysisSelectionView

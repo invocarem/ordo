@@ -181,7 +181,9 @@ public struct PsalmAnalysisResult: Codable {
     public let uniqueWords: Int
     public let uniqueLemmas: Int
     public let dictionary: [String: LemmaInfo]
-   
+    public let orderedLemmas: [String]
+    public var themes: [Theme]
+    
     public struct LemmaInfo: Codable {
         public let count: Int
         public let translation: String?
@@ -189,6 +191,23 @@ public struct PsalmAnalysisResult: Codable {
         public let entity: LatinWordEntity?
         public let generatedForms: [String]
     }
+    
+    public struct Theme: Codable {
+            public let name: String
+            public let description: String
+            public let supportingLemmas: [String]
+            public let lineRange: ClosedRange<Int>?
+            
+            public init(name: String,
+                       description: String,
+                       supportingLemmas: [String],
+                       lineRange: ClosedRange<Int>? = nil) {
+                self.name = name
+                self.description = description
+                self.supportingLemmas = supportingLemmas
+                self.lineRange = lineRange
+            }
+        }
 }
 
 public class LatinService {
@@ -281,30 +300,31 @@ public class LatinService {
     public func addTranslation(latin: String, english: String) {
         translations[latin] = english
     }
-public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
+public func analyzePsalm(text: [String], startingLineNumber: Int = 1) -> PsalmAnalysisResult {
     var allWords: [String] = []
     var lemmaCounts: [String: Int] = [:]
     var formCounts: [String: [String: Int]] = [:]
     var lemmaEntities: [String: LatinWordEntity] = [:]
+    var orderedLemmas: [String] = []
     let formToLemma = lemmaMapping.createFormToLemmaMapping()
-     //   print("!!!multiplio forms in mapping:")
-     // print(formToLemma.filter { $0.value.contains("multiplio") }.keys.sorted())
+        print("!!!multiplio forms in mapping:")
+      print(formToLemma.filter { $0.value.contains("multiplio") }.keys.sorted())
       //("elogium", ["elogia"], "expression"),
       // ("eloquium", ["eloquium"], "word")
    //let debugForms = formToLemma.filter { $0.value.contains("sion") }.keys.sorted()
    // print("Debug - Forms mapping to 'sion': \(debugForms)")
 
-   let debugForms2 = formToLemma.filter { $0.value.contains("tenebrae") }.keys.sorted()
-    print("Debug - Forms mapping to 'tenebrae': \(debugForms2)")
+   //let debugForms2 = formToLemma.filter { $0.value.contains("tenebrae") }.keys.sorted()
+   // print("Debug - Forms mapping to 'tenebrae': \(debugForms2)")
 
     //let multiplioForms = formToLemma.filter { $0.value.contains("multiplio") }.keys.sorted()
     //print("Debug - Forms mapping to 'multiplio': \(multiplioForms)")
     //print("Does 'multiplicati' map to multiplio?: \(multiplioForms.contains("multiplicati"))")
      
-    let debugForms = ["tenebras", "viro", "perverteris", "electo", "electus"]
-        for form in debugForms {
-            print("Form '\(form)' maps to: \(formToLemma[form] ?? [])")
-        }
+   // let debugForms = ["tenebras", "viro", "perverteris", "electo", "verumtamen"]
+   //     for form in debugForms {
+   //         print("Form '\(form)' maps to: \(formToLemma[form] ?? [])")
+   //     }
     
     for line in text {
         let normalizedLine = line.lowercased()
@@ -322,6 +342,10 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
                 // Deduplicate lemmas to avoid double-counting
                 let uniqueLemmas = Set(lemmas) // Ensures we don't count the same lemma twice
                 for lemma in uniqueLemmas {
+                    if lemmaCounts[lemma] == nil {
+                        orderedLemmas.append(lemma)
+                    }
+                    
                     lemmaCounts[lemma, default: 0] += 1
                     // Only increment form count once per unique (lemma, word) pair
                     formCounts[lemma, default: [:]][word, default: 0] += 1
@@ -359,20 +383,25 @@ public func analyzePsalm(text: [String]) -> PsalmAnalysisResult {
             generatedForms: Array(generatedForms))
     }
     
-    return PsalmAnalysisResult(
+    var result = PsalmAnalysisResult(
         totalWords: allWords.count,
         uniqueWords: Set(allWords).count,
         uniqueLemmas: lemmaCounts.count,
-        dictionary: resultDictionary
+        dictionary: resultDictionary,
+        orderedLemmas: orderedLemmas,
+        themes: []
     )
+    result = addThematicAnalysis(to: result, lines: text, startingLineNumber: startingLineNumber)
+    return result;
 }
     
     // Keep original String version for backward compatibility
-    public func analyzePsalm(text: String) -> PsalmAnalysisResult {
+    public func analyzePsalm(text: String, startingLineNumber: Int = 1) -> PsalmAnalysisResult {
         let lines = text.components(separatedBy: .newlines)
-        return analyzePsalm(text: lines)
+        return analyzePsalm(text: lines, startingLineNumber: startingLineNumber)
     }
     
+      
     
     // MARK: - Export Methods
     

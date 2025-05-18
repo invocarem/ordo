@@ -1,4 +1,35 @@
 [
+{
+  "lemma": "ipse",
+  "part_of_speech": "pronoun",
+  "type": "intensive",
+  "gender": "masculine",
+  "nominative": "ipse",
+  "genitive": "ipsius",
+  "dative": "ipsi",
+  "accusative": "ipsum",
+  "ablative": "ipso",
+  "translations": {
+    "en": "himself, the very",
+    "la": "ipse"
+  }
+},
+
+{
+  "lemma": "singularis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "singularis",
+  "genitive": "singularis",
+  "forms": {
+    "adverb": ["singulariter"]
+  },
+  "translations": {
+    "en": "alone, singular, individual",
+    "la": "singularis, -e"
+  }
+},
   {
   "lemma": "hesternus",
   "part_of_speech": "adjective",
@@ -365,6 +396,7 @@
   "lemma": "cum",
   "part_of_speech": "preposition",
   "case_government": "ablative",
+  
   "translations": {
     "en": "with, together with, when, since",
     "la": "cum"
@@ -4642,7 +4674,8 @@
     "part_of_speech": "noun",
     "declension": 3,
     "gender": "masculine",
-   
+    "nominative": "susceptor",
+    "genitive": "susceptoris", 
     "translations": {
       "en": "protector, receiver, undertaker",
       "la": "susceptor"
@@ -9805,37 +9838,16 @@
             "la": "filius"
           }
         },
-
-        {
-          "lemma": "xfilius",
-          "part_of_speech": "noun",
-          "gender": "masculine",   
-          "declension": 2,       
-          "forms": {
-          
-              "nominative_m": ["filius"],
-              "genitive": ["filii"],
-              "dative": ["filio"],
-              "accusative_m":[ "filium"],
-              "ablative": ["filio"],
-              "vocative": ["fili"]
-          },
-          "forms_plural": {
-              "nominative_m": ["filii"],
-              "genitive_m": ["filiorum"],
-              "dative": ["filiis"],
-              "accusative": ["filios"],
-              "ablative": ["filiis"],
-              "vocative": ["filii"]
-            
-          },
-          "translations": {
-            "en": "son",
-            "la": "filius"
-          },
-          "notes": "special handling"
-        },
-          
+{
+  "lemma": "verumtamen",
+  "part_of_speech": "adverb",
+ 
+  "translations": {
+    "en": "nevertheless, however",
+    "la": "verumtamen"
+  }
+},
+         
             {
               "lemma": "filia",
               "part_of_speech": "noun",
@@ -11582,6 +11594,9 @@
         {
             "lemma": "quoniam",
             "part_of_speech": "conjunction",
+            "forms": {
+                "base_form": ["quoniam"]
+            },
             "translations": {
                 "en": "because, since, for",
                 "la": "quoniam"
@@ -11651,7 +11666,7 @@
           "part_of_speech": "pronoun",
           "type": "relative",
           "gender": "masculine",
-          "nominative": "qui",
+          "nominative": "quis",
           "genitive": "cuius",
           "dative": "cui",
           "accusative": "quem",
@@ -11664,7 +11679,7 @@
           
           "translations": {
               "en": "who, which, that",
-              "la": "qui"
+              "la": "quis"
           }
       },
          {

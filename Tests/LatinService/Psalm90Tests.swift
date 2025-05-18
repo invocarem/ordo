@@ -18,6 +18,7 @@ class Psalm90Tests: XCTestCase {
     private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
         for (lemma, forms, translation) in confirmedWords {
             guard let entry = analysis.dictionary[lemma] else {
+                print("\n❌ MISSING LEMMA IN DICTIONARY: \(lemma)")
                 XCTFail("Missing confirmed lemma: \(lemma)")
                 continue
             }

@@ -31,6 +31,8 @@ struct PsalmAnalysisSelectionView: View {
     @State private var availablePsalms: [PsalmUsage] = []
     @State private var selectedPsalm: PsalmUsage?
     @State private var isLoading = true
+    @State private var currentAnalysis: PsalmAnalysisResult?
+        
     
     // MARK: - Constants
     private let psalmUsages: [PsalmUsage] = [
@@ -56,32 +58,35 @@ struct PsalmAnalysisSelectionView: View {
     
     // MARK: - Main View
     var body: some View {
-        Group {
-            if isLoading {
-                loadingView
-            } else {
-                contentView
+            Group {
+                if isLoading {
+                    loadingView
+                } else {
+                    contentView
+                }
+            }
+            .navigationTitle(navigationTitle)
+            .task { await loadData() }
+        }
+        
+        private var contentView: some View {
+            ScrollView {
+                VStack(alignment: .leading, spacing: 16) {
+                    hourHeader
+                    psalmGrid
+                    analysisView
+                }
+                .padding(.vertical)
             }
         }
-        .navigationTitle(navigationTitle)
-        .task { await loadData() }
-    }
+    
     
     // MARK: - Subviews
     private var loadingView: some View {
         ProgressView()
     }
     
-    private var contentView: some View {
-        ScrollView {
-            VStack(alignment: .leading, spacing: 16) {
-                hourHeader
-                psalmGrid
-                analysisView
-            }
-            .padding(.vertical)
-        }
-    }
+    
     
     private var hourHeader: some View {
         Group {
@@ -116,19 +121,21 @@ struct PsalmAnalysisSelectionView: View {
     
     @ViewBuilder
     private var analysisView: some View {
-        if let selectedPsalm = selectedPsalm,
-           let psalmText = psalms[selectedPsalm.id] {
-            let analysis = latinService.analyzePsalm(text: psalmText)
-            PsalmAnalysisView(
-                latinService: latinService,
-                analysis: analysis,
-                psalmTitle: selectedPsalm.displayTitle,
-                psalmText: psalmText // Pass the psalm text lines
-            )
-            .padding(.horizontal)
-            .transition(.opacity.combined(with: .move(edge: .bottom)))
+            if let selectedPsalm = selectedPsalm,
+               let psalmText = psalms[selectedPsalm.id] {
+                // Create a new analysis when the psalm changes
+                let analysis = latinService.analyzePsalm(text: psalmText.joined(separator: " "))
+                
+                LinePairAnalysisView(
+                    latinService: latinService,
+                    psalmText: psalmText,
+                    psalmTitle: selectedPsalm.displayTitle
+                )
+                .padding(.horizontal)
+                .transition(.opacity.combined(with: .move(edge: .bottom)))
+                .id(selectedPsalm.id) // This forces SwiftUI to recreate the view when the ID changes
+            }
         }
-    }
    
     
     private var navigationTitle: String {

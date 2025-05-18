@@ -11,7 +11,7 @@ struct LinePairAnalysisView: View {
     
     var body: some View {
         VStack(spacing: 0) {
-            // Simple navigation bar
+            // Navigation bar for line pairs
             ScrollView(.horizontal, showsIndicators: false) {
                 HStack(spacing: 10) {
                     ForEach(Array(linePairs.enumerated()), id: \.offset) { index, pair in
@@ -33,24 +33,28 @@ struct LinePairAnalysisView: View {
             .frame(height: 44)
             .background(Color(.systemBackground))
             
-            // Main content - simple vertical stack
+            // Main content
             ScrollView {
                 VStack(alignment: .leading, spacing: 20) {
-                    // Header
-                    Text(psalmTitle)
-                        .font(.title)
-                        .bold()
-                        .padding(.bottom)
-                    
-                    // Display only the selected line pair
                     if linePairs.indices.contains(selectedPairIndex) {
                         let pair = linePairs[selectedPairIndex]
-                        let inputText = pair.lines.joined(separator: " ")
+                        let analysis = latinService.analyzePsalm(
+                            text: pair.lines.joined(separator: " "),
+                            startingLineNumber: pair.startLine // Pass the starting line number
+                        )
                         
-                        
-                        let analysis = latinService.analyzePsalm(text: pair.lines.joined(separator: " "))
-                        
-                       
+                        // Show themes for current line range
+                        if !analysis.themes.isEmpty {
+                            ThemeView(
+                                themes: analysis.themes.filter { theme in
+                                    // Filter themes to only those matching current line range
+                                    guard let themeRange = theme.lineRange else { return false }
+                                    return themeRange.overlaps(pair.startLine...pair.endLine)
+                                },
+                                dictionary: analysis.dictionary
+                            )
+                            .padding(.horizontal)
+                        }
                         
                         LatinSectionView(title: "Lines \(pair.startLine)-\(pair.endLine)") {
                             VStack(alignment: .leading, spacing: 4) {
@@ -63,9 +67,11 @@ struct LinePairAnalysisView: View {
                             }
                             .padding(.bottom, 8)
                             
-                            ForEach(analysis.dictionary.sorted(by: { $0.key < $1.key }), id: \.key) { lemma, info in
-                                NavigationLink(destination: WordDetailView(lemma: lemma, lemmaInfo: info)) {
-                                    WordRow(lemma: lemma, info: info)
+                            ForEach(analysis.orderedLemmas, id: \.self) { lemma in
+                                if let info = analysis.dictionary[lemma] {
+                                    NavigationLink(destination: WordDetailView(lemma: lemma, lemmaInfo: info)) {
+                                        WordRow(lemma: lemma, info: info)
+                                    }
                                 }
                             }
                         }
@@ -73,9 +79,9 @@ struct LinePairAnalysisView: View {
                 }
                 .padding()
             }
-            .onAppear {
-                linePairs = createLinePairs()
-            }
+        }
+        .onAppear {
+            linePairs = createLinePairs()
         }
     }
     
@@ -85,7 +91,7 @@ struct LinePairAnalysisView: View {
             let lines = Array(psalmText[i..<endIndex])
             return LinePair(
                 id: "\(i)",
-                startLine: i + 1,
+                startLine: i + 1, // Line numbers start at 1
                 endLine: i + lines.count,
                 lines: lines
             )

@@ -60,6 +60,7 @@ let package = Package(
             sources: ["LatinService.swift", 
                 "LatinWordEntity.swift", 
                 "LatinWordAnalysis.swift",
+                "LatinThematicAnalysis.swift",
                 "LatinWordVerbForms.swift",
                 "LemmaMapping.swift"
             ],

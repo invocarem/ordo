@@ -27,7 +27,8 @@ struct LemmaMapping {
         var mapping: [String: [String]] = [:]
         
         for entity in wordEntities {
-        
+            let lemma = entity.lemma.lowercased()
+            mapping[lemma, default: []].append(lemma)
             
             // Map all standard case forms
             mapStandardForms(from: entity, to: &mapping)
