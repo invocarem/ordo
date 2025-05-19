@@ -15,6 +15,8 @@ class Psalm4Tests: XCTestCase {
         super.tearDown()
     }
 
+    let id = PsalmIdentity(number: 4, section: nil)
+
     private let psalm4 = [
         "Cum invocarem exaudivit me Deus justitiae meae; in tribulatione dilatasti mihi.",
         "Miserere mei, et exaudi orationem meam.",
@@ -34,7 +36,7 @@ func testPsalm4Lines1and2() {
     let line1 = psalm4[0] // "Cum invocarem exaudivit me Deus justitiae meae; in tribulatione dilatasti mihi."
     let line2 = psalm4[1] // "Miserere mei, et exaudi orationem meam."
     let combinedText = line1 + " " + line2
-    let analysis = latinService.analyzePsalm(text: combinedText, startingLineNumber: 1)
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 1)
     
     // Lemma verification
     let testLemmas = [
@@ -89,7 +91,7 @@ func testPsalm4Lines3and4() {
     let line3 = psalm4[2] // "Filii hominum, usquequo gravi corde? ut quid diligitis vanitatem, et quaeritis mendacium?"
     let line4 = psalm4[3] // "Et scitote quoniam mirificavit Dominus sanctum suum; Dominus exaudiet me cum clamavero ad eum."
     let combinedText = line3 + " " + line4
-    let analysis = latinService.analyzePsalm(text: combinedText, startingLineNumber: 3)
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 3)
     
     // Lemma verification
     let testLemmas = [
@@ -155,7 +157,7 @@ func testPsalm4Lines5and6() {
     let line5 = psalm4[4] // "Irascimini, et nolite peccare; quae dicitis in cordibus vestris, in cubilibus vestris compungimini."
     let line6 = psalm4[5] // "Sacrificate sacrificium justitiae, et sperate in Domino."
     let combinedText = line5 + " " + line6
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     // Lemma verification
     let testLemmas = [
@@ -215,7 +217,7 @@ func testPsalm4Lines7and8() {
     let line7 = psalm4[6] // "Multi dicunt: Quis ostendit nobis bona? Signatum est super nos lumen vultus tui, Domine."
     let line8 = psalm4[7] // "Dedisti laetitiam in corde meo, a tempore frumenti et vini sui multiplicati sunt."
     let combinedText = line7 + " " + line8
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     // Lemma verification
     let testLemmas = [
@@ -340,7 +342,7 @@ func testPsalm4Lines9and10() {
         """
         
         // Analyze
-        let result = latinService.analyzePsalm(text: psalm4Text)
+        let result = latinService.analyzePsalm(id, text: psalm4Text)
         
         // 1. Verify "filius" is detected (plural "filii" appears in text)
         XCTAssertNotNil(result.dictionary["filius"], "Lemma 'filius' should be detected")
@@ -485,36 +487,47 @@ func testPsalm4Lines9and10() {
     }
 
   // MARK: - Helper
-    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
-        for (lemma, forms, translation) in confirmedWords {
-            guard let entry = analysis.dictionary[lemma] else {
-                print("\n❌ MISSING LEMMA IN DICTIONARY: \(lemma)")
-                XCTFail("Missing lemma: \(lemma)")
-                continue
-            }
-            
-            // Verify semantic domain
-            XCTAssertTrue(
-                entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-                "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
-            )
-            
-            // Verify morphological coverage
-            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-            if !missingForms.isEmpty {
-                XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
-            }
-            
-            if verbose {
-                print("\n\(lemma.uppercased())")
-                print("  Translation: \(entry.translation ?? "?")")
-                forms.forEach { form in
-                    let count = entry.forms[form.lowercased()] ?? 0
-                    print("  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
-                }
+  // In Psalm4Tests.swift, replace the verifyWordsInAnalysis with this improved version:
+
+private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
+    let caseInsensitiveDict = Dictionary(uniqueKeysWithValues: 
+        analysis.dictionary.map { ($0.key.lowercased(), $0.value) }
+    )
+    
+    for (lemma, forms, translation) in confirmedWords {
+        guard let entry = caseInsensitiveDict[lemma.lowercased()] else {
+            print("\n❌ MISSING LEMMA IN DICTIONARY: \(lemma)")
+            XCTFail("Missing lemma: \(lemma)")
+            continue
+        }
+        
+        // Verify semantic domain
+        XCTAssertTrue(
+            entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
+            "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
+        )
+        
+        // Verify morphological coverage (case-insensitive)
+        let entryFormsLowercased = Dictionary(uniqueKeysWithValues:
+            entry.forms.map { ($0.key.lowercased(), $0.value) }
+        )
+        
+        let missingForms = forms.filter { entryFormsLowercased[$0.lowercased()] == nil }
+        if !missingForms.isEmpty {
+            XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
+        }
+        
+        if verbose {
+            print("\n\(lemma.uppercased())")
+            print("  Translation: \(entry.translation ?? "?")")
+            forms.forEach { form in
+                let count = entryFormsLowercased[form.lowercased()] ?? 0
+                print("  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
             }
         }
     }
+}
+
 private func verifyThematicElements(analysis: PsalmAnalysisResult, expectedThemes: [String: [(lemma: String, description: String)]]) {
     for (theme, elements) in expectedThemes {
         for (lemma, description) in elements {

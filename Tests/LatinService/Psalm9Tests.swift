@@ -11,6 +11,7 @@ class Psalm9ATests: XCTestCase {
     }
     
     // MARK: - Test Data (Psalm 9A)
+    let id = PsalmIdentity(number: 9, section: "A")
     let psalm9A = [
         "Confitebor tibi, Domine, in toto corde meo; narrabo omnia mirabilia tua.",
         "Laetabor et exsultabo in te; psallam nomini tuo, Altissime.",
@@ -35,7 +36,7 @@ class Psalm9ATests: XCTestCase {
     // MARK: - Test Cases
     
     func testPraiseVerbs() {
-        let analysis = latinService.analyzePsalm(text: psalm9A)
+        let analysis = latinService.analyzePsalm(id,text: psalm9A)
         
         let praiseTerms = [
             ("confiteor", ["confitebor"], "confess"), // v.1
@@ -49,7 +50,7 @@ class Psalm9ATests: XCTestCase {
     }
     
     func testDivineJustice() {
-        let analysis = latinService.analyzePsalm(text: psalm9A)
+        let analysis = latinService.analyzePsalm(id,text: psalm9A)
         
         let justiceTerms = [
             ("judicium", ["judicium", "judicio", "judicia"], "judgment"), // v.4, v.7, v.16
@@ -75,7 +76,7 @@ class Psalm9ATests: XCTestCase {
     }
     
     func testDivineProtection() {
-        let analysis = latinService.analyzePsalm(text: psalm9A)
+        let analysis = latinService.analyzePsalm(id, text: psalm9A)
         
         let protectionTerms = [
             ("refugium", ["refugium"], "refuge"), // v.9
@@ -88,7 +89,7 @@ class Psalm9ATests: XCTestCase {
     }
     
     func testEternalNature() {
-        let analysis = latinService.analyzePsalm(text: psalm9A)
+        let analysis = latinService.analyzePsalm(id, text: psalm9A)
         
         let eternalTerms = [
             ("aeternus", ["aeternum", "aeternum"], "forever"), // v.5, v.7
@@ -140,6 +141,7 @@ class Psalm9BTests: XCTestCase {
     }
     
     // MARK: - Test Data (Psalm 9B)
+    let id = PsalmIdentity(number: 9, section: "B")
     let psalm9B = [
         "Exsurge, Domine, non praevaleat homo; judicentur gentes in conspectu tuo.",
         "Constitue, Domine, legislatorem super eos, ut sciant gentes quoniam homines sunt.",
@@ -169,7 +171,7 @@ class Psalm9BTests: XCTestCase {
     // MARK: - Test Cases
     
     func testDivineIntervention() {
-        let analysis = latinService.analyzePsalm(text: psalm9B)
+        let analysis = latinService.analyzePsalm(id, text: psalm9B)
         
         let interventionTerms = [
             ("exsurgo", ["exsurge", "exsurge"], "arise"), // v.1, v.16
@@ -182,7 +184,7 @@ class Psalm9BTests: XCTestCase {
     }
     
     func testWickedCharacteristics() {
-        let analysis = latinService.analyzePsalm(text: psalm9B)
+        let analysis = latinService.analyzePsalm(id,text: psalm9B)
         
         let wickedTerms = [
             ("impius", ["impius", "impius"], "wicked"), // v.4, v.17
@@ -197,7 +199,7 @@ class Psalm9BTests: XCTestCase {
     }
     
     func testPoorAndOppressed() {
-        let analysis = latinService.analyzePsalm(text: psalm9B)
+        let analysis = latinService.analyzePsalm(id, text: psalm9B)
         
         let poorTerms = [
             ("pauper", ["pauper", "pauperem", "pauperum", "pauperum"], "poor"), // v.4, v.12, v.14, v.16
@@ -210,7 +212,7 @@ class Psalm9BTests: XCTestCase {
     }
     
     func testDivineAttributes() {
-        let analysis = latinService.analyzePsalm(text: psalm9B)
+        let analysis = latinService.analyzePsalm(id, text: psalm9B)
         
         let attributeTerms = [
             ("legislator", ["legislatorem"], "lawgiver"), // v.2
@@ -223,7 +225,7 @@ class Psalm9BTests: XCTestCase {
     }
     
     func testEschatologicalHope() {
-        let analysis = latinService.analyzePsalm(text: psalm9B)
+        let analysis = latinService.analyzePsalm(id, text: psalm9B)
         
         let hopeTerms = [
             ("aeternus", ["aeternum"], "forever"), // v.21

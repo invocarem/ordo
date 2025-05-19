@@ -15,6 +15,7 @@ class PsalmDegreesTests: XCTestCase {
         super.tearDown()
     }
 
+    let identity = PsalmIdentity(number: 119, section: nil)
     private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
         for (lemma, forms, translation) in confirmedWords {
             guard let entry = analysis.dictionary[lemma] else {
@@ -47,7 +48,7 @@ class PsalmDegreesTests: XCTestCase {
             "Ego pacem quaerebam: et cum loquerer illis, impugnabant me gratis."
         ]
         
-        let analysis = latinService.analyzePsalm(text: psalm119)
+        let analysis = latinService.analyzePsalm(identity, text: psalm119)
         
         // ===== 1. Verify ACTUAL words in this psalm =====
         let confirmedWords = [
@@ -170,7 +171,8 @@ class PsalmDegreesTests: XCTestCase {
             "Dominus custodiat introitum tuum et exitum tuum, ex hoc nunc et usque in saeculum"
         ]
         
-        let analysis = latinService.analyzePsalm(text: psalm120)
+        let identity = PsalmIdentity(number: 120, section: nil)
+        let analysis = latinService.analyzePsalm(identity, text: psalm120)
         
         // ===== 1. Verify ACTUAL words in this psalm =====
         let confirmedWords = [
@@ -285,6 +287,7 @@ class PsalmDegreesTests: XCTestCase {
     }
     
     func testAnalyzePsalm121() {
+        let identity = PsalmIdentity(number: 121, section: nil)
         let psalm121 = [
             "Laetatus sum in his quae dicta sunt mihi: In domum Domini ibimus.",
             "Stantes erant pedes nostri in atriis tuis, Jerusalem.",
@@ -297,7 +300,7 @@ class PsalmDegreesTests: XCTestCase {
             "Propter domum Domini Dei nostri, quaesivi bona tibi."
         ]
         
-        let analysis = latinService.analyzePsalm(text: psalm121)
+        let analysis = latinService.analyzePsalm(identity, text: psalm121)
         
         // ===== 1. Verify ACTUAL words in this psalm =====
         let confirmedWords = [
@@ -416,7 +419,8 @@ class PsalmDegreesTests: XCTestCase {
             "quia multum repleta est anima nostra opprobrium abundantibus et despectio superbis."
         ]
         
-        let analysis = latinService.analyzePsalm(text: psalm122)
+        let id = PsalmIdentity(number: 127, section: nil)
+        let analysis = latinService.analyzePsalm(id, text: psalm122)
         
         // ===== 1. Verify ACTUAL words in this psalm =====
         let confirmedWords = [            
@@ -526,8 +530,9 @@ class PsalmDegreesTests: XCTestCase {
         "laqueus contritus est, et nos liberati sumus.",
         "Adjutorium nostrum in nomine Domini, qui fecit caelum et terram."
     ]
+    let id = PsalmIdentity(number: 127, section: nil)
     
-    let analysis = latinService.analyzePsalm(text: psalm123)
+    let analysis = latinService.analyzePsalm(id, text: psalm123)
     
     // Key words to verify
     let confirmedWords = [
@@ -554,8 +559,9 @@ func testAnalyzePsalm124() {
         "Benefac, Domine, bonis, et rectis corde.",
         "Declinantes autem in obligationes, adducet Dominus cum operantibus iniquitatem. Pax super Israel!"
     ]
+    let id = PsalmIdentity(number: 124, section: nil)
     
-    let analysis = latinService.analyzePsalm(text: psalm124)
+    let analysis = latinService.analyzePsalm(id, text: psalm124)
     
     let confirmedWords = [
         ("confido", ["confidunt"], "trust"),
@@ -584,7 +590,8 @@ func testAnalyzePsalm125() {
         "Venientes autem venient cum exsultatione: portantes manipulos suos."
     ]
     
-    let analysis = latinService.analyzePsalm(text: psalm125)
+    let id = PsalmIdentity(number: 127, section: nil)
+    let analysis = latinService.analyzePsalm(id, text: psalm125)
     
     let confirmedWords = [
         ("converto", ["convertendo", "converte"], "turn"),
@@ -612,7 +619,8 @@ func testAnalyzePsalm126() {
         "Beatus vir qui implevit desiderium suum ex ipsis: non confundetur cum loquetur inimicis suis in porta."
     ]
     
-    let analysis = latinService.analyzePsalm(text: psalm126)
+    let id = PsalmIdentity(number: 127, section: nil)
+    let analysis = latinService.analyzePsalm(id, text: psalm126)
     
     let confirmedWords = [
         ("aedifico", ["aedificaverit", "aedificant"], "build"),
@@ -636,8 +644,9 @@ func testAnalyzePsalm127() {
         "Benedicat tibi Dominus ex Sion, et videas bona Jerusalem omnibus diebus vitae tuae.",
         "Et videas filios filiorum tuorum. Pax super Israel!"
     ]
+    let id = PsalmIdentity(number: 127, section: nil)
     
-    let analysis = latinService.analyzePsalm(text: psalm127)
+    let analysis = latinService.analyzePsalm(id, text: psalm127)
     
     // ===== 1. Verify all words and translations =====
     let confirmedWords = [
@@ -702,7 +711,8 @@ func testAnalyzePsalm128() {
         "Et non dixerunt qui praeteribant: Benedictio Domini super vos; benediximus vobis in nomine Domini."
     ]
     
-    let analysis = latinService.analyzePsalm(text: psalm128)
+    let id = PsalmIdentity(number: 128, section: nil)
+    let analysis = latinService.analyzePsalm(id, text: psalm128)
     
     // ===== 1. Verify all words and translations =====
     let confirmedWords = [
@@ -774,8 +784,10 @@ func testAnalyzePsalm129() {
         "Quia apud Dominum misericordia, et copiosa apud eum redemptio.",
         "Et ipse redimet Israel ex omnibus iniquitatibus ejus."
     ]
+
+    let id = PsalmIdentity(number: 129, section: nil)
     
-    let analysis = latinService.analyzePsalm(text: psalm129)
+    let analysis = latinService.analyzePsalm(id, text: psalm129)
     
     // ===== 1. Verify all words and translations =====
     let confirmedWords = [
@@ -825,8 +837,8 @@ func testAnalyzePsalm130() {
         "Si non humiliter sentiebam, sed exaltavi animam meam; sicut ablactatus est super matre sua, ita retributio in anima mea.",
         "Speret Israel in Domino, ex hoc nunc et usque in saeculum."
     ]
-    
-    let analysis = latinService.analyzePsalm(text: psalm130)
+    let id = PsalmIdentity(number: 130, section: nil) 
+    let analysis = latinService.analyzePsalm(id, text: psalm130)
     
     let confirmedWords = [
         ("exalto", ["exaltatum", "exaltavi"], "exalt"),
@@ -865,7 +877,8 @@ func testAnalyzePsalm131() {
         "Inimicos ejus induam confusione: super ipsum autem efflorebit sanctificatio mea."
     ]
     
-    let analysis = latinService.analyzePsalm(text: psalm131)
+    let id = PsalmIdentity(number: 131, section: nil)
+    let analysis = latinService.analyzePsalm(id, text: psalm131)
     
     let confirmedWords = [        
         ("memini", ["memento"], "remember"),        
@@ -879,6 +892,7 @@ func testAnalyzePsalm131() {
 }
 
 func testAnalyzePsalm132() {
+    let id = PsalmIdentity(number: 132, section: nil)
     let psalm132 = [
         "Ecce quam bonum, et quam jucundum habitare fratres in unum.",
         "Sicut unguentum in capite, quod descendit in barbam, barbam Aaron,",
@@ -886,7 +900,7 @@ func testAnalyzePsalm132() {
         "Quoniam illic mandavit Dominus benedictionem, et vitam usque in saeculum."
     ]
     
-    let analysis = latinService.analyzePsalm(text: psalm132)
+    let analysis = latinService.analyzePsalm(id, text: psalm132)
     
     let confirmedWords = [
         ("jucundus", ["jucundum"], "pleasant"),
@@ -922,6 +936,7 @@ func testAnalyzePsalm132() {
  
 
 func testAnalyzePsalm133() {
+    let id = PsalmIdentity(number: 133, section: nil)
     let psalm133 = [
         "Ecce nunc benedicite Dominum, omnes servi Domini:",
         "Qui statis in domo Domini, in atriis domus Dei nostri.",
@@ -929,7 +944,7 @@ func testAnalyzePsalm133() {
         "Benedicat te Dominus ex Sion, qui fecit caelum et terram."
     ]
     
-    let analysis = latinService.analyzePsalm(text: psalm133)
+    let analysis = latinService.analyzePsalm(id, text: psalm133)
     
     // ===== 1. Verify ACTUAL words in this psalm =====
     let confirmedWords = [

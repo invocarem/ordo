@@ -10,6 +10,7 @@ class Psalm118CophTests: XCTestCase {
         latinService = LatinService.shared
     }
     
+    let identity = PsalmIdentity(number: 118, section: "pe")
     // MARK: - Test Data (Psalm 118:145-152 "Coph" section)
     let psalm118Coph = [
         "Clamavi in toto corde meo, exaudi me, Domine; justificationes tuas requiram.",
@@ -25,7 +26,7 @@ class Psalm118CophTests: XCTestCase {
     // MARK: - Test Cases
     
     func testUrgentPetitions() {
-        let analysis = latinService.analyzePsalm(text: psalm118Coph)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Coph)
         
         let petitions = [
             ("clamo", ["clamavi", "clamavi", "clamavi"], "cry out"), // v.145, v.146, v.147
@@ -39,7 +40,7 @@ class Psalm118CophTests: XCTestCase {
     }
     
     func testTemporalReferences() {
-        let analysis = latinService.analyzePsalm(text: psalm118Coph)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Coph)
         
         let temporalTerms = [
             ("maturitas", ["maturitate"], "dawn"), // v.147
@@ -51,7 +52,7 @@ class Psalm118CophTests: XCTestCase {
     }
     
     func testTorahEngagement() {
-        let analysis = latinService.analyzePsalm(text: psalm118Coph)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Coph)
         
         let engagementTerms = [
             ("justificatio", ["justificationes"], "ordinance"), // v.145
@@ -66,7 +67,7 @@ class Psalm118CophTests: XCTestCase {
     }
     
     func testDivineProximity() {
-        let analysis = latinService.analyzePsalm(text: psalm118Coph)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Coph)
         
         let proximityTerms = [
             ("prope", ["prope"], "near"), // v.151
@@ -79,7 +80,7 @@ class Psalm118CophTests: XCTestCase {
     }
     
     func testContrastingStates() {
-        let analysis = latinService.analyzePsalm(text: psalm118Coph)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Coph)
         
         let contrasts = [
             ("misericordia", ["misericordiam"], "mercy"), // v.149

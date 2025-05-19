@@ -11,6 +11,7 @@ class Psalm89Tests: XCTestCase {
     }
     
     // MARK: - Test Data
+    let id = PsalmIdentity(number: 89, section: nil)
     let psalm89 = [
          "Domine, refugium factus es nobis a generatione et progenie.",
                 "Priusquam montes fierent, aut formaretur terra et orbis: a saeculo et usque in saeculum tu es, Deus.",
@@ -38,7 +39,7 @@ func testPsalm89Lines1and2() {
     let line1 = psalm89[0] // "Domine, refugium factus es nobis a generatione et progenie."
     let line2 = psalm89[1] // "Priusquam montes fierent, aut formaretur terra et orbis: a saeculo et usque in saeculum tu es, Deus."
     let combinedText = line1 + " " + line2
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     // Lemma verification
     let testLemmas = [
@@ -95,7 +96,7 @@ func testPsalm89Lines3and4() {
     let line3 = psalm89[2] // "Ne avertas hominem in humilitatem: et dixisti: Convertimini, filii hominum."
     let line4 = psalm89[3] // "Quoniam mille anni ante oculos tuos, tamquam dies hesterna quae praeteriit: et custodia in nocte."
     let combinedText = line3 + " " + line4
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     // Lemma verification
     let testLemmas = [
@@ -153,7 +154,7 @@ func testPsalm89Lines5and6() {
     let line5 = psalm89[4] // "Quae pro nihilo habentur, eorum anni erunt."
     let line6 = psalm89[5] // "Mane sicut herba transeat; mane floreat, et transeat: vespere decidat, induret, et arescat."
     let combinedText = line5 + " " + line6
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     // Lemma verification
     let testLemmas = [
@@ -213,7 +214,7 @@ func testPsalm89Lines7and8() {
     let line7 = psalm89[6] // "Quia defecimus in ira tua, et in furore tuo turbati sumus."
     let line8 = psalm89[7] // "Posuisti iniquitates nostras in conspectu tuo: saeculum nostrum in illuminatione vultus tui."
     let combinedText = line7 + " " + line8
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     // Lemma verification
     let testLemmas = [
@@ -271,7 +272,7 @@ func testPsalm89Lines9and10() {
     let line9 = psalm89[8] // "Quoniam omnes dies nostri defecerunt: et in ira tua defecimus. Anni nostri sicut aranea meditabuntur."
     let line10 = psalm89[9] // "Dies annorum nostrorum in ipsis septuaginta anni. Si autem in potentatibus octoginta anni: et amplius eorum labor et dolor."
     let combinedText = line9 + " " + line10
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     // Lemma verification
     let testLemmas = [
@@ -385,7 +386,7 @@ func testPsalm89Lines13and14() {
     let line13 = psalm89[12] // "Dextera tua sic notam fac: et eruditos corde in sapientia."
     let line14 = psalm89[13] // "Convertere, Domine, usquequo? et deprecabilis esto super servos tuos."
     let combinedText = line13 + " " + line14
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     // Lemma verification
     let testLemmas = [
@@ -443,7 +444,7 @@ func testPsalm89Lines15and16() {
     let line15 = psalm89[14] // "Repleti sumus mane misericordia tua: et exsultavimus, et delectati sumus omnibus diebus nostris."
     let line16 = psalm89[15] // "Laetati sumus pro diebus quibus nos humiliasti: annis quibus vidimus mala."
     let combinedText = line15 + " " + line16
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     // Lemma verification
     let testLemmas = [
@@ -501,7 +502,7 @@ func testPsalm89Lines17and18() {
     let line17 = psalm89[16] // "Respice in servos tuos, et in opera tua: et dirige filios eorum."
     let line18 = psalm89[17] // "Et sit splendor Domini Dei nostri super nos: et opera manuum nostrarum dirige super nos: et opus manuum nostrarum dirige."
     let combinedText = line17 + " " + line18
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     // Lemma verification
     let testLemmas = [
@@ -553,7 +554,7 @@ func testPsalm89Lines17and18() {
 }
     
     func testTemporalVocabulary() {
-        let analysis = latinService.analyzePsalm(text: psalm89)
+        let analysis = latinService.analyzePsalm(id, text: psalm89)
         
         let timeTerms = [
             ("saeculum", ["saeculum", "saeculo"], "age"),
@@ -567,7 +568,7 @@ func testPsalm89Lines17and18() {
     }
     
     func testDivineAttributes() {
-        let analysis = latinService.analyzePsalm(text: psalm89)
+        let analysis = latinService.analyzePsalm(id, text: psalm89)
         
         let divineTerms = [
             ("refugium", ["refugium"], "refuge"),
@@ -581,7 +582,7 @@ func testPsalm89Lines17and18() {
     }
     
     func testMortalityMetaphors() {
-        let analysis = latinService.analyzePsalm(text: psalm89)
+        let analysis = latinService.analyzePsalm(id, text: psalm89)
         
         let mortalTerms = [
             ("herba", ["herba"], "grass"),
@@ -594,7 +595,7 @@ func testPsalm89Lines17and18() {
     }
     
     func testStructuralVerbs() {
-        let analysis = latinService.analyzePsalm(text: psalm89)
+        let analysis = latinService.analyzePsalm(id, text: psalm89)
         
         let keyVerbs = [
             ("formo", ["formaretur"], "form"),

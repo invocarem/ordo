@@ -9,6 +9,9 @@ class Psalm6Tests: XCTestCase {
         super.setUp()
         latinService = LatinService.shared
     }
+     let identity = PsalmIdentity(number: 6, section: nil)
+     let id = PsalmIdentity(number: 6, section: nil)
+    
     
     // MARK: - Test Data
     let psalm6 = [
@@ -24,7 +27,7 @@ class Psalm6Tests: XCTestCase {
         "Erubescant et conturbentur vehementer omnes inimici mei; convertantur et erubescant valde velociter."
     ]
     func testUnlemmatizedWords() {
-    let analysis = latinService.analyzePsalm(text: psalm6)
+    let analysis = latinService.analyzePsalm(identity, text: psalm6)
     
     // Print words with only 1 occurrence (likely not lemmatized)
     let unlemmatized = analysis.dictionary.filter { $0.value.forms.count == 1 }
@@ -46,7 +49,7 @@ class Psalm6Tests: XCTestCase {
 }
     // MARK: - Test Cases
     func testAnalysisSummary() {
-        let analysis = latinService.analyzePsalm(text: psalm6)
+        let analysis = latinService.analyzePsalm(id, text: psalm6)
         if verbose {
             print("\n=== Full Analysis ===")
             print("Total words:", analysis.totalWords)
@@ -66,7 +69,7 @@ class Psalm6Tests: XCTestCase {
     }
     
     func testPenitentialVocabulary() {
-        let analysis = latinService.analyzePsalm(text: psalm6)
+        let analysis = latinService.analyzePsalm(identity, text: psalm6)
         
         let penitentialTerms = [
             ("misereor", ["miserere"], "have mercy"),
@@ -79,7 +82,7 @@ class Psalm6Tests: XCTestCase {
         verifyWordsInAnalysis(analysis, confirmedWords: penitentialTerms)
     }
     func testConturboForms() {
-    let analysis = latinService.analyzePsalm(text: psalm6)
+    let analysis = latinService.analyzePsalm(identity, text: psalm6)
     verifyWordsInAnalysis(
         analysis,
         confirmedWords: [("conturbo", ["conturbata", "conturbentur"], "trouble")]
@@ -87,14 +90,14 @@ class Psalm6Tests: XCTestCase {
 }
 
 func testTurboForms() {
-    let analysis = latinService.analyzePsalm(text: psalm6)
+    let analysis = latinService.analyzePsalm(identity, text: psalm6)
     verifyWordsInAnalysis(
         analysis,
         confirmedWords: [("turbo", ["turbata", "turbatus"], "disturb")]
     )
 }
     func testUniqueVerbForms() {
-        let analysis = latinService.analyzePsalm(text: psalm6)
+        let analysis = latinService.analyzePsalm(identity, text: psalm6)
         
         let rareVerbs = [
             ("invetero", ["inveteravi"], "grow old"), // Hapax legomenon
@@ -107,7 +110,7 @@ func testTurboForms() {
     }
     
     func testImperatives() {
-        let analysis = latinService.analyzePsalm(text: psalm6)
+        let analysis = latinService.analyzePsalm(identity, text: psalm6)
         
         let commands = [
             ("converto", ["convertere"], "turn back"), // Deponent imperative
@@ -118,7 +121,7 @@ func testTurboForms() {
         verifyWordsInAnalysis(analysis, confirmedWords: commands)
     }
     func testImperativesAndDeponents() {
-        let analysis = latinService.analyzePsalm(text: psalm6)
+        let analysis = latinService.analyzePsalm(identity, text: psalm6)
         
         let imperatives = [
             ("arguo", ["arguas"], "rebuke"),
@@ -132,7 +135,7 @@ func testTurboForms() {
     }
     
     func testBodyPartMetaphors() {
-        let analysis = latinService.analyzePsalm(text: psalm6)
+        let analysis = latinService.analyzePsalm(identity, text: psalm6)
         
         let bodilyTerms = [
             ("os", ["ossa"], "bone"),
@@ -143,7 +146,7 @@ func testTurboForms() {
         verifyWordsInAnalysis(analysis, confirmedWords: bodilyTerms)
     }
  func testRemainingVerbLemmas() {
-    let analysis = latinService.analyzePsalm(text: psalm6)
+    let analysis = latinService.analyzePsalm(identity, text: psalm6)
     
     let untestedVerbs = [
         ("arguo", ["arguas"], "rebuke"),      // Ps 6:1 ("ne in furore tuo arguas me")

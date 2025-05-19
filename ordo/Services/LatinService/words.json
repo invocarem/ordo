@@ -12299,18 +12299,61 @@
           "la": "sto"
         }
       },
-     
+
+      {
+  "lemma": "consilium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "consilium",
+  "genitive": "consilii",
+  "translations": {
+    "en": "counsel, plan, advice",
+    "la": "consilium"
+  }
+},
+
+{
+  "lemma": "prospero",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "prosperare",
+  "present": "prospero",
+  "perfect": "prosperavi",
+  "supine": "prosperatum",
+  "forms_plural":{
+    "future_passive": ["prosperabor", "prosperaberis", "prosperabitur", "prosperabimur", "prosperabimini", "prosperabuntur"]
+  },
+  "translations": {
+    "en": "prosper, cause to succeed",
+    "la": "prospero, prosperare"
+  }
+},
+    {
+  "lemma": "secus",
+  "part_of_speech": "adverb",
+  "indeclinable": true,
+  "translations": {
+    "en": "beside, otherwise, not so",
+    "la": "secus"
+  }
+}, 
       {
         "lemma": "facio",
         "part_of_speech": "verb",
         "conjugation": 3,
         "deponent": false,
         "infinitive": "facere",
+        "present": "facio",
+        "perfect": "feci",
+        "supine": "factum",
+        
         "forms": {
           "present": ["facio", "facis", "facit", "facimus", "facitis", "faciunt"],
           "present_passive": ["fior", "fieris", "fit", "fimur", "fimini", "fiunt"],
           "imperative": ["fac", "facite"],
           "subjunctive": ["faciam", "facias", "faciat", "faciamus", "faciatis", "faciant"],
+          "future": ["faciam", "facies", "faciet", "faciemus", "facietis", "facient"],
           "future_passive": ["fiar", "fieris", "fietur", "fiemur", "fiemini", "fientur"],
           "present_participle": ["faciens"],
           "perfect_passive_participle": ["factus", "facta", "factum"],

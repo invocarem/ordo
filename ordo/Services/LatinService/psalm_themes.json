@@ -1,0 +1,339 @@
+{
+  "themes": [
+      {
+        "psalmNumber": 1,
+        "category": "",
+        "startLine": 1,
+        "themes": [
+          {
+            "name": "Righteous Avoidance",
+            "description": "What the blessed person does not do",
+            "lemmas": ["abeo", "sto", "sedeo","consilium", "via", "cathedra"],
+            "comment": "Covers 'walks not...stands not...sits not' structure"
+          },
+          {
+            "name": "Positive Devotion",
+            "description": "What the blessed person does instead",
+            "lemmas": ["lex", "dominus", "voluntas", "meditor", "dies", "nox"]
+          }
+        ]
+      },
+      {
+        "psalmNumber": 1,
+        "category": "",
+        "startLine": 3,
+        "themes": [
+          {
+            "name": "Tree Imagery",
+            "description": "The righteous as a fruitful tree by water",
+            "lemmas": ["lignum", "planto", "decursus", "aqua", "fructus", "folium"]
+          },
+          {
+            "name": "Divine Blessing",
+            "description": "The prosperity of the righteous",
+            "lemmas": ["prospero", "tempus", "omnis", "facio"]
+          }
+        ]
+      },
+      {
+        "psalmNumber": 1,
+        "category": "",
+        "startLine": 5,
+        "themes": [
+          {
+            "name": "Wicked Contrast",
+            "description": "The fate of the wicked compared to chaff",
+            "lemmas": ["impius", "pulvis", "ventus", "projicio", "terra"]
+          },
+          {
+            "name": "Final Judgment",
+            "description": "The ultimate destiny of righteous and wicked",
+            "lemmas": ["resurgo", "judicium", "peccator", "justus", "nosco", "pereo"]
+          }
+        ]
+      },
+      
+      
+    {
+      "psalmNumber": 4,
+      "category": "",
+      "startLine": 1,
+      "themes": [
+        {
+          "name": "Divine Response",
+          "description": "God's answer to prayer",
+          "lemmas": ["invoco", "exaudio"]
+        },
+        {
+          "name": "Divine Justice",
+          "description": "God's righteous nature",
+          "lemmas": ["deus", "justitia"]
+        },
+        {
+          "name": "Human Need",
+          "description": "Human dependence on God",
+          "lemmas": ["tribulatio", "misereor"]
+        }
+      ]
+    },
+    {
+      "psalmNumber": 4,
+      "category": "",
+      "startLine": 3,
+      "themes": [
+        {
+          "name": "Human Folly",
+          "description": "Vanity of worldly pursuits",
+          "lemmas": ["vanitas", "mendacium"]
+        },
+        {
+          "name": "Divine Revelation",
+          "description": "God's marvelous works",
+          "lemmas": ["mirifico", "sanctus"]
+        }
+      ]
+    },
+    {
+      "psalmNumber": 4,
+      "category": "",
+      "startLine": 5,
+      "themes": [
+        {
+          "name": "Righteous Anger",
+          "description": "Proper emotional response",
+          "lemmas": ["irascor", "pecco"]
+        },
+        {
+          "name": "Night Reflection",
+          "description": "Private meditation",
+          "lemmas": ["cubile", "compungo"]
+        },
+        {
+          "name": "Proper Worship",
+          "description": "Righteous offerings",
+          "lemmas": ["sacrificium", "spero"]
+        }
+      ]
+    },
+    {
+      "psalmNumber": 4,
+      "category": "",
+      "startLine": 7,
+      "themes": [
+        {
+          "name": "Divine Goodness",
+          "description": "Question about good things",
+          "lemmas": ["bonus", "ostendo"]
+        },
+        {
+          "name": "Divine Favor",
+          "description": "Light of God's face",
+          "lemmas": ["lumen", "vultus"]
+        },
+        {
+          "name": "Abundant Blessing",
+          "description": "Agricultural prosperity",
+          "lemmas": ["frumentum", "vinum"]
+        }
+      ]
+    },
+    {
+      "psalmNumber": 4,
+      "category": "",
+      "startLine": 9,
+      "themes": [
+        {
+          "name": "Perfect Peace",
+          "description": "Complete security",
+          "lemmas": ["pax", "dormio"]
+        },
+        {
+          "name": "Exclusive Trust",
+          "description": "God alone as source",
+          "lemmas": ["singularis", "spes"]
+        },
+        {
+          "name": "Divine Establishment",
+          "description": "God's sovereign placement",
+          "lemmas": ["constituo", "requiesco"]
+        }
+      ]
+    },
+    {
+      "psalmNumber": 90,
+      "category": "",
+      "startLine": 1,
+      "themes": [
+        {
+          "name": "Divine Dwelling",
+          "description": "Abiding in God's protection",
+          "lemmas": ["habito", "commoror"]
+        },
+        {
+          "name": "Divine Titles",
+          "description": "Names of God",
+          "lemmas": ["altissimus", "deus", "dominus"]
+        },
+        {
+          "name": "Protection Imagery",
+          "description": "Metaphors of safety",
+          "lemmas": ["adjutorium", "protectio", "refugium"]
+        }
+      ]
+    },
+    {
+      "psalmNumber": 90,
+      "category": "",
+      "startLine": 3,
+      "themes": [
+        {
+          "name": "Deliverance",
+          "description": "Rescue from danger",
+          "lemmas": ["libero", "laqueus"]
+        },
+        {
+          "name": "Winged Protection",
+          "description": "Shelter under God's wings",
+          "lemmas": ["scapula", "penna", "obumbro"]
+        },
+        {
+          "name": "Dual Threats",
+          "description": "Physical and verbal dangers",
+          "lemmas": ["venator", "verbum", "asper"]
+        }
+      ]
+    },
+    {
+      "psalmNumber": 90,
+      "category": "",
+      "startLine": 5,
+      "themes": [
+        {
+          "name": "Divine Armor",
+          "description": "God as shield",
+          "lemmas": ["scutum", "veritas"]
+        },
+        {
+          "name": "Temporal Protection",
+          "description": "Day and night safety",
+          "lemmas": ["nocturnus", "dies", "meridianus"]
+        },
+        {
+          "name": "Multiform Threats",
+          "description": "Various dangers",
+          "lemmas": ["sagitta", "negotium", "daemonium"]
+        }
+      ]
+    },
+    {
+      "psalmNumber": 90,
+      "category": "",
+      "startLine": 7,
+      "themes": [
+        {
+          "name": "Numerical Protection",
+          "description": "Safety amidst destruction",
+          "lemmas": ["mille", "decem"]
+        },
+        {
+          "name": "Divine Justice",
+          "description": "Observation of wickedness",
+          "lemmas": ["considero", "video", "peccator"]
+        },
+        {
+          "name": "Impenetrable Safety",
+          "description": "Enemy cannot approach",
+          "lemmas": ["appropinquo"]
+        }
+      ]
+    },
+    {
+      "psalmNumber": 90,
+      "category": "",
+      "startLine": 9,
+      "themes": [
+        {
+          "name": "Personal Refuge",
+          "description": "God as personal protector",
+          "lemmas": ["spes", "refugium"]
+        },
+        {
+          "name": "Divine Immunity",
+          "description": "Protection from evil",
+          "lemmas": ["malum", "flagellum"]
+        },
+        {
+          "name": "Sacred Space",
+          "description": "Safety in God's dwelling",
+          "lemmas": ["tabernaculum"]
+        }
+      ]
+    },
+    {
+      "psalmNumber": 90,
+      "category": "",
+      "startLine": 11,
+      "themes": [
+        {
+          "name": "Angelic Guardianship",
+          "description": "Angels commanded to protect",
+          "lemmas": ["angelus", "mando", "custodio"]
+        },
+        {
+          "name": "Physical Protection",
+          "description": "Carried in hands",
+          "lemmas": ["manus", "porto"]
+        },
+        {
+          "name": "Preventive Care",
+          "description": "Avoiding obstacles",
+          "lemmas": ["offendo", "lapis", "pes"]
+        }
+      ]
+    },
+    {
+      "psalmNumber": 90,
+      "category": "",
+      "startLine": 13,
+      "themes": [
+        {
+          "name": "Victory Over Evil",
+          "description": "Trampling symbolic creatures",
+          "lemmas": ["aspis", "basiliscus", "conculco"]
+        },
+        {
+          "name": "Divine Response",
+          "description": "Answer to faithfulness",
+          "lemmas": ["spero", "libero", "protego"]
+        },
+        {
+          "name": "Covenant Relationship",
+          "description": "Knowing God's name",
+          "lemmas": ["cognosco", "nomen"]
+        }
+      ]
+    },
+    {
+      "psalmNumber": 90,
+      "category": "",
+      "startLine": 15,
+      "themes": [
+        {
+          "name": "Prayer Response",
+          "description": "God hears cries",
+          "lemmas": ["clamo", "exaudio"]
+        },
+        {
+          "name": "Divine Presence",
+          "description": "With us in trouble",
+          "lemmas": ["tribulatio", "sum"]
+        },
+        {
+          "name": "Dual Blessing",
+          "description": "Long life and salvation",
+          "lemmas": ["longitudo", "salutare"]
+        }
+      ]
+    }
+  ]
+}

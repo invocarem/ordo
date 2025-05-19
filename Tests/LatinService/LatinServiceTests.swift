@@ -68,7 +68,8 @@ final class LatinServiceTests: XCTestCase {
         print(forms["imperfect_subjunctive"]!)  // Includes "cognosceret"
     }
     func testAnalyzePsalm66() {
-        let analysis = latinService.analyzePsalm(text: psalm66)
+        let identity = PsalmIdentity(number: 66, section: nil)
+        let analysis = latinService.analyzePsalm(identity, text: psalm66)
         
         // Basic statistics
         XCTAssertGreaterThan(analysis.totalWords, 0, "Should have words in psalm")
@@ -97,7 +98,8 @@ final class LatinServiceTests: XCTestCase {
     
     
     func testPsalm66WordCounts() {
-        let analysis = latinService.analyzePsalm(text: psalm66)
+        let identity = PsalmIdentity(number: 66, section: nil)
+        let analysis = latinService.analyzePsalm(identity, text: psalm66)
         
         // Verify specific word counts
         if let deusInfo = analysis.dictionary["deus"] {
@@ -112,7 +114,8 @@ final class LatinServiceTests: XCTestCase {
     }
     
     func testEntityInformation() {
-        let analysis = latinService.analyzePsalm(text: psalm66)
+        let identity = PsalmIdentity(number: 66, section: nil)
+        let analysis = latinService.analyzePsalm(identity, text: psalm66)
         
         if let deusInfo = analysis.dictionary["deus"] {
             XCTAssertNotNil(deusInfo.entity, "Should have entity info for 'deus'")
@@ -171,8 +174,9 @@ func testAnalyzePsalm90() {
         "Clamabit ad me, et ego exaudiam eum; cum ipso sum in tribulatione, eripiam eum et glorificabo eum.",
         "Longitudine dierum replebo eum, et ostendam illi salutare meum."
     ]
+    let identity = PsalmIdentity(number: 90, section: nil)
     
-    let analysis = latinService.analyzePsalm(text: psalm90)
+    let analysis = latinService.analyzePsalm(identity, text: psalm90)
     
     // 1. Basic statistics
     XCTAssertGreaterThan(analysis.totalWords, 0, "Should have words in psalm")
@@ -196,9 +200,10 @@ func testAnalyzeAdolescens() {
         "Vide adolescentem currentem",      // Example sentence
         "Da intellectum adolescentibus"     // Plural example
     ]
+    let identity = PsalmIdentity(number: 118, section: nil)
     
     // Create analysis
-    let analysis = latinService.analyzePsalm(text: testText)
+    let analysis = latinService.analyzePsalm(identity, text: testText)
     
     // Verify lemma exists
     guard let entry = analysis.dictionary["adolescens"] else {
@@ -233,9 +238,10 @@ func testAnalyzeAdolescens() {
             "Custodi verba haec",             // Imperative
             "Custodiebant testamentum"        // Imperfect
         ]
+    let identity = PsalmIdentity(number: 118, section: nil)
         
         // Create analysis
-        let analysis = latinService.analyzePsalm(text: testText)
+        let analysis = latinService.analyzePsalm(identity, text: testText)
         
         // Verify lemma exists
         guard let entry = analysis.dictionary["custodio"] else {
@@ -269,8 +275,9 @@ func testAnalyzeAdolescens() {
             "Justitiae tuae"           // verse 138 (fem.gen)
             
         ]
+    let id = PsalmIdentity(number: 118, section: nil)
         
-        let analysis = latinService.analyzePsalm(text: psalm119Sade)
+        let analysis = latinService.analyzePsalm(id, text: psalm119Sade)
         
         // 1. Validate lemma exists        
         guard let justusEntry = analysis.dictionary["justus"], 

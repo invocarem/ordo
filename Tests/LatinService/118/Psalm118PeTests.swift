@@ -10,6 +10,7 @@ class Psalm118PeTests: XCTestCase {
         latinService = LatinService.shared
     }
     
+    let identity = PsalmIdentity(number: 118, section: "pe")
     // MARK: - Test Data (Psalm 118:129-136 "Pe" section)
     let psalm118Pe = [
         "Mirabilia testimonia tua, ideo scrutata est ea anima mea.",
@@ -25,7 +26,7 @@ class Psalm118PeTests: XCTestCase {
     // MARK: - Test Cases
     
     func testDivineRevelationTerms() {
-        let analysis = latinService.analyzePsalm(text: psalm118Pe)
+        let analysis = latinService.analyzePsalm(identity,text: psalm118Pe)
         
         let revelationTerms = [
             ("testimonium", ["testimonia"], "testimony"), // v.129
@@ -38,7 +39,7 @@ class Psalm118PeTests: XCTestCase {
     }
     
     func testPetitionVerbs() {
-        let analysis = latinService.analyzePsalm(text: psalm118Pe)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Pe)
         
         let petitions = [
             ("aspicio", ["aspice"], "look upon"), // v.132
@@ -52,7 +53,7 @@ class Psalm118PeTests: XCTestCase {
     }
     
     func testSpiritualFaculties() {
-        let analysis = latinService.analyzePsalm(text: psalm118Pe)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Pe)
         
         let faculties = [
             ("animus", ["anima"], "soul"), // v.129
@@ -66,7 +67,7 @@ class Psalm118PeTests: XCTestCase {
     }
     
     func testTorahLanguage() {
-        let analysis = latinService.analyzePsalm(text: psalm118Pe)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Pe)
         
         let lawTerms = [
             ("mandatum", ["mandata", "mandata"], "commandment"), // v.131, v.134
@@ -78,7 +79,7 @@ class Psalm118PeTests: XCTestCase {
     }
     
     func testEmotionalExpressions() {
-        let analysis = latinService.analyzePsalm(text: psalm118Pe)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Pe)
         
         let emotions = [
             ("desidero", ["desiderabam"], "long for"), // v.131

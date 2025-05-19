@@ -36,13 +36,14 @@ class Psalm131Tests: XCTestCase {
                 "Inimicos ejus induam confusione: super ipsum autem efflorebit sanctificatio mea."
 
     ]
+    let id = PsalmIdentity(number: 131, section: nil)
 
 // MARK: - Grouped Line Tests for Psalm 131
 func testPsalm131Lines1and2() {
     let line1 = psalm131[0] // "Memento, Domine, David, et omnis mansuetudinis ejus."
     let line2 = psalm131[1] // "Sicut juravit Domino, votum vovit Deo Jacob:"
     let combinedText = line1 + " " + line2
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     let testLemmas = [
         ("memini", ["memento"], "remember"),
@@ -88,7 +89,7 @@ func testPsalm131Lines3and4() {
     let line3 = psalm131[2] // "Si introiero in tabernaculum domus meae, si ascendero in lectum strati mei:"
     let line4 = psalm131[3] // "Si dedero somnum oculis meis, et palpebris meis dormitationem:"
     let combinedText = line3 + " " + line4
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     let testLemmas = [
         ("introeo", ["introiero"], "enter"),
@@ -133,7 +134,7 @@ func testPsalm131Lines5and6() {
     let line5 = psalm131[4] // "Et requiem temporibus meis: donec inveniam locum Domino, tabernaculum Deo Jacob."
     let line6 = psalm131[5] // "Ecce audivimus eam in Ephrata: invenimus eam in campis silvae."
     let combinedText = line5 + " " + line6
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     let testLemmas = [
         ("requies", ["requiem"], "rest"),
@@ -177,7 +178,7 @@ func testPsalm131Lines7and8() {
     let line7 = psalm131[6] // "Introibimus in tabernaculum ejus: adorabimus in loco ubi steterunt pedes ejus."
     let line8 = psalm131[7] // "Surge, Domine, in requiem tuam, tu et arca sanctificationis tuae."
     let combinedText = line7 + " " + line8
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     let testLemmas = [
         ("introeo", ["introibimus"], "enter"),
@@ -236,7 +237,7 @@ func testPsalm131Lines9and10() {
     let line9 = psalm131[8] // "Sacerdotes tui induantur justitiam: et sancti tui exsultent."
     let line10 = psalm131[9] // "Propter David servum tuum, non avertas faciem Christi tui."
     let combinedText = line9 + " " + line10
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     let testLemmas = [
         ("sacerdos", ["sacerdotes"], "priest"),
@@ -289,7 +290,7 @@ func testPsalm131Lines11and12() {
     let line11 = psalm131[10] // "Juravit Dominus David veritatem, et non frustrabitur eam: De fructu ventris tui ponam super sedem tuam."
     let line12 = psalm131[11] // "Si custodierint filii tui testamentum meum, et testimonia mea haec, quae docebo eos:"
     let combinedText = line11 + " " + line12
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     let testLemmas = [
         ("juro", ["juravit"], "swear"),
@@ -342,7 +343,7 @@ func testPsalm131Lines13and14() {
     let line13 = psalm131[12] // "Et filii eorum usque in saeculum, sedebunt super sedem tuam."
     let line14 = psalm131[13] // "Quoniam elegit Dominus Sion: elegit eam in habitationem sibi."
     let combinedText = line13 + " " + line14
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     let testLemmas = [
         ("filius", ["filii"], "son"),
@@ -438,7 +439,7 @@ func testPsalm131Lines17to19() {
     let line18 = psalm131[17] // "Sacerdotes ejus induam salutari: et sancti ejus exsultatione exsultabunt."
     let line19 = psalm131[18] // "Illuc producam cornu David: paravi lucernam Christo meo."
     let combinedText = line17 + " " + line18 + " " + line19
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     let testLemmas = [
         ("vidua", ["viduam"], "widow"),

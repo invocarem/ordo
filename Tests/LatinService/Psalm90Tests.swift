@@ -36,6 +36,8 @@ class Psalm90Tests: XCTestCase {
             }
         }
     }
+    let id = PsalmIdentity(number: 90, section: nil)
+
     let psalm90 = [
         "Qui habitat in adjutorio Altissimi, in protectione Dei caeli commorabitur.",
         "Dicet Domino: Susceptor meus es tu, et refugium meum; Deus meus, sperabo in eum.",
@@ -60,7 +62,7 @@ class Psalm90Tests: XCTestCase {
     let line1 = psalm90[0] // "Qui habitat in adjutorio Altissimi, in protectione Dei caeli commorabitur."
     let line2 = psalm90[1] // "Dicet Domino: Susceptor meus es tu, et refugium meum; Deus meus, sperabo in eum."
     let combinedText = line1 + " " + line2
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     let testLemmas = [
         ("habito", ["habitat"], "dwell"),
@@ -119,7 +121,7 @@ func testPsalm90Lines3and4() {
     let line3 = psalm90[2] // "Quoniam ipse liberavit me de laqueo venantium, et a verbo aspero."
     let line4 = psalm90[3] // "Scapulis suis obumbrabit tibi, et sub pennis ejus sperabis."
     let combinedText = line3 + " " + line4
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     let testLemmas = [
         ("libero", ["liberavit"], "deliver"),
@@ -173,7 +175,7 @@ func testPsalm90Lines5and6() {
     let line5 = psalm90[4] // "Scuto circumdabit te veritas ejus; non timebis a timore nocturno,"
     let line6 = psalm90[5] // "A sagitta volante per diem, a negotio perambulante in tenebris, ab incursu et daemonio meridiano."
     let combinedText = line5 + " " + line6
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     let testLemmas = [
         ("scutum", ["scuto"], "shield"),
@@ -235,7 +237,7 @@ func testPsalm90Lines7and8() {
     let line7 = psalm90[6] // "Cadent a latere tuo mille, et decem millia a dextris tuis; ad te autem non appropinquabit."
     let line8 = psalm90[7] // "Verumtamen oculis tuis considerabis, et retributionem peccatorum videbis."
     let combinedText = line7 + " " + line8
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     let testLemmas = [
         ("cado", ["cadent"], "fall"),
@@ -292,7 +294,7 @@ func testPsalm90Lines9and10() {
     let line9 = psalm90[8] // "Quoniam tu es, Domine, spes mea; Altissimum posuisti refugium tuum."
     let line10 = psalm90[9] // "Non accedet ad te malum, et flagellum non appropinquabit tabernaculo tuo."
     let combinedText = line9 + " " + line10
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     let testLemmas = [
         ("quoniam", ["quoniam"], "because"),
@@ -350,7 +352,7 @@ func testPsalm90Lines11and12() {
     let line11 = psalm90[10] // "Quoniam angelis suis mandavit de te, ut custodiant te in omnibus viis tuis."
     let line12 = psalm90[11] // "In manibus portabunt te, ne forte offendas ad lapidem pedem tuum."
     let combinedText = line11 + " " + line12
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     let testLemmas = [
         ("angelus", ["angelis"], "angel"),
@@ -401,7 +403,7 @@ func testPsalm90Lines13and14() {
     let line13 = psalm90[12] // "Super aspidem et basiliscum ambulabis, et conculcabis leonem et draconem."
     let line14 = psalm90[13] // "Quoniam in me speravit, liberabo eum; protegam eum, quoniam cognovit nomen meum."
     let combinedText = line13 + " " + line14
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText)
     
     let testLemmas = [
         ("aspis", ["aspidem"], "asp"),
@@ -506,7 +508,7 @@ func testPsalm90Lines15and16() {
 }
     func testAnalyzePsalm90() {
    
-    let analysis = latinService.analyzePsalm(text: psalm90)
+    let analysis = latinService.analyzePsalm(id, text: psalm90)
     
     // ===== TEST METRICS =====
     let totalWords = 150  // Actual word count in Psalm 90

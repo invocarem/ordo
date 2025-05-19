@@ -9,6 +9,7 @@ class Psalm119Tests: XCTestCase {
         super.setUp()
         latinService = LatinService.shared
     }
+    let id = PsalmIdentity(number: 119, section: nil)
     
     // MARK: - Test Data
     let psalm119 = [
@@ -24,7 +25,7 @@ class Psalm119Tests: XCTestCase {
     // MARK: - Test Cases
     
     func testPersecutionVocabulary() {
-        let analysis = latinService.analyzePsalm(text: psalm119)
+        let analysis = latinService.analyzePsalm(id, text: psalm119)
         
         let persecutionTerms = [
             ("tribulor", ["tribularer"], "be distressed"), // v.1
@@ -37,7 +38,7 @@ class Psalm119Tests: XCTestCase {
     }
     
     func testLinguisticImagery() {
-        let analysis = latinService.analyzePsalm(text: psalm119)
+        let analysis = latinService.analyzePsalm(id, text: psalm119)
         
         let speechTerms = [
             ("labium", ["labiis"], "lips"), // v.2
@@ -49,7 +50,7 @@ class Psalm119Tests: XCTestCase {
     }
     
     func testGeographicalReferences() {
-        let analysis = latinService.analyzePsalm(text: psalm119)
+        let analysis = latinService.analyzePsalm(id, text: psalm119)
         
         let places = [
             ("Cedar", ["Cedar"], "Kedar"), // v.5
@@ -60,7 +61,7 @@ class Psalm119Tests: XCTestCase {
     }
     
     func testMilitaryMetaphors() {
-        let analysis = latinService.analyzePsalm(text: psalm119)
+        let analysis = latinService.analyzePsalm(id, text: psalm119)
         
         let weaponTerms = [
             ("sagitta", ["Sagittae"], "arrow"), // v.4

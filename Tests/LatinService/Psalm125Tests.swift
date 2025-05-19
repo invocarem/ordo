@@ -9,6 +9,7 @@ class Psalm125Tests: XCTestCase {
         super.setUp()
         latinService = LatinService.shared
     }
+    let id = PsalmIdentity(number: 125, section: nil)
     
     // MARK: - Test Data
     let psalm125 = [
@@ -26,7 +27,7 @@ class Psalm125Tests: XCTestCase {
     
     // 1. Test for Restoration and Return
     func testRestorationThemes() {
-        let analysis = latinService.analyzePsalm(text: psalm125)
+        let analysis = latinService.analyzePsalm(id, text: psalm125)
         
         let restorationTerms = [
             ("converto", ["convertendo", "Converte"], "turn/restore"),
@@ -41,7 +42,7 @@ class Psalm125Tests: XCTestCase {
     
     // 2. Test for Joy and Exultation
     func testJoyExpressions() {
-        let analysis = latinService.analyzePsalm(text: psalm125)
+        let analysis = latinService.analyzePsalm(id, text: psalm125)
         
         let joyTerms = [
             ("gaudium", ["gaudio"], "joy"),
@@ -56,7 +57,7 @@ class Psalm125Tests: XCTestCase {
     
     // 3. Test for Agricultural Metaphors (Sowing and Reaping)
     func testAgriculturalImagery() {
-        let analysis = latinService.analyzePsalm(text: psalm125)
+        let analysis = latinService.analyzePsalm(id, text: psalm125)
         
         let agriculturalTerms = [
             ("semen", ["semina"], "seed"),
@@ -71,7 +72,7 @@ class Psalm125Tests: XCTestCase {
     
     // 4. Test for Divine Action
     func testDivineIntervention() {
-        let analysis = latinService.analyzePsalm(text: psalm125)
+        let analysis = latinService.analyzePsalm(id, text: psalm125)
         
         let divineTerms = [
             
@@ -86,7 +87,7 @@ class Psalm125Tests: XCTestCase {
     
     // 5. Test for Movement and Journey
     func testMovementThemes() {
-        let analysis = latinService.analyzePsalm(text: psalm125)
+        let analysis = latinService.analyzePsalm(id, text: psalm125)
         
         let movementTerms = [
             ("eo", ["euntes"], "go"),  
@@ -99,7 +100,7 @@ class Psalm125Tests: XCTestCase {
         verifyWordsInAnalysis(analysis, confirmedWords: movementTerms)
     }
     func testsAnalysisSummary() {
-        let analysis = latinService.analyzePsalm(text: psalm125)
+        let analysis = latinService.analyzePsalm(id, text: psalm125)
         if verbose {
             print("\n=== Full Analysis ===")
             print("Total words:", analysis.totalWords)

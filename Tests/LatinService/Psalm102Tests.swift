@@ -9,7 +9,7 @@ class Psalm102Tests: XCTestCase {
         super.setUp()
         latinService = LatinService.shared
     }
-    
+    let id = PsalmIdentity(number: 102, section: nil)
     // MARK: - Test Data
     let psalm102 = [
            "Benedic, anima mea, Domino, et omnia quae intra me sunt nomini sancto ejus.",
@@ -43,7 +43,7 @@ class Psalm102Tests: XCTestCase {
     
     // 1. Divine Mercy Terminology (Rare Forms)
     func testDivineMercyTerms() {
-        let analysis = latinService.analyzePsalm(text: psalm102)
+        let analysis = latinService.analyzePsalm(id, text: psalm102)
         
         let mercyTerms = [
             ("propitior", ["propitiatur"], "appease"), // Psalm 102:3 (Deponent)
@@ -73,7 +73,7 @@ class Psalm102Tests: XCTestCase {
     
     // 3. Cosmic-Scale Language
     func testCosmicScaleTerms() {
-        let analysis = latinService.analyzePsalm(text: psalm102)
+        let analysis = latinService.analyzePsalm(id, text: psalm102)
         
         let cosmicTerms = [
             ("altitudo", ["altitudinem"], "height"), // Psalm 102:11 (Heaven-earth comparison)
@@ -88,7 +88,7 @@ class Psalm102Tests: XCTestCase {
     
     // 4. Angelic Hierarchy Terms
     func testAngelicTerms() {
-        let analysis = latinService.analyzePsalm(text: psalm102)
+        let analysis = latinService.analyzePsalm(id, text: psalm102)
         
         let angelicTerms = [
             ("potens", ["potentes"], "mighty one"), // Psalm 102:20 (Angelic attribute)
@@ -103,7 +103,7 @@ class Psalm102Tests: XCTestCase {
     
     // 5. Renewal Verbs (Unique Forms)
     func testRenewalVerbs() {
-        let analysis = latinService.analyzePsalm(text: psalm102)
+        let analysis = latinService.analyzePsalm(id, text: psalm102)
         
         let renewalTerms = [
             ("renovo", ["renovabitur"], "renew"), // Psalm 102:5 (Eagle metaphor)
@@ -116,7 +116,7 @@ class Psalm102Tests: XCTestCase {
         verifyWordsInAnalysis(analysis, confirmedWords: renewalTerms)
     }
     func testAnalysisSummary() {
-        let analysis = latinService.analyzePsalm(text: psalm102)
+        let analysis = latinService.analyzePsalm(id, text: psalm102)
         if verbose {
             print("\n=== Full Analysis ===")
             print("Total words:", analysis.totalWords)

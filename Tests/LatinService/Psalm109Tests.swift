@@ -14,7 +14,8 @@ class Psalm109Tests: XCTestCase {
         latinService = nil
         super.tearDown()
     }
-    
+     
+    let identity = PsalmIdentity(number: 109, section: nil)
     private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
         for (lemma, forms, translation) in confirmedWords {
             guard let entry = analysis.dictionary[lemma] else {
@@ -47,7 +48,7 @@ class Psalm109Tests: XCTestCase {
             "De torrente in via bibet; propterea exaltabit caput."
         ]
         
-        let analysis = latinService.analyzePsalm(text: psalm109)
+        let analysis = latinService.analyzePsalm(identity, text: psalm109)
        
        let confirmedWords = [
             // Key nouns

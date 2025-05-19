@@ -4,7 +4,8 @@ import XCTest
 class Psalm129Tests: XCTestCase {
     private var latinService: LatinService!
     let verbose = true
-    
+    let id   =  PsalmIdentity(number: 129, section: nil)
+     
     override func setUp() {
         super.setUp()
         latinService = LatinService.shared
@@ -25,7 +26,7 @@ class Psalm129Tests: XCTestCase {
     // MARK: - Test Cases
     
     func testDepthAndRedemptionVocabulary() {
-        let analysis = latinService.analyzePsalm(text: psalm129)
+        let analysis = latinService.analyzePsalm(id, text: psalm129)
         
         let keyTerms = [
             ("profundum", ["profundis"], "depth"),
@@ -53,7 +54,7 @@ class Psalm129Tests: XCTestCase {
     }
     
     func testPrayerElements() {
-        let analysis = latinService.analyzePsalm(text: psalm129)
+        let analysis = latinService.analyzePsalm(id, text: psalm129)
         
         let prayerTerms = [
             ("deprecatio", ["deprecationis"], "supplication"),
@@ -67,7 +68,7 @@ class Psalm129Tests: XCTestCase {
     }
     
     func testTemporalReferences() {
-        let analysis = latinService.analyzePsalm(text: psalm129)
+        let analysis = latinService.analyzePsalm(id, text: psalm129)
         
         let timeTerms = [
             ("matutinus", ["matutina"], "morning"),

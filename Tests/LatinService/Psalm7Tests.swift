@@ -9,6 +9,7 @@ class Psalm7Tests: XCTestCase {
         super.setUp()
         latinService = LatinService.shared
     }
+    let id = PsalmIdentity(number: 7, section: nil)
     
     // MARK: - Test Data
     let psalm7 = [
@@ -33,7 +34,7 @@ class Psalm7Tests: XCTestCase {
     ]
     func testLine1() {
     let line = psalm7[0] // "Domine Deus meus, in te speravi; salvum me fac ex omnibus persequentibus me, et libera me."
-    let analysis = latinService.analyzePsalm(text: line)
+    let analysis = latinService.analyzePsalm(id, text: line)
     
     // Key lemmas to verify
     let testLemmas = [
@@ -88,7 +89,7 @@ class Psalm7Tests: XCTestCase {
     
     func testLine2() {
         let line = psalm7[1] // "Nequando rapiat ut leo animam meam, dum non est qui redimat, neque qui salvum faciat."
-        let analysis = latinService.analyzePsalm(text: line)
+        let analysis = latinService.analyzePsalm(id, text: line)
         
         // Key lemmas to verify
         let testLemmas = [
@@ -133,7 +134,7 @@ class Psalm7Tests: XCTestCase {
 
     func testLine12() {
         let line = psalm7[11] 
-        let analysis = latinService.analyzePsalm(text: line)
+        let analysis = latinService.analyzePsalm(id, text: line)
         
         let divineAttributes = [
             ("judex", ["judex"], "judge"),

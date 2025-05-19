@@ -20,10 +20,10 @@ class Psalm66Tests: XCTestCase {
         "Terra dedit fructum suum; benedicat nos Deus, Deus noster.",
         "Benedicat nos Deus; et metuant eum omnes fines terrae."
     ]
-    
+    let id = PsalmIdentity(number: 66, section: nil) 
     // MARK: - Test Cases
      func testDivineFaceMetaphor() {
-        let analysis = latinService.analyzePsalm(text: psalm66)
+        let analysis = latinService.analyzePsalm(id, text: psalm66)
         
         let faceTerms = [
             ("vultus", ["vultum"], "face"),
@@ -41,7 +41,7 @@ class Psalm66Tests: XCTestCase {
     }
     
     func testAgriculturalMetaphors() {
-        let analysis = latinService.analyzePsalm(text: psalm66)
+        let analysis = latinService.analyzePsalm(id, text: psalm66)
         
         let agrarianTerms = [
             ("terra", ["terra", "terrae"], "earth"),
@@ -59,7 +59,7 @@ class Psalm66Tests: XCTestCase {
     }
     
     func testLightAndGuidanceImagery() {
-        let analysis = latinService.analyzePsalm(text: psalm66)
+        let analysis = latinService.analyzePsalm(id, text: psalm66)
         
         let lightTerms = [
             ("via", ["viam"], "way"),
@@ -71,7 +71,7 @@ class Psalm66Tests: XCTestCase {
     }
     
     func testUniversalWorshipHyperbole() {
-        let analysis = latinService.analyzePsalm(text: psalm66)
+        let analysis = latinService.analyzePsalm(id, text: psalm66)
         
         let universalTerms = [
             ("omnis", ["omnibus", "omnes"], "all"),
@@ -90,7 +90,7 @@ class Psalm66Tests: XCTestCase {
     }
     
     func testDivineBlessings() {
-        let analysis = latinService.analyzePsalm(text: psalm66)
+        let analysis = latinService.analyzePsalm(id, text: psalm66)
         
         let blessingTerms = [
             ("misereor", ["misereatur"], "have mercy"),

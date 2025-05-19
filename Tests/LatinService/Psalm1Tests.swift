@@ -10,6 +10,7 @@ class Psalm1Tests: XCTestCase {
         latinService = LatinService.shared
     }
     
+    let identity = PsalmIdentity(number: 1, section: nil)
     // MARK: - Test Data
     let psalm1 = [
         "Beatus vir qui non abiit in consilio impiorum, et in via peccatorum non stetit, et in cathedra pestilentiae non sedit;",
@@ -24,7 +25,7 @@ class Psalm1Tests: XCTestCase {
         let line1 = psalm1[0] // "Beatus vir qui non abiit in consilio impiorum, et in via peccatorum non stetit, et in cathedra pestilentiae non sedit;"
         let line2 = psalm1[1] // "Sed in lege Domini voluntas eius, et in lege eius meditabitur die ac nocte."
         let combinedText = line1 + " " + line2
-        let analysis = latinService.analyzePsalm(text: combinedText)
+        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 1)
     
     let testLemmas = [
         ("beatus", ["beatus"], "blessed"),
@@ -59,6 +60,11 @@ class Psalm1Tests: XCTestCase {
         
         print("\nALL DETECTED LEMMAS: " + analysis.dictionary.keys.sorted().joined(separator: ", "))
         
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+
         print("\nKEY CONTRASTS:")
         print("Negative (v1): abiit (went) → stetit (stood) → sedit (sat)")
         print("Positive (v2): meditabitur (will meditate)")
@@ -84,7 +90,7 @@ func testPsalm1Lines3and4() {
     let line3 = psalm1[2] // "Et erit tamquam lignum quod plantatum est secus decursus aquarum, quod fructum suum dabit in tempore suo:"
     let line4 = psalm1[3] // "Et folium eius non defluet, et omnia quaecumque faciet prosperabuntur."
     let combinedText = line3 + " " + line4
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 3)
     
     let testLemmas = [
         ("lignum", ["lignum"], "tree"),
@@ -143,7 +149,7 @@ func testPsalm1Lines5and6() {
     let line5 = psalm1[4] // "Non sic impii, non sic: sed tamquam pulvis quem projicit ventus a facie terrae."
     let line6 = psalm1[5] // "Ideo non resurgent impii in judicio, neque peccatores in concilio justorum; quoniam novit Dominus viam justorum: et iter impiorum peribit."
     let combinedText = line5 + " " + line6
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 5)
     
     let testLemmas = [
         ("impius", ["impii", "impiorum"], "wicked"),
@@ -345,5 +351,20 @@ func testPsalm1Lines5and6() {
         }
     }
     
-    
+    // In Psalm1Tests.swift, add this helper function:
+
+private func verifyThematicElements(analysis: PsalmAnalysisResult, expectedThemes: [String: [(lemma: String, description: String)]]) {
+    for (theme, elements) in expectedThemes {
+        for (lemma, description) in elements {
+            guard analysis.dictionary[lemma.lowercased()] != nil else {
+                XCTFail("Missing lemma for theme verification: \(lemma) (theme: \(theme))")
+                continue
+            }
+            
+            if verbose {
+                print("VERIFIED THEME: \(theme) - \(lemma) (\(description))")
+            }
+        }
+    }
+}
 }

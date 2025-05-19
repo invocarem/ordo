@@ -64,7 +64,7 @@ let package = Package(
                 "LatinWordVerbForms.swift",
                 "LemmaMapping.swift"
             ],
-            resources: [.process("words.json"), .process("translations.json")]
+            resources: [.process("words.json"), .process("translations.json"), .process("psalm_themes.json")]
         ),
         .testTarget(
             name: "PsalmServiceTests",    
@@ -152,7 +152,11 @@ let package = Package(
                 "Psalm36ATests.swift",                    
                 "Psalm36BTests.swift"
             ],
-            resources: [.copy("../../ordo/Services/LatinService/words.json"), .copy("../../ordo/Services/LatinService/translations.json")]
+            resources: [
+                .copy("../../ordo/Services/LatinService/words.json"), 
+                .copy("../../ordo/Services/LatinService/translations.json"),
+                .copy("../../ordo/Services/LatinService/psalm_themes.json")
+            ]
         ),
 
 

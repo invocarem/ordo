@@ -175,7 +175,14 @@ extension LatinWordEntity{
     }    
 }
 
-
+public struct PsalmIdentity {
+    let number: Int       // e.g. 4 or 118
+    let section: String?  // e.g. "aleph" (nil for most psalms)
+    
+    var displayName: String {
+        section != nil ? "Psalm \(number):\(section!)" : "Psalm \(number)"
+    }
+}
 public struct PsalmAnalysisResult: Codable {
     public let totalWords: Int
     public let uniqueWords: Int
@@ -300,27 +307,14 @@ public class LatinService {
     public func addTranslation(latin: String, english: String) {
         translations[latin] = english
     }
-public func analyzePsalm(text: [String], startingLineNumber: Int = 1) -> PsalmAnalysisResult {
+public func analyzePsalm(_ identity: PsalmIdentity? = nil, text: [String], startingLineNumber: Int = 1) -> PsalmAnalysisResult {
     var allWords: [String] = []
     var lemmaCounts: [String: Int] = [:]
     var formCounts: [String: [String: Int]] = [:]
     var lemmaEntities: [String: LatinWordEntity] = [:]
     var orderedLemmas: [String] = []
     let formToLemma = lemmaMapping.createFormToLemmaMapping()
-        print("!!!multiplio forms in mapping:")
-      print(formToLemma.filter { $0.value.contains("multiplio") }.keys.sorted())
-      //("elogium", ["elogia"], "expression"),
-      // ("eloquium", ["eloquium"], "word")
-   //let debugForms = formToLemma.filter { $0.value.contains("sion") }.keys.sorted()
-   // print("Debug - Forms mapping to 'sion': \(debugForms)")
-
-   //let debugForms2 = formToLemma.filter { $0.value.contains("tenebrae") }.keys.sorted()
-   // print("Debug - Forms mapping to 'tenebrae': \(debugForms2)")
-
-    //let multiplioForms = formToLemma.filter { $0.value.contains("multiplio") }.keys.sorted()
-    //print("Debug - Forms mapping to 'multiplio': \(multiplioForms)")
-    //print("Does 'multiplicati' map to multiplio?: \(multiplioForms.contains("multiplicati"))")
-     
+      
    // let debugForms = ["tenebras", "viro", "perverteris", "electo", "verumtamen"]
    //     for form in debugForms {
    //         print("Form '\(form)' maps to: \(formToLemma[form] ?? [])")
@@ -391,14 +385,16 @@ public func analyzePsalm(text: [String], startingLineNumber: Int = 1) -> PsalmAn
         orderedLemmas: orderedLemmas,
         themes: []
     )
-    result = addThematicAnalysis(to: result, lines: text, startingLineNumber: startingLineNumber)
+    if let identity = identity {
+        result = addThematicAnalysis(to: result, psalm: identity, lines: text, startingLineNumber: startingLineNumber)
+    }
     return result;
 }
     
     // Keep original String version for backward compatibility
-    public func analyzePsalm(text: String, startingLineNumber: Int = 1) -> PsalmAnalysisResult {
+    public func analyzePsalm(_ identity: PsalmIdentity? = nil, text: String, startingLineNumber: Int = 1) -> PsalmAnalysisResult {
         let lines = text.components(separatedBy: .newlines)
-        return analyzePsalm(text: lines, startingLineNumber: startingLineNumber)
+        return analyzePsalm(identity, text: lines, startingLineNumber: startingLineNumber)
     }
     
       

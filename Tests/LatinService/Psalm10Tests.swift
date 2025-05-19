@@ -21,13 +21,13 @@ class Psalm10Tests: XCTestCase {
         "Pluet super peccatores laqueos; ignis, et sulphur, et spiritus procellarum pars calicis eorum.",
         "Quoniam justus Dominus, et justitias dilexit; aequitatem vidit vultus ejus."
     ]
-    
+    let id = PsalmIdentity(number: 10, section: nil)
     // MARK: - Test Cases
     
    
     
     func testDivineAttributes() {
-        let analysis = latinService.analyzePsalm(text: psalm10)
+        let analysis = latinService.analyzePsalm(id, text: psalm10)
         
         let divineTerms = [
             ("dominus", ["domino", "dominus"], "lord"),
@@ -41,7 +41,7 @@ class Psalm10Tests: XCTestCase {
     }
     
     func testHumanConditions() {
-        let analysis = latinService.analyzePsalm(text: psalm10)
+        let analysis = latinService.analyzePsalm(id, text: psalm10)
         
         let humanTerms = [
             ("pauper", ["pauperem"], "poor"),
@@ -57,7 +57,7 @@ class Psalm10Tests: XCTestCase {
    
     
     func testKeyVerbs() {
-        let analysis = latinService.analyzePsalm(text: psalm10)
+        let analysis = latinService.analyzePsalm(id, text: psalm10)
         
         let keyVerbs = [
             ("confido", ["confido"], "trust"),
@@ -74,7 +74,7 @@ class Psalm10Tests: XCTestCase {
     // MARK: - Test Cases
         
     func testDistinctiveImagery() {
-        let analysis = latinService.analyzePsalm(text: psalm10)
+        let analysis = latinService.analyzePsalm(id, text: psalm10)
         
         let imageTerms = [
             ("passer", ["passer"], "sparrow"),
@@ -101,7 +101,7 @@ class Psalm10Tests: XCTestCase {
     }
 
     func testViolenceImagery() {
-        let analysis = latinService.analyzePsalm(text: psalm10)
+        let analysis = latinService.analyzePsalm(id, text: psalm10)
         
         let violenceTerms = [
              ("arcus", ["arcum"], "bow"),
@@ -115,7 +115,7 @@ class Psalm10Tests: XCTestCase {
     }
 
     func testDivineExamination() {
-        let analysis = latinService.analyzePsalm(text: psalm10)
+        let analysis = latinService.analyzePsalm(id, text: psalm10)
         
         let examinationTerms = [
             ("respiro", ["respiciunt"], "look upon"),
@@ -128,7 +128,7 @@ class Psalm10Tests: XCTestCase {
     }
 
     func testKeyThematicVerbs() {
-        let analysis = latinService.analyzePsalm(text: psalm10)
+        let analysis = latinService.analyzePsalm(id, text: psalm10)
         
         let keyVerbs = [
             ("confido", ["confido"], "trust"),  // Opening declaration

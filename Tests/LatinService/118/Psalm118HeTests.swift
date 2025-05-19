@@ -9,6 +9,7 @@ class Psalm118HeTests: XCTestCase {
         super.setUp()
         latinService = LatinService.shared
     }
+    let identity = PsalmIdentity(number: 118, section: "pe")
     
     // MARK: - Test Data (Psalm 118:33-40 "He" section)
     let psalm118He = [
@@ -25,7 +26,7 @@ class Psalm118HeTests: XCTestCase {
     // MARK: - Test Cases
     
     func testPetitionVerbs() {
-        let analysis = latinService.analyzePsalm(text: psalm118He)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118He)
         
         let petitions = [
             ("pono", ["pone"], "set before"), // v.33
@@ -38,7 +39,7 @@ class Psalm118HeTests: XCTestCase {
     }
     
     func testTorahTerminology() {
-        let analysis = latinService.analyzePsalm(text: psalm118He)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118He)
         
         let lawTerms = [
             ("justificatio", ["justificationum"], "justice"), // v.33
@@ -51,7 +52,7 @@ class Psalm118HeTests: XCTestCase {
     }
     
     func testSpiritualFaculties() {
-        let analysis = latinService.analyzePsalm(text: psalm118He)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118He)
         
         let faculties = [
             ("intellectus", ["intellectum"], "understanding"), // v.34
@@ -63,7 +64,7 @@ class Psalm118HeTests: XCTestCase {
     }
     
     func testVitalityRequests() {
-        let analysis = latinService.analyzePsalm(text: psalm118He)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118He)
         
         let lifeTerms = [
             ("vivifico", ["vivifica"], "give life"), // v.37, v.40
@@ -74,7 +75,7 @@ class Psalm118HeTests: XCTestCase {
         verifyWordsInAnalysis(analysis, confirmedWords: lifeTerms)
     }
     func testAnalysisSummary() {
-        let analysis = latinService.analyzePsalm(text: psalm118He)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118He)
         if verbose {
             print("\n=== Full Analysis ===")
             print("Total words:", analysis.totalWords)

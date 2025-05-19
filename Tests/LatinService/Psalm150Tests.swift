@@ -19,11 +19,12 @@ class Psalm150Tests: XCTestCase {
         "Laudate eum in cymbalis benesonantibus: laudate eum in cymbalis jubilationis.",
         "Omnis spiritus laudet Dominum."
     ]
+    let id = PsalmIdentity(number: 150, section: nil)
     
     // MARK: - Test Cases
     
     func testPraiseVocabulary() {
-        let analysis = latinService.analyzePsalm(text: psalm150)
+        let analysis = latinService.analyzePsalm(id, text: psalm150)
         
         let praiseTerms = [
             ("laudo", ["Laudate", "laudet"], "praise"),
@@ -37,7 +38,7 @@ class Psalm150Tests: XCTestCase {
     }
     
     func testMusicalInstruments() {
-        let analysis = latinService.analyzePsalm(text: psalm150)
+        let analysis = latinService.analyzePsalm(id, text: psalm150)
         
         let instrumentTerms = [
             ("tuba", ["tubae"], "trumpet"),
@@ -53,7 +54,7 @@ class Psalm150Tests: XCTestCase {
     }
     
     func testMusicalContext() {
-        let analysis = latinService.analyzePsalm(text: psalm150)
+        let analysis = latinService.analyzePsalm(id, text: psalm150)
         
         let musicTerms = [
             ("sonus", ["sono"], "sound"),
@@ -66,7 +67,7 @@ class Psalm150Tests: XCTestCase {
     }
     
     func testDivineAttributes() {
-        let analysis = latinService.analyzePsalm(text: psalm150)
+        let analysis = latinService.analyzePsalm(id,text: psalm150)
         
         let divineTerms = [
             ("Dominus", ["Dominum"], "Lord"),
@@ -79,7 +80,7 @@ class Psalm150Tests: XCTestCase {
     }
     
     func testStructuralElements() {
-        let analysis = latinService.analyzePsalm(text: psalm150)
+        let analysis = latinService.analyzePsalm(id,text: psalm150)
         
         let structuralTerms = [
             ("in", ["in"], "in"),

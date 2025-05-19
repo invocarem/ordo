@@ -3,6 +3,7 @@ import XCTest
 
 class Psalm5Tests: XCTestCase {
     private var latinService: LatinService!
+    let id = PsalmIdentity(number: 5, section: nil)
     let verbose = true
     
     override func setUp() {
@@ -35,7 +36,7 @@ class Psalm5Tests: XCTestCase {
     
     // 1. Morning Prayer Theme
     func testMorningPrayerTheme() {
-        let analysis = latinService.analyzePsalm(text: psalm5)
+        let analysis = latinService.analyzePsalm(id, text: psalm5)
         
         let morningTerms = [
             ("mane", ["mane", "mane"], "morning"), // v.3,4
@@ -51,7 +52,7 @@ class Psalm5Tests: XCTestCase {
     
     // 2. Divine Justice Theme
     func testDivineJusticeTheme() {
-        let analysis = latinService.analyzePsalm(text: psalm5)
+        let analysis = latinService.analyzePsalm(id, text: psalm5)
         
         let justiceTerms = [
             ("iniquitas", ["iniquitatem", "iniquitatem"], "wickedness"), // v.4,6
@@ -68,7 +69,7 @@ class Psalm5Tests: XCTestCase {
     
     // 3. Sanctuary Theme
     func testSanctuaryTheme() {
-        let analysis = latinService.analyzePsalm(text: psalm5)
+        let analysis = latinService.analyzePsalm(id, text: psalm5)
         
         let sanctuaryTerms = [
             ("domus", ["domum", "domum"], "house"), // v.8,10
@@ -97,7 +98,7 @@ class Psalm5Tests: XCTestCase {
     
     // 5. Divine Protection Theme
     func testProtectionTheme() {
-        let analysis = latinService.analyzePsalm(text: psalm5)
+        let analysis = latinService.analyzePsalm(id, text: psalm5)
         
         let protectionTerms = [
             ("scutum", ["scuto"], "shield"), // v.17
@@ -111,7 +112,7 @@ class Psalm5Tests: XCTestCase {
     
     // 6. Joy and Blessing Theme
     func testJoyTheme() {
-        let analysis = latinService.analyzePsalm(text: psalm5)
+        let analysis = latinService.analyzePsalm(id, text: psalm5)
         
         let joyTerms = [
             ("laetitia", ["laetentur"], "rejoice"), // v.14

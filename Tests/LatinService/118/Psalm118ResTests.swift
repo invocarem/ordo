@@ -5,6 +5,7 @@ class Psalm118ReshTests: XCTestCase {
     private var latinService: LatinService!
     let verbose = true
     
+    let identity = PsalmIdentity(number: 118, section: "res")
     override func setUp() {
         super.setUp()
         latinService = LatinService.shared
@@ -25,7 +26,7 @@ class Psalm118ReshTests: XCTestCase {
     // MARK: - Test Cases
     
     func testPetitionVerbs() {
-        let analysis = latinService.analyzePsalm(text: psalm118Resh)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Resh)
         
         let petitions = [
             ("video", ["vide", "vide"], "see"), // v.153, v.159
@@ -39,7 +40,7 @@ class Psalm118ReshTests: XCTestCase {
     }
     
     func testContrastingParties() {
-        let analysis = latinService.analyzePsalm(text: psalm118Resh)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Resh)
         
         let parties = [
             ("peccator", ["peccatoribus"], "sinner"), // v.155
@@ -51,7 +52,7 @@ class Psalm118ReshTests: XCTestCase {
     }
     
     func testTorahCommitment() {
-        let analysis = latinService.analyzePsalm(text: psalm118Resh)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Resh)
         
         let commitmentTerms = [
             ("lex", ["legem"], "law"), // v.153
@@ -66,7 +67,7 @@ class Psalm118ReshTests: XCTestCase {
     }
     
     func testEmotionalResponses() {
-        let analysis = latinService.analyzePsalm(text: psalm118Resh)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Resh)
         
         let emotions = [
             ("humilitas", ["humilitatem"], "affliction"), // v.153
@@ -79,7 +80,7 @@ class Psalm118ReshTests: XCTestCase {
     }
     
     func testDivineAttributes() {
-        let analysis = latinService.analyzePsalm(text: psalm118Resh)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Resh)
         
         let attributes = [
             ("misericordia", ["misericordiae", "misericordia"], "mercy"), // v.156, v.159

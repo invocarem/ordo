@@ -10,6 +10,7 @@ class Psalm12Tests: XCTestCase {
         latinService = LatinService.shared
     }
     
+    let id = PsalmIdentity(number: 12, section: nil)
     // MARK: - Test Data (Psalm 12)
     let psalm12 = [
         "Usquequo, Domine, oblivisceris me in finem? usquequo avertis faciem tuam a me?",
@@ -22,7 +23,7 @@ class Psalm12Tests: XCTestCase {
     
     // MARK: - Test Cases
     func testAnalysis() {
-        let analysis = latinService.analyzePsalm(text: psalm12)
+        let analysis = latinService.analyzePsalm(id, text: psalm12)
         if verbose {
             print("\n=== Full Analysis ===")
             print("Total words:", analysis.totalWords)
@@ -41,7 +42,7 @@ class Psalm12Tests: XCTestCase {
     }
     
     func testLamentVerbs() {
-        let analysis = latinService.analyzePsalm(text: psalm12)
+        let analysis = latinService.analyzePsalm(id, text: psalm12)
         
         let lamentTerms = [
             ("obliviscor", ["oblivisceris"], "forget"), // v.1
@@ -55,7 +56,7 @@ class Psalm12Tests: XCTestCase {
     }
     
     func testTemporalExpressions() {
-        let analysis = latinService.analyzePsalm(text: psalm12)
+        let analysis = latinService.analyzePsalm(id, text: psalm12)
         
         let timeTerms = [
             ("usquequo", ["usquequo", "usquequo", "usquequo"], "how long"), // v.1 (2x), v.3
@@ -68,7 +69,7 @@ class Psalm12Tests: XCTestCase {
     }
     
     func testEnemyLanguage() {
-        let analysis = latinService.analyzePsalm(text: psalm12)
+        let analysis = latinService.analyzePsalm(id, text: psalm12)
         
         let enemyTerms = [
             ("inimicus", ["inimicus", "inimicus"], "enemy"), // v.3, v.5
@@ -81,7 +82,7 @@ class Psalm12Tests: XCTestCase {
     }
     
     func testSpiritualFaculties() {
-        let analysis = latinService.analyzePsalm(text: psalm12)
+        let analysis = latinService.analyzePsalm(id, text: psalm12)
         
         let facultyTerms = [
             ("animus", ["anima"], "soul"), // v.2
@@ -94,7 +95,7 @@ class Psalm12Tests: XCTestCase {
     }
     
     func testHopeTransition() {
-        let analysis = latinService.analyzePsalm(text: psalm12)
+        let analysis = latinService.analyzePsalm(id, text: psalm12)
         
         let hopeTerms = [
             ("misericordia", ["misericordia"], "mercy"), // v.6

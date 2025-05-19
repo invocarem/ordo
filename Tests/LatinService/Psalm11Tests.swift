@@ -9,6 +9,8 @@ class Psalm11Tests: XCTestCase {
         super.setUp()
         latinService = LatinService.shared
     }
+
+    let id = PsalmIdentity(number: 11, section: nil)
     
     // MARK: - Test Data
     let psalm11 = [
@@ -26,7 +28,7 @@ class Psalm11Tests: XCTestCase {
     // MARK: - Test Cases
     
     func testDivineProtectionVocabulary() {
-        let analysis = latinService.analyzePsalm(text: psalm11)
+        let analysis = latinService.analyzePsalm(id,text: psalm11)
         
         let protectionTerms = [
             ("salvus", ["Salvum"], "save"),
@@ -40,7 +42,7 @@ class Psalm11Tests: XCTestCase {
     }
     
     func testDeceptiveSpeech() {
-        let analysis = latinService.analyzePsalm(text: psalm11)
+        let analysis = latinService.analyzePsalm(id, text: psalm11)
         
         let speechTerms = [
             ("labium", ["labia", "labia"], "lip"),
@@ -54,7 +56,7 @@ class Psalm11Tests: XCTestCase {
     }
     
     func testMetallurgyMetaphors() {
-        let analysis = latinService.analyzePsalm(text: psalm11)
+        let analysis = latinService.analyzePsalm(id, text: psalm11)
         
         let metalTerms = [
             ("argentum", ["argentum"], "silver"),
@@ -68,7 +70,7 @@ class Psalm11Tests: XCTestCase {
     }
     
     func testHumanConditions() {
-        let analysis = latinService.analyzePsalm(text: psalm11)
+        let analysis = latinService.analyzePsalm(id, text: psalm11)
         
         let humanTerms = [
             ("inops", ["inopum"], "needy"),
@@ -82,7 +84,7 @@ class Psalm11Tests: XCTestCase {
     }
     
     func testKeyDivineActions() {
-        let analysis = latinService.analyzePsalm(text: psalm11)
+        let analysis = latinService.analyzePsalm(id, text: psalm11)
         
         let actionTerms = [
             ("exsurgo", ["exsurgam"], "arise"),

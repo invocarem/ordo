@@ -10,6 +10,7 @@ class Psalm126Tests: XCTestCase {
         latinService = LatinService.shared
     }
     
+    let identity = PsalmIdentity(number: 126, section: nil)
     // MARK: - Test Data
     let psalm126 = [
         "Nisi Dominus ædificaverit domum: in vanum laboraverunt qui ædificant eam.",
@@ -24,7 +25,7 @@ class Psalm126Tests: XCTestCase {
     
     // 1. Test Divine Providence (Nisi Dominus...)
     func testDivineProvidence() {
-        let analysis = latinService.analyzePsalm(text: psalm126)
+        let analysis = latinService.analyzePsalm(identity, text: psalm126)
         
         let providenceTerms = [
             ("nisi", ["Nisi"], "unless"),
@@ -39,7 +40,7 @@ class Psalm126Tests: XCTestCase {
     
     // 2. Test Labor Themes
     func testLaborThemes() {
-        let analysis = latinService.analyzePsalm(text: psalm126)
+        let analysis = latinService.analyzePsalm(identity, text: psalm126)
         
         let laborTerms = [
             ("laboro", ["laboraverunt"], "labor"),
@@ -54,7 +55,7 @@ class Psalm126Tests: XCTestCase {
     
     // 3. Test Family Blessings
     func testFamilyBlessings() {
-        let analysis = latinService.analyzePsalm(text: psalm126)
+        let analysis = latinService.analyzePsalm(identity, text: psalm126)
         
         let familyTerms = [
             ("hæreditas", ["hæreditas"], "inheritance"),
@@ -69,7 +70,7 @@ class Psalm126Tests: XCTestCase {
     
     // 4. Test Military Metaphors
     func testMilitaryMetaphors() {
-        let analysis = latinService.analyzePsalm(text: psalm126)
+        let analysis = latinService.analyzePsalm(identity, text: psalm126)
         
         let militaryTerms = [
             ("sagitta", ["sagittæ"], "arrow"),
@@ -84,7 +85,7 @@ class Psalm126Tests: XCTestCase {
     
     // 5. Test Promise of Security
     func testSecurityPromises() {
-        let analysis = latinService.analyzePsalm(text: psalm126)
+        let analysis = latinService.analyzePsalm(identity, text: psalm126)
         
         let securityTerms = [
             ("dilectus", ["dilectis"], "beloved"),
@@ -97,7 +98,7 @@ class Psalm126Tests: XCTestCase {
         verifyWordsInAnalysis(analysis, confirmedWords: securityTerms)
     }
     func testsAnalysisSummary() {
-        let analysis = latinService.analyzePsalm(text: psalm126)
+        let analysis = latinService.analyzePsalm(identity, text: psalm126)
         if verbose {
             print("\n=== Full Analysis ===")
             print("Total words:", analysis.totalWords)

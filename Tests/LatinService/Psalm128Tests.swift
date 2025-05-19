@@ -21,12 +21,13 @@ class Psalm128Tests: XCTestCase {
         "de quo non implevit manum suam qui metit, et sinum suum qui manipulos colligit.",
         "Et non dixerunt qui praeteribant: Benedictio Domini super vos; benediximus vobis in nomine Domini."
     ]
-    
+    let id = PsalmIdentity(number: 13, section: nil)
+     
     // MARK: - Test Cases
     
     // 1. Test Persecution Theme
     func testPersecutionTheme() {
-        let analysis = latinService.analyzePsalm(text: psalm128)
+        let analysis = latinService.analyzePsalm(id, text: psalm128)
         
         let persecutionTerms = [
             ("saepe", ["Saepe", "saepe"], "often"),
@@ -41,7 +42,7 @@ class Psalm128Tests: XCTestCase {
     
     // 2. Test Divine Justice
     func testDivineJustice() {
-        let analysis = latinService.analyzePsalm(text: psalm128)
+        let analysis = latinService.analyzePsalm(id, text: psalm128)
         
         let justiceTerms = [
             ("Dominus", ["Dominus", "Domini"], "Lord"),
@@ -56,7 +57,7 @@ class Psalm128Tests: XCTestCase {
     
     // 3. Test Enemies' Shame
     func testEnemiesShame() {
-        let analysis = latinService.analyzePsalm(text: psalm128)
+        let analysis = latinService.analyzePsalm(id, text: psalm128)
         
         let shameTerms = [
             ("confundo", ["Confundantur"], "be ashamed"),
@@ -71,7 +72,7 @@ class Psalm128Tests: XCTestCase {
     
     // 4. Test Agricultural Imagery
     func testAgriculturalImagery() {
-        let analysis = latinService.analyzePsalm(text: psalm128)
+        let analysis = latinService.analyzePsalm(id, text: psalm128)
         
         let agriculturalTerms = [
             ("foenum", ["foenum"], "hay"),
@@ -100,7 +101,7 @@ class Psalm128Tests: XCTestCase {
     }
     
     func testAnalysisSummary() {
-        let analysis = latinService.analyzePsalm(text: psalm128)
+        let analysis = latinService.analyzePsalm(id, text: psalm128)
         if verbose {
             print("\n=== Full Analysis ===")
             print("Total words:", analysis.totalWords)

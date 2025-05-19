@@ -9,6 +9,7 @@ class Psalm13Tests: XCTestCase {
         super.setUp()
         latinService = LatinService.shared
     }
+    let id = PsalmIdentity(number: 13, section: nil)
     
     // MARK: - Test Data (Psalm 13)
     let psalm13 = [
@@ -20,11 +21,14 @@ class Psalm13Tests: XCTestCase {
         "Dominum non invocaverunt; illic trepidaverunt timore, ubi non erat timor.",
         "Quoniam Dominus in generatione justa est, consilium inopis confudistis, quoniam Dominus spes ejus est.",
         "Quis dabit ex Sion salutare Israel? cum averterit Dominus captivitatem plebis suae, exsultabit Jacob, et laetabitur Israel."
-    ]
+    ] 
     
+    let identity = PsalmIdentity(number: 13, section: nil)
+    
+   
     // MARK: - Test Cases
     func testAnalysis() {
-        let analysis = latinService.analyzePsalm(text: psalm13)
+        let analysis = latinService.analyzePsalm(identity, text: psalm13)
         if verbose {
             print("\n=== Full Analysis ===")
             print("Total words:", analysis.totalWords)
@@ -45,7 +49,7 @@ class Psalm13Tests: XCTestCase {
     
     
     func testFoolsDeclaration() {
-        let analysis = latinService.analyzePsalm(text: psalm13)
+        let analysis = latinService.analyzePsalm(identity, text: psalm13)
         
         let foolTerms = [
             ("insipiens", ["insipiens"], "fool"), // v.1
@@ -58,7 +62,7 @@ class Psalm13Tests: XCTestCase {
     }
     
     func testMoralCorruption() {
-        let analysis = latinService.analyzePsalm(text: psalm13)
+        let analysis = latinService.analyzePsalm(identity, text: psalm13)
         
         let corruptionTerms = [
             ("corrumpo", ["corrupti"], "corrupt"), // v.2
@@ -72,7 +76,7 @@ class Psalm13Tests: XCTestCase {
     }
     
     func testDivineObservation() {
-        let analysis = latinService.analyzePsalm(text: psalm13)
+        let analysis = latinService.analyzePsalm(identity, text: psalm13)
         
         let observationTerms = [
             ("prospicio", ["prospexit"], "look forth"), // v.3
@@ -85,7 +89,7 @@ class Psalm13Tests: XCTestCase {
     }
     
     func testSocialOppression() {
-        let analysis = latinService.analyzePsalm(text: psalm13)
+        let analysis = latinService.analyzePsalm(id, text: psalm13)
         
         let oppressionTerms = [
             ("devoro", ["devorant"], "devour"), // v.5
@@ -98,7 +102,7 @@ class Psalm13Tests: XCTestCase {
     }
     
     func testRedemptionHope() {
-        let analysis = latinService.analyzePsalm(text: psalm13)
+        let analysis = latinService.analyzePsalm(id, text: psalm13)
         
         let redemptionTerms = [
             ("saluto", ["salutare"], "salvation"), // v.8
@@ -112,7 +116,7 @@ class Psalm13Tests: XCTestCase {
     }
     
     func testContrastingGroups() {
-        let analysis = latinService.analyzePsalm(text: psalm13)
+        let analysis = latinService.analyzePsalm(id, text: psalm13)
         
         let groupTerms = [
             ("justus", ["justa"], "righteous"), // v.7

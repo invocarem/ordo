@@ -4,6 +4,7 @@ import XCTest
 class Psalm118BethTests: XCTestCase {
     private var latinService: LatinService!
     let verbose = false
+    let id = PsalmIdentity(number: 118, section: nil)
     
     override func setUp() {
         super.setUp()
@@ -24,7 +25,7 @@ class Psalm118BethTests: XCTestCase {
 
     func testBeth() {
     
-        let analysis = latinService.analyzePsalm(text: psalm118Beth)
+        let analysis = latinService.analyzePsalm(id,text: psalm118Beth)
         
         print("All forms detected for 'mandatum':")
         analysis.dictionary["mandatum"]?.forms.forEach { print("\($0.key): \($0.value)") }
@@ -85,7 +86,7 @@ class Psalm118BethTests: XCTestCase {
     // MARK: - Test Cases
     
     func testSpiritualGuidanceVocabulary() {
-        let analysis = latinService.analyzePsalm(text: psalm118Beth)
+        let analysis = latinService.analyzePsalm(id,text: psalm118Beth)
         
         let guidanceTerms = [
             ("corrigo", ["corrigit"], "correct"),
@@ -99,7 +100,7 @@ class Psalm118BethTests: XCTestCase {
     }
     
     func testDivineCommunicationTerms() {
-        let analysis = latinService.analyzePsalm(text: psalm118Beth)
+        let analysis = latinService.analyzePsalm(id,text: psalm118Beth)
         
         let communicationTerms = [
             ("sermo", ["sermones", "sermones"], "word"),
@@ -113,7 +114,7 @@ class Psalm118BethTests: XCTestCase {
     }
     
     func testInternalizationTerms() {
-        let analysis = latinService.analyzePsalm(text: psalm118Beth)
+        let analysis = latinService.analyzePsalm(id, text: psalm118Beth)
         
         let internalTerms = [
             ("cor", ["corde", "corde"], "heart"),
@@ -127,7 +128,7 @@ class Psalm118BethTests: XCTestCase {
     }
     
     func testBehavioralVerbs() {
-        let analysis = latinService.analyzePsalm(text: psalm118Beth)
+        let analysis = latinService.analyzePsalm(id, text: psalm118Beth)
         
         let behavioralVerbs = [
             ("delector", ["delectatus"], "delight"),

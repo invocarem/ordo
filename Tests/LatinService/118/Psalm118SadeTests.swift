@@ -5,6 +5,7 @@ class Psalm118SadeTests: XCTestCase {
     private var latinService: LatinService!
     let verbose = true
     
+    let identity = PsalmIdentity(number: 118, section: "sade")
     override func setUp() {
         super.setUp()
         latinService = LatinService.shared
@@ -26,7 +27,7 @@ class Psalm118SadeTests: XCTestCase {
     func testAnalyzePsalm118Sade() {
     
     
-    let analysis = latinService.analyzePsalm(text: psalm118Sade)
+    let analysis = latinService.analyzePsalm(identity, text: psalm118Sade)
     
     // ===== 1. Core Statistics =====
     guard let justusEntry = analysis.dictionary["justus"] else {
@@ -126,7 +127,7 @@ class Psalm118SadeTests: XCTestCase {
 }
     
     func testDivineAttributes() {
-        let analysis = latinService.analyzePsalm(text: psalm118Sade)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Sade)
         
         let attributes = [
             ("justus", ["justus", "justum"], "righteous"), // v.137, v.144
@@ -139,7 +140,7 @@ class Psalm118SadeTests: XCTestCase {
     }
     
     func testTorahDescriptions() {
-        let analysis = latinService.analyzePsalm(text: psalm118Sade)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Sade)
         
         let torahTerms = [
             ("testimonium", ["testimonia", "testimonium"], "testimony"), // v.138, v.144
@@ -154,7 +155,7 @@ class Psalm118SadeTests: XCTestCase {
     }
     
     func testHumanCondition() {
-        let analysis = latinService.analyzePsalm(text: psalm118Sade)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Sade)
         
         let conditions = [
             ("zelus", ["zelus"], "zeal"), // v.139
@@ -168,7 +169,7 @@ class Psalm118SadeTests: XCTestCase {
     }
     
     func testTransformativeVerbs() {
-        let analysis = latinService.analyzePsalm(text: psalm118Sade)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Sade)
         
         let verbs = [
             ("tabesco", ["tabescere"], "waste away"), // v.139
@@ -182,7 +183,7 @@ class Psalm118SadeTests: XCTestCase {
     }
     
     func testVitalPetitions() {
-        let analysis = latinService.analyzePsalm(text: psalm118Sade)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Sade)
         
         let petitions = [
             ("do", ["da"], "give"), // v.144

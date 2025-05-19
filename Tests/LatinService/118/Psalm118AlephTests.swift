@@ -9,7 +9,9 @@ class Psalm118AlephTests: XCTestCase {
         super.setUp()
         latinService = LatinService.shared
     }
+
     
+    let identity = PsalmIdentity(number: 118, section: "aleph")
     // MARK: - Test Data (Psalm 118:1-8 "Aleph" section)
     let psalm118Aleph = [
         "Beati immaculati in via, qui ambulant in lege Domini.",
@@ -25,7 +27,7 @@ class Psalm118AlephTests: XCTestCase {
     // MARK: - Test Cases
     
     func testBeatitudeStatements() {
-        let analysis = latinService.analyzePsalm(text: psalm118Aleph)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Aleph)
         
         let blessedTerms = [
             ("beatus", ["Beati"], "blessed"), // v.1, v.2
@@ -37,7 +39,7 @@ class Psalm118AlephTests: XCTestCase {
     }
     
     func testTorahActionVerbs() {
-        let analysis = latinService.analyzePsalm(text: psalm118Aleph)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Aleph)
         
         let actionVerbs = [
             ("ambulo", ["ambulant", "ambulaverunt"], "walk"), // v.1, v.3
@@ -49,7 +51,7 @@ class Psalm118AlephTests: XCTestCase {
     }
     
     func testDivinePrecepts() {
-        let analysis = latinService.analyzePsalm(text: psalm118Aleph)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Aleph)
         
         let lawTerms = [
             ("lex", ["lege"], "law"), // v.1
@@ -62,7 +64,7 @@ class Psalm118AlephTests: XCTestCase {
     }
     
     func testSpiritualDirection() {
-        let analysis = latinService.analyzePsalm(text: psalm118Aleph)
+        let analysis = latinService.analyzePsalm(identity, text: psalm118Aleph)
         
         let guidanceTerms = [
             ("via", ["via", "viis", "viae"], "way"), // v.1, v.3, v.5

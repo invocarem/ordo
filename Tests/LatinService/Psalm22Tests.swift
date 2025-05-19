@@ -9,6 +9,8 @@ class Psalm22Tests: XCTestCase {
         super.setUp()
         latinService = LatinService.shared
     }
+
+    let id  = PsalmIdentity(number: 22, section: "")
     
     // MARK: - Test Data
     let psalm22 = [
@@ -20,7 +22,7 @@ class Psalm22Tests: XCTestCase {
         "Et misericordia tua subsequetur me omnibus diebus vitae meae; et ut inhabitem in domo Domini in longitudinem dierum."
     ]
     func testDeeritInPsalm22() {
-    let analysis = latinService.analyzePsalm(text: psalm22)
+    let analysis = latinService.analyzePsalm(id, text: psalm22)
     
         // Verify lemma and forms
         let verbTerms = [
@@ -42,7 +44,7 @@ class Psalm22Tests: XCTestCase {
     // MARK: - Thematic Test Cases
     
     func testPastoralImagery() {
-        let analysis = latinService.analyzePsalm(text: psalm22)
+        let analysis = latinService.analyzePsalm(id, text: psalm22)
         
         let pastoralTerms = [
             ("regere", ["regit"], "shepherd"),
@@ -57,7 +59,7 @@ class Psalm22Tests: XCTestCase {
     }
     
     func testProvisionMetaphors() {
-        let analysis = latinService.analyzePsalm(text: psalm22)
+        let analysis = latinService.analyzePsalm(id, text: psalm22)
         
         let provisionTerms = [
             ("collocare", ["collocavit"], "settle"),
@@ -72,7 +74,7 @@ class Psalm22Tests: XCTestCase {
     }
     
     func testJourneyVocabulary() {
-        let analysis = latinService.analyzePsalm(text: psalm22)
+        let analysis = latinService.analyzePsalm(id, text: psalm22)
         
         let journeyTerms = [
             ("semita", ["semitas"], "path"),
@@ -86,7 +88,7 @@ class Psalm22Tests: XCTestCase {
     }
     
     func testDivineProtectionTheme() {
-        let analysis = latinService.analyzePsalm(text: psalm22)
+        let analysis = latinService.analyzePsalm(id, text: psalm22)
         
         let protectionTerms = [
             ("consolari", ["consolata"], "to comfort"),
