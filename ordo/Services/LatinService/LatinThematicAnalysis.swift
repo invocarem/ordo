@@ -67,7 +67,7 @@ extension LatinService {
             )
             
             print("Line \(currentLineNumber): groupLemmas = \(groupLemmas.sorted())")
-                   print("Dictionary lemmas (sample): \(result.dictionary.keys.sorted().prefix(10))")
+            print("Dictionary lemmas (sample): \(result.dictionary.keys.sorted().prefix(10))")
             
             // Check themes for this group - now passing psalm identity
             for theme in themesForLineFromJSON(currentLineNumber, psalm: identity) {
@@ -161,7 +161,7 @@ extension LatinService {
             .flatMap { $0.themes }
             .map { (name: $0.name, description: $0.description, lemmas: $0.lemmas) }
         
-        print("Line \(lineNumber), Psalm \(identity.number): Found \(matchingThemes.count) themes: \(matchingThemes.map { $0.name })")
+        print("!!! Line \(lineNumber), Psalm \(identity.number): Found \(matchingThemes.count) themes: \(matchingThemes.map { $0.name })")
         return matchingThemes
     }
     

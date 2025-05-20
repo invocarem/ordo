@@ -62,13 +62,7 @@ struct LinePairAnalysisView: View {
                             }
                             .padding(.bottom, 8)
                             
-                            ForEach(analysis.orderedLemmas, id: \.self) { lemma in
-                                if let info = analysis.dictionary[lemma] {
-                                    NavigationLink(destination: WordDetailView(lemma: lemma, lemmaInfo: info)) {
-                                        WordRow(lemma: lemma, info: info)
-                                    }
-                                }
-                            }
+                            
                             
                             if !analysis.themes.isEmpty {
                                         let filteredThemes = analysis.themes.filter { theme in
@@ -79,9 +73,7 @@ struct LinePairAnalysisView: View {
                                         
                                         if !filteredThemes.isEmpty {
                                             VStack(alignment: .leading, spacing: 8) {
-                                                Text("Themes")
-                                                    .font(.subheadline)
-                                                    .foregroundColor(.secondary)
+                                                
                                                 
                                                 ForEach(filteredThemes, id: \.name) { theme in
                                                     VStack(alignment: .leading, spacing: 4) {
@@ -120,6 +112,13 @@ struct LinePairAnalysisView: View {
                                     }
                         }
                         
+                        ForEach(analysis.orderedLemmas, id: \.self) { lemma in
+                            if let info = analysis.dictionary[lemma] {
+                                NavigationLink(destination: WordDetailView(lemma: lemma, lemmaInfo: info)) {
+                                    WordRow(lemma: lemma, info: info)
+                                }
+                            }
+                        }
                         
                     }
                 }

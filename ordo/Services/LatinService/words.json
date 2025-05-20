@@ -2034,10 +2034,11 @@
   "deponent": true,
   "infinitive": "confundi",
   "forms" :{
-      "imperfect": ["confundebar"]
+      "imperfect": ["confundebar"],
+      "present_subjunctive": ["confundar", "confundaris", "confundatur", "confundamur", "confundamini", "confundant"]
   },
   "perfect": "confusus",
-  
+   
   "translations": {
     "en": "to be confused, ashamed, dismayed",
     "la": "confundor, confundi, confusus sum"
@@ -3762,7 +3763,21 @@
       "la": "infernus"
     }
   },
-
+  {
+    "lemma": "turbatus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "turbatus",
+    "genitive": "turbati",
+    "forms": {
+      "adverb": ["turbate"]
+    },
+    "translations": {
+      "en": "disturbed, confused, disordered",
+      "la": "turbatus, -a, -um"
+    }
+  },
   {
     "lemma": "erubesco",
     "part_of_speech": "verb",
@@ -10760,6 +10775,9 @@
       "forms" :{
         "future_indicative_passive": ["dirigetur"]
       },
+      "forms_plural" :{
+        "present_passive_subjunctive": ["dirigamur", "dirigamini", "dirigantur"]
+      },
       "translations": {
         "en": "establish, direct",
         "la": "dirigo, dirigere"
@@ -11527,8 +11545,10 @@
        {
            "lemma": "custodio",
            "part_of_speech": "verb",
+           "conjugation": 4,
            "perfect": "custodivi",
            "infinitive": "custodire",
+           "supine": "custoditum",
            "forms": {
                "present": ["custodio", "custodis", "custodit", "custodimus", "custoditis", "custodiunt"],
                "imperfect": ["custodiebam", "custodiebas", "custodiebat", "custodiebamus", "custodiebatis", "custodiebant"],
@@ -11537,6 +11557,11 @@
                "imperative_singular": ["custodi"],
                "imperative_plural": ["custodite"],
                "present_infinitive_passive": ["custodiri"]
+           },
+           "forms_plural":{
+                "gerundive": ["custodiendus", "custodienda", "custodiendum"],
+                "gerundive_passive_f": ["custodiendas"]
+
            },
            "translations": {
                "en": "guard, protect",

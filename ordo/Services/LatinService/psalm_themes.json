@@ -54,6 +54,122 @@
       },
       
       
+  {
+    "psalmNumber": 2,
+    "category": "",
+    "startLine": 1,
+    "themes": [
+      {
+        "name": "Rebellious Coalition",
+        "description": "The nations and rulers conspiring against God",
+        "lemmas": ["fremo", "gens", "populus", "rex", "princeps", "convenio", "adversus"],
+        "comment": "Covers the opening rebellion scene (v1-2)"
+      },
+      {
+        "name": "Divine Anointed",
+        "description": "The messianic figure opposed by the nations",
+        "lemmas": ["christus", "dominus", "unus"],
+        "comment": "First messianic reference in the Psalter"
+      }
+    ]
+  },
+  {
+    "psalmNumber": 2,
+    "category": "",
+    "startLine": 3,
+    "themes": [
+      {
+        "name": "Revolt Against Bondage",
+        "description": "The rebels' attempt to throw off divine authority",
+        "lemmas": ["dirumpo", "vinculum", "projicio", "jugum"],
+        "comment": "Metaphorical chains/yoke imagery (v3)"
+      },
+      {
+        "name": "Heavenly Derision",
+        "description": "God's mocking response to human rebellion",
+        "lemmas": ["irrideo", "subsanno", "caelum", "habito"],
+        "comment": "Divine perspective from heaven (v4)"
+      }
+    ]
+  },
+  {
+    "psalmNumber": 2,
+    "category": "",
+    "startLine": 5,
+    "themes": [
+      {
+        "name": "Divine Wrath",
+        "description": "God's terrifying response in anger",
+        "lemmas": ["ira", "furor", "conturbo", "loquor"],
+        "comment": "Theophanic language of divine speech (v5)"
+      },
+      {
+        "name": "Zion Kingship",
+        "description": "Establishment of the king on God's holy mountain",
+        "lemmas": ["constituo", "rex", "sion", "mons", "sanctus"],
+        "comment": "Royal installation decree (v6)"
+      }
+    ]
+  },
+  {
+    "psalmNumber": 2,
+    "category": "",
+    "startLine": 7,
+    "themes": [
+      {
+        "name": "Divine Sonship",
+        "description": "The king's special relationship as God's son",
+        "lemmas": ["filius", "gigno", "hodie", "dico"],
+        "comment": "Crucial messianic declaration (v7)"
+      },
+      {
+        "name": "Universal Inheritance",
+        "description": "The nations given as royal possession",
+        "lemmas": ["postulo", "do", "gens", "hereditas", "terminus"],
+        "comment": "Worldwide dominion promise (v8)"
+      }
+    ]
+  },
+  {
+    "psalmNumber": 2,
+    "category": "",
+    "startLine": 9,
+    "themes": [
+      {
+        "name": "Iron Rule",
+        "description": "The king's unbreakable authority over nations",
+        "lemmas": ["rego", "virga", "ferreus", "confringo"],
+        "comment": "Rod of iron imagery (v9)"
+      },
+      {
+        "name": "Royal Warning",
+        "description": "Admonition to earthly rulers to submit",
+        "lemmas": ["intelligo", "erudio", "judico"],
+        "comment": "Call to wisdom (v10)"
+      }
+    ]
+  },
+  {
+    "psalmNumber": 2,
+    "category": "",
+    "startLine": 11,
+    "themes": [
+      {
+        "name": "Trembling Worship",
+        "description": "Proper response to divine majesty",
+        "lemmas": ["servio", "timor", "exsulto", "tremor"],
+        "comment": "Paradoxical fear/joy combination (v11)"
+      },
+      {
+        "name": "Final Admonition",
+        "description": "Closing warning and beatitude",
+        "lemmas": ["apprehendo", "disciplina", "irascor", "pereo", "beatus", "confido"],
+        "comment": "Two ways conclusion (v12)"
+      }
+    ]
+  },
+
+      
     {
       "psalmNumber": 4,
       "category": "",
@@ -159,6 +275,263 @@
         }
       ]
     },
+
+    
+      {
+        "psalmNumber": 6,
+        "category": "",
+        "startLine": 1,
+        "themes": [
+          {
+            "name": "Divine Wrath",
+            "description": "Appealing against God's anger and chastening",
+            "lemmas": ["furor", "ira", "arguo", "corripio"],
+            "comment": "Opening plea against wrathful correction (v1)"
+          },
+          {
+            "name": "Physical Suffering",
+            "description": "Bodily affliction as manifestation of distress",
+            "lemmas": ["infirmus", "os", "conturbo", "sano"],
+            "comment": "Bones troubled + healing request (v2)"
+          }
+        ]
+      },
+      {
+        "psalmNumber": 6,
+        "category": "",
+        "startLine": 3,
+        "themes": [
+          {
+            "name": "Spiritual Anguish",
+            "description": "Deep disturbance of soul and being",
+            "lemmas": ["anima", "turbo", "usquequo"],
+            "comment": "Soul trouble + 'how long' cry (v3)"
+          },
+          {
+            "name": "Urgent Deliverance",
+            "description": "Plea for God to intervene and save",
+            "lemmas": ["converto", "eripio", "salvus", "misericordia"],
+            "comment": "Turn/rescue motifs (v4)"
+          }
+        ]
+      },
+      {
+        "psalmNumber": 6,
+        "category": "",
+        "startLine": 5,
+        "themes": [
+          {
+            "name": "Mortality Crisis",
+            "description": "Death as termination of praise",
+            "lemmas": ["mors", "infernus", "memor", "confiteor"],
+            "comment": "Sheol theology - no remembrance (v5)"
+          },
+          {
+            "name": "Nocturnal Lament",
+            "description": "Nighttime weeping and exhaustion",
+            "lemmas": ["laboro", "gemitus", "nox", "lacrima", "rigo"],
+            "comment": "Bed-drenching tears imagery (v6)"
+          }
+        ]
+      },
+       {
+    "psalmNumber": 6,
+    "category": "",
+    "startLine": 7,
+    "themes": [
+      {
+        "name": "Physical Distress",
+        "description": "Bodily manifestations of grief",
+        "lemmas": ["oculus", "turbatus", "fletus"],
+        "comment": "Eye trouble as physical symptom (v7-8)"
+      },
+      {
+        "name": "Enemy Confrontation",
+        "description": "Adversaries as source of suffering",
+        "lemmas": ["inimicus", "iniquitas"],
+        "comment": "Enemies and iniquity mentioned (v7-8)"
+      }
+    ]
+  },
+  {
+    "psalmNumber": 6,
+    "category": "",
+    "startLine": 9,
+    "themes": [
+      {
+        "name": "Divine Response",
+        "description": "Assurance of God hearing the plea",
+        "lemmas": ["exaudio", "deprecatio"],
+        "comment": "Weeping heard by God (v8-9)"
+      },
+      {
+        "name": "Enemy Shame",
+        "description": "Retributive justice on foes",
+        "lemmas": ["erubesco" ],
+        "comment": "Enemies will be ashamed (v10)"
+      },
+      {
+        "name": "Swift Resolution",
+        "description": "Immediate divine intervention",
+        "lemmas": ["velox", "converto"],
+        "comment": "Quick turning of fortunes (v10)"
+      }
+    ]
+  },
+    
+  {
+    "psalmNumber": 89,
+    "category": "",
+    "startLine": 1,
+    "themes": [
+      {
+        "name": "Divine Eternity",
+        "description": "God's existence beyond time and creation",
+        "lemmas": ["saeculum", "mons", "formo", "orbis"]
+      },
+      {
+        "name": "Covenantal Refuge",
+        "description": "God as protective shelter across generations",
+        "lemmas": ["refugium", "generatio", "progenies"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 89,
+    "category": "",
+    "startLine": 3,
+    "themes": [
+      {
+        "name": "Temporal Perspective",
+        "description": "Divine vs human experience of time",
+        "lemmas": ["mille", "dies", "hesternus", "custodia"]
+      },
+      {
+        "name": "Call to Repentance",
+        "description": "Invitation to turn from human frailty",
+        "lemmas": ["converto", "humilitas", "homo"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 89,
+    "category": "",
+    "startLine": 5,
+    "themes": [
+      {
+        "name": "Human Transience",
+        "description": "The fleeting nature of mortal life",
+        "lemmas": ["herba", "floreo", "aresco", "nihil"]
+      },
+      {
+        "name": "Daily Cycle",
+        "description": "Morning-to-evening metaphor for lifespan",
+        "lemmas": ["mane", "vesper", "transeo", "decido"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 89,
+    "category": "",
+    "startLine": 7,
+    "themes": [
+      {
+        "name": "Divine Wrath",
+        "description": "Experience of God's righteous anger",
+        "lemmas": ["ira", "furor", "turbo", "deficio"]
+      },
+      {
+        "name": "Illuminating Grace",
+        "description": "Counterbalancing divine mercy",
+        "lemmas": ["illuminatio", "vultus", "conspectus"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 89,
+    "category": "",
+    "startLine": 9,
+    "themes": [
+      {
+        "name": "Mortality Imagery",
+        "description": "Figures for life's fragility",
+        "lemmas": ["aranea", "meditor", "septuaginta"]
+      },
+      {
+        "name": "Existential Toil",
+        "description": "The pain of human existence",
+        "lemmas": ["labor", "dolor", "potentatus"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 89,
+    "category": "",
+    "startLine": 11,
+    "themes": [
+      {
+        "name": "Divine Paradox",
+        "description": "Tension between wrath and mercy",
+        "lemmas": ["mansuetudo", "corripio", "timor"]
+      },
+      {
+        "name": "Inscrutable Judgment",
+        "description": "Human inability to comprehend God's ways",
+        "lemmas": ["potestas", "dinumero", "ira"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 89,
+    "category": "",
+    "startLine": 13,
+    "themes": [
+      {
+        "name": "Wisdom Petition",
+        "description": "Request for divine instruction",
+        "lemmas": ["eruditus", "cor", "sapientia"]
+      },
+      {
+        "name": "Covenantal Appeal",
+        "description": "Pleading based on relationship",
+        "lemmas": ["deprecabilis", "servus", "usquequo"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 89,
+    "category": "",
+    "startLine": 15,
+    "themes": [
+      {
+        "name": "Mercy Renewal",
+        "description": "Daily experience of divine compassion",
+        "lemmas": ["misericordia", "repleo", "mane"]
+      },
+      {
+        "name": "Paradoxical Joy",
+        "description": "Gladness through suffering",
+        "lemmas": ["laetor", "humilio", "malum"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 89,
+    "category": "",
+    "startLine": 17,
+    "themes": [
+      {
+        "name": "Divine Splendor",
+        "description": "Request for God's glorious presence",
+        "lemmas": ["splendor", "respicio", "dominus"]
+      },
+      {
+        "name": "Vocational Blessing",
+        "description": "Consecration of human labor",
+        "lemmas": ["opus", "manus", "dirigo"]
+      }
+    ]
+  },
     {
       "psalmNumber": 90,
       "category": "",
@@ -334,6 +707,87 @@
           "lemmas": ["longitudo", "salutare"]
         }
       ]
-    }
+    },
+
+    
+  {
+    "psalmNumber": 118,
+    "category": "aleph",
+    "startLine": 1,
+    "themes": [
+      {
+        "name": "Double Beatitude",
+        "description": "Blessings for the obedient",
+        "lemmas": ["beatus", "immaculatus", "via", "ambulo"],
+        "comment": "Opening blessings for law-keepers (v1-2)"
+      },
+      {
+        "name": "Wholehearted Seeking",
+        "description": "Complete devotion to God's word",
+        "lemmas": ["scrutor", "testimonium", "cor", "exquiro"],
+        "comment": "Whole-hearted study of testimonies (v2)"
+      }
+    ]
+  },
+  {
+    "psalmNumber": 118,
+    "category": "Aleph",
+    "startLine": 3,
+    "themes": [
+      {
+        "name": "Path Contrast",
+        "description": "Opposing ways of righteousness and wickedness",
+        "lemmas": ["iniquitas", "via", "ambulo"],
+        "comment": "Negative example of law-breakers (v3)"
+      },
+      {
+        "name": "Commandment Imperative",
+        "description": "Divine charge to obey",
+        "lemmas": ["mando", "mandatum", "custodio", "nimis"],
+        "comment": "Explicit command to keep statutes (v4)"
+      }
+    ]
+  },
+  {
+    "psalmNumber": 118,
+    "category": "Aleph",
+    "startLine": 5,
+    "themes": [
+      {
+        "name": "Prayer for Guidance",
+        "description": "Petition for directed obedience",
+        "lemmas": ["dirigo", "via", "custodio", "justificatio"],
+        "comment": "Desire for paths aligned with God's law (v5)"
+      },
+      {
+        "name": "Confident Assurance",
+        "description": "Freedom from shame through obedience",
+        "lemmas": ["confundor", "perspicio", "mandatum"],
+        "comment": "Result of comprehensive obedience (v6)"
+      }
+    ]
+  },
+  {
+    "psalmNumber": 118,
+    "category": "Aleph",
+    "startLine": 7,
+    "themes": [
+      {
+        "name": "Grateful Learning",
+        "description": "Thankful response to divine instruction",
+        "lemmas": ["confiteor", "justus", "disco", "justificatio"],
+        "comment": "Commitment to learn judgments (v7)"
+      },
+      {
+        "name": "Covenantal Commitment",
+        "description": "Promise to keep God's statutes",
+        "lemmas": ["custodio", "derelinquo", "mandatum", "quaero"],
+        "comment": "Resolution not to forsake the law (v8)"
+      }
+    ]
+  }
+
+
+
   ]
 }
