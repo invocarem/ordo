@@ -224,6 +224,8 @@ public class LatinService {
     // Stored entities and translations
     private var wordEntities: [LatinWordEntity] = []
     private var translations: [String: String] = [:]
+    var themeCache: [PsalmThemeData] = [] 
+
     private lazy var lemmaMapping = LemmaMapping(wordEntities: wordEntities)
 
      private func loadWords() {
@@ -279,10 +281,40 @@ public class LatinService {
         }
         print("Error: translations.json not found in any bundle")
     }
+    private func loadThemes() {
+        let bundlesToCheck: [Bundle] = {
+                #if SWIFT_PACKAGE
+                // Docker/SwiftPM environment (uses Bundle.module)
+                return [Bundle.module]
+                #else
+                // Xcode environment (uses Bundle.main or Bundle(for:))
+                return [Bundle.main, Bundle(for: Self.self)]
+                #endif
+            }()
+        
+        for bundle in bundlesToCheck {
+            if let url = bundle.url(forResource: "psalm_themes", withExtension: "json") {
+                do {
+                    let data = try Data(contentsOf: url)
+
+                    print("\(data)")
+                    let psalmThemes  = try JSONDecoder().decode(PsalmThemes.self, from: data)
+                    themeCache = psalmThemes.themes
+                    return
+                } catch {
+                    print("Found translations.json but failed to load: \(error)")
+                }
+            }
+        }
+        print("Error: psalm_themes.json not found in any bundle")
+    }
+ 
+
     private init() {
         
             loadWords()
             loadTranslations()
+            loadThemes()
        
 
     }

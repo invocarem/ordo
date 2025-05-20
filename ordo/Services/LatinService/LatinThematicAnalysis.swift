@@ -19,23 +19,6 @@ public struct PsalmThemeData: Codable {
 }
 extension LatinService {
     
-    private static let themeCache: [PsalmThemeData] = {
-            guard let url = Bundle.main.url(forResource: "psalm_themes", withExtension: "json") else {
-                print("Error: psalm_themes.json not found in bundle")
-                return []
-            }
-            do {
-                let data = try Data(contentsOf: url)
-                let decoder = JSONDecoder()
-                let psalmThemes = try decoder.decode(PsalmThemes.self, from: data)
-                print("Loaded \(psalmThemes.themes.count) theme entries from JSON")
-                return psalmThemes.themes
-            } catch {
-                print("Error decoding JSON: \(error)")
-                return []
-            }
-        }()
-    
     func addThematicAnalysis(
         to result: PsalmAnalysisResult,
         psalm identity: PsalmIdentity,  // Added this parameter
@@ -150,7 +133,7 @@ extension LatinService {
         let effectiveSection = identity.section ?? ""
         print("Filtering for psalm \(identity.number), section: '\(effectiveSection)', startLine: \(lineNumber)")
         
-        let matchingThemes = LatinService.themeCache
+        let matchingThemes = self.themeCache
             .filter {
                 let categoryMatches = $0.category == effectiveSection || ($0.category.isEmpty && effectiveSection.isEmpty)
                 let psalmMatches = $0.psalmNumber == identity.number

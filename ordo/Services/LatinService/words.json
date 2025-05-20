@@ -1,4 +1,101 @@
 [
+  {
+  "lemma": "consumo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "consumere",
+  "present": "consumo",
+  "perfect": "consumpsi",
+  "supine": "consumptum",
+  "forms":{
+    "future_passive": ["consumetur"]
+  },
+  "translations": {
+    "en": "consume, devour, destroy",
+    "la": "consumo, consumere"
+  }
+},
+{
+  "lemma": "nequitia",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "nequitia",
+  "genitive": "nequitiae",
+  "translations": {
+    "en": "wickedness, vice, worthlessness",
+    "la": "nequitia"
+  }
+},
+{
+  "lemma": "regredior",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "regredi",
+  "present": "regredior",
+  "perfect": "regressus",
+  "forms": {
+    "present_infinitive": ["regredere"]
+  },
+  "translations": {
+    "en": "return, go back, retreat",
+    "la": "regredior, regredi"
+  }
+},
+{
+  "lemma": "synagoga",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "synagoga",
+  "genitive": "synagogae",
+  "translations": {
+    "en": "assembly, synagogue",
+    "la": "synagoga"
+  }
+},
+
+  {
+  "lemma": "altus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "altus",
+  "genitive": "alti",
+  "translations": {
+    "en": "high, deep, lofty",
+    "la": "altus, -a, -um"
+  }
+},
+  {
+  "lemma": "comprehendo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "comprehendere",
+  "present": "comprehendo",
+  "perfect": "comprehendi",
+  "supine": "comprehensum",
+  "forms": {
+    "present_subjunctive_3rd": ["comprehendat"]
+  },
+  "translations": {
+    "en": "seize, grasp, comprehend",
+    "la": "comprehendo, comprehendere"
+  }
+},
+  {
+  "lemma": "reddo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "reddere",
+  "present": "reddo",
+  "perfect": "reddidi",
+  "supine": "redditum",
+  "translations": {
+    "en": "repay, return, restore",
+    "la": "reddo, reddere"
+  }
+},
 {
   "lemma": "ipse",
   "part_of_speech": "pronoun",
@@ -10779,7 +10876,7 @@
         "present_passive_subjunctive": ["dirigamur", "dirigamini", "dirigantur"]
       },
       "translations": {
-        "en": "establish, direct",
+        "en": "establish, direct, guide",
         "la": "dirigo, dirigere"
       }
     },
@@ -14701,6 +14798,11 @@
     "gender": "masculine",
     "nominative": "malus",
     "genitive": "mali",
+    "forms":{
+        "nominative_f": ["mala"],
+        "nominative_n": ["malum"]
+
+    },
     "translations": {
       "en": "bad, evil",
       "la": "malus"

@@ -157,7 +157,7 @@ func testPsalm4Lines5and6() {
     let line5 = psalm4[4] // "Irascimini, et nolite peccare; quae dicitis in cordibus vestris, in cubilibus vestris compungimini."
     let line6 = psalm4[5] // "Sacrificate sacrificium justitiae, et sperate in Domino."
     let combinedText = line5 + " " + line6
-    let analysis = latinService.analyzePsalm(id, text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber:5)
     
     // Lemma verification
     let testLemmas = [
@@ -217,7 +217,7 @@ func testPsalm4Lines7and8() {
     let line7 = psalm4[6] // "Multi dicunt: Quis ostendit nobis bona? Signatum est super nos lumen vultus tui, Domine."
     let line8 = psalm4[7] // "Dedisti laetitiam in corde meo, a tempore frumenti et vini sui multiplicati sunt."
     let combinedText = line7 + " " + line8
-    let analysis = latinService.analyzePsalm(id, text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 7)
     
     // Lemma verification
     let testLemmas = [
@@ -281,7 +281,7 @@ func testPsalm4Lines9and10() {
     let line9 = psalm4[8] // "In pace in idipsum dormiam et requiescam;"
     let line10 = psalm4[9] // "Quoniam tu, Domine, singulariter in spe constituisti me."
     let combinedText = line9 + " " + line10
-    let analysis = latinService.analyzePsalm(text: combinedText)
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 9)
     
     // Lemma verification
     let testLemmas = [

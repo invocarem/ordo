@@ -378,6 +378,118 @@
       }
     ]
   },
+
+  {
+    "psalmNumber": 7,
+    "category": "",
+    "startLine": 1,
+    "themes": [
+      {
+        "name": "Divine Address",
+        "description": "Initial invocation and personal relationship with God",
+        "lemmas": ["dominus", "deus"]
+      },
+      {
+        "name": "Trust and Salvation",
+        "description": "Expression of trust and petition for salvation",
+        "lemmas": ["spero", "salvus"]
+      },
+      {
+        "name": "Threat Imagery",
+        "description": "Violent imagery depicting danger to the psalmist",
+        "lemmas": ["leo", "rapio"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 7,
+    "category": "",
+    "startLine": 3,
+    "themes": [
+      {
+        "name": "Self-Examination",
+        "description": "Reflection on one's own actions and possible wrongdoing",
+        "lemmas": ["facio", "iniquitas"]
+      },
+      {
+        "name": "Retribution Principle",
+        "description": "Concept of reciprocal justice and repayment",
+        "lemmas": ["reddo", "retribuo"]
+      },
+      {
+        "name": "Consequences",
+        "description": "Potential downfall and threat from enemies",
+        "lemmas": ["decido", "inimicus"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 7,
+    "category": "",
+    "startLine": 5,
+    "themes": [
+      {
+        "name": "Enemy Aggression",
+        "description": "Relentless pursuit and violent seizure by enemies",
+        "lemmas": ["persequor", "comprehendo"]
+      },
+      {
+        "name": "Divine Intervention",
+        "description": "Call for God to act and request for divine exaltation",
+        "lemmas": ["exsurgo", "exalto"]
+      },
+      {
+        "name": "Humiliation",
+        "description": "Imagery of being trampled and reduced to dust",
+        "lemmas": ["conculco", "pulvis"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 7,
+    "category": "",
+    "startLine": 7,
+    "themes": [
+      {
+        "name": "Divine Authority",
+        "description": "God's commands and divine mandate",
+        "lemmas": ["praeceptum", "mando"]
+      },
+      {
+        "name": "Divine Judgment",
+        "description": "God as judge of all people",
+        "lemmas": ["judico", "populus"]
+      },
+      {
+        "name": "Divine Presence",
+        "description": "God's surrounding presence and gathered assembly",
+        "lemmas": ["circumdo", "synagoga"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 7,
+    "category": "",
+    "startLine": 9,
+    "themes": [
+      {
+        "name": "Judicial Petition",
+        "description": "Request for judgment according to justice",
+        "lemmas": ["judico", "justitia"]
+      },
+      {
+        "name": "Divine Examination",
+        "description": "God's scrutiny of the inner being",
+        "lemmas": ["scrutor", "cor"]
+      },
+      {
+        "name": "Moral Contrast",
+        "description": "Destruction of wickedness and preservation of the righteous",
+        "lemmas": ["nequitia", "justus"]
+      }
+    ]
+  },
+
     
   {
     "psalmNumber": 89,
