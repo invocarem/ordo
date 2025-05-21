@@ -8,11 +8,33 @@ struct LinePairAnalysisView: View {
     @State private var selectedPairIndex = 0
     @State private var linePairs: [LinePair] = []
     
-    // Create PsalmIdentity from the psalm title (e.g., "Psalm 4" or "Psalm 118:aleph")
+    // Create PsalmIdentity from the psalm title (e.g., "Psalm 4" or "Psalm 118 (aleph)")
     private var psalmIdentity: PsalmIdentity {
-        let components = psalmTitle.replacingOccurrences(of: "Psalm ", with: "").components(separatedBy: ":")
-        let number = Int(components[0]) ?? 0
-        let section = components.count > 1 ? components[1].replacingOccurrences(of: "(", with: "").replacingOccurrences(of: ")", with: "") : nil
+        // Remove "Psalm " prefix
+        let cleanTitle = psalmTitle.replacingOccurrences(of: "Psalm ", with: "")
+        
+        // Split into main part and section (handling both : and parentheses)
+        let mainPart: String
+        let section: String?
+        
+        if let parenRange = cleanTitle.range(of: "(") {
+            mainPart = String(cleanTitle[..<parenRange.lowerBound]).trimmingCharacters(in: .whitespaces)
+            let sectionPart = String(cleanTitle[parenRange.lowerBound...])
+                .replacingOccurrences(of: "(", with: "")
+                .replacingOccurrences(of: ")", with: "")
+                .trimmingCharacters(in: .whitespaces)
+                .lowercased() // Convert to lowercase for consistency
+            section = sectionPart.isEmpty ? nil : sectionPart
+        } else {
+            let components = cleanTitle.components(separatedBy: ":")
+            mainPart = components[0].trimmingCharacters(in: .whitespaces)
+            let sectionPart = components.count > 1 ? components[1].trimmingCharacters(in: .whitespaces).lowercased() : nil
+            section = sectionPart?.isEmpty ?? true ? nil : sectionPart
+        }
+        
+        let number = Int(mainPart) ?? 0
+        
+        print("psalmTitle: \(psalmTitle)   number: \(number)   section: \(section ?? "")")
         return PsalmIdentity(number: number, section: section)
     }
     

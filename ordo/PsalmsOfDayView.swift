@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+
 struct PsalmsOfDayView: View {
     let psalms: [PsalmUsage]
     @ObservedObject var tracker: PsalmObservableTracker
