@@ -778,6 +778,271 @@
   },
 
   {
+    "psalmNumber": 9,
+    "category": "B",
+    "startLine": 1,
+    "themes": [
+      {
+        "name": "Divine Intervention",
+        "description": "Call for God to act and appointment of justice",
+        "lemmas": ["exsurgo", "constituo"]
+      },
+      {
+        "name": "Human Limitations",
+        "description": "Mortality emphasized and negation of human power",
+        "lemmas": ["homo", "praevaleo"]
+      },
+      {
+        "name": "Universal Knowledge",
+        "description": "Nations coming to understanding with international scope",
+        "lemmas": ["scio", "gens"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "category": "B",
+    "startLine": 3,
+    "themes": [
+      {
+        "name": "Divine Hiddenness",
+        "description": "Perceived absence and feeling abandoned",
+        "lemmas": ["recedo", "despicio"]
+      },
+      {
+        "name": "Oppression Dynamics",
+        "description": "Arrogance of the wicked and suffering of the poor",
+        "lemmas": ["superbio", "incendo"]
+      },
+      {
+        "name": "Moral Consequences",
+        "description": "Caught in own plans with schemes backfiring",
+        "lemmas": ["comprehendo", "consilium"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "category": "B",
+    "startLine": 5,
+    "themes": [
+      {
+        "name": "Moral Inversion",
+        "description": "Wicked being praised with false blessing",
+        "lemmas": ["laudo", "benedico"]
+      },
+      {
+        "name": "Divine Provocation",
+        "description": "Angering God with divine wrath",
+        "lemmas": ["exacerbo", "ira"]
+      },
+      {
+        "name": "Spiritual Apathy",
+        "description": "Negation of seeking God with self-centered desires",
+        "lemmas": ["quaero", "desiderium"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "category": "B",
+    "startLine": 7,
+    "themes": [
+      {
+        "name": "Practical Atheism",
+        "description": "Negation of God's presence with lack of divine awareness",
+        "lemmas": ["deus", "conspectus"]
+      },
+      {
+        "name": "Moral Corruption",
+        "description": "Defiled behavior with corrupt ways",
+        "lemmas": ["inquinatus", "via"]
+      },
+      {
+        "name": "Judicial Consequences",
+        "description": "Removal of justice leading to tyrannical rule",
+        "lemmas": ["aufero", "dominor"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "category": "B",
+    "startLine": 9,
+    "themes": [
+      {
+        "name": "False Security",
+        "description": "False stability claim with long-term presumption",
+        "lemmas": ["moveo", "generatio"]
+      },
+      {
+        "name": "Speech Corruption",
+        "description": "Cursing speech with deceptive language",
+        "lemmas": ["maledictio", "dolus"]
+      },
+      {
+        "name": "Internal Corruption",
+        "description": "Inner bitterness resulting in pain",
+        "lemmas": ["amaritudo", "dolor"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "category": "B",
+    "startLine": 11,
+    "themes": [
+      {
+        "name": "Predatory Behavior",
+        "description": "Scheming ambush with lion-like predation",
+        "lemmas": ["insidiae", "leo"]
+      },
+      {
+        "name": "Class Oppression",
+        "description": "Wealthy conspirators targeting the poor",
+        "lemmas": ["dives", "pauper"]
+      },
+      {
+        "name": "Violent Intent",
+        "description": "Murderous purpose with hidden violence",
+        "lemmas": ["interficio", "occultus"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "category": "B",
+    "startLine": 13,
+    "themes": [
+      {
+        "name": "Exploitative Tactics",
+        "description": "Violent seizure with forcible dragging",
+        "lemmas": ["rapio", "attraho"]
+      },
+      {
+        "name": "Poetic Justice",
+        "description": "Snare backfiring with eventual downfall",
+        "lemmas": ["laqueus", "cado"]
+      },
+      {
+        "name": "Power Dynamics",
+        "description": "Tyrannical rule with oppressive humiliation",
+        "lemmas": ["dominor", "humilio"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "category": "B",
+    "startLine": 15,
+    "themes": [
+      {
+        "name": "False Theology",
+        "description": "Wrong divine forgetfulness with false divine absence",
+        "lemmas": ["obliviscor", "averto"]
+      },
+      {
+        "name": "Divine Intervention",
+        "description": "Call to action with power display",
+        "lemmas": ["exsurgo", "exalto"]
+      },
+      {
+        "name": "Covenant Faithfulness",
+        "description": "Concern for the poor with ultimate perspective",
+        "lemmas": ["pauper", "finis"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "category": "B",
+    "startLine": 17,
+    "themes": [
+      {
+        "name": "Divine Provocation",
+        "description": "Angering God with wicked behavior",
+        "lemmas": ["irrito", "impius"]
+      },
+      {
+        "name": "False Assumptions",
+        "description": "Negation of divine concern with heart deception",
+        "lemmas": ["requiro", "cor"]
+      },
+      {
+        "name": "Divine Observation",
+        "description": "God's awareness with active consideration",
+        "lemmas": ["video", "considero"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "category": "B",
+    "startLine": 19,
+    "themes": [
+      {
+        "name": "Divine Protection",
+        "description": "Active help with vulnerable focus",
+        "lemmas": ["adjutor", "orphanus"]
+      },
+      {
+        "name": "Judicial Action",
+        "description": "Violent judgment breaking power",
+        "lemmas": ["contero", "brachium"]
+      },
+      {
+        "name": "Sin's Consequences",
+        "description": "Search for sin with negation of finding",
+        "lemmas": ["quaero", "invenio"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "category": "B",
+    "startLine": 21,
+    "themes": [
+      {
+        "name": "Eternal Kingship",
+        "description": "Unending reign with timeless rule",
+        "lemmas": ["regno", "aeternus"]
+      },
+      {
+        "name": "Divine Hearing",
+        "description": "Answered prayers with attentive listening",
+        "lemmas": ["exaudio", "auris"]
+      },
+      {
+        "name": "Heart Preparation",
+        "description": "Inner readiness with heart focus",
+        "lemmas": ["praeparatio", "cor"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "category": "B",
+    "startLine": 23,
+    "themes": [
+      {
+        "name": "Justice for Vulnerable",
+        "description": "Orphan focus with humble concern",
+        "lemmas": ["pupillus", "humilis"]
+      },
+      {
+        "name": "Human Limitation",
+        "description": "Negation of self-exaltation showing human limitation",
+        "lemmas": ["magnifico", "homo"]
+      },
+      {
+        "name": "Divine Jurisdiction",
+        "description": "God's judicial role with earthly scope",
+        "lemmas": ["judico", "terra"]
+      }
+    ]
+  },
+
+  {
     "psalmNumber": 89,
     "category": "",
     "startLine": 1,
