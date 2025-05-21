@@ -1,115 +1,62 @@
 struct LemmaMapping {
     private let wordEntities: [LatinWordEntity]
+    private let debugEnabled: Bool
+    private let debugTarget: String?
     
-    init(wordEntities: [LatinWordEntity]) {
+    init(wordEntities: [LatinWordEntity], debugTarget: String? = nil) {
         self.wordEntities = wordEntities
+        self.debugEnabled = debugTarget != nil
+        self.debugTarget = debugTarget?.lowercased()
     }
 
-    func dump(entity: LatinWordEntity) {
-    let dumpKey = "interficio" // Changed to target "dominor"
-    if entity.lemma.lowercased() == dumpKey {
-        print("\n=== Testing '\(dumpKey)' ===")
-        
-        // Print the verb's principal parts
-        print("\nPrincipal Parts:")
-        print("- Infinitive: \(entity.infinitive ?? "N/A")")
-        print("- Perfect: \(entity.perfect ?? "N/A")")
-        print("- Supine: \(entity.supine ?? "N/A")")
-        
-        // Generate and print all verb forms
-        let forms = entity.generatedVerbForms()
-        print("\nGenerated Forms:")
-        forms.sorted(by: { $0.key < $1.key }).forEach { formType, forms in
-            print("- \(formType): \(forms.joined(separator: ", "))")
-        }
-        
-        // Check if "dominatus" exists in perfect_passive_participle
-        if let perfectPassiveParticiples = forms["perfect_passive_participle"] {
-            print("\nPerfect Passive Participle Forms:")
-            print(perfectPassiveParticiples.joined(separator: ", "))
-            
-            let targetForm = "dominatus"
-            if perfectPassiveParticiples.contains(targetForm) {
-                print("\n✅ Found '\(targetForm)' in perfect_passive_participle.")
-            } else {
-                print("\n❌ '\(targetForm)' NOT found in perfect_passive_participle.")
-            }
-        } else {
-            print("\n❌ No perfect_passive_participle forms generated.")
-        }
-    }
-}
 
-   
     func createFormToLemmaMapping() -> [String: [String]] {
         var mapping: [String: [String]] = [:]
         
+        wordEntities.forEach { dumpIfNeeded(entity: $0) }
+        
         for entity in wordEntities {
             let lemma = entity.lemma.lowercased()
-            mapping[lemma, default: []].append(lemma)
             
-            // Map all standard case forms
+            // Map the lemma itself (ensure no duplicates)
+            addMapping(form: lemma, lemma: lemma, to: &mapping)
+            
+            // Map all forms
             mapStandardForms(from: entity, to: &mapping)
-
             mapSpecialForms(from: entity, to: &mapping)
             
-            // Map verb forms if applicable
+            
             if entity.partOfSpeech == .verb {
-                mapVerbForms(from: entity, to: &mapping)
-
-                dump(entity: entity)
-
-                // Then add generated forms (won't override existing entries)
                 let generated = entity.generatedVerbForms()
                 for (_, forms) in generated {
                     for form in forms {
-                        if !mapping[form, default: []].contains(entity.lemma) {
-                            mapping[form, default: []].append(entity.lemma)
-                        }
+                        addMapping(form: form, lemma: lemma, to: &mapping)
                     }
                 }
+            } else {
+                for form in entity.generatedForms.values {
+                    addMapping(form: form, lemma: lemma, to: &mapping)
+                }
             }
-            
-            
         }
-        
-       
         
         return mapping
     }
-    private func mapStandardForms(from entity: LatinWordEntity, to mapping: inout [String: [String]]) {
-    let lemma = entity.lemma.lowercased()
     
-    // Original case forms array (keeping the same variable name)
-    let caseForms = [
-        entity.nominative,
-        entity.vocative,
-        entity.dative,
-        entity.accusative,
-        entity.genitive,
-        entity.ablative,
-        entity.nominative_plural,
-        entity.genitive_plural,
-        entity.dative_plural,
-        entity.accusative_plural,
-        entity.ablative_plural
-    ]
-    
-    // Get generated forms
-    let generatedForms = Array(entity.generatedForms.values)
-    
-    // Combine both sets of forms (compactMap filters out nil values)
-    let allForms = caseForms.compactMap { $0 } + generatedForms
-    
-    // Map all forms to the lemma
-    allForms.forEach { form in
+    // Unified mapping function that prevents duplicates
+    private func addMapping(form: String, lemma: String, to mapping: inout [String: [String]]) {
         let lowerForm = form.lowercased()
-        mapping[lowerForm, default: []].append(lemma)
+        let lowerLemma = lemma.lowercased()
+        
+        if !(mapping[lowerForm]?.contains(lowerLemma) ?? false) {
+            mapping[lowerForm, default: []].append(lowerLemma)
+        }
     }
-}
-   
-    private func mapStandardFormsOrig(from entity: LatinWordEntity, to mapping: inout [String: [String]]) {
+    
+    private func mapStandardForms(from entity: LatinWordEntity, to mapping: inout [String: [String]]) {
         let lemma = entity.lemma.lowercased()
+        
+        // Get all case forms (nil values filtered out)
         let caseForms = [
             entity.nominative,
             entity.vocative,
@@ -122,66 +69,108 @@ struct LemmaMapping {
             entity.dative_plural,
             entity.accusative_plural,
             entity.ablative_plural
-        ]
+        ].compactMap { $0 }
         
-        caseForms.compactMap { $0?.lowercased() }
-            .forEach { form in
-                mapping[form, default: []].append(lemma)
-            }
+        // Get generated forms
+        let generatedForms = Array(entity.generatedForms.values)
+        
+        // Map all forms
+        (caseForms + generatedForms).forEach { form in
+            addMapping(form: form, lemma: lemma, to: &mapping)
+        }
     }
     
     private func mapSpecialForms(from entity: LatinWordEntity, to mapping: inout [String: [String]]) {
         let lemma = entity.lemma.lowercased()
         
-        // Handle forms (singular declensions or singular verb forms)
+        // Handle singular forms
         if let forms = entity.forms {
-            for (_, formValue) in forms {
-                formValue.forEach { form in
-                    let lowerForm = form.lowercased()
-                    mapping[lowerForm, default: []].append(lemma)
+            for formArray in forms.values {
+                for form in formArray {
+                    addMapping(form: form, lemma: lemma, to: &mapping)
                 }
             }
         }
         
-       
-        
-        // Handle formsPlural (plural declensions or plural verb forms)
+        // Handle plural forms
         if let formsPlural = entity.formsPlural {
-            for (_, formValues) in formsPlural {
-                formValues.forEach { form in
-                    let lowerForm = form.lowercased()
-                   
-                    mapping[lowerForm, default: []].append(lemma)
+            for formArray in formsPlural.values {
+                for form in formArray {
+                    addMapping(form: form, lemma: lemma, to: &mapping)
                 }
             }
         }
-        
-       
     }
     
     private func mapVerbForms(from entity: LatinWordEntity, to mapping: inout [String: [String]]) {
         let lemma = entity.lemma.lowercased()
         
         // Map principal parts
-        [entity.infinitive, entity.perfect].compactMap { $0?.lowercased() }
-            .forEach { form in
-                mapping[form, default: []].append(lemma)
-            }
+        [entity.infinitive, entity.perfect].compactMap { $0 }.forEach { form in
+            addMapping(form: form, lemma: lemma, to: &mapping)
+        }
         
         // Map all verb forms
         if let verbForms = entity.forms {
-            for (_, formArray) in verbForms {
+            for formArray in verbForms.values {
                 for formVariants in formArray {
-                    formVariants.lowercased()
-                        .components(separatedBy: "/")
-                        .forEach { variant in
-                           
-                            mapping[variant, default: []].append(lemma)
-                        }
+                    formVariants.components(separatedBy: "/").forEach { variant in
+                        addMapping(form: variant, lemma: lemma, to: &mapping)
+                    }
                 }
             }
         }
-        
-       
     }
+
+
+    private func dumpIfNeeded(entity: LatinWordEntity) {
+        guard debugEnabled, 
+              let target = debugTarget,
+              entity.lemma.lowercased() == target else { return }
+        
+        print("\n=== DEBUGGING '\(target)' ===")
+        
+        switch entity.partOfSpeech {
+        case .verb:
+            printVerbDebug(entity: entity)
+        case .noun:
+            printNounDebug(entity: entity)
+        default:
+            print(" - Lemma: \(entity.lemma)")
+            print(" - POS: \(entity.partOfSpeech)")
+        }
+    }
+    
+    private func printVerbDebug(entity: LatinWordEntity) {
+        print(" - Principal Parts:")
+        print("   • Infinitive: \(entity.infinitive ?? "N/A")")
+        print("   • Perfect: \(entity.perfect ?? "N/A")")
+        print("   • Supine: \(entity.supine ?? "N/A")")
+        
+        let forms = entity.generatedVerbForms()
+        print(" - Generated Forms:")
+        forms.sorted(by: { $0.key < $1.key }).forEach { formType, forms in
+            print("   • \(formType): \(forms.joined(separator: ", "))")
+        }
+    }
+    
+    private func printNounDebug(entity: LatinWordEntity) {
+        print(" - Declension: \(entity.declension ?? 0)")
+        print(" - Gender: \(entity.gender)")
+        print(" - Case Forms:")
+        print("   • Nom: \(entity.nominative ?? "N/A")")
+        print("   • Gen: \(entity.genitive ?? "N/A")")
+        print("   • Dat: \(entity.dative ?? "N/A")")
+        print("   • Acc: \(entity.accusative ?? "N/A")")
+        print("   • Abl: \(entity.ablative ?? "N/A")")
+        
+        let forms = entity.generatedForms
+        print(" - Generated Forms:")
+        forms.sorted(by: { $0.key < $1.key }).forEach { caseName, form in
+            print("   • \(caseName): \(form)")
+        }
+    }
+
 }
+
+

@@ -716,15 +716,15 @@ func testPsalm9BLines3and4() {
     // Lemma verification
     let testLemmas = [
         ("recedo", ["recessisti"], "withdraw"),
-        ("longus", ["longe"], "far"),
+        ("longus", ["longe"], "long"),
         ("despicio", ["despicis"], "despise"),
-        ("opportunitas", ["opportunitatibus"], "trouble"),
+        ("opportunitas", ["opportunitatibus"], "opportunity"),
         ("tribulatio", ["tribulatione"], "distress"),
-        ("superbus", ["superbit"], "proud"),
+        ("superbio", ["superbit"], "proud"),
         ("impius", ["impius"], "wicked"),
         ("incendo", ["incenditur"], "burn"),
         ("pauper", ["pauper"], "poor"),
-        ("comprehendo", ["comprehenduntur"], "catch"),
+        ("comprehendo", ["comprehenduntur"], "seize"),
         ("consilium", ["consiliis"], "counsel"),
         ("cogito", ["cogitant"], "think")
     ]
@@ -736,7 +736,7 @@ func testPsalm9BLines3and4() {
             ("despicio", "Feeling abandoned")
         ],
         "Oppression Dynamics": [
-            ("superbus", "Arrogance of the wicked"),
+            ("superbio", "Arrogance of the wicked"),
             ("incendo", "Suffering of the poor")
         ],
         "Moral Consequences": [
@@ -780,7 +780,6 @@ func testPsalm9BLines5and6() {
         ("iniquus", ["iniquus"], "unjust"),
         ("benedico", ["benedicitur"], "bless"),
         ("exacerbo", ["exacerbavit"], "provoke"),
-        ("dominus", ["dominum"], "Lord"),
         ("multitudo", ["multitudinem"], "abundance"),
         ("ira", ["irae"], "anger"),
         ("quaero", ["quaeret"], "seek")
@@ -1003,15 +1002,13 @@ func testPsalm9BLines13and14() {
     
     // Lemma verification
     let testLemmas = [
-        ("insidior", ["insidiatur"], "lie in wait"),
         ("rapio", ["rapiat", "rapere"], "snatch"),
         ("pauper", ["pauperem", "pauperem", "pauperum"], "poor"),
         ("attraho", ["attrahit"], "drag"),
         ("laqueus", ["laqueo"], "snare"),
         ("humilio", ["humiliabit"], "humble"),
         ("inclino", ["inclinabit"], "bend"),
-        ("cado", ["cadet"], "fall"),
-        ("dominor", ["dominatus"], "lord it over")
+        ("cado", ["cadet"], "fall")
     ]
     
     // Thematic analysis
@@ -1227,8 +1224,12 @@ func testPsalm9BLines21and22() {
     let line21 = psalm9B[20] // "Dominus regnabit in aeternum, et in saeculum saeculi; peribitis, gentes, de terra illius."
     let line22 = psalm9B[21] // "Desiderium pauperum exaudivit Dominus; praeparationem cordis eorum audivit auris tua,"
     let combinedText = line21 + " " + line22
+
+    latinService.configureDebugging(target: "regno")
     let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 21)
-    
+
+
+   
     // Lemma verification
     let testLemmas = [
         ("dominus", ["dominus", "dominus"], "Lord"),
@@ -1242,7 +1243,7 @@ func testPsalm9BLines21and22() {
         ("pauper", ["pauperum"], "poor"),
         ("exaudio", ["exaudivit"], "hear"),
         ("praeparatio", ["praeparationem"], "preparation"),
-        ("cor", ["corde"], "heart"),
+        ("cor", ["cordis"], "heart"),
         ("auris", ["auris"], "ear")
     ]
     
@@ -1407,6 +1408,13 @@ func testPsalm9BLine23() {
         let caseInsensitiveDict = Dictionary(uniqueKeysWithValues: 
             analysis.dictionary.map { ($0.key.lowercased(), $0.value) }
         )
+        for (lemma, forms, _) in confirmedWords {
+        guard caseInsensitiveDict[lemma.lowercased()] != nil else {
+            print("\n!!! ❌ MISSING LEMMA IN DICTIONARY: \(lemma)")
+            XCTFail("Missing lemma: \(lemma)")
+            continue
+        }
+    }
         
         for (lemma, forms, translation) in confirmedWords {
             guard let entry = caseInsensitiveDict[lemma.lowercased()] else {

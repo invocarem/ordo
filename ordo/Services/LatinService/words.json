@@ -1,5 +1,146 @@
 [
   {
+  "lemma": "praeparatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "praeparatio",
+  "genitive": "praeparationis",
+  "translations": {
+    "en": "preparation, foresight",
+    "la": "praeparatio, praeparationis"
+  }
+},
+  {
+  "lemma": "despicio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "despicere",
+  "present": "despicio",  
+  "perfect": "despexi",
+  "supine": "despectum",
+  "translations": {
+    "en": "to despise, look down on, scorn",
+    "la": "despicio, despicere"
+  }
+},
+  {
+  "lemma": "recedo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "recedere",
+  "present": "recedo",
+  "perfect": "recessi",
+  "supine": "recessum",
+  "translations": {
+    "en": "to go back, retreat, withdraw",
+    "la": "recedo, recedere"
+  }
+},
+{
+  "lemma": "longus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "longus",
+  "genitive": "longi",
+  "forms": {
+    "nominative_f": ["longa"],
+    "genitive_f": ["longae"],
+    "nominative_n": ["longum"],
+    "genitive_n": ["longi"]
+  },
+  "forms_plural": {
+    "nominative_m": ["longi"],
+    "genitive_m": ["longorum"],
+    "nominative_f": ["longae"],
+    "genitive_f": ["longarum"],
+    "nominative_n": ["longa"],
+    "genitive_n": ["longorum"]
+  },
+  "translations": {
+    "en": "long, extensive",
+    "la": "longus, -a, -um"
+  }
+},
+  {
+  "lemma": "incendo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "incendere",
+  "present": "incendo",
+  "perfect": "incendi",
+  "supine": "incensum",
+  "translations": {
+    "en": "burn, inflame, excite",
+    "la": "incendo, incendere"
+  }
+},
+  {
+  "lemma": "exacerbo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "exacerbare",
+  "present": "exacerbo",
+  "perfect": "exacerbavi",
+  "supine": "exacerbatum",
+  "translations": {
+    "en": "provoke, exasperate, irritate",
+    "la": "exacerbo, exacerbare"
+  }
+},
+ {
+  "lemma": "multitudo",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "multitudo",
+  "genitive": "multitudinis",
+  "translations": {
+    "en": "abundance, multitude, great number",
+    "la": "multitudo"
+  }
+}, 
+  {
+  "lemma": "irrito",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "irritare",
+  "present": "irrito",
+  "perfect": "irritavi",
+  "supine": "irritatum",
+  "translations": {
+    "en": "provoke, irritate, excite",
+    "la": "irrito, irritare"
+  }
+},
+{
+  "lemma": "trado",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "tradere",
+  "present": "trado",
+  "perfect": "tradidi",
+  "supine": "traditum",
+  "translations": {
+    "en": "deliver, hand over, betray",
+    "la": "trado, tradere"
+  }
+},
+  {
+  "lemma": "attraho",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "attrahere",
+  "present": "attraho",
+  "perfect": "attraxi",
+  "supine": "attractum",
+  "translations": {
+    "en": "drag, draw to, attract",
+    "la": "attraho, attrahere"
+  }
+},
+  {
   "lemma": "dives",
   "part_of_speech": "adjective",
   "declension": 3,
@@ -4702,17 +4843,19 @@
     }
   },
   {
-    "lemma": "regno",
-    "part_of_speech": "verb",
-    "perfect": "regnavi",
-    "infinitive": "regnare",
-    "supine": "regnatum",
-    "translations": {
-      "en": "to reign, rule",
-      "la": "regno"
-    }
-  },
-  {
+  "lemma": "regno",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "regnare",
+  "present": "regno",
+  "perfect": "regnavi",
+  "supine": "regnatum",
+  "translations": {
+    "en": "to reign, rule",
+    "la": "regno, regnare"
+  }
+},
+   {
     "lemma": "regere",
     "part_of_speech": "verb",
     "conjugation": 3,
@@ -10766,24 +10909,36 @@
                 "la": "concupio"
             }
         },
-    
-     {
-    "lemma": "superbus",
-    "part_of_speech": "adjective",
-    "declension": 2,
-    "gender": "masculine",
-    "nominative": "superbus",
-    "genitive": "superbi",
-    "dative": "superbo",
-    "accusative": "superbum",
-    "ablative": "superbo",   
-    "nominative_plural": "superbi",       
-    "accusative_plural": "superbos",  
-    "translations": {
-        "en": "proud, haughty, arrogant",
-        "la": "superbus, -a, -um"
-    },
-    "notes": "Psalm 119:21 - 'Increpasti superbos' (You rebuke the proud)"
+{
+  "lemma": "superbus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "superbus",
+  "genitive": "superbi",
+  "forms": {
+    "nominative_f": ["superba"],
+    "genitive_f": ["superbae"],
+    "nominative_n": ["superbum"],
+    "genitive_n": ["superbi"]
+  },
+  "translations": {
+    "en": "proud, arrogant, haughty",
+    "la": "superbus, -a, -um"
+  }
+},
+{
+  "lemma": "superbio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "superbire",
+  "present": "superbio",
+  "perfect": "superbivi",
+  "supine": "superbitum",
+  "translations": {
+    "en": "be proud, act arrogantly",
+    "la": "superbio, superbire"
+  }
 },
     {
         "lemma": "revelo",
@@ -10899,6 +11054,18 @@
             "la": "desidero, -are"
         }
     },
+    {
+  "lemma": "desiderium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "desiderium",
+  "genitive": "desiderii",
+  "translations": {
+    "en": "desire, longing, yearning",
+    "la": "desiderium"
+  }
+},
     {
         "lemma": "protectio",
         "part_of_speech": "noun",
@@ -12571,25 +12738,25 @@
                 "la": "diligo"
             }
         },
+
         {
-            "lemma": "dilato",
-            "part_of_speech": "verb",
-            "infinitive": "dilatare",
-            "perfect": "dilatavi",
-            "supine": "dilatatum",
-            "translations": {
-                "en": "to enlarge, spread out, relieve",
-                "la": "dilato, dilatare, dilatavi, dilatatum"
-            },
-            "forms": {
-                "perfect": ["dilatavi", "dilatavisti/dilatasti", "dilatavit", "dilatavimus", "dilatavistis", "dilaverunt"],
-                "present": ["dilato", "dilatas", "dilatat", "dilatamus", "dilatatis", "dilatant"],
-                "imperative": ["dilata", "dilatate"]
-            },
-           
-            "notes": "Psalm 4:2 - 'dilatasti mihi' (you have enlarged for me)"
-        },
-        {
+  "lemma": "dilato",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "dilatare",
+  "present": "dilato",
+  "future": "dilatabo",
+  "perfect": "dilatavi",
+  "supine": "dilatatum", 
+  "forms": {
+      "perfect_special": ["dilatasti"]
+  },
+  "translations": {
+    "en": "to spread out, extend, enlarge, defer",
+    "la": "dilato, dilatare"
+  }
+},
+         {
           "lemma": "aut",
           "part_of_speech": "conjunction",
           "translations": {
@@ -12627,25 +12794,29 @@
             "imperative": ["audi", "audite"]
           }
         },
+
         {
-            "lemma": "exaudio",
-            "part_of_speech": "verb",
-            "infinitive": "exaudire",
-            "perfect": "exaudivi",
-            "supine": "exauditum",
-            "translations": {
-                "en": "to hear, heed",
-                "la": "exaudio, exaudire, exaudivi, exauditum"
-            },
-            "forms": {
+  "lemma": "exaudio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "exaudire",
+  "present": "exaudio",
+  "future": "exaudiam",
+  "perfect": "exaudivi",
+  "supine": "exauditum",
+ "forms": {
                 "imperative": ["exaudi", "exaudite"],
                 "perfect": ["exaudivi", "exaudivisti", "exaudivit", "exaudivimus", "exaudivistis", "exaudiverunt"],
                 "future": ["exaudiam", "exaudies", "exaudiet", "exaudiemus", "exaudietis", "exaudient"],
                 "present": ["exaudio", "exaudis", "exaudit", "exaudimus", "exauditis", "exaudiunt"]
-            },
-            "notes": "Psalm 4:2 - 'exaudi me' (hear me)"
-        },
-        {
+  },
+
+  "translations": {
+    "en": "to hear, listen to, heed",
+    "la": "exaudio, exaudire"
+  }
+},
+         {
             "lemma": "frumentum",
             "part_of_speech": "noun",
             "declension": 2,
@@ -13185,35 +13356,19 @@
         },
         "notes": "From Psalm 17:46 - 'filii alieni claudicaverunt' (foreign children limped/haltered)"
     },
-    
-          {
-            "lemma": "cor",
-            "part_of_speech": "noun",
-            "declension": 3,
-            "gender": "neuter",
-            
-            "forms": {
-              "nominative_n": ["cor"],
-              "genitive_n": ["cordis"],
-              "dative_n": ["cordi"],
-              "accusative_n": ["cor"],
-              "ablative_n": ["corde"],
-              "vocative_n": ["cor"]
-            },
-            "forms_plural": {
-              "nominative_n": ["corda"],
-              "genitive_n": ["cordium"],
-              "dative_n": ["cordibus"],
-              "accusative_n": ["corda"],
-              "ablative_n": ["cordibus"],
-              "vocative_n": ["corda"]
-            },
-            "translations": {
-              "en": "heart",
-              "la": "cor"
-            }
-          },
-          {
+    {
+  "lemma": "cor",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "cor",
+  "genitive": "cordis",
+  "translations": {
+    "en": "heart, mind, soul",
+    "la": "cor, cordis"
+  }
+},
+           {
             "lemma": "septuplus",
             "part_of_speech": "adjective",
             "declension": 1,

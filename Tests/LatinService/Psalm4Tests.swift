@@ -45,7 +45,7 @@ func testPsalm4Lines1and2() {
         ("deus", ["deus"], "god"),
         ("justitia", ["justitiae"], "justice"),
         ("tribulatio", ["tribulatione"], "tribulation"),
-        ("dilato", ["dilatasti"], "relieve"),
+        ("dilato", ["dilatasti"], "enlarge"),
         ("misereor", ["miserere"], "have mercy"),
         ("oratio", ["orationem"], "prayer")
     ]
@@ -382,6 +382,39 @@ func testPsalm4Lines9and10() {
         XCTAssertEqual(filiusInfo.entity?.gender, .masculine)
         XCTAssertEqual(filiusInfo.entity?.declension, 2)
     }
+func testCorInPsalm4() {
+    // Setup
+    let psalm4Text = "Filii hominum, usquequo gravi corde?"
+    
+    // Analyze
+    let result = latinService.analyzePsalm(id, text: psalm4Text)
+    
+    guard let corInfo = result.dictionary["cor"] else {
+        XCTFail("Lemma 'cor' should be detected")
+        return
+    }
+    
+    // 1. Verify translation
+    XCTAssertTrue(corInfo.translation?.contains("heart") ?? false)
+    
+    // 2. Verify forms found in text
+    XCTAssertEqual(corInfo.forms["corde"], 1)
+    
+    // 3. Verify generated forms (excluding lemma and forms found in text)
+    let expectedForms = ["cordis", "cordi", "corda", "cordum", "cordibus"]
+    for form in expectedForms {
+        XCTAssertTrue(
+            corInfo.generatedForms.contains(form),
+            "Missing generated form: \(form)"
+        )
+    }
+    
+    // 4. Verify grammatical properties
+    XCTAssertEqual(corInfo.entity?.partOfSpeech, .noun)
+    XCTAssertEqual(corInfo.entity?.gender, .neuter)
+    XCTAssertEqual(corInfo.entity?.declension, 3)
+}
+
     func testAnalyzePsalm4() {
         let psalm4 = [
             "Cum invocarem exaudivit me Deus justitiae meae; in tribulatione dilatasti mihi.",
@@ -408,7 +441,7 @@ func testPsalm4Lines9and10() {
         let confirmedWords = [
             ("invoco", ["invocarem"], "call upon"),
             ("exaudio", ["exaudivit", "exaudiet", "exaudi"], "hear"),
-            ("dilato", ["dilatasti"], "relieve"),
+            ("dilato", ["dilatasti"], "enlarge"),
             ("misereor", ["miserere"], "have mercy"),
             ("oratio", ["orationem"], "prayer"),
             ("vanitas", ["vanitatem"], "vanity"),

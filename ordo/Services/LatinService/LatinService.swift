@@ -339,6 +339,11 @@ public class LatinService {
     public func addTranslation(latin: String, english: String) {
         translations[latin] = english
     }
+
+    public func configureDebugging(target: String?) {
+        self.lemmaMapping = LemmaMapping(wordEntities: self.wordEntities, debugTarget: target)
+    }
+
 public func analyzePsalm(_ identity: PsalmIdentity? = nil, text: [String], startingLineNumber: Int = 1) -> PsalmAnalysisResult {
     var allWords: [String] = []
     var lemmaCounts: [String: Int] = [:]
@@ -347,7 +352,7 @@ public func analyzePsalm(_ identity: PsalmIdentity? = nil, text: [String], start
     var orderedLemmas: [String] = []
     let formToLemma = lemmaMapping.createFormToLemmaMapping()
       
-    let debugForms = ["tenebras", "viro", "perverteris", "electo", "dominor"]
+    let debugForms = ["exaudivit", "dilatasti", "regno", "regnabit", "dominor"]
         for form in debugForms {
             print("Form '\(form)' maps to: \(formToLemma[form] ?? [])")
         }
