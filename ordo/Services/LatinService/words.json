@@ -1,5 +1,129 @@
 [
   {
+  "lemma": "dives",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "dives",
+  "genitive": "divitis",
+  "forms_plural": {
+    "dative_m": ["divitibus"],
+    "ablative_m": ["divitibus"]
+  },
+  "translations": {
+    "en": "rich, wealthy",
+    "la": "dives, divitis"
+  }
+},
+  {
+  "lemma": "occultus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "occultus",
+  "genitive": "occulti",
+  "forms": {
+    "nominative_f": ["occulta"],
+    "genitive_f": ["occultae"],
+    "nominative_n": ["occultum"],
+    "genitive_n": ["occulti"],
+    "dative_plural": ["occultis"],
+    "ablative_plural": ["occultis"]
+  },
+  "translations": {
+    "en": "hidden, secret, concealed",
+    "la": "occultus, -a, -um"
+  }
+},
+  {
+  "lemma": "spelunca",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "spelunca",
+  "genitive": "speluncae",
+  "translations": {
+    "en": "den, cave, cavern",
+    "la": "spelunca"
+  }
+},
+
+  {
+  "lemma": "interficio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "interficere",
+  "present": "interficio",
+  "perfect": "interfeci",
+  "supine": "interfectum",
+  "translations": {
+    "en": "kill, destroy",
+    "la": "interficio, interficere"
+  }
+},
+  {
+  "lemma": "insidiae",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "insidiae",
+  "genitive": "insidiarum",
+  "translations": {
+    "en": "ambush, plot, treachery",
+    "la": "insidiae"
+  }
+},
+  {
+  "lemma": "maledictio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "maledictio",
+  "genitive": "maledictionis",
+  "translations": {
+    "en": "cursing, slander, evil speech",
+    "la": "maledictio"
+  }
+},
+  {
+  "lemma": "cogito",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "cogitare",
+  "present": "cogito",
+  "perfect": "cogitavi",
+  "supine": "cogitatum",
+  "translations": {
+    "en": "think, consider, ponder",
+    "la": "cogito, cogitare"
+  }
+},
+{
+  "lemma": "amaritudo",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "amaritudo",
+  "genitive": "amaritudinis",
+  "translations": {
+    "en": "bitterness, grief",
+    "la": "amaritudo"
+  }
+},
+  {
+  "lemma": "praevaleo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "praevalere",
+  "present": "praevaleo",
+  "perfect": "praevalui",
+  "supine": "praevalitum",
+  "translations": {
+    "en": "prevail, have superior strength",
+    "la": "praevaleo, praevalere"
+  }
+},
+  {
   "lemma": "studium",
   "part_of_speech": "noun",
   "declension": 2,
@@ -11714,6 +11838,32 @@
             "notes": "Psalm 37:21: 'qui retribuunt mala pro bonis' ('who return evil for good') - implied context of iniquity"
         },
         {
+  "lemma": "inquinatus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "inquinatus",
+  "genitive": "inquinati",
+  "forms": {
+    "nominative_f": ["inquinata"],
+    "genitive_f": ["inquinatae"],
+    "nominative_n": ["inquinatum"],
+    "genitive_n": ["inquinati"]
+  },
+  "forms_plural": {
+    "nominative_m": ["inquinati"],
+    "genitive_m": ["inquinatorum"],
+    "nominative_f": ["inquinatae"],
+    "genitive_f": ["inquinatarum"],
+    "nominative_n": ["inquinata"],
+    "genitive_n": ["inquinatorum"]
+  },
+  "translations": {
+    "en": "defiled, polluted, contaminated",
+    "la": "inquinatus, -a, -um"
+  }
+},
+        {
             "lemma": "flagellum",
             "part_of_speech": "noun",
             "declension": 2,
@@ -11959,6 +12109,7 @@
        {
            "lemma": "scio",
            "part_of_speech": "verb",
+           "conjugation": 4,
            "perfect": "scivi",
            "infinitive": "scire",
            "forms": {
@@ -11966,8 +12117,11 @@
                "imperfect": ["sciebam", "sciebas", "sciebat", "sciebamus", "sciebatis", "sciebant"],
                "future": ["sciam", "scies", "sciet", "sciemus", "scietis", "scient"],
                "perfect": ["scivi", "scivisti", "scivit", "scivimus", "scivistis", "sciverunt"],
-               "imperative_singular": ["sci"],
-               "imperative_plural": ["scitote"]
+               "imperative_singular": ["sci"]
+           },
+           "forms_plural":{
+              "imperative": ["scitote"]
+
            },
            "translations": {
                "en": "know, understand",
@@ -12024,7 +12178,7 @@
           "perfect": "abstuli",
           "supine": "ablatum",
           "forms":{
-          
+            "present_passive": ["auferor", "auferris", "aufertur", "auferimur", "auferimini", "auferuntur"],
               "present_subjunctive": ["auferam", "auferas", "auferat", "auferamus", "auferatis", "auferant"]
           },
           "translations": {
@@ -15346,7 +15500,32 @@
     "la": "lavo, lavare"
   }
 },
-
+{
+  "lemma": "plenus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "plenus",
+  "genitive": "pleni",
+  "forms": {
+    "nominative_f": ["plena"],
+    "genitive_f": ["plenae"],
+    "nominative_n": ["plenum"],
+    "genitive_n": ["pleni"]
+  },
+  "forms_plural": {
+    "nominative_m": ["pleni"],
+    "genitive_m": ["plenorum"],
+    "nominative_f": ["plenae"],
+    "genitive_f": ["plenarum"],
+    "nominative_n": ["plena"],
+    "genitive_n": ["plenorum"]
+  },
+  "translations": {
+    "en": "full, filled, complete",
+    "la": "plenus, -a, -um"
+  }
+},
   {
     "lemma": "humilitas",
     "part_of_speech": "noun",

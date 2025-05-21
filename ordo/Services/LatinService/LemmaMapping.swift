@@ -4,25 +4,43 @@ struct LemmaMapping {
     init(wordEntities: [LatinWordEntity]) {
         self.wordEntities = wordEntities
     }
-    func dump(entity: LatinWordEntity) {
-        let dumpkey = "insidiae"
-        if entity.lemma.lowercased() == dumpkey {
-                print("\n=== Generating forms for \(dumpkey) ===")
-                let forms = entity.generatedVerbForms()
 
-                print("\nAll forms of \(dumpkey):")
-                print("\(entity)")
-                forms.sorted(by: { $0.key < $1.key }).forEach { formType, forms in
-                    print("- \(formType): \(forms.joined(separator: ", "))")
-                }
-                
-                
-                
-                // Print the lemma mapping being created
-                print("\nResulting mappings:")
-            }
+    func dump(entity: LatinWordEntity) {
+    let dumpKey = "interficio" // Changed to target "dominor"
+    if entity.lemma.lowercased() == dumpKey {
+        print("\n=== Testing '\(dumpKey)' ===")
+        
+        // Print the verb's principal parts
+        print("\nPrincipal Parts:")
+        print("- Infinitive: \(entity.infinitive ?? "N/A")")
+        print("- Perfect: \(entity.perfect ?? "N/A")")
+        print("- Supine: \(entity.supine ?? "N/A")")
+        
+        // Generate and print all verb forms
+        let forms = entity.generatedVerbForms()
+        print("\nGenerated Forms:")
+        forms.sorted(by: { $0.key < $1.key }).forEach { formType, forms in
+            print("- \(formType): \(forms.joined(separator: ", "))")
         }
-    
+        
+        // Check if "dominatus" exists in perfect_passive_participle
+        if let perfectPassiveParticiples = forms["perfect_passive_participle"] {
+            print("\nPerfect Passive Participle Forms:")
+            print(perfectPassiveParticiples.joined(separator: ", "))
+            
+            let targetForm = "dominatus"
+            if perfectPassiveParticiples.contains(targetForm) {
+                print("\n✅ Found '\(targetForm)' in perfect_passive_participle.")
+            } else {
+                print("\n❌ '\(targetForm)' NOT found in perfect_passive_participle.")
+            }
+        } else {
+            print("\n❌ No perfect_passive_participle forms generated.")
+        }
+    }
+}
+
+   
     func createFormToLemmaMapping() -> [String: [String]] {
         var mapping: [String: [String]] = [:]
         
@@ -39,7 +57,7 @@ struct LemmaMapping {
             if entity.partOfSpeech == .verb {
                 mapVerbForms(from: entity, to: &mapping)
 
-                //dump(entity: entity)
+                dump(entity: entity)
 
                 // Then add generated forms (won't override existing entries)
                 let generated = entity.generatedVerbForms()

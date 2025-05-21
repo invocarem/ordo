@@ -510,7 +510,7 @@ class Psalm9ATests: XCTestCase {
             ("converto", ["convertantur"], "turn"),
             ("peccator", ["peccatores"], "sinner"),
             ("infernus", ["infernum"], "hell"),
-            ("gens", ["gentes"], "nations"),
+            ("gens", ["gentes"], "nation"),
             ("obliviscor", ["obliviscuntur" ], "forget"),
             ("deus", ["deum"], "God"),
             ("finis", ["finem", "finem"], "end"),
@@ -650,7 +650,690 @@ class Psalm9BTests: XCTestCase {
     ]
     
     // MARK: - Test Cases
+    // MARK: - Grouped Line Tests for Psalm 9B
+
+func testPsalm9BLines1and2() {
+    let line1 = psalm9B[0] // "Exsurge, Domine, non praevaleat homo; judicentur gentes in conspectu tuo."
+    let line2 = psalm9B[1] // "Constitue, Domine, legislatorem super eos, ut sciant gentes quoniam homines sunt."
+    let combinedText = line1 + " " + line2
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 1)
     
+    // Lemma verification
+    let testLemmas = [
+        ("exsurgo", ["exsurge"], "arise"),
+        ("dominus", ["domine", "domine"], "Lord"),
+        ("praevaleo", ["praevaleat"], "prevail"),
+        ("homo", ["homo", "homines"], "man"),
+        ("judico", ["judicentur"], "judge"),
+        ("conspectus", ["conspectu"], "sight"),
+        ("constituo", ["constitue"], "appoint"),
+        ("legislator", ["legislatorem"], "lawgiver"),
+        ("scio", ["sciant"], "know")
+    ]
+    
+    // Thematic analysis
+    let expectedThemes = [
+        "Divine Intervention": [
+            ("exsurgo", "Call for God to act"),
+            ("constituo", "Appointment of justice")
+        ],
+        "Human Limitations": [
+            ("homo", "Mortality emphasized"),
+            ("praevaleo", "Negation of human power")
+        ],
+        "Universal Knowledge": [
+            ("scio", "Nations coming to understanding"),
+            ("gens", "International scope")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 9B:1-2 ANALYSIS:")
+        print("1: \"\(line1)\"")
+        print("2: \"\(line2)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+        
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm9BLines3and4() {
+    let line3 = psalm9B[2] // "Ut quid, Domine, recessisti longe, despicis in opportunitatibus, in tribulatione?"
+    let line4 = psalm9B[3] // "Dum superbit impius, incenditur pauper; comprehenduntur in consiliis quibus cogitant."
+    let combinedText = line3 + " " + line4
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 3)
+    
+    // Lemma verification
+    let testLemmas = [
+        ("recedo", ["recessisti"], "withdraw"),
+        ("longus", ["longe"], "far"),
+        ("despicio", ["despicis"], "despise"),
+        ("opportunitas", ["opportunitatibus"], "trouble"),
+        ("tribulatio", ["tribulatione"], "distress"),
+        ("superbus", ["superbit"], "proud"),
+        ("impius", ["impius"], "wicked"),
+        ("incendo", ["incenditur"], "burn"),
+        ("pauper", ["pauper"], "poor"),
+        ("comprehendo", ["comprehenduntur"], "catch"),
+        ("consilium", ["consiliis"], "counsel"),
+        ("cogito", ["cogitant"], "think")
+    ]
+    
+    // Thematic analysis
+    let expectedThemes = [
+        "Divine Hiddenness": [
+            ("recedo", "Perceived absence"),
+            ("despicio", "Feeling abandoned")
+        ],
+        "Oppression Dynamics": [
+            ("superbus", "Arrogance of the wicked"),
+            ("incendo", "Suffering of the poor")
+        ],
+        "Moral Consequences": [
+            ("comprehendo", "Caught in own plans"),
+            ("consilium", "Schemes backfiring")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 9B:3-4 ANALYSIS:")
+        print("3: \"\(line3)\"")
+        print("4: \"\(line4)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+        
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm9BLines5and6() {
+    let line5 = psalm9B[4] // "Quoniam laudatur peccator in desideriis animae suae, et iniquus benedicitur."
+    let line6 = psalm9B[5] // "Exacerbavit Dominum peccator, secundum multitudinem irae suae non quaeret:"
+    let combinedText = line5 + " " + line6
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 5)
+    
+    // Lemma verification
+    let testLemmas = [
+        ("laudo", ["laudatur"], "praise"),
+        ("peccator", ["peccator", "peccator"], "sinner"),
+        ("desiderium", ["desideriis"], "desire"),
+        ("anima", ["animae"], "soul"),
+        ("iniquus", ["iniquus"], "unjust"),
+        ("benedico", ["benedicitur"], "bless"),
+        ("exacerbo", ["exacerbavit"], "provoke"),
+        ("dominus", ["dominum"], "Lord"),
+        ("multitudo", ["multitudinem"], "abundance"),
+        ("ira", ["irae"], "anger"),
+        ("quaero", ["quaeret"], "seek")
+    ]
+    
+    // Thematic analysis
+    let expectedThemes = [
+        "Moral Inversion": [
+            ("laudo", "Wicked being praised"),
+            ("benedico", "False blessing")
+        ],
+        "Divine Provocation": [
+            ("exacerbo", "Angering God"),
+            ("ira", "Divine wrath")
+        ],
+        "Spiritual Apathy": [
+            ("quaero", "Negation of seeking God"),
+            ("desiderium", "Self-centered desires")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 9B:5-6 ANALYSIS:")
+        print("5: \"\(line5)\"")
+        print("6: \"\(line6)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+        
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm9BLines7and8() {
+    let line7 = psalm9B[6] // "Non est Deus in conspectu eius; inquinatae sunt viae illius in omni tempore."
+    let line8 = psalm9B[7] // "Auferuntur judicia tua a facie eius; omnium inimicorum suorum dominabitur."
+    let combinedText = line7 + " " + line8
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 7)
+    
+    // Lemma verification
+    let testLemmas = [
+        ("deus", ["deus"], "God"),
+        ("conspectus", ["conspectu"], "sight"),
+        ("inquinatus", ["inquinatae"], "defiled"),
+        ("via", ["viae"], "way"),
+        ("tempus", ["tempore"], "time"),
+        ("aufero", ["auferuntur"], "remove"),
+        ("judicium", ["judicia"], "judgment"),
+        ("facies", ["facie"], "face"),
+        ("inimicus", ["inimicorum"], "enemy"),
+        ("dominor", ["dominabitur"], "dominate")
+    ]
+    
+    // Thematic analysis
+    let expectedThemes = [
+        "Practical Atheism": [
+            ("deus", "Negation of God's presence"),
+            ("conspectus", "Lack of divine awareness")
+        ],
+        "Moral Corruption": [
+            ("inquinatus", "Defiled behavior"),
+            ("via", "Corrupt ways")
+        ],
+        "Judicial Consequences": [
+            ("aufero", "Removal of justice"),
+            ("dominor", "Tyrannical rule")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 9B:7-8 ANALYSIS:")
+        print("7: \"\(line7)\"")
+        print("8: \"\(line8)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+        
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm9BLines9and10() {
+    let line9 = psalm9B[8] // "Dixit enim in corde suo: Non movebor a generatione in generationem sine malo."
+    let line10 = psalm9B[9] // "Cujus maledictione os plenum est, et amaritudine, et dolo; sub lingua ejus labor et dolor."
+    let combinedText = line9 + " " + line10
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 9)
+    
+    // Lemma verification
+    let testLemmas = [
+        ("dico", ["dixit"], "say"),
+        ("cor", ["corde"], "heart"),
+        ("moveo", ["movebor"], "move"),
+        ("generatio", ["generatione", "generationem"], "generation"),
+        ("malus", ["malo"], "evil"),
+        ("maledictio", ["maledictione"], "cursing"),
+        ("os", ["os"], "mouth"),
+        ("plenus", ["plenum"], "full"),
+        ("amaritudo", ["amaritudine"], "bitterness"),
+        ("dolus", ["dolo"], "deceit"),
+        ("lingua", ["lingua"], "tongue"),
+        ("labor", ["labor"], "toil"),
+        ("dolor", ["dolor"], "pain")
+    ]
+    
+    // Thematic analysis
+    let expectedThemes = [
+        "False Security": [
+            ("moveo", "False stability claim"),
+            ("generatio", "Long-term presumption")
+        ],
+        "Speech Corruption": [
+            ("maledictio", "Cursing speech"),
+            ("dolus", "Deceptive language")
+        ],
+        "Internal Corruption": [
+            ("amaritudo", "Inner bitterness"),
+            ("dolor", "Resulting pain")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 9B:9-10 ANALYSIS:")
+        print("9: \"\(line9)\"")
+        print("10: \"\(line10)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+        
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm9BLines11and12() {
+    let line11 = psalm9B[10] // "Sedet in insidiis cum divitibus in occultis, ut interficiat innocentem;"
+    let line12 = psalm9B[11] // "Oculi ejus in pauperem respiciunt; insidiatur in abscondito, quasi leo in spelunca sua."
+    let combinedText = line11 + " " + line12
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 11)
+    
+    // Lemma verification
+    let testLemmas = [
+        ("sedeo", ["sedet"], "sit"),
+        ("insidiae", ["insidiis"], "ambush"),
+        ("dives", ["divitibus"], "rich"),
+        ("occultus", ["occultis" ], "hidden"),
+        ("interficio", ["interficiat"], "kill"),
+        ("innocens", ["innocentem"], "innocent"),
+        ("oculus", ["oculi"], "eye"),
+        ("pauper", ["pauperem"], "poor"),
+        ("respicio", ["respiciunt"], "look"),
+        ("insidior", ["insidiatur"], "lie in ambush"),
+        ("leo", ["leo"], "lion"),
+        ("spelunca", ["spelunca"], "den")
+    ]
+    
+    // Thematic analysis
+    let expectedThemes = [
+        "Predatory Behavior": [
+            ("insidiae", "Scheming ambush"),
+            ("leo", "Lion-like predation")
+        ],
+        "Class Oppression": [
+            ("dives", "Wealthy conspirators"),
+            ("pauper", "Poor as target")
+        ],
+        "Violent Intent": [
+            ("interficio", "Murderous purpose"),
+            ("occultus", "Hidden violence")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 9B:11-12 ANALYSIS:")
+        print("11: \"\(line11)\"")
+        print("12: \"\(line12)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+        
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm9BLines13and14() {
+    let line13 = psalm9B[12] // "Insidiatur ut rapiat pauperem; rapere pauperem dum attrahit eum."
+    let line14 = psalm9B[13] // "In laqueo suo humiliabit eum; inclinabit se, et cadet cum dominatus fuerit pauperum."
+    let combinedText = line13 + " " + line14
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 13)
+    
+    // Lemma verification
+    let testLemmas = [
+        ("insidior", ["insidiatur"], "lie in wait"),
+        ("rapio", ["rapiat", "rapere"], "snatch"),
+        ("pauper", ["pauperem", "pauperem", "pauperum"], "poor"),
+        ("attraho", ["attrahit"], "drag"),
+        ("laqueus", ["laqueo"], "snare"),
+        ("humilio", ["humiliabit"], "humble"),
+        ("inclino", ["inclinabit"], "bend"),
+        ("cado", ["cadet"], "fall"),
+        ("dominor", ["dominatus"], "lord it over")
+    ]
+    
+    // Thematic analysis
+    let expectedThemes = [
+        "Exploitative Tactics": [
+            ("rapio", "Violent seizure"),
+            ("attraho", "Forcible dragging")
+        ],
+        "Poetic Justice": [
+            ("laqueus", "Snare backfiring"),
+            ("cado", "Eventual downfall")
+        ],
+        "Power Dynamics": [
+            ("dominor", "Tyrannical rule"),
+            ("humilio", "Oppressive humiliation")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 9B:13-14 ANALYSIS:")
+        print("13: \"\(line13)\"")
+        print("14: \"\(line14)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+        
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm9BLines15and16() {
+    let line15 = psalm9B[14] // "Dixit enim in corde suo: Oblitus est Deus, avertit faciem suam ne videat in finem."
+    let line16 = psalm9B[15] // "Exsurge, Domine Deus, exaltetur manus tua; ne obliviscaris pauperum."
+    let combinedText = line15 + " " + line16
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 15)
+    
+    // Lemma verification
+    let testLemmas = [
+        ("dico", ["dixit"], "say"),
+        ("cor", ["corde"], "heart"),
+        ("obliviscor", ["oblitus", "obliviscaris"], "forget"),
+        ("deus", ["deus", "deus"], "God"),
+        ("averto", ["avertit"], "turn away"),
+        ("facies", ["faciem"], "face"),
+        ("video", ["videat"], "see"),
+        ("finis", ["finem"], "end"),
+        ("exsurgo", ["exsurge"], "arise"),
+        ("exalto", ["exaltetur"], "exalt"),
+        ("manus", ["manus"], "hand"),
+        ("pauper", ["pauperum"], "poor")
+    ]
+    
+    // Thematic analysis
+    let expectedThemes = [
+        "False Theology": [
+            ("obliviscor", "Wrong divine forgetfulness"),
+            ("averto", "False divine absence")
+        ],
+        "Divine Intervention": [
+            ("exsurgo", "Call to action"),
+            ("exalto", "Power display")
+        ],
+        "Covenant Faithfulness": [
+            ("pauper", "Concern for the poor"),
+            ("finis", "Ultimate perspective")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 9B:15-16 ANALYSIS:")
+        print("15: \"\(line15)\"")
+        print("16: \"\(line16)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+        
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm9BLines17and18() {
+    let line17 = psalm9B[16] // "Propter quid irritavit impius Deum? dixit enim in corde suo: Non requiret."
+    let line18 = psalm9B[17] // "Vides quoniam tu laborem et dolorem consideras, ut tradas eos in manus tuas."
+    let combinedText = line17 + " " + line18
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 17)
+    
+    // Lemma verification
+    let testLemmas = [
+        ("irrito", ["irritavit"], "provoke"),
+        ("impius", ["impius"], "wicked"),
+        ("deus", ["deum"], "God"),
+        ("dico", ["dixit"], "say"),
+        ("cor", ["corde"], "heart"),
+        ("requiro", ["requiret"], "seek"),
+        ("video", ["vides"], "see"),
+        ("labor", ["laborem"], "toil"),
+        ("dolor", ["dolorem"], "pain"),
+        ("considero", ["consideras"], "consider"),
+        ("trado", ["tradas"], "deliver"),
+        ("manus", ["manus"], "hand")
+    ]
+    
+    // Thematic analysis
+    let expectedThemes = [
+        "Divine Provocation": [
+            ("irrito", "Angering God"),
+            ("impius", "Wicked behavior")
+        ],
+        "False Assumptions": [
+            ("requiro", "Negation of divine concern"),
+            ("cor", "Heart deception")
+        ],
+        "Divine Observation": [
+            ("video", "God's awareness"),
+            ("considero", "Active consideration")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 9B:17-18 ANALYSIS:")
+        print("17: \"\(line17)\"")
+        print("18: \"\(line18)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+        
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm9BLines19and20() {
+    let line19 = psalm9B[18] // "Tibi derelictus est pauper; orphano tu eris adjutor."
+    let line20 = psalm9B[19] // "Contere brachium peccatoris et maligni; quaeretur peccatum illius, et non invenietur."
+    let combinedText = line19 + " " + line20
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 19)
+    
+    // Lemma verification
+    let testLemmas = [
+        ("derelinquo", ["derelictus"], "forsake"),
+        ("pauper", ["pauper"], "poor"),
+        ("orphanus", ["orphano"], "orphan"),
+        ("adjutor", ["adjutor"], "helper"),
+        ("contero", ["contere"], "crush"),
+        ("brachium", ["brachium"], "arm"),
+        ("peccator", ["peccatoris"], "sinner"),
+        ("malignus", ["maligni"], "evil"),
+        ("quaero", ["quaeretur"], "seek"),
+        ("peccatum", ["peccatum"], "sin"),
+        ("invenio", ["invenietur"], "find")
+    ]
+    
+    // Thematic analysis
+    let expectedThemes = [
+        "Divine Protection": [
+            ("adjutor", "Active help"),
+            ("orphanus", "Vulnerable focus")
+        ],
+        "Judicial Action": [
+            ("contero", "Violent judgment"),
+            ("brachium", "Power broken")
+        ],
+        "Sin's Consequences": [
+            ("quaero", "Search for sin"),
+            ("invenio", "Negation of finding")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 9B:19-20 ANALYSIS:")
+        print("19: \"\(line19)\"")
+        print("20: \"\(line20)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+        
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm9BLines21and22() {
+    let line21 = psalm9B[20] // "Dominus regnabit in aeternum, et in saeculum saeculi; peribitis, gentes, de terra illius."
+    let line22 = psalm9B[21] // "Desiderium pauperum exaudivit Dominus; praeparationem cordis eorum audivit auris tua,"
+    let combinedText = line21 + " " + line22
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 21)
+    
+    // Lemma verification
+    let testLemmas = [
+        ("dominus", ["dominus", "dominus"], "Lord"),
+        ("regno", ["regnabit"], "reign"),
+        ("aeternus", ["aeternum"], "eternal"),
+        ("saeculum", ["saeculum"], "age"),
+        ("pereo", ["peribitis"], "perish"),
+        ("gens", ["gentes"], "nations"),
+        ("terra", ["terra"], "land"),
+        ("desiderium", ["desiderium"], "desire"),
+        ("pauper", ["pauperum"], "poor"),
+        ("exaudio", ["exaudivit"], "hear"),
+        ("praeparatio", ["praeparationem"], "preparation"),
+        ("cor", ["corde"], "heart"),
+        ("auris", ["auris"], "ear")
+    ]
+    
+    // Thematic analysis
+    let expectedThemes = [
+        "Eternal Kingship": [
+            ("regno", "Unending reign"),
+            ("aeternus", "Timeless rule")
+        ],
+        "Divine Hearing": [
+            ("exaudio", "Answered prayers"),
+            ("auris", "Attentive listening")
+        ],
+        "Heart Preparation": [
+            ("praeparatio", "Inner readiness"),
+            ("cor", "Heart focus")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 9B:21-22 ANALYSIS:")
+        print("21: \"\(line21)\"")
+        print("22: \"\(line22)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+        
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm9BLine23() {
+    // Single line test for the last verse
+    let line23 = psalm9B[22] // "Judicare pupillo et humili, ut non apponat ultra magnificare se homo super terram."
+    let analysis = latinService.analyzePsalm(id, text: line23, startingLineNumber: 23)
+    
+    // Lemma verification
+    let testLemmas = [
+        ("judico", ["judicare"], "judge"),
+        ("pupillus", ["pupillo"], "orphan"),
+        ("humilis", ["humili"], "humble"),
+        ("appono", ["apponat"], "add"),
+        ("ultra", ["ultra"], "further"),
+        ("magnifico", ["magnificare"], "exalt"),
+        ("homo", ["homo"], "man"),
+        ("terra", ["terram"], "earth")
+    ]
+    
+    // Thematic analysis
+    let expectedThemes = [
+        "Justice for Vulnerable": [
+            ("pupillus", "Orphan focus"),
+            ("humilis", "Humble concern")
+        ],
+        "Human Limitation": [
+            ("magnifico", "Negation of self-exaltation"),
+            ("homo", "Human limitation")
+        ],
+        "Divine Jurisdiction": [
+            ("judico", "God's judicial role"),
+            ("terra", "Earthly scope")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 9B:23 ANALYSIS:")
+        print("23: \"\(line23)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+        
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
     func testDivineIntervention() {
         let analysis = latinService.analyzePsalm(id, text: psalm9B)
         
@@ -719,19 +1402,31 @@ class Psalm9BTests: XCTestCase {
     }
     
     // MARK: - Helper
+
     private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
+        let caseInsensitiveDict = Dictionary(uniqueKeysWithValues: 
+            analysis.dictionary.map { ($0.key.lowercased(), $0.value) }
+        )
+        
         for (lemma, forms, translation) in confirmedWords {
-            guard let entry = analysis.dictionary[lemma] else {
+            guard let entry = caseInsensitiveDict[lemma.lowercased()] else {
+                print("\n❌ MISSING LEMMA IN DICTIONARY: \(lemma)")
                 XCTFail("Missing lemma: \(lemma)")
                 continue
             }
             
+            // Verify semantic domain
             XCTAssertTrue(
                 entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
                 "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
             )
             
-            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
+            // Verify morphological coverage (case-insensitive)
+            let entryFormsLowercased = Dictionary(uniqueKeysWithValues:
+                entry.forms.map { ($0.key.lowercased(), $0.value) }
+            )
+            
+            let missingForms = forms.filter { entryFormsLowercased[$0.lowercased()] == nil }
             if !missingForms.isEmpty {
                 XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
             }
@@ -740,10 +1435,26 @@ class Psalm9BTests: XCTestCase {
                 print("\n\(lemma.uppercased())")
                 print("  Translation: \(entry.translation ?? "?")")
                 forms.forEach { form in
-                    let count = entry.forms[form.lowercased()] ?? 0
+                    let count = entryFormsLowercased[form.lowercased()] ?? 0
                     print("  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
                 }
             }
         }
     }
+    
+    private func verifyThematicElements(analysis: PsalmAnalysisResult, expectedThemes: [String: [(lemma: String, description: String)]]) {
+        for (theme, elements) in expectedThemes {
+            for (lemma, description) in elements {
+                guard analysis.dictionary[lemma] != nil else {
+                    XCTFail("Missing lemma for theme verification: \(lemma) (theme: \(theme))")
+                    continue
+                }
+                
+                if verbose {
+                    print("VERIFIED THEME: \(theme) - \(lemma) (\(description))")
+                }
+            }
+        }
+    }
+
 }

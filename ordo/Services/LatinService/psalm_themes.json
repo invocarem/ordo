@@ -580,7 +580,7 @@
 
   {
     "psalmNumber": 9,
-    "section": "A",
+    "category": "A",
     "startLine": 1,
     "themes": [
       {
@@ -602,7 +602,7 @@
   },
   {
     "psalmNumber": 9,
-    "section": "A",
+    "category": "A",
     "startLine": 3,
     "themes": [
       {
@@ -624,7 +624,7 @@
   },
   {
     "psalmNumber": 9,
-    "section": "A",
+    "category": "A",
     "startLine": 5,
     "themes": [
       {
@@ -646,7 +646,7 @@
   },
   {
     "psalmNumber": 9,
-    "section": "A",
+    "category": "A",
     "startLine": 7,
     "themes": [
       {
@@ -668,7 +668,7 @@
   },
   {
     "psalmNumber": 9,
-    "section": "A",
+    "category": "A",
     "startLine": 9,
     "themes": [
       {
@@ -690,7 +690,7 @@
   },
   {
     "psalmNumber": 9,
-    "section": "A",
+    "category": "A",
     "startLine": 11,
     "themes": [
       {
@@ -712,7 +712,7 @@
   },
   {
     "psalmNumber": 9,
-    "section": "A",
+    "category": "A",
     "startLine": 13,
     "themes": [
       {
@@ -734,7 +734,7 @@
   },
   {
     "psalmNumber": 9,
-    "section": "A",
+    "category": "A",
     "startLine": 15,
     "themes": [
       {
@@ -756,7 +756,7 @@
   },
   {
     "psalmNumber": 9,
-    "section": "A",
+    "category": "A",
     "startLine": 17,
     "themes": [
       {

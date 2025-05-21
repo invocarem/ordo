@@ -302,7 +302,7 @@ public class LatinService {
                     themeCache = psalmThemes.themes
                     return
                 } catch {
-                    print("Found translations.json but failed to load: \(error)")
+                    print("Found psalm_themes.json but failed to load: \(error)")
                 }
             }
         }
@@ -347,10 +347,10 @@ public func analyzePsalm(_ identity: PsalmIdentity? = nil, text: [String], start
     var orderedLemmas: [String] = []
     let formToLemma = lemmaMapping.createFormToLemmaMapping()
       
-   // let debugForms = ["tenebras", "viro", "perverteris", "electo", "verumtamen"]
-   //     for form in debugForms {
-   //         print("Form '\(form)' maps to: \(formToLemma[form] ?? [])")
-   //     }
+    let debugForms = ["tenebras", "viro", "perverteris", "electo", "dominor"]
+        for form in debugForms {
+            print("Form '\(form)' maps to: \(formToLemma[form] ?? [])")
+        }
     
     for line in text {
         let normalizedLine = line.lowercased()
