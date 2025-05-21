@@ -1,5 +1,271 @@
 [
   {
+  "lemma": "studium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "studium",
+  "genitive": "studii",
+  "translations": {
+    "en": "zeal, eagerness, pursuit",
+    "la": "studium"
+  }
+},
+ {
+  "lemma": "infigo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "infigere",
+  "present": "infigo",
+  "perfect": "infixi",
+  "supine": "infixum",
+  "forms":{
+    "perfect_passive_participle":["infixae"]
+  },
+  "translations": {
+    "en": "pierce, fasten, implant",
+    "la": "infigo, infigere"
+  }
+},
+{
+  "lemma": "salutaris",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "salutaris",
+  "genitive": "salutaris",
+  "forms": {
+    "nominative_f": ["salutaris"],
+    "genitive_f": ["salutaris"],
+    "dative_f": ["salutari"],
+    "accusative_f": ["salutarem"],
+    "ablative_f": ["salutari"],
+    "nominative_n": ["salutare"],
+    "genitive_n": ["salutaris"],
+    "dative_n": ["salutari"],
+    "accusative_n": ["salutare"],
+    "ablative_n": ["salutari"]
+  },
+  "forms_plural": {
+    "nominative_m": ["salutares"],
+    "genitive_m": ["salutarium"],
+    "dative_m": ["salutaribus"],
+    "accusative_m": ["salutares"],
+    "ablative_m": ["salutaribus"],
+    "nominative_f": ["salutares"],
+    "genitive_f": ["salutarium"],
+    "dative_f": ["salutaribus"],
+    "accusative_f": ["salutares"],
+    "ablative_f": ["salutaribus"],
+    "nominative_n": ["salutaria"],
+    "genitive_n": ["salutarium"],
+    "dative_n": ["salutaribus"],
+    "accusative_n": ["salutaria"],
+    "ablative_n": ["salutaribus"]
+  },
+  "translations": {
+    "en": "of salvation, saving, health-giving",
+    "la": "salutaris, -e"
+  }
+},
+
+{
+  "lemma": "saluto",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "salutare",
+  "present": "saluto",
+  "perfect": "salutavi",
+  "supine": "salutatum",
+  "translations": {
+    "en": "to greet, wish health, save",
+    "la": "saluto, salutare"
+  }
+},
+
+  {
+  "lemma": "interitus",
+  "part_of_speech": "noun",
+  "declension": 4,
+  "gender": "masculine",
+  "nominative": "interitus",
+  "genitive": "interitus",
+  "translations": {
+    "en": "destruction, ruin, annihilation",
+    "la": "interitus"
+  }
+},
+  {
+  "lemma": "mirabilis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "mirabilis",
+  "genitive": "mirabilis",
+  "forms_plural":{
+    "nominative_n": ["mirabilia"]
+  },
+  "translations": {
+    "en": "wonderful, marvelous, astonishing",
+    "la": "mirabilis, -e"
+  }
+},
+  {
+  "lemma": "opportunitas",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "opportunitas",
+  "genitive": "opportunitatis",
+  "translations": {
+    "en": "opportunity, convenience",
+    "la": "opportunitas"
+  }
+},
+  {
+  "lemma": "thronus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "thronus",
+  "genitive": "throni",
+  "translations": {
+    "en": "throne, seat of power",
+    "la": "thronus"
+  }
+},
+  {
+  "lemma": "framea",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "framea",
+  "genitive": "frameae",
+  "translations": {
+    "en": "sword, spear (Germanic origin)",
+    "la": "framea"
+  }
+},
+  {
+  "lemma": "increpo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "increpare",
+  "present": "increpo",
+  "perfect": "increpui",
+  "supine": "increpitum",
+  "forms": {
+    "perfect_indicative_2sg": ["increpasti"]
+  },
+  "translations": {
+    "en": "rebuke, chide, sound loudly",
+    "la": "increpo, increpare"
+  }
+},
+{
+  "lemma": "memoria",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "memoria",
+  "genitive": "memoriae",
+  "translations": {
+    "en": "memory, remembrance",
+    "la": "memoria"
+  }
+},
+{
+  "lemma": "sonitus",
+  "part_of_speech": "noun",
+  "declension": 4,
+  "gender": "masculine",
+  "nominative": "sonitus",
+  "genitive": "sonitus",
+  "translations": {
+    "en": "sound, noise",
+    "la": "sonitus"
+  }
+},
+{
+  "lemma": "civitas",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "civitas",
+  "genitive": "civitatis",
+  "translations": {
+    "en": "city, state, citizenship",
+    "la": "civitas"
+  }
+},
+{
+  "lemma": "infans",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "infans",
+  "genitive": "infantis",
+  "forms_plural":{
+    "genitive_n": ["infantium"]
+  },
+  "translations": {
+    "en": "infant, young child",
+    "la": "infans, infantis"
+  }
+},
+{
+  "lemma": "lactens",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "lactens",
+  "genitive": "lactentis",
+  "forms_plural":{
+    "genitive_n":["lactentium"]
+  },
+  "translations": {
+    "en": "nursing, suckling",
+    "la": "lactens, lactentis"
+  }
+},
+{
+  "lemma": "ultor",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "ultor",
+  "genitive": "ultoris",
+  "translations": {
+    "en": "avenger, punisher",
+    "la": "ultor"
+  }
+},
+{
+  "lemma": "minuo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "minuere",
+  "present": "minuo",
+  "perfect": "minui",
+  "supine": "minutum",
+  "translations": {
+    "en": "diminish, lessen, reduce",
+    "la": "minuo, minuere"
+  }
+},
+  {
+  "lemma": "honor",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "honor",
+  "genitive": "honoris",
+  "translations": {
+    "en": "honor, respect, dignity",
+    "la": "honor"
+  }
+},
+  {
   "lemma": "consumo",
   "part_of_speech": "verb",
   "conjugation": 3,
@@ -1834,6 +2100,18 @@
   }
 },
 {
+  "lemma": "patientia",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "patientia",
+  "genitive": "patientiae",
+  "translations": {
+    "en": "endurance, patience, suffering",
+    "la": "patientia"
+  }
+},
+{
   "lemma": "patiens",
   "part_of_speech": "adjective",
   "gender": "masculine",
@@ -1947,6 +2225,30 @@
       "la": "laudo, laudare"
     }
   },
+  {
+  "lemma": "digitus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "digitus",
+  "genitive": "digiti",
+  "translations": {
+    "en": "finger, toe",
+    "la": "digitus"
+  }
+},
+{
+  "lemma": "laus",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "laus",
+  "genitive": "laudis",
+  "translations": {
+    "en": "praise, glory, renown",
+    "la": "laus, laudis"
+  }
+},
 {
   "lemma": "laudatio",
   "part_of_speech": "noun",
@@ -2445,11 +2747,14 @@
     "present": "annuntio",
     "future": "annuntiabo",
     "supine": "annuntiatum",
+    "forms": {
+      "present_subjunctive": ["annuntiem", "annunties", "annuntiet"]
+    },
     "forms_plural": {
-      "present_subjunctive": ["annuntient"]
+      "present_subjunctive": [ "annuntiemus",  "annuntietis", "annuntient"]
     },
     "translations": {
-      "en": "proclaim, announce",
+      "en": "proclaim, announce, declare",
       "la": "annuntio, annuntiare"
     }
   },
@@ -3473,7 +3778,8 @@
     "perfect": "delevi",
     "supine": "deletum",    
     "forms": {
-      "future": ["delebo", "delebis", "delebit"]
+      "future": ["delebo", "delebis", "delebit"],
+      "perfect_2sg": ["delesti"]
     },
     "translations": {
       "en": "to wipe out, destroy, erase",
@@ -3634,19 +3940,6 @@
     "la": "adjutor"
   },
   "notes": "Derived from 'adjuvare' (to help). Often used in Christian Latin for divine helpers (e.g., 'Adjutor meus es tu' = 'You are my helper')."
-},
-{
-  "lemma": "saluto",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "salutare",
-  "present": "saluto",
-  "perfect": "salutavi",
-  "supine": "salutatum",
-  "translations": {
-    "en": "to greet, wish health, save",
-    "la": "saluto, salutare"
-  }
 },
   {
     "lemma": "salutor",
@@ -6541,7 +6834,7 @@
         "perfect": "exaltavi",
         "supine": "exaltatum",
         "translations": {
-            "en": "to exalt, raise up",
+            "en": "to exalt, raise up, lift up",
             "la": "exalto"
         },
         "forms": {
@@ -10604,6 +10897,18 @@
         }      
     },
     {
+  "lemma": "oblivio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "oblivio",
+  "genitive": "oblivionis",
+  "translations": {
+    "en": "forgetfulness, oblivion",
+    "la": "oblivio"
+  }
+},
+    {
         "lemma": "obliviscor",
         "part_of_speech": "verb",
         "conjugation": 3,
@@ -11093,27 +11398,6 @@
           }
         },
         {
-            "lemma": "salutare",
-            "part_of_speech": "noun",
-            "declension": 3,
-            "gender": "neuter",
-            "nominative": "salutare",
-            "genitive": "salutaris",
-            "dative": "salutari",
-            "accusative": "salutare",
-            "ablative": "salutari",
-            "nominative_plural": "salutaria",
-            "genitive_plural": "salutarium",
-            "dative_plural": "salutaribus",
-            "accusative_plural": "salutaria",
-            "ablative_plural": "salutaribus",
-            "translations": {
-                "en": "salvation, deliverance",
-                "la": "salutare"
-            },
-            "notes": "Psalm 37:23: 'Domine, salutare meum' ('Lord, my salvation')"
-        },
-        {
             "lemma": "humilio",
             "part_of_speech": "verb",
             "conjugation": 1,
@@ -11140,6 +11424,9 @@
             "forms": {
                 "perfect_passive": ["infirmatus"],
                 "present": ["infirmo", "infirmas", "infirmat", "infirmamus", "infirmatis", "infirmant"]
+            },
+            "forms_plural":{
+                "future_passive_3rd":["infirmabuntur"]
             },
             "translations": {
                 "en": "weaken, enfeeble",
@@ -11471,8 +11758,12 @@
         {
             "lemma": "abscondo",
             "part_of_speech": "verb",
-            "perfect": "abscondi",
+            "conjugation": 3,
             "infinitive": "abscondere",
+            "present": "abscondo",
+            "perfect": "abscondi",
+            "supine": "absconditum",
+                      
             "forms": {
                 "perfect_participle": ["absconditus", "abscondita", "absconditum"],
                 "present_passive": ["abscondor", "absconderis", "absconditur", "abscondimur", "abscondimini", "absconduntur"]
@@ -14827,6 +15118,9 @@
     "perfect": "cognovi",
     "infinitive": "cognoscere",    
     "supine": "cognitum",
+    "forms":{
+      "present_passive_3sg":["cognoscitur"]
+    },
     "translations": {
       "en": "know",
       "la": "cognosco"
@@ -14930,22 +15224,6 @@
   "declension": 3,
   "gender": "neuter",
   "nominative": "os",
-  "genitive": "ossis",
-  "forms_plural": {
-      "nominative_n": ["ossa"],
-      "genitive_n": ["ossium"]
-  },
-  "translations": {
-    "en": "bone",
-    "la": "os, ossis"
-  }
-},
-{
-  "lemma": "os",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "neuter",
-  "nominative": "os",
   "genitive": "oris",
   "forms": {
     "nominative_n": ["os"]
@@ -14956,6 +15234,24 @@
   },
   "notes": "Distinct from 'os, ossis' meaning 'bone'"
 },
+{
+  "lemma": "os",
+  "part_of_speech": "noun",
+  "declension": 0,
+  "gender": "neuter",
+  "nominative": "os",
+  "genitive": "ossis",
+  "forms_plural": {
+      "nominative_n": ["ossa"],
+      "genitive_n": ["ossium"]
+  },
+  "translations": {
+    "en": "bone",
+    "la": "os, ossis"
+  },
+  "notes": "declension to 0 instead of 3, hope it can fall to mouth"
+},
+ 
 {
   "lemma": "gaudium",
   "part_of_speech": "noun",
@@ -14981,6 +15277,33 @@
   "translations": {
     "en": "to heal, cure",
     "la": "sano, sanare"
+  }
+},
+{
+  "lemma": "universus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "universus",
+  "genitive": "universi",
+  "forms":{
+    "nominative_f":["universa"]
+  },
+  "translations": {
+    "en": "all, entire, whole",
+    "la": "universus, -a, -um"
+  }
+},
+{
+  "lemma": "mare",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "mare",
+  "genitive": "maris",
+  "translations": {
+    "en": "sea",
+    "la": "mare"
   }
 },
 {

@@ -138,7 +138,7 @@ extension LatinService {
                 let categoryMatches = $0.category == effectiveSection || ($0.category.isEmpty && effectiveSection.isEmpty)
                 let psalmMatches = $0.psalmNumber == identity.number
                 let lineMatches = $0.startLine == lineNumber
-                print("Checking entry: psalm \($0.psalmNumber), category '\($0.category)', startLine \($0.startLine) -> Matches: \(psalmMatches && categoryMatches && lineMatches)")
+                //print("Checking entry: psalm \($0.psalmNumber), category '\($0.category)', startLine \($0.startLine) -> Matches: \(psalmMatches && categoryMatches && lineMatches)")
                 return psalmMatches && categoryMatches && lineMatches
             }
             .flatMap { $0.themes }

@@ -490,7 +490,293 @@
     ]
   },
 
-    
+   
+  {
+    "psalmNumber": 8,
+    "category": "",
+    "startLine": 1,
+    "themes": [
+      {
+        "name": "Divine Majesty",
+        "description": "God's supreme glory manifest in creation",
+        "lemmas": ["dominus", "magnificentia", "admirabilis"]
+      },
+      {
+        "name": "Cosmic Scope",
+        "description": "Universal recognition of God's name",
+        "lemmas": ["universa", "terra", "caelos"]
+      }
+    ]
+ } ,
+
+ {
+    "psalmNumber": 8,
+    "category": "Creation Psalm",
+    "startLine": 3,
+    "themes": [
+      {
+        "name": "Infant Worship",
+        "description": "Perfect praise from the mouths of children",
+        "lemmas": ["infantium", "lactentium", "laudem", "perfecisti"]
+      },
+      {
+        "name": "Cosmic Design",
+        "description": "The heavens as God's handcrafted masterpiece",
+        "lemmas": ["digitorum", "lunam", "stellas", "fundasti"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 8,
+    "category": "Anthropology",
+    "startLine": 5,
+    "themes": [
+      {
+        "name": "Human Significance",
+        "description": "God's special attention to mortal beings",
+        "lemmas": ["homo", "memor", "visitas", "filius"]
+      },
+      {
+        "name": "Glorified Humanity",
+        "description": "Mankind crowned with divine honor",
+        "lemmas": ["minuisti", "angelis", "gloria", "honore", "coronasti"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 8,
+    "category": "Stewardship",
+    "startLine": 7,
+    "themes": [
+      {
+        "name": "Created Dominion",
+        "description": "Humanity's governance over God's works",
+        "lemmas": ["constituisti", "opera", "manuum", "subjecisti", "pedibus"]
+      },
+      {
+        "name": "Agricultural Blessing",
+        "description": "Domesticated creation under human care",
+        "lemmas": ["oves", "boves", "pecora", "campi"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 8,
+    "category": "Creation Psalm",
+    "startLine": 9,
+    "themes": [
+      {
+        "name": "Ecological Harmony",
+        "description": "Wild creatures in their created order",
+        "lemmas": ["volucres", "pisces", "perambulant", "semitas"]
+      },
+      {
+        "name": "Doxological Conclusion",
+        "description": "Bookend praise echoing the opening verses",
+        "lemmas": ["Domine", "noster", "admirabile", "nomen", "universa"]
+      }
+    ]
+  },
+
+  {
+    "psalmNumber": 9,
+    "section": "A",
+    "startLine": 1,
+    "themes": [
+      {
+        "name": "Personal Praise",
+        "description": "Individual confession and personal testimony",
+        "lemmas": ["confiteor", "narro"]
+      },
+      {
+        "name": "Joyful Worship",
+        "description": "Expression of joy and exuberant praise",
+        "lemmas": ["laetor", "exsulto"]
+      },
+      {
+        "name": "Divine Attributes",
+        "description": "God's supremacy and wonderful works",
+        "lemmas": ["altissimus", "mirabilis"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "section": "A",
+    "startLine": 3,
+    "themes": [
+      {
+        "name": "Divine Judgment",
+        "description": "Legal vindication and judicial authority",
+        "lemmas": ["judicium", "thronus"]
+      },
+      {
+        "name": "Enemy Defeat",
+        "description": "Opposition identified and final destruction",
+        "lemmas": ["inimicus", "pereo"]
+      },
+      {
+        "name": "Royal Imagery",
+        "description": "Kingly posture and righteous rule",
+        "lemmas": ["sedeo", "justus"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "section": "A",
+    "startLine": 5,
+    "themes": [
+      {
+        "name": "Divine Rebuke",
+        "description": "Authoritative correction and complete eradication",
+        "lemmas": ["increpo", "deleo"]
+      },
+      {
+        "name": "Final Destruction",
+        "description": "Permanent consequences and definitive ending",
+        "lemmas": ["aeternus", "finis"]
+      },
+      {
+        "name": "Historical Judgment",
+        "description": "Urban centers judged and oblivion of the wicked",
+        "lemmas": ["civitas", "memoria"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "section": "A",
+    "startLine": 7,
+    "themes": [
+      {
+        "name": "Eternal Sovereignty",
+        "description": "Unchanging nature and eternal reign",
+        "lemmas": ["permaneo", "thronus"]
+      },
+      {
+        "name": "Universal Justice",
+        "description": "Global scope and fairness standard",
+        "lemmas": ["orbis", "aequitas"]
+      },
+      {
+        "name": "Righteous Rule",
+        "description": "Judicial function and moral foundation",
+        "lemmas": ["judico", "justus"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "section": "A",
+    "startLine": 9,
+    "themes": [
+      {
+        "name": "Divine Protection",
+        "description": "Shelter imagery and active assistance",
+        "lemmas": ["refugium", "adjutor"]
+      },
+      {
+        "name": "Faithful Relationship",
+        "description": "Confident trust and divine faithfulness",
+        "lemmas": ["spero", "derelinquo"]
+      },
+      {
+        "name": "Covenant Knowledge",
+        "description": "Personal acquaintance and representative identity",
+        "lemmas": ["nosco", "nomen"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "section": "A",
+    "startLine": 11,
+    "themes": [
+      {
+        "name": "Universal Proclamation",
+        "description": "Global declaration with international scope",
+        "lemmas": ["annuntio", "gens"]
+      },
+      {
+        "name": "Divine Remembrance",
+        "description": "Active recollection and negation of forgetfulness",
+        "lemmas": ["recordor", "obliviscor"]
+      },
+      {
+        "name": "Justice for the Oppressed",
+        "description": "Violence remembered with focus on the vulnerable",
+        "lemmas": ["sanguis", "pauper"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "section": "A",
+    "startLine": 13,
+    "themes": [
+      {
+        "name": "Personal Petition",
+        "description": "Cry for mercy and request for divine attention",
+        "lemmas": ["misereor", "video"]
+      },
+      {
+        "name": "Resurrection Imagery",
+        "description": "Dramatic deliverance with threshold symbolism",
+        "lemmas": ["exalto", "porta"]
+      },
+      {
+        "name": "Redemptive Purpose",
+        "description": "Declarative response and public thanksgiving",
+        "lemmas": ["annuntio", "laudatio"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "section": "A",
+    "startLine": 15,
+    "themes": [
+      {
+        "name": "Poetic Justice",
+        "description": "Ensnarement reversed with literal stumbling",
+        "lemmas": ["laqueus", "pes"]
+      },
+      {
+        "name": "Divine Self-Revelation",
+        "description": "God making Himself known through judicial acts",
+        "lemmas": ["cognosco", "judicium"]
+      },
+      {
+        "name": "Moral Causality",
+        "description": "Self-inflicted ruin with deeds recoiling",
+        "lemmas": ["interitus", "opus"]
+      }
+    ]
+  },
+  {
+    "psalmNumber": 9,
+    "section": "A",
+    "startLine": 17,
+    "themes": [
+      {
+        "name": "Final Judgment",
+        "description": "Eternal destination for unrepentant sinners",
+        "lemmas": ["infernus", "peccator"]
+      },
+      {
+        "name": "Divine Memory",
+        "description": "Contrast between forgetful people and remembering God",
+        "lemmas": ["obliviscor", "pauper"]
+      },
+      {
+        "name": "Eschatological Hope",
+        "description": "Temporal limitation and ultimate vindication",
+        "lemmas": ["finis", "patientia"]
+      }
+    ]
+  },
+
   {
     "psalmNumber": 89,
     "category": "",
