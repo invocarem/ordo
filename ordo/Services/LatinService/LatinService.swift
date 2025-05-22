@@ -175,14 +175,7 @@ extension LatinWordEntity{
     }    
 }
 
-public struct PsalmIdentity {
-    let number: Int       // e.g. 4 or 118
-    let section: String?  // e.g. "aleph" (nil for most psalms)
-    
-    var displayName: String {
-        section != nil ? "Psalm \(number):\(section!)" : "Psalm \(number)"
-    }
-}
+
 public struct PsalmAnalysisResult: Codable {
     public let totalWords: Int
     public let uniqueWords: Int

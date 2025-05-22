@@ -1,5 +1,14 @@
 import Foundation
 
+public struct PsalmIdentity {
+    let number: Int       // e.g. 4 or 118
+    let category: String?  // e.g. "aleph" (nil for most psalms)
+    
+    var displayName: String {
+        category != nil ? "Psalm \(number):\(category!)" : "Psalm \(number)"
+    }
+}
+
 public struct PsalmThemes: Codable {
     let themes: [PsalmThemeData]
 }
@@ -130,12 +139,12 @@ extension LatinService {
         return lemmasInRange
     }
     private func themesForLineFromJSON(_ lineNumber: Int, psalm identity: PsalmIdentity) -> [(name: String, description: String, lemmas: [String])] {
-        let effectiveSection = identity.section ?? ""
-        print("Filtering for psalm \(identity.number), section: '\(effectiveSection)', startLine: \(lineNumber)")
+        let effectiveSection = identity.category?.lowercased() ?? ""
+        print("Filtering for psalm \(identity.number), category: '\(effectiveSection)', startLine: \(lineNumber)")
         
         let matchingThemes = self.themeCache
             .filter {
-                let categoryMatches = $0.category == effectiveSection || ($0.category.isEmpty && effectiveSection.isEmpty)
+                let categoryMatches = $0.category.lowercased() == effectiveSection || ($0.category.isEmpty && effectiveSection.isEmpty)
                 let psalmMatches = $0.psalmNumber == identity.number
                 let lineMatches = $0.startLine == lineNumber
                 //print("Checking entry: psalm \($0.psalmNumber), category '\($0.category)', startLine \($0.startLine) -> Matches: \(psalmMatches && categoryMatches && lineMatches)")
