@@ -1,0 +1,1616 @@
+{
+  "themes": [
+    {
+      "psalmNumber": 1,
+      "category": "",
+      "themes": [
+        {
+          "name": "Righteous Avoidance",
+          "description": "What the blessed person does not do",
+          "lemmas": ["abeo", "sto", "sedeo", "consilium", "via", "cathedra"],
+          "startLine": 1,
+          "endLine": 2,
+          "comment": "Covers 'walks not...stands not...sits not' structure"
+        },
+        {
+          "name": "Positive Devotion",
+          "description": "What the blessed person does instead",
+          "lemmas": ["lex", "dominus", "voluntas", "meditor", "dies", "nox"],
+          "startLine": 1,
+          "endLine": 2,
+          "comment": "Contrast with the avoidance themes"
+        },
+        {
+          "name": "Tree Imagery",
+          "description": "The righteous as a fruitful tree by water",
+          "lemmas": ["lignum", "planto", "decursus", "aqua", "fructus", "folium"],
+          "startLine": 3,
+          "endLine": 4,
+          "comment": "Nature metaphor for spiritual vitality"
+        },
+        {
+          "name": "Divine Blessing",
+          "description": "The prosperity of the righteous",
+          "lemmas": ["prospero", "tempus", "omnis", "facio"],
+          "startLine": 3,
+          "endLine": 4,
+          "comment": "God's favor on the righteous"
+        },
+        {
+          "name": "Wicked Contrast",
+          "description": "The fate of the wicked compared to chaff",
+          "lemmas": ["impius", "pulvis", "ventus", "projicio", "terra"],
+          "startLine": 5,
+          "endLine": 6,
+          "comment": "Negative counterpart to the tree imagery"
+        },
+        {
+          "name": "Final Judgment",
+          "description": "The ultimate destiny of righteous and wicked",
+          "lemmas": ["resurgo", "judicium", "peccator", "justus", "nosco", "pereo"],
+          "startLine": 5,
+          "endLine": 6,
+          "comment": "Eschatological conclusion of the psalm"
+        }
+      ]
+    },
+    {
+      "psalmNumber": 2,
+      "category": "",
+      "themes": [
+        {
+          "name": "Rebellious Coalition",
+          "description": "The nations and rulers conspiring against God",
+          "lemmas": ["fremo", "gens", "populus", "rex", "princeps", "convenio", "adversus"],
+          "startLine": 1,
+          "endLine": 2,
+          "comment": "Covers the opening rebellion scene (v1-2)"
+        },
+        {
+          "name": "Divine Anointed",
+          "description": "The messianic figure opposed by the nations",
+          "lemmas": ["christus", "dominus", "unus"],
+          "startLine": 1,
+          "endLine": 2,
+          "comment": "First messianic reference in the Psalter"
+        },
+        {
+          "name": "Revolt Against Bondage",
+          "description": "The rebels' attempt to throw off divine authority",
+          "lemmas": ["dirumpo", "vinculum", "projicio", "jugum"],
+          "startLine": 3,
+          "endLine": 3,
+          "comment": "Metaphorical chains/yoke imagery (v3)"
+        },
+        {
+          "name": "Heavenly Derision",
+          "description": "God's mocking response to human rebellion",
+          "lemmas": ["irrideo", "subsanno", "caelum", "habito"],
+          "startLine": 4,
+          "endLine": 4,
+          "comment": "Divine perspective from heaven (v4)"
+        },
+        {
+          "name": "Divine Wrath",
+          "description": "God's terrifying response in anger",
+          "lemmas": ["ira", "furor", "conturbo", "loquor"],
+          "startLine": 5,
+          "endLine": 5,
+          "comment": "Theophanic language of divine speech (v5)"
+        },
+        {
+          "name": "Zion Kingship",
+          "description": "Establishment of the king on God's holy mountain",
+          "lemmas": ["constituo", "rex", "sion", "mons", "sanctus"],
+          "startLine": 6,
+          "endLine": 6,
+          "comment": "Royal installation decree (v6)"
+        },
+        {
+          "name": "Divine Sonship",
+          "description": "The king's special relationship as God's son",
+          "lemmas": ["filius", "gigno", "hodie", "dico"],
+          "startLine": 7,
+          "endLine": 7,
+          "comment": "Crucial messianic declaration (v7)"
+        },
+        {
+          "name": "Universal Inheritance",
+          "description": "The nations given as royal possession",
+          "lemmas": ["postulo", "do", "gens", "hereditas", "terminus"],
+          "startLine": 8,
+          "endLine": 8,
+          "comment": "Worldwide dominion promise (v8)"
+        },
+        {
+          "name": "Iron Rule",
+          "description": "The king's unbreakable authority over nations",
+          "lemmas": ["rego", "virga", "ferreus", "confringo"],
+          "startLine": 9,
+          "endLine": 9,
+          "comment": "Rod of iron imagery (v9)"
+        },
+        {
+          "name": "Royal Warning",
+          "description": "Admonition to earthly rulers to submit",
+          "lemmas": ["intelligo", "erudio", "judico"],
+          "startLine": 10,
+          "endLine": 10,
+          "comment": "Call to wisdom (v10)"
+        },
+        {
+          "name": "Trembling Worship",
+          "description": "Proper response to divine majesty",
+          "lemmas": ["servio", "timor", "exsulto", "tremor"],
+          "startLine": 11,
+          "endLine": 11,
+          "comment": "Paradoxical fear/joy combination (v11)"
+        },
+        {
+          "name": "Final Admonition",
+          "description": "Closing warning and beatitude",
+          "lemmas": ["apprehendo", "disciplina", "irascor", "pereo", "beatus", "confido"],
+          "startLine": 12,
+          "endLine": 12,
+          "comment": "Two ways conclusion (v12)"
+        }
+      ]
+    },
+
+  {
+      "psalmNumber": 4,
+      "category": "",
+      "themes": [
+        {
+          "name": "Divine Answer",
+          "description": "Confidence in God's responsiveness to prayer",
+          "lemmas": ["invoco", "exaudio"],
+          "startLine": 1,
+          "endLine": 2,
+          "comment": "Opening affirmation of God hearing prayers"
+        },
+        {
+          "name": "Human Folly",
+          "description": "Rebuke of vain and deceitful pursuits",
+          "lemmas": ["vanitas", "mendacium"],
+          "startLine": 3,
+          "endLine": 3,
+          "comment": "Questioning worldly attachments"
+        },
+        {
+          "name": "Sacrificial Worship",
+          "description": "Call to proper worship and trust",
+          "lemmas": ["sacrificium", "justitia", "spero"],
+          "startLine": 6,
+          "endLine": 6,
+          "comment": "Central liturgical instruction"
+        },
+        {
+          "name": "Divine Favor",
+          "description": "Experience of God's blessings",
+          "lemmas": ["lumen", "vultus", "laetitia"],
+          "startLine": 7,
+          "endLine": 8,
+          "comment": "Divine light and joy imagery"
+        },
+        {
+          "name": "Peaceful Trust",
+          "description": "Final confidence in God's protection",
+          "lemmas": ["pax", "requiesco", "spe"],
+          "startLine": 9,
+          "endLine": 10,
+          "comment": "Closing promise of rest and hope"
+        },
+        {
+          "name": "Nighttime Examination",
+          "description": "Call to nocturnal self-reflection",
+          "lemmas": ["irascor", "pecco", "compungo"],
+          "startLine": 5,
+          "endLine": 5,
+          "comment": "Unique advice for nightly introspection"
+        },
+        {
+          "name": "Augustine: Ps4:5-Tears as Sacrifice",
+          "description": "My mother’s tears (lacrimae) watered the earth beneath her face in prayer",
+          "lemmas": ["compungo", "cubile"],
+          "startLine": 5,
+          "endLine": 5,
+          "comment": "Conf. 9.4.10"
+        },
+         {
+          "name": "Augustine: Signatum Lumen",
+          "description": "The light of Your face is stamped upon us, O Lord. You sealed us with the light of Your face",
+          "lemmas": ["signo", "lumen"], 
+          "startLine": 7,
+          "endLine": 7,
+          "comment": "The indelible mark of divine light on the soul.  "
+
+         }
+      ]
+    },
+
+    {
+      "psalmNumber": 6,
+      "category": "",
+      "themes": [
+        {
+          "name": "Divine Wrath",
+          "description": "Appealing against God's anger and chastening",
+          "lemmas": ["furor", "ira", "arguo", "corripio"],
+          "startLine": 1,
+          "endLine": 1,
+          "comment": "Opening plea against wrathful correction (v1)"
+        },
+        {
+          "name": "Physical Suffering",
+          "description": "Bodily affliction as manifestation of distress",
+          "lemmas": ["infirmus", "os", "conturbo", "sano"],
+          "startLine": 2,
+          "endLine": 2,
+          "comment": "Bones troubled + healing request (v2)"
+        },
+        {
+          "name": "Spiritual Anguish",
+          "description": "Deep disturbance of soul and being",
+          "lemmas": ["anima", "turbo", "usquequo"],
+          "startLine": 3,
+          "endLine": 3,
+          "comment": "Soul trouble + 'how long' cry (v3)"
+        },
+        {
+          "name": "Urgent Deliverance",
+          "description": "Plea for God to intervene and save",
+          "lemmas": ["converto", "eripio", "salvus", "misericordia"],
+          "startLine": 4,
+          "endLine": 4,
+          "comment": "Turn/rescue motifs (v4)"
+        },
+        {
+          "name": "Mortality Crisis",
+          "description": "Death as termination of praise",
+          "lemmas": ["mors", "infernus", "memor", "confiteor"],
+          "startLine": 5,
+          "endLine": 5,
+          "comment": "Sheol theology - no remembrance (v5)"
+        },
+        {
+          "name": "Nocturnal Lament",
+          "description": "Nighttime weeping and exhaustion",
+          "lemmas": ["laboro", "gemitus", "nox", "lacrima", "rigo"],
+          "startLine": 6,
+          "endLine": 6,
+          "comment": "Bed-drenching tears imagery (v6)"
+        },
+        {
+          "name": "Physical Distress",
+          "description": "Bodily manifestations of grief",
+          "lemmas": ["oculus", "turbatus", "fletus"],
+          "startLine": 7,
+          "endLine": 8,
+          "comment": "Eye trouble as physical symptom (v7-8)"
+        },
+        {
+          "name": "Enemy Confrontation",
+          "description": "Adversaries as source of suffering",
+          "lemmas": ["inimicus", "iniquitas"],
+          "startLine": 7,
+          "endLine": 8,
+          "comment": "Enemies and iniquity mentioned (v7-8)"
+        },
+        {
+          "name": "Divine Response",
+          "description": "Assurance of God hearing the plea",
+          "lemmas": ["exaudio", "deprecatio"],
+          "startLine": 8,
+          "endLine": 9,
+          "comment": "Weeping heard by God (v8-9)"
+        },
+        {
+          "name": "Enemy Shame",
+          "description": "Retributive justice on foes",
+          "lemmas": ["erubesco"],
+          "startLine": 10,
+          "endLine": 10,
+          "comment": "Enemies will be ashamed (v10)"
+        },
+        {
+          "name": "Swift Resolution",
+          "description": "Immediate divine intervention",
+          "lemmas": ["velox", "converto"],
+          "startLine": 10,
+          "endLine": 10,
+          "comment": "Quick turning of fortunes (v10)"
+        }
+      ]
+    },
+    {
+      "psalmNumber": 7,
+      "category": "",
+      "themes": [
+        {
+          "name": "Divine Address",
+          "description": "Initial invocation and personal relationship with God",
+          "lemmas": ["dominus", "deus"],
+          "startLine": 1,
+          "endLine": 1,
+          "comment": "Opening address to God"
+        },
+        {
+          "name": "Trust and Salvation",
+          "description": "Expression of trust and petition for salvation",
+          "lemmas": ["spero", "salvus"],
+          "startLine": 1,
+          "endLine": 1,
+          "comment": "Foundation of trust in God"
+        },
+        {
+          "name": "Threat Imagery",
+          "description": "Violent imagery depicting danger to the psalmist",
+          "lemmas": ["leo", "rapio"],
+          "startLine": 2,
+          "endLine": 2,
+          "comment": "Lion imagery for enemies"
+        },
+        {
+          "name": "Self-Examination",
+          "description": "Reflection on one's own actions and possible wrongdoing",
+          "lemmas": ["facio", "iniquitas"],
+          "startLine": 3,
+          "endLine": 4,
+          "comment": "Moral inventory before God"
+        },
+        {
+          "name": "Retribution Principle",
+          "description": "Concept of reciprocal justice and repayment",
+          "lemmas": ["reddo", "retribuo"],
+          "startLine": 4,
+          "endLine": 4,
+          "comment": "Justice returning to the wicked"
+        },
+        {
+          "name": "Consequences",
+          "description": "Potential downfall and threat from enemies",
+          "lemmas": ["decido", "inimicus"],
+          "startLine": 5,
+          "endLine": 5,
+          "comment": "Possible consequences if guilty"
+        },
+        {
+          "name": "Enemy Aggression",
+          "description": "Relentless pursuit and violent seizure by enemies",
+          "lemmas": ["persequor", "comprehendo"],
+          "startLine": 5,
+          "endLine": 6,
+          "comment": "Description of enemy actions"
+        },
+        {
+          "name": "Divine Intervention",
+          "description": "Call for God to act and request for divine exaltation",
+          "lemmas": ["exsurgo", "exalto"],
+          "startLine": 6,
+          "endLine": 7,
+          "comment": "Petition for God to arise"
+        },
+        {
+          "name": "Humiliation",
+          "description": "Imagery of being trampled and reduced to dust",
+          "lemmas": ["conculco", "pulvis"],
+          "startLine": 5,
+          "endLine": 6,
+          "comment": "Potential fate without God's help"
+        },
+        {
+          "name": "Divine Authority",
+          "description": "God's commands and divine mandate",
+          "lemmas": ["praeceptum", "mando"],
+          "startLine": 7,
+          "endLine": 7,
+          "comment": "God's sovereign authority"
+        },
+        {
+          "name": "Divine Judgment",
+          "description": "God as judge of all people",
+          "lemmas": ["judico", "populus"],
+          "startLine": 7,
+          "endLine": 8,
+          "comment": "Universal judgment theme"
+        },
+        {
+          "name": "Divine Presence",
+          "description": "God's surrounding presence and gathered assembly",
+          "lemmas": ["circumdo", "synagoga"],
+          "startLine": 7,
+          "endLine": 8,
+          "comment": "Divine courtroom imagery"
+        },
+        {
+          "name": "Judicial Petition",
+          "description": "Request for judgment according to justice",
+          "lemmas": ["judico", "justitia"],
+          "startLine": 8,
+          "endLine": 9,
+          "comment": "Appeal for righteous judgment"
+        },
+        {
+          "name": "Divine Examination",
+          "description": "God's scrutiny of the inner being",
+          "lemmas": ["scrutor", "cor"],
+          "startLine": 9,
+          "endLine": 9,
+          "comment": "God's omniscient knowledge"
+        },
+        {
+          "name": "Moral Contrast",
+          "description": "Destruction of wickedness and preservation of the righteous",
+          "lemmas": ["nequitia", "justus"],
+          "startLine": 9,
+          "endLine": 10,
+          "comment": "Two ways theology"
+        }
+      ]
+    },
+    {
+      "psalmNumber": 8,
+      "category": "Creation Psalm",
+      "themes": [
+        {
+          "name": "Divine Majesty",
+          "description": "God's supreme glory manifest in creation",
+          "lemmas": ["dominus", "magnificentia", "admirabilis"],
+          "startLine": 1,
+          "endLine": 2,
+          "comment": "Opening doxology"
+        },
+        {
+          "name": "Cosmic Scope",
+          "description": "Universal recognition of God's name",
+          "lemmas": ["universa", "terra", "caelos"],
+          "startLine": 1,
+          "endLine": 2,
+          "comment": "Global perspective"
+        },
+        {
+          "name": "Infant Worship",
+          "description": "Perfect praise from the mouths of children",
+          "lemmas": ["infantium", "lactentium", "laudem", "perfecisti"],
+          "startLine": 3,
+          "endLine": 3,
+          "comment": "Unexpected source of praise"
+        },
+        {
+          "name": "Cosmic Design",
+          "description": "The heavens as God's handcrafted masterpiece",
+          "lemmas": ["digitorum", "lunam", "stellas", "fundasti"],
+          "startLine": 3,
+          "endLine": 4,
+          "comment": "Artistic creation imagery"
+        },
+        {
+          "name": "Human Significance",
+          "description": "God's special attention to mortal beings",
+          "lemmas": ["homo", "memor", "visitas", "filius"],
+          "startLine": 5,
+          "endLine": 5,
+          "comment": "Divine mindfulness of humans"
+        },
+        {
+          "name": "Glorified Humanity",
+          "description": "Mankind crowned with divine honor",
+          "lemmas": ["minuisti", "angelis", "gloria", "honore", "coronasti"],
+          "startLine": 5,
+          "endLine": 6,
+          "comment": "Humanity's exalted status"
+        },
+        {
+          "name": "Created Dominion",
+          "description": "Humanity's governance over God's works",
+          "lemmas": ["constituisti", "opera", "manuum", "subjecisti", "pedibus"],
+          "startLine": 7,
+          "endLine": 7,
+          "comment": "Stewardship mandate"
+        },
+        {
+          "name": "Agricultural Blessing",
+          "description": "Domesticated creation under human care",
+          "lemmas": ["oves", "boves", "pecora", "campi"],
+          "startLine": 7,
+          "endLine": 8,
+          "comment": "Agricultural imagery"
+        },
+        {
+          "name": "Ecological Harmony",
+          "description": "Wild creatures in their created order",
+          "lemmas": ["volucres", "pisces", "perambulant", "semitas"],
+          "startLine": 8,
+          "endLine": 9,
+          "comment": "Natural world in balance"
+        },
+        {
+          "name": "Doxological Conclusion",
+          "description": "Bookend praise echoing the opening verses",
+          "lemmas": ["Domine", "noster", "admirabile", "nomen", "universa"],
+          "startLine": 9,
+          "endLine": 9,
+          "comment": "Closing refrain"
+        }
+      ]
+    },
+{
+  "psalmNumber": 9,
+  "category": "A",
+  "themes": [
+    {
+      "name": "Personal Praise",
+      "description": "Individual confession and personal testimony",
+      "lemmas": ["confiteor", "narro"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "Opening expressions of gratitude"
+    },
+    {
+      "name": "Joyful Worship",
+      "description": "Expression of joy and exuberant praise",
+      "lemmas": ["laetor", "exsulto"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Celebratory tone of the psalm"
+    },
+    {
+      "name": "Divine Attributes",
+      "description": "God's supremacy and wonderful works",
+      "lemmas": ["altissimus", "mirabilis"],
+      "startLine": 2,
+      "endLine": 2,
+      "comment": "Theological foundation of praise"
+    },
+    {
+      "name": "Divine Judgment",
+      "description": "Legal vindication and judicial authority",
+      "lemmas": ["judicium", "thronus"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "God's righteous rule established"
+    },
+    {
+      "name": "Enemy Defeat",
+      "description": "Opposition identified and final destruction",
+      "lemmas": ["inimicus", "pereo"],
+      "startLine": 3,
+      "endLine": 5,
+      "comment": "Fate of the wicked"
+    },
+    {
+      "name": "Royal Imagery",
+      "description": "Kingly posture and righteous rule",
+      "lemmas": ["sedeo", "justus"],
+      "startLine": 4,
+      "endLine": 5,
+      "comment": "Divine kingship motifs"
+    },
+    {
+      "name": "Divine Rebuke",
+      "description": "Authoritative correction and complete eradication",
+      "lemmas": ["increpo", "deleo"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Divine intervention against evil"
+    },
+    {
+      "name": "Final Destruction",
+      "description": "Permanent consequences and definitive ending",
+      "lemmas": ["aeternus", "finis"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Irreversible judgment"
+    },
+    {
+      "name": "Historical Judgment",
+      "description": "Urban centers judged and oblivion of the wicked",
+      "lemmas": ["civitas", "memoria"],
+      "startLine": 6,
+      "endLine": 7,
+      "comment": "Concrete examples of divine justice"
+    },
+    {
+      "name": "Eternal Sovereignty",
+      "description": "Unchanging nature and eternal reign",
+      "lemmas": ["permaneo", "thronus"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Timeless divine rule"
+    },
+    {
+      "name": "Universal Justice",
+      "description": "Global scope and fairness standard",
+      "lemmas": ["orbis", "aequitas"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "Worldwide application"
+    },
+    {
+      "name": "Righteous Rule",
+      "description": "Judicial function and moral foundation",
+      "lemmas": ["judico", "justus"],
+      "startLine": 8,
+      "endLine": 9,
+      "comment": "Moral basis of governance"
+    },
+    {
+      "name": "Divine Protection",
+      "description": "Shelter imagery and active assistance",
+      "lemmas": ["refugium", "adjutor"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "Security for the faithful"
+    },
+    {
+      "name": "Faithful Relationship",
+      "description": "Confident trust and divine faithfulness",
+      "lemmas": ["spero", "derelinquo"],
+      "startLine": 10,
+      "endLine": 10,
+      "comment": "Mutual covenant commitment"
+    },
+    {
+      "name": "Covenant Knowledge",
+      "description": "Personal acquaintance and representative identity",
+      "lemmas": ["nosco", "nomen"],
+      "startLine": 10,
+      "endLine": 11,
+      "comment": "Intimate divine relationship"
+    },
+    {
+      "name": "Universal Proclamation",
+      "description": "Global declaration with international scope",
+      "lemmas": ["annuntio", "gens"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "Missionary impulse"
+    },
+    {
+      "name": "Divine Remembrance",
+      "description": "Active recollection and negation of forgetfulness",
+      "lemmas": ["recordor", "obliviscor"],
+      "startLine": 12,
+      "endLine": 12,
+      "comment": "Divine memory contrasted with human"
+    },
+    {
+      "name": "Justice for the Oppressed",
+      "description": "Violence remembered with focus on the vulnerable",
+      "lemmas": ["sanguis", "pauper"],
+      "startLine": 12,
+      "endLine": 13,
+      "comment": "Special concern for the marginalized"
+    },
+    {
+      "name": "Personal Petition",
+      "description": "Cry for mercy and request for divine attention",
+      "lemmas": ["misereor", "video"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "Transition to supplication"
+    },
+    {
+      "name": "Resurrection Imagery",
+      "description": "Dramatic deliverance with threshold symbolism",
+      "lemmas": ["exalto", "porta"],
+      "startLine": 14,
+      "endLine": 14,
+      "comment": "Symbolic victory language"
+    },
+    {
+      "name": "Redemptive Purpose",
+      "description": "Declarative response and public thanksgiving",
+      "lemmas": ["annuntio", "laudatio"],
+      "startLine": 14,
+      "endLine": 15,
+      "comment": "Purpose behind deliverance"
+    },
+    {
+      "name": "Poetic Justice",
+      "description": "Ensnarement reversed with literal stumbling",
+      "lemmas": ["laqueus", "pes"],
+      "startLine": 15,
+      "endLine": 16,
+      "comment": "Retributive justice motif"
+    },
+    {
+      "name": "Divine Self-Revelation",
+      "description": "God making Himself known through judicial acts",
+      "lemmas": ["cognosco", "judicium"],
+      "startLine": 16,
+      "endLine": 16,
+      "comment": "Theophanic dimension"
+    },
+    {
+      "name": "Moral Causality",
+      "description": "Self-inflicted ruin with deeds recoiling",
+      "lemmas": ["interitus", "opus"],
+      "startLine": 16,
+      "endLine": 17,
+      "comment": "Deeds returning on doers"
+    },
+    {
+      "name": "Final Judgment",
+      "description": "Eternal destination for unrepentant sinners",
+      "lemmas": ["infernus", "peccator"],
+      "startLine": 17,
+      "endLine": 17,
+      "comment": "Eschatological conclusion"
+    },
+    {
+      "name": "Divine Memory",
+      "description": "Contrast between forgetful people and remembering God",
+      "lemmas": ["obliviscor", "pauper"],
+      "startLine": 17,
+      "endLine": 18,
+      "comment": "Theological anthropology"
+    },
+    {
+      "name": "Eschatological Hope",
+      "description": "Temporal limitation and ultimate vindication",
+      "lemmas": ["finis", "patientia"],
+      "startLine": 18,
+      "endLine": 18,
+      "comment": "Future-oriented faith"
+    }
+  ]
+},
+{
+  "psalmNumber": 9,
+  "category": "B",
+  "themes": [
+    {
+      "name": "Judicial Petition",
+      "description": "Call for divine intervention against human oppression",
+      "lemmas": ["exsurgo", "praevaleo", "judico"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "Urgent plea for God to arise (v1)"
+    },
+    {
+      "name": "Divine Governance",
+      "description": "Request for God to establish righteous authority",
+      "lemmas": ["constituo", "legislator", "scio"],
+      "startLine": 2,
+      "endLine": 2,
+      "comment": "Appeal for theocratic rule (v2)"
+    },
+    {
+      "name": "Lament of Abandonment",
+      "description": "Cry over perceived divine absence in crisis",
+      "lemmas": ["recedo", "despicio", "tribulatio"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Classic 'Where are you God?' lament (v3)"
+    },
+    {
+      "name": "Oppression Exposed",
+      "description": "Wicked arrogance versus poor suffering",
+      "lemmas": ["superbio", "incendo", "comprehendo"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Social injustice documented (v4)"
+    },
+    {
+      "name": "Moral Perversion",
+      "description": "Society's celebration of wickedness",
+      "lemmas": ["laudo", "benedico", "iniquus"],
+      "startLine": 5,
+      "endLine": 5,
+      "comment": "Cultural endorsement of evil (v5)"
+    },
+    {
+      "name": "Divine Wrath",
+      "description": "Provoking God through persistent sin",
+      "lemmas": ["exacerbo", "ira", "quaero"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Theology of provoked judgment (v6)"
+    },
+    {
+      "name": "Practical Atheism",
+      "description": "Functional denial of God's oversight",
+      "lemmas": ["deus", "inquinatus", "via"],
+      "startLine": 7,
+      "endLine": 7,
+      "comment": "Behavioral rejection of divine authority (v7)"
+    },
+    {
+      "name": "Judicial Collapse",
+      "description": "Failure of earthly justice systems",
+      "lemmas": ["aufero", "judicium", "dominor"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "Corruption of courts (v8)"
+    },
+    {
+      "name": "False Security",
+      "description": "Wicked's misplaced confidence",
+      "lemmas": ["moveo", "generatio", "malum"],
+      "startLine": 9,
+      "endLine": 9,
+      "comment": "Illusion of stability (v9)"
+    },
+    {
+      "name": "Corrupt Communication",
+      "description": "Poisonous speech patterns",
+      "lemmas": ["maledictio", "amaritudo", "dolor"],
+      "startLine": 10,
+      "endLine": 10,
+      "comment": "Toxic language (v10)"
+    },
+    {
+      "name": "Predatory Schemes",
+      "description": "Wealthy conspiring against innocents",
+      "lemmas": ["insidiae", "dives", "interficio"],
+      "startLine": 11,
+      "endLine": 11,
+      "comment": "Elite exploitation (v11)"
+    },
+    {
+      "name": "Lion Imagery",
+      "description": "Wicked as lurking predators",
+      "lemmas": ["oculus", "respicio", "leo"],
+      "startLine": 12,
+      "endLine": 12,
+      "comment": "Animal metaphor for cruelty (v12)"
+    },
+    {
+      "name": "Violent Exploitation",
+      "description": "Physical oppression of the poor",
+      "lemmas": ["rapio", "attraho", "humilio"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "Brutal treatment (vv13-14)"
+    },
+    {
+      "name": "Theological Error",
+      "description": "False assumption of divine indifference",
+      "lemmas": ["obliviscor", "averto", "video"],
+      "startLine": 15,
+      "endLine": 15,
+      "comment": "Heresy of divine neglect (v15)"
+    },
+    {
+      "name": "Final Appeal",
+      "description": "Climactic call for divine intervention",
+      "lemmas": ["exsurgo", "exalto", "obliviscor"],
+      "startLine": 16,
+      "endLine": 16,
+      "comment": "Urgent petition (v16)"
+    },
+    {
+      "name": "Divine Omniscience",
+      "description": "God's perfect knowledge of human evil",
+      "lemmas": ["video", "considero", "trado"],
+      "startLine": 18,
+      "endLine": 18,
+      "comment": "Theodicy resolution (v18)"
+    },
+    {
+      "name": "Protector of Vulnerable",
+      "description": "God as defender of orphans and poor",
+      "lemmas": ["pauper", "orphanus", "adjutor"],
+      "startLine": 19,
+      "endLine": 19,
+      "comment": "Divine social concern (v19)"
+    },
+    {
+      "name": "Judicial Punishment",
+      "description": "Breaking the power of wickedness",
+      "lemmas": ["contero", "brachium", "invenio"],
+      "startLine": 20,
+      "endLine": 20,
+      "comment": "Retributive justice (v20)"
+    },
+    {
+      "name": "Eternal Reign",
+      "description": "God's everlasting kingship",
+      "lemmas": ["regno", "aeternus", "saeculum"],
+      "startLine": 21,
+      "endLine": 21,
+      "comment": "Eschatological hope (v21)"
+    },
+    {
+      "name": "Prayer Response",
+      "description": "Divine attentiveness to human petitions",
+      "lemmas": ["exaudio", "praeparatio", "auris"],
+      "startLine": 22,
+      "endLine": 22,
+      "comment": "Theology of prayer (v22)"
+    },
+    {
+      "name": "Restorative Justice",
+      "description": "Final establishment of righteous judgment",
+      "lemmas": ["judico", "pupillus", "humilis"],
+      "startLine": 23,
+      "endLine": 23,
+      "comment": "Closing vision (v23)"
+    }
+  ]
+},
+
+{
+  "psalmNumber": 12,
+  "category": "",
+  "themes": [
+    {
+      "name": "Lament in Suffering",
+      "description": "The psalmist's cry of despair in prolonged suffering",
+      "lemmas": ["usquequo", "obliviscor", "dolor"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Repeated 'usquequo' (How long?) frames the lament"
+    },
+    {
+      "name": "Divine Hiddenness",
+      "description": "Feeling of God's absence and unanswered prayers",
+      "lemmas": ["averto", "facies"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "The turned face (avertō faciem) motif"
+    },
+    {
+      "name": "Enemy Threat",
+      "description": "Fear of enemy triumph and gloating",
+      "lemmas": ["exalto", "inimicus", "praevaleo"],
+      "startLine": 3,
+      "endLine": 5,
+      "comment": "Enemy references escalate from line 3 to 5"
+    },
+    {
+      "name": "Petition for Help",
+      "description": "Direct requests for divine intervention",
+      "lemmas": ["respicio", "exaudio", "illumino"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Imperative verbs: respice (look), exaudi (hear)"
+    },
+    {
+      "name": "Trust Transition",
+      "description": "Shift from lament to confident trust",
+      "lemmas": ["misericordia", "spero"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Pivot to trust (sperāvi) in God's mercy"
+    },
+    {
+      "name": "Promise of Praise",
+      "description": "Vow to worship despite circumstances",
+      "lemmas": ["exsulto", "cano", "psallo"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Threefold praise verbs: exsultō, canō, psallō"
+    }
+  ]
+},
+
+{
+  "psalmNumber": 13,
+  "category": "",
+  "themes": [
+    {
+      "name": "Folly of Atheism",
+      "description": "Condemnation of the fool who denies God's existence",
+      "lemmas": ["insipiens", "cor"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "Opening declaration of practical atheism"
+    },
+    {
+      "name": "Universal Corruption",
+      "description": "Description of total human depravity",
+      "lemmas": ["corrumpo", "abominabilis", "studium"],
+      "startLine": 2,
+      "endLine": 2,
+      "comment": "All humanity is corrupt in deeds"
+    },
+    {
+      "name": "Divine Scrutiny",
+      "description": "God's examination of human understanding",
+      "lemmas": ["caelum", "prospicio", "intelligens", "requiro"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Heavenly perspective on human wisdom"
+    },
+    {
+      "name": "Universal Apostasy",
+      "description": "Reiteration of total human waywardness",
+      "lemmas": ["declino", "inutilis"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Parallel to verse 2 emphasizing universal sin"
+    },
+    {
+      "name": "Oppression of the Righteous",
+      "description": "Warning to those who exploit God's people",
+      "lemmas": ["iniquitas", "devoro", "plebs", "panis"],
+      "startLine": 5,
+      "endLine": 5,
+      "comment": "Condemnation of social injustice"
+    },
+    {
+      "name": "False Fear",
+      "description": "Contrast between godless fear and true reverence",
+      "lemmas": ["invoco", "trepido", "timor"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Irony of fearing where no fear should exist"
+    },
+    {
+      "name": "Righteous Remnant",
+      "description": "Hope for the poor who trust in the Lord",
+      "lemmas": ["justus", "consilium", "inops", "spes"],
+      "startLine": 7,
+      "endLine": 7,
+      "comment": "Contrast to the corrupt majority"
+    },
+    {
+      "name": "Messianic Hope",
+      "description": "Longing for salvation from Zion",
+      "lemmas": ["sion", "salus", "israel", "captivitas", "exsulto", "laetor"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "Eschatological hope for restoration"
+    },
+    {
+      "name": "Augustine:  Interior vs exterior denial",
+      "description": "The fool says in his heart what he dares not say with his tongue",
+      "lemmas": ["insipiens", "cor"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "En. Ps. 13.2 - Interior vs exterior denial"
+    }
+  ]
+},
+    {
+      "psalmNumber": 89,
+      "category": "",
+      "themes": [
+        {
+          "name": "Divine Eternity",
+          "description": "God's existence beyond time and creation",
+          "lemmas": ["saeculum", "mons", "formo", "orbis"],
+          "startLine": 1,
+          "endLine": 2,
+          "comment": "Timeless nature of God"
+        },
+        {
+          "name": "Covenantal Refuge",
+          "description": "God as protective shelter across generations",
+          "lemmas": ["refugium", "generatio", "progenies"],
+          "startLine": 1,
+          "endLine": 2,
+          "comment": "Multi-generational faithfulness"
+        },
+        {
+          "name": "Temporal Perspective",
+          "description": "Divine vs human experience of time",
+          "lemmas": ["mille", "dies", "hesternus", "custodia"],
+          "startLine": 3,
+          "endLine": 4,
+          "comment": "Contrast between divine and human time"
+        },
+        {
+          "name": "Call to Repentance",
+          "description": "Invitation to turn from human frailty",
+          "lemmas": ["converto", "humilitas", "homo"],
+          "startLine": 3,
+          "endLine": 4,
+          "comment": "Exhortation to recognize mortality"
+        },
+        {
+          "name": "Human Transience",
+          "description": "The fleeting nature of mortal life",
+          "lemmas": ["herba", "floreo", "aresco", "nihil"],
+          "startLine": 5,
+          "endLine": 6,
+          "comment": "Floral metaphor for human life"
+        },
+        {
+          "name": "Daily Cycle",
+          "description": "Morning-to-evening metaphor for lifespan",
+          "lemmas": ["mane", "vesper", "transeo", "decido"],
+          "startLine": 5,
+          "endLine": 6,
+          "comment": "Day as metaphor for life"
+        },
+        {
+          "name": "Divine Wrath",
+          "description": "Experience of God's righteous anger",
+          "lemmas": ["ira", "furor", "turbo", "deficio"],
+          "startLine": 7,
+          "endLine": 8,
+          "comment": "Divine displeasure and its effects"
+        },
+        {
+          "name": "Illuminating Grace",
+          "description": "Counterbalancing divine mercy",
+          "lemmas": ["illuminatio", "vultus", "conspectus"],
+          "startLine": 7,
+          "endLine": 8,
+          "comment": "Divine favor as light"
+        },
+        {
+          "name": "Mortality Imagery",
+          "description": "Figures for life's fragility",
+          "lemmas": ["aranea", "meditor", "septuaginta"],
+          "startLine": 9,
+          "endLine": 10,
+          "comment": "Spiderweb and lifespan metaphors"
+        },
+        {
+          "name": "Existential Toil",
+          "description": "The pain of human existence",
+          "lemmas": ["labor", "dolor", "potentatus"],
+          "startLine": 9,
+          "endLine": 10,
+          "comment": "Human suffering theme"
+        },
+        {
+          "name": "Divine Paradox",
+          "description": "Tension between wrath and mercy",
+          "lemmas": ["mansuetudo", "corripio", "timor"],
+          "startLine": 11,
+          "endLine": 12,
+          "comment": "Complex divine nature"
+        },
+        {
+          "name": "Inscrutable Judgment",
+          "description": "Human inability to comprehend God's ways",
+          "lemmas": ["potestas", "dinumero", "ira"],
+          "startLine": 11,
+          "endLine": 12,
+          "comment": "Mystery of divine justice"
+        },
+        {
+          "name": "Wisdom Petition",
+          "description": "Request for divine instruction",
+          "lemmas": ["eruditus", "cor", "sapientia"],
+          "startLine": 13,
+          "endLine": 14,
+          "comment": "Prayer for understanding"
+        },
+        {
+          "name": "Covenantal Appeal",
+          "description": "Pleading based on relationship",
+          "lemmas": ["deprecabilis", "servus", "usquequo"],
+          "startLine": 13,
+          "endLine": 14,
+          "comment": "Appeal to God's covenant"
+        },
+        {
+          "name": "Mercy Renewal",
+          "description": "Daily experience of divine compassion",
+          "lemmas": ["misericordia", "repleo", "mane"],
+          "startLine": 15,
+          "endLine": 16,
+          "comment": "Morning as metaphor for renewal"
+        },
+        {
+          "name": "Paradoxical Joy",
+          "description": "Gladness through suffering",
+          "lemmas": ["laetor", "humilio", "malum"],
+          "startLine": 15,
+          "endLine": 16,
+          "comment": "Joy despite circumstances"
+        },
+        {
+          "name": "Divine Splendor",
+          "description": "Request for God's glorious presence",
+          "lemmas": ["splendor", "respicio", "dominus"],
+          "startLine": 17,
+          "endLine": 18,
+          "comment": "Longing for divine manifestation"
+        },
+        {
+          "name": "Vocational Blessing",
+          "description": "Consecration of human labor",
+          "lemmas": ["opus", "manus", "dirigo"],
+          "startLine": 17,
+          "endLine": 18,
+          "comment": "Sanctification of work"
+        }
+      ]
+    },
+    {
+      "psalmNumber": 90,
+      "category": "",
+      "themes": [
+        {
+          "name": "Divine Dwelling",
+          "description": "Abiding in God's protection",
+          "lemmas": ["habito", "commoror"],
+          "startLine": 1,
+          "endLine": 1,
+          "comment": "Security in God's presence"
+        },
+        {
+          "name": "Divine Titles",
+          "description": "Names of God",
+          "lemmas": ["altissimus", "deus", "dominus"],
+          "startLine": 1,
+          "endLine": 2,
+          "comment": "Theological foundation"
+        },
+        {
+          "name": "Protection Imagery",
+          "description": "Metaphors of safety",
+          "lemmas": ["adjutorium", "protectio", "refugium"],
+          "startLine": 1,
+          "endLine": 2,
+          "comment": "Divine shelter language"
+        },
+        {
+          "name": "Deliverance",
+          "description": "Rescue from danger",
+          "lemmas": ["libero", "laqueus"],
+          "startLine": 3,
+          "endLine": 4,
+          "comment": "Freedom from traps"
+        },
+        {
+          "name": "Winged Protection",
+          "description": "Shelter under God's wings",
+          "lemmas": ["scapula", "penna", "obumbro"],
+          "startLine": 3,
+          "endLine": 4,
+          "comment": "Avian metaphor for care"
+        },
+        {
+          "name": "Dual Threats",
+          "description": "Physical and verbal dangers",
+          "lemmas": ["venator", "verbum", "asper"],
+          "startLine": 3,
+          "endLine": 4,
+          "comment": "Multiple sources of danger"
+        },
+        {
+          "name": "Divine Armor",
+          "description": "God as shield",
+          "lemmas": ["scutum", "veritas"],
+          "startLine": 5,
+          "endLine": 6,
+          "comment": "Protective equipment imagery"
+        },
+        {
+          "name": "Temporal Protection",
+          "description": "Day and night safety",
+          "lemmas": ["nocturnus", "dies", "meridianus"],
+          "startLine": 5,
+          "endLine": 6,
+          "comment": "Round-the-clock security"
+        },
+        {
+          "name": "Multiform Threats",
+          "description": "Various dangers",
+          "lemmas": ["sagitta", "negotium", "daemonium"],
+          "startLine": 5,
+          "endLine": 6,
+          "comment": "Diverse sources of peril"
+        },
+        {
+          "name": "Numerical Protection",
+          "description": "Safety amidst destruction",
+          "lemmas": ["mille", "decem"],
+          "startLine": 7,
+          "endLine": 8,
+          "comment": "Quantitative security promise"
+        },
+        {
+          "name": "Divine Justice",
+          "description": "Observation of wickedness",
+          "lemmas": ["considero", "video", "peccator"],
+          "startLine": 7,
+          "endLine": 8,
+          "comment": "God's omniscient oversight"
+        },
+        {
+          "name": "Impenetrable Safety",
+          "description": "Enemy cannot approach",
+          "lemmas": ["appropinquo"],
+          "startLine": 7,
+          "endLine": 8,
+          "comment": "Divine boundary setting"
+        },
+        {
+          "name": "Personal Refuge",
+          "description": "God as personal protector",
+          "lemmas": ["spes", "refugium"],
+          "startLine": 9,
+          "endLine": 10,
+          "comment": "Individualized protection"
+        },
+        {
+          "name": "Divine Immunity",
+          "description": "Protection from evil",
+          "lemmas": ["malum", "flagellum"],
+          "startLine": 9,
+          "endLine": 10,
+          "comment": "Exemption from harm"
+        },
+        {
+          "name": "Sacred Space",
+          "description": "Safety in God's dwelling",
+          "lemmas": ["tabernaculum"],
+          "startLine": 9,
+          "endLine": 10,
+          "comment": "Temple as refuge"
+        },
+        {
+          "name": "Angelic Guardianship",
+          "description": "Angels commanded to protect",
+          "lemmas": ["angelus", "mando", "custodio"],
+          "startLine": 11,
+          "endLine": 12,
+          "comment": "Celestial protection detail"
+        },
+        {
+          "name": "Physical Protection",
+          "description": "Carried in hands",
+          "lemmas": ["manus", "porto"],
+          "startLine": 11,
+          "endLine": 12,
+          "comment": "Divine transportation"
+        },
+        {
+          "name": "Preventive Care",
+          "description": "Avoiding obstacles",
+          "lemmas": ["offendo", "lapis", "pes"],
+          "startLine": 11,
+          "endLine": 12,
+          "comment": "Protection from stumbling"
+        },
+        {
+          "name": "Victory Over Evil",
+          "description": "Trampling symbolic creatures",
+          "lemmas": ["aspis", "basiliscus", "conculco"],
+          "startLine": 13,
+          "endLine": 14,
+          "comment": "Dominion over dangerous creatures"
+        },
+        {
+          "name": "Divine Response",
+          "description": "Answer to faithfulness",
+          "lemmas": ["spero", "libero", "protego"],
+          "startLine": 13,
+          "endLine": 14,
+          "comment": "Reciprocal divine action"
+        },
+        {
+          "name": "Covenant Relationship",
+          "description": "Knowing God's name",
+          "lemmas": ["cognosco", "nomen"],
+          "startLine": 13,
+          "endLine": 14,
+          "comment": "Intimate divine knowledge"
+        },
+        {
+          "name": "Prayer Response",
+          "description": "God hears cries",
+          "lemmas": ["clamo", "exaudio"],
+          "startLine": 15,
+          "endLine": 16,
+          "comment": "Divine attentiveness"
+        },
+        {
+          "name": "Divine Presence",
+          "description": "With us in trouble",
+          "lemmas": ["tribulatio", "sum"],
+          "startLine": 15,
+          "endLine": 16,
+          "comment": "Emmanuel theology"
+        },
+        {
+          "name": "Dual Blessing",
+          "description": "Long life and salvation",
+          "lemmas": ["longitudo", "salutare"],
+          "startLine": 15,
+          "endLine": 16,
+          "comment": "Temporal and eternal benefits"
+        }
+      ]
+    },
+    {
+      "psalmNumber": 118,
+      "category": "aleph",
+      "themes": [
+        {
+          "name": "Double Beatitude",
+          "description": "Blessings for the obedient",
+          "lemmas": ["beatus", "immaculatus", "via", "ambulo"],
+          "startLine": 1,
+          "endLine": 2,
+          "comment": "Opening blessings for law-keepers (v1-2)"
+        },
+        {
+          "name": "Wholehearted Seeking",
+          "description": "Complete devotion to God's word",
+          "lemmas": ["scrutor", "testimonium", "cor", "exquiro"],
+          "startLine": 2,
+          "endLine": 2,
+          "comment": "Whole-hearted study of testimonies (v2)"
+        },
+        {
+          "name": "Path Contrast",
+          "description": "Opposing ways of righteousness and wickedness",
+          "lemmas": ["iniquitas", "via", "ambulo"],
+          "startLine": 3,
+          "endLine": 3,
+          "comment": "Negative example of law-breakers (v3)"
+        },
+        {
+          "name": "Commandment Imperative",
+          "description": "Divine charge to obey",
+          "lemmas": ["mando", "mandatum", "custodio", "nimis"],
+          "startLine": 4,
+          "endLine": 4,
+          "comment": "Explicit command to keep statutes (v4)"
+        },
+        {
+          "name": "Prayer for Guidance",
+          "description": "Petition for directed obedience",
+          "lemmas": ["dirigo", "via", "custodio", "justificatio"],
+          "startLine": 5,
+          "endLine": 5,
+          "comment": "Desire for paths aligned with God's law (v5)"
+        },
+        {
+          "name": "Confident Assurance",
+          "description": "Freedom from shame through obedience",
+          "lemmas": ["confundor", "perspicio", "mandatum"],
+          "startLine": 6,
+          "endLine": 6,
+          "comment": "Result of comprehensive obedience (v6)"
+        },
+        {
+          "name": "Grateful Learning",
+          "description": "Thankful response to divine instruction",
+          "lemmas": ["confiteor", "justus", "disco", "justificatio"],
+          "startLine": 7,
+          "endLine": 7,
+          "comment": "Commitment to learn judgments (v7)"
+        },
+        {
+          "name": "Covenantal Commitment",
+          "description": "Promise to keep God's statutes",
+          "lemmas": ["custodio", "derelinquo", "mandatum", "quaero"],
+          "startLine": 8,
+          "endLine": 8,
+          "comment": "Resolution not to forsake the law (v8)"
+        }
+      ]
+    },
+
+
+    {
+  "psalmNumber": 119,
+  "category": "",
+  "themes": [
+    {
+      "name": "Cry in Distress",
+      "description": "Initial plea to God in time of trouble",
+      "lemmas": ["tribulor", "clamo", "exaudio"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "Opening cry that establishes the psalm's supplicatory tone"
+    },
+    {
+      "name": "Protection from Deceit",
+      "description": "Request for deliverance from dishonest speech",
+      "lemmas": ["libero", "labium", "iniquus", "lingua", "dolosus"],
+      "startLine": 2,
+      "endLine": 2,
+      "comment": "Focus on protection from verbal harm"
+    },
+    {
+      "name": "Punishment of Deceivers",
+      "description": "Rhetorical question about divine justice against liars",
+      "lemmas": ["do", "appono", "lingua"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Implied expectation of retributive justice"
+    },
+    {
+      "name": "Divine Arsenal",
+      "description": "Imagery of God's weapons against the wicked",
+      "lemmas": ["sagitta", "potens", "acutus", "carbo", "desolatorius"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Military metaphors for divine judgment"
+    },
+    {
+      "name": "Exile Lament",
+      "description": "Expression of alienation among hostile people",
+      "lemmas": ["incolatus", "prolongo", "habito", "Cedar"],
+      "startLine": 5,
+      "endLine": 5,
+      "comment": "Geographical metaphor for spiritual isolation"
+    },
+    {
+      "name": "Peace-Seeker's Dilemma",
+      "description": "Conflict between desire for peace and experience of hatred",
+      "lemmas": ["incola", "anima", "odi", "pax"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Tension between peaceful intent and hostile environment"
+    },
+    {
+      "name": "Unprovoked Hostility",
+      "description": "Experience of being attacked despite peaceful words",
+      "lemmas": ["pax", "loquor", "impugno", "gratis"],
+      "startLine": 7,
+      "endLine": 7,
+      "comment": "Final complaint about unjust persecution"
+    },
+    {
+      "name": "Augustine: The Fire of Charity",
+      "description": "The desolating coals (carbonibus desolatoriis) purify like the fire of divine love",
+      "lemmas": ["carbo", "desolatorius"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Enarrationes in Psalmos 119.5"
+    }
+  ]
+},
+
+
+{
+  "psalmNumber": 122,
+  "category": "Pilgrimage Psalm (Song of Ascents)",
+  "themes": [
+    {
+      "name": "Upward Gaze",
+      "description": "The psalmist lifts eyes to God in heaven, expressing dependence",
+      "lemmas": ["levo", "oculus", "habito", "caelum"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "Physical gesture symbolizing spiritual reliance"
+    },
+    {
+      "name": "Servile Devotion",
+      "description": "Simile of servants’ eyes fixed on their masters’ hands",
+      "lemmas": ["servus", "manus", "ancilla", "domina"],
+      "startLine": 2,
+      "endLine": 3,
+      "comment": "Metaphor for total attentiveness to divine providence"
+    },
+    {
+      "name": "Persistent Plea",
+      "description": "Unwavering focus on God 'until He has mercy'",
+      "lemmas": ["misereor", "donec"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Implies patient but urgent expectation"
+    },
+    {
+      "name": "Double Cry for Mercy",
+      "description": "Repetition underscores desperation",
+      "lemmas": ["miserere", "repleo", "despectio"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Liturgical refrain intensifying the appeal"
+    },
+    {
+      "name": "Social Humiliation",
+      "description": "Description of scorn from the arrogant",
+      "lemmas": ["anima", "opprobrium", "abundo", "superbus"],
+      "startLine": 5,
+      "endLine": 5,
+      "comment": "Opposition defined by pride vs. the psalmist’s humility"
+    },
+    {
+      "name": "Augustine: Eyes of the Heart",
+      "description": "‘Levavi oculos’ signifies the soul’s ascent beyond bodily sight",
+      "lemmas": ["oculus", "levo"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "Enarrationes in Psalmos 121.1"
+    }
+  ]
+}
+  ]
+}
+

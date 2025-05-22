@@ -281,40 +281,12 @@ public class LatinService {
         }
         print("Error: translations.json not found in any bundle")
     }
-    private func loadThemes() {
-        let bundlesToCheck: [Bundle] = {
-                #if SWIFT_PACKAGE
-                // Docker/SwiftPM environment (uses Bundle.module)
-                return [Bundle.module]
-                #else
-                // Xcode environment (uses Bundle.main or Bundle(for:))
-                return [Bundle.main, Bundle(for: Self.self)]
-                #endif
-            }()
-        
-        for bundle in bundlesToCheck {
-            if let url = bundle.url(forResource: "psalm_themes", withExtension: "json") {
-                do {
-                    let data = try Data(contentsOf: url)
-
-                    print("\(data)")
-                    let psalmThemes  = try JSONDecoder().decode(PsalmThemes.self, from: data)
-                    themeCache = psalmThemes.themes
-                    return
-                } catch {
-                    print("Found psalm_themes.json but failed to load: \(error)")
-                }
-            }
-        }
-        print("Error: psalm_themes.json not found in any bundle")
-    }
- 
+    
 
     private init() {
         
             loadWords()
             loadTranslations()
-            loadThemes()
        
 
     }
@@ -352,7 +324,7 @@ public func analyzePsalm(_ identity: PsalmIdentity? = nil, text: [String], start
     var orderedLemmas: [String] = []
     let formToLemma = lemmaMapping.createFormToLemmaMapping()
       
-    let debugForms = ["exaudivit", "dilatasti", "regno", "regnabit", "dominor"]
+    let debugForms = ["exaudivit", "dilatasti", "nostra", "regnabit", "dominor"]
         for form in debugForms {
             print("Form '\(form)' maps to: \(formToLemma[form] ?? [])")
         }
@@ -423,7 +395,7 @@ public func analyzePsalm(_ identity: PsalmIdentity? = nil, text: [String], start
         themes: []
     )
     if let identity = identity {
-        result = addThematicAnalysis(to: result, psalm: identity, lines: text, startingLineNumber: startingLineNumber)
+        result =  updateThematicAnalysis(for: result, psalm: identity, lines: text, startingLineNumber: startingLineNumber)
     }
     return result;
 }

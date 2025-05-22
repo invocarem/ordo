@@ -105,8 +105,8 @@ class Psalm13Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(id, text: psalm13)
         
         let redemptionTerms = [
-            ("saluto", ["salutare"], "salvation"), // v.8
-            ("averto", ["averterit"], "restore"), // v.8
+            ("saluto", ["salutare"], "save"), // v.8
+            ("averto", ["averterit"], "turn away"), // v.8
             ("captivitas", ["captivitatem"], "captivity"), // v.8
             ("exsulto", ["exsultabit"], "rejoice"), // v.8
             ("laetor", ["laetabitur"], "be glad") // v.8

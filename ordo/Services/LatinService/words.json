@@ -38,6 +38,18 @@
   }
 },
 {
+  "lemma": "cedar",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "cedar",
+  "genitive": "cedar",
+  "translations": {
+    "en": "Kedar (a nomadic tribe in Arabia)",
+    "la": "Cedar (indeclinable)"
+  }
+},
+{
   "lemma": "longus",
   "part_of_speech": "adjective",
   "declension": 1,
@@ -3471,8 +3483,11 @@
     "forms_plural": {
       "perfect": ["corrupti"]
       
-    }
-    
+    },
+    "translations": {
+    "en": "to corrupt, spoil, bribe, destroy",
+    "la": "corrumpo, corrumpere, corrupi, corruptum"
+  }
   },
  
   {
@@ -6728,6 +6743,7 @@
   {
     "lemma": "habito",
     "part_of_speech": "verb",
+    "conjugation": 1,
     "infinitive": "habitare",
     "perfect": "habitavi",
     "supine": "habitatum",
@@ -6744,11 +6760,13 @@
         "present_passive": ["habitor", "habitaris", "habitatur", "habitamur", "habitamini", "habitantur"]
     },
     "forms_plural": {
-        "imperative": ["habitate"]
+        "imperative": ["habitate"],
+        "ablative_present_particle": ["habitantibus"]
     }
 },{
   "lemma": "conculco",
   "part_of_speech": "verb",
+  "conjugation": 1,
   "infinitive": "conculcare",
   "perfect": "conculcavi",
   "supine": "conculcatum",
@@ -12195,8 +12213,12 @@
     {
            "lemma": "compungo",
            "part_of_speech": "verb",
-           "perfect": "compunxi",
-           "infinitive": "compungere",
+            "conjugation": 3,
+            "infinitive": "compungere",
+            "present": "compungo",
+            "perfect": "compunxi",
+            "supine": "compunctum",
+           
            "forms": {
                "present_passive": ["compungor", "compungeris", "compungitur", "compungimur", "compungimini", "compunguntur"],
                "imperative_passive_plural": ["compungimini"]
@@ -12591,18 +12613,31 @@
             "la": "constituo, constituere, constitui, constitutum"
           },
           "forms": {
-            "perfect": ["constitui", "constituisti/constituisti", "constituit", "constituimus", "constituistis", "constituerunt"],
-            "present": ["constituo", "constituis", "constituit", "constituimus", "constituitis", "constituunt"],
             "imperfect": ["constituebam", "constituebas", "constituebat", "constituebamus", "constituebatis", "constituebant"],
-            "future": ["constituam", "constituēs", "constituet", "constituēmus", "constituētis", "constituent"],
             "pluperfect": ["constitueram", "constituerās", "constituerat", "constituerāmus", "constituerātis", "constituerant"],
             "subjunctive_present": ["constituam", "constituās", "constituat", "constituāmus", "constituātis", "constituant"],
             "subjunctive_imperfect": ["constituerem", "constituerēs", "constitueret", "constituerēmus", "constituerētis", "constituerent"],
-            "imperative": ["constitue", "constituite"]
+            "imperative": ["constitue", "constituite"],
+            "perfect_special": ["constituisti"]
           }
         },
         
-    
+    {
+  "lemma": "cano",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "canere",
+  "present": "cano",
+  "perfect": "cecini",
+  "supine": "cantum",
+  "forms":{
+    "future_participle": ["cantabo"]
+  },
+  "translations": {
+    "en": "to sing, recite, play (music), prophesy",
+    "la": "cano, canere, cecini, cantum"
+  }
+},
     {
            "lemma": "nos",
            "part_of_speech": "pronoun",

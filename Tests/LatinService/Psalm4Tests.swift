@@ -30,7 +30,35 @@ class Psalm4Tests: XCTestCase {
         "Quoniam tu, Domine, singulariter in spe constituisti me."
     ]
     // Add these test cases to the Psalm4Tests class
-
+func testPsalm4Themes() {
+    let analysis = latinService.analyzePsalm(id, text: psalm4)
+    
+    let allThemes = [
+        ("Divine Answer", ["invoco", "exaudio"]),
+        ("Human Folly", ["vanitas", "mendacium", "gravis"]),
+        ("Sacrificial Worship", ["sacrificium", "justitia", "spero"]),
+        ("Divine Favor", ["lumen", "vultus", "laetitia"]),
+        ("Peaceful Trust", ["pax", "requiesco", "spes"]),
+        ("Nighttime Examination", ["irascor", "pecco", "compungo"]),
+        ("Augustine: Ps4:5-Tears as Sacrifice", ["compungo", "cubile"]),
+        ("Augustine: Signatum Lumen", ["signo", "lumen"])
+    ]
+    
+    var failedChecks = [String]()
+    
+    // Identical lemma verification as Psalm 12 test
+    for (themeName, requiredLemmas) in allThemes {
+        let missing = requiredLemmas.filter { !analysis.dictionary.keys.contains($0) }
+        if !missing.isEmpty {
+            failedChecks.append("\(themeName): \(missing.joined(separator: ", "))")
+        }
+    }
+    
+    // Identical failure output format
+    if !failedChecks.isEmpty {
+        XCTFail("Missing lemmas:\n" + failedChecks.joined(separator: "\n"))
+    }
+}
 // MARK: - Grouped Line Tests for Psalm 4
 func testPsalm4Lines1and2() {
     let line1 = psalm4[0] // "Cum invocarem exaudivit me Deus justitiae meae; in tribulatione dilatasti mihi."

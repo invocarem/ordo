@@ -20,7 +20,87 @@ class Psalm12Tests: XCTestCase {
         "Nequando dicat inimicus meus: Praevalui adversus eum. Qui tribulant me, exsultabunt si motus fuero;",
         "Ego autem in misericordia tua speravi. Exsultabit cor meum in salutari tuo; cantabo Domino qui bona tribuit mihi, et psallam nomini Domini altissimi."
     ]
+
+    // MARK: - Theme Tests
+func testAllThemes() {
+    let analysis = latinService.analyzePsalm(id, text: psalm12)
     
+    // All themes from your JSON
+    let allThemes = [
+        ("Lament in Suffering", ["usquequo", "obliviscor", "dolor"]),
+        ("Divine Hiddenness", ["averto", "facies"]),
+        ("Enemy Threat", ["exalto", "inimicus", "praevaleo"]),
+        ("Petition for Help", ["respicio", "exaudio", "illumino"]),
+        ("Trust Transition", ["misericordia", "spero"]),
+        ("Promise of Praise", ["exsulto", "cano", "psallo"])
+    ]
+    
+    var failedChecks = [String]()
+    
+    for (themeName, requiredLemmas) in allThemes {
+        let missing = requiredLemmas.filter { !analysis.dictionary.keys.contains($0) }
+        if !missing.isEmpty {
+            failedChecks.append("\(themeName): \(missing.joined(separator: ", "))")
+        }
+    }
+    
+    if !failedChecks.isEmpty {
+        XCTFail("Missing lemmas:\n" + failedChecks.joined(separator: "\n"))
+    }
+}
+
+
+func testThemeLineCoverage() {
+    let analysis = latinService.analyzePsalm(id, text: psalm12)
+    
+    // Verify every line has at least one theme
+    psalm12.enumerated().forEach { lineIndex, lineText in
+        let lineNumber = lineIndex + 1
+        let lineThemes = analysis.themes.compactMap { theme in
+            theme.lineRange?.contains(lineNumber) == true ? theme : nil
+        }
+        
+        XCTAssertFalse(
+            lineThemes.isEmpty,
+            "Line \(lineNumber) has no associated themes: '\(lineText)'"
+        )
+        
+        if verbose && !lineThemes.isEmpty {
+            print("\nLine \(lineNumber) themes:")
+            lineThemes.forEach { print("- \($0.name) (lines \($0.lineRange?.description ?? "nil"))") }
+        }
+    }
+}
+
+func testThemeLemmaPresence() {
+    let analysis = latinService.analyzePsalm(id, text: psalm12)
+    
+    // First build a set of all lemmas that exist in the analysis
+    let existingLemmas = Set(analysis.dictionary.keys)
+    
+    for theme in analysis.themes {
+        // Verify all supporting lemmas exist in the dictionary
+        let missingLemmas = theme.supportingLemmas.filter { !existingLemmas.contains($0) }
+        XCTAssertTrue(
+            missingLemmas.isEmpty,
+            "Theme '\(theme.name)' references missing lemmas: \(missingLemmas.joined(separator: ", "))"
+        )
+        
+        // If we have line ranges, do additional verification
+        if let lineRange = theme.lineRange {
+            // For this simple test, we'll just confirm the lemmas exist
+            // More advanced line-based verification would require modifying PsalmAnalysisResult
+            // to include word-to-line mapping information
+            if verbose {
+                print("\nTheme '\(theme.name)' (lines \(lineRange)) has lemmas:")
+                theme.supportingLemmas.forEach { print("- \($0)") }
+            }
+        }
+    }
+}
+
+
+   
     // MARK: - Test Cases
     func testAnalysis() {
         let analysis = latinService.analyzePsalm(id, text: psalm12)
@@ -99,7 +179,7 @@ class Psalm12Tests: XCTestCase {
         
         let hopeTerms = [
             ("misericordia", ["misericordia"], "mercy"), // v.6
-            ("salus", ["salutari"], "salvation"), // v.6
+            ("salutaris", ["salutari"], "salvation"), // v.6
             ("canto", ["cantabo"], "sing"), // v.6
             ("psallo", ["psallam"], "sing praises"), // v.6
             ("spero", ["speravi"], "hope") // v.6

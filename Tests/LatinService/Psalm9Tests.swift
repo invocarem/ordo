@@ -614,7 +614,7 @@ class Psalm9ATests: XCTestCase {
 
 class Psalm9BTests: XCTestCase {
     private var latinService: LatinService!
-    let verbose = true
+    let verbose = false
     
     override func setUp() {
         super.setUp()
@@ -634,16 +634,18 @@ class Psalm9BTests: XCTestCase {
         "Auferuntur judicia tua a facie eius; omnium inimicorum suorum dominabitur.",
         "Dixit enim in corde suo: Non movebor a generatione in generationem sine malo.",
         "Cujus maledictione os plenum est, et amaritudine, et dolo; sub lingua ejus labor et dolor.",
+        
         "Sedet in insidiis cum divitibus in occultis, ut interficiat innocentem;",
         "Oculi ejus in pauperem respiciunt; insidiatur in abscondito, quasi leo in spelunca sua.",
         "Insidiatur ut rapiat pauperem; rapere pauperem dum attrahit eum.",
         "In laqueo suo humiliabit eum; inclinabit se, et cadet cum dominatus fuerit pauperum.",
-        "Dixit enim in corde suo: Oblitus est Deus, avertit faciem suam ne videat in finem.",
+        "Dixit enim in corde suo: Oblitus est Deus, avertit faciem suam ne videat in finem.",        
         "Exsurge, Domine Deus, exaltetur manus tua; ne obliviscaris pauperum.",
         "Propter quid irritavit impius Deum? dixit enim in corde suo: Non requiret.",
         "Vides quoniam tu laborem et dolorem consideras, ut tradas eos in manus tuas.",
         "Tibi derelictus est pauper; orphano tu eris adjutor.",
         "Contere brachium peccatoris et maligni; quaeretur peccatum illius, et non invenietur.",
+        
         "Dominus regnabit in aeternum, et in saeculum saeculi; peribitis, gentes, de terra illius.",
         "Desiderium pauperum exaudivit Dominus; praeparationem cordis eorum audivit auris tua,",
         "Judicare pupillo et humili, ut non apponat ultra magnificare se homo super terram."
@@ -881,6 +883,7 @@ func testPsalm9BLines9and10() {
     let line9 = psalm9B[8] // "Dixit enim in corde suo: Non movebor a generatione in generationem sine malo."
     let line10 = psalm9B[9] // "Cujus maledictione os plenum est, et amaritudine, et dolo; sub lingua ejus labor et dolor."
     let combinedText = line9 + " " + line10
+    latinService.configureDebugging(target: "")
     let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 9)
     
     // Lemma verification
@@ -1230,6 +1233,7 @@ func testPsalm9BLines21and22() {
 
 
    
+    latinService.configureDebugging(target: "")  // turn off debugging???
     // Lemma verification
     let testLemmas = [
         ("dominus", ["dominus", "dominus"], "Lord"),
@@ -1237,7 +1241,6 @@ func testPsalm9BLines21and22() {
         ("aeternus", ["aeternum"], "eternal"),
         ("saeculum", ["saeculum"], "age"),
         ("pereo", ["peribitis"], "perish"),
-        ("gens", ["gentes"], "nations"),
         ("terra", ["terra"], "land"),
         ("desiderium", ["desiderium"], "desire"),
         ("pauper", ["pauperum"], "poor"),

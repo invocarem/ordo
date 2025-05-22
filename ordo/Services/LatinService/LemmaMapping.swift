@@ -135,12 +135,15 @@ struct LemmaMapping {
             printVerbDebug(entity: entity)
         case .noun:
             printNounDebug(entity: entity)
+        case .adjective:
+            printNounDebug(entity: entity)
         default:
             print(" - Lemma: \(entity.lemma)")
             print(" - POS: \(entity.partOfSpeech)")
         }
     }
-    
+
+
     private func printVerbDebug(entity: LatinWordEntity) {
         print(" - Principal Parts:")
         print("   • Infinitive: \(entity.infinitive ?? "N/A")")
@@ -168,6 +171,12 @@ struct LemmaMapping {
         print(" - Generated Forms:")
         forms.sorted(by: { $0.key < $1.key }).forEach { caseName, form in
             print("   • \(caseName): \(form)")
+        }
+        if let specialForms = entity.forms {
+            print(" - Special Forms (including gender variants):")
+            for (formType, forms) in specialForms.sorted(by: { $0.key < $1.key }) {
+                print("   • \(formType): \(forms.joined(separator: ", "))")
+            }
         }
     }
 
