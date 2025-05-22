@@ -126,7 +126,7 @@ struct PsalmAnalysisSelectionView: View {
                 
                 let identity = PsalmIdentity(
                             number: Int(selectedPsalm.number) ?? 0,
-                            section: selectedPsalm.category
+                            category: selectedPsalm.category
                         )
                 // Create a new analysis when the psalm changes
                 let analysis = latinService.analyzePsalm(identity, text: psalmText.joined(separator: " "))

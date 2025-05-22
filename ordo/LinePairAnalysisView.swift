@@ -15,7 +15,7 @@ struct LinePairAnalysisView: View {
         
         // Split into main part and section (handling both : and parentheses)
         let mainPart: String
-        let section: String?
+        let category: String?
         
         if let parenRange = cleanTitle.range(of: "(") {
             mainPart = String(cleanTitle[..<parenRange.lowerBound]).trimmingCharacters(in: .whitespaces)
@@ -24,18 +24,18 @@ struct LinePairAnalysisView: View {
                 .replacingOccurrences(of: ")", with: "")
                 .trimmingCharacters(in: .whitespaces)
                 .lowercased() // Convert to lowercase for consistency
-            section = sectionPart.isEmpty ? nil : sectionPart
+            category = sectionPart.isEmpty ? nil : sectionPart
         } else {
             let components = cleanTitle.components(separatedBy: ":")
             mainPart = components[0].trimmingCharacters(in: .whitespaces)
             let sectionPart = components.count > 1 ? components[1].trimmingCharacters(in: .whitespaces).lowercased() : nil
-            section = sectionPart?.isEmpty ?? true ? nil : sectionPart
+            category = sectionPart?.isEmpty ?? true ? nil : sectionPart
         }
         
         let number = Int(mainPart) ?? 0
         
-        print("psalmTitle: \(psalmTitle)   number: \(number)   section: \(section ?? "")")
-        return PsalmIdentity(number: number, section: section)
+        print("psalmTitle: \(psalmTitle)   number: \(number)   category: \(category ?? "")")
+        return PsalmIdentity(number: number, category: category?.lowercased())
     }
     
     var body: some View {

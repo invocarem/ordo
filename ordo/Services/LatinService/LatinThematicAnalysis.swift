@@ -1,7 +1,16 @@
 import Foundation
 
 // MARK: - Data Models
-public struct PsalmThemesJSON: Codable {
+public struct PsalmIdentity {
+    let number: Int       // e.g. 4 or 118
+    let category: String?  // e.g. "aleph" (nil for most psalms)
+    
+    var displayName: String {
+        category != nil ? "Psalm \(number):\(category!)" : "Psalm \(number)"
+    }
+}
+
+public struct PsalmThemes: Codable {
     let themes: [PsalmThemeData]
 }
 
@@ -158,4 +167,29 @@ extension LatinService {
         
         return lemmasInRange
     }
+<<<<<<< HEAD
 }
+=======
+    private func themesForLineFromJSON(_ lineNumber: Int, psalm identity: PsalmIdentity) -> [(name: String, description: String, lemmas: [String])] {
+        let effectiveSection = identity.category?.lowercased() ?? ""
+        print("Filtering for psalm \(identity.number), category: '\(effectiveSection)', startLine: \(lineNumber)")
+        
+        let matchingThemes = self.themeCache
+            .filter {
+                let categoryMatches = $0.category.lowercased() == effectiveSection || ($0.category.isEmpty && effectiveSection.isEmpty)
+                let psalmMatches = $0.psalmNumber == identity.number
+                let lineMatches = $0.startLine == lineNumber
+                //print("Checking entry: psalm \($0.psalmNumber), category '\($0.category)', startLine \($0.startLine) -> Matches: \(psalmMatches && categoryMatches && lineMatches)")
+                return psalmMatches && categoryMatches && lineMatches
+            }
+            .flatMap { $0.themes }
+            .map { (name: $0.name, description: $0.description, lemmas: $0.lemmas) }
+        
+        print("!!! Line \(lineNumber), Psalm \(identity.number): Found \(matchingThemes.count) themes: \(matchingThemes.map { $0.name })")
+        return matchingThemes
+    }
+    
+    
+   
+}
+>>>>>>> c52e5835a41a70b0e339c198c55871b9b6bc5855
