@@ -20,7 +20,7 @@ class Psalm66Tests: XCTestCase {
         "Terra dedit fructum suum; benedicat nos Deus, Deus noster.",
         "Benedicat nos Deus; et metuant eum omnes fines terrae."
     ]
-    let id = PsalmIdentity(number: 66, section: nil) 
+    let id = PsalmIdentity(number: 66, category: nil) 
     // MARK: - Test Cases
      func testDivineFaceMetaphor() {
         let analysis = latinService.analyzePsalm(id, text: psalm66)

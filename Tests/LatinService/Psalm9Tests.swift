@@ -1411,7 +1411,7 @@ func testPsalm9BLine23() {
         let caseInsensitiveDict = Dictionary(uniqueKeysWithValues: 
             analysis.dictionary.map { ($0.key.lowercased(), $0.value) }
         )
-        for (lemma, forms, _) in confirmedWords {
+        for (lemma, _, _) in confirmedWords {
         guard caseInsensitiveDict[lemma.lowercased()] != nil else {
             print("\n!!! ❌ MISSING LEMMA IN DICTIONARY: \(lemma)")
             XCTFail("Missing lemma: \(lemma)")

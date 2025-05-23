@@ -9,7 +9,7 @@ class Psalm13Tests: XCTestCase {
         super.setUp()
         latinService = LatinService.shared
     }
-    let id = PsalmIdentity(number: 13, section: nil)
+    let id = PsalmIdentity(number: 13, category: nil)
     
     // MARK: - Test Data (Psalm 13)
     let psalm13 = [
@@ -23,7 +23,7 @@ class Psalm13Tests: XCTestCase {
         "Quis dabit ex Sion salutare Israel? cum averterit Dominus captivitatem plebis suae, exsultabit Jacob, et laetabitur Israel."
     ] 
     
-    let identity = PsalmIdentity(number: 13, section: nil)
+    let identity = PsalmIdentity(number: 13, category: nil)
     
    
     // MARK: - Test Cases

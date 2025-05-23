@@ -36,7 +36,7 @@ class Psalm90Tests: XCTestCase {
             }
         }
     }
-    let id = PsalmIdentity(number: 90, section: nil)
+    let id = PsalmIdentity(number: 90, category: nil)
 
     let psalm90 = [
         "Qui habitat in adjutorio Altissimi, in protectione Dei caeli commorabitur.",

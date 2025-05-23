@@ -5,13 +5,13 @@ class Psalm118SadeTests: XCTestCase {
     private var latinService: LatinService!
     let verbose = true
     
-    let identity = PsalmIdentity(number: 118, section: "sade")
+    let identity = PsalmIdentity(number: 118, category: "sade")
     override func setUp() {
         super.setUp()
         latinService = LatinService.shared
     }
     
-    // MARK: - Test Data (Psalm 118:137-144 "Sade" section)
+    // MARK: - Test Data (Psalm 118:137-144 "Sade" category)
     let psalm118Sade = [
         "Justus es, Domine, et rectum judicium tuum.",
         "Mandasti justitiam testimonia tua, et veritatem tuam nimis.",

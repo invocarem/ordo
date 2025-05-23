@@ -15,7 +15,7 @@ class Psalm4Tests: XCTestCase {
         super.tearDown()
     }
 
-    let id = PsalmIdentity(number: 4, section: nil)
+    let id = PsalmIdentity(number: 4, category: nil)
 
     private let psalm4 = [
         "Cum invocarem exaudivit me Deus justitiae meae; in tribulatione dilatasti mihi.",
@@ -138,11 +138,7 @@ func testPsalm4Lines3and4() {
         ("clamo", ["clamavero"], "cry out")
     ]
 
-    let requiredThemes = [
-        ("Human Folly", ["vanitas", "mendacium"]),
-        ("Divine Revelation", ["mirifico", "sanctus"]),
-        ("Divine Response", ["exaudiet", "clamavero"])
-    ]
+   
     
     // Thematic analysis
     let expectedThemes = [

@@ -9,8 +9,8 @@ class Psalm6Tests: XCTestCase {
         super.setUp()
         latinService = LatinService.shared
     }
-     let identity = PsalmIdentity(number: 6, section: nil)
-     let id = PsalmIdentity(number: 6, section: nil)
+     let identity = PsalmIdentity(number: 6, category: nil)
+     let id = PsalmIdentity(number: 6, category: nil)
     
     
     // MARK: - Test Data

@@ -10,7 +10,7 @@ class Psalm126Tests: XCTestCase {
         latinService = LatinService.shared
     }
     
-    let identity = PsalmIdentity(number: 126, section: nil)
+    let identity = PsalmIdentity(number: 126, category: nil)
     // MARK: - Test Data
     let psalm126 = [
         "Nisi Dominus ædificaverit domum: in vanum laboraverunt qui ædificant eam.",

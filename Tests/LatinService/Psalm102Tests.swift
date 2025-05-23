@@ -9,7 +9,7 @@ class Psalm102Tests: XCTestCase {
         super.setUp()
         latinService = LatinService.shared
     }
-    let id = PsalmIdentity(number: 102, section: nil)
+    let id = PsalmIdentity(number: 102, category: nil)
     // MARK: - Test Data
     let psalm102 = [
            "Benedic, anima mea, Domino, et omnia quae intra me sunt nomini sancto ejus.",

@@ -9,7 +9,7 @@ class Psalm125Tests: XCTestCase {
         super.setUp()
         latinService = LatinService.shared
     }
-    let id = PsalmIdentity(number: 125, section: nil)
+    let id = PsalmIdentity(number: 125, category: nil)
     
     // MARK: - Test Data
     let psalm125 = [

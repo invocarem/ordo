@@ -36,7 +36,7 @@ class Psalm131Tests: XCTestCase {
                 "Inimicos ejus induam confusione: super ipsum autem efflorebit sanctificatio mea."
 
     ]
-    let id = PsalmIdentity(number: 131, section: nil)
+    let id = PsalmIdentity(number: 131, category: nil)
 
 // MARK: - Grouped Line Tests for Psalm 131
 func testPsalm131Lines1and2() {

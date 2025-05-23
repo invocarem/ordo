@@ -183,7 +183,7 @@ func testAnalyzePsalm118Daleth() {
     XCTAssertGreaterThan(analysis.uniqueWords, 0, "Should have unique words")
     XCTAssertGreaterThan(analysis.uniqueLemmas, 0, "Should have unique lemmas")
     
-    // 2. Test specific important words in Daleth section
+    // 2. Test specific important words in Daleth category
     XCTAssertNotNil(analysis.dictionary["adhaereo"], "Should have 'adhaereo' in dictionary")
     XCTAssertNotNil(analysis.dictionary["vivifico"], "Should have 'vivifico' in dictionary")
     XCTAssertNotNil(analysis.dictionary["verbum"], "Should have 'verbum' in dictionary")
@@ -596,7 +596,7 @@ func testAnalyzePsalm118Sin() {
     
     let analysis = latinService.analyzePsalm(text: psalm118Sin)
     
-    // ===== 1. Verify ACTUAL words in this section =====
+    // ===== 1. Verify ACTUAL words in this category =====
     let confirmedWords = [
         ("mendacium", ["mendacium"], "falsehood"), // Present in verse 113
         ("scandalum", ["scandalum"], "stumbling block"), // Present in verse 115

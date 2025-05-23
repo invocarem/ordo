@@ -21,7 +21,7 @@ class Psalm10Tests: XCTestCase {
         "Pluet super peccatores laqueos; ignis, et sulphur, et spiritus procellarum pars calicis eorum.",
         "Quoniam justus Dominus, et justitias dilexit; aequitatem vidit vultus ejus."
     ]
-    let id = PsalmIdentity(number: 10, section: nil)
+    let id = PsalmIdentity(number: 10, category: nil)
     // MARK: - Test Cases
     
    

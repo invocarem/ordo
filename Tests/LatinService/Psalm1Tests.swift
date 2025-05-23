@@ -10,7 +10,7 @@ class Psalm1Tests: XCTestCase {
         latinService = LatinService.shared
     }
     
-    let identity = PsalmIdentity(number: 1, section: nil)
+    let identity = PsalmIdentity(number: 1, category: nil)
     // MARK: - Test Data
     let psalm1 = [
         "Beatus vir qui non abiit in consilio impiorum, et in via peccatorum non stetit, et in cathedra pestilentiae non sedit;",

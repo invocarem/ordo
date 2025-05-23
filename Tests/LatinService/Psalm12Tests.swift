@@ -10,7 +10,7 @@ class Psalm12Tests: XCTestCase {
         latinService = LatinService.shared
     }
     
-    let id = PsalmIdentity(number: 12, section: nil)
+    let id = PsalmIdentity(number: 12, category:  nil)
     // MARK: - Test Data (Psalm 12)
     let psalm12 = [
         "Usquequo, Domine, oblivisceris me in finem? usquequo avertis faciem tuam a me?",

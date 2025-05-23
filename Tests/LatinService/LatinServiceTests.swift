@@ -35,40 +35,88 @@ final class LatinServiceTests: XCTestCase {
     }
     func testIntendeGeneration() {
         let intende = LatinWordEntity(
-            lemma: "intende",
-            partOfSpeech: .verb,
-            perfect: "intendi",
-            infinitive: "intendere",            
-            supine: "intentum"
-        )
-        
-        let forms = intende.generatedVerbForms()
-         print(forms["present"]!)
-         print(forms["perfect"]!)
-          print(forms["past_participle"]!)
-        // Verify present system
-        XCTAssertEqual(forms["present"], ["intendeo", "intendes", "intendet", "intendemus", "intendetis", "intendent"])
-        XCTAssertEqual(forms["perfect"], ["intendi", "intendisti", "intendit", "intendimus", "intendistis", "intenderunt"])
-        
-        // Verify participle
-        XCTAssertEqual(forms["past_participle"], ["intentus"])
+        lemma: "intendo",
+        partOfSpeech: .verb,
+        declension: nil, // Not needed for verbs
+        gender: nil,     // Not needed for verbs
+        vocative: nil,   // Not needed for verbs
+        nominative: nil, // Not needed for verbs
+        dative: nil,    // Not needed for verbs
+        accusative: nil, // Not needed for verbs
+        genitive: nil,   // Not needed for verbs
+        ablative: nil,   // Not needed for verbs
+        nominative_plural: nil, // Not needed for verbs
+        genitive_plural: nil,   // Not needed for verbs
+        dative_plural: nil,     // Not needed for verbs
+        accusative_plural: nil, // Not needed for verbs
+        ablative_plural: nil,   // Not needed for verbs
+        possessive: nil,       // Not needed for verbs
+        perfect: "intendi",
+        infinitive: "intendere",
+        supine: "intentum",
+        conjugation: 3,
+        forms: nil,             // Optional: Add if you have irregular forms
+        formsPlural: nil,       // Optional: Add if needed
+        baseForm: "intende",    // The imperative form you're testing
+        derivedFrom: nil,       // Optional: Parent word if derived
+        translations: [
+            "en": "to stretch, aim, direct attention, intend",
+            "la": "intendo, intendere"
+        ]
+    )
+    
+    
+    let forms = intende.generatedVerbForms()    
+    print("All generated forms: \(forms)") // Debug the full output
+    
+    // Check if keys exist before force-unwrapping
+    if let present = forms["present"] {
+        print("Present: \(present)")
+        XCTAssertEqual(present, ["intendeo", "intendes", "intendet", "intendemus", "intendetis", "intendent"])
+    } else {
+        XCTFail("Missing 'present' forms")
     }
-    func testCognosco() {
-        let cognosco = LatinWordEntity(
-            lemma: "cognosco",
-            partOfSpeech: .verb,
-            perfect: "cognovi",
-            infinitive: "cognoscere",            
-            supine: "cognitum"
-        )
+    
+    if let perfect = forms["perfect"] {
+        print("Perfect: \(perfect)")
+        XCTAssertEqual(perfect, ["intendi", "intendisti", "intendit", "intendimus", "intendistis", "intenderunt"])
+    } else {
+        XCTFail("Missing 'perfect' forms")
+    }
+    
+    if let pastParticiple = forms["past_participle"] {
+        print("Past Participle: \(pastParticiple)")
+        XCTAssertEqual(pastParticiple, ["intentus"])
+    } else {
+        XCTFail("Missing 'past_participle'")
+    }
+}
 
-        let forms = cognosco.generatedVerbForms()
-        print(forms["perfect"]!)  // Includes "cognovisti"
-        //print(forms["present_passive"]!) 
-        print(forms["imperfect_subjunctive"]!)  // Includes "cognosceret"
+func testCognosco() {
+    let cognosco = LatinWordEntity(
+        lemma: "cognosco",
+        partOfSpeech: .verb,
+        perfect: "cognovi",
+        infinitive: "cognoscere",            
+        supine: "cognitum"
+    )
+
+    let forms = cognosco.generatedVerbForms()
+    
+    if let perfectForms = forms["perfect"] {
+        print(perfectForms)  // Should include "cognovisti"
+    } else {
+        XCTFail("Perfect forms not generated")
     }
-    func testAnalyzePsalm66() {
-        let identity = PsalmIdentity(number: 66, section: nil)
+    
+    if let imperfectSubjunctive = forms["imperfect_subjunctive"] {
+        print(imperfectSubjunctive)  // Should include "cognosceret"
+    } else {
+        XCTFail("Imperfect subjunctive forms not generated")
+    }
+}
+   func testAnalyzePsalm66() {
+        let identity = PsalmIdentity(number: 66, category: nil)
         let analysis = latinService.analyzePsalm(identity, text: psalm66)
         
         // Basic statistics
@@ -98,7 +146,7 @@ final class LatinServiceTests: XCTestCase {
     
     
     func testPsalm66WordCounts() {
-        let identity = PsalmIdentity(number: 66, section: nil)
+        let identity = PsalmIdentity(number: 66, category: nil)
         let analysis = latinService.analyzePsalm(identity, text: psalm66)
         
         // Verify specific word counts
@@ -114,7 +162,7 @@ final class LatinServiceTests: XCTestCase {
     }
     
     func testEntityInformation() {
-        let identity = PsalmIdentity(number: 66, section: nil)
+        let identity = PsalmIdentity(number: 66, category: nil)
         let analysis = latinService.analyzePsalm(identity, text: psalm66)
         
         if let deusInfo = analysis.dictionary["deus"] {
@@ -174,7 +222,7 @@ func testAnalyzePsalm90() {
         "Clamabit ad me, et ego exaudiam eum; cum ipso sum in tribulatione, eripiam eum et glorificabo eum.",
         "Longitudine dierum replebo eum, et ostendam illi salutare meum."
     ]
-    let identity = PsalmIdentity(number: 90, section: nil)
+    let identity = PsalmIdentity(number: 90, category: nil)
     
     let analysis = latinService.analyzePsalm(identity, text: psalm90)
     
@@ -200,7 +248,7 @@ func testAnalyzeAdolescens() {
         "Vide adolescentem currentem",      // Example sentence
         "Da intellectum adolescentibus"     // Plural example
     ]
-    let identity = PsalmIdentity(number: 118, section: nil)
+    let identity = PsalmIdentity(number: 118, category: nil)
     
     // Create analysis
     let analysis = latinService.analyzePsalm(identity, text: testText)
@@ -238,7 +286,7 @@ func testAnalyzeAdolescens() {
             "Custodi verba haec",             // Imperative
             "Custodiebant testamentum"        // Imperfect
         ]
-    let identity = PsalmIdentity(number: 118, section: nil)
+    let identity = PsalmIdentity(number: 118, category: nil)
         
         // Create analysis
         let analysis = latinService.analyzePsalm(identity, text: testText)
@@ -275,7 +323,7 @@ func testAnalyzeAdolescens() {
             "Justitiae tuae"           // verse 138 (fem.gen)
             
         ]
-    let id = PsalmIdentity(number: 118, section: nil)
+    let id = PsalmIdentity(number: 118, category: nil)
         
         let analysis = latinService.analyzePsalm(id, text: psalm119Sade)
         

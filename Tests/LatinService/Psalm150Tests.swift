@@ -19,7 +19,7 @@ class Psalm150Tests: XCTestCase {
         "Laudate eum in cymbalis benesonantibus: laudate eum in cymbalis jubilationis.",
         "Omnis spiritus laudet Dominum."
     ]
-    let id = PsalmIdentity(number: 150, section: nil)
+    let id = PsalmIdentity(number: 150, category: nil)
     
     // MARK: - Test Cases
     

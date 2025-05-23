@@ -11,7 +11,7 @@ class Psalm89Tests: XCTestCase {
     }
     
     // MARK: - Test Data
-    let id = PsalmIdentity(number: 89, section: nil)
+    let id = PsalmIdentity(number: 89, category: nil)
     let psalm89 = [
          "Domine, refugium factus es nobis a generatione et progenie.",
                 "Priusquam montes fierent, aut formaretur terra et orbis: a saeculo et usque in saeculum tu es, Deus.",

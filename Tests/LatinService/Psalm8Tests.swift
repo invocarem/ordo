@@ -15,7 +15,7 @@ class Psalm8Tests: XCTestCase {
         super.tearDown()
     }
 
-    let id = PsalmIdentity(number: 8, section: nil)
+    let id = PsalmIdentity(number: 8, category: nil)
     
     // MARK: - Test Data
     let psalm8 = [

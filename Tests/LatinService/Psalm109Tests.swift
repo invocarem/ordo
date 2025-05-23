@@ -15,7 +15,7 @@ class Psalm109Tests: XCTestCase {
         super.tearDown()
     }
      
-    let identity = PsalmIdentity(number: 109, section: nil)
+    let identity = PsalmIdentity(number: 109, category: nil)
     private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
         for (lemma, forms, translation) in confirmedWords {
             guard let entry = analysis.dictionary[lemma] else {

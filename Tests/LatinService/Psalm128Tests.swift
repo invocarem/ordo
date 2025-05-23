@@ -21,7 +21,7 @@ class Psalm128Tests: XCTestCase {
         "de quo non implevit manum suam qui metit, et sinum suum qui manipulos colligit.",
         "Et non dixerunt qui praeteribant: Benedictio Domini super vos; benediximus vobis in nomine Domini."
     ]
-    let id = PsalmIdentity(number: 13, section: nil)
+    let id = PsalmIdentity(number: 13, category: nil)
      
     // MARK: - Test Cases
     
