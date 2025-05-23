@@ -58,7 +58,7 @@ class PsalmThemeManager {
                 }
             do {
                     let decoder = JSONDecoder()
-                    let jsonData = try decoder.decode(PsalmThemesJSON.self, from: data)
+                    let jsonData = try decoder.decode(PsalmThemes.self, from: data)
                     themeData = jsonData.themes
                     print("Successfully loaded theme data for \(themeData.count) psalms")
                 } catch {
@@ -95,7 +95,7 @@ extension LatinService {
     // 1. Get all themes for this psalm
     let allThemes = PsalmThemeManager.shared.getThemes(
         for: identity.number,
-        category: identity.section ?? ""
+        category: identity.category ?? ""
     )
     
     // 2. Build word-to-line mapping
@@ -167,29 +167,8 @@ extension LatinService {
         
         return lemmasInRange
     }
-<<<<<<< HEAD
-}
-=======
-    private func themesForLineFromJSON(_ lineNumber: Int, psalm identity: PsalmIdentity) -> [(name: String, description: String, lemmas: [String])] {
-        let effectiveSection = identity.category?.lowercased() ?? ""
-        print("Filtering for psalm \(identity.number), category: '\(effectiveSection)', startLine: \(lineNumber)")
-        
-        let matchingThemes = self.themeCache
-            .filter {
-                let categoryMatches = $0.category.lowercased() == effectiveSection || ($0.category.isEmpty && effectiveSection.isEmpty)
-                let psalmMatches = $0.psalmNumber == identity.number
-                let lineMatches = $0.startLine == lineNumber
-                //print("Checking entry: psalm \($0.psalmNumber), category '\($0.category)', startLine \($0.startLine) -> Matches: \(psalmMatches && categoryMatches && lineMatches)")
-                return psalmMatches && categoryMatches && lineMatches
-            }
-            .flatMap { $0.themes }
-            .map { (name: $0.name, description: $0.description, lemmas: $0.lemmas) }
-        
-        print("!!! Line \(lineNumber), Psalm \(identity.number): Found \(matchingThemes.count) themes: \(matchingThemes.map { $0.name })")
-        return matchingThemes
-    }
+    
     
     
    
 }
->>>>>>> c52e5835a41a70b0e339c198c55871b9b6bc5855

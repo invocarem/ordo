@@ -10,8 +10,8 @@ class Psalm118CophTests: XCTestCase {
         latinService = LatinService.shared
     }
     
-    let identity = PsalmIdentity(number: 118, section: "pe")
-    // MARK: - Test Data (Psalm 118:145-152 "Coph" section)
+    let identity = PsalmIdentity(number: 118, category: "pe")
+    // MARK: - Test Data (Psalm 118:145-152 "Coph" category)
     let psalm118Coph = [
         "Clamavi in toto corde meo, exaudi me, Domine; justificationes tuas requiram.",
         "Clamavi ad te, salvum me fac, ut custodiam mandata tua.",

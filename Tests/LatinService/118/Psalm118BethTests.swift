@@ -4,7 +4,7 @@ import XCTest
 class Psalm118BethTests: XCTestCase {
     private var latinService: LatinService!
     let verbose = false
-    let id = PsalmIdentity(number: 118, section: nil)
+    let id = PsalmIdentity(number: 118, category: nil)
     
     override func setUp() {
         super.setUp()

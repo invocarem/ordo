@@ -11,8 +11,8 @@ class Psalm118AlephTests: XCTestCase {
     }
 
     
-    let identity = PsalmIdentity(number: 118, section: "aleph")
-    // MARK: - Test Data (Psalm 118:1-8 "Aleph" section)
+    let identity = PsalmIdentity(number: 118, category: "aleph")
+    // MARK: - Test Data (Psalm 118:1-8 "Aleph" category)
     let psalm118Aleph = [
         "Beati immaculati in via, qui ambulant in lege Domini.",
         "Beati qui scrutantur testimonia eius, in toto corde exquirunt eum.",

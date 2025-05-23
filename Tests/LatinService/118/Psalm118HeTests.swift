@@ -9,9 +9,9 @@ class Psalm118HeTests: XCTestCase {
         super.setUp()
         latinService = LatinService.shared
     }
-    let identity = PsalmIdentity(number: 118, section: "pe")
+    let identity = PsalmIdentity(number: 118, category: "pe")
     
-    // MARK: - Test Data (Psalm 118:33-40 "He" section)
+    // MARK: - Test Data (Psalm 118:33-40 "He" category)
     let psalm118He = [
         "Legem pone mihi, Domine, viam justificationum tuarum, et exquiram eam semper.",
         "Da mihi intellectum, et scrutabor legem tuam, et custodiam illam in toto corde meo.",

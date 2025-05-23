@@ -139,7 +139,6 @@ struct LemmaMapping {
             printNounDebug(entity: entity)
         default:
             print(" - Lemma: \(entity.lemma)")
-            print(" - POS: \(entity.partOfSpeech)")
         }
     }
 
@@ -159,7 +158,11 @@ struct LemmaMapping {
     
     private func printNounDebug(entity: LatinWordEntity) {
         print(" - Declension: \(entity.declension ?? 0)")
-        print(" - Gender: \(entity.gender)")
+        if let gender = entity.gender {
+               print(" - Gender: \(gender)")
+        } else {
+            print(" - Gender: N/A")
+        }
         print(" - Case Forms:")
         print("   • Nom: \(entity.nominative ?? "N/A")")
         print("   • Gen: \(entity.genitive ?? "N/A")")

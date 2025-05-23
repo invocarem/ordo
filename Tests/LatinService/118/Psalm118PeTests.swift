@@ -10,8 +10,8 @@ class Psalm118PeTests: XCTestCase {
         latinService = LatinService.shared
     }
     
-    let identity = PsalmIdentity(number: 118, section: "pe")
-    // MARK: - Test Data (Psalm 118:129-136 "Pe" section)
+    let identity = PsalmIdentity(number: 118, category: "pe")
+    // MARK: - Test Data (Psalm 118:129-136 "Pe" category)
     let psalm118Pe = [
         "Mirabilia testimonia tua, ideo scrutata est ea anima mea.",
         "Declaratio sermonum tuorum illuminat, et intellectum dat parvulis.",

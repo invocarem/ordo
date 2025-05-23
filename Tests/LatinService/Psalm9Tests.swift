@@ -16,7 +16,7 @@ class Psalm9ATests: XCTestCase {
     }
 
     // MARK: - Test Data (Psalm 9A)
-    let id = PsalmIdentity(number: 9, section: "A")
+    let id = PsalmIdentity(number: 9, category: "A")
     let psalm9A = [
         "Confitebor tibi, Domine, in toto corde meo; narrabo omnia mirabilia tua.",
         "Laetabor et exsultabo in te; psallam nomini tuo, Altissime.",
@@ -622,7 +622,7 @@ class Psalm9BTests: XCTestCase {
     }
     
     // MARK: - Test Data (Psalm 9B)
-    let id = PsalmIdentity(number: 9, section: "B")
+    let id = PsalmIdentity(number: 9, category: "B")
     let psalm9B = [
         "Exsurge, Domine, non praevaleat homo; judicentur gentes in conspectu tuo.",
         "Constitue, Domine, legislatorem super eos, ut sciant gentes quoniam homines sunt.",

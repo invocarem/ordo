@@ -5,13 +5,13 @@ class Psalm118ReshTests: XCTestCase {
     private var latinService: LatinService!
     let verbose = true
     
-    let identity = PsalmIdentity(number: 118, section: "res")
+    let identity = PsalmIdentity(number: 118, category: "res")
     override func setUp() {
         super.setUp()
         latinService = LatinService.shared
     }
     
-    // MARK: - Test Data (Psalm 118:153-160 "Resh" section)
+    // MARK: - Test Data (Psalm 118:153-160 "Resh" category)
     let psalm118Resh = [
         "Vide humilitatem meam, et eripe me, quia legem tuam non sum oblitus.",
         "Judica judicium meum, et redime me, propter eloquium tuum vivifica me.",
