@@ -1,5 +1,146 @@
 [
   {
+  "lemma": "accepto",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "acceptare",
+  "future": "acceptabo",
+  "perfect": "acceptavi",
+  "supine": "acceptatum",
+  "translations": {
+    "en": "to accept (repeatedly), receive willingly",
+    "la": "accepto, acceptare"
+  }
+},
+  
+  {
+  "lemma": "benignus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "benignus",
+  "genitive": "benigni",
+  "translations": {
+    "en": "gracious, kind, benevolent",
+    "la": "benignus, -a, -um"
+  }
+},
+  {
+  "lemma": "oblatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "oblatio",
+  "genitive": "oblationis",
+  "translations": {
+    "en": "offering, oblation",
+    "la": "oblatio, oblationis"
+  }
+},
+  {
+  "lemma": "altare",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "altare",
+  "genitive": "altaris",
+  "translations": {
+    "en": "altar",
+    "la": "altare, altaris"
+  }
+},
+  {
+  "lemma": "contritus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "contritus",
+  "genitive": "contriti",
+  "forms": {
+    "nominative_f": ["contrita"],
+    "genitive_f": ["contritae"],
+    "nominative_n": ["contritum"],
+    "genitive_n": ["contriti"]
+  },
+  "translations": {
+    "en": "contrite, crushed, broken-hearted",
+    "la": "contritus, -a, -um"
+  }
+},
+  {
+  "lemma": "holocaustum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "holocaustum",
+  "genitive": "holocausti",
+  "translations": {
+    "en": "burnt offering, whole sacrifice",
+    "la": "holocaustum, -i"
+  }
+},
+  {
+  "lemma": "contribulo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "contribulare",
+  "present": "contribulo",
+  "future": "contribulabo",
+  "perfect": "contribulavi",
+  "supine": "contribulatum",
+  "translations": {
+    "en": "to crush, oppress, break in pieces",
+    "la": "contribulo, contribulare"
+  }
+},{
+  "lemma": "despicio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "despicere",
+  "present": "despicio",
+  "future": "despiciam",
+  "perfect": "despexi",
+  "supine": "despectum",
+  "form": {
+    "future_active": ["despiciam", "despicies", "despiciet", "despiciemus", "despicietis", "despicient"]
+  },
+  "translations": {
+    "en": "to despise, scorn, look down upon",
+    "la": "despicio, despicere"
+  }
+},{
+  "lemma": "humilio",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "humiliare",
+  "present": "humilio",
+  "future": "humiliabo",
+  "perfect": "humiliavi",
+  "supine": "humiliatum",
+  "forms": {
+                "perfect_passive": ["humiliatus"],
+                "present": ["humilio", "humilias", "humiliat", "humiliamus", "humiliatis", "humiliant"]
+  },
+   "translations": {
+    "en": "to humble, bring low",
+    "la": "humilio, humiliare"
+  }
+},
+  {
+  "lemma": "reddo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "reddere",
+  "present": "reddo",
+  "future": "reddam",
+  "perfect": "reddidi",
+  "supine": "redditum",
+  "translations": {
+    "en": "to give back, return, restore",
+    "la": "reddo, reddere"
+  }
+},
+  {
   "lemma": "mundo",
   "part_of_speech": "verb",
   "conjugation": 1,
@@ -13,6 +154,7 @@
     "la": "mundo, mundare"
   }
 },
+
 {
   "lemma": "aspergo",
   "part_of_speech": "verb",
@@ -475,19 +617,7 @@
     "la": "praeparatio, praeparationis"
   }
 },
-  {
-  "lemma": "despicio",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "despicere",
-  "present": "despicio",  
-  "perfect": "despexi",
-  "supine": "despectum",
-  "translations": {
-    "en": "to despise, look down on, scorn",
-    "la": "despicio, despicere"
-  }
-},
+ 
   {
   "lemma": "recedo",
   "part_of_speech": "verb",
@@ -1102,19 +1232,6 @@
   "translations": {
     "en": "seize, grasp, comprehend",
     "la": "comprehendo, comprehendere"
-  }
-},
-  {
-  "lemma": "reddo",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "reddere",
-  "present": "reddo",
-  "perfect": "reddidi",
-  "supine": "redditum",
-  "translations": {
-    "en": "repay, return, restore",
-    "la": "reddo, reddere"
   }
 },
 {
@@ -1751,11 +1868,14 @@
   "part_of_speech": "verb",
   "conjugation": 1,
   "infinitive": "volare",
-  "present_participle": "volante",
   "perfect": "volavi",
   "supine": "volatum",
+  "forms" : {
+    "present_participle": ["volante"],
+    "pluperfect_subjunctive": ["voluisses"]
+  },
   "translations": {
-    "en": "to fly",
+    "en": "to fly, will, wish",
     "la": "volo, volare, volavi, volatum"
   }
 },
@@ -3774,7 +3894,7 @@
     "genitive": "vituli",
     "accusative": "vitulum",
     "translations": {
-      "en": "calf",
+      "en": "calf, young bull",
       "la": "vitulus"
     }
   },
@@ -9611,24 +9731,38 @@
   "conjugation": 2,
   "deponent": true,
   "infinitive": "misereri",
-  "perfect": "miseritus sum",
+  "perfect": "miseritus",
   "supine": "miseritum",
   "translations": {
     "en": "have mercy, pity, compassionate",
-    "la": "misereor, misereri, miseritus sum"
+    "la": "misereor, misereri, miseritus"
   },
   "forms": {
     "present": ["misereor", "misereris", "miseretur", "miseremur", "miseremini", "miserentur"],
     "imperfect": ["miserebar", "miserebaris", "miserebatur", "miserebamur", "miserebamini", "miserebantur"],
-    "future": ["miserebor", "miserēberis", "miserēbitur", "miserēbimur", "miserēbiminī", "miserēbuntur"],
-    "perfect": ["miseritus sum", "miseritus es", "miseritus est", "miseriti sumus", "miseriti estis", "miseriti sunt"],
+    "future": ["miserebor", "misereberis", "miserēbitur", "miserēbimur", "miserēbiminī", "miserēbuntur"],
+    "perfect": ["miseritus sum", "miseritus", "miseritus est", "miseriti sumus", "miseriti estis", "miseriti sunt"],
     "pluperfect": ["miseritus eram", "miseritus erās", "miseritus erat", "miseriti erāmus", "miseriti erātis", "miseriti erant"],
     "subjunctive_present": ["miserear", "miserearis", "misereatur", "misereamur", "misereamini", "misereantur"],
     "subjunctive_imperfect": ["miserērer", "miserērēris", "miserērētur", "miserērēmur", "miserērēminī", "miserērentur"],
     "imperative": ["miserere", "miseremini"]
   }
 },
-  
+  {
+  "lemma": "miseratio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "miseratio",
+  "genitive": "miserations",
+  "forms_plural" : {
+      "genitive_n": ["miserationum"]
+  },
+  "translations": {
+    "en": "compassion, mercy, pity",
+    "la": "miseratio, miserationis"
+  }
+},
     {
         "lemma": "abundo",
         "part_of_speech": "verb",
@@ -12248,23 +12382,6 @@
           }
         },
         {
-            "lemma": "humilio",
-            "part_of_speech": "verb",
-            "conjugation": 1,
-            "perfect": "humiliavi",
-            "infinitive": "humiliare",
-            "supine": "humiliatum",
-            "forms": {
-                "perfect_passive": ["humiliatus"],
-                "present": ["humilio", "humilias", "humiliat", "humiliamus", "humiliatis", "humiliant"]
-            },
-            "translations": {
-                "en": "humble, bring low",
-                "la": "humilio"
-            },
-            "notes": "Psalm 37:9: 'humiliatus sum nimis' ('I am humbled exceedingly')"
-        },
-        {
             "lemma": "infirmo",
             "part_of_speech": "verb",
             "conjugation": 1,
@@ -14039,7 +14156,8 @@
               "pluperfect": ["dederam", "dederas", "dederat", "dederamus", "dederatis", "dederant"],
               "subjunctive_present": ["dem", "des", "det", "demus", "detis", "dent"],
               "subjunctive_imperfect": ["darem", "dares", "daret", "daremus", "daretis", "darent"],
-              "imperative": ["da", "date"]
+              "imperative": ["da", "date"],
+              "pluperfect_subjunctive": ["dedissem"]
             }
           },
 
@@ -16130,7 +16248,7 @@
     "nominative_n": ["os"]
   },
   "translations": {
-    "en": "mouth",
+    "en": "mouth,bone",
     "la": "os, oris"
   },
   "notes": "Distinct from 'os, ossis' meaning 'bone'"
@@ -16147,7 +16265,7 @@
       "genitive_n": ["ossium"]
   },
   "translations": {
-    "en": "bone",
+    "en": "bone, mouth",
     "la": "os, ossis"
   },
   "notes": "declension to 0 instead of 3, hope it can fall to mouth"
@@ -16208,6 +16326,23 @@
   }
 },
 {
+  "lemma": "manifesto",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "manifestare",
+  "present": "manifesto",
+  "future": "manifestabo",
+  "perfect": "manifestavi",
+  "supine": "manifestatum",
+  "forms": {
+    "perfect_2sg_eccl": ["manifestasti"]
+  },
+  "translations": {
+    "en": "to reveal, make manifest, disclose",
+    "la": "manifesto, manifestare"
+  }
+},
+{
   "lemma": "laboro",
   "part_of_speech": "verb",
   "conjugation": 1,
@@ -16236,6 +16371,20 @@
   "translations": {
     "en": "uncertain, hidden, doubtful",
     "la": "incertus, -a, -um"
+  }
+},
+{
+  "lemma": "dealbo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "dealbare",
+  "present": "dealbo",
+  "future": "dealbabo",
+  "perfect": "dealbavi",
+  "supine": "dealbatum",
+  "translations": {
+    "en": "to whiten, purify, make white",
+    "la": "dealbo, dealbare"
   }
 },
 {

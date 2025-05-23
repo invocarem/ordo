@@ -23,16 +23,19 @@ class Psalm50Tests: XCTestCase {
         "Amplius lava me ab iniquitate mea, et a peccato meo munda me.",
         "Quoniam iniquitatem meam ego cognosco, et peccatum meum contra me est semper.",
         "Tibi soli peccavi, et malum coram te feci; ut justificeris in sermonibus tuis, et vincas cum judicaris.",
+        
         "Ecce enim in iniquitatibus conceptus sum, et in peccatis concepit me mater mea.",
         "Ecce enim veritatem dilexisti; incerta et occulta sapientiae tuae manifestasti mihi.",
         "Asperges me hyssopo, et mundabor; lavabis me, et super nivem dealbabor.",
         "Auditui meo dabis gaudium et laetitiam, et exsultabunt ossa humiliata.",
         "Averte faciem tuam a peccatis meis, et omnes iniquitates meas dele.",
+        
         "Cor mundum crea in me, Deus, et spiritum rectum innova in visceribus meis.",
         "Ne proiicias me a facie tua, et spiritum sanctum tuum ne auferas a me.",
         "Redde mihi laetitiam salutaris tui, et spiritu principali confirma me.",
         "Docebo iniquos vias tuas, et impii ad te convertentur.",
         "Libera me de sanguinibus, Deus, Deus salutis meae, et exsultabit lingua mea justitiam tuam.",
+        
         "Domine, labia mea aperies, et os meum annuntiabit laudem tuam.",
         "Quoniam si voluisses sacrificium, dedissem utique; holocaustis non delectaberis.",
         "Sacrificium Deo spiritus contribulatus; cor contritum et humiliatum, Deus, non despicies.",
@@ -41,38 +44,42 @@ class Psalm50Tests: XCTestCase {
     ]
     
     // MARK: - Theme Tests
+ func testPsalm50Themes() {
+    let analysis = latinService.analyzePsalm(id, text: psalm50)
     
-    func testPsalm50Themes() {
-        let analysis = latinService.analyzePsalm(id, text: psalm50)
-        
-        let allThemes = [
-            ("Penitence", ["miserere", "peccatum", "iniquitas", "contritus"]),
-            ("Divine Mercy", ["misericordia", "miseratio", "dele", "lava"]),
-            ("Purification", ["mundus", "aspergo", "hyssopus", "dealbabor"]),
-            ("Heart Transformation", ["cor", "innovare", "spiritus", "rectus"]),
-            ("True Sacrifice", ["sacrificium", "contribulatus", "holocaustum", "oblatio"]),
-            ("Restoration", ["redde", "confirma", "aedificare", "Sion"]),
-            ("Augustine: True Penance", ["cognosco", "contra me", "semper"]),
-            ("Augustine: Hyssop of Humility", ["hyssopo", "humiliata", "humiliatum"]),
-            ("Augustine: Spiritual Sacrifice", ["spiritus", "contribulatus", "non despicies"])
-        ]
-        
-        var failedChecks = [String]()
-        
-        for (themeName, requiredLemmas) in allThemes {
-            let missing = requiredLemmas.filter { !analysis.dictionary.keys.contains($0) }
-            if !missing.isEmpty {
-                failedChecks.append("\(themeName): \(missing.joined(separator: ", "))")
-            }
-        }
-        
-        if !failedChecks.isEmpty {
-            XCTFail("Missing lemmas:\n" + failedChecks.joined(separator: "\n"))
+   let allThemes = [
+    ("Penitence", ["misereor", "peccatum", "iniquitas", "contritus", "contribulo"]), // Added "contribulo"
+    ("Divine Mercy", ["misericordia", "miseratio", "deleo", "lavo", "reddo"]), // Added "reddo"
+    ("Purification", ["mundus", "aspergo", "hyssopus", "dealbo", "liber"]), // Added "liber"
+    ("Heart Transformation", ["cor", "innovo", "spiritus", "rectus", "creo"]), // Added "creo"
+    ("True Sacrifice", ["sacrificium", "contribulo", "holocaustum", "oblatio", "accepto"]), 
+    ("Restoration", ["reddo", "confirmo", "aedifico", "sion", "laetitia"]), // Added "laetitia"
+    ("Proclamation", ["annuntio", "laus", "lingua", "justitia"]), // NEW THEME
+    ("Divine-Human Dialogue", ["volo", "do", "accepto", "despicio"]), // NEW THEME
+    
+    // Augustine themes
+    ("Augustine: True Penance", ["cognosco", "contra", "semper", "viscera"]), // Added "viscera"
+    ("Augustine: Hyssop of Humility", ["hyssopus", "humilio", "humiliatus", "exsulto"]), // Added "exsulto"
+    ("Augustine: Spiritual Sacrifice", ["spiritus", "contribulo", "despicio", "cor"]), // Added "cor"
+    ("Augustine: City of God", ["sion", "jerusalem", "altare", "vitulus"]) // NEW THEME
+] 
+    var failedChecks = [String]()
+    
+    for (themeName, requiredLemmas) in allThemes {
+        let missing = requiredLemmas.filter { !analysis.dictionary.keys.contains($0) }
+        if !missing.isEmpty {
+            failedChecks.append("\(themeName): \(missing.joined(separator: ", "))")
         }
     }
     
+    if !failedChecks.isEmpty {
+        XCTFail("Missing lemmas:\n" + failedChecks.joined(separator: "\n"))
+    }
+}   
+   
     // MARK: - Grouped Line Tests
-    
+
+
     func testPsalm50Lines1and2() {
         let line1 = psalm50[0] // "Miserere mei, Deus, secundum magnam misericordiam tuam;"
         let line2 = psalm50[1] // "et secundum multitudinem miserationum tuarum, dele iniquitatem meam."
@@ -254,7 +261,7 @@ class Psalm50Tests: XCTestCase {
             ("hyssopus", ["hyssopo"], "hyssop"),
             ("mundo", ["mundabor"], "clean"),
             ("nix", ["nivem"], "snow"),
-            ("dealbare", ["dealbabor"], "whiten")
+            ("dealbo", ["dealbabor"], "whiten")
         ]
         
         // Thematic analysis
@@ -269,7 +276,7 @@ class Psalm50Tests: XCTestCase {
             ],
             "Augustine: Hyssop of Humility": [
                 ("hyssopus", "Symbol of humility"),
-                ("dealbare", "Complete cleansing")
+                ("dealbo", "Complete cleansing")
             ]
         ]
         
@@ -346,6 +353,296 @@ class Psalm50Tests: XCTestCase {
         verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
     }
     
+// MARK: - Continued Line Tests (11-20)
+
+func testPsalm50Lines11and12() {
+    let line11 = psalm50[10] // "Cor mundum crea in me, Deus, et spiritum rectum innova in visceribus meis."
+    let line12 = psalm50[11] // "Ne proiicias me a facie tua, et spiritum sanctum tuum ne auferas a me."
+    let combinedText = line11 + " " + line12
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 11)
+    
+    // Lemma verification
+    let testLemmas = [
+        ("cor", ["cor"], "heart"),
+        ("mundus", ["mundum"], "clean"),
+        ("creo", ["crea"], "create"),
+        ("deus", ["deus"], "god"),
+        ("spiritus", ["spiritum"], "spirit"),
+        ("rectus", ["rectum"], "right"),
+        ("innovo", ["innova"], "renew"),
+        ("viscera", ["visceribus"], "inward parts"),
+        ("proicio", ["proiicias"], "cast away"),
+        ("facies", ["facie"], "face"),
+        ("sanctus", ["sanctum"], "holy"),
+        ("aufero", ["auferas"], "take away")
+    ]
+    
+    // Thematic analysis
+    let expectedThemes = [
+        "Heart Renewal": [
+            ("creo", "Divine creative act"),
+            ("innovo", "Spiritual renovation")
+        ],
+        "Holy Spirit": [
+            ("spiritus", "Dual reference to human and divine spirit"),
+            ("sanctus", "Sanctifying work")
+        ],
+        "Divine Presence": [
+            ("facies", "Face as manifestation of presence"),
+            ("aufero", "Fear of abandonment")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 50:11-12 ANALYSIS:")
+        print("11: \"\(line11)\"")
+        print("12: \"\(line12)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+        
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm50Lines13and14() {
+    let line13 = psalm50[12] // "Redde mihi laetitiam salutaris tui, et spiritu principali confirma me."
+    let line14 = psalm50[13] // "Docebo iniquos vias tuas, et impii ad te convertentur."
+    let combinedText = line13 + " " + line14
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 13)
+    
+    // Lemma verification
+    let testLemmas = [
+        ("reddo", ["redde"], "restore"),
+        ("laetitia", ["laetitiam"], "joy"),
+        ("salutaris", ["salutaris"], "salvation"),
+        ("spiritus", ["spiritu"], "spirit"),
+        ("principalis", ["principali"], "principal"),
+        ("confirmo", ["confirma"], "strengthen"),
+        ("doceo", ["docebo"], "teach"),
+        ("iniquus", ["iniquos"], "wicked"),
+        ("via", ["vias"], "way"),
+        ("impius", ["impii"], "ungodly"),
+        ("converto", ["convertentur"], "turn")
+    ]
+    
+    // Thematic analysis
+    let expectedThemes = [
+        "Restoration": [
+            ("reddo", "Return of divine favor"),
+            ("laetitia", "Resulting joy")
+        ],
+        "Missionary Zeal": [
+            ("doceo", "Teaching commitment"),
+            ("converto", "Conversion expectation")
+        ],
+        "Spiritual Strength": [
+            ("confirmo", "Divine strengthening"),
+            ("principalis", "Governing spirit")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 50:13-14 ANALYSIS:")
+        print("13: \"\(line13)\"")
+        print("14: \"\(line14)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+        
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm50Lines15and16() {
+    let line15 = psalm50[14] // "Libera me de sanguinibus, Deus, Deus salutis meae, et exsultabit lingua mea justitiam tuam."
+    let line16 = psalm50[15] // "Domine, labia mea aperies, et os meum annuntiabit laudem tuam."
+    let combinedText = line15 + " " + line16
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 15)
+    
+    // Lemma verification
+    let testLemmas = [
+        ("libero", ["libera"], "deliver"),
+        ("sanguis", ["sanguinibus"], "blood"),
+        ("salus", ["salutis"], "salvation"),
+        ("exsulto", ["exsultabit"], "rejoice"),
+        ("lingua", ["lingua"], "tongue"),
+        ("justitia", ["justitiam"], "righteousness"),
+        ("dominus", ["domine"], "lord"),
+        ("labium", ["labia"], "lips"),
+        ("aperio", ["aperies"], "open"),
+        ("os", ["os", "meum"], "mouth"),
+        ("annuntio", ["annuntiabit"], "declare"),
+        ("laus", ["laudem"], "praise")
+    ]
+    
+    // Thematic analysis
+    let expectedThemes = [
+        "Deliverance": [
+            ("libero", "From bloodguilt"),
+            ("sanguis", "Violence imagery")
+        ],
+        "Vocal Praise": [
+            ("lingua", "Instrument of praise"),
+            ("annuntio", "Proclamation")
+        ],
+        "Divine Initiation": [
+            ("aperio", "God enabling speech"),
+            ("os", "Mouth as vehicle")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 50:15-16 ANALYSIS:")
+        print("15: \"\(line15)\"")
+        print("16: \"\(line16)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+        
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm50Lines17and18() {
+    let line17 = psalm50[16] // "Quoniam si voluisses sacrificium, dedissem utique; holocaustis non delectaberis."
+    let line18 = psalm50[17] // "Sacrificium Deo spiritus contribulatus; cor contritum et humiliatum, Deus, non despicies."
+    let combinedText = line17 + " " + line18
+    latinService.configureDebugging(target: "despicio")
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 17)
+    latinService.configureDebugging(target: "")
+    
+    // Lemma verification
+    let testLemmas = [
+        ("volo", ["voluisses"], "will"),
+        ("sacrificium", ["sacrificium"], "sacrifice"),
+        ("do", ["dedissem"], "give"),
+        ("holocaustum", ["holocaustis"], "burnt offering"),
+        ("delector", ["delectaberis"], "delight"),
+        ("spiritus", ["spiritus"], "spirit"),
+        ("contribulo", ["contribulatus"], "crushed"),
+        ("contritus", ["contritum"], "contrite"),
+        ("humilio", ["humiliatum"], "humble"),
+        ("despicio", ["despicies"], "despise")
+    ]
+    
+    // Thematic analysis
+    let expectedThemes = [
+        "True Sacrifice": [
+            ("contribulo", "Broken spirit"),
+            ("contritus", "Crushed heart")
+        ],
+        "Rejected Ritual": [
+            ("holocaustum", "External offerings"),
+            ("delector", "Divine displeasure")
+        ],
+        "Augustine: Spiritual Offering": [
+            ("spiritus", "Inner sacrifice"),
+            ("humilio", "Required humility")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 50:17-18 ANALYSIS:")
+        print("17: \"\(line17)\"")
+        print("18: \"\(line18)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+        
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm50Lines19and20() {
+    let line19 = psalm50[18] // "Benigne fac, Domine, in bona voluntate tua Sion, ut aedificentur muri Jerusalem."
+    let line20 = psalm50[19] // "Tunc acceptabis sacrificium justitiae, oblationes et holocausta; tunc imponent super altare tuum vitulos."
+    let combinedText = line19 + " " + line20
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 19)
+    
+    // Lemma verification
+    let testLemmas = [
+        ("benignus", ["benigne"], "gracious"),
+        ("facio", ["fac"], "do"),
+        ("voluntas", ["voluntate"], "will"),
+        ("Sion", ["Sion"], "Zion"),
+        ("aedifico", ["aedificentur"], "build"),
+        ("murus", ["muri"], "wall"),
+        ("Jerusalem", ["Jerusalem"], "Jerusalem"),
+        ("accepto", ["acceptabis"], "accept"),
+        ("oblatio", ["oblationes"], "offering"),
+        ("altare", ["altare"], "altar"),
+        ("vitulus", ["vitulos"], "bull")
+    ]
+    
+    // Thematic analysis
+    let expectedThemes = [
+        "Zion Restoration": [
+            ("sion", "Center of worship"),
+            ("aedifico", "Physical rebuilding")
+        ],
+        "Renewed Worship": [
+            ("accepto", "Divine acceptance"),
+            ("oblatio", "Restored sacrifices")
+        ],
+        "Divine Favor": [
+            ("benignus", "Gracious disposition"),
+            ("voluntas", "Goodwill")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 50:19-20 ANALYSIS:")
+        print("19: \"\(line19)\"")
+        print("20: \"\(line20)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+        
+        print("\nDETECTED THEMES:")
+        analysis.themes.forEach { theme in
+            print("Theme name:\(theme.name): \(theme.supportingLemmas.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
     // MARK: - Comprehensive Test
     
     func testAnalyzePsalm50() {
@@ -362,7 +659,7 @@ class Psalm50Tests: XCTestCase {
             ("deus", ["deus"], "god"),
             ("misericordia", ["misericordiam"], "mercy"),
             ("miseratio", ["miserationum"], "compassion"),
-            ("deleo", ["dele"], "blot out"),
+            ("deleo", ["dele"], "wipe out"),
             ("iniquitas", ["iniquitatem", "iniquitate", "iniquitatibus", "iniquitates"], "iniquity"),
             ("lavo", ["lava", "munda", "lavabis"], "wash"),
             ("peccatum", ["peccato", "peccatum", "peccatis", "peccata"], "sin"),
@@ -376,7 +673,7 @@ class Psalm50Tests: XCTestCase {
             ("aspergo", ["asperges"], "sprinkle"),
             ("hyssopus", ["hyssopo"], "hyssop"),
             ("nix", ["nivem"], "snow"),
-            ("dealbare", ["dealbabor"], "whiten"),
+            ("dealbo", ["dealbabor"], "whiten"),
             ("gaudium", ["gaudium"], "joy"),
             ("laetitia", ["laetitiam"], "gladness"),
             ("exsulto", ["exsultabunt", "exsultabit"], "rejoice"),

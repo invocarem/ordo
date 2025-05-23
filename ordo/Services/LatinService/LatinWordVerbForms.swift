@@ -116,10 +116,16 @@ extension LatinWordEntity {
                 stems.present + "ebimus", stems.present + "ebitis", stems.present + "ebunt"
             ]
         case 3:
-            futureActive = [
-                stems.present + "am", stems.present + "es", stems.present + "et",
-                stems.present + "emus", stems.present + "etis", stems.present + "ent"
-            ]
+    
+            futureActive =  [
+                // Regular 3rd conjugation pattern
+                stems.present + "am",     // mitt + am = mittam
+                stems.present + "es",     // mitt + es = mittes
+                stems.present + "et",     // mitt + et = mittet
+                stems.present + "emus",   // mitt + emus = mittemus
+                stems.present + "etis",   // mitt + etis = mittetis
+                stems.present + "ent"     // mitt + ent = mittent
+            ]   
         case 4:
             futureActive = [
                 stems.present + "iam", stems.present + "ies", stems.present + "iet",
