@@ -196,7 +196,7 @@
         {
           "name": "Peaceful Trust",
           "description": "Final confidence in God's protection",
-          "lemmas": ["pax", "requiesco", "spe"],
+          "lemmas": ["pax", "requiesco", "spes"],
           "startLine": 9,
           "endLine": 10,
           "comment": "Closing promise of rest and hope"
@@ -1610,7 +1610,239 @@
       "comment": "Enarrationes in Psalmos 121.1"
     }
   ]
+},
+
+{
+  "psalmNumber": 138,
+  "category": "a",
+  "themes": [
+    {
+      "name": "Personal Praise",
+      "description": "Individual confession and personal testimony",
+      "lemmas": ["cognosco", "intellego"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "Complete knowledge, Deep understanding"
+    },
+    {
+      "name": "Human Experience",
+      "description": "Daily activities and life transitions",
+      "lemmas": ["sessio", "resurrectio"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "From sitting to rising - encompassing all of life"
+    },
+    {
+      "name": "Divine Scrutiny",
+      "description": "God's thorough examination of the individual",
+      "lemmas": ["probo", "investigo"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Testing and searching of the heart"
+    },
+    {
+      "name": "Divine Foreknowledge",
+      "description": "God's complete foresight of human paths",
+      "lemmas": ["praevideo", "via"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "All ways and paths are known beforehand"
+    },
+    {
+      "name": "Creative Power",
+      "description": "God's formative action in human life",
+      "lemmas": ["formo", "pono"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Formation and purposeful placement"
+    },
+    {
+      "name": "Temporal Knowledge",
+      "description": "God's knowledge across all time",
+      "lemmas": ["novissimus", "antiquus"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "From ancient times to the future"
+    },
+    {
+      "name": "Divine Knowledge",
+      "description": "The wonderful nature of God's understanding",
+      "lemmas": ["scientia", "mirabilis"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Beyond human comprehension"
+    },
+    {
+      "name": "Divine Presence",
+      "description": "God's omnipresence in all places",
+      "lemmas": ["spiritus", "facies"],
+      "startLine": 6,
+      "endLine": 7,
+      "comment": "From heaven to hell, God is present"
+    },
+    {
+      "name": "Human Limitation",
+      "description": "The boundaries of human ability",
+      "lemmas": ["possum", "fugio"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Inability to escape or fully comprehend"
+    },
+    {
+      "name": "Omnipresence",
+      "description": "God's constant presence everywhere",
+      "lemmas": ["adsum", "caelum", "infernus"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "From highest heaven to deepest hell"
+    },
+    {
+      "name": "Extreme Locations",
+      "description": "God's presence in the farthest places",
+      "lemmas": ["extremus", "mare"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "Uttermost parts of the sea"
+    },
+    {
+      "name": "Divine Guidance",
+      "description": "God's active leading in life",
+      "lemmas": ["deduco", "manus"],
+      "startLine": 9,
+      "endLine": 9,
+      "comment": "God's hand guides and directs"
+    },
+    {
+      "name": "Divine Protection",
+      "description": "God's secure holding of the believer",
+      "lemmas": ["teneo", "dexter"],
+      "startLine": 9,
+      "endLine": 9,
+      "comment": "Right hand as symbol of strength and protection"
+    }
+  ]
+},
+
+{
+  "psalmNumber": 138,
+  "category": "b",
+  "themes": [
+    {
+      "name": "Divine Illumination",
+      "description": "God's light transforming darkness",
+      "lemmas": ["illuminatio", "lumen"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Darkness becomes light in God's presence"
+    },
+    {
+      "name": "Darkness Transformed",
+      "description": "The overcoming of darkness by divine light",
+      "lemmas": ["tenebrae", "nox"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Night shines like day before God"
+    },
+    {
+      "name": "Divine Formation",
+      "description": "God's intimate knowledge of human development",
+      "lemmas": ["possideo", "suscipio"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "From conception to birth and beyond"
+    },
+    {
+      "name": "Awe and Wonder",
+      "description": "Response to God's marvelous works",
+      "lemmas": ["terribilis", "mirabilis"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Fearful and wonderful works of God"
+    },
+    {
+      "name": "Divine Knowledge",
+      "description": "Nothing hidden from God's sight",
+      "lemmas": ["occulto", "oculus"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Sees even unformed substance and future days"
+    },
+    {
+      "name": "Creative Sovereignty",
+      "description": "God's control over time and development",
+      "lemmas": ["formo", "imperfectus"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Forms both days and human life"
+    },
+    {
+      "name": "Divine Friendship",
+      "description": "Honored relationship with God",
+      "lemmas": ["amicus", "honoro"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "God's friends are highly valued"
+    },
+    {
+      "name": "Abundant Blessing",
+      "description": "Multiplication of God's people",
+      "lemmas": ["multiplico", "arena"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "Numerous as sand on the shore"
+    },
+    {
+      "name": "Divine Judgment",
+      "description": "Against the wicked and violent",
+      "lemmas": ["occido", "peccator"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "Separation from bloodthirsty men"
+    },
+    {
+      "name": "Righteous Hatred",
+      "description": "Proper hatred of evil",
+      "lemmas": ["odi", "perfectus"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "Complete rejection of God's enemies"
+    },
+    {
+      "name": "Divine Examination",
+      "description": "Request for testing and purification",
+      "lemmas": ["probo", "interrogo"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "Invitation for God to search the heart"
+    },
+    {
+      "name": "Eternal Guidance",
+      "description": "Prayer for God's everlasting direction",
+      "lemmas": ["deduco", "aeternus"],
+      "startLine": 14,
+      "endLine": 14,
+      "comment": "Lead me in the way everlasting"
+    },
+    {
+      "name": "Identification with God",
+      "description": "Sharing God's perspective on enemies",
+      "lemmas": ["inimicus", "tabesco"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "Emotional alignment with God's values"
+    },
+    {
+      "name": "Heart Knowledge",
+      "description": "Deep understanding of inner being",
+      "lemmas": ["cor", "scio"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "God's complete knowledge of the heart"
+    }
+  ]
 }
+
+
   ]
 }
 

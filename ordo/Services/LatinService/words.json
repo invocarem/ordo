@@ -1,4 +1,196 @@
 [
+  
+  {
+    "lemma": "scientia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "scientia",
+    "genitive": "scientiae",
+    "translations": {
+      "en": "knowledge, understanding",
+      "la": "scientia"
+    }
+  },
+  {
+    "lemma": "conforto",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "confortare",
+    "present": "conforto",
+    "future": "confortabo",
+    "perfect": "confortavi",
+    "supine": "confortatum",
+    "translations": {
+      "en": "to strengthen, encourage, comfort",
+      "la": "conforto, confortare"
+    }
+  },
+  {
+    "lemma": "possum",
+    "part_of_speech": "verb",
+    "conjugation": 0,
+    "infinitive": "posse",
+    "present": "possum",
+    "future": "potero",
+    "perfect": "potui",
+    "supine": null,
+    "forms": {
+      "future": ["potero", "potes", "potest", "poterimus", "poteritis", "poterunt"]
+    },
+    "translations": {
+      "en": "to be able, can",
+      "la": "possum, posse"
+    }
+  },
+{
+  "lemma": "praevideo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "praevidere",
+  "present": "praevideo",
+  "future": "praevidebo",
+  "perfect": "praevidi",
+  "supine": "praevissum",
+  "translations": {
+    "en": "to foresee, see beforehand",
+    "la": "praevideo, praevidere"
+  }
+},  
+  {
+    "lemma": "novissimus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "novissimus",
+    "genitive": "novissimi",
+    "forms": {
+      "nominative_f": ["novissima"],
+      "genitive_f": ["novissimae"],
+      "nominative_n": ["novissimum"],
+      "genitive_n": ["novissimi"]
+    },
+    "forms_plural": {
+      "nominative_m": ["novissimi"],
+      "genitive_m": ["novissimorum"],
+      "nominative_f": ["novissimae"],
+      "genitive_f": ["novissimarum"],
+      "nominative_n": ["novissima"],
+      "genitive_n": ["novissimorum"]
+    },
+    "translations": {
+      "en": "last, latest, newest",
+      "la": "novissimus, -a, -um"
+    }
+  },
+  {
+    "lemma": "antiquus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "antiquus",
+    "genitive": "antiqui",
+    "forms": {
+      "nominative_f": ["antiqua"],
+      "genitive_f": ["antiquae"],
+      "nominative_n": ["antiquum"],
+      "genitive_n": ["antiqui"]
+    },
+    "forms_plural": {
+      "nominative_m": ["antiqui"],
+      "genitive_m": ["antiquorum"],
+      "nominative_f": ["antiquae"],
+      "genitive_f": ["antiquarum"],
+      "nominative_n": ["antiqua"],
+      "genitive_n": ["antiquorum"]
+    },
+    "translations": {
+      "en": "ancient, old, antique",
+      "la": "antiquus, -a, -um"
+    }
+  },
+
+  {
+  "lemma": "investigo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "investigare",
+  "present": "investigo",
+  "future": "investigabo",
+  "perfect": "investigavi",
+  "supine": "investigatum",
+  "forms": {
+    "present_subjunctive": ["investigem", "investiges", "investiget", "investigemus", "investigetis", "investigent"],
+    "perfect_indicative_2sg": ["investigasti"]
+  },
+  "translations": {
+    "en": "to investigate, track, trace",
+    "la": "investigo, investigare"
+  }
+},
+  {
+    "lemma": "resurrectio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "resurrectio",
+    "genitive": "resurrectionis",
+    "translations": {
+      "en": "resurrection, rising again",
+      "la": "resurrectio"
+    }
+  },
+  {
+    "lemma": "intellego",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "intellegere",
+    "present": "intellego",
+    "future": "intellegam",
+    "perfect": "intellexi",
+    "supine": "intellectum",
+    "translations": {
+      "en": "to understand, comprehend, perceive",
+      "la": "intellego, intellegere"
+    }
+  },
+  {
+    "lemma": "cogitatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "cogitatio",
+    "genitive": "cogitationis",
+    "translations": {
+      "en": "thought, reflection, consideration",
+      "la": "cogitatio"
+    }
+  },
+
+  {
+    "lemma": "sessio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "sessio",
+    "genitive": "sessionis",
+    "translations": {
+      "en": "sitting, session, assembly",
+      "la": "sessio"
+    }
+  },
+  {
+    "lemma": "funiculus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "funiculus",
+    "genitive": "funiculi",
+    "translations": {
+      "en": "small rope, cord, string",
+      "la": "funiculus"
+    }
+  },
   {
   "lemma": "praeparatio",
   "part_of_speech": "noun",
@@ -904,6 +1096,9 @@
   "present": "formo",
   "perfect": "formavi",
   "supine": "formatum",
+  "forms": {
+    "perfect_indicative_2sg": ["formasti"]
+  },
   "translations": {
     "en": "to form, shape, fashion",
     "la": "formo, formare"
