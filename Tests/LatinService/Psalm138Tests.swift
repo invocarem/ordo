@@ -396,8 +396,10 @@ class Psalm138BTests: XCTestCase {
         let line1 = psalm138B[0] // "Et dixi: Forsitan tenebrae conculcabunt me: et nox illuminatio mea in deliciis meis."
         let line2 = psalm138B[1] // "Quia tenebrae non obscurabuntur a te, et nox sicut dies illuminabitur: sicut tenebrae ejus, ita et lumen ejus."
         let combinedText = line1 + " " + line2
+        latinService.configureDebugging(target: "illuminatio")
         let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 1)
         
+        latinService.configureDebugging(target: "")
         // Lemma verification
         let testLemmas = [
             ("dico", ["dixi"], "say"),
@@ -405,7 +407,8 @@ class Psalm138BTests: XCTestCase {
             ("tenebrae", ["tenebrae", "tenebrae"], "darkness"),
             ("conculco", ["conculcabunt"], "trample"),
             ("nox", ["nox", "nox"], "night"),
-            ("illuminatio", ["illuminatio", "illuminabitur"], "light"),
+            ("illuminatio", ["illuminatio"], "light"),
+            ("illumino", ["illuminabitur"], "light"),
             ("obscuro", ["obscurabuntur"], "darken"),
             ("dies", ["dies"], "day"),
             ("lumen", ["lumen"], "light")
@@ -415,6 +418,7 @@ class Psalm138BTests: XCTestCase {
         let expectedThemes = [
             "Divine Illumination": [
                 ("illuminatio", "Transforming light"),
+                ("illumino", "Transforming light"),
                 ("lumen", "Divine radiance")
             ],
             "Darkness Transformed": [
@@ -461,7 +465,7 @@ class Psalm138BTests: XCTestCase {
             ("uterus", ["utero"], "womb"),
             ("mater", ["matris"], "mother"),
             ("confiteor", ["confitebor"], "praise"),
-            ("terribilis", ["terribiliter"], "awesomely"),
+            ("terribilis", ["terribiliter"], "awesome"),
             ("magnifico", ["magnificatus"], "magnify"),
             ("mirabilis", ["mirabilia"], "wonderful"),
             ("opus", ["opera"], "work"),
@@ -509,17 +513,19 @@ class Psalm138BTests: XCTestCase {
         let line5 = psalm138B[4] // "Non est occultatum os meum a te, quod fecisti in occulto: et substantia mea in inferioribus terrae."
         let line6 = psalm138B[5] // "Imperfectum meum viderunt oculi tui, et in libro tuo omnia scribentur: dies formabuntur, et nemo in eis."
         let combinedText = line5 + " " + line6
+        latinService.configureDebugging(target: "liber")
         let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 5)
         
+        latinService.configureDebugging(target: "")
         // Lemma verification
         let testLemmas = [
-            ("occulto", ["occultatum", "occulto"], "hidden"),
+            ("occulto", ["occultatum", "occulto"], "hide"),
             ("os", ["os"], "mouth"),
             ("facio", ["fecisti"], "make"),
             ("substantia", ["substantia"], "substance"),
             ("inferior", ["inferioribus"], "lower"),
             ("terra", ["terrae"], "earth"),
-            ("imperfectus", ["imperfectum"], "unformed"),
+            ("imperfectus", ["imperfectum"], "unfinished"),
             ("oculus", ["oculi"], "eye"),
             ("liber", ["libro"], "book"),
             ("scribo", ["scribentur"], "write"),
@@ -624,8 +630,10 @@ class Psalm138BTests: XCTestCase {
         let line9 = psalm138B[8] // "Si occideris, Deus, peccatores: viri sanguinum, declinate a me."
         let line10 = psalm138B[9] // "Quia dicitis in cogitatione: Accipient in vanitate civitates tuas."
         let combinedText = line9 + " " + line10
+        latinService.configureDebugging(target: "accipio")
         let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 9)
         
+        latinService.configureDebugging(target: nil)
         // Lemma verification
         let testLemmas = [
             ("occido", ["occideris"], "kill"),
@@ -635,7 +643,7 @@ class Psalm138BTests: XCTestCase {
             ("declino", ["declinate"], "turn away"),
             ("dico", ["dicitis"], "say"),
             ("cogitatio", ["cogitatione"], "thought"),
-            ("accipio", ["accient"], "receive"),
+            ("accipio", ["accipient"], "receive"),
             ("vanitas", ["vanitate"], "vanity"),
             ("civitas", ["civitates"], "city")
         ]
@@ -680,7 +688,11 @@ class Psalm138BTests: XCTestCase {
         let line11 = psalm138B[10] // "Nonne qui oderunt te, Domine, oderam? et super inimicos tuos tabescebam?"
         let line12 = psalm138B[11] // "Perfecto odio oderam illos: inimici facti sunt mihi."
         let combinedText = line11 + " " + line12
+
+
+        latinService.configureDebugging(target: "facio")
         let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 11)
+        latinService.configureDebugging(target: "")
         
         // Lemma verification
         let testLemmas = [

@@ -154,6 +154,20 @@ struct LemmaMapping {
         forms.sorted(by: { $0.key < $1.key }).forEach { formType, forms in
             print("   • \(formType): \(forms.joined(separator: ", "))")
         }
+
+        if let manualForms = entity.forms {
+           print(" - Manual Forms (from `forms`):")
+            for (key, values) in manualForms.sorted(by: { $0.key < $1.key }) {
+                print("   • \(key): \(values.joined(separator: ", "))")
+            }
+        }
+    
+        if let manualFormsPlural = entity.formsPlural {
+            print(" - Manual Plural Forms (from `forms_plural`):")
+            for (key, values) in manualFormsPlural.sorted(by: { $0.key < $1.key }) {
+                print("   • \(key): \(values.joined(separator: ", "))")
+            }
+        }
     }
     
     private func printNounDebug(entity: LatinWordEntity) {

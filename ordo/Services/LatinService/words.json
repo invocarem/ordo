@@ -1,5 +1,277 @@
 [
-  
+  {
+  "lemma": "mundo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "mundare",
+  "present": "mundo",
+  "future": "mundabo",
+  "perfect": "mundavi",
+  "supine": "mundatum",
+  "translations": {
+    "en": "to clean, to purify",
+    "la": "mundo, mundare"
+  }
+},
+{
+  "lemma": "aspergo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "aspergere",
+  "present": "aspergo",
+  "future": "aspergam",
+  "perfect": "aspersi",
+  "supine": "aspersum",
+  "translations": {
+    "en": "to sprinkle, scatter",
+    "la": "aspergo, aspergere"
+  }
+}, {
+  "lemma": "hyssopus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "feminine",
+  "nominative": "hyssopus",
+  "genitive": "hyssopi",
+  "translations": {
+    "en": "hyssop (purification plant)",
+    "la": "hyssopus, -i"
+  }
+},
+  {
+  "lemma": "justifico",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "justificare",
+  "present": "justifico",
+  "future": "justificabo",
+  "perfect": "justificavi",
+  "supine": "justificatum",
+  "forms": {
+    "present_passive_subjunctive_2sg": ["justificeris"]
+  },
+  "translations": {
+    "en": "to justify, be justified",
+    "la": "justifico, justificare"
+  }
+},
+  {
+  "lemma": "vinco",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "vincere",
+  "present": "vinco",
+  "future": "vincent",
+  "perfect": "vici",
+  "supine": "victum",
+  "translations": {
+    "en": "to conquer, overcome, prevail",
+    "la": "vinco, vincere"
+  }
+},
+{
+  "lemma": "coram",
+  "part_of_speech": "preposition",
+  "translations": {
+    "en": "before, in the presence of, in front of",
+    "la": "coram"
+  }
+},
+  {
+  "lemma": "mundus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "mundus",
+  "genitive": "mundi",
+  "forms": {
+    "nominative_f": ["munda"],
+    "genitive_f": ["mundae"],
+    "nominative_n": ["mundum"],
+    "genitive_n": ["mundi"]
+  },
+  "forms_plural": {
+    "nominative_m": ["mundi"],
+    "genitive_m": ["mundorum"],
+    "nominative_f": ["mundae"],
+    "genitive_f": ["mundarum"],
+    "nominative_n": ["munda"],
+    "genitive_n": ["mundorum"]
+  },
+  "translations": {
+    "en": "clean, pure, elegant",
+    "la": "mundus, -a, -um"
+  }
+},
+  {
+   "lemma": "perfectus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "perfectus",
+    "genitive": "perfecti",
+    "translations": {
+      "en": "perfect, complete, absolute",
+      "la": "perfectus, -a, -um"
+    }
+  },
+  {
+  "lemma": "obscuro",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "obscurare",
+  "present": "obscuro",
+  "future": "obscurabo",
+  "perfect": "obscuravi",
+  "supine": "obscuratum",
+  "translations": {
+    "en": "to darken, obscure, conceal",
+    "la": "obscuro, obscurare"
+  }
+},
+  {
+  "lemma": "possideo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "possidere",
+  "present": "possideo",
+  "future": "possidebo",
+  "perfect": "possedi",
+  "supine": "possessum",
+  "translations": {
+    "en": "to possess, occupy, own",
+    "la": "possideo, possidere"
+  }
+},
+  {
+  "lemma": "terribilis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "terribilis",
+  "genitive": "terribilis",
+  "forms":{
+    "adverb": ["terribiliter"]
+  },
+  "translations": {
+    "en": "awesome, terrifying, dreadful",
+    "la": "terribilis, -e"
+  }
+},
+  {
+  "lemma": "imperfectus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "imperfectus",
+  "genitive": "imperfecti",
+  "translations": {
+    "en": "unfinished, incomplete, imperfect",
+    "la": "imperfectus, -a, -um"
+  }
+},
+{
+  "lemma": "occulto",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "occultare",
+  "present": "occulto",
+  "future": "occultabo",
+  "perfect": "occultavi",
+  "supine": "occultatum",
+  "translations": {
+    "en": "to hide, conceal, keep secret",
+    "la": "occulto, occultare"
+  }
+},
+
+  {
+  "lemma": "inferior",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "inferior",
+  "genitive": "inferioris",
+  "translations": {
+    "en": "lower, inferior",
+    "la": "inferior, -ius"
+  }
+},
+  {
+  "lemma": "substantia",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "substantia",
+  "genitive": "substantiae",
+  "translations": {
+    "en": "substance, essence",
+    "la": "substantia, -ae"
+  }
+},
+  {
+  "lemma": "adhuc",
+  "part_of_speech": "adverb",
+  "translations": {
+    "en": "still, yet, thus far",
+    "la": "adhuc"
+  }
+}, {
+  "lemma": "principatus",
+  "part_of_speech": "noun",
+  "declension": 4,
+  "gender": "masculine",
+  "nominative": "principatus",
+  "genitive": "principatus",
+  "translations": {
+    "en": "rule, dominion, leadership",
+    "la": "principatus, -us"
+  }
+},
+  {
+  "lemma": "arena",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "arena",
+  "genitive": "arenae",
+  "translations": {
+    "en": "sand",
+    "la": "arena, -ae"
+  }
+},
+{
+  "lemma": "occido",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "occidere",
+  "present": "occido",
+  "future": "occidam",
+  "perfect": "occidi",
+  "supine": "occasum",
+  "translations": {
+    "en": "to kill, slay, cut down",
+    "la": "occido, occidere"
+  }
+},
+
+  {
+  "lemma": "accipio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "accipere",
+  "present": "accipio",
+  "future": "accipiam",
+  "perfect": "accepi",
+  "supine": "acceptum",
+  "forms_plural": {
+    "future_3rd_ecclesiastical": ["accipient"]
+  },
+  "translations": {
+    "en": "to receive, accept, take",
+    "la": "accipio, accipere"
+  }
+},  
   {
     "lemma": "scientia",
     "part_of_speech": "noun",
@@ -720,6 +992,20 @@
   "translations": {
     "en": "diminish, lessen, reduce",
     "la": "minuo, minuere"
+  }
+},
+{
+  "lemma": "honoro",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "honorare",
+  "present": "honoro",
+  "future": "honorabo",
+  "perfect": "honoravi",
+  "supine": "honoratum",
+  "translations": {
+    "en": "to honor, respect, dignify",
+    "la": "honoro, honorare"
   }
 },
   {
@@ -3878,7 +4164,7 @@
     "supine": "declinatum",
     
     "translations": {
-      "en": "to turn aside, deviate, avoid",
+      "en": "turn aside, turn away, deviate",
       "la": "declino, declinare"
     }
   },
@@ -4140,6 +4426,7 @@
         {
           "lemma": "probo",
           "part_of_speech": "verb",
+          "conjugation": 1,
           "perfect": "probavi",
           "infinitive": "probare",
           "supine": "probatum",
@@ -4154,6 +4441,7 @@
         {
           "lemma": "purgo",
           "part_of_speech": "verb",
+          "conjugation": 1,
           "perfect": "purgavi",
           "infinitive": "purgare",
           "supine": "purgatum",
@@ -4168,6 +4456,7 @@
       {
         "lemma": "uro",
         "part_of_speech": "verb",
+        "conjugation": 3,
         "perfect": "ussi",
         "infinitive": "urere",
         "supine": "ustum",
@@ -4522,6 +4811,20 @@
         "la": "pereo"
     },
     "notes": "Imperative singular is 'pere' (not 'per')."
+},
+{
+  "lemma": "interrogo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "interrogare",
+  "present": "interrogo",
+  "future": "interrogabo",
+  "perfect": "interrogavi",
+  "supine": "interrogatum",
+  "translations": {
+    "en": "to question, interrogate, examine",
+    "la": "interrogo, interrogare"
+  }
 },
   {
     "lemma": "insidia",
@@ -7016,17 +7319,56 @@
     }
 },
 {
+  "lemma": "scribo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "scribere",
+  "present": "scribo",
+  "future": "scribam",
+  "perfect": "scripsi",
+  "supine": "scriptum",
+  "translations": {
+    "en": "to write",
+    "la": "scribo, scribere"
+  }
+},
+{
+  "lemma": "liber",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "liber",
+  "genitive": "libri",
+  "forms": {
+    "ablative_m": ["libro"],
+    "accusative_m": ["librum"]
+  },
+  "translations": {
+    "en": "book",
+    "la": "liber, libri"
+  }
+},
+
+{
   "lemma": "liber",
   "part_of_speech": "adjective",
   "declension": 1,
-  "gender": "feminine",
-  "nominative": "libera",
-  "genitive": "liberae",
+  "gender": "masculine",
+  "nominative": "liber",
+  "genitive": "liberi",
+  "forms": {
+    "nominative_f": ["libera"],
+    "genitive_f": ["liberae"],
+    "nominative_n": ["liberum"],
+    "genitive_n": ["liberi"]
+  },
   "translations": {
     "en": "free",
-    "la": "libera"
+    "la": "liber, libera, liberum"
   }
 },
+
+
   {
     "lemma": "libero",
     "part_of_speech": "verb",
@@ -8445,11 +8787,15 @@
       "conjugation": 1,
       "deponent": false,
       "infinitive": "magnificare",
+      "present": "magnifico",
+      "future": "magnificabo",
+      "perfect": "magnificavi",
+      "supine": "magnificatum",
       "forms": {
         "present": ["magnifico", "magnificas", "magnificat", "magnificamus", "magnificatis", "magnificant"],
         "imperative": ["magnifica", "magnificate"],
         "subjunctive": ["magnificem", "magnifices", "magnificet", "magnificemus", "magnificetis", "magnificent"],
-        "perfect": ["magnificavit"]
+        "perfect_eccliastical": ["magnificavit"]
       },
       "translations": {
         "en": "to magnify, glorify",
@@ -12404,7 +12750,21 @@
             },
             "notes": "Psalm 37:18: 'Quoniam ego in flagella paratus sum, et dolor meus in conspectu meo semper' ('For I am ready for scourging, and my pain is ever before me')"
         },
-    
+   {
+  "lemma": "semper",
+  "part_of_speech": "adverb",
+  "translations": {
+    "en": "always, ever, forever",
+    "la": "semper"
+  }
+}, {
+  "lemma": "contra",
+  "part_of_speech": "adverb",
+  "translations": {
+    "en": "against, opposite, contrary to",
+    "la": "contra"
+  }
+},
     {
            "lemma": "compungo",
            "part_of_speech": "verb",
@@ -12496,6 +12856,7 @@
            "conjugation": 4,
            "perfect": "scivi",
            "infinitive": "scire",
+           "supine": "scitum",
            "forms": {
                "present": ["scio", "scis", "scit", "scimus", "scitis", "sciunt"],
                "imperfect": ["sciebam", "sciebas", "sciebat", "sciebamus", "sciebatis", "sciebant"],
@@ -13324,7 +13685,7 @@
           "future": ["faciam", "facies", "faciet", "faciemus", "facietis", "facient"],
           "future_passive": ["fiar", "fieris", "fietur", "fiemur", "fiemini", "fientur"],
           "present_participle": ["faciens"],
-          "perfect_passive_participle": ["factus", "facta", "factum"],
+          "perfect_passive_participle": ["factus", "facta", "factum", "facti", "factae", "facta" ],
           "perfect_indicative_active": ["feci", "fecisti", "fecit", "fecimus", "fecistis", "fecerunt"]
         },
         "translations": {
@@ -15860,6 +16221,36 @@
   }
 },
 {
+  "lemma": "incertus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "incertus",
+  "genitive": "incerti",
+  "forms": {
+    "nominative_f": ["incerta"],
+    "genitive_f": ["incertae"],
+    "nominative_n": ["incertum"],
+    "genitive_n": ["incerti"]
+  },
+  "translations": {
+    "en": "uncertain, hidden, doubtful",
+    "la": "incertus, -a, -um"
+  }
+},
+{
+  "lemma": "nix",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "nix",
+  "genitive": "nivis",
+  "translations": {
+    "en": "snow",
+    "la": "nix, nivis"
+  }
+},
+{
   "lemma": "cibus",
   "part_of_speech": "noun",
   "declension": 2,
@@ -15871,7 +16262,14 @@
     "la": "cibus"
   }
 },
-
+{
+  "lemma": "amplius",
+  "part_of_speech": "adverb",
+  "translations": {
+    "en": "more, thoroughly, to a greater extent",
+    "la": "amplius"
+  }
+},
 {
   "lemma": "lavo",
   "part_of_speech": "verb",

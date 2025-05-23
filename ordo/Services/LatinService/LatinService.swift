@@ -37,11 +37,11 @@ extension LatinWordEntity{
             forms["accusative"] = stem + "as" // "tenebras"
             forms["ablative"] = stem + "is" // "tenebris"
             forms["vocative"] = nominative // "tenebrae"
-    forms["nominative_plural"] = nominative // "tenebrae"
-    forms["genitive_plural"] = stem + "arum" // "tenebrarum"
-    forms["dative_plural"] = stem + "is" // "tenebris"
-    forms["accusative_plural"] = stem + "as" // "tenebras"
-    forms["ablative_plural"] = stem + "is" // "tenebris"
+            forms["nominative_plural"] = nominative // "tenebrae"
+            forms["genitive_plural"] = stem + "arum" // "tenebrarum"
+            forms["dative_plural"] = stem + "is" // "tenebris"
+            forms["accusative_plural"] = stem + "as" // "tenebras"
+            forms["ablative_plural"] = stem + "is" // "tenebris"
 
         case 1: // -a (feminine)
             let stem = String(nominative.dropLast())
@@ -63,6 +63,17 @@ extension LatinWordEntity{
                 stem = String(nominative.dropLast(3)) + "i" // "filius" → "fili"
                 forms["vocative"] = stem // "fili" (special vocative)
             } 
+             else if nominative.hasSuffix("er") {
+
+                 // For -er nouns, check genitive to determine stem
+                if let genitive = self.genitive, genitive.hasPrefix(nominative.dropLast(2)) {
+                    stem = String(nominative.dropLast(2)) // e.g. "puer" -> "pu" (pueri)
+                } else {
+                    stem = String(nominative.dropLast(1)) // e.g. "liber" -> "libr" (libri)
+                }
+
+               forms["vocative"] = nominative // -er nouns keep full nominative in vocative
+            }
             // Regular -us/-um handling
             else {
                 stem = String(nominative.dropLast(2)) // "dolus" → "dol", "bellum" → "bell"
