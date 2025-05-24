@@ -67,11 +67,14 @@ struct LinePairAnalysisView: View {
                 VStack(alignment: .leading, spacing: 20) {
                     if linePairs.indices.contains(selectedPairIndex) {
                         let pair = linePairs[selectedPairIndex]
+                        
+                    
                         let analysis = latinService.analyzePsalm(
                             psalmIdentity, // Using the computed identity
-                            text: pair.lines.joined(separator: " "),
+                            text: pair.lines, //.joined(separator: " "),
                             startingLineNumber: pair.startLine
                         )
+                            
                         
                         LatinSectionView(title: "Lines \(pair.startLine)-\(pair.endLine)") {
                             VStack(alignment: .leading, spacing: 4) {
@@ -84,54 +87,57 @@ struct LinePairAnalysisView: View {
                             }
                             .padding(.bottom, 8)
                             
-                            
-                            
                             if !analysis.themes.isEmpty {
-                                        let filteredThemes = analysis.themes.filter { theme in
-                                            guard let themeRange = theme.lineRange else { return false }
-                                            print ("themeRange: \(themeRange)")
-                                            return themeRange.overlaps(pair.startLine...pair.endLine)
-                                        }
-                                        
-                                        if !filteredThemes.isEmpty {
-                                            VStack(alignment: .leading, spacing: 8) {
-                                                
-                                                
-                                                ForEach(filteredThemes, id: \.name) { theme in
-                                                    VStack(alignment: .leading, spacing: 4) {
-                                                        Text(theme.name)
-                                                            .font(.headline)
-                                                        Text(theme.description)
-                                                            .font(.caption)
-                                                            .foregroundColor(.secondary)
-                                                        if !theme.supportingLemmas.isEmpty {
-                                                            FlowLayout(spacing: 4) {
-                                                                ForEach(theme.supportingLemmas, id: \.self) { lemma in
-                                                                                            if let lemmaInfo = analysis.dictionary[lemma] {
-                                                                                                VStack(spacing: 2) {
-                                                                                                    Text(lemma)
-                                                                                                        .font(.caption)
-                                                                                                        .bold()
-                                                                                                    if let translation = lemmaInfo.translation {
-                                                                                                        Text(translation)
-                                                                                                            .font(.caption2)
-                                                                                                    }
-                                                                                                }
-                                                                                                .padding(.horizontal, 6)
-                                                                                                .padding(.vertical, 4)
-                                                                                                .background(Color.accentColor.opacity(0.1))
-                                                                                                .cornerRadius(6)
-                                                                                            }
-                                                                                        }
+                                let filteredThemes = analysis.themes.filter { theme in
+                                    guard let themeRange = theme.lineRange else { return false }
+                                    // Check if theme range overlaps with the pair's range OR if the pair's range contains any part of the theme range
+                                    return pair.startLine...pair.endLine ~= themeRange.lowerBound ||
+                                           pair.startLine...pair.endLine ~= themeRange.upperBound ||
+                                           themeRange ~= pair.startLine ||
+                                           themeRange ~= pair.endLine
+                                }
+                                
+                                if !filteredThemes.isEmpty {
+                                    VStack(alignment: .leading, spacing: 8) {
+                                        ForEach(filteredThemes, id: \.name) { theme in
+                                            VStack(alignment: .leading, spacing: 4) {
+                                                Text(theme.name)
+                                                    .font(.headline)
+                                                Text(theme.description)
+                                                    .font(.caption)
+                                                    .foregroundColor(.secondary)
+                                                if !theme.supportingLemmas.isEmpty {
+                                                    FlowLayout(spacing: 4) {
+                                                        ForEach(theme.supportingLemmas, id: \.self) { lemma in
+                                                            if let lemmaInfo = analysis.dictionary[lemma] {
+                                                                VStack(spacing: 2) {
+                                                                    Text(lemma)
+                                                                        .font(.caption)
+                                                                        .bold()
+                                                                    if let translation = lemmaInfo.translation {
+                                                                        Text(translation)
+                                                                            .font(.caption2)
+                                                                    }
+                                                                }
+                                                                .padding(.horizontal, 6)
+                                                                .padding(.vertical, 4)
+                                                                .background(Color.accentColor.opacity(0.1))
+                                                                .cornerRadius(6)
                                                             }
                                                         }
                                                     }
-                                                    .padding(.vertical, 4)
                                                 }
                                             }
-                                            .padding(.top, 8)
+                                            .padding(.vertical, 4)
                                         }
                                     }
+                                    .padding(.top, 8)
+                                }
+                            }
+                            
+                            
+                                        
+                                       
                         }
                         
                         ForEach(analysis.orderedLemmas, id: \.self) { lemma in
@@ -224,5 +230,39 @@ struct FlowLayout: Layout {
             currentX += size.width + spacing
             lineHeight = max(lineHeight, size.height)
         }
+    }
+}
+struct DebugModifier: ViewModifier {
+    let message: String
+    @State private var debugMessage = ""
+    
+    func body(content: Content) -> some View {
+        content
+            .onAppear {
+                // Print to console
+                print(message)
+                // Also store for visual debugging
+                debugMessage = message
+            }
+            .overlay(
+                Text(debugMessage)
+                    .font(.caption)
+                    .foregroundColor(.red)
+                    .padding()
+                    .background(Color.yellow.opacity(0.3))
+                    .border(Color.red, width: 1)
+                    .padding(),
+                alignment: .topLeading
+            )
+    }
+}
+
+extension View {
+    func debug(_ message: String) -> some View {
+        #if DEBUG
+        return modifier(DebugModifier(message: message))
+        #else
+        return self
+        #endif
     }
 }

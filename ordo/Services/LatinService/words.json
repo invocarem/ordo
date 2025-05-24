@@ -1,5 +1,92 @@
 [
   {
+  "lemma": "principalis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "principalis",
+  "genitive": "principalis",
+  "forms": {
+    "nominative_n": ["principale"],
+    "genitive_n": ["principalis"]
+  },
+  "translations": {
+    "en": "principal, chief, first in rank",
+    "la": "principalis, -e"
+  }
+},
+  {
+  "lemma": "viscera",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "viscera",
+  "genitive": "viscerum",
+  "translations": {
+    "en": "entrails, inward parts, womb",
+    "la": "viscera, viscerum"
+  }
+},
+  {
+  "lemma": "proicio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "proicere",
+  "present": "proicio",
+  "future": "proiciam",
+  "perfect": "proieci",
+  "supine": "proiectum",
+  "forms": {
+    "present_subjunctive_2sg": ["proiicias"]
+  },
+  "translations": {
+    "en": "to throw forth, cast away",
+    "la": "proicio, proicere"
+  }
+},
+  {
+  "lemma": "confirmo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "confirmare",
+  "present": "confirmo",
+  "future": "confirmabo",
+  "perfect": "confirmavi",
+  "supine": "confirmatum",
+  "translations": {
+    "en": "to strengthen, confirm, establish",
+    "la": "confirmo, confirmare"
+  }
+},
+  {
+  "lemma": "creo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "creare",
+  "present": "creo",
+  "future": "creabo",
+  "perfect": "creavi",
+  "supine": "creatum",
+  "translations": {
+    "en": "to create, make, produce",
+    "la": "creo, creare"
+  }
+},
+  {
+  "lemma": "innovo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "innovare",
+  "present": "innovo",
+  "future": "innovabo",
+  "perfect": "innovavi",
+  "supine": "innovatum",
+  "translations": {
+    "en": "to renew, innovate, restore",
+    "la": "innovo, innovare"
+  }
+},
+  {
   "lemma": "accepto",
   "part_of_speech": "verb",
   "conjugation": 1,
@@ -101,7 +188,7 @@
   "future": "despiciam",
   "perfect": "despexi",
   "supine": "despectum",
-  "form": {
+  "forms": {
     "future_active": ["despiciam", "despicies", "despiciet", "despiciemus", "despicietis", "despicient"]
   },
   "translations": {
@@ -7082,28 +7169,7 @@
           "imperative": ["defluite"]
         }
       },
-      {
-        "lemma": "proicio",
-        "part_of_speech": "verb",
-        "infinitive": "proicere",
-        "perfect": "proieci",
-        "supine": "proiectum",
-        "translations": {
-          "en": "to scatter, throw forth",
-          "la": "proicio"
-        },
-        "forms": {
-          "present": ["proicio", "proicis", "proicit", "proicimus", "proicitis", "proiciunt"],
-          "imperfect": ["proiciebam", "proiciebas", "proiciebat", "proiciebamus", "proiciebatis", "proiciebant"],
-          "future": ["proiciam", "proicies", "proiciet", "proiciemus", "proicietis", "proicient"],
-          "perfect": ["proieci", "proiecisti", "proiecit", "proiecimus", "proiecistis", "proiecerunt"],
-          "imperative": ["proice"],
-          "present_passive": ["proicior", "proiceris", "proicitur", "proicimur", "proicimini", "proiciuntur"]
-        },
-        "forms_plural": {
-          "imperative": ["proicite"]
-        }
-      },
+     
       {
         "lemma": "resurgo",
         "part_of_speech": "verb",

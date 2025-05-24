@@ -1065,6 +1065,95 @@
     }
   ]
 },
+
+{
+  "psalmNumber": 50,
+  "category": "",
+  "themes": [
+    {
+      "name": "Penitence",
+      "description": "Recognition and contrition for sin",
+      "lemmas": ["misereor", "peccatum", "iniquitas", "cognosco", "contra"],
+      "startLine": 1,
+      "endLine": 5,
+      "comment": "David's confession begins with a plea for mercy (*misereor*) and acknowledges sin (*peccatum*, *iniquitas*)"
+    },
+    {
+      "name": "Divine Mercy",
+      "description": "Appeals to God's compassionate nature",
+      "lemmas": ["misericordia", "miserationum", "deleo", "lava", "mundabor"],
+      "startLine": 1,
+      "endLine": 4,
+      "comment": "Mercy is rooted in God's nature (*misericordia*) and enacted through cleansing (*lava*, *deleo*)"
+    },
+    {
+      "name": "Purification",
+      "description": "Ritual and spiritual cleansing",
+      "lemmas": ["aspergo", "hyssopus", "lavabis", "dealbabor", "mundabor"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "Hyssop symbolizes purification; washing metaphors (*lavabis*) transcend ritual"
+    },
+    {
+      "name": "Heart Transformation",
+      "description": "Request for inner renewal",
+      "lemmas": ["cor", "innovo", "spiritum", "rectum", "crea"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "A new heart (*cor mundum*) and spirit (*spiritum rectum*) are God's work"
+    },
+    {
+      "name": "True Sacrifice",
+      "description": "Contrition over ritual offerings",
+      "lemmas": ["sacrificium", "contribulatus", "holocaustis", "despicies", "cor contritum"],
+      "startLine": 17,
+      "endLine": 18,
+      "comment": "God rejects empty sacrifices (*holocaustis*) but accepts a broken spirit (*spiritus contribulatus*)"
+    },
+    {
+      "name": "Restoration",
+      "description": "Renewal of joy and mission",
+      "lemmas": ["redde", "laetitiam", "confirmo", "docebo", "exsultabit"],
+      "startLine": 13,
+      "endLine": 16,
+      "comment": "Forgiveness restores joy (*laetitiam*) and enables teaching (*docebo*)"
+    },
+    {
+      "name": "Augustine: True Penance",
+      "description": "Self-knowledge and humility in confession",
+      "lemmas": ["cognosco", "contra", "humiliata", "veritatem", "visceribus"],
+      "startLine": 4,
+      "endLine": 11,
+      "comment": "Augustine emphasizes truth (*veritatem*) and humility (*humiliata*) as prerequisites for mercy"
+    },
+    {
+      "name": "Augustine: Hyssop of Humility",
+      "description": "Purification through lowliness",
+      "lemmas": ["hyssopo", "humiliata", "dealbo", "mundabor"],
+      "startLine": 8,
+      "endLine": 9,
+      "comment": "Hyssop cleanses because it signifies humility (*ossa humiliata*)"
+    },
+    {
+      "name": "Augustine: Spiritual Sacrifice",
+      "description": "Contrite heart as true worship",
+      "lemmas": ["spiritus", "contribulatus", "cor contritum", "holocaustis"],
+      "startLine": 17,
+      "endLine": 18,
+      "comment": "Rejects ritual (*holocaustis*) for inward sacrifice (*spiritus contribulatus*)"
+    },
+    {
+      "name": "Augustine: City of God",
+      "description": "Jerusalem as the redeemed community",
+      "lemmas": ["Sion", "Jerusalem", "aedificentur", "altare", "vitulos"],
+      "startLine": 19,
+      "endLine": 20,
+      "comment": "The rebuilding of Jerusalem (line 19) and altar offerings (line 20) prefigure the Church (cf. *City of God*, XVII)"
+    }
+  ]
+},
+
+
     {
       "psalmNumber": 89,
       "category": "",

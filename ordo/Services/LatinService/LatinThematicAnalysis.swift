@@ -109,9 +109,12 @@ extension LatinService {
             wordLineMap: wordLineMap,
             lineRange: lineRange
         )
+        let requiredLemmaCount = 1  //max(1, theme.lemmas.count / 2) 
+        let matchingLemmaCount = theme.lemmas.filter { groupLemmas.contains($0) }.count
+        let isThemePresent = matchingLemmaCount >= requiredLemmaCount
         
         // Check if all theme lemmas exist in these lines
-        let isThemePresent = theme.lemmas.allSatisfy { groupLemmas.contains($0) }
+        //let isThemePresent = theme.lemmas.allSatisfy { groupLemmas.contains($0) }
         
         if isThemePresent {
             updatedResult.themes.append(

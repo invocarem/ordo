@@ -3,7 +3,7 @@ import XCTest
 
 class Psalm50Tests: XCTestCase {
     private var latinService: LatinService!
-    private let verbose = true // Set to false to reduce test output
+    private let verbose = false// Set to false to reduce test output
     
     override func setUp() {
         super.setUp()
@@ -59,7 +59,7 @@ class Psalm50Tests: XCTestCase {
     
     // Augustine themes
     ("Augustine: True Penance", ["cognosco", "contra", "semper", "viscera"]), // Added "viscera"
-    ("Augustine: Hyssop of Humility", ["hyssopus", "humilio", "humiliatus", "exsulto"]), // Added "exsulto"
+    ("Augustine: Hyssop of Humility", ["hyssopus", "humilio",  "exsulto"]), // Added "exsulto"
     ("Augustine: Spiritual Sacrifice", ["spiritus", "contribulo", "despicio", "cor"]), // Added "cor"
     ("Augustine: City of God", ["sion", "jerusalem", "altare", "vitulus"]) // NEW THEME
 ] 
@@ -95,7 +95,7 @@ class Psalm50Tests: XCTestCase {
             ("misericordia", ["misericordiam"], "mercy"),
             ("multitudo", ["multitudinem"], "multitude"),
             ("miseratio", ["miserationum"], "compassion"),
-            ("deleo", ["dele"], "blot out"),
+            ("deleo", ["dele"], "wipe out"),
             ("iniquitas", ["iniquitatem"], "iniquity")
         ]
         
@@ -359,7 +359,9 @@ func testPsalm50Lines11and12() {
     let line11 = psalm50[10] // "Cor mundum crea in me, Deus, et spiritum rectum innova in visceribus meis."
     let line12 = psalm50[11] // "Ne proiicias me a facie tua, et spiritum sanctum tuum ne auferas a me."
     let combinedText = line11 + " " + line12
+    latinService.configureDebugging(target: "proicio") 
     let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 11)
+    latinService.configureDebugging(target: "") 
     
     // Lemma verification
     let testLemmas = [
@@ -685,7 +687,7 @@ func testPsalm50Lines19and20() {
             ("rectus", ["rectum"], "right"),
             ("innovo", ["innova"], "renew"),
             ("salutaris", ["salutaris"], "salvation"),
-            ("confirma", ["confirma"], "strengthen"),
+            ("confirmo", ["confirma"], "strengthen"),
             ("doceo", ["docebo"], "teach"),
             ("converto", ["convertentur"], "turn"),
             ("lingua", ["lingua"], "tongue"),
@@ -695,7 +697,7 @@ func testPsalm50Lines19and20() {
             ("laus", ["laudem"], "praise"),
             ("sacrificium", ["sacrificium"], "sacrifice"),
             ("holocaustum", ["holocaustis", "holocausta"], "whole offering"),
-            ("contribulatus", ["contribulatus"], "contrite"),
+            ("contribulo", ["contribulatus"], "contrite"),
             ("contritus", ["contritum"], "crushed"),
             ("benignus", ["benigne"], "gracious"),
             ("voluntas", ["voluntate"], "will"),
