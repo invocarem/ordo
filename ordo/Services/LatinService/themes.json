@@ -1081,7 +1081,7 @@
     {
       "name": "Divine Mercy",
       "description": "Appeals to God's compassionate nature",
-      "lemmas": ["misericordia", "miserationum", "deleo", "lava", "mundabor"],
+      "lemmas": ["misericordia", "miseratio", "deleo", "lavo", "mundo"],
       "startLine": 1,
       "endLine": 4,
       "comment": "Mercy is rooted in God's nature (*misericordia*) and enacted through cleansing (*lava*, *deleo*)"
@@ -1089,7 +1089,7 @@
     {
       "name": "Purification",
       "description": "Ritual and spiritual cleansing",
-      "lemmas": ["aspergo", "hyssopus", "lavabis", "dealbabor", "mundabor"],
+      "lemmas": ["aspergo", "hyssopus", "mundo", "lavo", "dealbo"],
       "startLine": 8,
       "endLine": 8,
       "comment": "Hyssop symbolizes purification; washing metaphors (*lavabis*) transcend ritual"
@@ -1097,7 +1097,7 @@
     {
       "name": "Heart Transformation",
       "description": "Request for inner renewal",
-      "lemmas": ["cor", "innovo", "spiritum", "rectum", "crea"],
+      "lemmas": ["cor", "innovo", "spiritus", "rectus", "crea"],
       "startLine": 11,
       "endLine": 12,
       "comment": "A new heart (*cor mundum*) and spirit (*spiritum rectum*) are God's work"
@@ -1105,7 +1105,7 @@
     {
       "name": "True Sacrifice",
       "description": "Contrition over ritual offerings",
-      "lemmas": ["sacrificium", "contribulatus", "holocaustis", "despicies", "cor contritum"],
+      "lemmas": ["sacrificium", "contribulo", "holocaustum", "despicio", "contritus"],
       "startLine": 17,
       "endLine": 18,
       "comment": "God rejects empty sacrifices (*holocaustis*) but accepts a broken spirit (*spiritus contribulatus*)"
@@ -1113,7 +1113,7 @@
     {
       "name": "Restoration",
       "description": "Renewal of joy and mission",
-      "lemmas": ["redde", "laetitiam", "confirmo", "docebo", "exsultabit"],
+      "lemmas": ["reddo", "laetitia",  "docebo", "exsulto"],
       "startLine": 13,
       "endLine": 16,
       "comment": "Forgiveness restores joy (*laetitiam*) and enables teaching (*docebo*)"
@@ -1129,7 +1129,7 @@
     {
       "name": "Augustine: Hyssop of Humility",
       "description": "Purification through lowliness",
-      "lemmas": ["hyssopo", "humiliata", "dealbo", "mundabor"],
+      "lemmas": ["hyssopus", "aspergo", "humilio", "dealbo"],
       "startLine": 8,
       "endLine": 9,
       "comment": "Hyssop cleanses because it signifies humility (*ossa humiliata*)"
@@ -1137,7 +1137,7 @@
     {
       "name": "Augustine: Spiritual Sacrifice",
       "description": "Contrite heart as true worship",
-      "lemmas": ["spiritus", "contribulatus", "cor contritum", "holocaustis"],
+      "lemmas": ["spiritus", "contribulo", "contritus", "holocaustum"],
       "startLine": 17,
       "endLine": 18,
       "comment": "Rejects ritual (*holocaustis*) for inward sacrifice (*spiritus contribulatus*)"
@@ -1145,7 +1145,7 @@
     {
       "name": "Augustine: City of God",
       "description": "Jerusalem as the redeemed community",
-      "lemmas": ["Sion", "Jerusalem", "aedificentur", "altare", "vitulos"],
+      "lemmas": ["sion", "jerusalem", "aedifico", "altare", "vitulus"],
       "startLine": 19,
       "endLine": 20,
       "comment": "The rebuilding of Jerusalem (line 19) and altar offerings (line 20) prefigure the Church (cf. *City of God*, XVII)"
@@ -1333,6 +1333,14 @@
           "comment": "Divine shelter language"
         },
         {
+          "name": "Deliverance from Evil",
+          "description": "Protection against physical/spiritual threats",
+          "lemmas": ["laqueus", "pestis", "terror", "nocturnus", "mille"],
+          "startLine": 3,
+          "endLine": 7,
+          "comment": "The *laqueus* (snare) and *pestis* (plague) represent physical dangers, while *terror nocturnus* (night terror) symbolizes spiritual threats."
+        },
+        {
           "name": "Deliverance",
           "description": "Rescue from danger",
           "lemmas": ["libero", "laqueus"],
@@ -1429,13 +1437,14 @@
           "comment": "Temple as refuge"
         },
         {
-          "name": "Angelic Guardianship",
-          "description": "Angels commanded to protect",
-          "lemmas": ["angelus", "mando", "custodio"],
+          "name": "Angelological Assurance",
+          "description": "Angelic guardianship",
+          "lemmas": ["angelus", "mando", "porto", "lapis", "offendo"],
           "startLine": 11,
           "endLine": 12,
-          "comment": "Celestial protection detail"
+          "comment": "The lemma *angelus* (angel) appears in the dative plural (*angelis*), showing their active role in guardianship. The verb *mando* (to command) appears in the perfect tense (*mandavit*), emphasizing God's authoritative protection."
         },
+
         {
           "name": "Physical Protection",
           "description": "Carried in hands",
@@ -1502,6 +1511,95 @@
         }
       ]
     },
+
+{
+  "psalmNumber": 91,
+  "category": "",
+  "themes": [
+    {
+      "name": "Divine Praise",
+      "description": "Celebration of God's character through worship",
+      "lemmas": ["confiteor", "psallo", "magnifico", "exsulto", "delecto"],
+      "startLine": 1,
+      "endLine": 4,
+      "comment": "Opens with call to praise (*confiteor*) and musical worship (*psallo*), emphasizing joy (*exsultabo*)"
+    },
+    {
+      "name": "Musical Worship",
+      "description": "Instruments as vehicles for devotion",
+      "lemmas": ["decachordum", "psalterium", "cithara", "canticum"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Specific instruments (*cithara*) reflect temple worship practices"
+    },
+    {
+      "name": "Divine Wisdom",
+      "description": "Contrast between God's knowledge and human limitation",
+      "lemmas": ["profundus", "cogitatio", "insipiens", "stultus", "intelligo"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "God's deep (*profundae*) thoughts contrast with foolishness (*stultus*)"
+    },
+    {
+      "name": "Righteous Flourishing",
+      "description": "Metaphors of growth and stability",
+      "lemmas": ["palma", "cedrus", "floreo", "multiplico", "planto"],
+      "startLine": 12,
+      "endLine": 14,
+      "comment": "Botanical imagery (*cedrus Libani*) symbolizes enduring vitality"
+    },
+    {
+      "name": "Divine Justice",
+      "description": "Temporal judgment and eternal sovereignty",
+      "lemmas": ["iniquitas", "pereo", "dispergo", "intereo", "rectus"],
+      "startLine": 7,
+      "endLine": 15,
+      "comment": "Wicked perish (*pereo*) while God's justice (*rectus*) endures"
+    },
+    {
+      "name": "Temporal vs Eternal",
+      "description": "Contrast between transient evil and enduring God",
+      "lemmas": ["fenum", "aeternum", "saeculum", "altissimus"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Sinners like grass (*fenum*) vs God's eternity (*in aeternum*)"
+    },
+    {
+      "name": "Temple Imagery",
+      "description": "Sacred space as locus of blessing",
+      "lemmas": ["domus", "atrium", "planto", "altissimus"],
+      "startLine": 13,
+      "endLine": 13,
+      "comment": "Planted (*plantati*) in God's courts (*atriis*)"
+    },
+    {
+      "name": "Augustine: True Worship",
+      "description": "Inner disposition over ritual form",
+      "lemmas": ["confiteor", "rectus", "iniquitas", "delecto"],
+      "startLine": 1,
+      "endLine": 15,
+      "comment": "Augustine connects praise (*confiteor*) with moral uprightness (*rectus*)"
+    },
+    {
+      "name": "Augustine: Two Destinies",
+      "description": "Eschatological contrast of outcomes",
+      "lemmas": ["intereo", "floreo", "dispergo", "multiplico"],
+      "startLine": 7,
+      "endLine": 14,
+      "comment": "Wicked scatter (*dispergentur*) while righteous flourish (*florebunt*)"
+    },
+    {
+      "name": "Augustine: Spiritual Longevity",
+      "description": "Enduring grace in old age",
+      "lemmas": ["senectus", "uber", "patiens", "cornu"],
+      "startLine": 10,
+      "endLine": 14,
+      "comment": "Horn (*cornu*) as symbol of strength in later years (*senecta uberi*)"
+    }
+  ]
+},
+
+
     {
       "psalmNumber": 118,
       "category": "aleph",

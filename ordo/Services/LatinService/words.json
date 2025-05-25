@@ -1,4 +1,263 @@
 [
+    
+      {
+        "lemma": "psalterium",
+        "part_of_speech": "noun",
+        "declension": 2,
+        "gender": "neuter",
+        "nominative": "psalterium",
+        "genitive": "psalterii",
+        "translations": {
+          "en": "psaltery, stringed instrument",
+          "la": "psalterium, psalterii"
+        }
+      },
+      {
+        "lemma": "canticum",
+        "part_of_speech": "noun",
+        "declension": 2,
+        "gender": "neuter",
+        "nominative": "canticum",
+        "genitive": "cantici",
+        "translations": {
+          "en": "song, chant",
+          "la": "canticum, cantici"
+        }
+      },
+      {
+        "lemma": "cithara",
+        "part_of_speech": "noun",
+        "declension": 1,
+        "gender": "feminine",
+        "nominative": "cithara",
+        "genitive": "citharae",
+        "translations": {
+          "en": "harp, lyre",
+          "la": "cithara, citharae"
+        }
+      },
+      {
+        "lemma": "delecto",
+        "part_of_speech": "verb",
+        "conjugation": 1,
+        "infinitive": "delectare",
+        "present": "delecto",
+        "perfect": "delectavi",
+        "supine": "delectatum",
+        "forms": {
+          "perfect_2sg": ["delectasti"]
+        },
+        "translations": {
+          "en": "to delight, charm, please",
+          "la": "delecto, delectare"
+        }
+      },
+      {
+        "lemma": "factura",
+        "part_of_speech": "noun",
+        "declension": 1,
+        "gender": "feminine",
+        "nominative": "factura",
+        "genitive": "facturae",
+        "translations": {
+          "en": "creation, making, workmanship",
+          "la": "factura, facturae"
+        }
+      },
+    
+    {
+      "lemma": "decachordum",
+      "part_of_speech": "noun",
+      "declension": 2,
+      "gender": "neuter",
+      "nominative": "decachordum",
+      "genitive": "decachordi",
+      "translations": {
+        "en": "a ten-stringed instrument (harp/lyre)",
+        "la": "decachordum, decachordi (n)"
+      },
+      "biblical_context": {
+        "reference": "Psalm 32:2, 91:4 (Vulgate numbering)",
+        "comment": "Symbolized completeness in worship (10 strings = Decalogue association)"
+      }
+    },
+  {
+    "lemma": "profundus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "profundus",
+    "genitive": "profundi",
+    "forms": {
+      "nominative_f": ["profunda"],
+      "genitive_f": ["profundae"],
+      "nominative_n": ["profundum"],
+      "genitive_n": ["profundi"]
+    },
+    "forms_plural": {
+      "nominative_m": ["profundi"],
+      "genitive_m": ["profundorum"],
+      "nominative_f": ["profundae"],
+      "genitive_f": ["profundarum"],
+      "nominative_n": ["profunda"],
+      "genitive_n": ["profundorum"]
+    },
+   
+    "translations": {
+      "en": "deep, profound, vast",
+      "la": "profundus, -a, -um"
+    }
+  },
+  {
+    "lemma": "intereo",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "interire",
+    "present": "intereo",
+    "future": "interibo",
+    "perfect": "interii",
+    "forms": {
+      "present_subjunctive_3pl": ["intereant"]
+    },
+    "translations": {
+      "en": "to perish, to die, to be destroyed",
+      "la": "intereo, interire"
+    }
+  },
+  {
+    "lemma": "stultus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "stultus",
+    "genitive": "stulti",
+    "forms": {
+      "nominative_m": ["stultus"],
+      "genitive_m": ["stulti"],
+      "nominative_f": ["stulta"],
+      "genitive_f": ["stultae"],
+      "nominative_n": ["stultum"],
+      "genitive_n": ["stulti"]
+    },
+    "forms_plural": {
+      "nominative_m": ["stulti"],
+      "genitive_m": ["stultorum"],
+      "nominative_f": ["stultae"],
+      "genitive_f": ["stultarum"],
+      "nominative_n": ["stulta"],
+      "genitive_n": ["stultorum"]
+    },
+    "translations": {
+      "en": "fool, foolish, silly",
+      "la": "stultus, -a, -um"
+    }
+  },
+
+  {
+    "lemma": "exorior",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "exoriri",
+    "present": "exorior",
+    "future": "exoriar",
+    "perfect": "exortus sum",
+    "forms": {
+      "perfect_indicative_3pl": ["exorti"]
+    },
+    "translations": {
+      "en": "to arise, to rise up",
+      "la": "exorior, exoriri"
+    }
+  },
+   {
+    "lemma": "fenum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "fenum",
+    "genitive": "feni",
+    "forms": {
+      "nominative_sg": ["fenum"]
+    },
+    "translations": {
+      "en": "grass, hay",
+      "la": "fenum"
+    }
+  },
+  {
+    "lemma": "appareo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "apparere",
+    "present": "appareo",
+    "future": "apparebo",
+    "perfect": "apparui",
+    "supine": "apparitum",
+    "forms": {
+      "perfect_subjunctive_3pl": ["apparuerint"]
+    },
+    "translations": {
+      "en": "to appear, to become visible",
+      "la": "appareo, apparere"
+    }
+  },
+   {
+    "lemma": "uber",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "uber",
+    "genitive": "uberis",
+   
+    "translations": {
+      "en": "abundant, fertile, rich",
+      "la": "uber, -is, -e"
+    }
+  },
+  {
+    "lemma": "unicornis",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "unicornis",
+    "genitive": "unicornis",
+    "translations": {
+      "en": "unicorn, one-horned creature",
+      "la": "unicornis"
+    }
+  },
+  {
+    "lemma": "senectus",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "senectus",
+    "genitive": "senectutis",
+    "forms": {
+      "nominative_sg": ["senectus"]
+    },
+    "translations": {
+      "en": "old age, seniority",
+      "la": "senectus"
+    }
+  },
+  {
+    "lemma": "dispergo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "dispergere",
+    "present": "dispergo",
+    "future": "dispergam",
+    "perfect": "dispersi",
+    "supine": "dispersum",
+    "forms": {
+      "future_passive_indicative_3pl": ["dispergentur"]
+    },
+    "translations": {
+      "en": "to scatter, to disperse",
+      "la": "dispergo, dispergere"
+    }
+  },
   {
   "lemma": "principalis",
   "part_of_speech": "adjective",
