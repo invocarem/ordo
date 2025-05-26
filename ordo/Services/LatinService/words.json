@@ -1,5 +1,64 @@
 [
-    
+{
+  "lemma": "plasmo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "plasmare",
+  "present": "plasmo",
+  "future": "plasmabo",
+  "perfect": "plasmavi",
+  "supine": "plasmatum",
+  "forms": {
+    "perfect_indicative_3pl": ["plasmaverunt"]
+  },
+  "translations": {
+    "en": "to form, to shape, to mold",
+    "la": "plasmo, plasmare"
+  }
+},
+
+{
+  "lemma": "aurum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "aurum",
+  "genitive": "auri",
+ 
+  "translations": {
+    "en": "gold",
+    "la": "aurum"
+  }
+},
+  {
+  "lemma": "circumplector",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "circumplecti",
+  "present": "circumplector",
+  "future": "circumplectar",
+  "perfect": "circumplexus sum",
+  "forms": {
+    "perfect_indicative_1pl_or_3pl": ["circumplexi"]
+  },
+  "translations": {
+    "en": "to embrace, to surround, to encompass",
+    "la": "circumplector, circumplecti"
+  }
+},
+    {
+  "lemma": "particeps",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "particeps",
+  "genitive": "participalis",
+  
+  "translations": {
+    "en": "participant, sharer, partner",
+    "la": "particeps"
+  }
+},
       {
         "lemma": "psalterium",
         "part_of_speech": "noun",
@@ -22,6 +81,19 @@
         "translations": {
           "en": "song, chant",
           "la": "canticum, cantici"
+        }
+      },
+      {
+        "lemma": "bonitas",
+        "part_of_speech": "noun",
+        "declension": 3,
+        "gender": "feminine",
+        "nominative": "bonitas",
+        "genitive": "bonitatis",
+        
+        "translations": {
+          "en": "goodness, kindness, virtue",
+          "la": "bonitas"
         }
       },
       {
@@ -760,6 +832,15 @@
     "la": "accipio, accipere"
   }
 },  
+
+{
+  "lemma": "priusquam",
+  "part_of_speech": "conjunction",
+  "translations": {
+    "en": "before, until",
+    "la": "priusquam"
+  }
+},
   {
     "lemma": "scientia",
     "part_of_speech": "noun",
@@ -3648,6 +3729,20 @@
   "translations": {
     "en": "smoke, vapor",
     "la": "fumus"
+  }
+},
+{
+  "lemma": "confundo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "confundere",
+  "present": "confundo",
+  "future": "confundam",
+  "perfect": "confudi",
+  "supine": "confusum",
+  "translations": {
+    "en": "to confuse, to mix up, to confound",
+    "la": "confundo, confundere"
   }
 },
 {
@@ -7868,8 +7963,8 @@
   "future": "timebo",
   "perfect": "timui",
   "supine": "timitum",
-  "forms": {
-    "present": ["timeo", "timentes"]
+  "forms_plural": {
+    "present_active_participle_gen": ["timentium"]
   },
   "translations": {
     "en": "to fear, be afraid",
@@ -14041,7 +14136,6 @@
       "part_of_speech": "verb",
       "conjugation": 3,
       "infinitive": "statuere",
-     
       "perfect": "statui",
       "supine": "statutum",
       "translations": {
@@ -14893,6 +14987,12 @@
     {
         "lemma": "pono",
         "part_of_speech": "verb",
+        "conjugation": 3,
+        "infinitive": "ponere",
+        "present": "pono",
+        "future": "ponam",
+        "perfect": "posui",
+        "supine": "positum",
         "translations": {
             "en": "put, place, set"
         },
@@ -16403,9 +16503,11 @@
       "present_subjunctive": ["dirumpam", "dirumpas", "dirumpat", "dirumpamus", "dirumpatis", "dirumpant"],
       "present_active": ["dirumpo", "dirumpis", "dirumpit", "dirumpimus", "dirumpitis", "dirumpunt"]
     }
-  },  {
+  }, 
+   {
     "lemma": "deprecor",
     "part_of_speech": "verb",
+    "conjugation": 1,
     "perfect": "deprecatus",
     "infinitive": "deprecari",    
     "supine": "deprecatum",
@@ -16549,6 +16651,7 @@
   "perfect": "turbavi",
   "supine": "turbatum",
   "forms": {
+    "perfect_passive_participle_m_nom_sg": ["turbatus"],
     "perfect_passive_m": ["turbatus"],
     "perfect_passive_f": ["turbata"]
   },

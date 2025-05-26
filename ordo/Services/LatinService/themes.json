@@ -1670,6 +1670,445 @@
         }
       ]
     },
+    {
+      "psalmNumber": 118,
+      "category": "beth",
+      "themes": [
+        {
+          "name": "Spiritual Formation",
+          "description": "Guidance for the young believer's path",
+          "lemmas": ["corrigo", "adolescens", "custodio", "doceo", "exerceo"],
+          "startLine": 1,
+          "endLine": 2,
+          "comment": "Opening focus on correction and keeping God's words"
+        },
+        {
+          "name": "Heart Engagement",
+          "description": "Wholehearted seeking and internalization",
+          "lemmas": ["cor", "exquiro", "abscondo", "meditor", "obliviscor"],
+          "startLine": 2,
+          "endLine": 4,
+          "comment": "Mental and emotional aspects of devotion in middle verses"
+        },
+        {
+          "name": "Divine Communication",
+          "description": "God's spoken and written revelation",
+          "lemmas": ["sermo", "eloquium", "judicium", "testimonium", "mandatum"],
+          "startLine": 1,
+          "endLine": 8,
+          "comment": "Multiple terms for God's instructions throughout"
+        },
+        {
+          "name": "Delightful Obedience",
+          "description": "Joy in keeping God's commands",
+          "lemmas": ["delector", "pronuntio", "benedico", "considero", "justificatio"],
+          "startLine": 5,
+          "endLine": 8,
+          "comment": "Positive emotional response in closing verses"
+        },
+        {
+          "name": "Vocational Response",
+          "description": "Outward actions flowing from devotion",
+          "lemmas": ["pronuntio", "exerceo", "doceo", "meditor", "considero"],
+          "startLine": 5,
+          "endLine": 8,
+          "comment": "Active verbs showing engaged response"
+        },
+        {
+          "name": "Augustine: Memory Theater",
+          "description": "Storing God's word in the heart",
+          "lemmas": ["abscondo", "cor", "obliviscor", "eloquium", "meditor"],
+          "startLine": 3,
+          "endLine": 4,
+          "comment": "Augustinian emphasis on memory as spiritual faculty"
+        },
+        {
+          "name": "Augustine: Delightful Discipline",
+          "description": "Grace transforming duty into joy",
+          "lemmas": ["delector", "mandatum", "exerceo", "benedico", "justificatio"],
+          "startLine": 6,
+          "endLine": 8,
+          "comment": "How grace makes God's law desirable"
+        }
+      ]
+    },
+{
+  "psalmNumber": 118,
+  "category": "gimel",
+  "themes": [
+    {
+      "name": "Servant Identity",
+      "description": "The psalmist's self-understanding as God's servant",
+      "lemmas": ["servus", "vivifico", "custodio", "exerceo", "incola"],
+      "startLine": 1,
+      "endLine": 3,
+      "comment": "Repeated servant language with active obedience"
+    },
+    {
+      "name": "Divine Illumination",
+      "description": "Prayers for spiritual understanding",
+      "lemmas": ["revelo", "oculus", "considero", "mirabilium", "lex"],
+      "startLine": 2,
+      "endLine": 3,
+      "comment": "Vision metaphors for Torah comprehension"
+    },
+    {
+      "name": "Exilic Longing",
+      "description": "Earthly alienation and heavenly desire",
+      "lemmas": ["incola", "terra", "concupisco", "desidero", "tempus"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Tension between earthly sojourn and divine commandments"
+    },
+    {
+      "name": "Opposition Context",
+      "description": "Conflict with the arrogant and powerful",
+      "lemmas": ["increpo", "superbus", "maledico", "declino", "princeps"],
+      "startLine": 5,
+      "endLine": 7,
+      "comment": "Social resistance to Torah observance"
+    },
+    {
+      "name": "Covenantal Defense",
+      "description": "Appeal to God's testimonies in adversity",
+      "lemmas": ["opprobrium", "contemptum", "testimonium", "exquiro", "meditatio"],
+      "startLine": 6,
+      "endLine": 8,
+      "comment": "Using God's words as protection against slander"
+    },
+    {
+      "name": "Augustine: Two Cities",
+      "description": "Contrast between heavenly and earthly communities",
+      "lemmas": ["incola", "superbus", "princeps", "testimonium", "justificatio"],
+      "startLine": 3,
+      "endLine": 7,
+      "comment": "Earthly powers vs. heavenly citizenship"
+    },
+    {
+      "name": "Augustine: Delightful Struggle",
+      "description": "Grace transforming persecution into meditation",
+      "lemmas": ["exerceo", "concupisco", "meditatio", "justificatio", "desidero"],
+      "startLine": 4,
+      "endLine": 8,
+      "comment": "How adversity deepens love for God's law"
+    }
+  ]
+},
+
+{
+  "psalmNumber": 118,
+  "category": "daleth",
+  "themes": [
+    {
+      "name": "Mortal Anguish",
+      "description": "Deep distress requiring divine intervention",
+      "lemmas":  ["adhaereo", "pavimentum", "dormito", "taedium", "confirmo"],
+      "startLine": 1,
+      "endLine": 4,
+      "comment": "Physical metaphors for spiritual crisis"
+    },
+    {
+      "name": "Divine Rescue",
+      "description": "Pleas for life and preservation",
+      "lemmas": ["vivifico", "confirmo", "opprobrium", "misereor"],  
+      "startLine": 1,
+      "endLine": 8,
+      "comment": "Requests for God to act amid suffering"
+    },
+    {
+      "name": "Pedagogy of Suffering",
+      "description": "Affliction as context for learning God's ways",
+      "lemmas": ["doceo", "justificatio", "instruo", "exerceo", "mirabilium"],
+      "startLine": 2,
+      "endLine": 3,
+      "comment": "Educational language in trial context"
+    },
+    {
+      "name": "Two Ways Contrast",
+      "description": "Choice between truth and iniquity",
+      "lemmas": ["via", "iniquitas", "veritas", "elego", "removeo"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Classic wisdom literature dichotomy"
+    },
+    {
+      "name": "Covenantal Pursuit",
+      "description": "Active devotion to God's commandments",
+      "lemmas": ["adhaereo", "testimonium", "curro", "dilato", "cor"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Dynamic verbs of spiritual commitment"
+    },
+    {
+      "name": "Heart Transformation",
+      "description": "Divine action enabling obedience",
+      "lemmas": ["cor", "dilato", "confirma", "miserere", "elego"],
+      "startLine": 4,
+      "endLine": 8,
+      "comment": "God's role in shaping human will"
+    },
+    {
+      "name": "Augustine: Humble Learning",
+      "description": "Brokenness as prerequisite for divine instruction",
+      "lemmas": ["pavimentum", "doceo", "taedium", "instruo", "confirma"],
+      "startLine": 1,
+      "endLine": 4,
+      "comment": "Contrast between human lowliness and divine teaching"
+    },
+    {
+      "name": "Augustine: Dilated Heart",
+      "description": "Grace expanding capacity for love",
+      "lemmas": ["dilato", "cor", "adhaereo", "curro", "testimonium"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Divine action enabling wholehearted obedience"
+    }
+  ]
+},
+
+{
+  "psalmNumber": 118,
+  "category": "he",
+  "themes": [
+    {
+      "name": "Petition for Guidance",
+      "description": "Requests for divine direction in God's law",
+      "lemmas": ["lego", "pono", "deduc", "intellectus", "semita"],
+      "startLine": 1,
+      "endLine": 3,
+      "comment": "Imperative verbs seeking Torah instruction"
+    },
+    {
+      "name": "Heart Alignment",
+      "description": "Prayers for internal transformation",
+      "lemmas": ["cor", "inclina", "avaritia", "timor", "concupisco"],
+      "startLine": 4,
+      "endLine": 8,
+      "comment": "Divine action shaping human desires"
+    },
+    {
+      "name": "Sensory Sanctification",
+      "description": "Consecration of perception and action",
+      "lemmas": ["oculus", "video", "vanitas", "via", "eloquium"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Purification of sight and speech"
+    },
+    {
+      "name": "Covenantal Life",
+      "description": "Vital connection to God's commands",
+      "lemmas": ["vivifico", "custodio", "scrutor", "volo", "aequitas"],
+      "startLine": 2,
+      "endLine": 8,
+      "comment": "Life-sustaining relationship with Torah"
+    },
+    {
+      "name": "Delight in Judgment",
+      "description": "Paradoxical joy in divine ordinances",
+      "lemmas": ["jucundus", "concupisco", "opprobrium", "judicium", "mandatum"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Affective response to God's rulings"
+    },
+    {
+      "name": "Augustine: Ordered Love",
+      "description": "Rightly-directed desires through grace",
+      "lemmas": ["inclina", "cor", "avaritia", "concupisco", "aequitas"],
+      "startLine": 4,
+      "endLine": 8,
+      "comment": "Transformation of disordered affections"
+    },
+    {
+      "name": "Augustine: Two Wills",
+      "description": "Human weakness meeting divine grace",
+      "lemmas": ["volo", "pono", "deduc", "statuo", "vivifico"],
+      "startLine": 1,
+      "endLine": 8,
+      "comment": "Tension between human and divine volition"
+    }
+  ]
+},
+
+{
+  "psalmNumber": 118,
+  "category": "heth",
+  "themes": [
+    {
+      "name": "Covenantal Commitment",
+      "description": "Voluntary dedication to God's law",
+      "lemmas": ["portio", "custodio", "paratus", "participo"],
+      "startLine": 1,
+      "endLine": 7,
+      "comment": "Active choice to make God's law one's portion (v.57) and identity (v.63)"
+    },
+    {
+      "name": "Prayerful Dependence",
+      "description": "Petitions grounded in God's character",
+      "lemmas": ["deprecor", "misereor", "confiteor", "misericordia"],
+      "startLine": 2,
+      "endLine": 8,
+      "comment": "Appeals to mercy (vv.58,64) and nocturnal worship (v.62)"
+    },
+    {
+      "name": "Perseverance Amid Opposition",
+      "description": "Steadfastness despite external pressures",
+      "lemmas": ["converto", "funis", "circumplector", "turbo"],
+      "startLine": 3,
+      "endLine": 5,
+      "comment": "Encirclement by sinners (v.61) contrasted with resolve (v.60)"
+    },
+    {
+      "name": "Communal Piety",
+      "description": "Solidarity with the faithful",
+      "lemmas": ["particeps", "timeo", "custodio", "terra"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Identification with God-fearers (v.63) and global mercy (v.64)"
+    },
+    {
+      "name": "Augustine: Nocturnal Conversion",
+      "description": "Night as time for spiritual turning",
+      "lemmas": ["cogito", "converto", "media", "surgo"],
+      "startLine": 3,
+      "endLine": 6,
+      "comment": "Parallel between v.59's conversion and v.62's midnight rising"
+    },
+    {
+      "name": "Augustine: Mercy and Justice",
+      "description": "Divine compassion enabling obedience",
+      "lemmas": ["misericordia", "justificatio", "doceo", "eloquium"],
+      "startLine": 2,
+      "endLine": 8,
+      "comment": "Grace (v.58) precedes instruction in righteousness (v.64)"
+    }
+  ]
+},
+{
+  "psalmNumber": 118,
+  "category": "teth",
+  "themes": [
+    {
+      "name": "Divine Pedagogy",
+      "description": "God's goodness as instructional",
+      "lemmas": ["bonitas", "discipline", "scientia", "doceo", "humilio"],
+      "startLine": 1,
+      "endLine": 4,
+      "comment": "Divine goodness (v.65) linked to teaching (v.66) and humbling (v.71)"
+    },
+    {
+      "name": "Theological Paradox",
+      "description": "Affliction as divine gift",
+      "lemmas": ["bonus", "humilio", "disco", "iniquitas"],
+      "startLine": 5,
+      "endLine": 7,
+      "comment": "Humbling (v.71) and pride's opposition (v.69) become means of learning"
+    },
+    {
+      "name": "Comparative Value",
+      "description": "Spiritual vs. material worth",
+      "lemmas": ["lex", "aurum", "argentum", "super", "mille"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "God's law valued above precious metals (v.72)"
+    },
+    {
+      "name": "Contrast of Hearts",
+      "description": "Opposing internal dispositions",
+      "lemmas": ["superbus", "cor", "coagulo", "scrutor", "meditor"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Proud hearts curdled (v.70) vs. devoted meditation (v.70)"
+    },
+    {
+      "name": "Augustine: Humble Learning",
+      "description": "Precondition for true knowledge",
+      "lemmas": ["humilio", "disco", "priusquam", "delinquo"],
+      "startLine": 3,
+      "endLine": 7,
+      "comment": "Sin (v.67) precedes humility that enables learning"
+    },
+    {
+      "name": "Augustine: Ordered Love",
+      "description": "Right valuation of divine law",
+      "lemmas": ["bonus", "aurum", "lex", "super"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Proper love hierarchy: God's word > earthly riches"
+    }
+  ]
+},
+
+{
+  "psalmNumber": 118,
+  "category": "jod",
+  "themes": [
+    {
+      "name": "Divine Craftsmanship",
+      "description": "God as creator and instructor of humanity",
+      "lemmas": ["manus", "facio", "plasto", "intellectus", "disco"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "Creator-creation relationship (v.73) demands illumination"
+    },
+    {
+      "name": "Communal Joy",
+      "description": "Shared gladness among the faithful",
+      "lemmas": ["timeo", "video", "laetor", "superspero"],
+      "startLine": 2,
+      "endLine": 2,
+      "comment": "Mutual recognition of hope in God's word (v.74)"
+    },
+    {
+      "name": "Pedagogy of Suffering",
+      "description": "Affliction as divine instruction",
+      "lemmas": ["aequitas", "judicium", "veritas", "humilio"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Humiliation through truth (v.75) as formative"
+    },
+    {
+      "name": "Merciful Consolation",
+      "description": "Comfort anchored in God's promises",
+      "lemmas": ["misericordia", "consolor", "eloquium", "miseratio"],
+      "startLine": 4,
+      "endLine": 5,
+      "comment": "Mercy-life connection (vv.76-77) through meditation"
+    },
+    {
+      "name": "Antithetical Community",
+      "description": "Contrast between proud and faithful",
+      "lemmas": ["superbia", "iniquitas", "exerceor", "testimonium"],
+      "startLine": 6,
+      "endLine": 7,
+      "comment": "Shame for oppressors (v.78) vs. solidarity with God-fearers (v.79)"
+    },
+    {
+      "name": "Heart Purity",
+      "description": "Inward transformation goal",
+      "lemmas": ["cor", "immaculatus", "justificatio", "confundor"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "Blameless heart as protection from shame (v.80)"
+    },
+    {
+      "name": "Augustine: Creator-Redeemer",
+      "description": "Formation and reformation by God",
+      "lemmas": ["plasto", "disco", "humilio", "immaculatus"],
+      "startLine": 1,
+      "endLine": 8,
+      "comment": "God shapes physically (v.73) and spiritually (v.80)"
+    },
+    {
+      "name": "Augustine: Two Cities",
+      "description": "Proud vs. humble communities",
+      "lemmas": ["superbus", "timeo", "confundor", "justificatio"],
+      "startLine": 6,
+      "endLine": 8,
+      "comment": "Earthly shame vs. heavenly justification"
+    }
+  ]
+},
+
 
 
     {
