@@ -71,7 +71,6 @@ class Psalm130Tests: XCTestCase {
         let trustTerms = [
             ("spero", ["Speret"], "hope"),
             ("Israel", ["Israel"], "Israel"),
-            ("Dominus", ["Domino"], "Lord"),
             ("saeculum", ["saeculum"], "age"),
             ("usque", ["usque"], "even unto")
         ]

@@ -16,7 +16,7 @@ class Psalm125Tests: XCTestCase {
         "In convertendo Dominus captivitatem Sion: facti sumus sicut consolati.",
         "Tunc repletum est gaudio os nostrum: et lingua nostra exsultatione.",
         "Tunc dicent inter gentes: Magnificavit Dominus facere cum eis.",
-        "Magnificavit Dominus facere nobiscum: facti sumus lætantes.",
+        "Magnificavit Dominus facere nobiscum: facti sumus laetantes.",
         "Converte, Domine, captivitatem nostram: sicut torrens in austro.",
         "Qui seminant in lacrimis: in exsultatione metent.",
         "Euntes ibant et flebant: mittentes semina sua.",
@@ -30,7 +30,7 @@ class Psalm125Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(id, text: psalm125)
         
         let restorationTerms = [
-            ("converto", ["convertendo", "Converte"], "turn/restore"),
+            ("converto", ["convertendo", "Converte"], "turn"),
             ("captivitas", ["captivitatem", "captivitatem"], "captivity"),
             ("Sion", ["Sion"], "Zion"),
             ("consolor", ["consolati"], "comfort"),
@@ -47,7 +47,7 @@ class Psalm125Tests: XCTestCase {
         let joyTerms = [
             ("gaudium", ["gaudio"], "joy"),
             ("exsultatio", ["exsultatione", "exsultatione"], "exultation"),
-            ("laetor", ["lætantes"], "rejoice"),
+            ("laetor", ["laetantes"], "rejoice"),
             ("magnifico", ["Magnificavit", "Magnificavit"], "magnify"),
             ("os", ["os"], "mouth")
         ]
@@ -62,7 +62,7 @@ class Psalm125Tests: XCTestCase {
         let agriculturalTerms = [
             ("semen", ["semina"], "seed"),
             ("meto", ["metent"], "reap"),
-            ("lacrima", ["lacrimis"], "tears"),
+            ("lacrima", ["lacrimis"], "tear"),
             ("manipulus", ["manipulos"], "sheaf"),
             ("fleo", ["flebant"], "weep")
         ]

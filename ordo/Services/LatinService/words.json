@@ -1,4 +1,253 @@
 [
+  {
+  "lemma": "benefacio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "benefacere",
+  "present": "benefacio",
+  "perfect": "benefeci",
+  "supine": "benefactum",
+  "forms": {
+    "imperative_sg": ["benefac"],  
+    "imperative_pl": ["benefacite"] 
+  },
+  "translations": {
+    "en": "to do good, benefit",
+    "la": "benefacio, benefacere, benefeci, benefactum"
+  }
+},
+  {
+  "lemma": "opero",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "operare",
+  "present": "opero",
+  "perfect": "operavi",
+  "supine": "operatum",
+  "translations": {
+    "en": "to work, do, labor",
+    "la": "opero, operare, operavi, operatum"
+  }
+},
+  {
+  "lemma": "adduco",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "adducere",
+  "present": "adduco",
+  "future": "adducet",  
+  "perfect": "adduxi",
+  "supine": "adductum",
+  "translations": {
+    "en": "to lead, bring, induce",
+    "la": "adduco, adducere, adduxi, adductum"
+  }
+},
+  {
+  "lemma": "obligatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "obligatio",
+  "genitive": "obligationis",
+  "translations": {
+    "en": "bond, obligation",
+    "la": "obligatio, obligationis"
+  }
+},
+  {
+  "lemma": "unguentum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "unguentum",
+  "genitive": "unguenti",
+  "translations": {
+    "en": "ointment, perfume",
+    "la": "unguentum, -i"
+  }
+},
+  {
+  "lemma": "elatus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "elatus",
+  "genitive": "elati",
+  "forms": {
+    "nominative_f": ["elata"],
+    "genitive_f": ["elatae"],
+    "nominative_n": ["elatum"],
+    "genitive_n": ["elati"]
+  },
+  "forms_plural": {
+    "nominative_m": ["elati"],
+    "genitive_m": ["elatorum"],
+    "nominative_f": ["elatae"],
+    "genitive_f": ["elatarum"],
+    "nominative_n": ["elata"],
+    "genitive_n": ["elatorum"]
+  },
+  "translations": {
+    "en": "elevated, lofty, exalted",
+    "la": "elatus, -a, -um"
+  }
+},
+  {
+  "lemma": "profundum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "profundum",
+  "genitive": "profundi",
+  "translations": {
+    "en": "depth, abyss, the deep",
+    "la": "profundum, -i"
+  }
+},
+  {
+  "lemma": "matutinus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "matutinus",
+  "genitive": "matutini",
+  "forms": {
+    "nominative_f": ["matutina"],
+    "genitive_f": ["matutinae"],
+    "nominative_n": ["matutinum"],
+    "genitive_n": ["matutini"]
+  },
+  "forms_plural": {
+    "nominative_m": ["matutini"],
+    "genitive_m": ["matutinorum"],
+    "nominative_f": ["matutinae"],
+    "genitive_f": ["matutinarum"],
+    "nominative_n": ["matutina"],
+    "genitive_n": ["matutinorum"]
+  },
+  "translations": {
+    "en": "morning, of the morning, early",
+    "la": "matutinus, -a, -um"
+  }
+},
+  {
+  "lemma": "dilectus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "dilectus",
+  "genitive": "dilecti",
+  "forms": {
+    "nominative_f": ["dilecta"],
+    "genitive_f": ["dilectae"],
+    "nominative_n": ["dilectum"],
+    "genitive_n": ["dilecti"]
+  },
+  "forms_plural": {
+    "nominative_m": ["dilecti"],
+    "genitive_m": ["dilectorum"],
+    "nominative_f": ["dilectae"],
+    "genitive_f": ["dilectarum"],
+    "nominative_n": ["dilecta"],
+    "genitive_n": ["dilectorum"],
+    "dative_ablative_m": ["dilectis"]  
+  },
+  "translations": {
+    "en": "beloved, dear",
+    "la": "dilectus, -a, -um"
+  }
+},
+  {
+  "lemma": "surgo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "surgere",
+  "present": "surgo",
+  "perfect": "surrexi",
+  "supine": "surrectum",
+  "translations": {
+    "en": "to rise, get up, arise",
+    "la": "surgo, surgere, surrexi, surrectum"
+  }
+},
+{
+  "lemma": "saepe",
+  "part_of_speech": "adverb",
+  "degree": "positive",
+  "comparative": "saepius",
+  "superlative": "saepissime",
+  "translations": {
+    "en": "often, frequently",
+    "la": "saepe"
+  }
+},
+  {
+  "lemma": "fleo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "flere",
+  "present": "fleo",
+  "imperfect": "flebam",
+  "perfect": "flevi",
+  "supine": "fletum",
+  "translations": {
+    "en": "they were weeping, they wept, they used to weep",
+    "la": "fleo, flere, flevi, fletum"
+  }
+},
+  {
+  "lemma": "ereptus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "ereptus",
+  "genitive": "erepti",
+  "forms": {
+    "nominative_f": ["erepta"],
+    "genitive_f": ["ereptae"],
+    "nominative_n": ["ereptum"],
+    "genitive_n": ["erepti"]
+  },
+  "forms_plural": {
+    "nominative_m": ["erepti"],
+    "genitive_m": ["ereptorum"],
+    "nominative_f": ["ereptae"],
+    "genitive_f": ["ereptarum"],
+    "nominative_n": ["erepta"],
+    "genitive_n": ["ereptorum"]
+  },
+  "translations": {
+    "en": "snatched away, rescued, taken by force",
+    "la": "ēreptus, -a, -um"
+  }
+},
+  {
+  "lemma": "vivus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "vivus",
+  "genitive": "vivi",
+  "forms": {
+    "nominative_f": ["viva"],
+    "genitive_f": ["vivae"],
+    "nominative_n": ["vivum"],
+    "genitive_n": ["vivi"]
+  },
+  "forms_plural": {
+    "nominative_m": ["vivi"],
+    "genitive_m": ["vivorum"],
+    "nominative_f": ["vivae"],
+    "genitive_f": ["vivarum"],
+    "nominative_n": ["viva"],
+    "genitive_n": ["vivorum"]
+  },
+  "translations": {
+    "en": "alive, living",
+    "la": "vivus, -a, -um"
+  }
+},
 {
   "lemma": "plasmo",
   "part_of_speech": "verb",
@@ -5796,32 +6045,6 @@
     }
   },
   {
-    "lemma": "exitus",
-    "part_of_speech": "noun",
-    "declension": 4,
-    "gender": "masculine",
-    "forms": {
-      "nominative": ["exitus"],
-      "genitive": ["exitus"],
-      "dative": ["exitui"],
-      "accusative": ["exitum"],
-      "ablative": ["exitu"],
-      "vocative": ["exitus"]
-    },
-    "forms_plural": {
-      "nominative": ["exitus", "exitius"],  
-      "genitive": ["exituum"],
-      "dative": ["exitibus"],
-      "accusative": ["exitus"],
-      "ablative": ["exitibus"],
-      "vocative": ["exitus"]
-    },
-    "translations": {
-      "en": "outflow, streams (figurative), outcome",
-      "la": "exitus"
-    }
-  },
-  {
     "lemma": "spiritus",
     "part_of_speech": "noun",
     "declension": 4,
@@ -8683,6 +8906,8 @@
         "part_of_speech": "verb",
         "conjugation": 2,
         "infinitive": "sustinere",
+        "perfect": "sustinui",
+        "supine": "sustentum",
         "forms": {
           "present": ["sustineo", "sustines", "sustinet", "sustinemus", "sustinetis", "sustinent"],
           "future": ["sustinebo", "sustinebis", "sustinebit", "sustinebimus", "sustinebitis", "sustinebunt"],
@@ -8847,6 +9072,7 @@
           "accusative_plural": "humiles",
           "ablative_plural": "humilibus",
           "forms": {
+            "adverb": ["humiliter"],
             "nominative_f": ["humilis"],
             "genitive_f": ["humilis"],
             "dative_f": ["humili"],
@@ -8927,7 +9153,7 @@
           "genitive": "retributionis",
         
           "translations": {
-            "en": "reward, repayment",
+            "en": "reward, repayment, recompense",
             "la": "retributio"
           }
         },
@@ -9410,7 +9636,7 @@
       "vocative": "circuitus",
       "ablative_plural": "circuitibus",
       "translations": {
-        "en": "circuit, going around",
+        "en": "going around, surrouding",
         "la": "circuitus"
       }
     },
@@ -9560,7 +9786,7 @@
         "pluperfect_subjunctive": ["absorbuisset"]
       },
       "translations": {
-        "en": "to overwhelm, engulf",
+        "en": "to overwhelm, swallow up, engulf",
         "la": "absorbeo"
       }
     },
@@ -9901,7 +10127,7 @@
             "lemma": "usque",
             "part_of_speech": "adverb",
             "translations": {
-              "en": "all the way, continuously, even (to)",
+              "en": "all the way, continuously, even unto",
               "la": "usque"
             }
           },
@@ -9974,23 +10200,19 @@
               "la": "frater"
             }
           },
-            {
-              "lemma": "unguentum",
-              "part_of_speech": "noun",
-              "gender": "neuter",
-              "declension": 2,
-              "nominative": "unguentum",
-              "genitive": "unguenti",
-              "dative": "unguento",
-              "accusative": "unguentum",
-              "ablative": "unguento",
-              "vocative": "unguentum",
-              "ablative_plural": "unguentis",
-              "translations": {
-                "en": "ointment, salve",
-                "la": "unguentum"
-              }
-            },
+          {
+  "lemma": "hermon",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "hermon",
+  "genitive": "hermonis",
+  "translations": {
+    "en": "hermon (mountain name)",
+    "la": "hermon, hermonis"
+  },
+  "note": "Proper noun (3rd declension Greek origin)"
+},
             {
               "lemma": "ros",
               "part_of_speech": "noun",
@@ -10450,7 +10672,8 @@
       },
       "forms": {
         "present_subjunctive": ["dormitem", "dormites", "dormitet", "dormitemus", "dormitetis", "dormitent"],
-        "future": ["dormitabo", "dormitabis", "dormitabit", "dormitabimus", "dormitabitis", "dormitabunt"]
+        "future": ["dormitabo", "dormitabis", "dormitabit", "dormitabimus", "dormitabitis", "dormitabunt"],
+        "future_indicative_active": ["dormiet"]
       }
     },
     {
@@ -13971,6 +14194,7 @@
             "conjugation": 3,
             "infinitive": "irasci",
             "perfect": "iratus",
+            "supine": "iratum",
             "translations": {
                 "en": "to be angry",
                 "la": "irascor, irasci, iratus sum"
@@ -13978,9 +14202,8 @@
             "forms": {
                 "present": ["irascor", "irasciris", "irascitur", "irascimur", "irascimini", "irascuntur"],
                 "imperative": ["irascere", "irascimini"],
-                 "present_subjunctive": [
-                    "irascatur"
-                 ]
+                 "present_subjunctive": [ "irascatur" ],
+                 "imperfect_subjunctive_passive": ["irasceretur"]
             },
             "notes": "Psalm 4:5 - 'irascimini' (be angry - plural imperative)"
         },

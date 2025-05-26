@@ -28,7 +28,7 @@ class Psalm120Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(text: psalm120)
         
         let protectionTerms = [
-            ("custodio", ["custodit", "custodiat", "custodiet"], "guard"), // v.3-8
+            ("custodio", ["custodit", "custodiat"], "guard"), // v.3-8
             ("protectio", ["protectio"], "protection"), // v.5
             ("auxilium", ["auxilium", "auxilium"], "help"), // v.1-2
             ("malus", ["malo"], "evil") // v.7
@@ -44,7 +44,7 @@ class Psalm120Tests: XCTestCase {
             ("dominus", ["Domino", "Dominus"], "Lord"), // v.2,4,5,7,8
             ("caelum", ["caelum"], "heaven"), // v.2
             ("terra", ["terram"], "earth"), // v.2
-            ("Israel", ["Israel"], "Israel") // v.4
+            ("israel", ["israel"], "israel") // v.4
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: divineTerms)

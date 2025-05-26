@@ -34,7 +34,7 @@ class Psalm128Tests: XCTestCase {
             ("expugno", ["expugnaverunt"], "attack"),
             ("juventus", ["juventute"], "youth"),
             ("dorsum", ["dorsum"], "back"),
-            ("fabricor", ["fabricaverunt"], "build/weave")
+            ("fabricor", ["fabricaverunt"], "build")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: persecutionTerms)

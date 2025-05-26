@@ -2182,10 +2182,152 @@
   ]
 },
 
+{
+  "psalmNumber": 120,
+  "category": "Gradual Psalm",
+  "themes": [
+    {
+      "name": "Augustine: Interior Ascent",
+      "description": "The mountains signify spiritual ascent—toward the apostles, saints, and ultimately Christ. The help we seek begins in the heart's upward turn.",
+      "lemmas": ["levo", "oculus", "mons"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "En. Ps. 120.1 – Augustine reads 'montes' as spiritual authorities and the interior elevation of the soul."
+    },
+    {
+      "name": "Divine Help from the Creator",
+      "description": "True help comes not from earth but from the Lord who made heaven and earth.",
+      "lemmas": ["auxilium", "dominus", "creo", "caelum", "terra"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Foundational trust in God's creative authority as helper."
+    },
+    {
+      "name": "Unfailing Vigilance",
+      "description": "God never slumbers; His guardianship is ceaseless and perfect.",
+      "lemmas": ["custodio", "dormio", "dormito", "israel"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Contrast with human watchfulness—God protects Israel tirelessly."
+    },
+    {
+      "name": "Personal Protection",
+      "description": "God’s protection is personal, present, and proximate—like a shield on your right hand.",
+      "lemmas": ["custodio", "dominus", "protectio", "dextera", "manus"],
+      "startLine": 5,
+      "endLine": 5,
+      "comment": "Imagery of God as your shadow or shield beside you."
+    },
+    {
+      "name": "Cosmic Shelter",
+      "description": "God protects against cosmic dangers—sun by day, moon by night.",
+      "lemmas": ["sol", "luna", "dies", "nox"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Poetic depiction of full-spectrum protection from all celestial forces."
+    },
+    {
+      "name": "Spiritual Preservation",
+      "description": "God guards not only the body but also the soul from evil.",
+      "lemmas": ["custodio", "malus", "anima"],
+      "startLine": 7,
+      "endLine": 7,
+      "comment": "Inner security and moral integrity under divine custody."
+    },
+    {
+      "name": "Lifelong Guardianship",
+      "description": "From now and forever, God oversees your every movement—going out and coming in.",
+      "lemmas": ["custodio", "introitus", "exitus", "saeculum"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "The Psalm’s closing vision of comprehensive, eternal care."
+    }
+  ]
+},
+
+{
+  "psalmNumber": 121,
+  "category": "",
+  "themes": [
+    {
+      "name": "Pilgrimage Joy",
+      "description": "Joyful anticipation of going to the house of the Lord in communal worship.",
+      "lemmas": ["laetor", "dictum", "domus", "eo"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "Celebration of the journey toward God's house."
+    },
+    {
+      "name": "Sacred Arrival",
+      "description": "The pilgrims have arrived and stand in the holy precincts of Jerusalem.",
+      "lemmas": ["sto", "pes", "atrium", "Jerusalem"],
+      "startLine": 2,
+      "endLine": 2,
+      "comment": "Physical and spiritual arrival in the sacred center."
+    },
+    {
+      "name": "Jerusalem as Divine City",
+      "description": "Jerusalem is praised as a unified, built-up city symbolizing divine order.",
+      "lemmas": ["aedifico", "civitas", "participatio", "idipsum"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "City image as theological symbol of unity and stability."
+    },
+    {
+      "name": "Covenantal Worship",
+      "description": "The tribes ascend for worship and covenantal testimony.",
+      "lemmas": ["ascendo", "tribus", "testimonium", "confiteor", "nomen"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Liturgical participation in Israel’s identity."
+    },
+    {
+      "name": "Justice and Kingship",
+      "description": "The city hosts thrones of judgment rooted in Davidic rule.",
+      "lemmas": ["sedeo", "sedes", "judicium", "domus", "David"],
+      "startLine": 5,
+      "endLine": 5,
+      "comment": "Jerusalem as seat of righteous governance."
+    },
+    {
+      "name": "Prayer for Peace",
+      "description": "Exhortation to pray for the peace and prosperity of Jerusalem.",
+      "lemmas": ["rogo", "pax", "Jerusalem", "abundantia", "diligo"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Spiritual and material well-being of the city desired."
+    },
+    {
+      "name": "Security and Strength",
+      "description": "Blessings of peace and abundance in the city's towers and strength.",
+      "lemmas": ["pax", "virtus", "turris", "abundantia"],
+      "startLine": 7,
+      "endLine": 7,
+      "comment": "Images of fortified flourishing."
+    },
+    {
+      "name": "Brotherly Peace",
+      "description": "Desire for peace for the sake of community and kinship.",
+      "lemmas": ["frater", "proximus", "loquor", "pax"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "Relational peace as a communal virtue."
+    },
+    {
+      "name": "Worshipful Pursuit of Good",
+      "description": "Love for God's house motivates the pursuit of the city's good.",
+      "lemmas": ["domus", "deus", "quaero", "bonus"],
+      "startLine": 9,
+      "endLine": 9,
+      "comment": "Liturgical devotion spilling into civic love."
+    }
+  ]
+},
+
 
 {
   "psalmNumber": 122,
-  "category": "Pilgrimage Psalm (Song of Ascents)",
+  "category": "",
   "themes": [
     {
       "name": "Upward Gaze",
@@ -2237,6 +2379,554 @@
     }
   ]
 },
+
+{
+  "psalmNumber": 123,
+  "category": "",
+  "themes": [
+    {
+      "name": "Divine Presence as Salvation",
+      "description": "The repeated 'nisi quia Dominus' emphasizes God's essential presence in Israel's survival.",
+      "lemmas": ["dominus", "nisi", "in"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "If the Lord were not with us—Israel owes survival to divine companionship."
+    },
+    {
+      "name": "Human Threats",
+      "description": "Violent imagery of people rising up to devour the faithful.",
+      "lemmas": ["exsurgo", "homo", "vivos", "deglutio"],
+      "startLine": 2,
+      "endLine": 3,
+      "comment": "Imagery of being swallowed alive by enemies."
+    },
+    {
+      "name": "Flood and Wrath",
+      "description": "God protects against overwhelming forces likened to water and wrath.",
+      "lemmas": ["irascor", "furor", "aqua", "absorbeo"],
+      "startLine": 4,
+      "endLine": 5,
+      "comment": "Waters symbolize chaos and destruction fueled by rage."
+    },
+    {
+      "name": "Snare and Escape",
+      "description": "Like a bird escaping a trap, the soul is freed from enemies' schemes.",
+      "lemmas": ["passer", "ereptus", "laqueus", "venator", "contritus", "libero"],
+      "startLine": 6,
+      "endLine": 8,
+      "comment": "Striking imagery of divine rescue from cunning dangers."
+    },
+    {
+      "name": "Divine Creator as Helper",
+      "description": "Final affirmation of trust in the name of the Lord, Creator of heaven and earth.",
+      "lemmas": ["adjutorium", "nomen", "dominus", "caelum", "terra", "creo"],
+      "startLine": 9,
+      "endLine": 9,
+      "comment": "Psalm ends on a confident declaration of cosmic support."
+    }
+  ]
+},
+
+{
+  "psalmNumber": 124,
+  "category": "",
+  "themes": [
+    {
+      "name": "Steadfast Trust",
+      "description": "Those who trust in the Lord are as immovable as Mount Zion.",
+      "lemmas": ["confido", "dominus", "mons", "commoveo"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "Imagery of unshakable faith rooted in a sacred location."
+    },
+    {
+      "name": "Protective Encirclement",
+      "description": "God surrounds His people just as mountains surround Jerusalem.",
+      "lemmas": ["mons", "circuitus", "populus"],
+      "startLine": 2,
+      "endLine": 2,
+      "comment": "Topographical metaphor for divine protection."
+    },
+    {
+      "name": "Moral Safeguard",
+      "description": "God will not let the wicked rule over the righteous lest they be led into iniquity.",
+      "lemmas": ["relinquo", "virga", "peccator", "justus", "iniquitas", "manus"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Spiritual separation and the prevention of moral compromise."
+    },
+    {
+      "name": "Prayer for the Righteous",
+      "description": "Blessing is requested for the good and upright in heart.",
+      "lemmas": ["benefacio", "bonus", "rectus", "cor"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Invoking divine goodness upon the morally aligned."
+    },
+    {
+      "name": "Judgment and Peace",
+      "description": "The deviants and evildoers are led away, while peace is declared upon Israel.",
+      "lemmas": ["declino", "obligatio", "adduco", "opero", "iniquitas", "pax", "Israel"],
+      "startLine": 5,
+      "endLine": 5,
+      "comment": "Final eschatological contrast: judgment for the wicked, peace for God’s people."
+    }
+  ]
+},
+
+{
+  "psalmNumber": 125,
+  "category": "Gradual Psalm",
+  "themes": [
+    {
+      "name": "Restoration of Zion",
+      "description": "God’s turning of Zion’s captivity brought about collective joy and consolation.",
+      "lemmas": ["converto", "captivitas", "Sion", "consolor"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "Opening line emphasizes divine reversal of fortune."
+    },
+    {
+      "name": "Overflowing Joy",
+      "description": "Joy expressed through mouth and language; emotional reaction to divine restoration.",
+      "lemmas": ["gaudium", "exsultatio", "os", "lingua"],
+      "startLine": 2,
+      "endLine": 2,
+      "comment": "Exuberant reaction described with bodily imagery."
+    },
+    {
+      "name": "Witness of the Nations",
+      "description": "The greatness of God's actions becomes visible to the nations.",
+      "lemmas": ["magnifico", "facio", "gens"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Public acknowledgment of God's deeds beyond Israel."
+    },
+    {
+      "name": "Prayer for Continued Restoration",
+      "description": "The psalmist asks God to continue His redemptive work, like desert rains.",
+      "lemmas": ["converto", "captivitas", "torrens", "auster"],
+      "startLine": 5,
+      "endLine": 5,
+      "comment": "Petition framed with geographical simile (southern streams)."
+    },
+    {
+      "name": "Sowing in Tears, Reaping in Joy",
+      "description": "Those who suffer now in sorrow will later rejoice in harvest.",
+      "lemmas": ["semen", "lacrima", "meto", "exsultatio"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Agricultural metaphor for emotional and spiritual transformation."
+    },
+    {
+      "name": "Pilgrimage of Suffering and Return",
+      "description": "A poetic journey from weeping to rejoicing, bearing the fruit of endurance.",
+      "lemmas": ["eo", "fleo", "mitto", "venio", "porto", "manipulus"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Pilgrimage movement language emphasizes faithful perseverance."
+    }
+  ]
+},
+{
+  "psalmNumber": 126,
+  "category": "",
+  "themes": [
+    {
+      "name": "Vain Labor Without God",
+      "description": "Human efforts in building or guarding are futile without God's participation.",
+      "lemmas": ["nisi", "aedifico", "custodio", "vanus", "laboro"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Foundational theme: 'Unless the Lord builds the house...'"
+    },
+    {
+      "name": "Fruitless Anxiety",
+      "description": "Early rising and toiling in sorrow is empty without divine blessing.",
+      "lemmas": ["surgo", "sedeo", "manduco", "dolor", "vanus"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Contrast between self-reliant striving and God’s rest."
+    },
+    {
+      "name": "God’s Gift of Sleep and Family",
+      "description": "The Lord grants sleep to His beloved and gives children as a heritage.",
+      "lemmas": ["somnus", "dilectus", "haereditas", "filius", "venter", "merces", "fructus"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Rest and progeny as divine blessings."
+    },
+    {
+      "name": "Children as Defensive Strength",
+      "description": "Children are like arrows in a warrior’s hand—strength for the future.",
+      "lemmas": ["sagitta", "manus", "potens", "filius", "excutio"],
+      "startLine": 5,
+      "endLine": 5,
+      "comment": "Military metaphor showing familial empowerment."
+    },
+    {
+      "name": "Public Honor and Security",
+      "description": "The man with many children will not be shamed when facing his enemies.",
+      "lemmas": ["beatus", "impleo", "desiderium", "confundo", "inimicus", "porta"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Social vindication through familial abundance and dignity."
+    }
+  ]
+},
+{
+  "psalmNumber": 127,
+  "category": "",
+  "themes": [
+    {
+      "name": "Fear of the Lord and Right Living",
+      "description": "Blessing begins with those who fear the Lord and walk in His ways.",
+      "lemmas": ["beatus", "timeo", "ambulo", "via"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "Foundational condition for the blessings that follow."
+    },
+    {
+      "name": "Fruit of Labor",
+      "description": "The work of one’s hands will yield sustenance and well-being.",
+      "lemmas": ["labor", "fructus", "manduco", "bene"],
+      "startLine": 2,
+      "endLine": 2,
+      "comment": "Earthly blessing tied to faithful diligence."
+    },
+    {
+      "name": "Domestic Abundance",
+      "description": "The home is portrayed as flourishing: wife as vine, children as olive shoots.",
+      "lemmas": ["uxor", "vitis", "abundo", "filius", "novellus", "oliva", "mensa", "domus"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Rich family imagery celebrating household fruitfulness."
+    },
+    {
+      "name": "Covenantal Blessing",
+      "description": "The man who fears the Lord is blessed with this abundance.",
+      "lemmas": ["benedico", "homo", "timeo"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Repetition reinforces the blessing tied to fear of the Lord."
+    },
+    {
+      "name": "Zion and Lifelong Prosperity",
+      "description": "Blessings come from Zion, extending to the prosperity of Jerusalem and one’s lifetime.",
+      "lemmas": ["benedico", "sion", "video", "bonus", "jerusalem", "dies", "vita"],
+      "startLine": 5,
+      "endLine": 5,
+      "comment": "Spatial and temporal expansion of the blessing—from household to holy city."
+    },
+    {
+      "name": "Generational Continuity and Peace",
+      "description": "The final hope is to see one’s grandchildren and the peace of Israel.",
+      "lemmas": ["video", "filius", "pax", "israel"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Closes with generational vision and national peace."
+    }
+  ]
+},
+
+{
+  "psalmNumber": 128,
+  "category": "",
+  "themes": [
+    {
+      "name": "Enduring Affliction",
+      "description": "Israel recalls long-standing opposition and attack from its early days.",
+      "lemmas": ["expugno", "juventus", "israel", "possum"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Repeated suffering is emphasized—but without defeat."
+    },
+    {
+      "name": "Burden of Wickedness",
+      "description": "The wicked are described as having worked oppression across Israel’s back.",
+      "lemmas": ["dorsum", "peccator", "fabrico", "prolongo", "iniquitas"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Graphic image of prolonged exploitation."
+    },
+    {
+      "name": "Divine Justice",
+      "description": "The Lord defeats the wicked, cutting off their strength and dominion.",
+      "lemmas": ["dominus", "justus", "concido", "cervix", "peccator"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "God intervenes decisively against the oppressors."
+    },
+    {
+      "name": "Reversal of the Wicked",
+      "description": "Enemies of Zion are shamed and turned backward.",
+      "lemmas": ["confundo", "converto", "retrorsum", "odi" ],
+      "startLine": 5,
+      "endLine": 5,
+      "comment": "Judgment results in public reversal and disgrace."
+    },
+    {
+      "name": "Withering Futility",
+      "description": "The wicked are likened to roof-grass that dries up prematurely.",
+      "lemmas": ["foenum", "tectum", "evello", "exaresco"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "They have no lasting root or fruit."
+    },
+    {
+      "name": "Fruitless Effort",
+      "description": "Their efforts yield nothing worth harvesting or carrying.",
+      "lemmas": ["impleo", "manus", "meto", "sinus", "manipulus", "colligo"],
+      "startLine": 7,
+      "endLine": 7,
+      "comment": "No one benefits from their work."
+    },
+    {
+      "name": "Absence of Blessing",
+      "description": "The wicked are passed over without any greeting of blessing.",
+      "lemmas": ["dico", "praetereo", "benedictio", "nomen", "dominus"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "No one speaks peace or divine favor over them."
+    }
+  ]
+},
+
+{
+  "psalmNumber": 129,
+  "category": "",
+  "themes": [
+    {
+      "name": "Cry from the Depths",
+      "description": "The psalmist begins with a desperate plea from the lowest place of need.",
+      "lemmas": ["profundum", "clamo", "dominus"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "A prayer launched from the symbolic depths of suffering or sin."
+    },
+    {
+      "name": "Prayerful Appeal",
+      "description": "A heartfelt call for God to hear and attend to the supplicant’s voice.",
+      "lemmas": ["exaudi", "vox", "auris", "deprecatio"],
+      "startLine": 2,
+      "endLine": 2,
+      "comment": "Layered plea for divine attentiveness and mercy."
+    },
+    {
+      "name": "Recognition of Guilt",
+      "description": "Acknowledgment of human iniquity and unworthiness before divine justice.",
+      "lemmas": ["iniquitas", "observo", "sustineo"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "No one can stand before God if sins are accounted."
+    },
+    {
+      "name": "Hope in Mercy and Word",
+      "description": "Despite guilt, the psalmist waits for God's mercy and trusts in His word.",
+      "lemmas": ["propitiatio", "sustineo", "verbum", "spero", "anima"],
+      "startLine": 4,
+      "endLine": 5,
+      "comment": "Patience, waiting, and reliance on the Lord’s promise."
+    },
+    {
+      "name": "Communal Invitation to Hope",
+      "description": "The entire people of Israel are called to wait in faith for the Lord.",
+      "lemmas": ["custodia", "matutinus", "nox", "spero", "Israel"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Israel is summoned to collective, persistent hope."
+    },
+    {
+      "name": "Abundant Redemption",
+      "description": "God is portrayed as rich in mercy and redemption.",
+      "lemmas": ["misericordia", "redemptio", "copiosus"],
+      "startLine": 7,
+      "endLine": 7,
+      "comment": "Confidence in divine fullness and capacity to forgive."
+    },
+    {
+      "name": "Promise of Deliverance",
+      "description": "God Himself will redeem Israel from all sin.",
+      "lemmas": ["redimo"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "Final assurance of total salvation through the Lord."
+    }
+  ]
+},
+
+{
+  "psalmNumber": 130,
+  "category": "",
+  "themes": [
+    {
+      "name": "Rejection of Pride",
+      "description": "The psalmist denies any exaltation of heart, eyes, or ambition.",
+      "lemmas": ["exalto", "cor", "elatus", "oculus", "ambulo", "magnus", "mirabilis"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "A declaration of humility and distance from greatness or vanity."
+    },
+    {
+      "name": "Interior Humility",
+      "description": "Even in feelings, the soul is subdued and peaceful like a weaned child.",
+      "lemmas": ["humiliter", "sentio", "exalto", "anima", "ablactatus", "mater", "retributio"],
+      "startLine": 2,
+      "endLine": 2,
+      "comment": "Powerful image of spiritual calm, not striving or restlessness."
+    },
+    {
+      "name": "Communal Hope in God",
+      "description": "Israel is invited to place lasting hope in the Lord.",
+      "lemmas": ["spero", "israel", "dominus", "saeculum"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Final line turns personal stillness into collective trust."
+    },
+    {
+  "name": "Augustine: Holy Humility",
+  "description": "The psalmist's refusal to walk in greatness is true spiritual humility—Augustine sees this as the virtue by which all other virtues ascend.",
+  "lemmas": ["exalto", "humiliter", "cor", "magnus", "mirabilis"],
+  "startLine": 1,
+  "endLine": 1,
+  "comment": "En. Ps. 130.1 – Augustine: 'What lifts the soul is not pride but humility. The greater you want to be, the lower you must stoop.'"
+},
+{
+  "name": "Augustine: Weaned Soul as Peaceful Soul",
+  "description": "Augustine sees the weaned child as the image of a soul detached from worldly ambition and resting in quiet trust before God.",
+  "lemmas": ["ablacto"],
+  "startLine": 2,
+  "endLine": 2,
+  "comment": "En. Ps. 130.2 – The soul is quieted like a weaned child: no longer crying for milk, but resting on the mother’s lap in peace."
+}
+
+  ]
+},
+
+
+{
+  "psalmNumber": 131,
+  "category": "",
+  "themes": [
+    {
+      "name": "David’s Humble Vow",
+      "description": "David humbly vows not to rest until he finds a dwelling place for the Lord.",
+      "lemmas": ["david", "mansuetudo", "juro", "votum", "domus", "lectus", "somnus", "tabernaculum"],
+      "startLine": 1,
+      "endLine": 5,
+      "comment": "Opening remembrance of David’s humility and dedication to securing a resting place for God."
+    },
+    {
+      "name": "Seeking and Entering God's Presence",
+      "description": "The ark is discovered and honored; the people enter and worship in God's dwelling.",
+      "lemmas": ["ephrata", "invenio", "tabernaculum", "introeo", "adoro", "arca", "requies"],
+      "startLine": 6,
+      "endLine": 8,
+      "comment": "A sacred procession from hearing about the ark to entering God's presence."
+    },
+    {
+      "name": "Priestly Joy and Messianic Plea",
+      "description": "The people pray for priestly righteousness and appeal for God’s favor on His anointed.",
+      "lemmas": ["sacerdos", "justitia", "sanctus", "exsulto", "facies", "christus"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "Petition for priestly blessing and the Messiah’s honor, rooted in David’s legacy."
+    },
+    {
+      "name": "Divine Promise to David",
+      "description": "God swears to establish David’s lineage forever, conditioned on faithfulness.",
+      "lemmas": ["juravit", "fructus", "venter", "testamentum", "sedes", "doceo"],
+      "startLine": 11,
+      "endLine": 13,
+      "comment": "Unbreakable divine covenant with David’s house and throne."
+    },
+    {
+      "name": "Zion as God’s Chosen Dwelling",
+      "description": "God chooses Zion forever and promises to bless its people and priests.",
+      "lemmas": ["Sion", "eligo", "habitatio", "requies", "benedico", "pauper", "panis", "salutare"],
+      "startLine": 14,
+      "endLine": 17,
+      "comment": "Zion is the eternal site of God’s presence and blessing for the community."
+    },
+    {
+      "name": "Messianic Glory and Final Victory",
+      "description": "God exalts David’s power and prepares light for His Christ, while enemies are shamed.",
+      "lemmas": ["cornu", "lucerna", "christus", "inimicus", "confusio", "sanctificatio"],
+      "startLine": 18,
+      "endLine": 19,
+      "comment": "Messianic hope fulfilled as God glorifies His anointed and defeats opposition."
+    },
+    {
+      "name": "Augustine: Christ as Tabernacle",
+      "description": "David’s longing for a place for the Lord is fulfilled in Christ, who is both the Temple and the resting place of God in humanity.",
+      "lemmas": ["tabernaculum", "dominus", "christus"],
+      "startLine": 4,
+      "endLine": 8,
+      "comment": "En. Ps. 131 – The Word made flesh is where God comes to dwell among us."
+    },
+    {
+      "name": "Augustine: Zion as the Church",
+      "description": "Zion is chosen by God not just as a city, but as the figure of the eternal Church where He dwells and blesses forever.",
+      "lemmas": ["Sion", "habito", "saeculum", "sanctificatio"],
+      "startLine": 14,
+      "endLine": 19,
+      "comment": "Zion is the heavenly city, the Church filled with saints and Christ’s light."
+    }
+  ]
+},
+{
+  "psalmNumber": 132,
+  "category": "Gradual Psalm",
+  "themes": [
+    {
+      "name": "Fraternal Unity",
+      "description": "Unity among brethren is declared good and joyful.",
+      "lemmas": ["frater", "habito", "bonus", "jucundus", "unum"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "Opens with a vision of blessed communal harmony."
+    },
+    {
+      "name": "Priestly Anointing and Sacred Flow",
+      "description": "Unity is likened to anointing oil flowing from Aaron’s head to his garments.",
+      "lemmas": ["unguentum", "caput", "descendo", "barba", "vestimentum", "Aaron"],
+      "startLine": 2,
+      "endLine": 3,
+      "comment": "Priestly imagery conveys blessing flowing from head to body."
+    },
+    {
+      "name": "Dew and Blessing from Zion",
+      "description": "Divine blessing descends like Hermon’s dew on Zion, bringing eternal life.",
+      "lemmas": ["ros", "Hermon", "mons", "Sion", "mando", "benedictio", "vita", "saeculum"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Natural imagery illustrates God's commanded blessing and life."
+    }
+  ]
+},
+{
+  "psalmNumber": 133,
+  "category": "Gradual Psalm",
+  "themes": [
+    {
+      "name": "Call to Night Worship",
+      "description": "Servants of the Lord are summoned to bless God by night in His house.",
+      "lemmas": ["benedico", "servus", "domus", "atrium", "noctibus", "sto"],
+      "startLine": 1,
+      "endLine": 3,
+      "comment": "Liturgical call to continual temple praise during the night watches."
+    },
+    {
+      "name": "Blessing from the Creator",
+      "description": "The Lord who made heaven and earth blesses from Zion.",
+      "lemmas": ["benedico", "Sion", "facio", "caelum", "terra"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Final blessing anchors divine generosity in creation and sacred place."
+    }
+  ]
+},
+
 
 {
   "psalmNumber": 138,

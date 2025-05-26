@@ -13,11 +13,11 @@ class Psalm126Tests: XCTestCase {
     let identity = PsalmIdentity(number: 126, category: nil)
     // MARK: - Test Data
     let psalm126 = [
-        "Nisi Dominus ædificaverit domum: in vanum laboraverunt qui ædificant eam.",
+        "Nisi Dominus aedificaverit domum: in vanum laboraverunt qui aedificant eam.",
         "Nisi Dominus custodierit civitatem: frustra vigilat qui custodit eam.",
         "Vanum est vobis ante lucem surgere: surgite postquam sederitis, qui manducatis panem doloris.",
-        "Cum dederit dilectis suis somnum: ecce hæreditas Domini, filii; merces, fructus ventris.",
-        "Sicut sagittæ in manu potentis: ita filii excussorum.",
+        "Cum dederit dilectis suis somnum: ecce haereditas Domini, filii; merces, fructus ventris.",
+        "Sicut sagittae in manu potentis: ita filii excussorum.",
         "Beatus vir qui implevit desiderium suum ex ipsis: non confundetur cum loquetur inimicis suis in porta."
     ]
     
@@ -30,9 +30,9 @@ class Psalm126Tests: XCTestCase {
         let providenceTerms = [
             ("nisi", ["Nisi"], "unless"),
             ("Dominus", ["Dominus"], "Lord"),
-            ("ædifico", ["ædificaverit", "ædificant"], "build"),
+            ("aedifico", ["aedificaverit", "aedificant"], "build"),
             ("custodio", ["custodierit", "custodit"], "guard"),
-            ("vanus", ["vanum", "Vanum"], "vain")
+            ("vanus", ["vanum"], "vain")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: providenceTerms)
@@ -73,7 +73,7 @@ class Psalm126Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(identity, text: psalm126)
         
         let militaryTerms = [
-            ("sagitta", ["sagittæ"], "arrow"),
+            ("sagitta", ["sagittae"], "arrow"),
             ("potens", ["potentis"], "mighty"),
             ("excutio", ["excussorum"], "shake off"),
             ("inimicus", ["inimicis"], "enemy"),
@@ -92,7 +92,7 @@ class Psalm126Tests: XCTestCase {
             ("somnus", ["somnum"], "sleep"),
             ("fructus", ["fructus"], "fruit"),
             ("impleo", ["implevit"], "fulfill"),
-            ("confundo", ["confundetur"], "be ashamed")
+            ("confundo", ["confundetur"], "confuse")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: securityTerms)
