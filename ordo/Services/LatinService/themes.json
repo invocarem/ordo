@@ -2876,8 +2876,26 @@
 },
 {
   "psalmNumber": 132,
-  "category": "Gradual Psalm",
+  "category": "",
   "themes": [
+    {
+  "name": "Augustine: Anointing as Christ",
+  "description": "The anointing oil flowing from Aaron’s head is a figure of Christ, the Anointed One, through whom divine blessing flows from the head (Christ) to the body (the Church).",
+  "lemmas": ["unguentum", "caput", "descendo", "aaron", "vestimentum"],
+  "startLine": 2,
+  "endLine": 3,
+  "comment": "En. Ps. 132 – Augustine sees the anointing as a metaphor for Christ's grace descending upon the unity of the Church."
+},
+{
+  "name": "Augustine: Dew as Holy Spirit",
+  "description": "The dew of Hermon represents the Holy Spirit descending on the Church (Mount Zion), bringing divine refreshment and eternal life.",
+  "lemmas": ["ros", "hermon", "sion", "descendo", "vita"],
+  "startLine": 3,
+  "endLine": 4,
+  "comment": "En. Ps. 132 – Augustine: As dew brings fruitfulness to earth, so the Spirit brings fruit to the Church."
+},
+
+
     {
       "name": "Fraternal Unity",
       "description": "Unity among brethren is declared good and joyful.",
@@ -2906,8 +2924,26 @@
 },
 {
   "psalmNumber": 133,
-  "category": "Gradual Psalm",
+  "category": "",
   "themes": [
+    {
+  "name": "Augustine: Night Praise as Spiritual Watchfulness",
+  "description": "Augustine interprets the nighttime worship as the vigilant life of the Church amidst the darkness of the world, blessing God even when others sleep.",
+  "lemmas": ["noctibus", "benedico", "servus", "manus", "extollo"],
+  "startLine": 3,
+  "endLine": 3,
+  "comment": "En. Ps. 133 – 'In noctibus' signals the faithful who keep watch and remain spiritually alert."
+},
+{
+  "name": "Augustine: Zion Blessing and Creation",
+  "description": "The blessing from Zion is the blessing of the Church, and the Creator who made heaven and earth is the same who blesses through Christ.",
+  "lemmas": ["benedico", "sion", "caelum", "terra", "facio"],
+  "startLine": 4,
+  "endLine": 4,
+  "comment": "En. Ps. 133 – Blessing flows from the Church (Zion), grounded in the Creator of all things."
+},
+
+
     {
       "name": "Call to Night Worship",
       "description": "Servants of the Lord are summoned to bless God by night in His house.",

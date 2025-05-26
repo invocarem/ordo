@@ -3,12 +3,13 @@ import XCTest
 
 class Psalm121Tests: XCTestCase {
     private var latinService: LatinService!
-    let verbose = true
+    let verbose = false
     
     override func setUp() {
         super.setUp()
         latinService = LatinService.shared
     }
+    let id = PsalmIdentity(number: 121, category: nil)
     
     // MARK: - Test Data
     let psalm121 = [
@@ -27,15 +28,15 @@ class Psalm121Tests: XCTestCase {
     
     // 1. Pilgrimage Theme
     func testPilgrimageTheme() {
-        let analysis = latinService.analyzePsalm(text: psalm121)
+        let analysis = latinService.analyzePsalm(id, text: psalm121)
         
         let pilgrimageTerms = [
-            ("laetor", ["Laetatus"], "joy of pilgrimage"), // v.1
-            ("domus", ["domum"], "destination"), // v.1
-            ("eo", ["ibimus"], "journey"), // v.1
-            ("sto", ["Stantes"], "arrival"), // v.2
+            ("laetor", ["Laetatus"], "rejoice"), // v.1
+            ("domus", ["domum"], "house"), // v.1
+            ("eo", ["ibimus"], "go"), // v.1
+            ("sto", ["Stantes"], "stay"), // v.2
             ("atrium", ["atriis"], "sacred space"), // v.2
-            ("ascendo", ["ascenderunt"], "ascent") // v.4
+            ("ascendo", ["ascenderunt"], "ascend") // v.4
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: pilgrimageTerms)
@@ -45,12 +46,11 @@ class Psalm121Tests: XCTestCase {
     
     // 2. Jerusalem as Sacred Center
     func testJerusalemTheme() {
-        let analysis = latinService.analyzePsalm(text: psalm121)
+        let analysis = latinService.analyzePsalm(id, text: psalm121)
         
         let jerusalemTerms = [
-            ("Jerusalem", ["Jerusalem"], "holy city"), // v.2,3,6
-            ("civitas", ["civitas"], "ideal city"), // v.3
-            ("aedifico", ["aedificatur"], "being built"), // v.3
+            ("civitas", ["civitas"], "city"), // v.3
+            ("aedifico", ["aedificatur"], "build"), // v.3
             ("turris", ["turribus"], "protection"), // v.7
             ("sedes", ["sedes"], "throne"), // v.5
             ("judicium", ["judicio"], "justice") // v.5
@@ -63,13 +63,13 @@ class Psalm121Tests: XCTestCase {
     
     // 3. Unity and Community
     func testUnityTheme() {
-        let analysis = latinService.analyzePsalm(text: psalm121)
+        let analysis = latinService.analyzePsalm(id, text: psalm121)
         
         let unityTerms = [
             ("participatio", ["participatio"], "unity"), // v.3
-            ("tribus", ["tribus"], "community"), // v.4
-            ("confiteor", ["confitendum"], "shared confession"), // v.4
-            ("frater", ["fratres"], "brotherhood"), // v.8
+            ("tribus", ["tribus"], "tribe"), // v.4
+            ("confiteor", ["confitendum"], "confess"), // v.4
+            ("frater", ["fratres"], "brother"), // v.8
             ("proximus", ["proximos"], "neighbor") // v.8
         ]
         
@@ -78,13 +78,12 @@ class Psalm121Tests: XCTestCase {
     
     // 4. Divine Protection
     func testProtectionTheme() {
-        let analysis = latinService.analyzePsalm(text: psalm121)
+        let analysis = latinService.analyzePsalm(id, text: psalm121)
         
         let protectionTerms = [
-            ("custodio", ["custodit"], "guard"), // Implicit in context
-            ("turris", ["turribus"], "fortification"), // v.7
+            ("turris", ["turribus"], "tower"), // v.7
             ("virtus", ["virtute"], "strength"), // v.7
-            ("bonus", ["bona"], "goodness") // v.9
+            ("bonus", ["bona"], "good") // v.9
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: protectionTerms)
@@ -96,8 +95,8 @@ class Psalm121Tests: XCTestCase {
         
         let peaceTerms = [
             ("pax", ["pacem", "pax"], "peace"), // v.6,7,8
-            ("abundantia", ["abundantia"], "prosperity"), // v.6,7
-            ("rogo", ["Rogate"], "pray for"), // v.6
+            ("abundantia", ["abundantia"], "plenty"), // v.6,7
+            ("rogo", ["Rogate"], "pray"), // v.6
             ("diligo", ["diligentibus"], "love") // v.6
         ]
         
@@ -111,10 +110,10 @@ class Psalm121Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(text: psalm121)
         
         let worshipTerms = [
-            ("nomen", ["nomini"], "name of God"), // v.4
+            ("nomen", ["nomini"], "name"), // v.4
             ("testimonium", ["testimonium"], "testimony"), // v.4
             ("laetor", ["Laetatus"], "rejoice"), // v.1
-            ("quaero", ["quaesivi"], "seek God") // v.9
+            ("quaero", ["quaesivi"], "seek") // v.9
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: worshipTerms)

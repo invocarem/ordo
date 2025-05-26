@@ -329,7 +329,7 @@ public func analyzePsalm(_ identity: PsalmIdentity? = nil, text: [String], start
     let formToLemma = lemmaMapping.createFormToLemmaMapping()
       
     
-    let debugForms = ["asperges", "dilatasti", "nostra", "regnabit", "dominor"]
+    let debugForms = ["asperges", "dilatasti", "nostra", "custodit", "dominor"]
         for form in debugForms {
             print("Form '\(form)' maps to: \(formToLemma[form] ?? [])")
         }

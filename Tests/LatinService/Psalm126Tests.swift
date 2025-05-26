@@ -58,7 +58,7 @@ class Psalm126Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(identity, text: psalm126)
         
         let familyTerms = [
-            ("hæreditas", ["hæreditas"], "inheritance"),
+            ("haereditas", ["haereditas"], "inheritance"),
             ("filius", ["filii", "filii"], "son"),
             ("venter", ["ventris"], "womb"),
             ("merces", ["merces"], "reward"),

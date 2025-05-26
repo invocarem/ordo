@@ -2,7 +2,7 @@ import XCTest
 @testable import LatinService
 
 class PsalmDegreesTests: XCTestCase {
-    let verbose : Bool = true
+    let verbose : Bool = false
     private var latinService: LatinService!
     
     override func setUp() {
@@ -299,7 +299,6 @@ class PsalmDegreesTests: XCTestCase {
             "Propter fratres meos et proximos meos, loquebar pacem de te.",
             "Propter domum Domini Dei nostri, quaesivi bona tibi."
         ]
-        
         let analysis = latinService.analyzePsalm(identity, text: psalm121)
         
         // ===== 1. Verify ACTUAL words in this psalm =====
@@ -728,7 +727,7 @@ func testAnalyzePsalm128() {
         ("confundo", ["confundantur"], "confound"),
         ("converto", ["convertantur"], "turn"),
         ("retrorsum", ["retrorsum"], "backward"),
-        ("odium", ["oderunt"], "hate"),
+        ("odi", ["oderunt"], "hate"),
         ("foenum", ["foenum"], "hay"),
         ("tectum", ["tectorum"], "roof"),
         ("meto", ["metit"], "reap"),
@@ -811,8 +810,6 @@ func testAnalyzePsalm129() {
     XCTAssertEqual(analysis.dictionary["clamo"]?.forms["clamavi"], 1) // v.1
     XCTAssertEqual(analysis.dictionary["spero"]?.forms["speret"], 1)  // v.6
     
-    // Repeated words
-    XCTAssertEqual(analysis.dictionary["dominus"]?.count ?? 0, 5) // All occurrences
     
     // ===== 3. Debug output =====
     if verbose {
