@@ -25,23 +25,39 @@ class Psalm119Tests: XCTestCase {
     // MARK: - Test Cases
     
     func testPersecutionVocabulary() {
+        latinService.configureDebugging(target: "inpugno")
         let analysis = latinService.analyzePsalm(id, text: psalm119)
         
         let persecutionTerms = [
-            ("tribulor", ["tribularer"], "be distressed"), // v.1
+            ("tribulor", ["tribularer"], "afflict"), // v.1
             ("iniquus", ["iniquis"], "unjust"), // v.2
             ("impugno", ["impugnabant"], "attack"), // v.7
             ("desolatorius", ["desolatoriis"], "destructive") // v.4
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: persecutionTerms)
+        latinService.configureDebugging(target: "")
+    }
+    
+    func testVerbApponatur() {
+        latinService.configureDebugging(target: "appono")
+        let analysis = latinService.analyzePsalm(id, text: psalm119)
+        
+        let apponoEntry = analysis.dictionary["appono"]
+        XCTAssertNotNil(apponoEntry, "Lemma 'appono' should exist for 'apponatur'")
+        
+        if let entity = apponoEntry?.entity {
+            let result = entity.analyzeFormWithMeaning("apponatur")
+            XCTAssertTrue(result.contains("present") && result.contains("passive") && result.contains("subjunctive"),
+                        "Expected present passive subjunctive, got: \(result)")
+        }
     }
     
     func testLinguisticImagery() {
         let analysis = latinService.analyzePsalm(id, text: psalm119)
         
         let speechTerms = [
-            ("labium", ["labiis"], "lips"), // v.2
+            ("labium", ["labiis"], "lip"), // v.2
             ("lingua", ["lingua", "linguam"], "tongue"), // v.2, v.3
             ("loquor", ["loquerer"], "speak") // v.7
         ]
@@ -70,16 +86,60 @@ class Psalm119Tests: XCTestCase {
         
         verifyWordsInAnalysis(analysis, confirmedWords: weaponTerms)
     }
+
+    func testVerbImpugnabant() {
+    latinService.configureDebugging(target: "impugno")
+    let analysis = latinService.analyzePsalm(id, text: psalm119)
+    
+    // Verify "impugnabant" comes from "impugno"
+    let impugnoEntry = analysis.dictionary["impugno"]
+    XCTAssertNotNil(impugnoEntry, "Lemma 'impugno' should exist for 'impugnabant'")
+    
+    // Check translation
+    let translation = impugnoEntry?.translation?.lowercased() ?? ""
+    XCTAssertTrue(
+        translation.contains("attack") || translation.contains("assail"),
+        "Expected 'impugno' to mean 'attack' or 'assail', got: \(translation)"
+    )
+    
+    // Check if "impugnabant" is a recognized form
+    let impugnabantFormCount = impugnoEntry?.forms["impugnabant"] ?? 0
+    XCTAssertGreaterThan(
+        impugnabantFormCount, 0,
+        "Form 'impugnabant' should exist for lemma 'impugno'"
+    )
+    
+    if let entity = impugnoEntry?.entity {
+        let result = entity.analyzeFormWithMeaning("impugnabant")
+        
+        // Verify it's imperfect active indicative (3rd plural)
+        XCTAssertTrue(
+            result.lowercased().contains("they were attacking"),
+               "Expected 'they were attacking' (imperfect active), got: \(result)"
+        )
+        
+        if verbose {
+            print("\nIMPUGNO Analysis:")
+            print("  Translation: \(impugnoEntry?.translation ?? "?")")
+            print("  Form 'impugnabant' analysis: \(result)")
+        }
+    } else {
+        XCTFail("Entity for 'impugno' not found")
+    }
+}
     
     // MARK: - Helper
-    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
+      private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, 
+                                     confirmedWords: [(lemma: String, 
+                                                     forms: [String], 
+                                                     translation: String)]) {
         for (lemma, forms, translation) in confirmedWords {
             guard let entry = analysis.dictionary[lemma] else {
                 XCTFail("Missing lemma: \(lemma)")
                 continue
             }
             
-            // Verify semantic domain
+            // Verify semantic domain through translation
             XCTAssertTrue(
                 entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
                 "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
@@ -91,14 +151,44 @@ class Psalm119Tests: XCTestCase {
                 XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
             }
             
+            // NEW: Verify each form's grammatical analysis
+            for form in forms {
+                if let entity = entry.entity {
+                    let result = entity.analyzeFormWithMeaning(form)
+                    
+                    // Check if analysis contains either:
+                    // 1. The exact translation we expect
+                    // 2. Or appropriate grammatical markers
+                    XCTAssertTrue(
+                        result.lowercased().contains(translation.lowercased()) ||
+                        result.lowercased().contains("verb") ||
+                        result.lowercased().contains("participle") ||
+                        result.lowercased().contains("noun"),
+                        """
+                        For form '\(form)' of lemma '\(lemma)':
+                        Expected analysis to contain '\(translation)' or grammatical info,
+                        but got: \(result)
+                        """
+                    )
+                    
+                    if verbose {
+                        print("  Analysis of '\(form)': \(result)")
+                    }
+                } else {
+                    XCTFail("Entity for lemma '\(lemma)' not found")
+                }
+            }
+            
             if verbose {
                 print("\n\(lemma.uppercased())")
                 print("  Translation: \(entry.translation ?? "?")")
+                print("  Forms found: \(entry.forms.keys.filter { forms.map { $0.lowercased() }.contains($0) }.count)/\(forms.count)")
                 forms.forEach { form in
                     let count = entry.forms[form.lowercased()] ?? 0
-                    print("  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
+                    print("  \(form.padding(toLength: 15, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
                 }
             }
         }
     }
+    
 }

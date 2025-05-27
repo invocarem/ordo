@@ -38,14 +38,67 @@ class Psalm126Tests: XCTestCase {
         verifyWordsInAnalysis(analysis, confirmedWords: providenceTerms)
     }
     
-    // 2. Test Labor Themes
+    // 2. Test Verb Custodio
+    func testVerbCustodio() {
+        latinService.configureDebugging(target: "custodio")
+        let analysis = latinService.analyzePsalm(identity, text: psalm126)
+        
+        // Verify "custodierit" and "custodit" come from "custodio"
+        let custodioEntry = analysis.dictionary["custodio"]
+        XCTAssertNotNil(custodioEntry, "Lemma 'custodio' should exist for 'custodierit' and 'custodit'")
+        
+        // Check translation
+        let translation = custodioEntry?.translation?.lowercased() ?? ""
+        XCTAssertTrue(
+            translation.contains("guard") || translation.contains("protect") || translation.contains("watch"),
+            "Expected 'custodio' to mean 'guard/protect/watch', got: \(translation)"
+        )
+        
+        // Check if forms are recognized
+        let custodieritCount = custodioEntry?.forms["custodierit"] ?? 0
+        let custoditCount = custodioEntry?.forms["custodit"] ?? 0
+        
+        XCTAssertGreaterThan(
+            custodieritCount, 0,
+            "Form 'custodierit' should exist for lemma 'custodio'"
+        )
+        XCTAssertGreaterThan(
+            custoditCount, 0,
+            "Form 'custodit' should exist for lemma 'custodio'"
+        )
+        
+        if let entity = custodioEntry?.entity {
+            // Test custodierit (future perfect)
+            let custodieritResult = entity.analyzeFormWithMeaning("custodierit")
+            XCTAssertTrue(custodieritResult.contains("will have") || custodieritResult.contains("future perfect"),
+                        "Expected 'custodierit' to be future perfect, got: \(custodieritResult)")
+            
+            // Test custodit (present)
+            let custoditResult = entity.analyzeFormWithMeaning("custodit")
+            XCTAssertTrue(custoditResult.contains("he/she/it") && custoditResult.contains("present"),
+                        "Expected 'custodit' to be present tense, got: \(custoditResult)")
+            
+            if verbose {
+                print("\nCUSTODIO Analysis:")
+                print("  Translation: \(custodioEntry?.translation ?? "?")")
+                print("  Form 'custodierit' analysis: \(custodieritResult)")
+                print("  Form 'custodit' analysis: \(custoditResult)")
+            }
+        } else {
+            XCTFail("Entity for 'custodio' not found")
+        }
+        
+        latinService.configureDebugging(target: "")
+    }
+    
+    // 3. Test Labor Themes
     func testLaborThemes() {
         let analysis = latinService.analyzePsalm(identity, text: psalm126)
         
         let laborTerms = [
             ("laboro", ["laboraverunt"], "labor"),
             ("vigilo", ["vigilat"], "stay awake"),
-            ("surgere", ["surgere", "surgite"], "rise"),
+            ("surgo", ["surgere", "surgite"], "rise"),
             ("sedeo", ["sederitis"], "sit"),
             ("dolor", ["doloris"], "pain")
         ]
@@ -53,7 +106,7 @@ class Psalm126Tests: XCTestCase {
         verifyWordsInAnalysis(analysis, confirmedWords: laborTerms)
     }
     
-    // 3. Test Family Blessings
+    // 4. Test Family Blessings
     func testFamilyBlessings() {
         let analysis = latinService.analyzePsalm(identity, text: psalm126)
         
@@ -68,14 +121,16 @@ class Psalm126Tests: XCTestCase {
         verifyWordsInAnalysis(analysis, confirmedWords: familyTerms)
     }
     
-    // 4. Test Military Metaphors
+    // 5. Test Military Metaphors
     func testMilitaryMetaphors() {
+        latinService.configureDebugging(target: "excutio")
         let analysis = latinService.analyzePsalm(identity, text: psalm126)
+        latinService.configureDebugging(target: "")
         
         let militaryTerms = [
             ("sagitta", ["sagittae"], "arrow"),
             ("potens", ["potentis"], "mighty"),
-            ("excutio", ["excussorum"], "shake off"),
+            ("excutio", ["excussorum"], "expel"),
             ("inimicus", ["inimicis"], "enemy"),
             ("porta", ["porta"], "gate")
         ]
@@ -83,7 +138,7 @@ class Psalm126Tests: XCTestCase {
         verifyWordsInAnalysis(analysis, confirmedWords: militaryTerms)
     }
     
-    // 5. Test Promise of Security
+    // 6. Test Promise of Security
     func testSecurityPromises() {
         let analysis = latinService.analyzePsalm(identity, text: psalm126)
         
@@ -97,6 +152,49 @@ class Psalm126Tests: XCTestCase {
         
         verifyWordsInAnalysis(analysis, confirmedWords: securityTerms)
     }
+    
+    // 7. Test Verb Aedifico
+    func testVerbAedifico() {
+        latinService.configureDebugging(target: "aedifico")
+        let analysis = latinService.analyzePsalm(identity, text: psalm126)
+        
+        let aedificoEntry = analysis.dictionary["aedifico"]
+        XCTAssertNotNil(aedificoEntry, "Lemma 'aedifico' should exist for 'aedificaverit' and 'aedificant'")
+        
+        // Check translation
+        let translation = aedificoEntry?.translation?.lowercased() ?? ""
+        XCTAssertTrue(
+            translation.contains("build") || translation.contains("construct"),
+            "Expected 'aedifico' to mean 'build/construct', got: \(translation)"
+        )
+        
+        // Check forms
+        let aedificaveritCount = aedificoEntry?.forms["aedificaverit"] ?? 0
+        let aedificantCount = aedificoEntry?.forms["aedificant"] ?? 0
+        
+        XCTAssertGreaterThan(aedificaveritCount, 0, "Form 'aedificaverit' should exist")
+        XCTAssertGreaterThan(aedificantCount, 0, "Form 'aedificant' should exist")
+        
+        if let entity = aedificoEntry?.entity {
+            let aedificaveritResult = entity.analyzeFormWithMeaning("aedificaverit")
+            XCTAssertTrue(aedificaveritResult.contains("will have built") || aedificaveritResult.contains("future perfect"),
+                        "Expected 'aedificaverit' to be future perfect, got: \(aedificaveritResult)")
+            
+            let aedificantResult = entity.analyzeFormWithMeaning("aedificant")
+            XCTAssertTrue(aedificantResult.contains("they build") || aedificantResult.contains("present"),
+                        "Expected 'aedificant' to be present tense, got: \(aedificantResult)")
+            
+            if verbose {
+                print("\nAEDIFICO Analysis:")
+                print("  Translation: \(aedificoEntry?.translation ?? "?")")
+                print("  Form 'aedificaverit' analysis: \(aedificaveritResult)")
+                print("  Form 'aedificant' analysis: \(aedificantResult)")
+            }
+        } else {
+            XCTFail("Entity for 'aedifico' not found")
+        }
+    }
+    
     func testsAnalysisSummary() {
         let analysis = latinService.analyzePsalm(identity, text: psalm126)
         if verbose {
@@ -106,8 +204,7 @@ class Psalm126Tests: XCTestCase {
             
             print("'noster' forms:", analysis.dictionary["noster"]?.forms ?? [:])
             print("'eo' forms:", analysis.dictionary["eo"]?.forms ?? [:])
-
-             print("'torrens' forms:", analysis.dictionary["torrens"]?.forms ?? [:])
+            print("'torrens' forms:", analysis.dictionary["torrens"]?.forms ?? [:])
         }
         XCTAssertLessThan(
             analysis.totalWords, 
@@ -142,6 +239,26 @@ class Psalm126Tests: XCTestCase {
             let missingForms = forms.filter { entryFormsLowercased[$0.lowercased()] == nil }
             if !missingForms.isEmpty {
                 XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
+            }
+            
+            // Verify form analysis
+            if let entity = entry.entity {
+                for form in forms {
+                    let result = entity.analyzeFormWithMeaning(form)
+                    XCTAssertTrue(
+                        result.lowercased().contains(translation.lowercased()) ||
+                        (lemma == "surgo" && form == "surgite" && result.lowercased().contains("imperative")),
+                        """
+                        For form '\(form)' of lemma '\(lemma)':
+                        Expected analysis to contain '\(translation)' or appropriate tense,
+                        but got: \(result)
+                        """
+                    )
+                    
+                    if verbose {
+                        print("  Analysis of '\(form)': \(result)")
+                    }
+                }
             }
             
             if verbose {

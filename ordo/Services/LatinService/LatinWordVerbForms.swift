@@ -230,19 +230,56 @@ extension LatinWordEntity {
 }
     
     private func generateSubjunctiveForms(conjugation: Int, stems: VerbStems, addForm: (String, [String]) -> Void) {
-        // Imperfect Subjunctive
-        addForm("imperfect_subjunctive", [
-            stems.present + "erem", stems.present + "eres", stems.present + "eret",
-            stems.present + "eremus", stems.present + "eretis", stems.present + "erent"
+
+        let imperfectStem: String
+        switch conjugation {
+        case 1: 
+            imperfectStem = stems.present + "are"  // 1st conjugation: -are-
+        case 2, 3, 4: 
+            imperfectStem = stems.present + "ere"  // Others: -ere-
+        default: 
+            imperfectStem = stems.present
+        }
+    
+        // Imperfect Active Subjunctive
+        addForm("imperfect_active_subjunctive", [
+            imperfectStem + "m", imperfectStem + "s", imperfectStem + "t",
+            imperfectStem + "mus", imperfectStem + "tis", imperfectStem + "nt"
         ])
         
-        // Present Passive Subjunctive (1st conjugation only)
-        if conjugation == 1 {
-            addForm("present_passive_subjunctive",  [
+        // Imperfect Passive Subjunctive
+        addForm("imperfect_passive_subjunctive", [
+            imperfectStem + "r", imperfectStem + "ris", imperfectStem + "tur",
+            imperfectStem + "mur", imperfectStem + "mini", imperfectStem + "ntur"
+        ])
+        
+        // Present Passive Subjunctive (1st conjugation special case)
+        let presentPassiveSubjunctive: [String]
+        switch conjugation {
+        case 1:
+            presentPassiveSubjunctive = [
                 stems.present + "er", stems.present + "eris", stems.present + "etur",
                 stems.present + "emur", stems.present + "emini", stems.present + "entur"
-            ])
+            ]
+        case 2:
+            presentPassiveSubjunctive = [
+                stems.present + "ear", stems.present + "earis", stems.present + "eatur",
+                stems.present + "eamur", stems.present + "eamini", stems.present + "eantur"
+            ]
+        case 3:
+            presentPassiveSubjunctive = [
+                stems.present + "ar", stems.present + "aris", stems.present + "atur",
+                stems.present + "amur", stems.present + "amini", stems.present + "antur"
+            ]
+        case 4:
+            presentPassiveSubjunctive = [
+                stems.present + "iar", stems.present + "iaris", stems.present + "iatur",
+                stems.present + "iamur", stems.present + "iamini", stems.present + "iantur"
+            ]
+        default:
+            presentPassiveSubjunctive = []
         }
+        addForm("present_passive_subjunctive", presentPassiveSubjunctive)
     }
     private func generatePresentActiveSubjunctive(conjugation: Int, stems: VerbStems, addForm: (String, [String]) -> Void) {
     let presentActiveSubjunctive: [String]

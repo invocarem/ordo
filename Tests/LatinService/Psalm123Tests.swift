@@ -24,6 +24,31 @@ class Psalm123Tests: XCTestCase {
         "Adjutorium nostrum in nomine Domini, qui fecit caelum et terram."
     ]
 
+    // MARK: - Enhanced Tests
+    
+    func testVerbDicat() {
+        latinService.configureDebugging(target: "dico")
+        let analysis = latinService.analyzePsalm(id, text: psalm123[0])
+        
+        let dicoEntry = analysis.dictionary["dico"]
+        XCTAssertNotNil(dicoEntry, "Lemma 'dico' should exist for 'dicat'")
+        
+        if let entity = dicoEntry?.entity {
+            let result = entity.analyzeFormWithMeaning("dicat")
+            XCTAssertTrue(
+                result.contains("present") && result.contains("subjunctive"),
+                "Expected present subjunctive, got: \(result)"
+            )
+            
+            if verbose {
+                print("\nDICO Analysis:")
+                print("  Form 'dicat': \(result)")
+            }
+        } else {
+            XCTFail("Entity for 'dico' not found")
+        }
+    }
+
     func testHumanThreats() {
         let text = psalm123[1] + " " + psalm123[2]
         let analysis = latinService.analyzePsalm(id, text: text, startingLineNumber: 2)
@@ -86,24 +111,56 @@ class Psalm123Tests: XCTestCase {
         verifyWordsInAnalysis(analysis, confirmedWords: terms)
     }
 
-    // MARK: - Helper
-    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
+    // MARK: - Enhanced Helper
+    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, 
+                                     confirmedWords: [(lemma: String, 
+                                                     forms: [String], 
+                                                     translation: String)]) {
         for (lemma, forms, translation) in confirmedWords {
             guard let entry = analysis.dictionary[lemma] else {
                 XCTFail("Missing lemma: \(lemma)")
                 continue
             }
+            
+            // Verify semantic domain
             XCTAssertTrue(
                 entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
                 "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
             )
+            
+            // Verify morphological coverage
             let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
             if !missingForms.isEmpty {
                 XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
             }
+            
+            // NEW: Verify grammatical analysis for each form
+            for form in forms {
+                if let entity = entry.entity {
+                    let result = entity.analyzeFormWithMeaning(form)
+                    
+                    XCTAssertTrue(
+                        result.lowercased().contains(translation.lowercased()) ||
+                        result.lowercased().contains("verb") ||
+                        result.lowercased().contains("participle") ||
+                        result.lowercased().contains("noun"),
+                        """
+                        For form '\(form)' of lemma '\(lemma)':
+                        Expected analysis to contain '\(translation)' or grammatical info,
+                        but got: \(result)
+                        """
+                    )
+                    
+                    if verbose {
+                        print("  Analysis of '\(form)': \(result)")
+                    }
+                }
+            }
+            
             if verbose {
                 print("\n\(lemma.uppercased())")
                 print("  Translation: \(entry.translation ?? "?")")
+                print("  Forms found: \(entry.forms.keys.filter { forms.map { $0.lowercased() }.contains($0) }.count)/\(forms.count)")
                 forms.forEach { form in
                     let count = entry.forms[form.lowercased()] ?? 0
                     print("  \(form.padding(toLength: 15, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")

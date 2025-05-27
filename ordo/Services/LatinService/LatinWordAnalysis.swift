@@ -121,45 +121,85 @@ extension LatinWordEntity {
         if let perfect = perfect, perfect.lowercased() == form {
             return "has/have \(translation)ed (perfect)"
         }
-        if let participle = analyzeParticiple(form: lowerForm, translation: translation) {
-            return participle
+
+        if let passiveAnalysis = analyzeVerbPassive(form: lowerForm, translation: translation) {
+            return passiveAnalysis
         }
+
         if let gerundResult = analyzeGerund(form: lowerForm, translation: translation) {
             return gerundResult
         }
-            print("⚠️ Unknown verb form: \(form)")
+           
           
         
         // Handle conjugated forms
-        return analyzeVerbConjugation(form: form, translation: translation)
-    }
-
-    private func analyzeParticiple(form: String, translation: String) -> String? {
-        guard let forms = forms else { return nil }
-        let allForms = (forms ?? [:]).merging(generatedVerbForms()) { user, _ in user }
-
-        for (key, values) in allForms {
-            print("🔍 Checking key: \(key), values: \(values)")
-            guard values.contains(where: { $0.lowercased() == form }) else { continue }
-            
-            if key.hasPrefix("present_participle_") {
-                let genderNumber = key.replacingOccurrences(of: "present_participle_", with: "")
-                return "\(translation)ing (\(parseGenderNumber(genderNumber)))"
-            }
-            else if key.hasPrefix("perfect_passive_participle") {
-                   let genderSuffix = key.replacingOccurrences(of: "perfect_passive_participle_", with: "")
-                            return "having been \(translation)ed (\(parseGenderNumber(genderSuffix)))"
-            }
-            else  if key.hasPrefix("future_active_") {
-                let genderNumber = key.replacingOccurrences(of: "future_active_", with: "")
-                return "about to \(translation) (\(parseGenderNumber(genderNumber)))"
-            }
-            else {
-                   print("⚠️ Unknown participle key: \(key)")
-            }
+        if let conjugationResult = analyzeVerbConjugation(form: form, translation: translation) {
+            return conjugationResult
         }
+
+        print("⚠️ Unknown verb form: \(form)")
         return nil
     }
+
+private func analyzeVerbPassive(form: String, translation: String) -> String? {
+    guard let forms = forms else { return nil }
+    let allForms = (forms ?? [:]).merging(generatedVerbForms()) { user, _ in user }
+    
+    let lowerForm = form.lowercased()
+    let persons = ["I", "you", "he/she/it", "we", "you", "they"]
+    
+    // Present Passive
+    if let presentPassive = allForms["present_passive"],
+       let index = presentPassive.firstIndex(where: { $0.lowercased() == lowerForm }) {
+        return "\(persons[index]) is \(translation)ed (present passive)"
+    }
+    
+    // Imperfect Passive
+    if let imperfectPassive = allForms["imperfect_passive"],
+       let index = imperfectPassive.firstIndex(where: { $0.lowercased() == lowerForm }) {
+        return "\(persons[index]) was being \(translation)ed (imperfect passive)"
+    }
+    
+    // Future Passive
+    if let futurePassive = allForms["future_passive"],
+       let index = futurePassive.firstIndex(where: { $0.lowercased() == lowerForm }) {
+        return "\(persons[index]) will be \(translation)ed (future passive)"
+    }
+    
+    // Perfect Passive (using perfect passive participle + esse)
+    if let perfectPassive = allForms["perfect_passive"],
+       let index = perfectPassive.firstIndex(where: { $0.lowercased() == lowerForm }) {
+        return "\(persons[index]) has been \(translation)ed (perfect passive)"
+    }
+    
+    // Pluperfect Passive
+    if let pluperfectPassive = allForms["pluperfect_passive"],
+       let index = pluperfectPassive.firstIndex(where: { $0.lowercased() == lowerForm }) {
+        return "\(persons[index]) had been \(translation)ed (pluperfect passive)"
+    }
+    
+    // Future Perfect Passive
+    if let futurePerfectPassive = allForms["future_perfect_passive"],
+       let index = futurePerfectPassive.firstIndex(where: { $0.lowercased() == lowerForm }) {
+        return "\(persons[index]) will have been \(translation)ed (future perfect passive)"
+    }
+    
+    // Present Passive Subjunctive
+    if let presentPassiveSubj = allForms["present_passive_subjunctive"],
+       let index = presentPassiveSubj.firstIndex(where: { $0.lowercased() == lowerForm }) {
+        return "\(persons[index]) may be \(translation)ed (present passive subjunctive)"
+    }
+    
+    // Imperfect Passive Subjunctive
+    if let imperfectPassiveSubj = allForms["imperfect_passive_subjunctive"],
+       let index = imperfectPassiveSubj.firstIndex(where: { $0.lowercased() == lowerForm }) {
+        return "\(persons[index]) might be \(translation)ed (imperfect passive subjunctive)"
+    }
+    
+    return nil
+}
+
+
     private func parseGenderNumber(_ key: String) -> String {
         let components = key.components(separatedBy: "_")
         guard components.count >= 2 else { return key }
@@ -196,6 +236,24 @@ extension LatinWordEntity {
         }
         return nil
     }
+
+    private func stripInfinitivePrefix(from translation: String) -> String {
+        var trimmed = translation
+        if trimmed.hasPrefix("to ") {
+            trimmed = String(trimmed.dropFirst(3))
+        }
+        return trimmed
+    }
+    private func extractPrimaryVerb(_ translation: String) -> String {
+        // Strip "to " and take first meaning before comma
+        let base = translation
+            .replacingOccurrences(of: "to ", with: "")
+            .components(separatedBy: ",")
+            .first?
+            .trimmingCharacters(in: .whitespacesAndNewlines) ?? translation
+        return base
+    }
+
      private func analyzeConjugation(tense: String, index: Int, translation: String, isPlural: Bool) -> String? {
         if tense == "perfect_passive" {
             let genderNumber = getGenderAndNumber(index: index, isPlural: isPlural)
@@ -205,11 +263,27 @@ extension LatinWordEntity {
         let (person, number) = getPersonAndNumber(index: index)
         let effectiveNumber = isPlural ? " (pl)" : number
         
+        let base = extractPrimaryVerb(translation)
+        let cleanTranslation = base.replacingOccurrences(of: "^to\\s+", with: "", options: .regularExpression)
+
         switch tense {
+        case "perfect_passive_participle_m", "perfect_passive_participle_f", "perfect_passive_participle_n":
+            let gender = tense.hasSuffix("_f") ? "feminine" :
+                     tense.hasSuffix("_n") ? "neuter" :
+                     tense.hasSuffix("_m") ? "masculine" : "unknown"
+    
+            let helperVerb = (person == "they" || person == "we" || (person == "you" && isPlural)) ? "have" : "has"
+            return "\(person) \(helperVerb) been \(cleanTranslation)ed\(effectiveNumber) (perfect passive \(gender))"
+        case "present":
+            return "\(person) \(cleanTranslation)\(effectiveNumber) (present)"
         case "present_active_indicative":
             return "\(person) \(translation)\(effectiveNumber)"
         case "present_passive_indicative":
             return "\(person) \(isPlural ? "are" : "is") \(translation)ed\(effectiveNumber)"
+        case "imperfect_active":
+            let base = extractPrimaryVerb(translation)
+            let verb = (person == "they" || person == "we" || (person == "you" && isPlural)) ? "were" : "was"
+            return "\(person) \(verb) \(base)ing"
         case "imperfect_active_indicative":
             return "\(person) was \(translation)ing\(effectiveNumber)"
         case "imperfect_passive_indicative":
@@ -218,18 +292,35 @@ extension LatinWordEntity {
             return "\(person) will \(translation)\(effectiveNumber)"
         case "future_passive_indicative":
             return "\(person) will be \(translation)ed\(effectiveNumber)"
-        case "perfect_active_indicative":
-            return "\(person) has \(translation)ed\(effectiveNumber)"
+
+        case "future_perfect_eccl":
+            return "\(person) will have  \(cleanTranslation)ed \(effectiveNumber) (future perfect eccl)"
+        case "future_perfect":
+            return "\(person) will have  \(cleanTranslation)ed \(effectiveNumber) (future perfect)"
+
+
+        case "perfect_subjunctive":
+            let helperVerb = ((person == "I") || person == "they" || person == "we" || (person == "you" && isPlural)) ? "have" : "has"
+            return "\(person) \(helperVerb)  \(cleanTranslation)ed \(effectiveNumber) (perfect subjunctive)"
+
+
+
+        case "perfect", "perfect_active_indicative":
+            let helperVerb = (person == "they" || person == "we" || (person == "you" && isPlural)) ? "have" : "has"
+            return "\(person) \(helperVerb) \(cleanTranslation)ed\(effectiveNumber) (perfect)"
+
         case "perfect_passive_indicative":
-            return "\(person) has been \(translation)ed\(effectiveNumber)"
+            let helperVerb = (person == "they" || person == "we" || (person == "you" && isPlural)) ? "have" : "has"
+            return "\(person) \(helperVerb) been \(translation)ed\(effectiveNumber) (perfect passive)"
+
         case "pluperfect_active_indicative":
             return "\(person) had \(translation)ed\(effectiveNumber)"
         case "pluperfect_passive_indicative":
             return "\(person) had been \(translation)ed\(effectiveNumber)"
         case "present_active_subjunctive":
-            return "\(person) may \(translation)\(effectiveNumber) (subjunctive)"
+            return "\(person) may \(cleanTranslation)\(effectiveNumber) (present active subjunctive)"
         case "present_passive_subjunctive":
-            return "\(person) may be \(translation)ed\(effectiveNumber) (subjunctive)"
+            return "\(person) may be \(cleanTranslation)ed\(effectiveNumber) (present passive subjunctive)"
         case "imperfect_active_subjunctive":
             return "\(person) might \(translation)\(effectiveNumber) (subjunctive)"
         case "imperfect_passive_subjunctive":
@@ -238,32 +329,29 @@ extension LatinWordEntity {
             return "\(translation.capitalized)! (\(isPlural ? "plural" : "singular") command)"
         case "present_participle":
             return "\(translation)ing (participle)"
+
         default:
-            return "\(translation) (\(tense) \(isPlural ? "plural" : "singular"))"
+            return "default: \(translation) (\(tense) \(isPlural ? "plural" : "singular"))"
         }
     }
       private func analyzeVerbConjugation(form: String, translation: String) -> String? {
+        let lowerForm = form.lowercased()
+
+        // 1. Combine all available verb forms
+        let allForms = (forms ?? [:])
+            .merging(generatedVerbForms()) { manual, _ in manual }
+
+
+         for (tense, formArray) in allForms {
+                for (index, variant) in formArray.enumerated() {
+                    if matchesVariant(form: lowerForm, target: variant) {
+                        return analyzeConjugation(tense: tense, index: index, translation: translation, isPlural: false)
+                }
+            }
+        }
+
         // Check singular forms
-        if let forms = forms {
-            for (tense, formArray) in forms {
-                for (index, formVariants) in formArray.enumerated() {
-                    guard matchesVariant(form: form, target: formVariants) else { continue }
-                    return analyzeConjugation(tense: tense, index: index, translation: translation, isPlural: false)
-                }
-            }
-        }
-        
-        // Check plural forms
-        if let formsPlural = formsPlural {
-            for (tense, formArray) in formsPlural {
-                for (index, formVariants) in formArray.enumerated() {
-                    guard matchesVariant(form: form, target: formVariants) else { continue }
-                    return analyzeConjugation(tense: tense, index: index, translation: translation, isPlural: true)
-                }
-            }
-        }
-        
-        return nil
+       return nil
     }
    
    

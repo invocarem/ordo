@@ -1,5 +1,57 @@
 [
   {
+  "lemma": "excutio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "excutere",
+  "present": "excutio",
+  "perfect": "excussi",
+  "supine": "excussum",
+  "translations": {
+    "en": "to expel, shake out, drive away",
+    "la": "excutio, excutere, excussi, excussum"
+  }
+},
+  {
+  "lemma": "appono",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "apponere",
+  "present": "appono",
+  "perfect": "apposui",
+  "supine": "appositum",
+  "translations": {
+    "en": "to place, appoint, serve (food)",
+    "la": "appono, apponere, apposui, appositum"
+  }
+},
+  {
+  "lemma": "impugno",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "impugnare",
+  "present": "impugno",
+  "perfect": "impugnavi",
+  "supine": "impugnatum",
+  "translations": {
+    "en": "to attack, assault, fight against",
+    "la": "impugno, impugnare, impugnavi, impugnatum"
+  }
+},
+  {
+  "lemma": "tribulor",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "tribulari",
+  "present": "tribulor",
+  "perfect": "tribulatus",
+  "supine": "tribulatum",
+  "translations": {
+    "en": "to thresh, press, afflict",
+    "la": "tribulor, tribulari, tribulatus sum"
+  }
+},
+  {
   "lemma": "custodio",
   "part_of_speech": "verb",
   "conjugation": 4,
@@ -8,6 +60,7 @@
   "perfect": "custodivi",
   "supine": "custoditum",
   "forms": {
+    "future_perfect_eccl": ["custodiero", "custodieris", "custodierit"] ,
                "present": ["custodio", "custodis", "custodit", "custodimus", "custoditis", "custodiunt"],
                "imperfect": ["custodiebam", "custodiebas", "custodiebat", "custodiebamus", "custodiebatis", "custodiebant"],
                "future": ["custodiam", "custodies", "custodiet", "custodiemus", "custodietis", "custodient"],
@@ -4450,12 +4503,10 @@
   "part_of_speech": "verb",
   "conjugation": 1,
   "infinitive": "laetari",
-  "perfect": "laetatus sum",
+  "perfect": "laetatus",
   "present": "laetor",
   "future": "laetabor",
-  "forms_plural": {
-    "present_participle_nominative": ["laetantes"]
-  },
+  "supine": "laetatum",
   "translations": {
     "en": "rejoice, be glad",
     "la": "laetor, laetari"
@@ -6861,38 +6912,7 @@
         "la": "illumino"
     }
 },
-  {
-    "lemma": "laetor",
-    "part_of_speech": "verb",
-    "conjugation": 1,
-    "perfect": "laetatus",
-    "infinitive": "laetari",
-    "forms": {
-        "present": ["laetor", "laetaris", "laetatur"],
-        "imperfect": ["laetabar", "laetabaris", "laetabatur"],
-        "future": ["laetabor", "laetaberis", "laetabitur"],
-        "perfect": ["laetatus", "laetatus", "laetatus"],
-        "present_subjunctive": ["laeter", "laeteris", "laetetur"],
-        "imperative": ["laetare"],
-        "gerund_dative": ["laetando"],
-        "gerund_accusative": ["laetandum"],
-        "gerundive_masc_nom": ["laetandus"]
-    },
-    "forms_plural": {
-        "present": ["laetamur", "laetamini", "laetantur"],
-        "imperfect": ["laetabamur", "laetabamini", "laetabantur"],
-        "future": ["laetabimur", "laetabimini", "laetabuntur"],
-        "perfect": ["laetati", "laetati", "laetati"],
-        "present_subjunctive": ["laetemur", "laetemini", "laetentur"],
-        "imperative": ["laetamini"]  
-    },
-    "translations": {
-        "en": "to rejoice, be glad",
-        "la": "laetor"
-    },
-    "notes": "Deponent verb (passive forms with active meaning). Present subjunctive 'laetentur' is 3rd plural."
-},
-  {
+    {
     "lemma": "finis",
     "part_of_speech": "noun",
     "declension": 3,
@@ -9486,11 +9506,8 @@
       "supine": "aedificatum",
       "forms": {
         "present": ["aedifico", "aedificas", "aedificat", "aedificamus", "aedificatis", "aedificant"],
-        "present_passive": ["aedificor", "aedificaris", "aedificatur", "aedificamur", "aedificamini", "aedificantur"],
-        "present_passive_indicative": ["aedificatur"],
         "imperative": ["aedifica", "aedificate"],
-        "subjunctive": ["aedificem", "aedifices", "aedificet", "aedificemus", "aedificetis", "aedificent"],
-        "perfect_subjunctive": ["aedificaverit"]
+        "subjunctive": ["aedificem", "aedifices", "aedificet", "aedificemus", "aedificetis", "aedificent"]
       },
       "translations": {
         "en": "to build",
@@ -10544,21 +10561,6 @@
     },
 
     {
-      "lemma": "laetor",
-      "part_of_speech": "verb",
-      "conjugation": 1,
-      "infinitive": "laetari",
-      "perfect": "laetatus sum",
-      "supine": "laetatum",
-      "translations": {
-        "en": "to rejoice, be glad",
-        "la": "laetor"
-      },
-      "forms": {
-        "perfect_participle": ["laetatus", "laetata", "laetatum"]
-      }
-    },
-    {
       "lemma": "atrium",
       "part_of_speech": "noun",
       "gender": "neuter",
@@ -11324,22 +11326,6 @@
       "translations": {
         "en": "peace-making, peaceful, pacific",
         "la": "pacificus"
-      }
-    },
-    {
-      "lemma": "tribulor",
-      "part_of_speech": "verb",
-      "conjugation": 1,
-      "infinitive": "tribulari",
-      
-      "perfect": "tribulatus",
-      "supine": "tribulatum",
-      "forms":{
-        "present_passive": ["tribulor", "tribularis", "tribulatur", "tribulamur", "tribulamini", "tribulantur"]
-        },
-      "translations": {
-        "en": "to afflict, oppress",
-        "la": "tribulor, tribulari, tribulatus sum"
       }
     },
     {
