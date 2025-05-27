@@ -2184,7 +2184,7 @@
 
 {
   "psalmNumber": 120,
-  "category": "Gradual Psalm",
+  "category": "",
   "themes": [
     {
       "name": "Augustine: Interior Ascent",
@@ -2213,7 +2213,7 @@
     {
       "name": "Personal Protection",
       "description": "God’s protection is personal, present, and proximate—like a shield on your right hand.",
-      "lemmas": ["custodio", "dominus", "protectio", "dextera", "manus"],
+      "lemmas": ["custodio",  "protectio", "dextera", "manus"],
       "startLine": 5,
       "endLine": 5,
       "comment": "Imagery of God as your shadow or shield beside you."

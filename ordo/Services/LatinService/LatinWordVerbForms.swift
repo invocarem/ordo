@@ -204,20 +204,28 @@ extension LatinWordEntity {
     // Perfect Passive Participle (if supine stem exists)
     if !stems.supine.isEmpty {
         let supineStem = stems.supine
-        let perfectPassiveParticiple = [
-            // Masculine forms (nominative, genitive, dative, accusative, ablative, plural forms)
+
+        // Masculine forms (nominative, genitive, dative, accusative, ablative + plural forms)
+        let masculineForms = [
             supineStem + "us", supineStem + "i", supineStem + "o", supineStem + "um", supineStem + "o",
-            supineStem + "i", supineStem + "orum", supineStem + "is", supineStem + "os", supineStem + "is",
-            
-            // Feminine forms
+            supineStem + "i", supineStem + "orum", supineStem + "is", supineStem + "os", supineStem + "is"
+        ]
+        addForm("perfect_passive_participle_m", masculineForms)
+        
+        // Feminine forms
+        let feminineForms = [
             supineStem + "a", supineStem + "ae", supineStem + "ae", supineStem + "am", supineStem + "a",
-            supineStem + "ae", supineStem + "arum", supineStem + "is", supineStem + "as", supineStem + "is",
-            
-            // Neuter forms
+            supineStem + "ae", supineStem + "arum", supineStem + "is", supineStem + "as", supineStem + "is"
+        ]
+        addForm("perfect_passive_participle_f", feminineForms)
+        
+        // Neuter forms
+        let neuterForms = [
             supineStem + "um", supineStem + "i", supineStem + "o", supineStem + "um", supineStem + "o",
             supineStem + "a", supineStem + "orum", supineStem + "is", supineStem + "a", supineStem + "is"
         ]
-        addForm("perfect_passive_participle", perfectPassiveParticiple)
+        addForm("perfect_passive_participle_n", neuterForms)
+        
     }
 }
     

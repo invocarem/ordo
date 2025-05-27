@@ -14827,11 +14827,15 @@
         "lemma": "dico",
         "part_of_speech": "verb",
         "conjugation": 3,
+        "infinitive": "dicere",
+        "present": "dico",
+        "perfect": "dixi",
+        "supine": "dictum",
         "translations": {
             "en": "say, speak, tell",
             "la": "dico"
         },
-        "principal_parts": ["dico", "dicere", "dixi", "dictum"],
+        
         "forms": {
             "present": [
                 "dico", "dicis", "dicit",
@@ -14849,6 +14853,7 @@
                 "dixi", "dixisti", "dixit",
                 "diximus", "dixistis", "dixerunt"
             ]
+           
         }
     },
     {

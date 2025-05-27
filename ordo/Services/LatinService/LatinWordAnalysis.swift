@@ -121,16 +121,60 @@ extension LatinWordEntity {
         if let perfect = perfect, perfect.lowercased() == form {
             return "has/have \(translation)ed (perfect)"
         }
-         
+        if let participle = analyzeParticiple(form: lowerForm, translation: translation) {
+            return participle
+        }
         if let gerundResult = analyzeGerund(form: lowerForm, translation: translation) {
             return gerundResult
         }
-            
+            print("⚠️ Unknown verb form: \(form)")
           
         
         // Handle conjugated forms
         return analyzeVerbConjugation(form: form, translation: translation)
     }
+
+    private func analyzeParticiple(form: String, translation: String) -> String? {
+        guard let forms = forms else { return nil }
+        
+        for (key, values) in forms {
+            guard values.contains(where: { $0.lowercased() == form }) else { continue }
+            
+            if key.hasPrefix("present_participle_") {
+                let genderNumber = key.replacingOccurrences(of: "present_participle_", with: "")
+                return "\(translation)ing (\(parseGenderNumber(genderNumber)))"
+            }
+           if key.hasPrefix("perfect_passive_participle") {
+                   let genderSuffix = key.replacingOccurrences(of: "perfect_passive_participle_", with: "")
+                            return "having been \(translation)ed (\(parseGenderNumber(genderSuffix)))"
+            }
+            
+            if key.hasPrefix("future_active_") {
+                let genderNumber = key.replacingOccurrences(of: "future_active_", with: "")
+                return "about to \(translation) (\(parseGenderNumber(genderNumber)))"
+            }
+            else {
+                   print("⚠️ Unknown participle key: \(key)")
+            }
+        }
+        return nil
+    }
+    private func parseGenderNumber(_ key: String) -> String {
+        let components = key.components(separatedBy: "_")
+        guard components.count >= 2 else { return key }
+        
+        let gender: String
+        switch components[0] {
+        case "m": gender = "masculine"
+        case "f": gender = "feminine"
+        case "n": gender = "neuter"
+        default: gender = components[0]
+        }
+        
+        let number = components[1] == "sg" ? "singular" : "plural"
+        return "\(gender) \(number)"
+    }
+
     private func analyzeGerund(form: String, translation: String) -> String? {
         guard let forms = forms else { return nil }
         

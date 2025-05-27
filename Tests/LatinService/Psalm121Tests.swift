@@ -3,7 +3,7 @@ import XCTest
 
 class Psalm121Tests: XCTestCase {
     private var latinService: LatinService!
-    let verbose = false
+    let verbose = true
     
     override func setUp() {
         super.setUp()
@@ -60,7 +60,49 @@ class Psalm121Tests: XCTestCase {
         
        
     }
+    func testDico() {
+        latinService.configureDebugging(target: "dico")
+        let analysis = latinService.analyzePsalm(id, text: psalm121)
+        latinService.configureDebugging(target: "dico")
+        
+        // Verify "dicta" comes from "dico"
+        let dictaEntry = analysis.dictionary["dico"]
+        XCTAssertNotNil(dictaEntry, "Lemma 'dico' should exist for 'dicta'")
+        
+        // Check translation
+        let translation = dictaEntry?.translation?.lowercased() ?? ""
+        XCTAssertTrue(
+            translation.contains("say") || translation.contains("speak"),
+            "Expected 'dico' to mean 'say' or 'speak', got: \(translation)"
+        )
+        
+        // Check if "dicta" is a recognized form
+        let dictaFormCount = dictaEntry?.forms["dicta"] ?? 0
+        XCTAssertGreaterThan(
+            dictaFormCount, 0,
+            "Form 'dicta' should exist for lemma 'dico'"
+        )
+        
+        if let entity = dictaEntry?.entity {
+           let result = entity.analyzeFormWithMeaning("dicta")
+                XCTAssertTrue(result.contains("having been") && result.contains("said"),
+                      "Expected translation like 'having been said', got: \(result)")
     
+                 if verbose {
+                        print("  Translation of 'dicta': \(result)")
+                }
+            } else {
+            XCTFail("Entity for 'dico' not found")
+        }
+        
+        if verbose {
+            print("\nDICO Analysis:")
+            print("  Translation: \(dictaEntry?.translation ?? "?")")
+            print("  Form 'dicta' found: \(dictaFormCount > 0 ? "✅" : "❌")")
+            print("  All forms: \(dictaEntry?.forms.keys.joined(separator: ", ") ?? "none")")
+        }
+    }
+
     // 3. Unity and Community
     func testUnityTheme() {
         let analysis = latinService.analyzePsalm(id, text: psalm121)
