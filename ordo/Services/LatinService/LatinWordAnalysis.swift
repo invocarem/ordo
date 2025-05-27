@@ -136,20 +136,21 @@ extension LatinWordEntity {
 
     private func analyzeParticiple(form: String, translation: String) -> String? {
         guard let forms = forms else { return nil }
-        
-        for (key, values) in forms {
+        let allForms = (forms ?? [:]).merging(generatedVerbForms()) { user, _ in user }
+
+        for (key, values) in allForms {
+            print("🔍 Checking key: \(key), values: \(values)")
             guard values.contains(where: { $0.lowercased() == form }) else { continue }
             
             if key.hasPrefix("present_participle_") {
                 let genderNumber = key.replacingOccurrences(of: "present_participle_", with: "")
                 return "\(translation)ing (\(parseGenderNumber(genderNumber)))"
             }
-           if key.hasPrefix("perfect_passive_participle") {
+            else if key.hasPrefix("perfect_passive_participle") {
                    let genderSuffix = key.replacingOccurrences(of: "perfect_passive_participle_", with: "")
                             return "having been \(translation)ed (\(parseGenderNumber(genderSuffix)))"
             }
-            
-            if key.hasPrefix("future_active_") {
+            else  if key.hasPrefix("future_active_") {
                 let genderNumber = key.replacingOccurrences(of: "future_active_", with: "")
                 return "about to \(translation) (\(parseGenderNumber(genderNumber)))"
             }
