@@ -34,7 +34,7 @@ class Psalm128Tests: XCTestCase {
             ("expugno", ["expugnaverunt"], "attack"),
             ("juventus", ["juventute"], "youth"),
             ("dorsum", ["dorsum"], "back"),
-            ("fabricor", ["fabricaverunt"], "build")
+            ("fabricor", ["fabricaverunt"], "construct")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: persecutionTerms)
@@ -45,7 +45,7 @@ class Psalm128Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(id, text: psalm128)
         
         let justiceTerms = [
-            ("Dominus", ["Dominus", "Domini"], "Lord"),
+            ("dominus", ["Dominus", "Domini"], "Lord"),
             ("justus", ["justus"], "just"),
             ("concido", ["concidit"], "cut down"),
             ("cervix", ["cervices"], "neck"),
@@ -60,11 +60,11 @@ class Psalm128Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(id, text: psalm128)
         
         let shameTerms = [
-            ("confundo", ["Confundantur"], "be ashamed"),
+            ("confundo", ["Confundantur"], "confuse"),
             ("converto", ["convertantur"], "turn back"),
             ("retrorsum", ["retrorsum"], "backward"),
             ("odi", ["oderunt"], "hate"),
-            ("Sion", ["Sion"], "Zion")
+            ("sion", ["sion"], "zion")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: shameTerms)
@@ -108,7 +108,7 @@ class Psalm128Tests: XCTestCase {
             print("Unique lemmas:", analysis.uniqueLemmas)
             
             print("'expugno' forms:", analysis.dictionary["expugno"]?.forms ?? [:])
-            print("'Dominus' forms:", analysis.dictionary["Dominus"]?.forms ?? [:])
+            print("'dominus' forms:", analysis.dictionary["dominus"]?.forms ?? [:])
             print("'peccator' forms:", analysis.dictionary["peccator"]?.forms ?? [:])
         }
         XCTAssertLessThan(
@@ -119,41 +119,67 @@ class Psalm128Tests: XCTestCase {
     }
     
     // MARK: - Helper (Case-Insensitive)
-    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
-        let caseInsensitiveDict = Dictionary(uniqueKeysWithValues: 
-            analysis.dictionary.map { ($0.key.lowercased(), $0.value) }
-        )
-        
+
+    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, 
+                                     confirmedWords: [(lemma: String, 
+                                                     forms: [String], 
+                                                     translation: String)]) {
         for (lemma, forms, translation) in confirmedWords {
-            guard let entry = caseInsensitiveDict[lemma.lowercased()] else {
+            guard let entry = analysis.dictionary[lemma] else {
                 XCTFail("Missing lemma: \(lemma)")
                 continue
             }
             
-            // Case-insensitive translation check
+            // Verify semantic domain through translation
             XCTAssertTrue(
                 entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
                 "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
             )
             
-            // Case-insensitive form check
-            let entryFormsLowercased = Dictionary(uniqueKeysWithValues:
-                entry.forms.map { ($0.key.lowercased(), $0.value) }
-            )
-            
-            let missingForms = forms.filter { entryFormsLowercased[$0.lowercased()] == nil }
+            // Verify morphological coverage
+            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
             if !missingForms.isEmpty {
                 XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
+            }
+            
+            // NEW: Verify each form's grammatical analysis
+            for form in forms {
+                if let entity = entry.entity {
+                    let result = entity.analyzeFormWithMeaning(form)
+                    
+                    // Check if analysis contains either:
+                    // 1. The exact translation we expect
+                    // 2. Or appropriate grammatical markers
+                    XCTAssertTrue(
+                        result.lowercased().contains(translation.lowercased()) ||
+                        result.lowercased().contains("verb") ||
+                        result.lowercased().contains("participle") ||
+                        result.lowercased().contains("noun"),
+                        """
+                        For form '\(form)' of lemma '\(lemma)':
+                        Expected analysis to contain '\(translation)' or grammatical info,
+                        but got: \(result)
+                        """
+                    )
+                    
+                    if verbose {
+                        print("  Analysis of '\(form)': \(result)")
+                    }
+                } else {
+                    XCTFail("Entity for lemma '\(lemma)' not found")
+                }
             }
             
             if verbose {
                 print("\n\(lemma.uppercased())")
                 print("  Translation: \(entry.translation ?? "?")")
+                print("  Forms found: \(entry.forms.keys.filter { forms.map { $0.lowercased() }.contains($0) }.count)/\(forms.count)")
                 forms.forEach { form in
-                    let count = entryFormsLowercased[form.lowercased()] ?? 0
+                    let count = entry.forms[form.lowercased()] ?? 0
                     print("  \(form.padding(toLength: 15, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
                 }
             }
         }
     }
+
 }

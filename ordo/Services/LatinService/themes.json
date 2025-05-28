@@ -1152,7 +1152,153 @@
     }
   ]
 },
+{
+  "psalmNumber": 62,
+  "category": "",
+  "themes": [
+    {
+      "name": "Soul's Thirst",
+      "description": "Intense spiritual longing for God's presence.",
+      "lemmas": ["sitio", "adhaereo", "anima", "desertus"],
+      "startLine": 1,
+      "endLine": 3,
+      "comment": "Desert imagery emphasizing spiritual thirst"
+    },
+    {
+      "name": "Divine Refuge",
+      "description": "God as protector and sustainer.",
+      "lemmas": ["adjutor", "velamen", "dextera", "suscipio"],
+      "startLine": 7,
+      "endLine": 9,
+      "comment": "Wing and hand imagery for protection"
+    },
+    {
+      "name": "Sacred Praise",
+      "description": "Wholehearted worship in all circumstances.",
+      "lemmas": ["laudo", "benedico", "exsulto", "juro"],
+      "startLine": 4,
+      "endLine": 12,
+      "comment": "Praise from dawn to dark"
+    },
+    {
+      "name": "Divine Justice",
+      "description": "God's judgment on the wicked.",
+      "lemmas": ["gladius", "vulpes", "iniquus", "obstruo"],
+      "startLine": 10,
+      "endLine": 12,
+      "comment": "Contrast between faithful and wicked"
+    },
+    {
+      "name": "Royal Vindication",
+      "description": "The king's joy in God's justice.",
+      "lemmas": ["rex", "laetor", "juro", "obstruo"],
+      "startLine": 12,
+      "endLine": 12,
+      "comment": "Messianic undertones"
+    }
+  ]
+},
+{
+  "psalmNumber": 63,
+  "category": "",
+  "themes": [
+    {
+      "name": "Cry for Help",
+      "description": "The psalmist urgently pleads for God's intervention against enemies.",
+      "lemmas": ["exaudio", "deprecor", "eripio", "timore"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "Immediate plea for divine rescue from danger."
+    },
+    {
+      "name": "Divine Protection",
+      "description": "God's shielding power against hostile forces.",
+      "lemmas": ["protego", "conventus", "malignus", "multitudo"],
+      "startLine": 2,
+      "endLine": 2,
+      "comment": "God's defense against collective evil."
+    },
+    {
+      "name": "Enemy Weapons",
+      "description": "The dangerous arsenal of adversaries including words and projectiles.",
+      "lemmas": ["gladius", "lingua", "arcus", "sagitta", "laqueus"],
+      "startLine": 3,
+      "endLine": 6,
+      "comment": "Metaphorical and literal weapons used against the righteous."
+    },
+    {
+      "name": "Failed Schemes",
+      "description": "The enemies' plans ultimately fail despite their efforts.",
+      "lemmas": ["scrutor", "deficio", "conturbo", "infirmo"],
+      "startLine": 7,
+      "endLine": 10,
+      "comment": "Divine reversal of evil plans through exposure and weakness."
+    },
+    {
+      "name": "Righteous Vindication",
+      "description": "The just are ultimately rewarded and God is glorified.",
+      "lemmas": ["justus", "laetor", "spero", "laudo", "rectus"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "Final triumph of the faithful and recognition of God's works."
+    },
+    {
+      "name": "Divine Exaltation",
+      "description": "God is ultimately lifted up as the righteous take refuge in Him.",
+      "lemmas": ["exalto", "cor", "altum", "annuntio"],
+      "startLine": 8,
+      "endLine": 12,
+      "comment": "Theological climax where God's supremacy is revealed."
+    }
+  ]
+},
 
+{
+  "psalmNumber": 64,
+  "category": "",
+  "themes": [
+    {
+      "name": "Sacred Worship",
+      "description": "Proper praise and vows to God in holy places.",
+      "lemmas": ["hymnus", "votum", "sanctus", "templum"],
+      "startLine": 1,
+      "endLine": 5,
+      "comment": "Focus on liturgical elements in Jerusalem"
+    },
+    {
+      "name": "Cosmic Power",
+      "description": "God's control over nature and nations.",
+      "lemmas": ["virtus", "potentia", "conturbo", "praeparo"],
+      "startLine": 7,
+      "endLine": 9,
+      "comment": "Theophanic imagery of mountains and seas"
+    },
+    {
+      "name": "Agricultural Blessing",
+      "description": "Divine provision through abundant harvests.",
+      "lemmas": ["repleo", "fructus", "uber", "frumentum", "germino"],
+      "startLine": 10,
+      "endLine": 15,
+      "comment": "Celebration of fertility and abundance"
+    },
+    {
+      "name": "Prayer Dynamics",
+      "description": "Human petitions and divine responses.",
+      "lemmas": ["exaudio", "oratio", "propitior", "visito"],
+      "startLine": 1,
+      "endLine": 10,
+      "comment": "Pattern of invocation and answer"
+    },
+    {
+      "name": "Eschatological Joy",
+      "description": "Creation's ultimate rejoicing in God.",
+      "lemmas": ["laetor", "exsultatio", "hymnus", "clamo"],
+      "startLine": 12,
+      "endLine": 15,
+      "comment": "Creation personified in celebration"
+    }
+  ]
+},
 
     {
       "psalmNumber": 89,
@@ -2148,14 +2294,14 @@
       "comment": "Military metaphors for divine judgment"
     },
     {
-      "name": "Exile Lament",
-      "description": "Expression of alienation among hostile people",
-      "lemmas": ["incolatus", "prolongo", "habito", "Cedar"],
-      "startLine": 5,
-      "endLine": 5,
-      "comment": "Geographical metaphor for spiritual isolation"
+       "name": "Augsutine: The ‘Heu’ of Exile",
+        "description": "The psalmist’s cry of lament, interpreted by Augustine as the voice of sinful humanity’s exile from God",
+        "lemmas": ["heu", "incolatus", "prolongo", "cedar"],
+        "startLine": 5,
+        "endLine": 5,
+        "comment": "Augustine links this to the soul’s 'groaning' for redemption (Enarr. Ps. 119.5). The Cedar reference (Genesis 25:13) underscores exile among the unfaithful."
     },
-    {
+   {
       "name": "Peace-Seeker's Dilemma",
       "description": "Conflict between desire for peace and experience of hatred",
       "lemmas": ["incola", "anima", "odi", "pax"],

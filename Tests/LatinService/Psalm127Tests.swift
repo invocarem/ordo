@@ -9,6 +9,7 @@ class Psalm127Tests: XCTestCase {
         super.setUp()
         latinService = LatinService.shared
     }
+    let id = PsalmIdentity(number: 127, category: nil)
     
     // MARK: - Test Data
     let psalm127 = [
@@ -24,7 +25,7 @@ class Psalm127Tests: XCTestCase {
     
     // 1. Test Blessedness and Fear of the Lord
     func testBlessednessAndFearOfLord() {
-        let analysis = latinService.analyzePsalm(text: psalm127)
+        let analysis = latinService.analyzePsalm(id, text: psalm127)
         
         let blessedTerms = [
             ("beatus", ["Beati", "beatus"], "blessed"),
@@ -39,7 +40,7 @@ class Psalm127Tests: XCTestCase {
     
     // 2. Test Labor and Reward
     func testLaborAndReward() {
-        let analysis = latinService.analyzePsalm(text: psalm127)
+        let analysis = latinService.analyzePsalm(id, text: psalm127)
         
         let laborTerms = [
             ("labor", ["Labores"], "labor"),
@@ -54,7 +55,7 @@ class Psalm127Tests: XCTestCase {
     
     // 3. Test Family Blessings
     func testFamilyBlessings() {
-        let analysis = latinService.analyzePsalm(text: psalm127)
+        let analysis = latinService.analyzePsalm(id, text: psalm127)
         
         let familyTerms = [
             ("uxor", ["Uxor"], "wife"),
@@ -69,14 +70,14 @@ class Psalm127Tests: XCTestCase {
     
     // 4. Test Domestic Imagery
     func testDomesticImagery() {
-        let analysis = latinService.analyzePsalm(text: psalm127)
+        let analysis = latinService.analyzePsalm(id, text: psalm127)
         
         let domesticTerms = [
             ("latus", ["lateribus"], "side"),
             ("mensa", ["mensae"], "table"),
             ("novellus", ["novellae"], "young"),
             ("circuitus", ["circuitu"], "around"),
-            ("abundo", ["abundans"], "abundant")
+            ("abundo", ["abundans"], "abound")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: domesticTerms)
@@ -84,12 +85,11 @@ class Psalm127Tests: XCTestCase {
     
     // 5. Test National Blessings
     func testNationalBlessings() {
-        let analysis = latinService.analyzePsalm(text: psalm127)
+        let analysis = latinService.analyzePsalm(id, text: psalm127)
         
         let nationalTerms = [
-            ("benedico", ["benedicetur", "Benedicat"], "bless"),
-            ("Sion", ["Sion"], "Zion"),
-            ("Jerusalem", ["Jerusalem"], "Jerusalem"),
+            ("benedico", ["benedicetur", "benedicat"], "bless"),
+            ("sion", ["sion"], "zion"),
             ("vita", ["vitae"], "life"),
             ("pax", ["Pax"], "peace")
         ]

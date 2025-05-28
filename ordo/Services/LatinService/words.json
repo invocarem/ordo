@@ -1,4 +1,332 @@
 [
+{
+  "lemma": "suscipio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "suscipere",
+  "present": "suscipio",
+  "perfect": "suscepi",
+  "supine": "susceptum",
+  "forms": {
+    "perfect_active": ["suscepit"]
+  },
+  "translations": {
+    "en": "to receive, undertake, support",
+    "la": "suscipio, suscipere"
+  }
+},
+
+  {
+  "lemma": "velamen",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "velamen",
+  "genitive": "velaminis",
+  "dative": "velamini",
+  "accusative": "velamen",
+  "ablative": "velamine",
+  "nominative_plural": "velamina",
+  "genitive_plural": "velaminum",
+  "dative_plural": "velaminibus",
+  "accusative_plural": "velamina",
+  "ablative_plural": "velaminibus",
+  "forms": {
+    "dative_eccl": ["velamento"]
+  },
+  "translations": {
+    "en": "covering, veil, shroud",
+    "la": "velamen, velaminis"
+  }
+},
+  {
+    "lemma": "desertus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "positive": "desertus",
+    "nominative": "desertus",
+    "genitive": "deserti",
+    "dative": "deserto",
+    "accusative": "desertum",
+    "ablative": "deserto",
+    "vocative": "deserte",
+    "forms": {
+        "nominative_f": ["deserta"],
+        "genitive_f": ["desertae"],
+        "accusative_f": ["desertam"],
+        "ablative_f": ["deserta"],
+        "nominative_n": ["desertum"],
+        "accusative_n": ["desertum"],
+        "nominative_plural_f": ["desertae"],
+        "nominative_plural_n": ["deserta"]
+    },
+    "translations": {
+        "en": "deserted, abandoned, desolate",
+        "la": "desertus, -a, -um"
+    }
+},
+ {
+  "lemma": "sitio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "sitire",
+  "present": "sitio",
+  "future": "siliam",
+  "perfect": "sitivi",
+  "supine": "sititum",
+  "translations": {
+    "en": "to thirst, be thirsty",
+    "la": "sitio, sitire"
+  }
+},
+  {
+    "lemma": "vulpes",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "vulpes",
+    "genitive": "vulpis",
+    "forms": {
+      "genitive_plural_eccl": ["vulpium"]
+    },
+    "translations": {
+      "en": "fox",
+      "la": "vulpes, vulpis"
+    }
+  },
+  {
+    "lemma": "iniquus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "iniquus",
+    "genitive": "iniqui",
+    "forms": {
+      "nominative_f": ["iniqua"],
+      "genitive_f": ["iniquae"],
+      "nominative_n": ["iniquum"],
+      "genitive_n": ["iniqui"]
+    },
+    "forms_plural": {
+      "nominative_m":[ "iniqui"],
+      "genitive_m": ["iniquorum"],
+      "nominative_f": ["iniquae"],
+      "genitive_f": ["iniquarum"],
+      "nominative_n": ["iniqua"],
+      "genitive_n": ["iniquorum"]
+    },
+    "translations": {
+      "en": "unjust, unfair, wicked",
+      "la": "iniquus, iniqua, iniquum"
+    }
+  },
+  {
+    "lemma": "obstruo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "obstruere",
+    "present": "obstruo",
+    "future": "obstruam",
+    "perfect": "obstruxi",
+    "supine": "obstructum",
+    "translations": {
+      "en": "to block, obstruct, hinder",
+      "la": "obstruo, obstruere"
+    }
+  },
+
+   {
+    "lemma": "exsultatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "exsultatio",
+    "genitive": "exsultationis",
+    "translations": {
+      "en": "rejoicing, exultation",
+      "la": "exsultatio, exsultationis"
+    }
+  },
+  {
+  "lemma": "genimen",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "genimen",
+  "genitive": "geniminis",
+ "translations": {
+    "en": "offspring, shoot, produce (of plants)",
+    "la": "genimen, geniminis"
+  }
+},
+ {
+  "lemma": "fructus",
+  "part_of_speech": "noun",
+  "declension": 4,
+  "gender": "masculine",
+  "nominative": "fructus",
+  "genitive": "fructus",
+  "translations": {
+    "en": "fruit, produce, profit, benefit",
+    "la": "fructus, fructus"
+  }
+}, 
+  {
+    "lemma": "templum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "templum",
+    "genitive": "templi",
+    "translations": {
+      "en": "temple, shrine, sacred place",
+      "la": "templum, templi"
+    }
+  },
+  {
+    "lemma": "hymnus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "hymnus",
+    "genitive": "hymni",
+    "translations": {
+      "en": "hymn, song of praise",
+      "la": "hymnus, hymni"
+    }
+  },
+  {
+    "lemma": "praeparo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "praeparare",
+    "present": "praeparo",
+    "future": "praeparabo",
+    "perfect": "praeparavi",
+    "supine": "praeparatum",
+    "translations": {
+      "en": "to prepare, make ready, equip",
+      "la": "praeparo, praepare"
+    },
+    "note": "!change infinitive praepare to praeparare"
+  },
+  {
+    "lemma": "germino",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "germinare",
+    "present": "germino",
+    "future": "germinabo",
+    "perfect": "germinavi",
+    "supine": "germinatum",
+    "translations": {
+      "en": "to sprout, bud, germinate",
+      "la": "germino, germinare"
+    }
+  },
+  {
+  "lemma": "germen",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "germen",
+  "genitive": "germinis",
+  "forms_plural": {
+      "nominative_f": ["germina"],
+      "accusative_f": ["germina"]
+  },
+  "translations": {
+    "en": "sprout, bud, offspring",
+    "la": "germen, germinis"
+  }
+},
+  {
+    "lemma": "uber",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "uber",
+    "genitive": "uberis",
+    "ablative": "ubertate",
+    "translations": {
+      "en": "breast, udder, fertility",
+      "la": "uber, uberis"
+    }
+  },
+
+  {
+  "lemma": "firmo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "firmare",
+  "present": "firmo",
+  "future": "firmabo",
+  "perfect": "firmavi",
+  "supine": "firmatum",
+  "translations": {
+    "en": "to strengthen, confirm, make firm",
+    "la": "firmo, firmare"
+  }
+},
+  {
+  "lemma": "scrutinium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "scrutinium",
+  "genitive": "scrutinii",
+  "translations": {
+    "en": "examination, inquiry, search",
+    "la": "scrutinium, scrutinii"
+  }
+},
+  {
+  "lemma": "sagitto",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "sagittare",
+  "present": "sagitto",
+  "future": "sagittabo",
+  "perfect": "sagittavi",
+  "supine": "sagittatum",
+  "translations": {
+    "en": "to shoot arrows, to aim, to dart",
+    "la": "sagitto, sagittare"
+  }
+},
+  {
+  "lemma": "novellus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "novellus",
+  "genitive": "novelli",
+  "forms": {
+    "nominative_f": ["novella"],
+    "genitive_f": ["novellae"],
+    "nominative_n": ["novellum"],
+    "genitive_n": ["novelli"],
+    "nominative_f_plural": ["novellae"],
+    "genitive_f_plural": ["novellarum"]
+  },
+  "translations": {
+    "en": "young, new, fresh",
+    "la": "novellus, -a, -um"
+  }
+},
+  {
+  "lemma": "latus",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "latus",
+  "genitive": "lateris",
+  "translations": {
+    "en": "side, flank",
+    "la": "latus, lateris"
+  }
+},
     {
       "lemma": "gratis",
       "part_of_speech": "adverb",
@@ -2225,7 +2553,7 @@
   "nominative": "labor",
   "genitive": "laboris",
   "translations": {
-    "en": "toil, work, suffering",
+    "en": "toil, labor, suffering",
     "la": "labor"
   }
 },
@@ -6171,19 +6499,6 @@
     }
   },
   {
-    "lemma": "fructus",
-    "part_of_speech": "noun",
-    "declension": 4,
-    "gender": "masculine",
-    "nominative": "fructus",
-    "genitive": "fructus",
-
-    "translations": {
-      "en": "fruit, benefit, produce",
-      "la": "fructus"
-    }
-  },
-  {
     "lemma": "finis",
     "part_of_speech": "noun",
     "declension": 3,
@@ -6226,7 +6541,7 @@
     "perfect": "exsultavi",
     "supine": "exsultatum",
     "translations": {
-      "en": "exult, rejoice, leap for joy",
+      "en": "rejoice, leap for joy",
       "la": "exsulto, exsultare, exsultavi, exsultatum"
     },
     "forms": {
@@ -6725,20 +7040,7 @@
       "subjunctive_imperfect": ["insurgerem", "insurgeres", "insurgeret", "insurgeremus", "insurgeretis", "insurgerent"]
     }
   },
-  {
-  "lemma": "suscipio",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "suscipere",
-  "present": "suscipio",
-  "perfect": "suscepi",
-  "supine": "susceptum",
-  "translations": {
-    "en": "to receive, undertake, support",
-    "la": "suscipio, suscipere"
-  }
-},
-  {
+    {
     "lemma": "susceptor",
     "part_of_speech": "noun",
     "declension": 3,
@@ -8468,7 +8770,7 @@
       "perfect": "conturbavi",
       "supine": "conturbatum",
       "translations": {
-        "en": "to terrify, confuse, disturb, throw into disorder",
+        "en": "to disturb, terrify, confuse",
         "la": "conturbo, conturbare, conturbavi, conturbatum"
       },
       "forms": {
@@ -9467,7 +9769,7 @@
             "perfect": ["fabricaverunt"]
           },
           "translations": {
-            "en": "to forge, construct, plot (deponent)",
+            "en": "to construct, forge, plot (deponent)",
             "la": "fabricor"
           }
         },
@@ -9625,23 +9927,7 @@
         "la": "consolor"
       }
     },
-    {
-      "lemma": "exsultatio",
-      "part_of_speech": "noun",
-      "gender": "feminine",
-      "declension": 3,
-      "nominative": "exsultatio",
-      "genitive": "exsultationis",
-      "dative": "exsultationi",
-      "accusative": "exsultationem",
-      "ablative": "exsultatione",
-      "vocative": "exsultatio",
-      "ablative_plural": "exsultationibus",
-      "translations": {
-        "en": "exultation, rejoice",
-        "la": "exsultatio"
-      }
-    },
+    
     {
       "lemma": "magnifico",
       "part_of_speech": "verb",
@@ -10512,7 +10798,7 @@
             "gerundive": ["abundandus"]
         },
         "translations": {
-            "en": "abound",
+            "en": "to abound, overflow, be plentiful",
             "la": "abundo"
         }
     },
@@ -13351,25 +13637,7 @@
                 "la": "iniquitas"
             }
         },
-        {
-            "lemma": "iniquus",
-            "part_of_speech": "adjective",
-            "nominative": "iniquus",
-            "genitive": "iniqui",
-            "dative": "iniquo",
-            "accusative": "iniquum",
-            "ablative": "iniquo",
-            "nominative_plural": "iniqui",
-            "genitive_plural": "iniquorum",
-            "dative_plural": "iniquis",
-            "accusative_plural": "iniquos",
-            "ablative_plural": "iniquis",
-            "translations": {
-                "en": "unjust, wicked, iniquitous",
-                "la": "iniquus"
-            },
-            "notes": "Psalm 37:21: 'qui retribuunt mala pro bonis' ('who return evil for good') - implied context of iniquity"
-        },
+       
         {
   "lemma": "inquinatus",
   "part_of_speech": "adjective",

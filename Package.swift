@@ -108,6 +108,10 @@ let package = Package(
                 
                 "Psalm50Tests.swift",
 
+                "Psalm62Tests.swift",
+                "Psalm63Tests.swift",
+                "Psalm64Tests.swift",
+
                 "Psalm66Tests.swift",
                 
                 "Psalm75Tests.swift",

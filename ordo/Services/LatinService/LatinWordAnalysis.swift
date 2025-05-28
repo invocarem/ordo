@@ -148,6 +148,11 @@ private func analyzeVerbPassive(form: String, translation: String) -> String? {
     let lowerForm = form.lowercased()
     let persons = ["I", "you", "he/she/it", "we", "you", "they"]
     
+   let base = extractPrimaryVerb(translation)
+   let cleanTranslation = base.replacingOccurrences(of: "^to\\s+", with: "", options: .regularExpression)
+
+
+
     // Present Passive
     if let presentPassive = allForms["present_passive"],
        let index = presentPassive.firstIndex(where: { $0.lowercased() == lowerForm }) {
@@ -163,13 +168,13 @@ private func analyzeVerbPassive(form: String, translation: String) -> String? {
     // Future Passive
     if let futurePassive = allForms["future_passive"],
        let index = futurePassive.firstIndex(where: { $0.lowercased() == lowerForm }) {
-        return "\(persons[index]) will be \(translation)ed (future passive)"
+        return "\(persons[index]) will be \(cleanTranslation)ed (future passive)"
     }
     
     // Perfect Passive (using perfect passive participle + esse)
     if let perfectPassive = allForms["perfect_passive"],
        let index = perfectPassive.firstIndex(where: { $0.lowercased() == lowerForm }) {
-        return "\(persons[index]) has been \(translation)ed (perfect passive)"
+        return "\(persons[index]) has been \(cleanTranslation)ed (perfect passive)"
     }
     
     // Pluperfect Passive
@@ -181,19 +186,19 @@ private func analyzeVerbPassive(form: String, translation: String) -> String? {
     // Future Perfect Passive
     if let futurePerfectPassive = allForms["future_perfect_passive"],
        let index = futurePerfectPassive.firstIndex(where: { $0.lowercased() == lowerForm }) {
-        return "\(persons[index]) will have been \(translation)ed (future perfect passive)"
+        return "\(persons[index]) will have been \(cleanTranslation)ed (future perfect passive)"
     }
     
     // Present Passive Subjunctive
     if let presentPassiveSubj = allForms["present_passive_subjunctive"],
        let index = presentPassiveSubj.firstIndex(where: { $0.lowercased() == lowerForm }) {
-        return "\(persons[index]) may be \(translation)ed (present passive subjunctive)"
+        return "\(persons[index]) may be \(cleanTranslation)ed (present passive subjunctive)"
     }
     
     // Imperfect Passive Subjunctive
     if let imperfectPassiveSubj = allForms["imperfect_passive_subjunctive"],
        let index = imperfectPassiveSubj.firstIndex(where: { $0.lowercased() == lowerForm }) {
-        return "\(persons[index]) might be \(translation)ed (imperfect passive subjunctive)"
+        return "\(persons[index]) might be \(cleanTranslation)ed (imperfect passive subjunctive)"
     }
     
     return nil
@@ -255,11 +260,6 @@ private func analyzeVerbPassive(form: String, translation: String) -> String? {
     }
 
      private func analyzeConjugation(tense: String, index: Int, translation: String, isPlural: Bool) -> String? {
-        if tense == "perfect_passive" {
-            let genderNumber = getGenderAndNumber(index: index, isPlural: isPlural)
-            return "having been \(translation)ed (\(genderNumber))"
-        }
-        
         let (person, number) = getPersonAndNumber(index: index)
         let effectiveNumber = isPlural ? " (pl)" : number
         
@@ -272,12 +272,10 @@ private func analyzeVerbPassive(form: String, translation: String) -> String? {
                      tense.hasSuffix("_n") ? "neuter" :
                      tense.hasSuffix("_m") ? "masculine" : "unknown"
     
-            let helperVerb = (person == "they" || person == "we" || (person == "you" && isPlural)) ? "have" : "has"
+            let helperVerb = (person == "I" || person == "they" || person == "we" || (person == "you" && isPlural)) ? "have" : "has"
             return "\(person) \(helperVerb) been \(cleanTranslation)ed\(effectiveNumber) (perfect passive \(gender))"
-        case "present":
+        case "present", "present_active_indicative":
             return "\(person) \(cleanTranslation)\(effectiveNumber) (present)"
-        case "present_active_indicative":
-            return "\(person) \(translation)\(effectiveNumber)"
         case "present_passive_indicative":
             return "\(person) \(isPlural ? "are" : "is") \(translation)ed\(effectiveNumber)"
         case "imperfect_active":
@@ -288,10 +286,10 @@ private func analyzeVerbPassive(form: String, translation: String) -> String? {
             return "\(person) was \(translation)ing\(effectiveNumber)"
         case "imperfect_passive_indicative":
             return "\(person) was being \(translation)ed\(effectiveNumber)"
-        case "future_active_indicative":
-            return "\(person) will \(translation)\(effectiveNumber)"
+        case "future", "future_active_indicative":
+            return "\(person) will \(cleanTranslation) \(effectiveNumber) (future)"
         case "future_passive_indicative":
-            return "\(person) will be \(translation)ed\(effectiveNumber)"
+            return "\(person) will be \(cleanTranslation)ed \(effectiveNumber)"
 
         case "future_perfect_eccl":
             return "\(person) will have  \(cleanTranslation)ed \(effectiveNumber) (future perfect eccl)"
@@ -306,11 +304,11 @@ private func analyzeVerbPassive(form: String, translation: String) -> String? {
 
 
         case "perfect", "perfect_active_indicative":
-            let helperVerb = (person == "they" || person == "we" || (person == "you" && isPlural)) ? "have" : "has"
+            let helperVerb = (person == "I" || person == "they" || person == "we" || (person == "you" && isPlural)) ? "have" : "has"
             return "\(person) \(helperVerb) \(cleanTranslation)ed\(effectiveNumber) (perfect)"
 
         case "perfect_passive_indicative":
-            let helperVerb = (person == "they" || person == "we" || (person == "you" && isPlural)) ? "have" : "has"
+            let helperVerb = (person == "I" || person == "they" || person == "we" || (person == "you" && isPlural)) ? "have" : "has"
             return "\(person) \(helperVerb) been \(translation)ed\(effectiveNumber) (perfect passive)"
 
         case "pluperfect_active_indicative":
@@ -331,7 +329,7 @@ private func analyzeVerbPassive(form: String, translation: String) -> String? {
             return "\(translation)ing (participle)"
 
         default:
-            return "default: \(translation) (\(tense) \(isPlural ? "plural" : "singular"))"
+            return "default: \(cleanTranslation) (\(tense) \(isPlural ? "plural" : "singular"))"
         }
     }
       private func analyzeVerbConjugation(form: String, translation: String) -> String? {
@@ -385,11 +383,15 @@ private func analyzeVerbPassive(form: String, translation: String) -> String? {
                     
                     if formVariant.lowercased() == lowerForm {
                         let gender = caseKey.contains("_f") ? "feminine" : 
-                                    caseKey.contains("_n") ? "neuter" : "masculine"
+                                    caseKey.contains("_n") ? "neuter" : 
+                                    caseKey.contains("_m") ? "masculine" :
+                                    self.gender?.rawValue ?? "unknown"
+                                    
                         let cleanCase = caseKey
                             .replacingOccurrences(of: "_f", with: "")
                             .replacingOccurrences(of: "_n", with: "")
-                            .replacingOccurrences(of: "_", with: "")
+                            .replacingOccurrences(of: "_m", with: "")
+                            .replacingOccurrences(of: "_", with: " ")
                         return "\(translation) (\(cleanCase) \(gender))"
                     }
                 }
