@@ -64,6 +64,50 @@ class Psalm119Tests: XCTestCase {
         
         verifyWordsInAnalysis(analysis, confirmedWords: speechTerms)
     }
+    func testVerbLoquerer() {
+       latinService.configureDebugging(target: "loquor")
+        let analysis = latinService.analyzePsalm(id, text: psalm119)
+    
+        // Verify "loquerer" comes from "loquor"
+        let loquorEntry = analysis.dictionary["loquor"]
+        XCTAssertNotNil(loquorEntry, "Lemma 'loquor' should exist for 'loquerer'")
+        
+        // Check translation
+        let translation = loquorEntry?.translation?.lowercased() ?? ""
+        XCTAssertTrue(
+            translation.contains("speak") || translation.contains("talk"),
+            "Expected 'loquor' to mean 'speak' or 'talk', got: \(translation)"
+        )
+        
+        // Check if "loquerer" is a recognized form
+        let loquererFormCount = loquorEntry?.forms["loquerer"] ?? 0
+        XCTAssertGreaterThan(
+            loquererFormCount, 0,
+            "Form 'loquerer' should exist for lemma 'loquor'"
+        )
+        
+        if let entity = loquorEntry?.entity {
+            let result = entity.analyzeFormWithMeaning("loquerer")
+            
+            // Verify it's imperfect active subjunctive (1st singular)
+            XCTAssertTrue(
+                result.lowercased().contains("i would speak") || 
+                result.lowercased().contains("imperfect") ||
+                result.lowercased().contains("subjunctive"),
+                "Expected 'I would speak' (imperfect subjunctive), got: \(result)"
+            )
+            
+            if verbose {
+                print("\nLOQUOR Analysis:")
+                print("  Translation: \(loquorEntry?.translation ?? "?")")
+                print("  Form 'loquerer' analysis: \(result)")
+            }
+        } else {
+            XCTFail("Entity for 'loquor' not found")
+        }
+        
+        latinService.configureDebugging(target: "")
+    }
     
     func testGeographicalReferences() {
         let analysis = latinService.analyzePsalm(id, text: psalm119)
