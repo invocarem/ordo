@@ -1,5 +1,16 @@
 [
-  
+  {
+    "lemma": "pinguedo",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "pinguedo",
+    "genitive": "pinguedinis",
+   "translations": {
+      "en": "richness, fatness",
+      "la": "pinguedo, pinguedinis"
+    }
+  }, 
   {
     "lemma": "invius",
     "part_of_speech": "adjective",
@@ -1505,6 +1516,9 @@
   "gender": "masculine",
   "nominative": "inferior",
   "genitive": "inferioris",
+  "forms": {
+      "compparative_nominative_n_plural": ["inferiora"]
+  },
   "translations": {
     "en": "lower, inferior",
     "la": "inferior, -ius"
@@ -3268,6 +3282,9 @@
   "gender": "masculine",
   "nominative": "adeps",
   "accusative": "adipem",
+  "forms": {
+      "ablative": ["adipe"]
+  },
   "translations": {
     "en": "fat, grease (animal); richness (figurative)",
     "la": "adeps, adipis"
@@ -4051,7 +4068,7 @@
   "perfect": "vigilavi",
   "supine": "vigilatum",
   "translations": {
-    "en": "to stay awake, keep watch",
+    "en": "to watch, stay awake",
     "la": "vigilo, vigilare, vigilavi, vigilatum"
   }
 },{
@@ -11411,7 +11428,8 @@
         "la": "quaero"
       },
       "forms": {
-        "imperfect": ["quaerebam", "quaerebas", "quaerebat", "quaerebamus", "quaerebatis", "quaerebant"]
+        "imperfect": ["quaerebam", "quaerebas", "quaerebat", "quaerebamus", "quaerebatis", "quaerebant"],
+        "perfect": [ "quaesivi",  "quaesivisti", "quaesivit", "quaesivimus", "quaesivistis", "quaesierunt"]
       }
     },
     {
@@ -15049,14 +15067,12 @@
         "forms": {
             "comparative_nominative_f": ["melior"],
             "comparative_genitive_f": ["melioris"],
-        },
+            "nominative_plural": ["bona"],
+            "accusative_plural": ["bona"]
+         },
         "translations": {
             "en": "good",
             "la": "bonus"
-        },
-        "forms": {
-            "nominative_plural": ["bona"],
-            "accusative_plural": ["bona"]
         }
     },
     {

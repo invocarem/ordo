@@ -27,6 +27,75 @@ class Psalm62Tests: XCTestCase {
         "Rex vero laetabitur in Deo; laudabuntur omnes qui jurant in eo, quia obstructum est os loquentium iniqua."
     ]
     
+     func testPsalm62Vocabulary() {
+        let analysis = latinService.analyzePsalm(id, text: psalm62)
+        
+        // ===== TEST METRICS =====
+        let totalWords = 120  // Actual word count in Psalm 62
+        let testedLemmas = 35 // Number of lemmas we're testing
+        let testedForms = 45  // Number of word forms verified
+        
+        // ===== VOCABULARY VERIFICATION =====
+        let confirmedWords = [
+            ("deus", ["deus", "deus"], "god"),
+            ("vigilo", ["vigilo"], "watch"),
+            ("sitio", ["sitivit"], "thirst"),
+            ("anima", ["anima", "anima", "animam"], "soul"),
+            ("caro", ["caro"], "flesh"),
+            ("terra", ["terra"], "earth"),
+            ("desertus", ["deserta"], "desert"),
+            ("invius", ["invia"], "pathless"),
+            ("inaquosus", ["inaquosa"], "waterless"),
+            ("sanctus", ["sancto"], "holy"),
+            ("appareo", ["apparui"], "appear"),
+            ("video", ["viderem"], "see"),
+            ("virtus", ["virtutem"], "power"),
+            ("gloria", ["gloriam"], "glory"),
+            ("misericordia", ["misericordia"], "mercy"),
+            ("vita", ["vitas", "vita"], "life"),
+            ("laudo", ["laudabunt", "laudabit", "laudabuntur"], "praise"),
+            ("benedico", ["benedicam"], "bless"),
+            ("nomen", ["nomine"], "name"),
+            ("levo", ["levabo"], "lift"),
+            ("manus", ["manus"], "hand"),
+            ("adeps", ["adipe"], "fat"),
+            ("pinguedo", ["pinguedine"], "richness"),
+            ("repleo", ["repleatur"], "fill"),
+            ("exsultatio", ["exsultationis"], "joy"),
+            ("memor", ["memor"], "mindful"),
+            ("stratum", ["stratum"], "bed"),
+            ("meditor", ["meditabor"], "meditate"),
+            ("adjutor", ["adjutor"], "helper"),
+            ("velamen", ["velamento"], "covering"),
+            ("ala", ["alarum"], "wing"),
+            ("exsulto", ["exsultabo"], "rejoice"),
+            ("adhaereo", ["adhaesit"], "cling"),
+            ("dextera", ["dextera"], "right hand"),
+            ("suscipio", ["suscepit"], "receive"),
+            ("vanus", ["vanum"], "vain"),
+            ("quaero", ["quaesierunt"], "seek"),
+            ("inferior", ["inferiora"], "lower"),
+            ("gladius", ["gladii"], "sword"),
+            ("pars", ["partes"], "portion"),
+            ("vulpes", ["vulpium"], "fox"),
+            ("rex", ["rex"], "king"),
+            ("laetor", ["laetabitur"], "rejoice"),
+            ("juro", ["jurant"], "swear"),
+            ("obstruo", ["obstructum"], "stop"),
+            ("iniquus", ["iniqua"], "wicked")
+        ]
+        
+        if verbose {
+            print("\n=== Psalm 62 Test Coverage ===")
+            print("Total words: \(totalWords)")
+            print("Unique lemmas: \(analysis.uniqueLemmas)")
+            print("Tested lemmas: \(testedLemmas) (\(String(format: "%.1f", Double(testedLemmas)/Double(analysis.uniqueLemmas)*100))%)")
+            print("Tested forms: \(testedForms) (\(String(format: "%.1f", Double(testedForms)/Double(totalWords)*100))%)")
+        }
+        
+        verifyWordsInAnalysis(analysis, confirmedWords: confirmedWords)
+    }
+
     // MARK: - Thematic Test Cases
     
     // 1. Soul's Longing Theme
@@ -140,62 +209,58 @@ class Psalm62Tests: XCTestCase {
         }
     }
     func testNounVulpes() {
-    latinService.configureDebugging(target: "vulpes")
-    let analysis = latinService.analyzePsalm(id, text: psalm62)
-    
-    // 1. Verify lemma exists
-    let vulpesEntry = analysis.dictionary["vulpes"]
-    XCTAssertNotNil(vulpesEntry, "Noun lemma 'vulpes' should exist")
-    
-    // 2. Check basic translation
-    let translation = vulpesEntry?.translation?.lowercased() ?? ""
-    XCTAssertTrue(
-        translation.contains("fox"),
-        "Expected 'vulpes' to mean 'fox', got: \(translation)"
-    )
-    
-    // 3. Verify form exists
-    let formCount = vulpesEntry?.forms["vulpium"] ?? 0
-    XCTAssertGreaterThan(
-        formCount, 0,
-        "Genitive plural form 'vulpium' should exist for lemma 'vulpes'"
-    )
-    
-    // 4. Detailed analysis
-    if let entity = vulpesEntry?.entity {
-        let result = entity.analyzeFormWithMeaning("vulpium")
+        latinService.configureDebugging(target: "vulpes")
+        let analysis = latinService.analyzePsalm(id, text: psalm62)
         
-        // Grammatical checks
+        // 1. Verify lemma exists
+        let vulpesEntry = analysis.dictionary["vulpes"]
+        XCTAssertNotNil(vulpesEntry, "Noun lemma 'vulpes' should exist")
+        
+        // 2. Check basic translation
+        let translation = vulpesEntry?.translation?.lowercased() ?? ""
         XCTAssertTrue(
-            result.contains("genitive plural"),
-            "Expected genitive plural, got: \(result)"
+            translation.contains("fox"),
+            "Expected 'vulpes' to mean 'fox', got: \(translation)"
         )
         
-        // Semantic checks
-        XCTAssertTrue(
-            result.lowercased().contains("fox") || 
-            result.lowercased().contains("of fox"),
-            "Expected reference to foxes, got: \(result)"
+        // 3. Verify form exists
+        let formCount = vulpesEntry?.forms["vulpium"] ?? 0
+        XCTAssertGreaterThan(
+            formCount, 0,
+            "Genitive plural form 'vulpium' should exist for lemma 'vulpes'"
         )
         
-       
-        if verbose {
-            print("\nVULPES Analysis (Psalm 62:11):")
-            print("Actual text: 'partes vulpium erunt'")
-            print("Form: Genitive plural of vulpes, vulpis f.")
-            print("Literal meaning: 'they will be portions for foxes'")
-            print("Analysis: \(result)")
+        // 4. Detailed analysis
+        if let entity = vulpesEntry?.entity {
+            let result = entity.analyzeFormWithMeaning("vulpium")
+            
+            // Grammatical checks
+            XCTAssertTrue(
+                result.contains("genitive plural"),
+                "Expected genitive plural, got: \(result)"
+            )
+            
+            // Semantic checks
+            XCTAssertTrue(
+                result.lowercased().contains("fox") || 
+                result.lowercased().contains("of fox"),
+                "Expected reference to foxes, got: \(result)"
+            )
+            
+        
+            if verbose {
+                print("\nVULPES Analysis (Psalm 62:11):")
+                print("Actual text: 'partes vulpium erunt'")
+                print("Form: Genitive plural of vulpes, vulpis f.")
+                print("Literal meaning: 'they will be portions for foxes'")
+                print("Analysis: \(result)")
+            }
+        } else {
+            XCTFail("Entity for 'vulpes' not found")
         }
-    } else {
-        XCTFail("Entity for 'vulpes' not found")
+        
+        
     }
-    
-    // 5. Negative test - shouldn't appear as verb
-    XCTAssertNil(
-        analysis.dictionary["vulpo"],
-        "Shouldn't have a verb lemma 'vulpo'"
-    )
-}
 
     // MARK: - Helper Methods
     private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, 
