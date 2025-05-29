@@ -1,4 +1,78 @@
 [
+  
+  {
+    "lemma": "invius",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "positive": "invius",
+    "nominative": "invius",
+    "genitive": "invii",
+    "dative": "invio",
+    "accusative": "invium",
+    "ablative": "invio",
+    "vocative": "invie",
+    "nominative_plural": "invii",
+    "genitive_plural": "inviorum",
+    "dative_plural": "inviis",
+    "accusative_plural": "invios",
+    "ablative_plural": "inviis",
+    "forms": {
+      "nominative_f": ["invia"],
+      "genitive_f": ["inviae"],
+      "accusative_f": ["inviam"],
+      "ablative_f": ["invia"],
+      "nominative_n": ["invium"],
+      "accusative_n": ["invium"],
+      "nominative_plural_f": ["inviae"],
+      "nominative_plural_n": ["invia"]
+    },
+    "translations": {
+      "en": "pathless, trackless, impassable",
+      "la": "invius, -a, -um"
+    }
+  },
+  {
+    "lemma": "inaquosus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "positive": "inaquosus",
+    "nominative": "inaquosus",
+    "genitive": "inaquosi",
+    "dative": "inaquoso",
+    "accusative": "inaquosum",
+    "ablative": "inaquoso",
+    "vocative": "inaquose",
+    "nominative_plural": "inaquosi",
+    "genitive_plural": "inaquosorum",
+    "dative_plural": "inaquosis",
+    "accusative_plural": "inaquosos",
+    "ablative_plural": "inaquosis",
+    "forms": {
+      "nominative_f": ["inaquosa"],
+      "genitive_f": ["inaquosae"],
+      "accusative_f": ["inaquosam"],
+      "ablative_f": ["inaquosa"],
+      "nominative_n": ["inaquosum"],
+      "accusative_n": ["inaquosum"],
+      "nominative_plural_f": ["inaquosae"],
+      "nominative_plural_n": ["inaquosa"]
+    },
+    "translations": {
+      "en": "waterless, without water",
+      "la": "inaquosus, -a, -um"
+    }
+  },
+
+  {
+  "lemma": "multipliciter",
+  "part_of_speech": "adverb",
+  "translations": {
+    "en": "in many ways, manifoldly, multiply",
+    "la": "multipliciter"
+  }
+},
 {
   "lemma": "suscipio",
   "part_of_speech": "verb",
@@ -14972,6 +15046,10 @@
         "dative_plural": "bonis",
         "accusative_plural": "bona",
         "ablative_plural": "bonis",
+        "forms": {
+            "comparative_nominative_f": ["melior"],
+            "comparative_genitive_f": ["melioris"],
+        },
         "translations": {
             "en": "good",
             "la": "bonus"
