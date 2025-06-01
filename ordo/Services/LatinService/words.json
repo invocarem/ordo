@@ -1,5 +1,20 @@
 [
-
+    {
+      "lemma": "obligo",
+      "part_of_speech": "verb",
+      "conjugation": 1,
+      "infinitive": "obligare",
+      "present": "obligo",
+      "perfect": "obligavi",
+      "supine": "obligatum",
+      "translations": {
+        "en": "to bind, oblige, fasten",
+        "la": "obligo, obligare, obligavi, obligatum"
+      },
+      "form_analysis": {
+        "obligati": "perfect passive participle (nominative masculine plural)"
+      }
+    },
   {
   "lemma": "tueor",
   "part_of_speech": "verb",
