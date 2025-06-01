@@ -10,6 +10,7 @@ class Psalm17BTests: XCTestCase {
         latinService = LatinService.shared
     }
     
+    let id = PsalmIdentity(number: 17, category: "b")
     // MARK: - Test Data
     let psalm17B = [
         "Cum sancto sanctus eris, et cum viro innocente innocens eris,",
@@ -154,16 +155,18 @@ func testPsalm17BLines5and6() {
     let line5 = psalm17B[4] // "Quoniam in te eripiar a tentatione, et in Deo meo transgrediar murum."
     let line6 = psalm17B[5] // "Deus meus, impolluta via ejus; eloquia Domini igne examinata;"
     let combinedText = line5 + " " + line6
+    latinService.configureDebugging(target: "transgredior")
     let analysis = latinService.analyzePsalm(text: combinedText)
+    latinService.configureDebugging(target: "")
     
     let testLemmas = [
         ("eripio", ["eripiar"], "rescue"),
         ("tentatio", ["tentatione"], "temptation"),
-        ("transgredior", ["transgrediar"], "pass over"),
+        ("transgredior", ["transgrediar"], "cross over"),
         ("murus", ["murum"], "wall"),
         ("impollutus", ["impolluta"], "pure"),
         ("via", ["via"], "way"),
-        ("eloquium", ["eloquia"], "words"),
+        ("eloquium", ["eloquia"], "word"),
         ("ignis", ["igne"], "fire"),
         ("examino", ["examinata"], "test")
     ]
@@ -207,6 +210,332 @@ func testPsalm17BLines7and8() {
     }
     
     verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+}
+
+// MARK: - Additional Test Cases for Psalm 17B
+
+func testPsalm17BLines9and10() {
+    let line9 = psalm17B[8] // "Deus qui praecinxit me virtute, et posuit immaculatam viam meam;"
+    let line10 = psalm17B[9] // "qui perfecit pedes meos tamquam cervorum, et super excelsa statuens me;"
+    let combinedText = line9 + " " + line10
+
+    latinService.configureDebugging(target: "perfecio")
+    let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 9)
+    
+    let testLemmas = [
+        ("praecingo", ["praecinxit"], "gird"),
+        ("virtus", ["virtute"], "strength"),
+        ("pono", ["posuit"], "place"),
+        ("immaculatus", ["immaculatam"], "spotless"),
+        ("via", ["viam"], "way"),
+        ("perficio", ["perfecit"], "perfect"),
+        ("pes", ["pedes"], "foot"),
+        ("cervus", ["cervorum"], "deer"),
+        ("excelsum", ["excelsa"], "height"),
+        ("statuo", ["statuens"], "set up")
+    ]
+    
+    let expectedThemes = [
+        "Divine Empowerment": [
+            ("praecingo", "God girds with strength"),
+            ("virtus", "Divine strength given to the faithful")
+        ],
+        "Divine Guidance": [
+            ("immaculatus", "God provides a blameless path"),
+            ("via", "God's way is perfect")
+        ],
+        "Transformation": [
+            ("perficio", "God perfects human weakness"),
+            ("cervus", "Given agility like a deer"),
+            ("excelsum", "Elevated to high places")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 17B:9-10 ANALYSIS:")
+        //print("9: \"\(line9)\"")
+        //print("10: \"\(line10)\"")
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm17BLines11and12() {
+    let line11 = psalm17B[10] // "qui docet manus meas ad praelium, et posuisti arcum aereum brachia mea."
+    let line12 = psalm17B[11] // "Et dedisti mihi protectionem salutis tuae, et dextera tua suscepit me:"
+    let combinedText = line11 + " " + line12
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("doceo", ["docet"], "teach"),
+        ("manus", ["manus"], "hand"),
+        ("praelium", ["praelium"], "battle"),
+        ("pono", ["posuisti"], "place"),
+        ("arcus", ["arcum"], "bow"),
+        ("aereus", ["aereum"], "bronze"),
+        ("brachium", ["brachia"], "arm"),
+        ("protego", ["protectionem"], "protection"),
+        ("salus", ["salutis"], "salvation"),
+        ("dexter", ["dextera"], "right hand"),
+        ("suscipio", ["suscepit"], "support")
+    ]
+    
+    let expectedThemes = [
+        "Divine Training": [
+            ("doceo", "God teaches warfare"),
+            ("praelium", "Preparation for spiritual battle")
+        ],
+        "Divine Armor": [
+            ("arcus", "God provides weapons"),
+            ("aereus", "Divine armor is strong")
+        ],
+        "Divine Support": [
+            ("protego", "God's protective covering"),
+            ("dexter", "God's right hand sustains")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 17B:11-12 ANALYSIS:")
+        print("11: \"\(line11)\"")
+        print("12: \"\(line12)\"")
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm17BLines13and14() {
+    let line13 = psalm17B[12] // "et disciplina tua correxit me in finem, et disciplina tua ipsa me docebit."
+    let line14 = psalm17B[13] // "Dilatasti gressus meos subtus me, et non sunt infirmata vestigia mea."
+    let combinedText = line13 + " " + line14
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("disciplina", ["disciplina"], "discipline"),
+        ("corrigo", ["correxit"], "correct"),
+        ("doceo", ["docebit"], "teach"),
+        ("dilato", ["dilatasti"], "enlarge"),
+        ("gressus", ["gressus"], "step"),
+        ("infirmo", ["infirmata"], "weaken"),
+        ("vestigium", ["vestigia"], "footstep")
+    ]
+    
+    let expectedThemes = [
+        "Divine Discipline": [
+            ("disciplina", "God's correction is instructive"),
+            ("corrigo", "God's discipline brings alignment")
+        ],
+        "Divine Empowerment": [
+            ("dilato", "God enlarges capacity"),
+            ("gressus", "Steadfastness in walking")
+        ],
+        "Stability": [
+            ("infirmo", "Divine protection from weakness"),
+            ("vestigium", "Firm footing in God's way")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 17B:13-14 ANALYSIS:")
+        print("13: \"\(line13)\"")
+        print("14: \"\(line14)\"")
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm17BLines15to18() {
+    let lines = [psalm17B[14], psalm17B[15], psalm17B[16], psalm17B[17]].joined(separator: " ")
+    let analysis = latinService.analyzePsalm(text: lines)
+    
+    let testLemmas = [
+        ("persequor", ["persequar"], "pursue"),
+        ("inimicus", ["inimicos"], "enemy"),
+        ("comprehendo", ["comprehendam"], "seize"),
+        ("contero", ["conteram"], "crush"),
+        ("cado", ["cadent"], "fall"),
+        ("supplanto", ["supplantasti"], "trip up"),
+        ("insurgo", ["insurgentes"], "rise up"),
+        ("odium", ["odientes"], "hatred"),
+        ("disperdo", ["disperdidisti"], "destroy")
+    ]
+    
+    let expectedThemes = [
+        "Divine Victory": [
+            ("persequor", "Active pursuit of enemies"),
+            ("comprehendo", "Complete victory over opposition")
+        ],
+        "Divine Judgment": [
+            ("contero", "Total destruction of foes"),
+            ("disperdo", "Final elimination of adversaries")
+        ],
+        "Divine Protection": [
+            ("supplanto", "God undermines attackers"),
+            ("insurgo", "Protection against uprising")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 17B:15-18 ANALYSIS:")
+        print("15-18: \"\(lines)\"")
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm17BLines19to22() {
+    let lines = [psalm17B[18], psalm17B[19], psalm17B[20], psalm17B[21]].joined(separator: " ")
+    let analysis = latinService.analyzePsalm(text: lines)
+    
+    let testLemmas = [
+        ("clamo", ["clamaverunt"], "cry out"),
+        ("salvus", ["salvos"], "save"),
+        ("comminuo", ["comminuam"], "crush"),
+        ("pulvis", ["pulverem"], "dust"),
+        ("ventus", ["venti"], "wind"),
+        ("lutum", ["lutum"], "mud"),
+        ("platea", ["platearum"], "street"),
+        ("contradictio", ["contradictionibus"], "opposition"),
+        ("caput", ["caput"], "head"),
+        ("gens", ["gentium"], "nation")
+    ]
+    
+    let expectedThemes = [
+        "Divine Sovereignty": [
+            ("clamo", "Futility of crying to other gods"),
+            ("salvus", "Exclusive salvation in Yahweh")
+        ],
+        "Divine Judgment": [
+            ("comminuo", "Complete reduction of enemies"),
+            ("pulvis", "Insignificance of God's foes")
+        ],
+        "Divine Exaltation": [
+            ("caput", "Elevation to leadership"),
+            ("gens", "Authority over nations")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 17B:19-22 ANALYSIS:")
+        print("19-22: \"\(lines)\"")
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm17BLines23to26() {
+    let lines = [psalm17B[22], psalm17B[23], psalm17B[24], psalm17B[25]].joined(separator: " ")
+    let analysis = latinService.analyzePsalm(text: lines)
+    
+    let testLemmas = [
+        ("alienus", ["alieni"], "foreign"),
+        ("mentior", ["mentiti"], "deceive"),
+        ("invetero", ["inveterati"], "grow old"),
+        ("claudico", ["claudicaverunt"], "limp"),
+        ("semita", ["semitis"], "path"),
+        ("vivo", ["vivit"], "live"),
+        ("benedico", ["benedictus"], "bless"),
+        ("exalto", ["exaltetur"], "exalt"),
+        ("vindicta", ["vindictas"], "vengeance"),
+        ("subicio", ["subjicit"], "subdue")
+    ]
+    
+    let expectedThemes = [
+        "False Allegiance": [
+            ("alienus", "Foreigners' insincerity"),
+            ("mentior", "Deceptive submission")
+        ],
+        "Divine Faithfulness": [
+            ("vivo", "Yahweh's enduring life"),
+            ("benedico", "God as source of blessing")
+        ],
+        "Divine Justice": [
+            ("vindicta", "God executes justice"),
+            ("subicio", "Divine subjugation of enemies")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 17B:23-26 ANALYSIS:")
+        print("23-26: \"\(lines)\"")
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
+}
+
+func testPsalm17BLines27to29() {
+    let lines = [psalm17B[26], psalm17B[27], psalm17B[28], psalm17B[29]].joined(separator: " ")
+    let analysis = latinService.analyzePsalm(text: lines)
+    
+    let testLemmas = [
+        ("liberator", ["liberator"], "deliverer"),
+        ("ira", ["iracundis"], "anger"),
+        ("eripio", ["eripies"], "rescue"),
+        ("iniquus", ["iniquo"], "unjust"),
+        ("confiteor", ["confitebor"], "give thanks"),
+        ("natio", ["nationibus"], "nation"),
+        ("psalmus", ["psalmum"], "psalm"),
+        ("magnifico", ["magnificans"], "magnify"),
+        ("misericordia", ["misericordiam"], "mercy"),
+        ("saeculum", ["saeculum"], "age")
+    ]
+    
+    let expectedThemes = [
+        "Divine Deliverance": [
+            ("liberator", "God as ultimate rescuer"),
+            ("eripio", "Salvation from wickedness")
+        ],
+        "Universal Praise": [
+            ("confiteor", "Public thanksgiving"),
+            ("natio", "Witness among the nations")
+        ],
+        "Covenant Faithfulness": [
+            ("misericordia", "God's loyal love"),
+            ("saeculum", "Everlasting covenant")
+        ]
+    ]
+    
+    if verbose {
+        print("\nPSALM 17B:27-29 ANALYSIS:")
+        print("27-29: \"\(lines)\"")
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            print("\(lemma) (\(translation)): \(forms.joined(separator: ", "))")
+        }
+    }
+    
+    verifyWordsInAnalysis(analysis, confirmedWords: testLemmas)
+    verifyThematicElements(analysis: analysis, expectedThemes: expectedThemes)
 }
 
       // MARK: - Test Cases

@@ -7,10 +7,18 @@ extension LatinWordEntity {
         // Validate required fields
         guard let infinitive = infinitive?.lowercased(),
               let conjugation = conjugation else { return [:] }
-        
+
+
+        let isDeponent: Bool
+            if let presentForm = present?.lowercased() {
+                isDeponent = presentForm.hasSuffix("or")
+        } else {
+            isDeponent = false // fallback: assume not deponent if not known
+        }
+     
         // Prepare stems
         let stems = VerbStems(
-            present: String(infinitive.dropLast(3)),
+            present: isDeponent ? String(infinitive.dropLast(1)) : String(infinitive.dropLast(3)),
             perfect: perfect != nil ? String(perfect!.lowercased().dropLast(1)) : "",
             supine: supine != nil ? String(supine!.lowercased().dropLast(2)) : ""
         )
@@ -19,15 +27,22 @@ extension LatinWordEntity {
         let addForm = { (key: String, values: [String]) in
             forms[key] = values.map { $0.lowercased() }
         }
-        
+
+       if !isDeponent {
+            generatePresentSystemForms(conjugation: conjugation, stems: stems, addForm: addForm)
+            generatePerfectSystemForms(stems: stems, addForm: addForm)
+            generateImperativeForms(conjugation: conjugation, stems: stems, addForm: addForm)
+            generatePresentActiveSubjunctive(conjugation: conjugation, stems: stems, addForm: addForm)
+        } 
+
         // Generate all forms
-        generatePresentSystemForms(conjugation: conjugation, stems: stems, addForm: addForm)
-        generatePerfectSystemForms(stems: stems, addForm: addForm)
-        generateImperativeForms(conjugation: conjugation, stems: stems, addForm: addForm)
+        //generatePresentSystemForms(conjugation: conjugation, stems: stems, addForm: addForm)
+        //generatePerfectSystemForms(stems: stems, addForm: addForm)
+        //generateImperativeForms(conjugation: conjugation, stems: stems, addForm: addForm)
         generateNonFiniteForms(infinitive: infinitive, stems: stems, addForm: addForm)
         generateParticipleForms(conjugation: conjugation, stems: stems, addForm: addForm)
         generateSubjunctiveForms(conjugation: conjugation, stems: stems, addForm: addForm)
-        generatePresentActiveSubjunctive(conjugation: conjugation, stems: stems, addForm: addForm)
+        //generatePresentActiveSubjunctive(conjugation: conjugation, stems: stems, addForm: addForm)
         generatePresentPassiveForms(conjugation: conjugation, stems: stems, addForm: addForm)
         generateFuturePassiveForms(conjugation: conjugation, stems: stems, addForm: addForm)
 
@@ -176,15 +191,23 @@ extension LatinWordEntity {
     }
     
     private func generateNonFiniteForms(infinitive: String, stems: VerbStems, addForm: (String, [String]) -> Void) {
-        addForm("infinitive", [infinitive])
-        
-        if !stems.supine.isEmpty {
-            addForm("supine",  [stems.supine + "um"])
-            addForm("gerund",  [stems.present + "andum"])
-            addForm("gerundive",  [stems.present + "andus"])
-        }
+    addForm("infinitive", [infinitive])
+
+    if !stems.supine.isEmpty {
+        addForm("supine", [stems.supine + "um"])
+
+        // Use correct gerund/gerundive suffix for -io, 4th, and deponent verbs
+        let usesIendum = infinitive.hasSuffix("i")
+
+        let gerundStem = usesIendum ? stems.present + "iendum" : stems.present + "andum"
+        let gerundiveStem = usesIendum ? stems.present + "iendus" : stems.present + "andus"
+
+        addForm("gerund", [gerundStem])
+        addForm("gerundive", [gerundiveStem])
     }
-        
+}
+
+       
     private func generateParticipleForms(conjugation: Int, stems: VerbStems, addForm: (String, [String]) -> Void) {
     // Present Active Participle
     let participleStem: String
@@ -267,10 +290,21 @@ extension LatinWordEntity {
                 stems.present + "eamur", stems.present + "eamini", stems.present + "eantur"
             ]
         case 3:
-            presentPassiveSubjunctive = [
-                stems.present + "ar", stems.present + "aris", stems.present + "atur",
-                stems.present + "amur", stems.present + "amini", stems.present + "antur"
-            ]
+            if stems.present.hasSuffix("i") { // 3rd-io verb
+                presentPassiveSubjunctive = [
+                    stems.present + "ar",     // eripiar
+                    stems.present + "aris",    // eripiaris
+                    stems.present + "atur",   // eripiatur
+                    stems.present + "amur",   // eripiamur
+                    stems.present + "amini",  // eripiamini
+                    stems.present + "antur"   // eripiantur
+                ]
+            } else {
+                presentPassiveSubjunctive = [
+                    stems.present + "ar", stems.present + "aris", stems.present + "atur",
+                    stems.present + "amur", stems.present + "amini", stems.present + "antur"
+                ] 
+            }
         case 4:
             presentPassiveSubjunctive = [
                 stems.present + "iar", stems.present + "iaris", stems.present + "iatur",
@@ -318,7 +352,8 @@ extension LatinWordEntity {
 
 private func generateFuturePassiveForms(conjugation: Int, stems: VerbStems, addForm: (String, [String]) -> Void) {
     let futurePassive: [String]
-    
+    let isThirdIO = conjugation == 3 && self.present?.hasSuffix("io") == true
+    let isDeponent = self.present?.hasSuffix("or") == true
     switch conjugation {
     case 1:
         futurePassive = [
@@ -339,14 +374,29 @@ private func generateFuturePassiveForms(conjugation: Int, stems: VerbStems, addF
             stems.present + "ebuntur"    // monebuntur
         ]
     case 3:
-        futurePassive = [
-            stems.present + "ar",        // regar
-            stems.present + "eris",      // regeris
-            stems.present + "etur",      // regetur
-            stems.present + "emur",      // regemur
-            stems.present + "emini",     // regemini
-            stems.present + "entur"      // regentur
-        ]
+
+        // Check if the verb is a 3rd conjugation -io verb
+        if isThirdIO || isDeponent {
+            // Follow 4th conjugation pattern
+            futurePassive = [
+                stems.present + "iar",       // eripiar
+                stems.present + "ieris",     // eripieris
+                stems.present + "ietur",     // eripietur
+                stems.present + "iemur",     // eripiemur
+                stems.present + "iemini",    // eripiemini
+                stems.present + "ientur"     // eripientur
+            ]
+        } else {
+            // Regular 3rd conjugation
+            futurePassive = [
+                stems.present + "ar",        // regar
+                stems.present + "eris",      // regeris
+                stems.present + "etur",      // regetur
+                stems.present + "emur",      // regemur
+                stems.present + "emini",     // regemini
+                stems.present + "entur"      // regentur
+            ]
+        }
     case 4:
         futurePassive = [
             stems.present + "iar",       // audiar
@@ -364,7 +414,8 @@ private func generateFuturePassiveForms(conjugation: Int, stems: VerbStems, addF
 }
 private func generatePresentPassiveForms(conjugation: Int, stems: VerbStems, addForm: (String, [String]) -> Void) {
     let presentPassive: [String]
-    
+    let isThirdIO = conjugation == 3 && self.present?.hasSuffix("io") == true
+ 
     switch conjugation {
     case 1: // -a- (e.g., dominor)
         presentPassive = [
@@ -385,14 +436,26 @@ private func generatePresentPassiveForms(conjugation: Int, stems: VerbStems, add
             stems.present + "entur"     // monentur
         ]
     case 3: // -i-/-e- (e.g., regor, capior)
-        presentPassive = [
+        if isThirdIO {
+            presentPassive = [
+            stems.present + "ior",      
+            stems.present + "eris",    // regeris / caperis
+            stems.present + "itur",    // regitur / capitur
+            stems.present + "imur",     // regimur / capimur
+            stems.present + "imini",    // regimini / capimini
+            stems.present + "iuntur"     // reguntur / capiuntur
+        ] 
+        }   
+        else { 
+            presentPassive = [
             stems.present + "or",       // regor / capior
             stems.present + "eris",    // regeris / caperis
             stems.present + "itur",    // regitur / capitur
             stems.present + "imur",     // regimur / capimur
             stems.present + "imini",    // regimini / capimini
             stems.present + "untur"     // reguntur / capiuntur
-        ]
+        ] 
+        }
     case 4: // -i- (e.g., audior)
         presentPassive = [
             stems.present + "ior",      // audior
