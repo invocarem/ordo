@@ -1065,6 +1065,375 @@
     }
   ]
 },
+{
+  "psalmNumber": 17,
+  "category": "a",
+  "themes": [
+    {
+      "name": "Personal Devotion",
+      "description": "Declaration of love and trust in God's protection",
+      "lemmas": ["diligo", "firmamentum", "refugium", "liberator"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Opening with intimate 'Diligo te' and triple divine titles"
+    },
+    {
+      "name": "Divine Titles",
+      "description": "Accumulation of God's protective roles",
+      "lemmas": ["adjutor", "protector", "cornu", "susceptor"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Six roles in two verses emphasizing comprehensive care"
+    },
+    {
+      "name": "Mortal Peril",
+      "description": "Imagery of death's encompassing threat",
+      "lemmas": ["dolor", "infernus", "laqueus", "torrens"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Pains of death and torrents of wickedness"
+    },
+    {
+      "name": "Desperate Prayer",
+      "description": "Past-tense cries for deliverance",
+      "lemmas": ["invocavi", "clamavi", "exaudivit", "introivit"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Emphasizes God's hearing (entered His ears)"
+    },
+    {
+      "name": "Theophanic Response",
+      "description": "Earth-shaking divine intervention",
+      "lemmas": ["commoveo", "contremisco", "fundamentum", "mons"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "Creation reacts to God's movement"
+    },
+    {
+      "name": "Fiery Judgment",
+      "description": "Divine wrath manifested through fire",
+      "lemmas": ["ignis", "fumus", "exardesco", "carbo"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "Smoke, blazing fire, and burning coals"
+    },
+    {
+      "name": "Cosmic Descent",
+      "description": "God bending heaven to rescue",
+      "lemmas": ["inclino", "coelum", "descendo", "caligo"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "Darkness underfoot as mysterious presence"
+    },
+    {
+      "name": "Storm Theophany",
+      "description": "Classic storm god imagery",
+      "lemmas": ["cherub", "penna", "ventus", "tenebrae"],
+      "startLine": 15,
+      "endLine": 16,
+      "comment": "Riding cherubim with wind-wings"
+    },
+    {
+      "name": "Artillery of Heaven",
+      "description": "Divine warfare elements",
+      "lemmas": ["fulgur", "grando", "sagitta", "tono"],
+      "startLine": 17,
+      "endLine": 18,
+      "comment": "Lightning as arrows and thunderous voice"
+    },
+    {
+      "name": "Chaos Undone",
+      "description": "Primordial waters unleashed",
+      "lemmas": ["fons", "fundamentum", "orbis", "increpatio"],
+      "startLine": 19,
+      "endLine": 20,
+      "comment": "Watersources exposed at God's rebuke"
+    }
+  ]
+},
+
+{
+  "psalmNumber": 17,
+  "category": "b",
+  "themes": [
+    {
+      "name": "Ethical Reciprocity",
+      "description": "God's mirrored response to human character",
+      "lemmas": ["sanctus", "innocens", "electus", "perverto"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Chiastic structure showing divine correspondence"
+    },
+    {
+      "name": "Social Reversal",
+      "description": "Divine preference for the humble",
+      "lemmas": ["humilis", "salvus", "superbus", "humilio"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Salvation for lowly vs humbling of proud"
+    },
+    {
+      "name": "Divine Rescue and Purity",
+      "description": "God's deliverance from trials and the purity of His word",
+      "lemmas": ["eripio", "tentatio", "transgredior", "impollutus", "eloquium", "examino"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Combines rescue imagery with fire-tested divine words"
+    },
+    {
+      "name": "Illumination",
+      "description": "Divine light overcoming darkness",
+      "lemmas": ["illumino", "lucerna", "tenebrae"],
+      "startLine": 4,
+      "endLine": 6,
+      "comment": "Personal light imagery in midst of trial"
+    },
+    {
+      "name": "Divine Protection",
+      "description": "God as shield for the faithful",
+      "lemmas": ["protector", "spero", "dominus"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Exclusive protection of Yahweh"
+    },
+    {
+      "name": "Warrior's Preparation",
+      "description": "Divine equipping for battle",
+      "lemmas": ["praecingo", "virtus", "immaculatus", "perficio", "cervus", "excelsum"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "Feet like deer for high places"
+    },
+    {
+      "name": "Combat Training",
+      "description": "Divine instruction in warfare",
+      "lemmas": ["doceo", "praelium", "arcus", "aereus", "brachium"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "Hands trained for bronze bow warfare"
+    },
+    {
+      "name": "Divine Sustenance",
+      "description": "God's ongoing support in battle",
+      "lemmas": ["protego", "salus", "dexter", "suscipio", "disciplina"],
+      "startLine": 12,
+      "endLine": 14,
+      "comment": "Right hand support and firm footing"
+    },
+    {
+      "name": "Total Victory",
+      "description": "Complete domination of enemies",
+      "lemmas": ["persequor", "contero", "comprehendo", "supplanto", "disperdo"],
+      "startLine": 15,
+      "endLine": 18,
+      "comment": "Enemies crushed and tripped"
+    },
+    {
+      "name": "Judgment Imagery",
+      "description": "Reduction of foes to insignificance",
+      "lemmas": ["pulvis", "ventus", "lutum", "platea"],
+      "startLine": 19,
+      "endLine": 20,
+      "comment": "Enemies scattered like dust before wind"
+    },
+    {
+      "name": "Royal Exaltation",
+      "description": "Kingly elevation over nations",
+      "lemmas": ["caput", "gens", "servio", "obedio", "contradictio"],
+      "startLine": 21,
+      "endLine": 22,
+      "comment": "Headship over previously unknown peoples"
+    },
+    {
+      "name": "False Allegiance",
+      "description": "Insincere submission of enemies",
+      "lemmas": ["alienus", "mentior", "invetero", "claudico"],
+      "startLine": 23,
+      "endLine": 24,
+      "comment": "Foreigners' deceptive obedience"
+    },
+    {
+      "name": "Divine Supremacy",
+      "description": "Yahweh's unique power",
+      "lemmas": ["vivo", "benedico", "exalto", "salus"],
+      "startLine": 25,
+      "endLine": 26,
+      "comment": "Living God contrasted with powerless idols"
+    },
+    {
+      "name": "Just Rule",
+      "description": "Divine administration of justice",
+      "lemmas": ["vindicta", "subicio", "liberator", "ira"],
+      "startLine": 26,
+      "endLine": 27,
+      "comment": "Vengeance against unjust oppressors"
+    },
+    {
+      "name": "Universal Praise",
+      "description": "Global acknowledgment of God",
+      "lemmas": ["confiteor", "natio", "psalmus", "magnifico"],
+      "startLine": 28,
+      "endLine": 29,
+      "comment": "Thanksgiving among the nations"
+    },
+    {
+      "name": "Davidic Covenant",
+      "description": "Promise to David's lineage",
+      "lemmas": ["christus", "David", "semen", "misericordia", "saeculum"],
+      "startLine": 29,
+      "endLine": 30,
+      "comment": "Eternal mercy to anointed king"
+    }
+  ]
+},
+
+{
+  "psalmNumber": 18,
+  "category": "",
+  "themes": [
+    {
+      "name": "Cosmic Revelation",
+      "description": "Creation's proclamation of divine glory",
+      "lemmas": ["caelum", "firmamentum", "sol", "orbis", "gigas"],
+      "startLine": 1,
+      "endLine": 6,
+      "comment": "Nature as continuous divine communication"
+    },
+    {
+      "name": "Universal Proclamation",
+      "description": "Word spreading to all creation",
+      "lemmas": ["verbum", "scientia", "loquela", "sermo", "sonus"],
+      "startLine": 2,
+      "endLine": 4,
+      "comment": "Day/night cycle as revelation mechanism"
+    },
+    {
+      "name": "Solar Theophany",
+      "description": "Divine presence as radiant sun",
+      "lemmas": ["sol", "tabernaculum", "sponsus", "calor", "egressio"],
+      "startLine": 5,
+      "endLine": 8,
+      "comment": "Marriage and warrior imagery combined"
+    },
+    {
+      "name": "Torah's Perfection",
+      "description": "Law as transformative wisdom",
+      "lemmas": ["lex", "testimonium", "sapientia", "justitia", "praeceptum"],
+      "startLine": 9,
+      "endLine": 11,
+      "comment": "Sevenfold description of God's instruction"
+    },
+    {
+      "name": "Sensory Delight",
+      "description": "Spiritual truths through physical metaphors",
+      "lemmas": ["dulcis", "mel", "favus", "lucidum", "desiderabilia"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "Comparative sweetness surpassing honey"
+    },
+    {
+      "name": "Covenantal Obedience",
+      "description": "Servant's relationship to the law",
+      "lemmas": ["servus", "custodio", "retributio", "immaculatus", "emundo"],
+      "startLine": 13,
+      "endLine": 16,
+      "comment": "Reward-keeping cycle with purification"
+    },
+    {
+      "name": "Hidden Faults",
+      "description": "Petition for cleansing from unknown sins",
+      "lemmas": ["delictum", "occultus", "alienus", "parco", "dominor"],
+      "startLine": 14,
+      "endLine": 16,
+      "comment": "Distinction between willful and unwitting sins"
+    },
+    {
+      "name": "Meditative Devotion",
+      "description": "Internalization of divine words",
+      "lemmas": ["eloquium", "meditatio", "cor", "complaceo", "conspectus"],
+      "startLine": 17,
+      "endLine": 18,
+      "comment": "From external law to internalized devotion"
+    },
+    {
+      "name": "Divine Partnership",
+      "description": "God as helper and redeemer",
+      "lemmas": ["adjutor", "redemptor", "servus", "custodio", "immaculatus"],
+      "startLine": 18,
+      "endLine": 18,
+      "comment": "Closing declaration of relational trust"
+    }
+  ]
+},
+
+{
+  "psalmNumber": 19,
+  "category": "",
+  "themes": [
+    {
+      "name": "Royal Intercession",
+      "description": "Divine response to the king's petitions",
+      "lemmas": ["exaudio", "protego", "mitto", "tueor", "impleo"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Seven imperative verbs invoking divine action"
+    },
+    {
+      "name": "Sacrificial Favor",
+      "description": "God's remembrance of royal offerings",
+      "lemmas": ["sacrificium", "holocaustum", "pinguis", "memor", "confirmo"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Connection between sacrifice and answered prayers"
+    },
+    {
+      "name": "Messianic Victory",
+      "description": "Anointed king's divine deliverance",
+      "lemmas": ["christus", "salvus", "potentia", "dextera", "rex"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Divine salvation specifically for the anointed"
+    },
+    {
+      "name": "Military Contrast",
+      "description": "Divine power vs. human strength",
+      "lemmas": ["currus", "equus", "cado", "surgo", "erigo"],
+      "startLine": 7,
+      "endLine": 9,
+      "comment": "Chariots/horses fail vs. divine name's power"
+    },
+    {
+      "name": "Communal Participation",
+      "description": "People's shared response to salvation",
+      "lemmas": ["nos", "laetor", "magnifico", "invoco", "nomen"],
+      "startLine": 5,
+      "endLine": 10,
+      "comment": "Plural verbs emphasizing collective worship"
+    },
+    {
+      "name": "Zion Theology",
+      "description": "Jerusalem as source of divine help",
+      "lemmas": ["sanctus", "Sion", "caelum", "Deus", "Jacob"],
+      "startLine": 2,
+      "endLine": 7,
+      "comment": "Heavenly and earthly loci of divine power"
+    },
+    {
+      "name": "Covenantal Assurance",
+      "description": "Confidence in God's faithful response",
+      "lemmas": ["cor", "consilium", "petitio", "tribulatio", "dies"],
+      "startLine": 1,
+      "endLine": 10,
+      "comment": "Personal and national petitions intertwined"
+    }
+  ],
+  "structuralNotes": {
+    "movement": "From individual petitions (1-4) to communal victory (5-10)",
+    "keyTransition": "Line 5's shift to first-person plural",
+    "militaryPivot": "Lines 7-9's contrast between human and divine power",
+    "inclusio": "Framed by 'exaudiat' (1) and 'exaudi' (10)"
+  }
+},
 
 
 {

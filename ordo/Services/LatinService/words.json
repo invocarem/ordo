@@ -1,4 +1,79 @@
 [
+    {
+      "lemma": "obligo",
+      "part_of_speech": "verb",
+      "conjugation": 1,
+      "infinitive": "obligare",
+      "present": "obligo",
+      "perfect": "obligavi",
+      "supine": "obligatum",
+      "translations": {
+        "en": "to bind, oblige, fasten",
+        "la": "obligo, obligare, obligavi, obligatum"
+      },
+      "form_analysis": {
+        "obligati": "perfect passive participle (nominative masculine plural)"
+      }
+    },
+  {
+  "lemma": "tueor",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "tueri",
+  "present": "tueor",
+  "perfect": "tuitus",
+  "supine": "tuitum",
+  "forms": {
+    "present_passive_subjunctive": ["tuerear", "tuerearis", "tueatur", "tuereamur", "tuereamini", "tuereantur"]
+  },
+ "translations": {
+    "en": "to guard, protect, defend",
+    "la": "tueor, tueri, tuitus"
+  }
+},
+{
+  "lemma": "perficio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "perficere",
+  "present": "perficio",
+  "perfect": "perfeci",
+  "supine": "perfectum",
+  "forms":{
+    "perfect_2sg": ["perfecisti"]
+  },
+  "translations": {
+    "en": "to complete, perfect, accomplish",
+    "la": "perficio, perficere, perfeci, perfectum"
+  }
+},
+  {
+    "lemma": "tentatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "tentatio",
+    "genitive": "tentationis",
+    "translations": {
+      "en": "trial, temptation, attempt",
+      "la": "tentatio, tentationis"
+    }
+  },
+  {
+    "lemma": "transgredior",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "transgredi",
+    "present": "transgredior",
+    "future": "transgrediar",
+    "perfect": "transgressus",
+    "supine": "transgressum",
+    "translations": {
+      "en": "cross over, transgress, go beyond",
+      "la": "transgredior, transgredi"
+    }
+  },
+ 
   {
     "lemma": "pinguedo",
     "part_of_speech": "noun",
@@ -3885,21 +3960,7 @@
     "la": "destruo, destruere, destruxi, destructum"
   }
 },
-{
-  "lemma": "perficio",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "perficere",
-  "perfect": "perfecti",
-  "supine": "perfectum",
-  "forms":{
-    "perfect_2sg": ["perfecisti"]
-  },
-  "translations": {
-    "en": "to complete, perfect, accomplish",
-    "la": "perficio, perficere, perfecti, perfectum"
-  }
-},
+
 {
   "lemma": "stella",
   "part_of_speech": "noun",
@@ -8713,8 +8774,10 @@
   {
     "lemma": "mitto",
     "part_of_speech": "verb",
+    "conjugation": 3,
     "infinitive": "mittere",
     "perfect": "misi",
+    "present": "mitto",
     "supine": "missum",
     "translations": {
         "en": "to send, let go",
@@ -8812,6 +8875,7 @@
     {
         "lemma": "impleo",
         "part_of_speech": "verb",
+        "conjugation": 2,
         "infinitive": "implere",
         "perfect": "implevi",
         "supine": "impletum",
@@ -10286,6 +10350,10 @@
       "conjugation": 3,
       "deponent": false,
       "infinitive": "eripere",
+      "present": "eripio",
+      "future": "eripiam",
+      "perfect": "eripui",
+      "supine": "ereptum",
       "forms": {
         "present": ["eripio", "eripis", "eripit", "eripimus", "eripitis", "eriipiunt"],
         "imperative": ["eripe", "eripite"],
@@ -13148,9 +13216,13 @@
         "nominative": "immaculatus",
         "genitive": "immaculati",
         "dative": "immaculato",
-        "accusative": "immaculatum",
-        "ablative": "immaculato",
-        "vocative": "immaculate",
+        "forms": {
+            "nominative_f": ["immaculata"],
+            "genitive_f": ["immaculatae"],
+            "nominative_n": ["immaculatum"],
+            "genitive_n": ["immaculati"],
+            "accusative_f": ["immaculatam"]
+        },
         "nominative_plural": "immaculati",
         "genitive_plural": "immaculatorum",
         "dative_plural": "immaculatis",
@@ -14609,8 +14681,26 @@
             },
             "notes": "Psalm 4:7 - 'signatum est super nos lumen' (the light of your face has shone upon us)"
         },
-    
-   
+              
+               
+    {
+      "lemma": "impollutus",
+      "part_of_speech": "adjective",
+      "declension": 1,
+      "gender": "masculine",
+      "nominative": "impollutus",
+      "genitive": "impolluti",
+      "forms": {
+        "nominative_f": ["impolluta"],
+        "genitive_f": ["impollutae"],
+        "nominative_n": ["impollutum"],
+        "genitive_n": ["impolluti"]
+      },
+      "translations": {
+        "en": "unpolluted, undefiled, pure",
+        "la": "impollutus, -a, -um"
+      }
+    }  ,
     {
         "lemma": "gravis",
         "part_of_speech": "adjective",

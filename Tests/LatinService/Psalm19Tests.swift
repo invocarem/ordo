@@ -10,6 +10,7 @@ class Psalm19Tests: XCTestCase {
         latinService = LatinService.shared
     }
     
+    let id = PsalmIdentity(number: 19, category: nil)
     // MARK: - Test Data
     let psalm19 = [
         "Exaudiat te Dominus in die tribulationis; protegat te nomen Dei Jacob.",
@@ -39,7 +40,8 @@ class Psalm19Tests: XCTestCase {
     }
     
     func testDivineIntervention() {
-        let analysis = latinService.analyzePsalm(text: psalm19)
+        latinService.configureDebugging(target: "tueor")
+        let analysis = latinService.analyzePsalm(id, text: psalm19, startingLineNumber: 1)
         
         let interventionTerms = [
             ("exaudio", ["Exaudiat", "Exaudiet", "exaudi"], "hear"),
@@ -112,11 +114,11 @@ class Psalm19Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(text: psalm19)
         
         let divineTerms = [
-            ("Dominus", ["Dominus", "Domini"], "Lord"),
-            ("Deus", ["Dei"], "God"),
+            ("dominus", ["dominus", "domini"], "lord"),
+            ("deus", ["dei"], "god"),
             ("sanctus", ["sancto", "sancto"], "holy"),
-            ("Sion", ["Sion"], "Zion"),
-            ("Jacob", ["Jacob"], "Jacob")
+            ("sion", ["sion"], "zion"),
+            ("jacob", ["jacob"], "Jacob")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: divineTerms)
