@@ -3048,7 +3048,76 @@
     }
   ]
 },
-
+{
+  "psalmNumber": 118,
+  "category": "caph",
+  "themes": [
+    {
+      "name": "Desperate Longing",
+      "description": "Physical and spiritual exhaustion awaiting God's intervention",
+      "lemmas": ["deficio", "superspero", "consolor", "anima", "oculus"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Bodily metaphors (eyes/soul) for spiritual thirst"
+    },
+    {
+      "name": "Suffering Imagery",
+      "description": "Extreme vulnerability amid persecution",
+      "lemmas": ["uter", "pruina", "consummo", "terra", "persequor"],
+      "startLine": 3,
+      "endLine": 7,
+      "comment": "Wineskin/frost symbolize fragility; 'almost destroyed' (v.87)"
+    },
+    {
+      "name": "Cry for Justice",
+      "description": "Appeals for divine judgment against persecutors",
+      "lemmas": ["judicium", "iniquus", "persequor", "adjuvio", "servus"],
+      "startLine": 4,
+      "endLine": 6,
+      "comment": "Direct questions to God about timing of justice (v.84)"
+    },
+    {
+      "name": "Truth vs Falsehood",
+      "description": "Contrast between God's commands and human lies",
+      "lemmas": ["fabula", "lex", "mandatum", "veritas", "iniquus"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "'False tales' (fabulationes) vs 'all Your commandments are truth'"
+    },
+    {
+      "name": "Covenantal Faithfulness",
+      "description": "Steadfast loyalty despite opposition",
+      "lemmas": ["justificatio", "non oblitus", "non derelinquo", "custodio", "testimonium"],
+      "startLine": 3,
+      "endLine": 8,
+      "comment": "Double negation emphasizes commitment (vv.83,87)"
+    },
+    {
+      "name": "Life from Mercy",
+      "description": "Final plea grounded in God's character",
+      "lemmas": ["misericordia", "vivifico", "custodio", "os", "testimonium"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "Climax: 'Revive me according to Your mercy' (v.88)"
+    },
+    {
+      "name": "Augustine: Suffering as Remembrance",
+      "description": "Affliction prevents forgetfulness of God",
+      "lemmas": ["uter", "pruina", "non oblitus", "justificatio", "custodio"],
+      "startLine": 3,
+      "endLine": 8,
+      "comment": "Frostbitten wineskin (v.83) paradoxically preserves memory"
+    },
+    {
+      "name": "Augustine: Mercy Precedes Obedience",
+      "description": "Divine action enables human response",
+      "lemmas": ["misericordia", "vivifico", "custodio", "testimonium", "os"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "'Revive me... that I may keep' (v.88) shows grace-first logic"
+    }
+  ]
+},
 
 
     {

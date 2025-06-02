@@ -1,4 +1,50 @@
 [
+  {
+  "lemma": "fabula",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "fabula",
+  "genitive": "fabulae",
+  "forms": {
+    "irregular_variants": ["fabulationes"]  
+  },
+  "translations": {
+    "en": "story, tale; false tales, fables",
+    "la": "fabula, -ae"
+  },
+  "notes": "In Psalm 118:85 ('fabulationes'), it's a late Latin variant meaning 'false tales' with a negative connotation."
+},
+  {
+    "lemma": "adjuvio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "adjuviare",
+    "present": "adjuvio",
+    "perfect": "adjuviavi",
+    "supine": "adjuviatum",
+    "forms" :{
+       "imperative_active": ["adjuva", "adjuvate"]
+    },
+    "translations": {
+      "en": "help, aid, assist",
+      "la": "adjuvio, adjuviare, adjuviavi, adjuviatum"
+    }
+  },
+  {
+    "lemma": "persequor",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "persequi",
+    "present": "persequor",
+    "perfect": "persecutus sum",
+    "supine": "persecutum",
+   
+    "translations": {
+      "en": "pursue, persecute, follow persistently",
+      "la": "persequor, persequi, persecutus sum"
+    }
+  },
     {
       "lemma": "obligo",
       "part_of_speech": "verb",
@@ -2433,6 +2479,19 @@
   "translations": {
     "en": "consume, devour, destroy",
     "la": "consumo, consumere"
+  }
+},
+{
+  "lemma": "consummo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "consummare",
+  "present": "consummo",
+  "perfect": "consummavi",
+  "supine": "consummatum",
+  "translations": {
+    "en": "complete, finish, perfect; (in some contexts) consume, destroy",
+    "la": "consummo, consummare"
   }
 },
 {
@@ -7008,26 +7067,7 @@
       "la": "arcus"
     }
   },
-  {
-    "lemma": "persequor",
-    "part_of_speech": "verb",
-    "conjugation": 3,
-    "deponent": true,
-    "infinitive": "persequi",
-    "forms": {
-      "present": ["persequor", "persequeris", "persequitur", "persequimur", "persequimini", "persequuntur"],
-      "imperative": ["persequere", "persequimini"],
-      "subjunctive": ["persequar", "persequaris", "persequatur", "persequamur", "persequamini", "persequantur"],
-      "present_participle": ["persequens"],
-      "present_participle_forms": ["persequens", "persequentibus"],
-      "perfect_indicative_active": ["persecutus sum", "persecutus es", "persecutus est", "persecuti sumus", "persecuti estis", "persecuti sunt"]
-    },
-    "translations": {
-      "en": "to pursue, to follow, to persecute",
-      "la": "persequor"
-    }
-  },
-  {
+   {
     "lemma": "incido",
     "part_of_speech": "verb",
     "conjugation": 3,
@@ -8019,6 +8059,7 @@
       {
         "lemma": "deficio",
         "part_of_speech": "verb",
+        "conjugation": 3,
         "infinitive": "deficere",
         "perfect": "defeci",
         "supine": "defectum",
@@ -8041,7 +8082,9 @@
       {
         "lemma": "dinumero",
         "part_of_speech": "verb",
+        "conjugation": 1,
         "infinitive": "dinumerare",
+        "present": "dinumero",
         "perfect": "dinumeravi",
         "supine": "dinumeratus",
         "translations": {
