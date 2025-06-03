@@ -1,5 +1,20 @@
 [
   {
+  "lemma": "superspero",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "supersperare",
+  "present": "superspero",
+  "future": "supersperabo",
+  "imperfect": "supersperabam",
+  "perfect": "supersperavi",
+  "supine": "supersperatum",
+  "translations": {
+    "en": "hope exceedingly, hope beyond measure",
+    "la": "superspero, supersperare, supersperavi, supersperatum"
+  }
+},
+  {
   "lemma": "fabula",
   "part_of_speech": "noun",
   "declension": 1,
@@ -13558,7 +13573,9 @@
           "gender": "feminine",
           "nominative": "salus",
           "genitive": "salutis",
-
+          "forms": {
+            "verbal_noun": ["salutare"] 
+          },
           "translations": {
             "en": "salvation, safety, health, greeting",
             "la": "salus, salutis"
