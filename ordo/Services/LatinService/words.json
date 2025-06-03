@@ -1,5 +1,81 @@
 [
   {
+  "lemma": "meditatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "meditatio",
+  "genitive": "meditationis",
+  "translations": {
+    "en": "meditation, contemplation, study (of Scripture)",
+    "la": "meditatio, meditationis"
+  }
+},
+  {
+  "lemma": "ordinatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "ordinatio",
+  "genitive": "ordinationis",
+  "translations": {
+    "en": "arrangement, ordinance, divine decree",
+    "la": "ordinatio, ordinationis"
+  }
+},
+{
+  "lemma": "persevero",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "perseverare",
+  "present": "persevero",
+  "future": "perseverabo",  
+  "perfect": "perseveravi",
+  "supine": "perseveratum",
+  "translations": {
+    "en": "to persist, persevere, endure steadfastly",
+    "la": "persevero, perseverare"
+  }
+},
+{
+  "lemma": "latus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "latus",
+  "genitive": "lati",
+  "forms": {
+    "nominative_f": ["lata"],
+    "genitive_f": ["latae"],
+    "nominative_n": ["latum"],
+    "genitive_n": ["lati"]
+  },
+  "forms_plural": {
+    "nominative_m": ["lati"],
+    "genitive_m": ["latorum"],
+    "nominative_f": ["latae"],
+    "genitive_f": ["latarum"],
+    "nominative_n": ["lata"],
+    "genitive_n": ["latorum"]
+  },
+  "translations": {
+    "en": "broad, wide, extensive",
+    "la": "latus, -a, -um"
+  }
+},
+
+  {
+  "lemma": "paulum",
+  "part_of_speech": "adverb",
+  "forms": {
+          "base_form": ["paulo", "paulum"]
+  },
+  "translations": {
+    "en": "a little, slightly, almost (with 'minus')",
+    "la": "paulo"
+  }
+ },
+  {
   "lemma": "superspero",
   "part_of_speech": "verb",
   "conjugation": 1,
@@ -6250,6 +6326,7 @@
     "conjugation": 4,
     "infinitive": "perire",
     "perfect": "perii",
+    "present": "pereo",
     "supine": "peritum",
     "forms": {
         "present": ["pereo", "peris", "perit"],

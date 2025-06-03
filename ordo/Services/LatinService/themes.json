@@ -480,7 +480,7 @@
         {
           "name": "Cosmic Design",
           "description": "The heavens as God's handcrafted masterpiece",
-          "lemmas": ["digitorum", "lunam", "stellas", "fundasti"],
+          "lemmas": ["digitorum", "lunam", "stellas", "fundo"],
           "startLine": 3,
           "endLine": 4,
           "comment": "Artistic creation imagery"
@@ -3118,6 +3118,78 @@
     }
   ]
 },
+
+{
+  "psalmNumber": 118,
+  "category": "lamed",
+  "themes": [
+    {
+      "name": "Eternal Foundations",
+      "description": "God's word as enduring cosmic reality",
+      "lemmas": ["aeternum", "verbum", "permaneo", "fundo", "caelum"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Creation established through divine speech"
+    },
+    {
+      "name": "Divine Ordinance",
+      "description": "Creation's obedience to God's decrees",
+      "lemmas": ["ordinatio", "persevero", "servio", "dies", "omnia"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Nature's submission contrasts with human rebellion"
+    },
+    {
+      "name": "Law as Lifeline",
+      "description": "Scripture meditation preventing destruction",
+      "lemmas": ["lex", "meditatio", "pereo", "humilitas", "vivifico"],
+      "startLine": 4,
+      "endLine": 5,
+      "comment": "Torah study as antidote to spiritual death"
+    },
+    {
+      "name": "Covenantal Identity",
+      "description": "Belonging to God through obedience",
+      "lemmas": ["tuus", "salvo", "exquiro", "justificatio", "obliviscor"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Mutual possession expressed through law-keeping"
+    },
+    {
+      "name": "Enemy Contrast",
+      "description": "Righteous understanding vs. destructive intent",
+      "lemmas": ["peccator", "perdo", "exspecto", "testimonium", "intellego"],
+      "startLine": 7,
+      "endLine": 7,
+      "comment": "Opposition highlighting divine wisdom"
+    },
+    {
+      "name": "Boundless Commandment",
+      "description": "Infinite scope of God's instruction",
+      "lemmas": ["consummatio", "finis", "latus", "mandatum", "nimis"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "Paradox of perfect law exceeding human limits"
+    },
+    {
+      "name": "Augustine: Eternal Word",
+      "description": "Christ as the abiding divine utterance",
+      "lemmas": ["verbum", "permaneo", "caelum", "veritas", "fundo"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Johannine connection (John 1:1)"
+    },
+    {
+      "name": "Augustine: Law and Grace",
+      "description": "Commandments as means of vivification",
+      "lemmas": ["justificatio", "vivifico", "salvo", "mandatum", "misericordia"],
+      "startLine": 5,
+      "endLine": 8,
+      "comment": "Grace-enabled obedience to life-giving law"
+    }
+  ]
+},
+
 
 
     {

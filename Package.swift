@@ -129,6 +129,8 @@ let package = Package(
                 "118/Psalm118BethTests.swift", 
                 "118/Psalm118HeTests.swift", 
                 "118/Psalm118CaphTests.swift", 
+                "118/Psalm118LamedTests.swift", 
+
                 "118/Psalm118VauTests.swift", 
 
                 "118/Psalm118PeTests.swift", 
