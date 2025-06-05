@@ -2731,6 +2731,14 @@
       "startLine": 4,
       "endLine": 8,
       "comment": "How adversity deepens love for God's law"
+    },
+     {
+      "name": "Augustine: Ordered Love",
+      "description": "Proper desire directed toward eternal law",
+      "lemmas": ["concupisco", "desidero", "justificatio", "anima", "tempus"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Soul's longing rightly oriented toward God's statutes"
     }
   ]
 },

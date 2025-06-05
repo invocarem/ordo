@@ -1,5 +1,71 @@
 [
   {
+  "lemma": "mirabile",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "mirabile",
+  "genitive": "mirabilis",
+  "forms_plural": {
+    "nominative_n": ["mirabilia"],
+    "genitive_n": ["mirabilium"]
+  },
+  "translations": {
+    "en": "wonder, marvelous thing",
+    "la": "mirabile, mirabilis (n)"
+  }
+},
+  {
+  "lemma": "incola",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "neuter",
+  "nominative": "incola",
+  "genitive": "incolae",
+  "translations": {
+    "en": "inhabitant, sojourner, resident",
+    "la": "incola, -ae (m/f)"
+  }
+},
+  {
+  "lemma": "contemptus",
+  "part_of_speech": "noun",
+  "declension": 4,
+  "gender": "masculine",
+  "nominative": "contemptus",
+  "genitive": "contemptūs",
+  "translations": {
+    "en": "contempt, scorn, disdain",
+    "la": "contemptus, -ūs"
+  }
+},
+  {
+  "lemma": "maledictus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "maledictus",
+  "genitive": "maledicti",
+  "forms": {
+    "nominative_f": ["maledicta"],
+    "genitive_f": ["maledictae"],
+    "nominative_n": ["maledictum"],
+    "genitive_n": ["maledicti"]
+  },
+  "forms_plural": {
+    "nominative_m": ["maledicti"],
+    "genitive_m": ["maledictorum"],
+    "nominative_f": ["maledictae"],
+    "genitive_f": ["maledictarum"],
+    "nominative_n": ["maledicta"],
+    "genitive_n": ["maledictorum"]
+  },
+  "translations": {
+    "en": "cursed, accursed",
+    "la": "maledictus, -a, -um"
+  }
+},
+  {
   "lemma": "meditatio",
   "part_of_speech": "noun",
   "declension": 3,
@@ -7611,8 +7677,12 @@
   "lemma": "exerceo",
   "part_of_speech": "verb",
   "conjugation": 2,
-  "perfect": "exercui",
   "infinitive": "exercere",
+  "present": "exerceo",
+  "future": "exercebo",
+  "perfect": "exercui",
+  "supine": "exercitum",
+
   "forms": {
       "present": ["exerceo", "exerces", "exercet", "exercemus", "exercetis", "exercent"],
       "imperfect": ["exercebam", "exercebas", "exercebat", "exercebamus", "exercebatis", "exercebant"],
@@ -7625,7 +7695,8 @@
       "gerund_accusative": ["exercendum"],
       "gerundive_masc_nom": ["exercendus"],
       "present_passive": ["exerceor", "exerceris", "exercetur", "exercemur", "exercemini", "exercentur"],
-      "future_passive": ["exercebor", "exerceberis", "exercebitur", "exercebimur", "exercebimini", "exercebuntur"]
+      "future_passive": ["exercebor", "exerceberis", "exercebitur", "exercebimur", "exercebimini", "exercebuntur"],
+      "imperfect_passive_indicative_3rd": ["exercebatur"]
   },
   "translations": {
       "en": "to exercise, train, practice, keep busy",
