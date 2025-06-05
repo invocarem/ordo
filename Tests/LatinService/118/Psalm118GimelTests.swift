@@ -38,7 +38,7 @@ class Psalm118GimelTests: XCTestCase {
             ("vivifico", ["vivifica"], "give life"),
             ("custodio", ["custodiam"], "keep"),
             ("sermo", ["sermones"], "word"),
-            ("revelo", ["revela"], "open"),
+            ("revelo", ["revela"], "disclose"),
             ("oculus", ["oculos"], "eye"),
             ("considero", ["considerabo"], "consider"),
             ("mirabile", ["mirabilia"], "wonder"),
@@ -64,7 +64,7 @@ class Psalm118GimelTests: XCTestCase {
         
         // Key assertions
         XCTAssertEqual(analysis.dictionary["vivifico"]?.forms["vivifica"], 1, "Should find 'give life' reference")
-        XCTAssertNotNil(analysis.dictionary["revelo"], "Should find 'open' verb")
+        XCTAssertNotNil(analysis.dictionary["revelo"], "Should find 'disclose' verb")
         XCTAssertNotNil(analysis.dictionary["mirabile"], "Should find 'wonders' reference")
     }
     
@@ -199,7 +199,7 @@ class Psalm118GimelTests: XCTestCase {
         let terms = [
             ("retribuo", ["retribue"], "repay"),
             ("vivifico", ["vivifica"], "give life"),
-            ("revelo", ["revela"], "open"),
+            ("revelo", ["revela"], "disclose"),
             ("increpo", ["increpasti"], "rebuke")
         ]
         

@@ -1,5 +1,176 @@
 [
   {
+  "lemma": "consolor",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "consolari",
+  "present": "consolor",
+  "future": "consolabor",
+  "perfect": "consolatus",
+  "supine": "consolatum",
+  "translations": {
+    "en": "to comfort, console, encourage; (passive form with active meaning)",
+    "la": "consolor, consolari, consolatus sum"
+  }
+},
+  {
+  "lemma": "ago",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "agere",
+  "present": "ago",
+  "future": "agam",
+  "perfect": "egi",
+  "supine": "actum",
+  "translations": {
+    "en": "to do, act, drive, perform; spend (time)",
+    "la": "ago, agere, egi, actum"
+  }
+  
+},
+  {
+  "lemma": "cantabilis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "cantabilis",
+  "genitive": "cantabilis",
+  "forms": {
+    "nominative_f": ["cantabilis"],
+    "genitive_f": ["cantabilis"],
+    "nominative_n": ["cantabile"],
+    "genitive_n": ["cantabilis"]
+  },
+  "forms_plural": {
+    "nominative_m": ["cantabiles"],
+    "genitive_m": ["cantabilium"],
+    "nominative_f": ["cantabiles"],
+    "genitive_f": ["cantabilium"],
+    "nominative_n": ["cantabilia"],
+    "genitive_n": ["cantabilium"]
+  },
+  "translations": {
+    "en": "worthy to be sung, singable; melodious",
+    "la": "cantabilis, -e"
+  }
+},
+  {
+  "lemma": "peregrinatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "peregrinatio",
+  "genitive": "peregrinationis",
+  "translations": {
+    "en": "sojourn, exile; pilgrimage; ",
+    "la": "peregrinatio, peregrinationis"
+  }
+},
+  {
+  "lemma": "teneo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "tenere",
+  "present": "teneo",
+  "future": "tenebo",
+  "perfect": "tenui",
+  "supine": "tentum",
+  "translations": {
+    "en": "to hold; seize; understand",
+    "la": "teneo, tenere, tenui, tentum"
+  }
+},
+  {
+  "lemma": "defectio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "defectio",
+  "genitive": "defectionis",
+  "translations": {
+    "en": "fainting, failure, desertion; eclipse",
+    "la": "defectio, defectionis"
+  }
+},
+  {
+  "lemma": "amoveo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "amovere",
+  "present": "amoveo",
+  "future": "amovebo",
+  "perfect": "amovi",
+  "supine": "amotum",
+  "translations": {
+    "en": "to remove, take away, shift, expel",
+    "la": "amoveo, amovere, amovi, amotum"
+  }
+},
+
+  {
+  "lemma": "taedium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "taedium",
+  "genitive": "taedii",
+  "translations": {
+    "en": "weariness, boredom, disgust",
+    "la": "taedium, taedii (n)"
+  }
+},
+{
+  "lemma": "instruo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "instruere",
+  "present": "instruo",
+  "future": "instruam",
+  "perfect": "instruxi",
+  "supine": "instructum",
+  "translations": {
+    "en": "to build; to instruct; to equip, furnish",
+    "la": "instruo, instruere, instruxi, instructum"
+  }
+},
+  
+  {
+    "lemma": "enuntio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "enuntiare",
+    "present": "enuntio",
+    "future": "enuntiabo",
+    "perfect": "enuntiavi",
+    "supine": "enuntiatum",
+    "translations": {
+      "en": "to declare, announce, report",
+      "la": "enuntio, enuntiare, enuntiavi, enuntiatum"
+    }
+  },
+  {
+    "lemma": "exaudio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "exaudire",
+    "present": "exaudio",
+    "future": "exaudiam",
+    "perfect": "exaudivi",
+    "supine": "exauditum",
+    "forms": {
+                "imperative": ["exaudi", "exaudite"],
+                "perfect_2sg": ["exaudisti"],
+                "future": ["exaudiam", "exaudies", "exaudiet", "exaudiemus", "exaudietis", "exaudient"],
+                "present": ["exaudio", "exaudis", "exaudit", "exaudimus", "exauditis", "exaudiunt"]
+    },
+
+    "translations": {
+      "en": "to hear, listen to, heed",
+      "la": "exaudio, exaudire, exaudivi, exauditum"
+    }
+  }
+,
+  {
   "lemma": "mirabile",
   "part_of_speech": "noun",
   "declension": 3,
@@ -13220,7 +13391,7 @@
             "imperative": ["vivifica", "vivificate"]
         },
         "translations": {
-            "en": "to vivify, give life, quicken",
+            "en": "to revive, give life, quicken",
             "la": "vivifico"
         },
         "notes": "From Psalm 118:25 - 'Vivifica me in via tua' (Quicken me in your way)"
@@ -13789,8 +13960,11 @@
         {
             "lemma": "derelinquo",
             "part_of_speech": "verb",
+            "conjugation": 3,
+            "present": "derelinquo",
             "perfect": "dereliqui",
             "infinitive": "derelinquere",
+            "supine": "derelictum",
             "forms": {
                 "present": ["derelinquo", "derelinquis", "derelinquit", "derelinquimus", "derelinquitis", "derelinquunt"],
                 "present_subjunctive": ["derelinquam", "derelinquas", "derelinquat", "derelinquamus", "derelinquatis", "derelinquant"],
@@ -14801,34 +14975,13 @@
             "future": ["audiam", "audies", "audiet", "audiemus", "audietis", "audient"],
             "perfect": ["audivi", "audivisti", "audivit", "audivimus", "audivistis", "audiverunt"],
             "pluperfect": ["audiveram", "audiveras", "audiverat", "audiveramus", "audiveratis", "audiverant"],
-            "subjunctive_present": ["audiam", "audias", "audiat", "audiamus", "audiatis", "audiant"],
-            "subjunctive_imperfect": ["audirem", "audires", "audiret", "audiremus", "audiretis", "audirent"],
+            "present_subjunctive": ["audiam", "audias", "audiat", "audiamus", "audiatis", "audiant"],
+            "imperfect_subjunctive": ["audirem", "audires", "audiret", "audiremus", "audiretis", "audirent"],
             "imperative": ["audi", "audite"]
           }
         },
 
         {
-  "lemma": "exaudio",
-  "part_of_speech": "verb",
-  "conjugation": 4,
-  "infinitive": "exaudire",
-  "present": "exaudio",
-  "future": "exaudiam",
-  "perfect": "exaudivi",
-  "supine": "exauditum",
- "forms": {
-                "imperative": ["exaudi", "exaudite"],
-                "perfect": ["exaudivi", "exaudivisti", "exaudivit", "exaudivimus", "exaudivistis", "exaudiverunt"],
-                "future": ["exaudiam", "exaudies", "exaudiet", "exaudiemus", "exaudietis", "exaudient"],
-                "present": ["exaudio", "exaudis", "exaudit", "exaudimus", "exauditis", "exaudiunt"]
-  },
-
-  "translations": {
-    "en": "to hear, listen to, heed",
-    "la": "exaudio, exaudire"
-  }
-},
-         {
             "lemma": "frumentum",
             "part_of_speech": "noun",
             "declension": 2,
