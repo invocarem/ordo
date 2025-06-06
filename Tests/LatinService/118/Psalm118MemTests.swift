@@ -155,7 +155,7 @@ class Psalm118MemTests: XCTestCase {
         let testLemmas = [
             ("dulcis", ["dulcia"], "sweet"),
             ("faux", ["faucibus"], "mouth"),
-            ("eloquium", ["eloquia"], "words"),
+            ("eloquium", ["eloquia"], "word"),
             ("mel", ["mel"], "honey"),
             ("os", ["ori"], "mouth"),
             ("intellego", ["intellexi"], "understand"),
@@ -194,7 +194,9 @@ class Psalm118MemTests: XCTestCase {
             ("diligo", ["dilexi"], "love"),
             ("meditatio", ["meditatio", "meditatio"], "meditation"),
             ("quaero", ["quaesivi"], "seek"),
-            ("custodio", ["custodiam"], "keep")
+            ("custodio", ["custodiam"], "guard"),
+            ("lex", ["legem"], "law"),
+            ("mandatum", ["mandato"], "commandment")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: loveTerms)
@@ -206,8 +208,8 @@ class Psalm118MemTests: XCTestCase {
         let understandingTerms = [
             ("intellego", ["intellexi", "intellexi", "intellexi"], "understand"),
             ("prudens", ["prudentem"], "prudent"),
-            ("testimonium", ["testimonia"], "testimonies"),
-            ("judicium", ["judiciis"], "judgments")
+            ("testimonium", ["testimonia"], "testimony"),
+            ("judicium", ["judiciis"], "judgment")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: understandingTerms)
@@ -218,7 +220,7 @@ class Psalm118MemTests: XCTestCase {
         
         let sensoryTerms = [
             ("dulcis", ["dulcia"], "sweet"),
-            ("eloquium", ["eloquia"], "words"),
+            ("eloquium", ["eloquia"], "word"),
             ("mel", ["mel"], "honey"),
             ("os", ["ori"], "mouth")
         ]
