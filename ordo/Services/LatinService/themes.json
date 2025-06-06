@@ -2731,6 +2731,14 @@
       "startLine": 4,
       "endLine": 8,
       "comment": "How adversity deepens love for God's law"
+    },
+     {
+      "name": "Augustine: Ordered Love",
+      "description": "Proper desire directed toward eternal law",
+      "lemmas": ["concupisco", "desidero", "justificatio", "anima", "tempus"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Soul's longing rightly oriented toward God's statutes"
     }
   ]
 },
@@ -2865,6 +2873,62 @@
       "startLine": 1,
       "endLine": 8,
       "comment": "Tension between human and divine volition"
+    }
+  ]
+},
+
+
+{
+  "psalmNumber": 118,
+  "category": "zain",
+  "themes": [
+    {
+      "name": "Covenantal Promises",
+      "description": "God's word as source of hope and life-giving comfort",
+      "lemmas": ["memor", "verbum", "spes", "consolor", "vivifico"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalmist anchors hope in God's remembered promises"
+    },
+    {
+      "name": "Resistance and Eternity",
+      "description": "Steadfast obedience amid evil with eternal perspective",
+      "lemmas": ["superbus", "iniquus", "declino", "judicium", "saeculum"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Contrast between present wickedness and God's eternal judgments"
+    },
+    {
+      "name": "Exhaustion and Joy",
+      "description": "Spiritual weariness transformed through joyful obedience",
+      "lemmas": ["defectio", "teneo", "peccator", "cantabilis", "peregrinatio"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Paradox of finding song in God's statutes during exile"
+    },
+    {
+      "name": "Nocturnal Fidelity",
+      "description": "Nighttime remembrance and covenant keeping",
+      "lemmas": ["memor", "nomen", "custodio", "exquiro", "nox"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Devotion expressed through vigilant nighttime observance"
+    },
+    {
+      "name": "Augustine: Memory as Sacrament",
+      "description": "Remembrance as active participation in divine reality",
+      "lemmas": ["memor", "verbum", "nox", "nomen", "custodio"],
+      "startLine": 1,
+      "endLine": 8,
+      "comment": "Nocturnal remembrance is sacramental communion with God"
+    },
+    {
+      "name": "Augustine: Lex Vivificans",
+      "description": "God's law as living, active, and life-giving force",
+      "lemmas": ["vivifico", "verbum", "justificatio", "lex", "exquiro"],
+      "startLine": 2,
+      "endLine": 8,
+      "comment": "God's word operates as resurrection power in the soul"
     }
   ]
 },
@@ -3192,6 +3256,7 @@
 
 {
   "psalmNumber": 118,
+<<<<<<< HEAD
   "category": "mem",
   "themes": [
     {
@@ -3261,6 +3326,68 @@
   ]
 },
 
+=======
+  "category": "nun",
+  "themes": [
+    {
+      "name": "Light → Vows",
+      "description": "Divine illumination enabling sacred commitment",
+      "lemmas": ["lucerna", "verbum", "juro", "statuo"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "God's word as light (lucerna) precedes and empowers human vows (juravi)"
+    },
+    {
+      "name": "Humility → Teaching",
+      "description": "Lowliness preparing for divine instruction",
+      "lemmas": ["humilio", "vivifico", "doceo", "voluntarius"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Utter humiliation (usquequaque) creates space for life-giving teaching"
+    },
+    {
+      "name": "Protection → Steadfastness",
+      "description": "Divine custody ensuring covenant fidelity",
+      "lemmas": ["anima", "manus", "laqueus", "erro"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Soul in God's hands (manibus) prevents straying from commands"
+    },
+    {
+      "name": "Inheritance → Commitment",
+      "description": "Eternal joy motivating wholehearted obedience",
+      "lemmas": ["hereditas", "exsultatio", "inclino", "aeternum"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Testimonies as perpetual heritage (hereditate) inspire heart-inclining"
+    },
+    {
+      "name": "Augustine: Incarnate Light",
+      "description": "Christ as the walking Word enabling vows",
+      "lemmas": ["lucerna", "verbum", "juro"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "'Lamp to feet' signifies Christ's embodied guidance (Sermon 126)"
+    },
+    {
+      "name": "Augustine: Humilitas Docibilis",
+      "description": "Humiliation as pedagogy of grace",
+      "lemmas": ["humilio", "doceo", "manus"],
+      "startLine": 3,
+      "endLine": 5,
+      "comment": "God teaches only in the valley of humility (Enarrationes 118.25)"
+    },
+    {
+      "name": "Augustine: Inclinated Eschatology",
+      "description": "Heart bent toward eternal reward",
+      "lemmas": ["inclino", "retributio", "aeternum"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Grace inclines the heart toward its true homeland (Conf. XIII.9)"
+    }
+  ]
+},
+>>>>>>> cc628654447af9d05573439f38e12dd1bf0a994b
 
 
     {
