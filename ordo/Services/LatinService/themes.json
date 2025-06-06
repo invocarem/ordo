@@ -3256,7 +3256,6 @@
 
 {
   "psalmNumber": 118,
-<<<<<<< HEAD
   "category": "mem",
   "themes": [
     {
@@ -3325,8 +3324,8 @@
     }
   ]
 },
-
-=======
+{
+  "psalmNumber": 118,
   "category": "nun",
   "themes": [
     {
@@ -3387,8 +3386,6 @@
     }
   ]
 },
->>>>>>> cc628654447af9d05573439f38e12dd1bf0a994b
-
 
     {
   "psalmNumber": 119,

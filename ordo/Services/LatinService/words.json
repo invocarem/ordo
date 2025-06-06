@@ -119,8 +119,10 @@
   "translations": {
     "en": "completion, perfection, consummation",
     "la": "consummatio, consummationis"
-=======
-  "lemma": "consolor",
+  }
+},
+  {
+    "lemma": "consolor",
   "part_of_speech": "verb",
   "conjugation": 1,
   "infinitive": "consolari",
@@ -354,7 +356,6 @@
   "translations": {
     "en": "cursed, accursed",
     "la": "maledictus, -a, -um"
->>>>>>> cc628654447af9d05573439f38e12dd1bf0a994b
   }
 },
   {
