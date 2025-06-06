@@ -110,6 +110,7 @@ class Psalm118LamedTests: XCTestCase {
         let line5 = psalm118Lamed[4] // "In aeternum non obliviscar justificationes tuas, quia in ipsis vivificasti me."
         let line6 = psalm118Lamed[5] // "Tuus sum ego, salvum me fac, quoniam justificationes tuas exquisivi."
         let combinedText = line5 + " " + line6
+        latinService.configureDebugging(target: "vivifico")
         let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 5)
         
         let testLemmas = [
@@ -117,7 +118,7 @@ class Psalm118LamedTests: XCTestCase {
             ("justificatio", ["justificationes", "justificationes"], "ordinances"),
             ("vivifico", ["vivificasti"], "give life"),
             ("tuus", ["tuus"], "yours"),
-            ("salvo", ["salvum"], "save"),
+            ("salvus", ["salvum"], "safe"),
             ("exquiro", ["exquisivi"], "seek diligently")
         ]
         

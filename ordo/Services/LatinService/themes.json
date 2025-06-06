@@ -3190,6 +3190,77 @@
   ]
 },
 
+{
+  "psalmNumber": 118,
+  "category": "mem",
+  "themes": [
+    {
+      "name": "Love for God's Law",
+      "description": "Deep affection and meditation on divine commandments",
+      "lemmas": ["diligo", "meditatio", "quaero", "custodio"],
+      "startLine": 1,
+      "endLine": 8,
+      "comment": "Emotional and intellectual engagement with Torah"
+    },
+    {
+      "name": "Wisdom Superiority",
+      "description": "Divine law provides understanding surpassing human teachers",
+      "lemmas": ["intellego", "prudens", "super", "senex"],
+      "startLine": 2,
+      "endLine": 4,
+      "comment": "Divine wisdom exceeds even elders and teachers"
+    },
+    {
+      "name": "Sensory Delight",
+      "description": "Physical metaphors for spiritual satisfaction",
+      "lemmas": ["dulcis", "eloquium", "mel", "os"],
+      "startLine": 7,
+      "endLine": 7,
+      "comment": "Taste imagery for God's words"
+    },
+    {
+      "name": "Radical Rejection",
+      "description": "Understanding leads to complete opposition to evil",
+      "lemmas": ["odi", "iniquitas", "prohibeo", "declino"],
+      "startLine": 5,
+      "endLine": 8,
+      "comment": "Cognitive understanding produces moral revulsion"
+    },
+    {
+      "name": "Divine Pedagogy",
+      "description": "God's commandments as transformative instruction",
+      "lemmas": ["doceo", "prudens", "intellego", "mandatum"],
+      "startLine": 1,
+      "endLine": 4,
+      "comment": "Law makes wise beyond normal education"
+    },
+    {
+      "name": "Two Ways Contrast",
+      "description": "Clear dichotomy between God's way and evil path",
+      "lemmas": ["via", "malus", "iniquitas", "custodio"],
+      "startLine": 5,
+      "endLine": 8,
+      "comment": "Classic wisdom literature theme"
+    },
+    {
+      "name": "Augustine: Sweetness of Truth",
+      "description": "Sensory delight as metaphor for spiritual truth",
+      "lemmas": ["dulcis", "mel", "eloquium", "odi"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Contrast between honey-sweet words and hated iniquity"
+    },
+    {
+      "name": "Augustine: Illuminated Understanding",
+      "description": "Divine light enabling superior comprehension",
+      "lemmas": ["intellego", "super", "testimonium", "prudens"],
+      "startLine": 2,
+      "endLine": 4,
+      "comment": "Grace grants understanding surpassing human teachers"
+    }
+  ]
+},
+
 
 
     {

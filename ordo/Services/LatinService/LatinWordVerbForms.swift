@@ -212,8 +212,10 @@ extension LatinWordEntity {
     // Present Active Participle
     let participleStem: String
     switch conjugation {
-    case 1, 2, 4: participleStem = stems.present + "a"
+    case 1: participleStem = stems.present + "a"
+    case 2: participleStem = stems.present + "e"
     case 3: participleStem = stems.present + "e"
+    case 4: participleStem = stems.present + "ie"
     default: participleStem = stems.present
     }
     

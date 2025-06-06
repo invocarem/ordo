@@ -1,5 +1,127 @@
 [
   {
+  "lemma": "odi",
+  "part_of_speech": "verb",
+  "conjugation": 0,
+  "infinitive": "odisse",
+  "perfect": "odivi",
+  "supine": "osum",
+  "translations": {
+    "en": "to hate",
+    "la": "odi, osus"
+  },
+  "notes": "Defective verb; only perfect-system forms exist (no present stem). 'Odivi' is an alternative perfect form."
+},
+  {
+    "lemma": "dulcis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "dulcis",
+    "genitive": "dulcis",
+    "forms_plural": {
+      "nominative_n": ["dulcia"],
+      "accusative_n": ["dulcia"]
+    },
+    "translations": {
+      "en": "sweet, pleasant, delightful",
+      "la": "dulcis, dulcis"
+    }
+  },
+  {
+    "lemma": "faux",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "faux",
+    "genitive": "faucis",
+    "forms_plural": {
+      "ablative_f": ["faucibus"],
+      "dative_f": ["faucibus"]
+    },
+    "translations": {
+      "en": "throat, mouth, passage",
+      "la": "faux, faucis"
+    }
+  },
+  {
+    "lemma": "mel",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "mel",
+    "genitive": "mellis",
+    
+    "translations": {
+      "en": "honey",
+      "la": "mel, mellis"
+    }
+  },
+
+  {
+  "lemma": "prohibeo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "prohibere",
+  "present": "prohibeo",
+  "future": "prohibebo",
+  "perfect": "prohibui",
+  "supine": "prohibitum",
+ 
+  "translations": {
+    "en": "restrain, prevent, forbid",
+    "la": "prohibeo, prohibere"
+  }
+},
+  {
+  "lemma": "prudens",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "prudens",
+  "genitive": "prudentis",
+  "forms": {
+    "accusative_m": ["prudentem"],
+    "dative_m": ["prudentem"]
+  },
+  "translations": {
+    "en": "prudent, wise, cautious",
+    "la": "prudens, prudentis"
+  }
+},
+  {
+  "lemma": "senex",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "senex",
+  "genitive": "senis",
+ 
+  "translations": {
+    "en": "old man, elder, aged person",
+    "la": "senex, senis"
+  },
+  "notes": "Though 3rd declension, follows -i stem pattern in genitive plural (senum)"
+},
+  {
+  "lemma": "consummatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "consummatio",
+  "genitive": "consummationis",
+  "forms": {
+    "genitive_plural": ["consummationum"],
+    "dative_singular": ["consummationi"],
+    "accusative_singular": ["consummationem"],
+    "ablative_singular": ["consummatione"]
+  },
+  "translations": {
+    "en": "completion, perfection, consummation",
+    "la": "consummatio, consummationis"
+  }
+},
+  {
   "lemma": "meditatio",
   "part_of_speech": "noun",
   "declension": 3,
@@ -6335,17 +6457,18 @@
         "perfect": ["periī", "periistī", "periit"],
         "present_subjunctive": ["peream", "pereas", "pereat"],
         "imperative": ["pere", "perite"],
+        "pluperfect_subjunctive": ["periissem", "periisses", "periisset"],
         "gerund_dative": ["periendō"],
         "gerund_accusative": ["periendum"],
         "gerundive_masc_nom": ["periendus"]
     },
     "forms_plural": {
-        "present": ["perīmus", "perītis", "pereunt"],
-        "imperfect": ["perībāmus", "perībātis", "perībant"],
+        "present": ["perimus", "peritis", "pereunt"],
+        "imperfect": ["peribamus", "peribatis", "peribant"],
         "future": ["peribimus", "peribitis", "peribunt"],
         "perfect": ["periimus", "periistis", "perierunt"],
         "present_subjunctive": ["pereamus", "pereatis", "pereant"],
-        "imperative": ["perīte"]
+        "imperative": ["perite"]
     },
     "translations": {
         "en": "perish, be destroyed",
@@ -13134,17 +13257,21 @@
             "la": "altissimus, -i"
         },
         "notes": "Common in the Psalms as a title for God (e.g., Psalm 90:1 - 'Qui habitat in adjutorio Altissimi' - He who dwells in the help of the Most High)"
-    },{
+    },
+    
+    {
         "lemma": "vivifico",
         "part_of_speech": "verb",
         "conjugation": 1,
-        "perfect": "vivificavi",
         "infinitive": "vivificare",
+        "present": "vivifico",
+        "perfect": "vivificavi",
+        "supine": "vivificatum",
         "forms": {
             "present": ["vivifico", "vivificas", "vivificat", "vivificamus", "vivificatis", "vivificant"],
             "imperfect": ["vivificabam", "vivificabas", "vivificabat", "vivificabamus", "vivificabatis", "vivificabant"],
             "future": ["vivificabo", "vivificabis", "vivificabit", "vivificabimus", "vivificabitis", "vivificabunt"],
-            "perfect": ["vivificavi", "vivificavisti", "vivificavit", "vivificavimus", "vivificavistis", "vivificaverunt"],
+            "perfect": [ "vivificavi",  "vivificasti", "vivificavit", "vivificavimus", "vivificavistis", "vivificaverunt"],
             "present_subjunctive": ["vivificem", "vivifices", "vivificet", "vivificemus", "vivificetis", "vivificent"],
             "imperative": ["vivifica", "vivificate"]
         },
@@ -13248,8 +13375,11 @@
         "lemma": "doceo",
         "part_of_speech": "verb",
         "conjugation": 2,
-        "perfect": "docui",
-        "infinitive": "docere",
+         "infinitive": "docere",
+          "present": "doceo",
+          "future": "docebo",
+          "perfect": "docui",
+          "supine": "doctum",
         "forms": {
             "present": ["doceo", "doces", "docet", "docemus", "docetis", "docent"],
             "imperfect": ["docebam", "docebas", "docebat", "docebamus", "docebatis", "docebant"],
@@ -17122,6 +17252,43 @@
       "la": "salvus, -a, -um"
     }
   },
+  {
+  "lemma": "salvo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "salvare",
+  "present": "salvo",
+  "future": "salvabo",
+  "perfect": "salvavi",
+  "supine": "salvatum",
+  "forms": {
+    "present": ["salvo", "salvas", "salvat"],
+    "imperfect": ["salvabam", "salvabas", "salvabat"],
+    "future": ["salvabo", "salvabis", "salvabit"],
+    "perfect": ["salvavi", "salvavisti", "salvavit"],
+    "present_subjunctive": ["salvem", "salves", "salvet"],
+    "imperative": ["salva", "salvate"],
+    "gerund_dative": ["salvando"],
+    "gerund_accusative": ["salvandum"],
+    "gerundive_masc_nom": ["salvandus"]
+  },
+  "forms_plural": {
+    "present": ["salvamus", "salvatis", "salvant"],
+    "imperfect": ["salvabamus", "salvabatis", "salvabant"],
+    "future": ["salvabimus", "salvabitis", "salvabunt"],
+    "perfect": ["salvavimus", "salvavistis", "salvaverunt"],
+    "present_subjunctive": ["salvemus", "salvetis", "salvent"],
+    "imperative": ["salvate"]
+  },
+  "translations": {
+    "en": "to save, preserve, rescue (esp. divinely)",
+    "la": "salvo, salvare, salvavi, salvatum"
+  },
+  "notes": {
+    "line_6_usage": "Imperative force in 'salvum me fac' (Ps 118:94) reflects urgent plea for divine salvation.",
+    "theological_significance": "In Vulgate, often used for God's redemptive acts (cf. 'salus' = salvation)."
+  }
+},
   {
     "lemma": "salvare",
     "part_of_speech": "verb",
