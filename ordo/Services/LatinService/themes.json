@@ -1065,6 +1065,213 @@
     }
   ]
 },
+
+{
+  "psalmNumber": 15,
+  "themes": [
+    {
+      "name": "Refuge → Covenant",
+      "description": "Taking refuge in God through covenantal declaration",
+      "lemmas": ["conservo", "spero", "dico", "deus", "egeo"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Cry for preservation (conserva) leads to confession of divine sufficiency (non eges)"
+    },
+    {
+      "name": "Blessing → Suffering",
+      "description": "Divine fulfillment amidst human frailty",
+      "lemmas": ["sanctus", "mirifico", "voluntas", "infirmitas", "accelero"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "God's wonder (mirificavit) in saints contrasts with multiplied sufferings (infirmitates)"
+    },
+    {
+      "name": "Rejection → Inheritance",
+      "description": "Renouncing idolatry for divine portion",
+      "lemmas": ["congrego", "sanguis", "memor", "pars", "hereditas", "calix", "restituo"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Refusing pagan assemblies (conventicula) to claim the Lord as inheritance (pars haereditatis)"
+    },
+    {
+      "name": "Boundaries → Instruction",
+      "description": "Secure inheritance enabling spiritual discernment",
+      "lemmas": ["funis", "cado", "praeclarus", "benedico", "tribuo", "intellectus", "increpo", "ren"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Pleasant boundaries (funes) precede divine instruction (intellectum) and conscience (renes)"
+    },
+    {
+      "name": "Presence → Joy",
+      "description": "Constant awareness of God producing embodied hope",
+      "lemmas": ["provideo", "dexter", "commoveo", "laetor", "exsulto", "requiesco", "spes"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "Setting God always before (Providebam) results in unshakable joy (laetatum) and rest (requiescet)"
+    },
+    {
+      "name": "Resurrection → Fullness",
+      "description": "Hope beyond death leading to eternal delight",
+      "lemmas": ["derelinquo", "infernus", "corruptio", "notus", "via", "vita", "adimpleo", "laetitia", "delectatio"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "Abandonment avoided (non derelinques) opens to paths of life (vias vitae) and joy (laetitia)"
+    },
+
+    {
+      "name": "Augustine: Christ the Holy One",
+      "description": "Christ as the true referent of 'sanctum tuum'",
+      "lemmas": ["sanctus", "corruptio"],
+      "startLine": 11,
+      "endLine": 11,
+      "comment": "Christ's body did not see corruption (Enarrationes in Psalmos 15:10)"
+    },
+    {
+      "name": "Augustine: The Cup of the Lord",
+      "description": "Eucharistic participation in Christ's passion",
+      "lemmas": ["calix"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "The cup (calicis) signifies sharing in Christ's suffering (Sermon 213.8)"
+    },
+    {
+      "name": "Augustine: The Nightly Examination",
+      "description": "Conscience as divine instruction in the dark night",
+      "lemmas": ["increpo", "ren"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "The kidneys (renes) represent the inner self being schooled by God (Enarr. 15.8)"
+    },
+    {
+      "name": "Augustine: The Paths of Life",
+      "description": "Christ as the way to the Father's presence",
+      "lemmas": ["via", "vita", "vultus"],
+      "startLine": 12,
+      "endLine": 12,
+      "comment": "The paths (vias) lead to the vision of God's face (vultu tuo) (Conf. IX.4)"
+    },
+    {
+      "name": "Augustine: The Whole Christ",
+      "description": "Corporate identity of Christ with His Church",
+      "lemmas": ["sanctus", "cor", "lingua", "caro"],
+      "startLine": 9,
+      "endLine": 11,
+      "comment": "Christ speaks through His members: heart, tongue and flesh (Enarr. 15:9)"
+    }
+  ]
+},
+
+{
+  "psalmNumber": 16,
+  "themes": [
+    {
+      "name": "Judicial Prayer",
+      "description": "Appeal for divine justice and sincere hearing",
+      "lemmas": ["exaudio", "justitia", "deprecatio", "dolosus"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Opening cry for God's just hearing of sincere prayer"
+    },
+    {
+      "name": "Divine Examination",
+      "description": "God's scrutiny proving the psalmist's righteousness",
+      "lemmas": ["probo", "visito", "examino", "iniquitas"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Nightly testing by fire revealing no iniquity"
+    },
+    {
+      "name": "Covenant Commitment",
+      "description": "Obedience to God's words on difficult paths",
+      "lemmas": ["custodio", "via", "durus", "perficio"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Commitment to keep God's commands despite hardship"
+    },
+    {
+      "name": "Confident Intercession",
+      "description": "Assurance in God's saving mercy",
+      "lemmas": ["clamo", "exaudio", "mirifico", "salvus"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Past answered prayers motivating new requests"
+    },
+    {
+      "name": "Divine Protection",
+      "description": "Sheltering presence amid danger",
+      "lemmas": ["pupilla", "umbra", "ala", "protego"],
+      "startLine": 9,
+      "endLine": 11,
+      "comment": "Apple-of-eye protection under God's wings"
+    },
+    {
+      "name": "Lion-like Enemies",
+      "description": "Proud adversaries surrounding the righteous",
+      "lemmas": ["impius", "circumdo", "superbia", "leo"],
+      "startLine": 12,
+      "endLine": 14,
+      "comment": "Arrogant foes ambushing like lions in hiding"
+    },
+    {
+      "name": "Eschatological Hope",
+      "description": "Final deliverance and divine satisfaction",
+      "lemmas": ["eripio", "gloria", "satiabor", "appareo"],
+      "startLine": 15,
+      "endLine": 19,
+      "comment": "Confidence in ultimate rescue and glory"
+    },
+
+    {
+      "name": "Augustine: Christ the Just One",
+      "description": "Christ as the true righteous sufferer",
+      "lemmas": ["justitia", "examinasti"],
+      "startLine": 1,
+      "endLine": 4,
+      "comment": "Christ's perfect justice in his passion (Enarrationes 16.4)"
+    },
+    {
+      "name": "Augustine: The Purifying Fire",
+      "description": "Divine examination as sanctification",
+      "lemmas": ["igne", "visito"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Nightly visitation signifies God's refining grace (Sermon 29.2)"
+    },
+    {
+      "name": "Augustine: The Church as Pupil",
+      "description": "Ecclesial identity in God's protective gaze",
+      "lemmas": ["pupillam"],
+      "startLine": 9,
+      "endLine": 9,
+      "comment": "Church as apple of God's eye protected in Christ (Enarr. 16.9)"
+    },
+    {
+      "name": "Augustine: The Shadow of the Cross",
+      "description": "Wings as cruciform protection",
+      "lemmas": ["alarum"],
+      "startLine": 10,
+      "endLine": 10,
+      "comment": "Wings' shadow prefigures shelter of Christ's cross (De Civitate Dei XVII.16)"
+    },
+    {
+      "name": "Augustine: The Swelling of Pride",
+      "description": "Enemies' fatness as spiritual arrogance",
+      "lemmas": ["adipem", "superbia"],
+      "startLine": 12,
+      "endLine": 12,
+      "comment": "Fatness symbolizes pride blinding the wicked (Enarr. 16.12)"
+    },
+    {
+      "name": "Augustine: The Final Satisfaction",
+      "description": "Eternal fulfillment in God's presence",
+      "lemmas": ["satiabor", "gloria"],
+      "startLine": 19,
+      "endLine": 19,
+      "comment": "Ultimate satisfaction in the beatific vision (Conf. XIII.15)"
+    }
+  ]
+},
+
 {
   "psalmNumber": 17,
   "category": "a",
