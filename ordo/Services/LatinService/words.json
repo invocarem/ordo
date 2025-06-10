@@ -1,5 +1,334 @@
 [
   {
+    "lemma": "exardesco",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "exardescere",
+    "present": "exardesco",
+    "future": "exardescam",
+    "perfect": "exarsi",
+    "supine": "exarsum",
+    "translations": {
+        "en": "to blaze up, flare up, ignite",
+        "la": "exardesco, exardescere"
+    }
+},
+  {
+    "lemma": "succendo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "succendere",
+    "present": "succendo",
+    "future": "succendam",
+    "perfect": "succendi",
+    "supine": "succensum",
+    "translations": {
+        "en": "to kindle, set on fire",
+        "la": "succendo, succendere"
+    }
+},
+  {
+    "lemma": "succendo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "perfect": "succendi",
+    "translations": {
+        "en": "kindle, set on fire",
+        "la": "succendo"
+    }
+},
+{
+    "lemma": "caelum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "caelum",
+    "genitive": "caeli",
+   "translations": {
+        "en": "heaven, sky",
+        "la": "caelum"
+    }
+},
+ {
+    "lemma": "coelum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "coelum",
+    "genitive": "coeli",
+    "forms_plural": {
+      "accusative_eccl_n": ["coelos"],
+      "ablative_eccl_n": ["coelibus"]
+    },
+   "translations": {
+        "en": "heaven, sky",
+        "la": "coelum"
+    }
+},
+    
+ 
+  {
+    "lemma": "latibulum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "latibulum",
+    "genitive": "latibuli",
+    "translations": {
+        "en": "hiding place, retreat",
+        "la": "latibulum"
+    }
+},
+  {
+    "lemma": "cherub",
+    "part_of_speech": "noun",
+    "declension": 0,
+    "gender": "masculine",
+    "nominative": "cherub",
+    "genitive": "cherubim",
+    "translations": {
+        "en": "cherubim (angelic beings)",
+        "la": "cherub"
+    }
+},
+  {
+    "lemma": "fortitudo",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "fortitudo",
+    "genitive": "fortitudinis",
+    "translations": {
+        "en": "strength, courage",
+        "la": "fortitudo"
+    }
+},
+{
+    "lemma": "firmamentum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "firmamentum",
+    "genitive": "firmamenti",
+    "translations": {
+        "en": "support, prop, firmament",
+        "la": "firmamentum"
+    }
+},
+{
+    "lemma": "liberator",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "liberator",
+    "genitive": "liberatoris",
+    "translations": {
+        "en": "deliverer, liberator",
+        "la": "liberator"
+    }
+},
+  {
+    "lemma": "praefulgor",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "praefulgor",
+    "genitive": "praefulgoris",
+    "translations": {
+        "en": "bright shine, radiance",
+        "la": "praefulgor"
+    }
+},
+  {
+    "lemma": "tenebrosus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "tenebrosus",
+    "genitive": "tenebrosi",
+    "forms": {
+        "nominative_f": ["tenebrosa"],
+        "genitive_f": [ "tenebrosae"],
+        "dative_f": ["tenebrosae"],
+        "accusative_f":[ "tenebrosam"],
+        "ablative_f": ["tenebrosa"],
+
+        "nominative_n": ["tenebrosum"],
+        "genitive_n":  ["tenebrosi"],
+        "dative_n":  ["tenebroso"],
+        "accusative_n":  ["tenebrosum"],
+        "ablative_n":  ["tenebroso"]
+     },
+    "forms_plural": {
+        "nominative_f": ["tenebrosae"],
+        "genitive_f": ["tenebrosarum"],
+        "dative_f": ["tenebrosis"],
+        "accusative_f": ["tenebrosas"],
+        "ablative_f": ["tenebrosis"],
+        
+       "nominative_n": ["tenebrosa"],
+        "genitive_n": ["tenebrosorum"],
+        "dative_n": ["tenebrosis"],
+        "accusative_n": ["tenebrosa"],
+        "ablative_n": ["tenebrosis"]
+    },
+    "translations": {
+        "en": "dark, shadowy, gloomy",
+        "la": "tenebrosus"
+    }
+ },
+  {
+    "lemma": "aer",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "aer",
+    "genitive": "aeris",
+    "translations": {
+        "en": "air, atmosphere, mist",
+        "la": "aer"
+    }
+ },
+  {
+    "lemma": "nubes",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "nubes",
+    "genitive": "nubis",
+    "ablative": "nube",
+     "translations": {
+        "en": "cloud, mist, fog",
+        "la": "nubes"
+    }
+  },
+  {
+    "lemma": "grando",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "grando",
+    "genitive": "grandinis",
+    "dative": "grandini",
+    "accusative": "grandinem",
+    "ablative": "grandine",
+    "nominative_plural": "grandines",
+    "genitive_plural": "grandinum",
+    "dative_plural": "grandinibus",
+    "accusative_plural": "grandines",
+    "ablative_plural": "grandinibus",
+    "translations": {
+        "en": "hail, hailstorm",
+        "la": "grando"
+    }
+},
+  {
+    "lemma": "intono",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "intonare",
+    "present": "intono",
+    "future": "intonabo",
+    "perfect": "intonui",
+    "supine": "intonatum",
+    "translations": {
+        "en": "thunder, resound, proclaim loudly",
+        "la": "intono"
+    },
+    "forms": {
+        "present": ["intono", "intonas", "intonat", "intonamus", "intonatis", "intonant"],
+        "perfect": ["intonui", "intonuisti", "intonuit", "intonuimus", "intonuistis", "intonuerunt"]
+    }
+},
+  {
+    "lemma": "afflictio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "afflictio",
+    "genitive": "afflictionis",
+    "dative": "afflictioni",
+    "accusative": "afflictionem",
+    "ablative": "afflictione",
+    "nominative_plural": "afflictiones",
+    "genitive_plural": "afflictionum",
+    "dative_plural": "afflictionibus",
+    "accusative_plural": "afflictiones",
+    "ablative_plural": "afflictionibus",
+    "translations": {
+        "en": "trouble, distress, affliction",
+        "la": "afflictio"
+    }
+},
+  {
+    "lemma": "gero",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "gerere",
+    "perfect": "gessi",
+    "supine": "gestum",
+    "translations": {
+        "en": "carry, manage, behave, conduct",
+        "la": "gero"
+    }
+    
+},
+  {
+    "lemma": "repello",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "repellere",
+    "perfect": "repuli",
+    "supine": "repulsum",
+    "translations": {
+        "en": "reject, repel, drive back",
+        "la": "repello"
+    },
+    "forms": {
+        "perfect": ["repuli", "repulisti", "repulit", "repulimus", "repulistis", "repulerunt"]
+    }
+},
+  {
+    "lemma": "observo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "observare",
+    "present": "observo",
+    "future": "observabo",
+    "perfect": "observavi",
+    "supine": "observatum",
+    "translations": {
+        "en": "observe, watch, keep",
+        "la": "observo"
+    }
+  },
+  {
+    "lemma": "puritas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "puritas",
+    "genitive": "puritatis",
+     "translations": {
+        "en": "purity, cleanness",
+        "la": "puritas"
+    }
+},
+  {
+    "lemma": "commoveo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "commovere",
+    "present": "commoveo",
+    "future": "commovebo",
+    "perfect": "commovi",
+    "supine": "commotum",
+    "translations": {
+        "en": "shake, disturb, agitate",
+        "la": "commoveo"
+    }
+},
+  {
     "lemma": "dissipo",
     "part_of_speech": "verb",
     "conjugation": 1,
@@ -3895,19 +4224,6 @@
     "en": "to find, discover",
     "la": "invenio, invenire, inveni, inventum"
   }
-},
-{
-  "lemma": "coelum",
-  "part_of_speech": "noun",
-  "declension": 2,
-  "gender": "neuter",
-  "nominative": "coelum",
-  "genitive": "coeli",
-  "translations": {
-    "en": "heaven, sky",
-    "la": "coelum, -i"
-  },
-  "note": "The form 'coelos' is a masculine accusative plural variant (poetic/Late Latin). Standard neuter plural is 'coela'."
 },
 {
   "lemma": "protector",
@@ -11884,6 +12200,7 @@
       "forms" :{
         "present": ["fio", "fis", "fit", "fimus", "fitis", "fiunt"],
         "future": ["fiam", "fies", "fiet", "fiemus", "fietis", "fient"],
+        "perfect_passive": ["factus", "factus", "factus", "facti", "facti ", "facti"],
         "present_passive_subjunctive": [
                 "fiam", "fias", "fiat",
                 "fiamus", "fiatis", "fiant"
@@ -11923,20 +12240,25 @@
         "la": "saeculum"
       }
     },
-    {
-      "lemma": "educo",
-      "part_of_speech": "verb",
-      "infinitive": "educere",
-      "perfect": "eduxi",
-      "supine": "eductum",
-      "forms": {
-        "imperative": ["educ"]
-      },
-      "translations": {
-        "en": "lead out",
-        "la": "educ"
-      }
+ {
+    "lemma": "educo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "educere",
+    "present": "educo",
+    "future": "educam",
+    "perfect": "eduxi",
+    "supine": "eductum",
+    "translations": {
+        "en": "lead out, bring up, rear (children)",
+        "la": "educo"
     },
+    "forms": {
+        "present": ["educo", "educis", "educit", "educimus", "educitis", "educunt"],
+        "future": ["educam", "educes", "educet", "ecemus", "educetis", "educent"],
+        "perfect": ["eduxi", "eduxisti", "eduxit", "eduximus", "eduxistis", "eduxerunt"]
+    }
+},
     {
       "lemma": "confessio",
       "part_of_speech": "noun",
@@ -15073,35 +15395,7 @@
                "la": "nos"
            }
        },
-       {
-        "lemma": "caelum",
-        "part_of_speech": "noun",
-        "declension": 2,
-        "gender": "neuter",
-        "nominative": "caelus",
-        "genitive": "caeli",
-        "forms": {
-          "nominative_n": ["caelum"],
-          "genitive_n": ["caeli"],
-          "dative_n": ["caelo"],
-          "accusative_n": ["caelum"],
-          "ablative_n": ["caelo"],
-          "vocative_n": ["caelum"]
-        },
-        "forms_plural": {
-          "nominative_n": ["caela"],
-          "genitive_n": ["caelorum"],
-          "dative_n": ["caelis"],
-          "accusative_n": ["caela"],
-          "ablative_n": ["caelis"],
-          "vocative_n": ["caela"]
-        },
-        "translations": {
-          "en": "sky, heaven",
-          "la": "caelum"
-        }
-      },
-      {
+     {
         "lemma": "terra",
         "part_of_speech": "noun",
         "declension": 1,

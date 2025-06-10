@@ -251,7 +251,7 @@ func testPsalm17ALines9and10() {
         ("clamor", ["clamor"], "cry"),
         ("conspectus", ["conspectu"], "presence"),
         ("auris", ["aures"], "ear"),
-        ("commoveo", ["commota", "conturbata"], "shake"),
+        ("commoveo", ["commota"], "shake"),
         ("contremisco", ["contremuit"], "tremble"),
         ("fundamentum", ["fundamenta"], "foundation"),
         ("mons", ["montium"], "mountain")
@@ -342,6 +342,7 @@ func testPsalm17ALines13and14() {
     let line13 = psalm17A[12] // "carbones succensi sunt ab eo."
     let line14 = psalm17A[13] // "Inclinavit coelos, et descendit, et caligo sub pedibus ejus."
     let combinedText = line13 + " " + line14
+    latinService.configureDebugging(target: "coelum")
     let analysis = latinService.analyzePsalm(text: combinedText)
     
     let testLemmas = [
@@ -442,7 +443,7 @@ func testPsalm17ALines17and18() {
         ("aqua", ["aqua"], "water"),
         ("nubes", ["nubibus", "nubes"], "cloud"),
         ("aer", ["aeris"], "air"),
-        ("praefulgeo", ["praefulgor"], "shine forth"),
+        ("praefulgor", ["praefulgor"], "shine forth"),
         ("grando", ["grando"], "hail"),
         ("carbo", ["carbones"], "coal"),
         ("ignis", ["ignis"], "fire")
@@ -481,7 +482,7 @@ func testPsalm17ALines19and20() {
     let analysis = latinService.analyzePsalm(text: combinedText)
     
     let testLemmas = [
-        ("tono", ["intonuit"], "thunder"),
+        ("intono", ["intonuit"], "thunder"),
         ("coelum", ["coelo"], "heaven"),
         ("dominus", ["dominus"], "Lord"),
         ("altissimus", ["altissimus"], "Most High"),
@@ -510,7 +511,7 @@ func testPsalm17ALines19and20() {
     }
     
     // Divine voice
-    XCTAssertEqual(analysis.dictionary["tono"]?.forms["intonuit"], 1, "Should find thundering verb")
+    XCTAssertEqual(analysis.dictionary["intono"]?.forms["intonuit"], 1, "Should find thundering verb")
     XCTAssertEqual(analysis.dictionary["vox"]?.forms["vocem"], 1, "Should find voice reference")
     
     // Divine titles
@@ -609,7 +610,6 @@ func testPsalm17ALines25and26() {
     let line25 = psalm17A[24] // "Misit de summo, et accepit me; assumpsit me de aquis multis."
     let line26 = psalm17A[25] // "Eripuit me de inimico meo potentissimo, et ab his qui oderunt me:"
     let combinedText = line25 + " " + line26
-    latinService.configureDebugging(target: "assumo")
     let analysis = latinService.analyzePsalm(text: combinedText)
     
     let testLemmas = [
@@ -746,7 +746,7 @@ func testPsalm17ALines31and32() {
         ("custodio", ["custodivi"], "keep"),
         ("via", ["vias"], "way"),
         ("dominus", ["domini"], "Lord"),
-        ("impie", ["impie"], "wickedly"),
+        ("impius", ["impie"], "wickedly"),
         ("gero", ["gessi"], "behave"),
         ("deus", ["deo"], "God"),
         ("judicium", ["judicia"], "judgment"),
@@ -788,7 +788,7 @@ func testPsalm17ALines33and34() {
     let analysis = latinService.analyzePsalm(text: combinedText)
     
     let testLemmas = [
-        ("immaculatus", ["immaculatus"], "blameless"),
+        ("immaculatus", ["immaculatus"], "undefiled"),
         ("observo", ["observabo"], "keep"),
         ("iniquitas", ["iniquitate"], "sin"),
         ("retribuo", ["retribuet"], "repay"),
@@ -888,7 +888,7 @@ func testPsalm17ALines33and34() {
         let analysis = latinService.analyzePsalm(text: psalm17A)
         
         let purityTerms = [
-            ("immaculatus", ["immaculatus"], "blameless"),
+            ("immaculatus", ["immaculatus"], "spotless"),
             ("puritas", ["puritatem"], "purity"),
             ("iniquitas", ["iniquitate", "iniquitatis"], "wickedness"),
             ("justitia", ["justitiam", "justitias"], "righteousness"),

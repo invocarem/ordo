@@ -1279,84 +1279,131 @@
   "category": "a",
   "themes": [
     {
-      "name": "Personal Devotion",
-      "description": "Declaration of love and trust in God's protection",
+      "name": "Divine Refuge Triad",
+      "description": "Threefold declaration of God as strength, fortress, and deliverer",
       "lemmas": ["diligo", "firmamentum", "refugium", "liberator"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Opening with intimate 'Diligo te' and triple divine titles"
+      "comment": "The opening establishes personal devotion through possessive pronouns (mea/meum)"
     },
     {
-      "name": "Divine Titles",
-      "description": "Accumulation of God's protective roles",
-      "lemmas": ["adjutor", "protector", "cornu", "susceptor"],
+      "name": "Compound Divine Titles",
+      "description": "Six roles of God declared in rapid succession",
+      "lemmas": ["deus", "adjutor", "protector", "cornu", "susceptor", "spero"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "Six roles in two verses emphasizing comprehensive care"
+      "comment": "Includes future hope ('sperabo') and salvation metaphor ('cornu salutis')"
     },
     {
-      "name": "Mortal Peril",
-      "description": "Imagery of death's encompassing threat",
-      "lemmas": ["dolor", "infernus", "laqueus", "torrens"],
+      "name": "Praise Amid Peril",
+      "description": "Worship contrasted with mortal danger",
+      "lemmas": ["laudo", "invoco", "dolor", "torrens", "conturbo"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "Pains of death and torrents of wickedness"
+      "comment": "Future safety promised ('salvus ero') while surrounded by death's pains"
     },
+
     {
-      "name": "Desperate Prayer",
-      "description": "Past-tense cries for deliverance",
-      "lemmas": ["invocavi", "clamavi", "exaudivit", "introivit"],
-      "startLine": 7,
+      "name": "Snares of Death",
+      "description": "Fourfold perfect-tense siege by mortality",
+      "lemmas": [
+        "circumdo",  
+        "conturbo",  
+        "praeoccupo", 
+        "clamo"      
+      ],
+      "startLine": 6,  
       "endLine": 8,
-      "comment": "Emphasizes God's hearing (entered His ears)"
+      "comment": "Three passive perfects (circumdederunt...praeoccupaverunt) show death's total claim, answered by one active perfect (clamavi). Augustine reads this as Christ's descent into hell (En. Ps. 17.8) where 'death's snares' become Christ's victory trophies (Sermon 120.3)."
     },
+    
     {
-      "name": "Theophanic Response",
-      "description": "Earth-shaking divine intervention",
-      "lemmas": ["commoveo", "contremisco", "fundamentum", "mons"],
+      "name": "Theophany Response",
+      "description": "Cosmic reaction to divine hearing",
+      "lemmas": ["exaudio", "tremesco", "fundamentum", "mons"],
       "startLine": 9,
       "endLine": 10,
-      "comment": "Creation reacts to God's movement"
+      "comment": "Earth shakes when God's ear is attentive to human cries"
     },
     {
-      "name": "Fiery Judgment",
-      "description": "Divine wrath manifested through fire",
-      "lemmas": ["ignis", "fumus", "exardesco", "carbo"],
+      "name": "Smoke and Fire Wrath",
+      "description": "Divine anger manifested elementally",
+      "lemmas": ["fumus", "ignis", "irascor", "exardesco"],
       "startLine": 11,
       "endLine": 12,
-      "comment": "Smoke, blazing fire, and burning coals"
+      "comment": "Classic theophany elements signaling God's judicial presence"
     },
     {
       "name": "Cosmic Descent",
-      "description": "God bending heaven to rescue",
+      "description": "God bending heaven to intervene",
       "lemmas": ["inclino", "coelum", "descendo", "caligo"],
       "startLine": 13,
       "endLine": 14,
-      "comment": "Darkness underfoot as mysterious presence"
+      "comment": "Darkness under feet contrasts with earlier fire imagery"
     },
     {
-      "name": "Storm Theophany",
-      "description": "Classic storm god imagery",
-      "lemmas": ["cherub", "penna", "ventus", "tenebrae"],
+      "name": "Cherubic Flight",
+      "description": "Divine mobility and hidden presence",
+      "lemmas": ["cherub", "volo", "tenebrae", "tabernaculum"],
       "startLine": 15,
       "endLine": 16,
-      "comment": "Riding cherubim with wind-wings"
+      "comment": "Double 'volavit' emphasizes swift movement to rescue"
     },
     {
-      "name": "Artillery of Heaven",
-      "description": "Divine warfare elements",
-      "lemmas": ["fulgur", "grando", "sagitta", "tono"],
-      "startLine": 17,
-      "endLine": 18,
-      "comment": "Lightning as arrows and thunderous voice"
-    },
-    {
-      "name": "Chaos Undone",
-      "description": "Primordial waters unleashed",
-      "lemmas": ["fons", "fundamentum", "orbis", "increpatio"],
+      "name": "Storm Artillery",
+      "description": "Hail and fire as divine weapons",
+      "lemmas": ["grando", "carbo", "intono", "sagitta"],
       "startLine": 19,
-      "endLine": 20,
-      "comment": "Watersources exposed at God's rebuke"
+      "endLine": 22,
+      "comment": "Projectiles scatter enemies while revealing creation's foundations"
+    },
+    {
+      "name": "Personal Rescue Narrative",
+      "description": "First-person account of deliverance",
+      "lemmas": ["eripio", "inimicus", "potens", "latitudo"],
+      "startLine": 25,
+      "endLine": 28,
+      "comment": "From many waters to broad place - spatial salvation imagery"
+    },
+    {
+      "name": "Covenant Righteousness",
+      "description": "Reciprocal justice based on obedience",
+      "lemmas": ["retribuo", "justitia", "puritas", "immaculatus"],
+      "startLine": 29,
+      "endLine": 34,
+      "comment": "Double 'retribuet' frames ethical section closing the psalm"
+    },
+    {
+      "name": "Augustine: Baptismal Victory",
+      "description": "Waters of death becoming salvation",
+      "lemmas": ["aqua", "eripio", "inimicus", "latitudo"],
+      "startLine": 24,
+      "endLine": 28,
+      "comment": "'De aquis multis' as both threat and means of grace (Enarrationes 17.2)"
+    },
+    {
+      "name": "Augustine: Twofold Retribution",
+      "description": "Divine justice mirroring human purity",
+      "lemmas": ["retribuo", "manus", "justitia", "oculus"],
+      "startLine": 29,
+      "endLine": 34,
+      "comment": "'Secundum puritatem manuum' reflects God's gaze (City of God XX.22)"
+    },
+    {
+      "name": "Augustine: Christ the Cherub",
+      "description": "Flying on wings of incarnation",
+      "lemmas": ["cherub", "volo", "tabernaculum"],
+      "startLine": 15,
+      "endLine": 16,
+      "comment": "Divine flight signifies Christ's descent in flesh (Sermon 198.3)"
+    },
+    {
+      "name": "Augustine: Wrath as Love's Fire",
+      "description": "Purifying anger against evil",
+      "lemmas": ["ignis", "ira", "carbones"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "God's wrath is love refusing compromise with sin (Conf. I.12)"
     }
   ]
 },
