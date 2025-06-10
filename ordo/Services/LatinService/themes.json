@@ -451,7 +451,7 @@
     },
     {
       "psalmNumber": 8,
-      "category": "Creation Psalm",
+      "category": "",
       "themes": [
         {
           "name": "Divine Majesty",
@@ -537,7 +537,7 @@
     },
 {
   "psalmNumber": 9,
-  "category": "A",
+  "category": "a",
   "themes": [
     {
       "name": "Personal Praise",
@@ -759,7 +759,7 @@
 },
 {
   "psalmNumber": 9,
-  "category": "B",
+  "category": "b",
   "themes": [
     {
       "name": "Judicial Petition",
@@ -1068,6 +1068,7 @@
 
 {
   "psalmNumber": 15,
+  "category": "",
   "themes": [
     {
       "name": "Refuge → Covenant",
@@ -1163,6 +1164,7 @@
 
 {
   "psalmNumber": 16,
+  "category": "",
   "themes": [
     {
       "name": "Judicial Prayer",
