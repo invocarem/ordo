@@ -1,5 +1,142 @@
 [
   {
+    "lemma": "dissipo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "dissipare",
+    "present": "dissipo",
+    "future": "dissipabo",
+    "perfect": "dissipavi",
+    "supine": "dissipatum",
+    "translations": {
+        "en": "scatter, disperse, squander",
+        "la": "dissipo"
+    },
+    "forms": {
+        "present": ["dissipo", "dissipas", "dissipat", "dissipamus", "dissipatis", "dissipant"],
+        "future": ["dissipabo", "dissipabis", "dissipabit", "dissipabimus", "dissipabitis", "dissipabunt"],
+        "perfect": ["dissipavi", "dissipavisti", "dissipavit", "dissipavimus", "dissipavistis", "dissipaverunt"]
+    }
+},
+  {
+    "lemma": "fulgur",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "fulgur",
+    "genitive": "fulguris",
+    "dative": "fulguri",
+    "accusative": "fulgur",
+    "ablative": "fulgure",
+    "nominative_plural": "fulgura",
+    "genitive_plural": "fulgurum",
+    "dative_plural": "fulguribus",
+    "accusative_plural": "fulgura",
+    "ablative_plural": "fulguribus",
+    "translations": {
+        "en": "lightning, thunderbolt, flash",
+        "la": "fulgur"
+    }
+},
+  {
+    "lemma": "fons",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "fons",
+    "genitive": "fontis",
+    "dative": "fonti",
+    "accusative": "fontem",
+    "ablative": "fonte",
+    "nominative_plural": "fontes",
+    "genitive_plural": "fontium",
+    "dative_plural": "fontibus",
+    "accusative_plural": "fontes",
+    "ablative_plural": "fontibus",
+    "translations": {
+        "en": "spring, fountain, source",
+        "la": "fons"
+    }
+},
+
+  {
+    "lemma": "inspiratio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "inspiratio",
+    "genitive": "inspirationis",
+    "dative": "inspirationi",
+    "accusative": "inspirationem",
+    "ablative": "inspiratione",
+    "nominative_plural": "inspirationes",
+    "genitive_plural": "inspirationum",
+    "dative_plural": "inspirationibus",
+    "accusative_plural": "inspirationes",
+    "ablative_plural": "inspirationibus",
+    "translations": {
+        "en": "inspiration, breathing in",
+        "la": "inspiratio"
+    }
+},
+  {
+    "lemma": "summus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "summus",
+    "genitive": "summi",
+    "dative": "summo",
+    "accusative": "summum",
+    "ablative": "summo",
+    "nominative_plural": "summi",
+    "genitive_plural": "summorum",
+    "dative_plural": "summis",
+    "accusative_plural": "summos",
+    "ablative_plural": "summis",
+    "translations": {
+        "en": "highest, greatest, top (of a physical height or rank)",
+        "la": "summus"
+    }
+},
+  {
+    "lemma": "assumo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "assumere",
+    "present": "assumo",
+    "future": "assumam",
+    "perfect": "assumpsi",
+    "supine": "assumptum",
+    "translations": {
+        "en": "take up, receive, lift up",
+        "la": "assumo"
+    },
+    "forms": {
+        "present": ["assumo", "assumis", "assumit", "assumimus", "assumitis", "assumunt"],
+        "future": ["assumam", "assumes", "assumet", "assumemus", "assumetis", "assument"],
+        "perfect": ["assumpsi", "assumpsisti", "assumpsit", "assumpsimus", "assumpsistis", "assumpserunt"]
+    }
+},
+  {
+    "lemma": "potens",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "potens",
+    "genitive": "potentis",
+    "forms": {
+      "superlative_datative_m": ["potentissimo"],
+      "superlative_datative_f": ["potentissimae"],
+      "superlative_accusative_m": ["potentissimum"],
+      "superlative_accusative_f": ["potentissimam"]
+    },
+   "translations": {
+        "en": "powerful, able",
+        "la": "potens"
+    }
+},
+  {
   "lemma": "odi",
   "part_of_speech": "verb",
   "conjugation": 0,
@@ -13297,8 +13434,11 @@
         "lemma": "revelo",
         "part_of_speech": "verb",
         "conjugation": 1,
-        "perfect": "revelavi",
         "infinitive": "revelare",
+        "present": "revelo",
+        "future": "revelabo",
+        "perfect": "revelavi",
+        "supine": "revelatum",
         "forms": {
             "present": ["revelo", "revelas", "revelat", "revelamus", "revelatis", "revelant"],
             "imperfect": ["revelabam", "revelabas", "revelabat", "revelabamus", "revelabatis", "revelabant"],

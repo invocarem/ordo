@@ -386,7 +386,445 @@ func testPsalm17ALines13and14() {
 }
 // Continue implementing the remaining verse pairs...
 // [Rest of the implementation would follow the same pattern]
+func testPsalm17ALines15and16() {
+    let line15 = psalm17A[14] // "Et ascendit super cherubim, et volavit; volavit super pennas ventorum."
+    let line16 = psalm17A[15] // "Et posuit tenebras latibulum suum; in circuitu ejus tabernaculum ejus,"
+    let combinedText = line15 + " " + line16
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("ascendo", ["ascendit"], "ascend"),
+        ("cherub", ["cherubim"], "cherubim"),
+        ("volo", ["volavit"], "fly"),
+        ("penna", ["pennas"], "wing"),
+        ("ventus", ["ventorum"], "wind"),
+        ("pono", ["posuit"], "place"),
+        ("tenebrae", ["tenebras"], "darkness"),
+        ("latibulum", ["latibulum"], "hiding place"),
+        ("circuitus", ["circuitu"], "surrounding"),
+        ("tabernaculum", ["tabernaculum"], "tent")
+    ]
+    
+    if verbose {
+        print("\nPSALM 17:15-16 ANALYSIS:")
+        print("15: \"\(line15)\"")
+        print("16: \"\(line16)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nKEY THEMES:")
+        print("1. Divine Mobility: Double 'volavit' emphasizing God's swift movement")
+        print("2. Mysterious Presence: Darkness as God's hiding place")
+        print("3. Mobile Sanctuary: Tabernacle imagery suggesting God's portable presence")
+    }
+    
+    // Flight imagery
+    XCTAssertEqual(analysis.dictionary["volo"]?.forms["volavit"], 2, "Should find two instances of flying")
+    XCTAssertEqual(analysis.dictionary["cherub"]?.forms["cherubim"], 1, "Should find cherubim reference")
+    
+    // Divine dwelling
+    XCTAssertEqual(analysis.dictionary["latibulum"]?.forms["latibulum"], 1, "Should find hiding place")
+    XCTAssertEqual(analysis.dictionary["tabernaculum"]?.forms["tabernaculum"], 1, "Should find tent reference")
+}
 
+func testPsalm17ALines17and18() {
+    let line17 = psalm17A[16] // "tenebrosa aqua in nubibus aeris."
+    let line18 = psalm17A[17] // "Praefulgor ante eum nubes, grando et carbones ignis."
+    let combinedText = line17 + " " + line18
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("tenebrosus", ["tenebrosa"], "dark"),
+        ("aqua", ["aqua"], "water"),
+        ("nubes", ["nubibus", "nubes"], "cloud"),
+        ("aer", ["aeris"], "air"),
+        ("praefulgeo", ["praefulgor"], "shine forth"),
+        ("grando", ["grando"], "hail"),
+        ("carbo", ["carbones"], "coal"),
+        ("ignis", ["ignis"], "fire")
+    ]
+    
+    if verbose {
+        print("\nPSALM 17:17-18 ANALYSIS:")
+        print("17: \"\(line17)\"")
+        print("18: \"\(line18)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nKEY THEMES:")
+        print("1. Atmospheric Contrast: Dark waters vs shining clouds")
+        print("2. Storm Imagery: Hail and fire coals as divine weapons")
+        print("3. Elemental Juxtaposition: Water and fire coexisting")
+    }
+    
+    // Elemental contrast
+    XCTAssertEqual(analysis.dictionary["aqua"]?.forms["aqua"], 1, "Should find water reference")
+    XCTAssertEqual(analysis.dictionary["ignis"]?.forms["ignis"], 1, "Should find fire reference")
+    
+    // Storm elements
+    XCTAssertEqual(analysis.dictionary["grando"]?.forms["grando"], 1, "Should find hail reference")
+    XCTAssertEqual(analysis.dictionary["carbo"]?.forms["carbones"], 1, "Should find coals reference")
+}
+
+func testPsalm17ALines19and20() {
+    let line19 = psalm17A[18] // "Et intonuit de coelo Dominus, et Altissimus dedit vocem suam:"
+    let line20 = psalm17A[19] // "grandinem et carbones ignis."
+    let combinedText = line19 + " " + line20
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("tono", ["intonuit"], "thunder"),
+        ("coelum", ["coelo"], "heaven"),
+        ("dominus", ["dominus"], "Lord"),
+        ("altissimus", ["altissimus"], "Most High"),
+        ("do", ["dedit"], "give"),
+        ("vox", ["vocem"], "voice"),
+        ("grando", ["grandinem"], "hail"),
+        ("carbo", ["carbones"], "coal"),
+        ("ignis", ["ignis"], "fire")
+    ]
+    
+    if verbose {
+        print("\nPSALM 17:19-20 ANALYSIS:")
+        print("19: \"\(line19)\"")
+        print("20: \"\(line20)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nKEY THEMES:")
+        print("1. Divine Voice: Thunder as God's speech")
+        print("2. Compound Title: 'Dominus...Altissimus' showing authority and transcendence")
+        print("3. Storm Artillery: Hail and fire as divine projectiles")
+    }
+    
+    // Divine voice
+    XCTAssertEqual(analysis.dictionary["tono"]?.forms["intonuit"], 1, "Should find thundering verb")
+    XCTAssertEqual(analysis.dictionary["vox"]?.forms["vocem"], 1, "Should find voice reference")
+    
+    // Divine titles
+    XCTAssertEqual(analysis.dictionary["dominus"]?.forms["dominus"], 1, "Should find Lord reference")
+    XCTAssertEqual(analysis.dictionary["altissimus"]?.forms["altissimus"], 1, "Should find Most High reference")
+}
+
+func testPsalm17ALines21and22() {
+    let line21 = psalm17A[20] // "Et misit sagittas suas, et dissipavit eos;"
+    let line22 = psalm17A[21] // "fulgura multiplicavit, et conturbavit eos."
+    let combinedText = line21 + " " + line22
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("mitto", ["misit"], "send"),
+        ("sagitta", ["sagittas"], "arrow"),
+        ("dissipo", ["dissipavit"], "scatter"),
+        ("fulgur", ["fulgura"], "lightning"),
+        ("multiplico", ["multiplicavit"], "multiply"),
+        ("conturbo", ["conturbavit"], "confound")
+    ]
+    
+    if verbose {
+        print("\nPSALM 17:21-22 ANALYSIS:")
+        print("21: \"\(line21)\"")
+        print("22: \"\(line22)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nKEY THEMES:")
+        print("1. Divine Warfare: Arrows and lightning as weapons")
+        print("2. Enemy Defeat: Double verbs of scattering and confounding")
+        print("3. Perfect Tense: Completed actions showing decisive victory")
+    }
+    
+    // Warfare imagery
+    XCTAssertEqual(analysis.dictionary["sagitta"]?.forms["sagittas"], 1, "Should find arrows reference")
+    XCTAssertEqual(analysis.dictionary["fulgur"]?.forms["fulgura"], 1, "Should find lightning reference")
+    
+    // Victory verbs
+    XCTAssertEqual(analysis.dictionary["dissipo"]?.forms["dissipavit"], 1, "Should find scattering verb")
+    XCTAssertEqual(analysis.dictionary["conturbo"]?.forms["conturbavit"], 1, "Should find confounding verb")
+}
+
+func testPsalm17ALines23and24() {
+    let line23 = psalm17A[22] // "Et apparuerunt fontes aquarum, et revelata sunt fundamenta orbis terrarum"
+    let line24 = psalm17A[23] // "ab increpatione tua, Domine, ab inspiratione spiritus irae tuae."
+    let combinedText = line23 + " " + line24
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("appareo", ["apparuerunt"], "appear"),
+        ("fons", ["fontes"], "spring"),
+        ("aqua", ["aquarum"], "water"),
+        ("revelo", ["revelata"], "reveal"),
+        ("fundamentum", ["fundamenta"], "foundation"),
+        ("orbis", ["orbis"], "world"),
+        ("terra", ["terrarum"], "earth"),
+        ("increpatio", ["increpatione"], "rebuke"),
+        ("inspiratio", ["inspiratione"], "breath"),
+        ("spiritus", ["spiritus"], "spirit"),
+        ("ira", ["irae"], "wrath")
+    ]
+    
+    if verbose {
+        print("\nPSALM 17:23-24 ANALYSIS:")
+        print("23: \"\(line23)\"")
+        print("24: \"\(line24)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nKEY THEMES:")
+        print("1. Cosmic Exposure: Waters and foundations revealed")
+        print("2. Divine Breath: 'spiritus irae' as expression of God's power")
+        print("3. Cause and Effect: Rebuke leading to cosmic upheaval")
+    }
+    
+    // Cosmic imagery
+    XCTAssertEqual(analysis.dictionary["fons"]?.forms["fontes"], 1, "Should find springs reference")
+    XCTAssertEqual(analysis.dictionary["fundamentum"]?.forms["fundamenta"], 1, "Should find foundations reference")
+    
+    // Divine action
+    XCTAssertEqual(analysis.dictionary["increpatio"]?.forms["increpatione"], 1, "Should find rebuke reference")
+    XCTAssertEqual(analysis.dictionary["ira"]?.forms["irae"], 1, "Should find wrath reference")
+}
+
+func testPsalm17ALines25and26() {
+    let line25 = psalm17A[24] // "Misit de summo, et accepit me; assumpsit me de aquis multis."
+    let line26 = psalm17A[25] // "Eripuit me de inimico meo potentissimo, et ab his qui oderunt me:"
+    let combinedText = line25 + " " + line26
+    latinService.configureDebugging(target: "assumo")
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("mitto", ["misit"], "send"),
+        ("summus", ["summo"], "height"),
+        ("accipio", ["accepit"], "take"),
+        ("assumo", ["assumpsit"], "lift up"),
+        ("aqua", ["aquis"], "water"),
+        ("multus", ["multis"], "many"),
+        ("eripio", ["eripuit"], "deliver"),
+        ("inimicus", ["inimico"], "enemy"),
+        ("potens", ["potentissimo"], "powerful"),
+        ("odi", ["oderunt"], "hate")
+    ]
+    
+    if verbose {
+        print("\nPSALM 17:25-26 ANALYSIS:")
+        print("25: \"\(line25)\"")
+        print("26: \"\(line26)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nKEY THEMES:")
+        print("1. Divine Rescue: Triple verbs of taking, lifting, and delivering")
+        print("2. Danger Imagery: Many waters and powerful enemies")
+        print("3. Personal Testimony: Shift to first-person account of salvation")
+    }
+    
+    // Rescue verbs
+    XCTAssertEqual(analysis.dictionary["accipio"]?.forms["accepit"], 1, "Should find taking verb")
+    XCTAssertEqual(analysis.dictionary["eripio"]?.forms["eripuit"], 1, "Should find delivering verb")
+    
+    // Danger description
+    XCTAssertEqual(analysis.dictionary["aqua"]?.forms["aquis"], 1, "Should find waters reference")
+    XCTAssertEqual(analysis.dictionary["potens"]?.forms["potentissimo"], 1, "Should find powerful enemy reference")
+}
+
+func testPsalm17ALines27and28() {
+    let line27 = psalm17A[26] // "quoniam confortati sunt super me."
+    let line28 = psalm17A[27] // "Praevenerunt me in die afflictionis meae, et factus est Dominus protector meus."
+    let combinedText = line27 + " " + line28
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("conforto", ["confortati"], "strengthen"),
+        ("praevenio", ["praevenerunt"], "confront"),
+        ("dies", ["die"], "day"),
+        ("afflictio", ["afflictionis"], "trouble"),
+        ("fio", ["factus"], "become"),
+        ("dominus", ["dominus"], "Lord"),
+        ("protector", ["protector"], "protector")
+    ]
+    
+    if verbose {
+        print("\nPSALM 17:27-28 ANALYSIS:")
+        print("27: \"\(line27)\"")
+        print("28: \"\(line28)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nKEY THEMES:")
+        print("1. Enemy Strength: 'confortati sunt' showing opposition's power")
+        print("2. Timely Intervention: 'in die afflictionis' at the right moment")
+        print("3. Role Transformation: God 'becoming' a protector in crisis")
+    }
+    
+    // Enemy description
+    XCTAssertEqual(analysis.dictionary["conforto"]?.forms["confortati"], 1, "Should find strengthened enemies")
+    XCTAssertEqual(analysis.dictionary["praevenio"]?.forms["praevenerunt"], 1, "Should find confrontation verb")
+    
+    // Divine protection
+    XCTAssertEqual(analysis.dictionary["protector"]?.forms["protector"], 1, "Should find protector reference")
+}
+
+func testPsalm17ALines29and30() {
+    let line29 = psalm17A[28] // "Et eduxit me in latitudinem; salvum me fecit, quoniam voluit me."
+    let line30 = psalm17A[29] // "Retribuet mihi Dominus secundum justitiam meam, et secundum puritatem manuum mearum retribuet mihi."
+    let combinedText = line29 + " " + line30
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("educo", ["eduxit"], "lead out"),
+        ("latitudo", ["latitudinem"], "broad place"),
+        ("salvus", ["salvum"], "safe"),
+        ("facio", ["fecit"], "make"),
+        ("volo", ["voluit"], "will"),
+        ("retribuo", ["retribuet"], "repay"),
+        ("justitia", ["justitiam"], "righteousness"),
+        ("puritas", ["puritatem"], "purity"),
+        ("manus", ["manuum"], "hands")
+    ]
+    
+    if verbose {
+        print("\nPSALM 17:29-30 ANALYSIS:")
+        print("29: \"\(line29)\"")
+        print("30: \"\(line30)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nKEY THEMES:")
+        print("1. Liberation: From confinement to spacious place")
+        print("2. Divine Will: 'quoniam voluit me' showing God's pleasure")
+        print("3. Righteous Reward: Double 'retribuet' with justice and purity")
+    }
+    
+    // Deliverance imagery
+    XCTAssertEqual(analysis.dictionary["latitudo"]?.forms["latitudinem"], 1, "Should find broad place reference")
+    XCTAssertEqual(analysis.dictionary["salvus"]?.forms["salvum"], 1, "Should find safety reference")
+    
+    // Reward language
+    XCTAssertEqual(analysis.dictionary["retribuo"]?.forms["retribuet"], 2, "Should find two repayments")
+    XCTAssertEqual(analysis.dictionary["justitia"]?.forms["justitiam"], 1, "Should find righteousness reference")
+}
+
+func testPsalm17ALines31and32() {
+    let line31 = psalm17A[30] // "Quia custodivi vias Domini, nec impie gessi a Deo meo."
+    let line32 = psalm17A[31] // "Quoniam omnia judicia ejus in conspectu meo, et justitias ejus non repuli a me."
+    let combinedText = line31 + " " + line32
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("custodio", ["custodivi"], "keep"),
+        ("via", ["vias"], "way"),
+        ("dominus", ["domini"], "Lord"),
+        ("impie", ["impie"], "wickedly"),
+        ("gero", ["gessi"], "behave"),
+        ("deus", ["deo"], "God"),
+        ("judicium", ["judicia"], "judgment"),
+        ("conspectus", ["conspectu"], "sight"),
+        ("justitia", ["justitias"], "justice"),
+        ("repello", ["repuli"], "reject")
+    ]
+    
+    if verbose {
+        print("\nPSALM 17:31-32 ANALYSIS:")
+        print("31: \"\(line31)\"")
+        print("32: \"\(line32)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nKEY THEMES:")
+        print("1. Covenant Faithfulness: 'custodivi vias' showing obedience")
+        print("2. Double Negation: 'nec impie...non repuli' emphasizing loyalty")
+        print("3. Judicial Awareness: Keeping God's judgments in view")
+    }
+    
+    // Obedience language
+    XCTAssertEqual(analysis.dictionary["custodio"]?.forms["custodivi"], 1, "Should find keeping verb")
+    XCTAssertEqual(analysis.dictionary["repello"]?.forms["repuli"], 1, "Should find rejection verb (negated)")
+    
+    // Divine standards
+    XCTAssertEqual(analysis.dictionary["judicium"]?.forms["judicia"], 1, "Should find judgments reference")
+    XCTAssertEqual(analysis.dictionary["justitia"]?.forms["justitias"], 1, "Should find justice reference")
+}
+
+func testPsalm17ALines33and34() {
+    let line33 = psalm17A[32] // "Et ero immaculatus cum eo, et observabo me ab iniquitate mea."
+    let line34 = psalm17A[33] // "Et retribuet mihi Dominus secundum justitiam meam, et secundum puritatem manuum mearum in conspectu oculorum ejus."
+    let combinedText = line33 + " " + line34
+    let analysis = latinService.analyzePsalm(text: combinedText)
+    
+    let testLemmas = [
+        ("immaculatus", ["immaculatus"], "blameless"),
+        ("observo", ["observabo"], "keep"),
+        ("iniquitas", ["iniquitate"], "sin"),
+        ("retribuo", ["retribuet"], "repay"),
+        ("dominus", ["dominus"], "Lord"),
+        ("justitia", ["justitiam"], "righteousness"),
+        ("puritas", ["puritatem"], "purity"),
+        ("manus", ["manuum"], "hands"),
+        ("conspectus", ["conspectu"], "sight"),
+        ("oculus", ["oculorum"], "eyes")
+    ]
+    
+    if verbose {
+        print("\nPSALM 17:33-34 ANALYSIS:")
+        print("33: \"\(line33)\"")
+        print("34: \"\(line34)\"")
+        
+        print("\nLEMMA VERIFICATION:")
+        testLemmas.forEach { lemma, forms, translation in
+            let found = analysis.dictionary[lemma] != nil
+            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+        }
+        
+        print("\nKEY THEMES:")
+        print("1. Future Purity: 'ero immaculatus' as aspiration")
+        print("2. Self-Watchfulness: 'observabo me' showing personal responsibility")
+        print("3. Divine Perspective: Reward according to God's sight ('oculorum ejus')")
+    }
+    
+    // Purity language
+    XCTAssertEqual(analysis.dictionary["immaculatus"]?.forms["immaculatus"], 1, "Should find blameless reference")
+    XCTAssertEqual(analysis.dictionary["puritas"]?.forms["puritatem"], 1, "Should find purity reference")
+    
+    // Divine perspective
+    XCTAssertEqual(analysis.dictionary["oculus"]?.forms["oculorum"], 1, "Should find eyes reference")
+    XCTAssertEqual(analysis.dictionary["conspectus"]?.forms["conspectu"], 1, "Should find sight reference")
+}
 
     func testDivineWarfareImagery() {
         let analysis = latinService.analyzePsalm(text: psalm17A)
