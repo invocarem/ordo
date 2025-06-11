@@ -1065,6 +1065,62 @@
     }
   ]
 },
+{
+  "psalmNumber": 14,
+  "category": "",
+  "themes": [
+    {
+      "name": "Sacred Dwelling",
+      "description": "Qualifications for abiding in God's holy presence",
+      "lemmas": ["habito", "requiesco", "tabernaculum", "mons"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "Opening rhetorical question about divine habitation"
+    },
+    {
+      "name": "Moral Purity",
+      "description": "Ethical requirements for the worshiper",
+      "lemmas": ["macula", "justus", "veritas", "dolus"],
+      "startLine": 2,
+      "endLine": 3,
+      "comment": "Positive and negative ethical markers"
+    },
+    {
+      "name": "Social Integrity",
+      "description": "Right relationship with neighbors",
+      "lemmas": ["proximus", "malum", "opprobrium", "juro"],
+      "startLine": 3,
+      "endLine": 6,
+      "comment": "Triple repetition of 'proximo' emphasizes social ethics"
+    },
+    {
+      "name": "Financial Righteousness",
+      "description": "Economic ethics as worship requirement",
+      "lemmas": ["pecunia", "usura", "munus", "innocens"],
+      "startLine": 7,
+      "endLine": 7,
+      "comment": "Prohibition of exploitative financial practices"
+    },
+    {
+      "name": "Theological Foundation",
+      "description": "Fear of the Lord as basis for ethics",
+      "lemmas": ["malignus", "timeo", "glorifico", "dominus"],
+      "startLine": 5,
+      "endLine": 5,
+      "comment": "Central theological affirmation"
+    },
+    {
+      "name": "Eternal Stability",
+      "description": "Promise of unshakable righteousness",
+      "lemmas": ["aeternus", "moveo", "facio"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "Climactic promise of permanence"
+    }
+  ]
+},
+
+
 
 {
   "psalmNumber": 15,
@@ -1692,359 +1748,7 @@
 },
 
 
-{
-  "psalmNumber": 14,
-  "category": "",
-  "themes": [
-    {
-      "name": "Sacred Dwelling",
-      "description": "Qualifications for abiding in God's holy presence",
-      "lemmas": ["habito", "requiesco", "tabernaculum", "mons"],
-      "startLine": 1,
-      "endLine": 1,
-      "comment": "Opening rhetorical question about divine habitation"
-    },
-    {
-      "name": "Moral Purity",
-      "description": "Ethical requirements for the worshiper",
-      "lemmas": ["macula", "justus", "veritas", "dolus"],
-      "startLine": 2,
-      "endLine": 3,
-      "comment": "Positive and negative ethical markers"
-    },
-    {
-      "name": "Social Integrity",
-      "description": "Right relationship with neighbors",
-      "lemmas": ["proximus", "malum", "opprobrium", "juro"],
-      "startLine": 3,
-      "endLine": 6,
-      "comment": "Triple repetition of 'proximo' emphasizes social ethics"
-    },
-    {
-      "name": "Financial Righteousness",
-      "description": "Economic ethics as worship requirement",
-      "lemmas": ["pecunia", "usura", "munus", "innocens"],
-      "startLine": 7,
-      "endLine": 7,
-      "comment": "Prohibition of exploitative financial practices"
-    },
-    {
-      "name": "Theological Foundation",
-      "description": "Fear of the Lord as basis for ethics",
-      "lemmas": ["malignus", "timeo", "glorifico", "dominus"],
-      "startLine": 5,
-      "endLine": 5,
-      "comment": "Central theological affirmation"
-    },
-    {
-      "name": "Eternal Stability",
-      "description": "Promise of unshakable righteousness",
-      "lemmas": ["aeternus", "moveo", "facio"],
-      "startLine": 8,
-      "endLine": 8,
-      "comment": "Climactic promise of permanence"
-    }
-  ]
-},
 
-{
-  "psalmNumber": 15,
-  "category": "",
-  "themes": [
-    {
-      "name": "Covenantal Refuge",
-      "description": "God as ultimate protector and portion",
-      "lemmas": ["conservo", "spero", "pars", "haereditas"],
-      "startLine": 1,
-      "endLine": 6,
-      "comment": "Develops from plea (v1) to declaration (v6)"
-    },
-    {
-      "name": "Embodied Faith",
-      "description": "Physical metaphors for spiritual reality",
-      "lemmas": ["ren", "cor", "lingua", "caro", "labium"],
-      "startLine": 4,
-      "endLine": 10,
-      "comment": "Whole-person response to God"
-    },
-    {
-      "name": "Resurrection Hope",
-      "description": "Victory over death and decay",
-      "lemmas": ["infernus", "corruptio", "vita", "requiesco"],
-      "startLine": 10,
-      "endLine": 11,
-      "comment": "New Testament fulfillment (Acts 2:27)"
-    },
-    {
-      "name": "Liturgical Journey",
-      "description": "Cultic imagery of divine presence",
-      "lemmas": ["calix", "funis", "dexter", "vultus"],
-      "startLine": 5,
-      "endLine": 12,
-      "comment": "Cup, boundaries, and right hand motifs"
-    },
-    {
-      "name": "Nocturnal Wisdom",
-      "description": "Nighttime meditation and instruction",
-      "lemmas": ["nox", "increpo", "provideo"],
-      "startLine": 7,
-      "endLine": 9,
-      "comment": "Evening-to-morning progression"
-    },
-    {
-      "name": "Eschatological Joy",
-      "description": "Fullness of divine presence",
-      "lemmas": ["laetitia", "delectatio", "adimpleo", "finis"],
-      "startLine": 9,
-      "endLine": 12,
-      "comment": "Culmination in eternal pleasures"
-    },
-    {
-      "name": "Divine Pedagogy",
-      "description": "God as teacher of life's path",
-      "lemmas": ["intellectus", "notus", "via", "mirifico"],
-      "startLine": 7,
-      "endLine": 12,
-      "comment": "Cognitive and volitional transformation"
-    }
-  ]
-},
-
-{
-  "psalmNumber": 16,
-  "category": "Lament",
-  "themes": [
-    {
-      "name": "Judicial Appeal",
-      "description": "Plea for divine justice and vindication",
-      "lemmas": ["justitia", "judicium", "aequitas", "probo", "iniquitas"],
-      "startLine": 1,
-      "endLine": 4,
-      "comment": "Legal terminology framing prayer as court appeal"
-    },
-    {
-      "name": "Divine Scrutiny",
-      "description": "God's examination of the heart",
-      "lemmas": ["cor", "probo", "examino", "visito", "nox", "ignis"],
-      "startLine": 3,
-      "endLine": 4,
-      "comment": "Nightly testing by fire motif (v4)"
-    },
-    {
-      "name": "Guided Path",
-      "description": "Commitment to righteous living",
-      "lemmas": ["via", "custodio", "perficio", "gressus", "semita", "vestigium"],
-      "startLine": 5,
-      "endLine": 6,
-      "comment": "Path imagery with moral dimensions"
-    },
-    {
-      "name": "Protection Imagery",
-      "description": "Metaphors of divine shelter",
-      "lemmas": ["pupilla", "ala", "umbra", "custodio", "protego", "framea"],
-      "startLine": 8,
-      "endLine": 10,
-      "comment": "Apple of eye/wing shadow/sword protection"
-    },
-    {
-      "name": "Enemy Assault",
-      "description": "Description of adversaries",
-      "lemmas": ["inimicus", "impius", "circumdo", "adeps", "superbia", "leo"],
-      "startLine": 10,
-      "endLine": 14,
-      "comment": "Lion imagery (v14) and surrounding foes"
-    },
-    {
-      "name": "Eschatological Victory",
-      "description": "Hope beyond present distress",
-      "lemmas": ["gloria", "satiabor", "appareo", "absconditum", "reliquiae"],
-      "startLine": 17,
-      "endLine": 19,
-      "comment": "Future satisfaction in God's glory"
-    },
-    {
-      "name": "Body Metaphors",
-      "description": "Physical representations of spiritual states",
-      "lemmas": ["os", "labium", "auris", "oculus", "adeps", "venter"],
-      "startLine": 1,
-      "endLine": 12,
-      "comment": "Mouth, ears, eyes, fat as moral indicators"
-    },
-    {
-      "name": "Prayer Dynamics",
-      "description": "Mechanics of divine-human communication",
-      "lemmas": ["exaudio", "clamo", "deprecatio", "oratio", "intendo", "percipio"],
-      "startLine": 1,
-      "endLine": 7,
-      "comment": "Hearing/inclining ear verbs (7x in first 7 verses)"
-    }
-  ]
-},
-{
-  "psalmNumber": 17,
-  "category": "a",
-  "themes": [
-    {
-      "name": "Personal Devotion",
-      "description": "Declaration of love and trust in God's protection",
-      "lemmas": ["diligo", "firmamentum", "refugium", "liberator"],
-      "startLine": 1,
-      "endLine": 2,
-      "comment": "Opening with intimate 'Diligo te' and triple divine titles"
-    },
-    {
-      "name": "Divine Titles",
-      "description": "Accumulation of God's protective roles",
-      "lemmas": ["adjutor", "protector", "cornu", "susceptor"],
-      "startLine": 3,
-      "endLine": 4,
-      "comment": "Six roles in two verses emphasizing comprehensive care"
-    },
-    {
-      "name": "Mortal Peril",
-      "description": "Imagery of death's encompassing threat",
-      "lemmas": ["dolor", "infernus", "laqueus", "torrens"],
-      "startLine": 5,
-      "endLine": 6,
-      "comment": "Pains of death and torrents of wickedness"
-    },
-    {
-      "name": "Desperate Prayer",
-      "description": "Past-tense cries for deliverance",
-      "lemmas": ["invocavi", "clamavi", "exaudivit", "introivit"],
-      "startLine": 7,
-      "endLine": 8,
-      "comment": "Emphasizes God's hearing (entered His ears)"
-    },
-    {
-      "name": "Theophanic Response",
-      "description": "Earth-shaking divine intervention",
-      "lemmas": ["commoveo", "contremisco", "fundamentum", "mons"],
-      "startLine": 9,
-      "endLine": 10,
-      "comment": "Creation reacts to God's movement"
-    },
-    {
-      "name": "Fiery Judgment",
-      "description": "Divine wrath manifested through fire",
-      "lemmas": ["ignis", "fumus", "exardesco", "carbo"],
-      "startLine": 11,
-      "endLine": 12,
-      "comment": "Smoke, blazing fire, and burning coals"
-    },
-    {
-      "name": "Cosmic Descent",
-      "description": "God bending heaven to rescue",
-      "lemmas": ["inclino", "coelum", "descendo", "caligo"],
-      "startLine": 13,
-      "endLine": 14,
-      "comment": "Darkness underfoot as mysterious presence"
-    },
-    {
-      "name": "Storm Theophany",
-      "description": "Classic storm god imagery",
-      "lemmas": ["cherub", "penna", "ventus", "tenebrae"],
-      "startLine": 15,
-      "endLine": 16,
-      "comment": "Riding cherubim with wind-wings"
-    },
-    {
-      "name": "Artillery of Heaven",
-      "description": "Divine warfare elements",
-      "lemmas": ["fulgur", "grando", "sagitta", "tono"],
-      "startLine": 17,
-      "endLine": 18,
-      "comment": "Lightning as arrows and thunderous voice"
-    },
-    {
-      "name": "Chaos Undone",
-      "description": "Primordial waters unleashed",
-      "lemmas": ["fons", "fundamentum", "orbis", "increpatio"],
-      "startLine": 19,
-      "endLine": 20,
-      "comment": "Watersources exposed at God's rebuke"
-    }
-  ]
-},
-
-{
-  "psalmNumber": 17,
-  "category": "b",
-  "themes": [
-    {
-      "name": "Ethical Reciprocity",
-      "description": "God's mirrored response to human character",
-      "lemmas": ["sanctus", "innocens", "electus", "perverto"],
-      "startLine": 1,
-      "endLine": 2,
-      "comment": "Chiastic structure showing divine correspondence"
-    },
-    {
-      "name": "Social Reversal",
-      "description": "Divine preference for the humble",
-      "lemmas": ["humilis", "salvus", "superbus", "humilio"],
-      "startLine": 3,
-      "endLine": 4,
-      "comment": "Salvation for lowly vs humbling of proud"
-    },
-    {
-      "name": "Illumination",
-      "description": "Divine light overcoming darkness",
-      "lemmas": ["illumino", "lucerna", "tenebrae", "eripio"],
-      "startLine": 5,
-      "endLine": 6,
-      "comment": "Personal light imagery in midst of trial"
-    },
-    {
-      "name": "Divine Testing",
-      "description": "God's refined word as foundation",
-      "lemmas": ["impollutus", "eloquium", "igne", "examino"],
-      "startLine": 7,
-      "endLine": 8,
-      "comment": "Fire-tested purity of God's promises"
-    },
-    {
-      "name": "Warrior's Preparation",
-      "description": "Divine equipping for battle",
-      "lemmas": ["praecingo", "perficio", "cervus", "excelsum"],
-      "startLine": 9,
-      "endLine": 10,
-      "comment": "Feet like deer for high places"
-    },
-    {
-      "name": "Combat Training",
-      "description": "Divine instruction in warfare",
-      "lemmas": ["praelium", "arcus", "brachium", "disciplina"],
-      "startLine": 11,
-      "endLine": 12,
-      "comment": "Hands trained for bronze bow warfare"
-    },
-    {
-      "name": "Total Victory",
-      "description": "Complete domination of enemies",
-      "lemmas": ["contero", "comminuo", "pulvis", "lutum"],
-      "startLine": 13,
-      "endLine": 14,
-      "comment": "Enemies reduced to dust/mud"
-    },
-    {
-      "name": "Royal Exaltation",
-      "description": "Kingly elevation over nations",
-      "lemmas": ["caput", "gens", "servio", "vindicta"],
-      "startLine": 15,
-      "endLine": 16,
-      "comment": "Headship over previously unknown peoples"
-    },
-    {
-      "name": "Davidic Covenant",
-      "description": "Promise to David's lineage",
-      "lemmas": ["christus", "David", "semen", "saeculum"],
-      "startLine": 17,
-      "endLine": 18,
-      "comment": "Eternal mercy to anointed king"
-    }
-  ]
-},
 {
   "psalmNumber": 50,
   "category": "",
