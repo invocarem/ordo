@@ -1,4 +1,82 @@
 [
+ {
+    "lemma": "mentior",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "mentiri",
+    "present": "mentior",
+    "future": "mentiar",
+    "perfect": "mentitus",
+    "supine": "mentitum",
+    "translations": {
+        "en": "to lie, deceive",
+        "la": "mentior, mentiri"
+    }
+},
+ 
+  {
+    "lemma": "subicio",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "subicere",
+    "present": "subicio",
+    "future": "subiciam",
+    "perfect": "subieci",
+    "supine": "subiectum",
+    "translations": {
+        "en": "to subdue, place under, subject",
+        "la": "subicio, subicere"
+    },
+    "forms": {
+        "present": ["subicio", "subicis", "subicit", "subicimus", "subicitis", "subiciunt"],
+        "future": ["subiciam", "subicies", "subiciet", "subiciemus", "subicietis", "subicient"],
+        "present_3rd_eccl": ["subjicit"]
+    }
+},
+  {
+    "lemma": "iracundus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "iracundus",
+    "genitive": "iracundi",
+    "translations": {
+        "en": "wrathful, prone to anger",
+        "la": "iracundus"
+    },
+    "forms": {
+        "nominative_f": ["iracunda"],
+        "genitive_f": ["iracundae"],
+        "nominative_n": ["iracundum"],
+        "genitive_n": ["iracundi"]
+    }
+  },
+  {
+    "lemma": "psalmus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "psalmus",
+    "genitive": "psalmi",
+    "translations": {
+        "en": "psalm, sacred song",
+        "la": "psalmus"
+    }
+},
+  {
+    "lemma": "contremo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "contremere",
+    "present": "contremo",
+    "future": "contremam",
+    "perfect": "contremui",
+    "supine": "contremitum",
+    "translations": {
+        "en": "to tremble, shake violently",
+        "la": "contremo, contremere"
+    }
+},
   {
     "lemma": "exardesco",
     "part_of_speech": "verb",
@@ -7527,7 +7605,7 @@
     "perfect": "praeveni",
     "supine": "praeventum",
     "translations": {
-      "en": "come before, anticipate",
+      "en": "come before, anticipate, confront",
       "la": "praevenio, praevenire, praeveni, praeventum"
     },
     "forms": {
@@ -18502,28 +18580,7 @@
     "la": "cibus"
   }
 },
-{
-  "lemma": "amplius",
-  "part_of_speech": "adverb",
-  "translations": {
-    "en": "more, thoroughly, to a greater extent",
-    "la": "amplius"
-  }
-},
-{
-  "lemma": "lavo",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "lavare",
-  "present": "lavo",
-  "future": "lavabo",  
-  "perfect": "lavi",
-  "supine": "lavatum",
-  "translations": {
-    "en": "to wash, bathe",
-    "la": "lavo, lavare"
-  }
-},
+
 {
   "lemma": "plenus",
   "part_of_speech": "adjective",
@@ -18550,6 +18607,48 @@
     "la": "plenus, -a, -um"
   }
 },
+{
+  "lemma": "amplius",
+  "part_of_speech": "adverb",
+  "translations": {
+    "en": "more, thoroughly, to a greater extent",
+    "la": "amplius"
+  }
+},
+{
+  "lemma": "lavo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "lavare",
+  "present": "lavo",
+  "future": "lavabo",  
+  "perfect": "lavi",
+  "supine": "lavatum",
+  "translations": {
+    "en": "to wash, bathe",
+    "la": "lavo, lavare"
+  }
+},
+
+  {
+    "lemma": "alienus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "alienus",
+    "genitive": "alieni",
+    "translations": {
+        "en": "foreign, alien, strange",
+        "la": "alienus"
+    },
+    "forms": {
+        "nominative_f": ["aliena"],
+        "genitive_f": ["alienae" ],
+        "nominative_n": ["alienum"],
+        "genitive_n": ["alieni"]
+    }
+},
+ 
   {
     "lemma": "humilitas",
     "part_of_speech": "noun",

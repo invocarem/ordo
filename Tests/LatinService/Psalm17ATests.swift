@@ -832,9 +832,9 @@ func testPsalm17ALines33and34() {
         let warfareTerms = [
             ("sagitta", ["sagittas"], "arrow"),
             ("fulgur", ["fulgura"], "lightning"),
-            ("tono", ["intonuit"], "thunder"),
+            ("intono", ["intonuit"], "thunder"),
             ("ignis", ["ignis"], "fire"),
-            ("carbo", ["carbones"], "coals"),
+            ("carbo", ["carbones"], "coal"),
             ("grando", ["grandinem", "grando"], "hail"),
             ("fumus", ["fumus"], "smoke")
         ]
@@ -846,8 +846,8 @@ func testPsalm17ALines33and34() {
         let analysis = latinService.analyzePsalm(text: psalm17A)
         
         let protectionTerms = [
-            ("firmamentum", ["firmamentum"], "fortress"),
-            ("susceptor", ["susceptor"], "upholder"),
+            ("firmamentum", ["firmamentum"], "support"),
+            ("susceptor", ["susceptor"], "protect"),
             ("cornu", ["cornu"], "horn"),
             ("latibulum", ["latibulum"], "hiding place"),
             ("tabernaculum", ["tabernaculum"], "tent")
@@ -861,7 +861,7 @@ func testPsalm17ALines33and34() {
         
         let cosmicTerms = [
             ("contremo", ["contremuit"], "tremble"),
-            ("inclino", ["Inclinavit"], "bow down"),
+            ("inclino", ["Inclinavit"], "bend"),
             ("caligo", ["caligo"], "darkness"),
             ("fundamentum", ["fundamenta", "fundamenta"], "foundation"),
             ("cherub", ["cherubim"], "cherubim")

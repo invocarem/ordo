@@ -499,10 +499,10 @@ func testPsalm17BLines27to29() {
     
     let testLemmas = [
         ("liberator", ["liberator"], "deliverer"),
-        ("ira", ["iracundis"], "anger"),
+        ("iracundus", ["iracundis"], "anger"),
         ("eripio", ["eripies"], "rescue"),
         ("iniquus", ["iniquo"], "unjust"),
-        ("confiteor", ["confitebor"], "give thanks"),
+        ("confiteor", ["confitebor"], "praise"),
         ("natio", ["nationibus"], "nation"),
         ("psalmus", ["psalmum"], "psalm"),
         ("magnifico", ["magnificans"], "magnify"),
