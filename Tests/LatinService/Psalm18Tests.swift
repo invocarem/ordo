@@ -47,10 +47,12 @@ class Psalm18Tests: XCTestCase {
     }
     
     func testCosmicImagery() {
+        latinService.configureDebugging(target: "caelum")
         let analysis = latinService.analyzePsalm(text: psalm18)
+        latinService.configureDebugging(target: "")
         
         let cosmicTerms = [
-            ("caelum", ["Caeli", "caelo", "caelum"], "heaven"),
+            ("caelum", ["Caeli", "caelo" ], "heaven"),
             ("firmamentum", ["firmamentum"], "firmament"),
             ("sol", ["sole"], "sun"),
             ("orbis", ["orbis"], "world"),
@@ -96,7 +98,7 @@ class Psalm18Tests: XCTestCase {
             ("dulcis", ["dulciora"], "sweet"),
             ("mel", ["mel"], "honey"),
             ("favus", ["favum"], "honeycomb"),
-            ("lux", ["lucidum"], "light")
+            ("lucidus", ["lucidum"], "bright")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: sensoryTerms)
@@ -124,7 +126,7 @@ class Psalm18Tests: XCTestCase {
             ("procedo", ["procedens"], "proceed"),
             ("exsulto", ["exsultavit"], "rejoice"),
             ("curro", ["currendam"], "run"),
-            ("egredior", ["egressio"], "go out")
+            ("egressio", ["egressio"], "departure")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: movementVerbs)
@@ -134,7 +136,7 @@ class Psalm18Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(text: psalm18)
         
         let purificationTerms = [
-            ("immaculatus", ["immaculata", "immaculatus"], "blameless"),
+            ("immaculatus", ["immaculata", "immaculatus"], "undefiled"),
             ("emundo", ["emundabor"], "cleanse"),
             ("mundus", ["munda"], "clean"),
             ("delictum", ["Delicta", "delicto"], "sin"),

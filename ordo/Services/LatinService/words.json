@@ -1,4 +1,179 @@
 [
+{
+    "lemma": "redemptor",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "redemptor",
+    "genitive": "redemptoris",
+    "translations": {
+        "en": "redeemer, deliverer",
+        "la": "redemptor"
+    }
+},
+  {
+    "lemma": "egressio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "egressio",
+    "genitive": "egressionis",
+    "translations": {
+        "en": "a going out, departure",
+        "la": "egressio"
+    }
+},
+  {
+    "lemma": "egredior",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "egredi",
+    "present": "egredior",
+    "future": "egrediar",
+    "perfect": "egressus",
+    "supine": "egressum",
+    "translations": {
+        "en": "to go out, depart",
+        "la": "egredior, egredi"
+    }
+},
+  {
+    "lemma": "eructo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "eructare",
+    "present": "eructo",
+    "future": "eructabo",
+    "perfect": "eructavi",
+    "supine": "eructatum",
+    "translations": {
+        "en": "pour forth, belch out",
+        "la": "eructo, eructare"
+    }
+},
+  {
+    "lemma": "procedo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "procedere",
+    "present": "procedo",
+    "future": "procedam",
+    "perfect": "processi",
+    "supine": "processum",
+    "translations": {
+        "en": "proceed, go forward",
+        "la": "procedo, procedere"
+    }
+},
+  {
+    "lemma": "delictum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "delictum",
+    "genitive": "delicti",
+    "translations": {
+        "en": "sin, fault, offense",
+        "la": "delictum"
+    }
+},
+  {
+    "lemma": "gigas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "gigas",
+    "genitive": "gigantis",
+    "translations": {
+        "en": "giant",
+        "la": "gigas"
+    }
+},
+  {
+    "lemma": "dulcis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "dulcis",
+    "genitive": "dulcis",
+    "forms_plural" :{
+      "comparative_nominative": ["dulciora"]
+    },
+    "translations": {
+        "en": "sweet, pleasant",
+        "la": "dulcis"
+    }
+},
+  {
+    "lemma": "calor",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "calor",
+    "genitive": "caloris",
+    "translations": {
+        "en": "heat, warmth",
+        "la": "calor"
+    }
+},
+  {
+    "lemma": "lucidus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "lucidus",
+    "genitive": "lucidi",
+    "dative": "lucido",
+    "accusative": "lucidum",
+    "ablative": "lucido",
+    "nominative_plural": "lucidi",
+    "genitive_plural": "lucidorum",
+    "dative_plural": "lucidis",
+    "accusative_plural": "lucidos",
+    "ablative_plural": "lucidis",
+    "translations": {
+        "en": "bright, light, clear",
+        "la": "lucidus"
+    }
+},
+  {
+    "lemma": "favus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "favus",
+    "genitive": "favi",
+    "translations": {
+        "en": "honeycomb",
+        "la": "favus"
+    }
+ },
+  {
+    "lemma": "lux",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "lux",
+    "genitive": "lucis",
+    "translations": {
+        "en": "light",
+        "la": "lux"
+    }
+},
+  {
+    "lemma": "emundo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "emundare",
+    "present": "emundo",
+    "future": "emundabo",
+    "perfect": "emundavi",
+    "supine": "emundatum",
+    "translations": {
+        "en": "to cleanse, purify",
+        "la": "emundo, emundare"
+    }
+  },
  {
     "lemma": "mentior",
     "part_of_speech": "verb",
@@ -122,6 +297,9 @@
     "gender": "neuter",
     "nominative": "caelum",
     "genitive": "caeli",
+    "forms":{
+      "nominative_m": ["caelum"]
+    },
    "translations": {
         "en": "heaven, sky",
         "la": "caelum"
@@ -14138,14 +14316,22 @@
         "lemma": "curro",
         "part_of_speech": "verb",
         "conjugation": 3,
-        "perfect": "cucurri",
         "infinitive": "currere",
+        "present": "curro",
+        "future": "curram",
+        "perfect": "cucurri",
+        "supine": "cursum",
         "forms": {
             "present": ["curro", "curris", "currit", "currimus", "curritis", "currunt"],
             "imperfect": ["currebam", "currebas", "currebat", "currebamus", "currebatis", "currebant"],
             "future": ["curram", "curres", "curret", "curremus", "curretis", "current"],
             "perfect": ["cucurri", "cucurristi", "cucurrit", "cucurrimus", "cucurristis", "cucurrerunt"],
             "present_subjunctive": ["curram", "curras", "currat", "curramus", "curratis", "currant"],
+
+            "gerundive_m": ["currendus", "currendi", "currendo", "currendum", "currendo"],
+            "gerundive_f": ["currenda", "currendae", "currendae", "currendam", "currenda"],
+            "gerundive_n": ["currendum", "currendi", "currendo", "currendum", "currendo"],
+
             "imperative": ["curre", "currite"]
         },
         "translations": {
