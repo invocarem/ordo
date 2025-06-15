@@ -143,7 +143,7 @@ extension LatinWordEntity {
 
 private func analyzeVerbPassive(form: String, translation: String) -> String? {
     guard let forms = forms else { return nil }
-    let allForms = (forms ?? [:]).merging(generatedVerbForms()) { user, _ in user }
+    let allForms = forms.merging(generatedVerbForms()) { user, _ in user }
     
     let lowerForm = form.lowercased()
     let persons = ["I", "you", "he/she/it", "we", "you", "they"]

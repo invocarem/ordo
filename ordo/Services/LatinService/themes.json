@@ -449,92 +449,78 @@
         }
       ]
     },
+
+{
+  "psalmNumber": 8,
+  "category": "",
+  "themes": [
     {
-      "psalmNumber": 8,
-      "category": "",
-      "themes": [
-        {
-          "name": "Divine Majesty",
-          "description": "God's supreme glory manifest in creation",
-          "lemmas": ["dominus", "magnificentia", "admirabilis"],
-          "startLine": 1,
-          "endLine": 2,
-          "comment": "Opening doxology"
-        },
-        {
-          "name": "Cosmic Scope",
-          "description": "Universal recognition of God's name",
-          "lemmas": ["universa", "terra", "caelos"],
-          "startLine": 1,
-          "endLine": 2,
-          "comment": "Global perspective"
-        },
-        {
-          "name": "Infant Worship",
-          "description": "Perfect praise from the mouths of children",
-          "lemmas": ["infantium", "lactentium", "laudem", "perfecisti"],
-          "startLine": 3,
-          "endLine": 3,
-          "comment": "Unexpected source of praise"
-        },
-        {
-          "name": "Cosmic Design",
-          "description": "The heavens as God's handcrafted masterpiece",
-          "lemmas": ["digitorum", "lunam", "stellas", "fundo"],
-          "startLine": 3,
-          "endLine": 4,
-          "comment": "Artistic creation imagery"
-        },
-        {
-          "name": "Human Significance",
-          "description": "God's special attention to mortal beings",
-          "lemmas": ["homo", "memor", "visitas", "filius"],
-          "startLine": 5,
-          "endLine": 5,
-          "comment": "Divine mindfulness of humans"
-        },
-        {
-          "name": "Glorified Humanity",
-          "description": "Mankind crowned with divine honor",
-          "lemmas": ["minuisti", "angelis", "gloria", "honore", "coronasti"],
-          "startLine": 5,
-          "endLine": 6,
-          "comment": "Humanity's exalted status"
-        },
-        {
-          "name": "Created Dominion",
-          "description": "Humanity's governance over God's works",
-          "lemmas": ["constituisti", "opera", "manuum", "subjecisti", "pedibus"],
-          "startLine": 7,
-          "endLine": 7,
-          "comment": "Stewardship mandate"
-        },
-        {
-          "name": "Agricultural Blessing",
-          "description": "Domesticated creation under human care",
-          "lemmas": ["oves", "boves", "pecora", "campi"],
-          "startLine": 7,
-          "endLine": 8,
-          "comment": "Agricultural imagery"
-        },
-        {
-          "name": "Ecological Harmony",
-          "description": "Wild creatures in their created order",
-          "lemmas": ["volucres", "pisces", "perambulant", "semitas"],
-          "startLine": 8,
-          "endLine": 9,
-          "comment": "Natural world in balance"
-        },
-        {
-          "name": "Doxological Conclusion",
-          "description": "Bookend praise echoing the opening verses",
-          "lemmas": ["Domine", "noster", "admirabile", "nomen", "universa"],
-          "startLine": 9,
-          "endLine": 9,
-          "comment": "Closing refrain"
-        }
-      ]
+      "name": "Majesty → Praise",
+      "description": "Cosmic sovereignty inspiring universal worship",
+      "lemmas": ["dominus", "magnificentia", "admirabilis", "laus"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Divine name's wonder (admirabile) flows from heavenly supremacy (super caelos)"
     },
+    {
+      "name": "Infant Praise → Victory",
+      "description": "Weakness manifesting divine strength",
+      "lemmas": ["infans", "lactens", "perficio", "inimicus"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Perfected praise (perfecisti) from nursing mouths destroys enemies"
+    },
+    {
+      "name": "Microcosm → Macrocosm",
+      "description": "Human smallness amidst divine craftsmanship",
+      "lemmas": ["homo", "caelum", "luna", "stella"],
+      "startLine": 4,
+      "endLine": 5,
+      "comment": "Rhetorical 'what is man?' (quid est homo) contrasted with cosmic wonders"
+    },
+    {
+      "name": "Glory → Dominion",
+      "description": "Elevated status granting earthly stewardship",
+      "lemmas": ["gloria", "corono", "constituo", "subjicio"],
+      "startLine": 6,
+      "endLine": 8,
+      "comment": "Crowned with honor (honore coronasti) to rule creation (omnia subjecisti)"
+    },
+    {
+      "name": "Creation Chiasm",
+      "description": "Literary structure mirroring created order",
+      "lemmas": ["caelum", "terra", "ovis", "piscis"],
+      "startLine": 1,
+      "endLine": 9,
+      "comment": "Inclusion framing: heavens (caelos) → earth (terra) → animals (volucres/pisces)"
+    },
+    {
+      "name": "Augustine: Christological Crown",
+      "description": "Son of Man as crowned mediator",
+      "lemmas": ["filius", "corono", "angelus", "constituo"],
+      "startLine": 5,
+      "endLine": 7,
+      "comment": "'Little lower than angels' (paulo minus) fulfilled in Christ (Enarrationes 8.8)"
+    },
+    {
+      "name": "Augustine: Infant Ecclesia",
+      "description": "Church's praise as weapon against evil",
+      "lemmas": ["infans", "perficio", "inimicus"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Nursing children signify newborn Church defeating Satan (Sermon 121.6)"
+    },
+    {
+      "name": "Augustine: Cosmic Contemplation",
+      "description": "Stellar wonders revealing divine artistry",
+      "lemmas": ["luna", "stella", "digitus", "video"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Moon and stars (opera digitorum) as pointers to Creator (Conf. X.6)"
+    }
+  ]
+},
+ 
 {
   "psalmNumber": 9,
   "category": "a",
@@ -1598,82 +1584,89 @@
     }
   ]
 },
-
 {
   "psalmNumber": 18,
   "category": "",
   "themes": [
     {
-      "name": "Cosmic Revelation",
-      "description": "Creation's proclamation of divine glory",
-      "lemmas": ["caelum", "firmamentum", "sol", "orbis", "gigas"],
+      "name": "Cosmic Proclamation",
+      "description": "Creation's unceasing declaration of divine glory",
+      "lemmas": ["caelum", "firmamentum", "eructo", "indicat"],
       "startLine": 1,
-      "endLine": 6,
-      "comment": "Nature as continuous divine communication"
+      "endLine": 2,
+      "comment": "Day/night cycle as liturgical rhythm (Augustine: En. Ps. 18.2 - 'The heavens are like preachers with unceasing voices')"
     },
     {
-      "name": "Universal Proclamation",
-      "description": "Word spreading to all creation",
-      "lemmas": ["verbum", "scientia", "loquela", "sermo", "sonus"],
-      "startLine": 2,
+      "name": "Universal Revelation",
+      "description": "Wordless witness reaching all creation",
+      "lemmas": ["loquela", "sonus", "orbis", "verbum"],
+      "startLine": 3,
       "endLine": 4,
-      "comment": "Day/night cycle as revelation mechanism"
+      "comment": "Paradox of 'speech without words' (Augustine compares to natural law in Rom 1:20)"
     },
     {
       "name": "Solar Theophany",
-      "description": "Divine presence as radiant sun",
-      "lemmas": ["sol", "tabernaculum", "sponsus", "calor", "egressio"],
+      "description": "Sun as bridal warrior and divine symbol",
+      "lemmas": ["sol", "tabernaculum", "sponsus", "gigas"],
       "startLine": 5,
+      "endLine": 6,
+      "comment": "Christological reading: Sun = Christ as bridegroom (Augustine: Sermon 7.7)"
+    },
+    {
+      "name": "Unavoidable Radiance",
+      "description": "Divine presence penetrating all reality",
+      "lemmas": ["egressio", "calor", "abscondo", "summus"],
+      "startLine": 7,
       "endLine": 8,
-      "comment": "Marriage and warrior imagery combined"
+      "comment": "God's heat as both comfort and judgment (Augustine: Conf. 1.3 - 'You were more inward than my inmost self')"
     },
     {
-      "name": "Torah's Perfection",
-      "description": "Law as transformative wisdom",
-      "lemmas": ["lex", "testimonium", "sapientia", "justitia", "praeceptum"],
+      "name": "Torah's Sweetness",
+      "description": "Law as delight surpassing material treasures",
+      "lemmas": ["lex", "dulcis", "mel", "desiderabilia"],
       "startLine": 9,
-      "endLine": 11,
-      "comment": "Sevenfold description of God's instruction"
-    },
-    {
-      "name": "Sensory Delight",
-      "description": "Spiritual truths through physical metaphors",
-      "lemmas": ["dulcis", "mel", "favus", "lucidum", "desiderabilia"],
-      "startLine": 11,
       "endLine": 12,
-      "comment": "Comparative sweetness surpassing honey"
+      "comment": "Transition from cosmic to scriptural revelation (Augustine: 'The honeycomb is the unity of the Church')"
     },
     {
-      "name": "Covenantal Obedience",
-      "description": "Servant's relationship to the law",
-      "lemmas": ["servus", "custodio", "retributio", "immaculatus", "emundo"],
+      "name": "Purification Paradox",
+      "description": "Hidden sins revealed by divine light",
+      "lemmas": ["delictum", "occultus", "mundus", "emundo"],
       "startLine": 13,
       "endLine": 16,
-      "comment": "Reward-keeping cycle with purification"
+      "comment": "Illumination exposing what it cleanses (Augustine: 'My sins were like wounds seen only when light comes')"
     },
     {
-      "name": "Hidden Faults",
-      "description": "Petition for cleansing from unknown sins",
-      "lemmas": ["delictum", "occultus", "alienus", "parco", "dominor"],
-      "startLine": 14,
-      "endLine": 16,
-      "comment": "Distinction between willful and unwitting sins"
-    },
-    {
-      "name": "Meditative Devotion",
-      "description": "Internalization of divine words",
-      "lemmas": ["eloquium", "meditatio", "cor", "complaceo", "conspectus"],
+      "name": "Sacred Reciprocity",
+      "description": "Human words answering divine revelation",
+      "lemmas": ["eloquium", "meditatio", "redemptor", "servus"],
       "startLine": 17,
       "endLine": 18,
-      "comment": "From external law to internalized devotion"
+      "comment": "Closing prayer mirrors opening cosmic praise (Augustine: 'Our words are echoes of God's Word')"
     },
     {
-      "name": "Divine Partnership",
-      "description": "God as helper and redeemer",
-      "lemmas": ["adjutor", "redemptor", "servus", "custodio", "immaculatus"],
-      "startLine": 18,
+      "name": "Augustine: Twofold Book",
+      "description": "Creation and Scripture as dual revelation",
+      "lemmas": ["caelum", "verbum", "lex", "testimonium"],
+      "startLine": 1,
+      "endLine": 12,
+      "comment": "'God wrote two books: the universe and Scripture' (Gen. ad Litt. 2.5)"
+    },
+    {
+      "name": "Augustine: Solar Christology",
+      "description": "Sun imagery prefiguring incarnate Word",
+      "lemmas": ["sol", "sponsus", "egressio", "calor"],
+      "startLine": 5,
+      "endLine": 8,
+      "comment": "'Christ is the Sun of Righteousness whose heat is love' (Tract. Ev. Jo. 34.9)"
+    },
+    {
+      "name": "Augustine: Honeycomb Ecclesiology",
+      "description": "Church as purified community of delight",
+      "lemmas": ["mel", "favus", "immaculatus", "meditatio"],
+      "startLine": 9,
       "endLine": 18,
-      "comment": "Closing declaration of relational trust"
+      "comment": "'The Church's unity is sweeter than honey' (En. Ps. 18.15)"
     }
   ]
 },
@@ -2779,65 +2772,57 @@
   "category": "he",
   "themes": [
     {
-      "name": "Petition for Guidance",
-      "description": "Requests for divine direction in God's law",
-      "lemmas": ["lego", "pono", "deduc", "intellectus", "semita"],
+      "name": "Petition → Obedience",
+      "description": "Requests for divine guidance enabling Torah fidelity",
+      "lemmas": ["pono", "deduco", "custodio", "mandatum"],
       "startLine": 1,
       "endLine": 3,
-      "comment": "Imperative verbs seeking Torah instruction"
+      "comment": "Imperative verbs (pone, deduc) precede covenantal obedience (custodiam)"
     },
     {
-      "name": "Heart Alignment",
-      "description": "Prayers for internal transformation",
-      "lemmas": ["cor", "inclina", "avaritia", "timor", "concupisco"],
-      "startLine": 4,
-      "endLine": 8,
-      "comment": "Divine action shaping human desires"
+      "name": "Faculty Alignment",
+      "description": "Reorientation of human capacities toward divine law",
+      "lemmas": ["intellectus", "cor", "oculus", "inclino"],
+      "startLine": 2,
+      "endLine": 4,
+      "comment": "Heart (cor), mind (intellectum), and eyes (oculos) recalibrated to testimonies"
     },
     {
-      "name": "Sensory Sanctification",
-      "description": "Consecration of perception and action",
-      "lemmas": ["oculus", "video", "vanitas", "via", "eloquium"],
+      "name": "Aversion → Vivification",
+      "description": "Turning from vanity to find life in God's way",
+      "lemmas": ["averto", "vanitas", "vivifico", "via"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "Purification of sight and speech"
+      "comment": "Double movement: 'turn away' (averte) and 'give life' (vivifica)"
     },
     {
-      "name": "Covenantal Life",
-      "description": "Vital connection to God's commands",
-      "lemmas": ["vivifico", "custodio", "scrutor", "volo", "aequitas"],
-      "startLine": 2,
-      "endLine": 8,
-      "comment": "Life-sustaining relationship with Torah"
-    },
-    {
-      "name": "Delight in Judgment",
-      "description": "Paradoxical joy in divine ordinances",
-      "lemmas": ["jucundus", "concupisco", "opprobrium", "judicium", "mandatum"],
+      "name": "Judicial Delight",
+      "description": "God's judgments as both joyful and equitable",
+      "lemmas": ["judicium", "jucundus", "aequitas", "concupisco"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "Affective response to God's rulings"
+      "comment": "Unexpected pairing: opprobrium (shame) with jucunda (pleasant judgments)"
     },
     {
-      "name": "Augustine: Ordered Love",
-      "description": "Rightly-directed desires through grace",
-      "lemmas": ["inclina", "cor", "avaritia", "concupisco", "aequitas"],
-      "startLine": 4,
-      "endLine": 8,
-      "comment": "Transformation of disordered affections"
+      "name": "Augustine: Lex Vivificans",
+      "description": "Law as living path rather than dead letter",
+      "lemmas": ["via", "vivifico", "mandatum"],
+      "startLine": 3,
+      "endLine": 5,
+      "comment": "'In via tua vivifica me' shows law animated by grace (Enarrationes 118.33)"
     },
     {
-      "name": "Augustine: Two Wills",
-      "description": "Human weakness meeting divine grace",
-      "lemmas": ["volo", "pono", "deduc", "statuo", "vivifico"],
-      "startLine": 1,
-      "endLine": 8,
-      "comment": "Tension between human and divine volition"
+      "name": "Augustine: Oculus Cordis",
+      "description": "Spiritual vision purified for divine contemplation",
+      "lemmas": ["oculus", "vanitas", "cor"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Eyes turned from vanity (Conf. VII.21) to see via justificationum"
     }
+  
   ]
 },
-
-
+ 
 {
   "psalmNumber": 118,
   "category": "zain",
