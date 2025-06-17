@@ -1828,6 +1828,88 @@
     }
   ]
 },
+
+
+{
+  "psalmNumber": 56,
+  "category": "",
+  "themes": [
+    {
+      "name": "Speech → Iniquity",
+      "description": "Contrast between professed justice and practiced wickedness",
+      "lemmas": ["justitia", "loquor", "iniquitas", "operor"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Augustine: 'Loquimini justitiam' vs 'in corde iniquitates' shows tongue-heart divide (Enarrationes 56.2)"
+    },
+    {
+      "name": "Womb → Error",
+      "description": "Sin's origin from conception",
+      "lemmas": ["vulva", "uterus", "alieno", "erro"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Augustine: 'Ab utero' confirms original sin's transmission (De Peccatorum Meritis I.9)"
+    },
+    {
+      "name": "Ears → Obstinacy",
+      "description": "Willful rejection of truth",
+      "lemmas": ["auris", "obturo", "surdus", "aspis"],
+      "startLine": 4,
+      "endLine": 5,
+      "comment": "Augustine: Deaf adder symbolizes unrepentant soul (Sermon 76.5)"
+    },
+    {
+      "name": "Teeth → Judgment",
+      "description": "Divine dismantling of evil's instruments",
+      "lemmas": ["dens", "contero", "os", "leo"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Augustine: Crushed teeth signify broken power to harm (Enarrationes 56.8)"
+    },
+    {
+      "name": "Wax → Purification",
+      "description": "Transience of wickedness before divine fire",
+      "lemmas": ["cera", "fluo", "ignis", "sol"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Augustine: Melting wax represents sinners before God's light (Confessions XIII.15)"
+    },
+    {
+      "name": "Blood → Vindication",
+      "description": "Righteous celebration of divine justice",
+      "lemmas": ["sanguis", "lavo", "justus", "vindicta"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "Augustine: 'Lavabit in sanguine' symbolizes participation in Christ's victory (City of God XVII.7)"
+    },
+    {
+      "name": "Augustine: Cor Duplex",
+      "description": "Heart's division between truth and iniquity",
+      "lemmas": ["cor", "loquor", "justitia", "iniquitas"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Tension between 'loquimini justitiam' and 'in corde iniquitates' (De Trinitate XIV.17)"
+    },
+    {
+      "name": "Augustine: Serpens Aures",
+      "description": "Spiritual deafness as primal sin",
+      "lemmas": ["aspis", "obturo", "surdus", "erro"],
+      "startLine": 4,
+      "endLine": 5,
+      "comment": "Echo of Adam's willful disobedience (De Genesi contra Manichaeos II.15)"
+    },
+    {
+      "name": "Augustine: Ignis Illustratio",
+      "description": "Fire as divine truth exposing evil",
+      "lemmas": ["ignis", "sol", "cera", "nihilum"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Sinners' impermanence revealed by God's light (Enarrationes 56.12)"
+    }
+  ]
+},
+
+
 {
   "psalmNumber": 62,
   "category": "",
