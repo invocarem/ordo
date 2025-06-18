@@ -1,234 +1,270 @@
 {
   "themes": [
     {
-      "psalmNumber": 1,
-      "category": "",
-      "themes": [
-        {
-          "name": "Righteous Avoidance",
-          "description": "What the blessed person does not do",
-          "lemmas": ["abeo", "sto", "sedeo", "consilium", "via", "cathedra"],
-          "startLine": 1,
-          "endLine": 2,
-          "comment": "Covers 'walks not...stands not...sits not' structure"
-        },
-        {
-          "name": "Positive Devotion",
-          "description": "What the blessed person does instead",
-          "lemmas": ["lex", "dominus", "voluntas", "meditor", "dies", "nox"],
-          "startLine": 1,
-          "endLine": 2,
-          "comment": "Contrast with the avoidance themes"
-        },
-        {
-          "name": "Tree Imagery",
-          "description": "The righteous as a fruitful tree by water",
-          "lemmas": ["lignum", "planto", "decursus", "aqua", "fructus", "folium"],
-          "startLine": 3,
-          "endLine": 4,
-          "comment": "Nature metaphor for spiritual vitality"
-        },
-        {
-          "name": "Divine Blessing",
-          "description": "The prosperity of the righteous",
-          "lemmas": ["prospero", "tempus", "omnis", "facio"],
-          "startLine": 3,
-          "endLine": 4,
-          "comment": "God's favor on the righteous"
-        },
-        {
-          "name": "Wicked Contrast",
-          "description": "The fate of the wicked compared to chaff",
-          "lemmas": ["impius", "pulvis", "ventus", "projicio", "terra"],
-          "startLine": 5,
-          "endLine": 6,
-          "comment": "Negative counterpart to the tree imagery"
-        },
-        {
-          "name": "Final Judgment",
-          "description": "The ultimate destiny of righteous and wicked",
-          "lemmas": ["resurgo", "judicium", "peccator", "justus", "nosco", "pereo"],
-          "startLine": 5,
-          "endLine": 6,
-          "comment": "Eschatological conclusion of the psalm"
-        }
-      ]
+  "psalmNumber": 1,
+  "category": "",
+  "themes": [
+    {
+      "name": "Counsel → Law",
+      "description": "Rejection of wicked advice for divine instruction",
+      "lemmas": ["consilium", "impius", "lex", "meditor"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Threefold rejection (abiit/stetit/sedit) contrasts with double 'lege' meditation"
     },
     {
-      "psalmNumber": 2,
-      "category": "",
-      "themes": [
-        {
-          "name": "Rebellious Coalition",
-          "description": "The nations and rulers conspiring against God",
-          "lemmas": ["fremo", "gens", "populus", "rex", "princeps", "convenio", "adversus"],
-          "startLine": 1,
-          "endLine": 2,
-          "comment": "Covers the opening rebellion scene (v1-2)"
-        },
-        {
-          "name": "Divine Anointed",
-          "description": "The messianic figure opposed by the nations",
-          "lemmas": ["christus", "dominus", "unus"],
-          "startLine": 1,
-          "endLine": 2,
-          "comment": "First messianic reference in the Psalter"
-        },
-        {
-          "name": "Revolt Against Bondage",
-          "description": "The rebels' attempt to throw off divine authority",
-          "lemmas": ["dirumpo", "vinculum", "projicio", "jugum"],
-          "startLine": 3,
-          "endLine": 3,
-          "comment": "Metaphorical chains/yoke imagery (v3)"
-        },
-        {
-          "name": "Heavenly Derision",
-          "description": "God's mocking response to human rebellion",
-          "lemmas": ["irrideo", "subsanno", "caelum", "habito"],
-          "startLine": 4,
-          "endLine": 4,
-          "comment": "Divine perspective from heaven (v4)"
-        },
-        {
-          "name": "Divine Wrath",
-          "description": "God's terrifying response in anger",
-          "lemmas": ["ira", "furor", "conturbo", "loquor"],
-          "startLine": 5,
-          "endLine": 5,
-          "comment": "Theophanic language of divine speech (v5)"
-        },
-        {
-          "name": "Zion Kingship",
-          "description": "Establishment of the king on God's holy mountain",
-          "lemmas": ["constituo", "rex", "sion", "mons", "sanctus"],
-          "startLine": 6,
-          "endLine": 6,
-          "comment": "Royal installation decree (v6)"
-        },
-        {
-          "name": "Divine Sonship",
-          "description": "The king's special relationship as God's son",
-          "lemmas": ["filius", "gigno", "hodie", "dico"],
-          "startLine": 7,
-          "endLine": 7,
-          "comment": "Crucial messianic declaration (v7)"
-        },
-        {
-          "name": "Universal Inheritance",
-          "description": "The nations given as royal possession",
-          "lemmas": ["postulo", "do", "gens", "hereditas", "terminus"],
-          "startLine": 8,
-          "endLine": 8,
-          "comment": "Worldwide dominion promise (v8)"
-        },
-        {
-          "name": "Iron Rule",
-          "description": "The king's unbreakable authority over nations",
-          "lemmas": ["rego", "virga", "ferreus", "confringo"],
-          "startLine": 9,
-          "endLine": 9,
-          "comment": "Rod of iron imagery (v9)"
-        },
-        {
-          "name": "Royal Warning",
-          "description": "Admonition to earthly rulers to submit",
-          "lemmas": ["intelligo", "erudio", "judico"],
-          "startLine": 10,
-          "endLine": 10,
-          "comment": "Call to wisdom (v10)"
-        },
-        {
-          "name": "Trembling Worship",
-          "description": "Proper response to divine majesty",
-          "lemmas": ["servio", "timor", "exsulto", "tremor"],
-          "startLine": 11,
-          "endLine": 11,
-          "comment": "Paradoxical fear/joy combination (v11)"
-        },
-        {
-          "name": "Final Admonition",
-          "description": "Closing warning and beatitude",
-          "lemmas": ["apprehendo", "disciplina", "irascor", "pereo", "beatus", "confido"],
-          "startLine": 12,
-          "endLine": 12,
-          "comment": "Two ways conclusion (v12)"
-        }
-      ]
+      "name": "Root → Fruit",
+      "description": "Spiritual vitality through constant nourishment",
+      "lemmas": ["lignum", "planto", "aqua", "fructus"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Hydrated tree (secus aquarum) yields timely fruit (in tempore suo)"
     },
-
-  {
-      "psalmNumber": 4,
-      "category": "",
-      "themes": [
-        {
-          "name": "Divine Answer",
-          "description": "Confidence in God's responsiveness to prayer",
-          "lemmas": ["invoco", "exaudio"],
-          "startLine": 1,
-          "endLine": 2,
-          "comment": "Opening affirmation of God hearing prayers"
-        },
-        {
-          "name": "Human Folly",
-          "description": "Rebuke of vain and deceitful pursuits",
-          "lemmas": ["vanitas", "mendacium"],
-          "startLine": 3,
-          "endLine": 3,
-          "comment": "Questioning worldly attachments"
-        },
-        {
-          "name": "Sacrificial Worship",
-          "description": "Call to proper worship and trust",
-          "lemmas": ["sacrificium", "justitia", "spero"],
-          "startLine": 6,
-          "endLine": 6,
-          "comment": "Central liturgical instruction"
-        },
-        {
-          "name": "Divine Favor",
-          "description": "Experience of God's blessings",
-          "lemmas": ["lumen", "vultus", "laetitia"],
-          "startLine": 7,
-          "endLine": 8,
-          "comment": "Divine light and joy imagery"
-        },
-        {
-          "name": "Peaceful Trust",
-          "description": "Final confidence in God's protection",
-          "lemmas": ["pax", "requiesco", "spes"],
-          "startLine": 9,
-          "endLine": 10,
-          "comment": "Closing promise of rest and hope"
-        },
-        {
-          "name": "Nighttime Examination",
-          "description": "Call to nocturnal self-reflection",
-          "lemmas": ["irascor", "pecco", "compungo"],
-          "startLine": 5,
-          "endLine": 5,
-          "comment": "Unique advice for nightly introspection"
-        },
-        {
-          "name": "Augustine: Ps4:5-Tears as Sacrifice",
-          "description": "My mother’s tears (lacrimae) watered the earth beneath her face in prayer",
-          "lemmas": ["compungo", "cubile"],
-          "startLine": 5,
-          "endLine": 5,
-          "comment": "Conf. 9.4.10"
-        },
-         {
-          "name": "Augustine: Signatum Lumen",
-          "description": "The light of Your face is stamped upon us, O Lord. You sealed us with the light of Your face",
-          "lemmas": ["signo", "lumen"], 
-          "startLine": 7,
-          "endLine": 7,
-          "comment": "The indelible mark of divine light on the soul.  "
-
-         }
-      ]
+    {
+      "name": "Leaf → Prosperity",
+      "description": "Perpetual flourishing without withering",
+      "lemmas": ["folium", "defluo", "prospero", "omnia"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "Negative 'non defluet' precedes positive 'prosperabuntur'"
     },
+    {
+      "name": "Dust → Judgment",
+      "description": "Ephemeral nature of the wicked's existence",
+      "lemmas": ["pulvis", "ventus", "judicium", "resurgo"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Scattering (projicit) contrasts with righteous assembly (concilio)"
+    },
+    {
+      "name": "Way → Perishing",
+      "description": "Ultimate destiny determined by chosen path",
+      "lemmas": ["via", "iter", "nosco", "pereo"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Divine knowledge (novit) distinguishes two paths"
+    },
+    {
+      "name": "Augustine: Trinitas Negationis",
+      "description": "Threefold rejection mirroring Trinity",
+      "lemmas": ["abeo", "sto", "sedeo"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "Abiit/stetit/sedit as progressive entanglement with sin (Enarrationes 1.1)"
+    },
+    {
+      "name": "Augustine: Arbor Aeternitatis",
+      "description": "Tree as Christological symbol",
+      "lemmas": ["lignum", "aqua", "fructus"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Living water (John 4:10) yielding eternal fruit (Sermon 93.3)"
+    },
+    {
+      "name": "Augustine: Pulvis Resurrectionis",
+      "description": "Dust anticipating final judgment",
+      "lemmas": ["pulvis", "resurgo", "judicium"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Wicked's non-resurrection (non resurgent) contrasts with Matt 25:46 (City of God XX.30)"
+    }
+  ]
+},
 
+{
+  "psalmNumber": 2,
+  "category": "",
+  "themes": [
+    {
+      "name": "Rage → Futility",
+      "description": "Human rebellion against divine authority",
+      "lemmas": ["fremo", "meditor", "inania", "adversus"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Nations (gentes) and kings (reges) conspire in vain (inania)"
+    },
+    {
+      "name": "Bonds → Mockery",
+      "description": "Failed revolt meets divine derision",
+      "lemmas": ["vinculum", "projicio", "irrideo", "subsanno"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Human 'let us break' (dirumpamus) vs God's laughter (irridebit)"
+    },
+    {
+      "name": "Wrath → Coronation",
+      "description": "Divine fury establishes messianic rule",
+      "lemmas": ["ira", "furor", "constitutus", "rex"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Angry speech (loquetur) precedes Zion's kingship declaration"
+    },
+    {
+      "name": "Sonship → Inheritance",
+      "description": "Royal decree with universal dominion",
+      "lemmas": ["filius", "genui", "hereditas", "terminus"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "'Today I have begotten you' (hodie genui te) precedes nations as inheritance"
+    },
+    {
+      "name": "Rod → Shattering",
+      "description": "Iron rule over rebellious vessels",
+      "lemmas": ["virga", "ferreus", "vas", "confringo"],
+      "startLine": 9,
+      "endLine": 9,
+      "comment": "Pottery imagery (vas figuli) underscores fragility of resistance"
+    },
+    {
+      "name": "Warning → Blessing",
+      "description": "Final admonition with beatitude",
+      "lemmas": ["intelligo", "irascor", "confido", "beatus"],
+      "startLine": 10,
+      "endLine": 12,
+      "comment": "Kings warned (erudimini) before final promise to the faithful"
+    },
+    {
+      "name": "Augustine: Risus Dominicus",
+      "description": "Divine laughter as sovereign assurance",
+      "lemmas": ["irrideo", "subsanno", "habito"],
+      "startLine": 4,
+      "endLine": 4,
+      "comment": "God's mockery (subsannabit) reveals rebel futility (Enarrationes 2.6)"
+    },
+    {
+      "name": "Augustine: Generatio Aeterna",
+      "description": "'Today' in eternal present of Trinity",
+      "lemmas": ["hodie", "genui", "filius"],
+      "startLine": 7,
+      "endLine": 7,
+      "comment": "Christ's eternal generation outside time (De Trinitate IV.20)"
+    },
+    {
+      "name": "Augustine: Tremor Amoris",
+      "description": "Trembling worship as purified love",
+      "lemmas": ["tremor", "servio", "exsulto"],
+      "startLine": 11,
+      "endLine": 11,
+      "comment": "Holy fear (cum tremore) tempers joy (Sermon 349.2)"
+    }
+  ]
+},
+     
+{
+  "psalmNumber": 4,
+  "category": "",
+  "themes": [
+    {
+      "name": "Call → Answer",
+      "description": "Divine response to human invocation",
+      "lemmas": ["invoco", "exaudio", "dilato"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Threefold divine response pattern: hears (exaudivit), enlarges (dilatasti), shows mercy (miserere)",
+      "augustine": {
+        "source": "Confessions 9.4.8",
+        "comment": "'When I called, You answered me' - this was my own experience at conversion. Your answer was the expansion of my constricted heart (dilatasti mihi) through Monica's tears and Ambrose's preaching."
+      }
+    },
+    {
+      "name": "Vanity → Truth",
+      "description": "Contrast between human folly and divine revelation",
+      "lemmas": ["vanitas", "mendacium", "mirifico", "sanctus"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Rhetorical 'how long?' (usquequo) precedes God's marvelous works (mirificavit)",
+      "augustine": {
+        "source": "Confessions 9.4.9",
+        "comment": "'O sons of men, how long heavy-hearted?' - This pierced me like God's voice at the garden conversion. The 'heavy heart' (gravi corde) was my own before grace lifted it."
+      }
+    },
+    {
+      "name": "Anger → Compunction",
+      "description": "Righteous emotion leading to repentance",
+      "lemmas": ["irascor", "pecco", "compungo", "cubile"],
+      "startLine": 5,
+      "endLine": 5,
+      "comment": "Nighttime examination (in cubilibus) transforms anger into conviction",
+      "augustine": {
+        "source": "Confessions 9.4.10",
+        "comment": "'Be angry and sin not' - In my bed (cubile), I wept over wasted years. The compunction (compungimini) was Your knife cutting away my pride."
+      }
+    },
+    {
+      "name": "Sacrifice → Hope",
+      "description": "Proper worship anchoring trust",
+      "lemmas": ["sacrificium", "justitia", "spero"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Righteous offerings (sacrificium justitiae) precede command to hope (sperate)",
+      "augustine": {
+        "source": "Confessions 9.4.11",
+        "comment": "The true sacrifice is a contrite heart. When I finally offered mine (sacrificium justitiae), the hope (sperate) became certainty."
+      }
+    },
+    {
+      "name": "Question → Light",
+      "description": "Divine favor answering human seeking",
+      "lemmas": ["ostendo", "bonus", "signo", "lumen"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "'Who shows good?' answered by sealed light (signatum est lumen)",
+      "augustine": {
+        "source": "Confessions 9.4.12",
+        "comment": "The 'light of Your face' (lumen vultus) was the illumination I found in the Scriptures after baptism - not Plato's fleeting shadows."
+      }
+    },
+    {
+      "name": "Abundance → Rest",
+      "description": "Material blessing leading to spiritual peace",
+      "lemmas": ["frumentum", "vinum", "pax", "requiesco"],
+      "startLine": 8,
+      "endLine": 9,
+      "comment": "Grain/wine multiplication precedes peaceful sleep (in pace dormiam)",
+      "augustine": {
+        "source": "Confessions 9.4.13",
+        "comment": "The 'grain and wine' (frumenti et vini) signify the Eucharist that brought final peace (in pace) after my restless seeking."
+      }
+    },
+    {
+      "name": "Augustine: Nocturnal Conversion",
+      "description": "Verse 5 as paradigm of his spiritual awakening",
+      "lemmas": ["cubile", "compungo", "irascor"],
+      "startLine": 5,
+      "endLine": 5,
+      "comment": "The 'beds' (cubilibus) evoke the garden crisis and his mother's deathbed",
+      "augustine": {
+        "source": "Confessions 8.12.28-29, 9.4.10",
+        "comment": "That night under the fig tree, Your words 'took my bones and shook them' (compungimini). The anger (irascimini) was against my own delayed conversion."
+      }
+    },
+    {
+      "name": "Augustine: Monica's Tears",
+      "description": "Verse 2's mercy realized through his mother",
+      "lemmas": ["misereor", "exaudi", "oratio"],
+      "startLine": 2,
+      "endLine": 2,
+      "comment": "The answered prayer (exaudi orationem) was Monica's lifelong intercession",
+      "augustine": {
+        "source": "Confessions 9.4.8",
+        "comment": "'Have mercy on me' (miserere mei) - You heard my mother's prayers when I could not pray. Her tears watered the ground where I would be converted."
+      }
+    },
+    {
+      "name": "Augustine: Ostia Vision",
+      "description": "Verse 9's peace foreshadowing eternal rest",
+      "lemmas": ["pax", "requiesco", "dormio"],
+      "startLine": 9,
+      "endLine": 9,
+      "comment": "'In peace I will sleep' anticipates his mother's deathbed ecstasy",
+      "augustine": {
+        "source": "Confessions 9.10.23-26",
+        "comment": "At Ostia, we touched that peace (in pace) where souls find true rest (requiescam). This verse comforted me as Monica departed."
+      }
+    }
+  ]
+},
+ 
     {
       "psalmNumber": 6,
       "category": "",
@@ -1828,6 +1864,88 @@
     }
   ]
 },
+
+
+{
+  "psalmNumber": 56,
+  "category": "",
+  "themes": [
+    {
+      "name": "Speech → Iniquity",
+      "description": "Contrast between professed justice and practiced wickedness",
+      "lemmas": ["justitia", "loquor", "iniquitas", "operor"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Augustine: 'Loquimini justitiam' vs 'in corde iniquitates' shows tongue-heart divide (Enarrationes 56.2)"
+    },
+    {
+      "name": "Womb → Error",
+      "description": "Sin's origin from conception",
+      "lemmas": ["vulva", "uterus", "alieno", "erro"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Augustine: 'Ab utero' confirms original sin's transmission (De Peccatorum Meritis I.9)"
+    },
+    {
+      "name": "Ears → Obstinacy",
+      "description": "Willful rejection of truth",
+      "lemmas": ["auris", "obturo", "surdus", "aspis"],
+      "startLine": 4,
+      "endLine": 5,
+      "comment": "Augustine: Deaf adder symbolizes unrepentant soul (Sermon 76.5)"
+    },
+    {
+      "name": "Teeth → Judgment",
+      "description": "Divine dismantling of evil's instruments",
+      "lemmas": ["dens", "contero", "os", "leo"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Augustine: Crushed teeth signify broken power to harm (Enarrationes 56.8)"
+    },
+    {
+      "name": "Wax → Purification",
+      "description": "Transience of wickedness before divine fire",
+      "lemmas": ["cera", "fluo", "ignis", "sol"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Augustine: Melting wax represents sinners before God's light (Confessions XIII.15)"
+    },
+    {
+      "name": "Blood → Vindication",
+      "description": "Righteous celebration of divine justice",
+      "lemmas": ["sanguis", "lavo", "justus", "vindicta"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "Augustine: 'Lavabit in sanguine' symbolizes participation in Christ's victory (City of God XVII.7)"
+    },
+    {
+      "name": "Augustine: Cor Duplex",
+      "description": "Heart's division between truth and iniquity",
+      "lemmas": ["cor", "loquor", "justitia", "iniquitas"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Tension between 'loquimini justitiam' and 'in corde iniquitates' (De Trinitate XIV.17)"
+    },
+    {
+      "name": "Augustine: Serpens Aures",
+      "description": "Spiritual deafness as primal sin",
+      "lemmas": ["aspis", "obturo", "surdus", "erro"],
+      "startLine": 4,
+      "endLine": 5,
+      "comment": "Echo of Adam's willful disobedience (De Genesi contra Manichaeos II.15)"
+    },
+    {
+      "name": "Augustine: Ignis Illustratio",
+      "description": "Fire as divine truth exposing evil",
+      "lemmas": ["ignis", "sol", "cera", "nihilum"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Sinners' impermanence revealed by God's light (Enarrationes 56.12)"
+    }
+  ]
+},
+
+
 {
   "psalmNumber": 62,
   "category": "",

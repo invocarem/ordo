@@ -1,4 +1,250 @@
 [
+  {
+    "lemma": "aufero",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "auferre",
+    "present": "aufero",
+    "future": "auferam",
+    "perfect": "abstuli",
+    "supine": "ablatum",
+    "forms":{
+      "future_passive_indicative": [
+            "auferar",
+            "aufereris",
+            "auferetur",
+            "auferemur",
+            "auferemini",
+            "auferentur"
+        ],
+        "present_passive": ["auferor", "auferris", "aufertur", "auferimur", "auferimini", "auferuntur"],
+        "present_subjunctive": ["auferam", "auferas", "auferat", "auferamus", "auferatis", "auferant"]
+    },
+    "translations": {
+        "en": "to take away, carry off, remove",
+        "la": "aufero, auferre"
+    }
+},
+  {
+    "lemma": "fluo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "fluere",
+    "present": "fluo",
+    "future": "fluam",
+    "perfect": "fluxi",
+    "supine": "fluxum",
+    "translations": {
+        "en": "to flow, pour",
+        "la": "fluo, fluere"
+    }
+},
+{
+    "lemma": "devenio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "devenire",
+    "present": "devenio",
+    "future": "deveniam",
+    "perfect": "deveni",
+    "supine": "deventum",
+    "translations": {
+        "en": "to come to, arrive at",
+        "la": "devenio, devenire"
+    }
+},
+  {
+    "lemma": "decurro",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "decurrere",
+    "present": "decurro",
+    "future": "decurram",
+    "perfect": "decucurri",
+    "supine": "decursum",
+    "translations": {
+        "en": "to run down, hasten",
+        "la": "decurro, decurrere"
+    }
+},
+  {
+    "lemma": "veneficus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "veneficus",
+    "genitive": "venefici",
+    "translations": {
+        "en": "sorcerer, poisoner, magician",
+        "la": "veneficus"
+    },
+    "forms": {
+        "nominative_f":[ "venefica"],
+        "genitive_f": ["veneficae"]
+    }
+},{
+    "lemma": "incanto",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "incantare",
+    "present": "incanto",
+    "future": "incantabo",
+    "perfect": "incantavi",
+    "supine": "incantatum",
+    "translations": {
+        "en": "to enchant, bewitch, cast a spell",
+        "la": "incanto, incantare"
+    }
+ },
+
+  {
+    "lemma": "mola",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "mola",
+    "genitive": "molae",
+    "translations": {
+        "en": "millstone, molar tooth",
+        "la": "mola"
+    }
+},
+  {
+    "lemma": "sapienter",
+    "part_of_speech": "adverb",
+    "translations": {
+        "en": "wisely, judiciously",
+        "la": "sapienter"
+    }
+},
+  {
+    "lemma": "falsus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "falsus",
+    "genitive": "falsi",
+    "translations": {
+        "en": "false, deceptive",
+        "la": "falsus"
+    },
+    "forms": {
+        "nominative_f": ["falsa"],
+        "genitive_f": ["falsae"],
+        "nominative_n": ["falsum"],
+        "genitive_n": ["falsi"]
+    }
+},
+  {
+    "lemma": "surdus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "surdus",
+    "genitive": "surdi",
+    "translations": {
+        "en": "deaf",
+        "la": "surdus"
+    },
+    "forms": {
+        "nominative_f": [ "surda"],
+        "genitive_f": ["surda"],
+        "nominative_n": ["surdum"],
+        "genitive_n": ["surdi"]
+    }, 
+    "forms_plural" : {
+        "nominative_f": [ "surdae"]
+
+    }
+},
+  {
+    "lemma": "aspis",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "aspis",
+    "genitive": "aspidis",
+    "translations": {
+        "en": "asp, venomous snake",
+        "la": "aspis"
+    }
+},
+  {
+    "lemma": "serpens",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "serpens",
+    "genitive": "serpentis",
+    "translations": {
+        "en": "serpent, snake",
+        "la": "serpens"
+    }
+},
+  {
+    "lemma": "obturo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "obturare",
+    "present": "obturo",
+    "future": "obturabo",
+    "perfect": "obturavi",
+    "supine": "obturatum",
+    "translations": {
+        "en": "to stop up, block, seal",
+        "la": "obturo, obturare"
+    }
+},
+  {
+    "lemma": "erro",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "errare",
+    "present": "erro",
+    "future": "errabo",
+    "perfect": "erravi",
+    "supine": "erratum",
+    "translations": {
+        "en": "to go astray, wander, err",
+        "la": "erro, errare"
+    }
+},
+  {
+    "lemma": "vulva",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "vulva",
+    "genitive": "vulvae",
+    "translations": {
+        "en": "womb, uterus",
+        "la": "vulva"
+    }
+},
+{
+    "lemma": "verus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "verus",
+    "genitive": "veri",
+    "translations": {
+        "en": "true, real",
+        "la": "verus"
+    }
+},
+  {
+    "lemma": "rhamnus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "feminine",
+    "nominative": "rhamnus",
+    "genitive": "rhamni",
+    "translations": {
+        "en": "bramble, thorny shrub",
+        "la": "rhamnus"
+    }
+},
 {
     "lemma": "redemptor",
     "part_of_speech": "noun",
@@ -3906,6 +4152,11 @@
   "nominative": "nihil",
   "genitive": "nihili",
   "ablative": "nihilo",
+  "forms" :{
+    "nominative_n": ["nihilum"],
+    "genitive_n": ["nihili"]
+ 
+  },
   "translations": {
     "en": "nothing",
     "la": "nihil"
@@ -6204,22 +6455,31 @@
       "la": "bene"
     }
   }, 
+{
+    "lemma": "laetor",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "laetari",
+    "present": "laetor",
+    "future": "laetabor",
+    "perfect": "laetatus",
+    "supine": "laetatum",
+    "translations": {
+        "en": "to rejoice, be glad",
+        "la": "laetor, laetari"
+    },
+    "forms": {
+        "future_passive_indicative": [
+            "laetabor",
+            "laetaberis",
+            "laetabitur",
+            "laetabimur",
+            "laetabimini",
+            "laetabuntur"
+        ]
+    }
+ },
 
- {
-  "lemma": "laetor",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "laetari",
-  "perfect": "laetatus",
-  "present": "laetor",
-  "future": "laetabor",
-  "supine": "laetatum",
-  "translations": {
-    "en": "rejoice, be glad",
-    "la": "laetor, laetari"
-  },
-  "notes": "Deponent verb, only has passive forms with active meaning"
-},
   {  "lemma": "auster",
  "part_of_speech": "noun",
  "declension": 2,
@@ -12312,6 +12572,14 @@
       }
     },
     {
+    "lemma": "recte",
+    "part_of_speech": "adverb",
+    "translations": {
+        "en": "rightly, correctly",
+        "la": "recte"
+    }
+},
+    {
       "lemma": "abundantia",
       "part_of_speech": "noun",
       "gender": "feminine",
@@ -12339,11 +12607,12 @@
         "la": "loquor"
       },
       "forms": {
+        "present_passive_indicative": ["loquor", "loqueris", "loquitur", "loquimur", "loquimini", "loquuntur"],
         "imperfect": ["loquebar", "loquebaris", "loquebatur", "loquebamur", "loquebamini", "loquebantur"],
         "imperfect_passive_subjunctive": [
             "loquerer", "loquereris", "loqueretur", "loqueremur", "loqueremini", "loquerentur"
         ],
-        "present_subjunctive": [ "loquatur" ],
+        "present_subjunctive": ["loquar", "loquaris", "loquatur", "loquamur", "loquamini", "loquantur"],
         "gerund": ["loquendum"],
         "gerundive": ["loquendus"]
       }
@@ -13912,10 +14181,26 @@
           }
         },
         {
+    "lemma": "spina",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "spina",
+    "genitive": "spinae",
+    "translations": {
+        "en": "thorn, spine",
+        "la": "spina"
+    }
+},
+        {
             "lemma": "vivo",
             "part_of_speech": "verb",
-            "perfect": "vixi",
+             "conjugation": 3,
             "infinitive": "vivere",
+            "present": "vivo",
+            "future": "vivam",
+            "perfect": "vixi",
+            "supine": "victum",
             "forms": {
                 "present": ["vivo", "vivis", "vivit", "vivimus", "vivitis", "vivunt"],
                 "imperfect": ["vivebam", "vivebas", "vivebat", "vivebamus", "vivebatis", "vivebant"],
@@ -15364,23 +15649,6 @@
                 "en": "because, since, for",
                 "la": "quoniam"
             }
-        },
-        {
-          "lemma": "aufero",
-          "part_of_speech": "verb",
-          "conjugation": 0,
-          "infinitive": "auferre",
-         
-          "perfect": "abstuli",
-          "supine": "ablatum",
-          "forms":{
-            "present_passive": ["auferor", "auferris", "aufertur", "auferimur", "auferimini", "auferuntur"],
-              "present_subjunctive": ["auferam", "auferas", "auferat", "auferamus", "auferatis", "auferant"]
-          },
-          "translations": {
-            "en": "to take away, carry off, remove",
-            "la": "aufero, auferre, abstuli, ablatum"
-          }
         },
     {
             "lemma": "dormio",
@@ -18793,6 +19061,19 @@
     "la": "plenus, -a, -um"
   }
 },
+
+{
+    "lemma": "similitudo",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "similitudo",
+    "genitive": "similitudinis",
+    "translations": {
+        "en": "likeness, resemblance",
+        "la": "similitudo"
+    }
+},
 {
   "lemma": "amplius",
   "part_of_speech": "adverb",
@@ -18834,7 +19115,20 @@
         "genitive_n": ["alieni"]
     }
 },
- 
+{
+    "lemma": "alieno",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "alienare",
+    "present": "alieno",
+    "future": "alienabo",
+    "perfect": "alienavi",
+    "supine": "alienatum",
+    "translations": {
+        "en": "to estrange, alienate, transfer",
+        "la": "alieno, alienare"
+    }
+}, 
   {
     "lemma": "humilitas",
     "part_of_speech": "noun",
