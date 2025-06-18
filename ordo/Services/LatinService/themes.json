@@ -2822,7 +2822,78 @@
   
   ]
 },
- 
+
+{
+  "psalmNumber": 118,
+  "category": "vau",
+  "themes": [
+    {
+      "name": "Mercy → Salvation",
+      "description": "Divine compassion actualizing promised deliverance",
+      "lemmas": ["misericordia", "salutare", "eloquium", "venio"],
+      "startLine": 1,
+      "endLine": 1,
+      "comment": "Mercy (v.41) precedes and enables the keeping of law (v.44)"
+    },
+    {
+      "name": "Hope → Vindication",
+      "description": "Confident expectation answering adversaries",
+      "lemmas": ["spero", "superspero", "respondeo", "exprobro"],
+      "startLine": 2,
+      "endLine": 3,
+      "comment": "Double hope (speravi/supersperavi) confronts reproach (exprobrantibus)"
+    },
+    {
+      "name": "Truth → Eternity",
+      "description": "Uncompromised fidelity to everlasting covenant",
+      "lemmas": ["veritas", "usquequaque", "saeculum", "custodio"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "'Utterly' (usquequaque) modifies both truth-keeping and eternal scope"
+    },
+    {
+      "name": "Freedom → Proclamation",
+      "description": "Liberty enabling bold testimony",
+      "lemmas": ["latitudo", "testimonium", "rex", "confundor"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Width (latitudine) of movement parallels royal confidence"
+    },
+    {
+      "name": "Love → Gesture",
+      "description": "Affection expressed through physical devotion",
+      "lemmas": ["diligo", "levo", "meditor", "exerceo"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Hand-raising (levavi) completes the meditation-practice cycle"
+    },
+    {
+      "name": "Augustine: Misericordia Subjunctiva",
+      "description": "Prayer's grammatical mood shaping grace",
+      "lemmas": ["venio", "aufero", "custodio"],
+      "startLine": 1,
+      "endLine": 4,
+      "comment": "Subjunctives (veniat/auferas) show grace-dependent obedience (Enarrationes 118.41)"
+    },
+    {
+      "name": "Augustine: Supersperatio",
+      "description": "Excessive hope transcending circumstances",
+      "lemmas": ["superspero", "judicium", "exprobro"],
+      "startLine": 2,
+      "endLine": 3,
+      "comment": "Super-abundant hope (supersperavi) amid reproach (Sermon 32.12)"
+    },
+   {
+      "name": "Teresa: Manus Orantis",
+      "description": "Elevated hands as total surrender",
+      "lemmas": ["levo", "diligo", "justificatio"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "Physical gesture (levavi) manifests 'Nada te turbe' abandon (Interior Castle V.3)"
+    }
+  ]
+},
+
 {
   "psalmNumber": 118,
   "category": "zain",
