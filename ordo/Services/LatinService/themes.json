@@ -160,11 +160,7 @@
       "lemmas": ["invoco", "exaudio", "dilato"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Threefold divine response pattern: hears (exaudivit), enlarges (dilatasti), shows mercy (miserere)",
-      "augustine": {
-        "source": "Confessions 9.4.8",
-        "comment": "'When I called, You answered me' - this was my own experience at conversion. Your answer was the expansion of my constricted heart (dilatasti mihi) through Monica's tears and Ambrose's preaching."
-      }
+      "comment": "Threefold divine response pattern: hears (exaudivit), enlarges (dilatasti), shows mercy (miserere). Confessions 9.4.8 'When I called, You answered me' - this was my own experience at conversion. Your answer was the expansion of my constricted heart (dilatasti mihi) through Monica's tears and Ambrose's preaching."
     },
     {
       "name": "Vanity → Truth",
@@ -172,11 +168,7 @@
       "lemmas": ["vanitas", "mendacium", "mirifico", "sanctus"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "Rhetorical 'how long?' (usquequo) precedes God's marvelous works (mirificavit)",
-      "augustine": {
-        "source": "Confessions 9.4.9",
-        "comment": "'O sons of men, how long heavy-hearted?' - This pierced me like God's voice at the garden conversion. The 'heavy heart' (gravi corde) was my own before grace lifted it."
-      }
+      "comment": "Rhetorical 'how long?' (usquequo) precedes God's marvelous works (mirificavit), Confessions 9.4.9, 'O sons of men, how long heavy-hearted?' - This pierced me like God's voice at the garden conversion. The 'heavy heart' (gravi corde) was my own before grace lifted it."
     },
     {
       "name": "Anger → Compunction",
@@ -184,11 +176,7 @@
       "lemmas": ["irascor", "pecco", "compungo", "cubile"],
       "startLine": 5,
       "endLine": 5,
-      "comment": "Nighttime examination (in cubilibus) transforms anger into conviction",
-      "augustine": {
-        "source": "Confessions 9.4.10",
-        "comment": "'Be angry and sin not' - In my bed (cubile), I wept over wasted years. The compunction (compungimini) was Your knife cutting away my pride."
-      }
+      "comment": "Nighttime examination (in cubilibus) transforms anger into conviction,  Confessions 9.4.10, 'Be angry and sin not' - In my bed (cubile), I wept over wasted years. The compunction (compungimini) was Your knife cutting away my pride."
     },
     {
       "name": "Sacrifice → Hope",
@@ -196,11 +184,7 @@
       "lemmas": ["sacrificium", "justitia", "spero"],
       "startLine": 6,
       "endLine": 6,
-      "comment": "Righteous offerings (sacrificium justitiae) precede command to hope (sperate)",
-      "augustine": {
-        "source": "Confessions 9.4.11",
-        "comment": "The true sacrifice is a contrite heart. When I finally offered mine (sacrificium justitiae), the hope (sperate) became certainty."
-      }
+      "comment": "Righteous offerings (sacrificium justitiae) precede command to hope (sperate), Confessions 9.4.11, The true sacrifice is a contrite heart. When I finally offered mine (sacrificium justitiae), the hope (sperate) became certainty."
     },
     {
       "name": "Question → Light",
@@ -208,11 +192,7 @@
       "lemmas": ["ostendo", "bonus", "signo", "lumen"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "'Who shows good?' answered by sealed light (signatum est lumen)",
-      "augustine": {
-        "source": "Confessions 9.4.12",
-        "comment": "The 'light of Your face' (lumen vultus) was the illumination I found in the Scriptures after baptism - not Plato's fleeting shadows."
-      }
+      "comment": "Confessions 9.4.12 The 'light of Your face' (lumen vultus) was the illumination I found in the Scriptures after baptism - not Plato's fleeting shadows."
     },
     {
       "name": "Abundance → Rest",
@@ -220,11 +200,7 @@
       "lemmas": ["frumentum", "vinum", "pax", "requiesco"],
       "startLine": 8,
       "endLine": 9,
-      "comment": "Grain/wine multiplication precedes peaceful sleep (in pace dormiam)",
-      "augustine": {
-        "source": "Confessions 9.4.13",
-        "comment": "The 'grain and wine' (frumenti et vini) signify the Eucharist that brought final peace (in pace) after my restless seeking."
-      }
+      "comment": "Grain/wine multiplication precedes peaceful sleep (in pace dormiam) Confessions 9.4.13. The 'grain and wine' (frumenti et vini) signify the Eucharist that brought final peace (in pace) after my restless seeking."
     },
     {
       "name": "Augustine: Nocturnal Conversion",
@@ -232,11 +208,8 @@
       "lemmas": ["cubile", "compungo", "irascor"],
       "startLine": 5,
       "endLine": 5,
-      "comment": "The 'beds' (cubilibus) evoke the garden crisis and his mother's deathbed",
-      "augustine": {
-        "source": "Confessions 8.12.28-29, 9.4.10",
-        "comment": "That night under the fig tree, Your words 'took my bones and shook them' (compungimini). The anger (irascimini) was against my own delayed conversion."
-      }
+      "comment": "The 'beds' (cubilibus) evoke the garden crisis and his mother's deathbed. Confessions 8.12.28-29, 9.4.10 That night under the fig tree, Your words 'took my bones and shook them' (compungimini). The anger (irascimini) was against my own delayed conversion."
+      
     },
     {
       "name": "Augustine: Monica's Tears",
@@ -244,11 +217,7 @@
       "lemmas": ["misereor", "exaudi", "oratio"],
       "startLine": 2,
       "endLine": 2,
-      "comment": "The answered prayer (exaudi orationem) was Monica's lifelong intercession",
-      "augustine": {
-        "source": "Confessions 9.4.8",
-        "comment": "'Have mercy on me' (miserere mei) - You heard my mother's prayers when I could not pray. Her tears watered the ground where I would be converted."
-      }
+      "comment": "The answered prayer (exaudi orationem) was Monica's lifelong intercession. Confessions 9.4.8 'Have mercy on me' (miserere mei) - You heard my mother's prayers when I could not pray. Her tears watered the ground where I would be converted."
     },
     {
       "name": "Augustine: Ostia Vision",
@@ -256,11 +225,8 @@
       "lemmas": ["pax", "requiesco", "dormio"],
       "startLine": 9,
       "endLine": 9,
-      "comment": "'In peace I will sleep' anticipates his mother's deathbed ecstasy",
-      "augustine": {
-        "source": "Confessions 9.10.23-26",
-        "comment": "At Ostia, we touched that peace (in pace) where souls find true rest (requiescam). This verse comforted me as Monica departed."
-      }
+      "comment": "'In peace I will sleep' anticipates his mother's deathbed ecstasy. Confessions 9.10.23-26. At Ostia, we touched that peace (in pace) where souls find true rest (requiescam). This verse comforted me as Monica departed."
+      
     }
   ]
 },

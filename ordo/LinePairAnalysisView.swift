@@ -98,14 +98,20 @@ struct LinePairAnalysisView: View {
                                 }
                                 
                                 if !filteredThemes.isEmpty {
-                                    VStack(alignment: .leading, spacing: 8) {
+                                    VStack(alignment: .leading, spacing: 12) {
                                         ForEach(filteredThemes, id: \.name) { theme in
-                                            VStack(alignment: .leading, spacing: 4) {
+                                            VStack(alignment: .leading, spacing: 6) {
+                                                // Theme Name
                                                 Text(theme.name)
                                                     .font(.headline)
+                                                    .foregroundColor(.primary)
+                                                
+                                                // Theme Description
                                                 Text(theme.description)
-                                                    .font(.caption)
+                                                    .font(.subheadline)
                                                     .foregroundColor(.secondary)
+                                                
+                                                // Supporting Lemmas
                                                 if !theme.supportingLemmas.isEmpty {
                                                     FlowLayout(spacing: 4) {
                                                         ForEach(theme.supportingLemmas, id: \.self) { lemma in
@@ -114,25 +120,57 @@ struct LinePairAnalysisView: View {
                                                                     Text(lemma)
                                                                         .font(.caption)
                                                                         .bold()
+                                                                        .foregroundColor(.accentColor)
                                                                     if let translation = lemmaInfo.translation {
                                                                         Text(translation)
                                                                             .font(.caption2)
+                                                                            .foregroundColor(.secondary)
                                                                     }
                                                                 }
-                                                                .padding(.horizontal, 6)
+                                                                .padding(.horizontal, 8)
                                                                 .padding(.vertical, 4)
                                                                 .background(Color.accentColor.opacity(0.1))
                                                                 .cornerRadius(6)
                                                             }
                                                         }
                                                     }
+                                                    .padding(.top, 4)
                                                 }
+                                                
+                                                // Theme Comment (if exists)
+                                                if let comment = theme.comment?.trimmingCharacters(in: .whitespacesAndNewlines), !comment.isEmpty {
+                                                    VStack(alignment: .leading, spacing: 2) {
+                                                        //Text("Commentary:")
+                                                        //    .font(.caption)
+                                                        //    .bold()
+                                                        //    .foregroundColor(.secondary)
+                                                        Text(comment)
+                                                            .font(.caption)
+                                                            .foregroundColor(.secondary.opacity(0.8))
+                                                            .italic()
+                                                    }
+                                                    .padding(.top, 4)
+                                                    .padding(.leading, 8)
+                                                    .background(
+                                                        RoundedRectangle(cornerRadius: 4)
+                                                            .fill(Color.secondary.opacity(0.05))
+                                                            .padding(.leading, 4)
+                                                    )
+                                                }
+                                                
+                                               
                                             }
-                                            .padding(.vertical, 4)
+                                            .padding(.vertical, 8)
+                                            .padding(.horizontal, 12)
+                                            .background(Color(.systemBackground))
+                                            .cornerRadius(10)
+                                            .shadow(color: Color.black.opacity(0.05), radius: 3, x: 0, y: 2)
                                         }
                                     }
                                     .padding(.top, 8)
                                 }
+                                
+                                
                             }
                             
                             
@@ -167,6 +205,7 @@ struct LinePairAnalysisView: View {
                 startLine: i + 1, // Line numbers start at 1
                 endLine: i + lines.count,
                 lines: lines
+               
             )
         }
     }
@@ -177,6 +216,7 @@ struct LinePair: Identifiable {
     let startLine: Int
     let endLine: Int
     let lines: [String]
+    
 }
 struct FlowLayout: Layout {
     var spacing: CGFloat = 8

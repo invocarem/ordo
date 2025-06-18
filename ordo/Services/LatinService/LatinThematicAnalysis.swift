@@ -122,7 +122,8 @@ extension LatinService {
                     name: theme.name,
                     description: theme.description,
                     supportingLemmas: theme.lemmas,
-                    lineRange: lineRange
+                    lineRange: lineRange,
+                    comment: theme.comment ?? "N/A",
                 )
             )
         }

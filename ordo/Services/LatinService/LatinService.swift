@@ -208,15 +208,17 @@ public struct PsalmAnalysisResult: Codable {
             public let description: String
             public let supportingLemmas: [String]
             public let lineRange: ClosedRange<Int>?
-            
+            public let comment: String?
             public init(name: String,
                        description: String,
                        supportingLemmas: [String],
-                       lineRange: ClosedRange<Int>? = nil) {
+                       lineRange: ClosedRange<Int>? = nil,
+                        comment: String? = nil) {
                 self.name = name
                 self.description = description
                 self.supportingLemmas = supportingLemmas
                 self.lineRange = lineRange
+                self.comment = comment
             }
         }
 }
