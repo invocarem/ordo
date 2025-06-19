@@ -2190,158 +2190,86 @@
     }
   ]
 },
-
+{
+  "psalmNumber": 89,
+  "category": "",
+  "themes": [
     {
-      "psalmNumber": 89,
-      "category": "",
-      "themes": [
-        {
-          "name": "Divine Eternity",
-          "description": "God's existence beyond time and creation",
-          "lemmas": ["saeculum", "mons", "formo", "orbis"],
-          "startLine": 1,
-          "endLine": 2,
-          "comment": "Timeless nature of God"
-        },
-        {
-          "name": "Covenantal Refuge",
-          "description": "God as protective shelter across generations",
-          "lemmas": ["refugium", "generatio", "progenies"],
-          "startLine": 1,
-          "endLine": 2,
-          "comment": "Multi-generational faithfulness"
-        },
-        {
-          "name": "Temporal Perspective",
-          "description": "Divine vs human experience of time",
-          "lemmas": ["mille", "dies", "hesternus", "custodia"],
-          "startLine": 3,
-          "endLine": 4,
-          "comment": "Contrast between divine and human time"
-        },
-        {
-          "name": "Call to Repentance",
-          "description": "Invitation to turn from human frailty",
-          "lemmas": ["converto", "humilitas", "homo"],
-          "startLine": 3,
-          "endLine": 4,
-          "comment": "Exhortation to recognize mortality"
-        },
-        {
-          "name": "Human Transience",
-          "description": "The fleeting nature of mortal life",
-          "lemmas": ["herba", "floreo", "aresco", "nihil"],
-          "startLine": 5,
-          "endLine": 6,
-          "comment": "Floral metaphor for human life"
-        },
-        {
-          "name": "Daily Cycle",
-          "description": "Morning-to-evening metaphor for lifespan",
-          "lemmas": ["mane", "vesper", "transeo", "decido"],
-          "startLine": 5,
-          "endLine": 6,
-          "comment": "Day as metaphor for life"
-        },
-        {
-          "name": "Divine Wrath",
-          "description": "Experience of God's righteous anger",
-          "lemmas": ["ira", "furor", "turbo", "deficio"],
-          "startLine": 7,
-          "endLine": 8,
-          "comment": "Divine displeasure and its effects"
-        },
-        {
-          "name": "Illuminating Grace",
-          "description": "Counterbalancing divine mercy",
-          "lemmas": ["illuminatio", "vultus", "conspectus"],
-          "startLine": 7,
-          "endLine": 8,
-          "comment": "Divine favor as light"
-        },
-        {
-          "name": "Mortality Imagery",
-          "description": "Figures for life's fragility",
-          "lemmas": ["aranea", "meditor", "septuaginta"],
-          "startLine": 9,
-          "endLine": 10,
-          "comment": "Spiderweb and lifespan metaphors"
-        },
-        {
-          "name": "Existential Toil",
-          "description": "The pain of human existence",
-          "lemmas": ["labor", "dolor", "potentatus"],
-          "startLine": 9,
-          "endLine": 10,
-          "comment": "Human suffering theme"
-        },
-        {
-          "name": "Divine Paradox",
-          "description": "Tension between wrath and mercy",
-          "lemmas": ["mansuetudo", "corripio", "timor"],
-          "startLine": 11,
-          "endLine": 12,
-          "comment": "Complex divine nature"
-        },
-        {
-          "name": "Inscrutable Judgment",
-          "description": "Human inability to comprehend God's ways",
-          "lemmas": ["potestas", "dinumero", "ira"],
-          "startLine": 11,
-          "endLine": 12,
-          "comment": "Mystery of divine justice"
-        },
-        {
-          "name": "Wisdom Petition",
-          "description": "Request for divine instruction",
-          "lemmas": ["eruditus", "cor", "sapientia"],
-          "startLine": 13,
-          "endLine": 14,
-          "comment": "Prayer for understanding"
-        },
-        {
-          "name": "Covenantal Appeal",
-          "description": "Pleading based on relationship",
-          "lemmas": ["deprecabilis", "servus", "usquequo"],
-          "startLine": 13,
-          "endLine": 14,
-          "comment": "Appeal to God's covenant"
-        },
-        {
-          "name": "Mercy Renewal",
-          "description": "Daily experience of divine compassion",
-          "lemmas": ["misericordia", "repleo", "mane"],
-          "startLine": 15,
-          "endLine": 16,
-          "comment": "Morning as metaphor for renewal"
-        },
-        {
-          "name": "Paradoxical Joy",
-          "description": "Gladness through suffering",
-          "lemmas": ["laetor", "humilio", "malum"],
-          "startLine": 15,
-          "endLine": 16,
-          "comment": "Joy despite circumstances"
-        },
-        {
-          "name": "Divine Splendor",
-          "description": "Request for God's glorious presence",
-          "lemmas": ["splendor", "respicio", "dominus"],
-          "startLine": 17,
-          "endLine": 18,
-          "comment": "Longing for divine manifestation"
-        },
-        {
-          "name": "Vocational Blessing",
-          "description": "Consecration of human labor",
-          "lemmas": ["opus", "manus", "dirigo"],
-          "startLine": 17,
-          "endLine": 18,
-          "comment": "Sanctification of work"
-        }
-      ]
+      "name": "Time → Eternity",
+      "description": "From generational life to God's timeless refuge",
+      "lemmas": ["refugium", "generatio", "progenies", "saeculum"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Augustine emphasizes that God's eternity stands outside all generations. While humans come and go, God remains constant: 'a saeculo et usque in saeculum tu es'. He sees this as a comfort and a warning — our only lasting refuge is found outside time, in God Himself."
     },
+    {
+      "name": "Pride → Repentance",
+      "description": "Human fall reversed through conversion",
+      "lemmas": ["humilitas", "converto", "averto", "filius"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "When God says 'Convertimini, filii hominum,' Augustine hears the voice of mercy calling fallen humanity home. The 'return' is not geographical but spiritual — turning from pride to humility. He links this to Adam's exile and the lifelong journey of conversion for every soul."
+    },
+    {
+      "name": "Years → Nothingness",
+      "description": "A thousand years dissolve in divine light",
+      "lemmas": ["mille", "dies", "custodia", "nihil"],
+      "startLine": 4,
+      "endLine": 5,
+      "comment": "To Augustine, 'mille anni... tamquam dies hesterna' illustrates God's eternity more than human brevity. The contrast reveals how God sees history in a single glance. Augustine says human pride in longevity is shattered by this — for to God, all time is as nothing unless filled with love."
+    },
+    {
+      "name": "Flourishing → Fading",
+      "description": "Life’s morning beauty withers by evening",
+      "lemmas": ["mane", "herba", "floreo", "vesper", "aresco"],
+      "startLine": 6,
+      "endLine": 6,
+      "comment": "Augustine compares the morning grass to the person who flourishes outwardly — perhaps in beauty or power — but has no deep root in charity. Like Christ’s parable of the sower, they spring up quickly and wither when trial comes. Only love makes the soul endure the heat of the day."
+    },
+    {
+      "name": "Wrath → Illumination",
+      "description": "Divine anger met by the light of His face",
+      "lemmas": ["ira", "furor", "iniquitas", "illuminatio", "vultus"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Augustine says God's wrath isn't like human passion, but His just judgment. Yet even as He exposes iniquity, His 'illumination' is healing. He calls the face of God 'that which enlightens and reforms the heart' — wrath convicts, but the light restores."
+    },
+    {
+      "name": "Span → Spiderweb",
+      "description": "Human years dissolve into fragile thought",
+      "lemmas": ["dies", "aranea", "meditor", "labor", "dolor"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "Life, Augustine says, is like a spider’s web: beautiful yet easily destroyed. 'Meditabuntur' means our years are only murmurs, barely substantial. Even the strong (those who reach eighty) live in toil and sorrow — unless grace transforms their labor."
+    },
+    {
+      "name": "Severity → Instruction",
+      "description": "From divine wrath to heart-wisdom",
+      "lemmas": ["mansuetudo", "corripio", "sapientia", "timor", "potestas"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "‘Quis novit potestatem irae tuae?’ Augustine asks with awe. God’s wrath is real, but it brings correction. Through fear — not terror, but reverent awe — the soul becomes wise. The paradox of divine gentleness and wrath is resolved in discipline that leads to understanding."
+    },
+    {
+      "name": "Marking → Mercy",
+      "description": "From divine rebuke to personal pleading",
+      "lemmas": ["dextera", "nota", "eruditus", "converto", "deprecabilis"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "Augustine sees God’s right hand as both powerful and personal. 'Nota fac' implies a divine imprint — a sign of election and instruction. The plea 'Convertere, Domine, usquequo?' is both lament and hope. Augustine says the soul longs for a merciful God who still owns His servants."
+    },
+    {
+      "name": "Affliction → Joy",
+      "description": "Suffering transfigured into satisfaction",
+      "lemmas": ["misericordia", "repleo", "laetor", "humilio", "malum", "splendor"],
+      "startLine": 15,
+      "endLine": 18,
+      "comment": "Augustine reflects on how joy does not erase past suffering, but redeems it. 'Repleti sumus mane misericordia tua' suggests a resurrection morning — when divine light returns. The works of our hands, he says, matter only when directed by God, and joy follows obedience through trials."
+    }
+  ]
+},
 
+ 
     {
   "psalmNumber": 90,
   "category": "",

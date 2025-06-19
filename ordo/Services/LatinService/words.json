@@ -1,5 +1,17 @@
 [
   {
+  "lemma": "prex",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "prex",
+  "genitive": "precis",
+  "translations": {
+    "en": "prayer, entreaty",
+    "la": "prex"
+  }
+ },
+  {
   "lemma": "suscito",
   "part_of_speech": "verb",
   "conjugation": 1,
@@ -2962,25 +2974,8 @@
     "en": "to despise, scorn, look down upon",
     "la": "despicio, despicere"
   }
-},{
-  "lemma": "humilio",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "humiliare",
-  "present": "humilio",
-  "future": "humiliabo",
-  "perfect": "humiliavi",
-  "supine": "humiliatum",
-  "forms": {
-                "perfect_passive": ["humiliatus"],
-                "present": ["humilio", "humilias", "humiliat", "humiliamus", "humiliatis", "humiliant"]
-  },
-   "translations": {
-    "en": "to humble, bring low",
-    "la": "humilio, humiliare"
-  }
-},
-  {
+}, 
+ {
   "lemma": "reddo",
   "part_of_speech": "verb",
   "conjugation": 3,
@@ -4611,6 +4606,24 @@
   "translations": {
     "en": "rest, repose, peace",
     "la": "requies, requiei"
+  }
+},
+
+{
+  "lemma": "intro",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "intrare",
+  "present": "intro",
+  "future": "intrabo",
+  "perfect": "intravi",
+  "supine": "intratum",
+  "translations": {
+    "en": "enter",
+    "la": "intro, intrare"
+  },
+  "forms": {
+    "present_subjunctive_3sg": ["intret"]
   }
 },
   {
@@ -10689,7 +10702,7 @@
           "vocative_m": ["splendores"]
         },
         "translations": {
-          "en": "brightness",
+          "en": "brightness, radiance",
           "la": "splendor"
         }
       },
@@ -14037,7 +14050,10 @@
     {
         "lemma": "delecto",
         "part_of_speech": "verb",
+         "conjugation": 1,
         "infinitive": "delectare",
+        "present": "delecto",
+        "future": "delectabo",
         "perfect": "delectavi",
         "supine": "delectatum",
         "translations": {
@@ -15385,22 +15401,25 @@
             },
             "notes": "Psalm 37:21: 'qui retribuunt mala pro bonis' ('who repay evil for good')"
         },
-    
-        {
-            "lemma": "corripio",
-            "part_of_speech": "verb",
-            "perfect": "corripui",
-            "infinitive": "corripere",
-            "forms": {
-                "present": ["corripio", "corripis", "corripit", "corripimus", "corripitis", "corripiunt"],
-                "subjunctive_present": ["corripiam", "corripias", "corripiat", "corripiamus", "corripiatis", "corripiant"]
-            },
-            "translations": {
-                "en": "rebuke, correct, seize",
-                "la": "corripio"
-            },
-            "notes": "Psalm 37:2: 'Domine, ne in furore tuo arguas me, neque in ira tua corripias me' ('Lord, do not rebuke me in your fury, nor correct me in your anger')"
-        },
+  {
+    "lemma": "corripio",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "corripere",
+    "present": "corripio",
+    "future": "corripiam",
+    "perfect": "corripui",
+    "supine": "correptum",
+    "translations": {
+      "en": "to chastise, correct, rebuke",
+      "la": "corripio, corripere"
+    },
+    "forms": {
+      "future_passive_1pl": ["corripiemur"] ,
+      "present": ["corripio", "corripis", "corripit", "corripimus", "corripitis", "corripiunt"],
+      "subjunctive_present": ["corripiam", "corripias", "corripiat", "corripiamus", "corripiatis", "corripiant"]
+    }
+  },
         {
             "lemma": "facies",
             "part_of_speech": "noun",
@@ -16915,7 +16934,18 @@
         "la": "perdo, perdere, perdidi, perditum"
       }
     },
-    
+    {
+  "lemma": "perditio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "perditio",
+  "genitive": "perditionis",
+  "translations": {
+    "en": "destruction, ruin, perdition",
+    "la": "perditio"
+  }
+ },
     {
         "lemma": "disperdo",
         "part_of_speech": "verb",
@@ -19323,7 +19353,28 @@
         "la": "tenebrosus"
     }
  },
-
+{
+  "lemma": "humilio",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "humiliare",
+  "present": "humilio",
+  "future": "humiliabo",
+  "perfect": "humiliavi",
+  "supine": "humiliatum",
+  "forms": {
+    "present": ["humilio", "humilias", "humiliat", "humiliamus", "humiliatis", "humiliant"],
+    
+    "perfect": ["humiliavi", "humiliasti", "humiliavit", "humiliavimus", "humiliavistis", "humiliaverunt"],
+    "perfect_passive_m": ["humiliatus", "humiliate", "humiliatus", "humiliati", "humiliati", "humiliati"],
+    "perfect_passive_f": ["humiliata", "humiliata", "humiliata", "humiliatae", "humiliatae", "humiliatae"],
+    "perfect_passive_n": ["humiliatum", "humiliatum", "humiliatum", "humiliata", "humiliata", "humiliata"]
+  },
+  "translations": {
+    "en": "to humble (make one feel less proud)",
+    "la": "humilio, humiliare"
+  }
+},
   {
     "lemma": "humilitas",
     "part_of_speech": "noun",

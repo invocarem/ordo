@@ -100,6 +100,7 @@ class Psalm87Tests: XCTestCase {
         // Key assertions
         XCTAssertEqual(analysis.dictionary["clamo"]?.forms["clamavi"], 1, "Should find 'cry out' verb")
         XCTAssertEqual(analysis.dictionary["oratio"]?.forms["oratio"], 1, "Should find prayer reference")
+        XCTAssertEqual(analysis.dictionary["prex"]?.forms["precem"], 1, "Should find prayer reference")
         
         // Test temporal contrast
         let temporalTerms = ["die", "nocte"].map {
@@ -107,11 +108,6 @@ class Psalm87Tests: XCTestCase {
         }
         XCTAssertEqual(temporalTerms.filter { $0 }.count, 2, "Should find both day and night terms")
         
-        // Test prayer vocabulary
-        let prayerTerms = ["oratio", "precem"].reduce(0) {
-            $0 + (analysis.dictionary["oratio"]?.forms[$1] ?? 0)
-        }
-        XCTAssertEqual(prayerTerms, 2, "Should find both prayer terms")
     }
     
     func testPsalm87Lines3and4() {

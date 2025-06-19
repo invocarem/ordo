@@ -336,11 +336,11 @@ func testPsalm89Lines11and12() {
     // Lemma verification
     let testLemmas = [
         ("mansuetudo", ["mansuetudo"], "gentleness"),
-        ("corripio", ["corripiemur"], "chastened"),
+        ("corripio", ["corripiemur"], "chastise"),
         ("potestas", ["potestatem"], "power"),
         ("ira", ["irae", "iram"], "wrath"),
         ("timor", ["timore"], "fear"),
-        ("dinumero", ["dinumerare"], "calculate")
+        ("dinumero", ["dinumerare"], "count")
     ]
     
     // Thematic analysis
@@ -452,7 +452,7 @@ func testPsalm89Lines15and16() {
         ("mane", ["mane"], "morning"),
         ("misericordia", ["misericordia"], "mercy"),
         ("exsulto", ["exsultavimus"], "rejoice"),
-        ("delector", ["delectati"], "delight"),
+        ("delecto", ["delectati"], "delight"),
         ("laetor", ["laetati"], "glad"),
         ("humilio", ["humiliasti"], "humble"),
         ("malum", ["mala"], "evil")
@@ -506,7 +506,7 @@ func testPsalm89Lines17and18() {
     
     // Lemma verification
     let testLemmas = [
-        ("respicio", ["respice"], "look upon"),
+        ("respicio", ["respice"], "consider"),
         ("servus", ["servos"], "servant"),
         ("opus", ["opera", "opus"], "work"),
         ("dirigo", ["dirige"], "direct"),
@@ -522,7 +522,7 @@ func testPsalm89Lines17and18() {
         ],
         "Covenantal Blessing": [
             ("servus", "Servant relationship"),
-            ("filus", "Generational blessing")
+            ("filius", "Generational blessing")
         ],
         "Human Labor": [
             ("opus", "Works under divine guidance"),
