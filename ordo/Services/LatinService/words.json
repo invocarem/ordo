@@ -1,5 +1,190 @@
 [
   {
+  "lemma": "suscito",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "suscitare",
+  "present": "suscito",
+  "future": "suscitabo",
+  "perfect": "suscitavi",
+  "supine": "suscitatum",
+  "translations": {
+    "en": "raise up, awaken, stir up",
+    "la": "suscito, suscitare"
+  }
+},
+  {
+  "lemma": "medicus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "medicus",
+  "genitive": "medici",
+  "translations": {
+    "en": "physician, doctor",
+    "la": "medicus"
+  }
+},
+  {
+  "lemma": "mortuus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "mortuus",
+  "genitive": "mortui",
+  "translations": {
+    "en": "dead",
+    "la": "mortuus"
+  }
+ },
+  {
+  "lemma": "aestimo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "aestimare",
+  "present": "aestimo",
+  "future": "aestimabo",
+  "perfect": "aestimavi",
+  "supine": "aestimatum",
+  "translations": {
+    "en": "count, value, estimate",
+    "la": "aestimo, aestimare"
+  }
+ },
+  {
+  "lemma": "expando",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "expandere",
+  "present": "expando",
+  "future": "expandam",
+  "perfect": "expandi",
+  "supine": "expansum",
+  "translations": {
+    "en": "spread out, expand",
+    "la": "expando, expandere"
+  }
+ },
+  {
+  "lemma": "languo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "languere",
+  "present": "languo",
+  "future": "languam",
+  "perfect": "langui",
+  "supine": "languitum",
+  "translations": {
+    "en": "grow weak, languish",
+    "la": "languo, languere"
+  }
+ },
+  {
+  "lemma": "egredior",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "egredi",
+  "present": "egredior",
+  "future": "egrediar",
+  "perfect": "egressus",
+  "supine": "egressum",
+  "forms": {
+    "imperfect_1sg": ["egrediebar"]
+  },
+  "translations": {
+    "en": "go out, depart",
+    "la": "egredior, egredi"
+  }
+ },
+  {
+  "lemma": "abominatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "abominatio",
+  "genitive": "abominationis",
+  "translations": {
+    "en": "abomination, detestable thing",
+    "la": "abominatio"
+  }
+},
+ {
+  "lemma": "fluctus",
+  "part_of_speech": "noun",
+  "declension": 4,
+  "gender": "masculine",
+  "nominative": "fluctus",
+  "genitive": "fluctus",
+  "translations": {
+    "en": "wave, billow, surge",
+    "la": "fluctus"
+  },
+  "forms": {
+    "nominative_plural": ["fluctus"],
+    "genitive_plural": ["fluctuum"],
+    "dative_plural": ["fluctibus"],
+    "accusative_plural": ["fluctus"],
+    "ablative_plural": ["fluctibus"]
+  }
+}, 
+{
+  "lemma": "induco",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "inducere",
+  "present": "induco",
+  "future": "inducam",
+  "perfect": "induxi",
+  "supine": "inductum",
+  "translations": {
+    "en": "lead in, bring upon, induce",
+    "la": "induco, inducere"
+  }
+ },
+  {
+  "lemma": "vulnero",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "vulnerare",
+  "present": "vulnero",
+  "future": "vulnerabo",
+  "perfect": "vulneravi",
+  "supine": "vulneratum",
+  "translations": {
+    "en": "to wound, injure",
+    "la": "vulnero, vulnerare"
+  }
+ },
+ {
+  "lemma": "sepulchrum",  
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "sepulchrum",
+  "genitive": "sepulchri",
+  "translations": {
+    "en": "grave, tomb",
+    "la": "sepulchrum"
+  }
+},
+  {
+  "lemma": "sepulcrum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "sepulcrum",
+  "genitive": "sepulcri",
+  "translations": {
+    "en": "tomb",
+    "la": "sepulcrum"
+  },
+   "forms_plural": {
+    "ablative_n": ["sepulcris", "sepulchris"],
+    "dative_n": ["sepulcris", "sepulchris"],
+    "genitive_n": ["sepulcrorum"]
+  }
+},
+  {
     "lemma": "aufero",
     "part_of_speech": "verb",
     "conjugation": 3,
@@ -267,20 +452,6 @@
     "translations": {
         "en": "a going out, departure",
         "la": "egressio"
-    }
-},
-  {
-    "lemma": "egredior",
-    "part_of_speech": "verb",
-    "conjugation": 3,
-    "infinitive": "egredi",
-    "present": "egredior",
-    "future": "egrediar",
-    "perfect": "egressus",
-    "supine": "egressum",
-    "translations": {
-        "en": "to go out, depart",
-        "la": "egredior, egredi"
     }
 },
   {
@@ -641,45 +812,7 @@
         "la": "praefulgor"
     }
 },
-  {
-    "lemma": "tenebrosus",
-    "part_of_speech": "adjective",
-    "declension": 1,
-    "gender": "masculine",
-    "nominative": "tenebrosus",
-    "genitive": "tenebrosi",
-    "forms": {
-        "nominative_f": ["tenebrosa"],
-        "genitive_f": [ "tenebrosae"],
-        "dative_f": ["tenebrosae"],
-        "accusative_f":[ "tenebrosam"],
-        "ablative_f": ["tenebrosa"],
-
-        "nominative_n": ["tenebrosum"],
-        "genitive_n":  ["tenebrosi"],
-        "dative_n":  ["tenebroso"],
-        "accusative_n":  ["tenebrosum"],
-        "ablative_n":  ["tenebroso"]
-     },
-    "forms_plural": {
-        "nominative_f": ["tenebrosae"],
-        "genitive_f": ["tenebrosarum"],
-        "dative_f": ["tenebrosis"],
-        "accusative_f": ["tenebrosas"],
-        "ablative_f": ["tenebrosis"],
-        
-       "nominative_n": ["tenebrosa"],
-        "genitive_n": ["tenebrosorum"],
-        "dative_n": ["tenebrosis"],
-        "accusative_n": ["tenebrosa"],
-        "ablative_n": ["tenebrosis"]
-    },
-    "translations": {
-        "en": "dark, shadowy, gloomy",
-        "la": "tenebrosus"
-    }
- },
-  {
+   {
     "lemma": "aer",
     "part_of_speech": "noun",
     "declension": 3,
@@ -19129,6 +19262,68 @@
         "la": "alieno, alienare"
     }
 }, 
+{
+  "lemma": "inferus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "inferus",
+  "genitive": "inferi",
+  "translations": {
+    "en": "lower, below, infernal",
+    "la": "inferus"
+  },
+  "forms": {
+    "comparative_datative_m": ["inferiori"],
+    "comparative_m": ["inferior"],
+    "comparative_f": ["inferior"],
+    "comparative_n": ["inferius"]
+  },
+  "form_plural": {
+      "comparative_m": ["inferiores"],
+      "comparative_f": ["inferiores"],
+      "comparative_n": ["inferiora"]
+  }
+},
+ {
+    "lemma": "tenebrosus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "tenebrosus",
+    "genitive": "tenebrosi",
+    "forms": {
+        "nominative_f": ["tenebrosa"],
+        "genitive_f": [ "tenebrosae"],
+        "dative_f": ["tenebrosae"],
+        "accusative_f":[ "tenebrosam"],
+        "ablative_f": ["tenebrosa"],
+
+        "nominative_n": ["tenebrosum"],
+        "genitive_n":  ["tenebrosi"],
+        "dative_n":  ["tenebroso"],
+        "accusative_n":  ["tenebrosum"],
+        "ablative_n":  ["tenebroso"]
+     },
+    "forms_plural": {
+        "nominative_f": ["tenebrosae"],
+        "genitive_f": ["tenebrosarum"],
+        "dative_f": ["tenebrosis"],
+        "accusative_f": ["tenebrosas"],
+        "ablative_f": ["tenebrosis"],
+        
+       "nominative_n": ["tenebrosa"],
+        "genitive_n": ["tenebrosorum"],
+        "dative_n": ["tenebrosis"],
+        "accusative_n": ["tenebrosa"],
+        "ablative_n": ["tenebrosis"]
+    },
+    "translations": {
+        "en": "dark, shadowy, gloomy",
+        "la": "tenebrosus"
+    }
+ },
+
   {
     "lemma": "humilitas",
     "part_of_speech": "noun",

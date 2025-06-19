@@ -150,7 +150,7 @@
   ]
 },
      
-{
+ {
   "psalmNumber": 4,
   "category": "",
   "themes": [
@@ -160,77 +160,50 @@
       "lemmas": ["invoco", "exaudio", "dilato"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Threefold divine response pattern: hears (exaudivit), enlarges (dilatasti), shows mercy (miserere). Confessions 9.4.8 'When I called, You answered me' - this was my own experience at conversion. Your answer was the expansion of my constricted heart (dilatasti mihi) through Monica's tears and Ambrose's preaching."
+      "comment": "Threefold response: hearing, enlarging, mercy. Augustine relates this to his conversion experience - 'When I called, You answered me' (Confessions 9.4.8). He saw God's answer manifested through Monica's tears and Ambrose's preaching that expanded his 'constricted heart' (dilatasti mihi)."
     },
     {
       "name": "Vanity → Truth",
-      "description": "Contrast between human folly and divine revelation",
+      "description": "Transformation from worldly lies to divine wonder",
       "lemmas": ["vanitas", "mendacium", "mirifico", "sanctus"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "Rhetorical 'how long?' (usquequo) precedes God's marvelous works (mirificavit), Confessions 9.4.9, 'O sons of men, how long heavy-hearted?' - This pierced me like God's voice at the garden conversion. The 'heavy heart' (gravi corde) was my own before grace lifted it."
+      "comment": "The psalmist's 'how long?' (usquequo) mirrors Augustine's pre-conversion struggle. He heard 'O sons of men, how long heavy-hearted?' as God's personal call, recognizing his own 'heavy heart' (gravi corde) before grace intervened (Confessions 9.4.9)."
     },
     {
-      "name": "Anger → Compunction",
-      "description": "Righteous emotion leading to repentance",
+      "name": "Night Examination → Repentance",
+      "description": "Nocturnal conviction leading to transformation",
       "lemmas": ["irascor", "pecco", "compungo", "cubile"],
       "startLine": 5,
       "endLine": 5,
-      "comment": "Nighttime examination (in cubilibus) transforms anger into conviction,  Confessions 9.4.10, 'Be angry and sin not' - In my bed (cubile), I wept over wasted years. The compunction (compungimini) was Your knife cutting away my pride."
+      "comment": "Augustine connected this verse to two pivotal moments: 1) His garden conversion where God's words 'shook his bones' (compungimini), and 2) His mother Monica's deathbed. The 'beds' (cubilibus) represent both physical rest and spiritual awakening (Confessions 8.12.28-29, 9.4.10)."
     },
     {
       "name": "Sacrifice → Hope",
-      "description": "Proper worship anchoring trust",
+      "description": "From ritual offerings to confident trust",
       "lemmas": ["sacrificium", "justitia", "spero"],
       "startLine": 6,
       "endLine": 6,
-      "comment": "Righteous offerings (sacrificium justitiae) precede command to hope (sperate), Confessions 9.4.11, The true sacrifice is a contrite heart. When I finally offered mine (sacrificium justitiae), the hope (sperate) became certainty."
+      "comment": "Augustine interpreted 'sacrifice of righteousness' as Monica's contrite tears during her lifelong intercession. Her prayers, offered when Augustine couldn't pray himself, became the sacrifice that made his hope certain (Confessions 9.4.11)."
     },
     {
-      "name": "Question → Light",
-      "description": "Divine favor answering human seeking",
+      "name": "Divine Light → Revelation",
+      "description": "God's face replacing human philosophy",
       "lemmas": ["ostendo", "bonus", "signo", "lumen"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "Confessions 9.4.12 The 'light of Your face' (lumen vultus) was the illumination I found in the Scriptures after baptism - not Plato's fleeting shadows."
+      "comment": "After baptism, Augustine found the 'light of Your face' (lumen vultus) in Scripture - a lasting illumination that surpassed Plato's fleeting shadows. This sealed light (signatum est) marked his new understanding (Confessions 9.4.12)."
     },
     {
-      "name": "Abundance → Rest",
-      "description": "Material blessing leading to spiritual peace",
+      "name": "Abundance → Eternal Rest",
+      "description": "Earthly blessings pointing to heavenly peace",
       "lemmas": ["frumentum", "vinum", "pax", "requiesco"],
       "startLine": 8,
       "endLine": 9,
-      "comment": "Grain/wine multiplication precedes peaceful sleep (in pace dormiam) Confessions 9.4.13. The 'grain and wine' (frumenti et vini) signify the Eucharist that brought final peace (in pace) after my restless seeking."
-    },
-    {
-      "name": "Augustine: Nocturnal Conversion",
-      "description": "Verse 5 as paradigm of his spiritual awakening",
-      "lemmas": ["cubile", "compungo", "irascor"],
-      "startLine": 5,
-      "endLine": 5,
-      "comment": "The 'beds' (cubilibus) evoke the garden crisis and his mother's deathbed. Confessions 8.12.28-29, 9.4.10 That night under the fig tree, Your words 'took my bones and shook them' (compungimini). The anger (irascimini) was against my own delayed conversion."
-      
-    },
-    {
-      "name": "Augustine: Monica's Tears",
-      "description": "Verse 2's mercy realized through his mother",
-      "lemmas": ["misereor", "exaudi", "oratio"],
-      "startLine": 2,
-      "endLine": 2,
-      "comment": "The answered prayer (exaudi orationem) was Monica's lifelong intercession. Confessions 9.4.8 'Have mercy on me' (miserere mei) - You heard my mother's prayers when I could not pray. Her tears watered the ground where I would be converted."
-    },
-    {
-      "name": "Augustine: Ostia Vision",
-      "description": "Verse 9's peace foreshadowing eternal rest",
-      "lemmas": ["pax", "requiesco", "dormio"],
-      "startLine": 9,
-      "endLine": 9,
-      "comment": "'In peace I will sleep' anticipates his mother's deathbed ecstasy. Confessions 9.10.23-26. At Ostia, we touched that peace (in pace) where souls find true rest (requiescam). This verse comforted me as Monica departed."
-      
+      "comment": "The multiplied 'grain and wine' (frumenti et vini) foreshadowed the Eucharist that brought Augustine final peace after restless seeking. At Ostia with Monica, they glimpsed the perfect peace (in pace) this verse promises (Confessions 9.4.13, 9.10.23-26)."
     }
   ]
 },
- 
     {
       "psalmNumber": 6,
       "category": "",
@@ -2131,6 +2104,93 @@
   ]
 },
 
+{
+  "psalmNumber": 87,
+  "category": "",
+  "themes": [
+    {
+      "name": "Day/Night Cry → Unanswered Prayer",
+      "description": "Persistent prayer meets divine silence",
+      "lemmas": ["clamo", "dies", "nox", "oratio", "precem"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Augustine reads the day/night contrast as the psalmist's unceasing prayer (Rom 12:12), yet God's ear seems un-inclined. This mirrors Christ's cry on the cross—the righteous may endure seasons where heaven seems silent, yet still call faithfully."
+    },
+    {
+      "name": "Life → Brink of Sheol",
+      "description": "The soul's descent into death's dominion",
+      "lemmas": ["vita", "infernum", "lacus", "aestimo", "descendo"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Augustine allegorizes this as the soul's despair when grace feels absent. 'Counted among those who go down' reflects our solidarity with fallen humanity. The paradox of 'free among the dead' suggests the righteous suffer like all mortals, yet retain hope's freedom even in darkness."
+    },
+    {
+      "name": "Divine Memory → Divine Rejection",
+      "description": "From being forgotten to being actively repelled",
+      "lemmas": ["memor", "repello", "manus", "sepulcrum", "vulnero"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Augustine sees here the terror of reprobation—when God's hand no longer sustains but pushes away. The 'wounded sleeping in tombs' represent souls dead in sin, unaware of their peril until divine judgment awakens them."
+    },
+    {
+      "name": "Human Companionship → Utter Isolation",
+      "description": "From community to abhorred outcast",
+      "lemmas": ["notus", "longe", "abominatio", "fluctus", "furor"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Augustine compares this to Christ's abandonment by disciples. The 'waves' are adversities permitted by God; the 'abomination' reflects how the righteous become offensive to the worldly when suffering reveals their fragility."
+    },
+    {
+      "name": "Vision → Blindness",
+      "description": "Eyes fail as poverty overwhelms",
+      "lemmas": ["oculus", "languo", "inopia", "trado", "egredior"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "Augustine reads this as spiritual blindness—when distress dims the soul's vision of God. The 'spread hands' gesture mirrors Christ on the cross, showing prayer persists even when strength fails."
+    },
+    {
+      "name": "Miracles → Grave's Silence",
+      "description": "God's wonders seem absent in death's realm",
+      "lemmas": ["mirabilis", "sepulcrum", "mortuus", "medicus", "suscito"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "Augustine notes these rhetorical questions find their answer in Christ's resurrection. The 'physicians' (law/works) cannot raise the dead—only grace can. The grave's silence precedes Easter's dawn."
+    },
+    {
+      "name": "Mercy/Truth → Land of Oblivion",
+      "description": "Divine attributes seem negated by death's oblivion",
+      "lemmas": ["misericordia", "veritas", "perditio", "oblivio", "tenebrae"],
+      "startLine": 13,
+      "endLine": 13,
+      "comment": "Augustine sees this as the soul's darkest trial—when God's promises seem void amid suffering. Yet this very cry becomes, in Christ, the 'Eloi' moment that precedes resurrection (Mk 15:34)."
+    },
+    {
+      "name": "Rejection → Relentless Prayer",
+      "description": "Divine hiddenness met with dogged supplication",
+      "lemmas": ["repello", "facies", "clamo", "mane", "oratio"],
+      "startLine": 14,
+      "endLine": 15,
+      "comment": "Augustine observes how the psalmist, like Job, argues with God rather than disengages. 'Morning prayer' signifies hope persisting through night—the discipline of seeking God's face even when He seems to avert it."
+    },
+    {
+      "name": "Youthful Labor → Aged Desolation",
+      "description": "A life of suffering culminates in final turmoil",
+      "lemmas": ["juventus", "labor", "exalto", "humilio", "conturbo"],
+      "startLine": 16,
+      "endLine": 17,
+      "comment": "Augustine reads this as the soul's lifelong battle with concupiscence—the 'exaltation' of pride followed by crushing humiliations. The 'terrors' are ultimately medicinal, driving us to grace."
+    },
+    {
+      "name": "Solitude → Encircling Flood",
+      "description": "Isolation gives way to overwhelming assault",
+      "lemmas": ["aqua", "circumdo", "dies", "ira", "terror"],
+      "startLine": 18,
+      "endLine": 18,
+      "comment": "Augustine interprets the encircling waters as both external persecutions and internal temptations. Yet this flood, like Noah's, carries the sufferer to God's new creation—the very waves that seem to destroy become the path to salvation."
+    }
+  ]
+},
+
     {
       "psalmNumber": 89,
       "category": "",
@@ -2281,213 +2341,88 @@
         }
       ]
     },
-    {
-      "psalmNumber": 90,
-      "category": "",
-      "themes": [
-        {
-          "name": "Divine Dwelling",
-          "description": "Abiding in God's protection",
-          "lemmas": ["habito", "commoror"],
-          "startLine": 1,
-          "endLine": 1,
-          "comment": "Security in God's presence"
-        },
-        {
-          "name": "Divine Titles",
-          "description": "Names of God",
-          "lemmas": ["altissimus", "deus", "dominus"],
-          "startLine": 1,
-          "endLine": 2,
-          "comment": "Theological foundation"
-        },
-        {
-          "name": "Protection Imagery",
-          "description": "Metaphors of safety",
-          "lemmas": ["adjutorium", "protectio", "refugium"],
-          "startLine": 1,
-          "endLine": 2,
-          "comment": "Divine shelter language"
-        },
-        {
-          "name": "Deliverance from Evil",
-          "description": "Protection against physical/spiritual threats",
-          "lemmas": ["laqueus", "pestis", "terror", "nocturnus", "mille"],
-          "startLine": 3,
-          "endLine": 7,
-          "comment": "The *laqueus* (snare) and *pestis* (plague) represent physical dangers, while *terror nocturnus* (night terror) symbolizes spiritual threats."
-        },
-        {
-          "name": "Deliverance",
-          "description": "Rescue from danger",
-          "lemmas": ["libero", "laqueus"],
-          "startLine": 3,
-          "endLine": 4,
-          "comment": "Freedom from traps"
-        },
-        {
-          "name": "Winged Protection",
-          "description": "Shelter under God's wings",
-          "lemmas": ["scapula", "penna", "obumbro"],
-          "startLine": 3,
-          "endLine": 4,
-          "comment": "Avian metaphor for care"
-        },
-        {
-          "name": "Dual Threats",
-          "description": "Physical and verbal dangers",
-          "lemmas": ["venator", "verbum", "asper"],
-          "startLine": 3,
-          "endLine": 4,
-          "comment": "Multiple sources of danger"
-        },
-        {
-          "name": "Divine Armor",
-          "description": "God as shield",
-          "lemmas": ["scutum", "veritas"],
-          "startLine": 5,
-          "endLine": 6,
-          "comment": "Protective equipment imagery"
-        },
-        {
-          "name": "Temporal Protection",
-          "description": "Day and night safety",
-          "lemmas": ["nocturnus", "dies", "meridianus"],
-          "startLine": 5,
-          "endLine": 6,
-          "comment": "Round-the-clock security"
-        },
-        {
-          "name": "Multiform Threats",
-          "description": "Various dangers",
-          "lemmas": ["sagitta", "negotium", "daemonium"],
-          "startLine": 5,
-          "endLine": 6,
-          "comment": "Diverse sources of peril"
-        },
-        {
-          "name": "Numerical Protection",
-          "description": "Safety amidst destruction",
-          "lemmas": ["mille", "decem"],
-          "startLine": 7,
-          "endLine": 8,
-          "comment": "Quantitative security promise"
-        },
-        {
-          "name": "Divine Justice",
-          "description": "Observation of wickedness",
-          "lemmas": ["considero", "video", "peccator"],
-          "startLine": 7,
-          "endLine": 8,
-          "comment": "God's omniscient oversight"
-        },
-        {
-          "name": "Impenetrable Safety",
-          "description": "Enemy cannot approach",
-          "lemmas": ["appropinquo"],
-          "startLine": 7,
-          "endLine": 8,
-          "comment": "Divine boundary setting"
-        },
-        {
-          "name": "Personal Refuge",
-          "description": "God as personal protector",
-          "lemmas": ["spes", "refugium"],
-          "startLine": 9,
-          "endLine": 10,
-          "comment": "Individualized protection"
-        },
-        {
-          "name": "Divine Immunity",
-          "description": "Protection from evil",
-          "lemmas": ["malum", "flagellum"],
-          "startLine": 9,
-          "endLine": 10,
-          "comment": "Exemption from harm"
-        },
-        {
-          "name": "Sacred Space",
-          "description": "Safety in God's dwelling",
-          "lemmas": ["tabernaculum"],
-          "startLine": 9,
-          "endLine": 10,
-          "comment": "Temple as refuge"
-        },
-        {
-          "name": "Angelological Assurance",
-          "description": "Angelic guardianship",
-          "lemmas": ["angelus", "mando", "porto", "lapis", "offendo"],
-          "startLine": 11,
-          "endLine": 12,
-          "comment": "The lemma *angelus* (angel) appears in the dative plural (*angelis*), showing their active role in guardianship. The verb *mando* (to command) appears in the perfect tense (*mandavit*), emphasizing God's authoritative protection."
-        },
 
-        {
-          "name": "Physical Protection",
-          "description": "Carried in hands",
-          "lemmas": ["manus", "porto"],
-          "startLine": 11,
-          "endLine": 12,
-          "comment": "Divine transportation"
-        },
-        {
-          "name": "Preventive Care",
-          "description": "Avoiding obstacles",
-          "lemmas": ["offendo", "lapis", "pes"],
-          "startLine": 11,
-          "endLine": 12,
-          "comment": "Protection from stumbling"
-        },
-        {
-          "name": "Victory Over Evil",
-          "description": "Trampling symbolic creatures",
-          "lemmas": ["aspis", "basiliscus", "conculco"],
-          "startLine": 13,
-          "endLine": 14,
-          "comment": "Dominion over dangerous creatures"
-        },
-        {
-          "name": "Divine Response",
-          "description": "Answer to faithfulness",
-          "lemmas": ["spero", "libero", "protego"],
-          "startLine": 13,
-          "endLine": 14,
-          "comment": "Reciprocal divine action"
-        },
-        {
-          "name": "Covenant Relationship",
-          "description": "Knowing God's name",
-          "lemmas": ["cognosco", "nomen"],
-          "startLine": 13,
-          "endLine": 14,
-          "comment": "Intimate divine knowledge"
-        },
-        {
-          "name": "Prayer Response",
-          "description": "God hears cries",
-          "lemmas": ["clamo", "exaudio"],
-          "startLine": 15,
-          "endLine": 16,
-          "comment": "Divine attentiveness"
-        },
-        {
-          "name": "Divine Presence",
-          "description": "With us in trouble",
-          "lemmas": ["tribulatio", "sum"],
-          "startLine": 15,
-          "endLine": 16,
-          "comment": "Emmanuel theology"
-        },
-        {
-          "name": "Dual Blessing",
-          "description": "Long life and salvation",
-          "lemmas": ["longitudo", "salutare"],
-          "startLine": 15,
-          "endLine": 16,
-          "comment": "Temporal and eternal benefits"
-        }
-      ]
+    {
+  "psalmNumber": 90,
+  "category": "",
+  "themes": [
+    {
+      "name": "Dwelling → Abiding",
+      "description": "God's help transforms temporary shelter into lasting habitation",
+      "lemmas": ["habito", "commoror", "adjutorium", "protectio"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Augustine reads the beginning as a call to dwell spiritually in God—not just as a passerby, but in lasting communion. The shift from outer protection to internal abiding marks grace’s deepening work."
     },
+    {
+     "name": "Danger → Deliverance",
+      "description": "From external threats to divine rescue",
+      "lemmas": ["libero", "laqueus", "venator", "verbum", "asper"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Augustine explains that the soul is rarely struck by the 'arrow' directly, but is often terrified by the 'harsh word' — the noise — and in that panic falls into the snare. Thus, the 'word' wounds by fear, not by contact. God's rescue comes not just from danger, but from fear itself."
+    },
+    
+    {
+      "name": "Terror → Shield",
+      "description": "God's truth defends, but the noonday test reveals inner roots",
+      "lemmas": ["scutum", "veritas", "daemonium", "meridianus", "caritas"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Augustine allegorizes the 'noonday demon' as a trial of success or spiritual dryness, when temptations are no longer hidden in darkness. Those like grass without deep roots — lacking charity — wither under this heat. God's truth protects, but the test reveals whether love abides."
+    },
+    {
+      "name": "Falling Multitude → Secure Individual",
+      "description": "Divine protection amidst widespread collapse",
+      "lemmas": ["cado", "mille", "decem", "appropinquo"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Augustine reads these metaphors spiritually. 'A thousand will fall at your side' refers to general worldly temptations or weak souls nearby; 'ten thousand at your right hand' refers to the collapse of the strong—those who trusted in their own virtue or power (dextera). The 'right hand' signifies strength or status, yet even there pride can cause a greater fall. The righteous remain untouched ('non appropinquabit'), not by power, but by humility and trust in God. The faithful see ('videbis') divine justice unfold—not to condemn, but to reaffirm the danger of self-reliance over grace."
+    },
+    {
+      "name": "Mortal Fear → Divine Hope",
+      "description": "Hope in the Most High repels evil’s advance",
+      "lemmas": ["spes", "refugium", "malum", "flagellum"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "By placing one's hope in God, the faithful repel evil and plague. Augustine applies this to the soul’s inner tabernacle, which remains untouched by the enemy when anchored in divine hope."
+    },
+    {
+      "name": "Presumption → Protection",
+      "description": "Rightful trust in God's care, contrasted with false confidence",
+      "lemmas": ["angelus", "mando", "custodio", "porto", "offendo"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "From Isolation. Augustine reflects on how Satan used these verses to tempt Christ. The angels guard us 'in our ways' — that is, in the path God sets, not the one we invent. Divine protection is not a license for spiritual pride or testing God. Jesus answers the devil with humility and scripture, showing that faith is obedience, not presumption."
+    },
+   
+    {
+      "name": "Threat → Triumph",
+      "description": "Victory over symbolic forms of evil through divine authority",
+      "lemmas": ["aspis", "basiliscus", "leo", "draco", "conculco", "ambulo"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "Augustine interprets each beast symbolically: the asp is hidden sin, the basilisk is vain glory, the lion is persecution, and the dragon is the devil’s deceit. The psalmist walks over them, not just unharmed but victorious. This is the Christian's triumph over all forms of evil by faith and grace."
+    },
+
+    {
+      "name": "Cry → Glorification",
+      "description": "From calling out in distress to exaltation in salvation",
+      "lemmas": ["clamo", "exaudio", "tribulatio", "eripio", "glorifico"],
+      "startLine": 15,
+      "endLine": 15,
+      "comment": "Augustine notes how God not only hears but dwells with the sufferer. The movement from tribulation to glorification mirrors Christ’s passion and resurrection in the believer’s life."
+    },
+    {
+      "name": "Temporal Life → Eternal Salvation",
+      "description": "Long earthly days culminate in the vision of divine salvation",
+      "lemmas": ["longitudo", "dies", "repleo", "ostendo", "salutare"],
+      "startLine": 16,
+      "endLine": 16,
+      "comment": "The psalm ends with the full revelation of salvation. Augustine sees this as the eschatological promise: the final and beatific vision granted to those who abide in God."
+    }
+  ]
+},
 
 {
   "psalmNumber": 91,
@@ -4298,46 +4233,46 @@
     }
   ]
 },
+
 {
   "psalmNumber": 133,
   "category": "",
   "themes": [
     {
-  "name": "Augustine: Night Praise as Spiritual Watchfulness",
-  "description": "Augustine interprets the nighttime worship as the vigilant life of the Church amidst the darkness of the world, blessing God even when others sleep.",
-  "lemmas": ["noctibus", "benedico", "servus", "manus", "extollo"],
-  "startLine": 3,
-  "endLine": 3,
-  "comment": "En. Ps. 133 – 'In noctibus' signals the faithful who keep watch and remain spiritually alert."
-},
-{
-  "name": "Augustine: Zion Blessing and Creation",
-  "description": "The blessing from Zion is the blessing of the Church, and the Creator who made heaven and earth is the same who blesses through Christ.",
-  "lemmas": ["benedico", "sion", "caelum", "terra", "facio"],
-  "startLine": 4,
-  "endLine": 4,
-  "comment": "En. Ps. 133 – Blessing flows from the Church (Zion), grounded in the Creator of all things."
-},
-
-
-    {
-      "name": "Call to Night Worship",
-      "description": "Servants of the Lord are summoned to bless God by night in His house.",
-      "lemmas": ["benedico", "servus", "domus", "atrium", "noctibus", "sto"],
+      "name": "Call → Blessing",
+      "description": "A summons to praise initiates reciprocal blessing",
+      "lemmas": ["ecce", "nunc", "benedico", "servus"],
       "startLine": 1,
-      "endLine": 3,
-      "comment": "Liturgical call to continual temple praise during the night watches."
+      "endLine": 1,
+      "comment": "The psalm begins with an urgent imperative: 'behold now, bless the Lord.' Augustine notes the immediacy and communal nature of worship, where servants of God are not passive observers, but active participants in blessing."
     },
     {
-      "name": "Blessing from the Creator",
-      "description": "The Lord who made heaven and earth blesses from Zion.",
-      "lemmas": ["benedico", "Sion", "facio", "caelum", "terra"],
+      "name": "Standing → Serving",
+      "description": "Posture in the temple reflects readiness and consecration",
+      "lemmas": ["sto", "domus", "atrium"],
+      "startLine": 2,
+      "endLine": 2,
+      "comment": "To 'stand in the house of the Lord' implies more than physical presence — it's spiritual alertness. Augustine interprets this as the interior stance of the soul, alert in service, especially during the night watches."
+    },
+    {
+      "name": "Night → Lifting",
+      "description": "Darkness becomes occasion for prayer and elevation",
+      "lemmas": ["nox", "extollo", "manus", "sanctus"],
+      "startLine": 3,
+      "endLine": 3,
+      "comment": "Augustine views nocturnal prayer as especially potent. Lifting hands in the sanctuary is a physical symbol of the soul reaching beyond the visible. Night is not for sleep alone, but sacred ascent through prayer."
+    },
+    {
+      "name": "Earth → Heaven",
+      "description": "Blessing flows from the Creator, not just from the temple",
+      "lemmas": ["benedico", "sion", "facio", "caelum", "terra"],
       "startLine": 4,
       "endLine": 4,
-      "comment": "Final blessing anchors divine generosity in creation and sacred place."
+      "comment": "The psalm closes with a blessing not merely from Zion, but from the Creator of heaven and earth. Augustine notes the transcendence here: it is not the temple that blesses, but the Lord of all creation who sanctifies the place and the people."
     }
   ]
 },
+
 
 
 {

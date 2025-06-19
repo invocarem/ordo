@@ -119,6 +119,9 @@ let package = Package(
                 
                 "Psalm75Tests.swift",
 
+                "Psalm87Tests.swift",
+
+
                 "Psalm89Tests.swift",
                 "Psalm90Tests.swift",
                 "Psalm91Tests.swift",
