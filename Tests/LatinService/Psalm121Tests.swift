@@ -35,7 +35,7 @@ class Psalm121Tests: XCTestCase {
             ("laetor", ["Laetatus"], "rejoice"), // v.1
             ("domus", ["domum"], "house"), // v.1
             ("eo", ["ibimus"], "go"), // v.1
-            ("sto", ["Stantes"], "stay"), // v.2
+            ("sto", ["stantes"], "stand"), // v.2
             ("atrium", ["atriis"], "sacred space"), // v.2
             ("ascendo", ["ascenderunt"], "ascend") // v.4
         ]
@@ -251,12 +251,14 @@ class Psalm121Tests: XCTestCase {
     
     // 5. Peace and Abundance
     func testPeaceTheme() {
+        latinService.configureDebugging(target: "rogo")
         let analysis = latinService.analyzePsalm(id, text: psalm121)
+        latinService.configureDebugging(target: "")
         
         let peaceTerms = [
             ("pax", ["pacem", "pax"], "peace"), // v.6,7,8
             ("abundantia", ["abundantia"], "plenty"), // v.6,7
-            ("rogo", ["Rogate"], "pray"), // v.6
+            ("rogo", ["rogate"], "ask"), // v.6
             ("diligo", ["diligentibus"], "love") // v.6
         ]
         

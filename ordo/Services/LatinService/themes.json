@@ -3437,132 +3437,69 @@
   "category": "",
   "themes": [
     {
-      "name": "Pilgrimage Joy",
-      "description": "Joyful anticipation of going to the house of the Lord in communal worship.",
-      "lemmas": ["laetor", "dictum", "domus", "eo"],
+      "name": "Standing → Rejoicing",
+      "description": "Established presence in God's house gives rise to spiritual joy",
+      "lemmas": ["stantes", "pes", "atrium", "laetor", "domus"],
       "startLine": 1,
-      "endLine": 1,
-      "comment": "Celebration of the journey toward God's house."
-    },
-    {
-      "name": "Sacred Arrival",
-      "description": "The pilgrims have arrived and stand in the holy precincts of Jerusalem.",
-      "lemmas": ["sto", "pes", "atrium", "Jerusalem"],
-      "startLine": 2,
       "endLine": 2,
-      "comment": "Physical and spiritual arrival in the sacred center."
+      "comment": "Augustine reads this joy ('laetatus sum') as the natural overflow of standing firm in the courts of the Lord. Though the verse order suggests joy comes first, the theological order is reversed: the soul rejoices because it finds itself in God's house. The feet that once journeyed are now planted, and from this rootedness comes gladness (Enarr. Ps. 121.1–2)."
     },
     {
-      "name": "Jerusalem as Divine City",
-      "description": "Jerusalem is praised as a unified, built-up city symbolizing divine order.",
-      "lemmas": ["aedifico", "civitas", "participatio", "idipsum"],
+      "name": "Gather → Communion",
+      "description": "The tribes’ upward journey culminates in unified participation and shared confession",
+      "lemmas": ["aedifico", "civitas", "participatio", "idipsum", "ascendo", "tribus", "confiteor", "nomen"],
       "startLine": 3,
-      "endLine": 3,
-      "comment": "City image as theological symbol of unity and stability."
-    },
-    {
-      "name": "Covenantal Worship",
-      "description": "The tribes ascend for worship and covenantal testimony.",
-      "lemmas": ["ascendo", "tribus", "testimonium", "confiteor", "nomen"],
-      "startLine": 4,
       "endLine": 4,
-      "comment": "Liturgical participation in Israel’s identity."
+      "comment": "Augustine sees Jerusalem not just as a place, but a mystery: a city 'built' by God, whose unity is not geographic but spiritual. The tribes ascend not merely in space, but into a deeper communion — united in the confession of the Lord’s name. The Church is the fulfillment of this image: many ascending into one body through praise (Enarr. Ps. 121.3–4). Mass: tribes ascend = faithful gathering, city compact = church unified in Christ, confession of the name= liturgy of Word; participation in idipsum: mystical communion"      
     },
     {
-      "name": "Justice and Kingship",
-      "description": "The city hosts thrones of judgment rooted in Davidic rule.",
-      "lemmas": ["sedeo", "sedes", "judicium", "domus", "David"],
+      "name": "Worship → Intercession",
+      "description": "Encounter with divine order leads to prayer for peace and abundance",
+      "lemmas": ["sedeo", "sedes", "judicium", "rogo", "pax", "abundantia", "jerusalem"],
       "startLine": 5,
-      "endLine": 5,
-      "comment": "Jerusalem as seat of righteous governance."
-    },
-    {
-      "name": "Prayer for Peace",
-      "description": "Exhortation to pray for the peace and prosperity of Jerusalem.",
-      "lemmas": ["rogo", "pax", "Jerusalem", "abundantia", "diligo"],
-      "startLine": 6,
       "endLine": 6,
-      "comment": "Spiritual and material well-being of the city desired."
+      "comment": "Augustine sees the 'thrones of judgment' not as earthly courts, but Christ’s spiritual governance within the Church. From this seat, justice flows. But worship does not end in vision — it turns to prayer: for peace, for the flourishing of the Church. As in the Catholic Mass, after hearing God’s Word and seeing His order, we pray for the city of God on earth (Enarr. Ps. 121.5–6)."
     },
+
     {
-      "name": "Security and Strength",
-      "description": "Blessings of peace and abundance in the city's towers and strength.",
-      "lemmas": ["pax", "virtus", "turris", "abundantia"],
+      "name": "Peace → Charity → Action",
+      "description": "Worship concludes with love that overflows into peace-speaking and pursuit of the city's good",
+      "lemmas": ["pax", "virtus", "turris", "frater", "proximus", "loquor", "quaero", "bonus", "domus"],
       "startLine": 7,
-      "endLine": 7,
-      "comment": "Images of fortified flourishing."
-    },
-    {
-      "name": "Brotherly Peace",
-      "description": "Desire for peace for the sake of community and kinship.",
-      "lemmas": ["frater", "proximus", "loquor", "pax"],
-      "startLine": 8,
-      "endLine": 8,
-      "comment": "Relational peace as a communal virtue."
-    },
-    {
-      "name": "Worshipful Pursuit of Good",
-      "description": "Love for God's house motivates the pursuit of the city's good.",
-      "lemmas": ["domus", "deus", "quaero", "bonus"],
-      "startLine": 9,
       "endLine": 9,
-      "comment": "Liturgical devotion spilling into civic love."
+      "comment": "Augustine sees this as the final fruit of true worship. Peace, rooted in divine strength and abundance, becomes a spoken gift — 'I spoke peace for the sake of my brothers.' It does not end in sentiment: it seeks good for Jerusalem. The soul leaves God’s house not empty, but missioned — to speak, to seek, to build the good of the Church (Enarr. Ps. 121.7–9). Mass: after communion (abundantia in turribus); offer peace to others;dismissed (see the good of the City of God)"
     }
+
   ]
 },
-
 
 {
   "psalmNumber": 122,
   "category": "",
   "themes": [
     {
-      "name": "Upward Gaze",
-      "description": "The psalmist lifts eyes to God in heaven, expressing dependence",
-      "lemmas": ["levo", "oculus", "habito", "caelum"],
+      "name": "Eyes: Lifted → Fixed",
+      "description": "The soul’s vision rises from upward longing to a servant’s focused trust on the Lord’s hand",
+      "lemmas": ["levo", "oculus", "habito", "caelum", "servus", "manus", "ancilla", "dominus", "domina"],
       "startLine": 1,
-      "endLine": 1,
-      "comment": "Physical gesture symbolizing spiritual reliance"
+      "endLine": 2,
+      "comment": "Augustine sees this as the soul’s deepening posture after worship: first lifting its eyes to the God who dwells in heaven, then fixing them like a servant on the master's hand. This movement sets the tone for the Christian's humble vigilance after leaving the liturgy (Enarr. Ps. 122.1–2)."
     },
     {
-      "name": "Servile Devotion",
-      "description": "Simile of servants’ eyes fixed on their masters’ hands",
-      "lemmas": ["servus", "manus", "ancilla", "domina"],
-      "startLine": 2,
-      "endLine": 3,
-      "comment": "Metaphor for total attentiveness to divine providence"
-    },
-    {
-      "name": "Persistent Plea",
-      "description": "Unwavering focus on God 'until He has mercy'",
-      "lemmas": ["misereor", "donec"],
+      "name": "Waiting → Crying Out",
+      "description": "Hopeful attention becomes a doubled plea for mercy when God delays",
+      "lemmas": ["donec", "misereor", "miserere"],
       "startLine": 3,
-      "endLine": 3,
-      "comment": "Implies patient but urgent expectation"
-    },
-    {
-      "name": "Double Cry for Mercy",
-      "description": "Repetition underscores desperation",
-      "lemmas": ["miserere", "repleo", "despectio"],
-      "startLine": 4,
       "endLine": 4,
-      "comment": "Liturgical refrain intensifying the appeal"
+      "comment": "For Augustine, the soul's long silence and trust give way to urgent intercession. 'Miserere nostri, Domine' is not repetition, but intensification — showing a soul that still believes, but now pleads. The return to the world calls for deeper faith under pressure (Enarr. Ps. 122.3–4)."
     },
     {
-      "name": "Social Humiliation",
-      "description": "Description of scorn from the arrogant",
-      "lemmas": ["anima", "opprobrium", "abundo", "superbus"],
+      "name": "Contempt → Burdened Soul",
+      "description": "The soul is overwhelmed by scorn and insult from the proud, revealing the cost of faith in the world",
+      "lemmas": ["anima", "repleo", "opprobrium", "despectio", "superbus", "abundo"],
       "startLine": 5,
       "endLine": 5,
-      "comment": "Opposition defined by pride vs. the psalmist’s humility"
-    },
-    {
-      "name": "Augustine: Eyes of the Heart",
-      "description": "‘Levavi oculos’ signifies the soul’s ascent beyond bodily sight",
-      "lemmas": ["oculus", "levo"],
-      "startLine": 1,
-      "endLine": 1,
-      "comment": "Enarrationes in Psalmos 121.1"
+      "comment": "Augustine reads this as the soul's confession: after the heights of worship, it re-enters a world where the proud abound. The soul is repleta — filled not with grace but with contempt. The psalm ends not with resolution, but with honesty about the weight believers carry in the flesh (Enarr. Ps. 122.5)."
     }
   ]
 },
@@ -3572,47 +3509,48 @@
   "category": "",
   "themes": [
     {
-      "name": "Divine Presence as Salvation",
-      "description": "The repeated 'nisi quia Dominus' emphasizes God's essential presence in Israel's survival.",
-      "lemmas": ["dominus", "nisi", "in"],
+      "name": "Perished Without → Preserved With",
+      "description": "Without the Lord, destruction was certain — but He was with us",
+      "lemmas": ["nisi", "dominus", "erat", "in", "nos", "dico"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "If the Lord were not with us—Israel owes survival to divine companionship."
+      "comment": "Augustine sees this dual 'nisi quia Dominus' as the soul’s confession: not of victory, but of dependence. Without God, enemies would have risen and prevailed. With God, we still stand (Enarr. Ps. 123.1–2)."
     },
     {
-      "name": "Human Threats",
-      "description": "Violent imagery of people rising up to devour the faithful.",
-      "lemmas": ["exsurgo", "homo", "vivos", "deglutio"],
-      "startLine": 2,
-      "endLine": 3,
-      "comment": "Imagery of being swallowed alive by enemies."
+      "name": "Threat → Devouring",
+      "description": "Human rage would have swallowed us alive — the danger was real",
+      "lemmas": ["exsurgo", "homo", "vivos", "deglutio", "irascor", "furor"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The psalmist uses predator imagery for human persecution. Augustine reads this spiritually: heretics, oppressors, or temptations rise up in wrath — to devour those who are unguarded by God (Enarr. Ps. 123.3–4)."
     },
     {
-      "name": "Flood and Wrath",
-      "description": "God protects against overwhelming forces likened to water and wrath.",
-      "lemmas": ["irascor", "furor", "aqua", "absorbeo"],
+      "name": "Flood → Escape",
+      "description": "God rescued us from overwhelming floodwaters of destruction",
+      "lemmas": ["aqua", "absorbeo", "pertransit", "anima", "intolerabilis"],
       "startLine": 4,
       "endLine": 5,
-      "comment": "Waters symbolize chaos and destruction fueled by rage."
+      "comment": "Augustine compares this to baptismal deliverance and Noah’s flood. The soul passed through what should have drowned it. 'Anima nostra pertransivit' marks spiritual preservation under divine mercy (Enarr. Ps. 123.5)."
     },
     {
-      "name": "Snare and Escape",
-      "description": "Like a bird escaping a trap, the soul is freed from enemies' schemes.",
+      "name": "Snared → Freed",
+      "description": "We were trapped like a bird — but God broke the snare",
       "lemmas": ["passer", "ereptus", "laqueus", "venator", "contritus", "libero"],
       "startLine": 6,
       "endLine": 8,
-      "comment": "Striking imagery of divine rescue from cunning dangers."
+      "comment": "Augustine draws attention to the 'passer' (sparrow) as the humble soul. Though caught, it is not destroyed — the snare is broken. This is grace interrupting cunning. The contritus (broken) snare is the power of God overriding schemes (Enarr. Ps. 123.6–8)."
     },
     {
-      "name": "Divine Creator as Helper",
-      "description": "Final affirmation of trust in the name of the Lord, Creator of heaven and earth.",
-      "lemmas": ["adjutorium", "nomen", "dominus", "caelum", "terra", "creo"],
+      "name": "Earthly Danger → Cosmic Help",
+      "description": "The Lord who saved us is not local — but Creator of heaven and earth",
+      "lemmas": ["adjutorium", "dominus", "nomen", "caelum", "terra", "creo"],
       "startLine": 9,
       "endLine": 9,
-      "comment": "Psalm ends on a confident declaration of cosmic support."
+      "comment": "The psalm ends not with fear but confession. Augustine sees 'Adjutorium nostrum in nomine Domini' as the banner over all deliverance. The one who helps is not a local god — He made heaven and earth (Enarr. Ps. 123.9)."
     }
   ]
 },
+
 
 {
   "psalmNumber": 124,
