@@ -3350,73 +3350,41 @@
   ]
 },
 
-    {
+{
   "psalmNumber": 119,
   "category": "",
   "themes": [
     {
-      "name": "Cry in Distress",
-      "description": "Initial plea to God in time of trouble",
-      "lemmas": ["tribulor", "clamo", "exaudio"],
+      "name": "Distress → Deliverance",
+      "description": "From inner affliction to divine liberation from deceit",
+      "lemmas": ["tribulor", "clamo", "exaudio", "libero", "labium", "iniquus", "lingua", "dolosus"],
       "startLine": 1,
-      "endLine": 1,
-      "comment": "Opening cry that establishes the psalm's supplicatory tone"
-    },
-    {
-      "name": "Protection from Deceit",
-      "description": "Request for deliverance from dishonest speech",
-      "lemmas": ["libero", "labium", "iniquus", "lingua", "dolosus"],
-      "startLine": 2,
       "endLine": 2,
-      "comment": "Focus on protection from verbal harm"
+      "comment": "Augustine sees this as the cry of the soul caught in inner tribulation, not just external hardship. The deceitful tongue symbolizes confusion and heresy. God hears, not to shield physically, but to deliver the soul through truth. The movement from anguish to 'libera animam meam' marks grace’s work in pulling the soul out of lies and into light (Enarr. Ps. 119.1–2)."
     },
     {
-      "name": "Punishment of Deceivers",
-      "description": "Rhetorical question about divine justice against liars",
-      "lemmas": ["do", "appono", "lingua"],
+      "name": "Deception → Purifying Judgment",
+      "description": "The harm of lies is answered by divine fire and piercing correction",
+      "lemmas": ["do", "appono", "lingua", "sagitta", "potens", "acutus", "carbo", "desolatorius"],
       "startLine": 3,
-      "endLine": 3,
-      "comment": "Implied expectation of retributive justice"
-    },
-    {
-      "name": "Divine Arsenal",
-      "description": "Imagery of God's weapons against the wicked",
-      "lemmas": ["sagitta", "potens", "acutus", "carbo", "desolatorius"],
-      "startLine": 4,
       "endLine": 4,
-      "comment": "Military metaphors for divine judgment"
+      "comment": "Augustine reads these verses as the divine response to false speech. The tongue, which wounds through deceit, will receive 'sharp arrows' and 'desolating coals.' But these are not simply for destruction: they are purifying instruments. The 'coals' represent the burning power of charity, which scorches away sin and heals the deceived (Enarr. Ps. 119.3–5)."
     },
     {
-       "name": "Augsutine: The ‘Heu’ of Exile",
-        "description": "The psalmist’s cry of lament, interpreted by Augustine as the voice of sinful humanity’s exile from God",
-        "lemmas": ["heu", "incolatus", "prolongo", "cedar"],
-        "startLine": 5,
-        "endLine": 5,
-        "comment": "Augustine links this to the soul’s 'groaning' for redemption (Enarr. Ps. 119.5). The Cedar reference (Genesis 25:13) underscores exile among the unfaithful."
-    },
-   {
-      "name": "Peace-Seeker's Dilemma",
-      "description": "Conflict between desire for peace and experience of hatred",
-      "lemmas": ["incola", "anima", "odi", "pax"],
-      "startLine": 6,
+      "name": "Exile → Alienation",
+      "description": "Dwelling long among the ungodly deepens the soul’s sorrow",
+      "lemmas": ["heu", "incolatus", "prolongo", "cedar", "incola", "anima", "odi", "pax"],
+      "startLine": 5,
       "endLine": 6,
-      "comment": "Tension between peaceful intent and hostile environment"
+      "comment": "‘Heu mihi’ is Augustine’s sigh of the pilgrim soul exiled from its true home. To live in Kedar — a symbol of those who live in the flesh — is to be surrounded by hostility toward peace. The soul has dwelt too long here, not because of years, but because it feels the pain of separation from the City of God (Enarr. Ps. 119.5–6)."
     },
     {
-      "name": "Unprovoked Hostility",
-      "description": "Experience of being attacked despite peaceful words",
+      "name": "Peaceful Words → Hostile Response",
+      "description": "Peace is offered, but answered with aggression",
       "lemmas": ["pax", "loquor", "impugno", "gratis"],
       "startLine": 7,
       "endLine": 7,
-      "comment": "Final complaint about unjust persecution"
-    },
-    {
-      "name": "Augustine: The Fire of Charity",
-      "description": "The desolating coals (carbonibus desolatoriis) purify like the fire of divine love",
-      "lemmas": ["carbo", "desolatorius"],
-      "startLine": 4,
-      "endLine": 4,
-      "comment": "Enarrationes in Psalmos 119.5"
+      "comment": "Augustine interprets this verse as the voice of Christ and His Church: always seeking peace, yet constantly met with opposition. The psalmist speaks kindly, yet is attacked 'gratis' — without cause. This unjust suffering anticipates the passion of Christ, who was hated for no reason (Enarr. Ps. 119.7)."
     }
   ]
 },
@@ -3426,61 +3394,41 @@
   "category": "",
   "themes": [
     {
-      "name": "Augustine: Interior Ascent",
-      "description": "The mountains signify spiritual ascent—toward the apostles, saints, and ultimately Christ. The help we seek begins in the heart's upward turn.",
+      "name": "Gaze → Up",
+      "description": "The soul lifts its gaze from below to the heights, marking a new spiritual trajectory",
       "lemmas": ["levo", "oculus", "mons"],
       "startLine": 1,
-      "endLine": 1,
-      "comment": "En. Ps. 120.1 – Augustine reads 'montes' as spiritual authorities and the interior elevation of the soul."
-    },
-    {
-      "name": "Divine Help from the Creator",
-      "description": "True help comes not from earth but from the Lord who made heaven and earth.",
-      "lemmas": ["auxilium", "dominus", "creo", "caelum", "terra"],
-      "startLine": 1,
       "endLine": 2,
-      "comment": "Foundational trust in God's creative authority as helper."
+      "comment": "Augustine reads this upward gaze as the soul’s first act of turning — not yet arriving, but desiring. The mountains represent the apostles or spiritual heights. This gesture initiates a journey: the eyes rise, the heart follows. It’s not help received that marks the change, but the will to look up (Enarr. Ps. 120.1–2). Augustine interprets the 'mountains' not as earthly peaks but as the spiritual heights of the apostles and Scriptures. The soul first looks up but realizes that true help does not come from created things—even lofty ones—but from the Lord, who made heaven and earth. This signals a shift from creaturely confidence to Creator-dependence (Enarr. Ps. 120.1–2)."
     },
     {
-      "name": "Unfailing Vigilance",
-      "description": "God never slumbers; His guardianship is ceaseless and perfect.",
-      "lemmas": ["custodio", "dormio", "dormito", "israel"],
+      "name": "Sleep → Vigilance",
+      "description": "Human instability is guarded by God’s tireless watch",
+      "lemmas": ["pes", "dormio", "dormito"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "Contrast with human watchfulness—God protects Israel tirelessly."
+      "comment": "Augustine reads this as divine assurance for the soul: though our feet may falter, and though we sleep or forget, the Lord does not. The triple repetition — 'dormitet', 'dormitabit', 'dormiet' — insists that God’s watch never breaks. He keeps Israel, and each soul, through every lapse of human awareness (Enarr. Ps. 120.3–4)."
     },
+    
     {
-      "name": "Personal Protection",
-      "description": "God’s protection is personal, present, and proximate—like a shield on your right hand.",
-      "lemmas": ["custodio",  "protectio", "dextera", "manus"],
+      "name": "Protection → Peace",
+      "description": "God’s nearness shields the soul and brings rest from every threat",
+      "lemmas": ["dextera", "sol", "luna"],
       "startLine": 5,
-      "endLine": 5,
-      "comment": "Imagery of God as your shadow or shield beside you."
-    },
-    {
-      "name": "Cosmic Shelter",
-      "description": "God protects against cosmic dangers—sun by day, moon by night.",
-      "lemmas": ["sol", "luna", "dies", "nox"],
-      "startLine": 6,
       "endLine": 6,
-      "comment": "Poetic depiction of full-spectrum protection from all celestial forces."
+      "comment": "Augustine sees God's presence at the right hand as intimate and steadying. This protection brings peace — not just from physical harm, but from the fear of harm. The sun by day and moon by night represent total coverage: no time, condition, or influence escapes divine care. Peace flows from presence (Enarr. Ps. 120.5–6)."
     },
+
+
     {
-      "name": "Spiritual Preservation",
-      "description": "God guards not only the body but also the soul from evil.",
-      "lemmas": ["custodio", "malus", "anima"],
+      "name": "Peace → Permanence",
+      "description": "The soul's calm under God's care is extended into eternity",
+      "lemmas": ["custodio", "anima", "introitus", "exitus", "saeculum"],
       "startLine": 7,
-      "endLine": 7,
-      "comment": "Inner security and moral integrity under divine custody."
-    },
-    {
-      "name": "Lifelong Guardianship",
-      "description": "From now and forever, God oversees your every movement—going out and coming in.",
-      "lemmas": ["custodio", "introitus", "exitus", "saeculum"],
-      "startLine": 8,
       "endLine": 8,
-      "comment": "The Psalm’s closing vision of comprehensive, eternal care."
+      "comment": "Augustine reads this as the sealing of divine care: the soul, already protected and at peace, now walks in confidence that every step — going out or coming in — is under God’s watch. And not just for today, but 'from now and forever.' What began with an upward gaze ends in eternal companionship (Enarr. Ps. 120.7–8)."
     }
+
   ]
 },
 
