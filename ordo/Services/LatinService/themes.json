@@ -3509,45 +3509,41 @@
   "category": "",
   "themes": [
     {
-      "name": "Perished Without → Preserved With",
-      "description": "Without the Lord, destruction was certain — but He was with us",
+      "name": "Abandonment → Preservation",
+      "description": "If God had not been with us, we would have perished — but He was",
       "lemmas": ["nisi", "dominus", "erat", "in", "nos", "dico"],
       "startLine": 1,
       "endLine": 2,
       "comment": "Augustine sees this dual 'nisi quia Dominus' as the soul’s confession: not of victory, but of dependence. Without God, enemies would have risen and prevailed. With God, we still stand (Enarr. Ps. 123.1–2)."
     },
+    
     {
-      "name": "Threat → Devouring",
-      "description": "Human rage would have swallowed us alive — the danger was real",
-      "lemmas": ["exsurgo", "homo", "vivos", "deglutio", "irascor", "furor"],
+      "name": "Devoured → Drowned",
+      "description": "The soul first faces human rage like a beast's mouth, then escalating into overwhelming flood",
+      "lemmas": ["deglutio", "vivus", "homo", "irascor", "furor", "aqua", "absorbeo"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "The psalmist uses predator imagery for human persecution. Augustine reads this spiritually: heretics, oppressors, or temptations rise up in wrath — to devour those who are unguarded by God (Enarr. Ps. 123.3–4)."
+      "comment": "Augustine reads this as a two-stage escalation: first, the soul is in danger of being devoured — as if by men who rise up like beasts. Then wrath turns into a flood: fury becomes elemental, overwhelming, spiritual. The soul would have been utterly drowned if not for the Lord’s mercy (Enarr. Ps. 123.3–4)."
     },
-    {
-      "name": "Flood → Escape",
-      "description": "God rescued us from overwhelming floodwaters of destruction",
-      "lemmas": ["aqua", "absorbeo", "pertransit", "anima", "intolerabilis"],
-      "startLine": 4,
-      "endLine": 5,
-      "comment": "Augustine compares this to baptismal deliverance and Noah’s flood. The soul passed through what should have drowned it. 'Anima nostra pertransivit' marks spiritual preservation under divine mercy (Enarr. Ps. 123.5)."
+
+   {
+      "name": "Torrent → Survived",
+      "description": "The soul endured unbearable waters and escaped predation only by divine withholding",
+      "lemmas": ["pertransit", "anima", "aqua", "intolerabilis", "dedit", "captio", "dens"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Augustine reads this as fragile grace. The soul crossed the intolerable waters not by power, but preservation. We were not given over to the enemy’s teeth — not because we fled, but because the Lord withheld us. Survival is mercy (Enarr. Ps. 123.5–6).  Augustine compares this to baptismal deliverance and Noah’s flood. The soul passed through what should have drowned it. 'Anima nostra pertransivit' marks spiritual preservation under divine mercy (Enarr. Ps. 123.5)."
     },
+
     {
-      "name": "Snared → Freed",
-      "description": "We were trapped like a bird — but God broke the snare",
-      "lemmas": ["passer", "ereptus", "laqueus", "venator", "contritus", "libero"],
-      "startLine": 6,
-      "endLine": 8,
-      "comment": "Augustine draws attention to the 'passer' (sparrow) as the humble soul. Though caught, it is not destroyed — the snare is broken. This is grace interrupting cunning. The contritus (broken) snare is the power of God overriding schemes (Enarr. Ps. 123.6–8)."
-    },
-    {
-      "name": "Earthly Danger → Cosmic Help",
-      "description": "The Lord who saved us is not local — but Creator of heaven and earth",
-      "lemmas": ["adjutorium", "dominus", "nomen", "caelum", "terra", "creo"],
-      "startLine": 9,
+      "name": "Trap → Deliverance",
+      "description": "The soul was caught like a bird in a trap, but the Lord shattered the snare and delivered it through His name",
+      "lemmas": ["passer", "laqueus", "contritus", "libero", "adjutorium", "nomen", "dominus", "caelum", "terra"],
+      "startLine": 7,
       "endLine": 9,
-      "comment": "The psalm ends not with fear but confession. Augustine sees 'Adjutorium nostrum in nomine Domini' as the banner over all deliverance. The one who helps is not a local god — He made heaven and earth (Enarr. Ps. 123.9)."
+      "comment": "Augustine interprets the sparrow as the humble believer nearly taken by the hunter’s deceit. Psalm 123 resolves the fear of Psalm 90: the laqueus is not only real — it is broken. Deliverance does not come by escape but by the name of the Lord, Creator of heaven and earth (Enarr. Ps. 123.7–9; cf. Ps. 90.3)."
     }
+
   ]
 },
 
@@ -3556,15 +3552,16 @@
   "psalmNumber": 124,
   "category": "",
   "themes": [
+
     {
-      "name": "Steadfast Trust",
-      "description": "Those who trust in the Lord are as immovable as Mount Zion.",
-      "lemmas": ["confido", "dominus", "mons", "commoveo"],
+      "name": "Escaped → Dweller",
+      "description": "The soul transitions from being a rescued fugitive to a secure dweller in God's city",
+      "lemmas": ["confido", "mons", "habitat", "circuitu", "Jerusalem"],
       "startLine": 1,
-      "endLine": 1,
-      "comment": "Imagery of unshakable faith rooted in a sacred location."
+      "endLine": 2,
+      "comment": "Augustine contrasts this with Psalm 123: the 'sparrow' (passer) freed from the snare now 'dwells' (habitat) in Jerusalem. The 'mountain' (mons) is not geographic Zion but the soul's new stability in God. Divine encirclement (circuitu) replaces the broken snare (Enarr. Ps. 124.2–3)."
     },
-    {
+        {
       "name": "Protective Encirclement",
       "description": "God surrounds His people just as mountains surround Jerusalem.",
       "lemmas": ["mons", "circuitus", "populus"],
