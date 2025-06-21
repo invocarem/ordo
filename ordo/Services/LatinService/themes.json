@@ -3556,49 +3556,35 @@
     {
       "name": "Escaped → Dweller",
       "description": "The soul transitions from being a rescued fugitive to a secure dweller in God's city",
-      "lemmas": ["confido", "mons", "habitat", "circuitu", "Jerusalem"],
+      "lemmas": ["confido", "mons", "habitat", "circuitu", "jerusalem"],
       "startLine": 1,
       "endLine": 2,
       "comment": "Augustine contrasts this with Psalm 123: the 'sparrow' (passer) freed from the snare now 'dwells' (habitat) in Jerusalem. The 'mountain' (mons) is not geographic Zion but the soul's new stability in God. Divine encirclement (circuitu) replaces the broken snare (Enarr. Ps. 124.2–3)."
     },
-        {
-      "name": "Protective Encirclement",
-      "description": "God surrounds His people just as mountains surround Jerusalem.",
-      "lemmas": ["mons", "circuitus", "populus"],
-      "startLine": 2,
-      "endLine": 2,
-      "comment": "Topographical metaphor for divine protection."
-    },
+
     {
-      "name": "Moral Safeguard",
-      "description": "God will not let the wicked rule over the righteous lest they be led into iniquity.",
-      "lemmas": ["relinquo", "virga", "peccator", "justus", "iniquitas", "manus"],
+      "name": "Shielded → Blessed",
+      "description": "From potential domination by the wicked to divine protection and blessing",
+      "lemmas": ["relinquo", "virga", "benefacio", "rectus"],
       "startLine": 3,
-      "endLine": 3,
-      "comment": "Spiritual separation and the prevention of moral compromise."
-    },
-    {
-      "name": "Prayer for the Righteous",
-      "description": "Blessing is requested for the good and upright in heart.",
-      "lemmas": ["benefacio", "bonus", "rectus", "cor"],
-      "startLine": 4,
       "endLine": 4,
-      "comment": "Invoking divine goodness upon the morally aligned."
+      "comment": "Augustine: God actively withholds the wicked's rod ('non relinquet') to preserve the righteous, then commands blessing ('Benefac') for the upright—not based on merit but grace (Enarr. Ps. 124.5-6)."
     },
     {
-      "name": "Judgment and Peace",
-      "description": "The deviants and evildoers are led away, while peace is declared upon Israel.",
-      "lemmas": ["declino", "obligatio", "adduco", "opero", "iniquitas", "pax", "Israel"],
+      "name": "Bending → Peace",
+      "description": "Those inclining toward sin are removed, while peace is declared",
+      "lemmas": ["declino", "obligatio", "pax", "Israel"],
       "startLine": 5,
       "endLine": 5,
-      "comment": "Final eschatological contrast: judgment for the wicked, peace for God’s people."
+      "comment": "Augustine: The 'Declinantes' follow their trajectory into sin, while 'Pax super Israel' is God's final word—a declarative gift mirroring the Church's eschatological hope (Enarr. Ps. 124.8)."
     }
+
   ]
 },
 
 {
   "psalmNumber": 125,
-  "category": "Gradual Psalm",
+  "category": "",
   "themes": [
     {
       "name": "Restoration of Zion",
