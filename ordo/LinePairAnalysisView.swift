@@ -104,18 +104,18 @@ struct LinePairAnalysisView: View {
                                 
                             }
                             
-                            
+                            ForEach(analysis.orderedLemmas, id: \.self) { lemma in
+                                if let info = analysis.dictionary[lemma] {
+                                    NavigationLink(destination: WordDetailView(lemma: lemma, lemmaInfo: info)) {
+                                        WordRow(lemma: lemma, info: info)
+                                    }
+                                }
+                            }
                                         
                                        
                         }
                         
-                        ForEach(analysis.orderedLemmas, id: \.self) { lemma in
-                            if let info = analysis.dictionary[lemma] {
-                                NavigationLink(destination: WordDetailView(lemma: lemma, lemmaInfo: info)) {
-                                    WordRow(lemma: lemma, info: info)
-                                }
-                            }
-                        }
+                        
                         
                     }
                 }

@@ -1236,18 +1236,18 @@
 },
   {
     "lemma": "consolor",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "consolari",
-  "present": "consolor",
-  "future": "consolabor",
-  "perfect": "consolatus",
-  "supine": "consolatum",
-  "translations": {
-    "en": "to comfort, console, encourage; (passive form with active meaning)",
-    "la": "consolor, consolari, consolatus sum"
-  }
-},
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "consolari",
+    "present": "consolor",
+    "future": "consolabor",
+    "perfect": "consolatus",
+    "supine": "consolatum",
+    "translations": {
+      "en": "to comfort, console, encourage;",
+      "la": "consolor, consolari, consolatus sum"
+    }
+  },
   {
   "lemma": "ago",
   "part_of_speech": "verb",
@@ -8400,27 +8400,6 @@
     }
   },
   {
-    "lemma": "consolari",
-    "part_of_speech": "verb",
-    "conjugation": 1,
-    "deponent": true,
-    "infinitive": "consolari",
-    "forms": {
-      "present": ["consolor", "consolaris", "consolatur", "consolamur", "consolamini", "consolantur"],
-      "present_passive": ["consolor", "consolaris", "consolatur", "consolamur", "consolamini", "consolantur"],
-      "imperative": ["consolare", "consolamini"],
-      "subjunctive": ["consoler", "consoleris", "consoletur", "consolemur", "consolemini", "consolentur"],
-      "future_passive": ["consolabor", "consolaberis", "consolabitur", "consolabimur", "consolabimini", "consolabuntur"],
-      "present_participle": ["consolans"],
-      "perfect_passive_participle": ["consolatus", "consolata", "consolatum"],
-      "perfect_indicative_active": ["consolatus sum", "consolatus es", "consolatus est", "consolati sumus", "consolati estis", "consolati sunt"]
-    },
-    "translations": {
-      "en": "to comfort, to console",
-      "la": "consolor"
-    }
-  },
-  {
     "lemma": "refectio",
     "part_of_speech": "noun",
     "declension": 3,
@@ -11681,23 +11660,7 @@
     },
   
    
-    {
-      "lemma": "consolor",
-      "part_of_speech": "verb",
-      "conjugation": 1,
-      "deponent": true,
-      "infinitive": "consolari",
-      "forms": {
-        "present": ["consolor", "consolaris", "consolatur", "consolamur", "consolamini", "consolantur"],
-        "imperative": ["consolare", "consolati"],
-        "subjunctive": ["consoler", "consoleris", "consoleatur", "consolemur", "consolemini", "consolentur"]
-      },
-      "translations": {
-        "en": "to comfort, console (deponent)",
-        "la": "consolor"
-      }
-    },
-    
+   
     {
       "lemma": "magnifico",
       "part_of_speech": "verb",
