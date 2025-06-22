@@ -3587,100 +3587,73 @@
   "category": "",
   "themes": [
     {
-      "name": "Restoration of Zion",
-      "description": "God’s turning of Zion’s captivity brought about collective joy and consolation.",
-      "lemmas": ["converto", "captivitas", "Sion", "consolor"],
+      "name": "Captivity → Awakening Joy",
+      "description": "The memory of Zion's rescue stirs joy — like the first movement of thawed waters after spiritual winter",
+      "lemmas": ["converto", "captivitas", "Sion", "consolor", "gaudium", "exsultatio", "os", "lingua"],
       "startLine": 1,
-      "endLine": 1,
-      "comment": "Opening line emphasizes divine reversal of fortune."
-    },
-    {
-      "name": "Overflowing Joy",
-      "description": "Joy expressed through mouth and language; emotional reaction to divine restoration.",
-      "lemmas": ["gaudium", "exsultatio", "os", "lingua"],
-      "startLine": 2,
       "endLine": 2,
-      "comment": "Exuberant reaction described with bodily imagery."
+      "comment": "Augustine sees this not as completed joy but as awakening — a slow, heavy movement like ice beginning to melt. The captivity echoes previous suffering (Ps. 123), and the joy is its emotional release, not final triumph. The Church sings here like spring begins: with hope (Enarr. Ps. 125.1–2)."
     },
     {
-      "name": "Witness of the Nations",
-      "description": "The greatness of God's actions becomes visible to the nations.",
-      "lemmas": ["magnifico", "facio", "gens"],
+      "name": "Foreign Wonder → Internal Praise",
+      "description": "What others saw as God's greatness, Israel internalized with rejoicing.",
+      "lemmas": ["magnifico", "facio", "gens", "nobiscum", "laetor"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "Public acknowledgment of God's deeds beyond Israel."
+      "comment": "Augustine sees two levels here: the nations observe God's greatness from the outside, while Israel experiences it intimately. Joy is not just public testimony, but personal transformation (Enarr. Ps. 125.3–4)."
     },
+    
     {
-      "name": "Prayer for Continued Restoration",
-      "description": "The psalmist asks God to continue His redemptive work, like desert rains.",
-      "lemmas": ["converto", "captivitas", "torrens", "auster"],
+      "name": "Dry Captivity → Rushing Mercy",
+      "description": "The soul prays for renewal like water returning to the desert — sorrowful sowing will yield joyful harvest",
+      "lemmas": ["converto", "captivitas", "torrens", "auster", "semen", "lacrima", "meto", "exsultatio"],
       "startLine": 5,
-      "endLine": 5,
-      "comment": "Petition framed with geographical simile (southern streams)."
-    },
-    {
-      "name": "Sowing in Tears, Reaping in Joy",
-      "description": "Those who suffer now in sorrow will later rejoice in harvest.",
-      "lemmas": ["semen", "lacrima", "meto", "exsultatio"],
-      "startLine": 6,
       "endLine": 6,
-      "comment": "Agricultural metaphor for emotional and spiritual transformation."
+      "comment": "Augustine says the southern torrent is the soul thawing after captivity — slow, muddy, yet promising. Tears are the sowing of this moment; joy will be its reaping. This is not instant triumph, but grace gathering force underground (Enarr. Ps. 125.5–6)."
     },
+
     {
-      "name": "Pilgrimage of Suffering and Return",
-      "description": "A poetic journey from weeping to rejoicing, bearing the fruit of endurance.",
-      "lemmas": ["eo", "fleo", "mitto", "venio", "porto", "manipulus"],
+      "name": "Weeping → Rejoicing",
+      "description": "Those who go out weeping and sowing will return rejoicing with the fruit of endurance",
+      "lemmas": ["eo", "fleo", "mitto", "semen", "venio", "exsultatio", "porto", "manipulus"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "Pilgrimage movement language emphasizes faithful perseverance."
-    }
-  ]
+      "comment": "Augustine sees the Church walking in tears now — sowing prayers and love in a world of sorrow. But the end is sure: the faithful will return bearing manipuli, the harvest of mercy and endurance. This is pilgrimage language — sorrow transformed by patience (Enarr. Ps. 125.7–8)."
+  }
+
+ ]
 },
 {
   "psalmNumber": 126,
   "category": "",
   "themes": [
-    {
-      "name": "Vain Labor Without God",
-      "description": "Human efforts in building or guarding are futile without God's participation.",
+     {
+      "name": "Third Captivity  → Divine Building",
+      "description": "Labor without the Lord leads nowhere; true construction comes only from His participation.",
       "lemmas": ["nisi", "aedifico", "custodio", "vanus", "laboro"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Foundational theme: 'Unless the Lord builds the house...'"
+      "comment": "Augustine says this is about the soul’s construction. We are temples — but not builders. The inner Jerusalem must be built by God, or it collapses. Watchmen and workers without grace only labor in anxiety (Enarr. Ps. 126.1–2)."
     },
+    
     {
-      "name": "Fruitless Anxiety",
-      "description": "Early rising and toiling in sorrow is empty without divine blessing.",
-      "lemmas": ["surgo", "sedeo", "manduco", "dolor", "vanus"],
+      "name": "Anxious Toil → Beloved Rest",
+      "description": "From self-reliant striving and sorrowful labor to the peaceful sleep granted by God to His beloved.",
+      "lemmas": ["surgo", "sedeo", "manduco", "dolor", "dilectus", "somnus"],
       "startLine": 3,
-      "endLine": 3,
-      "comment": "Contrast between self-reliant striving and God’s rest."
-    },
-    {
-      "name": "God’s Gift of Sleep and Family",
-      "description": "The Lord grants sleep to His beloved and gives children as a heritage.",
-      "lemmas": ["somnus", "dilectus", "haereditas", "filius", "venter", "merces", "fructus"],
-      "startLine": 4,
       "endLine": 4,
-      "comment": "Rest and progeny as divine blessings."
+      "comment": "Augustine sees the 'bread of sorrow' as the symbol of unrestful self-effort, a labor born of anxiety. But God gives not wages but sleep — a sign of grace and belovedness. The soul is not built by fear but by trust (Enarr. Ps. 126.3–4)."
     },
     {
-      "name": "Children as Defensive Strength",
-      "description": "Children are like arrows in a warrior’s hand—strength for the future.",
-      "lemmas": ["sagitta", "manus", "potens", "filius", "excutio"],
+      "name": "Hidden Formation → Public Strength (Faith)",
+      "description": "Sons (spiritual or familial) are like arrows — hidden but honed. When the moment of testing comes, the one who has formed them will stand unashamed.",
+      "lemmas": ["sagitta", "manus", "potens", "filius", "excutio", "beatus", "impleo", "confundo", "inimicus", "porta"],
       "startLine": 5,
-      "endLine": 5,
-      "comment": "Military metaphor showing familial empowerment."
-    },
-    {
-      "name": "Public Honor and Security",
-      "description": "The man with many children will not be shamed when facing his enemies.",
-      "lemmas": ["beatus", "impleo", "desiderium", "confundo", "inimicus", "porta"],
-      "startLine": 6,
       "endLine": 6,
-      "comment": "Social vindication through familial abundance and dignity."
+      "comment": "Augustine reads the arrows as the sons of faith — formed in silence but destined for witness. The blessed man will not be confounded in the gate (symbol of judgment), because he has cultivated spiritual strength (Enarr. Ps. 126.5–6)."
     }
-  ]
+
+ ]
 },
 {
   "psalmNumber": 127,
