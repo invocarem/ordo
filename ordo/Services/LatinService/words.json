@@ -1,5 +1,22 @@
 [
   {
+  "lemma": "salix",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "salix",
+  "genitive": "salicis",
+  "translations": {
+    "en": "willow, willow tree",
+    "la": "salix"
+  },
+  "forms_plural": {
+    "dative_f": ["salicibus"],
+    "ablative_f": ["salicibus"],
+    "nominative_f": ["salices"]
+  }
+},
+  {
   "lemma": "prex",
   "part_of_speech": "noun",
   "declension": 3,
@@ -11,6 +28,19 @@
     "la": "prex"
   }
  },
+{
+  "lemma": "flumen",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "flumen",
+  "genitive": "fluminis",
+  "translations": {
+    "en": "river, stream",
+    "la": "flumen"
+  }
+},
+
   {
   "lemma": "suscito",
   "part_of_speech": "verb",
@@ -2391,7 +2421,7 @@
   "perfect": "flevi",
   "supine": "fletum",
   "translations": {
-    "en": "they were weeping, they wept, they used to weep",
+    "en": "weep",
     "la": "fleo, flere, flevi, fletum"
   }
 },
