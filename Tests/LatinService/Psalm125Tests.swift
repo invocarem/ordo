@@ -42,7 +42,9 @@ class Psalm125Tests: XCTestCase {
     
     // 2. Test for Joy and Exultation
     func testJoyExpressions() {
+        latinService.configureDebugging(target: "laetor")
         let analysis = latinService.analyzePsalm(id, text: psalm125)
+        latinService.configureDebugging(target: "")
         
         let joyTerms = [
             ("gaudium", ["gaudio"], "joy"),
