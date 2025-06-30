@@ -1,5 +1,96 @@
 [
   {
+  "lemma": "lingua",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "lingua",
+  "genitive": "linguae",
+  "translations": {
+    "en": "tongue, language",
+    "la": "lingua"
+  },
+  "forms": {
+    "nominative_plural": ["linguae"],
+    "ablative_sg": ["lingua"]  
+  }
+},
+  {
+              "lemma": "memini",
+              "part_of_speech": "verb",
+              "conjugation": 4,
+              "deponent": true,
+              "infinitive": "meminisse",
+              "perfect": "memini",
+              "future": "meminero",
+               "forms": {
+                "future_1sg": ["meminero"]  ,
+                "present": ["memini", "meministi", "meminit", "meminimus", "meministis", "meminerunt"],
+                "imperative": ["memento", "mementote"],
+                "subjunctive": ["meminerim", "memineris", "meminerit", "meminerimus", "memineritis", "meminerint"]
+              },
+              "translations": {
+                "en": "to remember (defective, deponent)",
+                "la": "memini"
+              }
+            },
+
+  {
+  "lemma": "exinanio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "exinanire",
+  "present": "exinanio",
+  "perfect": "exinanivi",
+  "supine": "exinanitum",
+  "translations": {
+    "en": "demolish, empty out, make void",
+    "la": "exinanio, exinanire"
+  },
+  "forms": {
+    "imperative_pl": ["exinanite"]  
+  }
+},
+  {
+    "lemma": "captivus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "captivus",
+    "genitive": "captivi",
+    "translations": {
+      "en": "captive, prisoner",
+      "la": "captivus"
+    }
+  },
+  {
+  "lemma": "organum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "organum",
+  "genitive": "organi",
+  "translations": {
+    "en": "musical instrument, harp (especially in Psalms)",
+    "la": "organum"
+  },
+  "forms_plural": {
+    "nominative_n": ["organa"]  
+  }
+},
+  {
+  "lemma": "petra",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "petra",
+  "genitive": "petrae",
+  "translations": {
+    "en": "rock, cliff",
+    "la": "petra"
+  }
+},
+  {
   "lemma": "salix",
   "part_of_speech": "noun",
   "declension": 3,
@@ -5433,6 +5524,31 @@
   }
 },
 {
+  "lemma": "babylon",
+  "part_of_speech": "noun",
+  "declension": 0,
+  "gender": "feminine",
+  "nominative": "babylon",
+  "forms": {
+    "genitive_f": ["babylonis"]  
+  },
+  "translations": {
+    "en": "Babylon (city of World)",
+    "la": "babylon"
+  }
+},
+{
+  "lemma": "edom",
+  "part_of_speech": "noun",
+  "declension": 0,
+  "gender": "masculine", 
+  "nominative": "edom",
+  "translations": {
+    "en": "Edom (descendants of Esau)",
+    "la": "edom"
+  }
+},
+{
   "lemma": "praedico",
   "part_of_speech": "verb",
   "conjugation": 1,
@@ -6565,7 +6681,7 @@
       "perfect_indicative": ["allisisti"]
     },
     "translations": {
-      "en": "shatter, crush",
+      "en": "dash against, shatter, crush",
       "la": "allido, allidere"
     }
   },
@@ -7416,19 +7532,7 @@
             "la": "dolosus"
           }
         },
-        {
-          "lemma": "lingua",
-          "part_of_speech": "noun",
-          "gender": "feminine",
-          "declension": 1,
-          "nominative": "lingua",
-          "genitive": "linguae",
-          "translations": {
-            "en": "tongue, language",
-            "la": "lingua"
-          }
-        },
-        {
+       {
           "lemma": "magniloquus",
           "part_of_speech": "adjective",
           "declension": 1,
@@ -12017,23 +12121,7 @@
   }
 },
 
-            {
-              "lemma": "memini",
-              "part_of_speech": "verb",
-              "conjugation": 4,
-              "deponent": true,
-              "infinitive": "meminisse",
-              "forms": {
-                "present": ["memini", "meministi", "meminit", "meminimus", "meministis", "meminerunt"],
-                "imperative": ["memento", "mementote"],
-                "subjunctive": ["meminerim", "memineris", "meminerit", "meminerimus", "memineritis", "meminerint"]
-              },
-              "translations": {
-                "en": "to remember (defective, deponent)",
-                "la": "memini"
-              }
-            },
-            {
+           {
               "lemma": "votum",
               "part_of_speech": "noun",
               "gender": "neuter",
@@ -12537,6 +12625,22 @@
     "subjunctive_present": ["miserear", "miserearis", "misereatur", "misereamur", "misereamini", "misereantur"],
     "subjunctive_imperfect": ["miserērer", "miserērēris", "miserērētur", "miserērēmur", "miserērēminī", "miserērentur"],
     "imperative": ["miserere", "miseremini"]
+  }
+},
+{
+  "lemma": "miser",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "miser",
+  "genitive": "miseri",
+  "translations": {
+    "en": "wretched, miserable, pitiable",
+    "la": "miser"
+  },
+  "forms": {
+    "nominative_f": ["misera"],  
+    "nominative_n": ["miserum"]
   }
 },
   {
@@ -16072,34 +16176,21 @@
                "en": "we, us",
                "la": "nos"
            }
-       },
-     {
+    },
+    {
         "lemma": "terra",
         "part_of_speech": "noun",
         "declension": 1,
         "gender": "feminine",
-        "forms": {
-          "nominative_f": ["terra"],
-          "genitive_f": ["terrae"],
-          "dative_f": ["terrae"],
-          "accusative_f": ["terram"],
-          "ablative_f": ["terra"],
-          "vocative_f": ["terra"]
-        },
-        "forms_plural": {
-          "nominative_f": ["terrae"],
-          "genitive_f": ["terrarum"],
-          "dative_f": ["terris"],
-          "accusative_f": ["terras"],
-          "ablative_f": ["terris"],
-          "vocative_f": ["terrae"]
-        },
+        "nominative": "terra",
+        "genitive": "terrae",
         "translations": {
           "en": "earth, land",
           "la": "terra"
         }
       },
    
+  
       {
         "lemma": "petitio",
         "part_of_speech": "noun",

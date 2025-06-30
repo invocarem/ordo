@@ -4063,20 +4063,21 @@
       "comment": "Augustine: The command to sing 'Zion’s songs' (v.3) in Babylon provokes the crisis of v.5—sacred joy cannot be forced. The soul must choose exile or faithfulness (Enarr. Ps. 136.4)."
     },
     {
-      "name": "Forgetting → Oath",
-      "description": "From risk of amnesia to bodily誓言 of remembrance",
-      "lemmas": ["obliviscor", "Jerusalem", "dextera", "lingua", "memini"],
+      "name": "Sacred Music → Refusal",
+      "description": "From captors’ demands for Zion's songs to a refusal to perform the sacred in exile",
+      "lemmas": ["captivus", "interrogo", "canticum", "hymnus", "terra", "alienus"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "Augustine: The self-curse ('let my right hand wither,' v.6) binds the body to memory—a physical vow against spiritual forgetfulness (Enarr. Ps. 136.6)."
+      "comment": "Augustine: The psalmist resists profaning sacred music for worldly amusement. 'How can we sing the Lord's song in a foreign land?' marks a line between worship and worldliness (Enarr. Ps. 136.4–5).Augustine: The self-curse ('let my right hand wither,' v.6) binds the body to memory—a physical vow against spiritual forgetfulness (Enarr. Ps. 136.6)."
     },
+
     {
-      "name": "Destruction → Imprecation",
+      "name": "Forgetfulness -> Destruction → Imprecation",
       "description": "From Edom’s violence to prophetic curse",
-      "lemmas": ["Edom", "exinanio", "fundamentum", "memor"],
+      "lemmas": ["lingua", "memini", "edom", "exinanio", "fundamentum", "memor"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "Augustine: 'Remember Edom’s cry' (v.7) invokes divine justice. The psalmist’s plea mirrors Revelation’s martyrs (Rev 6:10)—a cry against oppression (Enarr. Ps. 136.8)."
+      "comment": "Augustine: 'Remember Edom’s cry' (v.8) invokes divine justice. The psalmist’s plea mirrors Revelation’s martyrs (Rev 6:10)—a cry against oppression (Enarr. Ps. 136.8)."
     },
     {
       "name": "Infants → Divine Justice",
