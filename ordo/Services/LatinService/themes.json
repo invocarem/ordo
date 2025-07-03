@@ -4049,7 +4049,7 @@
     {
       "name": "Exile → Paralysis",
       "description": "From displacement in Babylon to emotional and spiritual suspension",
-      "lemmas": ["flumen", "babylon", "sedeo", "fleo", "sion", "salix", "organum"],
+      "lemmas": ["flumen", "sedeo", "fleo", "salix", "organum"],
       "startLine": 1,
       "endLine": 2,
       "comment": "Augustine: 'Sitting by Babylon’s rivers' (v.1) symbolizes spiritual inertia; 'hanging harps' (v.2) represents the soul’s refusal to misuse sacred gifts in exile (Enarr. Ps. 136.2)."
@@ -4079,14 +4079,18 @@
       "endLine": 8,
       "comment": "Augustine: 'Remember Edom’s cry' (v.8) invokes divine justice. The psalmist’s plea mirrors Revelation’s martyrs (Rev 6:10)—a cry against oppression (Enarr. Ps. 136.8)."
     },
+    
     {
       "name": "Infants → Divine Justice",
       "description": "From helpless victims to divine retribution",
-      "lemmas": ["Babylon", "misera", "beatus", "retributio", "allido", "petra"],
+      "lemmas": ["parvulus", "allido", "petra"],
       "startLine": 9,
       "endLine": 10,
-      "comment": "Augustine allegorizes v.9: the ‘dashing of infants’ signifies destroying sinful desires (Babylon’s ‘offspring’) against Christ the Rock. The literal cry for retribution is transfigured into spiritual warfare (Enarr. Ps. 136.21; 1 Cor 10:4)."
+      "comment": "Augustine allegorizes v.9: the ‘dashing of infants’ signifies destroying sinful desires (Babylon’s ‘offspring’) against Christ the Rock. The literal cry for retribution is transfigured into spiritual warfare (Enarr. Ps. 136.21; 1 Cor 10:4).",
+      "comment2": "Without allegory, this final cry is a wounded demand for justice after unbearable trauma. The psalmist's emotional violence expresses anguish too deep for silence — a biblical lament echoing Psalm 21: 'My God, my God, why have you forsaken me?' It reminds us that even rage can be laid bare before God."
     }
+
+    
   ]
 },
 

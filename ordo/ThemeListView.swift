@@ -30,8 +30,12 @@ private struct ThemeCardView: View {
             ThemeHeaderView(name: theme.name, description: theme.description)
             
             if let comment = theme.comment?.trimmedNonEmpty {
-                CommentView(comment: comment)
+                CommentView(comment: comment, label: "Commentary")
             }
+            
+            if let comment2 = theme.comment2?.trimmedNonEmpty {
+                            CommentView(comment: comment2, label: "Commentary (cont.)")
+                        }
             
             if !theme.supportingLemmas.isEmpty {
                 LemmaListView(lemmas: theme.supportingLemmas, analysis: analysis)
@@ -55,13 +59,13 @@ private struct ThemeHeaderView: View {
         }
     }
 }
-
 private struct CommentView: View {
     let comment: String
+    let label: String
     
     var body: some View {
         VStack(alignment: .leading, spacing: 4) {
-            Text("Commentary")
+            Text(label)
                 .commentHeaderStyle()
             
             Text(comment)
@@ -70,6 +74,7 @@ private struct CommentView: View {
         .commentContainerStyle()
     }
 }
+
 
 private struct LemmaListView: View {
     let lemmas: [String]

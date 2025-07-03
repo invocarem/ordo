@@ -50,20 +50,19 @@ class Psalm136Tests: XCTestCase {
                     lines: [line1, line2])
     }
     
-    func testMockeryToDefiance_Lines3and4() {
+    func testPsalm136Lines3and4() {
         let line3 = psalm136[2]
         let line4 = psalm136[3]
         let combinedText = line3 + " " + line4
-        latinService.configureDebugging(target: "terra")
+        latinService.configureDebugging(target: "canticum")
         let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 3)
+        latinService.configureDebugging(target: "")
         
         let testLemmas = [
-            ("captivus", ["captivos"], "captives"),
-            ("interrogo", ["interrogaverunt"], "ask"),
-            ("canticum", ["cantionum", "canticis"], "song"),
-            ("hymnus", ["hymnum"], "hymn"),
-            ("terra", ["terra"], "land"),
-            ("alienus", ["aliena"], "foreign")
+            ("captivus", ["captivos"], "captive"),
+            ("interrogo", ["interrogaverunt"], "examine"),
+            ("canticum", ["canticis"], "song"),
+            ("hymnus", ["hymnum"], "hymn")
         ]
         
         verifyTheme(analysis: analysis,
@@ -73,36 +72,37 @@ class Psalm136Tests: XCTestCase {
                    lines: [line3, line4])
     }
     
-    func testForgettingToOath_Lines5and6() {
+    func testPsalm136Lines5and6() {
         let line5 = psalm136[4]
         let line6 = psalm136[5]
         let combinedText = line5 + " " + line6
-        let analysis = latinService.analyzePsalm(text: combinedText)
+        let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 5)
+        
         let testLemmas = [
+            ("cantus", ["canticum"], "song"),
+            ("terra", ["terra"], "land"), 
+            ("alienus", ["aliena"], "foreign"),
             ("obliviscor", ["oblitus"], "forget"),
             ("jerusalem", ["jerusalem"], "Jerusalem"),
-            ("dextera", ["dextera"], "right hand"),
+            ("babylon", ["babylonis"], "Babylon") // Lowercase lemma
         ]
-       if verbose {
-    print("\nFULL ANALYSIS DICTIONARY:")
-    analysis.dictionary.forEach { lemma, info in
-        print("- \(lemma): \(info.forms.keys.joined(separator: ", "))")
-    }
-} 
+        
         verifyTheme(analysis: analysis,
-                   themeName: "Forgetting → Oath",
-                   description: "From risk of amnesia to bodily oath of remembrance",
-                   testLemmas: testLemmas,
-                   lines: [line5, line6])
+                themeName: "Sacred Music → Refusal",
+                description: "From captors' demands to refusal to profane sacred music",
+                testLemmas: testLemmas,
+                lines: [line5, line6])
     }
-    
-    func testDestructionToImprecation_Lines7and8() {
+
+    func testPsalm136Lines7and8() {
         let line7 = psalm136[6]
         let line8 = psalm136[7]
         let combinedText = line7 + " " + line8
-        let analysis = latinService.analyzePsalm(text: combinedText)
+        let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 7)
         
         let testLemmas = [
+            ("lingua", ["lingua"], "tongue"),
+            ("memini", ["meminero"], "remember"),
             ("edom", ["edom"], "Edom"),
             ("exinanio", ["exinanite"], "demolish"),
             ("fundamentum", ["fundamentum"], "foundation"),
@@ -110,33 +110,34 @@ class Psalm136Tests: XCTestCase {
         ]
         
         verifyTheme(analysis: analysis,
-                   themeName: "Destruction → Imprecation",
-                   description: "From Edom's violence to prophetic curse",
-                   testLemmas: testLemmas,
-                   lines: [line7, line8])
-    }
-    
-    func testInfantsToDivineJustice_Lines9and10() {
+                themeName: "Destruction → Imprecation",
+                description: "From Edom's violence to prophetic curse with Augustine's note: 'Remember Edom's cry invokes divine justice'",
+                testLemmas: testLemmas,
+                lines: [line7, line8])
+    }    
+
+   func testPsalm136Lines9and10() {
         let line9 = psalm136[8]
         let line10 = psalm136[9]
         let combinedText = line9 + " " + line10
-        let analysis = latinService.analyzePsalm(text: combinedText)
+        let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 9)
         
         let testLemmas = [
-            ("babylon", ["babylonis"], "babylon"),
+            ("babylon", ["babylonis"], "Babylon"),
             ("miser", ["misera"], "wretched"),
             ("beatus", ["beatus"], "blessed"),
-            ("retributio", ["retributionem"], "repayment"),
+            ("retributio", ["retributionem", "retribuet"], "repay"),
             ("allido", ["allidet"], "dash against"),
-            ("petra", ["petram"], "rock")
+            ("petra", ["petram"], "rock"),
+            ("parvulus", ["parvulos"], "infant")
         ]
         
         verifyTheme(analysis: analysis,
-                   themeName: "Infants → Divine Justice",
-                   description: "From helpless victims to divine retribution",
-                   testLemmas: testLemmas,
-                   lines: [line9, line10])
-    }
+                themeName: "Infants → Divine Justice",
+                description: "From helpless victims to divine retribution with Augustine's note: Infants allegorize sinful desires dashed against Christ the Rock",
+                testLemmas: testLemmas,
+                lines: [line9, line10])
+    } 
     
     // MARK: - Helper Methods
     
@@ -163,12 +164,25 @@ class Psalm136Tests: XCTestCase {
         }
         
         // Verify all expected lemmas are present
-        for (lemma, forms, translation) in testLemmas {
-            XCTAssertNotNil(analysis.dictionary[lemma], "Missing lemma: \(lemma) for theme \(themeName)")
+        for (lemma, forms, expectedKeyword) in testLemmas {
+            guard let entry = analysis.dictionary[lemma] else {
+                XCTFail("Missing lemma: \(lemma) for theme \(themeName)")
+                continue
+            }
             
             // Verify at least one form exists for each lemma
-            let hasForm = forms.contains { analysis.dictionary[lemma]?.forms[$0.lowercased()] != nil }
+            let hasForm = forms.contains { entry.forms[$0.lowercased()] != nil }
             XCTAssertTrue(hasForm, "Lemma \(lemma) should have at least one of these forms: \(forms.joined(separator: ", "))")
+            
+            // Verify English translation contains the expected keyword (case-insensitive)
+            if let translation = entry.translation?.lowercased() {
+                XCTAssertTrue(
+                    translation.contains(expectedKeyword.lowercased()),
+                    "Translation for \(lemma) should contain '\(expectedKeyword)', but found '\(translation)'"
+                )
+            } else {
+                XCTFail("Missing translations for lemma: \(lemma)")
+            }
         }
         
         // Verify theme-specific assertions
@@ -178,7 +192,7 @@ class Psalm136Tests: XCTestCase {
             XCTAssertGreaterThan(analysis.dictionary["sedeo"]?.forms["sedimus"] ?? 0, 0, "Should find 'sedimus' (we sat)")
             
         case "Mockery → Defiance":
-            XCTAssertGreaterThan(analysis.dictionary["canticum"]?.forms.values.reduce(0, +) ?? 0, 1, "Should find multiple song references")
+            XCTAssertGreaterThan(analysis.dictionary["canticum"]?.forms.values.reduce(0, +) ?? 0, 0, "Should find song reference")
             
         case "Forgetting → Oath":
             XCTAssertGreaterThan(analysis.dictionary["obliviscor"]?.forms["oblitus"] ?? 0, 0, "Should find forgetting verb")

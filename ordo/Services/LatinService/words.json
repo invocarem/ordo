@@ -2647,6 +2647,11 @@
         "gender": "neuter",
         "nominative": "canticum",
         "genitive": "cantici",
+        "forms_plural": {
+          "dative_n": ["canticis"],
+          "ablative_n": ["canticis"],
+          "genitive_n": ["canticorum"]  
+        },
         "translations": {
           "en": "song, chant",
           "la": "canticum, cantici"
@@ -19458,6 +19463,29 @@
   "translations": {
     "en": "to humble (make one feel less proud)",
     "la": "humilio, humiliare"
+  }
+},
+
+{
+  "lemma": "parvulus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "parvulus",
+  "genitive": "parvuli",
+  "translations": {
+    "en": "little child, infant, young one",
+    "la": "parvulus"
+  },
+  "forms_plural": {
+    "accusative_m": ["parvulos"], 
+    "nominative_m": ["parvuli"],
+    "accusative_n": ["parvula"],
+    "accusative_f": ["parvulas"]
+  },
+  "forms": {
+    "nominative_f": ["parvula"],
+    "nominative_n": ["parvulum"]
   }
 },
   {

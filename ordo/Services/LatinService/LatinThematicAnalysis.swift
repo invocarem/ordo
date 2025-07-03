@@ -26,6 +26,7 @@ public struct PsalmThemeData: Codable {
         let startLine: Int
         let endLine: Int
         let comment: String?
+        let comment2: String?
     }
 }
 
@@ -123,7 +124,8 @@ extension LatinService {
                     description: theme.description,
                     supportingLemmas: theme.lemmas,
                     lineRange: lineRange,
-                    comment: theme.comment ?? "N/A"
+                    comment: theme.comment ?? "N/A",
+                    comment2: theme.comment2 ?? ""
                 )
             )
         }
