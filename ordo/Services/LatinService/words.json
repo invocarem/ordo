@@ -1,5 +1,120 @@
 [
   {
+  "lemma": "festus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "festus",
+  "genitive": "festi",
+  "translations": {
+    "en": "festal, festive, relating to a feast",
+    "la": "festus"
+  },
+  "forms_plural": {
+    "accusative_m": ["festos"],
+    "nominative_m": ["festi"],
+    "accusative_f": ["festas"],
+    "nominative_f": ["festae"],
+    "accusative_n": ["festa"],
+    "nominative_n": ["festa"]
+  },
+  "forms": {
+    "nominative_f": ["festa"],
+    "nominative_n": ["festum"],
+    "accusative_m": ["festum"],
+    "accusative_f": ["festam"],
+    "accusative_n": ["festum"]
+  }
+},
+  {
+  "lemma": "quiesco",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "quiescere",
+  "present": "quiesco",
+  "future": "quiescam",
+  "perfect": "quievi",
+  "supine": "quietum",
+  "forms": {
+    "perfect": ["quievi", "quievisti", "quievit", "quievimus", "quievistis", "quieverunt"],
+    "perfect_passive_m": ["quietus", "quiete", "quietus", "quieti", "quieti", "quieti"],
+    "perfect_passive_f": ["quieta", "quieta", "quieta", "quietae", "quietae", "quietae"],
+    "perfect_passive_n": ["quietum", "quietum", "quietum", "quieta", "quieta", "quieta"]
+  },
+  "translations": {
+    "en": "be still, rest, cease",
+    "la": "quiesco, quiescere"
+  }
+},
+  {
+  "lemma": "tremo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "tremere",
+  "present": "tremo",
+  "future": "tremam",
+  "perfect": "tremui",
+  "supine": "tremitum",
+  "forms": {
+    "perfect": ["tremui", "tremuisti", "tremuit", "tremuimus", "tremuistis", "tremuerunt"],
+    "perfect_passive_m": ["tremitus", "tremite", "tremitus", "tremiti", "tremiti", "tremiti"],
+    "perfect_passive_f": ["tremita", "tremita", "tremita", "tremitae", "tremitae", "tremitae"],
+    "perfect_passive_n": ["tremitum", "tremitum", "tremitum", "tremita", "tremita", "tremita"]
+  },
+  "translations": {
+    "en": "tremble, shake (from fear or cold)",
+    "la": "tremo, tremere"
+  }
+},
+ 
+  {
+  "lemma": "bellum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "bellum",
+  "genitive": "belli",
+  "translations": {
+    "en": "war, conflict",
+    "la": "bellum"
+  }
+},
+  {
+  "lemma": "mirabilis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "mirabilis",
+  "genitive": "mirabilis",
+  "translations": {
+    "en": "wonderful, marvelous",
+    "la": "mirabilis"
+  },
+  "forms": {
+    "adverb": ["mirabiliter"]  
+  }
+},
+  {
+  "lemma": "habitatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "habitatio",
+  "genitive": "habitationis",
+  "translations": {
+    "en": "dwelling, habitation, residence",
+    "la": "habitatio"
+  },
+  "forms_plural": {
+    "genitive_f": ["habitationum"]
+  },
+  "forms": {
+    "dative_f": ["habitationi"],
+    "ablative_f": ["habitatione"],
+    "accusative_f": ["habitationem"]
+  }
+},
+  {
   "lemma": "lingua",
   "part_of_speech": "noun",
   "declension": 1,
@@ -7192,6 +7307,18 @@
     },
     "notes": "Hebrew origin; typically indeclinable in Latin (but some texts use genitive 'Israelis')"
   },
+  {
+  "lemma": "judaea",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "judaea",
+  "genitive": "judaeae",
+  "translations": {
+    "en": "Judah, Judea (the southern kingdom of Israel)",
+    "la": "Judaea"
+  }
+},
   {
     "lemma": "jerusalem",
     "part_of_speech": "noun",

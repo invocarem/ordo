@@ -2104,6 +2104,61 @@
   ]
 },
 
+
+{
+  "psalmNumber": 75,
+  "category": "",
+  "themes": [
+    {
+      "name": "Known → Dwelt",
+      "description": "God’s identity, once proclaimed among Judah, becomes presence—He now dwells among His people in Zion.",
+      "lemmas": ["notus", "deus", "judaea", "israel", "nomen", "pax", "locus", "habitatio", "sion"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Augustine: God is not merely known, but has made a peaceful home among His people. Recognition matures into relationship (Enarr. Ps. 75.1).",
+      "comment2": "The psalm’s journey begins with the movement from public knowledge to relational presence—God is not just confessed, but dwelling."
+    },
+    {
+      "name": "War → Wonder",
+      "description": "Weapons are shattered and war ceases; God's light dawns from the eternal hills.",
+      "lemmas": ["confringo", "arcus", "gladius", "scutum", "bellum", "illumino", "montes", "aeternus"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Augustine: The hills ‘aeterni’ represent divine peace. The God who shatters weapons offers not retaliation but revelation (Enarr. Ps. 75.3–4).",
+      "comment2": "This is the psalm’s second step: violence is answered by light, fear by awe—war gives way to wonder."
+    },
+    {
+      "name": "Pride → Powerlessness",
+      "description": "The arrogant are reduced to sleep and silence by divine rebuke.",
+      "lemmas": ["insipiens", "turbo", "dormio", "somnus", "divitiae", "increpatio", "equus"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Augustine: Sleep here is judgment, not rest. The self-reliant fall powerless at God's rebuke (Enarr. Ps. 75.5–6).",
+      "comment2": "A humbling phase in the psalm's movement—earthly pride is unseated to prepare for true reverence."
+    },
+    {
+      "name": "Wrath → Silence",
+      "description": "God's judgment silences even the earth—wrath gives way to sacred stillness.",
+      "lemmas": ["terribilis", "ira", "judicium", "resisto", "tremo", "quiesco"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Augustine: Divine wrath makes the whole earth tremble and then still—‘quievit terra’ signals reverence and awe (Enarr. Ps. 75.7–8).",
+      "comment2": "This transition shifts from divine anger to cosmic stillness—wrath yields to quiet readiness for worship."
+    },
+    {
+      "name": "Judgment → Festival",
+      "description": "God rises to save the meek, and human thoughts are transformed into festal worship.",
+      "lemmas": ["exsurgo", "judicium", "salvus", "mansuetus", "cogitatio", "confiteor", "reliquiae", "festus", "dies"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "Augustine: The ‘reliquiae cogitationis’ are those thoughts that remain after judgment—redeemed and turned to praise (Enarr. Ps. 75.10).",
+      "comment2": "The psalm’s arc completes here: from judgment to joy. The final word is celebration—worship from those God has saved."
+    }
+  ]
+},
+
+
+
 {
   "psalmNumber": 87,
   "category": "",

@@ -31,14 +31,14 @@ func testPsalm75Lines1and2() {
     
     let testLemmas = [
         ("notus", ["notus"], "known"),
-        ("Judaea", ["judaea"], "Judah"),
+        ("judaea", ["judaea"], "Judah"),
         ("deus", ["deus"], "God"),
-        ("Israel", ["israel"], "Israel"),
+        ("israel", ["israel"], "Israel"),
         ("nomen", ["nomen"], "name"),
         ("pax", ["pace"], "peace"),
         ("locus", ["locus"], "place"),
         ("habitatio", ["habitatio"], "dwelling"),
-        ("Sion", ["sion"], "Zion")
+        ("sion", ["sion"], "Zion")
     ]
     
     if verbose {
@@ -190,7 +190,7 @@ func testPsalm75Lines7and8() {
         ("facio", ["fecisti"], "make"),
         ("judicium", ["judicium"], "judgment"),
         ("terra", ["terra"], "earth"),
-        ("tremio", ["tremuit"], "tremble"),
+        ("tremo", ["tremuit"], "tremble"),
         ("quiesco", ["quievit"], "be still")
     ]
     
@@ -220,7 +220,7 @@ func testPsalm75Lines7and8() {
     XCTAssertEqual(analysis.dictionary["caelum"]?.forms["caelo"], 1, "Should find heaven reference")
     
     // Earth's reaction
-    XCTAssertEqual(analysis.dictionary["tremio"]?.forms["tremuit"], 1, "Should find trembling verb")
+    XCTAssertEqual(analysis.dictionary["tremo"]?.forms["tremuit"], 1, "Should find trembling verb")
     XCTAssertEqual(analysis.dictionary["quiesco"]?.forms["quievit"], 1, "Should find stillness verb")
 }
 
