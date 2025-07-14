@@ -1,5 +1,141 @@
 [
   {
+      "lemma": "dominor",
+      "part_of_speech": "verb",
+      "conjugation": 1,
+      "infinitive": "dominari",
+      "present": "dominor",
+      "perfect": "dominatus",
+      "supine": "dominatum",
+      "translations": {
+        "en": "to rule, to dominate",
+        "la": "dominor, dominari"
+      }
+  },
+  
+  {
+  "lemma": "gratulor",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "gratulari",
+  "present": "gratulor",
+  "future": "gratulabor",
+  "perfect": "gratulatus",
+  "supine": "gratulatum",
+  "translations": {
+    "en": "to congratulate, rejoice with",
+    "la": "gratulor, gratulari, gratulatus"
+  }
+},
+  {
+  "lemma": "gaudeo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "gaudere",
+  "present": "gaudeo",
+  "future": "gaudebo",
+  "perfect": "gavisus", 
+  "supine": null,
+  "forms": {
+    "present": ["gaudeo", "gaudes", "gaudet", "gaudemus", "gaudetis", "gaudent"]
+  },
+  "translations": {
+    "en": "to rejoice, take pleasure",
+    "la": "gaudeo, gaudere, gavisus"
+  }
+},
+  {
+  "lemma": "revereor",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "deponent": true,
+  "infinitive": "revereri",
+  "present": "revereor",
+  "future": "reverebor",
+  "perfect": "reveritus",
+  "supine": "reveritum",
+  "forms": {
+    "present_subjunctive": ["reverear", "revereare", "revereatur", "revereamur", "revereamini", "revereantur"],
+    "present": ["revereor", "revereris", "reveretur", "reveremur", "reveremini", "reverentur"]
+  },
+  "translations": {
+    "en": "to revere, fear, be dismayed",
+    "la": "revereor, revereri, reveritus"
+  }
+},
+  {
+  "lemma": "supergaudeo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "supergaudere",
+  "present": "supergaudeo",
+  "future": "supergaudebo",
+  "perfect": "supergavisus",
+  "forms": {
+    "present_subjunctive": ["supergaudeam", "supergaudeas", "supergaudeat", "supergaudeamus", "supergaudeatis", "supergaudeant"],
+    "present": ["supergaudeo", "supergaudes", "supergaudet", "supergaudemus", "supergaudetis", "supergaudent"],
+    "perfect_active_m": ["supergavisus", "supergavisus", "supergavisus", "supergavisi", "supergavisi", "supergavisi"]
+  },
+  "translations": {
+    "en": "to rejoice exceedingly, exult",
+    "la": "supergaudeo, supergaudere, supergavisus sum"
+  }
+},
+  {
+  "lemma": "pacificus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "pacificus",
+  "genitive": "pacifici",
+   "translations": {
+    "en": "peace-making, peaceful",
+    "la": "pacificus, -a, -um",
+    "biblical_ref": "Matthew 5:9 'beati pacifici' (blessed are the peacemakers)"
+  }
+},
+  {
+    "lemma": "iracundia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "iracundia",
+    "genitive": "iracundiae",
+   
+    "translations": {
+      "en": "anger, wrath, quick-temper",
+      "la": "iracundia, iracundiae"
+    }
+  },
+  {
+    "lemma": "lubricus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "neuter",
+    "nominative": "lubricum",
+    "genitive": "lubrici",
+    "forms": {
+      "nominative_n": ["lubricum"],
+      "accusative_n": ["lubricum"],
+      "vocative_n": ["lubricum"],
+      "ablative_n": ["lubrico"],
+      "nominative_m": ["lubricus"],
+      "nominative_f": ["lubrica"]
+    },
+    "forms_plural": {
+      "nominative_n": ["lubrica"],
+      "accusative_n": ["lubrica"],
+      "genitive_n": ["lubicrorum"],
+      "dative_n": ["lubricis"],
+      "ablative_n": ["lubricis"]
+    },
+    "translations": {
+      "en": "slippery, unstable, treacherous",
+      "la": "lubricus, -a, -um"
+   
+    }
+  },
+  {
   "lemma": "totus",
   "part_of_speech": "adjective",
   "declension": 1,
@@ -7827,6 +7963,14 @@
       "la": "hic, haec, hoc"
     }
     
+  },
+  {
+  "lemma": "euge",
+  "part_of_speech": "interjection",
+  "translations": {
+    "en": "Aha, well done, bravo!",
+    "la": "euge"
+  }
   },
   {
     "lemma": "ita",
@@ -17657,19 +17801,6 @@
       "translations": {
         "en": "dominion, rule",
         "la": "dominatio"
-      }
-    },
-    {
-      "lemma": "dominor",
-      "part_of_speech": "verb",
-      "conjugation": 1,
-      "infinitive": "dominari",
-      "present": "dominor",
-      "perfect": "dominatus",
-      "supine": "dominatum",
-      "translations": {
-        "en": "to rule, to dominate",
-        "la": "dominor, dominari"
       }
     },
     {

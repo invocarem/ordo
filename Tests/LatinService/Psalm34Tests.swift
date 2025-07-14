@@ -131,7 +131,7 @@ class Psalm34Tests: XCTestCase {
             ("angelus", ["angelus"], "angel"),
             ("coarcto", ["coarctans"], "harass"),
             ("tenebrae", ["tenebrae"], "darkness"),
-            ("lubricum", ["lubricum"], "slippery"),
+            ("lubricus", ["lubricum"], "slippery"),
             ("persequor", ["persequens"], "pursue")
         ]
         
@@ -329,6 +329,246 @@ class Psalm34Tests: XCTestCase {
         XCTAssertNotNil(analysis.dictionary["frater"], "Should find 'brother' reference")
         XCTAssertEqual(analysis.dictionary["convenio"]?.forms["convenerunt"], 1, "Should find 'assemble' verb")
     }
+    
+    // MARK: - Test Cases (continued)
+    func testPsalm34Lines17and18() {
+        let line17 = psalm34[16]
+        let line18 = psalm34[17]
+        let combinedText = line17 + " " + line18
+        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 17)
+        
+        let testLemmas = [
+            ("dissipo", ["Dissipati"], "scatter"),
+            ("compungo", ["compuncti"], "prick"),
+            ("tento", ["tentaverunt"], "tempt"),
+            ("subsanno", ["subsannaverunt", "subsannatione"], "mock"),
+            ("frendo", ["frenduerunt"], "gnash"),
+            ("respicio", ["respicies"], "look"),
+            ("malignitas", ["malignitate"], "malice")
+        ]
+        
+        if verbose {
+            print("\nPSALM 34:17-18 ANALYSIS:")
+            print("17: \"\(line17)\"")
+            print("18: \"\(line18)\"")
+            
+            print("\nLEMMA VERIFICATION:")
+            testLemmas.forEach { lemma, forms, translation in
+                let found = analysis.dictionary[lemma] != nil
+                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+            }
+            
+            print("\nTHEMES:")
+            print("1. Enemy Mockery: subsannaverunt (mocked) + frenduerunt (gnashed)")
+            print("2. Divine Intervention: respicies (look) + restitue (restore)")
+        }
+        
+        XCTAssertEqual(analysis.dictionary["subsanno"]?.forms["subsannaverunt"], 1, "Should find 'mock' verb")
+        XCTAssertNotNil(analysis.dictionary["malignitas"], "Should find 'malice' reference")
+    }
+    
+    func testPsalm34Lines19and20() {
+        let line19 = psalm34[18]
+        let line20 = psalm34[19]
+        let combinedText = line19 + " " + line20
+        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 19)
+        
+        let testLemmas = [
+            ("confiteor", ["Confitebor"], "praise"),
+            ("ecclesia", ["ecclesia"], "assembly"),
+            ("laudo", ["laudabo"], "praise"),
+            ("supergaudeo", ["supergaudeant"], "rejoice over"),
+            ("adverso", ["adversantur"], "oppose"),
+            ("odium", ["oderunt"], "hate")
+        ]
+        
+        if verbose {
+            print("\nPSALM 34:19-20 ANALYSIS:")
+            print("19: \"\(line19)\"")
+            print("20: \"\(line20)\"")
+            
+            print("\nLEMMA VERIFICATION:")
+            testLemmas.forEach { lemma, forms, translation in
+                let found = analysis.dictionary[lemma] != nil
+                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+            }
+            
+            print("\nTHEMES:")
+            print("1. Public Praise: Confitebor (I will praise) + laudabo (I will praise)")
+            print("2. Unjust Enemies: adversantur (oppose) + oderunt (hate)")
+        }
+        
+        XCTAssertEqual(analysis.dictionary["confiteor"]?.forms["Confitebor"], 1, "Should find 'praise' verb")
+        XCTAssertEqual(analysis.dictionary["odium"]?.forms["oderunt"], 1, "Should find 'hate' verb")
+    }
+    
+    func testPsalm34Lines21and22() {
+        let line21 = psalm34[20]
+        let line22 = psalm34[21]
+        let combinedText = line21 + " " + line22
+        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 21)
+        
+        let testLemmas = [
+            ("pacificus", ["pacifice"], "peacefully"),
+            ("iracundia", ["iracundia"], "anger"),
+            ("dolus", ["dolos"], "deceit"),
+            ("dilato", ["dilataverunt"], "open wide"),
+            ("euge", ["Euge", "euge"], "aha")
+        ]
+        
+        if verbose {
+            print("\nPSALM 34:21-22 ANALYSIS:")
+            print("21: \"\(line21)\"")
+            print("22: \"\(line22)\"")
+            
+            print("\nLEMMA VERIFICATION:")
+            testLemmas.forEach { lemma, forms, translation in
+                let found = analysis.dictionary[lemma] != nil
+                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+            }
+            
+            print("\nTHEMES:")
+            print("1. Hypocritical Speech: pacifice (peacefully) + iracundia (anger)")
+            print("2. Mocking Gestures: dilataverunt (opened wide) + Euge (Aha)")
+        }
+        
+        XCTAssertNotNil(analysis.dictionary["dolus"], "Should find 'deceit' reference")
+    }
+    
+    func testPsalm34Lines23and24() {
+        let line23 = psalm34[22]
+        let line24 = psalm34[23]
+        let combinedText = line23 + " " + line24
+        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 23)
+        
+        let testLemmas = [
+            ("video", ["Vidisti"], "see"),
+            ("sileo", ["sileas"], "be silent"),
+            ("discedo", ["discedas"], "depart"),
+            ("intendo", ["intende"], "attend"),
+            ("causa", ["causam"], "case")
+        ]
+        
+        if verbose {
+            print("\nPSALM 34:23-24 ANALYSIS:")
+            print("23: \"\(line23)\"")
+            print("24: \"\(line24)\"")
+            
+            print("\nLEMMA VERIFICATION:")
+            testLemmas.forEach { lemma, forms, translation in
+                let found = analysis.dictionary[lemma] != nil
+                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+            }
+            
+            print("\nTHEMES:")
+            print("1. Urgent Petition: ne sileas (do not be silent) + ne discedas (do not depart)")
+            print("2. Judicial Appeal: intende (attend) + causam (case)")
+        }
+        
+        XCTAssertEqual(analysis.dictionary["sileo"]?.forms["sileas"], 1, "Should find 'be silent' verb")
+        XCTAssertNotNil(analysis.dictionary["causa"], "Should find 'case' reference")
+    }
+    
+    func testPsalm34Lines25and26() {
+        let line25 = psalm34[24]
+        let line26 = psalm34[25]
+        let combinedText = line25 + " " + line26
+        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 25)
+        
+        let testLemmas = [
+            ("iustitia", ["iustitiam"], "justice"),
+            ("supergaudeo", ["supergaudeant"], "rejoice over"),
+            ("cor", ["cordibus"], "heart"),
+            ("devoro", ["Devoravimus"], "devour")
+        ]
+        
+        if verbose {
+            print("\nPSALM 34:25-26 ANALYSIS:")
+            print("25: \"\(line25)\"")
+            print("26: \"\(line26)\"")
+            
+            print("\nLEMMA VERIFICATION:")
+            testLemmas.forEach { lemma, forms, translation in
+                let found = analysis.dictionary[lemma] != nil
+                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+            }
+            
+            print("\nTHEMES:")
+            print("1. Righteous Judgment: iustitiam (justice) + iudica (judge)")
+            print("2. Enemy Boasting: cordibus (hearts) + Devoravimus (we have devoured)")
+        }
+        
+        XCTAssertNotNil(analysis.dictionary["iustitia"], "Should find 'justice' reference")
+        XCTAssertEqual(analysis.dictionary["devoro"]?.forms["Devoravimus"], 1, "Should find 'devour' verb")
+    }
+    
+    func testPsalm34Lines27and28() {
+        let line27 = psalm34[26]
+        let line28 = psalm34[27]
+        let combinedText = line27 + " " + line28
+        latinService.configureDebugging(target: "gratulor")
+        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 27)
+        latinService.configureDebugging(target: "")
+        
+        let testLemmas = [
+            ("erubesco", ["Erubescant"], "be ashamed"),
+            ("revereor", ["revereantur"], "be dismayed"),
+            ("gratulor", ["gratulantur"], "rejoice"),
+            ("induo", ["induantur"], "clothe"),
+            ("magnifico", ["magnificetur"], "be magnified")
+        ]
+        
+        if verbose {
+            print("\nPSALM 34:27-28 ANALYSIS:")
+            print("27: \"\(line27)\"")
+            print("28: \"\(line28)\"")
+            
+            print("\nLEMMA VERIFICATION:")
+            testLemmas.forEach { lemma, forms, translation in
+                let found = analysis.dictionary[lemma] != nil
+                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+            }
+            
+            print("\nTHEMES:")
+            print("1. Enemy Shame: Erubescant (be ashamed) + revereantur (be dismayed)")
+            print("2. Righteous Joy: exsultent (rejoice) + magnificetur (be magnified)")
+        }
+        
+        XCTAssertEqual(analysis.dictionary["erubesco"]?.forms["erubescant"], 1, "Should find 'be ashamed' verb")
+        XCTAssertEqual(analysis.dictionary["magnifico"]?.forms["magnificetur"], 1, "Should find 'be magnified' verb")
+    }
+    
+    func testPsalm34Line29() {
+        let line29 = psalm34[28]
+        let analysis = latinService.analyzePsalm(identity, text: line29, startingLineNumber: 29)
+        
+        let testLemmas = [
+            ("lingua", ["lingua"], "tongue"),
+            ("meditor", ["meditabitur"], "meditate"),
+            ("iustitia", ["iustitiam"], "justice"),
+            ("laus", ["laudem"], "praise")
+        ]
+        
+        if verbose {
+            print("\nPSALM 34:29 ANALYSIS:")
+            print("29: \"\(line29)\"")
+            
+            print("\nLEMMA VERIFICATION:")
+            testLemmas.forEach { lemma, forms, translation in
+                let found = analysis.dictionary[lemma] != nil
+                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
+            }
+            
+            print("\nTHEMES:")
+            print("1. Continual Praise: meditabitur (will meditate) + laudem (praise)")
+            print("2. Daily Devotion: tota die (all day) + iustitiam (justice)")
+        }
+        
+        XCTAssertEqual(analysis.dictionary["meditor"]?.forms["meditabitur"], 1, "Should find 'meditate' verb")
+        XCTAssertNotNil(analysis.dictionary["laus"], "Should find 'praise' reference")
+    }
+
+ 
     
     // MARK: - Thematic Tests
     func testDivineJusticeTheme() {
