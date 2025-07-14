@@ -1,4 +1,25 @@
 [
+  {
+  "lemma": "totus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "tota",
+  "genitive": "totius",
+  "forms": {
+    "nominative_f": ["tota"],
+    "accusative_f": ["totam"],
+    "ablative_f": ["tota"],
+    "nominative_n": ["totum"],
+    "accusative_n": ["totum"],
+    "nominative_plural_n": ["tota"],
+    "accusative_plural_n": ["tota"]
+  },
+  "translations": {
+    "en": "whole, entire, all",
+    "la": "totus, -a, -um"
+  }
+},
     {
       "lemma": "sileo",
       "part_of_speech": "verb",
