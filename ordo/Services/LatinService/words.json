@@ -1,4 +1,397 @@
 [
+    {
+      "lemma": "sileo",
+      "part_of_speech": "verb",
+      "conjugation": 2,
+      "infinitive": "silere",
+      "present": "sileo",
+      "future": "silebo",
+      "perfect": "silui",
+      "supine": "silitum",
+      "forms": {
+        "present": ["sileo", "siles", "silet", "silemus", "siletis", "silent"],
+        "present_subjunctive": ["sileam", "sileas", "sileat", "sileamus", "sileatis", "sileant"],
+        "imperfect": ["silebam", "silebas", "silebat", "silebamus", "silebatis", "silebant"],
+        "future": ["silebo", "silebis", "silebit", "silebimus", "silebitis", "silebunt"],
+        "perfect": ["silui", "siluisti", "siluit", "siluimus", "siluistis", "siluerunt"],
+        "perfect_passive_m": ["silitus", "silite", "silitus", "siliti", "siliti", "siliti"],
+        "perfect_passive_f": ["silita", "silita", "silita", "silitae", "silitae", "silitae"],
+        "perfect_passive_n": ["silitum", "silitum", "silitum", "silita", "silita", "silita"]
+      },
+      "translations": {
+        "en": "to be silent, keep quiet",
+        "la": "sileo, silere, silui, silitum"
+      }
+    },
+  {
+  "lemma": "arma",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "arma",
+  "genitive": "armorum",
+  "forms": {
+    "nominative": ["arma"],
+    "vocative": ["arma"],
+    "accusative": ["arma"],
+    "genitive": ["armorum"],
+    "dative": ["armis"],
+    "ablative": ["armis"]
+  },
+  "translations": {
+    "en": "weapons, arms, armor",
+    "la": "arma, armorum",
+    "notes": "Always plural in classical Latin (no singular form)"
+    
+  }
+},
+  {
+  "lemma": "contristo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "contristare",
+  "present": "contristo",
+  "future": "contristabo",
+  "perfect": "contristavi",
+  "supine": "contristatum",
+  "forms": {
+    "perfect_participle": ["contristatus", "contristata", "contristatum"],
+    "present": ["contristo", "contristas", "contristat", "contristamus", "contristatis", "contristant"],
+    "perfect": ["contristavi", "contristavisti", "contristavit", "contristavimus", "contristavistis", "contristaverunt"]
+  },
+  "translations": {
+    "en": "to sadden, grieve, afflict",
+    "la": "contristo, contristare, contristavi, contristatum",
+    "biblical_usage": "Common in Vulgate (e.g., Ephesians 4:30)"
+  }
+},
+  {
+  "lemma": "lugeo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "lugere",
+  "present": "lugeo",
+  "future": "lugebo",
+  "perfect": "luxi",
+  "supine": "luctum",
+  "forms": {
+    "present_participle": ["lugens", "lugentis"],
+    "present": ["lugeo", "luges", "luget", "lugemus", "lugetis", "lugent"],
+    "perfect": ["luxi", "luxisti", "luxit", "luximus", "luxistis", "luxerunt"]
+  },
+  "translations": {
+    "en": "to mourn, grieve, lament",
+    "la": "lugeo, lugere, luxi, luctum"
+  }
+},
+  {
+  "lemma": "complaceo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "complacere",
+  "present": "complaceo",
+  "future": "complacebo",
+  "perfect": "complacui",
+  "supine": "complacitum",
+  "forms": {
+    "imperfect": ["complacebam", "complacebas", "complacebat", "complacebamus", "complacebatis", "complacebant"],
+    "present": ["complaceo", "complaces", "complacet", "complacemus", "complacetis", "complacement"],
+    "perfect": ["complacui", "complacuis", "complacuit", "complacumus", "complacustis", "complacuerunt"]
+  },
+  "translations": {
+    "en": "to please greatly, satisfy (with dative)",
+    "la": "complaceo, complacere, complacui, complacitum"
+  }
+},
+  {
+  "lemma": "ieiunium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "ieiunium",
+  "genitive": "ieiunii",
+  "translations": {
+    "en": "fasting, hunger, famine (ecclesiastical)",
+    "la": "ieiunium, ieiunii"
+   }
+},
+  {
+  "lemma": "sterilitas",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "sterilitas",
+  "genitive": "sterilitatis",
+   "translations": {
+    "en": "barrenness, sterility, bereavement",
+    "la": "sterilitas, sterilitatis",
+    "note": "In Biblical context, often used metaphorically for bereavement (e.g., Ruth 1:21)"
+  }
+},
+  {
+  "lemma": "cilicium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "cilicium",
+  "genitive": "cilicii",
+  "forms": {
+    "accusative": ["cilicium"],
+    "genitive": ["cilicii"],
+    "dative": ["cilicio"],
+    "ablative": ["cilicio"],
+    "vocative": ["cilicium"]
+  },
+  "forms_plural": {
+    "nominative": ["cilicia"],
+    "genitive": ["ciliciorum"],
+    "dative": ["ciliciis"],
+    "ablative": ["ciliciis"]
+  },
+  "translations": {
+    "en": "sackcloth, hairshirt (worn in mourning/penance)",
+    "la": "cilicium, cilicii",
+    "biblical_ref": "Matthew 11:21, Jonah 3:6"
+  }
+},
+  {
+  "lemma": "aries",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "aries",
+  "genitive": "arietis",
+
+  "translations": {
+    "en": "ram, battering ram",
+    "la": "aries, arietis"
+  }
+},
+{
+  "lemma": "agnus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "agnus",
+  "genitive": "agni",
+ 
+  "translations": {
+    "en": "lamb",
+    "la": "agnus, agni"
+  }
+},
+
+  {
+  "lemma": "aaron",
+  "part_of_speech": "noun",
+  "declension": 0,
+  "gender": "masculine",
+  "nominative": "aaron",
+  "translations": {
+    "en": "Aaron (brother of Moses)",
+    "la": "Aaron"
+  }
+},
+  {
+  "lemma": "palpo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "palpare",
+  "present": "palpo",
+  "future": "palpabo",
+  "perfect": "palpavi",
+  "supine": "palpatum",
+  "forms": {
+    "present": ["palpo", "palpas", "palpat", "palpamus", "palpatis", "palpant"],
+    "future": ["palpabo", "palpabis", "palpabit", "palpabimus", "palpabitis", "palpabunt"],
+    "perfect": ["palpavi", "palpavisti", "palpavit", "palpavimus", "palpavistis", "palpaverunt"],
+    "perfect_passive_m": ["palpatus", "palpate", "palpatus", "palpati", "palpati", "palpati"],
+    "perfect_passive_f": ["palpata", "palpata", "palpata", "palpatae", "palpatae", "palpatae"],
+    "perfect_passive_n": ["palpatum", "palpatum", "palpatum", "palpata", "palpata", "palpata"]
+  },
+  "translations": {
+    "en": "to touch gently, feel, stroke",
+    "la": "palpo, palpare, palpavi, palpatum"
+  }
+},
+{
+  "lemma": "guttur",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "guttur",
+  "genitive": "gutturis",
+ 
+  "translations": {
+    "en": "throat, gullet",
+    "la": "guttur"
+  }
+},
+
+  {
+  "lemma": "odoror",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "odorari",
+  "present": "odoror",
+  "future": "odorabor",
+  "perfect": "odoratus sum",
+  "supine": "odoratum",
+  "forms": {
+    "present": ["odoror", "odoraris", "odoratur", "odoramur", "odoramini", "odorantur"],
+    "future": ["odorabor", "odoraberis", "odorabitur", "odorabimur", "odorabimini", "odorabuntur"],
+    "perfect_active_m": ["odoratus sum", "odoratus es", "odoratus est", "odorati sumus", "odorati estis", "odorati sunt"],
+    "perfect_active_f": ["odorata sum", "odorata es", "odorata est", "odoratae sumus", "odoratae estis", "odoratae sunt"],
+    "future_3rd_pl": ["odorabunt"]
+  },
+  "translations": {
+    "en": "to smell, scent",
+    "la": "odoror, odorari, odoratus sum"
+  }
+},
+  {
+  "lemma": "naris",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "naris",
+  "genitive": "naris",
+  "translations": {
+    "en": "nostril, nose",
+    "la": "naris"
+  }
+},
+  {
+  "lemma": "jordanis",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "jordanis",
+  "genitive": "jordanis",
+  "translations": {
+    "en": "Jordan (the river)",
+    "la": "jordanis"
+  }
+},
+  {
+  "lemma": "fugio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "fugere",
+  "present": "fugio",
+  "future": "fugiam",
+  "perfect": "fugi",
+  "supine": "fugitum",
+  "forms": {
+    "present": ["fugio", "fugis", "fugit", "fugimus", "fugitis", "fugiunt"],
+    "perfect": ["fugi", "fugisti", "fugit", "fugimus", "fugistis", "fugerunt"],
+    "perfect_passive_m": ["fugitus", "fugite", "fugitus", "fugiti", "fugiti", "fugiti"],
+    "perfect_passive_f": ["fugita", "fugita", "fugita", "fugitae", "fugitae", "fugitae"],
+    "perfect_passive_n": ["fugitum", "fugitum", "fugitum", "fugita", "fugita", "fugita"]
+  },
+  "translations": {
+    "en": "to flee, escape, avoid",
+    "la": "fugio, fugere"
+  }
+},
+  {
+  "lemma": "barbarus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine", 
+  "nominative": "barbarus",
+  "genitive": "barbari",
+  "forms": {
+    "ablative_m": ["barbaro"],
+    "ablative_n": ["barbaro"],
+    "nominative_f": ["barbara"],
+    "accusative_f": ["barbaram"],
+    "nominative_n": ["barbarum"]
+  },
+  "translations": {
+    "en": "barbarian, foreign, uncivilized (often pejorative)",
+    "la": "barbarus, -a, -um"
+  }
+},
+  {
+    "lemma": "stagnum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "stagnum",
+    "genitive": "stagni",
+    "forms": {
+      "nominative": ["stagnum"],
+      "accusative": ["stagnum"]
+    },
+    "forms_plural": {
+      "nominative": ["stagna"],
+      "accusative": ["stagna"]
+    },
+    "translations": {
+      "en": "pool",
+      "la": "stagnum"
+    }
+  },
+  {
+    "lemma": "rupes",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "rupes",
+    "genitive": "rupis",
+    "translations": {
+      "en": "cliff",
+      "la": "rupes"
+    }
+  }
+,
+  {
+  "lemma": "collis",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "collis",
+  "genitive": "collis",
+  "forms": {
+    "nominative_plural": ["colles"]
+  },
+  "translations": {
+    "en": "hill, elevation",
+    "la": "collis"
+  }
+},
+
+ {
+    "lemma": "jerusalem",
+    "part_of_speech": "noun",
+    "declension": 0,
+    "gender": "feminine",
+    "nominative": "jerusalem",
+   
+    "translations": {
+      "en": "Jerusalem",
+      "la": "Jerusalem"
+    }
+   
+  },
+  
+ 
+  {
+  "lemma": "aegyptus",
+  "part_of_speech": "noun",
+  "declension": 0,
+  "gender": "feminine",
+  "nominative": "aegyptus",
+
+  "translations": {
+    "en": "Egypt",
+    "la": "aegyptus"
+  },
+  "forms": {
+    "ablative_f": ["aegypto"]  
+  }
+},
   {
   "lemma": "festus",
   "part_of_speech": "adjective",
@@ -5274,6 +5667,18 @@
     "la": "justitia, -ae"
   }
 },
+  {
+  "lemma": "iustitia",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "iustitia",
+  "accusative": "iustitiam",
+  "translations": {
+    "en": "justice, righteousness",
+    "la": "iustitia, -ae"
+  }
+},
 {
   "lemma": "intendo",
   "part_of_speech": "verb",
@@ -7319,20 +7724,7 @@
     "la": "Judaea"
   }
 },
-  {
-    "lemma": "jerusalem",
-    "part_of_speech": "noun",
-    "declension": 0,
-    "gender": "feminine",
-    "nominative": "jerusalem",
-   
-    "translations": {
-      "en": "Jerusalem",
-      "la": "Jerusalem"
-    }
-   
-  },
-  {
+ {
     "lemma": "evello",
     "part_of_speech": "verb",
     "conjugation": 3,
@@ -8583,6 +8975,8 @@
     "part_of_speech": "verb",
     "conjugation": 1,
     "infinitive": "exsultare",
+    "present": "exsulto",
+    "future": "exsultabo", 
     "perfect": "exsultavi",
     "supine": "exsultatum",
     "translations": {
@@ -8596,7 +8990,8 @@
       "perfect": ["exsultavi", "exsultavisti", "exsultavit", "exsultavimus", "exsultavistis", "exsultaverunt"],
       "pluperfect": ["exsultaveram", "exsultaveras", "exsultaverat", "exsultaveramus", "exsultaveratis", "exsultaverant"],
       "subjunctive_present": ["exsultem", "exsultes", "exsultet", "exsultemus", "exsultetis", "exsultent"],
-      "subjunctive_imperfect": ["exsultarem", "exsultares", "exsultaret", "exsultaremus", "exsultaretis", "exsultarent"]
+      "subjunctive_imperfect": ["exsultarem", "exsultares", "exsultaret", "exsultaremus", "exsultaretis", "exsultarent"],
+      "perfect_2pl_eccl": ["exsultastis"]
     }
   },
   {
@@ -10877,7 +11272,45 @@
             "la": "judico"
         }
     },
-
+    {
+      "lemma": "iudico",
+      "part_of_speech": "verb",
+      "conjugation": 1,
+      "infinitive": "iudicare",
+      "present": "iudico",
+      "future": "iudicabo",
+      "perfect": "iudicavi",
+      "supine": "iudicatum",
+      "forms": {
+        "present": ["iudico", "iudicas", "iudicat", "iudicamus", "iudicatis", "iudicant"],
+        "perfect": ["iudicavi", "iudicavisti", "iudicavit", "iudicavimus", "iudicavistis", "iudicaverunt"]
+      },
+      "translations": {
+        "en": "to judge, decide, condemn",
+        "la": "iudico, iudicare, iudicavi, iudicatum",
+        "biblical_ref": "Matthew 7:1 ('Nolite iudicare')"
+      }
+    },
+    {
+      "lemma": "noceo",
+      "part_of_speech": "verb",
+      "conjugation": 2,
+      "infinitive": "nocere",
+      "present": "noceo",
+      "future": "nocebo",
+      "perfect": "nocui",
+      "supine": "nocitum",
+      "forms": {
+        "present_participle": ["nocens", "nocentis"],
+        "present": ["noceo", "noces", "nocet", "nocemus", "nocetis", "nocent"],
+        "perfect": ["nocui", "nocuisti", "nocuit", "nocuimus", "nocuistis", "nocuerunt"]
+      },
+      "translations": {
+        "en": "to harm, injure",
+        "la": "noceo, nocere, nocui, nocitum"
+      }
+    },
+ 
       {
         "lemma": "principium",
         "part_of_speech": "noun",
@@ -12976,13 +13409,16 @@
       "part_of_speech": "verb",
       "conjugation": 3,
       "infinitive": "loqui",
+      "present": "loquor",
       "perfect": "locutus",
+      "future": "loquar",
       "supine": "locutum",
       "translations": {
         "en": "to speak, talk",
         "la": "loquor"
       },
       "forms": {
+        "future": ["loquar", "loquēris", "loquētur", "loquēmur", "loquēmini", "loquentur"],
         "present_passive_indicative": ["loquor", "loqueris", "loquitur", "loquimur", "loquimini", "loquuntur"],
         "imperfect": ["loquebar", "loquebaris", "loquebatur", "loquebamur", "loquebamini", "loquebantur"],
         "imperfect_passive_subjunctive": [

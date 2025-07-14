@@ -20,7 +20,23 @@ public struct ThemeListView: View {
         .padding(.top, 12)
     }
 }
+public struct LemmaView: View {
+    let lemma: String
+    let translation: String?
 
+    public var body: some View {
+        VStack(spacing: 4) {
+            Text(lemma)
+                .lemmaTextStyle()
+
+            if let translation = translation {
+                Text(translation)
+                    .lemmaTranslationStyle()
+            }
+        }
+        .lemmaContainerStyle()
+    }
+}
 private struct ThemeCardView: View {
     let theme: PsalmAnalysisResult.Theme
     let analysis: PsalmAnalysisResult
@@ -88,7 +104,11 @@ private struct LemmaListView: View {
             FlowLayout(spacing: 8) {
                 ForEach(lemmas, id: \.self) { lemma in
                     if let lemmaInfo = analysis.dictionary[lemma] {
-                        LemmaView(lemma: lemma, translation: lemmaInfo.translation)
+                        //LemmaView(lemma: lemma, translation: lemmaInfo.translation)
+                        NavigationLink(destination: WordDetailView(lemma: lemma, lemmaInfo: lemmaInfo)) {
+                                                    LemmaView(lemma: lemma, translation: lemmaInfo.translation)
+                                                }
+                                                .buttonStyle(PlainButtonStyle())
                     }
                 }
             }
@@ -96,23 +116,7 @@ private struct LemmaListView: View {
     }
 }
 
-private struct LemmaView: View {
-    let lemma: String
-    let translation: String?
-    
-    var body: some View {
-        VStack(spacing: 4) {
-            Text(lemma)
-                .lemmaTextStyle()
-            
-            if let translation = translation {
-                Text(translation)
-                    .lemmaTranslationStyle()
-            }
-        }
-        .lemmaContainerStyle()
-    }
-}
+
 
 // MARK: - View Modifiers
 private extension Text {

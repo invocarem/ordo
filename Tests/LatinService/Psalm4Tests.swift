@@ -18,14 +18,14 @@ class Psalm4Tests: XCTestCase {
     let id = PsalmIdentity(number: 4, category: nil)
 
     private let psalm4 = [
-        "Cum invocarem exaudivit me Deus justitiae meae; in tribulatione dilatasti mihi.",
-        "Miserere mei, et exaudi orationem meam.",
-        "Filii hominum, usquequo gravi corde? ut quid diligitis vanitatem, et quaeritis mendacium?",
+        "Cum invocarem, exaudivit me Deus iustitiae meae; in tribulatione dilatasti mihi.",
+        "Miserere mei, Domine, et exaudi orationem meam.",
+        "Filii hominum, usquequo gravi corde? Ut quid diligitis vanitatem et quaeritis mendacium?",
         "Et scitote quoniam mirificavit Dominus sanctum suum; Dominus exaudiet me cum clamavero ad eum.",
         "Irascimini, et nolite peccare; quae dicitis in cordibus vestris, in cubilibus vestris compungimini.",
-        "Sacrificate sacrificium justitiae, et sperate in Domino.",
+        "Sacrificate sacrificium iustitiae, et sperate in Domino.",
         "Multi dicunt: Quis ostendit nobis bona? Signatum est super nos lumen vultus tui, Domine.",
-        "Dedisti laetitiam in corde meo, a tempore frumenti et vini sui multiplicati sunt.",
+        "Dedisti laetitiam in corde meo, a tempore frumenti et vini et olei sui multiplicati sunt.",
         "In pace in idipsum dormiam et requiescam;",
         "Quoniam tu, Domine, singulariter in spe constituisti me."
     ]

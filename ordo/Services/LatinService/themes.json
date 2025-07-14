@@ -1715,6 +1715,140 @@
   }
 },
 
+{
+  "psalmNumber": 34,
+  "category": "",
+  "themes": [
+    {
+      "name": "Plea → Divine Intervention",
+      "description": "The psalmist cries for God to judge and fight on his behalf against unjust enemies.",
+      "lemmas": ["iudico", "expugno", "arma", "scutum", "exsurgo"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Opening plea sets a legal and martial tone—justice is asked not by self-retaliation but divine advocacy."
+    },
+    {
+      "name": "Pursuit → Salvation",
+      "description": "God is invoked to halt the persecutors and declare His saving presence.",
+      "lemmas": ["effundo", "framea", "persequor", "salus"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Augustine: God’s voice to the soul—'I am your salvation'—is internal assurance in external conflict (Enarr. Ps. 34.3)."
+    },
+    {
+      "name": "Chaff → Angelic Chase",
+      "description": "The wicked are driven like dust and pursued by God’s angel.",
+      "lemmas": ["pulvis", "ventus", "angelus", "coarcto", "persequor"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Spiritual warfare intensifies; divine justice is swift and fearful through angelic agency."
+    },
+    {
+      "name": "Trap → Reversal",
+      "description": "Enemies set traps, but fall into them themselves.",
+      "lemmas": ["laqueus", "captio", "cado", "supervacue", "exprobro"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "The psalmist invokes poetic justice: their hidden snares become their own downfall."
+    },
+    {
+      "name": "Fear → Joyful Praise",
+      "description": "The soul rejoices in God’s salvation, and all the bones exult.",
+      "lemmas": ["exsulto", "delector", "salutaris", "os", "similis"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "Even the bones—symbol of the inner self—praise the incomparable God who saves."
+    },
+    {
+      "name": "Powerlessness → Deliverance",
+      "description": "God rescues the poor from the powerful and false witnesses.",
+      "lemmas": ["eripio", "inops", "fortis", "egenus", "testis"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "Social and legal vulnerability becomes the arena for divine vindication."
+    },
+    {
+      "name": "Sackcloth → Bosom",
+      "description": "From outward humility and fasting to inward, returning prayer",
+      "lemmas": ["cilicium", "jejunium", "converto", "sinus"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "Augustine reads 'cilicium' as the flesh Christ assumed in humility. The psalmist fasts ('jejunium') and his prayer returns 'into his bosom' ('sinus') — a gesture of interior transformation and divine charity. It prefigures Christ’s suffering intercession for others (Enarr. Ps. 34.13–14; Phil 2:7).",
+      "comment2": "The psalmist fasted and mourned for others as for a brother, clothed in sackcloth (cilicium). Yet they returned his love with scorn. Augustine sees this as Christ-like charity — unrequited and redemptive. The turning of prayer into the bosom ('sinus') reflects inward forgiveness and self-offering (Enarr. Ps. 34.13–14; Phil 2:7)."
+
+    },
+
+    
+    {
+      "name": "Friendship → Scourging",
+      "description": "From deep empathy and mourning to attack and mockery.",
+      "lemmas": ["frater", "lugeo", "contristo", "convenerunt", "subsanno"],
+      "startLine": 15,
+      "endLine": 16,
+      "comment": "Augustine: 'They gathered against me unrepentant'—a contrast between interior love and exterior malice (Enarr. Ps. 34.15)."
+    },
+
+    {
+  "name": "Scorn → Supplication",
+  "description": "From violent ridicule and gnashing hatred to a desperate plea for rescue",
+  "lemmas": ["subsanno", "frendeo", "dissipo", "restituo", "leo", "unicus"],
+  "startLine": 17,
+  "endLine": 18,
+  "comment": "Augustine sees the subsannation and frendentes dentes as the height of scorn toward Christ or the righteous soul. In response, the psalmist turns fully to God—'When will You look?'—begging rescue from a lion's mouth. 'Unicam meam' reflects the singular soul's worth, or even Christ’s unique life (Enarr. Ps. 34.17–18)."
+},
+    {
+      "name": "Politeness → Treachery",
+      "description": "From outward gestures of peace to hidden malice and deceit",
+      "lemmas": ["supergaudeo", "inique", "annuo", "pacifice", "dolus"],
+      "startLine": 19,
+      "endLine": 20,
+      "comment": "Augustine notes the enemy’s 'peaceful speech' hides an 'earth-born rage' (iracundia terrae), a hypocrisy of false friendship. The winking eye (annuunt oculis) signals betrayal, like Judas with a kiss. This duplicity wounds more than open enemies (Enarr. Ps. 34.19–20)."
+    },
+    
+    {
+      "name": "Peace → Mockery",
+      "description": "From false words of peace to open gloating over suffering",
+      "lemmas": ["pacifice", "iracundia", "dolus", "dilato", "euge", "oculus"],
+      "startLine": 21,
+      "endLine": 22,
+      "comment": "Augustine sees in these verses the wicked smiling with their lips while raging in their hearts. 'Euge, euge' is their cry of triumph, mocking the just as they fall. This mirrors the Passion: Christ, betrayed by feigned friendship, faced open derision (Enarr. Ps. 34.21–22; Luke 22:48)."
+    },
+
+    {
+      "name": "Injustice → Divine Advocacy",
+      "description": "From unjust persecution to appeal for God’s righteous intervention",
+      "lemmas": ["exsurgo", "intende", "iudicium", "causa", "iustitia", "supergaudeo"],
+      "startLine": 23,
+      "endLine": 24,
+      "comment": "Augustine reads this as the soul calling upon God not for vengeance but for justice rooted in divine truth. The psalmist entrusts his cause ('causam meam') to God's tribunal, resisting the pride of self-defense (Enarr. Ps. 34.23–24)."
+    },
+    {
+      "name": "Boasting → Shame",
+      "description": "From hidden gloating over downfall to public shame and reversal",
+      "lemmas": ["euge", "anima", "devoro", "erubesco", "confusio", "magnificor"],
+      "startLine": 25,
+      "endLine": 26,
+      "comment": "Augustine interprets the enemy’s gloating ('devoravimus eum') as pride in persecuting the righteous—yet this triumph is hollow. The psalmist calls for their undoing: shame and confusion will clothe those who exalted themselves (Enarr. Ps. 34.25–26)."
+    },
+    {
+      "name": "Persecution → Praise",
+      "description": "From suffering among enemies to shared joy among the just",
+      "lemmas": ["exsulto", "laetor", "iustitia", "magnificetur", "lingua", "laudo"],
+      "startLine": 27,
+      "endLine": 28,
+      "comment": "Augustine sees a final turn: not only is the soul rescued, but the just are called into praise. Peace returns through God’s justice, and the psalmist’s voice—once silenced by sorrow—now proclaims truth daily (Enarr. Ps. 34.27–28)."
+    },
+    {
+      "name": "Praise → All Day Long",
+      "description": "From voiceless affliction to all-day meditation on God's justice",
+      "lemmas": ["lingua", "meditor", "iustitia", "laudo", "totus"],
+      "startLine": 29,
+      "endLine": 29,
+      "comment": "Augustine sees 'tota die' as the seal of deliverance: the tongue, once silenced by enemies, now rejoices without interruption. Meditation becomes praise; suffering gives way to full-day worship (Enarr. Ps. 34.29)."
+    }
+
+  ]
+},
 
 
 {
@@ -2493,6 +2627,105 @@
     }
   ]
 },
+
+{
+  "psalmNumber": 113,
+  "category": "",
+  "themes": [
+    {
+      "name": "Exodus → Sanctification",
+      "description": "From departure out of Egypt to being made holy and empowered by God.",
+      "lemmas": ["exitus", "aegyptus", "jacob", "sanctificatio", "potestas"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The redemptive journey begins with God's deliverance and culminates in Israel becoming His sanctified people."
+    },
+    {
+      "name": "Sea → Leaping Hills",
+      "description": "From receding waters to mountains dancing with life",
+      "lemmas": ["fugio", "converto", "exsulto", "aries", "agnus"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Augustine sees grace moving nature: the waters flee, and the hills leap. Rams represent the strong in faith; lambs, the humble. All creation responds to God’s presence in a joyful transformation (Enarr. Ps. 113.4–6)."
+    },
+
+     {
+      "name": "Terror → Submission",
+      "description": "From rhetorical awe to acknowledgment of nature’s obedience to God.",
+      "lemmas": ["fugio", "converto", "mons", "exsulto"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Questions provoke reflection on why nature trembled—pointing to God as the true cause of submission."
+    },
+    {
+  "name": "Rock → Water",
+  "description": "From immovable rock to life-giving waters by the power of Christ",
+  "lemmas": ["petra", "rupes", "stagnum", "fons"],
+  "startLine": 7,
+  "endLine": 8,
+  "comment": "Augustine sees standing water and springing wells. Petra and rupes (flint stone) as Christ, from whom living waters flow. The stagnum (pool) and fontes (springs) represent the grace Christ bestows — as fulfilled in John 7:37–38. The transformation of rock into water is the mystery of Christ’s provision (Enarr. Ps. 113.8; 1 Cor 10:4; Jn 7:37)."
+},
+
+   {
+      "name": "Glory → Defense",
+      "description": "From divine glorification to defense of God's reputation among the nations.",
+      "lemmas": ["nomen", "gloria", "misericordia", "veritas", "gens"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "Glory is due to God's name alone; His mercy and truth vindicate Him before skeptical nations."
+    },
+    {
+      "name": "Creator → Contrast",
+      "description": "From God's sovereignty in heaven to the lifelessness of idols on earth.",
+      "lemmas": ["caelum", "facio", "simulacrum", "argentum", "aurum", "manus"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "God acts freely in heaven while idols, made by human hands, are mute and impotent."
+    },
+    {
+      "name": "Senses → Absence",
+      "description": "From visible senses in idols to complete spiritual absence.",
+      "lemmas": ["os", "oculus", "auris", "naris", "loquor", "video", "audio", "odoror"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "Though shaped with sensory organs, idols lack all life and power—mockery of divine perception."
+    },
+    {
+      "name": "Impotence → Imitation",
+      "description": "From motionless idols to the spiritual deadness of their makers.",
+      "lemmas": ["manus", "palpo", "pes", "ambulo", "guttur", "similis", "confido"],
+      "startLine": 15,
+      "endLine": 16,
+      "comment": "The lifelessness of idols reflects back on those who trust them: a descent into spiritual sterility."
+    },
+    {
+      "name": "Hope → Help",
+      "description": "From trusting in God to receiving His aid and protection.",
+      "lemmas": ["domus", "spero", "adjutor", "protector", "israel", "aaron"],
+      "startLine": 17,
+      "endLine": 18,
+      "comment": "The pattern of trust followed by divine response solidifies the covenantal relationship."
+    },
+    {
+      "name": "Remembrance → Blessing",
+      "description": "From God’s memory of His people to His active blessing upon all.",
+      "lemmas": ["memor", "benedico", "timentes", "pusillus", "maior"],
+      "startLine": 19,
+      "endLine": 21,
+      "comment": "God’s memory is not passive—it initiates blessing across generations and social ranks."
+    },
+    {
+      "name": "Expansion → Praise",
+      "description": "From increase in family and land to praise among the living.",
+      "lemmas": ["adjicio", "filius", "terra", "infernum", "benedicimus", "vivimus"],
+      "startLine": 22,
+      "endLine": 26,
+      "comment": "The psalm closes in a crescendo of praise—from earthly blessings to the eternal praise of the living."
+    }
+  ]
+},
+
+
 
 
     {

@@ -103,16 +103,28 @@ struct LinePairAnalysisView: View {
 
                                 
                             }
-                            
-                            ForEach(analysis.orderedLemmas, id: \.self) { lemma in
-                                if let info = analysis.dictionary[lemma] {
-                                    NavigationLink(destination: WordDetailView(lemma: lemma, lemmaInfo: info)) {
-                                        WordRow(lemma: lemma, info: info)
+                            Section(header: Text("All Lemmas in Range")
+                                        .font(.headline)
+                                        .padding(.bottom, 4)) {
+
+                                FlowLayout(spacing: 8) {
+                                    ForEach(analysis.orderedLemmas, id: \.self) { lemma in
+                                        if let info = analysis.dictionary[lemma] {
+                                            NavigationLink(destination: WordDetailView(lemma: lemma, lemmaInfo: info)) {
+                                                LemmaView(lemma: lemma, translation: info.translation)
+                                            }
+                                            .buttonStyle(PlainButtonStyle())
+                                        }
                                     }
                                 }
+                                .padding()
+                                .background(
+                                    RoundedRectangle(cornerRadius: 12)
+                                        .fill(Color(.systemBackground))
+                                        .shadow(color: Color.black.opacity(0.05), radius: 4, x: 0, y: 2)
+                                )
                             }
-                                        
-                                       
+           
                         }
                         
                         
@@ -225,6 +237,38 @@ struct DebugModifier: ViewModifier {
                     .padding(),
                 alignment: .topLeading
             )
+    }
+}
+
+
+private struct LemmaCardView: View {
+    let lemma: String
+    let info: PsalmAnalysisResult.LemmaInfo
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 4) {
+            Text(lemma)
+                .font(.headline)
+                .foregroundColor(.accentColor)
+
+            if let translation = info.translation {
+                Text(translation)
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+            }
+
+            if info.count > 1 {
+                Text("Occurrences: \(info.count)")
+                    .font(.caption)
+                    .foregroundColor(.gray)
+            }
+        }
+        .padding(.vertical, 6)
+        .padding(.horizontal)
+        .background(
+            RoundedRectangle(cornerRadius: 10)
+                .fill(Color.accentColor.opacity(0.05))
+        )
     }
 }
 

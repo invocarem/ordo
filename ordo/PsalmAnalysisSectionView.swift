@@ -139,12 +139,24 @@ struct PsalmAnalysisSelectionView: View {
                 .padding(.horizontal)
                 .transition(.opacity.combined(with: .move(edge: .bottom)))
                 .id(selectedPsalm.id) // This forces SwiftUI to recreate the view when the ID changes
+            } else {
+                Text("Select a Psalm to begin analysis.")
+                    .font(.subheadline)
+                    .foregroundColor(.secondary)
+                    .padding()
             }
         }
    
     
+    
     private var navigationTitle: String {
-        hourKey != nil ? "\(hourKey!.capitalized) Analysis" : "Psalm Analysis"
+        if let hour = hourKey {
+            return "\(hour.capitalized) Analysis"
+        } else if let psalm = selectedPsalm {
+            return "Analysis: \(psalm.displayTitle)"
+        } else {
+            return "Psalm Analysis"
+        }
     }
     
     // MARK: - Helper Methods
@@ -158,8 +170,21 @@ struct PsalmAnalysisSelectionView: View {
     
     // MARK: - Data Loading
     private func loadData() async {
+        print("[loadData] hourKey: \(hourKey ?? "nil")")
+        print("[loadData] liturgicalDay: \(liturgicalDay?.weekday.description ?? "nil")")
+          
         await loadAvailablePsalms()
+        print("[loadData] availablePsalms: \(availablePsalms.map(\.id))")
+            
         await loadPsalmTexts()
+        print("[loadData] psalms keys: \(psalms.keys)")
+           
+        if selectedPsalm == nil, let first = availablePsalms.first {
+            print("[loadData] Auto-selecting: \(first.id)")
+                   
+                selectedPsalm = first
+        }
+        
         isLoading = false
     }
     
