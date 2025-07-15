@@ -245,7 +245,10 @@ class Psalm5Tests: XCTestCase {
         let line13 = psalm5[12]
         let line14 = psalm5[13]
         let combinedText = line13 + " " + line14
+
+        latinService.configureDebugging(target: "laetor")
         let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 13)
+        latinService.configureDebugging(target: "")
         
         let testLemmas = [
             ("laetor", ["laetentur"], "rejoice"),

@@ -8,20 +8,32 @@ extension LatinWordEntity {
               let conjugation = conjugation else { return [:] }
 
 
-        let isDeponent: Bool
-            if let presentForm = present?.lowercased() {
-                isDeponent = presentForm.hasSuffix("or")
-        } else {
-            isDeponent = false // fallback: assume not deponent if not known
-        }
+        let isDeponent: Bool = {
+            let presentForm = self.present?.lowercased() ?? ""
+            return presentForm.hasSuffix("or") && 
+                   (infinitive.hasSuffix("ari") || 
+                    infinitive.hasSuffix("eri") || 
+                    infinitive.hasSuffix("i"))
+        }()
      
-        
- 
+        let presentStem: String
+        if isDeponent {
+            if infinitive.hasSuffix("ari") || infinitive.hasSuffix("eri") {
+                presentStem = String(infinitive.dropLast(3)) // dominari → domin
+            } else {
+                presentStem = String(present!.lowercased().dropLast(2)) // gratulor → gratul
+            }
+        } else {
+            presentStem = String(infinitive.dropLast(3)) // Regular verbs (laudare → laud)
+        }
+
         let stems = VerbStems(
-            present: isDeponent ? String(infinitive.dropLast(1)) : String(infinitive.dropLast(3)),
-            perfect: perfect != nil ? String(perfect!.lowercased().dropLast(1)) : "",
+            present: presentStem,
+            perfect: isDeponent ? perfect!.lowercased() : 
+                (perfect != nil ? String(perfect!.lowercased().dropLast(1)) : ""),
             supine: supine != nil ? String(supine!.lowercased().dropLast(2)) : ""
         )
+ 
         
         var forms = [String: [String]]()
         let addForm = { (key: String, values: [String]) in
@@ -29,16 +41,16 @@ extension LatinWordEntity {
         }
 
        if !isDeponent {
-            generatePresentSystemForms(conjugation: conjugation, stems: stems, addForm: addForm)
-            generatePerfectSystemForms(stems: stems, addForm: addForm)
             generateImperativeForms(conjugation: conjugation, stems: stems, addForm: addForm)
             generatePresentActiveSubjunctive(conjugation: conjugation, stems: stems, addForm: addForm)
         }  
 
         // Generate all forms
+        generatePresentSystemForms(conjugation: conjugation, stems: stems, isDeponent: isDeponent, addForm: addForm)
+        generatePerfectSystemForms(stems: stems, isDeponent: isDeponent, addForm: addForm)
         generateNonFiniteForms(infinitive: infinitive, stems: stems, addForm: addForm)
         generateParticipleForms(conjugation: conjugation, stems: stems, addForm: addForm)
-        generateSubjunctiveForms(conjugation: conjugation, stems: stems, addForm: addForm)
+        generateSubjunctiveForms(conjugation: conjugation, stems: stems, isDeponent: isDeponent, addForm: addForm)
         generatePresentPassiveForms(conjugation: conjugation, stems: stems, addForm: addForm)
         generateFuturePassiveForms(conjugation: conjugation, stems: stems, addForm: addForm)
 
@@ -60,87 +72,174 @@ extension LatinWordEntity {
     }
     
     // MARK: - Form Generators
-    
-    private func generatePresentSystemForms(conjugation: Int, stems: VerbStems, addForm: (String, [String]) -> Void) {
-        // Present Active Indicative
+    private func generatePresentSystemForms(conjugation: Int, stems: VerbStems, isDeponent: Bool, addForm: (String, [String]) -> Void) {
+        // Present Active Indicative (or Passive for deponents)
         let presentActive: [String]
         switch conjugation {
         case 1:
             presentActive = [
-                stems.present + "o", stems.present + "as", stems.present + "at",
-                stems.present + "amus", stems.present + "atis", stems.present + "ant"
+                stems.present + (isDeponent ? "or" : "o"), 
+                stems.present + (isDeponent ? "aris" : "as"),
+                stems.present + (isDeponent ? "atur" : "at"),
+                stems.present + "amus",
+                stems.present + "atis",
+                stems.present + (isDeponent ? "antur" : "ant")
             ]
         case 2:
             presentActive = [
-                stems.present + "eo", stems.present + "es", stems.present + "et",
-                stems.present + "emus", stems.present + "etis", stems.present + "ent"
+                stems.present + (isDeponent ? "eor" : "eo"),
+                stems.present + (isDeponent ? "eris" : "es"),
+                stems.present + (isDeponent ? "etur" : "et"),
+                stems.present + "emus",
+                stems.present + "etis",
+                stems.present + (isDeponent ? "entur" : "ent")
             ]
         case 3:
-            presentActive = [
-                stems.present + "o", stems.present + "is", stems.present + "it",
-                stems.present + "imus", stems.present + "itis", stems.present + "iunt", stems.present + "unt"
-            ]
+            let isIOVerb = stems.present.hasSuffix("i")
+            
+            // For 3rd conjugation -io verbs, include both regular and alternative forms
+            if isIOVerb {
+                let regularThirdConjugation = [
+                    stems.present + (isDeponent ? "or" : "o"),
+                    stems.present + (isDeponent ? "eris" : "is"),
+                    stems.present + (isDeponent ? "itur" : "it"),
+                    stems.present + "imus",
+                    stems.present + "itis",
+                    stems.present + (isDeponent ? "iuntur" : "iunt")
+                ]
+                
+                let alternativeForms = [
+                    stems.present + (isDeponent ? "ior" : "io"),
+                    stems.present + (isDeponent ? "eris" : "is"),
+                    stems.present + (isDeponent ? "itur" : "it"),
+                    stems.present + "imus",
+                    stems.present + "itis",
+                    stems.present + (isDeponent ? "iuntur" : "iunt")
+                ]
+                
+                presentActive = regularThirdConjugation + alternativeForms
+            } else {
+                presentActive = [
+                    stems.present + (isDeponent ? "or" : "o"),
+                    stems.present + (isDeponent ? "eris" : "is"),
+                    stems.present + (isDeponent ? "itur" : "it"),
+                    stems.present + "imus",
+                    stems.present + "itis",
+                    stems.present + (isDeponent ? "untur" : "unt")
+                ]
+            }
         case 4:
             presentActive = [
-                stems.present + "io", stems.present + "is", stems.present + "it",
-                stems.present + "imus", stems.present + "itis", stems.present + "iunt"
+                stems.present + (isDeponent ? "ior" : "io"),
+                stems.present + (isDeponent ? "iris" : "is"),
+                stems.present + (isDeponent ? "itur" : "it"),
+                stems.present + "imus",
+                stems.present + "itis",
+                stems.present + (isDeponent ? "iuntur" : "iunt")
             ]
         default:
             presentActive = []
         }
         addForm("present", presentActive)
         
-        // Imperfect Active Indicative
+        // Imperfect Active Indicative (or Passive for deponents)
         let imperfectActive: [String]
         switch conjugation {
         case 1:
             imperfectActive = [
-                stems.present + "abam", stems.present + "abas", stems.present + "abat",
-                stems.present + "abamus", stems.present + "abatis", stems.present + "abant"
+                stems.present + (isDeponent ? "abar" : "abam"),
+                stems.present + (isDeponent ? "abaris" : "abas"),
+                stems.present + (isDeponent ? "abatur" : "abat"),
+                stems.present + "abamus",
+                stems.present + "abatis",
+                stems.present + (isDeponent ? "abantur" : "abant")
             ]
         case 2, 3:
             imperfectActive = [
-                stems.present + "ebam", stems.present + "ebas", stems.present + "ebat",
-                stems.present + "ebamus", stems.present + "ebatis", stems.present + "ebant"
+                stems.present + (isDeponent ? "ebar" : "ebam"),
+                stems.present + (isDeponent ? "ebaris" : "ebas"),
+                stems.present + (isDeponent ? "ebatur" : "ebat"),
+                stems.present + "ebamus",
+                stems.present + "ebatis",
+                stems.present + (isDeponent ? "ebantur" : "ebant")
             ]
         case 4:
             imperfectActive = [
-                stems.present + "iebam", stems.present + "iebas", stems.present + "iebat",
-                stems.present + "iebamus", stems.present + "iebatis", stems.present + "iebant"
+                stems.present + (isDeponent ? "iebar" : "iebam"),
+                stems.present + (isDeponent ? "iebaris" : "iebas"),
+                stems.present + (isDeponent ? "iebatur" : "iebat"),
+                stems.present + "iebamus",
+                stems.present + "iebatis",
+                stems.present + (isDeponent ? "iebantur" : "iebant")
             ]
         default:
             imperfectActive = []
         }
         addForm("imperfect_active", imperfectActive)
         
-        // Future Active Indicative
+        // Future Active Indicative (or Passive for deponents)
         let futureActive: [String]
         switch conjugation {
         case 1:
             futureActive = [
-                stems.present + "abo", stems.present + "abis", stems.present + "abit",
-                stems.present + "abimus", stems.present + "abitis", stems.present + "abunt"
+                stems.present + (isDeponent ? "abor" : "abo"),
+                stems.present + (isDeponent ? "aberis" : "abis"),
+                stems.present + (isDeponent ? "abitur" : "abit"),
+                stems.present + "abimus",
+                stems.present + "abitis",
+                stems.present + (isDeponent ? "abuntur" : "abunt")
             ]
         case 2:
             futureActive = [
-                stems.present + "ebo", stems.present + "ebis", stems.present + "ebit",
-                stems.present + "ebimus", stems.present + "ebitis", stems.present + "ebunt"
+                stems.present + (isDeponent ? "ebor" : "ebo"),
+                stems.present + (isDeponent ? "eberis" : "ebis"),
+                stems.present + (isDeponent ? "ebitur" : "ebit"),
+                stems.present + "ebimus",
+                stems.present + "ebitis",
+                stems.present + (isDeponent ? "ebuntur" : "ebunt")
             ]
         case 3:
-    
-            futureActive =  [
-                // Regular 3rd conjugation pattern
-                stems.present + "am",     // mitt + am = mittam
-                stems.present + "es",     // mitt + es = mittes
-                stems.present + "et",     // mitt + et = mittet
-                stems.present + "emus",   // mitt + emus = mittemus
-                stems.present + "etis",   // mitt + etis = mittetis
-                stems.present + "ent"     // mitt + ent = mittent
-            ]   
+            let isIOVerb = stems.present.hasSuffix("i")
+            
+            if isIOVerb {
+                // Include both regular and alternative forms for 3rd-io verbs
+                let regularThirdConjugation = [
+                    stems.present + (isDeponent ? "ar" : "am"),
+                    stems.present + (isDeponent ? "eris" : "es"),
+                    stems.present + (isDeponent ? "etur" : "et"),
+                    stems.present + "emus",
+                    stems.present + "etis",
+                    stems.present + (isDeponent ? "entur" : "ent")
+                ]
+                
+                let alternativeForms = [
+                    stems.present + (isDeponent ? "iar" : "iam"),
+                    stems.present + (isDeponent ? "ieris" : "ies"),
+                    stems.present + (isDeponent ? "ietur" : "iet"),
+                    stems.present + "iemus",
+                    stems.present + "ietis",
+                    stems.present + (isDeponent ? "ientur" : "ient")
+                ]
+                
+                futureActive = regularThirdConjugation + alternativeForms
+            } else {
+                futureActive = [
+                    stems.present + (isDeponent ? "ar" : "am"),
+                    stems.present + (isDeponent ? "eris" : "es"),
+                    stems.present + (isDeponent ? "etur" : "et"),
+                    stems.present + "emus",
+                    stems.present + "etis",
+                    stems.present + (isDeponent ? "entur" : "ent")
+                ]
+            }
         case 4:
             futureActive = [
-                stems.present + "iam", stems.present + "ies", stems.present + "iet",
-                stems.present + "iemus", stems.present + "ietis", stems.present + "ient"
+                stems.present + (isDeponent ? "iar" : "iam"),
+                stems.present + (isDeponent ? "ieris" : "ies"),
+                stems.present + (isDeponent ? "ietur" : "iet"),
+                stems.present + "iemus",
+                stems.present + "ietis",
+                stems.present + (isDeponent ? "ientur" : "ient")
             ]
         default:
             futureActive = []
@@ -148,23 +247,33 @@ extension LatinWordEntity {
         addForm("future", futureActive)
     }
     
-    private func generatePerfectSystemForms(stems: VerbStems, addForm: (String, [String]) -> Void) {
+    private func generatePerfectSystemForms(stems: VerbStems, isDeponent: Bool, addForm: (String, [String]) -> Void) {
         guard !stems.perfect.isEmpty else { return }
         
-        addForm("perfect",  [
-            stems.perfect + "i", stems.perfect + "isti", stems.perfect + "it",
-            stems.perfect + "imus", stems.perfect + "istis", stems.perfect + "erunt"
-        ])
+         if isDeponent {
+            // For deponent verbs, use the perfect participle for all perfect forms
+            let perfectParticiple = stems.perfect // + "us" // "dominatus"
+            addForm("perfect", [
+                perfectParticiple, perfectParticiple, perfectParticiple,
+                perfectParticiple, perfectParticiple, perfectParticiple
+            ])
+        } else {
+            // Regular active perfect forms
+            addForm("perfect", [
+                stems.perfect + "i", stems.perfect + "isti", stems.perfect + "it",
+                stems.perfect + "imus", stems.perfect + "istis", stems.perfect + "erunt"
+            ])
+            addForm("pluperfect",  [
+                stems.perfect + "eram", stems.perfect + "eras", stems.perfect + "erat",
+                stems.perfect + "eramus", stems.perfect + "eratis", stems.perfect + "erant"
+            ])
         
-        addForm("pluperfect",  [
-            stems.perfect + "eram", stems.perfect + "eras", stems.perfect + "erat",
-            stems.perfect + "eramus", stems.perfect + "eratis", stems.perfect + "erant"
-        ])
-        
-        addForm("future_perfect",  [
-            stems.perfect + "ero", stems.perfect + "eris", stems.perfect + "erit",
-            stems.perfect + "erimus", stems.perfect + "eritis", stems.perfect + "erint"
-        ])
+            addForm("future_perfect",  [
+                stems.perfect + "ero", stems.perfect + "eris", stems.perfect + "erit",
+                stems.perfect + "erimus", stems.perfect + "eritis", stems.perfect + "erint"
+            ])
+         }
+       
     }
     
     private func generateImperativeForms(conjugation: Int, stems: VerbStems, addForm: (String, [String]) -> Void) {
@@ -250,7 +359,7 @@ extension LatinWordEntity {
     }
 }
     
-    private func generateSubjunctiveForms(conjugation: Int, stems: VerbStems, addForm: (String, [String]) -> Void) {
+    private func generateSubjunctiveForms(conjugation: Int, stems: VerbStems, isDeponent: Bool, addForm: (String, [String]) -> Void) {
 
         let imperfectStem: String
         switch conjugation {
@@ -261,7 +370,7 @@ extension LatinWordEntity {
         default: 
             imperfectStem = stems.present
         }
-    
+
         // Imperfect Active Subjunctive
         addForm("imperfect_active_subjunctive", [
             imperfectStem + "m", imperfectStem + "s", imperfectStem + "t",
@@ -274,14 +383,16 @@ extension LatinWordEntity {
             imperfectStem + "mur", imperfectStem + "mini", imperfectStem + "ntur"
         ])
         
-        // Present Passive Subjunctive (1st conjugation special case)
+        // Present Passive Subjunctive
         let presentPassiveSubjunctive: [String]
         switch conjugation {
         case 1:
+            let stem =  stems.present 
             presentPassiveSubjunctive = [
-                stems.present + "er", stems.present + "eris", stems.present + "etur",
-                stems.present + "emur", stems.present + "emini", stems.present + "entur"
+                stem + "er", stem + "eris", stem + "etur",
+                stem + "emur", stem + "emini", stem + "entur"  // laeter, laeteris, laetetur, etc.
             ]
+
         case 2:
             presentPassiveSubjunctive = [
                 stems.present + "ear", stems.present + "earis", stems.present + "eatur",
@@ -313,6 +424,7 @@ extension LatinWordEntity {
         }
         addForm("present_passive_subjunctive", presentPassiveSubjunctive)
     }
+    
     private func generatePresentActiveSubjunctive(conjugation: Int, stems: VerbStems, addForm: (String, [String]) -> Void) {
     let presentActiveSubjunctive: [String]
     

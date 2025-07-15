@@ -91,30 +91,133 @@ final class LatinServiceTests: XCTestCase {
         XCTFail("Missing 'past_participle'")
     }
 }
-
-func testCognosco() {
-    let cognosco = LatinWordEntity(
-        lemma: "cognosco",
+func testRespicio() {
+    let respicio = LatinWordEntity(
+        lemma: "respicio",
         partOfSpeech: .verb,
-        perfect: "cognovi",
-        infinitive: "cognoscere",            
-        supine: "cognitum"
+        present: "respicio",
+        perfect: "respexi",
+        infinitive: "respicere",
+        supine: "respectum",
+        conjugation: 3
     )
+    
+    let forms = respicio.generatedVerbForms()
+    
+    // Debug print all forms
+    print("===== ALL GENERATED FORMS FOR RESPICIO =====")
+    forms.sorted(by: { $0.key < $1.key }).forEach { key, values in
+        print("\(key): \(values.joined(separator: ", "))")
+    }
+    print("===========================================")
 
-    let forms = cognosco.generatedVerbForms()
-    
-    if let perfectForms = forms["perfect"] {
-        print(perfectForms)  // Should include "cognovisti"
+ // Verify future active indicative contains correct form "respices"
+    if let futureForms = forms["future"] {
+        XCTAssertTrue(futureForms.contains("respices"), 
+                     "Future forms should contain 'respices'. Found: \(futureForms)")
     } else {
-        XCTFail("Perfect forms not generated")
+        XCTFail("Future forms not generated at all")
     }
     
-    if let imperfectSubjunctive = forms["imperfect_subjunctive"] {
-        print(imperfectSubjunctive)  // Should include "cognosceret"
-    } else {
-        XCTFail("Imperfect subjunctive forms not generated")
-    }
+    // Additional verification for other expected forms
+    XCTAssertEqual(forms["infinitive"], ["respicere"])
+    XCTAssertEqual(forms["present_passive"], [
+        "respicior", "respiceris", "respicitur", 
+        "respicimur", "respicimini", "respiciuntur"
+    ])
+
 }
+  func testGratulor() {
+        let gratulor = LatinWordEntity(
+            lemma: "gratulor",
+            partOfSpeech: .verb,
+            present: "gratulor",
+            perfect: "gratulatus",
+            infinitive: "gratulari",
+            supine: "gratulatum",
+            conjugation: 1,
+            forms: [
+                "present_active_participle": ["gratulans"]
+            ]
+        )
+        
+        let forms = gratulor.generatedVerbForms()
+         forms.sorted(by: { $0.key < $1.key }).forEach { key, values in
+        print("\(key): \(values.joined(separator: ", "))")
+    }
+        // Present Passive
+        XCTAssertEqual(forms["present_passive"], [
+            "gratulor", "gratularis", "gratulatur",
+            "gratulamur", "gratulamini", "gratulantur"
+        ])
+        
+        // Should respect manual override for participle
+        XCTAssertEqual(forms["present_active_participle"], ["gratulans"])
+    }
+
+func testDominor() {
+    let dominor = LatinWordEntity(
+        lemma: "dominor",
+        partOfSpeech: .verb,
+        present: "dominor",
+        perfect: "dominatus",
+        infinitive: "dominari",
+        supine: "dominatum",
+        conjugation: 1
+    )
+    
+    let forms = dominor.generatedVerbForms()
+    forms.sorted(by: { $0.key < $1.key }).forEach { key, values in
+        print("\(key): \(values.joined(separator: ", "))")
+    }
+    
+    // Present Passive (should match present forms for deponents)
+    XCTAssertEqual(forms["present_passive"], [
+        "dominor", "dominaris", "dominatur",
+        "dominamur", "dominamini", "dominantur"
+    ], "present_passive")
+    
+    XCTAssertEqual(forms["present_passive_subjunctive"], [
+        "dominer", "domineris", "dominetur",
+        "dominemur", "dominemini", "dominentur"
+    ], "present_passive_subjunctive")
+
+    // Future Passive
+    XCTAssertEqual(forms["future_passive"], [
+        "dominabor", "dominaberis", "dominabitur",
+        "dominabimur", "dominabimini", "dominabuntur"
+    ], "future_passive")
+    
+    // Perfect System (active forms for deponents)
+    XCTAssertEqual(forms["perfect"], [
+        "dominatus", "dominatus", "dominatus",
+        "dominatus", "dominatus", "dominatus"
+    ], "perfect")
+}
+
+ func testCognosco() {
+        let cognosco = LatinWordEntity(
+            lemma: "cognosco",
+            partOfSpeech: .verb,
+            perfect: "cognovi",
+            infinitive: "cognoscere",            
+            supine: "cognitum",
+            conjugation: 3
+        )
+
+        let forms = cognosco.generatedVerbForms()
+        
+        XCTAssertEqual(forms["perfect"], [
+            "cognovi", "cognovisti", "cognovit",
+            "cognovimus", "cognovistis", "cognoverunt"
+        ])
+        
+        XCTAssertEqual(forms["imperfect_active_subjunctive"], [
+            "cognoscerem", "cognosceres", "cognosceret",
+            "cognosceremus", "cognosceretis", "cognoscerent"
+        ])
+    }
+
    func testAnalyzePsalm66() {
         let identity = PsalmIdentity(number: 66, category: nil)
         let analysis = latinService.analyzePsalm(identity, text: psalm66)

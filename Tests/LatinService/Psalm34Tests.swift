@@ -95,7 +95,7 @@ class Psalm34Tests: XCTestCase {
             ("concludo", ["conclude"], "confine"),
             ("persequor", ["persequuntur"], "persecute"),
             ("salus", ["Salus"], "salvation"),
-            ("confundo", ["Confundantur"], "be confounded"),
+            ("confundo", ["confundantur"], "be confounded"),
             ("revereor", ["revereantur"], "be put to shame")
         ]
         
@@ -116,7 +116,7 @@ class Psalm34Tests: XCTestCase {
         }
         
         XCTAssertNotNil(analysis.dictionary["framea"], "Should find 'sword' reference")
-        XCTAssertEqual(analysis.dictionary["confundo"]?.forms["Confundantur"], 1, "Should find 'be confounded' verb")
+        XCTAssertEqual(analysis.dictionary["confundo"]?.forms["confundantur"], 1, "Should find 'be confounded' verb")
     }
     
     func testPsalm34Lines5and6() {
@@ -499,7 +499,7 @@ class Psalm34Tests: XCTestCase {
         }
         
         XCTAssertNotNil(analysis.dictionary["iustitia"], "Should find 'justice' reference")
-        XCTAssertEqual(analysis.dictionary["devoro"]?.forms["Devoravimus"], 1, "Should find 'devour' verb")
+        XCTAssertEqual(analysis.dictionary["devoro"]?.forms["devoravimus"], 1, "Should find 'devour' verb")
     }
     
     func testPsalm34Lines27and28() {

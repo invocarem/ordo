@@ -1,5 +1,123 @@
 [
   {
+  "lemma": "oro",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "orare",
+  "present": "oro",
+  "future": "orabo",
+  "perfect": "oravi",
+  "supine": "oratum",
+ "translations": {
+    "en": "to pray, beg, plead",
+    "la": "oro, orare, oravi, oratum"
+   }
+},
+  {
+  "lemma": "captio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "captio",
+  "genitive": "captionis",
+   "translations": {
+    "en": "deception, sophism, trap (logical)",
+    "la": "captio, captionis"
+   }
+},
+  {
+  "lemma": "coarcto",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "coarctare",
+  "present": "coarcto",
+  "future": "coarctabo",
+  "perfect": "coarctavi",
+  "supine": "coarctatum",
+  "translations": {
+    "en": "to confine, harass",
+    "la": "coarcto, coarctare, coarctavi, coarctatum",
+   "note": "'Coarctans' is present participle ('harassing/constricting')"
+  }
+},
+  {
+  "lemma": "tento",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "tentare",
+  "present": "tento",
+  "future": "tentabo",
+  "perfect": "tentavi",
+  "supine": "tentatum",
+  "translations": {
+    "en": "to tempt, test, attempt",
+    "la": "tento, tentare, tentavi, tentatum",
+    "note": "Often synonymous with 'tempto' in Biblical Latin"
+  }
+},
+  {
+  "lemma": "malignitas",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "malignitas",
+  "genitive": "malignitatis",
+ "translations": {
+    "en": "malice, wickedness, malevolence",
+    "la": "malignitas, malignitatis" 
+   }
+},
+  {
+  "lemma": "frendo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "frendere",
+  "present": "frendo",
+  "perfect": "frendui",
+  "supine": "fressum",
+  "forms": {
+    "perfect": ["frendui", "frenduisti", "frenduit", "frenduimus", "frenduistis", "frenduerunt"]
+  },
+  "translations": {
+    "en": "to gnash, grind (teeth)",
+    "la": "frendo, frendere, frendui, fressum",
+    "note": "Perfect form 'frenduerunt' is rare (usually appears in present tense)"
+  }
+},
+  {
+  "lemma": "respicio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "respicere",
+  "present": "respicio",
+  "future": "respiciam",
+  "perfect": "respexi",
+  "supine": "respectum",
+  "forms": {
+    "future": ["respiciam", "respicies", "respiciet", "respiciemus", "respicietis", "respicient"],
+    "present": ["respicio", "respici", "respicimus", "respicitis", "respiciunt"],
+    "imperative": ["respice"],
+    "perfect_indicative": ["respexit"]
+   },
+  "translations": {
+    "en": "to look back, regard, consider",
+    "la": "respicio, respicere, respexi, respectum"  }
+},
+  {
+  "lemma": "devoro",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "devorare",
+  "present": "devoro",
+  "future": "devorabo",
+  "perfect": "devoravi",
+  "supine": "devoratum",
+ "translations": {
+    "en": "to devour, swallow up, consume",
+    "la": "devoro, devorare, devoravi, devoratum"
+   }
+},
+  {
   "lemma": "abominor",
   "part_of_speech": "verb",
   "conjugation": 1,
@@ -19805,23 +19923,7 @@
       "la": "cognosco"
     }
   },
-  {
-    "lemma": "respicio",
-    "part_of_speech": "verb",
-    "conjugation": 3,
-    "infinitive": "respicere",
-    "present": "respicio",
-    "perfect": "respexi",
-    "supine": "respectum",
-    "forms": {
-      "imperative": ["respice"],
-      "perfect_indicative": ["respexit"]
-    },
-    "translations": {
-      "en": "to look back at, regard, consider",
-      "la": "respicio, respicere"
-    }
-  },
+
   {
   "lemma": "fletus",
   "part_of_speech": "noun",
