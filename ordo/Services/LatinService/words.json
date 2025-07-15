@@ -1,5 +1,46 @@
 [
   {
+  "lemma": "abominor",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "abominari",
+  "present": "abominor",
+  "future": "abominabor",
+  "perfect": "abominatus",
+  "supine": "abominatum",
+  "forms": {
+    "future": ["abominabor", "abominaberis", "abominabitur", "abominabimur", "abominabimini", "abominabuntur"],
+    "present": ["abominor", "abominaris", "abominatur", "abominamur", "abominamini", "abominantur"],
+    "perfect_active_m": ["abominatus sum", "abominatus es", "abominatus est", "abominati sumus", "abominati estis", "abominati sunt"]
+  },
+  "translations": {
+    "en": "to abhor, detest, regard as an omen",
+    "la": "abominor, abominari, abominatus sum"
+ 
+  }
+},
+  {
+  "lemma": "introeo",
+  "part_of_speech": "verb",
+  "conjugation": 0,
+  "infinitive": "introire",
+  "present": "introeo",
+  "future": "introibo",
+  "perfect": "introivi",
+  "supine": "introituum",
+  "forms": {
+    "future": ["introibo", "introibis", "introibit", "introibimus", "introibitis", "introibunt"],
+    "present": ["introeo", "introīs", "introit", "introīmus", "introītis", "introēunt"],
+    "perfect": ["introivi", "introivisti", "introivit", "introivimus", "introivistis", "introiverunt"]
+  },
+  "translations": {
+    "en": "to enter, go into",
+    "la": "introeo, introire, introivi, introituum",
+    "biblical_ref": "Psalm 42:4 (Vulgate) 'Introibo ad altare Dei' (I will go unto the altar of God)"
+  }
+ 
+},
+  {
   "lemma": "totus",
   "part_of_speech": "adjective",
   "declension": 1,
@@ -8012,13 +8053,13 @@
         {
           "lemma": "corono",
           "part_of_speech": "verb",
+          "conjugation": 1,
+          "present": "corono",
           "perfect": "coronavi",
           "infinitive": "coronare",
           "supine": "coronatum",
           "forms": {
-            
-            "perfect": ["coronavi", "coronavisti/coronasti", "coronavit", "coronavimus", "coronavistis", "coronaverunt"]
-            
+            "perfect_2sg_eccl": [ "coronasti"]
           },
           "translations": {
             "en": "to crown",
@@ -8697,19 +8738,32 @@
     "la": "fundo, fundare, fundavi, fundatum"
   }
 },
-  {
-    "lemma": "effundo",
-    "part_of_speech": "verb",
-    "infinitive": "effundere",
-    "perfect": "effudi",
-    "supine": "effusum",
-    "translations": {
-      "en": "pour out, shed",
-      "la": "effundo"
-    }
+{
+  "lemma": "effundo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "effundere",
+  "present": "effundo",
+  "future": "effundam",
+  "perfect": "effudi",
+  "supine": "effusum",
+  "forms": {
+    "present": ["effundo", "effundis", "effundit", "effundimus", "effunditis", "effundunt"],
+    "imperative_sg": ["effunde"],
+    "imperative_pl": ["effundite"],
+    "perfect": ["effudi", "effudisti", "effudit", "effudimus", "effudistis", "effuderunt"],
+    "perfect_passive_m": ["effusus", "effuse", "effusus", "effusi", "effusi", "effusi"],
+    "perfect_passive_f": ["effusa", "effusa", "effusa", "effusae", "effusae", "effusae"],
+    "perfect_passive_n": ["effusum", "effusum", "effusum", "effusa", "effusa", "effusa"]
   },
+  "translations": {
+    "en": "to pour out, shed, spill",
+    "la": "effundo, effundere, effudi, effusum",
+    "biblical_ref": "Acts 2:17 'effundam de Spiritu meo' (I will pour out my Spirit)"
+  }
+},
 
-    {
+     {
     "lemma": "laqueus",
     "part_of_speech": "noun",
     "declension": 2,
@@ -13651,6 +13705,22 @@
       "gender": "masculine",
       "nominative": "dolus",
       "genitive": "doli",
+      "forms": {
+        "nominative": ["dolus"],
+        "vocative": ["dole"],
+        "accusative": ["dolum", "dolosum"],
+        "genitive": ["doli"],
+        "dative": ["dolo"],
+        "ablative": ["dolo"]
+      },
+      "forms_plural": {
+        "nominative": ["doli"],
+        "vocative": ["doli"],
+        "accusative": ["dolos"],
+        "genitive": ["dolorum"],
+        "dative": ["dolis"],
+        "ablative": ["dolis"]
+      },
       "translations": {
         "en": "deceit, trickery, fraud",
         "la": "dolus"
