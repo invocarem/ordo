@@ -1,5 +1,4 @@
 import Foundation
-
 extension LatinWordEntity {
     func generatedVerbForms() -> [String: [String]] {
         guard partOfSpeech == .verb else { return [:] }
@@ -16,7 +15,8 @@ extension LatinWordEntity {
             isDeponent = false // fallback: assume not deponent if not known
         }
      
-        // Prepare stems
+        
+ 
         let stems = VerbStems(
             present: isDeponent ? String(infinitive.dropLast(1)) : String(infinitive.dropLast(3)),
             perfect: perfect != nil ? String(perfect!.lowercased().dropLast(1)) : "",
@@ -33,16 +33,12 @@ extension LatinWordEntity {
             generatePerfectSystemForms(stems: stems, addForm: addForm)
             generateImperativeForms(conjugation: conjugation, stems: stems, addForm: addForm)
             generatePresentActiveSubjunctive(conjugation: conjugation, stems: stems, addForm: addForm)
-        } 
+        }  
 
         // Generate all forms
-        //generatePresentSystemForms(conjugation: conjugation, stems: stems, addForm: addForm)
-        //generatePerfectSystemForms(stems: stems, addForm: addForm)
-        //generateImperativeForms(conjugation: conjugation, stems: stems, addForm: addForm)
         generateNonFiniteForms(infinitive: infinitive, stems: stems, addForm: addForm)
         generateParticipleForms(conjugation: conjugation, stems: stems, addForm: addForm)
         generateSubjunctiveForms(conjugation: conjugation, stems: stems, addForm: addForm)
-        //generatePresentActiveSubjunctive(conjugation: conjugation, stems: stems, addForm: addForm)
         generatePresentPassiveForms(conjugation: conjugation, stems: stems, addForm: addForm)
         generateFuturePassiveForms(conjugation: conjugation, stems: stems, addForm: addForm)
 
@@ -417,17 +413,36 @@ private func generateFuturePassiveForms(conjugation: Int, stems: VerbStems, addF
 private func generatePresentPassiveForms(conjugation: Int, stems: VerbStems, addForm: (String, [String]) -> Void) {
     let presentPassive: [String]
     let isThirdIO = conjugation == 3 && self.present?.hasSuffix("io") == true
- 
+    let isDeponent = self.present?.hasSuffix("or") == true
+    let presentStem: String
+    if isDeponent, let presentForm = present?.lowercased() {
+        presentStem = String(presentForm.dropLast(2)) // drops "or"
+    } else {
+        presentStem = stems.present
+    }
     switch conjugation {
     case 1: // -a- (e.g., dominor)
-        presentPassive = [
-            stems.present + "or",       // dominor
-            stems.present + "aris",     // dominaris
-            stems.present + "atur",     // dominatur
-            stems.present + "amur",     // dominamur
-            stems.present + "amini",    // dominamini
-            stems.present + "antur"     // dominantur
-        ]
+        if isDeponent {
+            presentPassive = [
+                presentStem + "or",       // gratulor (from gratul- + or)
+                presentStem + "aris",     // gratularis
+                presentStem + "atur",    // gratulatur
+                presentStem + "amur",     // gratulamur
+                presentStem + "amini",    // gratulamini
+                presentStem + "antur"     // gratulantur
+            ]
+        } else {
+            presentPassive = [
+                presentStem + "or",       // dominor
+                presentStem + "aris",     // dominaris
+                presentStem + "atur",     // dominatur
+                presentStem + "amur",     // dominamur
+                presentStem + "amini",    // dominamini
+                presentStem + "antur"     // dominantur
+            ]
+        }
+        
+        
     case 2: // -e- (e.g., moneor)
         presentPassive = [
             stems.present + "eor",      // moneor
@@ -474,3 +489,4 @@ private func generatePresentPassiveForms(conjugation: Int, stems: VerbStems, add
     addForm("present_passive", presentPassive)
 }
 }
+
