@@ -1768,10 +1768,19 @@
       "comment": "Social and legal vulnerability becomes the arena for divine vindication."
     },
     {
+      "name": "Betrayal → Penitence",
+      "description": "From soul-wounding injustice to humble intercession through fasting, sackcloth and prayer",
+      "lemmas": ["retribuo", "sterilitas", "molestus",  "sinus"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "Augustine reads this transition as a portrait of Christ: betrayed by those He loved, He responds not with wrath but with suffering charity. The psalmist puts on sackcloth ('cilicium'), fasts ('ieiunium'), and turns his prayer inward ('sinus') — a gesture of transformation through humility (Enarr. Ps. 34.13–14; Phil 2:7)."
+    },
+
+    {
       "name": "Sackcloth → Bosom",
       "description": "From outward humility and fasting to inward, returning prayer",
-      "lemmas": ["cilicium", "jejunium", "converto", "sinus"],
-      "startLine": 13,
+      "lemmas": ["cilicium", "ieiunium", "oratio"],
+      "startLine": 14,
       "endLine": 14,
       "comment": "Augustine reads 'cilicium' as the flesh Christ assumed in humility. The psalmist fasts ('jejunium') and his prayer returns 'into his bosom' ('sinus') — a gesture of interior transformation and divine charity. It prefigures Christ’s suffering intercession for others (Enarr. Ps. 34.13–14; Phil 2:7).",
       "comment2": "The psalmist fasted and mourned for others as for a brother, clothed in sackcloth (cilicium). Yet they returned his love with scorn. Augustine sees this as Christ-like charity — unrequited and redemptive. The turning of prayer into the bosom ('sinus') reflects inward forgiveness and self-offering (Enarr. Ps. 34.13–14; Phil 2:7)."
@@ -1833,7 +1842,7 @@
     {
       "name": "Persecution → Praise",
       "description": "From suffering among enemies to shared joy among the just",
-      "lemmas": ["exsulto", "laetor", "iustitia", "magnificetur", "lingua", "laudo"],
+      "lemmas": ["exsulto", "laetor", "iustitia", "magnifico"],
       "startLine": 27,
       "endLine": 28,
       "comment": "Augustine sees a final turn: not only is the soul rescued, but the just are called into praise. Peace returns through God’s justice, and the psalmist’s voice—once silenced by sorrow—now proclaims truth daily (Enarr. Ps. 34.27–28)."
