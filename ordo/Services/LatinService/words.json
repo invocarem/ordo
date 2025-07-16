@@ -1,29 +1,127 @@
 [
   {
-  "lemma": "oro",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "orare",
-  "present": "oro",
-  "future": "orabo",
-  "perfect": "oravi",
-  "supine": "oratum",
- "translations": {
-    "en": "to pray, beg, plead",
-    "la": "oro, orare, oravi, oratum"
-   }
-},
-  {
-  "lemma": "captio",
+  "lemma": "confusio",
   "part_of_speech": "noun",
   "declension": 3,
   "gender": "feminine",
-  "nominative": "captio",
-  "genitive": "captionis",
-   "translations": {
-    "en": "deception, sophism, trap (logical)",
-    "la": "captio, captionis"
-   }
+  "nominative": "confusio",
+  "genitive": "confusionis",
+  "translations": {
+    "en": "confusion, disorder, mingling",
+    "la": "confusio, confusionis"
+  }
+},
+{
+  "lemma": "pudor",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "pudor",
+  "genitive": "pudoris",
+  "translations": {
+    "en": "shame, modesty, decency",
+    "la": "pudor, pudoris"
+  }
+},
+  {
+  "lemma": "ieiunio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "ieiunire",
+  "present": "ieiunio",
+  "future": "ieiuniam",
+  "perfect": "ieiunivi",
+  "supine": "ieiunitum",
+  "translations": {
+    "en": "to fast, abstain from food",
+    "la": "ieiunio, ieiunire, ieiunivi, ieiunitum"
+  }
+},
+  {
+  "lemma": "ieiunium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "ieiunium",
+  "genitive": "ieiunii",
+  "translations": {
+    "en": "fasting, abstinence from food",
+    "la": "ieiunium, ieiunii"
+  }
+},
+  {
+  "lemma": "interrogo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "interrogare",
+  "present": "interrogo",
+  "future": "interrogabo",
+  "perfect": "interrogavi",
+  "supine": "interrogatum",
+ 
+  "translations": {
+    "en": "to question, interrogate, examine",
+    "la": "interrogo, interrogare, interrogavi, interrogatum"  }
+},
+  {
+  "lemma": "inquiro",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "inquirere",
+  "present": "inquiro",
+  "future": "inquiram",
+  "perfect": "inquisi",
+  "supine": "inquisitum",
+  "translations": {
+    "en": "to search into, investigate",
+    "la": "inquiro, inquirere, inquisi, inquisitum",
+    "note": "'Interrogabant' belongs to 'interrogo' (to question), not 'inquiro'"
+  }
+},
+  {
+  "lemma": "testis",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "testis",
+  "genitive": "testis",
+  "forms": {
+    "nominative_plural": ["testes"],
+    "genitive_plural": ["testium"]
+  },
+  "translations": {
+    "en": "witness",
+    "la": "testis, testis"
+  }
+},
+  {
+  "lemma": "egenus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "egenus",
+  "genitive": "egeni",
+  "forms": {
+    "accusative_m": ["egenum"],
+    "nominative_f": ["egena"],
+    "nominative_n": ["egenum"]
+  },
+  "translations": {
+    "en": "needy, poor",
+    "la": "egenus, -a, -um"
+  }
+},
+  {
+  "lemma": "ecclesia",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "ecclesia",
+  "genitive": "ecclesiae",
+  "translations": {
+    "en": "church, assembly",
+    "la": "ecclesia, ecclesiae"
+  }
 },
   {
   "lemma": "coarcto",
@@ -2478,6 +2576,14 @@
   "translations": {
     "en": "broad, wide, extensive",
     "la": "latus, -a, -um"
+  }
+},
+{
+  "lemma": "supervacue",
+  "part_of_speech": "adverb",
+  "translations": {
+    "en": "vainly, uselessly",
+    "la": "supervacue"
   }
 },
 
@@ -6832,6 +6938,9 @@
   "declension": 3,
   "nominative": "fortis",
   "genitive": "fortis",
+  "forms": {
+    "genitive_plural": ["fortiorum"]
+  },
   "translations": {
     "en": "strong, brave, steadfast",
     "la": "fortis, forte"
@@ -12963,18 +13072,18 @@
       "lemma": "eripio",
       "part_of_speech": "verb",
       "conjugation": 3,
-      "deponent": false,
       "infinitive": "eripere",
       "present": "eripio",
       "future": "eripiam",
       "perfect": "eripui",
       "supine": "ereptum",
       "forms": {
-        "present": ["eripio", "eripis", "eripit", "eripimus", "eripitis", "eriipiunt"],
+        "present_participle": ["eripiens", "eripientis"],
+        "present": ["eripio", "eripis", "eripit", "eripimus", "eripitis", "eripiunt"],
+        "perfect": ["eripui", "eripuisti", "eripuit", "eripuimus", "eripuistis", "eripuerunt"],
         "imperative": ["eripe", "eripite"],
         "subjunctive": ["eripiam", "eripias", "eripiat", "eripiamus", "eripiatis", "eripiant"],
-        "future": ["eripiam", "eripies", "eripiet", "eripiemus", "eripietis", "eripient"],
-        "participle": ["erepta"]
+        "future": ["eripiam", "eripies", "eripiet", "eripiemus", "eripietis", "eripient"]
       },
       "translations": {
         "en": "to rescue, deliver, snatch away",
@@ -20387,7 +20496,34 @@
       "en": "affliction, humility, lowliness",
       "la": "humilitas"
     }
-  }
+  },
+  {
+  "lemma": "oro",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "orare",
+  "present": "oro",
+  "future": "orabo",
+  "perfect": "oravi",
+  "supine": "oratum",
+ "translations": {
+    "en": "to pray, beg, plead",
+    "la": "oro, orare, oravi, oratum"
+   }
+},
+  {
+  "lemma": "captio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "captio",
+  "genitive": "captionis",
+   "translations": {
+    "en": "deception, sophism, trap (logical)",
+    "la": "captio, captionis"
+   }
+}
+ 
 ]
 
 

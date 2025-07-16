@@ -232,12 +232,12 @@ class Psalm34Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 11)
         
         let testLemmas = [
-            ("eripio", ["Eripiens"], "rescue"),
+            ("eripio", ["eripiens"], "rescue"),
             ("inops", ["inopem"], "needy"),
             ("fortis", ["fortiorum"], "strong"),
             ("egenus", ["egenum"], "poor"),
             ("testis", ["testes"], "witness"),
-            ("inquiro", ["interrogabant"], "question")
+            ("interrogo", ["interrogabant"], "question")
         ]
         
         if verbose {
@@ -256,7 +256,7 @@ class Psalm34Tests: XCTestCase {
             print("2. False Accusation: testes (witnesses) + interrogabant (questioned)")
         }
         
-        XCTAssertEqual(analysis.dictionary["eripio"]?.forms["Eripiens"], 1, "Should find 'rescue' verb")
+        XCTAssertEqual(analysis.dictionary["eripio"]?.forms["eripiens"], 1, "Should find 'rescue' verb")
         XCTAssertNotNil(analysis.dictionary["testis"], "Should find 'witness' reference")
     }
     
@@ -272,7 +272,7 @@ class Psalm34Tests: XCTestCase {
             ("sterilitas", ["sterilitatem"], "bereavement"),
             ("cilicium", ["cilicio"], "sackcloth"),
             ("humilio", ["humiliabam"], "humble"),
-            ("ieiunium", ["ieiunio"], "fasting")
+            ("ieiunio", ["ieiunio"], "fast")
         ]
         
         if verbose {
@@ -291,7 +291,7 @@ class Psalm34Tests: XCTestCase {
             print("2. Penitential Practices: cilicio (sackcloth) + ieiunio (fasting)")
         }
         
-        XCTAssertEqual(analysis.dictionary["retribuo"]?.forms["Retribuebant"], 1, "Should find 'repay' verb")
+        XCTAssertEqual(analysis.dictionary["retribuo"]?.forms["retribuebant"], 1, "Should find 'repay' verb")
         XCTAssertNotNil(analysis.dictionary["humilio"], "Should find 'humble' reference")
     }
     
@@ -374,12 +374,12 @@ class Psalm34Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 19)
         
         let testLemmas = [
-            ("confiteor", ["Confitebor"], "praise"),
+            ("confiteor", ["confitebor"], "praise"),
             ("ecclesia", ["ecclesia"], "assembly"),
             ("laudo", ["laudabo"], "praise"),
             ("supergaudeo", ["supergaudeant"], "rejoice over"),
             ("adverso", ["adversantur"], "oppose"),
-            ("odium", ["oderunt"], "hate")
+            ("odi", ["oderunt"], "hate")
         ]
         
         if verbose {
@@ -398,8 +398,8 @@ class Psalm34Tests: XCTestCase {
             print("2. Unjust Enemies: adversantur (oppose) + oderunt (hate)")
         }
         
-        XCTAssertEqual(analysis.dictionary["confiteor"]?.forms["Confitebor"], 1, "Should find 'praise' verb")
-        XCTAssertEqual(analysis.dictionary["odium"]?.forms["oderunt"], 1, "Should find 'hate' verb")
+        XCTAssertEqual(analysis.dictionary["confiteor"]?.forms["confitebor"], 1, "Should find 'praise' verb")
+        XCTAssertEqual(analysis.dictionary["odi"]?.forms["oderunt"], 1, "Should find 'hate' verb")
     }
     
     func testPsalm34Lines21and22() {
@@ -506,12 +506,10 @@ class Psalm34Tests: XCTestCase {
         let line27 = psalm34[26]
         let line28 = psalm34[27]
         let combinedText = line27 + " " + line28
-        latinService.configureDebugging(target: "gratulor")
         let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 27)
-        latinService.configureDebugging(target: "")
         
         let testLemmas = [
-            ("erubesco", ["Erubescant"], "be ashamed"),
+            ("erubesco", ["Erubescant"], "ashamed"),
             ("revereor", ["revereantur"], "be dismayed"),
             ("gratulor", ["gratulantur"], "rejoice"),
             ("induo", ["induantur"], "clothe"),
@@ -588,8 +586,8 @@ class Psalm34Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(identity, text: psalm34)
         
         let terms = [
-            ("revereor", ["revereantur"], "be ashamed"),
-            ("erubesco", ["erubescant"], "be put to shame"),
+            ("revereor", ["revereantur"], "fear"),
+            ("erubesco", ["erubescant"], "shame"),
             ("confusio", ["confusione"], "confusion"),
             ("pudor", ["pudore"], "shame")
         ]

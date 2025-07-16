@@ -53,6 +53,7 @@ extension LatinWordEntity {
         generateSubjunctiveForms(conjugation: conjugation, stems: stems, isDeponent: isDeponent, addForm: addForm)
         generatePresentPassiveForms(conjugation: conjugation, stems: stems, addForm: addForm)
         generateFuturePassiveForms(conjugation: conjugation, stems: stems, addForm: addForm)
+        generateImperfectPassiveForms(conjugation: conjugation, stems: stems, addForm: addForm)
 
         // Apply manual overrides if any
         if let manualForms = self.forms {
@@ -294,7 +295,53 @@ extension LatinWordEntity {
         
         addForm("imperative", imperativeForms)
     }
-    
+    private func generateImperfectPassiveForms(conjugation: Int, stems: VerbStems, addForm: (String, [String]) -> Void) {
+        let imperfectPassive: [String]
+        
+        switch conjugation {
+        case 1:
+            imperfectPassive = [
+                stems.present + "abar",
+                stems.present + "abaris",
+                stems.present + "abatur",
+                stems.present + "abamur",
+                stems.present + "abamini",
+                stems.present + "abantur"
+            ]
+        case 2:
+            imperfectPassive = [
+                stems.present + "ebar",
+                stems.present + "ebaris",
+                stems.present + "ebatur",
+                stems.present + "ebamur",
+                stems.present + "ebamini",
+                stems.present + "ebantur"
+            ]
+        case 3:
+            imperfectPassive = [
+                stems.present + "ebar",
+                stems.present + "ebaris",
+                stems.present + "ebatur",
+                stems.present + "ebamur",
+                stems.present + "ebamini",
+                stems.present + "ebantur"
+            ]
+        case 4:
+            imperfectPassive = [
+                stems.present + "iebar",
+                stems.present + "iebaris",
+                stems.present + "iebatur",
+                stems.present + "iebamur",
+                stems.present + "iebamini",
+                stems.present + "iebantur"
+            ]
+        default:
+            imperfectPassive = []
+        }
+        
+        addForm("imperfect_passive", imperfectPassive)
+    }
+
     private func generateNonFiniteForms(infinitive: String, stems: VerbStems, addForm: (String, [String]) -> Void) {
     addForm("infinitive", [infinitive])
 

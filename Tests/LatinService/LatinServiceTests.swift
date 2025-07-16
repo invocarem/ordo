@@ -449,5 +449,107 @@ func testAnalyzeAdolescens() {
 
      
     }
+func testOdiDefectiveVerb() {
+    let odi = LatinWordEntity(
+        lemma: "odi",
+        partOfSpeech: .verb,
+        present: nil, // no present form
+        perfect: "odi",
+        infinitive: "odisse",
+        supine: "osum",
+        conjugation: 0 // conjugation not needed for defective verbs
+    )
+
+    let forms = odi.generatedVerbForms()
+    forms.sorted(by: { $0.key < $1.key }).forEach { key, values in
+        print("\(key): \(values.joined(separator: ", "))")
+    }
+
+    // Only perfect system should be present
+    XCTAssertEqual(forms["perfect"], [
+        "odi", "odisti", "odit",
+        "odimus", "odistis", "oderunt"
+    ], "perfect")
+
+    XCTAssertEqual(forms["pluperfect"], [
+        "oderam", "oderas", "oderat",
+        "oderamus", "oderatis", "oderant"
+    ], "pluperfect")
+
+    XCTAssertEqual(forms["future_perfect"], [
+        "odero", "oderis", "oderit",
+        "oderimus", "oderitis", "oderint"
+    ], "future_perfect")
+
+    // Present and other active forms should not exist
+    XCTAssertEqual(forms["present"], [])
+    XCTAssertEqual(forms["present_passive"], [])
+    XCTAssertEqual(forms["future"], [])
+    XCTAssertEqual(forms["imperfect_active"], [])
+}
+func testHumilio() {
+    let verb = LatinWordEntity(
+        lemma: "humilio",
+        partOfSpeech: .verb,
+        present: "humilio",
+        perfect: "humiliavi",
+        infinitive: "humiliare",
+        supine: "humiliatum",
+        conjugation: 1
+    )
+
+
+    let forms = verb.generatedVerbForms()
+    forms.sorted(by: { $0.key < $1.key }).forEach { key, values in
+        print("\(key): \(values.joined(separator: ", "))")
+    }
+    XCTAssertTrue(forms["imperfect_active"]?.contains("humiliabam") == true)
+    XCTAssertTrue(forms["imperfect_passive"]?.contains("humiliabar") == true)
+}
+
+func testEripio() {
+    let eripio = LatinWordEntity(
+        lemma: "eripio",
+        partOfSpeech: .verb,
+        present: "eripio",
+        perfect: "eripui",
+        infinitive: "eripere",
+        supine: "ereptum",
+        conjugation: 3
+    )
+
+    let forms = eripio.generatedVerbForms()
+    forms.sorted(by: { $0.key < $1.key }).forEach { key, values in
+        print("\(key): \(values.joined(separator: ", "))")
+    }
+
+    // Check that it's recognized as a 3rd-io verb: present starts with eripio
+    XCTAssertEqual(forms["present"]?.prefix(6), [
+        "eripio", "eripis", "eripit", "eripimus", "eripitis", "eripiunt"
+    ].prefix(6))
+
+    // Present active participle: eripiens
+    XCTAssertTrue(forms["present_active_participle"]?.contains("eripiens") == true)
+
+    // Future passive (3rd-io): eripiar, eripieris, ...
+    XCTAssertEqual(forms["future_passive"], [
+        "eripiar", "eripieris", "eripietur",
+        "eripiemur", "eripiemini", "eripientur"
+    ])
+
+    // Present passive subjunctive: eripiar, etc.
+    XCTAssertEqual(forms["present_passive_subjunctive"], [
+        "eripiar", "eripiaris", "eripiatur",
+        "eripiamur", "eripiamini", "eripiantur"
+    ])
+    
+    // Perfect
+    XCTAssertEqual(forms["perfect"], [
+        "eripui", "eripuisti", "eripuit",
+        "eripuimus", "eripuistis", "eripuerunt"
+    ])
+}
+
+
 
 }
