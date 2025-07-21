@@ -16,9 +16,9 @@ class Psalm1Tests: XCTestCase {
         "Beatus vir qui non abiit in consilio impiorum, et in via peccatorum non stetit, et in cathedra pestilentiae non sedit;",
         "Sed in lege Domini voluntas eius, et in lege eius meditabitur die ac nocte.",
         "Et erit tamquam lignum quod plantatum est secus decursus aquarum, quod fructum suum dabit in tempore suo:",
-        "Et folium eius non defluet, et omnia quaecumque faciet prosperabuntur.",        
-        "Non sic impii, non sic: sed tamquam pulvis quem projicit ventus a facie terrae.",
-        "Ideo non resurgent impii in judicio, neque peccatores in concilio justorum;Quoniam novit Dominus viam justorum, et iter impiorum peribit."
+        "Et folium eius non defluet, et omnia quaecumque faciet prosperabuntur.",
+        "Non sic impii, non sic: sed tamquam pulvis quem proicit ventus a facie terrae.",
+        "Ideo non resurgent impii in iudicio, neque peccatores in concilio iustorum; quoniam novit Dominus viam iustorum: et iter impiorum peribit." 
     ]
 
     func testPsalm1Lines1and2() {
@@ -138,7 +138,7 @@ func testPsalm1Lines3and4() {
     XCTAssertEqual(plantTerms.filter { $0 }.count, 3, "Should find all three plant parts")
     
     // Test positive outcomes
-    let positiveTerms = ["dabit", "non defluet", "prosperabuntur"].reduce(0) {
+    let positiveTerms = ["dabit", "defluet", "prosperabuntur"].reduce(0) {
         $0 + (analysis.dictionary["do"]?.forms[$1] ?? 0)
         + (analysis.dictionary["defluo"]?.forms[$1] ?? 0)
         + (analysis.dictionary["prospero"]?.forms[$1] ?? 0)
@@ -146,23 +146,26 @@ func testPsalm1Lines3and4() {
     XCTAssertEqual(positiveTerms, 3, "Should find three positive outcome terms")
 }
 func testPsalm1Lines5and6() {
-    let line5 = psalm1[4] // "Non sic impii, non sic: sed tamquam pulvis quem projicit ventus a facie terrae."
-    let line6 = psalm1[5] // "Ideo non resurgent impii in judicio, neque peccatores in concilio justorum; quoniam novit Dominus viam justorum: et iter impiorum peribit."
+    //  "Non sic impii, non sic: sed tamquam pulvis quem proicit ventus a facie terrae.",
+    //  "Ideo non resurgent impii in iudicio, neque peccatores in concilio iustorum; quoniam novit Dominus viam iustorum: et iter impiorum peribit."
+
+    let line5 = psalm1[4] 
+    let line6 = psalm1[5] 
     let combinedText = line5 + " " + line6
     let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 5)
     
     let testLemmas = [
         ("impius", ["impii", "impiorum"], "wicked"),
         ("pulvis", ["pulvis"], "dust"),
-        ("projicio", ["projicit"], "scatter"),
+        ("proicio", ["proicit"], "scatter"),
         ("ventus", ["ventus"], "wind"),
         ("facies", ["facie"], "face"),
         ("terra", ["terrae"], "earth"),
         ("resurgo", ["resurgent"], "rise up"),
-        ("judicium", ["judicio"], "judgment"),
+        ("iudicium", ["iudicio"], "judgment"),
         ("peccator", ["peccatores"], "sinner"),
         ("concilium", ["concilio"], "assembly"),
-        ("justus", ["justorum", "justorum"], "righteous"),
+        ("iustus", ["iustorum", "iustorum"], "righteous"),
         ("nosco", ["novit"], "know"),
         ("dominus", ["dominus"], "Lord"),
         ("via", ["viam"], "way"),
@@ -191,10 +194,10 @@ func testPsalm1Lines5and6() {
     
     // Key assertions
     XCTAssertEqual(analysis.dictionary["impius"]?.forms["impii"], 2, "Should find two 'wicked' references")
-    XCTAssertEqual(analysis.dictionary["justus"]?.forms["justorum"], 2, "Should find two 'righteous' references")
+    XCTAssertEqual(analysis.dictionary["iustus"]?.forms["iustorum"], 2, "Should find two 'righteous' references")
     
     // Test dust/wind imagery
-    let scatteringTerms = ["pulvis", "projicit", "ventus"].map {
+    let scatteringTerms = ["pulvis", "proicit", "ventus"].map {
         analysis.dictionary.values.flatMap { $0.forms.keys }.contains($0)
     }
     XCTAssertEqual(scatteringTerms.filter { $0 }.count, 3, "Should find all three scattering terms")
@@ -231,7 +234,7 @@ func testPsalm1Lines5and6() {
         let chaffMetaphorWords = [
             ("pulvis", ["pulvis"], "dust"),
             ("ventus", ["ventus"], "wind"),
-            ("projicio", ["projicit"], "scatter"),
+            ("proicio", ["proicit"], "scatter"),
             ("facies", ["facie"], "face")
         ]
         
@@ -247,7 +250,7 @@ func testPsalm1Lines5and6() {
         let analysis = latinService.analyzePsalm(text: psalm1)
         
         let judgmentWords = [
-            ("judicium", ["judicio"], "judgment"),
+            ("iudicium", ["iudicio"], "judgment"),
             ("concilium", ["concilio"], "assembly")
         ]
         
@@ -273,7 +276,7 @@ func testPsalm1Lines5and6() {
         let thematicWords = [
             ("beatus", ["beatus"], "blessed"),
             ("impius", ["impiorum", "impii"], "wicked"),
-            ("justus", ["justorum", "justorum"], "righteous")
+            ("iustus", ["iustorum", "iustorum"], "righteous")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: thematicWords)

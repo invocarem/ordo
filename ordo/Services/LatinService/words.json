@@ -1,5 +1,34 @@
 [
   {
+  "lemma": "iustus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "iustus",
+  "genitive": "iusti",
+  "forms": {
+    "accusative_m": ["iustum"],
+    "nominative_f": ["iusta"],
+    "nominative_n": ["iustum"]
+  },
+  "translations": {
+    "en": "just, fair, righteous",
+    "la": "iustus, -a, -um"
+  }
+},
+  {
+  "lemma": "iudicium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "iudicium",
+  "genitive": "iudicii",
+  "translations": {
+    "en": "judgment, trial, decision",
+    "la": "iudicium, iudicii"
+  }
+},
+  {
   "lemma": "confusio",
   "part_of_speech": "noun",
   "declension": 3,
@@ -3863,23 +3892,6 @@
   }
 },
   {
-  "lemma": "proicio",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "proicere",
-  "present": "proicio",
-  "future": "proiciam",
-  "perfect": "proieci",
-  "supine": "proiectum",
-  "forms": {
-    "present_subjunctive_2sg": ["proiicias"]
-  },
-  "translations": {
-    "en": "to throw forth, cast away",
-    "la": "proicio, proicere"
-  }
-},
-  {
   "lemma": "confirmo",
   "part_of_speech": "verb",
   "conjugation": 1,
@@ -6581,6 +6593,23 @@
   "translations": {
     "en": "vain, empty, meaningless",
     "la": "inanis, inane"
+  }
+},
+{
+  "lemma": "proicio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "proicere",
+  "present": "proicio",
+  "future": "proiciam",
+  "perfect": "proieci",
+  "supine": "proiectum",
+  "forms": {
+    "present_subjunctive_2sg": ["proiicias"]
+  },
+  "translations": {
+    "en": "to scatter, cast away, abandon",
+    "la": "proicio, proicere, proieci, proiectum"
   }
 },
   {
@@ -18629,7 +18658,7 @@
         "part_of_speech": "pronoun",
         "gender": "masculine",
         "nominative": "is",
-        "genitive": "ejus",
+        "genitive": "eius",
         "dative": "ei",
         "accusative": "eum",
         "ablative": "eo",
@@ -18639,50 +18668,22 @@
         "dative_plural": "eis",
         "accusative_plural": "eos",
         "ablative_plural": "eis",
+        "forms": {
+          "accusative_f": ["eam"],
+          "ablative_f": ["ea"],
+          "nominative_plural_f": ["eae"],
+          "genitive_plural_f": ["earum"],
+          "dative_plural_f": ["eis"],
+          "accusative_plural_f": ["eas"],
+          "nominative_n": ["id"]
+        },
         "translations": {
             "en": "he, him",
             "la": "is"
         }
     },
+
     {
-        "lemma": "is",
-        "part_of_speech": "pronoun",
-        "gender": "feminine",
-        "nominative": "ea",
-        "genitive": "ejus",
-        "dative": "ei",
-        "accusative": "eam",
-        "ablative": "ea",
-        "vocative": "ea",
-        "nominative_plural": "eae",
-        "genitive_plural": "earum",
-        "dative_plural": "eis",
-        "accusative_plural": "eas",
-        "ablative_plural": "eis",
-        "translations": {
-            "en": "she, her",
-            "la": "is"
-        }
-    },{
-        "lemma": "is",
-        "part_of_speech": "pronoun",
-        "gender": "neuter",
-        "nominative": "id",
-        "genitive": "ejus",
-        "dative": "ei",
-        "accusative": "id",
-        "ablative": "eo",
-        "vocative": "id",
-        "nominative_plural": "ea",
-        "genitive_plural": "eorum",
-        "dative_plural": "eis",
-        "accusative_plural": "ea",
-        "ablative_plural": "eis",
-        "translations": {
-            "en": "it",
-            "la": "is"
-        }
-    },{
         "lemma": "eo",
         "part_of_speech": "verb",
         "perfect": "ii",
