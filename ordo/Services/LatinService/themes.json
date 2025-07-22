@@ -204,6 +204,77 @@
     }
   ]
 },
+{
+  "psalmNumber": 5,
+  "category": "",
+  "themes": [
+    {
+      "name": "Speech → Prayer",
+      "description": "From vocal petition to intimate appeal before God the King",
+      "lemmas": ["verbum", "clamor", "oratio", "rex"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Augustine sees these opening lines as a layering of communication: words (verba), then inward groaning (clamor), then formal petition (oratio). God is not just King but intimate listener (Enarr. Ps. 5.2)."
+    },
+    {
+      "name": "Morning → Presence",
+      "description": "From early prayer to reverent standing before God",
+      "lemmas": ["mane", "orabo", "astabo", "videbo"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The soul rises early to speak and then to watch, anticipating divine presence. Augustine connects this with Christ rising early to pray (Mk 1:35), revealing devotion and attentiveness (Enarr. Ps. 5.4)."
+    },
+    {
+      "name": "Evil → Rejection",
+      "description": "From wicked intentions to divine intolerance",
+      "lemmas": ["malignus", "iniquitas", "habito", "permaneo"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "God’s holiness cannot dwell with evil. Augustine sees the dwelling (habitare) as incompatible with impurity; those clinging to iniquity remain outside (Enarr. Ps. 5.5)."
+    },
+    {
+      "name": "Blood → Worship",
+      "description": "From condemnation of the violent to the fear-filled approach to the sanctuary",
+      "lemmas": ["sanguis", "dolus", "introeo", "adoro", "misericordia"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Contrasting the abominable (abominabitur) with the beloved who enters the temple. Augustine emphasizes that only through mercy (misericordia) does one dare draw near (Enarr. Ps. 5.8)."
+    },
+    {
+      "name": "Injustice → Guidance",
+      "description": "From facing deceitful enemies to seeking righteous direction",
+      "lemmas": ["iustitia", "inimicus", "dirigo", "deduco"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "Because the enemy lacks truth, the psalmist seeks a path directed by God's justice. Augustine sees this path as Christ, the Way (John 14:6), given to those who reject the empty hearts of the wicked (Enarr. Ps. 5.9–10)."
+    },
+    {
+      "name": "Deceit → Judgment",
+      "description": "From poisonous speech to divine judgment",
+      "lemmas": ["sepulchrum", "dolus", "iudico", "decido", "impietas"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "Their throats are open graves, and their deceit requires divine judgment. Augustine reads this as the corruption of false teachers and the need for God to scatter their vain plots (Enarr. Ps. 5.11–12; Rom 3:13)."
+    },
+    {
+      "name": "Hope → Exultation",
+      "description": "From trusting in God to everlasting joy and communion",
+      "lemmas": ["spero", "exsulto", "laetor", "glorior"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "Augustine sees this as the fruit of the just soul: exultation and divine indwelling. Hope leads to joy, joy to glory, and glory to divine presence (Enarr. Ps. 5.13–14)."
+    },
+    {
+      "name": "Favor → Shield",
+      "description": "From divine goodwill to crowned protection",
+      "lemmas": ["voluntas", "scutum", "corono"],
+      "startLine": 15,
+      "endLine": 15,
+      "comment": "God’s favor (voluntas) surrounds the just like a shield. Augustine sees this not only as protection, but glorification—God crowns the soul with His own goodness (Enarr. Ps. 5.15)."
+    }
+  ]
+
+},
     {
       "psalmNumber": 6,
       "category": "",
