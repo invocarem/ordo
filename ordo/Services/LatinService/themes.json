@@ -1,155 +1,95 @@
 {
   "themes": [
     {
-  "psalmNumber": 1,
-  "category": "",
-  "themes": [
-    {
-      "name": "Counsel → Law",
-      "description": "Rejection of wicked advice for divine instruction",
-      "lemmas": ["consilium", "impius", "lex", "meditor"],
-      "startLine": 1,
-      "endLine": 2,
-      "comment": "Threefold rejection (abiit/stetit/sedit) contrasts with double 'lege' meditation"
-    },
-    {
-      "name": "Root → Fruit",
-      "description": "Spiritual vitality through constant nourishment",
-      "lemmas": ["lignum", "planto", "aqua", "fructus"],
-      "startLine": 3,
-      "endLine": 4,
-      "comment": "Hydrated tree (secus aquarum) yields timely fruit (in tempore suo)"
-    },
-    {
-      "name": "Leaf → Prosperity",
-      "description": "Perpetual flourishing without withering",
-      "lemmas": ["folium", "defluo", "prospero", "omnia"],
-      "startLine": 4,
-      "endLine": 4,
-      "comment": "Negative 'non defluet' precedes positive 'prosperabuntur'"
-    },
-    {
-      "name": "Dust → Judgment",
-      "description": "Ephemeral nature of the wicked's existence",
-      "lemmas": ["pulvis", "ventus", "judicium", "resurgo"],
-      "startLine": 5,
-      "endLine": 6,
-      "comment": "Scattering (projicit) contrasts with righteous assembly (concilio)"
-    },
-    {
-      "name": "Way → Perishing",
-      "description": "Ultimate destiny determined by chosen path",
-      "lemmas": ["via", "iter", "nosco", "pereo"],
-      "startLine": 6,
-      "endLine": 6,
-      "comment": "Divine knowledge (novit) distinguishes two paths"
-    },
-    {
-      "name": "Augustine: Trinitas Negationis",
-      "description": "Threefold rejection mirroring Trinity",
-      "lemmas": ["abeo", "sto", "sedeo"],
-      "startLine": 1,
-      "endLine": 1,
-      "comment": "Abiit/stetit/sedit as progressive entanglement with sin (Enarrationes 1.1)"
-    },
-    {
-      "name": "Augustine: Arbor Aeternitatis",
-      "description": "Tree as Christological symbol",
-      "lemmas": ["lignum", "aqua", "fructus"],
-      "startLine": 3,
-      "endLine": 3,
-      "comment": "Living water (John 4:10) yielding eternal fruit (Sermon 93.3)"
-    },
-    {
-      "name": "Augustine: Pulvis Resurrectionis",
-      "description": "Dust anticipating final judgment",
-      "lemmas": ["pulvis", "resurgo", "judicium"],
-      "startLine": 5,
-      "endLine": 6,
-      "comment": "Wicked's non-resurrection (non resurgent) contrasts with Matt 25:46 (City of God XX.30)"
-    }
-  ]
-},
+      "psalmNumber": 1,
+      "category": "",
+      "themes": [
+        {
+          "name": "Separation → Delight",
+          "description": "From avoidance of the wicked to joy in God's law",
+          "lemmas": ["sto", "abeo", "sedeo" ],
+          "startLine": 1,
+          "endLine": 2,
+          "comment": "Augustine sees a triple renunciation: counsel → way → seat (v.1), culminating in meditation on the Law (v.2). This path distinguishes the blessed one by his interior transformation (Enarr. Ps. 1.1–2)."
+        },
+        {
+          "name": "Rootedness → Fruitfulness",
+          "description": "From spiritual planting to lasting vitality and success",
+          "lemmas": ["lignum", "planto", "decursus", "aqua", "fructus", "prospero", "defluo"],
+          "startLine": 3,
+          "endLine": 4,
+          "comment": "The just man is like a tree by watercourses (v.3), bearing fruit in season. Augustine interprets this as rooted in grace and nourished by Scripture, producing lasting virtue (Enarr. Ps. 1.3)."
+        },
+        {
+          "name": "Chaff → Judgment",
+          "description": "From unstable wickedness to final divine separation",
+          "lemmas": ["iudicium", "concilio", "iustus", "via", "iter", "pereo", "novi"],
+          "startLine": 5,
+          "endLine": 6,
+          "comment": "The wicked are portrayed as chaff—weightless and rootless—unable to rise in judgment or belong to the company of the righteous. Augustine reads this as spiritual instability and exclusion from the City of God (Enarr. Ps. 1.5).",
+          "comment2": "The Lord 'knows' (novit) the way of the just with covenantal intimacy, while the path of the impious (iter impiorum) dissolves into ruin. This final judgment is not just a moment, but an eternal separation (Enarr. Ps. 1.6)."
 
-{
-  "psalmNumber": 2,
-  "category": "",
-  "themes": [
-    {
-      "name": "Rage → Futility",
-      "description": "Human rebellion against divine authority",
-      "lemmas": ["fremo", "meditor", "inania", "adversus"],
-      "startLine": 1,
-      "endLine": 2,
-      "comment": "Nations (gentes) and kings (reges) conspire in vain (inania)"
+        }
+
+     ]
     },
     {
-      "name": "Bonds → Mockery",
-      "description": "Failed revolt meets divine derision",
-      "lemmas": ["vinculum", "projicio", "irrideo", "subsanno"],
-      "startLine": 3,
-      "endLine": 4,
-      "comment": "Human 'let us break' (dirumpamus) vs God's laughter (irridebit)"
+      "psalmNumber": 2,
+      "category": "",
+      "themes": [
+        {
+          "name": "Rebellion → Conspiracy",
+          "description": "From chaotic resistance of the nations to unified opposition against God’s Christ",
+          "lemmas": ["fremo", "meditor", "consurgo", "convenio", "christus"],
+          "startLine": 1,
+          "endLine": 2,
+          "comment": "Augustine sees the Psalm beginning with irrational fury—nations raging in vain against the Lord and His Anointed (v.1). Kings and princes conspire not just against a ruler, but against divine order itself (v.2), prefiguring Christ’s passion (Acts 4:25–27)."
+        },
+        {
+          "name": "Yoke → Judgment",
+          "description": "From casting off divine rule to the Lord’s mocking response",
+          "lemmas": ["vinculum", "iugum", "proicio", "irrideo", "subsanno"],
+          "startLine": 3,
+          "endLine": 4,
+          "comment": "The nations cry for autonomy ('break their bonds', v.3), but God, enthroned in heaven, laughs at the futility of their rebellion. Augustine reads this as divine irony: their attempt to reject the yoke only confirms their judgment (Enarr. Ps. 2.4)."
+        },
+        {
+          "name": "Wrath → Kingship",
+          "description": "From divine fury to the appointment of the Messiah-King",
+          "lemmas": ["ira", "furo", "conturbo", "constitutio", "rex", "mons", "praedico"],
+          "startLine": 5,
+          "endLine": 6,
+          "comment": "In His wrath, God proclaims His chosen King on Zion (v.5–6). Augustine: this wrath isn't capricious, but righteous, establishing Christ’s kingship precisely where the nations rebel—on the holy mountain of suffering and resurrection (Enarr. Ps. 2.6)."
+        },
+        {
+          "name": "Sonship → Inheritance",
+          "description": "From divine begetting to the universal mission of the Son",
+          "lemmas": ["filius", "genuit", "hodie", "postulo", "hereditas", "possessio"],
+          "startLine": 7,
+          "endLine": 8,
+          "comment": "The Father begets the Son eternally ('hodie genui te', v.7) and grants Him the nations as inheritance (v.8). Augustine sees this as the mystery of Christ’s divine sonship and mission to gather the Church from all nations (Enarr. Ps. 2.7–8)."
+        },
+        {
+          "name": "Rod → Instruction",
+          "description": "From Messiah’s authority to a call for wisdom among rulers",
+          "lemmas": ["virga", "confringo", "figulus", "intelligo", "erudio", "iudico"],
+          "startLine": 9,
+          "endLine": 10,
+          "comment": "Christ rules with a rod of iron, shattering resistance like pottery (v.9). But the Psalm turns to appeal—calling rulers to wisdom and instruction (v.10). Augustine sees this as a merciful warning: submit before the Judge who offers peace (Enarr. Ps. 2.9–10)."
+        },
+        {
+          "name": "Fear → Trust",
+          "description": "From trembling service to beatitude in refuge",
+          "lemmas": ["servio", "timor", "exsulto", "tremor", "disciplina", "confido"],
+          "startLine": 11,
+          "endLine": 12,
+          "comment": "The final verses combine reverent fear with joy (v.11), urging all to embrace the Lord's discipline before His wrath is kindled. Augustine sees the beatitude—'Blessed are all who trust in Him'—as the secret of peace amidst divine judgment (Enarr. Ps. 2.12)."
+        }
+      ]
     },
-    {
-      "name": "Wrath → Coronation",
-      "description": "Divine fury establishes messianic rule",
-      "lemmas": ["ira", "furor", "constitutus", "rex"],
-      "startLine": 5,
-      "endLine": 6,
-      "comment": "Angry speech (loquetur) precedes Zion's kingship declaration"
-    },
-    {
-      "name": "Sonship → Inheritance",
-      "description": "Royal decree with universal dominion",
-      "lemmas": ["filius", "genui", "hereditas", "terminus"],
-      "startLine": 7,
-      "endLine": 8,
-      "comment": "'Today I have begotten you' (hodie genui te) precedes nations as inheritance"
-    },
-    {
-      "name": "Rod → Shattering",
-      "description": "Iron rule over rebellious vessels",
-      "lemmas": ["virga", "ferreus", "vas", "confringo"],
-      "startLine": 9,
-      "endLine": 9,
-      "comment": "Pottery imagery (vas figuli) underscores fragility of resistance"
-    },
-    {
-      "name": "Warning → Blessing",
-      "description": "Final admonition with beatitude",
-      "lemmas": ["intelligo", "irascor", "confido", "beatus"],
-      "startLine": 10,
-      "endLine": 12,
-      "comment": "Kings warned (erudimini) before final promise to the faithful"
-    },
-    {
-      "name": "Augustine: Risus Dominicus",
-      "description": "Divine laughter as sovereign assurance",
-      "lemmas": ["irrideo", "subsanno", "habito"],
-      "startLine": 4,
-      "endLine": 4,
-      "comment": "God's mockery (subsannabit) reveals rebel futility (Enarrationes 2.6)"
-    },
-    {
-      "name": "Augustine: Generatio Aeterna",
-      "description": "'Today' in eternal present of Trinity",
-      "lemmas": ["hodie", "genui", "filius"],
-      "startLine": 7,
-      "endLine": 7,
-      "comment": "Christ's eternal generation outside time (De Trinitate IV.20)"
-    },
-    {
-      "name": "Augustine: Tremor Amoris",
-      "description": "Trembling worship as purified love",
-      "lemmas": ["tremor", "servio", "exsulto"],
-      "startLine": 11,
-      "endLine": 11,
-      "comment": "Holy fear (cum tremore) tempers joy (Sermon 349.2)"
-    }
-  ]
-},
-     
+
+
+    
  {
   "psalmNumber": 4,
   "category": "",
