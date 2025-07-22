@@ -21,9 +21,9 @@
           "comment": "The just man is like a tree by watercourses (v.3), bearing fruit in season. Augustine interprets this as rooted in grace and nourished by Scripture, producing lasting virtue (Enarr. Ps. 1.3)."
         },
         {
-          "name": "Chaff → Judgment",
+          "name": "Chaff → Separation",
           "description": "From unstable wickedness to final divine separation",
-          "lemmas": ["iudicium", "concilio", "iustus", "via", "iter", "pereo", "novi"],
+          "lemmas": ["iudicium", "concilio", "iustus", "via", "iter", "pereo", "nosco"],
           "startLine": 5,
           "endLine": 6,
           "comment": "The wicked are portrayed as chaff—weightless and rootless—unable to rise in judgment or belong to the company of the righteous. Augustine reads this as spiritual instability and exclusion from the City of God (Enarr. Ps. 1.5).",
@@ -33,6 +33,7 @@
 
      ]
     },
+    
     {
       "psalmNumber": 2,
       "category": "",
@@ -215,100 +216,57 @@
   ]
 
 },
+
+{
+  "psalmNumber": 6,
+  "category": "",
+  "themes": [
     {
-      "psalmNumber": 6,
-      "category": "",
-      "themes": [
-        {
-          "name": "Divine Wrath",
-          "description": "Appealing against God's anger and chastening",
-          "lemmas": ["furor", "ira", "arguo", "corripio"],
-          "startLine": 1,
-          "endLine": 1,
-          "comment": "Opening plea against wrathful correction (v1)"
-        },
-        {
-          "name": "Physical Suffering",
-          "description": "Bodily affliction as manifestation of distress",
-          "lemmas": ["infirmus", "os", "conturbo", "sano"],
-          "startLine": 2,
-          "endLine": 2,
-          "comment": "Bones troubled + healing request (v2)"
-        },
-        {
-          "name": "Spiritual Anguish",
-          "description": "Deep disturbance of soul and being",
-          "lemmas": ["anima", "turbo", "usquequo"],
-          "startLine": 3,
-          "endLine": 3,
-          "comment": "Soul trouble + 'how long' cry (v3)"
-        },
-        {
-          "name": "Urgent Deliverance",
-          "description": "Plea for God to intervene and save",
-          "lemmas": ["converto", "eripio", "salvus", "misericordia"],
-          "startLine": 4,
-          "endLine": 4,
-          "comment": "Turn/rescue motifs (v4)"
-        },
-        {
-          "name": "Mortality Crisis",
-          "description": "Death as termination of praise",
-          "lemmas": ["mors", "infernus", "memor", "confiteor"],
-          "startLine": 5,
-          "endLine": 5,
-          "comment": "Sheol theology - no remembrance (v5)"
-        },
-        {
-          "name": "Nocturnal Lament",
-          "description": "Nighttime weeping and exhaustion",
-          "lemmas": ["laboro", "gemitus", "nox", "lacrima", "rigo"],
-          "startLine": 6,
-          "endLine": 6,
-          "comment": "Bed-drenching tears imagery (v6)"
-        },
-        {
-          "name": "Physical Distress",
-          "description": "Bodily manifestations of grief",
-          "lemmas": ["oculus", "turbatus", "fletus"],
-          "startLine": 7,
-          "endLine": 8,
-          "comment": "Eye trouble as physical symptom (v7-8)"
-        },
-        {
-          "name": "Enemy Confrontation",
-          "description": "Adversaries as source of suffering",
-          "lemmas": ["inimicus", "iniquitas"],
-          "startLine": 7,
-          "endLine": 8,
-          "comment": "Enemies and iniquity mentioned (v7-8)"
-        },
-        {
-          "name": "Divine Response",
-          "description": "Assurance of God hearing the plea",
-          "lemmas": ["exaudio", "deprecatio"],
-          "startLine": 8,
-          "endLine": 9,
-          "comment": "Weeping heard by God (v8-9)"
-        },
-        {
-          "name": "Enemy Shame",
-          "description": "Retributive justice on foes",
-          "lemmas": ["erubesco"],
-          "startLine": 10,
-          "endLine": 10,
-          "comment": "Enemies will be ashamed (v10)"
-        },
-        {
-          "name": "Swift Resolution",
-          "description": "Immediate divine intervention",
-          "lemmas": ["velox", "converto"],
-          "startLine": 10,
-          "endLine": 10,
-          "comment": "Quick turning of fortunes (v10)"
-        }
-      ]
+      "name": "Wrath → Mercy",
+      "description": "From divine anger to a plea for healing compassion",
+      "lemmas": ["furor", "ira", "arguo", "corripio", "misereor", "infirmus", "sano", "conturbo"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Augustine sees the psalmist appealing to God not as a just judge but as a merciful physician. Bodily and spiritual weakness are confessed openly (Enarr. Ps. 6.1–2)."
     },
+    {
+      "name": "Agitation → Rescue",
+      "description": "From inner turmoil to divine salvation",
+      "lemmas": ["turbo", "converto", "eripio", "salvo", "misericordia"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The psalmist cries out from the depths of fear and pleads for rescue, not for merit, but for God's mercy alone (Enarr. Ps. 6.3–4)."
+    },
+    {
+      "name": "Mortality → Tears",
+      "description": "From the silence of death to sorrowful intercession",
+      "lemmas": ["mors", "memor", "infernus", "confiteor", "lacrima", "rigo", "gemitus"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Augustine notes that the dead cannot praise God unless redeemed. The psalmist’s tears water the bed, symbolizing a compunction that prepares for renewal (Enarr. Ps. 6.5–6)."
+    },
+    {
+      "name": "Weariness → Hearing",
+      "description": "From exhaustion under oppression to God hearing the cry",
+      "lemmas": ["furor", "invetero", "inimicus", "exaudio", "fletus"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "The psalmist, worn by enemies and divine chastisement, finds hope as the Lord hears his weeping. Augustine highlights the grace given to contrite hearts (Enarr. Ps. 6.7–8)."
+    },
+    {
+      "name": "Prayer → Reversal",
+      "description": "From received prayer to the shame and retreat of enemies",
+      "lemmas": ["oratio", "suscipio", "erubesco", "convertor", "inimicus"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "Augustine emphasizes that the psalmist’s oratio is not only heard but lifted up ('suscepit'), signaling divine embrace. As a result, the wicked who once triumphed now reverse course—'erubescant et convertantur'—a final turning marked by divine justice (Enarr. Ps. 6.9–10)."
+    }
+    
+  ]
+},
+
+
+
     {
       "psalmNumber": 7,
       "category": "",
