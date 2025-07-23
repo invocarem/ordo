@@ -277,25 +277,24 @@
       "endLine": 2,
       "comment": "Augustine sees the 'lion' (leo) and act of seizing (rapio) as the aggression of the devil or wicked persecutors. In response, the soul flees to God in trust ('in te speravi') and pleads for liberation. This sets the tone of spiritual urgency and dependence (Enarr. Ps. 7.1–2)."
     },
-  
     {
-      "name": "Injustice → Emptiness",
-      "description": "If found guilty, the soul invites downfall and total loss",
-      "lemmas": ["iniquitas", "reddo", "decido", "inanis"],
+      "name": "Integrity → Collapse",
+      "description": "If found unjust, the psalmist accepts shameful defeat",
+      "lemmas": ["reddo", "retribuo", "decido", "inanis"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "The psalmist invokes judgment on himself if he has acted unjustly — repaying evil or betraying peace. 'Let me fall empty' ('decidam... inanis') is an image of moral collapse. Augustine sees this as the voice of Christ’s innocence, inviting scrutiny without fear (Enarr. Ps. 7.3–4)."
+      "comment": "The psalmist pleads innocence and offers himself to judgment: 'If I have repaid evil, let me fall.' Augustine sees this not as pride, but as the righteousness of one who truly fears God. The fall into emptiness ('inanis') symbolizes the soul’s ruin if cut off from justice (Enarr. Ps. 7.3–4)."
     },
 
     {
-      "name": "Guilt → Dust",
-      "description": "If guilty, the soul submits to complete defeat and humiliation",
-      "lemmas": ["decido", "inanis", "conculco", "pulvis"],
+      "name": "Capture → Dust",
+      "description": "From hypothetical pursuit to utter humiliation",
+      "lemmas": ["persequor", "comprehendo", "conculco", "pulvis"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "Verse 5 concludes the psalmist’s self-curse: if guilty, let him fall empty-handed and be overtaken.",
-      "comment2": "Verse 6 imagines the enemy trampling his soul and dragging his glory into the dust. Augustine sees this not only as a confession of integrity but as a Christic prophecy — the innocent one willing to bear dishonor to expose injustice (Enarr. Ps. 7.5–6)."
+      "comment": "If the psalmist is guilty, let the enemy chase and crush him. Augustine interprets this imagery as the total collapse of one without God’s protection: the soul overtaken and its glory buried in the dust — the fate of pride without repentance (Enarr. Ps. 7.5–6)."
     },
+
 
     {
       "name": "Judgment → Ascent",
