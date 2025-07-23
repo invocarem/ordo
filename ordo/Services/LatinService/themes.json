@@ -265,134 +265,91 @@
   ]
 },
 
-
+{
+  "psalmNumber": 7,
+  "category": "",
+  "themes": [
+    {
+      "name": "Threat → Refuge",
+      "description": "From violent pursuit to trusting in divine protection",
+      "lemmas": ["leo", "rapio", "spero", "libero"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Augustine sees the 'lion' (leo) and act of seizing (rapio) as the aggression of the devil or wicked persecutors. In response, the soul flees to God in trust ('in te speravi') and pleads for liberation. This sets the tone of spiritual urgency and dependence (Enarr. Ps. 7.1–2)."
+    },
+  
+    {
+      "name": "Injustice → Emptiness",
+      "description": "If found guilty, the soul invites downfall and total loss",
+      "lemmas": ["iniquitas", "reddo", "decido", "inanis"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The psalmist invokes judgment on himself if he has acted unjustly — repaying evil or betraying peace. 'Let me fall empty' ('decidam... inanis') is an image of moral collapse. Augustine sees this as the voice of Christ’s innocence, inviting scrutiny without fear (Enarr. Ps. 7.3–4)."
+    },
 
     {
-      "psalmNumber": 7,
-      "category": "",
-      "themes": [
-        {
-          "name": "Divine Address",
-          "description": "Initial invocation and personal relationship with God",
-          "lemmas": ["dominus", "deus"],
-          "startLine": 1,
-          "endLine": 1,
-          "comment": "Opening address to God"
-        },
-        {
-          "name": "Trust and Salvation",
-          "description": "Expression of trust and petition for salvation",
-          "lemmas": ["spero", "salvus"],
-          "startLine": 1,
-          "endLine": 1,
-          "comment": "Foundation of trust in God"
-        },
-        {
-          "name": "Threat Imagery",
-          "description": "Violent imagery depicting danger to the psalmist",
-          "lemmas": ["leo", "rapio"],
-          "startLine": 2,
-          "endLine": 2,
-          "comment": "Lion imagery for enemies"
-        },
-        {
-          "name": "Self-Examination",
-          "description": "Reflection on one's own actions and possible wrongdoing",
-          "lemmas": ["facio", "iniquitas"],
-          "startLine": 3,
-          "endLine": 4,
-          "comment": "Moral inventory before God"
-        },
-        {
-          "name": "Retribution Principle",
-          "description": "Concept of reciprocal justice and repayment",
-          "lemmas": ["reddo", "retribuo"],
-          "startLine": 4,
-          "endLine": 4,
-          "comment": "Justice returning to the wicked"
-        },
-        {
-          "name": "Consequences",
-          "description": "Potential downfall and threat from enemies",
-          "lemmas": ["decido", "inimicus"],
-          "startLine": 5,
-          "endLine": 5,
-          "comment": "Possible consequences if guilty"
-        },
-        {
-          "name": "Enemy Aggression",
-          "description": "Relentless pursuit and violent seizure by enemies",
-          "lemmas": ["persequor", "comprehendo"],
-          "startLine": 5,
-          "endLine": 6,
-          "comment": "Description of enemy actions"
-        },
-        {
-          "name": "Divine Intervention",
-          "description": "Call for God to act and request for divine exaltation",
-          "lemmas": ["exsurgo", "exalto"],
-          "startLine": 6,
-          "endLine": 7,
-          "comment": "Petition for God to arise"
-        },
-        {
-          "name": "Humiliation",
-          "description": "Imagery of being trampled and reduced to dust",
-          "lemmas": ["conculco", "pulvis"],
-          "startLine": 5,
-          "endLine": 6,
-          "comment": "Potential fate without God's help"
-        },
-        {
-          "name": "Divine Authority",
-          "description": "God's commands and divine mandate",
-          "lemmas": ["praeceptum", "mando"],
-          "startLine": 7,
-          "endLine": 7,
-          "comment": "God's sovereign authority"
-        },
-        {
-          "name": "Divine Judgment",
-          "description": "God as judge of all people",
-          "lemmas": ["judico", "populus"],
-          "startLine": 7,
-          "endLine": 8,
-          "comment": "Universal judgment theme"
-        },
-        {
-          "name": "Divine Presence",
-          "description": "God's surrounding presence and gathered assembly",
-          "lemmas": ["circumdo", "synagoga"],
-          "startLine": 7,
-          "endLine": 8,
-          "comment": "Divine courtroom imagery"
-        },
-        {
-          "name": "Judicial Petition",
-          "description": "Request for judgment according to justice",
-          "lemmas": ["judico", "justitia"],
-          "startLine": 8,
-          "endLine": 9,
-          "comment": "Appeal for righteous judgment"
-        },
-        {
-          "name": "Divine Examination",
-          "description": "God's scrutiny of the inner being",
-          "lemmas": ["scrutor", "cor"],
-          "startLine": 9,
-          "endLine": 9,
-          "comment": "God's omniscient knowledge"
-        },
-        {
-          "name": "Moral Contrast",
-          "description": "Destruction of wickedness and preservation of the righteous",
-          "lemmas": ["nequitia", "justus"],
-          "startLine": 9,
-          "endLine": 10,
-          "comment": "Two ways theology"
-        }
-      ]
+      "name": "Guilt → Dust",
+      "description": "If guilty, the soul submits to complete defeat and humiliation",
+      "lemmas": ["decido", "inanis", "conculco", "pulvis"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Verse 5 concludes the psalmist’s self-curse: if guilty, let him fall empty-handed and be overtaken.",
+      "comment2": "Verse 6 imagines the enemy trampling his soul and dragging his glory into the dust. Augustine sees this not only as a confession of integrity but as a Christic prophecy — the innocent one willing to bear dishonor to expose injustice (Enarr. Ps. 7.5–6)."
     },
+
+    {
+      "name": "Judgment → Ascent",
+      "description": "From divine summons to enthronement above all peoples",
+      "lemmas": ["mandatum", "synagoga", "regredior", "iudico"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "The psalmist foresees divine enthronement: peoples are gathered, and God ascends to judge. Augustine sees this fulfilled in Christ’s resurrection and return (Enarr. Ps. 7.7–8)."
+    },
+    {
+      "name": "Innocence → Discernment",
+      "description": "From self-examination to God's internal judgment",
+      "lemmas": ["iustitia", "innocentia", "scrutor", "renes"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "God tests not only actions but the heart and reins. Augustine interprets this as God refining interior motives (Enarr. Ps. 7.9–10)."
+    },
+    {
+      "name": "Righteousness → Warning",
+      "description": "From God’s support of the just to warning the unrepentant",
+      "lemmas": ["iustus", "adiutorium", "patiens", "converto"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "God is a righteous judge—merciful, but not endlessly tolerant. Augustine urges conversion while time remains (Enarr. Ps. 7.11–12)."
+    },
+    {
+      "name": "Preparation → Execution",
+      "description": "From preparation of judgment to fiery instruments",
+      "lemmas": ["paro", "vibrabit", "sagitta", "ardens"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "Weapons of divine justice are readied. Augustine sees the 'burning arrows' as spiritual wounds that bring repentance (Enarr. Ps. 7.13–14)."
+    },
+    {
+      "name": "Conception → Iniquity",
+      "description": "From conceiving sin to its birth in injustice",
+      "lemmas": ["parturio", "concipio", "iniquitas", "dolor"],
+      "startLine": 15,
+      "endLine": 16,
+      "comment": "The wicked give birth to iniquity and fall into their own traps. Augustine draws the parallel to the cross: the devil's net ensnared himself (Enarr. Ps. 7.15–16)."
+    },
+    {
+      "name": "Retribution → Praise",
+      "description": "From downfall of the wicked to exaltation of divine justice",
+      "lemmas": ["convertor", "iniquitas", "confiteor", "psallo"],
+      "startLine": 17,
+      "endLine": 18,
+      "comment": "Augustine sees poetic justice fulfilled: iniquity returns on the sinner’s head (v.17), prompting the psalmist to glorify God's righteous judgment (v.18). The righteous praise not vengeance, but God's unwavering justice (Enarr. Ps. 7.17–18)."
+    }
+
+  ]
+},
+
+
 
 {
   "psalmNumber": 8,

@@ -18,25 +18,29 @@ class Psalm9ATests: XCTestCase {
     // MARK: - Test Data (Psalm 9A)
     let id = PsalmIdentity(number: 9, category: "A")
     let psalm9A = [
+
         "Confitebor tibi, Domine, in toto corde meo; narrabo omnia mirabilia tua.",
         "Laetabor et exsultabo in te; psallam nomini tuo, Altissime.",
         "In convertendo inimicum meum retrorsum, infirmabuntur, et peribunt a facie tua.",
-        "Quoniam fecisti judicium meum et causam meum; sedisti super thronum, qui judicas justitiam.",
+        "Quoniam fecisti iudicium meum et causam meam; sedisti super thronum, qui iudicas iustitiam.",
         "Increpasti gentes, et periit impius; nomen eorum delesti in aeternum, et in saeculum saeculi.",
+        
         "Inimici defecerunt frameae in finem: et civitates destruxisti; periit memoria eorum cum sonitu.",
-        "Et Dominus in aeternum permanet; paravit in judicio thronum suum.",
-        "Et ipse judicabit orbem terrae in aequitate; judicabit populos in justitia.",
-        "Et factus est Dominus refugium pauperi; adjutor in opportunitatibus, in tribulatione.",
+        "Et Dominus in aeternum permanet; paravit in iudicio thronum suum.",
+        "Et ipse iudicabit orbem terrae in aequitate; iudicabit populos in iustitia.",
+        "Et factus est Dominus refugium pauperi; adiutor in opportunitatibus, in tribulatione.",
         "Et sperent in te qui noverunt nomen tuum; quoniam non dereliquisti quaerentes te, Domine.",
-        "Psallite Domino, qui habitat in Sion; annuntiate inter gentes studia ejus:",
+        
+        "Psallite Domino, qui habitat in Sion; annuntiate inter gentes studia eius:",
         "Quoniam requirens sanguinem eorum recordatus est; non est oblitus clamorem pauperum.",
         "Miserere mei, Domine; vide humilitatem meam de inimicis meis,",
         "Qui exaltas me de portis mortis, ut annuntiem omnes laudationes tuas in portis filiae Sion.",
         "Exsultabo in salutari tuo; infixae sunt gentes in interitu quem fecerunt; in laqueo isto quem absconderunt comprehensus est pes eorum.",
-        "Cognoscitur Dominus judicia faciens; in operibus manuum suarum comprehensus est peccator.",
+        "Cognoscitur Dominus iudicia faciens; in operibus manuum suarum comprehensus est peccator.",
         "Convertantur peccatores in infernum, omnes gentes quae obliviscuntur Deum.",
         "Quoniam non in finem oblivio erit pauperis; patientia pauperum non peribit in finem."
-    ]
+
+   ]
     
     // MARK: - Grouped Line Tests
     
@@ -110,11 +114,11 @@ class Psalm9ATests: XCTestCase {
             ("pereo", ["peribunt"], "perish"),
             ("facies", ["facie"], "face"),
             ("facio", ["fecisti"], "do"),
-            ("judicium", ["judicium"], "judgment"),
+            ("iudicium", ["iudicium"], "judgment"),
             ("causa", ["causam"], "cause"),
             ("sedeo", ["sedisti"], "sit"),
             ("thronus", ["thronum"], "throne"),
-            ("justus", ["justitiam"], "justice")
+            ("iustus", ["iustitiam"], "justice")
         ]
         
         // Thematic analysis
@@ -222,14 +226,14 @@ class Psalm9ATests: XCTestCase {
             ("dominus", ["dominus"], "Lord"),
             ("permaneo", ["permanet"], "endure"),
             ("paro", ["paravit"], "prepare"),
-            ("judicium", ["judicio"], "judgment"),
+            ("iudicium", ["iudicio"], "judgment"),
             ("thronus", ["thronum"], "throne"),
             ("judico", ["judicabit", "judicabit"], "judge"),
             ("orbis", ["orbem"], "world"),
             ("terra", ["terrae"], "earth"),
             ("aequitas", ["aequitate"], "equity"),
             ("populus", ["populos"], "people"),
-            ("justus", ["justitia"], "justice")
+            ("iustus", ["iustitia"], "justice")
         ]
         
         // Thematic analysis
@@ -243,8 +247,8 @@ class Psalm9ATests: XCTestCase {
                 ("aequitas", "Fairness standard")
             ],
             "Righteous Rule": [
-                ("judico", "Judicial function"),
-                ("justus", "Moral foundation")
+                ("iudico", "Judicial function"),
+                ("iustus", "Moral foundation")
             ]
         ]
         
@@ -269,7 +273,7 @@ class Psalm9ATests: XCTestCase {
     }
     
     func testPsalm9ALines9and10() {
-        let line9 = psalm9A[8] // "Et factus est Dominus refugium pauperi; adjutor in opportunitatibus, in tribulatione."
+        let line9 = psalm9A[8] // "Et factus est Dominus refugium pauperi; adiutor in opportunitatibus, in tribulatione."
         let line10 = psalm9A[9] // "Et sperent in te qui noverunt nomen tuum; quoniam non dereliquisti quaerentes te, Domine."
         let combinedText = line9 + " " + line10
         let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 9)
@@ -278,7 +282,7 @@ class Psalm9ATests: XCTestCase {
         let testLemmas = [
             ("refugium", ["refugium"], "refuge"),
             ("pauper", ["pauperi"], "poor"),
-            ("adjutor", ["adjutor"], "helper"),
+            ("adiutor", ["adiutor"], "helper"),
             ("opportunitas", ["opportunitatibus"], "opportunity"),
             ("tribulatio", ["tribulatione"], "tribulation"),
             ("spero", ["sperent"], "hope"),
@@ -292,7 +296,7 @@ class Psalm9ATests: XCTestCase {
         let expectedThemes = [
             "Divine Protection": [
                 ("refugium", "Shelter imagery"),
-                ("adjutor", "Active assistance")
+                ("adiutor", "Active assistance")
             ],
             "Faithful Relationship": [
                 ("spero", "Confident trust"),
@@ -624,31 +628,35 @@ class Psalm9BTests: XCTestCase {
     // MARK: - Test Data (Psalm 9B)
     let id = PsalmIdentity(number: 9, category: "B")
     let psalm9B = [
-        "Exsurge, Domine, non praevaleat homo; judicentur gentes in conspectu tuo.",
-        "Constitue, Domine, legislatorem super eos, ut sciant gentes quoniam homines sunt.",
-        "Ut quid, Domine, recessisti longe, despicis in opportunitatibus, in tribulatione?",
-        "Dum superbit impius, incenditur pauper; comprehenduntur in consiliis quibus cogitant.",
-        "Quoniam laudatur peccator in desideriis animae suae, et iniquus benedicitur.",
-        "Exacerbavit Dominum peccator, secundum multitudinem irae suae non quaeret:",
-        "Non est Deus in conspectu eius; inquinatae sunt viae illius in omni tempore.",
-        "Auferuntur judicia tua a facie eius; omnium inimicorum suorum dominabitur.",
-        "Dixit enim in corde suo: Non movebor a generatione in generationem sine malo.",
-        "Cujus maledictione os plenum est, et amaritudine, et dolo; sub lingua ejus labor et dolor.",
-        
-        "Sedet in insidiis cum divitibus in occultis, ut interficiat innocentem;",
-        "Oculi ejus in pauperem respiciunt; insidiatur in abscondito, quasi leo in spelunca sua.",
-        "Insidiatur ut rapiat pauperem; rapere pauperem dum attrahit eum.",
-        "In laqueo suo humiliabit eum; inclinabit se, et cadet cum dominatus fuerit pauperum.",
-        "Dixit enim in corde suo: Oblitus est Deus, avertit faciem suam ne videat in finem.",        
-        "Exsurge, Domine Deus, exaltetur manus tua; ne obliviscaris pauperum.",
-        "Propter quid irritavit impius Deum? dixit enim in corde suo: Non requiret.",
-        "Vides quoniam tu laborem et dolorem consideras, ut tradas eos in manus tuas.",
-        "Tibi derelictus est pauper; orphano tu eris adjutor.",
-        "Contere brachium peccatoris et maligni; quaeretur peccatum illius, et non invenietur.",
-        
-        "Dominus regnabit in aeternum, et in saeculum saeculi; peribitis, gentes, de terra illius.",
-        "Desiderium pauperum exaudivit Dominus; praeparationem cordis eorum audivit auris tua,",
-        "Judicare pupillo et humili, ut non apponat ultra magnificare se homo super terram."
+
+ "Exsurge, Domine, non praevaleat homo; iudicentur gentes in conspectu tuo.",
+                "Constitue, Domine, legislatorem super eos, ut sciant gentes quoniam homines sunt.",
+                "Ut quid, Domine, recessisti longe, despicis in opportunitatibus, in tribulatione?",
+                "Dum superbit impius, incenditur pauper; comprehenduntur in consiliis quibus cogitant.",
+                "Quoniam laudatur peccator in desideriis animae suae, et iniquus benedicitur.",
+                
+                "Exacerbavit Dominum peccator, secundum multitudinem irae suae non quaeret:",
+                "Non est Deus in conspectu eius; inquinatae sunt viae illius in omni tempore.",
+                "Auferuntur iudicia tua a facie eius; omnium inimicorum suorum dominabitur.",
+                "Dixit enim in corde suo: Non movebor a generatione in generationem sine malo.",
+                "Cuius maledictione os plenum est, et amaritudine, et dolo; sub lingua eius labor et dolor.",
+                
+                "Sedet in insidiis cum divitibus in occultis, ut interficiat innocentem;",
+                "Oculi eius in pauperem respiciunt; insidiatur in abscondito, quasi leo in spelunca sua.",
+                "Insidiatur ut rapiat pauperem; rapere pauperem dum attrahit eum.",
+                "In laqueo suo humiliabit eum; inclinabit se, et cadet cum dominatus fuerit pauperum.",
+                "Dixit enim in corde suo: Oblitus est Deus, avertit faciem suam ne videat in finem.",
+                
+                "Exsurge, Domine Deus, exaltetur manus tua; ne obliviscaris pauperum.",
+                "Propter quid irritavit impius Deum? dixit enim in corde suo: Non requiret.",
+                "Vides quoniam tu laborem et dolorem consideras, ut tradas eos in manus tuas.",
+                "Tibi derelictus est pauper; orphano tu eris adiutor.",
+                "Contere brachium peccatoris et maligni; quaeretur peccatum illius, et non invenietur.",
+                
+                "Dominus regnabit in aeternum, et in saeculum saeculi; peribitis, gentes, de terra illius.",
+                "Desiderium pauperum exaudivit Dominus; praeparationem cordis eorum audivit auris tua,",
+                "Iudicare pupillo et humili, ut non apponat ultra magnificare se homo super terram."
+
     ]
     
     // MARK: - Test Cases

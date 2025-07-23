@@ -1,5 +1,18 @@
 [
   {
+  "lemma": "adiutor",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "adiutor",
+  "genitive": "adiutoris",
+  "translations": {
+    "en": "helper, assistant, supporter",
+    "la": "adiutor, adiutoris"
+  },
+  "notes": "Feminine form is 'adiutrix' (adiutricis). Derived from 'adiuvo' (to help)."
+},
+  {
   "lemma": "iustus",
   "part_of_speech": "adjective",
   "declension": 1,
@@ -16543,21 +16556,6 @@
             },
             "notes": "Psalm 37:12: 'et qui iuxta me erant, de longe steterunt' ('and those near me stood afar off')"
         },
-        {
-            "lemma": "retribuo",
-            "part_of_speech": "verb",
-            "perfect": "retribui",
-            "infinitive": "retribuere",
-            "forms": {
-                "present": ["retribuo", "retribuis", "retribuit", "retribuimus", "retribuitis", "retribuunt"],
-                "perfect": ["retribui", "retribuisti", "retribuit", "retribuimus", "retribuistis", "retribuerunt"]
-            },
-            "translations": {
-                "en": "repay, requite, render",
-                "la": "retribuo"
-            },
-            "notes": "Psalm 37:21: 'qui retribuunt mala pro bonis' ('who repay evil for good')"
-        },
   {
     "lemma": "corripio",
     "part_of_speech": "verb",
@@ -18752,27 +18750,33 @@
             "en": "law",
             "la": "lex"
         }
-    }
-    ,
+    },
+
     {
-        "lemma": "mando",
-        "part_of_speech": "verb",
-        "perfect": "mandavi",
-        "infinitive": "mandare",
-        "forms": {
+      "lemma": "mando",
+      "part_of_speech": "verb",
+      "conjugation": 1,
+      "infinitive": "mandare",
+      "present": "mando",
+      "future": "mandabo",
+      "perfect": "mandavi",
+      "supine": "mandatum",
+      "translations": {
+        "en": "to command, entrust, commit",
+        "la": "mando, mandare, mandavi, mandatum"
+      },
+       "forms": {
             "present": ["mando", "mandas", "mandat", "mandamus", "mandatis", "mandant"],
             "imperfect": ["mandabam", "mandabas", "mandabat", "mandabamus", "mandabatis", "mandabant"],
             "future": ["mandabo", "mandabis", "mandabit", "mandabimus", "mandabitis", "mandabunt"],
-            "perfect": ["mandavi", "mandavisti/mandasti", "mandavit", "mandavimus", "mandavistis", "mandaverunt"],
+            "perfect_2sg_eccl": ["mandasti"],
             "imperative_singular": ["manda"],
             "imperative_plural": ["mandate"],
             "present_subjunctive": ["mandem", "mandes", "mandet", "mandemus", "mandetis", "mandent"]
-        },
-        "translations": {
-            "en": "command, entrust",
-            "la": "mando"
-        }
-    },{
+        }    
+    },
+    
+    {
         "lemma": "judicium",
         "part_of_speech": "noun",
         "declension": 2,

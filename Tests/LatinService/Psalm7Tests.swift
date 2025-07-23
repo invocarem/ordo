@@ -22,21 +22,26 @@ class Psalm7Tests: XCTestCase {
         "Domine Deus meus, in te speravi; salvum me fac ex omnibus persequentibus me, et libera me.",
         "Nequando rapiat ut leo animam meam, dum non est qui redimat, neque qui salvum faciat.",
         "Domine Deus meus, si feci istud, si est iniquitas in manibus meis,",
-        "si reddidi retribuentibus mihi mala, decidam merito ab inimicis meis inanis.",
+        "Si reddidi retribuentibus mihi mala, decidam merito ab inimicis meis inanis.",
         "Persequatur inimicus animam meam, et comprehendat, et conculcet in terra vitam meam, et gloriam meam in pulverem deducat.",
+       
         "Exsurge, Domine, in ira tua; exaltare in finibus inimicorum meorum.",
-        "Et exsurge, Domine Deus meus, in praecepto quod mandasti, et synagoga populorum circumdabit te.",
-        "Et propter hanc in altum regredere; Dominus judicat populos.",
-        "Judica me, Domine, secundum justitiam meam, et secundum innocentiam meam super me.",
-        "Consumetur nequitia peccatorum, et diriges justum, scrutans corda et renes, Deus.",
-        "Justum adjutorium meum a Domino, qui salvos facit rectos corde.",
-        "Deus judex justus, fortis, et patiens; numquid irascitur per singulos dies?",
+        "Et exsurge, Domine Deus meus, in praecepto quod mandasti; et synagoga populorum circumdabit te.",
+        "Et propter hanc in altum regredere; Dominus iudicat populos.",
+        "Iudica me, Domine, secundum iustitiam meam, et secundum innocentiam meam super me.",
+        "Consumetur nequitia peccatorum, et diriges iustum, scrutans corda et renes, Deus.",
+       
+        "Iustum adiutorium meum a Domino, qui salvos facit rectos corde.",
+        "Deus iudex iustus, fortis, et patiens; numquid irascitur per singulos dies?",
         "Nisi conversi fueritis, gladium suum vibrabit; arcum suum tetendit, et paravit illum.",
         "Et in eo paravit vasa mortis; sagittas suas ardentibus effecit.",
-        "Ecce parturiit injustitiam, concepit dolorem, et peperit iniquitatem.",
+        "Ecce parturiit iniustitiam, concepit dolorem, et peperit iniquitatem.",
+      
         "Lacum aperuit, et effodit eum, et incidit in foveam quam fecit.",
-        "Convertetur dolor ejus in caput ejus, et in verticem ipsius iniquitas ejus descendet.",
-        "Confitebor Domino secundum justitiam ejus, et psallam nomini Domini altissimi."
+        "Convertetur dolor eius in caput eius, et in verticem ipsius iniquitas eius descendet.",
+        "Confitebor Domino secundum iustitiam eius, et psallam nomini Domini altissimi."
+
+        
     ]
     
     // MARK: - Grouped Line Tests
@@ -230,7 +235,7 @@ class Psalm7Tests: XCTestCase {
             ("circumdo", ["circumdabit"], "surround"),
             ("altus", ["altum"], "high"),
             ("regredior", ["regredere"], "return"),
-            ("judico", ["judicat"], "judge")
+            ("iudico", ["iudicat"], "judge")
         ]
         
         // Thematic analysis
@@ -240,7 +245,7 @@ class Psalm7Tests: XCTestCase {
                 ("mando", "Divine mandate")
             ],
             "Divine Judgment": [
-                ("judico", "God as judge"),
+                ("iudico", "God as judge"),
                 ("populus", "Scope of judgment")
             ],
             "Divine Presence": [
@@ -277,15 +282,15 @@ class Psalm7Tests: XCTestCase {
         
         // Lemma verification
         let testLemmas = [
-            ("judico", ["judica"], "judge"),
+            ("iudico", ["iudica"], "judge"),
             ("dominus", ["domine"], "Lord"),
-            ("justitia", ["justitiam"], "justice"),
+            ("iustitia", ["iustitiam"], "justice"),
             ("innocentia", ["innocentiam"], "innocence"),
             ("consumo", ["consumetur"], "consume"),
             ("nequitia", ["nequitia"], "wickedness"),
             ("peccator", ["peccatorum"], "sinner"),
             ("dirigo", ["diriges"], "guide"),
-            ("justus", ["justum"], "righteous"),
+            ("iustus", ["iustum"], "righteous"),
             ("scrutor", ["scrutans"], "examine"),
             ("cor", ["corda"], "heart"),
             ("ren", ["renes"], "kidney"),
@@ -295,8 +300,8 @@ class Psalm7Tests: XCTestCase {
         // Thematic analysis
         let expectedThemes = [
             "Judicial Petition": [
-                ("judico", "Request for judgment"),
-                ("justitia", "Standard of justice")
+                ("iudico", "Request for judgment"),
+                ("iustitia", "Standard of justice")
             ],
             "Divine Examination": [
                 ("scrutor", "God's scrutiny"),
@@ -304,7 +309,7 @@ class Psalm7Tests: XCTestCase {
             ],
             "Moral Contrast": [
                 ("nequitia", "Wickedness destroyed"),
-                ("justus", "Righteous preserved")
+                ("iustus", "Righteous preserved")
             ]
         ]
         
