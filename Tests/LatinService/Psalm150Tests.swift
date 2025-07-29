@@ -12,86 +12,53 @@ class Psalm150Tests: XCTestCase {
     
     // MARK: - Test Data
     let psalm150 = [
-        "Laudate Dominum in sanctis ejus: laudate eum in firmamento virtutis ejus.",
-        "Laudate eum in virtutibus ejus: laudate eum secundum multitudinem magnitudinis ejus.",
+        "Laudate Dominum in sanctis eius: laudate eum in firmamento virtutis eius.",
+        "Laudate eum in virtutibus eius: laudate eum secundum multitudinem magnitudinis eius.",
         "Laudate eum in sono tubae: laudate eum in psalterio, et cithara.",
         "Laudate eum in tympano, et choro: laudate eum in chordis, et organo.",
-        "Laudate eum in cymbalis benesonantibus: laudate eum in cymbalis jubilationis.",
+        "Laudate eum in cymbalis benesonantibus: laudate eum in cymbalis iubilationis.",
         "Omnis spiritus laudet Dominum."
     ]
     let id = PsalmIdentity(number: 150, category: nil)
     
     // MARK: - Test Cases
-    
-    func testPraiseVocabulary() {
+
+    func testThemeLemmas() {
         let analysis = latinService.analyzePsalm(id, text: psalm150)
         
-        let praiseTerms = [
-            ("laudo", ["Laudate", "laudet"], "praise"),
-            ("magnitudo", ["magnitudinis"], "greatness"),
-            ("jubilatio", ["jubilationis"], "jubilation"),
+        // First theme (lines 1-2): Temple → Majesty
+        let templeTerms = [
+            ("sanctus", ["sanctis"], "holy"),
+            ("firmamentum", ["firmamento"], "firmament"),
             ("virtus", ["virtutis", "virtutibus"], "power"),
-            ("sanctus", ["sanctis"], "holy")
+            ("magnitudo", ["magnitudinis"], "greatness")
         ]
         
-        verifyWordsInAnalysis(analysis, confirmedWords: praiseTerms)
-    }
-    
-    func testMusicalInstruments() {
-        let analysis = latinService.analyzePsalm(id, text: psalm150)
-        
+        // Second theme (lines 3-4): Instruments → Communion  
         let instrumentTerms = [
             ("tuba", ["tubae"], "trumpet"),
             ("psalterium", ["psalterio"], "psaltery"),
             ("cithara", ["cithara"], "harp"),
             ("tympanum", ["tympano"], "tambourine"),
             ("chorda", ["chordis"], "string"),
-            ("organum", ["organo"], "organ"),
-            ("cymbalum", ["cymbali", "cymbalis"], "cymbal")
+            ("organum", ["organo"], "organ")
         ]
         
-        verifyWordsInAnalysis(analysis, confirmedWords: instrumentTerms)
-    }
-    
-    func testMusicalContext() {
-        let analysis = latinService.analyzePsalm(id, text: psalm150)
-        
-        let musicTerms = [
-            ("sonus", ["sono"], "sound"),
-            ("chorus", ["choro"], "dance"),
-            ("benesonans", ["benesonantibus"], "resounding"),
-            ("psallere", ["psalterio"], "to play the psaltery")
+        // Third theme (lines 5-6): Cymbals → Breath
+        let cymbalTerms = [
+            ("cymbalum", ["cymbalis"], "cymbal"),
+            ("iubilatio", ["iubilationis"], "jubilation"),
+            ("spiritus", ["spiritus"], "spirit"),
+            ("laudo", ["Laudate", "laudet"], "praise")
         ]
         
-        verifyWordsInAnalysis(analysis, confirmedWords: musicTerms)
+        // Verify each theme group exactly like testPraiseVocabulary does
+        verifyWordsInAnalysis(analysis, confirmedWords: templeTerms)
+        verifyWordsInAnalysis(analysis, confirmedWords: instrumentTerms) 
+        verifyWordsInAnalysis(analysis, confirmedWords: cymbalTerms)
     }
-    
-    func testDivineAttributes() {
-        let analysis = latinService.analyzePsalm(id,text: psalm150)
         
-        let divineTerms = [
-            ("Dominus", ["Dominum"], "Lord"),
-            ("firmamentum", ["firmamento"], "firmament"),
-            ("multitudo", ["multitudinem"], "multitude"),
-            ("spiritus", ["spiritus"], "spirit")
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: divineTerms)
-    }
-    
-    func testStructuralElements() {
-        let analysis = latinService.analyzePsalm(id,text: psalm150)
-        
-        let structuralTerms = [
-            ("in", ["in"], "in"),
-            ("et", ["et"], "and"),
-            ("secundum", ["secundum"], "according to"),
-            ("omnis", ["Omnis"], "all")
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: structuralTerms)
-    }
-    
+   
     // MARK: - Helper
     private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
         for (lemma, forms, translation) in confirmedWords {

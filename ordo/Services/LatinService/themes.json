@@ -4545,7 +4545,84 @@
     }
   ]
 }
+,
+{
+  "psalmNumber": 149,
+  "category": "",
+  "themes": [
+    {
+      "name": "New Song → Holy Assembly",
+      "description": "From renewed praise to communal joy among the saints",
+      "lemmas": ["canticum", "novus",  "ecclesia", "laetor", "exsulto"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalm opens with a new song ('canticum novum'), which Augustine takes as the song of the New Covenant. Joy in the Creator and King fills the assembly of the saints, where the Church celebrates her risen life (Enarr. Ps. 149.1–2)."
+    },
+    {
+      "name": "Dance → Favor",
+      "description": "From bodily worship to divine delight in the meek",
+      "lemmas": ["chorus", "tympanum", "psalterium", "beneplacitum", "mansuetus"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Praise through dance and instruments symbolizes total bodily devotion. Augustine connects God's delight in the meek to Christ’s humility, which becomes salvation for the lowly (Enarr. Ps. 149.3–4; Matt 5:5)."
+    },
+    {
+      "name": "Rest → Exaltation",
+      "description": "From contemplative joy to vocal praise of God's power",
+      "lemmas": ["gloria", "cubile", "guttur", "exaltatio", "gladius", "anceps"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The saints rejoice even upon their beds, a figure of inner peace. Augustine sees the 'double-edged swords' as the Word of God on their lips and in action — praise that is both contemplative and militant (Enarr. Ps. 149.5–6; Heb 4:12)."
+    },
+    {
+      "name": "Judgment → Dominion",
+      "description": "From vindication over nations to holy authority",
+      "lemmas": ["vindicta", "increpatio", "gens", "populus", "rego", "compedes", "manicae"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Augustine allegorizes the saints’ role in judgment: not carnal vengeance, but spiritual discernment and dominion. The binding of rulers represents the subjection of prideful powers to the will of Christ (Enarr. Ps. 149.7–8; 1 Cor 6:2)."
+    },
+    {
+      "name": "Written Judgment → Shared Glory",
+      "description": "From divine decree to the honor of all God's faithful",
+      "lemmas": ["iudicium", "conscriptus", "gloria", "sanctus"],
+      "startLine": 9,
+      "endLine": 9,
+      "comment": "This final line reveals that all judgment is already 'written' (conscriptum) — according to divine justice. Augustine sees the glory of the saints not in earthly power, but in union with God's will and final vindication (Enarr. Ps. 149.9)."
+    }
+  ]
+},
 
+{
+  "psalmNumber": 150,
+  "category": "",
+  "themes": [
+    {
+      "name": "Temple → Majesty",
+      "description": "From sanctuary worship to awe before divine greatness",
+      "lemmas": ["sanctus", "firmamentum", "virtus", "magnitudo"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Praise begins in God's sancta — the temple — and extends to the firmament of His power. Augustine sees this as an ascent from visible liturgy to contemplation of divine majesty. God's mighty acts (virtutes) and immeasurable greatness (magnitudo) inspire reverent joy (Enarr. Ps. 150.1–2)."
+    },
+    {
+      "name": "Instruments → Communion",
+      "description": "From diverse instruments to unified spiritual praise",
+      "lemmas": ["tuba", "psalterium", "cithara", "tympanum", "chorus", "chorda", "organum"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The instruments — wind, string, and dance — symbolize various gifts and temperaments. Augustine sees harmony in their diversity: the Church praises with all members, each contributing uniquely in the Spirit’s unity (Enarr. Ps. 150.3–4)."
+    },
+    {
+      "name": "Cymbals → Breath",
+      "description": "From jubilant sound to universal participation",
+      "lemmas": ["cymbalum", "iubilatio", "spiritus", "laudo"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The climax of praise is marked by 'jubilation' — a joy beyond words. Augustine notes that 'every spirit' (omnis spiritus) signifies the totality of redeemed creation praising God not only with music but with breath, life, and being itself (Enarr. Ps. 150.5–6)."
+    }
+  ]
+}
 
   ]
 }

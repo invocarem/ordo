@@ -124,7 +124,7 @@ class Psalm9ATests: XCTestCase {
         // Thematic analysis
         let expectedThemes = [
             "Divine Judgment": [
-                ("judicium", "Legal vindication"),
+                ("iudicium", "Legal vindication"),
                 ("thronus", "Judicial authority")
             ],
             "Enemy Defeat": [
@@ -228,12 +228,12 @@ class Psalm9ATests: XCTestCase {
             ("paro", ["paravit"], "prepare"),
             ("iudicium", ["iudicio"], "judgment"),
             ("thronus", ["thronum"], "throne"),
-            ("judico", ["judicabit", "judicabit"], "judge"),
+            ("iudico", ["iudicabit", "iudicabit"], "judge"),
             ("orbis", ["orbem"], "world"),
             ("terra", ["terrae"], "earth"),
             ("aequitas", ["aequitate"], "equity"),
             ("populus", ["populos"], "people"),
-            ("iustus", ["iustitia"], "justice")
+            ("iustitia", ["iustitia"], "justice")
         ]
         
         // Thematic analysis
@@ -248,7 +248,7 @@ class Psalm9ATests: XCTestCase {
             ],
             "Righteous Rule": [
                 ("iudico", "Judicial function"),
-                ("iustus", "Moral foundation")
+                ("iustitia", "Moral foundation")
             ]
         ]
         

@@ -1,5 +1,105 @@
 [
   {
+  "lemma": "chorda",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "chorda",
+  "genitive": "chordae",
+  "translations": {
+    "en": "string (of a musical instrument), cord",
+    "la": "chorda"
+  }
+ },
+  {
+  "lemma": "tympanum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "tympanum",
+  "genitive": "tympani",
+  "translations": {
+    "en": "tambourine, hand-drum",
+    "la": "tympanum"
+  }
+},
+  {
+  "lemma": "cymbalum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "cymbalum",
+  "genitive": "cymbali",
+  "translations": {
+    "en": "cymbal (percussion instrument)",
+    "la": "cymbalum"
+  },
+  "forms": {
+    "genitive_sg": ["cymbali"],      
+    "dative_pl": ["cymbalis"]  
+  }
+ },
+  {
+  "lemma": "magnitudo",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "magnitudo",
+  "genitive": "magnitudinis",
+  "translations": {
+    "en": "greatness, magnitude, vastness",
+    "la": "magnitudo"
+  }
+ },
+  {
+    "lemma": "tuba",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "tuba",
+    "genitive": "tubae",
+    "translations": {
+      "en": "trumpet, war-horn",
+      "la": "tuba"
+    }
+  },
+  {
+    "lemma": "chorus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "chorus",
+    "genitive": "chori",
+    "translations": {
+      "en": "chorus, dance, choir",
+      "la": "chorus"
+    }
+  },
+  {
+    "lemma": "sonus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "sonus",
+    "genitive": "soni",
+    "translations": {
+      "en": "sound, noise (especially musical)",
+      "la": "sonus"
+    }
+  },
+  {
+    "lemma": "iubilatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "iubilatio",
+    "genitive": "iubilationis",
+    "translations": {
+      "en": "jubilation, joyful shouting",
+      "la": "iubilatio"
+    }
+  },
+  {
   "lemma": "adiutor",
   "part_of_speech": "noun",
   "declension": 3,
@@ -1035,7 +1135,7 @@
   "nominative": "organum",
   "genitive": "organi",
   "translations": {
-    "en": "musical instrument, harp (especially in Psalms)",
+    "en": "organ, musical instrument, harp",
     "la": "organum"
   },
   "forms_plural": {
