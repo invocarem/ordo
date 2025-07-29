@@ -1,5 +1,81 @@
 [
   {
+  "lemma": "astrum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "astrum",
+  "genitive": "astri",
+  "translations": {
+    "en": "star, constellation",
+    "la": "astrum"
+  }
+},
+  {
+  "lemma": "bestia",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "bestia",
+  "genitive": "bestiae",
+  "translations": {
+    "en": "beast, wild animal, creature",
+    "la": "bestia"
+  }
+},
+  {
+  "lemma": "abyssus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "feminine",
+  "nominative": "abyssus",
+  "genitive": "abyssi",
+  "translations": {
+    "en": "abyss, depth, bottomless pit",
+    "la": "abyssus"
+  }
+},
+  {
+  "lemma": "iunior",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "iunior",
+  "genitive": "iunioris",
+  "translations": {
+    "en": "younger, more youthful",
+    "la": "iunior"
+  }
+},
+  {
+  "lemma": "iuvenis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "iuvenis",
+  "genitive": "iuvenis",
+  "forms" : {
+    "nominative_f": ["iuvenis"],
+    "nominative_n": ["iuvene"]
+  },
+  "translations": {
+    "en": "young, youthful",
+    "la": "iuvenis"
+  }
+},
+  {
+  "lemma": "iudex",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "iudex",
+  "genitive": "iudicis",
+  "translations": {
+    "en": "judge, arbiter",
+    "la": "iudex"
+  }
+},
+  {
   "lemma": "novus",
   "part_of_speech": "adjective",
   "declension": 1,
@@ -2027,7 +2103,8 @@
     "nominative": "caelum",
     "genitive": "caeli",
     "forms":{
-      "nominative_m": ["caelum"]
+      "nominative_m": ["caelum"],
+      "accusative_plural_eccl": ["caelos"]
     },
    "translations": {
         "en": "heaven, sky",

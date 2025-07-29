@@ -4544,8 +4544,73 @@
       "comment": "God's complete knowledge of the heart"
     }
   ]
-}
-,
+},
+
+
+{
+  "psalmNumber": 148,
+  "category": "",
+  "themes": [
+    {
+      "name": "Heavens → Hosts",
+      "description": "From cosmic heights to angelic praise",
+      "lemmas": ["caelum", "excelsum", "angelus", "virtus"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Praise begins in the highest realms — 'de caelis' and 'in excelsis' — and descends through angels and celestial powers. Augustine sees this as the call of invisible creation to glorify its Creator (Enarr. Ps. 148.1–2)."
+    },
+    {
+      "name": "Luminaries → Waters Above",
+      "description": "From sun and stars to upper waters praising the Lord",
+      "lemmas": ["sol", "luna", "astra", "aqua"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The visible heavens respond in praise: sun, moon, stars, and the mysterious 'waters above the heavens' (Gen 1:7). Augustine allegorizes this as the harmony of creation reflecting divine order (Enarr. Ps. 148.3–4)."
+    },
+    {
+      "name": "Command → Creation",
+      "description": "From divine utterance to the formation of all things",
+      "lemmas": ["dico", "creo", "praeceptum"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "'He spoke, and they were made' — creation is traced back to God’s word and will. Augustine emphasizes the eternal stability granted to creation by God’s decree (Enarr. Ps. 148.5–6)."
+    },
+    {
+      "name": "Depths → Storms",
+      "description": "From abyssal monsters to obedient tempests",
+      "lemmas": ["draco", "abyssus", "spiritus", "verbum"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "The earth joins the praise — including its most fearsome aspects: dragons, depths, fire, hail. Even storms are subject to God’s Word. Augustine sees all nature as under divine command, terrifying yet obedient (Enarr. Ps. 148.7–8)."
+    },
+    {
+      "name": "Mountains → Beasts",
+      "description": "From immovable heights to creatures of the earth",
+      "lemmas": ["mons", "cedrus", "bestia", "serpens"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "Nature’s grandeur and wildness — trees and beasts — are summoned to praise. Augustine reads the fruitful and the fearsome alike as figures for souls transformed or untamed (Enarr. Ps. 148.9–10)."
+    },
+    {
+      "name": "Rulers → Youth",
+      "description": "From kings to children united in praise",
+      "lemmas": ["rex", "iudex", "iuvenis", "senex"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "All human conditions and generations — rulers, judges, youth and elders — are drawn into the liturgy of creation. For Augustine, this symbolizes the unity of the Church transcending age and status (Enarr. Ps. 148.11–12)."
+    },
+    {
+      "name": "Name → People",
+      "description": "From God’s exalted name to His intimate people",
+      "lemmas": ["nomen", "confessio", "cornu", "populus"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "The psalm ends in covenant joy: God’s name is exalted above all, yet His people are drawn close. Augustine interprets the 'horn' as Christ glorified in the midst of the saints (Enarr. Ps. 148.13–14)."
+    }
+  ]
+},
+
+
 {
   "psalmNumber": 149,
   "category": "",
