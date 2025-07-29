@@ -181,6 +181,7 @@ let package = Package(
 
                 "Psalm141Tests.swift", 
                 
+                "Psalm149Tests.swift", 
                 "Psalm150Tests.swift", 
 
                 "PsalmDegreesTests.swift", 

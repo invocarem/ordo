@@ -1,5 +1,120 @@
 [
   {
+  "lemma": "novus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "novus",
+  "genitive": "novi",
+  "forms": {
+    "nominative_f": ["nova"],
+    "nominative_n": ["novum"]
+  },
+  "translations": {
+    "en": "new, fresh, recent",
+    "la": "novus"
+  }
+},
+  {
+  "lemma": "exaltatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "exaltatio",
+  "genitive": "exaltationis",
+  "translations": {
+    "en": "exaltation, elevation, glorification",
+    "la": "exaltatio"
+  }
+},
+  {
+  "lemma": "beneplacitum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "beneplacitum",
+  "genitive": "beneplaciti",
+  "translations": {
+    "en": "good pleasure, divine favor, will (of God)",
+    "la": "beneplacitum"
+  }
+},
+  {
+  "lemma": "conscriptus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "neuter",
+  "nominative": "conscriptum",
+  "genitive": "conscripti",
+  "translations": {
+    "en": "written down, decreed, officially recorded",
+    "la": "conscriptus"
+  }
+},
+  {
+  "lemma": "increpatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "increpatio",
+  "genitive": "increpationis",
+  "translations": {
+    "en": "rebuke, reprimand, stern warning",
+    "la": "increpatio"
+  },
+  "forms": {
+    "nominative_plural": ["increpationes"],  
+    "genitive_plural": ["increpationum"],
+    "ablative_sg": ["increpatione"]
+  }
+},
+  {
+  "lemma": "manicae",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "manicae",
+  "genitive": "manicarum",
+  "translations": {
+    "en": "handcuffs, chain (wrist restraints)",
+    "la": "manicae"
+  },
+  "forms": {
+    "dative_pl": ["manicis"],  
+    "ablative_pl": ["manicis"],
+    "nominative_sg": ["manica"] 
+  },
+  "note": "Distinct from 'catena' (general chain); specifies wrist restraints"
+},
+  {
+  "lemma": "compedes",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "compedes",
+  "genitive": "compedum",
+  "translations": {
+    "en": "fetters, leg chains (for prisoners)",
+    "la": "compedes"
+  }
+},
+  {
+  "lemma": "anceps",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "anceps",
+  "genitive": "ancipitis",
+  "translations": {
+    "en": "two-edged, double-headed, uncertain",
+    "la": "anceps"
+  },
+  "forms": {
+    "nominative_plural_f": ["ancipites"],  
+    "accusative_plural_f": ["ancipites"]
+ }
+},
+  {
   "lemma": "chorda",
   "part_of_speech": "noun",
   "declension": 1,

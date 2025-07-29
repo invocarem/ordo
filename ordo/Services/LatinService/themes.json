@@ -4577,7 +4577,7 @@
     {
       "name": "Judgment → Dominion",
       "description": "From vindication over nations to holy authority",
-      "lemmas": ["vindicta", "increpatio", "gens", "populus", "rego", "compedes", "manicae"],
+      "lemmas": ["vindicta", "increpatio", "populus", "rego", "compedes", "manicae"],
       "startLine": 7,
       "endLine": 8,
       "comment": "Augustine allegorizes the saints’ role in judgment: not carnal vengeance, but spiritual discernment and dominion. The binding of rulers represents the subjection of prideful powers to the will of Christ (Enarr. Ps. 149.7–8; 1 Cor 6:2)."
