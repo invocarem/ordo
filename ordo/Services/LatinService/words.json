@@ -1,5 +1,47 @@
 [
   {
+  "lemma": "exsurgo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "exsurgere",
+  "present": "exsurgo",
+  "future": "exsurgam",
+  "perfect": "exsurrexi",
+  "supine": "exsurrectum",
+  "forms": {
+    "future_indicative_active_3rd_sg" : ["exsurget"]
+  },
+  "translations": {
+    "en": "to rise up, stand up, arise",
+    "la": "exsurgo, exsurgere, exsurrexi, exsurrectum"
+  },
+  "notes": "The form 'exsurge' is the second-person singular present imperative active ('rise up!'). The form 'exsurget' is the third-person singular future indicative active ('he/she/it will rise up')."
+},
+  {
+  "lemma": "orphanus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "orphanus",
+  "genitive": "orphani",
+  "translations": {
+    "en": "orphan",
+    "la": "orphanus"
+  }
+},
+  {
+  "lemma": "brachium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "brachium",
+  "genitive": "brachii",
+  "translations": {
+    "en": "arm, forearm, branch",
+    "la": "brachium"
+  }
+},
+  {
   "lemma": "astrum",
   "part_of_speech": "noun",
   "declension": 2,
@@ -10294,30 +10336,7 @@
       "subjunctive_imperfect": ["soporarem", "soporares", "soporaret", "soporaremus", "soporaretis", "soporarent"]
     }
   },
-  {
-  "lemma": "exsurgo",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "exsurgere",
-  "perfect": "exsurrexi",
-  "supine": "exsurrectum",
-  "imperative": "exsurge",
-  "translations": {
-    "en": "to arise, rise up, stand up",
-    "la": "exsurgo, exsurgere, exsurrexi, exsurrectum"
-  },
-  "forms": {
-      "imperative": ["exsurge"],
-    "present": ["exsurgo", "exsurgis", "exsurgit", "exsurgimus", "exsurgitis", "exsurgunt"],
-    "imperfect": ["exsurgebam", "exsurgebas", "exsurgebat", "exsurgebamus", "exsurgebatis", "exsurgebant"],
-    "future": ["exsurgam", "exsurges", "exsurget", "exsurgemus", "exsurgetis", "exsurgent"],
-    "perfect": ["exsurrexi", "exsurrexisti", "exsurrexit", "exsurreximus", "exsurrexistis", "exsurrexerunt"],
-    "pluperfect": ["exsurrexeram", "exsurrexeras", "exsurrexerat", "exsurrexeramus", "exsurrexeratis", "exsurrexerant"],
-    "subjunctive_present": ["exsurgam", "exsurgas", "exsurget", "exsurgamus", "exsurgatis", "exsurgant"],
-    "subjunctive_imperfect": ["exsurgerem", "exsurgeres", "exsurgeret", "exsurgeremus", "exsurgeretis", "exsurgerent"]
-  }
-},
-  {
+    {
   "lemma": "fremo",
   "part_of_speech": "verb",
   "conjugation": 3,

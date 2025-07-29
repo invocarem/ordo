@@ -643,180 +643,111 @@
     }
   ]
 },
+
 {
   "psalmNumber": 9,
-  "category": "b",
+  "section": "B",
+  "category": "Prayer Against the Wicked",
   "themes": [
     {
-      "name": "Judicial Petition",
-      "description": "Call for divine intervention against human oppression",
-      "lemmas": ["exsurgo", "praevaleo", "judico"],
+      "name": "Pride → Judgment",
+      "description": "From human defiance to divine reckoning",
+      "lemmas": ["praevaleo", "iudico", "constituo", "legislator"],
       "startLine": 1,
-      "endLine": 1,
-      "comment": "Urgent plea for God to arise (v1)"
-    },
-    {
-      "name": "Divine Governance",
-      "description": "Request for God to establish righteous authority",
-      "lemmas": ["constituo", "legislator", "scio"],
-      "startLine": 2,
       "endLine": 2,
-      "comment": "Appeal for theocratic rule (v2)"
+      "comment": "Man exalts himself until God rises. Augustine sees this cry for judgment not as revenge but as restoration of truth, that the nations may remember they are but mortal (Enarr. Ps. 9.20–21)."
     },
     {
-      "name": "Lament of Abandonment",
-      "description": "Cry over perceived divine absence in crisis",
-      "lemmas": ["recedo", "despicio", "tribulatio"],
+      "name": "Distance → Snare",
+      "description": "From God's seeming absence to the schemes of the proud",
+      "lemmas": ["recedo", "opportunitas", "superbio", "consilium"],
       "startLine": 3,
-      "endLine": 3,
-      "comment": "Classic 'Where are you God?' lament (v3)"
-    },
-    {
-      "name": "Oppression Exposed",
-      "description": "Wicked arrogance versus poor suffering",
-      "lemmas": ["superbio", "incendo", "comprehendo"],
-      "startLine": 4,
       "endLine": 4,
-      "comment": "Social injustice documented (v4)"
+      "comment": "Though God seems distant, the proud burn with schemes that entrap the poor. Augustine reads this as the test of faith—where God hides to purify trust (Enarr. Ps. 9.22–23)."
     },
     {
-      "name": "Moral Perversion",
-      "description": "Society's celebration of wickedness",
-      "lemmas": ["laudo", "benedico", "iniquus"],
+      "name": "Desire → Blasphemy",
+      "description": "From glorifying sin to provoking God",
+      "lemmas": ["desiderium", "laudo", "exacerbo", "ira"],
       "startLine": 5,
-      "endLine": 5,
-      "comment": "Cultural endorsement of evil (v5)"
-    },
-    {
-      "name": "Divine Wrath",
-      "description": "Provoking God through persistent sin",
-      "lemmas": ["exacerbo", "ira", "quaero"],
-      "startLine": 6,
       "endLine": 6,
-      "comment": "Theology of provoked judgment (v6)"
+      "comment": "The wicked are praised for their cravings and provoke God with impunity. Augustine warns that flattery of sin blinds judgment and hardens hearts (Enarr. Ps. 9.24–25)."
     },
     {
-      "name": "Practical Atheism",
-      "description": "Functional denial of God's oversight",
-      "lemmas": ["deus", "inquinatus", "via"],
+      "name": "Blindness → Control",
+      "description": "From ignoring God to ruling through injustice",
+      "lemmas": ["inquinatus", "aufero", "dominor"],
       "startLine": 7,
-      "endLine": 7,
-      "comment": "Behavioral rejection of divine authority (v7)"
-    },
-    {
-      "name": "Judicial Collapse",
-      "description": "Failure of earthly justice systems",
-      "lemmas": ["aufero", "judicium", "dominor"],
-      "startLine": 8,
       "endLine": 8,
-      "comment": "Corruption of courts (v8)"
+      "comment": "God’s judgment is far from the sinner’s eyes. Augustine remarks how this impunity fosters delusions of dominance and moral decay (Enarr. Ps. 9.26–27)."
     },
     {
-      "name": "False Security",
-      "description": "Wicked's misplaced confidence",
-      "lemmas": ["moveo", "generatio", "malum"],
+      "name": "Boast → Curse",
+      "description": "From proud complacency to poisonous speech",
+      "lemmas": ["moveo", "maledictio", "amaritudo", "dolus"],
       "startLine": 9,
-      "endLine": 9,
-      "comment": "Illusion of stability (v9)"
-    },
-    {
-      "name": "Corrupt Communication",
-      "description": "Poisonous speech patterns",
-      "lemmas": ["maledictio", "amaritudo", "dolor"],
-      "startLine": 10,
       "endLine": 10,
-      "comment": "Toxic language (v10)"
+      "comment": "Secure in sin, the wicked believe they cannot fall. Their mouth flows with deception and malice—signs of inner rot, says Augustine (Enarr. Ps. 9.28–29)."
     },
     {
-      "name": "Predatory Schemes",
-      "description": "Wealthy conspiring against innocents",
-      "lemmas": ["insidiae", "dives", "interficio"],
+      "name": "Ambush → Innocence",
+      "description": "From hidden violence to the hunted poor",
+      "lemmas": ["insidiae", "insidior", "interficio", "spelunca", "pauper"],
       "startLine": 11,
-      "endLine": 11,
-      "comment": "Elite exploitation (v11)"
-    },
-    {
-      "name": "Lion Imagery",
-      "description": "Wicked as lurking predators",
-      "lemmas": ["oculus", "respicio", "leo"],
-      "startLine": 12,
       "endLine": 12,
-      "comment": "Animal metaphor for cruelty (v12)"
+      "comment": "Like beasts of prey, the wicked lie in wait for the innocent. Augustine sees this as a figure of Christ persecuted by the powerful (Enarr. Ps. 9.30–31)."
     },
     {
-      "name": "Violent Exploitation",
-      "description": "Physical oppression of the poor",
-      "lemmas": ["rapio", "attraho", "humilio"],
+      "name": "Snare → Fall",
+      "description": "From deceitful traps to the humiliation of the poor",
+      "lemmas": ["laqueus", "inclino", "humilio", "dominor"],
       "startLine": 13,
       "endLine": 14,
-      "comment": "Brutal treatment (vv13-14)"
+      "comment": "The wicked draws the poor into a trap. Augustine teaches that God allows this for the testing of the just, but the proud will fall into their own net (Enarr. Ps. 9.32–33)."
     },
     {
-      "name": "Theological Error",
-      "description": "False assumption of divine indifference",
-      "lemmas": ["obliviscor", "averto", "video"],
+      "name": "Forgetfulness → Exaltation",
+      "description": "From God’s supposed silence to His rising justice",
+      "lemmas": ["obliviscor", "exsurgo", "exalto", "pauper"],
       "startLine": 15,
-      "endLine": 15,
-      "comment": "Heresy of divine neglect (v15)"
-    },
-    {
-      "name": "Final Appeal",
-      "description": "Climactic call for divine intervention",
-      "lemmas": ["exsurgo", "exalto", "obliviscor"],
-      "startLine": 16,
       "endLine": 16,
-      "comment": "Urgent petition (v16)"
+      "comment": "God is not forgetful, but patient. Augustine explains that divine delay is mercy, but in due time, He rises to defend the poor (Enarr. Ps. 9.34–35)."
     },
     {
-      "name": "Divine Omniscience",
-      "description": "God's perfect knowledge of human evil",
-      "lemmas": ["video", "considero", "trado"],
-      "startLine": 18,
+      "name": "Vision → Justice",
+      "description": "From divine attention to defense of the orphan",
+      "lemmas": ["video", "labor", "derelinquo", "orphanos"],
+      "startLine": 17,
       "endLine": 18,
-      "comment": "Theodicy resolution (v18)"
+      "comment": "God sees all grief. To the forsaken He becomes Father and Deliverer. Augustine hears here the gospel promise to the lowly (Enarr. Ps. 9.36–37)."
     },
     {
-      "name": "Protector of Vulnerable",
-      "description": "God as defender of orphans and poor",
-      "lemmas": ["pauper", "orphanus", "adjutor"],
+      "name": "Power → Disappearance",
+      "description": "From crushing evil to the vanishing of sin",
+      "lemmas": ["contero", "brachium", "quaero", "invenio"],
       "startLine": 19,
-      "endLine": 19,
-      "comment": "Divine social concern (v19)"
-    },
-    {
-      "name": "Judicial Punishment",
-      "description": "Breaking the power of wickedness",
-      "lemmas": ["contero", "brachium", "invenio"],
-      "startLine": 20,
       "endLine": 20,
-      "comment": "Retributive justice (v20)"
+      "comment": "God shatters the arm of the sinner. Augustine interprets this as a figure for Christ defeating the hidden power of sin, so it can no longer be found (Enarr. Ps. 9.38)."
     },
     {
-      "name": "Eternal Reign",
-      "description": "God's everlasting kingship",
-      "lemmas": ["regno", "aeternus", "saeculum"],
+      "name": "Reign → Response",
+      "description": "From eternal kingship to attentive mercy",
+      "lemmas": ["regno", "desiderium", "praeparatio", "auris"],
       "startLine": 21,
-      "endLine": 21,
-      "comment": "Eschatological hope (v21)"
-    },
-    {
-      "name": "Prayer Response",
-      "description": "Divine attentiveness to human petitions",
-      "lemmas": ["exaudio", "praeparatio", "auris"],
-      "startLine": 22,
       "endLine": 22,
-      "comment": "Theology of prayer (v22)"
+      "comment": "The Lord reigns forever. He bends His ear to the prepared hearts of the poor. Augustine reads this as the King who listens from His eternal throne (Enarr. Ps. 9.39–40)."
     },
     {
-      "name": "Restorative Justice",
-      "description": "Final establishment of righteous judgment",
-      "lemmas": ["judico", "pupillus", "humilis"],
+      "name": "Judgment → Silence",
+      "description": "From justice for the lowly to the silencing of pride",
+      "lemmas": ["iudico", "pupillus", "humilis", "magnifico"],
       "startLine": 23,
       "endLine": 23,
-      "comment": "Closing vision (v23)"
+      "comment": "The Psalm ends with a vision of God defending the smallest. Augustine sees this as the triumph of humility: the proud are no longer exalted, and the meek inherit the earth (Enarr. Ps. 9.41)."
     }
   ]
 },
+
 
 {
   "psalmNumber": 12,

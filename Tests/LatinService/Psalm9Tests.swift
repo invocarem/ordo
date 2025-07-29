@@ -1477,3 +1477,196 @@ func testPsalm9BLine23() {
     }
 
 }
+
+
+
+class Psalm9BLemmasTests: XCTestCase {
+    private var latinService: LatinService!
+    let verbose = true
+    
+    override func setUp() {
+        super.setUp()
+        latinService = LatinService.shared
+    }
+    
+    // MARK: - Test Data
+    let psalm9B = [
+        "Exsurge, Domine, non praevaleat homo; iudicentur gentes in conspectu tuo.",
+        "Constitue, Domine, legislatorem super eos, ut sciant gentes quoniam homines sunt.",
+        "Ut quid, Domine, recessisti longe, despicis in opportunitatibus, in tribulatione?",
+        "Dum superbit impius, incenditur pauper; comprehenduntur in consiliis quibus cogitant.",
+        "Quoniam laudatur peccator in desideriis animae suae, et iniquus benedicitur.",
+        
+        "Exacerbavit Dominum peccator, secundum multitudinem irae suae non quaeret:",
+        "Non est Deus in conspectu eius; inquinatae sunt viae illius in omni tempore.",
+        "Auferuntur iudicia tua a facie eius; omnium inimicorum suorum dominabitur.",
+        "Dixit enim in corde suo: Non movebor a generatione in generationem sine malo.",
+        "Cuius maledictione os plenum est, et amaritudine, et dolo; sub lingua eius labor et dolor.",
+        
+        "Sedet in insidiis cum divitibus in occultis, ut interficiat innocentem;",
+        "Oculi eius in pauperem respiciunt; insidiatur in abscondito, quasi leo in spelunca sua.",
+        "Insidiatur ut rapiat pauperem; rapere pauperem dum attrahit eum.",
+        "In laqueo suo humiliabit eum; inclinabit se, et cadet cum dominatus fuerit pauperum.",
+        "Dixit enim in corde suo: Oblitus est Deus, avertit faciem suam ne videat in finem.",
+        
+        "Exsurge, Domine Deus, exaltetur manus tua; ne obliviscaris pauperum.",
+        "Propter quid irritavit impius Deum? dixit enim in corde suo: Non requiret.",
+        "Vides quoniam tu laborem et dolorem consideras, ut tradas eos in manus tuas.",
+        "Tibi derelictus est pauper; orphano tu eris adiutor.",
+        "Contere brachium peccatoris et maligni; quaeretur peccatum illius, et non invenietur.",
+        
+        "Dominus regnabit in aeternum, et in saeculum saeculi; peribitis, gentes, de terra illius.",
+        "Desiderium pauperum exaudivit Dominus; praeparationem cordis eorum audivit auris tua,",
+        "Iudicare pupillo et humili, ut non apponat ultra magnificare se homo super terram."
+    ]
+    
+    let id = PsalmIdentity(number: 9, category: "B")
+    
+    // MARK: - Test Cases
+    
+    func testThemeLemmas() {
+        let analysis = latinService.analyzePsalm(id, text: psalm9B)
+        
+        // Theme 1: Pride → Judgment
+        let prideTerms = [
+            ("praevaleo", ["praevaleat"], "prevail"),
+            ("iudico", ["iudicentur", "Iudicare"], "judge"),
+            ("constituo", ["constitue"], "establish"),
+            ("legislator", ["legislatorem"], "lawgiver")
+        ]
+        
+        // Theme 2: Distance → Snare
+        let distanceTerms = [
+            ("recedo", ["recessisti"], "withdraw"),
+            ("opportunitas", ["opportunitatibus"], "opportunity"),
+            ("superbio", ["superbit"], "be proud"), 
+            ("consilium", ["consiliis"], "counsel")
+        ]
+        
+        // Theme 3: Desire → Blasphemy
+        let desireTerms = [
+            ("desiderium", ["desideriis", "Desiderium"], "desire"),
+            ("laudo", ["laudatur"], "praise"),
+            ("exacerbo", ["Exacerbavit"], "provoke"),
+            ("ira", ["irae"], "wrath")
+        ]
+        
+        // Theme 4: Blindness → Control
+        let blindnessTerms = [
+            ("inquinatus", ["inquinatae"], "defiled"),
+            ("aufero", ["Auferuntur"], "take away"),
+            ("dominor", ["dominabitur", "dominatus"], "dominate")
+        ]
+        
+        // Theme 5: Boast → Curse
+        let boastTerms = [
+            ("moveo", ["movebor"], "move"),
+            ("maledictio", ["maledictione"], "cursing"),
+            ("amaritudo", ["amaritudine"], "bitterness"),
+            ("dolus", ["dolo"], "deceit")
+        ]
+        
+        // Theme 6: Ambush → Innocence
+        let ambushTerms = [
+            ("insidiae", ["insidiis"], "ambush"),  // Noun: physical ambush sites
+            ("insidior", ["insidiatur"], "lie in ambush"),
+            ("interficio", ["interficiat"], "kill"),
+            ("spelunca", ["spelunca"], "den"),
+            ("pauper", ["pauper", "pauperem", "pauperum"], "poor")
+        ]
+        
+        // Theme 7: Snare → Fall
+        let snareTerms = [
+            ("laqueus", ["laqueo"], "snare"),
+            ("inclino", ["inclinabit"], "bend"),
+            ("humilis", ["humili"], "humble"),  
+            ("humilio", ["humiliabit"], "humble"),
+            ("dominor", ["dominatus"], "rule")
+        ]
+        
+        // Theme 8: Forgetfulness → Exaltation
+        let forgetTerms = [
+            ("obliviscor", ["obliviscaris", "Oblitus"], "forget"),
+            ("exsurgo", ["exsurge"], "rise up"),
+            ("exalto", ["exaltetur"], "exalt"),
+            ("pauper", ["pauperum"], "poor")
+        ]
+        
+        // Theme 9: Vision → Justice
+        let visionTerms = [
+            ("video", ["Vides", "videat"], "see"),
+            ("labor", ["laborem"], "toil"),
+            ("derelinquo", ["derelictus"], "forsake"),
+            ("orphanus", ["orphano"], "orphan")
+        ]
+        
+        // Theme 10: Power → Disappearance
+        let powerTerms = [
+            ("contero", ["Contere"], "crush"),
+            ("brachium", ["brachium"], "arm"),
+            ("quaero", ["quaeret", "quaeretur"], "seek"),
+            ("invenio", ["invenietur"], "find")
+        ]
+        
+        // Theme 11: Reign → Response
+        let reignTerms = [
+            ("regno", ["regnabit"], "reign"),
+            ("desiderium", ["Desiderium"], "desire"),
+            ("praeparatio", ["praeparationem"], "preparation"),
+            ("auris", ["auris"], "ear")
+        ]
+        
+        // Theme 12: Judgment → Silence
+        let finalJudgmentTerms = [
+            ("iudico", ["Iudicare"], "judge"),
+            ("pupillus", ["pupillo"], "orphan"),
+            ("humilis", ["humili"], "humble"),
+            ("magnifico", ["magnificare"], "magnify")
+        ]
+        
+        // Verify all theme groups
+        verifyWordsInAnalysis(analysis, confirmedWords: prideTerms)
+        verifyWordsInAnalysis(analysis, confirmedWords: distanceTerms)
+        verifyWordsInAnalysis(analysis, confirmedWords: desireTerms)
+        verifyWordsInAnalysis(analysis, confirmedWords: blindnessTerms)
+        verifyWordsInAnalysis(analysis, confirmedWords: boastTerms)
+        verifyWordsInAnalysis(analysis, confirmedWords: ambushTerms)
+        verifyWordsInAnalysis(analysis, confirmedWords: snareTerms)
+        verifyWordsInAnalysis(analysis, confirmedWords: forgetTerms)
+        verifyWordsInAnalysis(analysis, confirmedWords: visionTerms)
+        verifyWordsInAnalysis(analysis, confirmedWords: powerTerms)
+        verifyWordsInAnalysis(analysis, confirmedWords: reignTerms)
+        verifyWordsInAnalysis(analysis, confirmedWords: finalJudgmentTerms)
+    }
+    
+    // MARK: - Helper
+    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
+        for (lemma, forms, translation) in confirmedWords {
+            guard let entry = analysis.dictionary[lemma] else {
+                XCTFail("Missing lemma: \(lemma)")
+                continue
+            }
+            
+            // Verify semantic domain
+            XCTAssertTrue(
+                entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
+                "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
+            )
+            
+            // Verify morphological coverage
+            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
+            if !missingForms.isEmpty {
+                XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
+            }
+            
+            if verbose {
+                print("\n\(lemma.uppercased())")
+                print("  Translation: \(entry.translation ?? "?")")
+                forms.forEach { form in
+                    let count = entry.forms[form.lowercased()] ?? 0
+                    print("  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
+                }
+            }
+        }
+    }
+}
