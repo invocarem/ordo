@@ -18,7 +18,7 @@ let package = Package(
             name: "LiturgicalDocker",
             dependencies: ["LiturgicalService", "HoursService", "PsalmService" ,"PsalmProgressTracker" ],
             path: "docker-support",
-            exclude: ["Dockerfile"],
+            exclude: ["Dockerfile", "Dockerfile.test"],
             sources: ["main.swift"]
         ),
         
@@ -180,6 +180,7 @@ let package = Package(
                 "Psalm138Tests.swift", 
 
                 "Psalm141Tests.swift", 
+                "Psalm144Tests.swift", 
                 
                 "Psalm149Tests.swift", 
                 "Psalm150Tests.swift", 

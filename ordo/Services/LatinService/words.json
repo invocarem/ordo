@@ -1,5 +1,130 @@
 [
   {
+  "lemma": "miseratio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "miseratio",
+  "genitive": "miserations",
+  "translations": {
+    "en": "compassion, mercy, pity",
+    "la": "miseratio"
+  },
+  "forms": {
+    "nominative_plural": ["miserationes"],
+    "genitive_n": ["miserationum"]
+  }
+},
+  {
+  "lemma": "omnis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "omnia",
+  "genitive": "omnium",
+  "translations": {
+    "en": "all, every",
+    "la": "omnis"
+  }
+},
+  {
+  "lemma": "suavis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "suavis",
+  "genitive": "suavis",
+  "translations": {
+    "en": "sweet, pleasant, agreeable",
+    "la": "suavis"
+  }
+},
+  {
+  "lemma": "terribilis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "terribilis",
+  "genitive": "terribilis",
+  "translations": {
+    "en": "awesome, terrifying (of divine majesty)",
+    "la": "terribilis"
+  },
+  "forms": {
+    "genitive_pl": ["terribilium"]
+  }
+},
+  {
+  "lemma": "suavitas",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "suavitas",
+  "genitive": "suavitatis",
+  "translations": {
+    "en": "sweetness, pleasantness",
+    "la": "suavitas"
+  }
+},
+  {
+  "lemma": "misericors",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "misericors",
+  "genitive": "misericordis",
+  "translations": {
+    "en": "merciful, compassionate",
+    "la": "misericors"
+  },
+  "forms": {
+    "nominative_sg": ["misericors"],
+    "nominative_pl": ["misericordes"]
+  }
+},
+  {
+  "lemma": "magnificentia",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "magnificentia",
+  "genitive": "magnificentiae",
+  "translations": {
+    "en": "magnificence, splendor (divine glory)",
+    "la": "magnificentia"
+  },
+  "forms": {
+    "accusative_sg": ["magnificentiam"] 
+  }
+},
+{
+  "lemma": "sanctitas",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "sanctitas",
+  "genitive": "sanctitatis",
+  "translations": {
+    "en": "holiness, sacredness (of God/saints)",
+    "la": "sanctitas"
+  },
+  "forms": {
+    "genitive_sg": ["sanctitatis"]  
+  }
+},
+  {
+  "lemma": "laudabilis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "laudabilis",
+  "genitive": "laudabilis",
+  "translations": {
+    "en": "praiseworthy, commendable (worthy of praise)",
+    "la": "laudabilis"
+  }
+ },
+  {
   "lemma": "exsurgo",
   "part_of_speech": "verb",
   "conjugation": 3,
@@ -7902,7 +8027,7 @@
   "nominative": "miserator",
   "genitive": "miseratoris",
   "translations": {
-    "en": "compassionate, one who shows mercy",
+    "en": "compassionate,  be merciful",
     "la": "miserator"
   }
 },
@@ -14007,22 +14132,7 @@
     "nominative_n": ["miserum"]
   }
 },
-  {
-  "lemma": "miseratio",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "miseratio",
-  "genitive": "miserations",
-  "forms_plural" : {
-      "genitive_n": ["miserationum"]
-  },
-  "translations": {
-    "en": "compassion, mercy, pity",
-    "la": "miseratio, miserationis"
-  }
-},
-    {
+      {
         "lemma": "abundo",
         "part_of_speech": "verb",
         "conjugation": 1,

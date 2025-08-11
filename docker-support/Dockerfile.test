@@ -1,0 +1,11 @@
+FROM swift:6.0.3-jammy
+
+# Install dependencies
+RUN apt-get update && apt-get install -y dos2unix libxml2-dev
+
+WORKDIR /app
+COPY . .
+
+# Fix line endings and run tests
+RUN find . -type f -name "*.swift" -exec dos2unix {} \; && dos2unix Package.swift
+CMD ["swift", "test"]

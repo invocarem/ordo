@@ -4476,6 +4476,52 @@
   ]
 },
 
+{
+  "psalmNumber": 144,
+  "category": "a",
+  "themes": [
+    {
+      "name": "Exaltation → Daily Praise",
+      "description": "From the eternal kingship of God to unceasing blessing",
+      "lemmas": ["exalto", "benedico", "rex"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalmist begins with personal exaltation of God as King, moving to a rhythm of daily praise. Augustine notes that true kingship is God’s alone, and His reign draws forth perpetual blessing (Enarr. Ps. 144.1–2)."
+    },
+    {
+      "name": "Greatness → Proclamation",
+      "description": "From God’s immeasurable majesty to generational witness",
+      "lemmas": ["magnus", "magnitudo", "generatio", "opera"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "God’s greatness is beyond measure. Augustine emphasizes that each generation receives and passes on the proclamation of His works, building a living chain of witness (Enarr. Ps. 144.3–4)."
+    },
+    {
+      "name": "Glory → Wonders",
+      "description": "From the splendour of holiness to the telling of God’s wonders",
+      "lemmas": ["gloria", "sanctitas", "mirabile"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The glory of God’s holiness stirs speech; His wonders compel narration. Augustine sees this as the impulse of the Church to speak of God’s majesty and mighty acts (Enarr. Ps. 144.5–6)."
+    },
+    {
+      "name": "Abundance → Mercy",
+      "description": "From overflowing goodness to universal compassion",
+      "lemmas": ["abundantia", "suavitas", "miseratio"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Out of the abundance of God’s goodness comes joy in His justice, and the revelation that He is merciful and patient. Augustine links this patience to the salvation offered to all (Enarr. Ps. 144.7–8)."
+    },
+    {
+      "name": "Kindness → Universal Care",
+      "description": "From God’s sweetness to His mercy over all creation",
+      "lemmas": ["suavis", "miseratio", "opus"],
+      "startLine": 9,
+      "endLine": 9,
+      "comment": "The Lord’s kindness embraces all; His mercy extends to every work of His hand. Augustine hears here the inclusive call of grace—nothing is beyond His care (Enarr. Ps. 144.9)."
+    }
+  ]
+},
 
 {
   "psalmNumber": 148,
