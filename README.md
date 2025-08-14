@@ -35,3 +35,13 @@ docker run --rm liturgical-test
  docker run --rm -it -v "$(pwd):/app" -w /app swift:6.0.3-jammy bash
  # swift test --filter "Psalm144Tests"
 ```
+
+
+# build
+```
+ xcrun xctrace list devices
+security find-identity -v -p codesigning
+
+```
+
+
