@@ -3152,12 +3152,12 @@
     "conjugation": 3,
     "infinitive": "persequi",
     "present": "persequor",
-    "perfect": "persecutus sum",
+    "perfect": "persecutus",
     "supine": "persecutum",
    
     "translations": {
       "en": "pursue, persecute, follow persistently",
-      "la": "persequor, persequi, persecutus sum"
+      "la": "persequor, persequi, persecutus"
     }
   },
     {
@@ -19411,20 +19411,25 @@
       },
       "notes": "'conveniendo' is the ablative gerund, often used to express means or manner"
     },
-    {
-      "lemma": "elogium",
-      "part_of_speech": "noun",
-      "declension": 2,
-      "gender": "neuter",
-      "nominative": "elogium",
-      "genitive": "elogii",
+    
+{
+  "lemma": "elogium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "elogium",
+  "genitive": "elogii",
+  "translations": {
+    "en": "expression, saying, inscription ",
+    "la": "elogium"
+  },
+  "forms_plural": {
+    "nominative_n": ["elogia"],
+    "genitive_n": ["elogiorum"],
+    "accusative_n": ["elogia"]
+  }
+},
 
-      
-      "translations": {
-        "en": "short saying, maxim, epitaph",
-        "la": "elogium"
-      }
-    },
     {
         "lemma": "eloquium",
         "part_of_speech": "noun",

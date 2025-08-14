@@ -5877,18 +5877,20 @@
                 "Deliver me from the calumnies of men: that I may keep thy commandments.",
                 "Make thy face to shine upon thy servant: and teach me thy justifications.",
                 "My eyes have sent forth springs of water: because they have not kept thy law."
-            ],"verified": true
+            ],"verified": false
         },
+
         {
             "number": 118,
             "section": "Sade",
+            "title": "The Justice of God's Law",
             "text": [
-                "Justus es, Domine, et rectum judicium tuum.",
-                "Mandasti justitiam testimonia tua, et veritatem tuam nimis.",
+                "Iustus es, Domine, et rectum iudicium tuum.",
+                "Mandasti iustitiam testimonia tua, et veritatem tuam nimis.",
                 "Tabescere me fecit zelus meus, quia obliti sunt verba tua inimici mei.",
                 "Igneus sermo tuus vehementer, et servus tuus dilexit eum.",
-                "Adolescentulus sum ego et contemptus, justificationes tuas non sum oblitus.",
-                "Justitia tua justitia in aeternum, et lex tua veritas.",
+                "Adolescentulus sum ego et contemptus, iustificationes tuas non sum oblitus.",
+                "Iustitia tua iustitia in aeternum, et lex tua veritas.",
                 "Tribulatio et angustia invenerunt me, mandata tua meditatio mea est.",
                 "Aequitas testimonia tua in aeternum, intellectum da mihi, et vivam."
             ],
@@ -5901,17 +5903,19 @@
                 "Thy justice is justice for ever: and thy law is the truth.",
                 "Tribulation and anguish have found me: thy commandments are my meditation.",
                 "Thy testimonies are justice for ever: give me understanding, and I shall live."
-            ],"verified": true
+            ],
+            "verified": true
         },
+
         {
             "number": 118,
             "section": "Coph",
             "text": [
-                "Clamavi in toto corde meo, exaudi me, Domine; justificationes tuas requiram.",
+                "Clamavi in toto corde meo, exaudi me, Domine; iustificationes tuas requiram.",
                 "Clamavi ad te, salvum me fac, ut custodiam mandata tua.",
                 "Praeveni in maturitate, et clamavi, quia in verba tua supersperavi.",
                 "Praevenerunt oculi mei ad te diluculo, ut meditarer eloquia tua.",
-                "Vocem meam audi secundum misericordiam tuam, Domine, et secundum judicium tuum vivifica me.",
+                "Vocem meam audi secundum misericordiam tuam, Domine, et secundum iudicium tuum vivifica me.",
                 "Appropinquaverunt persequentes me iniquitatem, a lege autem tua longe facti sunt.",
                 "Prope es tu, Domine, et omnes viae tuae veritas.",
                 "Initio cognovi de testimoniis tuis, quia in aeternum fundasti ea."
@@ -5925,21 +5929,23 @@
                 "They that persecute me have drawn nigh to iniquity: but they are gone far from thy law.",
                 "Thou art near, O Lord: and all thy commandments are truth.",
                 "From the beginning I have known of thy testimonies: that thou hast founded them for ever."
-            ],"verified": true
+            ],
+            "verified": true
         },
         {
             "number": 118,
             "section": "Res",
             "text": [
                 "Vide humilitatem meam, et eripe me, quia legem tuam non sum oblitus.",
-                "Judica judicium meum, et redime me, propter eloquium tuum vivifica me.",
-                "Longe a peccatoribus salus, quia justificationes tuas non exquisierunt.",
-                "Misericordiae tuae multae, Domine, secundum judicium tuum vivifica me.",
+                "Iudica iudicium meum, et redime me, propter eloquium tuum vivifica me.",
+                "Longe a peccatoribus salus, quia iustificationes tuas non exquisierunt.",
+                "Misericordiae tuae multae, Domine, secundum iudicium tuum vivifica me.",
                 "Multi qui persequuntur me, et tribulant me; a testimoniis tuis non declinavi.",
                 "Vidi praevaricantes, et tabescebam, quia eloquia tua non custodierunt.",
                 "Vide quoniam mandata tua dilexi, Domine, in misericordia tua vivifica me.",
-                "Principium verborum tuorum veritas, in aeternum omnia judicia justitiae tuae."
-            ] ,"englishText": [
+                "Principium verborum tuorum veritas, in aeternum omnia iudicia iustitiae tuae."
+            ],
+            "englishText": [
                 "See my humiliation, and deliver me: for I have not forgotten thy law.",
                 "Judge my judgment, and redeem me: quicken me for thy word’s sake.",
                 "Salvation is far from sinners: because they have not sought thy justifications.",
@@ -5951,7 +5957,8 @@
             ],
             "verified": true
         },
-        {
+
+       {
             "number": 118,
             "section": "Sin",
             "text": [

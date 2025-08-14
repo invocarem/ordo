@@ -13,14 +13,14 @@ class Psalm118ReshTests: XCTestCase {
     
     // MARK: - Test Data (Psalm 118:153-160 "Resh" category)
     let psalm118Resh = [
-        "Vide humilitatem meam, et eripe me, quia legem tuam non sum oblitus.",
-        "Judica judicium meum, et redime me, propter eloquium tuum vivifica me.",
-        "Longe a peccatoribus salus, quia justificationes tuas non exquisierunt.",
-        "Misericordiae tuae multae, Domine, secundum judicium tuum vivifica me.",
-        "Multi qui persequuntur me, et tribulant me; a testimoniis tuis non declinavi.",
-        "Vidi praevaricantes, et tabescebam, quia eloquia tua non custodierunt.",
-        "Vide quoniam mandata tua dilexi, Domine, in misericordia tua vivifica me.",
-        "Principium verborum tuorum veritas, in aeternum omnia judicia justitiae tuae."
+         "Vide humilitatem meam, et eripe me, quia legem tuam non sum oblitus.",
+         "Iudica iudicium meum, et redime me, propter eloquium tuum vivifica me.",
+         "Longe a peccatoribus salus, quia iustificationes tuas non exquisierunt.",
+         "Misericordiae tuae multae, Domine, secundum iudicium tuum vivifica me.",
+         "Multi qui persequuntur me, et tribulant me; a testimoniis tuis non declinavi.",
+         "Vidi praevaricantes, et tabescebam, quia eloquia tua non custodierunt.",
+         "Vide quoniam mandata tua dilexi, Domine, in misericordia tua vivifica me.",
+         "Principium verborum tuorum veritas, in aeternum omnia iudicia iustitiae tuae."
     ]
     
     // MARK: - Test Cases
@@ -31,7 +31,7 @@ class Psalm118ReshTests: XCTestCase {
         let petitions = [
             ("video", ["vide", "vide"], "see"), // v.153, v.159
             ("eripio", ["eripe"], "rescue"), // v.153
-            ("judico", ["judica"], "judge"), // v.154
+            ("iudico", ["iudica"], "judge"), // v.154
             ("redimo", ["redime"], "redeem"), // v.154
             ("vivifico", ["vivifica", "vivifica"], "give life") // v.154, v.156, v.159
         ]
@@ -45,7 +45,7 @@ class Psalm118ReshTests: XCTestCase {
         let parties = [
             ("peccator", ["peccatoribus"], "sinner"), // v.155
             ("praevaricator", ["praevaricantes"], "transgressor"), // v.158
-            ("persequor", ["persequuntur"], "persecutor") // v.157
+            ("persequor", ["persequuntur"], "persecute") // v.157
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: parties)
@@ -58,7 +58,7 @@ class Psalm118ReshTests: XCTestCase {
             ("lex", ["legem"], "law"), // v.153
             ("eloquium", ["eloquium"], "word"), // v.154, v.158
             ("elogium", ["elogia"], "expression"),
-            ("justificatio", ["justificationes"], "ordinance"), // v.155
+            ("iustificatio", ["iustificationes"], "ordinance"), // v.155
             ("testimonium", ["testimoniis"], "testimony"), // v.157
             ("mandatum", ["mandata"], "commandment") // v.159
         ]
@@ -84,9 +84,9 @@ class Psalm118ReshTests: XCTestCase {
         
         let attributes = [
             ("misericordia", ["misericordiae", "misericordia"], "mercy"), // v.156, v.159
-            ("judicium", ["judicium", "judicia"], "judgment"), // v.156, v.160
+            ("iudicium", ["iudicium", "iudicia"], "judgment"), // v.156, v.160
             ("veritas", ["veritas"], "truth"), // v.160
-            ("justitia", ["justitiae"], "righteousness") // v.160
+            ("iustitia", ["iustitiae"], "righteousness") // v.160
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: attributes)
