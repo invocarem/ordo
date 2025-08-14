@@ -57,8 +57,7 @@ class Psalm118ReshTests: XCTestCase {
         let commitmentTerms = [
             ("lex", ["legem"], "law"), // v.153
             ("eloquium", ["eloquium"], "word"), // v.154, v.158
-            ("elogium", ["elogia"], "expression"),
-            ("iustificatio", ["iustificationes"], "ordinance"), // v.155
+            ("iustificatio", ["iustificationes"], "justification"), // v.155
             ("testimonium", ["testimoniis"], "testimony"), // v.157
             ("mandatum", ["mandata"], "commandment") // v.159
         ]

@@ -3503,6 +3503,56 @@
 },
 
 {
+  "psalmNumber": 118,
+  "category": "Res",
+  "themes": [
+    {
+      "name": "Affliction → Vindication",
+      "description": "From personal humility under trial to God’s redemptive judgment",
+      "lemmas": ["humiliatio", "iudicium", "redimo"],
+      "startLine": 1,
+      "endLine": 2,
+
+      "comment": "The psalmist asks God to see his affliction and rescue him, not forgetting the Law. This is the cry of the faithful who seek both deliverance and the life-giving Word (vivifica) as the true vindication.",
+      "comment2": "Augustine sees this as the soul presenting its case before God, confident that true life is restored not by escaping earthly trouble but by cleaving to the divine Law that was never forgotten (Enarr. Ps. 118-Res.1–2)."
+    },
+    {
+      "name": "Estrangement → Mercy",
+      "description": "From the distance of sinners to the nearness of divine compassion",
+      "lemmas": ["peccator", "salus", "misericordia"],
+      "startLine": 3,
+      "endLine": 4,
+
+       "comment": "Salvation is far from those who ignore God’s statutes, but the Lord’s mercies are abundant, and He restores life in His judgment.",
+      "comment2": "Augustine contrasts the remoteness of the sinner’s life—estranged from the statutes—with the boundless nearness of mercy for those who seek God’s will. God’s judgments, though feared by the wicked, are life to the faithful (Enarr. Ps. 118-Res.3–4)."
+  
+    },
+    {
+      "name": "Persecution → Zeal",
+      "description": "From many enemies to a burning grief for God’s Word",
+      "lemmas": ["persequor", "tribulatio", "praevaricor"],
+      "startLine": 5,
+      "endLine": 6,
+       "comment": "Even amid many persecutors, the psalmist does not turn from God’s testimonies. Seeing the faithless ignore His words causes deep grief.",
+      "comment2": "Augustine notes that holy sorrow over others’ sins springs from love, not pride. This wasting away in grief is not despair but zeal for God’s honor, mirroring Christ’s own compassion for the erring (Enarr. Ps. 118-Res.5–6)."
+    
+
+
+    },
+    {
+      "name": "Love → Eternal Truth",
+      "description": "From love of God’s commands to the everlasting foundation of His justice",
+      "lemmas": ["dilectio", "mandatum", "veritas"],
+      "startLine": 7,
+      "endLine": 8,
+       "comment": "The psalmist’s love for God’s commands is met with the life-giving mercy of the Lord. God’s words are truth from the beginning, and His just judgments endure forever.",
+      "comment2": "Augustine interprets ‘principium verborum tuorum veritas’ as Christ Himself—the eternal Word and Truth—from whom all just decrees flow and by whom they stand unshaken through every age (Enarr. Ps. 118-Res.7–8)."
+    }
+  ]
+},
+
+
+{
   "psalmNumber": 119,
   "category": "",
   "themes": [
