@@ -9,4 +9,10 @@ Pods/
 #dock
 .build/
 .vscode/
+.test_logs/
 
+build/
+
+.env
+*.swp
+*.bak
