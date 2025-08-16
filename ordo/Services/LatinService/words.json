@@ -16530,13 +16530,18 @@
     {
         "lemma": "exquiro",
         "part_of_speech": "verb",
-        "perfect": "exquisivi",
+        "conjugation": 3,
         "infinitive": "exquirere",
+        "present": "exquiro",
+        "perfect": "exquisivi",
+        "supine": "exquisitum",
+              
         "forms": {
             "present": ["exquiro", "exquiris", "exquirit", "exquirimus", "exquiritis", "exquirunt"],
             "imperfect": ["exquirebam", "exquirebas", "exquirebat", "exquirebamus", "exquirebatis", "exquirebant"],
             "future": ["exquiram", "exquires", "exquiret", "exquiremus", "exquiretis", "exquirent"],
             "perfect": ["exquisivi", "exquisivisti", "exquisivit", "exquisivimus", "exquisivistis", "exquisiverunt"],
+            "perfect_3pl": ["exquisierunt"],
             "imperative_singular": ["exquire"],
             "imperative_plural": ["exquirite"],
             "present_subjunctive": ["exquiram", "exquiras", "exquirat", "exquiramus", "exquiratis", "exquirant"]
