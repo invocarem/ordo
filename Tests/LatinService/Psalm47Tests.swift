@@ -37,9 +37,9 @@ class Psalm47Tests: XCTestCase {
         
         let sovereigntyTerms = [
             ("magnus", ["magnus", "magni"], "great"), // v.1, v.2
-            ("rex", ["regis"], "king"), // v.2
-            ("dominium", ["Domini"], "Lord"), // v.1, v.8
-            ("regnum", ["reget"], "rule") // v.14
+            ("rex", ["regis", "reges"], "king"), // v.2, v.4
+            ("dominus", ["Dominus", "Domini", "Domine"], "Lord"), // v.1, v.8, v.11
+            ("rego", ["reget"], "rule") // v.14
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: sovereigntyTerms)
@@ -49,7 +49,7 @@ class Psalm47Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(identity, text: psalm47)
         
         let zionTerms = [
-            ("Sion", ["Sion"], "Zion"), // v.2, v.11
+            ("Sion", ["Sion"], "Zion"), // v.2, v.11 (proper noun, indeclinable)
             ("civitas", ["civitate", "civitas"], "city"), // v.1, v.2, v.8
             ("mons", ["monte", "mons"], "mountain"), // v.1, v.2, v.11
             ("templum", ["templi"], "temple") // v.9
@@ -64,8 +64,9 @@ class Psalm47Tests: XCTestCase {
         let judgmentTerms = [
             ("iudicium", ["iudicia"], "judgment"), // v.11
             ("iustitia", ["iustitia"], "justice"), // v.10
-            ("tremor", ["tremor"], "trembling"), // v.6
-            ("conturbo", ["conturbati"], "disturb") // v.5
+            ("tremor", ["tremor"], "trembling"), // v.6 (noun)
+            ("conturbo", ["conturbati"], "disturb"), // v.5
+            ("admiror", ["admirati"], "admire") // v.5
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: judgmentTerms)
@@ -75,10 +76,13 @@ class Psalm47Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(identity, text: psalm47)
         
         let praiseTerms = [
-            ("laudo", ["laudabilis", "laus"], "praise"), // v.1, v.10
-            ("exsulto", ["exsultatione", "exsultent"], "rejoice"), // v.2, v.11
-            ("laetitia", ["Laetetur"], "gladness"), // v.11
-            ("narro", ["narrate", "enarretis"], "declare") // v.12, v.13
+            ("laudabilis", ["laudabilis"], "praiseworthy"), 
+            ("laus", ["laus"], "praise"), // v.10 (noun)
+            ("exsulto", ["exsultent"], "rejoice"), // v.11 (verb)
+            ("exsultatio", ["exsultatione"], "rejoicing"), // v.2 (noun)
+            ("laetor", ["Laetetur"], "rejoice"), // v.11
+            ("narro", ["narrate"], "tell"), // 2nd pl. present imperative active
+            ("enarro", ["enarretis"], "relate") // 2nd pl. future indicative active
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: praiseTerms)
@@ -89,14 +93,56 @@ class Psalm47Tests: XCTestCase {
         
         let eternalTerms = [
             ("aeternus", ["aeternum"], "eternal"), // v.8
-            ("saeculum", ["saeculum", "saeculi", "saecula"], "age/forever"), // v.14
-            ("fundamentum", ["fundatur", "fundavit"], "establish"), // v.2, v.8
+            ("saeculum", ["saeculum", "saeculi", "saecula"], "age"), // v.14
+            ("fundo", ["fundatur", "fundavit"], "establish"), // v.2, v.8
             ("suscipio", ["suscipiet", "Suscepimus"], "receive") // v.3, v.9
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: eternalTerms)
     }
     
+    func testDivinePower() {
+        let analysis = latinService.analyzePsalm(identity, text: psalm47)
+        
+        let powerTerms = [
+            ("virtus", ["virtute", "virtutum"], "power"), // v.13, v.8
+            ("contero", ["conteres"], "shatter"), // v.7
+            ("dexter", ["dextera"], "right hand"), // v.10
+            ("apprehendo", ["apprehendit"], "seize") // v.6
+        ]
+        
+        verifyWordsInAnalysis(analysis, confirmedWords: powerTerms)
+    }
+    func testProblematicPrepositionalPhrases() {
+        let analysis = latinService.analyzePsalm(identity, text: psalm47)
+        
+        let prepositionalTerms = [
+            ("medium", ["medio"], "midst"), // v.9 "in medio templi"
+            ("finis", ["fines"], "end"), // v.10 "in fines terrae"
+            ("unus", ["unum"], "one"), // v.4 "in unum"
+            ("aeternum", ["aeternum"], "eternity") // v.8, v.14
+        ]
+        
+        verifyWordsInAnalysis(analysis, confirmedWords: prepositionalTerms)
+    }
+
+    func testRareForms() {
+        let analysis = latinService.analyzePsalm(identity, text: psalm47)
+        
+        let rareForms = [
+            ("vehemens", ["vehementi"], "violent"), // v.7 "spiritu vehementi"
+            ("enarro", ["enarretis"], "recount"), // v.13 - Prefixed verb
+            ("latus", ["latera"], "broad"), // v.2 "latera aquilonis"
+            ("aquilo", ["aquilonis"], "north"),
+            ("complector", ["complectimini"], "embrace"), // v.12 - Rare imperative
+            ("distribuo", ["distribuite"], "distribute"), // v.13 - Administrative term
+            ("parturio", ["parturientis"], "be in labor") // v.6 - Unique metaphor
+        ]
+        
+        verifyWordsInAnalysis(analysis, confirmedWords: rareForms)
+    }
+
+
     func testAnalysisSummary() {
         let analysis = latinService.analyzePsalm(identity, text: psalm47)
         if verbose {
@@ -104,8 +150,8 @@ class Psalm47Tests: XCTestCase {
             print("Total words:", analysis.totalWords)
             print("Unique lemmas:", analysis.uniqueLemmas)
             
-            print("'magnus' forms:", analysis.dictionary["magnus"]?.forms ?? [:])
-            print("'Sion' forms:", analysis.dictionary["Sion"]?.forms ?? [:])
+            print("'dominus' forms:", analysis.dictionary["dominus"]?.forms ?? [:])
+            print("'rex' forms:", analysis.dictionary["rex"]?.forms ?? [:])
             print("'iudicium' forms:", analysis.dictionary["iudicium"]?.forms ?? [:])
         }
         XCTAssertLessThan(

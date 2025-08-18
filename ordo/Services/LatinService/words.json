@@ -1,5 +1,108 @@
 [
   {
+    "lemma": "distribuo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "distribuere",
+    "present": "distribuo",
+    "perfect": "distribui",
+    "supine": "distributum",
+    "translations": {
+      "en": "to distribute, divide, allot",
+      "la": "distribuo, distribuere"
+    },
+    "forms": {
+      "imperative_2pl": ["distribuite"]  
+    }
+  },
+
+  {
+    "lemma": "complector",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "complecti",
+    "present": "complector",
+    "perfect": "complexus",
+    "translations": {
+      "en": "to embrace, cherish, encompass",
+      "la": "complector, complecti"
+    },
+    "forms": {
+      "imperative_2pl": ["complectimini"]  
+    }
+  },
+  {
+    "lemma": "aquilo",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "aquilo",
+    "genitive": "aquilonis",
+    "translations": {
+      "en": "north wind, north (as a direction)",
+      "la": "aquilo"
+    },
+    "forms": {
+      "genitive_sg": ["aquilonis"]  
+    }
+  },
+  {
+    "lemma": "vehemens",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "vehemens",
+    "genitive": "vehementis",
+    "translations": {
+      "en": "violent, fierce, intense",
+      "la": "vehemens"
+    },
+    "forms": {
+      "ablative_sg": ["vehementi"]
+    }
+  },
+    {
+    "lemma": "medium",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "medium",
+    "genitive": "medii",
+    "translations": {
+      "en": "midst, middle, center",
+      "la": "medium"
+    }
+  },
+  {
+    "lemma": "admiror",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "admirari",
+    "present": "admiror",
+    "perfect": "admiratus sum",
+    "translations": {
+      "en": "to admire, wonder at",
+      "la": "admiror, admirari"
+    },
+    "forms": {
+      "perfect_passive_participle_plural_m": ["admirati"]  
+    }
+  },
+  {
+    "lemma": "enarro",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "enarrare",
+    "present": "enarro",
+    "future": "enarrabo",
+    "perfect": "enarravi",
+    "supine": "enarratum",
+    "translations": {
+      "en": "to relate, recount, explain in detail",
+      "la": "enarro, enarrare"
+    }
+  },
+  {
   "lemma": "miseratio",
   "part_of_speech": "noun",
   "declension": 3,
@@ -3329,7 +3432,9 @@
   "perfect": "suscepi",
   "supine": "susceptum",
   "forms": {
-    "perfect_active": ["suscepit"]
+    "perfect_active": ["suscepit"],
+    "future_3sg": ["suscipiet"],  
+    "perfect_1pl": ["suscepimus"]
   },
   "translations": {
     "en": "to receive, undertake, support",
@@ -13998,7 +14103,7 @@
           "perfect": "contrivi",
           "supine": "contritum",
           "translations": {
-            "en": "crush, grind, wear out",
+            "en": "crush, shatter, wear out",
             "la": "contero, conterere, contrivi, contritum"
           },
           "forms": {

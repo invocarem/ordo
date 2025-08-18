@@ -1714,6 +1714,68 @@
   ]
 },
 
+{
+  "psalmNumber": 47,
+  "category": "",
+  "themes": [
+    {
+      "name": "Greatness → Holy City",
+      "description": "From God’s greatness to His dwelling on Zion, the joy of the whole earth",
+      "lemmas": ["magnus", "mons", "civitas", "rex"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalm begins with praise of the Lord’s greatness, made visible in Mount Zion, the city of the great King. Augustine interprets Zion as the Church, exalted above the world and a sign of universal joy (Enarr. Ps. 47.1–2)."
+    },
+    {
+      "name": "God Present → Nations Shaken",
+      "description": "From God’s presence in His city to the trembling of gathered kings",
+      "lemmas": ["domus", "cognosco", "rex", "conturbo"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "God is known within His holy dwellings, defending His city. Earthly rulers, gathering in pride, are confounded before Him, for no power endures against His protection (Enarr. Ps. 47.3–4)."
+    },
+    {
+      "name": "Terror → Travail",
+      "description": "From astonishment of kings to the image of labor pains",
+      "lemmas": ["admiro", "tremor", "parturio"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The nations behold and are seized with fear, like women in travail. Augustine reads this as the world’s powers convulsed when confronted with Christ’s resurrection and the rise of His Church (Enarr. Ps. 47.5–6)."
+    },
+    {
+      "name": "Storm → Foundation",
+      "description": "From the breaking of ships to the eternal stability of God’s city",
+      "lemmas": ["spiritus", "contero", "navis", "fundamentum"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "As ships are shattered by a mighty wind, so earthly strength collapses before God. Yet Zion stands firm, founded forever — the eternal dwelling of the Lord (Enarr. Ps. 47.7–8)."
+    },
+    {
+      "name": "Mercy → Praise",
+      "description": "From receiving God’s mercy in the temple to worldwide proclamation of His justice",
+      "lemmas": ["misericordia", "templum", "laus", "iustitia"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "In the midst of the temple the faithful receive God’s mercy. His name and praise extend to the ends of the earth, His right hand full of justice — Christ’s redeeming power made manifest (Enarr. Ps. 47.9–10)."
+    },
+    {
+      "name": "Joy → Witness",
+      "description": "From Zion’s gladness to the charge to tell future generations",
+      "lemmas": ["laetitia", "iudicium", "turris", "progenies"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "Zion rejoices in God’s judgments, and her towers are to be recounted as testimony. Augustine sees the Church’s witness as a lasting proclamation to all generations (Enarr. Ps. 47.11–12)."
+    },
+    {
+      "name": "Strength → Eternal Shepherd",
+      "description": "From reflecting on Zion’s strength to God’s everlasting reign",
+      "lemmas": ["virtus", "domus", "saeculum", "rego"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "The faithful are called to ponder Zion’s strength, for it proclaims God’s eternal reign. Augustine identifies this ruler as Christ, the shepherd who guides His people forever (Enarr. Ps. 47.13–14)."
+    }
+  ]
+},
 
 {
   "psalmNumber": 50,
