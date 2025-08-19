@@ -2594,7 +2594,7 @@
 
 {
   "psalmNumber": 94,
-  "category": "",
+  "category": "Worship and Warning",
   "themes": [
     {
       "name": "Exultation → Thanksgiving",
@@ -2602,7 +2602,8 @@
       "lemmas": ["exsulto", "iubilo", "confessio", "psalmus"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "The psalm begins with a call to joyful worship, urging the faithful to approach God with psalms and thanksgiving. Augustine sees this as the Church’s daily summons to open the heart in praise (Enarr. Ps. 94.1–2)."
+      "comment": "The psalm begins with a call to joyful worship, urging the faithful to approach God with psalms and thanksgiving. Augustine sees this as the Church’s daily summons to open the heart in praise (Enarr. Ps. 94.1–2).",
+      "comment2": "For Augustine, this exultant song is the 'new song' of the New Covenant in Christ, who is Himself our salvation. The jubilus — a cry beyond words — expresses the soul’s stretching toward eternity (Enarr. Ps. 94.1)."
     },
     {
       "name": "Greatness → Dominion",
@@ -2610,7 +2611,8 @@
       "lemmas": ["magnus", "rex", "manus", "altitudo"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "The Lord is proclaimed as king above all gods, whose hands hold both the earth’s limits and the heights of the mountains. Augustine underlines that no realm lies outside His dominion (Enarr. Ps. 94.3–4)."
+      "comment": "The Lord is proclaimed as king above all gods, whose hands hold both the earth’s limits and the heights of the mountains. Augustine underlines that no realm lies outside His dominion (Enarr. Ps. 94.3–4).",
+      "comment2": "Augustine links this sovereignty to Christ the King, to whom the Father has given 'all things in His hand' (John 3:35). The mountains symbolize the proud, and the depths the humble — yet all are under Christ’s rule."
     },
     {
       "name": "Sea → Adoration",
@@ -2618,7 +2620,8 @@
       "lemmas": ["mare", "arida", "adoro", "procido"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "The sea and the dry land are His creation, and so the faithful are summoned to kneel before their Maker. Augustine contrasts this humility with the pride of those who refuse to bow (Enarr. Ps. 94.5–6)."
+      "comment": "The sea and the dry land are His creation, and so the faithful are summoned to kneel before their Maker. Augustine contrasts this humility with the pride of those who refuse to bow (Enarr. Ps. 94.5–6).",
+      "comment2": "Augustine recalls Christ calming the sea (Mark 4:39): He who made the waters also rules their storms. Thus, adoration of the Creator is fulfilled in bowing to Christ, through whom all was made (John 1:3)."
     },
     {
       "name": "People → Voice",
@@ -2626,7 +2629,8 @@
       "lemmas": ["populus", "ovis", "vox", "hodie"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "God’s people are the sheep of His hand, called to listen today if they hear His voice. Augustine stresses the urgency of 'hodie'—today is the time of obedience and conversion (Enarr. Ps. 94.7–8)."
+      "comment": "God’s people are the sheep of His hand, called to listen today if they hear His voice. Augustine stresses the urgency of 'hodie'—today is the time of obedience and conversion (Enarr. Ps. 94.7–8).",
+      "comment2": "Christ is the Shepherd, and we the sheep of His pasture (John 10:14). Augustine emphasizes that 'today' points to the present moment of grace in Christ — the acceptable time of salvation (2 Cor 6:2)."
     },
     {
       "name": "Testing → Rebellion",
@@ -2634,7 +2638,8 @@
       "lemmas": ["tentatio", "exacerbatio", "desertum", "opera"],
       "startLine": 9,
       "endLine": 10,
-      "comment": "The desert generation tested and provoked the Lord, though they saw His works. Augustine recalls this as a warning for the Church, lest we repeat their unbelief (Enarr. Ps. 94.9–10)."
+      "comment": "The desert generation tested and provoked the Lord, though they saw His works. Augustine recalls this as a warning for the Church, lest we repeat their unbelief (Enarr. Ps. 94.9–10).",
+      "comment2": "Augustine interprets the desert testing as prefiguring Christ, the Rock struck to give living water (1 Cor 10:4). The provocation warns us not to harden our hearts against the grace poured out in Him."
     },
     {
       "name": "Error → Exclusion",
@@ -2642,10 +2647,12 @@
       "lemmas": ["erro", "via", "requies", "ira"],
       "startLine": 11,
       "endLine": 12,
-      "comment": "For forty years the Lord bore with a wayward people, declaring they would not enter His rest. Augustine interprets this as the eternal rest of God, entered only by faith and obedience (Enarr. Ps. 94.11)."
+      "comment": "For forty years the Lord bore with a wayward people, declaring they would not enter His rest. Augustine interprets this as the eternal rest of God, entered only by faith and obedience (Enarr. Ps. 94.11).",
+      "comment2": "Augustine sees 'requies' as Christ Himself, our Sabbath rest (Matt 11:28–29). Those hardened in unbelief cannot enter. Thus the psalm anticipates the Church’s hope: eternal rest in Christ’s kingdom."
     }
   ]
 },
+
 
 {
   "psalmNumber": 113,
