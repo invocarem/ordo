@@ -388,79 +388,59 @@
   ]
 },
 
-
-
 {
   "psalmNumber": 8,
   "category": "",
   "themes": [
     {
-      "name": "Majesty → Praise",
-      "description": "Cosmic sovereignty inspiring universal worship",
-      "lemmas": ["dominus", "magnificentia", "admirabilis", "laus"],
+      "name": "Divine Name → Universal Glory",
+      "description": "From praising God’s name to His majesty exalted above the heavens",
+      "lemmas": ["nomen", "admirabile", "magnificentia", "caelum"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Divine name's wonder (admirabile) flows from heavenly supremacy (super caelos)"
+      "comment": "The psalmist praises God’s admirable name (‘nomen,’ ‘admirabile’) across the earth, exalting His majesty (‘magnificentia’) above the heavens (‘caelum’).",
+      "comment2": "Augustine sees ‘nomen’ and ‘admirabile’ as God’s glory revealed universally, with ‘magnificentia’ above ‘caelum’ prefiguring Christ’s ascension (Enarr. Ps. 8.1–2)."
     },
     {
-      "name": "Infant Praise → Victory",
-      "description": "Weakness manifesting divine strength",
-      "lemmas": ["infans", "lactens", "perficio", "inimicus"],
+      "name": "Weak Praise → Defeat of Enemies",
+      "description": "From the praise of the weak to the destruction of God’s enemies",
+      "lemmas": ["infans", "laudem", "inimicus", "destruo"],
       "startLine": 3,
-      "endLine": 3,
-      "comment": "Perfected praise (perfecisti) from nursing mouths destroys enemies"
-    },
-    {
-      "name": "Microcosm → Macrocosm",
-      "description": "Human smallness amidst divine craftsmanship",
-      "lemmas": ["homo", "caelum", "luna", "stella"],
-      "startLine": 4,
-      "endLine": 5,
-      "comment": "Rhetorical 'what is man?' (quid est homo) contrasted with cosmic wonders"
-    },
-    {
-      "name": "Glory → Dominion",
-      "description": "Elevated status granting earthly stewardship",
-      "lemmas": ["gloria", "corono", "constituo", "subjicio"],
-      "startLine": 6,
-      "endLine": 8,
-      "comment": "Crowned with honor (honore coronasti) to rule creation (omnia subjecisti)"
-    },
-    {
-      "name": "Creation Chiasm",
-      "description": "Literary structure mirroring created order",
-      "lemmas": ["caelum", "terra", "ovis", "piscis"],
-      "startLine": 1,
-      "endLine": 9,
-      "comment": "Inclusion framing: heavens (caelos) → earth (terra) → animals (volucres/pisces)"
-    },
-    {
-      "name": "Augustine: Christological Crown",
-      "description": "Son of Man as crowned mediator",
-      "lemmas": ["filius", "corono", "angelus", "constituo"],
-      "startLine": 5,
-      "endLine": 7,
-      "comment": "'Little lower than angels' (paulo minus) fulfilled in Christ (Enarrationes 8.8)"
-    },
-    {
-      "name": "Augustine: Infant Ecclesia",
-      "description": "Church's praise as weapon against evil",
-      "lemmas": ["infans", "perficio", "inimicus"],
-      "startLine": 3,
-      "endLine": 3,
-      "comment": "Nursing children signify newborn Church defeating Satan (Sermon 121.6)"
-    },
-    {
-      "name": "Augustine: Cosmic Contemplation",
-      "description": "Stellar wonders revealing divine artistry",
-      "lemmas": ["luna", "stella", "digitus", "video"],
-      "startLine": 4,
       "endLine": 4,
-      "comment": "Moon and stars (opera digitorum) as pointers to Creator (Conf. X.6)"
+      "comment": "God perfects praise (‘laudem’) from infants (‘infans’), confounding the enemy (‘inimicus’) and avenger through their weakness, as He reveals His works (‘opera’) in the heavens.",
+      "comment2": "Augustine interprets ‘infans’ and ‘laudem’ as the humble, including Christ and His Church, silencing the ‘inimicus’ through divine power (Enarr. Ps. 8.3–4)."
+    },
+    {
+      "name": "Human Lowliness → Divine Honor",
+      "description": "From human insignificance to being crowned with glory",
+      "lemmas": ["homo", "memoro", "gloria", "corono"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The psalmist marvels that God remembers (‘memoro’) man (‘homo’), crowning him (‘corono’) with glory (‘gloria’) and honor, despite his lowliness.",
+      "comment2": "Augustine sees ‘homo’ as Christ, the Son of Man, whom God ‘memoro’ and ‘corono’ with ‘gloria,’ exalting humanity through Him (Enarr. Ps. 8.5–6)."
+    },
+    {
+      "name": "Divine Creation → Human Dominion",
+      "description": "From God’s works to man’s authority over creation",
+      "lemmas": ["constituo", "opus", "subicio", "pes"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "God establishes (‘constituo’) man over His works (‘opus’), subjecting (‘subicio’) all creation, from sheep to cattle, under his feet (‘pes’).",
+      "comment2": "Augustine views ‘constituo’ and ‘subicio’ as Christ’s dominion over creation, with ‘opus’ and ‘pes’ symbolizing His authority extended to the Church (Enarr. Ps. 8.7–8)."
+    },
+    {
+      "name": "Creation’s Paths → Universal Praise",
+      "description": "From the creatures of air and sea to renewed praise of God’s name",
+      "lemmas": ["volucris", "piscis", "nomen", "admirabile"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "The birds (‘volucris’) and fish (‘piscis’) traversing creation’s paths lead to renewed praise of God’s admirable name (‘nomen,’ ‘admirabile’) across the earth.",
+      "comment2": "Augustine sees ‘volucris’ and ‘piscis’ as symbols of the Church’s mission, proclaiming God’s ‘nomen’ and ‘admirabile’ glory universally (Enarr. Ps. 8.9–10)."
     }
   ]
 },
- 
+
+
 {
   "psalmNumber": 9,
   "category": "a",
@@ -2385,88 +2365,85 @@
   ]
 },
 
- 
-    {
+{
   "psalmNumber": 90,
   "category": "",
   "themes": [
     {
-      "name": "Dwelling → Abiding",
-      "description": "God's help transforms temporary shelter into lasting habitation",
-      "lemmas": ["habito", "commoror", "adjutorium", "protectio"],
+      "name": "Divine Shelter → Heavenly Protection",
+      "description": "From dwelling in God’s help to abiding under His heavenly protection",
+      "lemmas": ["habito", "adiutorium", "protectio", "caelum"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Augustine reads the beginning as a call to dwell spiritually in God—not just as a passerby, but in lasting communion. The shift from outer protection to internal abiding marks grace’s deepening work."
+      "comment": "The psalmist declares that one who dwells (‘habito’) in God’s help (‘adiutorium’) abides under the heavenly (‘caelum’) protection (‘protectio’) of God.",
+      "comment2": "Augustine sees ‘habito’ and ‘adiutorium’ as the faithful resting in Christ, under the ‘protectio’ of God’s ‘caelum,’ symbolizing divine refuge (Enarr. Ps. 90.1–2)."
     },
     {
-     "name": "Danger → Deliverance",
-      "description": "From external threats to divine rescue",
-      "lemmas": ["libero", "laqueus", "venator", "verbum", "asper"],
+      "name": "Trust in God → Divine Deliverance",
+      "description": "From trusting God as refuge to His deliverance from danger",
+      "lemmas": ["susceptor", "refugium", "spero", "libero"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "Augustine explains that the soul is rarely struck by the 'arrow' directly, but is often terrified by the 'harsh word' — the noise — and in that panic falls into the snare. Thus, the 'word' wounds by fear, not by contact. God's rescue comes not just from danger, but from fear itself."
+      "comment": "The faithful proclaim God as their protector (‘susceptor’) and refuge (‘refugium’), trusting (‘spero’) in Him for deliverance (‘libero’) from traps and harsh words.",
+      "comment2": "Augustine interprets ‘susceptor’ and ‘refugium’ as Christ, in whom the faithful ‘spero,’ receiving ‘libero’ from spiritual snares (Enarr. Ps. 90.3–4)."
     },
-    
     {
-      "name": "Terror → Shield",
-      "description": "God's truth defends, but the noonday test reveals inner roots",
-      "lemmas": ["scutum", "veritas", "daemonium", "meridianus", "caritas"],
+      "name": "Divine Covering → Fearless Trust",
+      "description": "From God’s protective wings to fearless trust in His truth",
+      "lemmas": ["scapula", "penna", "veritas", "timeo"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "Augustine allegorizes the 'noonday demon' as a trial of success or spiritual dryness, when temptations are no longer hidden in darkness. Those like grass without deep roots — lacking charity — wither under this heat. God's truth protects, but the test reveals whether love abides."
+      "comment": "God covers with His wings (‘scapula,’ ‘penna’), shielding with His truth (‘veritas’) so the faithful need not fear (‘timeo’) nightly terrors.",
+      "comment2": "Augustine sees ‘scapula’ and ‘penna’ as God’s merciful protection, with ‘veritas’ enabling the Church to trust without ‘timeo’ (Enarr. Ps. 90.5–6)."
     },
     {
-      "name": "Falling Multitude → Secure Individual",
-      "description": "Divine protection amidst widespread collapse",
-      "lemmas": ["cado", "mille", "decem", "appropinquo"],
+      "name": "Destruction of Enemies → Safety of the Faithful",
+      "description": "From the fall of thousands to the faithful’s protection from harm",
+      "lemmas": ["cado", "mille", "appropinquo", "video"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "Augustine reads these metaphors spiritually. 'A thousand will fall at your side' refers to general worldly temptations or weak souls nearby; 'ten thousand at your right hand' refers to the collapse of the strong—those who trusted in their own virtue or power (dextera). The 'right hand' signifies strength or status, yet even there pride can cause a greater fall. The righteous remain untouched ('non appropinquabit'), not by power, but by humility and trust in God. The faithful see ('videbis') divine justice unfold—not to condemn, but to reaffirm the danger of self-reliance over grace."
+      "comment": "Thousands fall (‘cado,’ ‘mille’) around the faithful, yet evil does not approach (‘appropinquo’) them, as they see (‘video’) the wicked’s retribution.",
+      "comment2": "Augustine views ‘cado’ and ‘mille’ as the defeat of spiritual enemies, with ‘video’ showing the faithful’s safety despite evil’s ‘appropinquo’ (Enarr. Ps. 90.7–8)."
     },
     {
-      "name": "Mortal Fear → Divine Hope",
-      "description": "Hope in the Most High repels evil’s advance",
-      "lemmas": ["spes", "refugium", "malum", "flagellum"],
+      "name": "Hope in God → Divine Refuge",
+      "description": "From hope in God to making Him a refuge against evil",
+      "lemmas": ["spes", "refugium", "malum", "appropinquo"],
       "startLine": 9,
       "endLine": 10,
-      "comment": "By placing one's hope in God, the faithful repel evil and plague. Augustine applies this to the soul’s inner tabernacle, which remains untouched by the enemy when anchored in divine hope."
+      "comment": "The faithful’s hope (‘spes’) in God makes Him their refuge (‘refugium’), preventing evil (‘malum’) and scourge from approaching (‘appropinquo’) their dwelling.",
+      "comment2": "Augustine sees ‘spes’ and ‘refugium’ as trust in Christ, shielding the faithful from ‘malum’ and its ‘appropinquo’ (Enarr. Ps. 90.9–10)."
     },
     {
-      "name": "Presumption → Protection",
-      "description": "Rightful trust in God's care, contrasted with false confidence",
-      "lemmas": ["angelus", "mando", "custodio", "porto", "offendo"],
+      "name": "Angelic Guardians → Safe Journey",
+      "description": "From God’s command to angels to protection from stumbling",
+      "lemmas": ["angelus", "custodio", "offendo", "pes"],
       "startLine": 11,
       "endLine": 12,
-      "comment": "From Isolation. Augustine reflects on how Satan used these verses to tempt Christ. The angels guard us 'in our ways' — that is, in the path God sets, not the one we invent. Divine protection is not a license for spiritual pride or testing God. Jesus answers the devil with humility and scripture, showing that faith is obedience, not presumption."
+      "comment": "God commands angels (‘angelus’) to guard (‘custodio’) the faithful, preventing their foot (‘pes’) from stumbling (‘offendo’) on a stone.",
+      "comment2": "Augustine interprets ‘angelus’ and ‘custodio’ as God’s providence, guiding the Church so ‘pes’ avoids ‘offendo’ in trials (Enarr. Ps. 90.11–12)."
     },
-   
     {
-      "name": "Threat → Triumph",
-      "description": "Victory over symbolic forms of evil through divine authority",
-      "lemmas": ["aspis", "basiliscus", "leo", "draco", "conculco", "ambulo"],
+      "name": "Triumph over Evil → Victory over Serpents",
+      "description": "From treading on serpents to conquering lions and dragons",
+      "lemmas": ["aspis", "basiliscus", "leo", "conculco"],
       "startLine": 13,
       "endLine": 14,
-      "comment": "Augustine interprets each beast symbolically: the asp is hidden sin, the basilisk is vain glory, the lion is persecution, and the dragon is the devil’s deceit. The psalmist walks over them, not just unharmed but victorious. This is the Christian's triumph over all forms of evil by faith and grace."
+      "comment": "The faithful tread (‘conculco’) on the asp (‘aspis’) and basilisk (‘basiliscus’), conquering the lion (‘leo’) and dragon with God’s power.",
+      "comment2": "Augustine sees ‘aspis,’ ‘basiliscus,’ and ‘leo’ as Satan’s powers, defeated by the faithful through ‘conculco’ in Christ (Enarr. Ps. 90.13–14)."
     },
-
     {
-      "name": "Cry → Glorification",
-      "description": "From calling out in distress to exaltation in salvation",
-      "lemmas": ["clamo", "exaudio", "tribulatio", "eripio", "glorifico"],
+      "name": "Trustful Cry → Divine Salvation",
+      "description": "From crying out in trust to God’s deliverance and glory",
+      "lemmas": ["spero", "clamor", "exaudio", "salutare"],
       "startLine": 15,
-      "endLine": 15,
-      "comment": "Augustine notes how God not only hears but dwells with the sufferer. The movement from tribulation to glorification mirrors Christ’s passion and resurrection in the believer’s life."
-    },
-    {
-      "name": "Temporal Life → Eternal Salvation",
-      "description": "Long earthly days culminate in the vision of divine salvation",
-      "lemmas": ["longitudo", "dies", "repleo", "ostendo", "salutare"],
-      "startLine": 16,
       "endLine": 16,
-      "comment": "The psalm ends with the full revelation of salvation. Augustine sees this as the eschatological promise: the final and beatific vision granted to those who abide in God."
+      "comment": "The faithful trust (‘spero’) and cry out (‘clamor’) to God, who hears (‘exaudio’) and grants salvation (‘salutare’) and long life.",
+      "comment2": "Augustine sees ‘spero’ and ‘clamor’ as the Church’s faith, answered by ‘exaudio’ and ‘salutare’ through Christ’s glorification (Enarr. Ps. 90.15–16)."
     }
   ]
 },
+
 
 {
   "psalmNumber": 91,

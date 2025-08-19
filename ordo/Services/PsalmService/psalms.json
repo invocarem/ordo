@@ -4116,21 +4116,18 @@
             "verified": true
         },
 
-        
-        
         {
             "number": 90,
             "section": "",
             "title": "Qui habitat (The Protection of the Most High)",
-
             "text": [
-                "Qui habitat in adjutorio Altissimi, in protectione Dei caeli commorabitur.",
+                "Qui habitat in adiutorio Altissimi, in protectione Dei caeli commorabitur.",
                 "Dicet Domino: Susceptor meus es tu, et refugium meum; Deus meus, sperabo in eum.",
                 "Quoniam ipse liberavit me de laqueo venantium, et a verbo aspero.",
-                "Scapulis suis obumbrabit tibi, et sub pennis ejus sperabis.",
-                "Scuto circumdabit te veritas ejus; non timebis a timore nocturno,",
+                "Scapulis suis obumbrabit tibi, et sub pennis eius sperabis.",
+                "Scuto circumdabit te veritas eius; non timebis a timore nocturno,",
                 "A sagitta volante per diem, a negotio perambulante in tenebris, ab incursu et daemonio meridiano.",
-                "Cadent a latere tuo mille, et decem millia a dextris tuis; ad te autem non appropinquabit.",
+                "Cadent a latere tuo mille, et decem milia a dextris tuis; ad te autem non appropinquabit.",
                 "Verumtamen oculis tuis considerabis, et retributionem peccatorum videbis.",
                 "Quoniam tu es, Domine, spes mea; Altissimum posuisti refugium tuum.",
                 "Non accedet ad te malum, et flagellum non appropinquabit tabernaculo tuo.",
@@ -4161,7 +4158,8 @@
             ],
             "verified": true
         },
-        {
+                
+       {
             "number": 91,
             "section": "",
             "title": "A Song of Praise for God’s Righteousness",
