@@ -151,7 +151,7 @@ public struct LatinWordEntity: Codable {
 
 // Enums for type safety
 public enum PartOfSpeech: String, Codable {
-    case noun, verb, pronoun, adjective, adverb,preposition,conjunction,interjection
+    case noun, verb, pronoun, adjective, adverb,preposition,conjunction,interjection,numeral
 }
 
 public enum Gender: String, Codable {

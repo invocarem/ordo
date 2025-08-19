@@ -2593,6 +2593,61 @@
 },
 
 {
+  "psalmNumber": 94,
+  "category": "",
+  "themes": [
+    {
+      "name": "Exultation → Thanksgiving",
+      "description": "From joyful shouting to approaching God with confession and psalms",
+      "lemmas": ["exsulto", "iubilo", "confessio", "psalmus"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalm begins with a call to joyful worship, urging the faithful to approach God with psalms and thanksgiving. Augustine sees this as the Church’s daily summons to open the heart in praise (Enarr. Ps. 94.1–2)."
+    },
+    {
+      "name": "Greatness → Dominion",
+      "description": "From the greatness of God to His sovereignty over creation’s boundaries",
+      "lemmas": ["magnus", "rex", "manus", "altitudo"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The Lord is proclaimed as king above all gods, whose hands hold both the earth’s limits and the heights of the mountains. Augustine underlines that no realm lies outside His dominion (Enarr. Ps. 94.3–4)."
+    },
+    {
+      "name": "Sea → Adoration",
+      "description": "From God as maker of sea and land to worship before Him who made us",
+      "lemmas": ["mare", "arida", "adoro", "procido"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The sea and the dry land are His creation, and so the faithful are summoned to kneel before their Maker. Augustine contrasts this humility with the pride of those who refuse to bow (Enarr. Ps. 94.5–6)."
+    },
+    {
+      "name": "People → Voice",
+      "description": "From belonging to God’s flock to hearing His voice today",
+      "lemmas": ["populus", "ovis", "vox", "hodie"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "God’s people are the sheep of His hand, called to listen today if they hear His voice. Augustine stresses the urgency of 'hodie'—today is the time of obedience and conversion (Enarr. Ps. 94.7–8)."
+    },
+    {
+      "name": "Testing → Rebellion",
+      "description": "From the desert trial to the provocation of a hardened heart",
+      "lemmas": ["tentatio", "exacerbatio", "desertum", "opera"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "The desert generation tested and provoked the Lord, though they saw His works. Augustine recalls this as a warning for the Church, lest we repeat their unbelief (Enarr. Ps. 94.9–10)."
+    },
+    {
+      "name": "Error → Exclusion",
+      "description": "From wandering hearts to the oath of exclusion from God’s rest",
+      "lemmas": ["erro", "via", "requies", "ira"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "For forty years the Lord bore with a wayward people, declaring they would not enter His rest. Augustine interprets this as the eternal rest of God, entered only by faith and obedience (Enarr. Ps. 94.11)."
+    }
+  ]
+},
+
+{
   "psalmNumber": 113,
   "category": "",
   "themes": [

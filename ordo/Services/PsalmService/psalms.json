@@ -4281,40 +4281,40 @@
             ],
             "verified": true
           },
-
-        {
-            "number": 94,
-            "section": "",
-            "text": [
-                "Venite, exsultemus Domino; jubilemus Deo salutari nostro.",
-                "Praeveniamus faciem ejus in confessione, et in psalmis jubilemus ei.",
-                "Quoniam Deus magnus Dominus, et rex magnus super omnes deos.",
-                "Quia in manu ejus sunt omnes fines terrae, et altitudines montium ipsius sunt.",
-                "Quoniam ipsius est mare, et ipse fecit illud, et aridam fundaverunt manus ejus.",
-                "Venite, adoremus, et procidamus ante Deum; ploremus coram Domino qui fecit nos.",
-                "Quia ipse est Dominus Deus noster, et nos populus pascuae ejus, et oves manus ejus.",
-                "Hodie si vocem ejus audieritis, nolite obdurare corda vestra,",
-                "sicut in exacerbatione secundum diem tentationis in deserto, ubi tentaverunt me patres vestri, probaverunt et viderunt opera mea.",
-                "Quadraginta annis offensus fui generationi illi, et dixi: Semper hi errant corde.",
-                "Et isti non cognoverunt vias meas: ut juravi in ira mea: Si introibunt in requiem meam."
-            ],
-            "englishText": [
-                "Come let us praise the Lord with joy; let us joyfully sing to God our saviour.",
-                "Let us come before his presence with thanksgiving; and make a joyful noise to him with psalms.",
-                "For the Lord is a great God, and a great King above all gods.",
-                "For in his hand are all the ends of the earth, and the heights of the mountains are his.",
-                "For the sea is his, and he made it, and his hands formed the dry land.",
-                "Come let us adore and fall down, and weep before the Lord that made us.",
-                "For he is the Lord our God, and we are the people of his pasture and the sheep of his hand.",
-                "Today if you shall hear his voice, harden not your hearts,",
-                "As in the provocation, according to the day of temptation in the wilderness, where your fathers tempted me; they proved me, and saw my works.",
-                "Forty years long was I offended with that generation, and I said: These always err in heart.",
-                "And these men have not known my ways; so I swore in my wrath that they shall not enter into my rest."
-            ],
-            "verified": true
-        },
-
-        {
+            
+    {
+        "number": 94,
+        "section": "",
+        "title": "A Call to Worship and Obedience",
+        "text": [
+            "Venite, exsultemus Domino; iubilemus Deo salutari nostro.",
+            "Praeveniamus faciem eius in confessione, et in psalmis iubilemus ei.",
+            "Quoniam Deus magnus Dominus, et rex magnus super omnes deos.",
+            "Quia in manu eius sunt omnes fines terrae, et altitudines montium ipsius sunt.",
+            "Quoniam ipsius est mare, et ipse fecit illud, et aridam fundaverunt manus eius.",
+            "Venite, adoremus, et procidamus ante Deum; ploremus coram Domino qui fecit nos.",
+            "Quia ipse est Dominus Deus noster, et nos populus pascuae eius, et oves manus eius.",
+            "Hodie si vocem eius audieritis, nolite obdurare corda vestra,",
+            "sicut in exacerbatione secundum diem tentationis in deserto, ubi tentaverunt me patres vestri, probaverunt et viderunt opera mea.",
+            "Quadraginta annis offensus fui generationi illi, et dixi: Semper hi errant corde.",
+            "Et isti non cognoverunt vias meas: ut iuravi in ira mea: Si introibunt in requiem meam."
+        ],
+        "englishText": [
+            "Come let us praise the Lord with joy; let us joyfully sing to God our saviour.",
+            "Let us come before his presence with thanksgiving; and make a joyful noise to him with psalms.",
+            "For the Lord is a great God, and a great King above all gods.",
+            "For in his hand are all the ends of the earth, and the heights of the mountains are his.",
+            "For the sea is his, and he made it, and his hands formed the dry land.",
+            "Come let us adore and fall down, and weep before the Lord that made us.",
+            "For he is the Lord our God, and we are the people of his pasture and the sheep of his hand.",
+            "Today if you shall hear his voice, harden not your hearts,",
+            "As in the provocation, according to the day of temptation in the wilderness, where your fathers tempted me; they proved me, and saw my works.",
+            "Forty years long was I offended with that generation, and I said: These always err in heart.",
+            "And these men have not known my ways; so I swore in my wrath that they shall not enter into my rest."
+        ],
+        "verified": true
+    },
+         {
             "number": 95,
             "section": "",
             "title": "The Lord's Dominion Over All",

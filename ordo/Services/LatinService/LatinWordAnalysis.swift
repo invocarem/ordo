@@ -41,7 +41,9 @@ extension LatinWordEntity {
             
         case .preposition, .conjunction:
             return "\(translation) (\(partOfSpeech.rawValue))"
-            
+
+        case .numeral:
+            return "\(translation) (numeral)"            
         default:
             return nil
         }

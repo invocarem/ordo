@@ -1,5 +1,117 @@
 [
   {
+  "lemma": "aridus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "aridus",
+  "genitive": "aridi",
+  "translations": {
+    "en": "dry, arid, parched",
+    "la": "aridus"
+  },
+  "forms_plural": {
+    "accusative_m": ["aridos"],
+    "nominative_m": ["aridi"],
+    "accusative_n": ["arida"],
+    "accusative_f": ["aridas"]
+  },
+  "forms": {
+    "nominative_f": ["arida"],
+    "accusative_sg_f": ["aridam"],
+    "nominative_n": ["aridum"]
+  }
+},
+  {
+    "lemma": "quadraginta",
+    "part_of_speech": "numeral",
+    "declension": 0,
+    "nominative": "quadraginta",
+    "translations": {
+      "en": "forty",
+      "la": "quadraginta"
+    }
+  },
+  {
+    "lemma": "desertum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "desertum",
+    "genitive": "deserti",
+    "translations": {
+      "en": "wilderness, desert, wasteland, solitary place",
+      "la": "desertum, deserti"
+    }
+  },
+  {
+    "lemma": "exacerbatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "exacerbatio",
+    "genitive": "exacerbationis",
+    "translations": {
+      "en": "exasperation, provocation, irritation, aggravation",
+      "la": "exacerbatio, exacerbationis"
+    }
+  },
+  {
+    "lemma": "obduro",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "obdurare",
+    "present": "obduro",
+    "future": "obdurabo",
+    "perfect": "obduravi",
+    "supine": "obduratum",
+    "translations": {
+      "en": "to harden, be hard, persist, endure",
+      "la": "obduro, obdurare, obduravi, obduratum"
+    }
+  },
+  {
+  "lemma": "iubilo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "iubilare",
+  "present": "iubilo",
+  "future": "iubilabo",
+  "perfect": "iubilavi",
+  "supine": "iubilatum",
+  "translations": {
+    "en": "to shout for joy, jubilate",
+    "la": "iubilo, iubilare, iubilavi, iubilatum"
+  }
+},
+  {
+    "lemma": "ploro",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "plorare",
+    "present": "ploro",
+    "future": "plorabo",
+    "perfect": "ploravi",
+    "supine": "ploratum",
+    "translations": {
+      "en": "to weep, lament, cry aloud",
+      "la": "ploro, plorare"
+    }
+  },
+  {
+    "lemma": "procido",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "procidere",
+    "present": "procido",
+    "perfect": "procidi",
+    "supine": "procasum",
+    "translations": {
+      "en": "to fall down, prostrate oneself (in reverence or despair)",
+      "la": "procido, procidere"
+    }
+  },
+  {
     "lemma": "distribuo",
     "part_of_speech": "verb",
     "conjugation": 3,
