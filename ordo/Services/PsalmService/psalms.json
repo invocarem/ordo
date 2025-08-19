@@ -373,64 +373,63 @@
             ],
             "verified": true
         },
-                
-            {
-                "number": 10,
-                "section": "",
-                "title": "Trust in God's Justice",
-               
-                "text": [
-                    "In Domino confido; quomodo dicitis animae meae: Transvola in montem sicut passer?",
-                    "Quoniam ecce peccatores intenderunt arcum, paraverunt sagittas suas in pharetra, ut sagittent in obscuro rectos corde.",
-                    "Quoniam quae perfecisti, destruxerunt: justus autem quid fecit?",
-                    "Dominus in templo sancto suo; Dominus in caelo sedes ejus.",
-                    "Oculi ejus in pauperem respiciunt; palpebrae ejus interrogant filios hominum.",
-                    "Dominus interrogat justum et impium; qui autem diligit iniquitatem, odit animam suam.",
-                    "Pluet super peccatores laqueos; ignis, et sulphur, et spiritus procellarum pars calicis eorum.",
-                    "Quoniam justus Dominus, et justitias dilexit; aequitatem vidit vultus ejus."
-                ],
-                "englishText": [
-                    "In the Lord I put my trust: how say you to my soul: Flee as a bird to your mountain?",
-                    "For behold the wicked bend their bow; they prepare their arrows in the quiver, to shoot in darkness at the upright in heart.",
-                    "For they have destroyed what you have perfected: but what has the just man done?",
-                    "The Lord is in his holy temple, the Lord's throne is in heaven.",
-                    "His eyes behold the poor man; his eyelids examine the sons of men.",
-                    "The Lord tests the just and the wicked: but he that loves iniquity hates his own soul.",
-                    "He shall rain snares upon sinners: fire and brimstone and storms of winds shall be the portion of their cup.",
-                    "For the Lord is just, and has loved justice: his countenance has beheld righteousness."
-                ],
-                "verified": true
-               
-            },
-            {
-                "number": 11,
-                "section": "",
-                "title": "A Prayer Against Deceit",
-                "text": [
-                    "Salvum me fac, Domine, quoniam defecit sanctus, quoniam diminutae sunt veritates a filiis hominum.",
-                    "Vana locuti sunt unusquisque ad proximum suum; labia dolosa, in corde et corde locuti sunt.",
-                    "Disperdat Dominus universa labia dolosa, et linguam magniloquam.",
-                    "Qui dixerunt: Linguam nostram magnificabimus; labia nostra a nobis sunt, quis noster Dominus est?",
-                    "Propter miseriam inopum, et gemitum pauperum, nunc exsurgam, dicit Dominus.",
-                    "Ponam in salutari; fiducialiter agam in eo.",
-                    "Eloquia Domini, eloquia casta: argentum igne examinatum, probatum terrae, purgatum septuplum.",
-                    "Tu, Domine, servabis nos: et custodies nos a generatione hac in aeternum.",
-                    "In circuitu impii ambulant; secundum altitudinem tuam multiplicasti filios hominum."
-                ],
-                "englishText": [
-                    "Save me, O Lord, for there is no saint left: truths are diminished among the children of men.",
-                    "They have spoken vain things each to his neighbor: with deceitful lips, and with a double heart have they spoken.",
-                    "May the Lord destroy all deceitful lips, and the tongue that speaks proud things.",
-                    "Who have said: We will magnify our tongue; our lips are our own; who is lord over us?",
-                    "Because of the misery of the needy, and the groans of the poor, now will I arise, says the Lord.",
-                    "I will set him in safety; I will deal confidently for him.",
-                    "The words of the Lord are pure words: as silver tried by fire, purified in the earth, refined seven times.",
-                    "Thou, O Lord, wilt preserve us: and keep us from this generation forever.",
-                    "The wicked walk round about: according to thy greatness thou hast multiplied the children of men."
-                ],
-                "verified": true
-            },
-            {
+
+        {
+            "number": 10,
+            "section": "",
+            "title": "Trust in God's Justice",
+            "text": [
+                "In Domino confido; quomodo dicitis animae meae: Transvola in montem sicut passer?",
+                "Quoniam ecce peccatores intenderunt arcum, paraverunt sagittas suas in pharetra, ut sagittent in obscuro rectos corde.",
+                "Quoniam quae perfecisti, destruxerunt: iustus autem quid fecit?",
+                "Dominus in templo sancto suo; Dominus in caelo sedes eius.",
+                "Oculi eius in pauperem respiciunt; palpebrae eius interrogant filios hominum.",
+                "Dominus interrogat iustum et impium; qui autem diligit iniquitatem, odit animam suam.",
+                "Pluet super peccatores laqueos; ignis, et sulphur, et spiritus procellarum pars calicis eorum.",
+                "Quoniam iustus Dominus, et iustitias dilexit; aequitatem vidit vultus eius."
+            ],
+            "englishText": [
+                "In the Lord I put my trust: how say you to my soul: Flee as a bird to your mountain?",
+                "For behold the wicked bend their bow; they prepare their arrows in the quiver, to shoot in darkness at the upright in heart.",
+                "For they have destroyed what you have perfected: but what has the just man done?",
+                "The Lord is in his holy temple, the Lord's throne is in heaven.",
+                "His eyes behold the poor man; his eyelids examine the sons of men.",
+                "The Lord tests the just and the wicked: but he that loves iniquity hates his own soul.",
+                "He shall rain snares upon sinners: fire and brimstone and storms of winds shall be the portion of their cup.",
+                "For the Lord is just, and has loved justice: his countenance has beheld righteousness."
+            ],
+            "verified": true
+        },
+
+        {
+            "number": 11,
+            "section": "",
+            "text": [
+                "Salvum me fac, Domine, quoniam defecit sanctus, quoniam diminutae sunt veritates a filiis hominum.",
+                "Vana locuti sunt unusquisque ad proximum suum; labia dolosa, in corde et corde locuti sunt.",
+                "Disperdat Dominus universa labia dolosa, et linguam magniloquam.",
+                "Qui dixerunt: Linguam nostram magnificabimus; labia nostra a nobis sunt, quis noster Dominus est?",
+                "Propter miseriam inopum, et gemitum pauperum, nunc exsurgam, dicit Dominus.",
+                "Ponam in salutari; fiducialiter agam in eo.",
+                "Eloquia Domini, eloquia casta: argentum igne examinatum, probatum terrae, purgatum septuplum.",
+                "Tu, Domine, servabis nos: et custodies nos a generatione hac in aeternum.",
+                "In circuitu impii ambulant; secundum altitudinem tuam multiplicasti filios hominum."
+            ],
+            "englishText": [
+                "Save me, O Lord, for there is no saint left: truths are diminished among the children of men.",
+                "They have spoken vain things each to his neighbor: with deceitful lips, and with a double heart have they spoken.",
+                "May the Lord destroy all deceitful lips, and the tongue that speaks proud things.",
+                "Who have said: We will magnify our tongue; our lips are our own; who is lord over us?",
+                "Because of the misery of the needy, and the groans of the poor, now will I arise, says the Lord.",
+                "I will set him in safety; I will deal confidently for him.",
+                "The words of the Lord are pure words: as silver tried by fire, purified in the earth, refined seven times.",
+                "Thou, O Lord, wilt preserve us: and keep us from this generation forever.",
+                "The wicked walk round about: according to thy greatness thou hast multiplied the children of men."
+            ],
+            "verified": true
+        },
+
+                {
                 "number": 12,
                 "section": "",
                 "title": "A Cry for God's Help",

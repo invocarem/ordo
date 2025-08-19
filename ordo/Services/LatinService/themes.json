@@ -464,220 +464,85 @@
   "category": "a",
   "themes": [
     {
-      "name": "Personal Praise",
-      "description": "Individual confession and personal testimony",
-      "lemmas": ["confiteor", "narro"],
-      "startLine": 1,
-      "endLine": 1,
-      "comment": "Opening expressions of gratitude"
-    },
-    {
-      "name": "Joyful Worship",
-      "description": "Expression of joy and exuberant praise",
-      "lemmas": ["laetor", "exsulto"],
+      "name": "Wonder → Praise",
+      "description": "From recounting God’s marvelous works to rejoicing in His name",
+      "lemmas": ["mirabile", "exsulto", "psallo", "nomen"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Celebratory tone of the psalm"
+      "comment": "The psalmist begins with wholehearted thanksgiving, rejoicing and singing to the Most High for His wondrous deeds.",
+      "comment2": "Augustine sees here the Church’s song: the marvels of Christ’s resurrection and the new creation are confessed with joy and psalmody (Enarr. Ps. 9.1–2)."
     },
     {
-      "name": "Divine Attributes",
-      "description": "God's supremacy and wonderful works",
-      "lemmas": ["altissimus", "mirabilis"],
-      "startLine": 2,
-      "endLine": 2,
-      "comment": "Theological foundation of praise"
-    },
-    {
-      "name": "Divine Judgment",
-      "description": "Legal vindication and judicial authority",
-      "lemmas": ["judicium", "thronus"],
+      "name": "Enemy → Judgment",
+      "description": "From the downfall of enemies to God’s righteous throne",
+      "lemmas": ["inimicus", "infirmo", "iudicium", "thronus"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "God's righteous rule established"
+      "comment": "God turns back the enemy, causing them to perish before His face, while He sits enthroned in justice.",
+      "comment2": "Augustine interprets this as the triumph of Christ over the devil and sin, enthroning God’s judgment as the foundation of the City of God (Enarr. Ps. 9.3–4)."
     },
     {
-      "name": "Enemy Defeat",
-      "description": "Opposition identified and final destruction",
-      "lemmas": ["inimicus", "pereo"],
-      "startLine": 3,
-      "endLine": 5,
-      "comment": "Fate of the wicked"
-    },
-    {
-      "name": "Royal Imagery",
-      "description": "Kingly posture and righteous rule",
-      "lemmas": ["sedeo", "justus"],
-      "startLine": 4,
-      "endLine": 5,
-      "comment": "Divine kingship motifs"
-    },
-    {
-      "name": "Divine Rebuke",
-      "description": "Authoritative correction and complete eradication",
-      "lemmas": ["increpo", "deleo"],
+      "name": "Nations → Oblivion",
+      "description": "From rebuked nations to perishing memory",
+      "lemmas": ["increpo", "gens", "impious", "memoria"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "Divine intervention against evil"
+      "comment": "The nations are rebuked, the wicked perish, their names erased, their cities destroyed, and their memory vanishes in noise.",
+      "comment2": "For Augustine, this points to earthly kingdoms opposed to God, whose glory fades to nothing, unlike the eternal remembrance of the just (Enarr. Ps. 9.5–6)."
     },
     {
-      "name": "Final Destruction",
-      "description": "Permanent consequences and definitive ending",
-      "lemmas": ["aeternus", "finis"],
-      "startLine": 6,
-      "endLine": 6,
-      "comment": "Irreversible judgment"
-    },
-    {
-      "name": "Historical Judgment",
-      "description": "Urban centers judged and oblivion of the wicked",
-      "lemmas": ["civitas", "memoria"],
-      "startLine": 6,
-      "endLine": 7,
-      "comment": "Concrete examples of divine justice"
-    },
-    {
-      "name": "Eternal Sovereignty",
-      "description": "Unchanging nature and eternal reign",
-      "lemmas": ["permaneo", "thronus"],
+      "name": "Eternal Throne → Just Judgment",
+      "description": "From God’s everlasting throne to equity in judgment",
+      "lemmas": ["aeternus", "thronus", "iudicium", "iustitia"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "Timeless divine rule"
+      "comment": "The Lord remains forever, establishing His throne in judgment to govern the earth with righteousness.",
+      "comment2": "Augustine sees Christ as the eternal Judge, who alone brings true equity — not partial or earthly justice, but eternal righteousness (Enarr. Ps. 9.7–8)."
     },
     {
-      "name": "Universal Justice",
-      "description": "Global scope and fairness standard",
-      "lemmas": ["orbis", "aequitas"],
-      "startLine": 8,
-      "endLine": 8,
-      "comment": "Worldwide application"
-    },
-    {
-      "name": "Righteous Rule",
-      "description": "Judicial function and moral foundation",
-      "lemmas": ["judico", "justus"],
-      "startLine": 8,
-      "endLine": 9,
-      "comment": "Moral basis of governance"
-    },
-    {
-      "name": "Divine Protection",
-      "description": "Shelter imagery and active assistance",
-      "lemmas": ["refugium", "adjutor"],
+      "name": "Refuge → Trust",
+      "description": "From God as a refuge for the poor to the trust of those who know His name",
+      "lemmas": ["refugium", "pauper", "nomen", "spero"],
       "startLine": 9,
       "endLine": 10,
-      "comment": "Security for the faithful"
+      "comment": "The poor find refuge in God, and those who know His name place their trust in Him, confident He will not forsake them.",
+      "comment2": "Augustine teaches that Christ Himself is the stronghold of the poor, and that true knowledge of God’s name comes through faith in Him (Enarr. Ps. 9.9–10)."
     },
     {
-      "name": "Faithful Relationship",
-      "description": "Confident trust and divine faithfulness",
-      "lemmas": ["spero", "derelinquo"],
-      "startLine": 10,
-      "endLine": 10,
-      "comment": "Mutual covenant commitment"
-    },
-    {
-      "name": "Covenant Knowledge",
-      "description": "Personal acquaintance and representative identity",
-      "lemmas": ["nosco", "nomen"],
-      "startLine": 10,
-      "endLine": 11,
-      "comment": "Intimate divine relationship"
-    },
-    {
-      "name": "Universal Proclamation",
-      "description": "Global declaration with international scope",
-      "lemmas": ["annuntio", "gens"],
+      "name": "Zion → Remembrance",
+      "description": "From psalms in Zion to God remembering the blood of the poor",
+      "lemmas": ["psallo", "Sion", "sanguis", "recordor"],
       "startLine": 11,
       "endLine": 12,
-      "comment": "Missionary impulse"
+      "comment": "The psalm calls for song in Zion and the proclamation of God’s works, for He remembers the blood of the oppressed and the cry of the poor.",
+      "comment2": "Augustine links this to the blood of the martyrs, never forgotten by God, whose cry is heard in His heavenly Zion (Enarr. Ps. 9.11–12)."
     },
     {
-      "name": "Divine Remembrance",
-      "description": "Active recollection and negation of forgetfulness",
-      "lemmas": ["recordor", "obliviscor"],
-      "startLine": 12,
-      "endLine": 12,
-      "comment": "Divine memory contrasted with human"
-    },
-    {
-      "name": "Justice for the Oppressed",
-      "description": "Violence remembered with focus on the vulnerable",
-      "lemmas": ["sanguis", "pauper"],
-      "startLine": 12,
-      "endLine": 13,
-      "comment": "Special concern for the marginalized"
-    },
-    {
-      "name": "Personal Petition",
-      "description": "Cry for mercy and request for divine attention",
-      "lemmas": ["misereor", "video"],
+      "name": "Mortality → Praise",
+      "description": "From prayer amid death’s gates to praise in Zion’s gates",
+      "lemmas": ["humilitas", "porta", "mors", "laus"],
       "startLine": 13,
       "endLine": 14,
-      "comment": "Transition to supplication"
+      "comment": "The psalmist begs God to see his affliction, to raise him from the gates of death, that he may proclaim God’s praise in the gates of Zion.",
+      "comment2": "Augustine sees here Christ lifting believers from death into the life of the Church, so that the praise of God replaces the silence of the grave (Enarr. Ps. 9.13–14)."
     },
     {
-      "name": "Resurrection Imagery",
-      "description": "Dramatic deliverance with threshold symbolism",
-      "lemmas": ["exalto", "porta"],
-      "startLine": 14,
-      "endLine": 14,
-      "comment": "Symbolic victory language"
-    },
-    {
-      "name": "Redemptive Purpose",
-      "description": "Declarative response and public thanksgiving",
-      "lemmas": ["annuntio", "laudatio"],
-      "startLine": 14,
-      "endLine": 15,
-      "comment": "Purpose behind deliverance"
-    },
-    {
-      "name": "Poetic Justice",
-      "description": "Ensnarement reversed with literal stumbling",
-      "lemmas": ["laqueus", "pes"],
+      "name": "Trap → Judgment",
+      "description": "From nations ensnared in their own snares to God’s revealed justice",
+      "lemmas": ["gens", "laqueus", "iudicium", "peccator"],
       "startLine": 15,
       "endLine": 16,
-      "comment": "Retributive justice motif"
+      "comment": "The nations fall into the pit they made, caught in their hidden traps; the Lord makes Himself known in judgment, ensnaring the sinner by his own works.",
+      "comment2": "Augustine interprets this as sin turning back on the sinner: the trap of pride becomes the means of downfall, while God’s justice is revealed in this reversal (Enarr. Ps. 9.15–16)."
     },
     {
-      "name": "Divine Self-Revelation",
-      "description": "God making Himself known through judicial acts",
-      "lemmas": ["cognosco", "judicium"],
-      "startLine": 16,
-      "endLine": 16,
-      "comment": "Theophanic dimension"
-    },
-    {
-      "name": "Moral Causality",
-      "description": "Self-inflicted ruin with deeds recoiling",
-      "lemmas": ["interitus", "opus"],
-      "startLine": 16,
-      "endLine": 17,
-      "comment": "Deeds returning on doers"
-    },
-    {
-      "name": "Final Judgment",
-      "description": "Eternal destination for unrepentant sinners",
-      "lemmas": ["infernus", "peccator"],
-      "startLine": 17,
-      "endLine": 17,
-      "comment": "Eschatological conclusion"
-    },
-    {
-      "name": "Divine Memory",
-      "description": "Contrast between forgetful people and remembering God",
-      "lemmas": ["obliviscor", "pauper"],
+      "name": "Forgetting God → Eternal Loss",
+      "description": "From sinners descending to hell to hope for the poor",
+      "lemmas": ["peccator", "infernum", "pauper", "patientia"],
       "startLine": 17,
       "endLine": 18,
-      "comment": "Theological anthropology"
-    },
-    {
-      "name": "Eschatological Hope",
-      "description": "Temporal limitation and ultimate vindication",
-      "lemmas": ["finis", "patientia"],
-      "startLine": 18,
-      "endLine": 18,
-      "comment": "Future-oriented faith"
+      "comment": "Sinners and nations that forget God are turned into hell, while the poor will not be forgotten and their patience will not perish forever.",
+      "comment2": "Augustine highlights the contrast: forgetfulness of God leads to eternal loss, but the poor in spirit, patient in faith, are remembered unto life (Enarr. Ps. 9.17–18)."
     }
   ]
 },
@@ -687,100 +552,196 @@
   "category": "b",
   "themes": [
     {
-      "name": "Pride → Judgment",
-      "description": "From human defiance to divine reckoning",
-      "lemmas": ["praevaleo", "iudico", "constituo", "legislator"],
+      "name": "Rise Up → Human Limits",
+      "description": "From God’s rising against human pride to nations learning their mortality",
+      "lemmas": ["exsurgo", "iudicium", "homo"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Man exalts himself until God rises. Augustine sees this cry for judgment not as revenge but as restoration of truth, that the nations may remember they are but mortal (Enarr. Ps. 9.20–21)."
+      "comment": "The psalmist begs God to rise so that man does not prevail, and that nations may know they are but human.",
+      "comment2": "Augustine sees this as the humiliation of pride: nations are taught their weakness under God’s law (Enarr. Ps. 9.1–2B)."
     },
     {
-      "name": "Distance → Snare",
-      "description": "From God's seeming absence to the schemes of the proud",
-      "lemmas": ["recedo", "opportunitas", "superbio", "consilium"],
+      "name": "Distance → Oppression",
+      "description": "From God’s seeming absence to the poor consumed by the proud",
+      "lemmas": ["recedo", "superbia", "pauper"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "Though God seems distant, the proud burn with schemes that entrap the poor. Augustine reads this as the test of faith—where God hides to purify trust (Enarr. Ps. 9.22–23)."
+      "comment": "The psalm laments God’s apparent distance as the proud inflame the poor and ensnare them in plots.",
+      "comment2": "Augustine interprets this as the trial of faith: God seems far, but He never abandons His people (Enarr. Ps. 9.3–4B)."
     },
     {
-      "name": "Desire → Blasphemy",
-      "description": "From glorifying sin to provoking God",
-      "lemmas": ["desiderium", "laudo", "exacerbo", "ira"],
+      "name": "Boast → Defilement",
+      "description": "From the sinner’s self-praise to the corruption of his ways",
+      "lemmas": ["peccator", "ira", "via"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "The wicked are praised for their cravings and provoke God with impunity. Augustine warns that flattery of sin blinds judgment and hardens hearts (Enarr. Ps. 9.24–25)."
+      "comment": "The sinner boasts in his desires and angers the Lord, refusing to seek God, walking always in defiled paths.",
+      "comment2": "Augustine contrasts this with the just, who glory not in themselves but in God (Enarr. Ps. 9.5–6B)."
     },
     {
-      "name": "Blindness → Control",
-      "description": "From ignoring God to ruling through injustice",
-      "lemmas": ["inquinatus", "aufero", "dominor"],
+      "name": "False Security → Deceit",
+      "description": "From the wicked’s claim of stability to speech filled with curses and lies",
+      "lemmas": ["moveo", "maledictio", "dolus"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "God’s judgment is far from the sinner’s eyes. Augustine remarks how this impunity fosters delusions of dominance and moral decay (Enarr. Ps. 9.26–27)."
+      "comment": "The wicked claim they will not be moved, yet their ways are full of deceit and domination over enemies.",
+      "comment2": "Augustine says their words betray them: claiming strength, they reveal corruption (Enarr. Ps. 9.7–8B)."
     },
     {
-      "name": "Boast → Curse",
-      "description": "From proud complacency to poisonous speech",
-      "lemmas": ["moveo", "maledictio", "amaritudo", "dolus"],
+      "name": "Boast → Corruption of Tongue",
+      "description": "From arrogant confidence to a mouth filled with bitterness and fraud",
+      "lemmas": ["cor", "maledictio", "dolor"],
       "startLine": 9,
       "endLine": 10,
-      "comment": "Secure in sin, the wicked believe they cannot fall. Their mouth flows with deception and malice—signs of inner rot, says Augustine (Enarr. Ps. 9.28–29)."
+      "comment": "The wicked say in their hearts they will not be moved, but their tongues are full of curses, lies, and bitterness.",
+      "comment2": "Augustine notes the contrast: the proud heart produces a corrupt tongue, which betrays the inner decay (Enarr. Ps. 9.9–10B)."
     },
     {
-      "name": "Ambush → Innocence",
-      "description": "From hidden violence to the hunted poor",
-      "lemmas": ["insidiae", "insidior", "interficio", "spelunca", "pauper"],
+      "name": "Ambush → Violence",
+      "description": "From hidden traps to the lion’s den awaiting the poor",
+      "lemmas": ["insidiae", "leo", "pauper"],
       "startLine": 11,
       "endLine": 12,
-      "comment": "Like beasts of prey, the wicked lie in wait for the innocent. Augustine sees this as a figure of Christ persecuted by the powerful (Enarr. Ps. 9.30–31)."
+      "comment": "The wicked sit in ambush with the wealthy, seeking to kill the innocent, like a lion lurking in his den.",
+      "comment2": "Augustine applies this to the devil and his agents who hunt the innocent in secret (Enarr. Ps. 9.11–12B)."
     },
     {
-      "name": "Snare → Fall",
-      "description": "From deceitful traps to the humiliation of the poor",
-      "lemmas": ["laqueus", "inclino", "humilio", "dominor"],
+      "name": "Trap → Denial",
+      "description": "From snaring the poor to denying God’s sight",
+      "lemmas": ["laqueus", "pauper", "obliviscor"],
       "startLine": 13,
       "endLine": 14,
-      "comment": "The wicked draws the poor into a trap. Augustine teaches that God allows this for the testing of the just, but the proud will fall into their own net (Enarr. Ps. 9.32–33)."
+      "comment": "The wicked trap the poor, bending low until he falls, while claiming God has forgotten and turned away.",
+      "comment2": "For Augustine, the wicked think God does not see, but His judgment will expose their false security (Enarr. Ps. 9.13–14B)."
     },
     {
-      "name": "Forgetfulness → Exaltation",
-      "description": "From God’s supposed silence to His rising justice",
-      "lemmas": ["obliviscor", "exsurgo", "exalto", "pauper"],
+      "name": "Exalted Hand → Defender of the Poor",
+      "description": "From God’s exalted hand to His defense of the orphan",
+      "lemmas": ["exsurgo", "manus", "pauper"],
       "startLine": 15,
       "endLine": 16,
-      "comment": "God is not forgetful, but patient. Augustine explains that divine delay is mercy, but in due time, He rises to defend the poor (Enarr. Ps. 9.34–35)."
+      "comment": "The psalmist calls for God to rise with His hand exalted, not forgetting the poor.",
+      "comment2": "Augustine sees Christ’s exaltation as the lifting of God’s hand to aid the humble and forgotten (Enarr. Ps. 9.15–16B)."
     },
     {
-      "name": "Vision → Justice",
-      "description": "From divine attention to defense of the orphan",
-      "lemmas": ["video", "labor", "derelinquo", "orphanos"],
+      "name": "Vision → Aid",
+      "description": "From God’s seeing toil and sorrow to becoming helper of the orphan",
+      "lemmas": ["video", "dolor", "orphano"],
       "startLine": 17,
       "endLine": 18,
-      "comment": "God sees all grief. To the forsaken He becomes Father and Deliverer. Augustine hears here the gospel promise to the lowly (Enarr. Ps. 9.36–37)."
+      "comment": "The psalmist confesses God sees the labor and pain of His people, entrusting them into His hands and aiding the orphan.",
+      "comment2": "Augustine emphasizes God’s providence: He sees what men ignore, defending the weakest (Enarr. Ps. 9.17–18B)."
     },
     {
-      "name": "Power → Disappearance",
-      "description": "From crushing evil to the vanishing of sin",
-      "lemmas": ["contero", "brachium", "quaero", "invenio"],
+      "name": "King Forever → Humble Secured",
+      "description": "From God’s eternal reign to justice for the poor against human pride",
+      "lemmas": ["regno", "aeternus", "iudico"],
       "startLine": 19,
       "endLine": 20,
-      "comment": "God shatters the arm of the sinner. Augustine interprets this as a figure for Christ defeating the hidden power of sin, so it can no longer be found (Enarr. Ps. 9.38)."
+      "comment": "The Lord reigns forever; nations perish from His land while the poor are secured in His Kingdom.",
+      "comment2": "Augustine interprets this as eschatological hope: the reign of God is eternal, and pride vanishes before His justice (Enarr. Ps. 9.19–20B)."
     },
     {
-      "name": "Reign → Response",
-      "description": "From eternal kingship to attentive mercy",
-      "lemmas": ["regno", "desiderium", "praeparatio", "auris"],
+      "name": "Desire → Final Judgment",
+      "description": "From the prayer of the poor to the end of human self-exaltation",
+      "lemmas": ["desiderium", "pauper", "iudicium"],
       "startLine": 21,
-      "endLine": 22,
-      "comment": "The Lord reigns forever. He bends His ear to the prepared hearts of the poor. Augustine reads this as the King who listens from His eternal throne (Enarr. Ps. 9.39–40)."
+      "endLine": 23,
+      "comment": "God hears the desire of the poor and judges for the humble, so that man may no longer exalt himself upon the earth.",
+      "comment2": "Augustine says this is the closing hope: God hears the hidden desires of His saints, securing them against human pride (Enarr. Ps. 9.21–23B)."
+    }
+  ]
+},
+{
+  "psalmNumber": 10,
+  "category": "",
+  "themes": [
+    {
+      "name": "Trust → Flight Questioned",
+      "description": "From confidence in the Lord to the temptation of fleeing like a bird",
+      "lemmas": ["confido", "transvolo", "passer"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalmist declares trust in the Lord, rejecting the counsel of fear that urges escape while the wicked prepare their arrows.",
+      "comment2": "Augustine interprets the bird’s flight as vain self-reliance: the just must not flee from trial but trust in God (Enarr. Ps. 10.1–2)."
     },
     {
-      "name": "Judgment → Silence",
-      "description": "From justice for the lowly to the silencing of pride",
-      "lemmas": ["iudico", "pupillus", "humilis", "magnifico"],
-      "startLine": 23,
-      "endLine": 23,
-      "comment": "The Psalm ends with a vision of God defending the smallest. Augustine sees this as the triumph of humility: the proud are no longer exalted, and the meek inherit the earth (Enarr. Ps. 9.41)."
+      "name": "Destruction → Divine Throne",
+      "description": "From the collapse of human works to the Lord enthroned in heaven",
+      "lemmas": ["destruo", "templum", "sedes"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "When the foundations are destroyed and the just seem powerless, the Lord remains in His holy temple, reigning from heaven.",
+      "comment2": "Augustine sees this as the stability of God’s reign against human ruin: His temple is unshaken though earthly works collapse (Enarr. Ps. 10.3–4)."
+    },
+    {
+      "name": "Divine Gaze → Testing",
+      "description": "From God’s eyes upon the poor to His testing of the just and wicked",
+      "lemmas": ["oculus", "pauper", "interrogo"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The Lord’s eyes behold the poor, His eyelids test the children of men, examining both the righteous and the wicked.",
+      "comment2": "Augustine teaches that God’s scrutiny purifies the just but exposes the wicked who hate their own souls through sin (Enarr. Ps. 10.5–6)."
+    },
+    {
+      "name": "Judgment → Equity",
+      "description": "From fire and storm upon sinners to the just Lord who loves righteousness",
+      "lemmas": ["pluo", "ignis", "iustus"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "The wicked drink a cup of fire, sulfur, and storm, while the Lord, who is just, loves righteousness and shows His face in equity.",
+      "comment2": "For Augustine, the cup of the wicked is eternal punishment, but the vision of God’s face belongs to the just (Enarr. Ps. 10.7–8)."
+    }
+  ]
+},
+{
+  "psalmNumber": 11,
+  "category": "",
+  "themes": [
+    {
+      "name": "Loss of Truth → Deceptive Speech",
+      "description": "From the vanishing of the faithful to false words and double hearts",
+      "lemmas": ["deficio", "veritas", "labium"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalmist laments that the holy have failed and truth has diminished, while deceitful lips and divided hearts prevail.",
+      "comment2": "Augustine reads the 'double heart' as hypocrisy: speaking peace outwardly while concealing malice inwardly (Enarr. Ps. 11.1–2)."
+    },
+    {
+      "name": "Prideful Speech → Divine Judgment",
+      "description": "From boastful tongues to the Lord cutting them off",
+      "lemmas": ["disperdo", "lingua", "magnifico"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The Lord will destroy deceitful lips and the arrogant tongue that boasts of self-sufficiency and rejects divine authority.",
+      "comment2": "For Augustine, pride in one’s own tongue opposes the Word of God; such speech is judged and brought low (Enarr. Ps. 11.3–4)."
+    },
+    {
+      "name": "Oppression → Divine Rising",
+      "description": "From the groaning of the poor to God’s intervention for salvation",
+      "lemmas": ["miseria", "pauper", "exsurgo"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "God rises because of the suffering of the needy, promising to place them in safety and act faithfully on their behalf.",
+      "comment2": "Augustine interprets this as Christ rising to redeem the poor in spirit, establishing them securely in salvation (Enarr. Ps. 11.5–6)."
+    },
+    {
+      "name": "Pure Words → Preservation",
+      "description": "From refined speech of the Lord to His eternal protection",
+      "lemmas": ["eloquium", "purgatus", "servo"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "The words of the Lord are pure, like silver tested sevenfold, and He preserves His people forever from corruption.",
+      "comment2": "Augustine sees the 'sevenfold purification' as the fullness of the Spirit, guaranteeing the truth of God’s promises (Enarr. Ps. 11.7–8)."
+    },
+    {
+      "name": "Wicked Circling → Human Exaltation",
+      "description": "From the wicked surrounding to the exaltation of human pride",
+      "lemmas": ["in circuitu", "impius", "altitudo"],
+      "startLine": 9,
+      "endLine": 9,
+      "comment": "The psalm ends with the wicked strutting around, while human pride multiplies in defiance of God.",
+      "comment2": "Augustine contrasts this with the faithful preserved by God: the proud exalt themselves, but the humble are safeguarded (Enarr. Ps. 11.9)."
     }
   ]
 },
@@ -2594,7 +2555,7 @@
 
 {
   "psalmNumber": 94,
-  "category": "Worship and Warning",
+  "category": "",
   "themes": [
     {
       "name": "Exultation → Thanksgiving",
