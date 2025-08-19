@@ -89,6 +89,44 @@
       ]
     },
 
+{
+  "psalmNumber": 3,
+  "category": "",
+  "themes": [
+    {
+      "name": "Enemies → Doubt",
+      "description": "From multiplied persecutors to their taunt: no salvation in God",
+      "lemmas": ["multus", "insurgo", "salus"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalm opens with a cry of affliction: enemies surround and voices of despair rise — 'no salvation in his God.' Augustine sees here the voice of Christ’s body, the Church, mocked in its suffering (Enarr. Ps. 3.1–2)."
+    },
+    {
+      "name": "Shield → Hearing",
+      "description": "From God as protector and glory to the prayer He hears on His holy mountain",
+      "lemmas": ["suscipio", "gloria", "exalto", "mons"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Against despair, God is confessed as shield, glory, and lifter of the head. Prayer is not wasted: it ascends and is heard from the holy mountain. Augustine reads this as Christ praying in the Passion, with assurance of the Father’s help (Enarr. Ps. 3.3–4)."
+    },
+    {
+      "name": "Sleep → Rising",
+      "description": "From mortal sleep to resurrection and fearless confidence",
+      "lemmas": ["dormio", "soporor", "exsurgo", "suscipio"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The psalmist sleeps and wakes because the Lord sustains him. Augustine sees a mystery of Christ’s death and resurrection, by which the faithful too find courage: they need not fear even a multitude of foes (Enarr. Ps. 3.5–6)."
+    },
+    {
+      "name": "Blow → Blessing",
+      "description": "From God’s strike against enemies to salvation and blessing for His people",
+      "lemmas": ["percutio", "dens", "salus", "benedictio"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "God shatters the teeth of sinners, breaking their power to devour. Salvation belongs to the Lord, and His blessing rests on His people. Augustine interprets this as Christ’s victory over sin and death, shared with the Church (Enarr. Ps. 3.7–8)."
+    }
+  ]
+},
 
     
  {
