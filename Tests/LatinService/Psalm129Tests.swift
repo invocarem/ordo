@@ -73,7 +73,7 @@ class Psalm129Tests: XCTestCase {
         let timeTerms = [
             ("matutinus", ["matutina"], "morning"),
             ("nox", ["noctem"], "night"),
-            ("usque", ["usque"], "until")
+            ("usque", ["usque"], "all the way")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: timeTerms)

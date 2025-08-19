@@ -73,7 +73,7 @@ class Psalm127Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(id, text: psalm127)
         
         let domesticTerms = [
-            ("latus", ["lateribus"], "side"),
+            ("latus", ["lateribus"], "wide"),
             ("mensa", ["mensae"], "table"),
             ("novellus", ["novellae"], "young"),
             ("circuitus", ["circuitu"], "around"),

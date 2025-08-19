@@ -353,7 +353,7 @@ class Psalm56Tests: XCTestCase {
             ("aqua", ["aqua"], "water"),
             ("cera", ["cera"], "wax"),
             ("fluo", ["fluit"], "flow"),
-            ("nihilum", ["nihilum"], "nothing")
+            ("nihil", ["nihilum"], "nothing")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: transientTerms)

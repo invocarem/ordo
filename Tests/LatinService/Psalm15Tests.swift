@@ -88,7 +88,7 @@ func testPsalm15Lines3and4() {
         ("sanctus", ["sanctis"], "holy"),
         ("sum", ["sunt"], "are"),
         ("terra", ["terra"], "land"),
-        ("mirifico", ["mirificavit"], "wonderfully fulfill"),
+        ("mirifico", ["mirificavit"], "wonderful"),
         ("voluntas", ["voluntates"], "desires"),
         ("meus", ["meas"], "my"),
         ("multiplico", ["multiplicatae"], "multiplied"),
@@ -147,7 +147,7 @@ func testPsalm15Lines5and6() {
         ("labium", ["labia"], "lips"),
         ("dominus", ["dominus"], "Lord"),
         ("pars", ["pars"], "portion"),
-        ("hereditas", ["haereditatis", "haereditatem"], "inheritance"),
+        ("haereditas", ["haereditatis", "haereditatem"], "inheritance"),
         ("calix", ["calicis"], "cup"),
         ("restituo", ["restitues"], "restore")
     ]
@@ -181,7 +181,7 @@ func testPsalm15Lines5and6() {
     
     // Test inheritance terminology
     let inheritanceTerms = ["haereditatis", "haereditatem"].reduce(0) {
-        $0 + (analysis.dictionary["hereditas"]?.forms[$1] ?? 0)
+        $0 + (analysis.dictionary["haereditas"]?.forms[$1] ?? 0)
     }
     XCTAssertEqual(inheritanceTerms, 2, "Should find both inheritance references")
     
@@ -409,11 +409,10 @@ func testPsalm15Lines11and12() {
         let analysis = latinService.analyzePsalm(text: psalm15)
         
         let presenceTerms = [
-            ("provideo", ["Providebam"], "keep before"),
+            ("provideo", ["Providebam"], "set before"),
             ("dexter", ["dextris", "dextera"], "right hand"),
             ("notus", ["notas"], "known"),
-          
-            ("mirifico", ["mirificavit"], "wonderfully show")
+            ("mirifico", ["mirificavit"], "make wonderful")
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: presenceTerms)

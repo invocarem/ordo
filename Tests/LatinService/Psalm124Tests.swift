@@ -25,7 +25,7 @@ class Psalm124Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(id, text: text, startingLineNumber: 1)
         let terms = [
             ("confido", ["confidunt"], "trust"),
-            ("commoveo", ["commovebitur"], "move"),
+            ("commoveo", ["commovebitur"], "shake"),
             ("mons", ["mons"], "mountain"),
             ("sion", ["sion"], "zion"),
             ("habito", ["habitat"], "dwell")

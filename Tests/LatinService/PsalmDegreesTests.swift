@@ -425,7 +425,7 @@ class PsalmDegreesTests: XCTestCase {
         let confirmedWords = [            
             ("ancilla", ["ancillae"], "handmaid"),
             ("dominus", ["dominae"], "mistress"),
-            ("misereri", ["misereatur", "miserere"], "have mercy"),
+            ("misereor", ["misereatur", "miserere"], "have mercy"),
             ("repleo", ["repleti", "repleta"], "fill"),                        
             ("abundo", ["abundantibus"], "abound")
         ]
@@ -564,7 +564,7 @@ func testAnalyzePsalm124() {
     
     let confirmedWords = [
         ("confido", ["confidunt"], "trust"),
-        ("commoveo", ["commovebitur"], "move"),
+        ("commoveo", ["commovebitur"], "shake"),
         ("relinquo", ["relinquet"], "leave"),
         ("extendo", ["extendant"], "stretch"),
         ("benefacio", ["benefac"], "do good")
@@ -595,7 +595,7 @@ func testAnalyzePsalm125() {
     let confirmedWords = [
         ("converto", ["convertendo", "converte"], "turn"),
         ("consolor", ["consolati"], "comfort"),
-        ("exsultatio", ["exsultatione"], "rejoice"),
+        ("exsultatio", ["exsultatione"], "exultation"),
         ("magnifico", ["magnificavit"], "magnify"),
         ("sero", ["seminant"], "sow")
     ]
@@ -610,11 +610,11 @@ func testAnalyzePsalm125() {
 
 func testAnalyzePsalm126() {
     let psalm126 = [
-        "Nisi Dominus ædificaverit domum: in vanum laboraverunt qui ædificant eam.",
+        "Nisi Dominus aedificaverit domum: in vanum laboraverunt qui aedificant eam.",
         "Nisi Dominus custodierit civitatem: frustra vigilat qui custodit eam.",
         "Vanum est vobis ante lucem surgere: surgite postquam sederitis, qui manducatis panem doloris.",
         "Cum dederit dilectis suis somnum: ecce haereditas Domini, filii; merces, fructus ventris.",
-        "Sicut sagittæ in manu potentis: ita filii excussorum.",
+        "Sicut sagittae in manu potentis: ita filii excussorum.",
         "Beatus vir qui implevit desiderium suum ex ipsis: non confundetur cum loquetur inimicis suis in porta."
     ]
     
@@ -795,7 +795,7 @@ func testAnalyzePsalm129() {
         ("exaudio", ["exaudi"], "hear"),
         ("deprecatio", ["deprecationis"], "supplication"),
         ("iniquitas", ["iniquitates"], "iniquity"),
-        ("propitiatio", ["propitiatio"], "forgiveness"),
+        ("propitiatio", ["propitiatio"], "atonement"),
         ("sustineo", ["sustinebit", "sustinui", "sustinuit"], "endure"),
         ("spero", ["speravit", "speret"], "hope"),
         ("custodia", ["custodia"], "watch"),

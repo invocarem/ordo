@@ -61,7 +61,7 @@ class Psalm128Tests: XCTestCase {
         
         let shameTerms = [
             ("confundo", ["Confundantur"], "confuse"),
-            ("converto", ["convertantur"], "turn back"),
+            ("converto", ["convertantur"], "convert"),
             ("retrorsum", ["retrorsum"], "backward"),
             ("odi", ["oderunt"], "hate"),
             ("sion", ["sion"], "zion")

@@ -1,5 +1,87 @@
 [
   {
+  "lemma": "haereditas",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "haereditas",
+  "genitive": "haereditatis",
+  "translations": {
+    "en": "inheritance, heritage",
+    "la": "haereditas"
+  },
+  "forms": {
+    "genitive_sg": ["haereditatis"],
+    "accusative_sg": ["haereditatem"]
+  }
+},
+  {
+  "lemma": "praeclarus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "praeclarus",
+  "genitive": "praeclari",
+  "translations": {
+    "en": "excellent, famous, brilliant",
+    "la": "praeclarus"
+  },
+  "forms": {
+    "dative_pl": ["praeclaris"],
+    "ablative_pl": ["praeclaris"],
+    "nominative_sg_f": ["praeclara"]
+  }
+},
+  {
+  "lemma": "provideo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "providere",
+  "present": "provideo",
+  "future": "providebo",
+  "perfect": "providi",
+  "supine": "provisum",
+  "translations": {
+    "en": "to foresee, provide for, set before (in care or preparation)",
+    "la": "provideo, providere"
+  },
+  "forms": {
+  }
+},
+  {
+  "lemma": "educo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "educere",
+  "present": "educo",
+  "future": "educam",
+  "perfect": "eduxi",
+  "supine": "eductum",
+  "translations": {
+    "en": "to lead out, bring forth, raise up",
+    "la": "educo, educere"
+  },
+  "forms": {
+    "imperative_2sg": ["educ"]  
+  }
+},
+ {
+    "lemma": "merces",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "merces",
+    "genitive": "mercedis",
+    "translations": {
+      "en": "reward, wage, recompense",
+      "la": "merces"
+    },
+    "forms": {
+      "nominative_pl": ["mercedes"],
+      "accusative_sg": ["mercedem"]
+    }
+  },
+  {
   "lemma": "aridus",
   "part_of_speech": "adjective",
   "declension": 1,
@@ -2867,7 +2949,7 @@
       "superlative_accusative_f": ["potentissimam"]
     },
    "translations": {
-        "en": "powerful, able",
+        "en": "powerful, mighty",
         "la": "potens"
     }
 },
@@ -11197,7 +11279,7 @@
     "nominative": "dexter",
     "genitive": "dexteri",
     "forms": {
-      
+      "accusative_sg_f": ["dexteram"], 
       "nominative_f": ["dextera", "dextra"],
       "ablative_f": ["dextera"],
       "dative_f": ["dexterae"]
@@ -12040,7 +12122,8 @@
   "nominative": "liber",
   "genitive": "liberi",
   "forms": {
-    "nominative_f": ["libera"],
+    "nominative_sg_f": ["libera"],  
+    "ablative_sg_f": ["libera"],
     "genitive_f": ["liberae"],
     "nominative_n": ["liberum"],
     "genitive_n": ["liberi"]
@@ -12265,19 +12348,17 @@
         }
     },
 
-  
-
-
- 
     {
         "lemma": "impleo",
         "part_of_speech": "verb",
         "conjugation": 2,
         "infinitive": "implere",
+        "present": "impleo",
+        "future": "implebo",
         "perfect": "implevi",
         "supine": "impletum",
         "translations": {
-            "en": "to fill, fulfill",
+            "en": "to fulfill, fill",
             "la": "impleo"
         },
         "forms": {
@@ -12858,7 +12939,7 @@
         "accusative_plural": "propitiationes",
         "ablative_plural": "propitiationibus",
         "translations": {
-          "en": "forgiveness",
+          "en": "propitiation, atonement, or appeasement",
           "la": "propitiatio"
         }
       },
@@ -13213,6 +13294,10 @@
           "conjugation": 3,
           "deponent": false,
           "infinitive": "convertere",
+          "present": "converto",
+          "future": "convertam",
+          "perfect": "converti",
+          "supine": "conversum",
           "forms": {
             "present": ["converto", "convertis", "convertit", "convertimus", "convertitis", "convertunt"],
             "present_passive": ["convertor", "converteris", "convertitur", "convertimur", "convertimini", "convertuntur"],
@@ -13455,6 +13540,10 @@
       "translations": {
         "en": "arrow",
         "la": "sagitta"
+      },
+      "forms": {
+        "genitive_sg": ["sagittae"], 
+        "dative_sg": ["sagittae"]
       }
     },
     {
@@ -16708,20 +16797,7 @@
             "la": "immaculatus"
         }
     },
-    {
-      "lemma": "potens",
-      "part_of_speech": "adjective",
-      "declension": 3,
-      "gender": "masculine",
-      "nominative": "potens",
-      "genitive": "potentis",
-     
-      "translations": {
-        "en": "powerful, mighty",
-        "la": "potens"
-      }
-    },
-    {
+   {
       "lemma": "aspicio",
       "part_of_speech": "verb",
       "conjugation": 3,

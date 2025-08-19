@@ -97,7 +97,7 @@ class Psalm126Tests: XCTestCase {
         
         let laborTerms = [
             ("laboro", ["laboraverunt"], "labor"),
-            ("vigilo", ["vigilat"], "stay awake"),
+            ("vigilo", ["vigilat"], "watch"),
             ("surgo", ["surgere", "surgite"], "rise"),
             ("sedeo", ["sederitis"], "sit"),
             ("dolor", ["doloris"], "pain")

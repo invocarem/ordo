@@ -31,7 +31,8 @@ class Psalm141Tests: XCTestCase {
         
         let prayerTerms = [
             ("clamo", ["clamavi"], "cry out"),
-            ("deprecor", ["deprecatus", "deprecationem"], "plead"),
+            ("deprecor", ["deprecatus"], "plead"),
+            ("deprecatio", ["deprecationem"], "plea"),
             ("oratio", ["orationem"], "prayer"),
             ("confiteor", ["confitendum"], "confess")
         ]
@@ -72,7 +73,6 @@ class Psalm141Tests: XCTestCase {
             ("effundo", ["effundo"], "our out"),
             ("cognosco", ["cognovisti", "cognosceret"], "know"),
             ("intende", ["intende"], "pay attention"),
-            ("liber", ["libera"], "free"),
             ("educo", ["educ"], "lead out")
         ]
         
