@@ -1,5 +1,6 @@
 {
   "themes": [
+
     {
       "psalmNumber": 1,
       "category": "",
@@ -7,90 +8,99 @@
         {
           "name": "Separation → Delight",
           "description": "From avoidance of the wicked to joy in God's law",
-          "lemmas": ["sto", "abeo", "sedeo", "voluntas", "meditor"],
+          "lemmas": ["sto", "abeo", "sedeo", "lex", "meditor"],
           "startLine": 1,
           "endLine": 2,
-          "comment": "The blessed one turns away from the path of the wicked and instead finds delight in the law of the Lord.",
-          "comment2": "Augustine sees a triple renunciation: counsel → way → seat (v.1), culminating in meditation on the Law (v.2). This is not only outward avoidance, but an inward transformation (Enarr. Ps. 1.1–2)."
+          "comment": "The blessed one turns away from the path of the wicked and instead finds delight in the law of the Lord.", 
+          "comment2": "Augustine interprets this as a triple renunciation (consilium → via → cathedra), culminating in the joy of meditating on the Law. For him, the righteous one is defined by inward transformation and desire for God (Enarr. Ps. 1.1–2)."
         },
         {
-          "name": "Rootedness → Fruitfulness",
-          "description": "From spiritual planting to lasting vitality and success",
-          "lemmas": ["lignum", "aqua", "fructus"],
+          "name": "Rootedness → Dust",
+          "description": "From the planted tree to the fate of the wicked as drifting dust",
+          "lemmas": ["lignum", "aqua", "fructus", "pulvis"],
           "startLine": 3,
           "endLine": 4,
-          "comment": "The just man is compared to a tree planted by flowing water, bearing fruit in its season and prospering in all things.",
-          "comment2": "Augustine interprets the tree as the soul rooted in grace and nourished by Scripture, whose fruit is virtue that endures (Enarr. Ps. 1.3)."
+          "comment": "The just is like a tree planted by streams, yielding fruit in its season and not withering. By contrast, the wicked are like dust driven away by the wind.",
+          "comment2": "Augustine interprets the tree as rooted in grace and nourished by Scripture, bringing forth works in due season. The dust signifies instability and dryness: those who lack roots in God are swept away (Enarr. Ps. 1.3–4)."
         },
+
         {
-          "name": "Chaff → Separation",
-          "description": "From unstable wickedness to final divine separation",
-          "lemmas": ["palea", "iudicium", "iter"],
+          "name": "Judgment → Perishing",
+          "description": "From exclusion at judgment to the ruin of the wicked's path",
+          "lemmas": ["iudicium", "concilio", "via", "iter", "pereo", "nosco"],
           "startLine": 5,
           "endLine": 6,
-          "comment": "The wicked are like chaff—without root or weight—unable to stand in the judgment or remain among the righteous.",
-          "comment2": "For Augustine, the instability of the wicked leads to exclusion from the City of God. By contrast, the Lord 'knows' (novit) the way of the just with covenantal intimacy, while the path of the impious dissolves into ruin (Enarr. Ps. 1.5–6)."
+          "comment": "The wicked cannot stand in judgment or in the assembly of the righteous, for the Lord knows the way of the just while the way of the impious comes to nothing.",
+          "comment2": "Augustine reads 'novit Dominus' as covenantal intimacy: God embraces the way of the righteous, while the path of the impious is not merely cut short but dissolved into nothingness (Enarr. Ps. 1.5–6)."
         }
+
       ]
     },
+
+{
+  "psalmNumber": 2,
+  "category": "",
+  "themes": [
+    {
+      "name": "Rage → Opposition",
+      "description": "From the turmoil of nations to defiance against the Lord and His Christ",
+      "lemmas": ["fremo", "inanis", "christus"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Nations rage in vanity, rulers set themselves against the Lord and His Anointed, revealing the futility of human power against divine kingship.",
+      "comment2": "Augustine interprets this as the nations plotting against Christ and His Church, yet all human counsels are 'inania'—empty—before the eternal decree of God (Enarr. Ps. 2.1–2)."
+    },
+    {
+      "name": "Chains → Laughter",
+      "description": "From rebellion against divine bonds to God’s derision from heaven",
+      "lemmas": ["vinculum", "iugum", "irrideo"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The peoples reject the Lord’s yoke as bondage, but God responds not with fear but with laughter, revealing their revolt as powerless.",
+      "comment2": "Augustine notes that what the proud see as 'chains' are in fact bonds of love and discipline; God mocks their rebellion as vain pretension (Enarr. Ps. 2.3–4)."
+    },
+    {
+      "name": "Wrath → Installation",
+      "description": "From divine anger to the establishment of the true King on Zion",
+      "lemmas": ["ira", "furo", "rex", "Sion"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "God answers with wrath, establishing His chosen king upon Zion, His holy mountain.",
+      "comment2": "Augustine reads Zion as the Church, the place where Christ reigns despite worldly rage; God's anger here manifests as His unshakable justice (Enarr. Ps. 2.5–6)."
+    },
+    {
+      "name": "Sonship → Inheritance",
+      "description": "From divine begetting to the universal rule of the Son",
+      "lemmas": ["filius", "genui", "hereditas"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "The Lord declares the King to be His begotten Son and grants Him all nations as inheritance and possession.",
+      "comment2": "For Augustine, 'hodie genui te' refers to the eternal generation of the Son and also to the Resurrection; the inheritance is the Church drawn from all nations (Enarr. Ps. 2.7–8)."
+    },
+    {
+      "name": "Rod → Shattering",
+      "description": "From rule with iron to the breaking of resistance",
+      "lemmas": ["virga", "ferreus", "confringo"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "The Messiah rules with a rod of iron, shattering nations like fragile pottery, yet kings are called to wisdom and instruction.",
+      "comment2": "Augustine notes the dual sense: the iron rod is both severe judgment and the firm, unbreakable discipline of Christ, which smashes pride but also reforms the humble (Enarr. Ps. 2.9–10)."
+    },
+    {
+      "name": "Service → Trust",
+      "description": "From trembling service to blessed confidence in the Lord",
+      "lemmas": ["servio", "timor", "disciplina", "confido"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "The psalm ends by exhorting rulers to serve with fear, rejoice with trembling, embrace discipline, and find blessing in trust.",
+      "comment2": "Augustine interprets this as the movement from fear to love: discipline leads to true freedom, and blessedness belongs to all who cling to Christ in humble trust (Enarr. Ps. 2.11–12)."
+    }
+  ]
+},
 
 
     
-    {
-      "psalmNumber": 2,
-      "category": "",
-      "themes": [
-        {
-          "name": "Rebellion → Conspiracy",
-          "description": "From chaotic resistance of the nations to unified opposition against God’s Christ",
-          "lemmas": ["fremo", "meditor", "consurgo", "convenio", "christus"],
-          "startLine": 1,
-          "endLine": 2,
-          "comment": "Augustine sees the Psalm beginning with irrational fury—nations raging in vain against the Lord and His Anointed (v.1). Kings and princes conspire not just against a ruler, but against divine order itself (v.2), prefiguring Christ’s passion (Acts 4:25–27)."
-        },
-        {
-          "name": "Yoke → Judgment",
-          "description": "From casting off divine rule to the Lord’s mocking response",
-          "lemmas": ["vinculum", "iugum", "proicio", "irrideo", "subsanno"],
-          "startLine": 3,
-          "endLine": 4,
-          "comment": "The nations cry for autonomy ('break their bonds', v.3), but God, enthroned in heaven, laughs at the futility of their rebellion. Augustine reads this as divine irony: their attempt to reject the yoke only confirms their judgment (Enarr. Ps. 2.4)."
-        },
-        {
-          "name": "Wrath → Kingship",
-          "description": "From divine fury to the appointment of the Messiah-King",
-          "lemmas": ["ira", "furo", "conturbo", "constitutio", "rex", "mons", "praedico"],
-          "startLine": 5,
-          "endLine": 6,
-          "comment": "In His wrath, God proclaims His chosen King on Zion (v.5–6). Augustine: this wrath isn't capricious, but righteous, establishing Christ’s kingship precisely where the nations rebel—on the holy mountain of suffering and resurrection (Enarr. Ps. 2.6)."
-        },
-        {
-          "name": "Sonship → Inheritance",
-          "description": "From divine begetting to the universal mission of the Son",
-          "lemmas": ["filius", "genuit", "hodie", "postulo", "hereditas", "possessio"],
-          "startLine": 7,
-          "endLine": 8,
-          "comment": "The Father begets the Son eternally ('hodie genui te', v.7) and grants Him the nations as inheritance (v.8). Augustine sees this as the mystery of Christ’s divine sonship and mission to gather the Church from all nations (Enarr. Ps. 2.7–8)."
-        },
-        {
-          "name": "Rod → Instruction",
-          "description": "From Messiah’s authority to a call for wisdom among rulers",
-          "lemmas": ["virga", "confringo", "figulus", "intelligo", "erudio", "iudico"],
-          "startLine": 9,
-          "endLine": 10,
-          "comment": "Christ rules with a rod of iron, shattering resistance like pottery (v.9). But the Psalm turns to appeal—calling rulers to wisdom and instruction (v.10). Augustine sees this as a merciful warning: submit before the Judge who offers peace (Enarr. Ps. 2.9–10)."
-        },
-        {
-          "name": "Fear → Trust",
-          "description": "From trembling service to beatitude in refuge",
-          "lemmas": ["servio", "timor", "exsulto", "tremor", "disciplina", "confido"],
-          "startLine": 11,
-          "endLine": 12,
-          "comment": "The final verses combine reverent fear with joy (v.11), urging all to embrace the Lord's discipline before His wrath is kindled. Augustine sees the beatitude—'Blessed are all who trust in Him'—as the secret of peace amidst divine judgment (Enarr. Ps. 2.12)."
-        }
-      ]
-    },
-
+   
 {
   "psalmNumber": 3,
   "category": "",
