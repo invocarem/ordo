@@ -14,26 +14,25 @@
           "comment": "The blessed one turns away from the path of the wicked and instead finds delight in the law of the Lord.", 
           "comment2": "Augustine interprets this as a triple renunciation (consilium → via → cathedra), culminating in the joy of meditating on the Law. For him, the righteous one is defined by inward transformation and desire for God (Enarr. Ps. 1.1–2)."
         },
-        {
-          "name": "Rootedness → Dust",
-          "description": "From the planted tree to the fate of the wicked as drifting dust",
-          "lemmas": ["lignum", "aqua", "fructus", "pulvis"],
+
+       {
+          "name": "Rootedness → Fruitfulness",
+          "description": "From spiritual planting to lasting vitality and success",
+          "lemmas": ["lignum", "planto", "aqua", "fructus", "prospero"],
           "startLine": 3,
           "endLine": 4,
-          "comment": "The just is like a tree planted by streams, yielding fruit in its season and not withering. By contrast, the wicked are like dust driven away by the wind.",
-          "comment2": "Augustine interprets the tree as rooted in grace and nourished by Scripture, bringing forth works in due season. The dust signifies instability and dryness: those who lack roots in God are swept away (Enarr. Ps. 1.3–4)."
+          "comment": "The just is like a tree planted by streams, yielding fruit in its season and not withering. This image emphasizes stability, growth, and enduring vitality through divine nourishment.",
+          "comment2": "Augustine reads the tree as one rooted in grace and Scripture, continually refreshed by Christ, the living water. Its fruit signifies good works in due season, prospering by God’s help (Enarr. Ps. 1.3)."
         },
-
         {
-          "name": "Judgment → Perishing",
-          "description": "From exclusion at judgment to the ruin of the wicked's path",
-          "lemmas": ["iudicium", "concilio", "via", "iter", "pereo", "nosco"],
+          "name": "Chaff → Separation",
+          "description": "From unstable wickedness to final divine separation",
+          "lemmas": ["pulvis", "iudicium", "via", "iter", "pereo", "nosco"],
           "startLine": 5,
           "endLine": 6,
           "comment": "The wicked cannot stand in judgment or in the assembly of the righteous, for the Lord knows the way of the just while the way of the impious comes to nothing.",
-          "comment2": "Augustine reads 'novit Dominus' as covenantal intimacy: God embraces the way of the righteous, while the path of the impious is not merely cut short but dissolved into nothingness (Enarr. Ps. 1.5–6)."
+          "comment2": "Augustine contrasts the rooted tree of the righteous with the empty lightness of the ungodly. The Lord 'knows' (novit) the way of the just with covenantal intimacy, but the way of the wicked perishes — eternal separation from God (Enarr. Ps. 1.5–6)."
         }
-
       ]
     },
 
@@ -140,61 +139,58 @@
   ]
 },
 
-    
- {
+  {
   "psalmNumber": 4,
   "category": "",
   "themes": [
     {
       "name": "Call → Answer",
-      "description": "Divine response to human invocation",
+      "description": "From human invocation to divine enlargement and mercy",
       "lemmas": ["invoco", "exaudio", "dilato"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Threefold response: hearing, enlarging, mercy. Augustine relates this to his conversion experience - 'When I called, You answered me' (Confessions 9.4.8). He saw God's answer manifested through Monica's tears and Ambrose's preaching that expanded his 'constricted heart' (dilatasti mihi)."
+      "comment": "God answers with both hearing and enlargement of the heart. The psalmist moves from constriction to freedom by divine mercy.",
+      "comment2": "Augustine recalls how God 'dilated' his narrow heart during conversion, through Ambrose’s preaching and Monica’s tears (Conf. 9.4.8)."
     },
     {
       "name": "Vanity → Truth",
-      "description": "Transformation from worldly lies to divine wonder",
+      "description": "From clinging to falsehood to beholding divine wonder",
       "lemmas": ["vanitas", "mendacium", "mirifico", "sanctus"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "The psalmist's 'how long?' (usquequo) mirrors Augustine's pre-conversion struggle. He heard 'O sons of men, how long heavy-hearted?' as God's personal call, recognizing his own 'heavy heart' (gravi corde) before grace intervened (Confessions 9.4.9)."
+      "comment": "The psalmist challenges men who love vanity and lies, redirecting them to the marvel of God’s chosen.",
+      "comment2": "Augustine recognized his own 'heavy heart' in this appeal: God’s rebuke pierced him as one long ensnared by empty loves (Conf. 9.4.9)."
     },
     {
-      "name": "Night Examination → Repentance",
-      "description": "Nocturnal conviction leading to transformation",
-      "lemmas": ["irascor", "pecco", "compungo", "cubile"],
+      "name": "Examination → Sacrifice",
+      "description": "From self-search in silence to offering righteous worship",
+      "lemmas": ["irascor", "pecco", "cubile", "sacrificium", "iustitia"],
       "startLine": 5,
-      "endLine": 5,
-      "comment": "Augustine connected this verse to two pivotal moments: 1) His garden conversion where God's words 'shook his bones' (compungimini), and 2) His mother Monica's deathbed. The 'beds' (cubilibus) represent both physical rest and spiritual awakening (Confessions 8.12.28-29, 9.4.10)."
-    },
-    {
-      "name": "Sacrifice → Hope",
-      "description": "From ritual offerings to confident trust",
-      "lemmas": ["sacrificium", "justitia", "spero"],
-      "startLine": 6,
       "endLine": 6,
-      "comment": "Augustine interpreted 'sacrifice of righteousness' as Monica's contrite tears during her lifelong intercession. Her prayers, offered when Augustine couldn't pray himself, became the sacrifice that made his hope certain (Confessions 9.4.11)."
+      "comment": "Nighttime reflection leads to repentance, expressed in offering the sacrifice of righteousness and trusting in the Lord.",
+      "comment2": "Augustine links this to his garden conversion (shaken in his 'bed' by God’s command) and to Monica’s prayers as true sacrifice that upheld his hope (Conf. 8.12.28–29; 9.4.10–11)."
     },
     {
       "name": "Divine Light → Revelation",
-      "description": "God's face replacing human philosophy",
-      "lemmas": ["ostendo", "bonus", "signo", "lumen"],
+      "description": "From worldly good to the light of God’s countenance",
+      "lemmas": ["ostendo", "lumen", "vultus", "bonus"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "After baptism, Augustine found the 'light of Your face' (lumen vultus) in Scripture - a lasting illumination that surpassed Plato's fleeting shadows. This sealed light (signatum est) marked his new understanding (Confessions 9.4.12)."
+      "comment": "Earthly blessings pale before the shining of God’s face, which brings true joy.",
+      "comment2": "Augustine contrasts the fleeting light of philosophy with the sealed light of Scripture — the illumination of God’s face (Conf. 9.4.12)."
     },
     {
       "name": "Abundance → Eternal Rest",
-      "description": "Earthly blessings pointing to heavenly peace",
+      "description": "From earthly plenty to the peace of divine rest",
       "lemmas": ["frumentum", "vinum", "pax", "requiesco"],
       "startLine": 8,
       "endLine": 9,
-      "comment": "The multiplied 'grain and wine' (frumenti et vini) foreshadowed the Eucharist that brought Augustine final peace after restless seeking. At Ostia with Monica, they glimpsed the perfect peace (in pace) this verse promises (Confessions 9.4.13, 9.10.23-26)."
+      "comment": "Material abundance points beyond itself to the peace found only in God, where the soul rests secure.",
+      "comment2": "At Ostia, Augustine and Monica tasted this peace — the Eucharistic abundance of 'grain and wine' finding fulfillment in eternal rest (Conf. 9.10.23–26)."
     }
   ]
 },
+  
 {
   "psalmNumber": 5,
   "category": "",
@@ -267,6 +263,7 @@
 
 },
 
+
 {
   "psalmNumber": 6,
   "category": "",
@@ -274,46 +271,51 @@
     {
       "name": "Wrath → Mercy",
       "description": "From divine anger to a plea for healing compassion",
-      "lemmas": ["furor", "ira", "arguo", "corripio", "misereor", "infirmus", "sano", "conturbo"],
+      "lemmas": ["furor", "arguo", "corripio", "infirmus"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Augustine sees the psalmist appealing to God not as a just judge but as a merciful physician. Bodily and spiritual weakness are confessed openly (Enarr. Ps. 6.1–2)."
+      "comment": "The psalmist appeals to God not as a just judge but as a merciful physician. Weakness, both bodily and spiritual, is openly confessed.",
+      "comment2": "Augustine interprets the chastisement ('arguas… corripias') not as condemnation but as medicinal correction, so that frailty may be healed by divine mercy (Enarr. Ps. 6.1–2)."
     },
     {
       "name": "Agitation → Rescue",
       "description": "From inner turmoil to divine salvation",
-      "lemmas": ["turbo", "converto", "eripio", "salvo", "misericordia"],
+      "lemmas": ["turbo", "converto", "eripio", "misericordia"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "The psalmist cries out from the depths of fear and pleads for rescue, not for merit, but for God's mercy alone (Enarr. Ps. 6.3–4)."
+      "comment": "The psalmist cries out from deep turmoil, pleading for rescue grounded not in merit but in mercy.",
+      "comment2": "For Augustine, the soul’s turbulence is stilled only by God turning toward it; salvation rests entirely on the mercy of the Lord (Enarr. Ps. 6.3–4)."
     },
     {
       "name": "Mortality → Tears",
       "description": "From the silence of death to sorrowful intercession",
-      "lemmas": ["mors", "memor", "infernus", "confiteor", "lacrima", "rigo", "gemitus"],
+      "lemmas": ["mors", "infernus", "confiteor", "lacrima"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "Augustine notes that the dead cannot praise God unless redeemed. The psalmist’s tears water the bed, symbolizing a compunction that prepares for renewal (Enarr. Ps. 6.5–6)."
+      "comment": "Death is a place of silence where no one confesses God; the psalmist therefore pours out tears in prayer while still alive.",
+      "comment2": "Augustine sees these tears as compunction, watering the soul like a field, preparing it for renewal by God (Enarr. Ps. 6.5–6)."
     },
     {
       "name": "Weariness → Hearing",
       "description": "From exhaustion under oppression to God hearing the cry",
-      "lemmas": ["furor", "invetero", "inimicus", "exaudio", "fletus"],
+      "lemmas": ["inimicus", "invetero", "fletus", "exaudio"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "The psalmist, worn by enemies and divine chastisement, finds hope as the Lord hears his weeping. Augustine highlights the grace given to contrite hearts (Enarr. Ps. 6.7–8)."
+      "comment": "Weary and worn down among enemies, the psalmist clings to hope because the Lord hears his weeping.",
+      "comment2": "Augustine emphasizes that God’s hearing ('exaudivit') shows His closeness to the contrite heart, even amid human hostility (Enarr. Ps. 6.7–8)."
     },
     {
       "name": "Prayer → Reversal",
       "description": "From received prayer to the shame and retreat of enemies",
-      "lemmas": ["oratio", "suscipio", "erubesco", "convertor", "inimicus"],
+      "lemmas": ["oratio", "suscipio", "erubesco", "inimicus"],
       "startLine": 9,
       "endLine": 10,
-      "comment": "Augustine emphasizes that the psalmist’s oratio is not only heard but lifted up ('suscepit'), signaling divine embrace. As a result, the wicked who once triumphed now reverse course—'erubescant et convertantur'—a final turning marked by divine justice (Enarr. Ps. 6.9–10)."
+      "comment": "The psalmist’s prayer is not only heard but embraced; enemies are overturned in shame and confusion.",
+      "comment2": "Augustine highlights the reversal: the psalmist is lifted up ('suscepit'), while enemies are cast down in sudden shame ('erubescant valde velociter')—a figure of the final judgment (Enarr. Ps. 6.9–10)."
     }
-    
   ]
 },
+
 
 {
   "psalmNumber": 7,
@@ -325,58 +327,62 @@
       "lemmas": ["leo", "rapio", "spero", "libero"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Augustine sees the 'lion' (leo) and act of seizing (rapio) as the aggression of the devil or wicked persecutors. In response, the soul flees to God in trust ('in te speravi') and pleads for liberation. This sets the tone of spiritual urgency and dependence (Enarr. Ps. 7.1–2)."
+      "comment": "The psalmist likens persecutors to a lion ready to seize its prey. In response, he entrusts himself to God as the only liberator.",
+      "comment2": "Augustine interprets the lion as the devil or violent adversaries. Safety lies only in the Lord, who receives those fleeing in faith (Enarr. Ps. 7.1–2)."
     },
     {
       "name": "Integrity → Collapse",
-      "description": "If found unjust, the psalmist accepts shameful defeat",
+      "description": "If unjust, the psalmist accepts shameful defeat",
       "lemmas": ["reddo", "retribuo", "decido", "inanis"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "The psalmist pleads innocence and offers himself to judgment: 'If I have repaid evil, let me fall.' Augustine sees this not as pride, but as the righteousness of one who truly fears God. The fall into emptiness ('inanis') symbolizes the soul’s ruin if cut off from justice (Enarr. Ps. 7.3–4)."
+      "comment": "The psalmist offers himself to God’s judgment: if guilty of betrayal, let him fall empty-handed into enemy hands.",
+      "comment2": "For Augustine, this is not pride but holy fear: a willingness to be judged shows the integrity of the just. To fall 'inanis' is to lose all fruit of life apart from God (Enarr. Ps. 7.3–4)."
     },
-
     {
       "name": "Capture → Dust",
-      "description": "From hypothetical pursuit to utter humiliation",
+      "description": "From pursuit to utter humiliation",
       "lemmas": ["persequor", "comprehendo", "conculco", "pulvis"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "If the psalmist is guilty, let the enemy chase and crush him. Augustine interprets this imagery as the total collapse of one without God’s protection: the soul overtaken and its glory buried in the dust — the fate of pride without repentance (Enarr. Ps. 7.5–6)."
+      "comment": "If guilty, let the enemy overtake and trample him, reducing his glory to dust.",
+      "comment2": "Augustine sees dust as the destiny of the proud soul abandoned to itself: the fall of human glory without God’s defense (Enarr. Ps. 7.5–6)."
     },
-
-
     {
       "name": "Judgment → Ascent",
       "description": "From divine summons to enthronement above all peoples",
-      "lemmas": ["mandatum", "synagoga", "regredior", "iudico"],
+      "lemmas": ["exsurgo", "mandatum", "synagoga", "iudico"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "The psalmist foresees divine enthronement: peoples are gathered, and God ascends to judge. Augustine sees this fulfilled in Christ’s resurrection and return (Enarr. Ps. 7.7–8)."
+      "comment": "The Lord rises to judge among assembled nations, taking His seat on high.",
+      "comment2": "Augustine reads this as Christ exalted after the resurrection, gathering peoples into His Church and judging with justice (Enarr. Ps. 7.7–8)."
     },
     {
       "name": "Innocence → Discernment",
-      "description": "From self-examination to God's internal judgment",
+      "description": "From appeal to justice to God’s searching judgment",
       "lemmas": ["iustitia", "innocentia", "scrutor", "renes"],
       "startLine": 9,
       "endLine": 10,
-      "comment": "God tests not only actions but the heart and reins. Augustine interprets this as God refining interior motives (Enarr. Ps. 7.9–10)."
+      "comment": "The psalmist asks to be judged by his innocence, yet acknowledges God searches even the heart and reins.",
+      "comment2": "For Augustine, this penetrates deeper than outward acts: God weighs interior motives, revealing true justice (Enarr. Ps. 7.9–10)."
     },
     {
       "name": "Righteousness → Warning",
-      "description": "From God’s support of the just to warning the unrepentant",
+      "description": "From God’s help for the upright to warning the impenitent",
       "lemmas": ["iustus", "adiutorium", "patiens", "converto"],
       "startLine": 11,
       "endLine": 12,
-      "comment": "God is a righteous judge—merciful, but not endlessly tolerant. Augustine urges conversion while time remains (Enarr. Ps. 7.11–12)."
+      "comment": "God is patient and aids the upright, but warns that His forbearance has limits.",
+      "comment2": "Augustine urges conversion while time remains: God’s patience is meant to lead sinners back, not excuse them forever (Enarr. Ps. 7.11–12)."
     },
     {
       "name": "Preparation → Execution",
-      "description": "From preparation of judgment to fiery instruments",
-      "lemmas": ["paro", "vibrabit", "sagitta", "ardens"],
+      "description": "From preparation of weapons to fiery judgment",
+      "lemmas": ["paro", "vibro", "sagitta", "ardens"],
       "startLine": 13,
       "endLine": 14,
-      "comment": "Weapons of divine justice are readied. Augustine sees the 'burning arrows' as spiritual wounds that bring repentance (Enarr. Ps. 7.13–14)."
+      "comment": "God bends the bow and readies burning arrows, images of judgment.",
+      "comment2": "Augustine interprets these arrows spiritually: divine words pierce sinners, igniting repentance rather than mere destruction (Enarr. Ps. 7.13–14)."
     },
     {
       "name": "Conception → Iniquity",
@@ -384,7 +390,8 @@
       "lemmas": ["parturio", "concipio", "iniquitas", "dolor"],
       "startLine": 15,
       "endLine": 16,
-      "comment": "The wicked give birth to iniquity and fall into their own traps. Augustine draws the parallel to the cross: the devil's net ensnared himself (Enarr. Ps. 7.15–16)."
+      "comment": "The wicked conceive trouble and give birth to iniquity, only to fall into their own pit.",
+      "comment2": "Augustine sees in this the paradox of the cross: by plotting Christ’s death, the devil trapped himself in the pit he dug (Enarr. Ps. 7.15–16)."
     },
     {
       "name": "Retribution → Praise",
@@ -392,9 +399,9 @@
       "lemmas": ["convertor", "iniquitas", "confiteor", "psallo"],
       "startLine": 17,
       "endLine": 18,
-      "comment": "Augustine sees poetic justice fulfilled: iniquity returns on the sinner’s head (v.17), prompting the psalmist to glorify God's righteous judgment (v.18). The righteous praise not vengeance, but God's unwavering justice (Enarr. Ps. 7.17–18)."
+      "comment": "The sinner’s violence recoils upon his own head, while the psalmist gives thanks in song.",
+      "comment2": "Augustine highlights the contrast: the wicked are ensnared in their own works, but the just respond with praise of God’s unchanging righteousness (Enarr. Ps. 7.17–18)."
     }
-
   ]
 },
 
@@ -2381,79 +2388,78 @@
   "themes": [
     {
       "name": "Divine Shelter → Heavenly Protection",
-      "description": "From dwelling in God’s help to abiding under His heavenly protection",
+      "description": "From dwelling in God’s help to abiding under His protection",
       "lemmas": ["habito", "adiutorium", "protectio", "caelum"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "The psalmist declares that one who dwells (‘habito’) in God’s help (‘adiutorium’) abides under the heavenly (‘caelum’) protection (‘protectio’) of God.",
-      "comment2": "Augustine sees ‘habito’ and ‘adiutorium’ as the faithful resting in Christ, under the ‘protectio’ of God’s ‘caelum,’ symbolizing divine refuge (Enarr. Ps. 90.1–2)."
+      "comment": "The psalm opens with confidence: to dwell in God’s help is to rest under His protection, safe from every danger.",
+      "comment2": "Augustine interprets this as the faithful resting in Christ, who is Himself the refuge and heavenly shelter (Enarr. Ps. 90.1–2)."
     },
     {
       "name": "Trust in God → Divine Deliverance",
-      "description": "From trusting God as refuge to His deliverance from danger",
+      "description": "From confessing God as refuge to deliverance from snares",
       "lemmas": ["susceptor", "refugium", "spero", "libero"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "The faithful proclaim God as their protector (‘susceptor’) and refuge (‘refugium’), trusting (‘spero’) in Him for deliverance (‘libero’) from traps and harsh words.",
-      "comment2": "Augustine interprets ‘susceptor’ and ‘refugium’ as Christ, in whom the faithful ‘spero,’ receiving ‘libero’ from spiritual snares (Enarr. Ps. 90.3–4)."
+      "comment": "The psalmist proclaims God as refuge and savior, trusting in His power to deliver from hidden traps and threats.",
+      "comment2": "Augustine sees ‘susceptor’ and ‘refugium’ fulfilled in Christ, who liberates from spiritual snares and false voices (Enarr. Ps. 90.3–4)."
     },
     {
       "name": "Divine Covering → Fearless Trust",
-      "description": "From God’s protective wings to fearless trust in His truth",
+      "description": "From God’s sheltering wings to fearless confidence",
       "lemmas": ["scapula", "penna", "veritas", "timeo"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "God covers with His wings (‘scapula,’ ‘penna’), shielding with His truth (‘veritas’) so the faithful need not fear (‘timeo’) nightly terrors.",
-      "comment2": "Augustine sees ‘scapula’ and ‘penna’ as God’s merciful protection, with ‘veritas’ enabling the Church to trust without ‘timeo’ (Enarr. Ps. 90.5–6)."
+      "comment": "God’s protective wings symbolize His nearness; His truth is a shield, removing fear of unseen terrors.",
+      "comment2": "Augustine reads the wings as God’s mercy and the shield as Christ’s truth, freeing the Church from fear (Enarr. Ps. 90.5–6)."
     },
     {
       "name": "Destruction of Enemies → Safety of the Faithful",
-      "description": "From the fall of thousands to the faithful’s protection from harm",
+      "description": "From the downfall of thousands to the preservation of the just",
       "lemmas": ["cado", "mille", "appropinquo", "video"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "Thousands fall (‘cado,’ ‘mille’) around the faithful, yet evil does not approach (‘appropinquo’) them, as they see (‘video’) the wicked’s retribution.",
-      "comment2": "Augustine views ‘cado’ and ‘mille’ as the defeat of spiritual enemies, with ‘video’ showing the faithful’s safety despite evil’s ‘appropinquo’ (Enarr. Ps. 90.7–8)."
+      "comment": "Though multitudes fall in judgment, the faithful are preserved and see the punishment of the wicked.",
+      "comment2": "Augustine interprets the thousands as the fallen powers of the enemy, while the faithful safely watch God’s judgment (Enarr. Ps. 90.7–8)."
     },
     {
       "name": "Hope in God → Divine Refuge",
-      "description": "From hope in God to making Him a refuge against evil",
+      "description": "From personal trust to God’s protection of the household",
       "lemmas": ["spes", "refugium", "malum", "appropinquo"],
       "startLine": 9,
       "endLine": 10,
-      "comment": "The faithful’s hope (‘spes’) in God makes Him their refuge (‘refugium’), preventing evil (‘malum’) and scourge from approaching (‘appropinquo’) their dwelling.",
-      "comment2": "Augustine sees ‘spes’ and ‘refugium’ as trust in Christ, shielding the faithful from ‘malum’ and its ‘appropinquo’ (Enarr. Ps. 90.9–10)."
+      "comment": "Hope in God transforms Him into a dwelling-place, keeping evil far from one’s home.",
+      "comment2": "Augustine links this to Christ as the true dwelling: in Him, the faithful are kept from ultimate harm (Enarr. Ps. 90.9–10)."
     },
     {
       "name": "Angelic Guardians → Safe Journey",
-      "description": "From God’s command to angels to protection from stumbling",
+      "description": "From angelic command to protection on life’s path",
       "lemmas": ["angelus", "custodio", "offendo", "pes"],
       "startLine": 11,
       "endLine": 12,
-      "comment": "God commands angels (‘angelus’) to guard (‘custodio’) the faithful, preventing their foot (‘pes’) from stumbling (‘offendo’) on a stone.",
-      "comment2": "Augustine interprets ‘angelus’ and ‘custodio’ as God’s providence, guiding the Church so ‘pes’ avoids ‘offendo’ in trials (Enarr. Ps. 90.11–12)."
+      "comment": "God sends His angels to guard the faithful, preventing stumbling along the way.",
+      "comment2": "Augustine applies this to the apostolic preachers — angels in function — who protect believers from stumbling in faith (Enarr. Ps. 90.11–12)."
     },
     {
       "name": "Triumph over Evil → Victory over Serpents",
-      "description": "From treading on serpents to conquering lions and dragons",
+      "description": "From treading on serpents to conquering all hostile beasts",
       "lemmas": ["aspis", "basiliscus", "leo", "conculco"],
       "startLine": 13,
       "endLine": 14,
-      "comment": "The faithful tread (‘conculco’) on the asp (‘aspis’) and basilisk (‘basiliscus’), conquering the lion (‘leo’) and dragon with God’s power.",
-      "comment2": "Augustine sees ‘aspis,’ ‘basiliscus,’ and ‘leo’ as Satan’s powers, defeated by the faithful through ‘conculco’ in Christ (Enarr. Ps. 90.13–14)."
+      "comment": "The imagery of trampling lions and serpents depicts victory over deadly and violent enemies.",
+      "comment2": "Augustine interprets aspis, basilisk, and lion as figures of Satan and his powers, defeated in Christ by the faithful’s perseverance (Enarr. Ps. 90.13–14)."
     },
     {
       "name": "Trustful Cry → Divine Salvation",
-      "description": "From crying out in trust to God’s deliverance and glory",
+      "description": "From crying to God in trust to His saving response",
       "lemmas": ["spero", "clamor", "exaudio", "salutare"],
       "startLine": 15,
       "endLine": 16,
-      "comment": "The faithful trust (‘spero’) and cry out (‘clamor’) to God, who hears (‘exaudio’) and grants salvation (‘salutare’) and long life.",
-      "comment2": "Augustine sees ‘spero’ and ‘clamor’ as the Church’s faith, answered by ‘exaudio’ and ‘salutare’ through Christ’s glorification (Enarr. Ps. 90.15–16)."
+      "comment": "The psalm closes with the faithful crying out in trust, and God’s promise of salvation, long life, and glory.",
+      "comment2": "Augustine interprets this as the Church’s prayer fulfilled in Christ: through His exaltation comes salvation and eternal glory (Enarr. Ps. 90.15–16)."
     }
   ]
 },
-
 
 {
   "psalmNumber": 91,
@@ -4323,39 +4329,26 @@
   "category": "",
   "themes": [
     {
-      "name": "Call → Blessing",
-      "description": "A summons to praise initiates reciprocal blessing",
-      "lemmas": ["ecce", "nunc", "benedico", "servus"],
+      "name": "Call → Standing",
+      "description": "Summon into active, vigilant worship",
+      "lemmas": ["ecce", "nunc", "benedico", "sto", "domus", "servus"],
       "startLine": 1,
-      "endLine": 1,
-      "comment": "The psalm begins with an urgent imperative: 'behold now, bless the Lord.' Augustine notes the immediacy and communal nature of worship, where servants of God are not passive observers, but active participants in blessing."
-    },
-    {
-      "name": "Standing → Serving",
-      "description": "Posture in the temple reflects readiness and consecration",
-      "lemmas": ["sto", "domus", "atrium"],
-      "startLine": 2,
       "endLine": 2,
-      "comment": "To 'stand in the house of the Lord' implies more than physical presence — it's spiritual alertness. Augustine interprets this as the interior stance of the soul, alert in service, especially during the night watches."
+      "comment": "The psalm opens with a call: 'Behold now, bless the Lord, all you servants.' This is answered by their standing in the house of the Lord, a posture of vigilance and consecration. Worship is not passive but active, and standing symbolizes readiness and faithfulness, especially in the night watches.",
+      "comment2": "Augustine emphasizes that 'blessing the Lord' is not adding anything to Him, but aligning the soul with divine praise. To stand in His house means interior stability and perseverance in service, lifting the heart continually toward God (Enarr. Ps. 133.1–2)."
     },
     {
-      "name": "Night → Lifting",
-      "description": "Darkness becomes occasion for prayer and elevation",
-      "lemmas": ["nox", "extollo", "manus", "sanctus"],
+      "name": "Night Prayer → Blessing",
+      "description": "Darkness transfigured into ascent, crowned by God’s cosmic blessing",
+      "lemmas": ["nox", "extollo", "manus", "sanctus", "benedico", "caelum", "terra"],
       "startLine": 3,
-      "endLine": 3,
-      "comment": "Augustine views nocturnal prayer as especially potent. Lifting hands in the sanctuary is a physical symbol of the soul reaching beyond the visible. Night is not for sleep alone, but sacred ascent through prayer."
-    },
-    {
-      "name": "Earth → Heaven",
-      "description": "Blessing flows from the Creator, not just from the temple",
-      "lemmas": ["benedico", "sion", "facio", "caelum", "terra"],
-      "startLine": 4,
       "endLine": 4,
-      "comment": "The psalm closes with a blessing not merely from Zion, but from the Creator of heaven and earth. Augustine notes the transcendence here: it is not the temple that blesses, but the Lord of all creation who sanctifies the place and the people."
+      "comment": "The night, often a time of rest, becomes here a moment of prayerful ascent: hands lifted in holiness. The psalm concludes with blessing flowing not just from Zion, but from the Lord who made heaven and earth, grounding all worship in His creative power.",
+      "comment2": "For Augustine, nocturnal prayer symbolizes the Church in pilgrimage, persevering in faith amid darkness. The final blessing comes from the Creator Himself, showing that holiness derives not from the temple, but from the God who sanctifies it (Enarr. Ps. 133.3–4)."
     }
   ]
 },
+
 {
   "psalmNumber": 136,
   "category": "",
