@@ -18932,7 +18932,21 @@
         "notes": "From Psalm 17:37 - 'dilatasti gressus meos' (you have enlarged my steps)"
     },
    
-    
+     {
+        "lemma": "iuro",
+        "part_of_speech": "verb",
+        "perfect": "iuravi",
+        "infinitive": "iurare",
+        "forms": {
+            "perfect": ["iuravi", "iuravisti", "iuravit", "iuravimus", "iuravistis", "iuraverunt"],
+            "present": ["iuro", "iuras", "iurat", "iuramus", "iuratis", "iurant"]
+        },
+        "translations": {
+            "en": "swear, take an oath",
+            "la": "iuro"
+        }
+        
+    },   
    
   
     {

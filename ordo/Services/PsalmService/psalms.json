@@ -463,8 +463,8 @@
                     "Omnes declinaverunt, simul inutiles facti sunt; non est qui faciat bonum, non est usque ad unum.",
                     "Nonne scient omnes qui operantur iniquitatem, qui devorant plebem meam ut cibum panis?",
                     "Dominum non invocaverunt; illic trepidaverunt timore, ubi non erat timor.",
-                    "Quoniam Dominus in generatione justa est, consilium inopis confudistis, quoniam Dominus spes ejus est.",
-                    "Quis dabit ex Sion salutare Israel? cum averterit Dominus captivitatem plebis suae, exsultabit Jacob, et laetabitur Israel."
+                    "Quoniam Dominus in generatione iusta est, consilium inopis confudistis, quoniam Dominus spes eius est.",
+                    "Quis dabit ex Sion salutare Israel? cum averterit Dominus captivitatem plebis suae, exsultabit Iacob, et laetabitur Israel."
                 ],
                 "englishText": [
                     "The fool hath said in his heart: There is no God.",
@@ -478,17 +478,18 @@
                 ],
                 "verified": true
             },
+
             {
                 "number": 14,
                 "section": "",
                 "title": "The Just Man's Virtues",
                 "text": [
                     "Domine, quis habitabit in tabernaculo tuo? aut quis requiescet in monte sancto tuo?",
-                    "Qui ingreditur sine macula, et operatur justitiam;",
+                    "Qui ingreditur sine macula, et operatur iustitiam;",
                     "Qui loquitur veritatem in corde suo, qui non egit dolum in lingua sua;",
                     "Nec fecit proximo suo malum, et opprobrium non sustinuit adversus proximos suos;",
-                    "Ad nihilum deductus est in conspectu ejus malignus, timentes autem Dominum glorificat;",
-                    "Qui jurat proximo suo, et non decipit;",
+                    "Ad nihilum deductus est in conspectu eius malignus, timentes autem Dominum glorificat;",
+                    "Qui iurat proximo suo, et non decipit;",
                     "Qui pecuniam suam non dedit ad usuram, et munera super innocentem non accepit.",
                     "Qui facit haec, non movebitur in aeternum."
                 ],
@@ -504,7 +505,7 @@
                 ],
                 "verified": true
             },
-          
+                    
           
           {
             "number": 15,
@@ -6054,17 +6055,19 @@
             ],
             "verified": true
         },
+
+
         {
             "number": 121,
             "section": "",
-            "title": "Prayer for Jerusalem’s Peace",
+            "title": "Prayer for Jerusalem's Peace",
             "text": [
                 "Laetatus sum in his quae dicta sunt mihi: In domum Domini ibimus.",
-                "Stantes erant pedes nostri in atriis tuis, Jerusalem.",
-                "Jerusalem, quae aedificatur ut civitas, cujus participatio ejus in idipsum.",
+                "Stantes erant pedes nostri in atriis tuis, Ierusalem.",
+                "Ierusalem, quae aedificatur ut civitas, cuius participatio eius in idipsum.",
                 "Illuc enim ascenderunt tribus, tribus Domini, testimonium Israel, ad confitendum nomini Domini.",
-                "Quia illic sederunt sedes in judicio, sedes super domum David.",
-                "Rogate quae ad pacem sunt Jerusalem, et abundantia diligentibus te.",
+                "Quia illic sederunt sedes in iudicio, sedes super domum David.",
+                "Rogate quae ad pacem sunt Ierusalem, et abundantia diligentibus te.",
                 "Fiat pax in virtute tua, et abundantia in turribus tuis.",
                 "Propter fratres meos et proximos meos, loquebar pacem de te.",
                 "Propter domum Domini Dei nostri, quaesivi bona tibi."
@@ -6082,8 +6085,7 @@
             ],
             "verified": true
         },
-
-        {
+         {
             "number": 122,
             "section": "",
             "title": "A Plea for Mercy",

@@ -800,82 +800,45 @@
     }
   ]
 },
-
 {
   "psalmNumber": 13,
   "category": "",
   "themes": [
     {
-      "name": "Folly of Atheism",
-      "description": "Condemnation of the fool who denies God's existence",
-      "lemmas": ["insipiens", "cor"],
+      "name": "Folly → Corruption",
+      "description": "From denial of God to universal corruption in deeds",
+      "lemmas": ["insipiens", "cor", "corruptus", "abominabilis", "bonus"],
       "startLine": 1,
-      "endLine": 1,
-      "comment": "Opening declaration of practical atheism"
-    },
-    {
-      "name": "Universal Corruption",
-      "description": "Description of total human depravity",
-      "lemmas": ["corrumpo", "abominabilis", "studium"],
-      "startLine": 2,
       "endLine": 2,
-      "comment": "All humanity is corrupt in deeds"
+      "comment": "The psalm opens with the folly of atheism — denial of God leads directly to corruption and abominable works, leaving no one who does good.",
+      "comment2": "Augustine interprets 'dixit insipiens in corde suo: non est Deus' as the root of sin — the foolish heart turning away from its Creator. This denial is not theoretical but lived, shown in corrupt works (Enarr. Ps. 13.1–2)."
     },
     {
-      "name": "Divine Scrutiny",
-      "description": "God's examination of human understanding",
-      "lemmas": ["caelum", "prospicio", "intelligens", "requiro"],
+      "name": "Divine Gaze → Human Deviation",
+      "description": "From God’s search for the faithful to the universal turn aside",
+      "lemmas": ["prospecto", "intelligo", "requiro", "declino", "inutilis"],
       "startLine": 3,
-      "endLine": 3,
-      "comment": "Heavenly perspective on human wisdom"
-    },
-    {
-      "name": "Universal Apostasy",
-      "description": "Reiteration of total human waywardness",
-      "lemmas": ["declino", "inutilis"],
-      "startLine": 4,
       "endLine": 4,
-      "comment": "Parallel to verse 2 emphasizing universal sin"
+      "comment": "The Lord looks down from heaven seeking understanding and devotion, but all have turned aside, becoming useless.",
+      "comment2": "Augustine sees here the universality of sin: all men declined from the way, none remained upright. This prepares the way for the need of grace, since no one is justified by their own works (Enarr. Ps. 13.3–4)."
     },
     {
-      "name": "Oppression of the Righteous",
-      "description": "Warning to those who exploit God's people",
-      "lemmas": ["iniquitas", "devoro", "plebs", "panis"],
+      "name": "Oppression → Fear",
+      "description": "From devouring the poor to fear where no fear should be",
+      "lemmas": ["operor", "iniquitas", "devoro", "plebs", "panis", "timeo"],
       "startLine": 5,
-      "endLine": 5,
-      "comment": "Condemnation of social injustice"
-    },
-    {
-      "name": "False Fear",
-      "description": "Contrast between godless fear and true reverence",
-      "lemmas": ["invoco", "trepido", "timor"],
-      "startLine": 6,
       "endLine": 6,
-      "comment": "Irony of fearing where no fear should exist"
+      "comment": "The wicked consume God’s people like bread, and yet live without invoking the Lord, until terror overtakes them where no fear was.",
+      "comment2": "Augustine explains that the wicked devour the poor as easily as daily bread. Their false security collapses when they suddenly tremble with groundless fear, a mark of consciences secretly aware of judgment (Enarr. Ps. 13.5–6)."
     },
     {
-      "name": "Righteous Remnant",
-      "description": "Hope for the poor who trust in the Lord",
-      "lemmas": ["justus", "consilium", "inops", "spes"],
+      "name": "Counsel of the Poor → Salvation from Zion",
+      "description": "From despised counsel of the lowly to promised deliverance from Zion",
+      "lemmas": ["consilium", "inops", "confundo", "spes", "salutare", "exulto"],
       "startLine": 7,
-      "endLine": 7,
-      "comment": "Contrast to the corrupt majority"
-    },
-    {
-      "name": "Messianic Hope",
-      "description": "Longing for salvation from Zion",
-      "lemmas": ["sion", "salus", "israel", "captivitas", "exsulto", "laetor"],
-      "startLine": 8,
       "endLine": 8,
-      "comment": "Eschatological hope for restoration"
-    },
-    {
-      "name": "Augustine:  Interior vs exterior denial",
-      "description": "The fool says in his heart what he dares not say with his tongue",
-      "lemmas": ["insipiens", "cor"],
-      "startLine": 1,
-      "endLine": 1,
-      "comment": "En. Ps. 13.2 - Interior vs exterior denial"
+      "comment": "Though the poor are mocked for their reliance on God, Zion is promised as the place of Israel’s salvation and joy.",
+      "comment2": "Augustine reads this as Christ Himself — the salvation (salutare) from Zion — who vindicates the poor in spirit. When the Lord turns back captivity, the true Israel, both Jew and Gentile, rejoices in freedom (Enarr. Ps. 13.7–8)."
     }
   ]
 },
@@ -884,52 +847,40 @@
   "category": "",
   "themes": [
     {
-      "name": "Sacred Dwelling",
-      "description": "Qualifications for abiding in God's holy presence",
-      "lemmas": ["habito", "requiesco", "tabernaculum", "mons"],
+      "name": "Dwelling → Holiness",
+      "description": "From the question of who may dwell with God to the requirement of purity and justice",
+      "lemmas": ["habito", "tabernaculum", "requiesco", "mons", "sanctus", "macula", "iustitia"],
       "startLine": 1,
-      "endLine": 1,
-      "comment": "Opening rhetorical question about divine habitation"
+      "endLine": 2,
+      "comment": "The psalm begins by asking who is worthy to dwell with God. The answer: one who walks blamelessly and acts with justice.",
+      "comment2": "Augustine reads the 'tabernacle' and 'holy mountain' as Christ and His Church. To inhabit them is to live in holiness, with actions aligned to God’s justice (Enarr. Ps. 14.1–2)."
     },
     {
-      "name": "Moral Purity",
-      "description": "Ethical requirements for the worshiper",
-      "lemmas": ["macula", "justus", "veritas", "dolus"],
-      "startLine": 2,
-      "endLine": 3,
-      "comment": "Positive and negative ethical markers"
-    },
-    {
-      "name": "Social Integrity",
-      "description": "Right relationship with neighbors",
-      "lemmas": ["proximus", "malum", "opprobrium", "juro"],
+      "name": "Truth → Integrity",
+      "description": "From inward truth to outward integrity in speech and conduct",
+      "lemmas": ["veritas", "cor", "dolus", "lingua", "malum", "proximus"],
       "startLine": 3,
-      "endLine": 6,
-      "comment": "Triple repetition of 'proximo' emphasizes social ethics"
+      "endLine": 4,
+      "comment": "The true worshipper speaks truth from the heart, avoids deceit, and does no harm to a neighbor.",
+      "comment2": "Augustine emphasizes that it is not enough to avoid lying with the tongue; the heart itself must be purified, since God sees within (Enarr. Ps. 14.3–4)."
     },
     {
-      "name": "Financial Righteousness",
-      "description": "Economic ethics as worship requirement",
-      "lemmas": ["pecunia", "usura", "munus", "innocens"],
-      "startLine": 7,
-      "endLine": 7,
-      "comment": "Prohibition of exploitative financial practices"
-    },
-    {
-      "name": "Theological Foundation",
-      "description": "Fear of the Lord as basis for ethics",
-      "lemmas": ["malignus", "timeo", "glorifico", "dominus"],
+      "name": "Reverence → Faithfulness",
+      "description": "From despising the wicked to honoring the God-fearing, from swearing oaths to keeping them faithfully",
+      "lemmas": ["malignus", "conspectus", "timeo", "glorifico", "iuro", "decipio"],
       "startLine": 5,
-      "endLine": 5,
-      "comment": "Central theological affirmation"
+      "endLine": 6,
+      "comment": "The righteous person despises evil, honors those who fear the Lord, and keeps his word even when it costs him.",
+      "comment2": "Augustine sees in this a picture of the Church: despising sin, honoring holiness, and standing firm in truth without deception (Enarr. Ps. 14.5–6)."
     },
     {
-      "name": "Eternal Stability",
-      "description": "Promise of unshakable righteousness",
-      "lemmas": ["aeternus", "moveo", "facio"],
-      "startLine": 8,
+      "name": "Justice → Stability",
+      "description": "From refusing unjust gain to the promise of eternal security",
+      "lemmas": ["pecunia", "usura", "munus", "innocens", "moveo", "aeternum"],
+      "startLine": 7,
       "endLine": 8,
-      "comment": "Climactic promise of permanence"
+      "comment": "The just do not exploit others through money or bribery, but live with clean hands. They are promised immovable stability forever.",
+      "comment2": "Augustine interprets refusal of usury and bribes as freedom from greed. Such a person, grounded in Christ, 'shall not be moved forever' (Enarr. Ps. 14.7–8)."
     }
   ]
 },
