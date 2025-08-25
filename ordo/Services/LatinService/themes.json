@@ -139,7 +139,7 @@
   ]
 },
 
-  {
+ {
   "psalmNumber": 4,
   "category": "",
   "themes": [
@@ -168,29 +168,29 @@
       "startLine": 5,
       "endLine": 6,
       "comment": "Nighttime reflection leads to repentance, expressed in offering the sacrifice of righteousness and trusting in the Lord.",
-      "comment2": "Augustine links this to his garden conversion (shaken in his 'bed' by God’s command) and to Monica’s prayers as true sacrifice that upheld his hope (Conf. 8.12.28–29; 9.4.10–11)."
+      "comment2": "For Augustine, 'Irascimini' means holy anger at one’s own past sins, leading to compunction ('compungimini'). This inner turning offers the 'old life' itself as the true sacrifice of righteousness, replaced by hope in God (Conf. 8.12.28–29; 9.4.10–11)."
     },
     {
-      "name": "Divine Light → Revelation",
+      "name": "Light → Joy",
       "description": "From worldly good to the light of God’s countenance",
       "lemmas": ["ostendo", "lumen", "vultus", "bonus"],
       "startLine": 7,
       "endLine": 8,
       "comment": "Earthly blessings pale before the shining of God’s face, which brings true joy.",
-      "comment2": "Augustine contrasts the fleeting light of philosophy with the sealed light of Scripture — the illumination of God’s face (Conf. 9.4.12)."
+      "comment2": "Augustine explains that the 'bona' outside are empty and false, but within, illumined by the Spirit, the soul beholds the true Good: God Himself. This is the sealed light of God’s face that surpasses all earthly goods (Conf. 9.4.12)."
     },
     {
       "name": "Abundance → Eternal Rest",
       "description": "From earthly plenty to the peace of divine rest",
       "lemmas": ["frumentum", "vinum", "pax", "requiesco"],
-      "startLine": 8,
-      "endLine": 9,
+      "startLine": 9,
+      "endLine": 10,
       "comment": "Material abundance points beyond itself to the peace found only in God, where the soul rests secure.",
       "comment2": "At Ostia, Augustine and Monica tasted this peace — the Eucharistic abundance of 'grain and wine' finding fulfillment in eternal rest (Conf. 9.10.23–26)."
     }
   ]
 },
-  
+   
 {
   "psalmNumber": 5,
   "category": "",
