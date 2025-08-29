@@ -1518,119 +1518,135 @@
     "inclusio": "Framed by 'exaudiat' (1) and 'exaudi' (10)"
   }
 },
-
-
 {
   "psalmNumber": 30,
   "category": "",
   "themes": [
     {
       "name": "Hope → Deliverance",
-      "description": "From trust in God to prayer for liberation",
-      "lemmas": ["spero", "confundo", "iustitia", "libero", "eripio"],
+      "description": "From trusting God to pleading for His swift rescue",
+      "lemmas": ["spero", "libero", "inclino", "eripio"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "The psalm opens with confident hope: the one who trusts in God will not be confounded, but delivered in divine justice.",
-      "comment2": "Augustine sees here Christ’s voice in the Passion: He hopes in the Father without being confounded, and is delivered by resurrection (Enarr. Ps. 30.1–2)."
+      "comment": "The psalmist entrusts himself to God’s justice, begging for liberation and speedy deliverance.",
+      "comment2": "Augustine emphasizes that true hope (‘in te, Domine, speravi’) cannot be confounded, for God bends low (‘inclina aurem tuam’) to hear those who trust Him (Enarr. Ps. 30.1–2)."
     },
     {
       "name": "Refuge → Guidance",
-      "description": "From seeking refuge to being led for God’s name",
-      "lemmas": ["refugium", "salvo", "deduco", "nutrio", "fortitudo"],
+      "description": "From God as protector to divine leading and nourishment",
+      "lemmas": ["protector", "refugium", "deduco", "nutrio"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "God is both strength and refuge, who saves and guides for the sake of His name.",
-      "comment2": "Augustine links this to the Church seeking stability in God: not for their merit but ‘propter nomen tuum’ He sustains and nourishes them (Enarr. Ps. 30.3–4)."
+      "comment": "God is both fortress and refuge, but also guide and sustainer, leading the faithful for His name’s sake.",
+      "comment2": "Augustine interprets ‘domus refugii’ as Christ Himself, in whom the soul finds shelter, and ‘deduces me’ as God’s providential guidance (Enarr. Ps. 30.3–4)."
     },
     {
-      "name": "Snare → Trust",
-      "description": "From deliverance out of traps to commending the spirit to God",
-      "lemmas": ["laqueus", "abscondo", "protector", "commendo", "spiritus"],
+      "name": "Rescue → Trust",
+      "description": "From escape out of snares to entrusting the spirit in God’s hands",
+      "lemmas": ["educo", "laqueus", "commendo", "spiritus", "redimo"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "From escape out of hidden snares to the great act of trust: ‘Into your hands I commend my spirit.’",
-      "comment2": "Augustine emphasizes this verse as Christ’s own words on the Cross, fulfilled in ultimate trust and vindication (Luke 23:46; Enarr. Ps. 30.5–6)."
+      "comment": "The psalmist acknowledges hidden traps but entrusts his spirit into God’s hands, proclaiming redemption.",
+      "comment2": "Augustine ties ‘In manus tuas commendo spiritum meum’ directly to Christ on the cross (Lk 23:46), teaching that all believers share in this trust (Enarr. Ps. 30.5–6)."
     },
     {
-      "name": "Vanity → Mercy",
-      "description": "From rejecting idols to rejoicing in God’s saving mercy",
-      "lemmas": ["vanitas", "spero", "laetor", "misericordia", "humilitas"],
+      "name": "Idols → Mercy",
+      "description": "From rejecting empty vanities to rejoicing in God’s mercy",
+      "lemmas": ["vanitas", "spero", "misericordia", "humilitas"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "The psalmist rejects vain idols and instead rejoices in God who regards his lowliness and saves him.",
-      "comment2": "Augustine contrasts his former enslavement to vanities with joy found only in God’s mercy, which lifts up the humble (Conf. 9.4.9; Enarr. Ps. 30.7–8)."
+      "comment": "Unlike those who chase idols, the psalmist trusts in the Lord and rejoices in God’s mercy for the humble.",
+      "comment2": "Augustine contrasts vanity outside God with mercy inside Him: the faithful find joy (‘laetabor in misericordia tua’) by turning inward where God dwells (Enarr. Ps. 30.7–8)."
     },
     {
-      "name": "Constriction → Spaciousness",
-      "description": "From oppression by enemies to being set in a wide place",
-      "lemmas": ["concludo", "inimicus", "statuo", "spatiosus", "pes"],
+      "name": "Safety → Affliction",
+      "description": "From deliverance into wide space to overwhelming sorrow and weakness",
+      "lemmas": ["concludo", "spatiosus", "tribulor", "conturbo", "dolor"],
       "startLine": 9,
       "endLine": 10,
-      "comment": "Once trapped and surrounded, the psalmist is set free and placed on spacious ground.",
-      "comment2": "Augustine interprets this ‘locus spatiosus’ as the liberty of the Spirit, a heart enlarged by God after oppression (Enarr. Ps. 30.9–10)."
+      "comment": "After celebrating safety, the psalmist laments deep affliction: eyes, soul, and body overwhelmed by grief.",
+      "comment2": "Augustine notes the alternation: God grants relief (‘in loco spatioso’), yet human frailty groans under trial (Enarr. Ps. 30.9–10)."
     },
     {
-      "name": "Frailty → Reproach",
-      "description": "From weakness and sorrow to becoming a reproach to others",
-      "lemmas": ["dolor", "gemitus", "virtus", "conturbo", "opprobrium"],
+      "name": "Weakness → Reproach",
+      "description": "From bodily decline to public shame and fear",
+      "lemmas": ["vita", "gemitus", "infirmo", "opprobrium", "fugio"],
       "startLine": 11,
-      "endLine": 13,
-      "comment": "Life consumed by grief and weakness leads to shame and reproach among enemies and neighbors.",
-      "comment2": "Augustine reads this as Christ’s suffering: despised, abandoned, and mocked, yet carrying human frailty in His body (Enarr. Ps. 30.11–13)."
+      "endLine": 12,
+      "comment": "Life is consumed in grief and strength fails, preparing for public shame and reproach.",
+      "comment2": "Augustine applies this to the weakness of Christ’s body and His members, scorned and suffering (Enarr. Ps. 30.11–12)."
     },
     {
-      "name": "Forgotten → Plotted Against",
-      "description": "From abandonment and oblivion to enemies conspiring for death",
-      "lemmas": ["oblivio", "mortuus", "vas", "consilium", "anima"],
-      "startLine": 14,
+      "name": "Isolation → Conspiracy",
+      "description": "From social abandonment to plotted violence",
+      "lemmas": ["oblivio", "vas", "vituperium", "consilium"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "The psalmist is treated as forgotten and broken, while enemies conspire together to take his life.",
+      "comment2": "Augustine sees here the image of Christ’s passion: deserted by men, plotted against, yet offering Himself willingly (Enarr. Ps. 30.13–14)."
+    },
+    {
+      "name": "Plots → Trust",
+      "description": "From enemies’ schemes to renewed declaration of faith",
+      "lemmas": ["accipio", "anima", "spero", "sortes"],
+      "startLine": 15,
       "endLine": 16,
-      "comment": "The psalmist is forgotten as dead, broken like a lost vessel, while enemies conspire to take his life.",
-      "comment2": "Augustine relates this to Christ handed over, despised and betrayed, as well as the Church suffering persecution (Enarr. Ps. 30.14–16)."
+      "comment": "Conspirators seek the psalmist’s soul, but he declares: ‘You are my God, my times are in Your hand.’",
+      "comment2": "Augustine interprets this as the Church beset by worldly powers, yet professing faith in God’s providence (Enarr. Ps. 30.15–16)."
     },
     {
-      "name": "Commitment → Salvation",
-      "description": "From declaring trust in God to prayer for rescue",
-      "lemmas": ["spero", "Deus", "sortes", "eripio", "persequor"],
+      "name": "Face → Shame",
+      "description": "From the light of God’s face to the shame of the wicked",
+      "lemmas": ["illuminare", "facies", "erubesco", "infernus"],
       "startLine": 17,
       "endLine": 18,
-      "comment": "The psalmist entrusts his life into God’s hands, asking deliverance from persecutors.",
-      "comment2": "Augustine applies this to Christ giving Himself into the Father’s hands, and the faithful likewise placing their ‘sortes’ into God’s providence (Enarr. Ps. 30.17–18)."
+      "comment": "God’s radiant face saves the servant, while the wicked are shamed and silenced.",
+      "comment2": "For Augustine, the ‘illumination of the face’ is Christ’s revelation, salvation for the faithful but shame for the proud (Enarr. Ps. 30.17–18)."
     },
     {
-      "name": "Illumination → Justice",
-      "description": "From God’s shining face to the shame of the wicked",
-      "lemmas": ["illumino", "facies", "salvo", "erubesco", "infernus"],
+      "name": "Sweetness → Shelter",
+      "description": "From tasting God’s goodness to protection against strife",
+      "lemmas": ["dulcedo", "abscondo", "protego", "tabernaculum"],
       "startLine": 19,
       "endLine": 20,
-      "comment": "God’s radiant mercy saves His servant, while the wicked are confounded and brought low.",
-      "comment2": "Augustine contrasts the light of God’s face with the darkness of the proud who are cast down into hell (Enarr. Ps. 30.19–20)."
+      "comment": "The psalmist celebrates God’s hidden sweetness and protection from human strife.",
+      "comment2": "Augustine reads this as the hidden life in Christ, where believers are sheltered in God’s tabernacle (Enarr. Ps. 30.19–20)."
     },
     {
-      "name": "Falsehood → Protection",
-      "description": "From silencing lies to God’s hidden protection",
-      "lemmas": ["labium", "dolus", "protego", "tabernaculum", "abscondo"],
+      "name": "Hiddenness → Praise",
+      "description": "From divine concealment to public thanksgiving",
+      "lemmas": ["abscondo", "facies", "misericordia", "civitas"],
       "startLine": 21,
-      "endLine": 23,
-      "comment": "Deceitful lips are silenced, while the faithful are hidden and protected in God’s dwelling.",
-      "comment2": "Augustine sees in the tabernacle a symbol of Christ, where believers are hidden from human contradictions and guarded by God (Enarr. Ps. 30.21–23)."
+      "endLine": 22,
+      "comment": "The faithful are hidden in God’s face, then praise His mercy shown in a fortified city.",
+      "comment2": "Augustine interprets the ‘civitas munita’ as the heavenly Jerusalem, where God’s mercy is fully revealed (Enarr. Ps. 30.21–22)."
     },
     {
-      "name": "Distress → Consolation",
-      "description": "From despair of being cast off to assurance of being heard",
-      "lemmas": ["excessus", "mentis", "proicio", "exaudio", "oratio"],
-      "startLine": 24,
-      "endLine": 25,
-      "comment": "From saying in distress ‘I am cut off’ to realizing God has heard the prayer of his cry.",
-      "comment2": "Augustine identifies this with Christ’s Passion: forsaken in appearance, yet truly heard and vindicated by the Father (Enarr. Ps. 30.24–25)."
+      "name": "Despair → Hearing",
+      "description": "From feeling abandoned to assurance of answered prayer",
+      "lemmas": ["projicio", "exaudio", "oratio", "clamo"],
+      "startLine": 23,
+      "endLine": 24,
+      "comment": "Though he thought himself cast out, the psalmist rejoices that God heard his prayer.",
+      "comment2": "Augustine applies this to moments of spiritual trial, when the soul fears abandonment but God remains faithful (Enarr. Ps. 30.23–24)."
     },
     {
-      "name": "Love → Strength",
-      "description": "From exhortation to love God to encouragement in courageous hope",
-      "lemmas": ["diligo", "requiro", "retribuo", "viriliter", "conforto"],
-      "startLine": 26,
-      "endLine": 27,
-      "comment": "The psalm closes with a call: love the Lord, trust His justice, and take courage in hope.",
-      "comment2": "Augustine sees the closing exhortation as the Church’s voice, urging all the faithful to courage and steadfastness in the Lord (Enarr. Ps. 30.26–27)."
+      "name": "Blessing → Restoration",
+      "description": "From blessing God for mercy to renewal after despair",
+      "lemmas": ["benedictus", "misericordia", "exaudio", "clamo"],
+      "startLine": 25,
+      "endLine": 26,
+      "comment": "The psalmist blesses God for steadfast mercy, even after moments of feeling cast off. God hears the cry from the depth of anguish.",
+      "comment2": "Augustine reads this as the soul’s healing: even when it imagines itself rejected, God’s attentive mercy restores it through prayer (Enarr. Ps. 30.25–26)."
+    },
+    {
+      "name": "Justice → Courage",
+      "description": "From God’s requital of the proud to exhortation of the faithful",
+      "lemmas": ["retribuo", "superbia", "viriliter", "conforto", "spero"],
+      "startLine": 27,
+      "endLine": 28,
+      "comment": "God requites the proud but exhorts His saints to love, hope, and courage. The psalm closes with a collective call to steadfastness.",
+      "comment2": "For Augustine, this marks the two destinies: pride leads to ruin in the earthly city, but hope strengthens the faithful in the City of God (Enarr. Ps. 30.27–28)."
     }
   ]
 },
