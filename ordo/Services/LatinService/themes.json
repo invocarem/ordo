@@ -29,7 +29,7 @@
           "description": "From unstable wickedness to final divine separation",
           "lemmas": ["pulvis", "iudicium", "via", "iter", "pereo", "nosco"],
           "startLine": 5,
-          "endLine": 6,
+          "endLine": 7,
           "comment": "The wicked cannot stand in judgment or in the assembly of the righteous, for the Lord knows the way of the just while the way of the impious comes to nothing.",
           "comment2": "Augustine contrasts the rooted tree of the righteous with the empty lightness of the ungodly. The Lord 'knows' (novit) the way of the just with covenantal intimacy, but the way of the wicked perishes — eternal separation from God (Enarr. Ps. 1.5–6)."
         }
@@ -139,57 +139,58 @@
   ]
 },
 
- {
+{
   "psalmNumber": 4,
   "category": "",
   "themes": [
     {
-      "name": "Call → Answer",
-      "description": "From human invocation to divine enlargement and mercy",
+      "name": "Call → Enlargement",
+      "description": "A plea from the tight confines of distress is met with a liberating answer that creates space and freedom.",
       "lemmas": ["invoco", "exaudio", "dilato"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "God answers with both hearing and enlargement of the heart. The psalmist moves from constriction to freedom by divine mercy.",
-      "comment2": "Augustine recalls how God 'dilated' his narrow heart during conversion, through Ambrose’s preaching and Monica’s tears (Conf. 9.4.8)."
+      "comment": "The psalmist calls out in distress and God responds with both hearing and deliverance, enlarging his constricted situation.",
+      "comment2": "Augustine experienced this dilation as God 'enlarging' his constricted heart through grace (Conf. 9.4.8)."
     },
     {
-      "name": "Vanity → Truth",
-      "description": "From clinging to falsehood to beholding divine wonder",
+      "name": "Vanity → Wonder",
+      "description": "An appeal to abandon empty illusions and behold God's marvelous faithfulness.",
       "lemmas": ["vanitas", "mendacium", "mirifico", "sanctus"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "The psalmist challenges men who love vanity and lies, redirecting them to the marvel of God’s chosen.",
-      "comment2": "Augustine recognized his own 'heavy heart' in this appeal: God’s rebuke pierced him as one long ensnared by empty loves (Conf. 9.4.9)."
+      "comment": "The psalmist challenges those chasing falsehoods and reveals God's wondrous works for the faithful.",
+      "comment2": "Augustine felt personally addressed by this rebuke to his own vain pursuits (Conf. 9.4.9)."
     },
     {
-      "name": "Examination → Sacrifice",
-      "description": "From self-search in silence to offering righteous worship",
-      "lemmas": ["irascor", "pecco", "cubile", "sacrificium", "iustitia"],
+      "name": "Anger → Good",
+      "description": "From righteous anger turned inward to the piercing question of true goodness.",
+      "lemmas": ["irascor", "compungor", "sacrificium", "bonus"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "Nighttime reflection leads to repentance, expressed in offering the sacrifice of righteousness and trusting in the Lord.",
-      "comment2": "For Augustine, 'Irascimini' means holy anger at one’s own past sins, leading to compunction ('compungimini'). This inner turning offers the 'old life' itself as the true sacrifice of righteousness, replaced by hope in God (Conf. 8.12.28–29; 9.4.10–11)."
+      "comment": "Holy anger directed at one's own sin leads to compunction, the sacrifice of the old life, and the fundamental question: where is true good to be found?",
+      "comment2": "For Augustine, this was the crucial turning point: anger at his past life sacrificed, creating the space to ask for the true good of God's grace (Conf. 8.12.28-29)."
     },
     {
-      "name": "Light → Joy",
-      "description": "From worldly good to the light of God’s countenance",
-      "lemmas": ["ostendo", "lumen", "vultus", "bonus"],
+      "name": "Seal → Abundance",
+      "description": "From God's mark of favor to the fruits of His blessing",
+      "lemmas": ["signo", "lumen", "laetitia", "frumentum"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "Earthly blessings pale before the shining of God’s face, which brings true joy.",
-      "comment2": "Augustine explains that the 'bona' outside are empty and false, but within, illumined by the Spirit, the soul beholds the true Good: God Himself. This is the sealed light of God’s face that surpasses all earthly goods (Conf. 9.4.12)."
+      "comment": "God's light is sealed upon us as a mark of His favor, bringing joy that culminates in material abundance.",
+      "comment2": "Augustine saw this sealing as God's claim upon the soul, with earthly blessings following as fruits of divine favor (Conf. 9.4.12)."
     },
     {
-      "name": "Abundance → Eternal Rest",
-      "description": "From earthly plenty to the peace of divine rest",
-      "lemmas": ["frumentum", "vinum", "pax", "requiesco"],
+      "name": "Peace → Rest",
+      "description": "From God's gift of peace to the soul's complete rest in Him",
+      "lemmas": ["pax", "requiesco", "spes", "constituo"],
       "startLine": 9,
       "endLine": 10,
-      "comment": "Material abundance points beyond itself to the peace found only in God, where the soul rests secure.",
-      "comment2": "At Ostia, Augustine and Monica tasted this peace — the Eucharistic abundance of 'grain and wine' finding fulfillment in eternal rest (Conf. 9.10.23–26)."
+      "comment": "God's peace enables the soul to rest securely, establishing us in the certain hope of His salvation.",
+      "comment2": "At Ostia, Augustine and Monica experienced this divine peace that leads to perfect rest in God's eternal hope (Conf. 9.10.23-26)."
     }
   ]
 },
+ 
    
 {
   "psalmNumber": 5,
@@ -1949,13 +1950,138 @@
 
 
 {
+  "psalmNumber": 54,
+  "category": "",
+  "themes": [
+    {
+      "name": "Supplication → Anguish",
+      "description": "From plea for God’s hearing to turmoil from enemies",
+      "lemmas": ["exaudio", "oratio", "despicio", "contristo", "inimicus"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalm opens in distress, pleading for God to hear amidst sorrow caused by hostile voices.",
+      "comment2": "Augustine sees here the cry of Christ and His Body, the Church, beset by enemies but sustained by God’s listening ear (Enarr. Ps. 54.1–2)."
+    },
+    {
+      "name": "Oppression → Fear",
+      "description": "From overwhelming iniquities to dread of death",
+      "lemmas": ["declino", "iniquitas", "ira", "conturbo", "formido", "mors"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The weight of sin and wrath drives the psalmist into deep inner fear, foreshadowing death’s shadow.",
+      "comment2": "For Augustine, the 'fear of death' signifies humanity’s condition outside grace, until Christ conquers death’s power (Enarr. Ps. 54.3–4)."
+    },
+    {
+      "name": "Terror → Escape",
+      "description": "From trembling under darkness to longing for wings",
+      "lemmas": ["timor", "tremor", "tenebrae", "columba", "volo", "requiesco"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Fear and trembling bring the desire to flee like a dove, finding rest away from turmoil.",
+      "comment2": "Augustine interprets the longing for wings as the soul’s desire to rise above earthly cares and find rest in God (Enarr. Ps. 54.5–6)."
+    },
+    {
+      "name": "Flight → Solitude",
+      "description": "From withdrawal to waiting for deliverance",
+      "lemmas": ["fugio", "solitudo", "exspecto", "salvo", "tempestas"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "The psalmist imagines escape into solitude, hoping for salvation from inner weakness and storm.",
+      "comment2": "Augustine explains the 'solitude' as separation from worldly tumult, where the soul waits on God’s rescue (Enarr. Ps. 54.7–8)."
+    },
+    {
+      "name": "Confusion → Corruption",
+      "description": "From prayer against division to vision of civic decay",
+      "lemmas": ["praecipito", "divido", "iniquitas", "contradictio", "civitas"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "He calls for God to divide the tongues of the wicked, describing a city filled with injustice day and night.",
+      "comment2": "Augustine applies this to Babel and the division of heretics, showing how pride corrupts community life (Enarr. Ps. 54.9–10)."
+    },
+    {
+      "name": "Deceit → Betrayal",
+      "description": "From public fraud to the sorrow of betrayal by a friend",
+      "lemmas": ["usura", "dolus", "inimicus", "maledico", "abscondo"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "While streets are full of fraud, the wound deepens when betrayal comes not from an enemy but a close companion.",
+      "comment2": "Augustine sees here Christ’s betrayal by Judas, the deepest wound being treachery from within, not hostility from without (Enarr. Ps. 54.11–12)."
+    },
+    {
+      "name": "Companionship → Treachery",
+      "description": "From shared worship to perfidy in God’s house",
+      "lemmas": ["unanimis", "dux", "notus", "cibus", "domus", "consensus"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "The pain is intensified: the betrayer once shared meals and worship in God’s house, turning fellowship into treachery.",
+      "comment2": "For Augustine, this verse foreshadows Judas sharing Christ’s table, showing how even sacred fellowship can be perverted by betrayal (Enarr. Ps. 54.13–14)."
+    },
+    {
+      "name": "Judgment → Wickedness",
+      "description": "From plea for death on the wicked to recognition of their dwelling in evil",
+      "lemmas": ["mors", "descendo", "infernum", "nequitia", "habitaculum"],
+      "startLine": 15,
+      "endLine": 16,
+      "comment": "The psalmist calls for the wicked to descend alive into Sheol, for evil dwells within them.",
+      "comment2": "Augustine interprets the descent as the ruin of those who cling to sin: alive in body, but spiritually dead (Enarr. Ps. 54.15–16)."
+    },
+    {
+      "name": "Cry → Salvation",
+      "description": "From prayer to confidence in God’s rescue",
+      "lemmas": ["clamo", "salvo", "vespera", "mane", "meridies", "exaudio"],
+      "startLine": 17,
+      "endLine": 18,
+      "comment": "In contrast, the psalmist cries out continually, assured that God will hear and save.",
+      "comment2": "Augustine links the rhythm of prayer — evening, morning, and noon — with the continual praise of the Church (Enarr. Ps. 54.17–18)."
+    },
+    {
+      "name": "Peace → Division",
+      "description": "From promise of redemption to denunciation of hardened hearts",
+      "lemmas": ["redimo", "pax", "humilio", "commutatio", "timeo"],
+      "startLine": 19,
+      "endLine": 20,
+      "comment": "God redeems the soul in peace, but the wicked, unchanging and without fear of God, remain opposed.",
+      "comment2": "Augustine stresses that true peace is God’s gift, but those who refuse change (‘commutatio’) remain hardened (Enarr. Ps. 54.19–20)."
+    },
+    {
+      "name": "Covenant → Treachery",
+      "description": "From stretched hands to words of deceit",
+      "lemmas": ["retribuo", "contamino", "testamentum", "sermo", "iaculum"],
+      "startLine": 21,
+      "endLine": 22,
+      "comment": "The wicked profane covenantal bonds, their smooth words concealing weapons of betrayal.",
+      "comment2": "Augustine notes the deceit of flattering words ‘softer than oil,’ yet wounding like darts — an image of hypocrisy (Enarr. Ps. 54.21–22)."
+    },
+    {
+      "name": "Burden → Support",
+      "description": "From casting anxieties on God to assurance of His sustaining power",
+      "lemmas": ["iacio", "cura", "enutrio", "fluctuatio", "iustus"],
+      "startLine": 23,
+      "endLine": 24,
+      "comment": "The psalmist exhorts to place one’s burden on God, who nourishes and prevents the righteous from falling forever.",
+      "comment2": "Augustine cites this verse to show the Christian duty of trust: casting cares on God who upholds His just ones (Enarr. Ps. 54.23–24)."
+    },
+    {
+      "name": "Destruction → Trust",
+      "description": "From God’s judgment on the wicked to steadfast trust",
+      "lemmas": ["deduco", "puteus", "interitus", "sanguis", "dolus", "spero"],
+      "startLine": 25,
+      "endLine": 27,
+      "comment": "The psalm closes with a contrast: deceivers face the pit of destruction, but the psalmist resolves to trust in the Lord.",
+      "comment2": "For Augustine, the psalm ends with the triumph of faith: the wicked perish, but the believer entrusts himself wholly to God (Enarr. Ps. 54.25–27)."
+    }
+  ]
+},
+
+
+{
   "psalmNumber": 56,
   "category": "",
   "themes": [
     {
       "name": "Speech → Iniquity",
       "description": "Contrast between professed justice and practiced wickedness",
-      "lemmas": ["justitia", "loquor", "iniquitas", "operor"],
+      "lemmas": ["iustitia", "loquor", "iniquitas", "operor"],
       "startLine": 1,
       "endLine": 2,
       "comment": "Augustine: 'Loquimini justitiam' vs 'in corde iniquitates' shows tongue-heart divide (Enarrationes 56.2)"
