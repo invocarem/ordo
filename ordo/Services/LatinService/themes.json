@@ -1948,6 +1948,83 @@
   ]
 },
 
+{
+  "psalmNumber": 52,
+  "category": "",
+  "themes": [
+    {
+      "name": "Folly → Corruption",
+      "description": "A foolish heart's denial of God decays into complete moral failure.",
+      "lemmas": ["insipiens", "corrumpo", "abominabilis", "iniquitas"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalm begins with the fool's denial of God's existence, which leads to total corruption and the absence of any good action.",
+      "comment2": "Augustine would see this as the natural progression of a soul that turns away from God, the source of all good, resulting in complete moral decay (as explored in Confessions regarding his own pre-conversion state)."
+    },
+    {
+      "name": "Observation → Failure",
+      "description": "God's searching gaze from heaven finds only universal human failure.",
+      "lemmas": ["prospicio", "intelligens", "requiro", "declino", "inutilis"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "God looks down from heaven to examine humanity, only to find that all have turned away and become worthless, with none who do good.",
+      "comment2": "Augustine frequently reflected on human depravity without God's grace, seeing in this divine observation the need for redemption that he himself experienced."
+    },
+    {
+      "name": "Oppression → Fear",
+      "description": "Those who devour God's people instead find themselves consumed by empty terror.",
+      "lemmas": ["devoro", "invoco", "trepido", "timor"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The evildoers who prey on God's people and fail to call upon Him ultimately tremble in fear where there should be no fear.",
+      "comment2": "Augustine understood this as the inevitable anxiety and disordered fear that comes from relying on worldly power rather than God's protection."
+    },
+    {
+      "name": "Judgment → Salvation",
+      "description": "Divine rejection of the wicked gives way to joyful restoration for God's people.",
+      "lemmas": ["dissipo", "confundor", "sperno", "salus", "averto", "exsulto"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "God's judgment on the wicked gives way to His gracious restoration, turning captivity into joyful salvation for His people.",
+      "comment2": "Augustine saw this as demonstrating God's pattern of using judgment to bring about redemption, much as his own conversion followed a period of spiritual captivity."
+    }
+  ]
+},
+
+{
+  "psalmNumber": 53,
+  "category": "",
+  "themes": [
+   {
+      "name": "Invocation → Attentive Hearing",
+      "description": "A cry for salvation through attentive hearing.",
+      "lemmas": ["invoco", "nomen", "iudico", "audio"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalmist appeals for salvation in God’s name and justice, asking not only for deliverance but for God’s attentive listening. Judgment here is vindication — the act of God recognizing and defending the innocent through His hearing.",
+      "comment2": "Augustine interprets this invocation as the cry of the Church, who is heard because she appeals not in her own merit but in God’s name. God’s judgment (*iudica*) is mercy for the faithful and attentive response to their plea (Enarr. Ps. 53.1–2)."
+    },
+    {
+      "name": "Threat → Support",
+      "description": "The assault of enemies without God meets divine assistance and protection.",
+      "lemmas": ["alienus", "insurgo", "fortis", "adiuvo", "susceptor"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Though the powerful rise against him, the psalmist finds confidence in God's helping presence.",
+      "comment2": "Augustine would recognize this as the Christian's experience of God's protection amid worldly opposition."
+    },
+    {
+      "name": "Petition → Thanksgiving",
+      "description": "A plea for justice transforms into voluntary sacrifice and grateful confession.",
+      "lemmas": ["averto", "disperdo", "voluntarie", "sacrifico", "confiteor", "eripio"],
+      "startLine": 5,
+      "endLine": 7,
+      "comment": "The prayer for God to turn back enemies becomes a freewill offering of praise for deliverance.",
+      "comment2": "Augustine saw this movement from petition to praise as the natural response to God's saving work in one's life."
+    }
+  ]
+},
+
 
 {
   "psalmNumber": 54,
@@ -2073,6 +2150,66 @@
   ]
 },
 
+{
+  "psalmNumber": 55,
+  "category": "",
+  "themes": [
+    {
+      "name": "Crushing → Cry",
+      "description": "Relentless human oppression triggers a desperate plea for divine mercy.",
+      "lemmas": ["conculco", "impugno", "tribulo", "misereor"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalmist describes being trampled and attacked all day by enemies, leading to a cry for God's mercy.",
+      "comment2": "Augustine sees this as the soul's recognition that true mercy comes only from God when human oppression becomes overwhelming (En. Ps. 55.2)."
+    },
+    {
+      "name": "Fear → Confidence",
+      "description": "Daytime terror transforms into unwavering trust through hope in God.",
+      "lemmas": ["timeo", "spero", "laudo", "caro"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Despite fear from threats, the psalmist declares hope and praise in God, rejecting fear of human harm.",
+      "comment2": "Augustine explains that fear of God drives out fear of man, and true confidence is found only in divine protection (En. Ps. 55.5)."
+    },
+    {
+      "name": "Betrayal → Surveillance",
+      "description": "Cursed words and evil intentions lead to hidden enemies watching closely.",
+      "lemmas": ["execror", "cogito", "inhabito", "observo"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The psalmist faces constant cursing and malicious thoughts, with enemies lying in wait to surveil and betray.",
+      "comment2": "Augustine interprets this as the experience of the righteous in a fallen world, where spiritual enemies constantly seek to undermine faith (Civ. Dei 1.9)."
+    },
+    {
+      "name": "Judgment → Intimacy",
+      "description": "Divine anger toward enemies shifts to personal intimacy with God over tears.",
+      "lemmas": ["salvus", "ira", "annuntio", "lacrima"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "God's judgment on the wicked is contrasted with the psalmist's personal devotion, where God notices and keeps his tears.",
+      "comment2": "Augustine teaches that God's justice toward the wicked coincides with His tender compassion for the righteous, noting how He treasures our tears (En. Ps. 55.9)."
+    },
+    {
+      "name": "Promise → Knowledge",
+      "description": "God's faithful promise leads to assured knowledge through prayer.",
+      "lemmas": ["promissio", "retrorsum", "invoco", "cognosco"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "The psalmist recalls God's promise that enemies will retreat, and through prayer, gains certainty of God's presence.",
+      "comment2": "Augustine emphasizes that prayer activates God's promises, transforming theoretical faith into experiential knowledge of His presence (De Doctrina Christiana 1.4.4)."
+    },
+    {
+      "name": "Praise → Deliverance",
+      "description": "Heartfelt praise for God's word culminates in rescue from death and joyful service.",
+      "lemmas": ["laudo", "spero", "eripio", "lumen"],
+      "startLine": 11,
+      "endLine": 13,
+      "comment": "The psalmist praises God's word, hopes in Him, and celebrates deliverance from death, enabling service in God's light.",
+      "comment2": "Augustine sees this final movement as the soul's journey from petition to thanksgiving, where deliverance inspires perpetual worship in God's eternal light (En. Ps. 55.17)."
+    }
+  ]
+},
 
 {
   "psalmNumber": 56,

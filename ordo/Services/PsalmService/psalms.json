@@ -2403,41 +2403,47 @@
     "verified": true
 },
 
+{
+    "number": 55,
+    "section": "",
+    "text": [
+        "Miserere mei, Deus, quoniam conculcavit me homo; tota die impugnans tribulavit me.",
+        "Conculcaverunt me inimici mei tota die; quoniam multi bellantes adversum me.",
+        "Ab altitudine diei timebo; ego vero in te sperabo.",
+        "In Deo laudabo sermones meos, in Deo speravi; non timebo quid faciat mihi caro.",
+        "Tota die verba mea execrabantur; adversum me omnia cogitata eorum in malum.",
+       
+        "Inhabitabunt, et abscondent; ipsi calcaneum meum observabunt.",
+        "Sicut sustinuerunt animam meam, pro nihilo salvos facies illos; in ira populos confringes.",
+        "Deus, vitam meam annuntiavi tibi; posuisti lacrimas meas in conspectu tuo.",
+        "Sicut et in promissione tua: tunc convertentur inimici mei retrorsum;",
+        "In quacumque die invocavero te: ecce cognovi quoniam Deus meus es.",
+       
+        "In Deo laudabo verbum, in Domino laudabo sermonem; in Deo speravi, non timebo quid faciat mihi homo.",
+        "In me sunt, Deus, vota tua, quae reddam, laudationes tibi;",
+        "Quoniam eripuisti animam meam de morte, et pedes meos de lapsu, ut placeam coram Deo in lumine viventium."
+    ],
+    "englishText": [
+        "Have mercy on me, O God, for man hath trodden me under foot; all the day long he hath afflicted me fighting against me.",
+        "My enemies have trodden on me all the day long; for they are many that make war against me.",
+        "From the height of the day I shall fear; but I will trust in thee.",
+        "In God I will praise my words, in God I have hoped; I will not fear what flesh can do unto me.",
+        "All the day long they detested my words; all their thoughts were against me unto evil.",
+ 
+        "They will dwell and hide themselves; they will watch my heel.",
+        "As they have waited for my soul, for nothing shalt thou save them; in thy wrath thou shalt break the people in pieces.",
+        "O God, I have declared to thee my life; thou hast set my tears in thy sight.",
+        "As also in thy promise: then shall my enemies be turned back;",
+        "In what day soever I shall call upon thee: behold I know that thou art my God.",
+ 
+        "In God will I praise the word, in the Lord will I praise his speech; in God have I hoped, I will not fear what man can do unto me.",
+        "In me, O God, are vows to thee, which I will pay, praises to thee;",
+        "Because thou hast delivered my soul from death, and my feet from falling, that I may please in the sight of God, in the light of the living."
+    ],
+    "verified": true
+},
 
-               {
-            "number": 55,
-            "section": "",
-            "text": [
-                "Miserere mei, Deus, quoniam conculcavit me homo; tota die impugnans tribulavit me.",
-                "Conculcaverunt me inimici mei tota die; quoniam multi bellantes adversum me.",
-                "Ab altitudine diei timebo; ego vero in te sperabo.",
-                "In Deo laudabo sermones meos, in Deo speravi; non timebo quid faciat mihi caro.",
-                "Tota die verba mea execrabantur; adversum me omnia cogitata eorum in malum.",
-                "Inhabitabunt, et abscondent; ipsi calcaneum meum observabunt, sicut sustinuerunt animam meam.",
-                "Pro nihilo salvos facies illos; in ira populos confringes.",
-                "Deus, vitam meam annuntiavi tibi; posuisti lacrimas meas in conspectu tuo, sicut et in promissione tua.",
-                "Tunc convertentur inimici mei retrorsum in quacumque die invocavero te; ecce cognovi quoniam Deus meus es tu.",
-                "In Deo laudabo verbum, in Domino laudabo sermonem; in Deo speravi, non timebo quid faciat mihi homo.",
-                "In me sunt, Deus, vota tua, quae reddam, laudationes tibi.",
-                "Quoniam eripuisti animam meam de morte, et pedes meos de lapsu, ut placeam coram Deo in lumine viventium."
-            ],
-            "englishText": [
-                "Have mercy on me, O God, for man hath trodden me under foot; all the day long he hath afflicted me fighting against me.",
-                "My enemies have trodden on me all the day long; for they are many that make war against me.",
-                "From the height of the day I shall fear; but I will trust in thee.",
-                "In God I will praise my words, in God I have hoped; I will not fear what flesh can do unto me.",
-                "All the day long they detested my words; all their thoughts were against me unto evil.",
-                "They will dwell and hide themselves; they will watch my heel, as they have waited for my soul.",
-                "For nothing shalt thou save them; in thy wrath thou shalt break the people in pieces.",
-                "O God, I have declared to thee my life; thou hast set my tears in thy sight, as also in thy promise.",
-                "Then shall my enemies be turned back in the day when I call upon thee; behold I know that thou art my God.",
-                "In God will I praise the word, in the Lord will I praise his speech; in God have I hoped, I will not fear what man can do unto me.",
-                "In me, O God, are vows to thee, which I will pay, praises to thee.",
-                "Because thou hast delivered my soul from death, and my feet from falling, that I may please in the sight of God, in the light of the living."
-            ],
-            "verified": true
-        },
-        {
+       {
             "number": 56,
             "section": "",
             "text": [

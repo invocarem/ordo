@@ -1,5 +1,49 @@
 [
   {
+    "lemma": "sustineo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "sustinere",
+    "present": "sustineo",
+    "future": "sustinebo",
+    "perfect": "sustinui",
+    "supine": "sustentum",
+    "translations": {
+      "en": "to sustain, endure, hold up, support",
+      "la": "sustineo, sustinere"
+    }
+  },
+
+    {
+      "lemma": "inhabito",
+      "part_of_speech": "verb",
+      "conjugation": 1,
+      "infinitive": "habitare",
+      "present": "inhabito",
+      "future": "habitabo",
+      "perfect": "habitavi",
+      "supine": "habitatum",
+      "translations": {
+        "en": "to inhabit, dwell in, live in",
+        "la": "inhabito, habitare"
+      },
+      "forms": {
+      "future_3pl": ["inhabitabunt"]
+      }
+    },
+    {
+      "lemma": "execror",
+      "part_of_speech": "verb",
+      "conjugation": 1,
+      "infinitive": "execrari",
+      "present": "execror",
+      "perfect": "execratus",
+      "translations": {
+        "en": "to curse, execrate, detest",
+        "la": "execror, execrari"
+      }
+    },
+  {
   "lemma": "haereditas",
   "part_of_speech": "noun",
   "declension": 3,
