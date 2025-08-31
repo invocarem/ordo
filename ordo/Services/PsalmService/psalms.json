@@ -1391,11 +1391,11 @@
                 "Quis est homo qui vult vitam, diligit dies videre bonos?",
                 "Prohibe linguam tuam a malo, et labia tua ne loquantur dolum.",
                 "Diverte a malo, et fac bonum; inquire pacem, et persequere eam.",
-                "Oculi Domini super justos, et aures eius in preces eorum.",
+                "Oculi Domini super iustos, et aures eius in preces eorum.",
                 "Vultus autem Domini super facientes mala, ut perdat de terra memoriam eorum.",
                 "Clamaverunt justi, et Dominus exaudivit eos; et ex omnibus tribulationibus eorum liberavit eos.",
                 "Juxta est Dominus iis qui tribulato sunt corde; et humiles spiritu salvabit.",
-                "Multae tribulationes justorum; et de omnibus his liberabit eos Dominus.",
+                "Multae tribulationes iustorum; et de omnibus his liberabit eos Dominus.",
                 "Custodit Dominus omnia ossa eorum; unum ex his non conteretur.",
                 "Mors peccatorum pessima; et qui oderunt justum, delinquent.",
                 "Redimet Dominus animas servorum suorum; et non delinquent omnes qui sperant in eo."
@@ -1556,8 +1556,8 @@
                 "Dominus autem irridebit eum, quoniam prospicit quod veniet dies eius.",
                 "Gladium evaginaverunt peccatores; intenderunt arcum suum, ut dejiciant pauperem et inopem, ut trucident rectos corde.",
                 "Gladius eorum intret in corda ipsorum, et arcus eorum confringatur.",
-                "Melius est modicum justo, super divitias peccatorum multas.",
-                "Quoniam brachia peccatorum conterentur; confirmat autem justos Dominus.",
+                "Melius est modicum iusto, super divitias peccatorum multas.",
+                "Quoniam brachia peccatorum conterentur; confirmat autem iustos Dominus.",
                 "Novit Dominus dies immaculatorum; et haereditas eorum in aeternum erit.",
                 "Non confundentur in tempore malo, et in diebus famis saturabuntur.",
                 "Quia peccatores peribunt; inimici vero Domini mox ut honorificati fuerint et exaltati, deficiens quemadmodum fumus deficient.",
@@ -1620,7 +1620,7 @@
                 "Et transivi, et ecce non erat; et quaesivi eum, et non est inventus locus eius.",
                 "Custodi innocentiam, et vide aequitatem, quoniam sunt reliquiae homini pacifico.",
                 "Injusti autem disperibunt simul; reliquiae impiorum interibunt.",
-                "Salus autem justorum a Domino; et protector eorum est in tempore tribulationis.",
+                "Salus autem iustorum a Domino; et protector eorum est in tempore tribulationis.",
                 "Et adjuvabit eos Dominus, et liberabit eos; et eripiet eos a peccatoribus, et salvabit eos, quia speraverunt in eo."
             ],
             "englishText": [                
@@ -2489,7 +2489,7 @@
                 "Sicut cera quae fluit, auferentur; supercecidit ignis, et non viderunt solem.",
                 "Priusquam intelligerent spinae vestrae rhamnum: sicut viventes, sic in ira absorbet eos.",
                 "Laetabitur iustus cum viderit vindictam; manus suas lavabit in sanguine peccatoris.",
-                "Et dicet homo: Si utique est fructus justo; utique est Deus iudicans eos in terra."
+                "Et dicet homo: Si utique est fructus iusto; utique est Deus iudicans eos in terra."
             ],
             "englishText": [
                 "If in very deed you speak justice: judge right things, ye sons of men.",
@@ -2507,11 +2507,9 @@
             "verified": true
         },
 
-
-       {
+        {
             "number": 58,
             "section": "",
-            "title": "Prayer for Deliverance from Enemies",
             "text": [
                 "Eripe me de inimicis meis, Deus meus; et ab insurgentibus in me libera me.",
                 "Eripe me de operantibus iniquitatem, et de viris sanguinum salva me.",
@@ -2522,8 +2520,17 @@
                 "Convertentur ad vesperam, et famem patientur ut canes; et circuibunt civitatem.",
                 "Ecce loquentur in ore suo, et gladius in labiis eorum: quoniam quis audivit?",
                 "Et tu, Domine, deridebis eos; ad nihilum deduces omnes gentes.",
-                "Fortitudinem meam ad te custodiam, quia, Deus, susceptor meus es.",
-                "Deus meus, misericordia eius praeveniet me; Deus meus ostendet mihi in inimicis meis."
+                "Fortitudinem meam ad te custodiam, quia, Deus, susceptor meus es; Deus meus, misericordia eius praeveniet me.",
+                "Deus meus ostendet mihi in inimicis meis. Ne occidas eos, nequando obliviscantur populi mei;",
+                "Disperge illos in virtute tua, et depone eos, protector meus, Domine.",
+                "Delictum oris eorum, sermonem labiorum ipsorum; et comprehendantur in superbia sua.",
+                "Et de exsecratione et mendacio annuntiabuntur in consummatione, in ira consummationis, et non erunt.",
+                "Et scient quia Deus dominabitur Iacob, et finium terrae.",
+                "Convertentur ad vesperam, et famem patientur ut canes, et circuibunt civitatem.",
+                "Ipsi dispergentur ad manducandum; si vero non fuerint saturati, et murmurabunt.",
+                "Ego autem cantabo fortitudinem tuam; et exsultabo mane misericordiam tuam.",
+                "Quia factus es susceptor meus, et refugium meum in die tribulationis meae.",
+                "Adiutor meus, tibi psallam, quia, Deus, susceptor meus es, Deus meus, misericordia mea."
             ],
             "englishText": [
                 "Deliver me from my enemies, O my God; and defend me from them that rise up against me.",
@@ -2535,11 +2542,21 @@
                 "They shall return at evening, and shall suffer hunger like dogs: and shall go round about the city.",
                 "Behold they shall speak with their mouth, and a sword is in their lips: for who, say they, hath heard us?",
                 "But thou, O Lord, shalt laugh at them: thou shalt bring all the nations to nothing.",
-                "I will keep my strength to thee: for thou art my protector.",
-                "My God, his mercy shall prevent me: my God shall shew me on my enemies."
+                "I will keep my strength to thee: for thou art my protector; my God, his mercy shall prevent me.",
+                "My God shall shew me on my enemies. Slay them not, lest my people forget;",
+                "Scatter them by thy power; and bring them down, O Lord, my protector.",
+                "For the sin of their mouth and the word of their lips: and let them be taken in their pride.",
+                "And for their cursing and lying they shall be talked of, when they are consumed: when they are consumed by thy wrath, and they shall be no more.",
+                "And they shall know that God will rule Jacob, and all the ends of the earth.",
+                "They shall return at evening and shall suffer hunger like dogs: and shall go round about the city.",
+                "They shall be scattered abroad to eat, and shall murmur if they be not filled.",
+                "But I will sing thy strength: and will extol thy mercy in the morning.",
+                "For thou art become my support, and my refuge, in the day of my trouble.",
+                "Unto thee, O my helper, will I sing, for thou art God my defence: my God my mercy."
             ],
             "verified": true
         },
+
         {
             "number": 59,
             "section": "",
@@ -4416,7 +4433,7 @@
                 "Audivit et laetata est Sion; et exsultaverunt filiae Judae propter iudicia tua, Domine.",
                 "Quoniam tu Dominus altissimus super omnem terram; nimis exaltatus es super omnes deos.",
                 "Qui diligitis Dominum, odite malum; custodit Dominus animas sanctorum suorum, de manu peccatoris liberabit eos.",
-                "Lux orta est justo, et rectis corde laetitia.",
+                "Lux orta est iusto, et rectis corde laetitia.",
                 "Laetamini, justi, in Domino, et confitemini memoriae sanctificationis eius."
             ],
             "englishText": [
@@ -5235,7 +5252,7 @@
             "section": "",
             "title": "The Blessings of the Just",
             "text": [
-                "Confitebor tibi, Domine, in toto corde meo, in concilio justorum, et congregatione.",
+                "Confitebor tibi, Domine, in toto corde meo, in concilio iustorum, et congregatione.",
                 "Magna opera Domini: exquisita in omnes voluntates eius.",
                 "Confessio et magnificentia opus eius; et justitia eius manet in saeculum saeculi.",
                 "Memoriam fecit mirabilium suorum, misericors et miserator Dominus.",
@@ -5486,7 +5503,7 @@
                 "Circumdederunt me sicut apes: et exarserunt sicut ignis in spinis: et in nomine Domini vindicabor in eis.",
                 "Impulsus eversus sum ut caderem: et Dominus suscepit me.",
                 "Fortitudo mea et laus mea Dominus: et factus est mihi in salutem.",
-                "Vox exsultationis et salutis in tabernaculis justorum.",
+                "Vox exsultationis et salutis in tabernaculis iustorum.",
                 "Dextera Domini fecit virtutem: dextera Domini exaltavit me.",
                 "Non moriar, sed vivam: et narrabo opera Domini.",
                 "Castigans castigavit me Dominus: et morti non tradidit me.",
@@ -6194,7 +6211,7 @@
                 "text": [
                     "Qui confidunt in Domino, sicut mons Sion: non commovebitur in aeternum, qui habitat in Jerusalem.",
                     "Montes in circuitu eius, et Dominus in circuitu populi sui, ex hoc nunc et usque in saeculum.",
-                    "Quia non relinquet Dominus virgam peccatorum super sortem justorum, ut non extendant justi ad iniquitatem manus suas.",
+                    "Quia non relinquet Dominus virgam peccatorum super sortem iustorum, ut non extendant justi ad iniquitatem manus suas.",
                     "Benefac, Domine, bonis, et rectis corde.",
                     "Declinantes autem in obligationes, adducet Dominus cum operantibus iniquitatem. Pax super Israel!"
                 ],
@@ -6951,7 +6968,7 @@
                     "Qui fecit caelum et terram, mare, et omnia quae in eis sunt.",
                     "Qui custodit veritatem in saeculum, facit judicium injuriam patientibus: dat escam esurientibus.",
                     "Dominus solvit compeditos: Dominus illuminat caecos.",
-                    "Dominus erigit elisos: Dominus diligit justos.",
+                    "Dominus erigit elisos: Dominus diligit iustos.",
                     "Dominus custodit advenas, pupillum et viduam suscipiet: et vias peccatorum disperdet.",
                     "Regnabit Dominus in saecula, Deus tuus, Sion, in generatione et generationem."
                 ],

@@ -2289,7 +2289,57 @@
     }
   ]
 },
-
+{
+  "psalmNumber": 57,
+  "category": "",
+  "themes": [
+    {
+      "name": "Appearance → Reality",
+      "description": "From speaking justice outwardly to practicing iniquity inwardly.",
+      "lemmas": ["iustitia", "loquor", "iniquitas", "concinno"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalm begins by challenging those who speak of justice while their hearts and hands work iniquity on earth.",
+      "comment2": "Augustine interprets this as addressing those who judge by human standards rather than divine truth, noting how the 'sons of men' often mask inner corruption with outward righteousness (En. Ps. 57.1)."
+    },
+    {
+      "name": "Origin → Error",
+      "description": "From birth alienation to lifelong deception.",
+      "lemmas": ["alieno", "vulva", "erro", "falsus"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Sinners are described as alienated from the womb, erring from birth, and speaking falsehood as their natural state.",
+      "comment2": "Augustine sees here the doctrine of original sin, where humanity is born into error and requires divine grace for redemption (De Peccatorum Meritis 1.9.9)."
+    },
+    {
+      "name": "Deafness → Judgment",
+      "description": "From willful spiritual deafness to divine shattering of power.",
+      "lemmas": ["aspis", "surdus", "contero", "confringo"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The wicked are compared to deaf adders that refuse to hear, leading to God's judgment that shatters their power.",
+      "comment2": "Augustine explains this as the punishment for those who willfully reject God's voice, comparing the serpent's deafness to the obstinacy of hardened sinners (En. Ps. 57.6)."
+    },
+    {
+      "name": "Temporal → Eternal",
+      "description": "From fleeting earthly existence to final divine judgment.",
+      "lemmas": ["aqua", "decurro", "cera", "fluo", "ignis"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "The wicked are shown to be temporary like flowing water or melting wax, ultimately consumed by divine fire.",
+      "comment2": "Augustine contrasts the transient nature of evil with God's eternal judgment, seeing the fire as both purgative and punitive (Civ. Dei 20.10)."
+    },
+    {
+      "name": "Justice → Vindication",
+      "description": "From divine wrath against evil to the righteous rejoicing in God's judgment.",
+      "lemmas": ["ira", "absorbeo", "laetor", "vindicta", "iudico"],
+      "startLine": 9,
+      "endLine": 11,
+      "comment": "God's wrath consumes the wicked before they understand their danger, while the righteous rejoice in seeing divine justice fulfilled.",
+      "comment2": "Augustine interprets the washing of hands in the sinner's blood not as literal violence but as the righteous sharing in Christ's victory over evil through divine justice (En. Ps. 57.11)."
+    }
+  ]
+},
 
 {
   "psalmNumber": 62,
@@ -2337,6 +2387,104 @@
     }
   ]
 },
+
+{
+  "psalmNumber": 58,
+  "category": "",
+  "themes": [
+    {
+      "name": "Cry → Rescue",
+      "description": "A desperate plea for deliverance from violent adversaries.",
+      "lemmas": ["eripio", "insurgo","operor", "sanguis"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalmist urgently calls for God to rescue him from enemies and bloodthirsty men who work iniquity.",
+      "comment2": "Augustine interprets this as the soul's fundamental cry for divine intervention against both physical and spiritual adversaries (En. Ps. 58.1)."
+    },
+    {
+      "name": "Innocence → Vindication",
+      "description": "A declaration of innocence amidst violent assault, seeking divine recognition.",
+      "lemmas": ["capio", "irruo", "iniquitas", "peccatum"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Despite being seized and attacked by strong enemies, the psalmist maintains his innocence and calls God to witness his righteousness.",
+      "comment2": "Augustine sees this as the righteous soul's appeal to God's perfect judgment when human justice fails, emphasizing that only divine vision perceives true innocence (En. Ps. 58.3)."
+    },
+    {
+      "name": "Arise → No Mercy",
+      "description": "A call for God to intervene and withhold mercy from workers of iniquity.",
+      "lemmas": ["exsurgo", "occurro", "visito", "misereor"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The psalmist calls upon the Lord of hosts to arise, confront his situation, and extend judgment to all nations without mercy for evildoers.",
+      "comment2": "Augustine explains this as the soul's recognition that true justice requires God's active intervention, where divine judgment rightly withholds mercy from those who persistently work iniquity (En. Ps. 58.5)."
+    },
+    {
+      "name": "Evening → Capture",
+      "description": "The wicked's prowling at dusk culminates in their seizure by their own devices.",
+      "lemmas": ["vespera", "fames", "canis", "circueo", "gladius", "comprehendo"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "The wicked return at evening, growling like hungry dogs that prowl the city, but will be captured by the very swords they speak.",
+      "comment2": "Augustine explains that the wicked are ultimately trapped by their own sinful words and devices, which become the instruments of their capture (En. Ps. 58.8)."
+    },
+      {
+      "name": "Mockery → Protection",
+      "description": "God's derision reduces enemies to nothing while the faithful find security in divine strength.",
+      "lemmas": ["derideo", "nihilum", "fortitudo", "custodio"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "The Lord laughs at the nations and brings them to nothing, while the psalmist preserves his strength through trust in God's protection.",
+      "comment2": "Augustine explains that God's mockery demonstrates the ultimate futility of evil, while true security is found in entrusting one's strength to divine care (En. Ps. 58.9)."
+    },
+   {
+      "name": "Revelation → Scattering",
+      "description": "Divine disclosure of enemies leads to their dispersion rather than total destruction.",
+      "lemmas": ["ostendo", "occido", "obliviscor", "dispergo"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "God shows the psalmist his enemies, but he asks that they be scattered rather than killed completely, so that people may remember God's justice.",
+      "comment2": "Augustine interprets this as a plea for pedagogical justice—God's power should disperse the wicked so their partial punishment serves as a lasting lesson to His people (En. Ps. 58.11)."
+    },
+    {
+      "name": "False Speech → Annihilation",
+      "description": "Sins of speech and pride culminate in complete consumption by divine wrath.",
+      "lemmas": ["delictum", "os", "superbia", "exsecratio", "mendacium", "consummatio"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "The wicked are consumed by God's wrath because of their sinful speech, curses, lies, and pride.",
+      "comment2": "Augustine explains that evil words and pride contain their own punishment, as they separate the soul from God and lead to spiritual destruction (En. Ps. 58.13)."
+    },
+    {
+      "name": "Ignorance → Dominion",
+      "description": "The wicked's aimless wandering gives way to universal recognition of God's sovereign rule.",
+      "lemmas": ["scio", "dominor", "Iacob", "finis", "convertor", "fames", "canis", "circueo"],
+      "startLine": 15,
+      "endLine": 16,
+      "comment": "All nations will come to know that God rules over Jacob and to the ends of the earth, while the wicked wander aimlessly like hungry dogs.",
+      "comment2": "Augustine emphasizes that God's dominion extends beyond Israel to all nations, and even the wicked's restless wandering ultimately serves to demonstrate His universal sovereignty (En. Ps. 58.15)."
+    },
+    {
+      "name": "Dissatisfaction → Praise",
+      "description": "The wicked's restless hunger contrasts with the psalmist's joyful morning praise.",
+      "lemmas": ["dispergo", "saturatus", "murmuro", "canto", "exsulto", "misericordia"],
+      "startLine": 17,
+      "endLine": 18,
+      "comment": "While the wicked scatter seeking satisfaction and murmur in discontent, the psalmist sings of God's strength and rejoices in His mercy each morning.",
+      "comment2": "Augustine contrasts the perpetual dissatisfaction of those who seek earthly fulfillment with the soul's true satisfaction found in praising God's eternal attributes (En. Ps. 58.17)."
+    },
+    {
+      "name": "Refuge → Thanksgiving",
+      "description": "God's protective care inspires musical thanksgiving from the delivered soul.",
+      "lemmas": ["susceptor", "refugium", "tribulatio", "adiutor", "psallo"],
+      "startLine": 19,
+      "endLine": 20,
+      "comment": "Recognizing God as protector and helper in trouble, the psalmist responds with joyful musical praise and thanksgiving.",
+      "comment2": "Augustine sees this as the natural culmination of God's saving work—the protected soul overflowing with grateful song, recognizing divine mercy as its ultimate refuge (En. Ps. 58.20)."
+    }
+  ]
+},
+
 {
   "psalmNumber": 63,
   "category": "",

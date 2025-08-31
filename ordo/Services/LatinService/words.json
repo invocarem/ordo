@@ -1,5 +1,22 @@
 [
   {
+  "lemma": "concinno",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "concinnare",
+  "present": "concinno",
+  "future": "concinnabo",
+  "perfect": "concinnavi",
+  "supine": "concinnatum",
+  "translations": {
+    "en": "to arrange skillfully, put together, adjust",
+    "la": "concinno, concinnare"
+  },
+  "forms": {
+    "present_3pl": ["concinnant"]
+  }
+},
+  {
     "lemma": "sustineo",
     "part_of_speech": "verb",
     "conjugation": 2,

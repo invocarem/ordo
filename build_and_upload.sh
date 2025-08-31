@@ -28,8 +28,8 @@ xcodebuild -project ordo.xcodeproj \
    CODE_SIGN_STYLE=Manual \
    CODE_SIGN_IDENTITY="Apple Distribution: Chen Chen (RD9Q6XUA82)" \
    CURRENT_PROJECT_VERSION=$BUILD_NUM \
-   PROVISIONING_PROFILE="9da726df-b079-4469-8096-5aa87cc8ae18"
-
+   PROVISIONING_PROFILE="9da726df-b079-4469-8096-5aa87cc8ae18" \
+   INFOPLIST_FILE="ordo/Info.plist"
 
 
 echo "📦 Exporting IPA..."
