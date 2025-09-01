@@ -2660,6 +2660,233 @@
 
 
 {
+  "psalmNumber": 68,
+  "category": "a",
+  "themes": [
+    {
+           "name": "Flood → Foundation",
+           "description": "Overwhelming waters threatening the soul give way to the need for divine stability.",
+           "lemmas": ["salvo", "aqua", "infigo", "substantia"],
+           "startLine": 1,
+           "endLine": 2,
+           "comment": "The psalmist cries for salvation as waters threaten his very soul, stuck in deep mire with no solid standing.",
+           "comment2": "Augustine sees the 'substantia' (firm standing) as representing the stability of truth that is lost when the soul is overwhelmed by tribulations, making divine rescue necessary (En. Ps. 68.2)."
+    },
+    {
+      "name": "Storm → Exhaustion",
+      "description": "Sea depths and stormy waves lead to complete physical and spiritual exhaustion.",
+      "lemmas": ["altitudo", "tempestas", "laboro", "raucus"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The metaphor continues with sea depths and storms, while the psalmist grows hoarse from crying and his eyes fail from waiting on God.",
+      "comment2": "Augustine interprets this as the soul's struggle against overwhelming temptations, where human strength fails and divine assistance becomes necessary (En. Ps. 68.4)."
+    },
+    {
+      "name": "Persecution → Injustice",
+      "description": "Multiplying hostile enemies lead to suffering unjust persecution.",
+      "lemmas": ["multiplico", "odi", "persequor", "iniuste"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Enemies multiply beyond counting, strengthening against the psalmist who must repay what he never stole.",
+      "comment2": "Augustine sees here the experience of Christ and His members, who suffer unjust persecution and bear others' sins (En. Ps. 68.6)."
+    },
+    {
+      "name": "Confession → Shame",
+      "description": "From acknowledgment of personal failing to bearing public shame for God's sake.",
+      "lemmas": ["insipientia", "delictum", "erubesco", "exspecto"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "The psalmist acknowledges his foolishness and sins before God, then endures shame and disgrace for God's sake.",
+      "comment2": "Augustine notes how the righteous bear shame willingly for God's honor, following Christ's example of bearing others' reproaches (En. Ps. 68.9)."
+    },
+   {
+      "name": "Seeking → Reproach",
+      "description": "The quest for God results in enduring shame and reproach for His sake.",
+      "lemmas": ["confundo", "quaero", "opprobrium", "confusio"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "The psalmist continues to pray that God's seekers not be confounded, while describing how he bears reproach and shame for God's cause.",
+      "comment2": "Augustine interprets this as Christ-like endurance, where suffering for righteousness leads to sharing in divine reproach (En. Ps. 68.10)."
+    },
+   {
+     "name": "Alienation → Zeal",
+     "description": "Becoming a stranger to family leads to being consumed by zeal for God's house.",
+     "lemmas": ["extraneus", "frater", "zelus", "opprobrium"],
+     "startLine": 11,
+     "endLine": 12,
+     "comment": "The psalmist becomes a stranger to his own family while being consumed by zeal for God's house and bearing the reproaches meant for God.",
+     "comment2": "Augustine interprets this as Christ's experience of rejection by His own people and His consuming passion for the Father's house (En. Ps. 68.12)."
+   },
+   {
+     "name": "Humiliation → Mockery",
+     "description": "Acts of devotion and mourning become occasions for public scorn and ridicule.",
+     "lemmas": ["ieiunium", "cilicium", "opprobrium", "parabola"],
+     "startLine": 13,
+     "endLine": 14,
+     "comment": "The psalmist's fasting and wearing of sackcloth, meant as acts of humility, instead become objects of mockery and proverbial ridicule.",
+     "comment2": "Augustine sees in this the pattern of Christ's humiliation becoming the occasion for mockery by sinners, where holy actions are scorned by the worldly (En. Ps. 68.14)."
+   },
+   {
+     "name": "Mockery → Prayer",
+     "description": "Public scorn and drunken songs give way to earnest prayer for God's timely intervention.",
+     "lemmas": ["parabola", "psallo", "oratio", "beneplacitum"],
+     "startLine": 15,
+     "endLine": 16,
+     "comment": "Even as others mock him in song while drinking wine, the psalmist turns to prayer, seeking God's favorable time for intervention.",
+     "comment2": "Augustine emphasizes that the righteous should respond to mockery with prayer, trusting in God's perfect timing rather than seeking human vindication (En. Ps. 68.16)."
+   },
+   {
+     "name": "Prayer → Rescue",
+     "description": "Earnest petition based on God's mercy leads to plea for deliverance from overwhelming depths.",
+     "lemmas": ["multitudo", "lutum", "profundum", "tempestas", "puteus"],
+     "startLine": 17,
+     "endLine": 19,
+     "comment": "The psalmist appeals to God's abundant mercy, pleading for rescue from the mud (luto), deep waters, and overwhelming flood that threaten to engulf him.",
+     "comment2": "Augustine sees this final plea as the soul's ultimate cry for salvation from both external persecution and internal spiritual struggles, trusting in God's merciful deliverance (En. Ps. 68.19)."
+   }
+  ]
+},
+
+{
+  "psalmNumber": 68,
+  "category": "b",
+  "themes": [
+    {
+      "name": "Petition → Attention",
+      "description": "A plea for God's merciful gaze replaces being ignored in tribulation.",
+      "lemmas": ["benignus", "misereor", "averto", "tribulor"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalmist begs God not to turn His face away but to quickly hear him in his distress, appealing to God's abundant mercy.",
+      "comment2": "Augustine sees this as the soul's cry for God's gracious attention, recognizing that divine mercy is our only hope in trouble (En. Ps. 68.20)."
+    },
+    {
+      "name": "Distress → Deliverance",
+      "description": "Inner anguish and external enemies necessitate divine rescue.",
+      "lemmas": ["intendo", "libero", "improperium", "reverentia"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The psalmist asks God to attend to his soul and deliver him, acknowledging God's knowledge of his reproach, shame, and reverence.",
+      "comment2": "Augustine interprets this as the soul laying bare its deepest struggles before God who knows all things (En. Ps. 68.22)."
+    },
+    {
+      "name": "Enemies → Abandonment",
+      "description": "Visible oppressors lead to complete isolation without comfort.",
+      "lemmas": ["conspectus", "tribulo", "improperium", "consolator"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "All who trouble the psalmist are before God, yet his heart finds only reproach and misery with no one to share his grief.",
+      "comment2": "Augustine sees this as the experience of Christ in His passion, abandoned by all comforters (En. Ps. 68.24)."
+    },
+       {
+      "name": "Abandonment → Affliction",
+      "description": "The absence of any human comforter gives way to being actively tormented with bitterness.",
+      "lemmas": ["consolor", "fel", "acetum", "sitis"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "Finding no one to comfort him, the psalmist is instead given gall for his food and vinegar for his thirst.",
+      "comment2": "Augustine interprets this as the fulfillment of Christ's suffering on the cross, where the absence of human solace was compounded by the bitter drink offered to Him (En. Ps. 68.25)."
+    },
+    {
+      "name": "Retribution → Justice",
+      "description": "A plea for enemy traps transforms into a prayer for divine justice.",
+      "lemmas": ["mensa", "laqueus", "scandalum", "retributio"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "The psalmist asks that his enemies' table become a snare and retribution for them.",
+      "comment2": "Augustine interprets this as a prayer for divine justice where evil intentions rebound upon the wicked (En. Ps. 68.26)."
+    },
+    {
+      "name": "Blinding → Desolation",
+      "description": "Spiritual blindness leads to complete abandonment and emptiness.",
+      "lemmas": ["obscuro", "incurvo", "habitatio", "desertus"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "A prayer for enemies to be blinded and bowed down, with their dwellings made desolate.",
+      "comment2": "Augustine sees this as the consequence of willful spiritual blindness - complete desolation without God's presence (En. Ps. 68.27)."
+    },
+    {
+      "name": "Wrath → Exclusion",
+      "description": "Divine anger results in being blotted from the book of life.",
+      "lemmas": ["effundo", "furor", "deleo", "liber"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "The psalmist asks for God's wrath to consume enemies and for them to be erased from the book of the living.",
+      "comment2": "Augustine explains this as the ultimate consequence of persisting in persecution against God's anointed (En. Ps. 68.29)."
+    },
+    {
+      "name": "Poverty → Exaltation",
+      "description": "Personal suffering and poverty transform into divine rescue and praise.",
+      "lemmas": ["pauper", "doleo", "salus", "suscipe"],
+      "startLine": 15,
+      "endLine": 16,
+      "comment": "The psalmist identifies as poor and suffering but upheld by God's salvation, leading to praise.",
+      "comment2": "Augustine sees this as the pattern of Christ's humiliation leading to exaltation (En. Ps. 68.31)."
+    },
+    {
+      "name": "Praise → Acceptance",
+      "description": "Joyful worship becomes as pleasing to God as sacrificial offerings.",
+      "lemmas": ["laudo", "canticum", "placeo", "vitulus"],
+      "startLine": 17,
+      "endLine": 18,
+      "comment": "The psalmist vows to praise God with song, which will be more pleasing than sacrificial offerings.",
+      "comment2": "Augustine interprets this as the superior worship of the New Covenant replacing animal sacrifices (En. Ps. 68.33)."
+    },
+    {
+      "name": "Seeking → Life",
+      "description": "The poor finding joy leads others to seek God and find life.",
+      "lemmas": ["quaero", "vivo", "exaudio", "vinctus"],
+      "startLine": 19,
+      "endLine": 20,
+      "comment": "The poor are encouraged to rejoice and seek God, who hears the needy and prisoners.",
+      "comment2": "Augustine sees this as God's preferential care for the humble and oppressed (En. Ps. 68.34)."
+    },
+    {
+      "name": "Restoration → Inheritance",
+      "description": "Universal praise gives way to Zion's salvation and eternal inheritance.",
+      "lemmas": ["laudo", "salvum", "aedifico", "haereditas"],
+      "startLine": 21,
+      "endLine": 23,
+      "comment": "All creation praises God who saves Zion, rebuilds cities, and gives them as an inheritance to His servants.",
+      "comment2": "Augustine sees this as the eschatological fulfillment where God's people inherit the heavenly Jerusalem (En. Ps. 68.36)."
+    }
+  ]
+},
+ 
+{
+  "psalmNumber": 69,
+  "category": "",
+  "themes": [
+    {
+      "name": "Plea → Confusion",
+      "description": "An urgent cry for help coupled with a plea for the shame of enemies.",
+      "lemmas": ["adiutorium", "intendo", "festino", "confundor", "revereor" ],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalm opens with a desperate cry for God's immediate help, immediately followed by a request that those seeking the psalmist's life be put to shame and confusion.",
+      "comment2": "Augustine sees this as representing the dual movement of prayer: both seeking God's help and surrendering judgment of enemies to divine justice (En. Ps. 69.1-2)."
+    },
+    {
+      "name": "Malice → Shame",
+      "description": "Evil wishes against the psalmist result in the enemies' retreat and humiliation.",
+      "lemmas": ["avertor", "erubesco", "malum", "dico"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The psalmist asks that those who wish him evil be turned back and ashamed, particularly those who mock him with insincere praise.",
+      "comment2": "Augustine interprets this as the inevitable consequence for those who plot against the righteous: their own malice leads to their confusion and retreat, as divine justice turns their schemes back upon them (En. Ps. 69.3)."
+    },
+    {
+      "name": "Seeking → Salvation",
+      "description": "The joy of God's seekers culminates in personal deliverance for the humble.",
+      "lemmas": ["quaero", "exsulto", "pauper", "adiutor"],
+      "startLine": 5,
+      "endLine": 7,
+      "comment": "The psalm contrasts the perpetual praise of those who love God's salvation with the psalmist's confession of personal poverty, culminating in a confident declaration of God as helper and liberator.",
+      "comment2": "Augustine explains that true seeking of God begins with the recognition of one's spiritual poverty, which then opens the soul to experience God as its ultimate helper and source of joy (En. Ps. 69.5-7)."
+    }
+  ]
+},
+{
   "psalmNumber": 75,
   "category": "",
   "themes": [

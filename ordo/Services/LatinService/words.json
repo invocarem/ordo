@@ -1,5 +1,188 @@
 [
   {
+  "lemma": "vester",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "vester",
+  "genitive": "vestri",
+  "translations": {
+    "en": "your (plural), belonging to you all",
+    "la": "vester"
+  },
+  "forms_plural": {
+    "accusative_m": ["vestros"],
+    "nominative_m": ["vestri"],
+    "accusative_n": ["vestra"],
+    "accusative_f": ["vestras"]
+  },
+  "forms": {
+    "nominative_f": "vestra",
+    "nominative_n": "vestrum"
+  }
+},
+    {
+      "lemma": "placeo",
+      "part_of_speech": "verb",
+      "conjugation": 2,
+      "infinitive": "placere",
+      "present": "placeo",
+      "future": "placebo",
+      "perfect": "placui",
+      "supine": "placitum",
+      "translations": {
+        "en": "to please, be pleasing to, satisfy",
+        "la": "placeo, placere, placui, placitum"
+      }
+    }, {
+    "lemma": "fel",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "fel",
+    "genitive": "fellis",
+    "translations": {
+      "en": "bile, gall; venom; bitterness, rage",
+      "la": "fel, fellis"
+    }
+  },
+    
+{
+  "lemma": "vinctus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "vinctus",
+  "genitive": "vincti",
+  "translations": {
+    "en": "bound, tied, fastened, in chains",
+    "la": "vinctus"
+  },
+  "forms_plural": {
+    "accusative_m": ["vinctos"],
+    "nominative_m": ["vincti"],
+    "accusative_n": ["vincta"],
+    "accusative_f": ["vinctas"]
+  },
+  "forms": {
+    "nominative_f": ["vincta"],
+    "nominative_n": ["vinctum"]
+  }
+},
+  {
+  "lemma": "benignus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "benignus",
+  "genitive": "benigni",
+  "translations": {
+    "en": "kind, generous, benevolent",
+    "la": "benignus"
+  },
+  "forms_plural": {
+    "accusative_m": ["benignos"],
+    "nominative_m": ["benigni"],
+    "accusative_n": ["benigna"],
+    "accusative_f": ["benignas"]
+  },
+  "forms": {
+    "nominative_f": ["benigna"],
+    "nominative_n": ["benignum"]
+  }
+},
+  {
+  "lemma": "neque",
+  "part_of_speech": "conjunction",
+  "translations": {
+    "en": "and not, nor, neither",
+    "la": "neque"
+  }
+},
+  {
+  "lemma": "demergo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "demergere",
+  "present": "demergo",
+  "future": "demergam",
+  "perfect": "demersi",
+  "supine": "demersum",
+  "translations": {
+    "en": "to sink, plunge, submerge",
+    "la": "demergo, demergere"
+  }
+},
+    {
+    "lemma": "tempestas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "tempestas",
+    "genitive": "tempestatis",
+    "translations": {
+      "en": "storm, weather, season, period of time",
+      "la": "tempestas"
+    }
+  },
+    {
+      "lemma": "raucus",
+      "part_of_speech": "adjective",
+      "declension": 1,
+      "gender": "masculine",
+      "nominative": "raucus",
+      "genitive": "rauci",
+      "translations": {
+        "en": "hoarse, harsh-sounding, grating",
+        "la": "raucus, rauca, raucum"
+      },
+      "forms_plural": {
+    "nominative_f": ["raucae"]
+  }
+    },
+    {
+      "lemma": "limus",
+      "part_of_speech": "noun",
+      "declension": 2,
+      "gender": "masculine",
+      "nominative": "limus",
+      "genitive": "limi",
+      "translations": {
+        "en": "apron, ritual garment (worn by priests)",
+        "la": "limus"
+      }
+    },
+  {
+  "lemma": "festino",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "festinare",
+  "present": "festino",
+  "future": "festinabo",
+  "perfect": "festinavi",
+  "supine": "festinatum",
+  "translations": {
+    "en": "to hurry, hasten, make haste",
+    "la": "festino, festinare"
+  },
+  "forms": {
+    "present_1sg": ["festino"],
+    "imperative_2sg": ["festina"]
+  }
+},
+  {
+  "lemma": "adiutorium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "adiutorium",
+  "genitive": "adiutorii",
+  "translations": {
+    "en": "help, aid, assistance",
+    "la": "adiutorium"
+  }
+},
+  {
   "lemma": "concinno",
   "part_of_speech": "verb",
   "conjugation": 1,
@@ -3014,19 +3197,7 @@
         "la": "potens"
     }
 },
-  {
-  "lemma": "odi",
-  "part_of_speech": "verb",
-  "conjugation": 0,
-  "infinitive": "odisse",
-  "perfect": "odivi",
-  "supine": "osum",
-  "translations": {
-    "en": "to hate",
-    "la": "odi, osus"
-  },
-  "notes": "Defective verb; only perfect-system forms exist (no present stem). 'Odivi' is an alternative perfect form."
-},
+  
   {
     "lemma": "dulcis",
     "part_of_speech": "adjective",
@@ -4779,18 +4950,6 @@
   }
 },
   
-  {
-  "lemma": "benignus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "benignus",
-  "genitive": "benigni",
-  "translations": {
-    "en": "gracious, kind, benevolent",
-    "la": "benignus, -a, -um"
-  }
-},
   {
   "lemma": "oblatio",
   "part_of_speech": "noun",
@@ -8817,6 +8976,22 @@
     "la": "cervus"
   }
 },
+  {
+    "lemma": "puteus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "puteus",
+    "genitive": "putei",
+    "translations": {
+      "en": "well, pit",
+      "la": "puteus"
+    },
+    "forms": {
+      "accusative_sg": ["puteum"],
+      "ablative_sg": ["puteo"]
+    }
+  },
   {
   "lemma": "lutum",
   "part_of_speech": "noun",
@@ -13276,7 +13451,43 @@
             "la": "spero"
           }
         },
+        {
+          "lemma": "insipientia",
+          "part_of_speech": "noun",
+          "declension": 1,
+          "gender": "feminine",
+          "nominative": "insipientia",
+          "genitive": "insipientiae",
+          "translations": {
+            "en": "folly, foolishness, lack of wisdom",
+            "la": "insipientia"
+          }
           
+        },
+        {
+          "lemma": "opprobrium",
+          "part_of_speech": "noun",
+          "declension": 2,
+          "gender": "neuter",
+          "nominative": "opprobrium",
+          "genitive": "opprobrii",
+          "translations": {
+            "en": "reproach, disgrace, shame",
+            "la": "opprobrium"
+          },
+          "forms": {
+            "accusative_sg": ["opprobrium"],
+            "ablative_sg": ["opprobrio"]
+          }
+        },
+        {
+          "lemma": "iniuste",
+          "part_of_speech": "adverb",
+          "translations": {
+            "en": "unjustly, wrongly",
+            "la": "iniuste"
+          }
+        },
         {
           "lemma": "prolongo",
           "part_of_speech": "verb",
@@ -20241,59 +20452,24 @@
               }
             },
             
-          
-            {
-                "lemma": "meus",
-                "part_of_speech": "pronoun",
-                "gender": "masculine", 
-                
-                "nominative": "meus",
-                "genitive": "mei",
-                "dative": "meo",
-                "accusative": "meum",
-                "ablative": "meo",
-                "vocative": "mee",
-             
-                "nominative_plural": "mei",
-                "genitive_plural": "meorum",
-                "dative_plural": "meis",
-                "accusative_plural": "meos",
-                "ablative_plural": "meis",
-                
-             
-                "forms": {
-                    "nominative_f": ["mea"],
-                    "genitive_f": ["meae"],
-                    "dative_f": ["meae"],
-                    "accusative_f": ["meam"],
-                    "ablative_f": ["mea"],
-                    "vocative_f": ["mea"],
-                    
-                    
-                    "nominative_n": ["meum"],
-                    "genitive_n": ["mei"],
-                    "dative_n": ["meo"],
-                    "accusative_n": ["meum"],
-                    "ablative_n": ["meo"],
-                    "vocative_n": ["meum"],
-                    
-                    
-                    "nominative_plural_f": ["meae"],
-                    "genitive_plural_f": ["mearum"],
-                    "accusative_plural_f": ["meas"],
-                    
-                    
-                    "nominative_plural_n": ["mea"],
-                    "accusative_plural_n": ["mea"]
-                   
-                },
-                
-                "translations": {
-                    "en": "my",
-                    "la": "meus"
-                }
-            },
-            
+          {
+  "lemma": "meus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "meus",
+  "genitive": "mei",
+  "translations": {
+    "en": "my, mine",
+    "la": "meus, mea, meum"
+  },
+  "forms": {
+    "nominative_f": ["mea"],
+    "nominative_n": ["meum"],
+    "accusative_m": ["meum"]
+  }
+},
+           
                 {
                   "lemma": "uxor",
                   "part_of_speech": "noun",
