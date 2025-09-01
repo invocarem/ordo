@@ -17,8 +17,8 @@
     "accusative_f": ["vestras"]
   },
   "forms": {
-    "nominative_f": "vestra",
-    "nominative_n": "vestrum"
+    "nominative_f": ["vestra"],
+    "nominative_n": ["vestrum"]
   }
 },
     {
