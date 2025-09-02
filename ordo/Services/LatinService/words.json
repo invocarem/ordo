@@ -1,17 +1,88 @@
 [
- 
-{
-  "lemma": "castra",
+  {
+  "lemma": "calumnior",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "calumniari",
+  "present": "calumnior",
+  "future": "calumniabor",
+  "perfect": "calumniatus sum",
+  "translations": {
+    "en": "to accuse falsely, slander, deceive by trickery",
+    "la": "calumnior, calumniārī, calumniātus sum"
+  },
+  "forms_plural": {
+    "present_participle_dative": ["calumniantibus"],
+    "present_subjunctive": [ "calumnier", "calumnieris", "calumnietur", "calumniemur", "calumniemini", "calumnientur"
+    ]
+  }
+},
+  {
+    "lemma": "configo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "configere",
+    "present": "configo",
+    "future": "configam",
+    "perfect": "confixi",
+    "supine": "confixum",
+    "translations": {
+      "en": "to fasten, pierce, transfix",
+      "la": "cōnfīgō, cōnfīgere, cōnfīxī, cōnfīxum"
+    },
+    "forms": {
+      "imperative_sg": ["confige"]
+    }
+  },
+  {
+  "lemma": "exspectatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "exspectatio",
+  "genitive": "exspectationis",
+  "translations": {
+    "en": "expectation, waiting, anticipation",
+    "la": "exspectātiō, exspectātiōnis"
+  }
+},
+  {
+  "lemma": "odium",
   "part_of_speech": "noun",
   "declension": 2,
   "gender": "neuter",
-  "nominative": "castra",
-  "genitive": "castrorum",
+  "nominative": "odium",
+  "genitive": "odii",
   "translations": {
-    "en": "military camp, encampment",
-    "la": "castra, castrorum"
+    "en": "hatred, loathing, disgust",
+    "la": "odium, odii"
   }
 },
+  {
+    "lemma": "voluntarius",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "voluntarius",
+    "genitive": "voluntarii",
+    "translations": {
+      "en": "voluntary, willing, of free will",
+      "la": "voluntarius, voluntaria, voluntarium"
+    }
+  },
+  
+  {
+    "lemma": "castra",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "castra",
+    "genitive": "castrorum",
+    "translations": {
+      "en": "military camp, encampment",
+      "la": "castra, castrorum"
+    }
+  },
   {
   "lemma": "custodio",
   "part_of_speech": "verb",
@@ -1254,6 +1325,20 @@
       "la": "iubilatio"
     }
   },
+  {
+  "lemma": "adiuvo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "adiuvare",
+  "present": "adiuvo",
+  "future": "adiuvabo",
+  "perfect": "adiuvi",
+  "supine": "adiutatum",
+  "translations": {
+    "en": "to help, assist, support",
+    "la": "adiuvō, adiuvāre, adiūvī, adiūtum"
+  }
+},
   {
   "lemma": "adiutor",
   "part_of_speech": "noun",
@@ -4216,32 +4301,7 @@
       "la": "vulpes, vulpis"
     }
   },
-  {
-    "lemma": "iniquus",
-    "part_of_speech": "adjective",
-    "declension": 1,
-    "gender": "masculine",
-    "nominative": "iniquus",
-    "genitive": "iniqui",
-    "forms": {
-      "nominative_f": ["iniqua"],
-      "genitive_f": ["iniquae"],
-      "nominative_n": ["iniquum"],
-      "genitive_n": ["iniqui"]
-    },
-    "forms_plural": {
-      "nominative_m":[ "iniqui"],
-      "genitive_m": ["iniquorum"],
-      "nominative_f": ["iniquae"],
-      "genitive_f": ["iniquarum"],
-      "nominative_n": ["iniqua"],
-      "genitive_n": ["iniquorum"]
-    },
-    "translations": {
-      "en": "unjust, unfair, wicked",
-      "la": "iniquus, iniqua, iniquum"
-    }
-  },
+
   {
     "lemma": "obstruo",
     "part_of_speech": "verb",
@@ -4257,7 +4317,7 @@
     }
   },
 
-   {
+  {
     "lemma": "exsultatio",
     "part_of_speech": "noun",
     "declension": 3,
@@ -21731,6 +21791,50 @@
   "forms": {
     "nominative_f": ["parvula"],
     "nominative_n": ["parvulum"]
+  }
+},
+
+{
+  "lemma": "iniquus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "iniquus",
+  "genitive": "iniqui",
+  "translations": {
+    "en": "unjust, unfair, wicked",
+    "la": "iniquus, iniqua, iniquum"
+  },
+  "forms": {
+    "nominative_f": ["iniqua"],
+    "genitive_f": ["iniquae"],
+    "dative_f": ["iniquae"],
+    "accusative_f": ["iniquam"],
+    "ablative_f": ["iniqua"],
+    "nominative_n": ["iniquum"],
+    "genitive_n": ["iniqui"],
+    "dative_n": ["iniquo"],
+    "accusative_n": ["iniquum"],
+    "ablative_n": ["iniquo"],
+    "dative_m": ["iniquo"],
+    "ablative_m": ["iniquo"]
+  },
+  "forms_plural": {
+    "nominative_m": ["iniqui"],
+    "genitive_m": ["iniquorum"],
+    "dative_m": ["iniquis"],
+    "accusative_m": ["iniquos"],
+    "ablative_m": ["iniquis"],
+    "nominative_f": ["iniquae"],
+    "genitive_f": ["iniquarum"],
+    "dative_f": ["iniquis"],
+    "accusative_f": ["iniquas"],
+    "ablative_f": ["iniquis"],
+    "nominative_n": ["iniqua"],
+    "genitive_n": ["iniquorum"],
+    "dative_n": ["iniquis"],
+    "accusative_n": ["iniqua"],
+    "ablative_n": ["iniquis"]
   }
 },
   {

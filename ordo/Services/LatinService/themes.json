@@ -4536,7 +4536,7 @@
     {
       "name": "Protection → Steadfastness",
       "description": "Divine custody ensuring covenant fidelity",
-      "lemmas": ["manus", "oblitus", "laqueus", "erro"],
+      "lemmas": ["manus", "obliviscor", "laqueus", "erro"],
       "startLine": 5,
       "endLine": 6,
       "comment": "Soul in God's hands (manibus) prevents straying from commands when siners set a trap.",
@@ -4569,7 +4569,7 @@
     {
       "name": "Rejection → Devotion",
       "description": "A command for the wicked to depart leads to deep devotion to God's commandments.",
-      "lemmas": ["declino", "suscito", "vivam", "exspectatio"],
+      "lemmas": ["declino", "suscito", "vivo", "exspectatio"],
       "startLine": 3,
       "endLine": 4,
       "comment": "The psalmist commands the evil to depart from him so he may keep the commands of his God, pleading to be upheld and given life according to God's promise.",
@@ -4578,7 +4578,7 @@
     {
       "name": "Plea → Preservation",
       "description": "A plea for help and salvation leads to a commitment to continual meditation on God's statutes.",
-      "lemmas": ["adiuva", "salvus", "meditor", "semper"],
+      "lemmas": ["adiuvo", "salvus", "meditor", "semper"],
       "startLine": 5,
       "endLine": 6,
       "comment": "The psalmist asks to be sustained and saved according to God's word, promising to constantly meditate on His decrees and not be put to shame in his hope.",
@@ -4587,7 +4587,7 @@
     {
       "name": "Rejection → Reverence",
       "description": "The recognition that God rejects the faithless leads to a holy fear and love for His testimonies.",
-      "lemmas": ["sperno", "praevaricator", "diligo", "timor"],
+      "lemmas": ["praevaricator", "diligo", "configo","timor"],
       "startLine": 7,
       "endLine": 8,
       "comment": "Seeing that God rejects all who stray from His statutes, the psalmist counts them as dross and loves God's testimonies, asking for holy fear to pierce his flesh.",
@@ -4603,7 +4603,7 @@
      {
       "name": "Deeds → Defense",
       "description": "Righteous action leads to a plea for defense against arrogant accusers.",
-      "lemmas": ["feci", "trado", "calumnia", "superbus"],
+      "lemmas": ["fecio", "trado", "calumnior", "superbus"],
       "startLine": 1,
       "endLine": 2,
       "comment": "The psalmist declares he has done what is right and pleads not to be surrendered to his false accusers, asking to be upheld against the calumny of the proud.",
