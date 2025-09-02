@@ -241,50 +241,46 @@
             "verified": true
         },
             
-        {
+       {
             "number": 8,
             "section": "",
-            "title": "The Majesty of God and Dignity of Man",
             "text": [
                 "Domine, Dominus noster, quam admirabile est nomen tuum in universa terra!",
                 "Quoniam elevata est magnificentia tua super caelos.",
-                "Ex ore infantium et lactentium perfecisti laudem propter inimicos tuos: ut destruas inimicum et ultorem.",
-                "Quoniam videbo caelos tuos, opera digitorum tuorum: lunam et stellas quae tu fundasti.",
-                "Quid est homo quod memor es eius? aut filius hominis, quoniam visitas eum?",
-                "Minuisti eum paulo minus ab angelis: gloria et honore coronasti eum.",
-                "Et constituisti eum super opera manuum tuarum: omnia subiecisti sub pedibus eius.",
-                "Oves et boves universas: insuper et pecora campi.",
-                "Volucres caeli, et pisces maris: qui perambulant semitas maris.",
-                "Domine, Dominus noster: quam admirabile est nomen tuum in universa terra!"
+                "Ex ore infantium et lactentium perfecisti laudem propter inimicos tuos, ut destruas inimicum et ultorem.",
+                "Quoniam videbo caelos tuos, opera digitorum tuorum: lunam et stellas, quae tu fundasti.",
+                "Quid est homo, quod memor es eius? aut filius hominis, quoniam visitas eum?",
+                "Minuisti eum paulo minus ab angelis, gloria et honore coronasti eum:",
+                "Omnia subiecisti sub pedibus eius, oves et boves universas: insuper et pecora campi.",
+                "Volucres caeli, et pisces maris, qui perambulant semitas maris.",
+                "Domine, Dominus noster, quam admirabile est nomen tuum in universa terra!"
             ],
             "englishText": [
                 "O Lord, our Lord, how admirable is thy name in the whole earth!",
                 "For thy magnificence is elevated above the heavens.",
-                "Out of the mouth of infants and of sucklings thou hast perfected praise, because of thy enemies: that thou mayst destroy the enemy and the avenger.",
+                "Out of the mouth of infants and of sucklings thou hast perfected praise, because of thy enemies, that thou mayst destroy the enemy and the avenger.",
                 "For I will behold thy heavens, the works of thy fingers: the moon and the stars which thou hast founded.",
                 "What is man, that thou art mindful of him? or the son of man, that thou visitest him?",
-                "Thou hast made him a little less than the angels: thou hast crowned him with glory and honour.",
-                "And hast set him over the works of thy hands: thou hast put all things in subjection under his feet.",
-                "All sheep and oxen: moreover the beasts also of the fields.",
-                "The birds of the air, and the fishes of the sea: that pass through the paths of the sea.",
-                "O Lord, our Lord: how admirable is thy name in all the earth!"
+                "Thou hast made him a little less than the angels, thou hast crowned him with glory and honour;",
+                "Thou hast put all things in subjection under his feet, all sheep and oxen: moreover, the beasts also of the fields.",
+                "The birds of the air, and the fishes of the sea, that pass through the paths of the sea.",
+                "O Lord, our Lord, how admirable is thy name in all the earth!"
             ],
             "verified": true
         },
-              
+
         {
             "number": 9,
             "section": "A",
-            "title": "Thanksgiving for God's Justice",
             "text": [
                 "Confitebor tibi, Domine, in toto corde meo; narrabo omnia mirabilia tua.",
                 "Laetabor et exsultabo in te; psallam nomini tuo, Altissime.",
                 "In convertendo inimicum meum retrorsum, infirmabuntur, et peribunt a facie tua.",
                 "Quoniam fecisti iudicium meum et causam meam; sedisti super thronum, qui iudicas iustitiam.",
                 "Increpasti gentes, et periit impius; nomen eorum delesti in aeternum, et in saeculum saeculi.",
-                "Inimici defecerunt frameae in finem: et civitates destruxisti; periit memoria eorum cum sonitu.",
-                "Et Dominus in aeternum permanet; paravit in iudicio thronum suum.",
-                "Et ipse iudicabit orbem terrae in aequitate; iudicabit populos in iustitia.",
+                "Inimici defecerunt frameae in finem: et civitates destruxisti.",
+                "Periit memoria eorum cum sonitu; et Dominus in aeternum permanet.",
+                "Paravit in iudicio thronum suum; et ipse iudicabit orbem terrae in aequitate, iudicabit populos in iustitia.",
                 "Et factus est Dominus refugium pauperi; adiutor in opportunitatibus, in tribulatione.",
                 "Et sperent in te qui noverunt nomen tuum; quoniam non dereliquisti quaerentes te, Domine.",
                 "Psallite Domino, qui habitat in Sion; annuntiate inter gentes studia eius:",
@@ -297,27 +293,28 @@
                 "Quoniam non in finem oblivio erit pauperis; patientia pauperum non peribit in finem."
             ],
             "englishText": [
-                "I will praise you, O Lord, with my whole heart; I will declare all your wonders.",
-                "I will be glad and rejoice in you; I will sing to your name, O Most High.",
-                "When my enemies are turned back, they shall grow weak and perish before your face.",
-                "For you have upheld my judgment and my cause; you sit on the throne judging with justice.",
-                "You have rebuked the nations, and the wicked have perished; you have blotted out their name forever and ever.",
-                "The enemy's swords have failed utterly, and you have destroyed their cities; their memory has perished with a crash.",
-                "But the Lord endures forever; he has established his throne for judgment.",
-                "And he shall judge the world in righteousness; he shall judge the peoples in uprightness.",
-                "The Lord also will be a refuge for the oppressed, a refuge in times of trouble.",
-                "And those who know your name will put their trust in you; for you, Lord, have not forsaken those who seek you.",
-                "Sing praises to the Lord who dwells in Zion; declare among the peoples his deeds.",
-                "For he who avenges blood remembers them; he does not forget the cry of the afflicted.",
-                "Have mercy on me, O Lord; consider my trouble from those who hate me,",
-                "You who lift me up from the gates of death, that I may declare all your praises in the gates of the daughter of Zion.",
-                "I will rejoice in your salvation; the nations have sunk down in the pit that they made; in the net which they hid, their own foot is caught.",
-                "The Lord is known by the judgment he executes; the wicked is snared in the work of his own hands.",
-                "The wicked shall be turned into hell, all the nations that forget God.",
-                "For the needy shall not always be forgotten; the expectation of the poor shall not perish forever."
+                "I will praise thee, O Lord, with my whole heart; I will shew forth all thy marvellous works.",
+                "I will be glad and rejoice in thee: I will sing praise to thy name, O thou most High.",
+                "When mine enemies are turned back, they shall fall and perish at thy presence.",
+                "For thou hast maintained my right and my cause; thou satest in the throne judging right.",
+                "Thou hast rebuked the heathen, thou hast destroyed the wicked, thou hast put out their name for ever and ever.",
+                "O thou enemy, destructions are come to a perpetual end: and thou hast destroyed cities;",
+                "Their memory hath perished with a noise: But the Lord remaineth for ever.",
+                "He hath prepared his throne in judgment: And he shall judge the world in equity, he shall judge the people in justice.",
+                "And the Lord is become a refuge for the poor: a helper in due time in tribulation.",
+                "And they that know thy name will put their trust in thee: for thou, Lord, hast not forsaken them that seek thee.",
+                "Sing praises to the Lord, which dwelleth in Zion: declare among the people his doings.",
+                "When he maketh inquisition for blood, he remembereth them: he forgetteth not the cry of the humble.",
+                "Have mercy upon me, O Lord; consider my trouble which I suffer of them that hate me,",
+                "Thou that liftest me up from the gates of death: that I may shew forth all thy praise in the gates of the daughter of Zion.",
+                "I will rejoice in thy salvation: the heathen are sunk down in the pit that they made: in the net which they hid is their own foot taken.",
+                "The Lord is known by the judgment which he executeth: the wicked is snared in the work of his own hands.",
+                "The wicked shall be turned into hell, and all the nations that forget God.",
+                "For the needy shall not alway be forgotten: the expectation of the poor shall not perish for ever."
             ],
             "verified": true
-        },
+        },          
+
 
         {
             "number": 9,
@@ -1999,10 +1996,10 @@
             ],
             "verified": true
         },
+
         {
             "number": 45,
             "section": "",
-            "title": "God Our Refuge and Strength",
             "text": [
                 "Deus noster refugium et virtus; adiutor in tribulationibus, quae invenerunt nos nimis.",
                 "Propterea non timebimus dum turbabitur terra, et transferentur montes in cor maris.",
@@ -2010,28 +2007,29 @@
                 "Fluminis impetus laetificat civitatem Dei; sanctificavit tabernaculum suum Altissimus.",
                 "Deus in medio eius, non commovebitur; adjuvabit eam Deus mane diluculo.",
                 "Conturbatae sunt gentes, et inclinata sunt regna; dedit vocem suam, mota est terra.",
-                "Dominus virtutum nobiscum; susceptor noster Deus Jacob.",
+                "Dominus virtutum nobiscum; susceptor noster Deus Iacob.",
                 "Venite, et videte opera Domini, quae posuit prodigia super terram.",
                 "Auferens bella usque ad finem terrae, arcum conteret, et confringet arma, et scuta comburet igni.",
                 "Vacate, et videte quoniam ego sum Deus; exaltabor in gentibus, exaltabor in terra.",
-                "Dominus virtutum nobiscum; susceptor noster Deus Jacob."
+                "Dominus virtutum nobiscum; susceptor noster Deus Iacob."
             ],
             "englishText": [
-                "Our God is our refuge and strength; a helper in troubles, which have found us exceedingly.",
-                "Therefore we will not fear, when the earth shall be troubled; and the mountains shall be removed into the heart of the sea.",
-                "Their waters roared and were troubled; the mountains were troubled with his strength.",
-                "The stream of the river maketh the city of God joyful; the most High hath sanctified his own tabernacle.",
-                "God is in the midst thereof, it shall not be moved; God will help it in the morning early.",
-                "Nations were troubled, and kingdoms were bowed down; he uttered his voice, the earth trembled.",
-                "The Lord of armies is with us; the God of Jacob is our protector.",
-                "Come and behold ye the works of the Lord, what wonders he hath done upon earth.",
-                "Making wars to cease even to the end of the earth, he shall destroy the bow, and break the weapons, and the shield he shall burn with fire.",
-                "Be still and see that I am God; I will be exalted among the nations, and I will be exalted in the earth.",
-                "The Lord of armies is with us; the God of Jacob is our protector."
+                "God is our refuge and strength; a very present help in trouble.",
+                "Therefore we will not fear, though the earth should change, and though the mountains be moved into the heart of the sea.",
+                "Its waters roar and are troubled; the mountains shake with its swelling.",
+                "There is a river whose streams make glad the city of God, the holy habitation of the Most High.",
+                "God is in the midst of her; she shall not be moved: God will help her at the break of dawn.",
+                "The nations raged, the kingdoms were moved; he uttered his voice, the earth melted.",
+                "The Lord of hosts is with us; the God of Jacob is our refuge.",
+                "Come, behold the works of the Lord, what desolations he has made in the earth.",
+                "He makes wars to cease to the end of the earth; he breaks the bow, and cuts the spear in two; he burns the chariots with fire.",
+                "Be still, and know that I am God: I will be exalted among the nations, I will be exalted in the earth.",
+                "The Lord of hosts is with us; the God of Jacob is our refuge."
             ],
             "verified": true
         },
-        {
+
+       {
             "number": 46,
             "section": "",
             "title": "The Lord Reigns Over the Nations",

@@ -411,53 +411,43 @@
   "category": "",
   "themes": [
     {
-      "name": "Divine Name → Universal Glory",
-      "description": "From praising God’s name to His majesty exalted above the heavens",
+      "name": "Name → Majesty",
+      "description": "God's admirable name on earth leads to His majesty exalted above heavens",
       "lemmas": ["nomen", "admirabile", "magnificentia", "caelum"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "The psalmist praises God’s admirable name (‘nomen,’ ‘admirabile’) across the earth, exalting His majesty (‘magnificentia’) above the heavens (‘caelum’).",
-      "comment2": "Augustine sees ‘nomen’ and ‘admirabile’ as God’s glory revealed universally, with ‘magnificentia’ above ‘caelum’ prefiguring Christ’s ascension (Enarr. Ps. 8.1–2)."
+      "comment": "The psalm opens with praise for God's wonderful name throughout the earth, acknowledging His majesty elevated above the heavens.",
+      "comment2": "Augustine sees this as revealing God's glory both in creation and beyond, with the heavens pointing to Christ's ascension (Enarr. Ps. 8.1-2)."
     },
     {
-      "name": "Weak Praise → Defeat of Enemies",
-      "description": "From the praise of the weak to the destruction of God’s enemies",
+      "name": "Weakness → Strength",
+      "description": "Praise from infants leads to the defeat of God's enemies",
       "lemmas": ["infans", "laudem", "inimicus", "destruo"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "God perfects praise (‘laudem’) from infants (‘infans’), confounding the enemy (‘inimicus’) and avenger through their weakness, as He reveals His works (‘opera’) in the heavens.",
-      "comment2": "Augustine interprets ‘infans’ and ‘laudem’ as the humble, including Christ and His Church, silencing the ‘inimicus’ through divine power (Enarr. Ps. 8.3–4)."
+      "comment": "God perfects praise from the mouths of infants and nursing babies, using this weakness to destroy the enemy and avenger.",
+      "comment2": "Augustine interprets this as Christ's humility silencing the devil through the praise of the humble Church (Enarr. Ps. 8.3-4)."
     },
     {
-      "name": "Human Lowliness → Divine Honor",
-      "description": "From human insignificance to being crowned with glory",
+      "name": "Humanity → Glory",
+      "description": "God's remembrance of humble humanity leads to their crowning with glory",
       "lemmas": ["homo", "memoro", "gloria", "corono"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "The psalmist marvels that God remembers (‘memoro’) man (‘homo’), crowning him (‘corono’) with glory (‘gloria’) and honor, despite his lowliness.",
-      "comment2": "Augustine sees ‘homo’ as Christ, the Son of Man, whom God ‘memoro’ and ‘corono’ with ‘gloria,’ exalting humanity through Him (Enarr. Ps. 8.5–6)."
+      "comment": "The psalmist marvels that God remembers mere humans, making them little less than angels and crowning them with glory and honor.",
+      "comment2": "Augustine sees this fulfilled in Christ, the Son of Man, through whom humanity is exalted and glorified (Enarr. Ps. 8.5-6)."
     },
     {
-      "name": "Divine Creation → Human Dominion",
-      "description": "From God’s works to man’s authority over creation",
-      "lemmas": ["constituo", "opus", "subicio", "pes"],
+      "name": "Dominion → Praise",
+      "description": "Human authority over creation circles back to praise of God's name",
+      "lemmas": ["subicio", "pes", "volucris", "piscis", "nomen"],
       "startLine": 7,
-      "endLine": 8,
-      "comment": "God establishes (‘constituo’) man over His works (‘opus’), subjecting (‘subicio’) all creation, from sheep to cattle, under his feet (‘pes’).",
-      "comment2": "Augustine views ‘constituo’ and ‘subicio’ as Christ’s dominion over creation, with ‘opus’ and ‘pes’ symbolizing His authority extended to the Church (Enarr. Ps. 8.7–8)."
-    },
-    {
-      "name": "Creation’s Paths → Universal Praise",
-      "description": "From the creatures of air and sea to renewed praise of God’s name",
-      "lemmas": ["volucris", "piscis", "nomen", "admirabile"],
-      "startLine": 9,
-      "endLine": 10,
-      "comment": "The birds (‘volucris’) and fish (‘piscis’) traversing creation’s paths lead to renewed praise of God’s admirable name (‘nomen,’ ‘admirabile’) across the earth.",
-      "comment2": "Augustine sees ‘volucris’ and ‘piscis’ as symbols of the Church’s mission, proclaiming God’s ‘nomen’ and ‘admirabile’ glory universally (Enarr. Ps. 8.9–10)."
+      "endLine": 9,
+      "comment": "God subjects all creation under human feet—animals, birds, and fish—which leads back to praising God's wonderful name throughout the earth.",
+      "comment2": "Augustine views this dominion as fulfilled in Christ's authority over creation, with all things ultimately returning to praise God (Enarr. Ps. 8.7-9)."
     }
   ]
 },
-
 
 {
   "psalmNumber": 9,
@@ -1795,6 +1785,59 @@
       "comment": "Augustine sees 'tota die' as the seal of deliverance: the tongue, once silenced by enemies, now rejoices without interruption. Meditation becomes praise; suffering gives way to full-day worship (Enarr. Ps. 34.29)."
     }
 
+  ]
+},
+
+
+{
+  "psalmNumber": 45,
+  "category": "",
+  "themes": [
+    {
+      "name": "Refuge → Confidence",
+      "description": "God's protection as our fortress leads to fearless confidence amid chaos.",
+      "lemmas": ["refugium", "virtus", "timeo", "turbabitur"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalm declares God as our refuge and strength, leading to fearlessness even when the earth changes and mountains shake.",
+      "comment2": "Augustine interprets this as the soul's stability in God amidst worldly turmoil, where earthly instabilities cannot shake those grounded in divine protection (En. Ps. 45.2)."
+    },
+    {
+      "name": "Chaos → Joy",
+      "description": "Roaring and troubled waters give way to the joyful stream that gladdens God's city.",
+      "lemmas": ["sonuerunt", "conturbati", "fluminis", "laetificat"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Though the waters roar and mountains tremble, a river brings joy to God's city, where the Most High sanctifies His dwelling.",
+      "comment2": "Augustine sees the chaotic waters as tribulations and the river as the grace of God that brings joy and refreshment to the Church, His holy city (En. Ps. 45.4)."
+    },
+    {
+      "name": "Presence → Stability",
+      "description": "God's presence in the midst of His city ensures it will not be moved, even as nations are in uproar.",
+      "lemmas": ["commovebitur", "adjuvabit", "conturbatae", "inclinata"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "God is in the midst of His city, guaranteeing its stability and early help, while nations are in chaos and kingdoms fall.",
+      "comment2": "For Augustine, the unshaken city is the Heavenly Jerusalem, the Church, which remains firm because God dwells within it, unlike earthly kingdoms that rise and fall (Civ. Dei 1. Pref.)."
+    },
+    {
+      "name": "Proclamation → Invitation",
+      "description": "The proclamation of God's presence with us becomes an invitation to behold His works.",
+      "lemmas": ["virtutum", "susceptor", "venite", "prodigia"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "The declaration that the Lord of hosts is with us shifts to an invitation to come and see the astounding works He has done on earth.",
+      "comment2": "Augustine explains that knowing God is with us leads to witnessing His marvels, an invitation to all to see divine action in creation and history (En. Ps. 45.8)."
+    },
+    {
+      "name": "War → Peace",
+      "description": "God's cessation of war to the ends of the earth leads to universal acknowledgment of His exaltation.",
+      "lemmas": ["bella", "conteret", "vacate", "exaltabor"],
+      "startLine": 9,
+      "endLine": 11,
+      "comment": "God makes wars cease, breaks weapons, and burns shields, commanding all to be still and know He is God, who will be exalted among the nations.",
+      "comment2": "Augustine sees this as the eschatological peace of Christ, who breaks the bows of spiritual enemies and establishes a peace that allows the soul to rest in the knowledge of God (En. Ps. 45.10)."
+    }
   ]
 },
 
