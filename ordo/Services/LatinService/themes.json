@@ -2938,248 +2938,442 @@
   ]
 },
 
+{
+  "psalmNumber": 77,
+  "category": "a",
+  "themes": [
+    {
+      "name": "Call → Proverbs",
+      "description": "A call to pay attention precedes teaching through stories.",
+      "lemmas": ["attendite", "inclino", "aperio", "parabola"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalm begins with a command for God's people to attentively listen, promising to speak wisdom through parables from of old.",
+      "comment2": "Augustine sees this as a figure for Christ, who speaks through prophecy and parable to instruct our hearts (Sermon 130.2)."
+    },
+    {
+      "name": "Fathers → Children",
+      "description": "Knowledge from fathers is passed down to their children.",
+      "lemmas": ["audio", "cognosco", "narro", "occulto"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The psalmist establishes that the truths heard from the fathers were not hidden but revealed to their children.",
+      "comment2": "Augustine emphasizes God's desire for revelation and the continuity of faith across generations (Catech. 3.5)."
+    },
+    {
+      "name": "Story → Law",
+      "description": "Telling the story of God's wonders leads to establishing his law.",
+      "lemmas": ["laus", "mirabilia", "suscito", "testimonium"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The fathers narrated God's praises and wonders, which culminated in Him raising up a testimony and law in Jacob.",
+      "comment2": "For Augustine, God's wondrous acts themselves form a living testimony that precedes and gives context to His law (En. Ps. 77.6)."
+    },
+    {
+      "name": "Instruction → Future",
+      "description": "Teaching children ensures God's knowledge continues in the future.",
+      "lemmas": ["mando", "nota", "cognosco", "exsurgo"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "God commanded the fathers to make His works known to their children, so that the next generation would know and in turn tell their own children.",
+      "comment2": "Augustine interprets this as the divine pedagogy for sustaining faith through family and community instruction (En. Ps. 77.8)."
+    },
+    {
+      "name": "Hope → Obedience",
+      "description": "The goal is hope in God, not rebellion like the past.",
+      "lemmas": ["spes", "obliviscor", "exquiro", "praevus"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "The purpose of this teaching is that children would set their hope in God and not forget His works, unlike their rebellious fathers.",
+      "comment2": "Augustine sees this as the core purpose of remembering: to create hope and avoid the stubbornness of previous generations (En. Ps. 77.10)."
+    },
 
+ {
+    "name": "Wayward Heart → Militarized Turning",
+    "description": "A generation that did not direct its heart proved unfaithful; Ephraim’s armed men turned in the day of battle.",
+    "lemmas": ["dirigo", "Ephraim", "arcus", "bellum"],
+    "startLine": 11,
+    "endLine": 12,
+    "comment": "The generation did not set its heart aright and lacked faith; Ephraim’s archers turned about on the day of battle.",
+    "comment2": "Augustine sees a telling contrast: outward skill and martial readiness cannot substitute for a rightly ordered heart toward God."
+  },
+  {
+    "name": "Covenant Neglect → Forgetting Gifts",
+    "description": "They failed to keep God’s covenant and forgot his benefits and miracles.",
+    "lemmas": ["custodio", "testamentum", "obliviscor", "beneficium", "mirabile"],
+    "startLine": 13,
+    "endLine": 14,
+    "comment": "They did not keep the covenant nor walk in God’s law, and they forgot his benefactions and wonders.",
+    "comment2": "Augustine laments how easily men forget God’s saving deeds — covenantal neglect leads to spiritual amnesia and moral failure."
+  },
+ 
+{
+    "name": "Wonders in Egypt → Sea Deliverance",
+    "description": "God worked miracles before their fathers in Egypt and brought deliverance by dividing the sea.",
+    "lemmas": ["mirabile", "Aegyptus", "interrumpo", "mare", "perduco", "uter"],
+    "startLine": 15,
+    "endLine": 16,
+    "comment": "In the sight of their fathers God did wonders in Egypt, broke the sea, and established the waters as a heap.",
+    "comment2": "Augustine highlights the redemptive acts in Egypt as foundational memory for Israel — signs meant to shape faith and obedience."
+  },
+  {
+    "name": "Guidance → Refreshing",
+    "description": "Led by cloud and fire, God also struck rock to give them abundant water — guidance that nourishes.",
+    "lemmas": ["deduco", "nubes", "ignis", "adaquare", "petra"],
+    "startLine": 17,
+    "endLine": 18,
+    "comment": "He led them by a cloud by day and by a pillar of fire by night; he struck the rock and supplied copious water.",
+    "comment2": "Augustine reads the cloud and fire as God’s protecting presence, and the water from the rock as his merciful nourishment intended to inspire trust."
+  },
+  {
+    "name": "Water from Rock → Continued Provocation",
+    "description": "God drew water from the rock for them, yet they persisted in sin and provoked the Most High.",
+    "lemmas": ["educo", "aqua", "peccare", "provoco"],
+    "startLine": 19,
+    "endLine": 20,
+    "comment": "God yielded water from the rock, but despite such provision they continued to sin and stirred God’s anger.",
+    "comment2": "Augustine observes that miraculous relief without interior amendment only amplifies guilt: God’s gifts are meant to lead to repentance."
+  },
+  {
+    "name": "Testing → Complaint",
+    "description": "They tested God in their hearts and then spoke ill of Him, demanding signs of provision.",
+    "lemmas": ["tentare", "cor", "petere", "maledicere"],
+    "startLine": 21,
+    "endLine": 22,
+    "comment": "They tempted God, requesting food for their souls, and spoke negatively of Him — a willful testing and complaint.",
+    "comment2": "Augustine condemns testing God as the vice of the ungrateful: to demand proofs from the One who already acts is a sign of spiritual hardness."
+  },
+
+
+  {
+    "name": "Sign → Questioning",
+    "description": "Even after the rock was smitten and waters flowed, they still asked whether God could give bread.",
+    "lemmas": ["percutere", "petra", "fluere", "interrogare"],
+    "startLine": 23,
+    "endLine": 24,
+    "comment": "Though water gushed from the struck rock, the people incredulously asked if God could supply bread in the desert.",
+    "comment2": "Augustine remarks on the strange instability of faith: past miracles should settle doubt, yet human suspicion persists."
+  },
+
+  {
+    "name": "Unbelief → Divine Wrath",
+    "description": "Because they would not believe nor hope in God’s salvation, the Lord’s anger flared up.",
+    "lemmas": ["audire", "ira", "noncredere", "sperare"],
+    "startLine": 25,
+    "endLine": 26,
+    "comment": "The Lord heard and his ire ascended, for the people failed to believe in God and to hope in his saving power.",
+    "comment2": "Augustine stresses that unbelief provokes God’s righteous anger: hearing God’s acts without faith exposes obstinacy of heart."
+  },
+ {
+    "name": "Heaven’s Gate → Sustenance",
+    "description": "God opened the gates of heaven and commanded the clouds to send manna for their eating.",
+    "lemmas": ["mandare", "nubes", "aperire", "manna"],
+    "startLine": 27,
+    "endLine": 28,
+    "comment": "The Lord ordered the clouds and opened heaven, raining down manna so the people could eat.",
+    "comment2": "Augustine highlights God’s free ordering of creation to feed his people — a providential action meant to teach trust."
+  },
+  {
+    "name": "Heavenly Bread → Abundance",
+    "description": "God gave the bread of angels and sent abundance from the heavens.",
+    "lemmas": ["panis", "angelus", "manducare", "abundantia"],
+    "startLine": 29,
+    "endLine": 30,
+    "comment": "The text calls the food 'bread of angels' and emphasizes abundant provision from on high.",
+    "comment2": "Augustine sees manna as a sign of divine providence and a type of heavenly nourishment that should awaken faith and gratitude."
+  },
+  {
+    "name": "Provision → Sudden Calamity",
+    "description": "What fell as provision for the camp became the scene of sudden downfall among the people.",
+    "lemmas": ["pluo", "pulvis", "cado", "castra"],
+
+    "startLine": 31,
+    "endLine": 32,
+    "comment": "Food fell like dust and winged creatures; yet people also fell in the midst of their camps — provision and disaster are juxtaposed.",
+    "comment2": "Augustine notes how God’s gifts can be accompanied by judgment when hearts misuse provision and refuse thanksgiving."
+  },
+ {
+    "name": "Satiation → Complacency",
+    "description": "They are filled with food, and that fullness fosters complacency before God’s response.",
+    "lemmas": ["manducare", "saturare", "desiderium", "os"],
+    "startLine": 33,
+    "endLine": 34,
+    "comment": "They ate and were overfull, even while food remained in their mouths — a picture of complacency that presages judgment.",
+    "comment2": "Augustine warns that bodily plenty often deadens gratitude and spiritual vigilance, making people easy prey for presumption rather than repentance."
+  },
+
+ {
+  "name": "Judgment → Unbelief",
+  "description": "Even after God’s wrath struck, they persisted in sin and disbelief.",
+  "lemmas": ["ira", "occido", "pecco", "non credo"],
+  "startLine": 35,
+  "endLine": 36,
+  "comment": "God’s anger rose against them, striking down the strong, yet they still sinned and refused to believe in His wonders.",
+  "comment2": "Augustine points out that chastisement without change exposes a hardened heart: though punished, they remained unbelieving and blind to God’s miraculous works (En. Ps. 77.36)."
+},
+
+    {
+      "name": "Chastening → Repentance",
+      "description": "God's discipline leads the people to remember and return to Him.",
+      "lemmas": ["deficio", "vanitas", "quaero", "recordor", "adiutor", "redemptor"],
+      "startLine": 37,
+      "endLine": 39,
+      "comment": "Their days ended in vanity, but when afflicted, they sought God, remembered Him as their helper, and acknowledged the Most High as their redeemer.",
+      "comment2": "Augustine interprets this as God using the futility of life without Him to turn hearts toward true remembrance and dependence on divine redemption."
+    }
+  ]
+},
 
 {
   "psalmNumber": 87,
   "category": "",
   "themes": [
     {
-      "name": "Day/Night Cry → Unanswered Prayer",
-      "description": "Persistent prayer meets divine silence",
-      "lemmas": ["clamo", "dies", "nox", "oratio", "precem"],
+      "name": "Cry → Attention",
+      "description": "Persistent day and night prayer seeks God's attentive ear.",
+      "lemmas": ["clamo", "oratio", "inclino", "prex"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Augustine reads the day/night contrast as the psalmist's unceasing prayer (Rom 12:12), yet God's ear seems un-inclined. This mirrors Christ's cry on the cross—the righteous may endure seasons where heaven seems silent, yet still call faithfully."
+      "comment": "The psalmist cries out continually, day and night, begging for his prayer to be heard and for God to incline His ear.",
+      "comment2": "Augustine sees this as the soul's constant turning to God in prayer, the fundamental act of faith that precedes all deliverance (En. Ps. 87.1)."
     },
     {
-      "name": "Life → Brink of Sheol",
-      "description": "The soul's descent into death's dominion",
-      "lemmas": ["vita", "infernum", "lacus", "aestimo", "descendo"],
+      "name": "Life → Death",
+      "description": "A soul filled with evils draws near to the realm of the dead.",
+      "lemmas": ["malum", "anima", "infernus", "lacus"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "Augustine allegorizes this as the soul's despair when grace feels absent. 'Counted among those who go down' reflects our solidarity with fallen humanity. The paradox of 'free among the dead' suggests the righteous suffer like all mortals, yet retain hope's freedom even in darkness."
+      "comment": "The psalmist describes his soul as saturated with evils and his life as drawing near to Sheol, counted among those who descend into the pit.",
+      "comment2": "Augustine interprets this as the spiritual state of being dead in sin, cut off from the land of the living (i.e., true life in God) and in need of salvation (En. Ps. 87.3)."
     },
     {
-      "name": "Divine Memory → Divine Rejection",
-      "description": "From being forgotten to being actively repelled",
-      "lemmas": ["memor", "repello", "manus", "sepulcrum", "vulnero"],
+      "name": "Abandonment → Forsakenness",
+      "description": "Being forgotten among the dead leads to a sense of being cast off by God.",
+      "lemmas": ["memor", "repello", "sepulcrum", "vulnero"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "Augustine sees here the terror of reprobation—when God's hand no longer sustains but pushes away. The 'wounded sleeping in tombs' represent souls dead in sin, unaware of their peril until divine judgment awakens them."
+      "comment": "He compares himself to the slain who lie in graves, forgotten and cut off from God's hand, placed in the darkest pit and shadow of death.",
+      "comment2": "Augustine sees this as the ultimate expression of desolation—feeling utterly forgotten and rejected by God, a Christ-like experience of dereliction (En. Ps. 87.5)."
     },
     {
-      "name": "Human Companionship → Utter Isolation",
-      "description": "From community to abhorred outcast",
-      "lemmas": ["notus", "longe", "abominatio", "fluctus", "furor"],
+      "name": "Wrath → Isolation",
+      "description": "The weight of divine wrath coincides with complete abandonment by all companions.",
+      "lemmas": ["furor", "fluctus", "removeo", "abominatio"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "Augustine compares this to Christ's abandonment by disciples. The 'waves' are adversities permitted by God; the 'abomination' reflects how the righteous become offensive to the worldly when suffering reveals their fragility."
+      "comment": "God's wrath lies heavily upon him, all His waves crash over him, and his friends have been made to loathe him and are put far away.",
+      "comment2": "Augustine explains that sometimes God permits the feeling of His wrath and the loss of human comfort to drive the soul to rely solely on Him (En. Ps. 87.7)."
     },
     {
-      "name": "Vision → Blindness",
-      "description": "Eyes fail as poverty overwhelms",
-      "lemmas": ["oculus", "languo", "inopia", "trado", "egredior"],
+      "name": "Imprisonment → Desperation",
+      "description": "Being trapped and unable to escape leads to eyes weakened by affliction.",
+      "lemmas": ["trado", "langueo", "inopia", "expando"],
       "startLine": 9,
       "endLine": 10,
-      "comment": "Augustine reads this as spiritual blindness—when distress dims the soul's vision of God. The 'spread hands' gesture mirrors Christ on the cross, showing prayer persists even when strength fails."
+      "comment": "He feels imprisoned with no way out; his eyes grow dim from misery as he continues to cry out all day long with hands outstretched.",
+      "comment2": "Augustine interprets the outstretched hands as a figure of the cross, a prayer of total surrender and desperate hope in God alone (En. Ps. 87.9)."
     },
     {
-      "name": "Miracles → Grave's Silence",
-      "description": "God's wonders seem absent in death's realm",
-      "lemmas": ["mirabilis", "sepulcrum", "mortuus", "medicus", "suscito"],
+      "name": "Question → Hope",
+      "description": "Rhetorical questions about praise in death lead back to a plea for help in life.",
+      "lemmas": ["mirabilis", "medicus", "confiteor", "perditio"],
       "startLine": 11,
       "endLine": 12,
-      "comment": "Augustine notes these rhetorical questions find their answer in Christ's resurrection. The 'physicians' (law/works) cannot raise the dead—only grace can. The grave's silence precedes Easter's dawn."
+      "comment": "The psalmist asks if God's wonders can be known in death or His faithfulness in destruction, implying the answer is no and thus he must be saved now.",
+      "comment2": "Augustine sees this as a profound theological argument: since the dead cannot praise God, salvation must occur in this life, making the psalmist's plea all the more urgent (En. Ps. 87.11)."
     },
     {
-      "name": "Mercy/Truth → Land of Oblivion",
-      "description": "Divine attributes seem negated by death's oblivion",
-      "lemmas": ["misericordia", "veritas", "perditio", "oblivio", "tenebrae"],
-      "startLine": 13,
-      "endLine": 13,
-      "comment": "Augustine sees this as the soul's darkest trial—when God's promises seem void amid suffering. Yet this very cry becomes, in Christ, the 'Eloi' moment that precedes resurrection (Mk 15:34)."
-    },
-    {
-      "name": "Rejection → Relentless Prayer",
-      "description": "Divine hiddenness met with dogged supplication",
-      "lemmas": ["repello", "facies", "clamo", "mane", "oratio"],
-      "startLine": 14,
-      "endLine": 15,
-      "comment": "Augustine observes how the psalmist, like Job, argues with God rather than disengages. 'Morning prayer' signifies hope persisting through night—the discipline of seeking God's face even when He seems to avert it."
-    },
-    {
-      "name": "Youthful Labor → Aged Desolation",
-      "description": "A life of suffering culminates in final turmoil",
-      "lemmas": ["juventus", "labor", "exalto", "humilio", "conturbo"],
-      "startLine": 16,
-      "endLine": 17,
-      "comment": "Augustine reads this as the soul's lifelong battle with concupiscence—the 'exaltation' of pride followed by crushing humiliations. The 'terrors' are ultimately medicinal, driving us to grace."
-    },
-    {
-      "name": "Solitude → Encircling Flood",
-      "description": "Isolation gives way to overwhelming assault",
-      "lemmas": ["aqua", "circumdo", "dies", "ira", "terror"],
-      "startLine": 18,
-      "endLine": 18,
-      "comment": "Augustine interprets the encircling waters as both external persecutions and internal temptations. Yet this flood, like Noah's, carries the sufferer to God's new creation—the very waves that seem to destroy become the path to salvation."
-    }
-  ]
-},
-{
-  "psalmNumber": 89,
-  "category": "",
-  "themes": [
-    {
-      "name": "Time → Eternity",
-      "description": "From generational life to God's timeless refuge",
-      "lemmas": ["refugium", "generatio", "progenies", "saeculum"],
-      "startLine": 1,
-      "endLine": 2,
-      "comment": "Augustine emphasizes that God's eternity stands outside all generations. While humans come and go, God remains constant: 'a saeculo et usque in saeculum tu es'. He sees this as a comfort and a warning — our only lasting refuge is found outside time, in God Himself."
-    },
-    {
-      "name": "Pride → Repentance",
-      "description": "Human fall reversed through conversion",
-      "lemmas": ["humilitas", "converto", "averto", "filius"],
-      "startLine": 3,
-      "endLine": 4,
-      "comment": "When God says 'Convertimini, filii hominum,' Augustine hears the voice of mercy calling fallen humanity home. The 'return' is not geographical but spiritual — turning from pride to humility. He links this to Adam's exile and the lifelong journey of conversion for every soul."
-    },
-    {
-      "name": "Years → Nothingness",
-      "description": "A thousand years dissolve in divine light",
-      "lemmas": ["mille", "dies", "custodia", "nihil"],
-      "startLine": 4,
-      "endLine": 5,
-      "comment": "To Augustine, 'mille anni... tamquam dies hesterna' illustrates God's eternity more than human brevity. The contrast reveals how God sees history in a single glance. Augustine says human pride in longevity is shattered by this — for to God, all time is as nothing unless filled with love."
-    },
-    {
-      "name": "Flourishing → Fading",
-      "description": "Life’s morning beauty withers by evening",
-      "lemmas": ["mane", "herba", "floreo", "vesper", "aresco"],
-      "startLine": 6,
-      "endLine": 6,
-      "comment": "Augustine compares the morning grass to the person who flourishes outwardly — perhaps in beauty or power — but has no deep root in charity. Like Christ’s parable of the sower, they spring up quickly and wither when trial comes. Only love makes the soul endure the heat of the day."
-    },
-    {
-      "name": "Wrath → Illumination",
-      "description": "Divine anger met by the light of His face",
-      "lemmas": ["ira", "furor", "iniquitas", "illuminatio", "vultus"],
-      "startLine": 7,
-      "endLine": 8,
-      "comment": "Augustine says God's wrath isn't like human passion, but His just judgment. Yet even as He exposes iniquity, His 'illumination' is healing. He calls the face of God 'that which enlightens and reforms the heart' — wrath convicts, but the light restores."
-    },
-    {
-      "name": "Span → Spiderweb",
-      "description": "Human years dissolve into fragile thought",
-      "lemmas": ["dies", "aranea", "meditor", "labor", "dolor"],
-      "startLine": 9,
-      "endLine": 10,
-      "comment": "Life, Augustine says, is like a spider’s web: beautiful yet easily destroyed. 'Meditabuntur' means our years are only murmurs, barely substantial. Even the strong (those who reach eighty) live in toil and sorrow — unless grace transforms their labor."
-    },
-    {
-      "name": "Severity → Instruction",
-      "description": "From divine wrath to heart-wisdom",
-      "lemmas": ["mansuetudo", "corripio", "sapientia", "timor", "potestas"],
-      "startLine": 11,
-      "endLine": 12,
-      "comment": "‘Quis novit potestatem irae tuae?’ Augustine asks with awe. God’s wrath is real, but it brings correction. Through fear — not terror, but reverent awe — the soul becomes wise. The paradox of divine gentleness and wrath is resolved in discipline that leads to understanding."
-    },
-    {
-      "name": "Marking → Mercy",
-      "description": "From divine rebuke to personal pleading",
-      "lemmas": ["dextera", "nota", "eruditus", "converto", "deprecabilis"],
+      "name": "Darkness → Prayer",
+      "description": "The impossibility of knowing God in the land of oblivion fuels persistent morning prayer.",
+      "lemmas": ["tenebrae", "oblivio", "praevenio", "oratio"],
       "startLine": 13,
       "endLine": 14,
-      "comment": "Augustine sees God’s right hand as both powerful and personal. 'Nota fac' implies a divine imprint — a sign of election and instruction. The plea 'Convertere, Domine, usquequo?' is both lament and hope. Augustine says the soul longs for a merciful God who still owns His servants."
+      "comment": "He reiterates that God's wonders and righteousness cannot be known in the darkness of the grave, so his prayer must meet God at the dawn.",
+      "comment2": "For Augustine, the 'morning' prayer signifies the hope of resurrection and enlightenment after the night of tribulation (En. Ps. 87.13)."
     },
     {
-      "name": "Affliction → Joy",
-      "description": "Suffering transfigured into satisfaction",
-      "lemmas": ["misericordia", "repleo", "laetor", "humilio", "malum", "splendor"],
+      "name": "Rejection → Affliction",
+      "description": "Feeling rejected by God is compounded by a life marked by poverty and turmoil from youth.",
+      "lemmas": ["repello", "pauper", "labor", "conturbo"],
       "startLine": 15,
-      "endLine": 18,
-      "comment": "Augustine reflects on how joy does not erase past suffering, but redeems it. 'Repleti sumus mane misericordia tua' suggests a resurrection morning — when divine light returns. The works of our hands, he says, matter only when directed by God, and joy follows obedience through trials."
+      "endLine": 16,
+      "comment": "He questions why God seems to reject his prayer and hide His face, describing a life of poverty, toil, and being humbled and dismayed.",
+      "comment2": "Augustine reads this as the soul grappling with the mystery of God's perceived absence during suffering, a test of faith (En. Ps. 87.15)."
+    },
+    {
+      "name": "Anguish → Loneliness",
+      "description": "Overwhelming terrors and encircling waters culminate in the loss of every close relationship.",
+      "lemmas": ["ira", "terror", "circumdo", "elongo"],
+      "startLine": 17,
+      "endLine": 19,
+      "comment": "God's terrors and wrath have overwhelmed him, encircling him like water all day long, resulting in the complete loss of friend, neighbor, and acquaintance.",
+      "comment2": "Augustine sees this final isolation as the culmination of suffering, where the soul, stripped of all human aid, is poised to find God as its only true comfort (En. Ps. 87.17)."
     }
   ]
 },
 
 {
+  "psalmNumber": 89,
+  "category": "",
+  "themes": [
+    {
+      "name": "Refuge → Eternity",
+      "description": "God's role as our dwelling place is established in His eternal nature before creation.",
+      "lemmas": ["refugium", "generatio", "saeculum", "orbis"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalm establishes that God has been our eternal refuge since before the mountains and earth were formed, existing from everlasting to everlasting.",
+      "comment2": "Augustine sees this as affirming God's unchanging nature as the true home for our restless hearts, which find no permanent refuge in temporal things (Conf. 1.1.1)."
+    },
+    {
+      "name": "Command → Perspective",
+      "description": "A divine call to return contrasts with humanity's fragility in light of God's eternal perspective.",
+      "lemmas": ["avertas", "humilitas", "converto", "praetereo"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "God commands humanity to return from lowliness, framing human existence within His perspective where a thousand years pass like yesterday.",
+      "comment2": "Augustine interprets this as God's merciful call to conversion, pulling humanity toward Himself and away from fleeting temporal existence (En. Ps. 89.4)."
+    },
+    {
+      "name": "Measurement → Transience",
+      "description": "Divine measurement of time reveals human years as nothingness and fleeting growth.",
+      "lemmas": ["custodia", "nihilum", "herba", "transeo"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "Human years are considered as nothing—like a night watch to God—and life is as transient as grass that grows and withers in a single day.",
+      "comment2": "Augustine reflects on how human life is a fleeting moment compared to God's eternity, emphasizing its vanity without Him (En. Ps. 89.5)."
+    },
+    {
+      "name": "Wrath → Revelation",
+      "description": "Consumption by divine wrath leads to the revelation of our sins in God's light.",
+      "lemmas": ["deficio", "furor", "iniquitas", "illuminatio"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "We are consumed and troubled by God's wrath; our iniquities are set before Him and our days are revealed in the light of His countenance.",
+      "comment2": "Augustine explains that God's wrath justly responds to sin, and His light exposes our frail condition, necessitating His mercy (En. Ps. 89.8)."
+    },
+    {
+      "name": "Span → Labor",
+      "description": "The brief span of human life is filled with toil and sorrow.",
+      "lemmas": ["aranea", "septuaginta", "potestas", "labor"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "Our days pass like a sigh; the typical lifespan is seventy or eighty years marked by labor and sorrow.",
+      "comment2": "Augustine sees this as a realistic portrait of the human condition after the Fall, marked by brevity and suffering (Civ. Dei 13.10)."
+    },
+    {
+      "name": "Discipline → Wisdom",
+      "description": "Divine discipline and gentleness lead to correction and the fear of the Lord.",
+      "lemmas": ["mansuetudo", "corripió", "potestas", "timor"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "God's gentleness comes upon us for correction; who can understand the power of His anger or number His wrath due to fear of Him?",
+      "comment2": "For Augustine, the fear of the Lord is the beginning of wisdom, leading to a proper understanding of our dependence on God (En. Ps. 89.12)."
+    },
+    {
+      "name": "Knowledge → Prayer",
+      "description": "The knowledge of God's power leads to prayer for wisdom and His return.",
+      "lemmas": ["notam", "eruditus", "convertere", "deprecabilis"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "The psalmist asks God to make His power known and teach wisdom to the learned of heart, then pleads for His return and mercy.",
+      "comment2": "Augustine interprets this as the prayer for divine wisdom and for Christ's return to show mercy to His servants (En. Ps. 89.14)."
+    },
+    {
+      "name": "Mercy → Joy",
+      "description": "Morning mercy leads to joy all our days, even in years of affliction.",
+      "lemmas": ["misericordia", "exsulto", "humilio", "laetor"],
+      "startLine": 15,
+      "endLine": 16,
+      "comment": "We ask for God's compassion and are filled with His mercy in the morning, leading to joy and delight all our days, even in years we saw evil.",
+      "comment2": "Augustine sees the 'morning' as the light of God's grace after the night of sin, which turns even trials into occasions for joy rooted in Him (En. Ps. 89.16)."
+    },
+    {
+      "name": "Favor → Establishment",
+      "description": "A prayer for God's glorious favor to rest upon and establish the work of His people.",
+      "lemmas": ["splendor", "respicio", "dirigo", "opus"],
+      "startLine": 17,
+      "endLine": 19,
+      "comment": "The final plea is for God to look upon His servants, let His beauty be upon us, and establish the work of our hands for lasting significance.",
+      "comment2": "Augustine concludes that without God's favor and grace, human labor is fleeting; true permanence comes only from His blessing (En. Ps. 89.17)."
+    }
+  ]
+},
+{
   "psalmNumber": 90,
   "category": "",
   "themes": [
     {
-      "name": "Divine Shelter → Heavenly Protection",
-      "description": "From dwelling in God’s help to abiding under His protection",
-      "lemmas": ["habito", "adiutorium", "protectio", "caelum"],
+      "name": "Dwelling → Trust",
+      "description": "Choosing God as one's habitation leads to confident declaration of trust in Him.",
+      "lemmas": ["habito", "adiutorium", "susceptor", "spero"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "The psalm opens with confidence: to dwell in God’s help is to rest under His protection, safe from every danger.",
-      "comment2": "Augustine interprets this as the faithful resting in Christ, who is Himself the refuge and heavenly shelter (Enarr. Ps. 90.1–2)."
+      "comment": "The psalm opens by blessing those who dwell in God's protection, leading to a personal confession of trust in Him as refuge and fortress.",
+      "comment2": "Augustine sees this dwelling as the soul's rest in God, which is the foundation of all true security and the opposite of restless seeking in the world (En. Ps. 90.1)."
     },
     {
-      "name": "Trust in God → Divine Deliverance",
-      "description": "From confessing God as refuge to deliverance from snares",
-      "lemmas": ["susceptor", "refugium", "spero", "libero"],
+      "name": "Danger → Deliverance",
+      "description": "Threats from hidden traps and harsh words are met with divine rescue.",
+      "lemmas": ["libero", "laqueus", "verbum", "asper"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "The psalmist proclaims God as refuge and savior, trusting in His power to deliver from hidden traps and threats.",
-      "comment2": "Augustine sees ‘susceptor’ and ‘refugium’ fulfilled in Christ, who liberates from spiritual snares and false voices (Enarr. Ps. 90.3–4)."
+      "comment": "The Lord delivers from the snare of the fowler and from destructive words, offering protection under His wings.",
+      "comment2": "Augustine interprets the fowler's snare as the devil's temptations and the harsh word as false accusations or blasphemies, from which God faithfully delivers (En. Ps. 90.3)."
     },
     {
-      "name": "Divine Covering → Fearless Trust",
-      "description": "From God’s sheltering wings to fearless confidence",
-      "lemmas": ["scapula", "penna", "veritas", "timeo"],
+      "name": "Fear → Protection",
+      "description": "Nocturnal terrors and daily threats are overcome by God's shielding truth.",
+      "lemmas": ["scutum", "veritas", "timeo", "sagitta"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "God’s protective wings symbolize His nearness; His truth is a shield, removing fear of unseen terrors.",
-      "comment2": "Augustine reads the wings as God’s mercy and the shield as Christ’s truth, freeing the Church from fear (Enarr. Ps. 90.5–6)."
+      "comment": "God's faithfulness is a shield against night terrors, daytime arrows, and the pestilence that stalks in darkness.",
+      "comment2": "For Augustine, the 'shield' is faith in God's promises, which protects the mind from fear and the soul from the arrows of evil suggestion (En. Ps. 90.5)."
     },
     {
-      "name": "Destruction of Enemies → Safety of the Faithful",
-      "description": "From the downfall of thousands to the preservation of the just",
-      "lemmas": ["cado", "mille", "appropinquo", "video"],
+      "name": "Disaster → Immunity",
+      "description": "Widespread disaster strikes others but is prevented from touching the one under divine protection.",
+      "lemmas": ["cado", "appropinquo", "considero", "retributio"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "Though multitudes fall in judgment, the faithful are preserved and see the punishment of the wicked.",
-      "comment2": "Augustine interprets the thousands as the fallen powers of the enemy, while the faithful safely watch God’s judgment (Enarr. Ps. 90.7–8)."
+      "comment": "Though a thousand fall at one's side and ten thousand at the right hand, the disaster will not come near; one will only observe and understand the punishment of the wicked.",
+      "comment2": "Augustine explains this immunity is a gift of grace, preserving the righteous to witness God's justice without themselves falling to the same fate (En. Ps. 90.7)."
     },
     {
-      "name": "Hope in God → Divine Refuge",
-      "description": "From personal trust to God’s protection of the household",
-      "lemmas": ["spes", "refugium", "malum", "appropinquo"],
+      "name": "Refuge → Immunity",
+      "description": "Making the Lord one's refuge results in a promised immunity from evil and harm.",
+      "lemmas": ["spes", "refugium", "malum", "flagellum"],
       "startLine": 9,
       "endLine": 10,
-      "comment": "Hope in God transforms Him into a dwelling-place, keeping evil far from one’s home.",
-      "comment2": "Augustine links this to Christ as the true dwelling: in Him, the faithful are kept from ultimate harm (Enarr. Ps. 90.9–10)."
+      "comment": "Because the Lord is his hope and refuge, no evil or plague is allowed to come near his dwelling.",
+      "comment2": "Augustine teaches that this 'immunity' is primarily spiritual, guarding the soul from the ultimate evil of sin and eternal death (En. Ps. 90.9)."
     },
     {
-      "name": "Angelic Guardians → Safe Journey",
-      "description": "From angelic command to protection on life’s path",
-      "lemmas": ["angelus", "custodio", "offendo", "pes"],
+      "name": "Command → Guardianship",
+      "description": "A divine command to angels ensures constant care and physical safeguarding.",
+      "lemmas": ["angelus", "mando", "custodio", "offendo"],
       "startLine": 11,
       "endLine": 12,
-      "comment": "God sends His angels to guard the faithful, preventing stumbling along the way.",
-      "comment2": "Augustine applies this to the apostolic preachers — angels in function — who protect believers from stumbling in faith (Enarr. Ps. 90.11–12)."
+      "comment": "God commands His angels to guard the believer in all their ways, to bear them up and prevent physical harm.",
+      "comment2": "Augustine affirms the ministry of angels as part of God's providence, guiding the steps of the righteous to prevent spiritual stumbling as well as physical (En. Ps. 90.11)."
     },
     {
-      "name": "Triumph over Evil → Victory over Serpents",
-      "description": "From treading on serpents to conquering all hostile beasts",
-      "lemmas": ["aspis", "basiliscus", "leo", "conculco"],
+      "name": "Conflict → Dominion",
+      "description": "Walking over deadly enemies demonstrates the authority given to the faithful.",
+      "lemmas": ["aspis", "basiliscus", "conculco", "draco"],
       "startLine": 13,
       "endLine": 14,
-      "comment": "The imagery of trampling lions and serpents depicts victory over deadly and violent enemies.",
-      "comment2": "Augustine interprets aspis, basilisk, and lion as figures of Satan and his powers, defeated in Christ by the faithful’s perseverance (Enarr. Ps. 90.13–14)."
+      "comment": "The believer is given authority to tread upon serpents, adders, lions, and dragons—symbolic of overcoming powerful evils.",
+      "comment2": "Augustine interprets this as Christ's promise of authority over the power of the enemy, fulfilled in the Church (Luke 10:19) (En. Ps. 90.13)."
     },
     {
-      "name": "Trustful Cry → Divine Salvation",
-      "description": "From crying to God in trust to His saving response",
-      "lemmas": ["spero", "clamor", "exaudio", "salutare"],
+      "name": "Knowledge → Salvation",
+      "description": "Knowing God's name leads to deliverance, protection, and ultimate glorification.",
+      "lemmas": ["spero", "cognosco", "protego", "glorifico"],
       "startLine": 15,
       "endLine": 16,
-      "comment": "The psalm closes with the faithful crying out in trust, and God’s promise of salvation, long life, and glory.",
-      "comment2": "Augustine interprets this as the Church’s prayer fulfilled in Christ: through His exaltation comes salvation and eternal glory (Enarr. Ps. 90.15–16)."
+      "comment": "Because he clings to God in love and knows His name, God promises to answer, be with him in trouble, deliver him, honor him, satisfy him with long life, and show him His salvation.",
+      "comment2": "Augustine sees the culmination of this psalm in the vision of God's salvation ('ostendam illi salutare meum'), which is ultimately the sight of Christ, our Savior, in eternity (En. Ps. 90.16)."
     }
   ]
 },

@@ -1,4 +1,260 @@
 [
+ 
+{
+  "lemma": "castra",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "castra",
+  "genitive": "castrorum",
+  "translations": {
+    "en": "military camp, encampment",
+    "la": "castra, castrorum"
+  }
+},
+  {
+  "lemma": "custodio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "custodire",
+  "present": "custodio",
+  "future": "custodiam",
+  "perfect": "custodivi",
+  "supine": "custoditum",
+  "translations": {
+    "en": "to guard, watch over, keep, protect",
+    "la": "custōdiō, custōdīre, custōdīvī, custōdītum"
+  }
+},
+  {
+  "lemma": "divido",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "dividere",
+  "present": "divido",
+  "future": "dividam",
+  "perfect": "divisi",
+  "supine": "divisum",
+  "translations": {
+    "en": "to divide, separate",
+    "la": "dīvidō, dīvidere, dīvīsī, dīvīsum"
+  }
+},
+  {
+  "lemma": "eicio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "eicere",
+  "present": "eicio",
+  "future": "eiciam",
+  "perfect": "eieci",
+  "supine": "eiectum",
+  "translations": {
+    "en": "to throw out, expel, eject",
+    "la": "ēiciō, ēicere, ēiēcī, ēiectum"
+  },
+   "forms": {
+    "perfect_3s": ["eiecit"]
+  }
+},
+  {
+  "lemma": "pasco",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "pascere",
+  "present": "pasco",
+  "future": "pascam",
+  "perfect": "pavi",
+  "supine": "pastum",
+  "translations": {
+    "en": "to feed, pasture, graze",
+    "la": "pasco, pascere, pavi, pastum"
+  }
+},
+  {
+  "lemma": "feto",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "fetare",
+  "present": "feto",
+  "future": "fetabo",
+  "perfect": "fetavi",
+  "supine": "fetatum",
+  "translations": {
+    "en": "to make fruitful, impregnate, breed",
+    "la": "fētō, fētāre, fētāvī, fētātum"
+  }
+},
+  {
+  "lemma": "ovis",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "ovis",
+  "genitive": "ovis",
+  "translations": {
+    "en": "sheep",
+    "la": "ovis, ovis"
+  }
+},
+  {
+  "lemma": "grex",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "grex",
+  "genitive": "gregis",
+  "translations": {
+    "en": "flock, herd, crowd",
+    "la": "grex, gregis"
+  }
+},
+  {
+  "lemma": "sustollo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "sustollere",
+  "present": "sustollo",
+  "future": "sustollam",
+  "perfect": "sustuli",
+  "supine": "sublatum",
+  "translations": {
+    "en": "to lift up, raise up, take away",
+    "la": "sustollo, sustollere, sustuli, sublatum"
+  }
+},
+{
+  "lemma": "alter",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "alter",
+  "genitive": "alterius",
+  "translations": {
+    "en": "the other, another, second",
+    "la": "alter, altera, alterum"
+  },
+  "forms_plural": {
+    "nominative_m": ["alteri"],
+    "accusative_m": ["alteros"],
+    "nominative_f": ["alterae"],
+    "accusative_f": ["alteras"],
+    "nominative_n": ["altera"],
+    "accusative_n": ["altera"]
+  },
+  "forms": {
+    "nominative_f": ["altera"],
+    "nominative_n": ["alterum"],
+    "accusative_f": ["alteram"]
+  }
+},
+ 
+  {
+  "lemma": "quantus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "quantus",
+  "genitive": "quanti",
+  "translations": {
+    "en": "how great, how much, as much",
+    "la": "quantus, quanta, quantum"
+  },
+  "forms": {
+    "nominative_f": ["quanta"]
+  }
+},
+  {
+  "lemma": "parabola",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "parabola",
+  "genitive": "parabolae",
+  "translations": {
+    "en": "parable, proverb, allegory",
+    "la": "parabola, parabolae"
+  }
+},
+  {
+  "lemma": "attendo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "attendere",
+  "present": "attendo",
+  "future": "attendam",
+  "perfect": "attendi",
+  "supine": "attentum",
+  "translations": {
+    "en": "pay attention, heed, listen",
+    "la": "attendō, attendere, attendī, attentum"
+  }
+},
+  {
+  "lemma": "ipse",
+  "part_of_speech": "pronoun",
+  "declension": 0,
+  "gender": "masculine",
+  "nominative": "ipse",
+  "genitive": "ipsius",
+  "translations": {
+    "en": "himself, itself, selfsame",
+    "la": "ipse, ipsa, ipsum"
+  }
+},
+  {
+  "lemma": "inopia",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "inopia",
+  "genitive": "inopiae",
+  "translations": {
+    "en": "want, need, poverty",
+    "la": "inopia, inopiae"
+  }
+},
+  {
+  "lemma": "elongo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "elongare",
+  "present": "elongo",
+  "future": "elongabo",
+  "perfect": "elongavi",
+  "supine": "elongatum",
+  "translations": {
+    "en": "to remove, depart, go far away",
+    "la": "elongo"
+  },
+  "forms": {
+    "perfect_2sg": ["elongasti"]
+  }
+},
+{
+  "lemma": "aliquis",
+  "part_of_speech": "pronoun",
+  "declension": 0,
+  "gender": "masculine",
+  "nominative": "aliquis",
+  "genitive": "alicujus",
+  "translations": {
+    "en": "someone, anybody, something",
+    "la": "aliquis, aliqua, aliquid"
+  }
+},
+  {
+  "lemma": "terror",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "terror",
+  "genitive": "terroris",
+  "translations": {
+    "en": "fright, terror, panic, dread",
+    "la": "terror, terroris"
+  }
+},
   {
   "lemma": "vester",
   "part_of_speech": "adjective",
@@ -13,12 +269,12 @@
   "forms_plural": {
     "accusative_m": ["vestros"],
     "nominative_m": ["vestri"],
-    "accusative_n": ["vestra"],
-    "accusative_f": ["vestras"]
+    "accusative_n": ["vestra"]
   },
   "forms": {
     "nominative_f": ["vestra"],
-    "nominative_n": ["vestrum"]
+    "nominative_n": ["vestrum"],
+    "accusative_f": ["vestram"]
   }
 },
     {
@@ -2161,6 +2417,19 @@
     "la": "expando, expandere"
   }
  },
+ {
+  "lemma": "langueo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "languere",
+  "present": "langueo",
+  "future": "languebo",
+  "perfect": "langui",
+  "translations": {
+    "en": "to be faint, weak, weary; to languish",
+    "la": "langueo, languēre, languī"
+  }
+},
   {
   "lemma": "languo",
   "part_of_speech": "verb",
