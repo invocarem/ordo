@@ -454,85 +454,85 @@
   "category": "a",
   "themes": [
     {
-      "name": "Wonder → Praise",
-      "description": "From recounting God’s marvelous works to rejoicing in His name",
-      "lemmas": ["mirabile", "exsulto", "psallo", "nomen"],
+      "name": "Thanksgiving → Praise",
+      "description": "Wholehearted thanksgiving leads to joyful praise of God's marvelous works",
+      "lemmas": ["confiteor", "mirabilis", "exsulto", "psallo"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "The psalmist begins with wholehearted thanksgiving, rejoicing and singing to the Most High for His wondrous deeds.",
-      "comment2": "Augustine sees here the Church’s song: the marvels of Christ’s resurrection and the new creation are confessed with joy and psalmody (Enarr. Ps. 9.1–2)."
+      "comment": "The psalmist begins with wholehearted thanksgiving, vowing to declare all God's wonders and rejoicing in song to His name.",
+      "comment2": "Augustine sees here the perfect confession of the Church, where thanksgiving for Christ's marvels leads to eternal praise (Enarr. Ps. 9.1-2)."
     },
     {
-      "name": "Enemy → Judgment",
-      "description": "From the downfall of enemies to God’s righteous throne",
-      "lemmas": ["inimicus", "infirmo", "iudicium", "thronus"],
+      "name": "Enemy → Justice",
+      "description": "The turning back of enemies leads to God's righteous judgment from His throne",
+      "lemmas": ["inimicus", "retrorsum", "iudicium", "thronus"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "God turns back the enemy, causing them to perish before His face, while He sits enthroned in justice.",
-      "comment2": "Augustine interprets this as the triumph of Christ over the devil and sin, enthroning God’s judgment as the foundation of the City of God (Enarr. Ps. 9.3–4)."
+      "comment": "God turns back the enemy, causing them to weaken and perish, while He sits enthroned judging righteously and vindicating the cause of the faithful.",
+      "comment2": "Augustine interprets this as Christ's victory over spiritual enemies and His eternal reign as righteous judge (Enarr. Ps. 9.3-4)."
     },
     {
-      "name": "Nations → Oblivion",
-      "description": "From rebuked nations to perishing memory",
-      "lemmas": ["increpo", "gens", "impious", "memoria"],
+      "name": "Rebuke → Destruction",
+      "description": "Divine rebuke of nations leads to the complete destruction of the wicked",
+      "lemmas": ["increpo", "impius", "nomen", "framea"], 
       "startLine": 5,
       "endLine": 6,
-      "comment": "The nations are rebuked, the wicked perish, their names erased, their cities destroyed, and their memory vanishes in noise.",
-      "comment2": "For Augustine, this points to earthly kingdoms opposed to God, whose glory fades to nothing, unlike the eternal remembrance of the just (Enarr. Ps. 9.5–6)."
+      "comment": "God rebukes the nations, the wicked perish, their names are blotted out forever, their weapons fail, and their cities are destroyed.",
+      "comment2": "For Augustine, this signifies the ultimate fate of all earthly powers opposed to God's kingdom (Enarr. Ps. 9.5-6)."
     },
     {
-      "name": "Eternal Throne → Just Judgment",
-      "description": "From God’s everlasting throne to equity in judgment",
-      "lemmas": ["aeternus", "thronus", "iudicium", "iustitia"],
+      "name": "Memory → Eternity",
+      "description": "The noisy perishing of human memory contrasts with God's eternal reign",
+      "lemmas": ["memoria", "sonitus", "aeternus", "permaneo"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "The Lord remains forever, establishing His throne in judgment to govern the earth with righteousness.",
-      "comment2": "Augustine sees Christ as the eternal Judge, who alone brings true equity — not partial or earthly justice, but eternal righteousness (Enarr. Ps. 9.7–8)."
+      "comment": "The memory of enemies perishes with noise, but the Lord endures forever, establishing His throne for righteous judgment of the world.",
+      "comment2": "Augustine contrasts the temporary noise of earthly destruction with God's eternal, quiet sovereignty (Enarr. Ps. 9.7-8)."
     },
     {
-      "name": "Refuge → Trust",
-      "description": "From God as a refuge for the poor to the trust of those who know His name",
+      "name": "Refuge → Hope",
+      "description": "God's refuge for the poor inspires hope in those who know His name",
       "lemmas": ["refugium", "pauper", "nomen", "spero"],
       "startLine": 9,
       "endLine": 10,
-      "comment": "The poor find refuge in God, and those who know His name place their trust in Him, confident He will not forsake them.",
-      "comment2": "Augustine teaches that Christ Himself is the stronghold of the poor, and that true knowledge of God’s name comes through faith in Him (Enarr. Ps. 9.9–10)."
+      "comment": "The Lord becomes a refuge for the poor and a helper in trouble, inspiring hope in those who know His name, for He does not forsake seekers.",
+      "comment2": "Augustine teaches that Christ is the true refuge, and knowledge of His name brings sure hope (Enarr. Ps. 9.9-10)."
     },
     {
-      "name": "Zion → Remembrance",
-      "description": "From psalms in Zion to God remembering the blood of the poor",
+      "name": "Proclamation → Remembrance",
+      "description": "Songs in Zion proclaim God's deeds and His remembrance of the oppressed",
       "lemmas": ["psallo", "Sion", "sanguis", "recordor"],
       "startLine": 11,
       "endLine": 12,
-      "comment": "The psalm calls for song in Zion and the proclamation of God’s works, for He remembers the blood of the oppressed and the cry of the poor.",
-      "comment2": "Augustine links this to the blood of the martyrs, never forgotten by God, whose cry is heard in His heavenly Zion (Enarr. Ps. 9.11–12)."
+      "comment": "The call to sing in Zion and declare God's deeds among nations emphasizes His remembrance of the blood of the oppressed and the cry of the poor.",
+      "comment2": "Augustine links this to the martyrs' blood and God's faithful remembrance of His suffering people (Enarr. Ps. 9.11-12)."
     },
     {
-      "name": "Mortality → Praise",
-      "description": "From prayer amid death’s gates to praise in Zion’s gates",
-      "lemmas": ["humilitas", "porta", "mors", "laus"],
+      "name": "Mercy → Deliverance",
+      "description": "Cry for mercy in affliction leads to deliverance from death's gates",
+      "lemmas": ["misereor", "humilitas", "porta", "laudatio"],
       "startLine": 13,
       "endLine": 14,
-      "comment": "The psalmist begs God to see his affliction, to raise him from the gates of death, that he may proclaim God’s praise in the gates of Zion.",
-      "comment2": "Augustine sees here Christ lifting believers from death into the life of the Church, so that the praise of God replaces the silence of the grave (Enarr. Ps. 9.13–14)."
+      "comment": "The psalmist cries for mercy in his affliction, asking to be lifted from death's gates to proclaim God's praises in Zion's gates.",
+      "comment2": "Augustine sees this as the soul's cry from spiritual death to resurrection life in Christ (Enarr. Ps. 9.13-14)."
     },
     {
-      "name": "Trap → Judgment",
-      "description": "From nations ensnared in their own snares to God’s revealed justice",
-      "lemmas": ["gens", "laqueus", "iudicium", "peccator"],
+      "name": "Salvation → Entrapment",
+      "description": "Joy in salvation contrasts with nations trapped in their own destruction",
+      "lemmas": ["exsulto", "salus", "laqueus", "comprehendo"],
       "startLine": 15,
       "endLine": 16,
-      "comment": "The nations fall into the pit they made, caught in their hidden traps; the Lord makes Himself known in judgment, ensnaring the sinner by his own works.",
-      "comment2": "Augustine interprets this as sin turning back on the sinner: the trap of pride becomes the means of downfall, while God’s justice is revealed in this reversal (Enarr. Ps. 9.15–16)."
+      "comment": "The psalmist rejoices in God's salvation while nations are trapped in the destruction they prepared, caught in their own hidden snares.",
+      "comment2": "Augustine interprets this as the ironic justice where sinners are caught by their own devices (Enarr. Ps. 9.15-16)."
     },
     {
-      "name": "Forgetting God → Eternal Loss",
-      "description": "From sinners descending to hell to hope for the poor",
-      "lemmas": ["peccator", "infernum", "pauper", "patientia"],
+      "name": "Judgment → Remembrance",
+      "description": "Divine judgment of sinners contrasts with God's eternal remembrance of the poor",
+      "lemmas": ["cognosco", "iudicium", "oblivio", "patientia"],
       "startLine": 17,
-      "endLine": 18,
-      "comment": "Sinners and nations that forget God are turned into hell, while the poor will not be forgotten and their patience will not perish forever.",
-      "comment2": "Augustine highlights the contrast: forgetfulness of God leads to eternal loss, but the poor in spirit, patient in faith, are remembered unto life (Enarr. Ps. 9.17–18)."
+      "endLine": 19,
+      "comment": "The Lord is known through His judgments; sinners return to hell and nations forgetting God perish, but the poor are not forgotten and their endurance does not perish.",
+      "comment2": "Augustine emphasizes God's faithful remembrance of the humble despite the judgment of the wicked (Enarr. Ps. 9.17-19)."
     }
   ]
 },
