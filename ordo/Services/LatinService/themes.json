@@ -2260,79 +2260,72 @@
   "category": "",
   "themes": [
     {
-      "name": "Speech → Iniquity",
-      "description": "Contrast between professed justice and practiced wickedness",
-      "lemmas": ["iustitia", "loquor", "iniquitas", "operor"],
+      "name": "Plea → Trust",
+      "description": "A cry for mercy is grounded in trust and hope in God's protection.",
+      "lemmas": ["misereor", "confido", "umbra", "spero"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Augustine: 'Loquimini justitiam' vs 'in corde iniquitates' shows tongue-heart divide (Enarrationes 56.2)"
+      "comment": "The psalmist begins with a repeated cry for mercy, declaring his soul's trust in God and his hope in the shadow of His wings until calamity passes.",
+      "comment2": "Augustine sees this dual cry for mercy as the foundational prayer of the humble soul, taking refuge in God as its only security (Enarr. Ps. 56.1)."
     },
     {
-      "name": "Womb → Error",
-      "description": "Sin's origin from conception",
-      "lemmas": ["vulva", "uterus", "alieno", "erro"],
+      "name": "Cry → Deliverance",
+      "description": "A cry to the highest God results in deliverance and the shaming of enemies.",
+      "lemmas": ["clamo", "altus", "libero", "opprobrium"],
       "startLine": 3,
-      "endLine": 3,
-      "comment": "Augustine: 'Ab utero' confirms original sin's transmission (De Peccatorum Meritis I.9)"
+      "endLine": 4,
+      "comment": "The psalmist cries out to God Most High, who does good, and is answered with deliverance from heaven that puts his oppressors to shame.",
+      "comment2": "Augustine interprets this as Christological: the cry from the depths is answered by the Father sending deliverance from heaven (Enarr. Ps. 56.3)."
     },
     {
-      "name": "Ears → Obstinacy",
-      "description": "Willful rejection of truth",
-      "lemmas": ["auris", "obturo", "surdus", "aspis"],
-      "startLine": 4,
-      "endLine": 5,
-      "comment": "Augustine: Deaf adder symbolizes unrepentant soul (Sermon 76.5)"
-    },
-    {
-      "name": "Teeth → Judgment",
-      "description": "Divine dismantling of evil's instruments",
-      "lemmas": ["dens", "contero", "os", "leo"],
-      "startLine": 6,
+      "name": "Sending → Rescue",
+      "description": "God's active sending from heaven leads to a dramatic rescue from mortal danger.",
+      "lemmas": ["mitto", "eripio", "catulus", "conturbatus"],
+      "startLine": 5,
       "endLine": 6,
-      "comment": "Augustine: Crushed teeth signify broken power to harm (Enarrationes 56.8)"
+      "comment": "God personally sends forth His aid from heaven to snatch away the psalmist's life from the midst of lion cubs, even though he slept in a state of terror.",
+      "comment2": "Augustine emphasizes the agency of God: rescue is not passive but an active mission of deliverance, prefiguring Christ being sent for our salvation (Enarr. Ps. 56.5)."
     },
     {
-      "name": "Wax → Purification",
-      "description": "Transience of wickedness before divine fire",
-      "lemmas": ["cera", "fluo", "ignis", "sol"],
+      "name": "Exaltation → Persecution",
+      "description": "A call for God's supreme exaltation is met with the immediate reality of enemy traps.",
+      "lemmas": ["exalto", "paro", "laqueus", "incurvo"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "Augustine: Melting wax represents sinners before God's light (Confessions XIII.15)"
+      "comment": "The psalmist calls for God to be exalted high above the heavens, but in the very next breath describes how enemies have prepared a trap for his feet and crushed his soul.",
+      "comment2": "Augustine sees this as the constant tension of the Christian life: proclaiming God's ultimate victory while enduring earthly struggles and spiritual attacks (Enarr. Ps. 56.7)."
     },
-    {
-      "name": "Blood → Vindication",
-      "description": "Righteous celebration of divine justice",
-      "lemmas": ["sanguis", "lavo", "justus", "vindicta"],
+        {
+      "name": "Digging → Fall",
+      "description": "The enemies' act of digging a pit leads to their own fall and the psalmist's steadfast praise.",
+      "lemmas": ["fodio", "fovea", "incido", "paratus"],
       "startLine": 9,
       "endLine": 10,
-      "comment": "Augustine: 'Lavabit in sanguine' symbolizes participation in Christ's victory (City of God XVII.7)"
+      "comment": "The enemies dig a pit intended for the psalmist but fall into it themselves; this act of poetic justice solidifies his steadfast heart and resolve to sing praises.",
+      "comment2": "Augustine often comments on this theme of the wicked being ensnared by their own devices, seeing it as a manifestation of divine justice that strengthens the faith of the righteous (cf. Enarr. Ps. 7:16)."
     },
     {
-      "name": "Augustine: Cor Duplex",
-      "description": "Heart's division between truth and iniquity",
-      "lemmas": ["cor", "loquor", "justitia", "iniquitas"],
-      "startLine": 1,
-      "endLine": 2,
-      "comment": "Tension between 'loquimini justitiam' and 'in corde iniquitates' (De Trinitate XIV.17)"
+      "name": "Readiness → Praise",
+      "description": "A prepared heart leads to awakening with instruments and song at dawn.",
+      "lemmas": ["exsurgo", "psalterium", "confiteor", "dico"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "The psalmist passionately calls for his inner glory and instruments to awaken, vowing to rouse the dawn itself and proclaim his praise among all peoples and nations.",
+      "comment2": "Augustine sees this as the soul's resurrection to new life in Christ, ready for a universal confession of faith that transcends all boundaries (Enarr. Ps. 56.11)."   
     },
     {
-      "name": "Augustine: Serpens Aures",
-      "description": "Spiritual deafness as primal sin",
-      "lemmas": ["aspis", "obturo", "surdus", "erro"],
-      "startLine": 4,
-      "endLine": 5,
-      "comment": "Echo of Adam's willful disobedience (De Genesi contra Manichaeos II.15)"
-    },
-    {
-      "name": "Augustine: Ignis Illustratio",
-      "description": "Fire as divine truth exposing evil",
-      "lemmas": ["ignis", "sol", "cera", "nihilum"],
-      "startLine": 7,
-      "endLine": 8,
-      "comment": "Sinners' impermanence revealed by God's light (Enarrationes 56.12)"
+      "name": "Height → Exaltation",
+      "description": "The immense height of God's attributes leads to a final call for His supreme exaltation.",
+      "lemmas": ["magnifico", "caelum", "nubes", "exalto"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "The psalm concludes by proclaiming that God's mercy reaches the heavens and His truth the clouds, culminating in a final call for Him to be exalted above the heavens and His glory over all the earth.",
+      "comment2": "Augustine ends with this vision of God's transcendent attributes, which are so vast they compel His universal glorification above all creation (Enarr. Ps. 56.13)."
     }
   ]
 },
+
+
 {
   "psalmNumber": 57,
   "category": "",
@@ -4525,10 +4518,11 @@
     {
       "name": "Light → Vows",
       "description": "Divine illumination enabling sacred commitment",
-      "lemmas": ["lucerna", "verbum", "juro", "statuo"],
+      "lemmas": ["lucerna", "semita", "iuro", "statuo"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "God's word as light (lucerna) precedes and empowers human vows (juravi)"
+      "comment": "God's word as light (lucerna) precedes and empowers human vows (juravi)",
+      "comment2": "Augustine sees this as the soul's recognition that divine illumination leads to resolute obedience; God's light enables our firm commitment to His ways (Enarr. Ps. 118.25.1)."
     },
     {
       "name": "Humility → Teaching",
@@ -4536,51 +4530,114 @@
       "lemmas": ["humilio", "vivifico", "doceo", "voluntarius"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "Utter humiliation (usquequaque) creates space for life-giving teaching"
+      "comment": "Utter humiliation (usquequaque) creates space for life-giving teaching",
+      "comment2": "For Augustine, this 'humiliation' is the necessary emptying of self that makes room for God's life-giving instruction and makes our offerings acceptable (Enarr. Ps. 118.26.2)."
     },
     {
       "name": "Protection → Steadfastness",
       "description": "Divine custody ensuring covenant fidelity",
-      "lemmas": ["anima", "manus", "laqueus", "erro"],
+      "lemmas": ["manus", "oblitus", "laqueus", "erro"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "Soul in God's hands (manibus) prevents straying from commands"
+      "comment": "Soul in God's hands (manibus) prevents straying from commands when siners set a trap.",
+      "comment2": "Augustine interprets this total entrustment to God's providence as the source of true stability, protecting one from the snares of temptation and error (Enarr. Ps. 118.27.1)."
     },
     {
       "name": "Inheritance → Commitment",
-      "description": "Eternal joy motivating wholehearted obedience",
-      "lemmas": ["hereditas", "exsultatio", "inclino", "aeternum"],
+      "description": "The heart's joy in its divine inheritance leads to a permanent inclination to actively do God's statutes, motivated by their eternal reward.",
+      "lemmas": ["hereditas", "exsultatio", "inclino", "facio", "retributio"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "Testimonies as perpetual heritage (hereditate) inspire heart-inclining"
-    },
+      "comment": "God's testimonies are received as a joyous eternal inheritance. This joy causes the psalmist to bend his heart to the active doing of God's statutes forever, precisely because of the reward that such obedience brings.",
+      "comment2": "Augustine synthesizes this: the heart is drawn by love for the law itself (facio), which is its own reward (retributio), but also looks forward to the ultimate recompense of full communion with God (Enarr. Ps. 118.28.8)."
+    }
+  ]
+},
+{
+  "psalmNumber": 118,
+  "category": "samech",
+  "themes": [
     {
-      "name": "Augustine: Incarnate Light",
-      "description": "Christ as the walking Word enabling vows",
-      "lemmas": ["lucerna", "verbum", "juro"],
+      "name": "Hatred → Love",
+      "description": "Hatred for the wicked is paired with love for God's law and hope in His word.",
+      "lemmas": ["iniquus", "odium", "diligo", "superspero"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "'Lamp to feet' signifies Christ's embodied guidance (Sermon 126)"
+      "comment": "The psalmist declares his hatred for the double-minded but his love for God's law, affirming God as his helper and the source of his supreme hope.",
+      "comment2": "Augustine explains that this holy hatred is the necessary separation from evil that allows for pure love of God's truth; hope in God's word is the anchor in this division (Enarr. Ps. 118.29.1)."
     },
     {
-      "name": "Augustine: Humilitas Docibilis",
-      "description": "Humiliation as pedagogy of grace",
-      "lemmas": ["humilio", "doceo", "manus"],
+      "name": "Rejection → Devotion",
+      "description": "A command for the wicked to depart leads to deep devotion to God's commandments.",
+      "lemmas": ["declino", "suscito", "vivam", "exspectatio"],
       "startLine": 3,
-      "endLine": 5,
-      "comment": "God teaches only in the valley of humility (Enarrationes 118.25)"
+      "endLine": 4,
+      "comment": "The psalmist commands the evil to depart from him so he may keep the commands of his God, pleading to be upheld and given life according to God's promise.",
+      "comment2": "For Augustine, this represents the soul's active turning away from temptation to fully devote itself to the study and practice of God's will (Enarr. Ps. 118.30.2)."
     },
     {
-      "name": "Augustine: Inclinated Eschatology",
-      "description": "Heart bent toward eternal reward",
-      "lemmas": ["inclino", "retributio", "aeternum"],
+      "name": "Plea → Preservation",
+      "description": "A plea for help and salvation leads to a commitment to continual meditation on God's statutes.",
+      "lemmas": ["adiuva", "salvus", "meditor", "semper"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The psalmist asks to be sustained and saved according to God's word, promising to constantly meditate on His decrees and not be put to shame in his hope.",
+      "comment2": "Augustine sees this as the soul's complete dependence on grace for both salvation and perseverance in righteous meditation (Enarr. Ps. 118.31.3)."
+    },
+    {
+      "name": "Rejection → Reverence",
+      "description": "The recognition that God rejects the faithless leads to a holy fear and love for His testimonies.",
+      "lemmas": ["sperno", "praevaricator", "diligo", "timor"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "Grace inclines the heart toward its true homeland (Conf. XIII.9)"
+      "comment": "Seeing that God rejects all who stray from His statutes, the psalmist counts them as dross and loves God's testimonies, asking for holy fear to pierce his flesh.",
+      "comment2": "Augustine interprets this as the proper fear that comes from understanding God's righteous judgment, which purifies love and keeps the soul faithful (Enarr. Ps. 118.32.8)."
     }
   ]
 },
 
+{
+  "psalmNumber": 118,
+  "category": "ain",
+  "themes": [
+     {
+      "name": "Deeds → Defense",
+      "description": "Righteous action leads to a plea for defense against arrogant accusers.",
+      "lemmas": ["feci", "trado", "calumnia", "superbus"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalmist declares he has done what is right and pleads not to be surrendered to his false accusers, asking to be upheld against the calumny of the proud.",
+      "comment2": "Augustine sees this as the prayer of one who acts justly yet faces persecution, seeking refuge in God's protection against the distortions of the arrogant (Enarr. Ps. 118.33.1)."
+    },
+    {
+      "name": "Longing → Plea",
+      "description": "Eyes failing from watching for salvation lead to a plea for mercy and teaching.",
+      "lemmas": ["oculus", "deficio", "salus", "doceo"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The psalmist's eyes grow dim from watching for God's salvation and righteous word, leading him to plead for God to deal mercifully with His servant and teach him His statutes.",
+      "comment2": "Augustine interprets this as the soul's weary but persistent waiting for God's promises, which finds its answer not in human strength but in divine mercy and instruction (Enarr. Ps. 118.34.2)."
+    },
+    {
+      "name": "Identity  → Understanding",
+      "description": "The acknowledgment of one's relationship to God leads to a request for understanding of His ways.",
+      "lemmas": ["servus", "intellectus", "tempus", "dissipo"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The psalmist affirms his identity as God's servant and asks for understanding to know His testimonies, noting that it is time for action since others have broken God's law.",
+      "comment2": "For Augustine, true servitude to God begins with the request for spiritual understanding to discern His will, especially in times when others abandon His law (Enarr. Ps. 118.35.3)."
+    },
+    {
+      "name": "Love → Direction",
+      "description": "Love for commandments beyond treasure leads to being directed in all paths and hating evil ways.",
+      "lemmas": ["diligo", "aurum", "dirigo", "iniquus"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "The psalmist declares his love for God's commands above finest gold, and therefore directs his paths by all God's precepts and hates every false way.",
+      "comment2": "Augustine sees this love as the necessary foundation for all righteous living: when God's law is loved more than earthly treasure, it naturally directs the soul away from all iniquity (Enarr. Ps. 118.36.8)."
+    }
+  ]
+},
 {
   "psalmNumber": 118,
   "category": "res",

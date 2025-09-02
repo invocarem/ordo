@@ -2442,38 +2442,45 @@
     "verified": true
 },
 
-       {
-            "number": 56,
-            "section": "",
-            "text": [
-                "Miserere mei, Deus, miserere mei, quoniam in te confidet anima mea.",
-                "Et in umbra alarum tuarum sperabo, donec transeat iniquitas.",
-                "Clamabo ad Deum altissimum, Deum qui benefecit mihi.",
-                "Misit de caelo, et liberavit me; dedit in opprobrium conculcantes me.",
-                "Misit Deus misericordiam suam et veritatem suam, et eripuit animam meam de medio catulorum leonum; dormivi conturbatus.",
-                "Filii hominum dentes eorum arma et sagittae, et lingua eorum gladius acutus.",
-                "Exaltare super caelos, Deus, et in omnem terram gloria tua.",
-                "Laqueum paraverunt pedibus meis, et incurvaverunt animam meam.",
-                "Foderunt ante faciem meam foveam, et inciderunt in eam.",
-                "Paratum cor meum, Deus, paratum cor meum; cantabo, et psalmum dicam.",
-                "Exsurge, gloria mea; exsurge, psalterium et cithara; exsurgam diluculo."
-            ],
-            "englishText": [
-                "Have mercy on me, O God, have mercy on me, for my soul trusteth in thee.",
-                "And in the shadow of thy wings will I hope, until iniquity pass away.",
-                "I will cry to God the most high, to God who hath done good to me.",
-                "He hath sent from heaven and delivered me; he hath made them a reproach that trod upon me.",
-                "God hath sent his mercy and his truth, and he hath delivered my soul from the midst of the lions' whelps; I slept troubled.",
-                "The sons of men, their teeth are weapons and arrows, and their tongue a sharp sword.",
-                "Be thou exalted, O God, above the heavens, and thy glory over all the earth.",
-                "They prepared a snare for my feet, and they bowed down my soul.",
-                "They dug a pit before my face, and they are fallen into it.",
-                "My heart is ready, O God, my heart is ready; I will sing, and I will give praise.",
-                "Arise, O my glory; arise, psalterium and harp; I will arise early."
-            ],
-            "verified": true
-        },
 
+{
+    "number": 56,
+    "section": "",
+    "text": [
+        "Miserere mei, Deus, miserere mei, quoniam in te confidet anima mea.",
+        "Et in umbra alarum tuarum sperabo, donec transeat iniquitas.",
+        "Clamabo ad Deum altissimum, Deum qui benefecit mihi.",
+        "Misit de caelo, et liberavit me; dedit in opprobrium conculcantes me.",
+        "Misit Deus misericordiam suam et veritatem suam, et eripuit animam meam de medio catulorum leonum; dormivi conturbatus.",
+        "Filii hominum dentes eorum arma et sagittae, et lingua eorum gladius acutus.",
+        "Exaltare super caelos, Deus, et in omnem terram gloria tua.",
+        "Laqueum paraverunt pedibus meis, et incurvaverunt animam meam.",
+        "Foderunt ante faciem meam foveam, et inciderunt in eam.",
+        "Paratum cor meum, Deus, paratum cor meum; cantabo, et psalmum dicam.",
+        "Exsurge, gloria mea; exsurge, psalterium et cithara; exsurgam diluculo.",
+        "Confitebor tibi in populis, Domine, et psalmum dicam tibi in gentibus.",
+        "Quoniam magnificata est usque ad caelos misericordia tua, et usque ad nubes veritas tua.",
+        "Exaltare super caelos, Deus, et super omnem terram gloria tua."
+    ],
+    "englishText": [
+        "Have mercy on me, O God, have mercy on me, for my soul trusts in you.",
+        "In the shadow of your wings I will hope, until wrongdoing has passed.",
+        "I will call upon God the Most High, upon God who has been good to me.",
+        "He sent from heaven and saved me; he handed over to shame those who trampled me.",
+        "God sent his mercy and his truth, and delivered my soul from among the lions' cubs; I lay down, troubled.",
+        "The sons of men—their teeth are weapons and arrows, and their tongue a sharp sword.",
+        "Be exalted above the heavens, O God; let your glory be over all the earth.",
+        "They set a trap for my feet, and my soul was bowed down.",
+        "They dug a pit before me, but they have fallen into it themselves.",
+        "My heart is steadfast, O God, my heart is steadfast; I will sing and make melody.",
+        "Awake, my soul! Awake, O harp and lyre! I will awake the dawn!",
+        "I will give you thanks among the peoples, O Lord; I will sing praises to you among the nations.",
+        "For your mercy is great, reaching to the heavens, and your truth to the clouds.",
+        "Be exalted above the heavens, O God; let your glory be over all the earth."
+    ],
+    "verified": true
+},
+ 
         {
             "number": 57,
             "section": "",
@@ -4894,7 +4901,7 @@
                 "Quia memor fuit verbi sancti sui, quod habuit ad Abraham puerum suum.",
                 "Et eduxit populum suum in exsultatione, et electos suos in laetitia.",
                 "Et dedit illis regiones gentium, et labores populorum possederunt,",
-                "ut custodiant justificationes eius, et legem eius requirant."
+                "ut custodiant iustificationes eius, et legem eius requirant."
             ],
             "englishText": [                
                 "And Israel went into Egypt: and Jacob was a sojourner in the land of Cham.",
@@ -5552,10 +5559,10 @@
                 "Beati qui scrutantur testimonia eius, in toto corde exquirunt eum.",
                 "Non enim qui operantur iniquitatem, in viis eius ambulaverunt.",
                 "Tu mandasti mandata tua custodiri nimis.",
-                "Utinam dirigantur viae meae, ad custodiendas justificationes tuas!",
+                "Utinam dirigantur viae meae, ad custodiendas iustificationes tuas!",
                 "Tunc non confundar, cum perspexero in omnibus praeceptis tuis.",
                 "Confitebor tibi in directione cordis, in eo quod didici iudicia justitiae tuae.",
-                "Justificationes tuas custodiam, non me derelinquas usquequaque."
+                "iustificationes tuas custodiam, non me derelinquas usquequaque."
             ],
             "englishText": [
                 "Blessed are the undefiled in the way, who walk in the law of the Lord.",
@@ -5575,7 +5582,7 @@
                 "In quo corrigit adolescentior viam suam? In custodiendo sermones tuos.",
                 "In toto corde meo exquisivi te, ne repellas me a mandatis tuis.",
                 "In corde meo abscondi eloquia tua, ut non peccem tibi.",
-                "Benedictus es, Domine, doce me justificationes tuas.",
+                "Benedictus es, Domine, doce me iustificationes tuas.",
                 "In labiis meis pronuntiavi omnia iudicia oris tui.",
                 "In via testimoniorum tuorum delectatus sum, sicut in omnibus divitiis.",
                 "In mandatis tuis exercebor, et considerabo vias tuas.",
@@ -5599,11 +5606,11 @@
                 "Retribue servo tuo, vivifica me, et custodiam sermones tuos.",
                 "Revela oculos meos, et considerabo mirabilia de lege tua.",
                 "Incola ego sum in terra, non abscondas a me mandata tua.",
-                "Concupivit anima mea desiderare justificationes tuas in omni tempore.",
+                "Concupivit anima mea desiderare iustificationes tuas in omni tempore.",
                 "Increpasti superbos, maledicti qui declinant a mandatis tuis.",
                 "Aufer a me opprobrium et contemptum, quia testimonia tua exquisivi.",
                 "Etenim sederunt principes, et adversum me loquebantur; servus autem tuus exercebatur in justificationibus tuis.",
-                "Nam et testimonia tua meditatio mea est, et consilium meum justificationes tuae."
+                "Nam et testimonia tua meditatio mea est, et consilium meum iustificationes tuae."
             ],
             "englishText": [
                 "Deal bountifully with thy servant, that I may live and keep thy words.",
@@ -5621,7 +5628,7 @@
             "section": "daleth",
             "text": [
                 "Adhaesit pavimento anima mea, vivifica me secundum verbum tuum.",
-                "Vias meas enuntiavi, et exaudisti me; doce me justificationes tuas.",
+                "Vias meas enuntiavi, et exaudisti me; doce me iustificationes tuas.",
                 "Viam justificationum tuarum instrue me, et exercebor in mirabilibus tuis.",
                 "Dormitavit anima mea prae taedio, confirma me in verbis tuis.",
                 "Viam iniquitatis amove a me, et de lege tua miserere mei.",
@@ -5695,9 +5702,9 @@
                 "Superbi inique agebant usquequaque, a lege autem tua non declinavi.",
                 "Memor fui judiciorum tuorum a saeculo, Domine, et consolatus sum.",
                 "Defectio tenuit me, pro peccatoribus derelinquentibus legem tuam.",
-                "Cantabiles mihi erant justificationes tuae in loco peregrinationis meae.",
+                "Cantabiles mihi erant iustificationes tuae in loco peregrinationis meae.",
                 "Memor fui nocte nominis tui, Domine, et custodivi legem tuam.",
-                "Hoc factum est mihi, quia justificationes tuas exquisivi."
+                "Hoc factum est mihi, quia iustificationes tuas exquisivi."
             ], "englishText": [
                 "Be thou mindful of thy word to thy servant: in which thou hast given me hope.",
                 "This hath comforted me in my humiliation: because thy word hath enlivened me.",
@@ -5720,7 +5727,7 @@
                 "Funes peccatorum circumplexi sunt me, et legem tuam non sum oblitus.",
                 "Media nocte surgebam ad confitendum tibi, super iudicia justitiae tuae.",
                 "Particeps ego sum omnium timentium te, et custodientium mandata tua.",
-                "Misericordia tua, Domine, plena est terra, justificationes tuas doce me."
+                "Misericordia tua, Domine, plena est terra, iustificationes tuas doce me."
             ] , "englishText": [
                 "O Lord, my portion: I have said, I would keep thy law.",
                 "I entreated thy face with my whole heart: have mercy on me according to thy word.",
@@ -5739,10 +5746,10 @@
                 "Bonitatem fecisti cum servo tuo, Domine, secundum verbum tuum.",
                 "Bonitatem et disciplinam et scientiam doce me, quia mandatis tuis credidi.",
                 "Priusquam humiliarer ego deliqui, propterea eloquium tuum custodivi.",
-                "Bonus es tu, et in bonitate tua doce me justificationes tuas.",
+                "Bonus es tu, et in bonitate tua doce me iustificationes tuas.",
                 "Multiplicata est super me iniquitas superborum, ego autem in toto corde meo scrutabor mandata tua.",
                 "Coagulatum est sicut lac cor eorum, ego vero legem tuam meditatus sum.",
-                "Bonum mihi quia humiliasti me, ut discam justificationes tuas.",
+                "Bonum mihi quia humiliasti me, ut discam iustificationes tuas.",
                 "Bonum mihi lex oris tui, super millia auri et argenti."
             ], "englishText": [
                 "Thou hast done good to thy servant, O Lord: according to thy word.",
@@ -5784,7 +5791,7 @@
             "text": [
                 "Defecit in salutare tuum anima mea, et in verbum tuum supersperavi.",
                 "Defecerunt oculi mei in eloquium tuum, dicentes: Quando consolaberis me?",
-                "Quia factus sum sicut uter in pruina, justificationes tuas non sum oblitus.",
+                "Quia factus sum sicut uter in pruina, iustificationes tuas non sum oblitus.",
                 "Quot sunt dies servi tui? quando facies de persequentibus me judicium?",
                 "Narraverunt mihi iniqui fabulationes, sed non ut lex tua.",
                 "Omnia mandata tua veritas; inique persecuti sunt me, adjuva me.",
@@ -5809,8 +5816,8 @@
                 "In generationem et generationem veritas tua; fundasti terram, et permanet.",
                 "Ordinatione tua perseverat dies, quoniam omnia serviunt tibi.",
                 "Nisi quod lex tua meditatio mea est, tunc forte periissem in humilitate mea.",
-                "In aeternum non obliviscar justificationes tuas, quia in ipsis vivificasti me.",
-                "Tuus sum ego, salvum me fac, quoniam justificationes tuas exquisivi.",
+                "In aeternum non obliviscar iustificationes tuas, quia in ipsis vivificasti me.",
+                "Tuus sum ego, salvum me fac, quoniam iustificationes tuas exquisivi.",
                 "Me exspectaverunt peccatores ut perderent me; testimonia tua intellexi.",
                 "Omnis consummationis vidi finem, latum mandatum tuum nimis."
             ],  "englishText": [
@@ -5847,63 +5854,70 @@
                 "By thy commandments I have had understanding: therefore have I hated every way of iniquity."
             ],"verified": true
         },
+
         {
             "number": 118,
             "section": "nun",
             "text": [
                 "Lucerna pedibus meis verbum tuum, et lumen semitis meis.",
-                "Juravi et statui custodire iudicia justitiae tuae.",
-                "Humiliatus sum usquequaque, Domine, vivifica me secundum verbum tuum.",
+                "Iuravi et statui custodire iudicia iustitiae tuae.",
+                "Humiliatus sum usquequaque, Domine; vivifica me secundum verbum tuum.",
                 "Voluntaria oris mei beneplacita fac, Domine, et iudicia tua doce me.",
                 "Anima mea in manibus tuis semper, et legem tuam non sum oblitus.",
                 "Posuerunt peccatores laqueum mihi, et de mandatis tuis non erravi.",
                 "Hereditate acquisivi testimonia tua in aeternum, quia exsultatio cordis mei sunt.",
-                "Inclinavi cor meum ad faciendas justificationes tuas in aeternum, propter retributionem."
-            ], "englishText": [
-                "Thy word is a lamp to my feet: and a light to my paths.",
-                "I have sworn and am determined to keep the judgments of thy justice.",
-                "I have been humbled, O Lord, exceedingly: quicken thou me according to thy word.",
-                "The free offerings of my mouth make thou acceptable, O Lord: and teach me thy judgments.",
-                "My soul is continually in my hands: and I have not forgotten thy law.",
-                "The wicked have laid a snare for me: but I have not strayed from thy commandments.",
-                "I have purchased thy testimonies for an inheritance for ever: because they are the joy of my heart.",
-                "I have inclined my heart to do thy justifications for ever: for the reward."
-            ]  ,"verified": true      },
-        {
-            "number": 118,
-            "section": "Samech",
-            "text": [
-                "Iniquos odio habui, et legem tuam dilexi.",
-                "adiutor et susceptor meus es tu, et in verbum tuum supersperavi.",
-                "Declinate a me, maligni, et scrutabor mandata Dei mei.",
-                "Suscita me secundum verbum tuum, et vivam, et non confundas me ab exspectatione mea.",
-                "Adjuva me, et salvus ero, et meditabor in justificationibus tuis semper.",
-                "Sprevisti omnes discedentes a judiciis tuis, quia injusta cogitatio eorum.",
-                "Praevari cantes reputavi omnes peccatores terrae, ideo dilexi testimonia tua.",
-                "Confige timore tuo carnes meas, a judiciis enim tuis timui."
-            ], "englishText": [
-                "I have hated the unjust: and I have loved thy law.",
-                "Thou art my helper and my protector: and in thy word I have greatly hoped.",
-                "Depart from me, ye malignant: and I will search the commandments of my God.",
-                "Uphold me according to thy word, and I shall live: and let me not be confounded in my expectation.",
-                "Help me, and I shall be saved: and I will meditate always on thy justifications.",
-                "Thou hast despised all them that fall off from thy judgments: for their thought is unjust.",
-                "I have counted all the sinners of the earth prevaricators: therefore have I loved thy testimonies.",
-                "Pierce thou my flesh with thy fear: for I am afraid of thy judgments."
-            ],"verified": true
+                "Inclinavi cor meum ad faciendas iustificationes tuas in aeternum, propter retributionem."
+            ],
+            "englishText": [
+                "Your word is a lamp for my feet and a light for my path.",
+                "I have sworn and firmly determined to keep the ordinances of your justice.",
+                "I am greatly humbled, O Lord; give me life according to your word.",
+                "Graciously accept the voluntary offerings of my mouth, O Lord, and teach me your judgments.",
+                "My soul is continually in your hands; I have not forgotten your law.",
+                "Sinners have set a trap for me, but I have not strayed from your commandments.",
+                "I hold your testimonies as an inheritance forever, for they are the joy of my heart.",
+                "I have set my heart on keeping your statutes forever, for the enduring reward."
+            ],
+            "verified": true
         },
+
+{
+    "number": 118,
+    "section": "Samech",
+    "text": [
+        "Iniquos odio habui, et legem tuam dilexi.",
+        "Adiutor et susceptor meus es tu, et in verbum tuum supersperavi.",
+        "Declinate a me, maligni, et scrutabor mandata Dei mei.",
+        "Suscita me secundum verbum tuum, et vivam, et non confundas me ab exspectatione mea.",
+        "Adiuva me, et salvus ero, et meditabor in iustificationibus tuis semper.",
+        "Sprevisti omnes discedentes a iudiciis tuis, quia iniqua cogitatio eorum.",
+        "Praevaricantes reputavi omnes peccatores terrae, ideo dilexi testimonia tua.",
+        "Confige timore tuo carnes meas, a iudiciis enim tuis timui."
+    ],
+    "englishText": [
+        "I hate and abhor falsehood, but I love your law.",
+        "You are my helper and my shield; in your word I put my hope.",
+        "Away from me, you evildoers, that I may keep the commands of my God!",
+        "Uphold me according to your promise, that I may live; let me not be put to shame in my hope.",
+        "Sustain me, that I may be saved and ever contemplate your statutes.",
+        "You reject all who stray from your statutes, for their deceit is in vain.",
+        "You consider all the wicked of the earth as dross; therefore I love your testimonies.",
+        "My flesh trembles for fear of you; I stand in awe of your judgments."
+    ],
+    "verified": true
+},
         {
             "number": 118,
             "section": "Ain",
             "text": [
-                "Feci judicium et iustitiam, non tradas me calumniantibus me.",
-                "Suscipe servum tuum in bonum, non calumnientur me superbi.",
-                "Oculi mei defecerunt in salutare tuum, et in eloquium justitiae tuae.",
-                "Fac cum servo tuo secundum misericordiam tuam, et justificationes tuas doce me.",
-                "Servus tuus sum ego, da mihi intellectum, ut sciam testimonia tua.",
-                "Tempus faciendi, Domine, dissipaverunt legem tuam.",
+               "Feci iudicium et iustitiam; non tradas me calumniantibus me.",
+                "Suscipe servum tuum in bonum; non calumnientur me superbi.",
+                "Oculi mei defecerunt in salutare tuum, et in eloquium iustitiae tuae.",
+                "Fac cum servo tuo secundum misericordiam tuam, et iustificationes tuas doce me.",
+                "Servus tuus sum ego; da mihi intellectum, ut sciam testimonia tua.",
+                "Tempus faciendi, Domine; dissipaverunt legem tuam.",
                 "Ideo dilexi mandata tua super aurum et topazion.",
-                "Propterea ad omnia mandata tua dirigebar, omnem viam iniquam odio habui."
+                "Propterea ad omnia mandata tua dirigebar; omnem viam iniquam odio habui."
             ] ,"englishText": [
                 "I have done judgment and justice: give me not up to them that slander me.",
                 "Uphold thy servant unto good: let not the proud calumniate me.",
@@ -5925,7 +5939,7 @@
                 "Aspice in me et miserere mei, secundum judicium diligentium nomen tuum.",
                 "Gressus meos dirige secundum eloquium tuum, et non dominetur mei omnis iniquitas.",
                 "Redime me a calumniis hominum, ut custodiam mandata tua.",
-                "Faciem tuam illumina super servum tuum, et doce me justificationes tuas.",
+                "Faciem tuam illumina super servum tuum, et doce me iustificationes tuas.",
                 "Exitius aquae deduxerunt oculi mei, quia non custodierunt legem tuam."
             ], "englishText": [
                 "Thy testimonies are wonderful: therefore my soul hath sought them.",
@@ -6047,7 +6061,7 @@
             "text": [
                 "Appropinquet deprecatio mea in conspectu tuo, Domine; juxta eloquium tuum da mihi intellectum.",
                 "Intret postulatio mea in conspectu tuo; secundum eloquium tuum eripe me.",
-                "Eructabunt labia mea hymnum, cum docueris me justificationes tuas.",
+                "Eructabunt labia mea hymnum, cum docueris me iustificationes tuas.",
                 "Pronuntiabit lingua mea eloquium tuum, quia omnia mandata tua aequitas.",
                 "Fiat manus tua ut salvet me, quoniam mandata tua elegi.",
                 "Concupivi salutare tuum, Domine, et lex tua meditatio mea est.",
