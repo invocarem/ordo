@@ -4638,6 +4638,50 @@
     }
   ]
 },
+
+{
+  "psalmNumber": 118,
+  "category": "pe",
+  "themes": [
+    {
+      "name": "Wonder → Scrutiny",
+      "description": "The marvelous nature of God's testimonies leads the soul to examine them deeply.",
+      "lemmas": ["mirabilis", "testimonium", "scrutor", "declaratio"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalmist declares the wondrous nature of God's testimonies, which his soul has thoroughly examined, and acknowledges how the revelation of God's words brings light and understanding to the simple.",
+      "comment2": "Augustine sees this as the soul's response to divine revelation: wonder leads to deep study, and God's word itself provides the illumination needed for understanding (Enarr. Ps. 118.37.1)."
+    },
+    {
+      "name": "Longing → Plea",
+      "description": "An open-mouthed longing for God's commands leads to a plea for merciful attention.",
+      "lemmas": ["aperio", "attraho", "spiritus", "aspicio"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The psalmist describes opening his mouth and panting with desire for God's commands, leading to a plea for God to look upon him and show mercy according to His judgment of those who love His name.",
+      "comment2": "Augustine interprets this physical imagery of opening the mouth and panting as the soul's intense desire for spiritual nourishment from God's word (Enarr. Ps. 118.38.2)."
+    },
+    {
+      "name": "Guidance → Redemption",
+      "description": "A request for directed steps leads to a plea for redemption from human oppression.",
+      "lemmas": ["dirigo", "dominor", "redimo", "calumnia"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The psalmist asks God to direct his steps according to His word so that no injustice may dominate him, and to redeem him from human oppression that he may keep God's commands.",
+      "comment2": "For Augustine, this shows the connection between divine guidance and deliverance: only God's direction can free us from both external oppression and internal sin's dominion (Enarr. Ps. 118.39.3)."
+    },
+    {
+      "name": "Illumination → Grief",
+      "description": "A request for God's face to shine in teaching leads to grief over law-breaking.",
+      "lemmas": ["illumina", "doceo", "exitus", "custodio"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "The psalmist asks for God's face to shine upon His servant and teach him His statutes, while his eyes shed streams (exitus: going out) of tears because people do not keep God's law.",
+      "comment2": "Augustine sees this as the perfect response to divine illumination: both a desire to learn God's ways and a heartfelt grief when others reject them (Enarr. Ps. 118.40.8)."
+    }
+  ]
+},
+
 {
   "psalmNumber": 118,
   "category": "res",

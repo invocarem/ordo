@@ -17,6 +17,24 @@
     ]
   }
 },
+
+{
+  "lemma": "calumnia",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "calumnia",
+  "genitive": "calumniae",
+  "translations": {
+    "en": "false accusation, trickery, slander",
+    "la": "calumnia, calumniae"
+  },
+  "forms": {
+    "dative_plural": ["calumniis"],
+    "ablative_plural": ["calumniis"]
+  }
+},
+
   {
     "lemma": "configo",
     "part_of_speech": "verb",
@@ -11617,7 +11635,10 @@
     {
       "lemma": "deduco",
       "part_of_speech": "verb",
+      "conjugation": 3,
       "infinitive": "deducere",
+      "present": "deduco",
+      "future": "deducam",
       "perfect": "deduxi",
       "supine": "deductum",
       "translations": {
