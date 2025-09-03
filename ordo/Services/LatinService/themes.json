@@ -701,7 +701,7 @@
     {
       "name": "Deceitful Lips → Boasting",
       "description": "The presence of deceitful lips leads directly to arrogant boasting in human autonomy and a denial of God's lordship.",
-      "lemmas": ["disperdo", "magniloquus", "magnifico", "dominor"],
+      "lemmas": ["disperdo", "magniloquus", "magnifico", "dico"],
       "startLine": 3,
       "endLine": 4,
       "comment": "The psalmist describes deceitful lips and a boastful tongue, which are defined by the declaration: 'We will magnify our tongue; our lips are our own: who is lord over us?'",
@@ -719,7 +719,7 @@
     {
       "name": "Word → Refining",
       "description": "The Lord's pure and tested words serve as a refining fire for the faithful amidst encircling evil and human multitude.",
-      "lemmas": ["eloquium", "castus", "examino", "septuplum", "custodio", "circuitus"],
+      "lemmas": ["eloquium", "castus", "examino", "septuplus", "custodio", "circuitus"],
       "startLine": 7,
       "endLine": 9,
       "comment": "The Lord's words are pure and tested like silver refined sevenfold. They guard the faithful amidst the wicked who encircle them and the multiplied children of men, serving as both protection and purification.",

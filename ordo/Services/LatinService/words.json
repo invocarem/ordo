@@ -1,5 +1,55 @@
 [
   {
+    "lemma": "septuplus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "septuplus",
+    "genitive": "septupli",
+    "translations": {
+      "en": "sevenfold, septuple",
+      "la": "septuplus, septupla, septuplum"
+    },
+    "forms": {
+      "nominative_f": ["septupla"],
+      "accusative_f": ["septuplam"],
+      "ablative_f": ["septupla"],
+      "nominative_n": ["septuplum"],
+      "accusative_n": ["septuplum"],
+      "ablative_n": ["septuplo"]
+    }
+  },
+  {
+    "lemma": "ambulo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "ambulare",
+    "present": "ambulo",
+    "future": "ambulabo",
+    "perfect": "ambulavi",
+    "supine": "ambulatum",
+    "translations": {
+      "en": "to walk, go about, march",
+      "la": "ambulō, ambulāre, ambulāvī, ambulātum"
+    }
+  },
+  {
+    "lemma": "magniloquus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "magniloquus",
+    "genitive": "magniloqui",
+    "translations": {
+      "en": "boastful, bragging",
+      "la": "magniloquus, magniloqua, magniloquum"
+    },
+    "forms": {
+      "nominative_f": ["magniloqua"],
+      "accusative_f": ["magniloquam"]
+    }
+  },
+  {
     "lemma": "diminutus",
     "part_of_speech": "adjective",
     "declension": 1,
@@ -7,7 +57,7 @@
     "nominative": "diminutus",
     "genitive": "diminuti",
     "translations": {
-      "en": "diminished, weakened, impaired, made scarce",
+      "en": "diminished, weakened, impaired",
       "la": "dīminūtus, dīminūta, dīminūtum"
     },
     "forms": {
@@ -3779,7 +3829,7 @@
   "perfect": "egi",
   "supine": "actum",
   "translations": {
-    "en": "to do, act, drive, perform; spend (time)",
+    "en": "to do, act, drive",
     "la": "ago, agere, egi, actum"
   }
   
@@ -9948,18 +9998,7 @@
             "la": "dolosus"
           }
         },
-       {
-          "lemma": "magniloquus",
-          "part_of_speech": "adjective",
-          "declension": 1,
-          "nominative": "magniloquus",
-          "genitive": "magniloqui",
-          "translations": {
-            "en": "boastful, pompous",
-            "la": "magniloquus"
-          }
-        },
-      
+     
       
         {
           "lemma": "argentum",
@@ -17584,26 +17623,7 @@
                 "la": "testimonium"
             }
         },
-        {
-            "lemma": "ambulo",
-            "part_of_speech": "verb",
-            "perfect": "ambulavi",
-            "infinitive": "ambulare",
-            "forms": {
-                "present": ["ambulo", "ambulas", "ambulat", "ambulamus", "ambulatis", "ambulant"],
-                "imperfect": ["ambulabam", "ambulabas", "ambulabat", "ambulabamus", "ambulabatis", "ambulabant"],
-                "future": ["ambulabo", "ambulabis", "ambulabit", "ambulabimus", "ambulabitis", "ambulabunt"],
-                "perfect": ["ambulavi", "ambulavisti", "ambulavit", "ambulavimus", "ambulavistis", "ambulaverunt"],
-                "imperative_singular": ["ambula"],
-                "imperative_plural": ["ambulate"],
-                "present_subjunctive": ["ambulem", "ambules", "ambulet", "ambulemus", "ambuletis", "ambulent"]
-            },
-            "translations": {
-                "en": "walk",
-                "la": "ambulo"
-            }
-        },
-        {
+       {
           "lemma": "sine",
           "part_of_speech": "preposition",
           "translations": {
@@ -19359,66 +19379,48 @@
     "la": "cor, cordis"
   }
 },
-           {
-            "lemma": "septuplus",
-            "part_of_speech": "adjective",
-            "declension": 1,
-            "nominative": "septuplus",
-            "genitive": "septupli",
-            "forms": {
-              "nominative_f": ["septupla"],
-              "accusative_f": ["septuplam"],
-              "ablative_f": ["septupla"],
-              "nominative_n": ["septuplum"],
-              "accusative_n": ["septuplum"],
-              "ablative_n": ["septuplo"]
-            },
-            "translations": {
-              "en": "sevenfold",
-              "la": "septuplus"
-            }
-          },
-          {
-            "lemma": "multiplico",
-            "part_of_speech": "verb",
-            "conjugation": 1,
-            "perfect": "multiplicavi",
-            "infinitive": "multiplicare",
-            "supine": "multiplicatum",
-            "forms": {
-                "perfect": ["multiplicavi", "multiplicavisti/multiplicasti", "multiplicavit", "multiplicavimus", "multiplicavistis", "multiplicaverunt"]
-            },
-            "forms_plural":{
-                "perfect_participle_f": ["multiplicatae"]
-            },
-            "translations": {
-              "en": "multiply, increase",
-              "la": "multiplico"
-            }
-          },
-          {
-            "lemma": "multiplio",
-            "part_of_speech": "verb",
-            "conjugation": 1,  
-            "deponent": false,
-            "infinitive": "multiplicare",
-            "forms": {
-              "present": ["multiplio", "multiplicas", "multiplicat", "multiplicamus", "multiplicatis", "multiplicant"],
-              "present_passive": ["multiplicor", "multiplicaris", "multiplicatur", "multiplicamur", "multiplicamini", "multiplicantur"],
-              "imperative": ["multiplica", "multiplicate"], 
-              "subjunctive": ["multiplicem", "multiplices", "multiplicet", "multiplicemus", "multiplicetis", "multiplicent"],
-              "future_passive": ["multiplicabor", "multiplicaberis", "multiplicabitur", "multiplicabimur", "multiplicabimini", "multiplicabuntur"],
-              "present_participle": ["multiplicans"],  
-              "perfect_passive_participle": ["multiplicatus", "multiplicata", "multiplicatum"]  
-            },
-            "forms_plural" :{
-                "perfect_passive_participle": ["multiplicati", "multiplicatae", "multiplicata"]
-            }, 
-            "translations": {
-              "en": "to multiply",
-              "la": "multiplio, multiplicare, multiplicavi, multiplicatum"
-            }
-          },
+
+  {
+    "lemma": "multiplico",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "perfect": "multiplicavi",
+    "infinitive": "multiplicare",
+    "supine": "multiplicatum",
+    "forms": {
+        "perfect": ["multiplicavi", "multiplicavisti/multiplicasti", "multiplicavit", "multiplicavimus", "multiplicavistis", "multiplicaverunt"]
+    },
+    "forms_plural":{
+        "perfect_participle_f": ["multiplicatae"]
+    },
+    "translations": {
+      "en": "multiply, increase",
+      "la": "multiplico"
+    }
+  },
+  {
+    "lemma": "multiplio",
+    "part_of_speech": "verb",
+    "conjugation": 1,  
+    "deponent": false,
+    "infinitive": "multiplicare",
+    "forms": {
+      "present": ["multiplio", "multiplicas", "multiplicat", "multiplicamus", "multiplicatis", "multiplicant"],
+      "present_passive": ["multiplicor", "multiplicaris", "multiplicatur", "multiplicamur", "multiplicamini", "multiplicantur"],
+      "imperative": ["multiplica", "multiplicate"], 
+      "subjunctive": ["multiplicem", "multiplices", "multiplicet", "multiplicemus", "multiplicetis", "multiplicent"],
+      "future_passive": ["multiplicabor", "multiplicaberis", "multiplicabitur", "multiplicabimur", "multiplicabimini", "multiplicabuntur"],
+      "present_participle": ["multiplicans"],  
+      "perfect_passive_participle": ["multiplicatus", "multiplicata", "multiplicatum"]  
+    },
+    "forms_plural" :{
+        "perfect_passive_participle": ["multiplicati", "multiplicatae", "multiplicata"]
+    }, 
+    "translations": {
+      "en": "to multiply",
+      "la": "multiplio, multiplicare, multiplicavi, multiplicatum"
+    }
+  },
     
           {
             "lemma": "do",
@@ -21185,29 +21187,6 @@
     }
   },
 
-  {
-    "lemma": "ambulare",
-    "part_of_speech": "verb",
-    "conjugation": 1,
-    "deponent": false,
-    "infinitive": "ambulare",
-    "forms": {
-      "present": ["ambulo", "ambulas", "ambulat", "ambulamus", "ambulatis", "ambulant"],
-      "present_passive": ["ambolor", "ambularis", "ambulatur", "ambulamur", "ambulamini", "ambulantur"],
-      "imperative": ["ambula", "ambulate"],
-      "subjunctive": ["ambulem", "ambules", "ambulet", "ambulemus", "ambuletis", "ambulent"],
-      "future": ["ambulabo", "ambulabis", "ambulabit", "ambulabimus", "ambulabitis", "ambulabunt"],
-      "future_passive": ["ambulabor", "ambulaberis", "ambulabitur", "ambulabimur", "ambulabimini", "ambulabuntur"],
-      "present_participle": ["ambulans"],
-      "perfect_passive_participle": ["ambulatus", "ambulata", "ambulatum"],
-      "perfect_indicative_active": ["ambulavi", "ambulavisti", "ambulavit", "ambulavimus", "ambulavistis", "ambulaverunt"],
-      "future_perfect_indicative_active": ["ambulavero", "ambulaveris", "ambulaverit", "ambulaverimus", "ambulaveritis", "ambulaverint"]
-    },
-    "translations": {
-      "en": "to walk, to go",
-      "la": "ambulare"
-    }
-  },
   {
     "lemma": "semita",
     "part_of_speech": "noun",
