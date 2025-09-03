@@ -436,7 +436,6 @@
                 {
                 "number": 12,
                 "section": "",
-                "title": "A Cry for God's Help",
                 "text": [
                     "Usquequo, Domine, oblivisceris me in finem? usquequo avertis faciem tuam a me?",
                     "Quandiu ponam consilia in anima mea, dolorem in corde meo per diem?",
@@ -2232,7 +2231,7 @@
         "Domine, labia mea aperies, et os meum annuntiabit laudem tuam.",
         "Quoniam si voluisses sacrificium, dedissem utique; holocaustis non delectaberis.",
         "Sacrificium Deo spiritus contribulatus; cor contritum et humiliatum, Deus, non despicies.",
-        "Benigne fac, Domine, in bona voluntate tua Sion, ut aedificentur muri Jerusalem.",
+        "Benigne fac, Domine, in bona voluntate tua Sion, ut aedificentur muri Ierusalem.",
         "Tunc acceptabis sacrificium iustitiae, oblationes et holocausta; tunc imponent super altare tuum vitulos."
     ],
     "englishText": [
@@ -2741,7 +2740,7 @@
     "section": "",
     "title": "Thanksgiving for God's Abundance",
     "text": [
-        "Te decet hymnus, Deus, in Sion; et tibi reddetur votum in Jerusalem.",
+        "Te decet hymnus, Deus, in Sion; et tibi reddetur votum in Ierusalem.",
         "Exaudi orationem meam; ad te omnis caro veniet.",
         "Verba iniquorum praevaluerunt super nos; et impietatibus nostris tu propitiaberis.",
         "Beatus quem elegisti et assumpsisti; inhabitabit in atriis tuis.",
@@ -2917,7 +2916,7 @@
         "In ecclesiis benedicite Deo Domino, de fontibus Israel.",
         "Ibi Benjamin adolescentulus, in mentis excessu; principes Juda, duces eorum; principes Zabulon, principes Nephthali.",
         "Manda, Deus, virtuti tuae; confirma hoc, Deus, quod operatus es in nobis.",
-        "A templo tuo in Jerusalem, tibi offerent reges munera.",
+        "A templo tuo in Ierusalem, tibi offerent reges munera.",
         "Increpa feras arundinis; congregatio taurorum in vaccis populorum, ut excludantur qui probati sunt argento; dissipa gentes quae bella volunt.",
         "Venient legati ex Aegypto; Aethiopia praeveniet manus eius Deo.",
         "Regna terrae, cantate Deo; psallite Domino.",
@@ -3609,9 +3608,9 @@
             "section": "",
             "title": "Deus, venerunt gentes",
             "text": [
-                "Deus, venerunt gentes in hereditatem tuam: polluerunt templum sanctum tuum: posuerunt Jerusalem in pomorum custodiam.",
+                "Deus, venerunt gentes in hereditatem tuam: polluerunt templum sanctum tuum: posuerunt Ierusalem in pomorum custodiam.",
                 "Posuerunt morticina servorum tuorum, escas volatilibus caeli: carnes sanctorum tuorum, bestiis terrae.",
-                "Effuderunt sanguinem ipsorum tamquam aquam in circuitu Jerusalem: et non erat qui sepeliret.",
+                "Effuderunt sanguinem ipsorum tamquam aquam in circuitu Ierusalem: et non erat qui sepeliret.",
                 "Facti sumus opprobrium vicinis nostris: subsannatio et illusio his, qui in circuitu nostro sunt.",
                 "Usquequo Domine irasceris in finem: accendetur velut ignis zelus tuus?",
                 "Effunde iram tuam in gentes, quae te non noverunt: et in regna quae nomen tuum non invocaverunt.",
@@ -4602,7 +4601,7 @@
                 "Scribantur haec in generatione altera, et populus qui creabitur laudabit Dominum.",
                 "Quia prospexit de excelso sancto suo; Dominus de caelo in terram aspexit,",
                 "ut audiret gemitus compeditorum, ut solveret filios interemptorum,",
-                "ut annuntient in Sion nomen Domini, et laudem eius in Jerusalem,",
+                "ut annuntient in Sion nomen Domini, et laudem eius in Ierusalem,",
                 "in conveniendo populos in unum, et reges ut serviant Domino.",
                 "Respondit ei in via virtutis suae: Paucitatem dierum meorum nuntia mihi.",
                 "Ne revoces me in dimidio dierum meorum; in generationem et generationem anni tui.",
@@ -5449,7 +5448,7 @@
                 "O Domine, quia ego servus tuus: ego servus tuus, et filius ancillae tuae.",
                 "Dirupisti vincula mea: tibi sacrificabo hostiam laudis, et nomen Domini invocabo.",
                 "Vota mea Domino reddam in conspectu omnis populi eius:",
-                "In atriis domus Domini, in medio tui, Jerusalem."
+                "In atriis domus Domini, in medio tui, Ierusalem."
             ],
             "englishText": [
                 "I have believed, therefore have I spoken; but I was humbled exceedingly.",
@@ -6215,7 +6214,7 @@
                 "section": "",
                 "title": "The Lord Surrounds His People",
                 "text": [
-                    "Qui confidunt in Domino, sicut mons Sion: non commovebitur in aeternum, qui habitat in Jerusalem.",
+                    "Qui confidunt in Domino, sicut mons Sion: non commovebitur in aeternum, qui habitat in Ierusalem.",
                     "Montes in circuitu eius, et Dominus in circuitu populi sui, ex hoc nunc et usque in saeculum.",
                     "Quia non relinquet Dominus virgam peccatorum super sortem iustorum, ut non extendant justi ad iniquitatem manus suas.",
                     "Benefac, Domine, bonis, et rectis corde.",
@@ -6277,33 +6276,32 @@
                     "Blessed is the man that hath filled his desire with them: he shall not be confounded when he shall speak to his enemies in the gate."
                 ],
                 "verified": true
-            }
-        ,
-
-       
+            },
         
             {
                 "number": 127,
                 "section": "",
-                "title": "The Blessings of the God-Fearing",
                 "text": [
                     "Beati omnes qui timent Dominum, qui ambulant in viis eius.",
                     "Labores fructuum tuorum manducabis; beatus es, et bene tibi erit.",
-                    "Uxor tua sicut vitis abundans in lateribus domus tuae; filii tui sicut novellae olivarum in circuitu mensae tuae.",
+                    "Uxor tua sicut vitis abundans in lateribus domus tuae;",
+                    "Filii tui sicut novellae olivarum in circuitu mensae tuae.",
                     "Ecce sic benedicetur homo qui timet Dominum.",
-                    "Benedicat tibi Dominus ex Sion, et videas bona Jerusalem omnibus diebus vitae tuae.",
+                    "Benedicat tibi Dominus ex Sion, et videas bona Ierusalem omnibus diebus vitae tuae.",
                     "Et videas filios filiorum tuorum. Pax super Israel!"
                 ],
                 "englishText": [
                     "Blessed are all they that fear the Lord: that walk in his ways.",
                     "For thou shalt eat the labours of thy hands: blessed art thou, and it shall be well with thee.",
-                    "Thy wife as a fruitful vine, on the sides of thy house. Thy children as olive plants, round about thy table.",
+                    "Thy wife as a fruitful vine, on the sides of thy house. ",
+                    "Thy children as olive plants, round about thy table.",
                     "Behold, thus shall the man be blessed that feareth the Lord.",
                     "May the Lord bless thee out of Sion: and mayest thou see the good things of Jerusalem all the days of thy life.",
                     "And mayest thou see thy children’s children, peace upon Israel."
                 ],
                 "verified": true
             },
+
             {
                 "number": 128,
                 "section": "",
@@ -6493,7 +6491,7 @@
                     "Similes illis fiant qui faciunt ea, et omnes qui confidunt in eis.",
                     "Domus Israel benedicite Domino: domus Aaron benedicite Domino.",
                     "Domus Levi benedicite Domino: qui timetis Dominum, benedicite Domino.",
-                    "Benedictus Dominus ex Sion, qui habitat in Jerusalem."
+                    "Benedictus Dominus ex Sion, qui habitat in Ierusalem."
                 ],
                 "englishText": [
                     "Praise ye the name of the Lord: O you his servants, praise the Lord:",
@@ -6593,9 +6591,9 @@
                     "Quia illic interrogaverunt nos, qui captivos duxerunt nos, verba cantionum.",
                     "Et qui abduxerunt nos: Hymnum cantate nobis de canticis Sion.",
                     "Quomodo cantabimus canticum Domini in terra aliena?",
-                    "Si oblitus fuero tui, Jerusalem, oblivioni detur dextera mea.",
-                    "Adhaereat lingua mea faucibus meis, si non meminero tui: si non proposuero Jerusalem, in principio laetitiae meae.",
-                    "Memor esto, Domine, filiorum Edom, in die Jerusalem: qui dicunt: Exinanite, exinanite usque ad fundamentum in ea.",
+                    "Si oblitus fuero tui, Ierusalem, oblivioni detur dextera mea.",
+                    "Adhaereat lingua mea faucibus meis, si non meminero tui: si non proposuero Ierusalem, in principio laetitiae meae.",
+                    "Memor esto, Domine, filiorum Edom, in die Ierusalem: qui dicunt: Exinanite, exinanite usque ad fundamentum in ea.",
                     "Filia Babylonis misera: beatus qui retribuet tibi retributionem tuam, quam retribuisti nobis.",
                     "Beatus qui tenebit, et allidet parvulos tuos ad petram."
                 ],
@@ -6998,7 +6996,7 @@
                 "title": "Praise for Restoration and Provision",
                 "text": [
                     "Laudate Dominum, quoniam bonus est psalmus: Deo nostro sit jucunda, decoraque laudatio.",
-                    "Aedificans Jerusalem Dominus: dispersiones Israel congregabit.",
+                    "Aedificans Ierusalem Dominus: dispersiones Israel congregabit.",
                     "Qui sanat contritos corde: et alligat contritiones eorum.",
                     "Qui numerat multitudinem stellarum: et omnibus eis nomina vocat.",
                     "Magnus Dominus noster, et magna virtus eius: et sapientiae eius non est numerus.",
@@ -7012,7 +7010,7 @@
                 ],
                 "englishText": [
                     "Praise ye the Lord, because psalm is good: to our God be joyful and comely praise.",
-                    "The Lord buildeth up Jerusalem: he will gather together the dispersed of Israel.",
+                    "The Lord buildeth up Ierusalem: he will gather together the dispersed of Israel.",
                     "Who healeth the broken of heart: and bindeth up their bruises.",
                     "Who numbereth the multitude of the stars: and calleth them all by their names.",
                     "Great is our Lord, and great is his power: and of his wisdom there is no number.",
@@ -7030,9 +7028,8 @@
             {
                 "number": 147,
                 "section": "A",
-                "title": "God’s Care for Jerusalem",
                 "text": [
-                    "Lauda, Jerusalem, Dominum: lauda Deum tuum, Sion.",
+                    "Lauda, Ierusalem, Dominum: lauda Deum tuum, Sion.",
                     "Quoniam confortavit seras portarum tuarum: benedixit filiis tuis in te.",
                     "Qui posuit fines tuos pacem: et adipe frumenti satiat te.",
                     "Qui emittit eloquium suum terrae: velociter currit sermo eius.",

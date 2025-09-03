@@ -737,61 +737,40 @@
   ]
 },
 
-
 {
   "psalmNumber": 12,
   "category": "",
   "themes": [
     {
-      "name": "Lament in Suffering",
-      "description": "The psalmist's cry of despair in prolonged suffering",
-      "lemmas": ["usquequo", "obliviscor", "dolor"],
+      "name": "Abandonment → Anguish",
+      "description": "A feeling of divine forgetfulness leads to deep internal anguish and questioning.",
+      "lemmas": ["obliviscor", "avertor", "pono", "dolor"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Repeated 'usquequo' (How long?) frames the lament"
+      "comment": "The psalmist repeatedly questions how long God will forget him and hide His face, describing how he must continually harbor sorrow and grief in his heart.",
+      "comment2": "Augustine sees this as the soul's cry in spiritual desolation, feeling the absence of God's comfort while grappling with persistent inner pain."
     },
     {
-      "name": "Divine Hiddenness",
-      "description": "Feeling of God's absence and unanswered prayers",
-      "lemmas": ["averto", "facies"],
-      "startLine": 1,
-      "endLine": 1,
-      "comment": "The turned face (avertō faciem) motif"
-    },
-    {
-      "name": "Enemy Threat",
-      "description": "Fear of enemy triumph and gloating",
-      "lemmas": ["exalto", "inimicus", "praevaleo"],
+      "name": "Oppression → Plea",
+      "description": "The exaltation of enemies leads to a desperate plea for God's attention and illumination.",
+      "lemmas": ["exalto", "respicio", "illumino", "obdormio"],
       "startLine": 3,
-      "endLine": 5,
-      "comment": "Enemy references escalate from line 3 to 5"
-    },
-    {
-      "name": "Petition for Help",
-      "description": "Direct requests for divine intervention",
-      "lemmas": ["respicio", "exaudio", "illumino"],
-      "startLine": 4,
       "endLine": 4,
-      "comment": "Imperative verbs: respice (look), exaudi (hear)"
+      "comment": "The psalmist asks how long his enemy will be exalted over him, then urgently pleads for God to look upon him, hear him, and bring light to his eyes lest he sleep in death.",
+      "comment2": "For Augustine, this represents the turn from lament to petition—asking God to replace the darkness of oppression with His illuminating grace to prevent spiritual death."
     },
     {
-      "name": "Trust Transition",
-      "description": "Shift from lament to confident trust",
-      "lemmas": ["misericordia", "spero"],
-      "startLine": 6,
+      "name": "Defeat → Hope",
+      "description": "The fear of enemy triumph is overcome by hope in divine mercy and salvation.",
+      "lemmas": ["praevaleo", "exsulto", "spero", "salus"],
+      "startLine": 5,
       "endLine": 6,
-      "comment": "Pivot to trust (sperāvi) in God's mercy"
-    },
-    {
-      "name": "Promise of Praise",
-      "description": "Vow to worship despite circumstances",
-      "lemmas": ["exsulto", "cano", "psallo"],
-      "startLine": 6,
-      "endLine": 6,
-      "comment": "Threefold praise verbs: exsultō, canō, psallō"
+      "comment": "The psalmist fears his enemies' triumph and exultation should he fall, but declares his personal hope in God's mercy and the future joy of His salvation.",
+      "comment2": "Augustine interprets this as the crucial movement from fear to faith, where trust in God's character overcomes anxiety about circumstances."
     }
   ]
 },
+
 {
   "psalmNumber": 13,
   "category": "",
