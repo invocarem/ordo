@@ -560,33 +560,33 @@
       "comment2": "Augustine interprets this as the test of faith when God seems distant during persecution (Enarr. Ps. 9.3-4B)."
     },
     {
-      "name": "Praise → Corruption",
-      "description": "Praise of sinners leads to God's anger and moral corruption.",
-      "lemmas": ["laudo", "exacerbo", "inquinatus", "dominor"],
+      "name": "Praise → Provocation",
+      "description": "Praise of sinners for their desires provokes God's anger.",
+      "lemmas": ["laudo", "exacerbo", "iniquus", "benedico"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "The wicked are praised for their desires, provoking God's anger and corrupting their ways while dominating enemies.",
-      "comment2": "Augustine contrasts this self-glory with divine requirements (Enarr. Ps. 9.5-6B)."
+      "comment": "The sinner is praised for his desires, and the wicked is blessed, which exacerbates the Lord's anger.",
+      "comment2": "Augustine contrasts this self-glorification with divine requirements (Enarr. Ps. 9.5-6B)."
     },
     {
-      "name": "Security → Deceit",
-      "description": "False claims of stability mask speech full of curses and deceit.",
-      "lemmas": ["moveo", "maledictio", "amaritudo", "dolus"],
+      "name": "Denial → Dominance",
+      "description": "The denial of God's presence leads to corrupt ways and the removal of His judgment, resulting in worldly dominance.",
+      "lemmas": ["inquinatus", "aufero", "iudicium", "dominor"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "The wicked claim they will never be moved, yet their speech overflows with curses, bitterness, and deception.",
-      "comment2": "Augustine notes how corrupt speech reveals inner corruption (Enarr. Ps. 9.7-8B)."
+      "comment": "The wicked lives as if there is no God, which corrupts all his ways. God's judgments are removed from his sight, and he dominates all his enemies.",
+      "comment2": "Augustine explains that when a man acts without regard for divine judgment, he becomes utterly corrupt and is left to his own sinful dominion (Enarr. Ps. 9.7-8B)."
     },
     {
-      "name": "Ambush → Predation",
-      "description": "Wealthy ambushes target the innocent like lions hunting prey.",
-      "lemmas": ["insidiae", "dives", "innocens", "leo"],
+      "name": "Boasting → Corruption",
+      "description": "The boast of unshaken stability masks a heart and mouth full of evil, bitterness, and deceit.",
+      "lemmas": ["moveo", "maledictio", "amaritudo", "dolus"],
       "startLine": 9,
       "endLine": 10,
-      "comment": "The wicked wait in ambush with the rich to murder the innocent, lurking like lions to seize the poor.",
-      "comment2": "Augustine applies this to spiritual predators hunting the righteous (Enarr. Ps. 9.9-10B)."
+      "comment": "The wicked boasts in his heart that he will never be moved, yet his mouth is full of curses, bitterness, and deception.",
+      "comment2": "Augustine notes how corrupt speech reveals inner corruption (Enarr. Ps. 9.9-10B)."
     },
-   {
+    {
       "name": "Ambush → Observation",
       "description": "Lurking in ambush leads to predatory observation of the poor.",
       "lemmas": ["insidiae", "dives", "oculus", "spelunca"],
@@ -596,49 +596,49 @@
       "comment2": "Augustine interprets this as the devil and his agents setting spiritual traps for the righteous from hidden places of wealth and power (Enarr. Ps. 9.11-12B)."
     },
     {
-      "name": "Seizure → Denial",
-      "description": "The act of seizing the poor leads to the arrogant denial of God's attention.",
-      "lemmas": ["rapio", "laqueus", "humilio", "averto"],
+      "name": "Seizure → Humiliation",
+      "description": "The act of seizing the poor leads to their humiliation and downfall.",
+      "lemmas": ["rapio", "laqueus", "humilio", "cado"],
       "startLine": 13,
       "endLine": 14,
-      "comment": "The wicked lies in wait to seize and humble the poor with his snare, leading him to say in his heart that God has turned His face away.",
-      "comment2": "Augustine explains how success in oppression breeds the false belief that God does not see or care (Enarr. Ps. 9.13-14B)."
+      "comment": "The wicked lies in wait to seize and humble the poor with his snare, bringing them down in their downfall.",
+      "comment2": "Augustine describes this as the successful but temporary victory of the persecutor over the righteous (Enarr. Ps. 9.13-14B)."
     },
     {
-      "name": "Ascent → Remembrance",
-      "description": "God's rising leads to remembrance of the poor.",
-      "lemmas": ["exsurgo", "exalto", "obliviscor", "irrito"],
+      "name": "Denial → Invocation",
+      "description": "The wicked's denial of God's attention provokes a direct invocation for God to rise and remember.",
+      "lemmas": ["obliviscor", "averto", "exsurgo", "obliviscor"],
       "startLine": 15,
       "endLine": 16,
-      "comment": "The psalmist calls for God to rise with exalted hand and not forget the poor, questioning why the wicked provoke Him.",
-      "comment2": "Augustine sees this as a plea for divine intervention against oppression (Enarr. Ps. 9.15-16B)."
+      "comment": "The wicked's success leads him to think, 'God has forgotten; He has turned His face away.' The psalmist immediately answers this by calling on God to rise and not forget the poor.",
+      "comment2": "Augustine sees this as the faithful response to the taunts of the wicked: turning to God in prayer, not despair (Enarr. Ps. 9.15-16B)."
     },
     {
-      "name": "Vision → Help",
-      "description": "God's seeing suffering leads to help for the vulnerable.",
-      "lemmas": ["video", "labor", "orphanus", "adiutor"],
+      "name": "Provocation → Attention",
+      "description": "The wicked's provocation of God, believing He will not inquire, is contrasted with God's careful attention to suffering.",
+      "lemmas": ["irrito", "requiro", "video", "labor"],
       "startLine": 17,
       "endLine": 18,
-      "comment": "God sees the toil and grief, promising to deliver the victim and help the orphan.",
-      "comment2": "Augustine emphasizes God's special care for the most vulnerable (Enarr. Ps. 9.17-18B)."
+      "comment": "The verse asks why the wicked provokes God by saying in his heart that God will not hold him accountable. This is immediately answered by affirming that God does see toil and grief, and He does act to deliver.",
+      "comment2": "Augustine contrasts the fool's belief in God's indifference with the reality of His omniscience and justice, which guarantees judgment (Enarr. Ps. 9.17-18B)."
+    },
+    {
+      "name": "Destruction → Seeking",
+      "description": "The call for destruction of the wicked leads to the seeking out of their sin.",
+      "lemmas": ["contero", "quaero", "non invenietur"],
+      "startLine": 19,
+      "endLine": 20,
+      "comment": "The psalmist calls for God to break the arm of the sinner, and that his sin will be sought but not found.",
+      "comment2": "Augustine interprets this as the complete eradication of sin and the ultimate victory of God's justice (Enarr. Ps. 9.19-20B)."
     },
     {
       "name": "Reign → Justice",
-      "description": "God's eternal reign brings justice against evil.",
-      "lemmas": ["regno", "aeternus", "pereo", "quaero"],
-      "startLine": 19,
-      "endLine": 20,
-      "comment": "The Lord reigns forever; nations perish from His land while He seeks out sin.",
-      "comment2": "Augustine interprets this as God's eternal justice prevailing over earthly powers (Enarr. Ps. 9.19-20B)."
-    },
-    {
-      "name": "Desire → Humility",
-      "description": "God hears the poor's desire and humbles human pride.",
-      "lemmas": ["exaudio", "desiderium", "humilis", "magnifico"],
+      "description": "God's eternal reign brings justice for the poor and humble.",
+      "lemmas": ["regno", "aeternus", "exaudio", "iudico"],
       "startLine": 21,
       "endLine": 23,
-      "comment": "God hears the desire of the poor and judges for the humble, so humanity may no longer exalt itself on earth.",
-      "comment2": "Augustine sees this as the final humbling of pride through divine justice (Enarr. Ps. 9.21-23B)."
+      "comment": "The Lord reigns forever; He hears the desire of the poor and judges for the orphan and humble, so that man may no longer exalt himself on earth.",
+      "comment2": "Augustine sees this as God's eternal justice prevailing over earthly powers and His special care for the most vulnerable (Enarr. Ps. 9.21-23B)."
     }
   ]
 },
