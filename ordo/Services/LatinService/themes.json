@@ -691,7 +691,7 @@
         {
       "name": "Plea → Absence",
       "description": "A plea for salvation arises from the absence of the faithful and the diminishing of truth among men.",
-      "lemmas": ["deficio", "diminuo", "vanus", "dolosus"],
+      "lemmas": ["deficio", "diminutus", "vanus", "dolosus"],
       "startLine": 1,
       "endLine": 2,
       "comment": "The psalmist cries for salvation because the faithful have vanished and truths are diminished among the sons of men. People speak vanity with deceitful lips and double hearts.",

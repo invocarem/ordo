@@ -1,5 +1,33 @@
 [
   {
+    "lemma": "diminutus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "diminutus",
+    "genitive": "diminuti",
+    "translations": {
+      "en": "diminished, weakened, impaired, made scarce",
+      "la": "dīminūtus, dīminūta, dīminūtum"
+    },
+    "forms": {
+      "nominative_f": ["diminuta"],
+      "genitive_f": ["diminutae"],
+      "accusative_f": ["diminutam"],
+      "ablative_f": ["diminuta"],
+      "nominative_n": ["diminutum"],
+      "accusative_n": ["diminutum"]
+    },
+    "forms_plural": {
+      "nominative_f": ["diminutae"],
+      "genitive_f": ["diminutarum"],
+      "accusative_f": ["diminutas"],
+      "ablative_f": ["diminutis"],
+      "nominative_n": ["diminuta"],
+      "accusative_n": ["diminuta"]
+    }
+  },
+  {
   "lemma": "fiducialiter",
   "part_of_speech": "adverb",
   "translations": {
