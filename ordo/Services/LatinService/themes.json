@@ -642,46 +642,45 @@
     }
   ]
 },
-
 {
   "psalmNumber": 10,
   "category": "",
   "themes": [
     {
-      "name": "Trust → Flight Questioned",
-      "description": "From confidence in the Lord to the temptation of fleeing like a bird",
-      "lemmas": ["confido", "transvolo", "passer"],
+      "name": "Trust → Persecution",
+      "description": "The psalmist's trust in the Lord is met with taunts and the threat of violent persecution.",
+      "lemmas": ["confido", "transvolo", "intendo", "sagitto", "obscuro"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "The psalmist declares trust in the Lord, rejecting the counsel of fear that urges escape while the wicked prepare their arrows.",
-      "comment2": "Augustine interprets the bird’s flight as vain self-reliance: the just must not flee from trial but trust in God (Enarr. Ps. 10.1–2)."
+      "comment": "The psalmist declares his trust in the Lord while others tell his soul to flee. The wicked prepare their bows and arrows to shoot the upright in heart under cover of darkness.",
+      "comment2": "Augustine interprets this as the Church's steadfast faith amidst the world's persecution, where the 'darkness' represents the obscurity of sin and error (Enarr. Ps. 10.1-2)."
     },
     {
-      "name": "Destruction → Divine Throne",
-      "description": "From the collapse of human works to the Lord enthroned in heaven",
-      "lemmas": ["destruo", "templum", "sedes"],
+      "name": "Destruction → Sovereignty",
+      "description": "The destruction of the righteous by the wicked is contrasted with the Lord's sovereign reign from His holy temple and heaven.",
+      "lemmas": ["perficio", "destruo", "templum", "sedes"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "When the foundations are destroyed and the just seem powerless, the Lord remains in His holy temple, reigning from heaven.",
-      "comment2": "Augustine sees this as the stability of God’s reign against human ruin: His temple is unshaken though earthly works collapse (Enarr. Ps. 10.3–4)."
+      "comment": "The psalmist laments that the wicked have destroyed what God has perfected, questioning what the righteous can do. This is answered by the affirmation of the Lord's sovereignty from His holy temple and heavenly throne.",
+      "comment2": "Augustine sees this as the eternal perspective: though the righteous suffer temporarily, God's ultimate authority and order remain unchallenged in heaven (Enarr. Ps. 10.3-4)."
     },
     {
-      "name": "Divine Gaze → Testing",
-      "description": "From God’s eyes upon the poor to His testing of the just and wicked",
-      "lemmas": ["oculus", "pauper", "interrogo"],
+      "name": "Observation → Judgment",
+      "description": "The Lord's careful observation of humanity leads to His just judgment of the righteous and the wicked.",
+      "lemmas": ["oculus", "respicio", "interrogo", "odi"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "The Lord’s eyes behold the poor, His eyelids test the children of men, examining both the righteous and the wicked.",
-      "comment2": "Augustine teaches that God’s scrutiny purifies the just but exposes the wicked who hate their own souls through sin (Enarr. Ps. 10.5–6)."
+      "comment": "The Lord's eyes watch the poor and His eyelids test the sons of men. He examines both the righteous and the wicked, and whoever loves violence hates his own soul.",
+      "comment2": "Augustine explains that God's testing is an act of merciful judgment, meant to reveal the heart and call the wicked to repentance by showing them the self-destructive nature of sin (Enarr. Ps. 10.5-6)."
     },
     {
-      "name": "Judgment → Equity",
-      "description": "From fire and storm upon sinners to the just Lord who loves righteousness",
-      "lemmas": ["pluo", "ignis", "iustus"],
+      "name": "Judgment → Retribution",
+      "description": "The Lord's righteous judgment leads to a fitting retribution upon sinners.",
+      "lemmas": ["pluo", "laqueus", "iustus", "aequitas"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "The wicked drink a cup of fire, sulfur, and storm, while the Lord, who is just, loves righteousness and shows His face in equity.",
-      "comment2": "For Augustine, the cup of the wicked is eternal punishment, but the vision of God’s face belongs to the just (Enarr. Ps. 10.7–8)."
+      "comment": "The Lord will rain snares upon the wicked; fire, brimstone, and a scorching wind will be their portion. For the Lord is righteous and loves justice; upright men will see His face.",
+      "comment2": "Augustine interprets this eschatologically: the 'snares' are the consequences of one's own sinful choices, and the fiery judgment represents the ultimate separation from God that sin demands (Enarr. Ps. 10.7-8)."
     }
   ]
 },
@@ -689,50 +688,42 @@
   "psalmNumber": 11,
   "category": "",
   "themes": [
-    {
-      "name": "Loss of Truth → Deceptive Speech",
-      "description": "From the vanishing of the faithful to false words and double hearts",
-      "lemmas": ["deficio", "veritas", "labium"],
+        {
+      "name": "Plea → Absence",
+      "description": "A plea for salvation arises from the absence of the faithful and the diminishing of truth among men.",
+      "lemmas": ["deficio", "diminuo", "vanus", "dolosus"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "The psalmist laments that the holy have failed and truth has diminished, while deceitful lips and divided hearts prevail.",
-      "comment2": "Augustine reads the 'double heart' as hypocrisy: speaking peace outwardly while concealing malice inwardly (Enarr. Ps. 11.1–2)."
+      "comment": "The psalmist cries for salvation because the faithful have vanished and truths are diminished among the sons of men. People speak vanity with deceitful lips and double hearts.",
+      "comment2": "Augustine sees this as describing the decay of truth in human society and the need for divine intervention when human faithfulness fails (Enarr. Ps. 11.1-2)."
     },
+
     {
-      "name": "Prideful Speech → Divine Judgment",
-      "description": "From boastful tongues to the Lord cutting them off",
-      "lemmas": ["disperdo", "lingua", "magnifico"],
+      "name": "Deceitful Lips → Boasting",
+      "description": "The presence of deceitful lips leads directly to arrogant boasting in human autonomy and a denial of God's lordship.",
+      "lemmas": ["disperdo", "magniloquus", "magnifico", "dominor"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "The Lord will destroy deceitful lips and the arrogant tongue that boasts of self-sufficiency and rejects divine authority.",
-      "comment2": "For Augustine, pride in one’s own tongue opposes the Word of God; such speech is judged and brought low (Enarr. Ps. 11.3–4)."
+      "comment": "The psalmist describes deceitful lips and a boastful tongue, which are defined by the declaration: 'We will magnify our tongue; our lips are our own: who is lord over us?'",
+      "comment2": "Augustine explains that deceitful speech inevitably culminates in the ultimate boast: the rejection of God's authority, which is the root of all sin (Enarr. Ps. 11.3-4)."
     },
     {
-      "name": "Oppression → Divine Rising",
-      "description": "From the groaning of the poor to God’s intervention for salvation",
-      "lemmas": ["miseria", "pauper", "exsurgo"],
+      "name": "Misery → Intervention",
+      "description": "The misery and groaning of the poor prompt the Lord's confident intervention and salvation.",
+      "lemmas": ["miseria", "gemitus", "fiducialiter", "ago"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "God rises because of the suffering of the needy, promising to place them in safety and act faithfully on their behalf.",
-      "comment2": "Augustine interprets this as Christ rising to redeem the poor in spirit, establishing them securely in salvation (Enarr. Ps. 11.5–6)."
+      "comment": "The Lord declares that because of the misery of the helpless and the groaning of the poor, He will now arise. He will place them in a place of safety and act with confident power ('fiducialiter agam') on their behalf.",
+      "comment2": "Augustine emphasizes this as a key promise of God's character: He is not indifferent to suffering but is moved to confident, saving action by the cries of the afflicted (Enarr. Ps. 11.5-6)."
     },
     {
-      "name": "Pure Words → Preservation",
-      "description": "From refined speech of the Lord to His eternal protection",
-      "lemmas": ["eloquium", "purgatus", "servo"],
+      "name": "Word → Refining",
+      "description": "The Lord's pure and tested words serve as a refining fire for the faithful amidst encircling evil and human multitude.",
+      "lemmas": ["eloquium", "castus", "examino", "septuplum", "custodio", "circuitus"],
       "startLine": 7,
-      "endLine": 8,
-      "comment": "The words of the Lord are pure, like silver tested sevenfold, and He preserves His people forever from corruption.",
-      "comment2": "Augustine sees the 'sevenfold purification' as the fullness of the Spirit, guaranteeing the truth of God’s promises (Enarr. Ps. 11.7–8)."
-    },
-    {
-      "name": "Wicked Circling → Human Exaltation",
-      "description": "From the wicked surrounding to the exaltation of human pride",
-      "lemmas": ["in circuitu", "impius", "altitudo"],
-      "startLine": 9,
       "endLine": 9,
-      "comment": "The psalm ends with the wicked strutting around, while human pride multiplies in defiance of God.",
-      "comment2": "Augustine contrasts this with the faithful preserved by God: the proud exalt themselves, but the humble are safeguarded (Enarr. Ps. 11.9)."
+      "comment": "The Lord's words are pure and tested like silver refined sevenfold. They guard the faithful amidst the wicked who encircle them and the multiplied children of men, serving as both protection and purification.",
+      "comment2": "Augustine sees God's word as the refining fire that purifies the faithful through trials, with the encircling wickedness and multitude of people forming the context for this purification (Enarr. Ps. 11.7-9)."
     }
   ]
 },

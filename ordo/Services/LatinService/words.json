@@ -1,5 +1,41 @@
 [
   {
+  "lemma": "fiducialiter",
+  "part_of_speech": "adverb",
+  "translations": {
+    "en": "confidently, trustingly",
+    "la": "fidūciāliter"
+  }
+},
+  {
+  "lemma": "pluo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "pluere",
+  "present": "pluo",
+  "future": "pluam",
+  "perfect": "pluit",
+  "translations": {
+    "en": "to rain",
+    "la": "pluo, pluere, pluit"
+  }
+},
+  {
+
+    "lemma": "transvolo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "transvolare",
+    "present": "transvolo",
+    "future": "transvolabo",
+    "perfect": "transvolavi",
+    "supine": "transvolatum",
+    "translations": {
+      "en": "to fly over, fly across, cross over",
+      "la": "trānsvolō, trānsvolāre, trānsvolāvī, trānsvolātum"
+    }
+  },
+  {
     "lemma": "inquinatus",
     "part_of_speech": "adjective",
     "declension": 1,
@@ -8031,23 +8067,23 @@
     "la": "subjicio, subjicere, subjeci, subjectum"
   }
 }, 
-  {
+{
   "lemma": "destruo",
   "part_of_speech": "verb",
   "conjugation": 3,
   "infinitive": "destruere",
-  "forms": {
-    "present_subjunctive_2sg": ["destruas"]
-  },
-
+  "present": "destruo",
+  "future": "destruam",
   "perfect": "destruxi",
   "supine": "destructum",
   "translations": {
-    "en": "to destroy, tear down",
-    "la": "destruo, destruere, destruxi, destructum"
+    "en": "to destroy, tear down, ruin",
+    "la": "dēstruō, dēstruere, dēstrūxī, dēstrūctum"
+  },
+  "forms": {
+    "present_subjunctive_2sg": ["destruas"]
   }
 },
-
 {
   "lemma": "stella",
   "part_of_speech": "noun",
