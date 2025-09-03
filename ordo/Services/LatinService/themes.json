@@ -1489,6 +1489,51 @@
     "inclusio": "Framed by 'exaudiat' (1) and 'exaudi' (10)"
   }
 },
+
+
+{
+  "psalmNumber": 22,
+  "category": "",
+  "themes": [
+    {
+      "name": "Provision → Restoration",
+      "description": "The Lord's rule provides complete lack of nothing, leading to restoration and guidance.",
+      "lemmas": ["rego", "pascuum", "educo", "converto"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The Lord's shepherding provides everything needed, placing in green pastures, leading beside restorative waters, and converting the soul.",
+      "comment2": "Augustine sees this as Christ the Good Shepherd's complete provision that restores and turns the soul back to Himself (Enarr. Ps. 22.1)."
+    },
+    {
+      "name": "Guidance → Protection",
+      "description": "Guidance on right paths leads to fearless protection through dark valleys.",
+      "lemmas": ["deduco", "iustitia", "umbra", "timeo"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "God leads along righteous paths for His name's sake, providing protection and banishing fear even when walking through death's dark shadow.",
+      "comment2": "For Augustine, the paths of righteousness are Christ Himself, and His presence removes all fear of evil (Enarr. Ps. 22.2)."
+    },
+    {
+      "name": "Comfort → Provision",
+      "description": "The comfort of God's rod and staff leads to abundant provision before enemies.",
+      "lemmas": ["virga", "consolor", "paro", "tribulo"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "God's rod and staff bring comfort, culminating in a table prepared in the presence of enemies.",
+      "comment2": "Augustine interprets the rod as discipline and staff as support - both comforting aspects of God's care that culminate in Eucharistic nourishment amid opposition (Enarr. Ps. 22.3)."
+    },
+    {
+      "name": "Anointing → Dwelling",
+      "description": "An abundant anointing leads to eternal mercy and everlasting dwelling with God.",
+      "lemmas": ["impinguo", "oleum", "subsequor", "inhabito"],
+      "startLine": 7,
+      "endLine": 9,
+      "comment": "God anoints with oil and provides an overflowing cup, followed by mercy all life's days and eternal dwelling in His house.",
+      "comment2": "Augustine sees this as the Holy Spirit's anointing, the cup of Christ's blood, and the eternal communion with God that follows the faithful (Enarr. Ps. 22.4)."
+    }
+  ]
+},
+
 {
   "psalmNumber": 30,
   "category": "",
