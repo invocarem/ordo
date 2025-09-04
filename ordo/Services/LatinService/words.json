@@ -18529,47 +18529,8 @@
     "la": "quare"
   }
 },
-        {
-            "lemma": "quae",
-            "part_of_speech": "pronoun",
-            "type": "relative",
-            "gender": "feminine",
-            "nominative": "quae",
-            "genitive": "cuius",
-            "dative": "cui",
-            "accusative": "quam",
-            "ablative": "qua",
-            "nominative_plural": "quae",
-            "genitive_plural": "quarum",
-            "dative_plural": "quibus",
-            "accusative_plural": "quas",
-            "ablative_plural": "quibus",
-            "translations": {
-                "en": "who, which, that",
-                "la": "quae"
-            }
-        },
-        {
-            "lemma": "quod",
-            "part_of_speech": "pronoun",
-            "type": "relative",
-            "gender": "neuter",
-            "nominative": "quod",
-            "genitive": "cuius",
-            "dative": "cui",
-            "accusative": "quod",
-            "ablative": "quo",
-            "nominative_plural": "quae",
-            "genitive_plural": "quorum",
-            "dative_plural": "quibus",
-            "accusative_plural": "quae",
-            "ablative_plural": "quibus",
-            "translations": {
-                "en": "which, that",
-                "la": "quod"
-            }
-        },
-        {
+
+       {
             "lemma": "quia",
             "part_of_speech": "conjunction",
             "translations": {
