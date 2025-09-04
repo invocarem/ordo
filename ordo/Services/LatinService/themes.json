@@ -5425,7 +5425,102 @@
     }
   ]
 },
-
+{
+  "psalmNumber": 134,
+  "category": "",
+  "themes": [
+    {
+      "name": "Call → Home",
+      "description": "A call to praise the Lord's name is directed to the servants who stand in His house and its courtyards.",
+      "lemmas": ["laudo", "nomen", "sto", "domus", "atrium"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalm opens with a call for servants to praise the name of the Lord, specifically addressing those who stand in the house (*domus*) of the Lord and in the courtyards (*atria*) of the house of our God.",
+      "comment2": "Augustine sees this as a call to the entire Church, from the laity in the outer courts to the clergy in the inner sanctum, all offering praise from their fixed position in God's spiritual household (Enarr. Ps. 134.1-2)."
+    },
+    {
+      "name": "Goodness → Choice",
+      "description": "Praise is motivated by the Lord's goodness and His sovereign choice of a people for Himself.",
+      "lemmas": ["bonus", "psallo", "eligo", "possessio"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The call to praise is repeated, grounded in the Lord's inherent goodness. His election of Jacob and Israel as His own special possession is given as a specific reason for this praise.",
+      "comment2": "Augustine interprets God's choice as an act of pure grace, not human merit, making His people a living testament to His goodness (Enarr. Ps. 134.3-4)."
+    },
+    {
+      "name": "Recognition → Sovereignty",
+      "description": "The personal recognition of God's supreme greatness leads to the confession of His absolute sovereignty over all creation, from the heavens to the deepest abyss.",
+      "lemmas": ["cognosco", "magnus", "volo", "abyssus"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The psalmist confesses a deep, personal recognition ('cognovi') that the Lord is greater than all gods. This recognition leads to the confession of His sovereign will, executed perfectly in all creation—heaven, earth, sea, and abyss.",
+      "comment2": "Augustine emphasizes that this recognition is not mere intellectual assent but a conviction that leads to awe at His omnipotence; whatever He wills, He accomplishes in every realm (Enarr. Ps. 134.5-6)."
+    },
+    {
+      "name": "Clouds → Strike",
+      "description": "God's sovereignty, demonstrated by His command of clouds and winds, is matched by His decisive strike against the oppressors of His people.",
+      "lemmas": ["educo", "fulgur", "producens", "percutio"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "God demonstrates His power by leading out the clouds from the ends of the earth and making lightning for the rain. He produces the winds from His stores. This same sovereign power was manifested in striking down the firstborn of Egypt.",
+      "comment2": "Augustine reads this as God using the very elements of His creation (clouds, wind) as instruments, which culminates in the ultimate act of judgment against Egypt (Enarr. Ps. 134.7-8)."
+    },
+    {
+      "name": "Signs → Conquest",
+      "description": "The signs performed in Egypt culminated in the conquest of mighty kings and nations.",
+      "lemmas": ["mitto", "signum", "percutio", "occido"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "The Lord sent signs and wonders into Egypt against Pharaoh and his servants. This same power was displayed in conquering many nations and slaying mighty kings.",
+      "comment2": "For Augustine, the Exodus and Conquest are one continuous demonstration of God's power to liberate His people and establish them in His promise (Enarr. Ps. 134.9-10)."
+    },
+    {
+      "name": "Defeat → Inheritance",
+      "description": "The defeat of specific kings resulted in the granting of their land as an eternal inheritance for God's people.",
+      "lemmas": ["Amorraeus", "Basan", "haereditas", "populus"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "Specific powerful kings (Sihon, Og, Canaanite kings) were defeated. Their land was not merely taken, but given by God as a hereditary possession to Israel, His people.",
+      "comment2": "Augustine sees this as a prefiguration of the Church's inheritance of the earth (the Kingdom of Heaven) through Christ's victory over spiritual powers (Enarr. Ps. 134.11-12)."
+    },
+    {
+      "name": "Name → Vindication",
+      "description": "The eternal renown of the Lord's name is linked to His role as the vindicator and advocate for His people.",
+      "lemmas": ["memoriale", "aeternus", "iudico", "deprecor"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "The Lord's name and memory endure forever. This eternal nature is expressed in His action: He will vindicate His people and have compassion on His servants.",
+      "comment2": "Augustine interprets God's judgment as both justice against enemies and merciful advocacy for His servants, which secures His eternal fame (Enarr. Ps. 134.13-14)."
+    },
+    {
+      "name": "Idols → Insensibility",
+      "description": "The lifeless nature of man-made idols is described, highlighting their complete inability to perceive or act.",
+      "lemmas": ["simulacrum", "argentum", "aurum", "manus"],
+      "startLine": 15,
+      "endLine": 16,
+      "comment": "The idols of the nations are mere silver and gold, made by human hands. They have mouths but cannot speak, eyes but cannot see.",
+      "comment2": "Augustine contrasts the living God with dead idols to show the folly of worshipping anything created, which has no life or power of its own (Enarr. Ps. 134.15-16)."
+    },
+    {
+      "name": "Lifeless → Likeness",
+      "description": "The total lifelessness and impotence of idols culminates in a curse that their makers and worshippers will become like them.",
+      "lemmas": ["similis", "spiritus", "confido", "fio"],
+      "startLine": 17,
+      "endLine": 18,
+      "comment": "The idols have ears but cannot hear, and there is no breath (spiritus) in their mouths. The psalmist's conclusion is a curse: may those who make them and trust (confidunt) in them become (fiant) just like them.",
+      "comment2": "Augustine sees this as a spiritual law: worship shapes the worshipper. To trust in and fashion oneself after lifeless things is to become spiritually dead and impotent oneself (Enarr. Ps. 134.17-18)."
+    },
+    {
+      "name": "Blessing → Dwelling",
+      "description": "A final comprehensive call for all God's people to bless the Lord culminates in praising Him who is blessed from Zion and dwells in Jerusalem.",
+      "lemmas": ["benedico", "domus", "timeo", "habito", "Sion"],
+      "startLine": 19,
+      "endLine": 21,
+      "comment": "All the houses of Israel, Aaron, and Levi are called to bless the Lord, along with all who fear Him. The blessing is for the Lord who is blessed **from Zion** (the place of His dwelling) and who **inhabits Jerusalem** (the city of His people).",
+      "comment2": "Augustine interprets this as the entire Church united in blessing God. Zion represents the source of grace (God's presence), while Jerusalem is the community of the faithful who live in that grace. God dwells in His people, making them the true Jerusalem (Enarr. Ps. 134.19-21)."
+    }
+  ]
+},
 {
   "psalmNumber": 136,
   "category": "",

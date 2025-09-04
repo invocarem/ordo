@@ -1,4 +1,15 @@
-[
+[{
+  "lemma": "simulacrum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "simulacrum",
+  "genitive": "simulacri",
+  "translations": {
+    "en": "image, likeness, statue, phantom",
+    "la": "simulacrum, simulacri"
+  }
+},
   {
     "lemma": "septuplus",
     "part_of_speech": "adjective",
@@ -10860,8 +10871,6 @@
     "gender": "masculine",
     "nominative": "spiritus",
     "genitive": "spiritus",
-  
-    
     "translations": {
       "en": "spirit, breath, air",
       "la": "spiritus"
