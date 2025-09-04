@@ -79,7 +79,7 @@ let package = Package(
             name: "LatinServiceTests",    
             dependencies: ["LatinService"],
             path: "Tests/LatinService",
-            sources: ["LatinServiceTests.swift", 
+            sources: ["LatinWordTests.swift", 
                 "Psalm1Tests.swift",
                 "Psalm2Tests.swift",
                 "Psalm3Tests.swift",

@@ -58,15 +58,12 @@ extension LatinWordEntity {
         }
         
         // 2. Check gendered forms in "forms" dictionary (e.g., accusative_f for feminine)
-       if let forms = forms {
+        if let forms = forms {
             for (key, formVariants) in forms {
                 for formVariant in formVariants {
                     if formVariant.lowercased() == lowerForm {
-                        let caseName = key
-                            .replacingOccurrences(of: "_f", with: " (feminine)")
-                            .replacingOccurrences(of: "_n", with: " (neuter)")
-                            .replacingOccurrences(of: "_", with: " ")
-                        return "\(translation) (\(caseName))"
+                        let (caseName, gender) = parseFormKey(key)
+                        return "\(translation) (\(caseName) \(gender))"
                     }
                 }
             }

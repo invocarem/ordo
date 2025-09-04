@@ -1,5 +1,17 @@
 [
   {
+  "lemma": "adolescens",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "adolescens",
+  "genitive": "adolescentis",
+  "translations": {
+    "en": "young man, youth, adolescent",
+    "la": "adolescens, adolescentis"
+  }
+},
+  {
     "lemma": "qui",
     "part_of_speech": "pronoun",
     "declension": 0,
@@ -1580,23 +1592,37 @@
   },
   "notes": "Feminine form is 'adiutrix' (adiutricis). Derived from 'adiuvo' (to help)."
 },
+
   {
-  "lemma": "iustus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "iustus",
-  "genitive": "iusti",
-  "forms": {
-    "accusative_m": ["iustum"],
-    "nominative_f": ["iusta"],
-    "nominative_n": ["iustum"]
+    "lemma": "iustus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "iustus",
+    "genitive": "iusti",
+    "translations": {
+      "en": "just, fair, righteous",
+      "la": "iustus, iusta, iustum"
+    },
+    "forms": {
+      "nominative_m": ["iustus"],
+      "genitive_m": ["iusti"],
+      "dative_m": ["iusto"],
+      "accusative_m": ["iustum"],
+      "ablative_m": ["iusto"],
+      "nominative_f": ["iusta"],   
+      "genitive_f": ["iustae"],    
+      "dative_f": ["iustae"],      
+      "accusative_f": ["iustam"],  
+      "ablative_f": ["iusta"],     
+      "nominative_n": ["iustum"],
+      "genitive_n": ["iusti"],
+      "dative_n": ["iusto"],
+      "accusative_n": ["iustum"],
+      "ablative_n": ["iusto"]
+    }
   },
-  "translations": {
-    "en": "just, fair, righteous",
-    "la": "iustus, -a, -um"
-  }
-},
+ 
   {
   "lemma": "iudicium",
   "part_of_speech": "noun",
@@ -7650,17 +7676,18 @@
   }
 },
   {
-  "lemma": "iustitia",
-  "part_of_speech": "noun",
-  "declension": 1,
-  "gender": "feminine",
-  "nominative": "iustitia",
-  "accusative": "iustitiam",
-  "translations": {
-    "en": "justice, righteousness",
-    "la": "iustitia, -ae"
-  }
-},
+    "lemma": "iustitia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "iustitia",
+    "accusative": "iustitiam",
+    "translations": {
+      "en": "justice, righteousness",
+      "la": "iustitia, -ae"
+    }
+  },
+
 {
   "lemma": "intendo",
   "part_of_speech": "verb",
@@ -14680,17 +14707,13 @@
       "future": "eripiam",
       "perfect": "eripui",
       "supine": "ereptum",
-      "forms": {
-        "present_participle": ["eripiens", "eripientis"],
-        "present": ["eripio", "eripis", "eripit", "eripimus", "eripitis", "eripiunt"],
-        "perfect": ["eripui", "eripuisti", "eripuit", "eripuimus", "eripuistis", "eripuerunt"],
-        "imperative": ["eripe", "eripite"],
-        "subjunctive": ["eripiam", "eripias", "eripiat", "eripiamus", "eripiatis", "eripiant"],
-        "future": ["eripiam", "eripies", "eripiet", "eripiemus", "eripietis", "eripient"]
-      },
-      "translations": {
+       "translations": {
         "en": "to rescue, deliver, snatch away",
         "la": "eripio"
+      },
+      "forms": {
+        "present_participle": ["eripientes"],
+        "future": ["eripiam", "eripies", "eripiet", "eripiemus", "eripietis", "eripient"]
       }
     },
     {
@@ -20532,56 +20555,6 @@
             "la": "corrigo"
         }
     },
-    {
-      "lemma": "adolescens",
-      "part_of_speech": "adjective",
-      "declension": 3,
-      "gender": "masculine",
-      "positive": "adolescens",
-      "comparative": "adolescentior",
-      "superlative": "adolescentissimus",
-      "nominative": "adolescens",
-      "genitive": "adolescentis",
-      "dative": "adolescenti",
-      "accusative": "adolescentem",
-      "ablative": "adolescente",
-      "vocative": "adolescens",
-      "nominative_plural": "adolescentes",
-      "genitive_plural": "adolescentium",
-      "dative_plural": "adolescentibus",
-      "accusative_plural": "adolescentes",
-      "ablative_plural": "adolescentibus",
-      "forms": {
-          "comparative_m": ["adolescentior"],
-
-          "nominative_f": ["adolescens"],
-          "genitive_f": ["adolescentis"],
-          "dative_f": ["adolescenti"],
-          "accusative_f": ["adolescentem"],
-          "ablative_f": ["adolescente"],
-          "vocative_f": ["adolescens"],
-          "nominative_n": ["adolescens"],
-          "genitive_n": ["adolescentis"],
-          "dative_n": ["adolescenti"],
-          "accusative_n": ["adolescens"],
-          "ablative_n": ["adolescente"],
-          "vocative_n": ["adolescens"],
-          "nominative_plural_f": ["adolescentes"],
-          "genitive_plural_f": ["adolescentium"],
-          "dative_plural_f": ["adolescentibus"],
-          "accusative_plural_f": ["adolescentes"],
-          "ablative_plural_f": ["adolescentibus"],
-          "nominative_plural_n": ["adolescentia"],
-          "genitive_plural_n": ["adolescentium"],
-          "dative_plural_n": ["adolescentibus"],
-          "accusative_plural_n": ["adolescentia"],
-          "ablative_plural_n": ["adolescentibus"]
-      },
-      "translations": {
-          "en": "young, growing, adolescent",
-          "la": "adolescens, -entis"
-      }
-  },
     {
         "lemma": "adolescenta",
         "part_of_speech": "adjective",
