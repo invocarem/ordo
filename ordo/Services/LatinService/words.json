@@ -1,15 +1,88 @@
-[{
-  "lemma": "simulacrum",
-  "part_of_speech": "noun",
-  "declension": 2,
-  "gender": "neuter",
-  "nominative": "simulacrum",
-  "genitive": "simulacri",
-  "translations": {
-    "en": "image, likeness, statue, phantom",
-    "la": "simulacrum, simulacri"
-  }
-},
+[
+  {
+    "lemma": "qui",
+    "part_of_speech": "pronoun",
+    "declension": 0,
+    "type": "relative",
+    "gender": "masculine",
+    "nominative": "qui",
+    "genitive": "cuius",
+    "translations": {
+      "en": "who, which, that",
+      "la": "qui, quae, quod"
+    },
+    "forms": {
+      "nominative_m": ["qui"],
+      "genitive_m": ["cuius"],
+      "dative_m": ["cui"],
+      "accusative_m": ["quem"],
+      "ablative_m": ["quo"],
+      "nominative_f": ["quae"],
+      "genitive_f": ["cuius"],
+      "dative_f": ["cui"],
+      "accusative_f": ["quam"],
+      "ablative_f": ["qua"],
+      "nominative_n": ["quod"],
+      "genitive_n": ["cuius"],
+      "dative_n": ["cui"],
+      "accusative_n": ["quod"],
+      "ablative_n": ["quo"]
+    },
+    "forms_plural": {
+      "nominative_m": ["qui"],
+      "genitive_m": ["quorum"],
+      "dative_m": ["quibus"],
+      "accusative_m": ["quos"],
+      "ablative_m": ["quibus"],
+      "nominative_f": ["quae"],
+      "genitive_f": ["quarum"],
+      "dative_f": ["quibus"],
+      "accusative_f": ["quas"],
+      "ablative_f": ["quibus"],
+      "nominative_n": ["quae"],
+      "genitive_n": ["quorum"],
+      "dative_n": ["quibus"],
+      "accusative_n": ["quae"],
+      "ablative_n": ["quibus"]
+    }
+  },
+  {
+    "lemma": "quis",
+    "part_of_speech": "pronoun",
+    "declension": 0,
+    "type": "interrogative",
+    "gender": "masculine",
+    "nominative": "quis",
+    "genitive": "cuius",
+    "translations": {
+      "en": "who? what?",
+      "la": "quis, quid"
+    },
+    "forms": {
+      "nominative_m": ["quis"],
+      "accusative_m": ["quem"],
+      "nominative_f": ["quis"],
+      "accusative_f": ["quam"],
+      "nominative_n": ["quid"],
+      "accusative_n": ["quid"],
+      "genitive_m": ["cuius"],
+      "dative_m": ["cui"],
+      "ablative_m": ["quo"],
+      "ablative_f": ["qua"]
+    }
+  },
+  {
+    "lemma": "simulacrum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "simulacrum",
+    "genitive": "simulacri",
+    "translations": {
+      "en": "image, likeness, statue, phantom",
+      "la": "simulacrum, simulacri"
+    }
+  },
   {
     "lemma": "septuplus",
     "part_of_speech": "adjective",
@@ -18425,48 +18498,7 @@
             }
         },
       
-        {
-            "lemma": "qui",
-            "part_of_speech": "pronoun",
-            "type": "relative",
-            "gender": "masculine",
-            "nominative": "qui",
-            "genitive": "cuius",
-            "dative": "cui",
-            "accusative": "quem",
-            "ablative": "quo",
-            "nominative_plural": "qui",
-            "genitive_plural": "quorum",
-            "dative_plural": "quibus",
-            "accusative_plural": "quos",
-            "ablative_plural": "quibus",
-            "translations": {
-                "en": "who, which, that",
-                "la": "qui"
-            }
-        },
-        {
-          "lemma": "quis",
-          "part_of_speech": "pronoun",
-          "type": "relative",
-          "gender": "masculine",
-          "nominative": "quis",
-          "genitive": "cuius",
-          "dative": "cui",
-          "accusative": "quem",
-          "ablative": "quo",
-          "forms":{
-              "nominative_f": ["quae"]
-             
-
-          },
-          
-          "translations": {
-              "en": "who, which, that",
-              "la": "quis"
-          }
-      },
-         {
+       {
   "lemma": "quare",
   "part_of_speech": "adverb",
   "translations": {
