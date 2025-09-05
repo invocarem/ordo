@@ -871,40 +871,40 @@
       "comment2": "Augustine sees this as the soul's fundamental stance: taking refuge not in its own goods but in God, who is the only true good and needs nothing from His creation (Enarr. Ps. 15.1-2)."
     },
     {
-      "name": "Saints → Separation",
-      "description": "The excellence of God's saints is contrasted with the multiplied sorrows and idolatrous worship of others, leading to a vow of separation.",
-      "lemmas": ["sanctus", "mirifico", "infirmitas", "sanguis"],
+      "name": "Idolatry → Separation",
+      "description": "The multiplied sorrows and frantic idolatry of the wicked are contrasted with the psalmist's vow of total separation from their practices.",  
+      "lemmas": ["infirmitas", "accelero", "congrego", "sanguis"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "The psalmist praises the saints in whom God has made all his will wonderful. This is contrasted with the multiplied sorrows of others who 'accelerate' after other gods. The psalmist vows not to partake in their bloody idolatrous assemblies or even speak the names of their gods.",
-      "comment2": "Augustine interprets the 'saints' as those who belong to the heavenly city. The 'multiplied sorrows' are the ever-increasing anxieties of those who pursue earthly desires. The vow of separation is a refusal to participate in the works of the 'earthly city' (Enarr. Ps. 15.3-4)."
+      "comment": "The psalmist contrasts the state of the faithful with idolaters: 'Their sorrows [or idolatries] have been multiplied; afterward they made haste.' The response is a vow of total separation - not participating in their bloody assemblies or even speaking the names of their gods.",
+      "comment2": "Augustine interprets the 'multiplied sorrows' as the ever-increasing anxieties of those who pursue earthly desires. The vow not to 'gather their assemblies of blood' is a refusal to partake in the works of the 'earthly city' and its idolatrous practices (Enarr. Ps. 15.3-4)."
     },
     {
       "name": "Portion → Inheritance",
-      "description": "The Lord is chosen as the only lasting portion and inheritance, which is beautiful and secure.",
+      "description": "The voluntary choice of God as one's portion and cup leads to deep contentment with the beautiful inheritance He has apportioned.",
       "lemmas": ["pars", "hereditas", "restitues", "praeclarus"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "The psalmist declares that the Lord is his chosen portion and cup, the one who restores his inheritance. The measuring lines have fallen in pleasant places, confirming that his inheritance is truly beautiful and secure.",
-      "comment2": "For Augustine, this is the voice of Christ and every faithful soul rejecting worldly portions for God Himself. The 'beautiful inheritance' is the eternal life and joy found only in God, which He Himself will restore (Enarr. Ps. 15.5-6)."
+      "comment": "The psalmist makes a profound declaration: 'The Lord is my chosen portion and my cup.' This means God alone is his inheritance, security, and source of joy. He then looks at the 'boundary lines' of his life—his circumstances as measured out by God—and declares them to have fallen in 'pleasant places,' finding his God-given inheritance to be beautiful and sufficient.",
+      "comment2": "Augustine interprets this as the soul's rejection of earthly treasures for the ultimate treasure: God Himself. To have God as one's 'portion' is to possess all things. The 'pleasant boundaries' signify a life of contentment and joy found not in changing circumstances, but in the constant presence of God within those circumstances (Enarr. Ps. 15.5-6)."
     },
     {
-      "name": "Counsel → Stability",
-      "description": "Blessing God for counsel leads to His constant presence at the right hand, providing unshakable stability.",
-      "lemmas": ["benedico", "intellectus", "increpo", "provideo"],
+      "name": "Counsel → Correction",
+      "description": "Blessing God for the gift of understanding leads to a receptive heart, allowing even inner struggles and the conscience to become a source of corrective instruction.",
+      "lemmas": ["benedico", "intellectus", "increpo", "ren"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "The psalmist blesses the Lord for giving him counsel and instruction, even through inner conviction ('my kidneys instruct me at night'). Because he always keeps the Lord before him, who is at his right hand, he will not be shaken.",
-      "comment2": "Augustine sees the 'counsel' and 'instruction' as divine wisdom guiding the soul. The 'right hand' signifies God's powerful presence that steadies the believer amidst all turmoil, preventing them from being moved by temporal troubles (Enarr. Ps. 15.7-8)."
+      "comment": "The psalmist blesses the Lord for the gift of understanding ('intellectum'). This divine counsel is so effective that it transforms his inner life: even his deepest emotions and conscience ('renes mei') instruct and correct him through the night, a process of ongoing refinement.",
+      "comment2": "Augustine sees the 'chastising kidneys' as the believer's carnal desires being corrected by God's gift of understanding. This internal dialogue, even when painful, is a mark of God's grace actively purifying the soul from within (Enarr. Ps. 15.7)."
     },
     {
       "name": "Joy → Resurrection",
       "description": "Fullness of joy in God's presence leads to the hope of bodily rest and the ultimate promise of resurrection without corruption.",
-      "lemmas": ["laetor", "requiesco", "infernum", "corruptio"],
+      "lemmas": ["cor", "lingua", "caro", "requiesco", "derelinques", "infernum", "corruptio", "notas", "laetitia"],
       "startLine": 9,
       "endLine": 11,
-      "comment": "The heart, tongue, and flesh all respond with joy and rest in hope. This hope is anchored in the belief that God will not abandon the soul to the realm of the dead nor allow His holy one to see decay, culminating in the knowledge of the path of life and eternal joy in God's presence.",
-      "comment2": "Augustine reads this eschatologically as a clear prophecy of Christ's resurrection ('nor will you allow your Holy One to see decay'). For all believers, it is the hope of bodily resurrection and the fullness of joy found only in the beatific vision of God's face (Enarr. Ps. 15.9-11)."
+      "comment": "The heart (seat of will and emotion), tongue (instrument of expression), and flesh (physical, mortal body subject to decay and death) all respond with joy and rest in hope. This hope is anchored in the belief that God will not abandon the soul to the realm of the dead nor allow His holy one to see decay, culminating in the knowledge of the path of life and eternal joy in God's presence.",
+      "comment2": "Augustine reads this as a profound prophecy of Christ's resurrection and the Christian hope. The joy of the 'flesh' (carnal desires) finding rest is particularly significant—it affirms the transformation of physical existence through hope in resurrection, where the body is redeemed from its subjection to corruption and desire (Enarr. Ps. 15.9-11)."
     }
   ]
 },
