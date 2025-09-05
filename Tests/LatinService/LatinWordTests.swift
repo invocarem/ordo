@@ -33,6 +33,77 @@ final class LatinWordTests: XCTestCase {
     func testTranslationsAreLoaded() {
         XCTAssertFalse(latinService.getTranslations().isEmpty, "Should have loaded translations")
     }
+    func testAnalyzeLevo() {
+    // Setup test data - using Vulgate verses that contain 'levo' and its forms
+    let testText = [
+        "Leva oculos tuos et vide",                       // Genesis 13:14 - "Lift up your eyes and see" (Imperative)
+        "Levavi oculos meos in montes",                   // Psalm 121:1 - "I have lifted up my eyes to the mountains" (Perfect)
+        "Qui levat in altum oculos suos",                 // Proverbs 21:4 (Vulgate) - "Who raises his eyes on high" (Present relative)
+        "Levantes autem oculos suos",                     // Matthew 17:8 - "But lifting up their eyes" (Present Participle)
+        "Nonne haec levabis super eum parabolam?",        // Micah 2:4 (Vulgate) - "Will you not utter a parable against him?" (Future)
+        "Levabit enim Dominus super eos",                 // Isaiah 19:1 (Vulgate) - "For the Lord will lift up against them" (Future)
+        "Qui levat de terra inopem",                      // Psalm 113:7 - "Who raises up the needy from the earth" (Present)
+        "Levatus est autem et abiit",                     // John 5:15 - "But he was raised up and he went away" (Perfect Passive)
+        "Levamus corda nostra cum manibus ad Deum",       // Lamentations 3:41 (Vulgate) - "Let us lift up our hearts with our hands to God" (Present)
+        "Leva manum tuam super gentes alienas",           // Jeremiah 50:25 (Vulgate) - "Lift up your hand against foreign nations" (Imperative)
+        "Et levavit Ioseph currum suum",                  // Genesis 46:29 (Vulgate) - "And Joseph prepared his chariot" (Perfect - idiomatic use)
+        "Levabit signum in nationes procul",              // Isaiah 5:26 (Vulgate) - "He will lift up a signal to distant nations" (Future)
+        "Nolite levare coram hominibus",                  // Matthew 6:1 (Vulgate) - "Do not practice your righteousness before men" (Infinitive - "to display")
+        "Quoniam tu es qui levabis me",                   // Psalm 4:8 (Vulgate) - "For you are the one who will lift me up" (Future)
+        "Levatus que est rex de solio suo"                 // 1 Kings 1:53 (Vulgate) - "And the king was raised from his throne" (Perfect Passive)
+    ]
+    let identity = PsalmIdentity(number: 999, category: nil)
+    
+    // Create analysis
+    let analysis = latinService.analyzePsalm(identity, text: testText)
+    
+    // Verify lemma exists
+    guard let entry = analysis.dictionary["levo"] else {
+        XCTFail("Missing 'levo' lemma")
+        return
+    }
+    
+    print("\n=== levō Forms ===")
+    
+    // Check expected forms
+    let expectedForms = [
+        ("leva", "imperative_sg", 2),         // "lift!" (command)
+        ("levavi", "perfect_1s", 1),          // "I have lifted"
+        ("levat", "present_3s", 1),           // "he lifts"
+        ("levantes", "pres_part", 1),         // "lifting" (present participle)
+        ("levabit", "future_3s", 2),          // "he will lift"
+        ("levamus", "present_1pl", 1),        // "we lift"
+        ("levatus", "perf_part", 2),          // "having been lifted" (perfect passive participle)
+        ("levavit", "perfect_3s", 1),         // "he lifted"
+        ("levare", "infinitive", 1),          // "to lift"
+        ("levetur", "pres_subj_3s", 0),       // "may he be lifted" (optional check)
+    ]
+    
+    for (form, tenseMood, minCount) in expectedForms {
+        let count = entry.forms[form] ?? 0
+        print("\(form.padding(toLength: 10, withPad: " ", startingAt: 0)) | \(tenseMood.padding(toLength: 20, withPad: " ", startingAt: 0)) | \(count >= minCount ? "✅" : "❌")")
+        if minCount > 0 {
+            XCTAssertGreaterThanOrEqual(count, minCount, "Missing form '\(form)' (\(tenseMood))")
+        }
+    }
+    
+    // Verify verb properties
+    XCTAssertEqual(entry.entity?.partOfSpeech, .verb)
+    XCTAssertEqual(entry.entity?.conjugation, 1) // 1st conjugation verb
+    // Verify translation captures the meaning
+    let translationContainsLift = entry.translation?.contains("lift") == true
+    let translationContainsRaise = entry.translation?.contains("raise") == true
+    XCTAssertTrue(translationContainsLift || translationContainsRaise, 
+                 "Translation should include 'lift' or 'raise'")
+    
+    // Print all found forms for debugging
+    print("\nAll found forms for levō:")
+    for (form, count) in entry.forms.sorted(by: { $0.key < $1.key }) {
+        if count > 0 {
+            print("\(form): \(count)")
+        }
+    }
+}
 
     func testAnalyzeIntendo() {
         // Setup test data - using Vulgate verses that contain 'intendo' and its forms

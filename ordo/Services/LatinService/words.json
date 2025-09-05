@@ -1,16 +1,56 @@
 [
   {
-  "lemma": "adolescens",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "masculine",
-  "nominative": "adolescens",
-  "genitive": "adolescentis",
-  "translations": {
-    "en": "young man, youth, adolescent",
-    "la": "adolescens, adolescentis"
-  }
-},
+    "lemma": "solemnitas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "solemnitas",
+    "genitive": "solemnitatis",
+    "translations": {
+      "en": "solemnity, solemn feast, religious rite",
+      "la": "solemnitas, solemnitatis"
+    }
+  },
+  {
+    "lemma": "congregatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "congregatio",
+    "genitive": "congregationis",
+    "translations": {
+      "en": "assembly, gathering, congregation, group",
+      "la": "congregatio, congregationis"
+    }
+  },
+  {
+    "lemma": "glorior",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "gloriari",
+    "present": "glorior",
+    "future": "gloriabor",
+    "perfect": "gloriatus sum",
+    "translations": {
+      "en": "to boast, glory, take pride in",
+      "la": "glōrior, glōriārī, glōriātus sum"
+    },
+    "forms": {
+      "perfect_participle_substantive_masc_nom_pl": ["gloriati"]
+    }
+  },
+  {
+    "lemma": "adolescens",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "adolescens",
+    "genitive": "adolescentis",
+    "translations": {
+      "en": "young man, youth, adolescent",
+      "la": "adolescens, adolescentis"
+    }
+  },
   {
     "lemma": "qui",
     "part_of_speech": "pronoun",
@@ -15492,6 +15532,8 @@
       "part_of_speech": "verb",
       "conjugation": 1,
       "infinitive": "levare",
+      "present": "levo",
+      "future": "levabo",
       "perfect": "levavi",
       "supine": "levatum",
       "translations": {
@@ -15499,7 +15541,7 @@
         "la": "levo"
       },
       "forms": {
-        "perfect": ["levavi", "levavisti", "levavit", "levavimus", "levavistis", "levaverunt"]
+        "perfect_passive_participle": ["levatus", "levata", "levatum"]
       }
     },
     {
@@ -16115,21 +16157,7 @@
         "perfect_passive": ["superexaltatus sum", "superexaltatus es", "superexaltatus est", "superexaltati sumus", "superexaltati estis", "superexaltati sunt"]
       }
     },
-    {
-      "lemma": "elevo",
-      "part_of_speech": "verb",
-      "conjugation": 1,
-      "infinitive": "elevare",
-      "perfect": "elevavi",
-      "supine": "elevatum",
-      "translations": {
-        "en": "to lift up, elevate, raise",
-        "la": "elevo"
-      },
-      "forms": {
-        "perfect_passive": ["elevatus sum", "elevatus es", "elevatus est", "elevati sumus", "elevati estis", "elevati sunt"]
-      }
-    },
+    
     {
       "lemma": "pacificus",
       "part_of_speech": "adjective",
