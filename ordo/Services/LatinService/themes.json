@@ -768,42 +768,51 @@
   "themes": [
     {
       "name": "Folly → Corruption",
-      "description": "From denial of God to universal corruption in deeds",
-      "lemmas": ["insipiens", "cor", "corruptus", "abominabilis", "bonus"],
+      "description": "The fool's denial of God leads to universal moral corruption and absence of good.",
+      "lemmas": ["insipiens", "corrumpo", "abominabilis", "bonum"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "The psalm opens with the folly of atheism — denial of God leads directly to corruption and abominable works, leaving no one who does good.",
-      "comment2": "Augustine interprets 'dixit insipiens in corde suo: non est Deus' as the root of sin — the foolish heart turning away from its Creator. This denial is not theoretical but lived, shown in corrupt works (Enarr. Ps. 13.1–2)."
+      "comment": "The psalm begins with the fool's declaration that there is no God, which results in complete corruption and abominable deeds, with none doing good.",
+      "comment2": "Augustine sees this as describing the root of sin: practical atheism that leads to moral decay. The denial of God corrupts human nature itself (Enarr. Ps. 13.1-2)."
     },
     {
-      "name": "Divine Gaze → Human Deviation",
-      "description": "From God’s search for the faithful to the universal turn aside",
-      "lemmas": ["prospecto", "intelligo", "requiro", "declino", "inutilis"],
+      "name": "Search → Turning Away",
+      "description": "God's search for understanding among humanity reveals universal turning away from Him.",
+      "lemmas": ["prospicio", "intelligens", "requiro", "declino"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "The Lord looks down from heaven seeking understanding and devotion, but all have turned aside, becoming useless.",
-      "comment2": "Augustine sees here the universality of sin: all men declined from the way, none remained upright. This prepares the way for the need of grace, since no one is justified by their own works (Enarr. Ps. 13.3–4)."
+      "comment": "The Lord looks down from heaven to see if any understand or seek God, but finds that all have turned aside and become corrupt.",
+      "comment2": "Augustine interprets this as God's gracious condescension to seek out those who might respond to Him, yet finding universal sinfulness that requires divine grace (Enarr. Ps. 13.3-4)."
     },
     {
-      "name": "Oppression → Fear",
-      "description": "From devouring the poor to fear where no fear should be",
-      "lemmas": ["operor", "iniquitas", "devoro", "plebs", "panis", "timeo"],
+      "name": "Speech → Violent Action",
+      "description": "Internal moral decay manifests as deceitful speech and culminates in eager physical violence.",
+      "lemmas": ["sepulcrum", "guttur", "venenum", "aspis", "pes", "sanguis"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "The wicked consume God’s people like bread, and yet live without invoking the Lord, until terror overtakes them where no fear was.",
-      "comment2": "Augustine explains that the wicked devour the poor as easily as daily bread. Their false security collapses when they suddenly tremble with groundless fear, a mark of consciences secretly aware of judgment (Enarr. Ps. 13.5–6)."
-    },
+      "comment": "The psalmist describes a progression of evil: it begins with inner decay (a throat like an open grave), expresses itself through deceitful and poisonous speech, and inevitably culminates in eager physical violence ('swift feet to shed blood').",
+      "comment2": "Augustine sees this as a necessary chain of sin: a heart that denies God (v.1) cannot help but produce corruption that moves from harmful words to violent deeds. The 'feet' complete the action the 'tongue' began (Enarr. Ps. 13.5-6)." },
     {
-      "name": "Counsel of the Poor → Salvation from Zion",
-      "description": "From despised counsel of the lowly to promised deliverance from Zion",
-      "lemmas": ["consilium", "inops", "confundo", "spes", "salutare", "exulto"],
+      "name": "Ways → Ignorance",
+      "description": "Destructive ways and ignorance of peace reveal the absence of God's fear before their eyes, leading them to oppress others as casually as eating bread.",
+      "lemmas": ["contritio", "infelicitas", "devoro", "panis"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "Though the poor are mocked for their reliance on God, Zion is promised as the place of Israel’s salvation and joy.",
-      "comment2": "Augustine reads this as Christ Himself — the salvation (salutare) from Zion — who vindicates the poor in spirit. When the Lord turns back captivity, the true Israel, both Jew and Gentile, rejoices in freedom (Enarr. Ps. 13.7–8)."
+      "comment": "Ruin and misery mark their ways; they know nothing of peace's path and lack the fear of God before their eyes, devouring God's people like bread.",
+      "comment2": "For Augustine, this describes the inevitable consequences of godlessness: destruction, unhappiness, and oppression of the righteous (Enarr. Ps. 13.7-8)."
+    },
+    {
+      "name": "False Fear → Restoration",
+      "description": "The wrongful terror of the wicked, who refuse to call on the Lord, is contrasted with His defense of the poor and the future restoration of His people.",
+      "lemmas": ["invoco", "trepido", "inops", "confundo", "Sion", "captivitas"],
+      "startLine": 9,
+      "endLine": 11,
+      "comment": "The wicked do not call upon the Lord but instead tremble with a groundless, misplaced fear. In contrast, the Lord is with the righteous generation. The counsel of the poor is confounded because the Lord is their hope. The psalm culminates in a hope for salvation from Zion, when God will restore the fortunes of His people, bringing joy and gladness.",
+      "comment2": "Augustine contrasts the vain, chaotic fears of the godless with the well-placed hope of the righteous. The 'turning of the captivity' is interpreted spiritually as liberation from the bondage of sin, a restoration accomplished by Christ, the true 'salvation from Zion' (Enarr. Ps. 13.9-11)."
     }
   ]
 },
+
 {
   "psalmNumber": 14,
   "category": "",
