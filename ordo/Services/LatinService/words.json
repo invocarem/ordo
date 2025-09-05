@@ -15850,6 +15850,7 @@
         "la": "carbo"
       }
     },
+
     {
       "lemma": "desolatorius",
       "part_of_speech": "adjective",
@@ -15857,29 +15858,27 @@
       "gender": "masculine",
       "nominative": "desolatorius",
       "genitive": "desolatorii",
-      "dative": "desolatorio",
-      "accusative": "desolatorium",
-      "ablative": "desolatorio",
-      "vocative": "desolatorie",
-      "nominative_plural": "desolatorii",
-      "genitive_plural": "desolatorium",
-      "dative_plural": "desolatoriis",
-      "accusative_plural": "desolatorios",
-      "ablative_plural": "desolatoriis",
+      "translations": {
+        "en": "desolating, laying waste, destructive ",
+        "la": "dēsōlātōrius, dēsōlātōria, dēsōlātōrium"
+      },
       "forms": {
         "nominative_f": ["desolatoria"],
-        "accusative_f": ["desolatoriam"],
-        "ablative_f": ["desolatoria"],
         "nominative_n": ["desolatorium"],
-        "accusative_n": ["desolatorium"],
-        "ablative_n": ["desolatorio"]
+        "genitive_m": ["desolatorii"],
+        "genitive_f": ["desolatoriae"],
+        "genitive_n": ["desolatorii"]
       },
-      "translations": {
-        "en": "desolating, laying waste",
-        "la": "desolatorius"
+      "forms_plural": {
+        "nominative_m": ["desolatorii"],
+        "nominative_f": ["desolatoriae"],
+        "nominative_n": ["desolatoria"],
+        "genitive_m": ["desolatoriorum"],
+        "genitive_f": ["desolatoriarum"],
+        "genitive_n": ["desolatoriorum"]
       }
     },
-    {
+     {
       "lemma": "incolatus",
       "part_of_speech": "noun",
       "gender": "masculine",

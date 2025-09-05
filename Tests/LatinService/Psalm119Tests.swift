@@ -12,15 +12,16 @@ class Psalm119Tests: XCTestCase {
     let id = PsalmIdentity(number: 119, category: nil)
     
     // MARK: - Test Data
-    let psalm119 = [
-        "Ad Dominum cum tribularer clamavi, et exaudivit me.",
-        "Domine, libera anima mea a labiis iniquis, et a lingua dolosa.",
-        "Quid detur tibi, aut quid apponatur tibi ad linguam dolosam?",
-        "Sagittae potentis acutae, cum carbonibus desolatoriis.",
-        "Heu mihi, quia incolatus meus prolongatus est: habitavi cum habitantibus Cedar.",
-        "Multum incola fuit anima mea cum his qui oderunt pacem.",
-        "Ego pacem quaerebam: et cum loquerer illis, impugnabant me gratis."
-    ]
+    let psalm119 = 
+         [
+                "Ad Dominum cum tribularer clamavi, et exaudivit me.",
+                "Domine, libera anima mea a labiis iniquis, et a lingua dolosa.",
+                "Quid detur tibi, aut quid apponatur tibi ad linguam dolosam?",
+                "Sagittae potentis acutae, cum carbonibus desolatoriis.",
+                "Heu mihi, quia incolatus meus prolongatus est: habitavi cum habitantibus Cedar: multum incola fuit anima mea.",
+                "Cum his, qui oderunt pacem, ego pacem quaerebam: et cum loquerer illis, impugnabant me gratis."
+            ]
+
     
     // MARK: - Test Cases
     
@@ -113,7 +114,7 @@ class Psalm119Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(id, text: psalm119)
         
         let places = [
-            ("Cedar", ["Cedar"], "Kedar"), // v.5
+            ("cedar", ["Cedar"], "Kedar"), // v.5
             ("incolatus", ["incolatus"], "sojourn") // v.5
         ]
         

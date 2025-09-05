@@ -6090,28 +6090,26 @@
         {
             "number": 119,
             "section": "",
-            "title": "Prayer for Deliverance from Slanderers",
             "text": [
                 "Ad Dominum cum tribularer clamavi, et exaudivit me.",
                 "Domine, libera anima mea a labiis iniquis, et a lingua dolosa.",
                 "Quid detur tibi, aut quid apponatur tibi ad linguam dolosam?",
                 "Sagittae potentis acutae, cum carbonibus desolatoriis.",
-                "Heu mihi, quia incolatus meus prolongatus est: habitavi cum habitantibus Cedar.",
-                "Multum incola fuit anima mea cum his qui oderunt pacem.",
-                "Ego pacem quaerebam: et cum loquerer illis, impugnabant me gratis."
+                "Heu mihi, quia incolatus meus prolongatus est: habitavi cum habitantibus Cedar: multum incola fuit anima mea.",
+                "Cum his, qui oderunt pacem, ego pacem quaerebam: et cum loquerer illis, impugnabant me gratis."
             ],
             "englishText": [
                 "To the Lord, when I was in tribulation, I cried out: and he heard me.",
                 "O Lord, deliver my soul from wicked lips, and a deceitful tongue.",
                 "What shall be given to thee, or what shall be added to thee, against a deceitful tongue?",
                 "The sharp arrows of the mighty, with coals that lay waste.",
-                "Woe is me, that my sojourning is prolonged: I have dwelt with the inhabitants of Cedar.",
-                "Long hath my soul been a sojourner with them that hate peace.",
-                "I sought peace: and when I spoke thereof to them, they fought against me without cause."
+                "Woe is me, that my sojourning is prolonged: I have dwelt with the inhabitants of Cedar, long hath my soul been a sojourner.",
+                "With them that hate peace, I sought peace: and when I spoke thereof to them, they fought against me without cause."
             ],
             "verified": true
         },
-        {
+ 
+         {
             "number": 120,
             "section": "",
             "title": "The Lord, My Protector",
