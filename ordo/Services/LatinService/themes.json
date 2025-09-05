@@ -4757,7 +4757,8 @@
       "lemmas": ["tribulor", "clamo", "exaudio", "libero", "labium", "iniquus", "lingua", "dolosus"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Augustine sees this as the cry of the soul caught in inner tribulation, not just external hardship. The deceitful tongue symbolizes confusion and heresy. God hears, not to shield physically, but to deliver the soul through truth. The movement from anguish to 'libera animam meam' marks grace’s work in pulling the soul out of lies and into light (Enarr. Ps. 119.1–2)."
+      "comment": "The psalmist begins with a cry to the Lord in time of trouble and receives assurance of being heard, followed by a specific plea for deliverance from deceitful lips and a lying tongue.",
+      "comment2": "Augustine sees this as the cry of the soul caught in inner tribulation, not just external hardship. The deceitful tongue symbolizes confusion and heresy. God hears, not to shield physically, but to deliver the soul through truth. The movement from anguish to 'libera animam meam' marks grace’s work in pulling the soul out of lies and into light (Enarr. Ps. 119.1–2)."
     },
     {
       "name": "Deception → Purifying Judgment",
@@ -4765,24 +4766,19 @@
       "lemmas": ["do", "appono", "lingua", "sagitta", "potens", "acutus", "carbo", "desolatorius"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "Augustine reads these verses as the divine response to false speech. The tongue, which wounds through deceit, will receive 'sharp arrows' and 'desolating coals.' But these are not simply for destruction: they are purifying instruments. The 'coals' represent the burning power of charity, which scorches away sin and heals the deceived (Enarr. Ps. 119.3–5)."
+      "comment": "The psalmist asks what punishment fits a deceitful tongue, answering with the metaphor of a warrior's sharp arrows and the desolating coals of juniper.",
+      "comment2": "Augustine reads these verses as the divine response to false speech. The tongue, which wounds through deceit, will receive 'sharp arrows' and 'desolating coals.' But these are not simply for destruction: they are purifying instruments. The 'coals' represent the burning power of charity, which scorches away sin and heals the deceived (Enarr. Ps. 119.3–5)."
     },
     {
-      "name": "Exile → Alienation",
+      "name": "Exile → Conflict",
       "description": "Dwelling long among the ungodly deepens the soul’s sorrow",
-      "lemmas": ["heu", "incolatus", "prolongo", "cedar", "incola", "anima", "odi", "pax"],
+      "lemmas": ["heu", "incolatus", "prolongo", "cedar", "incola", "impugno", "gratis"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "‘Heu mihi’ is Augustine’s sigh of the pilgrim soul exiled from its true home. To live in Kedar — a symbol of those who live in the flesh — is to be surrounded by hostility toward peace. The soul has dwelt too long here, not because of years, but because it feels the pain of separation from the City of God (Enarr. Ps. 119.5–6)."
-    },
-    {
-      "name": "Peaceful Words → Hostile Response",
-      "description": "Peace is offered, but answered with aggression",
-      "lemmas": ["pax", "loquor", "impugno", "gratis"],
-      "startLine": 7,
-      "endLine": 7,
-      "comment": "Augustine interprets this verse as the voice of Christ and His Church: always seeking peace, yet constantly met with opposition. The psalmist speaks kindly, yet is attacked 'gratis' — without cause. This unjust suffering anticipates the passion of Christ, who was hated for no reason (Enarr. Ps. 119.7)."
+      "comment": "‘Heu mihi’ is Augustine’s sigh of the pilgrim soul exiled from its true home. To live in Kedar — a symbol of those who live in the flesh — is to be surrounded by hostility toward peace. The soul has dwelt too long here, not because of years, but because it feels the pain of separation from the City of God. ",
+      "comment2":  "Augustine interprets this verse as the voice of Christ and His Church: always seeking peace, yet constantly met with opposition. The psalmist speaks kindly, yet is attacked 'gratis' — without cause. This unjust suffering anticipates the passion of Christ, who was hated for no reason."
     }
+    
   ]
 },
 
