@@ -304,28 +304,28 @@ private func analyzeVerbPassive(form: String, translation: String) -> String? {
 
         case "perfect", "perfect_active_indicative":
             let helperVerb = (person == "I" || person == "they" || person == "we" || (person == "you" && isPlural)) ? "have" : "has"
-            return "\(person) \(helperVerb) \(cleanTranslation)ed\(effectiveNumber) (perfect)"
+            return "\(person) \(helperVerb) [\(cleanTranslation)] \(effectiveNumber) (perfect)"
 
         case "perfect_passive_indicative":
             let helperVerb = (person == "I" || person == "they" || person == "we" || (person == "you" && isPlural)) ? "have" : "has"
-            return "\(person) \(helperVerb) been \(translation)ed\(effectiveNumber) (perfect passive)"
+            return "\(person) \(helperVerb) been [\(cleanTranslation)] \(effectiveNumber) (perfect passive)"
 
         case "pluperfect_active_indicative":
-            return "\(person) had \(translation)ed\(effectiveNumber)"
+            return "\(person) had [\(translation)] \(effectiveNumber) (pluperfect active)"
         case "pluperfect_passive_indicative":
-            return "\(person) had been \(translation)ed\(effectiveNumber)"
+            return "\(person) had been \(translation)ed\(effectiveNumber) (pluperfect passive)"
         case "present_active_subjunctive":
             return "\(person) may \(cleanTranslation)\(effectiveNumber) (present active subjunctive)"
         case "present_passive_subjunctive":
-            return "\(person) may be \(cleanTranslation)ed\(effectiveNumber) (present passive subjunctive)"
+            return "\(person) may be [\(cleanTranslation)] \(effectiveNumber) (present passive subjunctive)"
         case "imperfect_active_subjunctive":
-            return "\(person) might \(translation)\(effectiveNumber) (subjunctive)"
+            return "\(person) might [\(cleanTranslation)]\(effectiveNumber) (imperfect active subjunctive)"
         case "imperfect_passive_subjunctive":
-            return "\(person) might be \(translation)ed\(effectiveNumber) (subjunctive)"
+            return "\(person) might be [\(cleanTranslation)] \(effectiveNumber) (imperfect passive subjunctive)"
         case "imperative_active":
-            return "\(translation.capitalized)! (\(isPlural ? "plural" : "singular") command)"
+            return "\(translation.capitalized)! (\(isPlural ? "plural" : "singular") command) (imperative active)"
         case "present_participle":
-            return "\(translation)ing (participle)"
+            return "\(CleanTranslation)ing (present participle)"
 
         default:
             return "default: \(cleanTranslation) (\(tense) \(isPlural ? "plural" : "singular"))"
