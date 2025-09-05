@@ -12,16 +12,22 @@ class Psalm13Tests: XCTestCase {
     let id = PsalmIdentity(number: 13, category: nil)
     
     // MARK: - Test Data (Psalm 13)
-    let psalm13 = [
-        "Dixit insipiens in corde suo: Non est Deus.",
-        "Corrupti sunt, et abominabiles facti sunt in studiis suis; non est qui faciat bonum, non est usque ad unum.",
-        "Dominus de caelo prospexit super filios hominum, ut videat si est intelligens, aut requirens Deum.",
-        "Omnes declinaverunt, simul inutiles facti sunt; non est qui faciat bonum, non est usque ad unum.",
-        "Nonne scient omnes qui operantur iniquitatem, qui devorant plebem meam ut cibum panis?",
-        "Dominum non invocaverunt; illic trepidaverunt timore, ubi non erat timor.",
-        "Quoniam Dominus in generatione justa est, consilium inopis confudistis, quoniam Dominus spes ejus est.",
-        "Quis dabit ex Sion salutare Israel? cum averterit Dominus captivitatem plebis suae, exsultabit Jacob, et laetabitur Israel."
-    ] 
+    let psalm13 = 
+       [
+            "Dixit insipiens in corde suo: Non est Deus.",
+            "Corrupti sunt, et abominabiles facti sunt in studiis suis; non est qui faciat bonum, non est usque ad unum.",
+            "Dominus de caelo prospexit super filios hominum, ut videat si est intelligens, aut requirens Deum.",
+            "Omnes declinaverunt, simul inutiles facti sunt; non est qui faciat bonum, non est usque ad unum.",
+            "Sepulcrum patens est guttur eorum; linguis suis dolose agebant, venenum aspidum sub labiis eorum.",
+            
+            "Quorum os maledictione et amaritudine plenum est, veloces pedes eorum ad effundendum sanguinem.",
+            "Contritio et infelicitas in viis eorum, et viam pacis non cognoverunt; non est timor Dei ante oculos eorum.",
+            "Nonne scient omnes qui operantur iniquitatem, qui devorant plebem meam ut cibum panis?",
+            "Dominum non invocaverunt; illic trepidaverunt timore, ubi non erat timor.",
+            "Quoniam Dominus in generatione iusta est, consilium inopis confudistis, quoniam Dominus spes eius est.",
+            
+            "Quis dabit ex Sion salutare Israel? cum averterit Dominus captivitatem plebis suae, exsultabit Iacob, et laetabitur Israel."
+        ]
     
     let identity = PsalmIdentity(number: 13, category: nil)
     
@@ -119,9 +125,9 @@ class Psalm13Tests: XCTestCase {
         let analysis = latinService.analyzePsalm(id, text: psalm13)
         
         let groupTerms = [
-            ("justus", ["justa"], "righteous"), // v.7
+            ("iustus", ["iusta"], "righteous"), // v.7
             ("generatio", ["generatione"], "generation"), // v.7
-            ("jacob", ["jacob"], "jacob"), // v.8
+            ("iacob", ["iacob"], "Jacob"), // v.8
             ("israel", ["israel", "israel"], "israel") // v.8 (2x)
         ]
         

@@ -14,11 +14,12 @@ class Psalm1Tests: XCTestCase {
     // MARK: - Test Data
     let psalm1 = [
         "Beatus vir qui non abiit in consilio impiorum, et in via peccatorum non stetit, et in cathedra pestilentiae non sedit;",
-        "Sed in lege Domini voluntas eius, et in lege eius meditabitur die ac nocte.",
-        "Et erit tamquam lignum quod plantatum est secus decursus aquarum, quod fructum suum dabit in tempore suo:",
-        "Et folium eius non defluet, et omnia quaecumque faciet prosperabuntur.",
-        "Non sic impii, non sic: sed tamquam pulvis quem proicit ventus a facie terrae.",
-        "Ideo non resurgent impii in iudicio, neque peccatores in concilio iustorum; quoniam novit Dominus viam iustorum: et iter impiorum peribit." 
+                "Sed in lege Domini voluntas eius, et in lege eius meditabitur die ac nocte.",
+                "Et erit tamquam lignum quod plantatum est secus decursus aquarum, quod fructum suum dabit in tempore suo:",
+                "Et folium eius non defluet, et omnia quaecumque faciet, prosperabuntur.",
+                "Non sic impii, non sic: sed tamquam pulvis, quem proicit ventus a facie terrae.",
+                "Ideo non resurgent impii in iudicio, neque peccatores in concilio iustorum; ",
+                "Quoniam novit Dominus viam iustorum: et iter impiorum peribit."    
     ]
 
     func testPsalm1Lines1and2() {
@@ -145,13 +146,14 @@ func testPsalm1Lines3and4() {
     }
     XCTAssertEqual(positiveTerms, 3, "Should find three positive outcome terms")
 }
-func testPsalm1Lines5and6() {
+func testPsalm1Lines5and7() {
     //  "Non sic impii, non sic: sed tamquam pulvis quem proicit ventus a facie terrae.",
     //  "Ideo non resurgent impii in iudicio, neque peccatores in concilio iustorum; quoniam novit Dominus viam iustorum: et iter impiorum peribit."
 
     let line5 = psalm1[4] 
     let line6 = psalm1[5] 
-    let combinedText = line5 + " " + line6
+    let line7 = psalm1[6] 
+    let combinedText = line5 + " " + line6 + " " + line7
     let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 5)
     
     let testLemmas = [
@@ -210,7 +212,7 @@ func testPsalm1Lines5and6() {
     XCTAssertEqual(destinyTerms, 2, "Should find both destiny verbs")
 }
     func testTreeMetaphor() {
-        let analysis = latinService.analyzePsalm(text: psalm1)
+        let analysis = latinService.analyzePsalm(identity, text: psalm1)
         
         let treeTerms = [
             ("lignum", ["lignum"], "tree"),

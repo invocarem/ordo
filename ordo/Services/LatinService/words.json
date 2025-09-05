@@ -1,5 +1,19 @@
 [
   {
+    "lemma": "trepido",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "trepidare",
+    "present": "trepido",
+    "future": "trepidabo",
+    "perfect": "trepidavi",
+    "supine": "trepidatum",
+    "translations": {
+      "en": "to tremble, be anxious, be alarmed, be terrified",
+      "la": "trepidō, trepidāre, trepidāvī, trepidātum"
+    }
+  },
+  {
     "lemma": "solemnitas",
     "part_of_speech": "noun",
     "declension": 3,
@@ -9772,16 +9786,16 @@
 },
   
   {
-    "lemma": "jacob",
+    "lemma": "iacob",
     "part_of_speech": "noun",
     "gender": "masculine",
     "declension": 3,
-    "nominative": "Jacob",
-    "genitive": "Jacobis",
+    "nominative": "iacob",
+    "genitive": "iacobis",
     
     "translations": {
       "en": "Jacob (Biblical patriarch)",
-      "la": "Jacob"
+      "la": "Iacob"
     
     },
     "notes": "Hebrew origin; often appears in Vulgate as 'Jacob' (indeclinable in some texts)"
