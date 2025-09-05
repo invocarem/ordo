@@ -325,7 +325,7 @@ private func analyzeVerbPassive(form: String, translation: String) -> String? {
         case "imperative_active":
             return "\(translation.capitalized)! (\(isPlural ? "plural" : "singular") command) (imperative active)"
         case "present_participle":
-            return "\(CleanTranslation)ing (present participle)"
+            return "\(cleanTranslation)ing (present participle)"
 
         default:
             return "default: \(cleanTranslation) (\(tense) \(isPlural ? "plural" : "singular"))"
