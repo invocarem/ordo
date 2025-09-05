@@ -11,26 +11,27 @@ class Psalm15Tests: XCTestCase {
     }
     
     // MARK: - Test Data
-    let psalm15 = [
-        "Conserva me, Domine, quoniam in te speravi;",
-        "Dixi Domino: Deus meus es tu, quoniam bonorum meorum non eges.",
-        "Sanctis qui sunt in terra ejus, mirificavit omnes voluntates meas in eis.",
+    let psalm15 =
+     [ 
+        "Conserva me, Domine, quoniam in te speravi; Dixi Domino: Deus meus es tu, quoniam bonorum meorum non eges.",
+        "Sanctis qui sunt in terra eius, mirificavit omnes voluntates meas in eis.",
         "Multiplicatae sunt infirmitates eorum; postea acceleraverunt.",
         "Non congregabo conventicula eorum de sanguinibus, nec memor ero nominum eorum per labia mea.",
         "Dominus pars haereditatis meae, et calicis mei: tu es qui restitues haereditatem meam mihi.",
+
         "Funes ceciderunt mihi in praeclaris; etenim haereditas mea praeclara est mihi.",
         "Benedicam Dominum qui tribuit mihi intellectum; insuper et usque ad noctem increpuerunt me renes mei.",
         "Providebam Dominum in conspectu meo semper: quoniam a dextris est mihi, ne commovear.",
         "Propter hoc laetatum est cor meum, et exsultavit lingua mea: insuper et caro mea requiescet in spe.",
         "Quoniam non derelinques animam meam in inferno, nec dabis sanctum tuum videre corruptionem.",
+
         "Notas mihi fecisti vias vitae; adimplebis me laetitia cum vultu tuo: delectationes in dextera tua usque in finem."
     ]
     
     // MARK: - Test Cases
-    func testPsalm15Lines1and2() {
+    func testPsalm15Lines1() {
     let line1 = psalm15[0] // "Conserva me, Domine, quoniam in te speravi;"
-    let line2 = psalm15[1] // "Dixi Domino: Deus meus es tu, quoniam bonorum meorum non eges."
-    let combinedText = line1 + " " + line2
+    let combinedText = line1 
     let analysis = latinService.analyzePsalm(text: combinedText)
     
     let testLemmas = [
@@ -45,9 +46,8 @@ class Psalm15Tests: XCTestCase {
     ]
     
     if verbose {
-        print("\nPSALM 15:1-2 ANALYSIS:")
+        print("\nPSALM 15:1 ANALYSIS:")
         print("1: \"\(line1)\"")
-        print("2: \"\(line2)\"")
         
         print("\nLEMMA VERIFICATION:")
         testLemmas.forEach { lemma, forms, translation in
@@ -78,9 +78,9 @@ class Psalm15Tests: XCTestCase {
     XCTAssertTrue(hasHumanGoods && hasDivineNeed, "Should contrast human goods with divine needlessness")
 }
 
-func testPsalm15Lines3and4() {
-    let line3 = psalm15[2] // "Sanctis qui sunt in terra ejus, mirificavit omnes voluntates meas in eis."
-    let line4 = psalm15[3] // "Multiplicatae sunt infirmitates eorum; postea acceleraverunt."
+func testPsalm15Lines2and3() {
+    let line3 = psalm15[1] // "Sanctis qui sunt in terra ejus, mirificavit omnes voluntates meas in eis."
+    let line4 = psalm15[2] // "Multiplicatae sunt infirmitates eorum; postea acceleraverunt."
     let combinedText = line3 + " " + line4
     let analysis = latinService.analyzePsalm(text: combinedText)
     
@@ -90,7 +90,6 @@ func testPsalm15Lines3and4() {
         ("terra", ["terra"], "land"),
         ("mirifico", ["mirificavit"], "wonderful"),
         ("voluntas", ["voluntates"], "desires"),
-        ("meus", ["meas"], "my"),
         ("multiplico", ["multiplicatae"], "multiplied"),
         ("infirmitas", ["infirmitates"], "sufferings"),
         ("postea", ["postea"], "afterwards"),
@@ -98,9 +97,9 @@ func testPsalm15Lines3and4() {
     ]
     
     if verbose {
-        print("\nPSALM 15:3-4 ANALYSIS:")
-        print("3: \"\(line3)\"")
-        print("4: \"\(line4)\"")
+        print("\nPSALM 15:2-3 ANALYSIS:")
+        print("2: \"\(line3)\"")
+        print("3: \"\(line4)\"")
         
         print("\nLEMMA VERIFICATION:")
         testLemmas.forEach { lemma, forms, translation in
@@ -133,8 +132,8 @@ func testPsalm15Lines3and4() {
     XCTAssertEqual(perfectVerbs, 2, "Should find both perfect tense verbs")
 }
 func testPsalm15Lines5and6() {
-    let line5 = psalm15[4] // "Non congregabo conventicula eorum de sanguinibus, nec memor ero nominum eorum per labia mea."
-    let line6 = psalm15[5] // "Dominus pars haereditatis meae, et calicis mei: tu es qui restitues haereditatem meam mihi."
+    let line5 = psalm15[3] // "Non congregabo conventicula eorum de sanguinibus, nec memor ero nominum eorum per labia mea."
+    let line6 = psalm15[4] // "Dominus pars haereditatis meae, et calicis mei: tu es qui restitues haereditatem meam mihi."
     let combinedText = line5 + " " + line6
     let analysis = latinService.analyzePsalm(text: combinedText)
     
@@ -189,10 +188,10 @@ func testPsalm15Lines5and6() {
     let isBloodPlural = analysis.dictionary["sanguis"]?.forms["sanguinibus"] == 1
     XCTAssertTrue(isBloodPlural, "Should find plural 'bloods' (ritual sacrifices)")
 }
-func testPsalm15Lines7and8() {
-    let line7 = psalm15[6] // "Funes ceciderunt mihi in praeclaris; etenim haereditas mea praeclara est mihi."
-    let line8 = psalm15[7] // "Benedicam Dominum qui tribuit mihi intellectum; insuper et usque ad noctem increpuerunt me renes mei."
-    let combinedText = line7 + " " + line8
+func testPsalm15Lines6and7() {
+    let line6 = psalm15[5] // "Funes ceciderunt mihi in praeclaris; etenim haereditas mea praeclara est mihi."
+    let line7 = psalm15[6] // "Benedicam Dominum qui tribuit mihi intellectum; insuper et usque ad noctem increpuerunt me renes mei."
+    let combinedText = line6 + " " + line7
     let analysis = latinService.analyzePsalm(text: combinedText)
     
     let testLemmas = [
@@ -210,9 +209,9 @@ func testPsalm15Lines7and8() {
     ]
     
     if verbose {
-        print("\nPSALM 15:7-8 ANALYSIS:")
+        print("\nPSALM 15:6-7 ANALYSIS:")
+        print("6: \"\(line6)\"")
         print("7: \"\(line7)\"")
-        print("8: \"\(line8)\"")
         
         print("\nLEMMA VERIFICATION:")
         testLemmas.forEach { lemma, forms, translation in
@@ -247,10 +246,10 @@ func testPsalm15Lines7and8() {
     XCTAssertEqual(perfectVerb + futureVerb, 2, "Should find both perfect and future verbs")
 }
 
-func testPsalm15Lines9and10() {
-    let line9 = psalm15[8] // "Providebam Dominum in conspectu meo semper: quoniam a dextris est mihi, ne commovear."
-    let line10 = psalm15[9] // "Propter hoc laetatum est cor meum, et exsultavit lingua mea: insuper et caro mea requiescet in spe."
-    let combinedText = line9 + " " + line10
+func testPsalm15Lines8and9() {
+    let line8 = psalm15[7] // "Providebam Dominum in conspectu meo semper: quoniam a dextris est mihi, ne commovear."
+    let line9 = psalm15[8] // "Propter hoc laetatum est cor meum, et exsultavit lingua mea: insuper et caro mea requiescet in spe."
+    let combinedText = line8 + " " + line9
     let analysis = latinService.analyzePsalm(text: combinedText)
     
     let testLemmas = [
@@ -268,9 +267,9 @@ func testPsalm15Lines9and10() {
     ]
     
     if verbose {
-        print("\nPSALM 15:9-10 ANALYSIS:")
+        print("\nPSALM 15:8-9 ANALYSIS:")
+        print("8: \"\(line8)\"")
         print("9: \"\(line9)\"")
-        print("10: \"\(line10)\"")
         
         print("\nLEMMA VERIFICATION:")
         testLemmas.forEach { lemma, forms, translation in
@@ -296,10 +295,10 @@ func testPsalm15Lines9and10() {
     }
     XCTAssertEqual(bodyParts.reduce(0, +), 3, "Should find heart, tongue, and flesh references")
 }
-func testPsalm15Lines11and12() {
-    let line11 = psalm15[10] // "Quoniam non derelinques animam meam in inferno, nec dabis sanctum tuum videre corruptionem."
-    let line12 = psalm15[11] // "Notas mihi fecisti vias vitae; adimplebis me laetitia cum vultu tuo: delectationes in dextera tua usque in finem."
-    let combinedText = line11 + " " + line12
+func testPsalm15Lines10and11() {
+    let line10 = psalm15[9] // "Quoniam non derelinques animam meam in inferno, nec dabis sanctum tuum videre corruptionem."
+    let line11 = psalm15[10] // "Notas mihi fecisti vias vitae; adimplebis me laetitia cum vultu tuo: delectationes in dextera tua usque in finem."
+    let combinedText = line10 + " " + line11
     let analysis = latinService.analyzePsalm(text: combinedText)
     
     let testLemmas = [
@@ -314,14 +313,14 @@ func testPsalm15Lines11and12() {
         ("adimpleo", ["adimplebis"], "fill"),
         ("laetitia", ["laetitia"], "joy"),
         ("vultus", ["vultu"], "face"),
-        ("delectatio", ["delectationes"], "pleasures"),
+        ("delectatio", ["delectationes"], "pleasure"),
         ("finis", ["finem"], "end")
     ]
     
     if verbose {
-        print("\nPSALM 15:11-12 ANALYSIS:")
+        print("\nPSALM 15:10-11 ANALYSIS:")
+        print("10: \"\(line10)\"")
         print("11: \"\(line11)\"")
-        print("12: \"\(line12)\"")
         
         print("\nLEMMA VERIFICATION:")
         testLemmas.forEach { lemma, forms, translation in

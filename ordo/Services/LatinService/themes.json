@@ -857,99 +857,54 @@
 },
 
 
-
 {
   "psalmNumber": 15,
   "category": "",
   "themes": [
     {
-      "name": "Refuge → Covenant",
-      "description": "Taking refuge in God through covenantal declaration",
-      "lemmas": ["conservo", "spero", "dico", "deus", "egeo"],
+      "name": "Refuge → Declaration",
+      "description": "A plea for preservation based on trust in God leads to a declaration of His self-sufficiency.",
+      "lemmas": ["conservo", "spero", "dico", "egeo"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Cry for preservation (conserva) leads to confession of divine sufficiency (non eges)"
+      "comment": "The psalmist begins with a plea for God's protection, grounded in personal trust. This trust is expressed through the declaration 'You are my God,' emphasizing that God has no need of human goods, highlighting His complete self-sufficiency.",
+      "comment2": "Augustine sees this as the soul's fundamental stance: taking refuge not in its own goods but in God, who is the only true good and needs nothing from His creation (Enarr. Ps. 15.1-2)."
     },
     {
-      "name": "Blessing → Suffering",
-      "description": "Divine fulfillment amidst human frailty",
-      "lemmas": ["sanctus", "mirifico", "voluntas", "infirmitas", "accelero"],
+      "name": "Saints → Separation",
+      "description": "The excellence of God's saints is contrasted with the multiplied sorrows and idolatrous worship of others, leading to a vow of separation.",
+      "lemmas": ["sanctus", "mirifico", "infirmitas", "sanguis"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "God's wonder (mirificavit) in saints contrasts with multiplied sufferings (infirmitates)"
+      "comment": "The psalmist praises the saints in whom God has made all his will wonderful. This is contrasted with the multiplied sorrows of others who 'accelerate' after other gods. The psalmist vows not to partake in their bloody idolatrous assemblies or even speak the names of their gods.",
+      "comment2": "Augustine interprets the 'saints' as those who belong to the heavenly city. The 'multiplied sorrows' are the ever-increasing anxieties of those who pursue earthly desires. The vow of separation is a refusal to participate in the works of the 'earthly city' (Enarr. Ps. 15.3-4)."
     },
     {
-      "name": "Rejection → Inheritance",
-      "description": "Renouncing idolatry for divine portion",
-      "lemmas": ["congrego", "sanguis", "memor", "pars", "hereditas", "calix", "restituo"],
+      "name": "Portion → Inheritance",
+      "description": "The Lord is chosen as the only lasting portion and inheritance, which is beautiful and secure.",
+      "lemmas": ["pars", "hereditas", "restitues", "praeclarus"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "Refusing pagan assemblies (conventicula) to claim the Lord as inheritance (pars haereditatis)"
+      "comment": "The psalmist declares that the Lord is his chosen portion and cup, the one who restores his inheritance. The measuring lines have fallen in pleasant places, confirming that his inheritance is truly beautiful and secure.",
+      "comment2": "For Augustine, this is the voice of Christ and every faithful soul rejecting worldly portions for God Himself. The 'beautiful inheritance' is the eternal life and joy found only in God, which He Himself will restore (Enarr. Ps. 15.5-6)."
     },
     {
-      "name": "Boundaries → Instruction",
-      "description": "Secure inheritance enabling spiritual discernment",
-      "lemmas": ["funis", "cado", "praeclarus", "benedico", "tribuo", "intellectus", "increpo", "ren"],
+      "name": "Counsel → Stability",
+      "description": "Blessing God for counsel leads to His constant presence at the right hand, providing unshakable stability.",
+      "lemmas": ["benedico", "intellectus", "increpo", "provideo"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "Pleasant boundaries (funes) precede divine instruction (intellectum) and conscience (renes)"
+      "comment": "The psalmist blesses the Lord for giving him counsel and instruction, even through inner conviction ('my kidneys instruct me at night'). Because he always keeps the Lord before him, who is at his right hand, he will not be shaken.",
+      "comment2": "Augustine sees the 'counsel' and 'instruction' as divine wisdom guiding the soul. The 'right hand' signifies God's powerful presence that steadies the believer amidst all turmoil, preventing them from being moved by temporal troubles (Enarr. Ps. 15.7-8)."
     },
     {
-      "name": "Presence → Joy",
-      "description": "Constant awareness of God producing embodied hope",
-      "lemmas": ["provideo", "dexter", "commoveo", "laetor", "exsulto", "requiesco", "spes"],
-      "startLine": 9,
-      "endLine": 10,
-      "comment": "Setting God always before (Providebam) results in unshakable joy (laetatum) and rest (requiescet)"
-    },
-    {
-      "name": "Resurrection → Fullness",
-      "description": "Hope beyond death leading to eternal delight",
-      "lemmas": ["derelinquo", "infernus", "corruptio", "notus", "via", "vita", "adimpleo", "laetitia", "delectatio"],
-      "startLine": 11,
-      "endLine": 12,
-      "comment": "Abandonment avoided (non derelinques) opens to paths of life (vias vitae) and joy (laetitia)"
-    },
-
-    {
-      "name": "Augustine: Christ the Holy One",
-      "description": "Christ as the true referent of 'sanctum tuum'",
-      "lemmas": ["sanctus", "corruptio"],
-      "startLine": 11,
-      "endLine": 11,
-      "comment": "Christ's body did not see corruption (Enarrationes in Psalmos 15:10)"
-    },
-    {
-      "name": "Augustine: The Cup of the Lord",
-      "description": "Eucharistic participation in Christ's passion",
-      "lemmas": ["calix"],
-      "startLine": 6,
-      "endLine": 6,
-      "comment": "The cup (calicis) signifies sharing in Christ's suffering (Sermon 213.8)"
-    },
-    {
-      "name": "Augustine: The Nightly Examination",
-      "description": "Conscience as divine instruction in the dark night",
-      "lemmas": ["increpo", "ren"],
-      "startLine": 8,
-      "endLine": 8,
-      "comment": "The kidneys (renes) represent the inner self being schooled by God (Enarr. 15.8)"
-    },
-    {
-      "name": "Augustine: The Paths of Life",
-      "description": "Christ as the way to the Father's presence",
-      "lemmas": ["via", "vita", "vultus"],
-      "startLine": 12,
-      "endLine": 12,
-      "comment": "The paths (vias) lead to the vision of God's face (vultu tuo) (Conf. IX.4)"
-    },
-    {
-      "name": "Augustine: The Whole Christ",
-      "description": "Corporate identity of Christ with His Church",
-      "lemmas": ["sanctus", "cor", "lingua", "caro"],
+      "name": "Joy → Resurrection",
+      "description": "Fullness of joy in God's presence leads to the hope of bodily rest and the ultimate promise of resurrection without corruption.",
+      "lemmas": ["laetor", "requiesco", "infernum", "corruptio"],
       "startLine": 9,
       "endLine": 11,
-      "comment": "Christ speaks through His members: heart, tongue and flesh (Enarr. 15:9)"
+      "comment": "The heart, tongue, and flesh all respond with joy and rest in hope. This hope is anchored in the belief that God will not abandon the soul to the realm of the dead nor allow His holy one to see decay, culminating in the knowledge of the path of life and eternal joy in God's presence.",
+      "comment2": "Augustine reads this eschatologically as a clear prophecy of Christ's resurrection ('nor will you allow your Holy One to see decay'). For all believers, it is the hope of bodily resurrection and the fullness of joy found only in the beatific vision of God's face (Enarr. Ps. 15.9-11)."
     }
   ]
 },
