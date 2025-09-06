@@ -1161,12 +1161,12 @@
   "themes": [
     {
       "name": "Sanctity → Corruption",
-      "description": "God’s dealings reflect the heart: holy with the holy, twisted with the perverse.",
+      "description": "God's dealings reflect the heart: holy with the holy, twisted with the perverse.",
       "lemmas": ["sanctus", "innocens", "electus", "perversus"],
       "startLine": 1,
       "endLine": 2,
       "comment": "The divine mirror shows both purity and distortion: God appears to each as their own heart allows.",
-      "comment2": "Augustine sees this as God’s justice: He seems merciful to the humble and severe to the proud. Christ Himself reveals this duality—grace for the penitent, judgment for the hardened (Enarr. Ps. 17.26–27)."
+      "comment2": "Augustine sees this as God's justice: He seems merciful to the humble and severe to the proud. Christ Himself reveals this duality—grace for the penitent, judgment for the hardened."
     },
     {
       "name": "Humility → Light",
@@ -1174,26 +1174,26 @@
       "lemmas": ["humilis", "salvus", "superbus", "illumino"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "God overturns human pride and makes His light shine in the believer’s obscurity.",
-      "comment2": "Augustine teaches that Christ humbled Himself to exalt the lowly, and illuminates believers by removing their blindness, while the proud stumble in darkness (Enarr. Ps. 17.28–29)."
+      "comment": "God overturns human pride and makes His light shine in the believer's obscurity.",
+      "comment2": "Augustine teaches that Christ humbled Himself to exalt the lowly, and illuminates believers by removing their blindness, while the proud stumble in darkness."
     },
     {
       "name": "Trial → Victory",
       "description": "God delivers from temptation and empowers to scale walls.",
-      "lemmas": ["eripio", "tentatio", "Deus", "transgredior", "murus"],
+      "lemmas": ["eripio", "tentatio",  "transgredior", "murus"],
       "startLine": 5,
       "endLine": 6,
       "comment": "Strength in God turns weakness into triumph over obstacles.",
-      "comment2": "For Augustine, the ‘wall’ is the Law that condemns; in Christ, the faithful scale it, overcoming temptation through grace (Enarr. Ps. 17.30)."
+      "comment2": "For Augustine, the 'wall' is the Law that condemns; in Christ, the faithful scale it, overcoming temptation through grace."
     },
     {
       "name": "Unique God → Strength",
       "description": "No God but the Lord, who grants strength and integrity of way.",
-      "lemmas": ["Deus", "via", "eloquium", "protector"],
+      "lemmas": ["praecingo", "virtus", "pono", "via"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "The psalmist confesses the one true God as both shield and guide.",
-      "comment2": "Augustine affirms that Christ alone is the true God and protector. His Word, tested like fire, secures the believer’s path (Enarr. Ps. 17.31–32)."
+      "comment": "The psalmist contrasts God with all pretenders: only the Lord is God. This confession leads into a personal testimony of empowerment, as God girds with strength and establishes a straight path.",
+      "comment2": "Augustine affirms that Christ alone is the true God and protector. His Word, tested like fire, secures the believer's path."
     },
     {
       "name": "Sure-footed → Battle-ready",
@@ -1202,25 +1202,25 @@
       "startLine": 9,
       "endLine": 10,
       "comment": "Spiritual agility and strength prepare the just for struggle.",
-      "comment2": "Augustine sees the swift feet as missionary zeal, and the trained hands as spiritual warfare against sin and unbelief (Enarr. Ps. 17.33–35)."
+      "comment2": "Augustine sees the swift feet as missionary zeal, and the trained hands as spiritual warfare against sin and unbelief."
     },
     {
       "name": "Protection → Discipline",
-      "description": "Salvation’s shield and fatherly correction secure the way.",
+      "description": "Salvation's shield and fatherly correction secure the way.",
       "lemmas": ["protectio", "salus", "dextera", "disciplina"],
       "startLine": 11,
       "endLine": 12,
       "comment": "Mercy protects, discipline refines: both come from the same hand.",
-      "comment2": "Augustine interprets God’s discipline as sanctifying correction, making the believer steadfast in Christ, whose mercy shields and whose teaching trains (Enarr. Ps. 17.36)."
+      "comment2": "Augustine interprets God's discipline as sanctifying correction, making the believer steadfast in Christ, whose mercy shields and whose teaching trains."
     },
     {
       "name": "Pursuit → Defeat",
-      "description": "The psalmist’s enemies are chased, crushed, and unable to stand.",
+      "description": "The psalmist's enemies are chased, crushed, and unable to stand.",
       "lemmas": ["dilato", "vestigium", "persequor", "confringo"],
       "startLine": 13,
       "endLine": 14,
       "comment": "Divine empowerment ensures that opposition collapses beneath the faithful.",
-      "comment2": "Augustine applies this to Christ’s conquest of sin and the devil, pursued and crushed by His passion and resurrection (Enarr. Ps. 17.37–38)."
+      "comment2": "Augustine applies this to Christ's conquest of sin and the devil, pursued and crushed by His passion and resurrection."
     },
     {
       "name": "Armed → Overthrown",
@@ -1228,8 +1228,8 @@
       "lemmas": ["praecingo", "virtus", "supplanto", "disperdo"],
       "startLine": 15,
       "endLine": 16,
-      "comment": "Victory flows not from self, but from God’s enabling strength.",
-      "comment2": "For Augustine, this arming is Christ equipping His Church, so that the faithful trample spiritual enemies underfoot (Enarr. Ps. 17.39–40)."
+      "comment": "Victory flows not from self, but from God's enabling strength.",
+      "comment2": "For Augustine, this arming is Christ equipping His Church, so that the faithful trample spiritual enemies underfoot."
     },
     {
       "name": "Cry → Silence",
@@ -1238,7 +1238,7 @@
       "startLine": 17,
       "endLine": 18,
       "comment": "The contrast: God hears His servant, but not the wicked who rebel.",
-      "comment2": "Augustine contrasts Christ’s cry—heard by the Father—with the wicked’s cry, ignored because it lacks faith and repentance (Enarr. Ps. 17.41–42)."
+      "comment2": "Augustine contrasts Christ's cry—heard by the Father—with the wicked's cry, ignored because it lacks faith and repentance."
     },
     {
       "name": "Dust → Exaltation",
@@ -1246,8 +1246,8 @@
       "lemmas": ["comminuo", "pulvis", "delebo", "gens"],
       "startLine": 19,
       "endLine": 20,
-      "comment": "The humbled foe and the exalted servant both reveal God’s justice.",
-      "comment2": "Augustine sees the pulverized enemies as demons scattered, while Christ is exalted as head of the nations (Enarr. Ps. 17.43–44)."
+      "comment": "The humbled foe and the exalted servant both reveal God's justice.",
+      "comment2": "Augustine sees the pulverized enemies as demons scattered, while Christ is exalted as head of the nations."
     },
     {
       "name": "Obedient Nations → Failing Strangers",
@@ -1256,7 +1256,7 @@
       "startLine": 21,
       "endLine": 22,
       "comment": "A new people, formerly unknown, hear and obey, while alien sons prove false and stumble from their paths.",
-      "comment2": "Augustine interprets the 'people not known' as the Gentiles, who obeyed at the hearing of the Gospel, while 'foreign sons' represent hypocrites and heretics, who feign faith but collapse in pride (Enarr. in Ps. 17.21–22)."
+      "comment2": "Augustine interprets the 'people not known' as the Gentiles, who obeyed at the hearing of the Gospel, while 'foreign sons' represent hypocrites and heretics, who feign faith but collapse in pride."
     },
 
     {
@@ -1265,21 +1265,20 @@
       "lemmas": ["vivo", "dominus", "salus", "vindicta", "libero"],
       "startLine": 23,
       "endLine": 24,
-      "comment": "The psalmist’s song is grounded in the living, acting God.",
-      "comment2": "Augustine emphasizes that Christ lives forever, granting vindication to His Body, the Church, against persecutors (Enarr. Ps. 17.47–48)."
+      "comment": "The psalmist's song is grounded in the living, acting God.",
+      "comment2": "Augustine emphasizes that Christ lives forever, granting vindication to His Body, the Church, against persecutors."
     },
     {
       "name": "Praise → Covenant Mercy",
-      "description": "Thanksgiving among nations, proclaiming God’s mercy to His anointed forever.",
+      "description": "Thanksgiving among nations, proclaiming God's mercy to His anointed forever.",
       "lemmas": ["confiteor", "psalmus", "misericordia", "christus", "semen"],
       "startLine": 25,
       "endLine": 27,
-      "comment": "Gratitude extends outward to the nations and forward to David’s seed.",
-      "comment2": "Augustine sees this fulfilled in Christ, the true David, whose mercy extends to all nations and whose covenant endures in His eternal seed (Enarr. Ps. 17.49–50)."
+      "comment": "Gratitude extends outward to the nations and forward to David's seed.",
+      "comment2": "Augustine sees this fulfilled in Christ, the true David, whose mercy extends to all nations and whose covenant endures in His eternal seed."
     }
   ]
 },
-
 
 {
   "psalmNumber": 18,
