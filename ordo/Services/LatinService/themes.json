@@ -4828,26 +4828,29 @@
     {
       "name": "Eyes: Lifted → Fixed",
       "description": "The soul’s vision rises from upward longing to a servant’s focused trust on the Lord’s hand",
-      "lemmas": ["levo", "oculus", "habito", "caelum", "servus", "manus", "ancilla", "dominus", "domina"],
+      "lemmas": ["levo", "oculus", "caelum", "habito"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Augustine sees this as the soul’s deepening posture after worship: first lifting its eyes to the God who dwells in heaven, then fixing them like a servant on the master's hand. This movement sets the tone for the Christian's humble vigilance after leaving the liturgy (Enarr. Ps. 122.1–2)."
+      "comment": "The psalmist directs his gaze upward to God who resides in the heavens, establishing a posture of prayer and recognition of God's transcendence.",
+      "comment2": "Augustine sees this as the soul’s deepening posture after worship: first lifting its eyes to the God who dwells in heaven, then fixing them like a servant on the master's hand. This movement sets the tone for the Christian's humble vigilance after leaving the liturgy (Enarr. Ps. 122.1–2)."
     },
     {
-      "name": "Waiting → Crying Out",
+      "name": "Servents: Gaze → Plea for mercy",
       "description": "Hopeful attention becomes a doubled plea for mercy when God delays",
-      "lemmas": ["donec", "misereor", "miserere"],
+      "lemmas": ["servus", "ancilla", "oculus", "misericordia"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "For Augustine, the soul's long silence and trust give way to urgent intercession. 'Miserere nostri, Domine' is not repetition, but intensification — showing a soul that still believes, but now pleads. The return to the world calls for deeper faith under pressure (Enarr. Ps. 122.3–4)."
+      "comment": "Using the metaphor of servants looking to their masters' hands for provision and command, the psalmist describes our total dependence on God. This dependence fuels a repeated cry for mercy ('Miserere nostri, Domine, miserere nostri').",
+      "comment2": "For Augustine, the soul's long silence and trust give way to urgent intercession. 'Miserere nostri, Domine' is not repetition, but intensification — showing a soul that still believes, but now pleads. The return to the world calls for deeper faith under pressure (Enarr. Ps. 122.3–4)."
     },
     {
       "name": "Contempt → Burdened Soul",
       "description": "The soul is overwhelmed by scorn and insult from the proud, revealing the cost of faith in the world",
-      "lemmas": ["anima", "repleo", "opprobrium", "despectio", "superbus", "abundo"],
+      "lemmas": ["repleo", "opprobrium", "despectio", "superbus", "abundo"],
       "startLine": 5,
       "endLine": 5,
-      "comment": "Augustine reads this as the soul's confession: after the heights of worship, it re-enters a world where the proud abound. The soul is repleta — filled not with grace but with contempt. The psalm ends not with resolution, but with honesty about the weight believers carry in the flesh (Enarr. Ps. 122.5)."
+      "comment": "The psalmist explains the reason for the desperate plea: the soul is overwhelmed, filled to the full with the contempt and reproach from those who are arrogant and abundant in pride.",
+      "comment2": "Augustine reads this as the soul's confession: after the heights of worship, it re-enters a world where the proud abound. The soul is repleta — filled not with grace but with contempt. The psalm ends not with resolution, but with honesty about the weight believers carry in the flesh (Enarr. Ps. 122.5)."
     }
   ]
 },
