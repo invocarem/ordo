@@ -1160,135 +1160,127 @@
   "category": "b",
   "themes": [
     {
-      "name": "Ethical Reciprocity",
-      "description": "God's mirrored response to human character",
-      "lemmas": ["sanctus", "innocens", "electus", "perverto"],
+      "name": "Sanctity → Corruption",
+      "description": "God’s dealings reflect the heart: holy with the holy, twisted with the perverse.",
+      "lemmas": ["sanctus", "innocens", "electus", "perversus"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "Chiastic structure showing divine correspondence"
+      "comment": "The divine mirror shows both purity and distortion: God appears to each as their own heart allows.",
+      "comment2": "Augustine sees this as God’s justice: He seems merciful to the humble and severe to the proud. Christ Himself reveals this duality—grace for the penitent, judgment for the hardened (Enarr. Ps. 17.26–27)."
     },
     {
-      "name": "Social Reversal",
-      "description": "Divine preference for the humble",
-      "lemmas": ["humilis", "salvus", "superbus", "humilio"],
+      "name": "Humility → Light",
+      "description": "The lowly are saved and the proud humbled, as God turns darkness to light.",
+      "lemmas": ["humilis", "salvus", "superbus", "illumino"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "Salvation for lowly vs humbling of proud"
+      "comment": "God overturns human pride and makes His light shine in the believer’s obscurity.",
+      "comment2": "Augustine teaches that Christ humbled Himself to exalt the lowly, and illuminates believers by removing their blindness, while the proud stumble in darkness (Enarr. Ps. 17.28–29)."
     },
     {
-      "name": "Divine Rescue and Purity",
-      "description": "God's deliverance from trials and the purity of His word",
-      "lemmas": ["eripio", "tentatio", "transgredior", "impollutus", "eloquium", "examino"],
+      "name": "Trial → Victory",
+      "description": "God delivers from temptation and empowers to scale walls.",
+      "lemmas": ["eripio", "tentatio", "Deus", "transgredior", "murus"],
       "startLine": 5,
       "endLine": 6,
-      "comment": "Combines rescue imagery with fire-tested divine words"
+      "comment": "Strength in God turns weakness into triumph over obstacles.",
+      "comment2": "For Augustine, the ‘wall’ is the Law that condemns; in Christ, the faithful scale it, overcoming temptation through grace (Enarr. Ps. 17.30)."
     },
     {
-      "name": "Illumination",
-      "description": "Divine light overcoming darkness",
-      "lemmas": ["illumino", "lucerna", "tenebrae"],
-      "startLine": 4,
-      "endLine": 6,
-      "comment": "Personal light imagery in midst of trial"
-    },
-    {
-      "name": "Divine Protection",
-      "description": "God as shield for the faithful",
-      "lemmas": ["protector", "spero", "dominus"],
+      "name": "Unique God → Strength",
+      "description": "No God but the Lord, who grants strength and integrity of way.",
+      "lemmas": ["Deus", "via", "eloquium", "protector"],
       "startLine": 7,
       "endLine": 8,
-      "comment": "Exclusive protection of Yahweh"
+      "comment": "The psalmist confesses the one true God as both shield and guide.",
+      "comment2": "Augustine affirms that Christ alone is the true God and protector. His Word, tested like fire, secures the believer’s path (Enarr. Ps. 17.31–32)."
     },
     {
-      "name": "Warrior's Preparation",
-      "description": "Divine equipping for battle",
-      "lemmas": ["praecingo", "virtus", "immaculatus", "perficio", "cervus", "excelsum"],
+      "name": "Sure-footed → Battle-ready",
+      "description": "God grants deer-like stability and trains hands for war.",
+      "lemmas": ["cervus", "statuo", "doceo", "praelium", "arcus"],
       "startLine": 9,
       "endLine": 10,
-      "comment": "Feet like deer for high places"
+      "comment": "Spiritual agility and strength prepare the just for struggle.",
+      "comment2": "Augustine sees the swift feet as missionary zeal, and the trained hands as spiritual warfare against sin and unbelief (Enarr. Ps. 17.33–35)."
     },
     {
-      "name": "Combat Training",
-      "description": "Divine instruction in warfare",
-      "lemmas": ["doceo", "praelium", "arcus", "aereus", "brachium"],
+      "name": "Protection → Discipline",
+      "description": "Salvation’s shield and fatherly correction secure the way.",
+      "lemmas": ["protectio", "salus", "dextera", "disciplina"],
       "startLine": 11,
       "endLine": 12,
-      "comment": "Hands trained for bronze bow warfare"
+      "comment": "Mercy protects, discipline refines: both come from the same hand.",
+      "comment2": "Augustine interprets God’s discipline as sanctifying correction, making the believer steadfast in Christ, whose mercy shields and whose teaching trains (Enarr. Ps. 17.36)."
     },
     {
-      "name": "Divine Sustenance",
-      "description": "God's ongoing support in battle",
-      "lemmas": ["protego", "salus", "dexter", "suscipio", "disciplina"],
-      "startLine": 12,
+      "name": "Pursuit → Defeat",
+      "description": "The psalmist’s enemies are chased, crushed, and unable to stand.",
+      "lemmas": ["dilato", "vestigium", "persequor", "confringo"],
+      "startLine": 13,
       "endLine": 14,
-      "comment": "Right hand support and firm footing"
+      "comment": "Divine empowerment ensures that opposition collapses beneath the faithful.",
+      "comment2": "Augustine applies this to Christ’s conquest of sin and the devil, pursued and crushed by His passion and resurrection (Enarr. Ps. 17.37–38)."
     },
     {
-      "name": "Total Victory",
-      "description": "Complete domination of enemies",
-      "lemmas": ["persequor", "contero", "comprehendo", "supplanto", "disperdo"],
+      "name": "Armed → Overthrown",
+      "description": "God arms for war and causes foes to collapse beneath His servant.",
+      "lemmas": ["praecingo", "virtus", "supplanto", "disperdo"],
       "startLine": 15,
-      "endLine": 18,
-      "comment": "Enemies crushed and tripped"
+      "endLine": 16,
+      "comment": "Victory flows not from self, but from God’s enabling strength.",
+      "comment2": "For Augustine, this arming is Christ equipping His Church, so that the faithful trample spiritual enemies underfoot (Enarr. Ps. 17.39–40)."
     },
     {
-      "name": "Judgment Imagery",
-      "description": "Reduction of foes to insignificance",
-      "lemmas": ["pulvis", "ventus", "lutum", "platea"],
+      "name": "Cry → Silence",
+      "description": "Enemies cry out but find no salvation, silenced before the Lord.",
+      "lemmas": ["clamor", "salvo", "Dominus", "exaudio"],
+      "startLine": 17,
+      "endLine": 18,
+      "comment": "The contrast: God hears His servant, but not the wicked who rebel.",
+      "comment2": "Augustine contrasts Christ’s cry—heard by the Father—with the wicked’s cry, ignored because it lacks faith and repentance (Enarr. Ps. 17.41–42)."
+    },
+    {
+      "name": "Dust → Exaltation",
+      "description": "Enemies reduced to dust, while the psalmist is set over nations.",
+      "lemmas": ["comminuo", "pulvis", "delebo", "gens"],
       "startLine": 19,
       "endLine": 20,
-      "comment": "Enemies scattered like dust before wind"
+      "comment": "The humbled foe and the exalted servant both reveal God’s justice.",
+      "comment2": "Augustine sees the pulverized enemies as demons scattered, while Christ is exalted as head of the nations (Enarr. Ps. 17.43–44)."
     },
     {
-      "name": "Royal Exaltation",
-      "description": "Kingly elevation over nations",
-      "lemmas": ["caput", "gens", "servio", "obedio", "contradictio"],
+      "name": "Obedient Nations → Failing Strangers",
+      "description": "From unexpected peoples submitting in obedience to foreign sons faltering in deceit.",
+      "lemmas": ["servio", "auditus", "oboedio", "alienus", "claudico"],
       "startLine": 21,
       "endLine": 22,
-      "comment": "Headship over previously unknown peoples"
+      "comment": "A new people, formerly unknown, hear and obey, while alien sons prove false and stumble from their paths.",
+      "comment2": "Augustine interprets the 'people not known' as the Gentiles, who obeyed at the hearing of the Gospel, while 'foreign sons' represent hypocrites and heretics, who feign faith but collapse in pride (Enarr. in Ps. 17.21–22)."
     },
+
     {
-      "name": "False Allegiance",
-      "description": "Insincere submission of enemies",
-      "lemmas": ["alienus", "mentior", "invetero", "claudico"],
+      "name": "Living God → Deliverer",
+      "description": "Praise to the living God who subdues nations and rescues from enemies.",
+      "lemmas": ["vivo", "dominus", "salus", "vindicta", "libero"],
       "startLine": 23,
       "endLine": 24,
-      "comment": "Foreigners' deceptive obedience"
+      "comment": "The psalmist’s song is grounded in the living, acting God.",
+      "comment2": "Augustine emphasizes that Christ lives forever, granting vindication to His Body, the Church, against persecutors (Enarr. Ps. 17.47–48)."
     },
     {
-      "name": "Divine Supremacy",
-      "description": "Yahweh's unique power",
-      "lemmas": ["vivo", "benedico", "exalto", "salus"],
+      "name": "Praise → Covenant Mercy",
+      "description": "Thanksgiving among nations, proclaiming God’s mercy to His anointed forever.",
+      "lemmas": ["confiteor", "psalmus", "misericordia", "christus", "semen"],
       "startLine": 25,
-      "endLine": 26,
-      "comment": "Living God contrasted with powerless idols"
-    },
-    {
-      "name": "Just Rule",
-      "description": "Divine administration of justice",
-      "lemmas": ["vindicta", "subicio", "liberator", "ira"],
-      "startLine": 26,
       "endLine": 27,
-      "comment": "Vengeance against unjust oppressors"
-    },
-    {
-      "name": "Universal Praise",
-      "description": "Global acknowledgment of God",
-      "lemmas": ["confiteor", "natio", "psalmus", "magnifico"],
-      "startLine": 28,
-      "endLine": 29,
-      "comment": "Thanksgiving among the nations"
-    },
-    {
-      "name": "Davidic Covenant",
-      "description": "Promise to David's lineage",
-      "lemmas": ["christus", "David", "semen", "misericordia", "saeculum"],
-      "startLine": 29,
-      "endLine": 30,
-      "comment": "Eternal mercy to anointed king"
+      "comment": "Gratitude extends outward to the nations and forward to David’s seed.",
+      "comment2": "Augustine sees this fulfilled in Christ, the true David, whose mercy extends to all nations and whose covenant endures in His eternal seed (Enarr. Ps. 17.49–50)."
     }
   ]
 },
+
+
 {
   "psalmNumber": 18,
   "category": "",
