@@ -4826,21 +4826,21 @@
   "category": "",
   "themes": [
     {
-      "name": "Eyes: Lifted → Fixed",
-      "description": "The soul’s vision rises from upward longing to a servant’s focused trust on the Lord’s hand",
-      "lemmas": ["levo", "oculus", "caelum", "habito"],
+      "name": "Gaze → Servitude",
+      "description": "The lifting of eyes toward heaven is compared to the attentive gaze of a servant looking to their master's hand.",
+      "lemmas": ["levo", "oculus", "habito", "caelum", "servus", "dominus"],
       "startLine": 1,
       "endLine": 2,
-      "comment": "The psalmist directs his gaze upward to God who resides in the heavens, establishing a posture of prayer and recognition of God's transcendence.",
+      "comment": "The psalmist directs his gaze upward to God who resides in the heavens. This posture is immediately compared to that of a servant (servus) looking to the hand of their master (dominus) for direction and provision.",
       "comment2": "Augustine sees this as the soul’s deepening posture after worship: first lifting its eyes to the God who dwells in heaven, then fixing them like a servant on the master's hand. This movement sets the tone for the Christian's humble vigilance after leaving the liturgy (Enarr. Ps. 122.1–2)."
     },
     {
-      "name": "Servents: Gaze → Plea for mercy",
-      "description": "Hopeful attention becomes a doubled plea for mercy when God delays",
-      "lemmas": ["servus", "ancilla", "oculus", "misericordia"],
+     "name": "Attention → Plea",
+      "description": "The attentive gaze of a maid to her mistress leads to a persistent plea for mercy.",
+      "lemmas": ["ancilla", "domina", "misereor"],
       "startLine": 3,
       "endLine": 4,
-      "comment": "Using the metaphor of servants looking to their masters' hands for provision and command, the psalmist describes our total dependence on God. This dependence fuels a repeated cry for mercy ('Miserere nostri, Domine, miserere nostri').",
+      "comment": "The metaphor deepens with the image of a female servant (ancilla) looking to the hand of her mistress (domina). This sustained attention fuels the repeated cry for mercy ('Miserere nostri, Domine, miserere nostri').",
       "comment2": "For Augustine, the soul's long silence and trust give way to urgent intercession. 'Miserere nostri, Domine' is not repetition, but intensification — showing a soul that still believes, but now pleads. The return to the world calls for deeper faith under pressure (Enarr. Ps. 122.3–4)."
     },
     {
