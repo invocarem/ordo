@@ -1,4 +1,48 @@
 [
+{
+  "lemma": "suspicor",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "suspicari",
+  "present": "suspicor",
+  "future": "suspicabor",
+  "perfect": "suspicatus sum",
+  "translations": {
+    "en": "to suspect, mistrust",
+    "la": "suspicor, suspicari, suspicatus sum"
+  },
+   "forms": {
+    "perfect_participle": ["suspicatus", "suspicata", "suspicatum"]
+  }
+},
+{
+  "lemma": "iucundus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "iucundus",
+  "genitive": "iucundi",
+  "translations": {
+    "en": "pleasant, delightful, enjoyable",
+    "la": "iucundus, iucunda, iucundum"
+  },
+  "forms": {
+    "nominative_f": ["iucunda"],
+    "nominative_n": ["iucundum"]
+  }
+},
+  {
+  "lemma": "avaritia",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "avaritia",
+  "genitive": "avaritiae",
+  "translations": {
+    "en": "greed, avarice, lust for gain",
+    "la": "avaritia, avaritiae"
+  }
+},
   {
   "lemma": "iuventus",
   "part_of_speech": "noun",
@@ -14095,7 +14139,7 @@
             "la": "ablacto"
           }
         },
-        
+
         {
           "lemma": "retributio",
           "part_of_speech": "noun",

@@ -4267,56 +4267,43 @@
       "category": "he",
       "themes": [
         {
-          "name": "Petition → Obedience",
-          "description": "Requests for divine guidance enabling Torah fidelity",
-          "lemmas": ["pono", "deduco", "custodio", "mandatum"],
+          "name": "Request → Foundation",
+          "description": "A plea for divine instruction and understanding to guard God's law wholeheartedly",
+          "lemmas": ["pono", "exquiro", "iustificatio", "semper"],
           "startLine": 1,
-          "endLine": 3,
-          "comment": "Imperative verbs (pone, deduc) precede covenantal obedience (custodiam)"
+          "endLine": 2,
+          "comment": "The psalmist begins by asking the Lord to set His law before him as a guide, vowing to seek it out continually and asking for the understanding to guard it wholeheartedly.",
+          "comment2": "Augustine sees 'legem pone' not as God placing the law externally, but impressing it upon the heart, making it the foundation of the soul's desire. The perpetual seeking signifies the soul's endless journey toward God in this life, fueled by the gift of understanding."
         },
         {
-          "name": "Faculty Alignment",
-          "description": "Reorientation of human capacities toward divine law",
-          "lemmas": ["intellectus", "cor", "oculus", "inclino"],
-          "startLine": 2,
+          "name": "Guidance → Volition",
+          "description": "A prayer for divine guidance on the path of commandments and ordering of the heart's desires",
+          "lemmas": ["deduco", "semita", "volo", "custodio"],
+          "startLine": 3,
           "endLine": 4,
-          "comment": "Heart (cor), mind (intellectum), and eyes (oculos) recalibrated to testimonies"
+          "comment": "The psalmist asks to be led in the path of the commandments, explicitly stating his desire for it. This is paired with a plea for his heart to be inclined toward God's testimonies and away from greed.",
+          "comment2": "For Augustine, 'Deduc me' is a prayer for grace to precede every step. The path is narrow, requiring divine guidance. The confession 'quia ipsam volui' reveals that this desire itself is a gift of grace, ordering a heart that would otherwise be inclined toward avaritia."
         },
         {
           "name": "Aversion → Vivification",
-          "description": "Turning from vanity to find life in God's way",
-          "lemmas": ["averto", "vanitas", "vivifico", "via"],
+          "description": "Seeking protection from vanity and petition for true life through God's way",
+          "lemmas": ["averto", "vanitas", "vivifico", "timor"],
           "startLine": 5,
           "endLine": 6,
-          "comment": "Double movement: 'turn away' (averte) and 'give life' (vivifica)"
+          "comment": "The psalmist seeks protection from falsehood by asking God to turn his eyes from vanity. He simultaneously prays for true life through adherence to God's way and for God's word to be established in him with reverence.",
+          "comment2": "Augustine interprets 'vanitas' as the empty spectacles of temporal life that distract from eternal truth. True life is found only 'in via tua'—in Christ, who is the Way. The 'timor' is not servile dread but holy reverence, the beginning of wisdom that establishes God's word in the soul."
         },
         {
-          "name": "Judicial Delight",
-          "description": "God's judgments as both joyful and equitable",
-          "lemmas": ["judicium", "jucundus", "aequitas", "concupisco"],
+          "name": "Removal → Delight",
+          "description": "The cutting away of reproach and discovery of joy in God's righteous judgments",
+          "lemmas": ["amputo", "opprobrium", "iucundus", "concupisco"],
           "startLine": 7,
           "endLine": 8,
-          "comment": "Unexpected pairing: opprobrium (shame) with jucunda (pleasant judgments)"
-        },
-        {
-          "name": "Augustine: Lex Vivificans",
-          "description": "Law as living path rather than dead letter",
-          "lemmas": ["via", "vivifico", "mandatum"],
-          "startLine": 3,
-          "endLine": 5,
-          "comment": "'In via tua vivifica me' shows law animated by grace (Enarrationes 118.33)"
-        },
-        {
-          "name": "Augustine: Oculus Cordis",
-          "description": "Spiritual vision purified for divine contemplation",
-          "lemmas": ["oculus", "vanitas", "cor"],
-          "startLine": 5,
-          "endLine": 6,
-          "comment": "Eyes turned from vanity (Conf. VII.21) to see via justificationum"
+          "comment": "The section culminates in a plea to remove the shame of fearing human judgment, grounded in the pleasant nature of God's true judgments. It ends with a declaration of longing for God's commandments and a final plea for life in His righteousness.",
+          "comment2": "Augustine sees the 'opprobrium' as the fear of human opinion that hinders confession. It is amputated by the love of God's sweet judgments. The 'ecce' announces a revelation: the soul's desire is itself God's work. To be vivified 'in aequitate tua' is to live by God's righteousness, not our own."
         }
       ]
     },
-
     {
       "psalmNumber": 118,
       "category": "vau",
