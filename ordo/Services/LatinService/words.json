@@ -50,7 +50,7 @@
     "perfect_3sg": ["praeteriit"],
     "imperfect": [ "praeteribam", "praeteribas", "praeteribat", "praeteribamus", "praeteribatis", "praeteribant"
     ]
-  },
+  }
  },
 {
   "lemma": "brevis",
@@ -14189,6 +14189,10 @@
           "conjugation": 1,
           "deponent": false,
           "infinitive": "prolongare",
+          "present": "prolongo",
+          "future": "prolongabo",
+          "perfect": "prolongavi",
+          "supine": "prolongatum",
           "forms": {
             "present": ["prolongo", "prolongas", "prolongat", "prolongamus", "prolongatis", "prolongant"],
             "imperative": ["prolonga", "prolongate"],
@@ -14206,6 +14210,10 @@
           "conjugation": 3,
           "deponent": false,
           "infinitive": "concipere",
+          "present": "concipio",
+          "future": "concipiam",
+          "perfect": "concepi",
+          "supine": "conceptum",
           "forms": {
             "present": ["concipio", "concipis", "concipit", "concipimus", "concipitis", "concipiunt"],
             "present_passive": ["concipior", "conciperis", "concipitur", "concipimur", "concipimini", "concipiuntur"],
@@ -14227,6 +14235,10 @@
           "conjugation": 3,
           "deponent": false,
           "infinitive": "concidere",
+          "present": "concido",
+          "future": "concidam",
+          "perfect": "concidi",
+          "supine": "concisum",
           "forms": {
             "present": ["concido", "concidis", "concidit", "concidimus", "conciditis", "concidunt"],
             "imperative": ["concide", "concidite"],
@@ -14360,7 +14372,7 @@
           "forms": {
             "present": ["expugno", "expugnas", "expugnat", "expugnamus", "expugnatis", "expugnant"],
             "imperative": ["expugna", "expugnate"],
-            "subjunctive": ["expugnem", "expugnes", "expugnet", "expugnemus", "expugnetis", "expugnent"],
+            "subjunctive": ["expugnem", "expugnes", "expugnet", "expugnemus", "expugnetis", "expugnent"]
           },
           "translations": {
             "en": "to attack, conquer",
@@ -14406,12 +14418,16 @@
           "part_of_speech": "verb",
           "conjugation": 1,
           "deponent": true,
-          "infinitive": "fabricari",
+          "infinitive": "fabricare",
+          "present": "fabrico",
+          "future": "fabricabo",
+          "perfect": "fabricavi",
+          "supine": "fabricatum",
+
           "forms": {
             "present": ["fabricor", "fabricaris", "fabricatur", "fabricamur", "fabricamini", "fabricantur"],
             "imperative": ["fabricare", "fabricamini"],
-            "subjunctive": ["fabricer", "fabriceris", "fabricetur", "fabricemur", "fabricemini", "fabricentur"],
-            "perfect": ["fabricaverunt"]
+            "subjunctive": ["fabricer", "fabriceris", "fabricetur", "fabricemur", "fabricemini", "fabricentur"]
           },
           "translations": {
             "en": "to construct, forge, plot (deponent)",
