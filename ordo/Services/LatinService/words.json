@@ -1,5 +1,47 @@
 [
   {
+    "lemma": "uter",
+    "part_of_speech": "pronoun",
+    "declension": 0,
+    "gender": "masculine",
+    "nominative": "uter",
+    "genitive": "utrius",
+    "translations": {
+      "en": "which of two? whether, which",
+      "la": "uter, utra, utrum"
+    }
+  },
+  {
+    "lemma": "pruina",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "pruina",
+    "genitive": "pruinae",
+    "translations": {
+      "en": "hoarfrost, rime, frost, cold",
+      "la": "pruina, pruinae"
+    }
+  },
+  {
+    "lemma": "quando",
+    "part_of_speech": "adverb",
+    "declension": 0,
+    "translations": {
+      "en": "when, at what time, since ",
+      "la": "quando"
+    }
+  },
+  {
+    "lemma": "quot",
+    "part_of_speech": "adjective",
+    "declension": 0,
+    "translations": {
+      "en": "how many? as many as",
+      "la": "quot"
+    }
+  },
+  {
     "lemma": "adiuvio",
     "part_of_speech": "verb",
     "conjugation": 4,

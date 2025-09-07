@@ -4609,92 +4609,54 @@
       "category": "caph",
       "themes": [
         {
-          "name": "Desperate Longing",
-          "description": "Physical and spiritual exhaustion awaiting God's intervention",
-          "lemmas": ["deficio", "superspero", "consolor", "anima", "oculus"],
+          "name": "Fainting → Hope",
+          "description": "The soul and eyes grow faint while waiting for God's salvation and comfort",
+          "lemmas": ["deficio", "salus", "superspero", "eloquium", "consolor"],
           "startLine": 1,
           "endLine": 2,
-          "comment": "Bodily metaphors (eyes/soul) for spiritual thirst"
+          "comment": "The psalmist's soul faints for God's salvation while his eyes fail looking for God's word, crying out 'When will you comfort me?' yet maintaining supreme hope.",
+          "comment2": "Augustine sees this as the soul's weary longing for Christ, the true salvation. The physical exhaustion represents spiritual thirst, while the 'superspero' shows hope that transcends human weakness."
         },
         {
-          "name": "Suffering Imagery",
-          "description": "Extreme vulnerability amid persecution",
-          "lemmas": ["uter", "pruina", "consummo", "terra", "persequor"],
+          "name": "Affliction → Memory",
+          "description": "Becoming like a wineskin in frost while still remembering God's justifications",
+          "lemmas": ["fio", "uter", "pruina", "iustificatio", "obliviscor"],
           "startLine": 3,
-          "endLine": 7,
-          "comment": "Wineskin/frost symbolize fragility; 'almost destroyed' (v.87)"
+          "endLine": 4,
+          "comment": "Though made like a wineskin shriveled by frost - a image of extreme affliction - the psalmist has not forgotten God's statutes. He questions how long until God judges his persecutors.",
+          "comment2": "For Augustine, the frozen wineskin represents the soul shriveled by suffering and waiting. The memory of God's justifications preserves faith during this frozen state, while the cry for judgment expresses trust in divine justice."
         },
         {
-          "name": "Cry for Justice",
-          "description": "Appeals for divine judgment against persecutors",
-          "lemmas": ["judicium", "iniquus", "persequor", "adjuvio", "servus"],
-          "startLine": 4,
-          "endLine": 6,
-          "comment": "Direct questions to God about timing of justice (v.84)"
-        },
-        {
-          "name": "Truth vs Falsehood",
-          "description": "Contrast between God's commands and human lies",
-          "lemmas": ["fabula", "lex", "mandatum", "veritas", "iniquus"],
+          "name": "Deception → Truth",
+          "description": "Facing false stories from the wicked while clinging to God's true commandments",
+          "lemmas": [
+            "narro",
+            "iniquus",
+            "fabula",
+            "veritas",
+            "persequor",
+            "adiuvo"
+          ],
           "startLine": 5,
           "endLine": 6,
-          "comment": "'False tales' (fabulationes) vs 'all Your commandments are truth'"
+          "comment": "The wicked tell deceptive stories, but not according to God's law. The psalmist affirms all God's commandments are truth, cries that the wicked persecute him unjustly, and begs for help.",
+          "comment2": "Augustine interprets this as the conflict between worldly wisdom and divine truth. The 'fabulae' represent human philosophies opposed to God's law. The prayer for help acknowledges that only divine aid can preserve truth in persecution."
         },
         {
-          "name": "Covenantal Faithfulness",
-          "description": "Steadfast loyalty despite opposition",
+          "name": "Consumption → Preservation",
+          "description": "Nearly consumed on earth yet not abandoning God's commandments, seeking life through mercy",
           "lemmas": [
-            "justificatio",
-            "non oblitus",
-            "non derelinquo",
-            "custodio",
-            "testimonium"
-          ],
-          "startLine": 3,
-          "endLine": 8,
-          "comment": "Double negation emphasizes commitment (vv.83,87)"
-        },
-        {
-          "name": "Life from Mercy",
-          "description": "Final plea grounded in God's character",
-          "lemmas": [
+            "consummo",
+            "derelinquo",
             "misericordia",
             "vivifico",
             "custodio",
-            "os",
             "testimonium"
           ],
-          "startLine": 8,
+          "startLine": 7,
           "endLine": 8,
-          "comment": "Climax: 'Revive me according to Your mercy' (v.88)"
-        },
-        {
-          "name": "Augustine: Suffering as Remembrance",
-          "description": "Affliction prevents forgetfulness of God",
-          "lemmas": [
-            "uter",
-            "pruina",
-            "non oblitus",
-            "justificatio",
-            "custodio"
-          ],
-          "startLine": 3,
-          "endLine": 8,
-          "comment": "Frostbitten wineskin (v.83) paradoxically preserves memory"
-        },
-        {
-          "name": "Augustine: Mercy Precedes Obedience",
-          "description": "Divine action enables human response",
-          "lemmas": [
-            "misericordia",
-            "vivifico",
-            "custodio",
-            "testimonium",
-            "os"
-          ],
-          "startLine": 8,
-          "endLine": 8,
-          "comment": "'Revive me... that I may keep' (v.88) shows grace-first logic"
+          "comment": "Though nearly consumed on earth, the psalmist has not abandoned God's precepts. He pleads for life according to God's mercy so he may keep the testimonies of God's mouth.",
+          "comment2": "Augustine sees the near-consummation as the final assault of temptation. Not abandoning the commandments demonstrates grace-enabled perseverance. The appeal for life 'secundum misericordiam' acknowledges salvation depends on mercy, not merit."
         }
       ]
     },

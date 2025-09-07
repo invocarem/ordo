@@ -32,7 +32,7 @@ class Psalm118CaphTests: XCTestCase {
             (2, ["deficio", "oculus", "eloquium", "dico", "quando", "consolor"]),
             (3, ["quia", "facio", "sicut", "uter", "pruina", "iustificatio", "obliviscor"]),
             (4, ["quot", "dies", "servus", "quando", "facio", "persequor", "iudicium"]),
-            (5, ["narro", "iniquus", "fabulatio", "lex"]),
+            (5, ["narro", "iniquus", "fabula", "lex"]),
             (6, ["omnis", "mandatum", "veritas", "inique", "persequor", "adiuvo"]),
             (7, ["paulus", "minus", "consummo", "terra", "derelinquo", "mandatum"]),
             (8, ["secundum", "misericordia", "vivifico", "custodio", "testimonium", "os"])
