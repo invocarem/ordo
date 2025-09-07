@@ -4372,58 +4372,55 @@
       "category": "zain",
       "themes": [
         {
-          "name": "Covenantal Promises",
-          "description": "God's word as source of hope and life-giving comfort",
-          "lemmas": ["memor", "verbum", "spes", "consolor", "vivifico"],
+          "name": "Remembrance → Hope",
+          "description": "Finding hope through remembering God's word and promises in times of humility",
+          "lemmas": ["memor", "verbum", "spes", "humilitas", "consolor"],
           "startLine": 1,
           "endLine": 2,
-          "comment": "The psalmist anchors hope in God's remembered promises"
+          "comment": "The psalmist asks God to remember His word to His servant, which has given hope. This word becomes his consolation in humility and what gives him life.",
+          "comment2": "Augustine sees this as the soul's cry for God to fulfill His promises in Christ. The remembrance of God's word in humility becomes the source of true hope and spiritual consolation that vivifies the soul."
         },
         {
-          "name": "Resistance and Eternity",
-          "description": "Steadfast obedience amid evil with eternal perspective",
-          "lemmas": ["superbus", "iniquus", "declino", "judicium", "saeculum"],
+          "name": "Fidelity → Steadfastness",
+          "description": "Remaining faithful to God's law despite the actions of the proud and wicked",
+          "lemmas": [
+            "superbus",
+            "inique",
+            "usquequaque",
+            "declino",
+            "memini",
+            "iudicium"
+          ],
           "startLine": 3,
           "endLine": 4,
-          "comment": "Contrast between present wickedness and God's eternal judgments"
+          "comment": "Though the proud act wickedly without limit, the psalmist has not declined from God's law. He remembers God's eternal judgments and finds comfort in them.",
+          "comment2": "For Augustine, this represents the Church's perseverance against persecutors. Remembering God's eternal judgments provides comfort, knowing that divine justice will ultimately prevail over temporal wickedness."
         },
         {
-          "name": "Exhaustion and Joy",
-          "description": "Spiritual weariness transformed through joyful obedience",
+          "name": "Anguish → Song",
+          "description": "Transforming grief over sin into song through God's justifications",
           "lemmas": [
             "defectio",
             "teneo",
             "peccator",
+            "derelinquo",
             "cantabilis",
+            "iustificatio",
             "peregrinatio"
           ],
           "startLine": 5,
           "endLine": 6,
-          "comment": "Paradox of finding song in God's statutes during exile"
+          "comment": "The psalmist is seized with anguish because of sinners who abandon God's law, yet God's justifications become songs to him in his place of pilgrimage.",
+          "comment2": "Augustine interprets this as the righteous grief over those who abandon God's law. Yet in this earthly pilgrimage, God's statutes become songs of joy - the commandments transformed from burden to melody through grace."
         },
         {
-          "name": "Nocturnal Fidelity",
-          "description": "Nighttime remembrance and covenant keeping",
-          "lemmas": ["memor", "nomen", "custodio", "exquiro", "nox"],
+          "name": "Vigilance → Reward",
+          "description": "Nightly remembrance of God's name leading to faithful obedience and its blessing",
+          "lemmas": ["memini", "nox", "nomen", "custodio", "exquiro", "facio"],
           "startLine": 7,
           "endLine": 8,
-          "comment": "Devotion expressed through vigilant nighttime observance"
-        },
-        {
-          "name": "Augustine: Memory as Sacrament",
-          "description": "Remembrance as active participation in divine reality",
-          "lemmas": ["memor", "verbum", "nox", "nomen", "custodio"],
-          "startLine": 1,
-          "endLine": 8,
-          "comment": "Nocturnal remembrance is sacramental communion with God"
-        },
-        {
-          "name": "Augustine: Lex Vivificans",
-          "description": "God's law as living, active, and life-giving force",
-          "lemmas": ["vivifico", "verbum", "justificatio", "lex", "exquiro"],
-          "startLine": 2,
-          "endLine": 8,
-          "comment": "God's word operates as resurrection power in the soul"
+          "comment": "The psalmist remembers God's name at night and keeps His law. This blessing comes to him because he has sought God's justifications.",
+          "comment2": "Augustine sees the nocturnal remembrance as the soul's vigilance in darkness and trial. The seeking of God's justifications results in the divine action (hoc factum est) - God Himself working obedience in the believer as reward for faithful seeking."
         }
       ]
     },

@@ -1,5 +1,145 @@
 [
   {
+    "lemma": "adiuvio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "adjuviare",
+    "present": "adiuvio",
+    "perfect": "adiuviavi",
+    "supine": "adiuviatum",
+    "forms": {
+      "imperative_active": ["adiuva", "adiuvate"]
+    },
+    "translations": {
+      "en": "help, aid, assist",
+      "la": "adiuvio, adiuviare, adiuviavi, adiuviatum"
+    }
+  },
+  {
+    "lemma": "minus",
+    "part_of_speech": "adverb",
+    "declension": 0,
+    "translations": {
+      "en": "less, not very, not at all",
+      "la": "minus"
+    }
+  },
+  {
+    "lemma": "paulus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "paulus",
+    "genitive": "pauli",
+    "translations": {
+      "en": "little, small",
+      "la": "paulus, paula, paulum"
+    },
+    "forms": {
+      "ablative_m": ["paulo"]
+    }
+  },
+  {
+    "lemma": "sum",
+    "part_of_speech": "verb",
+    "conjugation": 0,
+    "infinitive": "esse",
+    "present": "sum",
+    "future": "ero",
+    "perfect": "fui",
+    "translations": {
+      "en": "to be, exist",
+      "la": "sum, esse, fui, futurus"
+    },
+    "forms": {
+      "present": ["sum", "es", "est", "sumus", "estis", "sunt"],
+      "imperfect": ["eram", "eras", "erat", "eramus", "eratis", "erant"],
+      "future": ["ero", "eris", "erit", "erimus", "eritis", "erunt"],
+      "perfect": ["fui", "fuisti", "fuit", "fuimus", "fuistis", "fuerunt"],
+      "pluperfect": [
+        "fueram",
+        "fueras",
+        "fuerat",
+        "fueramus",
+        "fueratis",
+        "fuerant"
+      ],
+      "future_perfect": [
+        "fuero",
+        "fueris",
+        "fuerit",
+        "fuerimus",
+        "fueritis",
+        "fuerint"
+      ],
+      "subjunctive_present": ["sim", "sis", "sit", "simus", "sitis", "sint"],
+      "subjunctive_imperfect": [
+        "essem",
+        "esses",
+        "esset",
+        "essemus",
+        "essetis",
+        "essent"
+      ],
+      "subjunctive_perfect": [
+        "fuerim",
+        "fueris",
+        "fuerit",
+        "fuerimus",
+        "fueritis",
+        "fuerint"
+      ],
+      "subjunctive_pluperfect": [
+        "fuissem",
+        "fuisses",
+        "fuisset",
+        "fuissemus",
+        "fuissetis",
+        "fuissent"
+      ],
+      "imperative_present": ["es", "este"]
+    }
+  },
+  {
+    "lemma": "hic",
+    "part_of_speech": "pronoun",
+    "declension": 0,
+    "gender": "masculine",
+    "nominative": "hic",
+    "genitive": "huius",
+    "translations": {
+      "en": "this, these; he, she, it",
+      "la": "hic, haec, hoc"
+    },
+    "forms": {
+      "nominative_f": ["haec"],
+      "nominative_n": ["hoc"],
+      "accusative_n": ["hoc"],
+      "genitive": ["huius"],
+      "dative": ["huic"],
+      "ablative_m": ["hoc"],
+      "ablative_f": ["hac"],
+      "ablative_n": ["hoc"]
+    },
+    "forms_plural": {
+      "nominative_m": ["hi"],
+      "nominative_f": ["hae"],
+      "nominative_n": ["haec"],
+      "accusative_m": ["hos"],
+      "accusative_f": ["has"],
+      "accusative_n": ["haec"]
+    }
+  },
+  {
+    "lemma": "pro",
+    "part_of_speech": "preposition",
+    "case_government": "ablative",
+    "translations": {
+      "en": "for, on behalf of, instead of",
+      "la": "pro"
+    }
+  },
+  {
     "lemma": "salutare",
     "part_of_speech": "noun",
     "declension": 3,
@@ -7,7 +147,7 @@
     "nominative": "salutare",
     "genitive": "salutaris",
     "translations": {
-      "en": "salvation, deliverance, help, safety",
+      "en": "salvation, deliverance, safety",
       "la": "salutare, salutaris"
     }
   },
@@ -10619,19 +10759,7 @@
       "la": "sinus"
     }
   },
-  {
-    "lemma": "hic",
-    "part_of_speech": "pronoun",
-    "type": "demonstrative",
-    "gender": "neuter",
-    "nominative": "hoc",
-    "genitive": "huius",
 
-    "translations": {
-      "en": "this",
-      "la": "hic, haec, hoc"
-    }
-  },
   {
     "lemma": "euge",
     "part_of_speech": "interjection",
@@ -23858,19 +23986,7 @@
       "la": "inimicus, -i"
     }
   },
-  {
-    "lemma": "sum",
-    "part_of_speech": "verb",
-    "principal_parts": ["sum", "esse", "fui", "futurum"],
-    "forms": {
-      "present": ["sum", "es", "est", "sumus", "estis", "sunt"],
-      "imperative": ["es", "este"]
-    },
-    "forms_plural": {
-      "future_perfect": ["fueritis"]
-    },
-    "translations": { "en": "be" }
-  },
+
   {
     "lemma": "amputo",
     "part_of_speech": "verb",
