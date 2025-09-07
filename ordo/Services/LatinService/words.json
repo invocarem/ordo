@@ -21987,6 +21987,35 @@
     "la": "oro, orare, oravi, oratum"
    }
 },
+{
+  "lemma": "infirmus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "infirmus",
+  "genitive": "infirmi",
+  "translations": {
+    "en": "weak, sick, feeble, infirm, powerless",
+    "la": "īnfirmus, īnfirma, īnfirmum"
+  },
+  "forms": {
+    "nominative_f": ["infirma"],
+    "nominative_n": ["infirmum"],
+    "genitive_f": ["infirmae"],
+    "genitive_n": ["infirmi"],
+    "accusative_m": ["infirmum"],
+    "accusative_f": ["infirmam"],
+    "accusative_n": ["infirmum"]
+  },
+  "forms_plural": {
+    "nominative_m": ["infirmi"],
+    "nominative_f": ["infirmae"],
+    "nominative_n": ["infirma"],
+    "genitive_m": ["infirmorum"],
+    "genitive_f": ["infirmarum"],
+    "genitive_n": ["infirmorum"]
+  }
+},
   {
   "lemma": "captio",
   "part_of_speech": "noun",
