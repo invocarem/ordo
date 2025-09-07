@@ -4304,73 +4304,65 @@
         }
       ]
     },
+
     {
       "psalmNumber": 118,
       "category": "vau",
       "themes": [
         {
-          "name": "Mercy → Salvation",
-          "description": "Divine compassion actualizing promised deliverance",
-          "lemmas": ["misericordia", "salutare", "eloquium", "venio"],
+          "name": "Petition → Assurance",
+          "description": "A plea for God's merciful salvation according to His promise",
+          "lemmas": ["misericordia", "salutare", "eloquium", "superspero"],
           "startLine": 1,
-          "endLine": 1,
-          "comment": "Mercy (v.41) precedes and enables the keeping of law (v.44)"
+          "endLine": 2,
+          "comment": "The psalmist petitions for God's mercy and salvation to come upon him, grounded in God's own word. He declares he will answer his reproachers because of his hope in God's promises.",
+          "comment2": "Augustine sees this as the soul's confident prayer for Christ (salutare tuum) to come according to God's eternal word. The hope in God's sermons allows the believer to answer reproachers not with shame but with divine assurance."
         },
         {
-          "name": "Hope → Vindication",
-          "description": "Confident expectation answering adversaries",
-          "lemmas": ["spero", "superspero", "respondeo", "exprobro"],
-          "startLine": 2,
-          "endLine": 3,
-          "comment": "Double hope (speravi/supersperavi) confronts reproach (exprobrantibus)"
-        },
-        {
-          "name": "Truth → Eternity",
-          "description": "Uncompromised fidelity to everlasting covenant",
-          "lemmas": ["veritas", "usquequaque", "saeculum", "custodio"],
+          "name": "Preservation → Perseverance",
+          "description": "A prayer for truth to remain and a vow to keep God's law eternally",
+          "lemmas": [
+            "veritas",
+            "usquequaque",
+            "iudicium",
+            "custodio",
+            "saeculum"
+          ],
           "startLine": 3,
           "endLine": 4,
-          "comment": "'Utterly' (usquequaque) modifies both truth-keeping and eternal scope"
+          "comment": "The psalmist begs that the word of truth never be taken from his mouth, because he has supremely hoped in God's judgments. He vows to keep God's law forever and ever.",
+          "comment2": "For Augustine, this expresses the Christian's prayer to never be deprived of Christ, who is Truth itself. The eternal keeping of the law signifies participation in God's eternal kingdom rather than mere temporal observance."
         },
         {
-          "name": "Freedom → Proclamation",
-          "description": "Liberty enabling bold testimony",
-          "lemmas": ["latitudo", "testimonium", "rex", "confundor"],
+          "name": "Liberty → Confidence",
+          "description": "Walking in freedom through seeking commandments and speaking boldly before rulers",
+          "lemmas": [
+            "latitudo",
+            "exquiro",
+            "loquor",
+            "testimonium",
+            "confundo"
+          ],
           "startLine": 5,
           "endLine": 6,
-          "comment": "Width (latitudine) of movement parallels royal confidence"
+          "comment": "The psalmist declares he walks in breadth because he has sought God's commandments. He speaks of God's testimonies before kings and is not ashamed.",
+          "comment2": "Augustine interprets the 'breadth' as the freedom and expansion of heart that comes from charity fulfilled through the commandments. This liberty gives boldness to testify before earthly powers without confusion, rooted in divine authority."
         },
         {
-          "name": "Love → Gesture",
-          "description": "Affection expressed through physical devotion",
-          "lemmas": ["diligo", "levo", "meditor", "exerceo"],
+          "name": "Meditation → Action",
+          "description": "Loving contemplation of God's commandments expressed through physical devotion",
+          "lemmas": [
+            "meditor",
+            "diligo",
+            "levo",
+            "manus",
+            "exerceo",
+            "iustificatio"
+          ],
           "startLine": 7,
           "endLine": 8,
-          "comment": "Hand-raising (levavi) completes the meditation-practice cycle"
-        },
-        {
-          "name": "Augustine: Misericordia Subjunctiva",
-          "description": "Prayer's grammatical mood shaping grace",
-          "lemmas": ["venio", "aufero", "custodio"],
-          "startLine": 1,
-          "endLine": 4,
-          "comment": "Subjunctives (veniat/auferas) show grace-dependent obedience (Enarrationes 118.41)"
-        },
-        {
-          "name": "Augustine: Supersperatio",
-          "description": "Excessive hope transcending circumstances",
-          "lemmas": ["superspero", "judicium", "exprobro"],
-          "startLine": 2,
-          "endLine": 3,
-          "comment": "Super-abundant hope (supersperavi) amid reproach (Sermon 32.12)"
-        },
-        {
-          "name": "Teresa: Manus Orantis",
-          "description": "Elevated hands as total surrender",
-          "lemmas": ["levo", "diligo", "justificatio"],
-          "startLine": 8,
-          "endLine": 8,
-          "comment": "Physical gesture (levavi) manifests 'Nada te turbe' abandon (Interior Castle V.3)"
+          "comment": "The section culminates with meditation on beloved commandments, lifting hands to them in prayerful gesture, and exercising oneself in God's justifications.",
+          "comment2": "Augustine sees here the integration of inner contemplation and outward devotion. The lifted hands signify prayer and surrender, while exercise in justifications represents the practical working out of righteousness that begins with loving meditation."
         }
       ]
     },
