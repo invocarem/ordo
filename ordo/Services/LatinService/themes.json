@@ -60,7 +60,7 @@
         {
           "name": "Wrath → Installation",
           "description": "From divine anger to the establishment of the true King on Zion",
-          "lemmas": ["ira", "furo", "rex", "Sion"],
+          "lemmas": ["ira", "furor", "rex", "sion"],
           "startLine": 5,
           "endLine": 6,
           "comment": "God answers with wrath, establishing His chosen king upon Zion, His holy mountain.",
@@ -69,7 +69,7 @@
         {
           "name": "Sonship → Inheritance",
           "description": "From divine begetting to the universal rule of the Son",
-          "lemmas": ["filius", "genui", "hereditas"],
+          "lemmas": ["filius", "gigno", "hereditas"],
           "startLine": 7,
           "endLine": 8,
           "comment": "The Lord declares the King to be His begotten Son and grants Him all nations as inheritance and possession.",
@@ -89,7 +89,7 @@
           "description": "From trembling service to blessed confidence in the Lord",
           "lemmas": ["servio", "timor", "disciplina", "confido"],
           "startLine": 11,
-          "endLine": 12,
+          "endLine": 13,
           "comment": "The psalm ends by exhorting rulers to serve with fear, rejoice with trembling, embrace discipline, and find blessing in trust.",
           "comment2": "Augustine interprets this as the movement from fear to love: discipline leads to true freedom, and blessedness belongs to all who cling to Christ in humble trust (Enarr. Ps. 2.11–12)."
         }

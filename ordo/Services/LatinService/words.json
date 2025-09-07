@@ -1,5 +1,22 @@
 [
 {
+  "lemma": "brevis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "brevis",
+  "genitive": "brevis",
+  "translations": {
+    "en": "short, brief, shallow, quick",
+    "la": "brevis, breve"
+  },
+  "forms": {
+    "nominative_n": ["breve"],
+    "accusative_n": ["breve"]
+  }
+},
+
+  {
   "lemma": "iugum",
   "part_of_speech": "noun",
   "declension": 2,
