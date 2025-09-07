@@ -14095,28 +14095,7 @@
             "la": "ablacto"
           }
         },
-        {
-          "lemma": "retribuere",
-          "part_of_speech": "verb",
-          "conjugation": 2,
-          "deponent": false,
-          "infinitive": "retribuere",
-          "forms": {
-            "present": ["retribuo", "retribuis", "retribuit", "retribuimus", "retribuitis", "retribuunt"],
-            "present_passive": ["retribuor", "retribueris", "retribuitur", "retribuimur", "retribuimini", "retribuuntur"],
-            "imperative": ["retribue", "retribuite"],
-            "subjunctive": ["retribuam", "retribuas", "retribuat", "retribuamus", "retribuatis", "retribuant"],
-            "future_passive": ["retribuar", "retribueris", "retribuetur", "retribuemur", "retribuemini", "retribuentur"],
-            "present_participle": ["retribuens"],
-            "present_participle_forms": ["retribuens", "retribuentibus"],
-            "perfect_passive_participle": ["retributus", "retributa", "retributum"],
-            "perfect_indicative_active": ["retribui", "retribuisti", "retribuit", "retribuimus", "retribuistis", "retribuerunt"]
-          },
-          "translations": {
-            "en": "to repay, to recompense",
-            "la": "retribuere"
-          }
-        },
+        
         {
           "lemma": "retributio",
           "part_of_speech": "noun",
@@ -17392,8 +17371,11 @@
         "lemma": "retribuo",
         "part_of_speech": "verb",
         "conjugation": 3,
-        "perfect": "retribui",
         "infinitive": "retribuere",
+        "present": "retribuo",
+        "future": "retribuam",
+        "perfect": "retribui",
+        "supine": "retributum",
         "forms": {
             "present": ["retribuo", "retribuis", "retribuit", "retribuimus", "retribuitis", "retribuunt"],
             "imperfect": ["retribuebam", "retribuebas", "retribuebat", "retribuebamus", "retribuebatis", "retribuebant"],
@@ -17411,8 +17393,11 @@
         "lemma": "desidero",
         "part_of_speech": "verb",
         "conjugation": 1,
-        "perfect": "desideravi",
         "infinitive": "desiderare",
+        "present": "desidero",
+        "future": "desiderabo",
+        "perfect": "desideravi",
+        "supine": "desideratum",
         "forms": {
             "present": ["desidero", "desideras", "desiderat", "desideramus", "desideratis", "desiderant"],
             "imperfect": ["desiderabam", "desiderabas", "desiderabat", "desiderabamus", "desiderabatis", "desiderabant"],
