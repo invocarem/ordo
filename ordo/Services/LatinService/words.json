@@ -14353,11 +14353,14 @@
           "conjugation": 1,
           "deponent": false,
           "infinitive": "expugnare",
+          "present": "expugno",
+          "future": "expugnabo",
+          "perfect": "expugnavi",
+          "supine": "expugnatum",
           "forms": {
             "present": ["expugno", "expugnas", "expugnat", "expugnamus", "expugnatis", "expugnant"],
             "imperative": ["expugna", "expugnate"],
             "subjunctive": ["expugnem", "expugnes", "expugnet", "expugnemus", "expugnetis", "expugnent"],
-            "perfect": ["expugnaverunt"]
           },
           "translations": {
             "en": "to attack, conquer",
