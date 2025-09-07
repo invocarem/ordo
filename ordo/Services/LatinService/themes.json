@@ -5587,73 +5587,57 @@
         }
       ]
     },
-
     {
       "psalmNumber": 128,
       "category": "",
       "themes": [
         {
-          "name": "Enduring Affliction",
-          "description": "Israel recalls long-standing opposition and attack from its early days.",
-          "lemmas": ["expugno", "juventus", "israel", "possum"],
+          "name": "Persecution → Endurance",
+          "description": "Repeated attacks from youth are met with a declaration of Israel's endurance, as the enemies ultimately could not prevail.",
+          "lemmas": ["saepe", "expugno", "iuventus", "possum"],
           "startLine": 1,
           "endLine": 2,
-          "comment": "Repeated suffering is emphasized—but without defeat."
+          "comment": "The psalmist recounts being fought against since his youth, but declares that his persecutors were ultimately unable to overcome him or Israel.",
+          "comment2": "Augustine sees this as the Church's testimony of enduring persecution throughout history, yet remaining unconquered by the enemies of God (Enarr. Ps. 128.1-2)."
         },
         {
-          "name": "Burden of Wickedness",
-          "description": "The wicked are described as having worked oppression across Israel’s back.",
-          "lemmas": ["dorsum", "peccator", "fabrico", "prolongo", "iniquitas"],
-          "startLine": 3,
-          "endLine": 3,
-          "comment": "Graphic image of prolonged exploitation."
-        },
-        {
-          "name": "Divine Justice",
-          "description": "The Lord defeats the wicked, cutting off their strength and dominion.",
-          "lemmas": ["dominus", "justus", "concido", "cervix", "peccator"],
-          "startLine": 4,
-          "endLine": 4,
-          "comment": "God intervenes decisively against the oppressors."
-        },
-        {
-          "name": "Reversal of the Wicked",
-          "description": "Enemies of Zion are shamed and turned backward.",
-          "lemmas": ["confundo", "converto", "retrorsum", "odi"],
-          "startLine": 5,
-          "endLine": 5,
-          "comment": "Judgment results in public reversal and disgrace."
-        },
-        {
-          "name": "Withering Futility",
-          "description": "The wicked are likened to roof-grass that dries up prematurely.",
-          "lemmas": ["foenum", "tectum", "evello", "exaresco"],
-          "startLine": 6,
-          "endLine": 6,
-          "comment": "They have no lasting root or fruit."
-        },
-        {
-          "name": "Fruitless Effort",
-          "description": "Their efforts yield nothing worth harvesting or carrying.",
+          "name": "Oppression → Judgment",
+          "description": "The prolonged iniquity of sinners who plotted on the psalmist's back is met with the Lord's just judgment, cutting them down and turning back the haters of Zion.",
           "lemmas": [
+            "dorsum",
+            "fabricor",
+            "peccator",
+            "prolongo",
+            "concido",
+            "confundo",
+            "converto",
+            "odi"
+          ],
+          "startLine": 3,
+          "endLine": 4,
+          "comment": "Sinners wove their plots upon the psalmist's back and prolonged their iniquity. The just Lord responds by cutting the necks of sinners, confounding them and turning back all who hate Zion.",
+          "comment2": "Augustine interprets the 'back' as Christ bearing the cross of human sin. God's justice ultimately cuts down the proud and reverses the schemes of those who oppose His holy city, the Church (Enarr. Ps. 128.3-4)."
+        },
+        {
+          "name": "Insignificance → Absence of Blessing",
+          "description": "The haters of Zion become as insignificant as withered roof grass, which is not gathered by reapers and receives no blessing from passersby.",
+          "lemmas": [
+            "fio",
+            "foenum",
+            "tectum",
+            "evello",
+            "exaresco",
             "impleo",
-            "manus",
             "meto",
             "sinus",
             "manipulus",
-            "colligo"
+            "colligo",
+            "praetereo"
           ],
-          "startLine": 7,
+          "startLine": 5,
           "endLine": 7,
-          "comment": "No one benefits from their work."
-        },
-        {
-          "name": "Absence of Blessing",
-          "description": "The wicked are passed over without any greeting of blessing.",
-          "lemmas": ["dico", "praetereo", "benedictio", "nomen", "dominus"],
-          "startLine": 8,
-          "endLine": 8,
-          "comment": "No one speaks peace or divine favor over them."
+          "comment": "The fate of God's enemies is to be like roof grass that withers before being plucked. It is so worthless that no reaper fills his hand with it or gathers it into his bosom. Those who pass by do not even bestow a blessing upon it in the Lord's name.",
+          "comment2": "Augustine sees this as the ultimate fruitlessness of evil: it produces nothing of value worthy of harvest or blessing. Those who oppose God become spiritually barren and are excluded from the community of blessing (Enarr. Ps. 128.5-7)."
         }
       ]
     },

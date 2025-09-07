@@ -956,7 +956,7 @@
         "Confundantur omnes iniqua agentes supervacue: vias tuas, Domine, demonstra mihi, et semitas tuas edoce me.",
         "Dirige me in veritate tua, et doce me, quia tu es Deus salvator meus, et te sustinui tota die.",
         "Reminiscere miserationum tuarum, Domine, et misericordiarum tuarum, quae a saeculo sunt.",
-        "Delicta juventutis meae et ignorantias meas ne memineris: secundum misericordiam tuam memento mei tu, propter bonitatem tuam, Domine.",
+        "Delicta iuventutis meae et ignorantias meas ne memineris: secundum misericordiam tuam memento mei tu, propter bonitatem tuam, Domine.",
         "Dulcis et rectus Dominus: propter hoc legem dabit delinquentibus in via.",
         "Diriget mansuetos in judicio, docebit mites vias suas.",
         "Universae viae Domini misericordia et veritas, requirentibus testamentum eius et testimonia eius.",
@@ -1820,7 +1820,7 @@
         "iudica me, Deus, et discerne causam meam de gente non sancta; ab homine iniquo et doloso erue me.",
         "Quia tu es Deus fortitudo mea; quare me repulisti, et quare tristis incedo, dum affligit me inimicus?",
         "Emitte lucem tuam et veritatem tuam; ipsa me deduxerunt, et adduxerunt in montem sanctum tuum, et in tabernacula tua.",
-        "Et introibo ad altare Dei, ad Deum qui laetificat juventutem meam.",
+        "Et introibo ad altare Dei, ad Deum qui laetificat iuventutem meam.",
         "Confitebor tibi in cithara, Deus, Deus meus; quare tristis es, anima mea, et quare conturbas me?",
         "Spera in Deo, quoniam adhuc confitebor illi; salutare vultus mei, et Deus meus."
       ],
@@ -6150,23 +6150,20 @@
     {
       "number": 128,
       "section": "",
-      "title": "Deliverance from Persecutors",
       "text": [
-        "Saepe expugnaverunt me a juventute mea, dicat nunc Israel;",
-        "saepe expugnaverunt me a juventute mea, etenim non potuerunt mihi.",
+        "Saepe expugnaverunt me a iuventute mea, dicat nunc Israel;",
+        "saepe expugnaverunt me a iuventute mea, etenim non potuerunt mihi.",
         "Supra dorsum meum fabricaverunt peccatores; prolongaverunt iniquitatem suam.",
-        "Dominus iustus concidit cervices peccatorum.",
-        "Confundantur et convertantur retrorsum omnes qui oderunt Sion.",
+        "Dominus iustus concidit cervices peccatorum. confundantur et convertantur retrorsum omnes qui oderunt Sion.",
         "Fiant sicut foenum tectorum, quod priusquam evellatur exaruit,",
-        "de quo non implevit manum suam qui metit, et sinum suum qui manipulos colligit.",
+        "De quo non implevit manum suam qui metit, et sinum suum qui manipulos colligit.",
         "Et non dixerunt qui praeteribant: Benedictio Domini super vos; benediximus vobis in nomine Domini."
       ],
       "englishText": [
         "Often have they fought against me from my youth, let Israel now say.",
         "Often have they fought against me from my youth: yet they could not prevail over me.",
         "The wicked have wrought upon my back: they have lengthened their iniquity.",
-        "The Lord who is just will cut the necks of sinners.",
-        "Let them all be confounded and turned back that hate Sion.",
+        "The Lord who is just will cut the necks of sinners. Let them all be confounded and turned back that hate Sion.",
         "Let them be as grass upon the tops of houses, which withereth before it be plucked up:",
         "Wherewith the mower filleth not his hand: nor he that gathereth sheaves his bosom.",
         "Neither have they that passed by said: The blessing of the Lord be upon you: we have blessed you in the name of the Lord."
@@ -6706,7 +6703,7 @@
         "Deus, canticum novum cantabo tibi: in psalterio decachordo psallam tibi.",
         "Qui das salutem regibus: qui redemisti David, servum tuum, de gladio nequissimo:",
         "Eripe me, et libera me de manu filiorum alienorum: quorum os locutum est vanitatem, et dextera eorum dextera iniquitatis.",
-        "Quorum filii sicut novellae plantationes in juventute sua: filiae eorum compositae, circumornatae ut similitudo templi:",
+        "Quorum filii sicut novellae plantationes in iuventute sua: filiae eorum compositae, circumornatae ut similitudo templi:",
         "Promptuaria eorum plena, eructantia ex hoc in illud: oves eorum foetosae, abundantes in egressibus suis:",
         "Boves eorum crassi: non est ruina parietis, neque transitorium, neque clamor in plateis eorum.",
         "Beatum dixerunt populum, cui haec sunt: beatus populus, cujus Dominus Deus eius."

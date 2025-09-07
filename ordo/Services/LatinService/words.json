@@ -1,4 +1,57 @@
 [
+  {
+  "lemma": "iuventus",
+  "part_of_speech": "noun",
+  "declension": 4,
+  "gender": "feminine",
+  "nominative": "iuventus",
+  "genitive": "iuventutis",
+  "translations": {
+    "en": "youth, young manhood, the young (as a group)",
+    "la": "iuventus, iuventutis"
+  },
+  "forms": {
+    "ablative_sg": ["iuventute"]
+  }
+},
+{
+  "lemma": "etenim",
+  "part_of_speech": "conjunction",
+  "declension": 0,
+  "translations": {
+    "en": "for, and indeed, for truly, because",
+    "la": "etenim"
+  }
+},
+{
+  "lemma": "supra",
+  "part_of_speech": "adverb",
+  "declension": 0,
+  "translations": {
+    "en": "above, over, beforehand",
+    "la": "supra"
+  }
+},
+  {
+  "lemma": "praetereo",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "praeterire",
+  "present": "praetereo",
+  "future": "praeteribo",
+  "perfect": "praeterii",
+  "supine": "praeteritum",
+  "translations": {
+    "en": "to go past, pass by, pass over",
+    "la": "praetereō, praeterīre, praeteriī, praeteritum"
+  },
+  "forms": {
+    "present_subjunctive": ["praeteream", "praetereas", "praetereat", "praetereamus", "praetereatis", "praeteriant"],
+    "perfect_3sg": ["praeteriit"],
+    "imperfect": [ "praeteribam", "praeteribas", "praeteribat", "praeteribamus", "praeteribatis", "praeteribant"
+    ]
+  },
+ },
 {
   "lemma": "brevis",
   "part_of_speech": "adjective",
@@ -6881,23 +6934,7 @@
     "la": "hesternus, -a, -um"
   }
 },
-{
-  "lemma": "praetereo",
-  "part_of_speech": "verb",
-  "conjugation": 0,
-  "infinitive": "praeterire",
-  "present": "praetereo",
-  "perfect": "praeterii",
-  "supine": "praeteritum",
-  "forms": {
-    "present_subjunctive": ["praeteream", "praetereas", "praetereat", "praetereamus", "praetereatis", "praeteriant"],
-    "perfect_3sg": ["praeteriit"]
-  },
-  "translations": {
-    "en": "pass by, go past, omit",
-    "la": "praetereo, praeterire"
-  }
-},
+
   {
   "lemma": "transeo",
   "part_of_speech": "verb",
