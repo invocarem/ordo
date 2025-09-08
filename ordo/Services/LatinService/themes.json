@@ -3933,74 +3933,58 @@
         }
       ]
     },
-
     {
       "psalmNumber": 118,
       "category": "aleph",
       "themes": [
         {
-          "name": "Double Beatitude",
-          "description": "Blessings for the obedient",
-          "lemmas": ["beatus", "immaculatus", "via", "ambulo"],
+          "name": "Blessedness → Integrity",
+          "description": "The blessed state of the blameless who walk in God's law",
+          "lemmas": ["beatus", "immaculatus", "via", "ambulo", "lex"],
           "startLine": 1,
           "endLine": 2,
-          "comment": "Opening blessings for law-keepers (v1-2)"
+          "comment": "The psalmist declares blessed those who are blameless in way and walk in the law of the Lord, who seek Him with their whole heart.",
+          "comment2": "Augustine sees this as describing those perfected in charity through grace. The 'immaculati' are not sinless by nature but made blameless through Christ, walking in His law of love."
         },
         {
-          "name": "Wholehearted Seeking",
-          "description": "Complete devotion to God's word",
-          "lemmas": ["scrutor", "testimonium", "cor", "exquiro"],
-          "startLine": 2,
-          "endLine": 2,
-          "comment": "Whole-hearted study of testimonies (v2)"
-        },
-        {
-          "name": "Path Contrast",
-          "description": "Opposing ways of righteousness and wickedness",
-          "lemmas": ["iniquitas", "via", "ambulo"],
+          "name": "Contrast → Iniquity",
+          "description": "The distinction between workers of iniquity and followers of God's ways",
+          "lemmas": ["iniquitas", "via", "ambulo", "custodio", "nimis"],
           "startLine": 3,
-          "endLine": 3,
-          "comment": "Negative example of law-breakers (v3)"
-        },
-        {
-          "name": "Commandment Imperative",
-          "description": "Divine charge to obey",
-          "lemmas": ["mando", "mandatum", "custodio", "nimis"],
-          "startLine": 4,
           "endLine": 4,
-          "comment": "Explicit command to keep statutes (v4)"
+          "comment": "The workers of iniquity have not walked in God's ways, in contrast to those who diligently keep His commandments as He has ordained.",
+          "comment2": "For Augustine, this represents the fundamental choice between the broad way of destruction and the narrow way of life. God's strict command reveals the seriousness of this spiritual division."
         },
         {
-          "name": "Prayer for Guidance",
-          "description": "Petition for directed obedience",
-          "lemmas": ["dirigo", "via", "custodio", "justificatio"],
+          "name": "Petition → Direction",
+          "description": "A prayer for one's ways to be directed toward keeping God's statutes",
+          "lemmas": [
+            "dirigo",
+            "custodio",
+            "confundor",
+            "perspicio",
+            "praeceptum"
+          ],
           "startLine": 5,
-          "endLine": 5,
-          "comment": "Desire for paths aligned with God's law (v5)"
-        },
-        {
-          "name": "Confident Assurance",
-          "description": "Freedom from shame through obedience",
-          "lemmas": ["confundor", "perspicio", "mandatum"],
-          "startLine": 6,
           "endLine": 6,
-          "comment": "Result of comprehensive obedience (v6)"
+          "comment": "The psalmist prays for his paths to be directed to keep God's justifications, so he will not be ashamed when he considers all God's precepts.",
+          "comment2": "Augustine interprets this as the soul's prayer for divine guidance to avoid straying. The lack of shame comes from alignment with God's will rather than human judgment."
         },
         {
-          "name": "Grateful Learning",
-          "description": "Thankful response to divine instruction",
-          "lemmas": ["confiteor", "justus", "disco", "justificatio"],
+          "name": "Commitment → Preservation",
+          "description": "Confession of commitment to God's justifications and plea for divine presence",
+          "lemmas": [
+            "confiteor",
+            "directio",
+            "iudicium",
+            "iustitia",
+            "derelinquo",
+            "usquequaque"
+          ],
           "startLine": 7,
-          "endLine": 7,
-          "comment": "Commitment to learn judgments (v7)"
-        },
-        {
-          "name": "Covenantal Commitment",
-          "description": "Promise to keep God's statutes",
-          "lemmas": ["custodio", "derelinquo", "mandatum", "quaero"],
-          "startLine": 8,
           "endLine": 8,
-          "comment": "Resolution not to forsake the law (v8)"
+          "comment": "With upright heart, the psalmist praises God for His righteous judgments and vows to keep His statutes, begging not to be forsaken utterly.",
+          "comment2": "Augustine sees the 'directione cordis' as heart straightened by grace. The plea not to be forsaken acknowledges human weakness and total dependence on divine sustenance."
         }
       ]
     },
@@ -4009,78 +3993,52 @@
       "category": "beth",
       "themes": [
         {
-          "name": "Spiritual Formation",
-          "description": "Guidance for the young believer's path",
-          "lemmas": ["corrigo", "adolescens", "custodio", "doceo", "exerceo"],
+          "name": "Correction → Adherence",
+          "description": "The young person's path correction through keeping God's words",
+          "lemmas": [
+            "corrigo",
+            "adolescentior",
+            "custodio",
+            "sermo",
+            "repello"
+          ],
           "startLine": 1,
           "endLine": 2,
-          "comment": "Opening focus on correction and keeping God's words"
+          "comment": "The psalmist asks how a young man can correct his path—by keeping God's words. He has sought God with his whole heart and begs not to be rejected from His commandments.",
+          "comment2": "Augustine sees this as the beginning of spiritual life—the correction from worldly ways through adherence to God's word. The whole-hearted seeking reflects the first commandment of loving God completely."
         },
         {
-          "name": "Heart Engagement",
-          "description": "Wholehearted seeking and internalization",
-          "lemmas": ["cor", "exquiro", "abscondo", "meditor", "obliviscor"],
-          "startLine": 2,
-          "endLine": 4,
-          "comment": "Mental and emotional aspects of devotion in middle verses"
-        },
-        {
-          "name": "Divine Communication",
-          "description": "God's spoken and written revelation",
-          "lemmas": [
-            "sermo",
-            "eloquium",
-            "judicium",
-            "testimonium",
-            "mandatum"
-          ],
-          "startLine": 1,
-          "endLine": 8,
-          "comment": "Multiple terms for God's instructions throughout"
-        },
-        {
-          "name": "Delightful Obedience",
-          "description": "Joy in keeping God's commands",
-          "lemmas": [
-            "delector",
-            "pronuntio",
-            "benedico",
-            "considero",
-            "justificatio"
-          ],
-          "startLine": 5,
-          "endLine": 8,
-          "comment": "Positive emotional response in closing verses"
-        },
-        {
-          "name": "Vocational Response",
-          "description": "Outward actions flowing from devotion",
-          "lemmas": ["pronuntio", "exerceo", "doceo", "meditor", "considero"],
-          "startLine": 5,
-          "endLine": 8,
-          "comment": "Active verbs showing engaged response"
-        },
-        {
-          "name": "Augustine: Memory Theater",
-          "description": "Storing God's word in the heart",
-          "lemmas": ["abscondo", "cor", "obliviscor", "eloquium", "meditor"],
+          "name": "Treasure → Preservation",
+          "description": "Hiding God's words in the heart as protection against sin",
+          "lemmas": ["abscondo", "eloquium", "pecco", "benedico", "doceo"],
           "startLine": 3,
           "endLine": 4,
-          "comment": "Augustinian emphasis on memory as spiritual faculty"
+          "comment": "God's words are hidden in the heart to avoid sin. The psalmist blesses the Lord and asks to be taught His justifications.",
+          "comment2": "For Augustine, hiding God's word in the heart represents internalizing Scripture through meditation and memory. This becomes protection against temptation and the foundation for ongoing divine instruction."
         },
         {
-          "name": "Augustine: Delightful Discipline",
-          "description": "Grace transforming duty into joy",
+          "name": "Proclamation → Delight",
+          "description": "Declaring God's judgments and delighting in His testimonies",
           "lemmas": [
+            "pronuntio",
+            "iudicium",
             "delector",
-            "mandatum",
-            "exerceo",
-            "benedico",
-            "justificatio"
+            "testimonium",
+            "divitiae"
           ],
-          "startLine": 6,
+          "startLine": 5,
+          "endLine": 6,
+          "comment": "The psalmist has declared all God's judgments with his lips and delights in His testimonies as much as in all riches.",
+          "comment2": "Augustine interprets this as the natural overflow of the heart filled with God's word. The delight in testimonies surpasses earthly wealth because it offers spiritual riches that endure forever."
+        },
+        {
+          "name": "Exercise → Remembrance",
+          "description": "Meditating on God's justifications and remembering His words",
+          "lemmas": ["exerceor", "considero", "meditor", "obliviscor", "sermo"],
+          "startLine": 7,
           "endLine": 8,
-          "comment": "How grace makes God's law desirable"
+          "comment": "The psalmist exercises himself in God's commandments and considers His ways. He meditates on His justifications and will not forget His words.",
+          "comment2": "Augustine sees this as the active engagement with God's law—both practical obedience ('exerceor') and contemplative reflection ('meditor'). The promise not to forget signifies perseverance in grace."
         }
       ]
     },

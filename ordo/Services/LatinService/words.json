@@ -1,5 +1,14 @@
 [
   {
+    "lemma": "nam",
+    "part_of_speech": "conjunction",
+    "declension": 0,
+    "translations": {
+      "en": "for, since, because, indeed",
+      "la": "nam"
+    }
+  },
+  {
     "lemma": "enim",
     "part_of_speech": "conjunction",
     "declension": 0,
@@ -3679,6 +3688,7 @@
     "perfect": "abstuli",
     "supine": "ablatum",
     "forms": {
+      "imperative_active": ["aufer", "auferte"],
       "future_passive_indicative": [
         "auferar",
         "aufereris",
