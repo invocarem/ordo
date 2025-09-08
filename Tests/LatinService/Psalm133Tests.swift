@@ -23,8 +23,7 @@ class Psalm133Tests: XCTestCase {
     ]
 
     private let themeKeyLemmas = [
-        ("Blessing", "Call to bless and be blessed by God", ["benedico"]),
-        ("Divine Service", "Service and standing in God's house", ["servus", "sto", "domus", "atrium"]),
+        ("Divine Service", "Service and standing in God's house", ["servus", "sto", "domus", "atrium", "benedico"]),
         ("Sacred Space", "Holy places and worship settings", ["sanctus", "sion", "domus", "atrium"]),
         ("Divine Majesty", "God's creative power and sovereignty", ["dominus", "deus", "facio", "caelum", "terra"]),
         ("Worship Posture", "Physical acts of worship", ["extollo", "manus", "sto", "nox"]),
