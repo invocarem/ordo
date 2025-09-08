@@ -1,47 +1,43 @@
 @testable import LatinService
 import XCTest
 
-class Psalm4Tests: XCTestCase {
+class Psalm118AinTests: XCTestCase {
     private var latinService: LatinService!
     private let verbose = true
-    let id = PsalmIdentity(number: 4, category: "")
+    let id = PsalmIdentity(number: 118, category: "Ain")
 
     // MARK: - Test Data Properties
 
-    private let psalm4 = [
-        "Cum invocarem exaudivit me Deus iustitiae meae; in tribulatione dilatasti mihi.",
-        "Miserere mei, et exaudi orationem meam.",
-        "Filii hominum, usquequo gravi corde? ut quid diligitis vanitatem, et quaeritis mendacium?",
-        "Et scitote quoniam mirificavit Dominus sanctum suum; Dominus exaudiet me cum clamavero ad eum.",
-        "Irascimini, et nolite peccare; quae dicitis in cordibus vestris, in cubilibus vestris compungimini.",
-        "Sacrificate sacrificium iustitiae, et sperate in Domino; multi dicunt: Quis ostendit nobis bona?",
-        "Signatum est super nos lumen vultus tui, Domine; dedisti laetitiam in corde meo.",
-        "A fructu frumenti, vini et olei sui multiplicati sunt.",
-        "In pace in idipsum dormiam et requiescam;",
-        "Quoniam tu, Domine, singulariter in spe constituisti me.",
+    private let psalm118Ain = [
+        "Feci iudicium et iustitiam; non tradas me calumniantibus me.",
+        "Suscipe servum tuum in bonum; non calumnientur me superbi.",
+        "Oculi mei defecerunt in salutare tuum, et in eloquium iustitiae tuae.",
+        "Fac cum servo tuo secundum misericordiam tuam, et iustificationes tuas doce me.",
+        "Servus tuus sum ego; da mihi intellectum, ut sciam testimonia tua.",
+        "Tempus faciendi, Domine; dissipaverunt legem tuam.",
+        "Ideo dilexi mandata tua super aurum et topazion.",
+        "Propterea ad omnia mandata tua dirigebar; omnem viam iniquam odio habui."
     ]
 
     private let lineKeyLemmas = [
-        (1, ["invoco", "exaudio", "deus", "iustitia", "tribulatio", "dilato"]),
-        (2, ["misereor", "exaudio", "oratio"]),
-        (3, ["filius", "homo", "usquequo", "gravis", "cor", "diligo", "vanitas", "quaero", "mendacium"]),
-        (4, ["scio", "quoniam", "mirifico", "dominus", "sanctus", "exaudio", "clamo"]),
-        (5, ["irascor", "pecco", "dico", "cor", "cubile", "compungo"]),
-        (6, ["sacrifico", "sacrificium", "iustitia", "spero", "dominus", "multus", "dico", "ostendo", "bonus"]),
-        (7, ["signo", "lumen", "vultus", "dominus", "do", "laetitia", "cor"]),
-        (8, ["fructus", "frumentum", "vinum", "oleum", "multiplico"]),
-        (9, ["pax", "idipsum", "dormio", "requiesco"]),
-        (10, ["quoniam", "dominus", "singularis", "spes", "constituo"]),
+        (1, ["facio", "iudicium", "iustitia", "trado", "calumnior"]),
+        (2, ["suscipio", "servus", "bonus", "calumnior", "superbus"]),
+        (3, ["oculus", "deficio", "salutare", "eloquium", "iustitia"]),
+        (4, ["facio", "servus", "secundum", "misericordia", "iustificatio", "doceo"]),
+        (5, ["servus", "sum", "do", "intellectus", "scio", "testimonium"]),
+        (6, ["tempus", "facio", "dominus", "dissipo", "lex"]),
+        (7, ["diligo", "mandatum", "super", "aurum", "topazion"]),
+        (8, ["propterea", "mandatum", "dirigo", "omnis", "via", "iniquus", "odium", "habeo"])
     ]
 
     private let themeKeyLemmas = [
-        ("Prayer and Response", "God hearing and answering prayers", ["invoco", "exaudio", "oratio", "clamo", "misereor"]),
-        ("Trust and Hope", "Trusting in God and finding hope", ["spero", "spes", "constituo", "requiesco"]),
-        ("Divine Provision", "God's material blessings and provision", ["dilato", "fructus", "frumentum", "vinum", "oleum", "multiplico"]),
-        ("Divine Favor", "God's grace, light, and joyful presence", ["signo", "lumen", "vultus", "laetitia"]),
-        ("Christological Fulfillment", "References to Christ as the ultimate Good and resurrection", ["bonus", "sanctus", "iustitia"]),
-        ("Heart Examination", "Examination of inner thoughts and repentance", ["cor", "gravis", "compungo", "cubile", "dico", "irascor", "pecco"]),
-        ("Human Folly", "Human tendency toward vanity, falsehood, and spiritual heaviness", ["vanitas", "mendacium", "gravis", "diligo", "quaero"]),
+        ("Justice and Righteousness", "Doing what is right and just before God", ["iudicium", "iustitia", "iustificatio", "salutare"]),
+        ("Divine Protection", "Seeking God's protection from enemies", ["trado", "calumnior", "suscipio", "superbus"]),
+        ("Servanthood", "Identity as God's servant and seeking guidance", ["servus", "facio", "doceo", "intellectus", "scio"]),
+        ("Love for God's Word", "Affection for commandments and testimonies", ["diligo", "mandatum", "testimonium", "eloquium"]),
+        ("Obedience and Direction", "Being guided by God's commandments", ["dirigo", "propterea", "secundum", "misericordia"]),
+        ("Rejection of Evil", "Hatred for wicked paths and injustice", ["iniquus", "odium", "habeo", "via", "dissipo"]),
+        ("Divine Timing", "Recognition of God's appointed time", ["tempus", "facio", "dominus"])
     ]
 
     // MARK: - Setup
@@ -53,11 +49,11 @@ class Psalm4Tests: XCTestCase {
 
     // MARK: - Line by Line Key Lemmas Test
 
-    func testPsalm4LineByLineKeyLemmas() {
+    func testPsalm118AinLineByLineKeyLemmas() {
         var allFailures: [String] = []
 
         for (lineNumber, expectedLemmas) in lineKeyLemmas {
-            let line = psalm4[lineNumber - 1]
+            let line = psalm118Ain[lineNumber - 1]
             let analysis = latinService.analyzePsalm(id, text: line, startingLineNumber: lineNumber)
 
             let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
@@ -84,8 +80,8 @@ class Psalm4Tests: XCTestCase {
         }
     }
 
-    func testPsalm4Themes() {
-        let analysis = latinService.analyzePsalm(id, text: psalm4.joined(separator: " "))
+    func testPsalm118AinThemes() {
+        let analysis = latinService.analyzePsalm(id, text: psalm118Ain.joined(separator: " "))
         let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
         var allFailures: [String] = []
 

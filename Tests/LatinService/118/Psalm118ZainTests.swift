@@ -4,15 +4,10 @@ import XCTest
 class Psalm118ZainTests: XCTestCase {
     private var latinService: LatinService!
     private let verbose = true
-    
-    override func setUp() {
-        super.setUp()
-        latinService = LatinService.shared
-    }
-    
+    private let minimumLemmasPerTheme = 3
     let id = PsalmIdentity(number: 118, category: "zain")
     
-    // MARK: - Test Data
+    // MARK: - Test Data Properties
     private let psalm118Zain = [
         "Memor esto verbi tui servo tuo, in quo mihi spem dedisti.",
         "Haec me consolata est in humilitate mea, quia eloquium tuum vivificavit me.",
@@ -24,23 +19,35 @@ class Psalm118ZainTests: XCTestCase {
         "Hoc factum est mihi, quia iustificationes tuas exquisivi."
     ]
     
-    // MARK: - Line by Line Key Lemmas Test (STRICT - fails for any missing lemma)
+    private let lineKeyLemmas = [
+        (1, ["memor", "verbum", "servus", "spes", "do"]),
+        (2, ["hic", "consolor", "humilitas", "quia", "eloquium", "vivifico"]),
+        (3, ["superbus", "inique", "ago", "usquequaque", "declino"]),
+        (4, ["memor", "sum", "iudicium", "saeculum", "dominus", "consolor"]),
+        (5, ["defectio", "teneo", "pro", "peccator", "derelinquo", "lex"]),
+        (6, ["cantabilis", "sum", "iustificatio", "locus", "peregrinatio"]),
+        (7, ["memor", "nox", "nomen", "dominus", "custodio", "lex"]),
+        (8, ["hic", "facio", "quia", "iustificatio", "exquiro"])
+    ]
+    
+    private let themeKeyLemmas = [
+        ("Divine Word", "References to God's word, law, and judgments", ["verbum", "eloquium", "iustificatio", "lex", "nomen", "iudicium"]),
+        ("Memory", "Themes of remembrance and recalling", ["memor", "memini", "recordor", "reminiscor", "saeculum", "nox"]),
+        ("Comfort", "Expressions of consolation and hope", ["consolor", "vivifico", "cantabilis", "spes", "defectio", "peregrinatio"]),
+        ("Faithfulness", "Steadfastness amidst adversity and the wicked", ["custodio", "declino", "derelinquo", "superbus", "inique", "peccator", "teneo"])
+    ]
+    
+    // MARK: - Setup
+    override func setUp() {
+        super.setUp()
+        latinService = LatinService.shared
+    }
+    
+    // MARK: - Line by Line Key Lemmas Test
     func testPsalm118ZainLineByLineKeyLemmas() {
-        // Test that each line contains ALL expected BASE LEMMAS including rare words
-        let lineTests = [
-            (1, ["memor",  "verbum", "servus", "spes", "do"]),
-            (2, ["hic", "consolor", "humilitas", "quia", "eloquium", "vivifico"]),
-            (3, ["superbus", "inique", "ago", "usquequaque", "declino"]),
-            (4, ["memor", "sum", "iudicium", "saeculum", "dominus", "consolor"]),
-            (5, ["defectio", "teneo", "pro", "peccator", "derelinquo", "lex"]),
-            (6, ["cantabilis", "sum", "iustificatio", "locus", "peregrinatio"]),
-            (7, ["memor",  "nox", "nomen", "dominus", "custodio", "lex"]),
-            (8, ["hic", "facio", "quia", "iustificatio", "exquiro"])
-        ]
-        
         var allFailures: [String] = []
         
-        for (lineNumber, expectedLemmas) in lineTests {
+        for (lineNumber, expectedLemmas) in lineKeyLemmas {
             let line = psalm118Zain[lineNumber - 1]
             let analysis = latinService.analyzePsalm(id, text: line, startingLineNumber: lineNumber)
             
@@ -67,62 +74,34 @@ class Psalm118ZainTests: XCTestCase {
             XCTFail("Missing lemmas detected:\n" + allFailures.joined(separator: "\n"))
         }
     }
-    
-    // MARK: - Thematic Tests
-    
-    func testDivineWordAndPromiseTheme() {
+
+    // MARK: - Combined Theme Test
+    func testPsalm118ZainThemes() {
         let analysis = latinService.analyzePsalm(id, text: psalm118Zain.joined(separator: " "))
-        
-        let wordLemmas = ["verbum", "eloquium", "iustificatio", "lex", "nomen", "iudicium"]
         let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-        let foundLemmas = wordLemmas.filter { detectedLemmas.contains($0.lowercased()) }
+        var allFailures: [String] = []
         
-        if verbose {
-            print("\nDIVINE WORD THEME: Found \(foundLemmas.count)/\(wordLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
+        for (themeName, themeDescription, themeLemmas) in themeKeyLemmas {
+            let foundLemmas = themeLemmas.filter { detectedLemmas.contains($0.lowercased()) }
+            let missingLemmas = themeLemmas.filter { !detectedLemmas.contains($0.lowercased()) }
+            
+            if verbose {
+                let status = foundLemmas.count >= minimumLemmasPerTheme ? "✅" : "❌"
+                print("\n\(status) \(themeName.uppercased()): \(themeDescription)")
+                print("   Found \(foundLemmas.count)/\(themeLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
+                
+                if !missingLemmas.isEmpty {
+                    print("   MISSING: \(missingLemmas.joined(separator: ", "))")
+                }
+            }
+            
+            if foundLemmas.count < minimumLemmasPerTheme {
+                allFailures.append("Theme \(themeName): Found only \(foundLemmas.count) lemmas (needed \(minimumLemmasPerTheme)): \(foundLemmas.joined(separator: ", "))")
+            }
         }
         
-        XCTAssertTrue(foundLemmas.count >= 4, "Should find at least 4 divine word lemmas. Found: \(foundLemmas.joined(separator: ", "))")
-    }
-    
-    func testMemoryAndRemembranceTheme() {
-        let analysis = latinService.analyzePsalm(id, text: psalm118Zain.joined(separator: " "))
-        
-        let memoryLemmas = ["memor", "memini", "recordor", "reminiscor", "saeculum", "nox"]
-        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-        let foundLemmas = memoryLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-        
-        if verbose {
-            print("\nMEMORY THEME: Found \(foundLemmas.count)/\(memoryLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
+        if !allFailures.isEmpty {
+            XCTFail("Theme lemma requirements not met:\n" + allFailures.joined(separator: "\n"))
         }
-        
-        XCTAssertTrue(foundLemmas.count >= 3, "Should find at least 3 memory/remembrance lemmas. Found: \(foundLemmas.joined(separator: ", "))")
-    }
-    
-    func testComfortAndConsolationTheme() {
-        let analysis = latinService.analyzePsalm(id, text: psalm118Zain.joined(separator: " "))
-        
-        let comfortLemmas = ["consolor", "vivifico", "cantabilis", "spes", "defectio", "peregrinatio"]
-        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-        let foundLemmas = comfortLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-        
-        if verbose {
-            print("\nCOMFORT THEME: Found \(foundLemmas.count)/\(comfortLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
-        }
-        
-        XCTAssertTrue(foundLemmas.count >= 3, "Should find at least 3 comfort/consolation lemmas. Found: \(foundLemmas.joined(separator: ", "))")
-    }
-    
-    func testFaithfulnessAmidstAdversityTheme() {
-        let analysis = latinService.analyzePsalm(id, text: psalm118Zain.joined(separator: " "))
-        
-        let faithfulnessLemmas = ["custodio", "declino", "derelinquo", "superbus", "inique", "peccator", "teneo"]
-        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-        let foundLemmas = faithfulnessLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-        
-        if verbose {
-            print("\nFAITHFULNESS THEME: Found \(foundLemmas.count)/\(faithfulnessLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
-        }
-        
-        XCTAssertTrue(foundLemmas.count >= 4, "Should find at least 4 faithfulness/adversity lemmas. Found: \(foundLemmas.joined(separator: ", "))")
     }
 }

@@ -4,15 +4,10 @@ import XCTest
 class Psalm118DalethTests: XCTestCase {
     private var latinService: LatinService!
     private let verbose = true
-    
-    override func setUp() {
-        super.setUp()
-        latinService = LatinService.shared
-    }
-    
+    private let minimumLemmasPerTheme = 4
     let id = PsalmIdentity(number: 118, category: "daleth")
     
-    // MARK: - Test Data
+    // MARK: - Test Data Properties
     private let psalm118Daleth = [
         "Adhaesit pavimento anima mea, vivifica me secundum verbum tuum.",
         "Vias meas enuntiavi, et exaudisti me; doce me iustificationes tuas.",
@@ -24,23 +19,35 @@ class Psalm118DalethTests: XCTestCase {
         "Viam mandatorum tuorum cucurri, cum dilatasti cor meum."
     ]
     
-    // MARK: - Line by Line Key Lemmas Test (STRICT - fails for any missing lemma)
+    private let lineKeyLemmas = [
+        (1, ["adhaereo", "pavimentum", "anima", "vivifico", "secundum", "verbum"]),
+        (2, ["enuntio", "exaudio", "doceo", "iustificatio"]),
+        (3, ["iustificatio", "instruo", "exerceo", "mirabilis"]),
+        (4, ["dormito", "anima", "taedium", "confirmo", "verbum"]),
+        (5, ["iniquitas", "amoveo", "lex", "misereor"]),
+        (6, ["veritas", "eligo", "iudicium", "obliviscor"]),
+        (7, ["adhaereo", "testimonium", "dominus", "confundo"]),
+        (8, ["mandatum", "curro", "dilato", "cor"])
+    ]
+    
+    private let themeKeyLemmas = [
+        ("Affliction", "References to weariness, clinging to dust, and need for revival", ["adhaereo", "pavimentum", "dormito", "taedium", "confundo", "iniquitas"]),
+        ("Petition", "Requests for teaching, confirmation, and mercy", ["vivifico", "exaudio", "doceo", "instruo", "confirmo", "amoveo", "misereor"]),
+        ("Path", "Emphasis on choosing, running, and staying on God's path", ["via", "eligo", "curro", "veritas", "iustificatio", "mandatum"]),
+        ("Transformation", "Themes of expansion, exercise, and declaration", ["dilato", "exerceo", "enuntio", "obliviscor", "adhaereo", "mirabilis"])
+    ]
+    
+    // MARK: - Setup
+    override func setUp() {
+        super.setUp()
+        latinService = LatinService.shared
+    }
+    
+    // MARK: - Line by Line Key Lemmas Test
     func testPsalm118DalethLineByLineKeyLemmas() {
-        // Test that each line contains ALL expected BASE LEMMAS (common words removed)
-        let lineTests = [
-            (1, ["adhaereo", "pavimentum", "anima", "vivifico", "secundum", "verbum"]),
-            (2, ["enuntio", "exaudio", "doceo", "iustificatio"]),
-            (3, ["iustificatio", "instruo", "exerceo", "mirabilis"]),
-            (4, ["dormito", "anima", "taedium", "confirmo", "verbum"]),
-            (5, ["iniquitas", "amoveo", "lex", "misereor"]),
-            (6, ["veritas", "eligo", "iudicium", "obliviscor"]),
-            (7, ["adhaereo", "testimonium", "dominus", "confundo"]),
-            (8, [ "mandatum", "curro", "dilato", "cor"])
-        ]
-        
         var allFailures: [String] = []
         
-        for (lineNumber, expectedLemmas) in lineTests {
+        for (lineNumber, expectedLemmas) in lineKeyLemmas {
             let line = psalm118Daleth[lineNumber - 1]
             let analysis = latinService.analyzePsalm(id, text: line, startingLineNumber: lineNumber)
             
@@ -67,62 +74,34 @@ class Psalm118DalethTests: XCTestCase {
             XCTFail("Missing lemmas detected:\n" + allFailures.joined(separator: "\n"))
         }
     }
-    
-    // MARK: - Thematic Tests
-    
-    func testAfflictionTheme() {
+
+    // MARK: - Combined Theme Test
+    func testPsalm118DalethThemes() {
         let analysis = latinService.analyzePsalm(id, text: psalm118Daleth.joined(separator: " "))
-        
-        let afflictionLemmas = ["adhaereo", "pavimentum", "dormito", "taedium", "confundo", "iniquitas"]
         let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-        let foundLemmas = afflictionLemmas.filter { detectedLemmas.contains($0.lowercased()) }
+        var allFailures: [String] = []
         
-        if verbose {
-            print("\nAFFLICTION THEME: Found \(foundLemmas.count)/\(afflictionLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
+        for (themeName, themeDescription, themeLemmas) in themeKeyLemmas {
+            let foundLemmas = themeLemmas.filter { detectedLemmas.contains($0.lowercased()) }
+            let missingLemmas = themeLemmas.filter { !detectedLemmas.contains($0.lowercased()) }
+            
+            if verbose {
+                let status = foundLemmas.count >= minimumLemmasPerTheme ? "✅" : "❌"
+                print("\n\(status) \(themeName.uppercased()): \(themeDescription)")
+                print("   Found \(foundLemmas.count)/\(themeLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
+                
+                if !missingLemmas.isEmpty {
+                    print("   MISSING: \(missingLemmas.joined(separator: ", "))")
+                }
+            }
+            
+            if foundLemmas.count < minimumLemmasPerTheme {
+                allFailures.append("Theme \(themeName): Found only \(foundLemmas.count) lemmas (needed \(minimumLemmasPerTheme)): \(foundLemmas.joined(separator: ", "))")
+            }
         }
         
-        XCTAssertTrue(foundLemmas.count >= 4, "Should find at least 4 affliction lemmas. Found: \(foundLemmas.joined(separator: ", "))")
-    }
-    
-    func testPetitionTheme() {
-        let analysis = latinService.analyzePsalm(id, text: psalm118Daleth.joined(separator: " "))
-        
-        let petitionLemmas = ["vivifico", "exaudio", "doceo", "instruo", "confirmo", "amoveo", "misereor"]
-        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-        let foundLemmas = petitionLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-        
-        if verbose {
-            print("\nPETITION THEME: Found \(foundLemmas.count)/\(petitionLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
+        if !allFailures.isEmpty {
+            XCTFail("Theme lemma requirements not met:\n" + allFailures.joined(separator: "\n"))
         }
-        
-        XCTAssertTrue(foundLemmas.count >= 4, "Should find at least 4 petition lemmas. Found: \(foundLemmas.joined(separator: ", "))")
-    }
-    
-    func testPathTheme() {
-        let analysis = latinService.analyzePsalm(id, text: psalm118Daleth.joined(separator: " "))
-        
-        let pathLemmas = ["via", "eligo", "curro", "veritas", "iustificatio", "mandatum"]
-        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-        let foundLemmas = pathLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-        
-        if verbose {
-            print("\nPATH THEME: Found \(foundLemmas.count)/\(pathLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
-        }
-        
-        XCTAssertTrue(foundLemmas.count >= 4, "Should find at least 4 path lemmas. Found: \(foundLemmas.joined(separator: ", "))")
-    }
-    
-    func testTransformationTheme() {
-        let analysis = latinService.analyzePsalm(id, text: psalm118Daleth.joined(separator: " "))
-        
-        let transformationLemmas = ["dilato", "exerceor", "enuntio", "obliviscor", "adhaereo", "mirabilis"]
-        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-        let foundLemmas = transformationLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-        
-        if verbose {
-            print("\nTRANSFORMATION THEME: Found \(foundLemmas.count)/\(transformationLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
-        }
-        
-        XCTAssertTrue(foundLemmas.count >= 3, "Should find at least 3 transformation lemmas. Found: \(foundLemmas.joined(separator: ", "))")
     }
 }

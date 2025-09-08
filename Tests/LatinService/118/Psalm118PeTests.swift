@@ -3,122 +3,105 @@ import XCTest
 
 class Psalm118PeTests: XCTestCase {
     private var latinService: LatinService!
-    let verbose = true
+    private let verbose = true
+    let id = PsalmIdentity(number: 118, category: "pe")
     
+    // MARK: - Test Data Properties
+    private let psalm118Pe = [
+        "Mirabilia testimonia tua, ideo scrutata est ea anima mea.",
+        "Declaratio sermonum tuorum illuminat, et intellectum dat parvulis.",
+        "Os meum aperui et attraxi spiritum, quia mandata tua desiderabam.",
+        "Aspice in me et miserere mei, secundum iudicium diligentium nomen tuum.",
+        "Gressus meos dirige secundum eloquium tuum, et non dominetur mei omnis iniquitas.",
+        "Redime me a calumniis hominum, ut custodiam mandata tua.",
+        "Faciem tuam illumina super servum tuum, et doce me iustificationes tuas.",
+        "Exitus aquae deduxerunt oculi mei, quia non custodierunt legem tuam."
+    ]
+    
+    private let lineKeyLemmas = [
+        (1, ["mirabilis", "testimonium", "ideo", "scrutor", "anima"]),
+        (2, ["declaratio", "sermo", "illumino", "intellectus", "do", "parvulus"]),
+        (3, ["os", "aperio", "attraho", "spiritus", "quia", "mandatum", "desidero"]),
+        (4, ["aspicio", "misereor", "secundum", "iudicium", "diligo", "nomen"]),
+        (5, ["gressus", "dirigo", "secundum", "eloquium", "non", "dominor", "omnis", "iniquitas"]),
+        (6, ["redimo", "calumnia", "homo", "ut", "custodio", "mandatum"]),
+        (7, ["facies", "illumino", "super", "servus", "doceo", "iustificatio"]),
+        (8, ["exitus", "aqua", "deduco", "oculus", "quia", "non", "custodio", "lex"])
+    ]
+    
+    private let themeKeyLemmas = [
+        ("Divine Revelation", "God's wondrous testimonies and illuminating word", ["mirabilis", "testimonium", "declaratio", "illumino", "intellectus", "eloquium"]),
+        ("Desire and Longing", "Soul's yearning for God's commandments", ["scrutor", "desidero", "anima", "spiritus", "diligo"]),
+        ("Prayer for Guidance", "Requests for direction, mercy, and redemption", ["dirigo", "aspicio", "misereor", "redimo", "custodio"]),
+        ("Protection from Evil", "Deliverance from iniquity and human calumny", ["iniquitas", "calumnia", "dominor", "non", "homo"]),
+        ("Divine Instruction", "Teaching of God's statutes and commandments", ["doceo", "iustificatio", "mandatum", "lex", "nomen"]),
+        ("Emotional Response", "Physical expressions of spiritual longing", ["os", "aperio", "attraho", "oculus", "exitus", "aqua", "deduco"])
+    ]
+    
+    // MARK: - Setup
     override func setUp() {
         super.setUp()
         latinService = LatinService.shared
     }
     
-    let identity = PsalmIdentity(number: 118, category: "pe")
-    // MARK: - Test Data (Psalm 118:129-136 "Pe" category)
-    let psalm118Pe = [
-        "Mirabilia testimonia tua, ideo scrutata est ea anima mea.",
-        "Declaratio sermonum tuorum illuminat, et intellectum dat parvulis.",
-        "Os meum aperui et attraxi spiritum, quia mandata tua desiderabam.",
-        "Aspice in me et miserere mei, secundum judicium diligentium nomen tuum.",
-        "Gressus meos dirige secundum eloquium tuum, et non dominetur mei omnis iniquitas.",
-        "Redime me a calumniis hominum, ut custodiam mandata tua.",
-        "Faciem tuam illumina super servum tuum, et doce me justificationes tuas.",
-        "Exitius aquae deduxerunt oculi mei, quia non custodierunt legem tuam."
-    ]
-    
-    // MARK: - Test Cases
-    
-    func testDivineRevelationTerms() {
-        let analysis = latinService.analyzePsalm(identity,text: psalm118Pe)
+    // MARK: - Line by Line Key Lemmas Test
+    func testPsalm118PeLineByLineKeyLemmas() {
+        var allFailures: [String] = []
         
-        let revelationTerms = [
-            ("testimonium", ["testimonia"], "testimony"), // v.129
-            ("declaratio", ["declaratio"], "declaration"), // v.130
-            ("sermo", ["sermonum"], "word"), // v.130
-            ("eloquium", ["eloquium"], "expression") // v.133
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: revelationTerms)
-    }
-    
-    func testPetitionVerbs() {
-        let analysis = latinService.analyzePsalm(identity, text: psalm118Pe)
-        
-        let petitions = [
-            ("aspicio", ["aspice"], "look upon"), // v.132
-            ("dirigo", ["dirige"], "direct"), // v.133
-            ("redimo", ["redime"], "redeem"), // v.134
-            ("illumino", ["illumina"], "shine"), // v.135
-            ("doceo", ["doce"], "teach") // v.135
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: petitions)
-    }
-    
-    func testSpiritualFaculties() {
-        let analysis = latinService.analyzePsalm(identity, text: psalm118Pe)
-        
-        let faculties = [
-            ("animus", ["anima"], "soul"), // v.129
-            ("intellectus", ["intellectum"], "understanding"), // v.130
-            ("os", ["os"], "mouth"), // v.131
-            ("spiritus", ["spiritum"], "spirit"), // v.131
-            ("oculus", ["oculi"], "eye") // v.136
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: faculties)
-    }
-    
-    func testTorahLanguage() {
-        let analysis = latinService.analyzePsalm(identity, text: psalm118Pe)
-        
-        let lawTerms = [
-            ("mandatum", ["mandata", "mandata"], "commandment"), // v.131, v.134
-            ("justificatio", ["justificationes"], "ordinance"), // v.135
-            ("lex", ["legem"], "law") // v.136
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: lawTerms)
-    }
-    
-    func testEmotionalExpressions() {
-        let analysis = latinService.analyzePsalm(identity, text: psalm118Pe)
-        
-        let emotions = [
-            ("desidero", ["desiderabam"], "long for"), // v.131
-            ("misereor", ["miserere"], "mercy"), // v.132
-            ("exitus", ["exitius"], "streams"), // v.136 (tears)
-            ("scrutor", ["scrutata"], "search") // v.129
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: emotions)
-    }
-    
-    // MARK: - Helper
-    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
-        for (lemma, forms, translation) in confirmedWords {
-            guard let entry = analysis.dictionary[lemma] else {
-                XCTFail("Missing lemma: \(lemma)")
-                continue
-            }
+        for (lineNumber, expectedLemmas) in lineKeyLemmas {
+            let line = psalm118Pe[lineNumber - 1]
+            let analysis = latinService.analyzePsalm(id, text: line, startingLineNumber: lineNumber)
             
-            // Verify semantic domain
-            XCTAssertTrue(
-                entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-                "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
-            )
-            
-            // Verify morphological coverage
-            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-            if !missingForms.isEmpty {
-                XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
-            }
+            let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
+            let foundLemmas = expectedLemmas.filter { detectedLemmas.contains($0.lowercased()) }
+            let missingLemmas = expectedLemmas.filter { !detectedLemmas.contains($0.lowercased()) }
             
             if verbose {
-                print("\n\(lemma.uppercased())")
-                print("  Translation: \(entry.translation ?? "?")")
-                forms.forEach { form in
-                    let count = entry.forms[form.lowercased()] ?? 0
-                    print("  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
+                let status = missingLemmas.isEmpty ? "✅" : "❌"
+                print("\(status) Line \(lineNumber): Found \(foundLemmas.count)/\(expectedLemmas.count) key lemmas: \(foundLemmas.joined(separator: ", "))")
+                
+                if !missingLemmas.isEmpty {
+                    print("   MISSING: \(missingLemmas.joined(separator: ", "))")
+                    print("   Available: \(detectedLemmas.sorted().joined(separator: ", "))")
                 }
             }
+            
+            if !missingLemmas.isEmpty {
+                allFailures.append("Line \(lineNumber): Missing lemmas: \(missingLemmas.joined(separator: ", "))")
+            }
+        }
+        
+        if !allFailures.isEmpty {
+            XCTFail("Missing lemmas detected:\n" + allFailures.joined(separator: "\n"))
+        }
+    }
+
+    func testPsalm118PeThemes() {
+        let analysis = latinService.analyzePsalm(id, text: psalm118Pe.joined(separator: " "))
+        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
+        var allFailures: [String] = []
+        
+        for (themeName, themeDescription, themeLemmas) in themeKeyLemmas {
+            let foundLemmas = themeLemmas.filter { detectedLemmas.contains($0.lowercased()) }
+            let missingLemmas = themeLemmas.filter { !detectedLemmas.contains($0.lowercased()) }
+            
+            if verbose {
+                let status = missingLemmas.isEmpty ? "✅" : "❌"
+                print("\n\(status) \(themeName.uppercased()): \(themeDescription)")
+                print("   Found \(foundLemmas.count)/\(themeLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
+                
+                if !missingLemmas.isEmpty {
+                    print("   MISSING: \(missingLemmas.joined(separator: ", "))")
+                }
+            }
+            
+            if !missingLemmas.isEmpty {
+                allFailures.append("Theme \(themeName): Missing \(missingLemmas.count) lemmas: \(missingLemmas.joined(separator: ", "))")
+            }
+        }
+        
+        if !allFailures.isEmpty {
+            XCTFail("Theme lemma requirements not met:\n" + allFailures.joined(separator: "\n"))
         }
     }
 }

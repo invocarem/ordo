@@ -1,5 +1,128 @@
 [
   {
+  "lemma": "aperio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "aperire",
+  "present": "aperio",
+  "future": "aperiam",
+  "perfect": "aperui",
+  "supine": "apertum",
+  "translations": {
+    "en": "to open, uncover, reveal",
+    "la": "aperio, aperire, aperui, apertum"
+  }
+},
+  {
+  "lemma": "ideo",
+  "part_of_speech": "adverb",
+  "declension": 0,
+  "translations": {
+    "en": "therefore, for that reason",
+    "la": "ideo"
+  }
+},
+  {
+  "lemma": "topazion",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "topazion",
+  "genitive": "topazii",
+  "translations": {
+    "en": "topaz (precious stone)",
+    "la": "topazion, topazii"
+  }
+},
+  {
+  "lemma": "habeo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "habere",
+  "present": "habeo",
+  "future": "habebo",
+  "perfect": "habui",
+  "supine": "habitum",
+  "translations": {
+    "en": "to have, hold, possess",
+    "la": "habeo, habere, habui, habitum"
+  }},
+  {
+  "lemma": "sperno",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "spernere",
+  "present": "sperno",
+  "future": "spernam",
+  "perfect": "sprevi",
+  "supine": "spretum",
+  "translations": {
+    "en": "to despise, scorn, spurn",
+    "la": "sperno, spernere, sprevi, spretum"
+  }
+},
+  {
+  "lemma": "reputo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "reputare",
+  "present": "reputo",
+  "future": "reputabo",
+  "perfect": "reputavi",
+  "supine": "reputatum",
+  "translations": {
+    "en": "to reckon, calculate, consider, reflect upon, think over",
+    "la": "reputo, reputare, reputavi, reputatum"
+  }
+},
+  {
+  "lemma": "praevaricor",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "praevaricari",
+  "present": "praevaricor",
+  "future": "praevaricabor",
+  "perfect": "praevaricatus",
+  "translations": {
+    "en": "to transgress, be a false witness",
+    "la": "praevaricor, praevaricari, praevaricatus sum"
+  },
+  "forms": {
+    "present_participle": ["praevaricans", "praevaricantis", "praevaricantes"]
+  }
+},
+  {
+  "lemma": "voluntarius",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "voluntarius",
+  "genitive": "voluntarii",
+  "translations": {
+    "en": "voluntary, willing, of free will, spontaneous",
+    "la": "voluntarius, voluntaria, voluntarium"
+  },
+  "forms": {
+    "nominative_f": ["voluntaria"],
+    "nominative_n": ["voluntarium"],
+    "accusative_n": ["voluntarium"]
+  }
+},
+  {
+  "lemma": "acquiro",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "acquirere",
+  "present": "acquiro",
+  "future": "acquiram",
+  "perfect": "acquisivi",
+  "supine": "acquisitum",
+  "translations": {
+    "en": "to acquire, gain, obtain, procure",
+    "la": "acquiro, acquirere, acquisivi, acquisitum"
+  }
+},
+  {
     "lemma": "nam",
     "part_of_speech": "conjunction",
     "declension": 0,
@@ -734,19 +857,6 @@
     }
   },
   {
-    "lemma": "voluntarius",
-    "part_of_speech": "adjective",
-    "declension": 1,
-    "gender": "masculine",
-    "nominative": "voluntarius",
-    "genitive": "voluntarii",
-    "translations": {
-      "en": "voluntary, willing, of free will",
-      "la": "voluntarius, voluntaria, voluntarium"
-    }
-  },
-
-  {
     "lemma": "castra",
     "part_of_speech": "noun",
     "declension": 2,
@@ -773,9 +883,50 @@
     },
     "forms": {
       "gerund": ["custodiendi", "custodiendo", "custodiendum", "custodiendo"],
-      "gerundive": ["custodiendus", "custodienda", "custodiendum"]
+      "gerundive": ["custodiendus", "custodienda", "custodiendum"],
+      "future_perfect_eccl": ["custodiero", "custodieris", "custodierit"],
+      "perfect_3pl_eccl": ["custodierunt"],
+      "present": [
+        "custodio",
+        "custodis",
+        "custodit",
+        "custodimus",
+        "custoditis",
+        "custodiunt"
+      ],
+      "imperfect": [
+        "custodiebam",
+        "custodiebas",
+        "custodiebat",
+        "custodiebamus",
+        "custodiebatis",
+        "custodiebant"
+      ],
+      "future": [
+        "custodiam",
+        "custodies",
+        "custodiet",
+        "custodiemus",
+        "custodietis",
+        "custodient"
+      ],
+      "perfect": [
+        "custodivi",
+        "custodivisti",
+        "custodivit",
+        "custodivimus",
+        "custodivistis",
+        "custodiverunt"
+      ],
+      "imperative_singular": ["custodi"],
+      "present_infinitive_passive": ["custodiri"]
+    },
+    "forms_plural": {
+      "imperative": ["custodite"],
+      "gerundive": ["custodiendus", "custodienda", "custodiendum"],
+      "gerundive_passive_f": ["custodiendas"]
     }
-  },
+   },
   {
     "lemma": "divido",
     "part_of_speech": "verb",
@@ -5723,61 +5874,6 @@
     }
   },
   {
-    "lemma": "custodio",
-    "part_of_speech": "verb",
-    "conjugation": 4,
-    "infinitive": "custodire",
-    "present": "custodio",
-    "perfect": "custodivi",
-    "supine": "custoditum",
-    "forms": {
-      "future_perfect_eccl": ["custodiero", "custodieris", "custodierit"],
-      "present": [
-        "custodio",
-        "custodis",
-        "custodit",
-        "custodimus",
-        "custoditis",
-        "custodiunt"
-      ],
-      "imperfect": [
-        "custodiebam",
-        "custodiebas",
-        "custodiebat",
-        "custodiebamus",
-        "custodiebatis",
-        "custodiebant"
-      ],
-      "future": [
-        "custodiam",
-        "custodies",
-        "custodiet",
-        "custodiemus",
-        "custodietis",
-        "custodient"
-      ],
-      "perfect": [
-        "custodivi",
-        "custodivisti",
-        "custodivit",
-        "custodivimus",
-        "custodivistis",
-        "custodiverunt"
-      ],
-      "imperative_singular": ["custodi"],
-      "imperative_plural": ["custodite"],
-      "present_infinitive_passive": ["custodiri"]
-    },
-    "forms_plural": {
-      "gerundive": ["custodiendus", "custodienda", "custodiendum"],
-      "gerundive_passive_f": ["custodiendas"]
-    },
-    "translations": {
-      "en": "to guard, protect, watch over",
-      "la": "custodio, custodire, custodivi, custoditum"
-    }
-  },
-  {
     "lemma": "colligo",
     "part_of_speech": "verb",
     "conjugation": 3,
@@ -9594,19 +9690,7 @@
       "la": "rapio, rapere, rapui, raptum"
     }
   },
-  {
-    "lemma": "aperio",
-    "part_of_speech": "verb",
-    "conjugation": 4,
-    "infinitive": "aperire",
-    "perfect": "aperuit",
-    "supine": "apertum",
-    "translations": {
-      "en": "to open, uncover, reveal",
-      "la": "aperio, aperire, aperui, apertum"
-    }
-  },
-  {
+    {
     "lemma": "scrutor",
     "part_of_speech": "verb",
     "conjugation": 1,
@@ -24186,6 +24270,8 @@
     "supine": "factum",
 
     "forms": {
+      "gerundive_fem_acc_pl": ["faciendas"],
+      "gerund_genitive": ["faciendi"],
       "present": ["facio", "facis", "facit", "facimus", "facitis", "faciunt"],
       "present_passive": ["fior", "fieris", "fit", "fimur", "fimini", "fiunt"],
       "imperative": ["fac", "facite"],
