@@ -4675,26 +4675,28 @@
           "comment2": "Augustine sees this as affirming the divine Logos, the eternal Word through whom all things were made. The permanence of creation reflects the unchanging nature of God's truth, which stands firm against temporal instability."
         },
         {
-          "name": "Meditation → Preservation",
-          "description": "God's law as the meditation that preserves from destruction in humility",
+          "name": "Order → Service",
+          "description": "Divine ordinance governing creation and the service of all things to God",
           "lemmas": [
+            "ordinatio",
+            "persevero",
+            "servio",
             "meditatio",
             "pereo",
-            "humilitas",
-            "obliviscor",
-            "vivifico"
+            "humilitas"
           ],
           "startLine": 3,
           "endLine": 4,
-          "comment": "The psalmist confesses that without God's law as his meditation, he would have perished in his humiliation. Through God's statutes, he is given life and will never forget them.",
-          "comment2": "For Augustine, this reveals the life-giving power of meditating on God's law. In states of humility and affliction, the law becomes not a burden but the very means of preservation and spiritual vivification, preventing total destruction."
+          "comment": "All of creation perseveres by God's ordinance and serves Him. The psalmist reflects that without God's law as his meditation, he would have perished in his humility.",
+          "comment2": "For Augustine, this reveals the cosmic order established by God where all creation serves its Creator. The meditation on God's law aligns human will with this divine order, preserving the soul from destruction in times of humiliation."
         },
         {
-          "name": "Ownership → Salvation",
-          "description": "The believer's belonging to God as the basis for the plea for salvation",
+          "name": "Remembrance → Vivification",
+          "description": "Eternal remembrance of God's justifications as the source of life",
           "lemmas": [
-            "tuus",
-            "salvus",
+            "obliviscor",
+            "iustificatio",
+            "vivifico",
             "exquiro",
             "exspecto",
             "perdo",
@@ -4702,20 +4704,13 @@
           ],
           "startLine": 5,
           "endLine": 6,
-          "comment": "Declaring 'I am Yours,' the psalmist pleads for salvation because he has sought God's precepts. Though sinners wait to destroy him, he understands God's testimonies.",
-          "comment2": "Augustine interprets 'Tuus sum ego' as the fundamental confession of the redeemed soul. This relationship of belonging grounds the plea for salvation. Understanding God's testimonies provides wisdom to evade the traps set by those who seek to destroy."
+          "comment": "The psalmist vows never to forget God's justifications, through which he has been given life. He seeks them diligently while understanding God's testimonies despite sinners waiting to destroy him.",
+          "comment2": "Augustine interprets this as the soul's commitment to remember God's acts of righteousness. This remembrance is not mere memory but spiritual participation that brings life. Understanding God's testimonies provides protection against those who seek destruction."
         },
         {
-          "name": "Limitation → Breadth",
-          "description": "Seeing the end of all perfection contrasted with the exceeding breadth of God's command",
-          "lemmas": [
-            "consummatio",
-            "finis",
-            "video",
-            "latus",
-            "mandatum",
-            "nimis"
-          ],
+          "name": "Perfection → Breadth",
+          "description": "The limitation of all human perfection compared to the boundless breadth of God's command",
+          "lemmas": ["consummatio", "finis", "latus", "mandatum", "nimis"],
           "startLine": 7,
           "endLine": 8,
           "comment": "Having seen the limit of all perfection, the psalmist concludes that God's commandment is exceedingly broad, encompassing infinitely more than human completion.",
@@ -4729,71 +4724,44 @@
       "category": "mem",
       "themes": [
         {
-          "name": "Love for God's Law",
-          "description": "Deep affection and meditation on divine commandments",
-          "lemmas": ["diligo", "meditatio", "quaero", "custodio"],
+          "name": "Affection → Meditation",
+          "description": "Deep love for God's law expressed through constant meditation",
+          "lemmas": ["diligo", "meditatio", "totus", "dies"],
           "startLine": 1,
-          "endLine": 8,
-          "comment": "Emotional and intellectual engagement with Torah"
+          "endLine": 2,
+          "comment": "The psalmist expresses profound love for God's law, declaring it his meditation all day long. This devotion makes him wiser than his enemies through God's eternal commandment.",
+          "comment2": "Augustine sees this as the soul's delight in divine wisdom, where meditation becomes continuous prayer. The eternal commandment refers to Christ, the Logos, who grants true prudence against spiritual adversaries."
         },
         {
-          "name": "Wisdom Superiority",
-          "description": "Divine law provides understanding surpassing human teachers",
-          "lemmas": ["intellego", "prudens", "super", "senex"],
-          "startLine": 2,
+          "name": "Understanding → Superiority",
+          "description": "Divinely granted understanding surpassing all teachers and elders",
+          "lemmas": ["prudens", "intellego", "doceo", "senex", "quaero"],
+          "startLine": 3,
           "endLine": 4,
-          "comment": "Divine wisdom exceeds even elders and teachers"
+          "comment": "The psalmist understands more than all his teachers and elders because God's testimonies are his meditation and he has sought God's commandments diligently.",
+          "comment2": "For Augustine, this supernatural understanding comes not from human learning but from illumination by the Holy Spirit. Those who meditate on God's word receive wisdom that surpasses earthly knowledge and age."
         },
         {
-          "name": "Sensory Delight",
-          "description": "Physical metaphors for spiritual satisfaction",
-          "lemmas": ["dulcis", "eloquium", "mel", "os"],
-          "startLine": 7,
-          "endLine": 7,
-          "comment": "Taste imagery for God's words"
-        },
-        {
-          "name": "Radical Rejection",
-          "description": "Understanding leads to complete opposition to evil",
-          "lemmas": ["odi", "iniquitas", "prohibeo", "declino"],
+          "name": "Restraint → Adherence",
+          "description": "Restraining from evil paths to keep God's words without turning aside",
+          "lemmas": ["prohibeo", "custodio", "declino", "pono"],
           "startLine": 5,
-          "endLine": 8,
-          "comment": "Cognitive understanding produces moral revulsion"
+          "endLine": 6,
+          "comment": "The psalmist restrains his feet from every evil way to keep God's words. He does not turn aside from God's judgments because God Himself has established the law for him.",
+          "comment2": "Augustine interprets this as grace-enabled restraint from sin. God's establishment of the law refers to the natural law written on the heart and the revealed law that guides the believer away from iniquity."
         },
         {
-          "name": "Divine Pedagogy",
-          "description": "God's commandments as transformative instruction",
-          "lemmas": ["doceo", "prudens", "intellego", "mandatum"],
-          "startLine": 1,
-          "endLine": 4,
-          "comment": "Law makes wise beyond normal education"
-        },
-        {
-          "name": "Two Ways Contrast",
-          "description": "Clear dichotomy between God's way and evil path",
-          "lemmas": ["via", "malus", "iniquitas", "custodio"],
-          "startLine": 5,
-          "endLine": 8,
-          "comment": "Classic wisdom literature theme"
-        },
-        {
-          "name": "Augustine: Sweetness of Truth",
-          "description": "Sensory delight as metaphor for spiritual truth",
-          "lemmas": ["dulcis", "mel", "eloquium", "odi"],
+          "name": "Sweetness → Discernment",
+          "description": "Experiencing God's words as sweetness leading to hatred of iniquity",
+          "lemmas": ["dulcis", "eloquium", "mel", "odi", "iniquitas"],
           "startLine": 7,
           "endLine": 8,
-          "comment": "Contrast between honey-sweet words and hated iniquity"
-        },
-        {
-          "name": "Augustine: Illuminated Understanding",
-          "description": "Divine light enabling superior comprehension",
-          "lemmas": ["intellego", "super", "testimonium", "prudens"],
-          "startLine": 2,
-          "endLine": 4,
-          "comment": "Grace grants understanding surpassing human teachers"
+          "comment": "God's words are sweeter than honey to the psalmist's mouth. This understanding from God's commandments leads him to hate every path of iniquity.",
+          "comment2": "Augustine sees this spiritual sweetness as the delight in God's truth that transforms the soul. True understanding of God's commands naturally produces hatred for sin and attraction to righteousness."
         }
       ]
     },
+
     {
       "psalmNumber": 118,
       "category": "nun",
