@@ -1,5 +1,26 @@
 [
   {
+    "lemma": "enim",
+    "part_of_speech": "conjunction",
+    "declension": 0,
+    "translations": {
+      "en": "for, indeed, truly, because",
+      "la": "enim"
+    }
+  },
+  {
+    "lemma": "directio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "directio",
+    "genitive": "directionis",
+    "translations": {
+      "en": "direction, guidance, management",
+      "la": "directio, directionis"
+    }
+  },
+  {
     "lemma": "forte",
     "part_of_speech": "adverb",
     "declension": 0,
@@ -406,6 +427,9 @@
     "translations": {
       "en": "young man, youth, adolescent",
       "la": "adolescens, adolescentis"
+    },
+    "forms": {
+      "comparative": ["adolescentior", "adolescentius"]
     }
   },
   {
@@ -737,6 +761,10 @@
     "translations": {
       "en": "to guard, watch over, keep, protect",
       "la": "custōdiō, custōdīre, custōdīvī, custōdītum"
+    },
+    "forms": {
+      "gerund": ["custodiendi", "custodiendo", "custodiendum", "custodiendo"],
+      "gerundive": ["custodiendus", "custodienda", "custodiendum"]
     }
   },
   {

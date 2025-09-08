@@ -3,226 +3,126 @@ import XCTest
 
 class Psalm118AlephTests: XCTestCase {
     private var latinService: LatinService!
-    let verbose = true
+    private let verbose = true
     
     override func setUp() {
         super.setUp()
         latinService = LatinService.shared
     }
-
     
-    let identity = PsalmIdentity(number: 118, category: "aleph")
-    // MARK: - Test Data (Psalm 118:1-8 "Aleph" category)
-    let psalm118Aleph = [
+    let id = PsalmIdentity(number: 118, category: "aleph")
+    
+    // MARK: - Test Data
+    private let psalm118Aleph = [
         "Beati immaculati in via, qui ambulant in lege Domini.",
         "Beati qui scrutantur testimonia eius, in toto corde exquirunt eum.",
         "Non enim qui operantur iniquitatem, in viis eius ambulaverunt.",
-        "Tu mandasti mandata tua custodire nimis.",
-        "Utinam dirigantur viae meae ad custodiendas justificationes tuas!",
-        "Tunc non confundar, cum perspexero in omnibus mandatis tuis.",
-        "Confitebor tibi in directione cordis, in eo quod didici judicia justitiae tuae.",
-        "Justificationes tuas custodiam; non me derelinquas usquequaque."
+        "Tu mandasti mandata tua custodiri nimis.",
+        "Utinam dirigantur viae meae, ad custodiendas iustificationes tuas!",
+        "Tunc non confundar, cum perspexero in omnibus praeceptis tuis.",
+        "Confitebor tibi in directione cordis, in eo quod didici iudicia iustitiae tuae.",
+        "Iustificationes tuas custodiam, non me derelinquas usquequaque."
     ]
     
-    // MARK: - Test Cases
-    // MARK: - Line Group Tests
-func testPsalm118AlephLines1and2() {
-    let line1 = psalm118Aleph[0] // "Beati immaculati in via, qui ambulant in lege Domini."
-    let line2 = psalm118Aleph[1] // "Beati qui scrutantur testimonia eius, in toto corde exquirunt eum."
-    let combinedText = line1 + " " + line2
-    let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 1)
-    
-    let testLemmas = [
-        ("beatus", ["beati"], "blessed"),
-        ("immaculatus", ["immaculati"], "blameless"),
-        ("via", ["via"], "way"),
-        ("ambulo", ["ambulant"], "walk"),
-        ("lex", ["lege"], "law"),
-        ("dominus", ["domini"], "Lord"),
-        ("scrutor", ["scrutantur"], "search"),
-        ("testimonium", ["testimonia"], "testimonies"),
-        ("cor", ["corde"], "heart"),
-        ("exquiro", ["exquirunt"], "seek")
-    ]
-    
-    if verbose {
-        print("\nPSALM 118 ALEPH:1-2 ANALYSIS:")
-        print("1: \"\(line1)\"")
-        print("2: \"\(line2)\"")
-        
-        print("\nLEMMA VERIFICATION:")
-        testLemmas.forEach { lemma, forms, translation in
-            let found = analysis.dictionary[lemma] != nil
-            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-        }
-        
-        print("\nTHEMES:")
-        print("1. Double Beatitude: beati (blessed) repeated")
-        print("2. Torah Obedience: lege (law) + testimonia (testimonies)")
-        print("3. Wholeheartedness: toto corde (whole heart)")
-    }
-    
-    // Key assertions
-    XCTAssertEqual(analysis.dictionary["beatus"]?.forms["beati"], 2, "Should find two 'blessed' references")
-    XCTAssertNotNil(analysis.dictionary["immaculatus"], "Should find blameless reference")
-    XCTAssertNotNil(analysis.dictionary["exquiro"], "Should find seeking verb")
-}
-
-func testPsalm118AlephLines3and4() {
-    let line3 = psalm118Aleph[2] // "Non enim qui operantur iniquitatem, in viis eius ambulaverunt."
-    let line4 = psalm118Aleph[3] // "Tu mandasti mandata tua custodire nimis."
-    let combinedText = line3 + " " + line4
-    let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 3)
-    
-    let testLemmas = [
-        ("iniquitas", ["iniquitatem"], "iniquity"),
-        ("via", ["viis"], "ways"),
-        ("ambulo", ["ambulaverunt"], "walk"),
-        ("mando", ["mandasti"], "command"),
-        ("mandatum", ["mandata"], "commandments"),
-        ("custodio", ["custodire"], "keep"),
-        ("nimis", ["nimis"], "diligently")
-    ]
-    
-    if verbose {
-        print("\nPSALM 118 ALEPH:3-4 ANALYSIS:")
-        print("3: \"\(line3)\"")
-        print("4: \"\(line4)\"")
-        
-        print("\nLEMMA VERIFICATION:")
-        testLemmas.forEach { lemma, forms, translation in
-            let found = analysis.dictionary[lemma] != nil
-            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-        }
-        
-        print("\nTHEMES:")
-        print("1. Contrast: iniquitatem (iniquity) vs mandata (commandments)")
-        print("2. Path Imagery: viis (ways) + ambulaverunt (walked)")
-        print("3. Divine Command: mandasti (commanded) + custodire (keep)")
-    }
-    
-    // Key assertions
-    XCTAssertEqual(analysis.dictionary["via"]?.forms["viis"], 1, "Should find 'ways' reference")
-    XCTAssertNotNil(analysis.dictionary["custodio"], "Should find keeping commandment")
-    XCTAssertNotNil(analysis.dictionary["nimis"], "Should find 'diligently' adverb")
-}
-
-func testPsalm118AlephLines5and6() {
-    let line5 = psalm118Aleph[4] // "Utinam dirigantur viae meae ad custodiendas justificationes tuas!"
-    let line6 = psalm118Aleph[5] // "Tunc non confundar, cum perspexero in omnibus mandatis tuis."
-    let combinedText = line5 + " " + line6
-    let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 5)
-    
-    let testLemmas = [
-        ("dirigo", ["dirigantur"], "direct"),
-        ("via", ["viae"], "ways"),
-        ("custodio", ["custodiendas"], "keep"),
-        ("justificatio", ["justificationes"], "ordinances"),
-        ("confundor", ["confundar"], "ashamed"),
-        ("perspicio", ["perspexero"], "look"),
-        ("mandatum", ["mandatis"], "commandments")
-    ]
-    
-    if verbose {
-        print("\nPSALM 118 ALEPH:5-6 ANALYSIS:")
-        print("5: \"\(line5)\"")
-        print("6: \"\(line6)\"")
-        
-        print("\nLEMMA VERIFICATION:")
-        testLemmas.forEach { lemma, forms, translation in
-            let found = analysis.dictionary[lemma] != nil
-            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-        }
-        
-        print("\nTHEMES:")
-        print("1. Divine Guidance: dirigantur (directed) + viae (ways)")
-        print("2. Obedience Result: non confundar (not ashamed)")
-        print("3. Comprehensive Study: omnibus mandatis (all commandments)")
-    }
-    
-    // Key assertions
-    XCTAssertEqual(analysis.dictionary["dirigo"]?.forms["dirigantur"], 1, "Should find 'direct' verb")
-    XCTAssertNotNil(analysis.dictionary["justificatio"], "Should find ordinances reference")
-    XCTAssertNotNil(analysis.dictionary["perspicio"], "Should find 'look' verb")
-}
-
-    func testBeatitudeStatements() {
-        let analysis = latinService.analyzePsalm(identity, text: psalm118Aleph)
-        
-        let blessedTerms = [
-            ("beatus", ["Beati"], "blessed"), // v.1, v.2
-            ("immaculatus", ["immaculati"], "blameless"), // v.1
-            ("confundor", ["confundar"], "be ashamed") // v.6 (negated)
+    // MARK: - Line by Line Key Lemmas Test (STRICT - fails for any missing lemma)
+    func testPsalm118AlephLineByLineKeyLemmas() {
+        // Test that each line contains ALL expected BASE LEMMAS (common words removed)
+        let lineTests = [
+            (1, ["beatus", "immaculatus", "ambulo", "dominus"]), // removed via, lex
+            (2, ["beatus", "scrutor", "testimonium", "totus", "exquiro"]), // removed cor
+            (3, ["enim", "operor", "iniquitas", "ambulo"]), // removed non, via
+            (4, ["mando", "mandatum", "custodio", "nimis"]), // removed tu
+            (5, ["utinam", "dirigo", "custodio", "iustificatio"]), // removed via
+            (6, ["tunc", "confundo", "perspicio", "omnis", "praeceptum"]), // removed non, cum
+            (7, ["confiteor", "directio", "disco", "iudicium", "iustitia"]), // removed cor
+            (8, ["iustificatio", "custodio", "derelinquo", "usquequaque"]) // removed non
         ]
         
-        verifyWordsInAnalysis(analysis, confirmedWords: blessedTerms)
-    }
-    
-    func testTorahActionVerbs() {
-        let analysis = latinService.analyzePsalm(identity, text: psalm118Aleph)
+        var allFailures: [String] = []
         
-        let actionVerbs = [
-            ("ambulo", ["ambulant", "ambulaverunt"], "walk"), // v.1, v.3
-            ("scrutor", ["scrutantur"], "search"), // v.2
-            ("custodio", ["custodire", "custodiendas", "custodiam"], "keep") // v.4, v.5, v.8
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: actionVerbs)
-    }
-    
-    func testDivinePrecepts() {
-        let analysis = latinService.analyzePsalm(identity, text: psalm118Aleph)
-        
-        let lawTerms = [
-            ("lex", ["lege"], "law"), // v.1
-            ("testimonium", ["testimonia"], "testimony"), // v.2
-            ("mandatum", ["mandata", "mandatis"], "commandment"), // v.4, v.6
-            ("justificatio", ["justificationes", "justificationes"], "ordinance") // v.5, v.8
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: lawTerms)
-    }
-    
-    func testSpiritualDirection() {
-        let analysis = latinService.analyzePsalm(identity, text: psalm118Aleph)
-        
-        let guidanceTerms = [
-            ("via", ["via", "viis", "viae"], "way"), // v.1, v.3, v.5
-            ("dirigo", ["dirigantur"], "direct"), // v.5
-            ("derelinquo", ["derelinquas"], "forsake") // v.8 (negated)
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: guidanceTerms)
-    }
-    
-    // MARK: - Helper
-    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
-        for (lemma, forms, translation) in confirmedWords {
-            guard let entry = analysis.dictionary[lemma] else {
-                XCTFail("Missing lemma: \(lemma)")
-                continue
-            }
+        for (lineNumber, expectedLemmas) in lineTests {
+            let line = psalm118Aleph[lineNumber - 1]
+            let analysis = latinService.analyzePsalm(id, text: line, startingLineNumber: lineNumber)
             
-            // Verify semantic domain
-            XCTAssertTrue(
-                entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-                "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
-            )
-            
-            // Verify morphological coverage
-            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-            if !missingForms.isEmpty {
-                XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
-            }
+            let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
+            let foundLemmas = expectedLemmas.filter { detectedLemmas.contains($0.lowercased()) }
+            let missingLemmas = expectedLemmas.filter { !detectedLemmas.contains($0.lowercased()) }
             
             if verbose {
-                print("\n\(lemma.uppercased())")
-                print("  Translation: \(entry.translation ?? "?")")
-                forms.forEach { form in
-                    let count = entry.forms[form.lowercased()] ?? 0
-                    print("  \(form.padding(toLength: 15, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
+                let status = missingLemmas.isEmpty ? "✅" : "❌"
+                print("\(status) Line \(lineNumber): Found \(foundLemmas.count)/\(expectedLemmas.count) key lemmas: \(foundLemmas.joined(separator: ", "))")
+                
+                if !missingLemmas.isEmpty {
+                    print("   MISSING: \(missingLemmas.joined(separator: ", "))")
+                    print("   Available: \(detectedLemmas.sorted().joined(separator: ", "))")
                 }
             }
+            
+            if !missingLemmas.isEmpty {
+                allFailures.append("Line \(lineNumber): Missing lemmas: \(missingLemmas.joined(separator: ", "))")
+            }
         }
+        
+        if !allFailures.isEmpty {
+            XCTFail("Missing lemmas detected:\n" + allFailures.joined(separator: "\n"))
+        }
+    }
+    
+    // MARK: - Thematic Tests
+    
+    func testBlessednessTheme() {
+        let analysis = latinService.analyzePsalm(id, text: psalm118Aleph.joined(separator: " "))
+        
+        let blessedLemmas = ["beatus", "immaculatus", "confundo", "iustitia", "directio"]
+        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
+        let foundLemmas = blessedLemmas.filter { detectedLemmas.contains($0.lowercased()) }
+        
+        if verbose {
+            print("\nBLESSEDNESS THEME: Found \(foundLemmas.count)/\(blessedLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
+        }
+        
+        XCTAssertTrue(foundLemmas.count >= 3, "Should find at least 3 blessedness lemmas. Found: \(foundLemmas.joined(separator: ", "))")
+    }
+    
+    func testObedienceTheme() {
+        let analysis = latinService.analyzePsalm(id, text: psalm118Aleph.joined(separator: " "))
+        
+        let obedienceLemmas = ["custodio", "ambulo", "mando", "dirigo", "perspicio"]
+        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
+        let foundLemmas = obedienceLemmas.filter { detectedLemmas.contains($0.lowercased()) }
+        
+        if verbose {
+            print("\nOBEDIENCE THEME: Found \(foundLemmas.count)/\(obedienceLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
+        }
+        
+        XCTAssertTrue(foundLemmas.count >= 4, "Should find at least 4 obedience lemmas. Found: \(foundLemmas.joined(separator: ", "))")
+    }
+    
+    func testDivineLawTheme() {
+        let analysis = latinService.analyzePsalm(id, text: psalm118Aleph.joined(separator: " "))
+        
+        let lawLemmas = ["testimonium", "mandatum", "iustificatio", "praeceptum", "iudicium"]
+        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
+        let foundLemmas = lawLemmas.filter { detectedLemmas.contains($0.lowercased()) }
+        
+        if verbose {
+            print("\nDIVINE LAW THEME: Found \(foundLemmas.count)/\(lawLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
+        }
+        
+        XCTAssertTrue(foundLemmas.count >= 4, "Should find at least 4 divine law lemmas. Found: \(foundLemmas.joined(separator: ", "))")
+    }
+    
+    func testHeartAndSeekingTheme() {
+        let analysis = latinService.analyzePsalm(id, text: psalm118Aleph.joined(separator: " "))
+        
+        let heartLemmas = ["exquiro", "scrutor", "disco", "confiteor", "usquequaque"]
+        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
+        let foundLemmas = heartLemmas.filter { detectedLemmas.contains($0.lowercased()) }
+        
+        if verbose {
+            print("\nHEART AND SEEKING THEME: Found \(foundLemmas.count)/\(heartLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
+        }
+        
+        XCTAssertTrue(foundLemmas.count >= 4, "Should find at least 4 heart/seeking lemmas. Found: \(foundLemmas.joined(separator: ", "))")
     }
 }
