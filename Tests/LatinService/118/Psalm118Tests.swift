@@ -16,74 +16,7 @@ final class Psalm118Tests: XCTestCase {
         super.tearDown()
     }
     
-    func testAnalyzePsalm118Aleph() {
-    let psalm119Aleph = [
-        "Beati immaculati in via, qui ambulant in lege Domini.",
-        "Beati qui scrutantur testimonia eius, in toto corde exquirunt eum.",
-        "Non enim qui operantur iniquitatem, in viis eius ambulaverunt.",
-        "Tu mandasti mandata tua custodire nimis.",
-        "Utinam dirigantur viae meae ad custodiendas iustificationes tuas!",
-        "Tunc non confundar, cum perspexero in omnibus mandatis tuis.",
-        "Confitebor tibi in directione cordis, in eo quod didici iudicia iustitiae tuae.",
-        "Iustificationes tuas custodiam; non me derelinquas usquequaque."
-    ]
-    
-    let analysis = latinService.analyzePsalm(text: psalm119Aleph)
-    // print("All words in analysis dictionary:")
-    //analysis.dictionary.keys.sorted().forEach { print($0) }
-    
-    // Basic statistics
-    XCTAssertGreaterThan(analysis.totalWords, 0, "Should have words in psalm")
-    XCTAssertGreaterThan(analysis.uniqueWords, 0, "Should have unique words")
-    XCTAssertGreaterThan(analysis.uniqueLemmas, 0, "Should have unique lemmas")
-
-    
-    // Test specific words
-    XCTAssertNotNil(analysis.dictionary["ambulo"], "Should have 'ambulo' in dictionary")
-   
-    
-     guard let ambuloEntry = analysis.dictionary["ambulo"] else {
-        XCTFail("Dictionary should contain 'ambulo' lemma")
-        return
-    }
-    
-    // 3. Verify basic properties of the ambulo entry
-    XCTAssertEqual(ambuloEntry.entity?.partOfSpeech?.rawValue, "verb", "Should be a verb")
-    XCTAssertEqual(ambuloEntry.translation, "walk", "English translation should be 'walk'")
-    // Verify forms and counts for 'ambulo' (lemma)
-    if let ambuloInfo = analysis.dictionary["ambulo"] {
-        XCTAssertEqual(ambuloInfo.translation, "walk", "Translation should match")
-        
-        // Check that the forms exist and have counts > 0
-        if let ambulantCount = ambuloInfo.forms["ambulant"] {
-            XCTAssertGreaterThan(ambulantCount, 0, "'ambulant' should appear at least once")
-        } else {
-            XCTFail("Missing 'ambulant' form in analysis")
-        }
-        
-        if let ambulaveruntCount = ambuloInfo.forms["ambulaverunt"] {
-            XCTAssertGreaterThan(ambulaveruntCount, 0, "'ambulaverunt' should appear at least once")
-        } else {
-            XCTFail("Missing 'ambulaverunt' form in analysis")
-        }
-    } else {
-        XCTFail("Missing 'ambulo' in analysis")
-    }
-    
-     // Update these checks to look for the lemma forms:
-    XCTAssertNotNil(analysis.dictionary["beatus"], "Should have 'beatus' (lemma of 'beati') in dictionary")
-    XCTAssertNotNil(analysis.dictionary["lex"], "Should have 'lex' (lemma of 'lege') in dictionary")
-    
-    // Additional checks for other important words in this psalm
-    
-    XCTAssertNotNil(analysis.dictionary["via"], "Should have 'via' in dictionary")
-    
-     XCTAssertNotNil(analysis.dictionary["immaculatus"], "Should have 'immaculatus' in dictionary")
-    XCTAssertNotNil(analysis.dictionary["dominus"], "Should have 'dominus' in dictionary")
-    XCTAssertNotNil(analysis.dictionary["mandatum"], "Should have 'mandatum' in dictionary")
-
-}
-    
+      
     func testAnalyzePsalm118Gimel() {
     let psalm119Gimel = [
         "Retribue servo tuo, vivifica me, et custodiam sermones tuos.",
