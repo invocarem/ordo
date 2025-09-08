@@ -4,7 +4,7 @@
     "part_of_speech": "adverb",
     "declension": 0,
     "translations": {
-      "en": "by chance, by accident, perchance, perhaps, maybe",
+      "en": "by chance, perhaps, maybe",
       "la": "forte"
     }
   },
@@ -5014,7 +5014,7 @@
     "nominative": "meditatio",
     "genitive": "meditationis",
     "translations": {
-      "en": "meditation, contemplation, study (of Scripture)",
+      "en": "meditation, contemplation",
       "la": "meditatio, meditationis"
     }
   },
