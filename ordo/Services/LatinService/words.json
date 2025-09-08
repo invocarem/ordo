@@ -1,5 +1,18 @@
 [
   {
+  "lemma": "venor",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "venari",
+  "present": "venor",
+  "future": "venabor",
+  "perfect": "venatus",
+  "translations": {
+    "en": "to hunt, chase, pursue",
+    "la": "venor, venari, venatus sum"
+  }
+},
+  {
   "lemma": "aperio",
   "part_of_speech": "verb",
   "conjugation": 4,
@@ -14151,10 +14164,10 @@
       "ablative": ["mille"]
     },
     "forms_plural": {
-      "nominative_n": ["millia"],
+      "nominative_n": ["milia"],
       "genitive_n": ["millium"],
       "dative_n": ["millibus"],
-      "accusative_n": ["millia"],
+      "accusative_n": ["milia"],
       "ablative_n": ["millibus"]
     },
     "translations": {
