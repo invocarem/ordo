@@ -4666,80 +4666,60 @@
       "category": "lamed",
       "themes": [
         {
-          "name": "Eternal Foundations",
-          "description": "God's word as enduring cosmic reality",
-          "lemmas": ["aeternum", "verbum", "permaneo", "fundo", "caelum"],
+          "name": "Eternity → Permanence",
+          "description": "The eternal and unchanging nature of God's word and creation",
+          "lemmas": ["aeternum", "permaneo", "veritas", "fundo", "ordinatio"],
           "startLine": 1,
           "endLine": 2,
-          "comment": "Creation established through divine speech"
+          "comment": "The psalmist declares the eternal permanence of God's word in heaven and His truth across all generations. The earth itself, founded by God, endures by His decree.",
+          "comment2": "Augustine sees this as affirming the divine Logos, the eternal Word through whom all things were made. The permanence of creation reflects the unchanging nature of God's truth, which stands firm against temporal instability."
         },
         {
-          "name": "Divine Ordinance",
-          "description": "Creation's obedience to God's decrees",
-          "lemmas": ["ordinatio", "persevero", "servio", "dies", "omnia"],
-          "startLine": 3,
-          "endLine": 3,
-          "comment": "Nature's submission contrasts with human rebellion"
-        },
-        {
-          "name": "Law as Lifeline",
-          "description": "Scripture meditation preventing destruction",
-          "lemmas": ["lex", "meditatio", "pereo", "humilitas", "vivifico"],
-          "startLine": 4,
-          "endLine": 5,
-          "comment": "Torah study as antidote to spiritual death"
-        },
-        {
-          "name": "Covenantal Identity",
-          "description": "Belonging to God through obedience",
-          "lemmas": ["tuus", "salvo", "exquiro", "justificatio", "obliviscor"],
-          "startLine": 5,
-          "endLine": 6,
-          "comment": "Mutual possession expressed through law-keeping"
-        },
-        {
-          "name": "Enemy Contrast",
-          "description": "Righteous understanding vs. destructive intent",
+          "name": "Meditation → Preservation",
+          "description": "God's law as the meditation that preserves from destruction in humility",
           "lemmas": [
-            "peccator",
-            "perdo",
+            "meditatio",
+            "pereo",
+            "humilitas",
+            "obliviscor",
+            "vivifico"
+          ],
+          "startLine": 3,
+          "endLine": 4,
+          "comment": "The psalmist confesses that without God's law as his meditation, he would have perished in his humiliation. Through God's statutes, he is given life and will never forget them.",
+          "comment2": "For Augustine, this reveals the life-giving power of meditating on God's law. In states of humility and affliction, the law becomes not a burden but the very means of preservation and spiritual vivification, preventing total destruction."
+        },
+        {
+          "name": "Ownership → Salvation",
+          "description": "The believer's belonging to God as the basis for the plea for salvation",
+          "lemmas": [
+            "tuus",
+            "salvus",
+            "exquiro",
             "exspecto",
-            "testimonium",
+            "perdo",
             "intellego"
           ],
-          "startLine": 7,
-          "endLine": 7,
-          "comment": "Opposition highlighting divine wisdom"
-        },
-        {
-          "name": "Boundless Commandment",
-          "description": "Infinite scope of God's instruction",
-          "lemmas": ["consummatio", "finis", "latus", "mandatum", "nimis"],
-          "startLine": 8,
-          "endLine": 8,
-          "comment": "Paradox of perfect law exceeding human limits"
-        },
-        {
-          "name": "Augustine: Eternal Word",
-          "description": "Christ as the abiding divine utterance",
-          "lemmas": ["verbum", "permaneo", "caelum", "veritas", "fundo"],
-          "startLine": 1,
-          "endLine": 2,
-          "comment": "Johannine connection (John 1:1)"
-        },
-        {
-          "name": "Augustine: Law and Grace",
-          "description": "Commandments as means of vivification",
-          "lemmas": [
-            "justificatio",
-            "vivifico",
-            "salvo",
-            "mandatum",
-            "misericordia"
-          ],
           "startLine": 5,
+          "endLine": 6,
+          "comment": "Declaring 'I am Yours,' the psalmist pleads for salvation because he has sought God's precepts. Though sinners wait to destroy him, he understands God's testimonies.",
+          "comment2": "Augustine interprets 'Tuus sum ego' as the fundamental confession of the redeemed soul. This relationship of belonging grounds the plea for salvation. Understanding God's testimonies provides wisdom to evade the traps set by those who seek to destroy."
+        },
+        {
+          "name": "Limitation → Breadth",
+          "description": "Seeing the end of all perfection contrasted with the exceeding breadth of God's command",
+          "lemmas": [
+            "consummatio",
+            "finis",
+            "video",
+            "latus",
+            "mandatum",
+            "nimis"
+          ],
+          "startLine": 7,
           "endLine": 8,
-          "comment": "Grace-enabled obedience to life-giving law"
+          "comment": "Having seen the limit of all perfection, the psalmist concludes that God's commandment is exceedingly broad, encompassing infinitely more than human completion.",
+          "comment2": "Augustine sees this as a profound spiritual insight: all human perfection has an end and is ultimately limited. In contrast, God's commandment is immeasurably broad—it is charity, which knows no bounds and fulfills the law completely."
         }
       ]
     },

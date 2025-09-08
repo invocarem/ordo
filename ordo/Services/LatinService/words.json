@@ -1,5 +1,14 @@
 [
   {
+    "lemma": "forte",
+    "part_of_speech": "adverb",
+    "declension": 0,
+    "translations": {
+      "en": "by chance, by accident, perchance, perhaps, maybe",
+      "la": "forte"
+    }
+  },
+  {
     "lemma": "uter",
     "part_of_speech": "pronoun",
     "declension": 0,
@@ -7581,7 +7590,7 @@
     "perfect": "consummavi",
     "supine": "consummatum",
     "translations": {
-      "en": "complete, finish, perfect; (in some contexts) consume, destroy",
+      "en": "complete, finish, consume",
       "la": "consummo, consummare"
     }
   },

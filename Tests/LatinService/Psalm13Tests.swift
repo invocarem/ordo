@@ -61,7 +61,7 @@ class Psalm13Tests: XCTestCase {
         // Verify key lemmas are detected
         let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
         
-        for (lemma, expectedForms, expectedTranslation) in keyLemmas {
+        for (lemma, expectedForms, _) in keyLemmas {
             XCTAssertTrue(
                 detectedLemmas.contains(lemma.lowercased()),
                 "Key lemma '\(lemma)' should be detected in analysis"

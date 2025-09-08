@@ -87,7 +87,7 @@ class Psalm128Tests: XCTestCase {
         let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
         var failedLemmas: [String] = []
         
-        for (lemma, expectedForms, expectedTranslation) in keyLemmas {
+        for (lemma, expectedForms, _) in keyLemmas {
             let lemmaLower = lemma.lowercased()
             let isDetected = detectedLemmas.contains(lemmaLower)
             

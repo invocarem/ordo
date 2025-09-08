@@ -276,7 +276,7 @@ private func analyzeVerbPassive(form: String, translation: String) -> String? {
         case "present", "present_active_indicative":
             return "\(person) \(cleanTranslation)\(effectiveNumber) (present)"
         case "present_passive_indicative":
-            return "\(person) \(isPlural ? "are" : "is") [\(translation)]\(effectiveNumber) (present passive \(gender))"
+            return "\(person) \(isPlural ? "are" : "is") [\(translation)]\(effectiveNumber) (present passive)"
         case "imperfect_active":
             let base = extractPrimaryVerb(translation)
             let verb = (person == "they" || person == "we" || (person == "you" && isPlural)) ? "were" : "was"
