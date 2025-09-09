@@ -229,12 +229,15 @@ public struct PsalmAnalysisResult: Codable {
     public struct ConceptualTheme: Codable {
         public let name: String
         public let description: String
+        public let category: ThemeCategory
         public let supportingLemmas: [String]
         public init(name: String,
                    description: String,
+                   category: ThemeCategory,
                    supportingLemmas: [String]) {
             self.name = name
             self.description = description
+            self.category = ThemeCategory
             self.supportingLemmas = supportingLemmas
         }
     }
