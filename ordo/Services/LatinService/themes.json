@@ -1941,104 +1941,130 @@
         }
       ]
     },
+
     {
       "psalmNumber": 50,
       "category": "",
       "themes": [
         {
-          "name": "Penitence",
-          "description": "Recognition and contrition for sin",
-          "lemmas": ["misereor", "peccatum", "iniquitas", "cognosco", "contra"],
+          "name": "Appeal → Mercy",
+          "description": "Pleading for forgiveness based on God's abundant compassion",
+          "lemmas": ["misereor", "miseratio", "deleo", "iniquitas"],
           "startLine": 1,
-          "endLine": 5,
-          "comment": "David's confession begins with a plea for mercy (*misereor*) and acknowledges sin (*peccatum*, *iniquitas*)"
+          "endLine": 2,
+          "comment": "The psalmist begs for mercy according to God's great compassion, asking for his iniquity to be blotted out according to the multitude of God's tender mercies.",
+          "comment2": "Augustine sees this as the fundamental posture of the penitent soul—appealing not to human merit but to the infinite depths of divine mercy for cleansing."
         },
         {
-          "name": "Divine Mercy",
-          "description": "Appeals to God's compassionate nature",
-          "lemmas": ["misericordia", "miseratio", "deleo", "lavo", "mundo"],
-          "startLine": 1,
+          "name": "Purification → Knowledge",
+          "description": "Seeking thorough cleansing accompanied by acknowledgment of sin",
+          "lemmas": ["lavo", "mundo", "cognosco", "peccatum", "contra"],
+          "startLine": 3,
           "endLine": 4,
-          "comment": "Mercy is rooted in God's nature (*misericordia*) and enacted through cleansing (*lava*, *deleo*)"
+          "comment": "The psalmist asks to be washed thoroughly from iniquity and made clean from sin, while acknowledging his transgressions which are ever before him.",
+          "comment2": "For Augustine, the prayer for cleansing is coupled with the self-knowledge that recognizes sin as a constant reality, requiring ongoing divine purification."
         },
         {
-          "name": "Purification",
-          "description": "Ritual and spiritual cleansing",
-          "lemmas": ["aspergo", "hyssopus", "mundo", "lavo", "dealbo"],
-          "startLine": 8,
+          "name": "Confession → Justification",
+          "description": "Admitting sin against God alone so He may be justified in His words",
+          "lemmas": ["solus", "pecco", "coram", "iustifico", "iudico"],
+          "startLine": 5,
+          "endLine": 6,
+          "comment": "The psalmist confesses he has sinned against God alone and done evil in His sight, so that God may be justified in His words and prevail when judged.",
+          "comment2": "Augustine interprets this as acknowledging that all sin is ultimately against God, and His judgment is always righteous, even when condemning human failure."
+        },
+        {
+          "name": "Truth → Revelation",
+          "description": "God's love for truth and revelation of hidden wisdom",
+          "lemmas": ["veritas", "diligo", "occultus", "sapientia", "manifesto"],
+          "startLine": 7,
           "endLine": 8,
-          "comment": "Hyssop symbolizes purification; washing metaphors (*lavabis*) transcend ritual"
+          "comment": "God loves truth and has made known to the psalmist the hidden and secret things of His wisdom, leading to purification with hyssop and washing.",
+          "comment2": "Augustine sees this as God revealing the deep mysteries of redemption through Christ, symbolized by the hyssop of purification that makes whiter than snow."
         },
         {
-          "name": "Heart Transformation",
-          "description": "Request for inner renewal",
-          "lemmas": ["cor", "innovo", "spiritus", "rectus", "crea"],
+          "name": "Joy → Restoration",
+          "description": "Petition for joy and gladness to restore humbled bones",
+          "lemmas": ["auditus", "gaudium", "laetitia", "exsulto", "humilio"],
+          "startLine": 9,
+          "endLine": 10,
+          "comment": "The psalmist asks God to make him hear joy and gladness so his humbled bones may rejoice, while begging God to turn His face from his sins.",
+          "comment2": "Augustine interprets the humbled bones as the deepest parts of human nature crushed by sin, now asking for the joy that only divine forgiveness can restore."
+        },
+        {
+          "name": "Creation → Renewal",
+          "description": "Pleading for a clean heart and renewal of a right spirit",
+          "lemmas": ["creo", "cor", "mundus", "innovo", "spiritus", "rectus"],
           "startLine": 11,
           "endLine": 12,
-          "comment": "A new heart (*cor mundum*) and spirit (*spiritum rectum*) are God's work"
+          "comment": "The psalmist asks God to create a clean heart within him and renew a right spirit, begging not to be cast away from God's presence nor have His Holy Spirit taken away.",
+          "comment2": "Augustine sees this as the pinnacle of the penitential prayer—asking not merely for forgiveness but for total inner transformation through the Holy Spirit's work."
         },
         {
-          "name": "True Sacrifice",
-          "description": "Contrition over ritual offerings",
+          "name": "Salvation → Confirmation",
+          "description": "Restoration of salvific joy and strengthening by the Spirit",
+          "lemmas": [
+            "reddo",
+            "salutaris",
+            "spiritus",
+            "principalis",
+            "confirmo"
+          ],
+          "startLine": 13,
+          "endLine": 14,
+          "comment": "The psalmist asks for the return of the joy of God's salvation and to be upheld by a willing spirit, vowing to teach transgressors God's ways so sinners will convert.",
+          "comment2": "For Augustine, the 'spiritus principalis' refers to the Holy Spirit who confirms and strengthens the redeemed soul to become an instrument for others' conversion."
+        },
+        {
+          "name": "Deliverance → Proclamation",
+          "description": "Freedom from bloodguilt leading to proclamation of righteousness",
+          "lemmas": [
+            "libero",
+            "sanguis",
+            "exsulto",
+            "lingua",
+            "iustitia",
+            "annuntio"
+          ],
+          "startLine": 15,
+          "endLine": 16,
+          "comment": "The psalmist asks deliverance from bloodguilt so his tongue may joyfully declare God's righteousness, and for the Lord to open his lips to proclaim praise.",
+          "comment2": "Augustine interprets the bloodguilt as the debt of sin, and the opened lips as the mouth empowered by grace to proclaim God's praise rather than human boasting."
+        },
+        {
+          "name": "Sacrifice → Contrition",
+          "description": "True sacrifice as a broken spirit rather than ritual offerings",
           "lemmas": [
             "sacrificium",
-            "contribulo",
             "holocaustum",
-            "despicio",
-            "contritus"
+            "contribulo",
+            "contero",
+            "despicio"
           ],
           "startLine": 17,
           "endLine": 18,
-          "comment": "God rejects empty sacrifices (*holocaustis*) but accepts a broken spirit (*spiritus contribulatus*)"
+          "comment": "God does not desire ritual sacrifice but a contrite spirit—a heart that is broken and humbled, which He will not despise.",
+          "comment2": "Augustine sees this as the fulfillment of all sacrifice in Christ's once-for-all offering, now reflected in the believer's contrite heart rather than external rituals."
         },
         {
-          "name": "Restoration",
-          "description": "Renewal of joy and mission",
-          "lemmas": ["reddo", "laetitia", "docebo", "exsulto"],
-          "startLine": 13,
-          "endLine": 16,
-          "comment": "Forgiveness restores joy (*laetitiam*) and enables teaching (*docebo*)"
-        },
-        {
-          "name": "Augustine: True Penance",
-          "description": "Self-knowledge and humility in confession",
+          "name": "Restoration → Acceptance",
+          "description": "Prayer for Zion's restoration leading to accepted sacrifices",
           "lemmas": [
-            "cognosco",
-            "contra",
-            "humiliata",
-            "veritatem",
-            "visceribus"
+            "benigne",
+            "voluntas",
+            "aedifico",
+            "accipio",
+            "oblatio",
+            "impono"
           ],
-          "startLine": 4,
-          "endLine": 11,
-          "comment": "Augustine emphasizes truth (*veritatem*) and humility (*humiliata*) as prerequisites for mercy"
-        },
-        {
-          "name": "Augustine: Hyssop of Humility",
-          "description": "Purification through lowliness",
-          "lemmas": ["hyssopus", "aspergo", "humilio", "dealbo"],
-          "startLine": 8,
-          "endLine": 9,
-          "comment": "Hyssop cleanses because it signifies humility (*ossa humiliata*)"
-        },
-        {
-          "name": "Augustine: Spiritual Sacrifice",
-          "description": "Contrite heart as true worship",
-          "lemmas": ["spiritus", "contribulo", "contritus", "holocaustum"],
-          "startLine": 17,
-          "endLine": 18,
-          "comment": "Rejects ritual (*holocaustis*) for inward sacrifice (*spiritus contribulatus*)"
-        },
-        {
-          "name": "Augustine: City of God",
-          "description": "Jerusalem as the redeemed community",
-          "lemmas": ["sion", "jerusalem", "aedifico", "altare", "vitulus"],
           "startLine": 19,
           "endLine": 20,
-          "comment": "The rebuilding of Jerusalem (line 19) and altar offerings (line 20) prefigure the Church (cf. *City of God*, XVII)"
+          "comment": "The psalmist asks God to show favor to Zion and rebuild Jerusalem's walls, so He may accept righteous sacrifices and offerings upon His altar.",
+          "comment2": "Augustine interprets this as the prayer for the heavenly Jerusalem—the Church—to be built up, where spiritual sacrifices offered in righteousness are accepted by God."
         }
       ]
     },
+
     {
       "psalmNumber": 52,
       "category": "",

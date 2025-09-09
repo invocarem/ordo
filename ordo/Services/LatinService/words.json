@@ -1,5 +1,33 @@
 [
   {
+    "lemma": "ierusalem",
+    "part_of_speech": "noun",
+    "declension": 0,
+    "gender": "feminine",
+    "nominative": "ierusalem",
+    "translations": {
+      "en": "Jerusalem",
+      "la": "Ierusalem"
+    }
+  },
+  {
+    "lemma": "iustifico",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "iustificare",
+    "present": "iustifico",
+    "future": "iustificabo",
+    "perfect": "iustificavi",
+    "supine": "iustificatum",
+    "forms": {
+      "present_passive_subjunctive_2sg": ["iustificeris"]
+    },
+    "translations": {
+      "en": "to justify, be justified",
+      "la": "iustifico, iustificare"
+    }
+  },
+  {
     "lemma": "soporor",
     "part_of_speech": "verb",
     "conjugation": 1,
