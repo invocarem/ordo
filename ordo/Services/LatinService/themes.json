@@ -42,7 +42,7 @@
         "name": "Divine Justice",
         "description": "God's righteous judgment",
         "category": "justice",
-        "lemmas": ["pereo", "resurgo"]
+        "lemmas": ["pereo", "resurgo", "proicio", "ventus", "pulvis", "terra"]
       },
       {
         "name": "Righteous Worship",
@@ -54,7 +54,7 @@
         "name": "Virtuous Life",
         "description": "Qualities of the righteous person",
         "category": "virtue",
-        "lemmas": ["beatus", "iustus", "prospero", "fructus"]
+        "lemmas": ["beatus", "iustus", "prospero", "fructus", "lignum", "aqua", "folium"]
       },
       {
         "name": "Spiritual Conflict",

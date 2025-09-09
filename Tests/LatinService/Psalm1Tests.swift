@@ -44,7 +44,7 @@ private let themeKeyLemmas: [(name: String, description: String, lemmas: [String
     (
         "Divine Justice",
         "God's righteous judgment", 
-        ["pereo", "resurgo"],
+        ["pereo", "resurgo", "proicio", "ventus", "pulvis", "terra"],
         .justice
     ),
     (
@@ -56,7 +56,7 @@ private let themeKeyLemmas: [(name: String, description: String, lemmas: [String
     (
         "Virtuous Life",
         "Qualities of the righteous person",
-        ["beatus", "iustus", "prospero", "fructus"],
+        ["beatus", "iustus", "prospero", "fructus", "lignum", "aqua", "folium"],
         .virtue
     ),
     (
