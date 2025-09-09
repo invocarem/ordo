@@ -16,9 +16,10 @@ public typealias PsalmThemes = [PsalmThemeData]
 public struct PsalmThemeData: Codable {
     let psalmNumber: Int
     let category: String
-    let themes: [Theme]
+    let structuralThemes: [StructuralTheme]
+    let conceptualThemes: [ConceptualTheme]?
     
-    public struct Theme: Codable {
+    public struct StructuralTheme: Codable {
         let name: String
         let description: String
         let lemmas: [String]
@@ -26,6 +27,11 @@ public struct PsalmThemeData: Codable {
         let endLine: Int
         let comment: String?
         let comment2: String?
+    }
+    public struct ConceptualTheme: Codable {
+        let name: String
+        let description: String
+        let lemmas: [String]
     }
 }
 
@@ -66,16 +72,21 @@ class PsalmThemeManager {
         }
     }
     
-    func getThemes(for psalmNumber: Int, category: String = "") -> [PsalmThemeData.Theme] {
+    func getThemes(for psalmNumber: Int, category: String = "") -> [PsalmThemeData.StructuralTheme] {
         return themeData
             .filter { $0.psalmNumber == psalmNumber && $0.category == category }
-            .flatMap { $0.themes }
+            .flatMap { $0.structuralThemes }
     }
     
-    func getThemes(forLine lineNumber: Int, psalmNumber: Int, category: String = "") -> [PsalmThemeData.Theme] {
+    func getConceptualThemes(for psalmNumber: Int, category: String = "") -> [PsalmThemeData.ConceptualTheme] {
+    return themeData
+        .filter { $0.psalmNumber == psalmNumber && $0.category == category }
+        .flatMap { $0.conceptualThemes ?? [] }  
+}
+    func getThemes(forLine lineNumber: Int, psalmNumber: Int, category: String = "") -> [PsalmThemeData.StructuralTheme] {
         return themeData
             .filter { $0.psalmNumber == psalmNumber && $0.category == category }
-            .flatMap { $0.themes }
+            .flatMap { $0.structralThemes }
             .filter { lineNumber >= $0.startLine && lineNumber <= $0.endLine }
     }
 }
@@ -117,7 +128,7 @@ extension LatinService {
         
         if isThemePresent {
             updatedResult.themes.append(
-                PsalmAnalysisResult.Theme(
+                PsalmAnalysisResult.StructuralTheme(
                     name: theme.name,
                     description: theme.description,
                     supportingLemmas: theme.lemmas,

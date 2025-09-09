@@ -193,7 +193,8 @@ public struct PsalmAnalysisResult: Codable {
     public let uniqueLemmas: Int
     public let dictionary: [String: LemmaInfo]
     public let orderedLemmas: [String]
-    public var themes: [Theme]
+    public var structuralThemes: [StructuralTheme]  // Changed from themes to structuralThemes
+    public var conceptualThemes: [ConceptualTheme]?
     
     public struct LemmaInfo: Codable {
         public let count: Int
@@ -203,7 +204,7 @@ public struct PsalmAnalysisResult: Codable {
         public let generatedForms: [String]
     }
     
-    public struct Theme: Codable {
+    public struct StructuralTheme: Codable {
             public let name: String
             public let description: String
             public let supportingLemmas: [String]
@@ -224,6 +225,19 @@ public struct PsalmAnalysisResult: Codable {
                 self.comment2 = comment2
             }
         }
+
+    public struct ConceptualTheme: Codable {
+        public let name: String
+        public let description: String
+        public let supportingLemmas: [String]
+        public init(name: String,
+                   description: String,
+                   supportingLemmas: [String]) {
+            self.name = name
+            self.description = description
+            self.supportingLemmas = supportingLemmas
+        }
+    }
 }
 
 public class LatinService {
@@ -402,7 +416,8 @@ public func analyzePsalm(_ identity: PsalmIdentity? = nil, text: [String], start
         uniqueLemmas: lemmaCounts.count,
         dictionary: resultDictionary,
         orderedLemmas: orderedLemmas,
-        themes: []
+        structuralThemes: [],
+        conceptualThemes: []
     )
     if let identity = identity {
         result =  updateThematicAnalysis(for: result, psalm: identity, lines: text, startingLineNumber: startingLineNumber)
