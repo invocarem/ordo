@@ -49,35 +49,54 @@ class Psalm7Tests: XCTestCase {
         (17, ["converto", "dolor", "caput", "vertex", "iniquitas", "descendo"]),
         (18, ["confiteor", "secundum", "iustitia", "psallo", "nomen", "altissimus"]),
     ]
-
-    private let themeKeyLemmas = [
+    private let themeKeyLemmas: [(name: String, description: String, lemmas: [String], category: ThemeCategory)] = [
         (
-            "Divine Protection", "Appeal to God for salvation and deliverance",
-            ["spero", "salvus", "libero", "redimo", "adiutorium"]
+            "Divine Protection",
+            "God's salvation and deliverance",
+            ["spero", "salvus", "libero", "redimo", "adiutorium", "exsurgo"],
+            .divine
         ),
         (
-            "Judicial Process", "Legal and judicial aspects of God's judgment",
-            ["iudico", "iustitia", "iudex", "scrutor", "mereor", "retribuo"]
+            "Divine Authority",
+            "God's sovereignty, majesty, and commands",
+            ["altissimus", "praeceptum", "mando", "regredior"],
+            .divine
         ),
         (
-            "Innocence", "Declaration of righteousness and innocence",
-            ["innocentia", "iustus", "rectus"]
+            "Divine Judgment",
+            "God's judicial process and righteous judgment",
+            ["iudico", "iustitia", "iudex", "scrutor", "mereor", "retribuo", "decido"],
+            .justice
         ),
         (
-            "Violence and Destruction", "Imagery of violence, weapons, and destructive forces",
-            ["ira", "gladius", "arcus", "sagitta", "mors", "conculco", "rapio", "persequor", "ardeo"]
+            "Human Innocence",
+            "Declaration of righteousness before God",
+            ["innocentia", "iustus", "rectus", "super"],
+            .virtue
         ),
         (
-            "Consequences of Sin", "Results and punishment for wrongdoing",
-            ["iniquitas", "peccator", "nequitia", "dolor", "decido", "descendo", "mereor"]
+            "Divine Wrath",
+            "God's violent judgment against enemies",
+            ["ira", "gladius", "arcus", "sagitta", "mors", "conculco", "vibro", "ardeo"],
+            .justice
         ),
         (
-            "Enemies", "References to adversaries and persecutors",
-            ["inimicus", "persequor", "malus"]
+            "Sin's Consequences",
+            "Natural results of wrongdoing",
+            ["iniquitas", "peccator", "nequitia", "dolor", "descendo", "parturio", "concipio", "pario"],
+            .sin
         ),
         (
-            "Praise", "Worship and acknowledgment of God",
-            ["confiteor", "psallo", "nomen", "exalto"]
+            "Enemy Opposition",
+            "Adversaries and persecutors",
+            ["inimicus", "persequor", "malus", "comprehendo", "rapio"],
+            .opposition
+        ),
+        (
+            "Worship Response",
+            "Human praise and acknowledgment",
+            ["confiteor", "psallo", "nomen", "exalto"],
+            .worship
         ),
     ]
 
@@ -129,16 +148,15 @@ class Psalm7Tests: XCTestCase {
         let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
         var allFailures: [String] = []
 
-        for (themeName, themeDescription, themeLemmas) in themeKeyLemmas {
+        for (themeName, themeDescription, themeLemmas, category) in themeKeyLemmas {
             let foundLemmas = themeLemmas.filter { detectedLemmas.contains($0.lowercased()) }
             let missingLemmas = themeLemmas.filter { !detectedLemmas.contains($0.lowercased()) }
 
             if verbose {
                 let status = missingLemmas.isEmpty ? "✅" : "❌"
-                print("\n\(status) \(themeName.uppercased()): \(themeDescription)")
-                print(
-                    "   Found \(foundLemmas.count)/\(themeLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))"
-                )
+                let colorName = category.rawValue.uppercased()
+                print("\n\(status) [\(colorName)] \(themeName): \(themeDescription)")
+                print("   Found \(foundLemmas.count)/\(themeLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
 
                 if !missingLemmas.isEmpty {
                     print("   MISSING: \(missingLemmas.joined(separator: ", "))")
@@ -147,7 +165,7 @@ class Psalm7Tests: XCTestCase {
 
             if !missingLemmas.isEmpty {
                 allFailures.append(
-                    "Theme \(themeName): Missing \(missingLemmas.count) lemmas: \(missingLemmas.joined(separator: ", "))"
+                    "Theme \(themeName) (\(category.rawValue)): Missing \(missingLemmas.count) lemmas: \(missingLemmas.joined(separator: ", "))"
                 )
             }
         }

@@ -195,6 +195,12 @@ public struct PsalmAnalysisResult: Codable {
     public let orderedLemmas: [String]
     public var structuralThemes: [StructuralTheme]  // Changed from themes to structuralThemes
     public var conceptualThemes: [ConceptualTheme]?
+
+    // Backward compatibility - themes returns structuralThemes
+    public var themes: [StructuralTheme] {
+        get { structuralThemes }
+        set { structuralThemes = newValue }
+    }
     
     public struct LemmaInfo: Codable {
         public let count: Int
