@@ -62,7 +62,7 @@ class Psalm50Tests: XCTestCase {
         (
             19,
             [
-                "benigne", "facio", "dominus", "bonus", "voluntas", "sion", "aedifico", "murus",
+                "benignus", "facio", "dominus", "bonus", "voluntas", "sion", "aedifico", "murus",
                 "ierusalem",
             ]
         ),
@@ -86,7 +86,7 @@ class Psalm50Tests: XCTestCase {
         ),
         (
             "Mercy", "Appeals to God's compassion",
-            ["misereor", "misericordia", "miseratio", "benigne", "secundum"]
+            ["misereor", "misericordia", "miseratio", "benignus", "secundum"]
         ),
         (
             "Transformation", "Inner renewal and creation",

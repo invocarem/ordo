@@ -1,5 +1,37 @@
 [
   {
+    "lemma": "impono",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "imponere",
+    "present": "impono",
+    "future": "imponam",
+    "perfect": "imposui",
+    "supine": "impositum",
+    "translations": {
+      "en": "to impose, place upon, put on",
+      "la": "impono, imponere, imposui, impositum"
+    }
+  },
+  {
+    "lemma": "viscus",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "viscus",
+    "genitive": "visceris",
+    "translations": {
+      "en": "internal organ, flesh,  bowels",
+      "la": "viscus, visceris"
+    },
+    "forms_plural": {
+      "dative_n": ["visceribus"],
+      "ablative_n": ["visceribus"],
+      "nominative_n": ["viscera"],
+      "genitive_n": ["viscerum"]
+    }
+  },
+  {
     "lemma": "ierusalem",
     "part_of_speech": "noun",
     "declension": 0,
@@ -1309,7 +1341,8 @@
     },
     "forms": {
       "nominative_f": ["benigna"],
-      "nominative_n": ["benignum"]
+      "nominative_n": ["benignum"],
+      "adverb": ["benigne"]
     }
   },
   {
@@ -6945,7 +6978,8 @@
     "perfect": "accepi",
     "supine": "acceptum",
     "forms_plural": {
-      "future_3rd_ecclesiastical": ["accipient"]
+      "future_2nd_eccl": ["acceptabis"],
+      "future_3rd_eccl": ["accipient"]
     },
     "translations": {
       "en": "to receive, accept, take",
