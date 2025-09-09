@@ -13,11 +13,12 @@ public struct PsalmIdentity {
 public enum ThemeCategory: String, Codable {
     case divine
     case justice
+    case worship
     case virtue
     case conflict
     case sin
     case opposition
-    case worship
+    
     case unknown
     
     // Provide a fallback initializer
@@ -175,6 +176,7 @@ extension LatinService {
                 PsalmAnalysisResult.ConceptualTheme(
                     name: theme.name,
                     description: theme.description,
+                    category: theme.category,
                     supportingLemmas: theme.lemmas
                 )
             )

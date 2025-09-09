@@ -237,7 +237,7 @@ public struct PsalmAnalysisResult: Codable {
                    supportingLemmas: [String]) {
             self.name = name
             self.description = description
-            self.category = ThemeCategory
+            self.category = category
             self.supportingLemmas = supportingLemmas
         }
     }

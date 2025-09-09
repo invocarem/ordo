@@ -79,18 +79,23 @@ struct ConceptualThemeCardView: View {
 struct ConceptualThemesView: View {
     let themes: [PsalmAnalysisResult.ConceptualTheme]
     let analysis: PsalmAnalysisResult
-
-    // Color palette for themes - you can customize these colors
+    
     private func getColorForCategory(_ category: ThemeCategory) -> Color {
         switch category {
-        case .divine: return .blue // Heavenly intervention
-        case .justice: return .green // Balanced judgment, life
-        case .virtue: return .yellow // Golden virtue, value
-        case .conflict: return .red // Bloodshed, violence
-        case .sin: return .purple // Penance, sacrifice
-        case .opposition: return .gray // Spiritual opposition
-        case .worship: return .white // Pure worship
-        case .unknown: return Color(white: 0.9) // Very light gray (almost white)
+            // From God (divine sources)
+            case .divine: return .blue       // Heavenly intervention
+            case .justice: return .green     // Divine justice, balance
+            
+            // From humans (positive response to God)
+            case .worship: return .yellow    // Golden worship, praise
+            case .virtue: return .white      // Pure virtue, innocence
+            
+            // Wicked categories (hierarchy of severity)
+            case .sin: return .purple        // Penance, could be redeemed (least severe)
+            case .conflict: return .orange   // Warning, physical danger (medium severity)
+            case .opposition: return .red    // Ultimate rebellion, spiritual enemies (most severe)
+            
+            case .unknown: return Color(white: 0.9)
         }
     }
 
