@@ -10,9 +10,8 @@ public struct PsalmIdentity {
     }
 }
 
-public struct PsalmThemes: Codable {
-    let themes: [PsalmThemeData]
-}
+public typealias PsalmThemes = [PsalmThemeData]
+
 
 public struct PsalmThemeData: Codable {
     let psalmNumber: Int
@@ -59,8 +58,7 @@ class PsalmThemeManager {
                 }
             do {
                     let decoder = JSONDecoder()
-                    let jsonData = try decoder.decode(PsalmThemes.self, from: data)
-                    themeData = jsonData.themes
+                     themeData = try decoder.decode([PsalmThemeData].self, from: data) // Direct array decoding
                     print("Successfully loaded theme data for \(themeData.count) psalms")
                 } catch {
                     print("Error decoding theme data: \(error)")

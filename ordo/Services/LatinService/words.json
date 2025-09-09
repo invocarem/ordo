@@ -1,5 +1,113 @@
 [
   {
+    "lemma": "iniustitia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "iniustitia",
+    "genitive": "iniustitiae",
+    "translations": {
+      "en": "injustice, unrighteousness, wrong",
+      "la": "iniustitia, iniustitiae"
+    }
+  },
+  {
+    "lemma": "vertex",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "vertex",
+    "genitive": "verticis",
+    "translations": {
+      "en": "whirlpool, whirlwind, vortex",
+      "la": "vertex, verticis"
+    }
+  },
+  {
+    "lemma": "ardeo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "ardere",
+    "present": "ardeo",
+    "future": "ardebo",
+    "perfect": "arsi",
+    "supine": "arsum",
+    "translations": {
+      "en": "to burn, be on fire, be passionate",
+      "la": "ardeo, ardere, arsi, arsum"
+    },
+    "forms": {
+      "present_participle": ["ardens"],
+      "pres_part_dat_abl_pl": ["ardentibus"]
+    }
+  },
+  {
+    "lemma": "efficio",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "efficere",
+    "present": "efficio",
+    "future": "efficiam",
+    "perfect": "effeci",
+    "supine": "effectum",
+    "translations": {
+      "en": "to bring about, accomplish, cause",
+      "la": "efficio, efficere, effeci, effectum"
+    }
+  },
+  {
+    "lemma": "mereor",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "mereri",
+    "present": "mereor",
+    "future": "merebor",
+    "perfect": "meritus",
+    "supine": "meritum",
+    "translations": {
+      "en": "to deserve, earn, be worthy of",
+      "la": "mereor, mereri, meritus sum"
+    },
+    "forms": {
+      "perfect_participle": ["meritus", "merita", "meritum"],
+      "adverb": ["merito"]
+    }
+  },
+  {
+    "lemma": "iste",
+    "part_of_speech": "pronoun",
+    "declension": 0,
+    "gender": "masculine",
+    "nominative": "iste",
+    "genitive": "istius",
+    "translations": {
+      "en": "that (of yours), that one, that person",
+      "la": "iste, ista, istud"
+    },
+    "forms": {
+      "nominative_m": ["iste"],
+      "nominative_f": ["ista"],
+      "nominative_n": ["istud"],
+      "genitive_m": ["istius"],
+      "dative_m": ["isti"],
+      "accusative_m": ["istum"],
+      "accusative_f": ["istam"],
+      "accusative_n": ["istud"],
+      "ablative_m": ["isto"],
+      "ablative_f": ["ista"],
+      "ablative_n": ["isto"]
+    }
+  },
+  {
+    "lemma": "dum",
+    "part_of_speech": "conjunction",
+    "declension": 0,
+    "translations": {
+      "en": "while, as long as, until, provided that",
+      "la": "dum"
+    }
+  },
+  {
     "lemma": "impono",
     "part_of_speech": "verb",
     "conjugation": 3,
@@ -416,11 +524,12 @@
       "la": "hic, haec, hoc"
     },
     "forms": {
+      "accusative_f": ["hanc"],
       "nominative_f": ["haec"],
       "nominative_n": ["hoc"],
       "accusative_n": ["hoc"],
-      "genitive": ["huius"],
-      "dative": ["huic"],
+      "genitive_m": ["huius"],
+      "dative_m": ["huic"],
       "ablative_m": ["hoc"],
       "ablative_f": ["hac"],
       "ablative_n": ["hoc"]
