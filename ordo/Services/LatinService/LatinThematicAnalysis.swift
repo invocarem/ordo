@@ -10,6 +10,24 @@ public struct PsalmIdentity {
     }
 }
 
+public enum ThemeCategory: String, Codable {
+    case divine
+    case justice
+    case virtue
+    case conflict
+    case sin
+    case opposition
+    case worship
+    case unknown
+    
+    // Provide a fallback initializer
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.singleValueContainer()
+        let rawValue = try container.decode(String.self)
+        self = ThemeCategory(rawValue: rawValue.lowercased()) ?? .unknown
+    }
+}
+
 public typealias PsalmThemes = [PsalmThemeData]
 
 
@@ -32,6 +50,7 @@ public struct PsalmThemeData: Codable {
         let name: String
         let description: String
         let lemmas: [String]
+        let category: ThemeCategory
     }
 }
 

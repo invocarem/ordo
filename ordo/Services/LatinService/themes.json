@@ -414,36 +414,43 @@
     {
       "name": "Divine Protection",
       "description": "Appeal to God for salvation and deliverance",
+      "category": "divine",
       "lemmas": ["spero", "salvus", "libero", "redimo", "adiutorium"]
     },
     {
       "name": "Judicial Process",
       "description": "Legal and judicial aspects of God's judgment",
+      "category": "justice",
       "lemmas": ["iudico", "iustitia", "iudex", "scrutor", "mereor", "retribuo"]
     },
     {
       "name": "Innocence",
       "description": "Declaration of righteousness and innocence",
+      "category": "virtue",
       "lemmas": ["innocentia", "iustus", "rectus"]
     },
     {
       "name": "Violence and Destruction",
       "description": "Imagery of violence, weapons, and destructive forces",
+      "category": "conflict",
       "lemmas": ["ira", "gladius", "arcus", "sagitta", "mors", "conculco", "rapio", "persequor", "ardeo"]
     },
     {
       "name": "Consequences of Sin",
       "description": "Results and punishment for wrongdoing",
+      "category": "sin",
       "lemmas": ["iniquitas", "peccator", "nequitia", "dolor", "decido", "descendo", "mereor"]
     },
     {
       "name": "Enemies",
       "description": "References to adversaries and persecutors",
+      "category": "opposition",
       "lemmas": ["inimicus", "persequor", "malus"]
     },
     {
       "name": "Praise",
       "description": "Worship and acknowledgment of God",
+      "category": "worship",
       "lemmas": ["confiteor", "psallo", "nomen", "exalto"]
     }
   ]

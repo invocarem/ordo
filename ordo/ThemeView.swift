@@ -81,27 +81,28 @@ struct ConceptualThemesView: View {
     let analysis: PsalmAnalysisResult
 
     // Color palette for themes - you can customize these colors
-    private let themeColors: [Color] = [
-        Color(red: 0.2, green: 0.4, blue: 0.8), // Soft blue
-        Color(red: 0.3, green: 0.6, blue: 0.3), // Soft green
-        Color(red: 0.8, green: 0.5, blue: 0.2), // Soft orange
-        Color(red: 0.6, green: 0.4, blue: 0.8), // Soft purple
-        Color(red: 0.8, green: 0.4, blue: 0.6), // Soft pink
-        Color(red: 0.3, green: 0.7, blue: 0.7), // Soft teal
-        Color(red: 0.5, green: 0.4, blue: 0.9), // Soft indigo
-        Color(red: 0.6, green: 0.5, blue: 0.4), // Soft brown
-    ]
+    private func getColorForCategory(_ category: ThemeCategory) -> Color {
+        switch category {
+        case .divine: return .blue // Heavenly intervention
+        case .justice: return .green // Balanced judgment, life
+        case .virtue: return .yellow // Golden virtue, value
+        case .conflict: return .red // Bloodshed, violence
+        case .sin: return .purple // Penance, sacrifice
+        case .opposition: return .gray // Spiritual opposition
+        case .worship: return .white // Pure worship
+        case .unknown: return Color(white: 0.9) // Very light gray (almost white)
+        }
+    }
 
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
-
             ScrollView {
                 LazyVStack(spacing: 16) {
-                    ForEach(Array(themes.enumerated()), id: \.element.name) { index, theme in
+                    ForEach(Array(themes.enumerated()), id: \.element.name) { _, theme in
                         ConceptualThemeCardView(
                             theme: theme,
                             analysis: analysis,
-                            color: themeColors[index % themeColors.count]
+                            color: getColorForCategory(theme.category)
                         )
                     }
                 }
