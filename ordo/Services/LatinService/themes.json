@@ -323,93 +323,132 @@
       }
     ]
   },
+
   {
-    "psalmNumber": 7,
-    "category": "",
-    "structuralThemes": [
-      {
-        "name": "Threat → Refuge",
-        "description": "From violent pursuit to trusting in divine protection",
-        "lemmas": ["leo", "rapio", "spero", "libero"],
-        "startLine": 1,
-        "endLine": 2,
-        "comment": "The psalmist likens persecutors to a lion ready to seize its prey. In response, he entrusts himself to God as the only liberator.",
-        "comment2": "Augustine interprets the lion as the devil or violent adversaries. Safety lies only in the Lord, who receives those fleeing in faith (Enarr. Ps. 7.1–2)."
-      },
-      {
-        "name": "Integrity → Collapse",
-        "description": "If unjust, the psalmist accepts shameful defeat",
-        "lemmas": ["reddo", "retribuo", "decido", "inanis"],
-        "startLine": 3,
-        "endLine": 4,
-        "comment": "The psalmist offers himself to God’s judgment: if guilty of betrayal, let him fall empty-handed into enemy hands.",
-        "comment2": "For Augustine, this is not pride but holy fear: a willingness to be judged shows the integrity of the just. To fall 'inanis' is to lose all fruit of life apart from God (Enarr. Ps. 7.3–4)."
-      },
-      {
-        "name": "Capture → Dust",
-        "description": "From pursuit to utter humiliation",
-        "lemmas": ["persequor", "comprehendo", "conculco", "pulvis"],
-        "startLine": 5,
-        "endLine": 6,
-        "comment": "If guilty, let the enemy overtake and trample him, reducing his glory to dust.",
-        "comment2": "Augustine sees dust as the destiny of the proud soul abandoned to itself: the fall of human glory without God’s defense (Enarr. Ps. 7.5–6)."
-      },
-      {
-        "name": "Judgment → Ascent",
-        "description": "From divine summons to enthronement above all peoples",
-        "lemmas": ["exsurgo", "mandatum", "synagoga", "iudico"],
-        "startLine": 7,
-        "endLine": 8,
-        "comment": "The Lord rises to judge among assembled nations, taking His seat on high.",
-        "comment2": "Augustine reads this as Christ exalted after the resurrection, gathering peoples into His Church and judging with justice (Enarr. Ps. 7.7–8)."
-      },
-      {
-        "name": "Innocence → Discernment",
-        "description": "From appeal to justice to God’s searching judgment",
-        "lemmas": ["iustitia", "innocentia", "scrutor", "renes"],
-        "startLine": 9,
-        "endLine": 10,
-        "comment": "The psalmist asks to be judged by his innocence, yet acknowledges God searches even the heart and reins.",
-        "comment2": "For Augustine, this penetrates deeper than outward acts: God weighs interior motives, revealing true justice (Enarr. Ps. 7.9–10)."
-      },
-      {
-        "name": "Righteousness → Warning",
-        "description": "From God’s help for the upright to warning the impenitent",
-        "lemmas": ["iustus", "adiutorium", "patiens", "converto"],
-        "startLine": 11,
-        "endLine": 12,
-        "comment": "God is patient and aids the upright, but warns that His forbearance has limits.",
-        "comment2": "Augustine urges conversion while time remains: God’s patience is meant to lead sinners back, not excuse them forever (Enarr. Ps. 7.11–12)."
-      },
-      {
-        "name": "Preparation → Execution",
-        "description": "From preparation of weapons to fiery judgment",
-        "lemmas": ["paro", "vibro", "sagitta", "ardens"],
-        "startLine": 13,
-        "endLine": 14,
-        "comment": "God bends the bow and readies burning arrows, images of judgment.",
-        "comment2": "Augustine interprets these arrows spiritually: divine words pierce sinners, igniting repentance rather than mere destruction (Enarr. Ps. 7.13–14)."
-      },
-      {
-        "name": "Conception → Iniquity",
-        "description": "From conceiving sin to its birth in injustice",
-        "lemmas": ["parturio", "concipio", "iniquitas", "dolor"],
-        "startLine": 15,
-        "endLine": 16,
-        "comment": "The wicked conceive trouble and give birth to iniquity, only to fall into their own pit.",
-        "comment2": "Augustine sees in this the paradox of the cross: by plotting Christ’s death, the devil trapped himself in the pit he dug (Enarr. Ps. 7.15–16)."
-      },
-      {
-        "name": "Retribution → Praise",
-        "description": "From downfall of the wicked to exaltation of divine justice",
-        "lemmas": ["convertor", "iniquitas", "confiteor", "psallo"],
-        "startLine": 17,
-        "endLine": 18,
-        "comment": "The sinner’s violence recoils upon his own head, while the psalmist gives thanks in song.",
-        "comment2": "Augustine highlights the contrast: the wicked are ensnared in their own works, but the just respond with praise of God’s unchanging righteousness (Enarr. Ps. 7.17–18)."
-      }
-    ]
-  },
+  "psalmNumber": 7,
+  "category": "",
+  "structuralThemes": [
+    {
+      "name": "Threat → Refuge",
+      "description": "From violent pursuit to trusting in divine protection",
+      "lemmas": ["leo", "rapio", "spero", "libero"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalmist likens persecutors to a lion ready to seize its prey. In response, he entrusts himself to God as the only liberator.",
+      "comment2": "Augustine interprets the lion as the devil or violent adversaries. Safety lies only in the Lord, who receives those fleeing in faith (Enarr. Ps. 7.1–2)."
+    },
+    {
+      "name": "Integrity → Collapse",
+      "description": "If unjust, the psalmist accepts shameful defeat",
+      "lemmas": ["reddo", "retribuo", "decido", "inanis"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The psalmist offers himself to God's judgment: if guilty of betrayal, let him fall empty-handed into enemy hands.",
+      "comment2": "For Augustine, this is not pride but holy fear: a willingness to be judged shows the integrity of the just. To fall 'inanis' is to lose all fruit of life apart from God (Enarr. Ps. 7.3–4)."
+    },
+    {
+      "name": "Capture → Dust",
+      "description": "From pursuit to utter humiliation",
+      "lemmas": ["persequor", "comprehendo", "conculco", "pulvis"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "If guilty, let the enemy overtake and trample him, reducing his glory to dust.",
+      "comment2": "Augustine sees dust as the destiny of the proud soul abandoned to itself: the fall of human glory without God's defense (Enarr. Ps. 7.5–6)."
+    },
+    {
+      "name": "Judgment → Ascent",
+      "description": "From divine summons to enthronement above all peoples",
+      "lemmas": ["exsurgo", "mandatum", "synagoga", "iudico"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "The Lord rises to judge among assembled nations, taking His seat on high.",
+      "comment2": "Augustine reads this as Christ exalted after the resurrection, gathering peoples into His Church and judging with justice (Enarr. Ps. 7.7–8)."
+    },
+    {
+      "name": "Innocence → Discernment",
+      "description": "From appeal to justice to God's searching judgment",
+      "lemmas": ["iustitia", "innocentia", "scrutor", "renes"],
+      "startLine": 9,
+      "endLine": 10,
+      "comment": "The psalmist asks to be judged by his innocence, yet acknowledges God searches even the heart and reins.",
+      "comment2": "For Augustine, this penetrates deeper than outward acts: God weighs interior motives, revealing true justice (Enarr. Ps. 7.9–10)."
+    },
+    {
+      "name": "Righteousness → Warning",
+      "description": "From God's help for the upright to warning the impenitent",
+      "lemmas": ["iustus", "adiutorium", "patiens", "converto"],
+      "startLine": 11,
+      "endLine": 12,
+      "comment": "God is patient and aids the upright, but warns that His forbearance has limits.",
+      "comment2": "Augustine urges conversion while time remains: God's patience is meant to lead sinners back, not excuse them forever (Enarr. Ps. 7.11–12)."
+    },
+    {
+      "name": "Preparation → Execution",
+      "description": "From preparation of weapons to fiery judgment",
+      "lemmas": ["paro", "vibro", "sagitta", "ardens"],
+      "startLine": 13,
+      "endLine": 14,
+      "comment": "God bends the bow and readies burning arrows, images of judgment.",
+      "comment2": "Augustine interprets these arrows spiritually: divine words pierce sinners, igniting repentance rather than mere destruction (Enarr. Ps. 7.13–14)."
+    },
+    {
+      "name": "Conception → Iniquity",
+      "description": "From conceiving sin to its birth in injustice",
+      "lemmas": ["parturio", "concipio", "iniquitas", "dolor"],
+      "startLine": 15,
+      "endLine": 16,
+      "comment": "The wicked conceive trouble and give birth to iniquity, only to fall into their own pit.",
+      "comment2": "Augustine sees in this the paradox of the cross: by plotting Christ's death, the devil trapped himself in the pit he dug (Enarr. Ps. 7.15–16)."
+    },
+    {
+      "name": "Retribution → Praise",
+      "description": "From downfall of the wicked to exaltation of divine justice",
+      "lemmas": ["convertor", "iniquitas", "confiteor", "psallo"],
+      "startLine": 17,
+      "endLine": 18,
+      "comment": "The sinner's violence recoils upon his own head, while the psalmist gives thanks in song.",
+      "comment2": "Augustine highlights the contrast: the wicked are ensnared in their own works, but the just respond with praise of God's unchanging righteousness (Enarr. Ps. 7.17–18)."
+    }
+  ],
+  "conceptualThemes": [
+    {
+      "name": "Divine Protection",
+      "description": "Appeal to God for salvation and deliverance",
+      "lemmas": ["spero", "salvus", "libero", "redimo", "adiutorium"]
+    },
+    {
+      "name": "Judicial Process",
+      "description": "Legal and judicial aspects of God's judgment",
+      "lemmas": ["iudico", "iustitia", "iudex", "scrutor", "mereor", "retribuo"]
+    },
+    {
+      "name": "Innocence",
+      "description": "Declaration of righteousness and innocence",
+      "lemmas": ["innocentia", "iustus", "rectus"]
+    },
+    {
+      "name": "Violence and Destruction",
+      "description": "Imagery of violence, weapons, and destructive forces",
+      "lemmas": ["ira", "gladius", "arcus", "sagitta", "mors", "conculco", "rapio", "persequor", "ardeo"]
+    },
+    {
+      "name": "Consequences of Sin",
+      "description": "Results and punishment for wrongdoing",
+      "lemmas": ["iniquitas", "peccator", "nequitia", "dolor", "decido", "descendo", "mereor"]
+    },
+    {
+      "name": "Enemies",
+      "description": "References to adversaries and persecutors",
+      "lemmas": ["inimicus", "persequor", "malus"]
+    },
+    {
+      "name": "Praise",
+      "description": "Worship and acknowledgment of God",
+      "lemmas": ["confiteor", "psallo", "nomen", "exalto"]
+    }
+  ]
+},
+ 
   {
     "psalmNumber": 8,
     "category": "",

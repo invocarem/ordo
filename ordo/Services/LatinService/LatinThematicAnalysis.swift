@@ -86,7 +86,7 @@ class PsalmThemeManager {
     func getThemes(forLine lineNumber: Int, psalmNumber: Int, category: String = "") -> [PsalmThemeData.StructuralTheme] {
         return themeData
             .filter { $0.psalmNumber == psalmNumber && $0.category == category }
-            .flatMap { $0.structralThemes }
+            .flatMap { $0.structuralThemes }
             .filter { lineNumber >= $0.startLine && lineNumber <= $0.endLine }
     }
 }
@@ -127,7 +127,7 @@ extension LatinService {
         //let isThemePresent = theme.lemmas.allSatisfy { groupLemmas.contains($0) }
         
         if isThemePresent {
-            updatedResult.themes.append(
+            updatedResult.structuralThemes.append(
                 PsalmAnalysisResult.StructuralTheme(
                     name: theme.name,
                     description: theme.description,

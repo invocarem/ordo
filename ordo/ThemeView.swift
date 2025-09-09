@@ -1,7 +1,104 @@
+// ConceptualThemesView.swift
 import SwiftUI
 
+struct ConceptualThemesView: View {
+    let themes: [PsalmAnalysisResult.ConceptualTheme]
+    let analysis: PsalmAnalysisResult
+    
+    // Color palette for themes - you can customize these colors
+    private let themeColors: [Color] = [
+        .blue, .green, .orange, .purple, .pink, .teal, .indigo, .brown,
+        .mint, .cyan, .red, .yellow
+    ]
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 16) {
+            Text("Conceptual Themes")
+                .font(.title2)
+                .fontWeight(.bold)
+                .padding(.horizontal)
+            
+            ScrollView {
+                LazyVStack(spacing: 16) {
+                    ForEach(Array(themes.enumerated()), id: \.element.name) { index, theme in
+                        ConceptualThemeCardView(
+                            theme: theme,
+                            analysis: analysis,
+                            color: themeColors[index % themeColors.count]
+                        )
+                    }
+                }
+                .padding(.horizontal)
+            }
+        }
+    }
+}
+
+struct ConceptualThemeCardView: View {
+    let theme: PsalmAnalysisResult.ConceptualTheme
+    let analysis: PsalmAnalysisResult
+    let color: Color
+    
+    var body: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            // Theme header with colored accent
+            HStack {
+                Circle()
+                    .fill(color)
+                    .frame(width: 12, height: 12)
+                
+                VStack(alignment: .leading, spacing: 2) {
+                    Text(theme.name)
+                        .font(.headline)
+                        .foregroundColor(.primary)
+                    
+                    Text(theme.description)
+                        .font(.subheadline)
+                        .foregroundColor(.secondary)
+                }
+            }
+            
+            // Supporting lemmas
+            if !theme.supportingLemmas.isEmpty {
+                VStack(alignment: .leading, spacing: 8) {
+                    Text("Key Terms")
+                        .font(.caption)
+                        .fontWeight(.medium)
+                        .foregroundColor(.secondary)
+                    
+                    FlowLayout(spacing: 8) {
+                        ForEach(theme.supportingLemmas, id: \.self) { lemma in
+                            if let lemmaInfo = analysis.dictionary[lemma] {
+                                NavigationLink(destination: WordDetailView(lemma: lemma, lemmaInfo: lemmaInfo)) {
+                                    LemmaView(lemma: lemma, translation: lemmaInfo.translation)
+                                        .overlay(
+                                            RoundedRectangle(cornerRadius: 8)
+                                                .stroke(color.opacity(0.3), lineWidth: 1)
+                                        )
+                                }
+                                .buttonStyle(PlainButtonStyle())
+                            }
+                        }
+                    }
+                }
+                .padding(.top, 4)
+            }
+        }
+        .padding()
+        .background(
+            RoundedRectangle(cornerRadius: 12)
+                .fill(Color(.systemBackground))
+                .shadow(color: color.opacity(0.1), radius: 4, x: 0, y: 2)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 12)
+                .stroke(color.opacity(0.2), lineWidth: 1)
+        )
+    }
+}
+
 struct ThemeView: View {
-    let themes: [PsalmAnalysisResult.Theme]
+    let themes: [PsalmAnalysisResult.StructuralTheme]
     let dictionary: [String: PsalmAnalysisResult.LemmaInfo]
     
     var body: some View {
@@ -28,7 +125,7 @@ struct ThemeView: View {
         }
     }
     
-    private func themeCard(for theme: PsalmAnalysisResult.Theme) -> some View {
+    private func themeCard(for theme: PsalmAnalysisResult.StructuralTheme) -> some View {
         VStack(alignment: .leading, spacing: 12) {
             // Theme header with name and description
             VStack(alignment: .leading, spacing: 4) {

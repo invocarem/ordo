@@ -8,7 +8,7 @@ import SwiftUI
 
 // Reusable Component
 public struct ThemeListView: View {
-    let themes: [PsalmAnalysisResult.Theme]
+    let themes: [PsalmAnalysisResult.StructuralTheme]
     let analysis: PsalmAnalysisResult
     
     public var body: some View {
@@ -38,7 +38,7 @@ public struct LemmaView: View {
     }
 }
 private struct ThemeCardView: View {
-    let theme: PsalmAnalysisResult.Theme
+    let theme: PsalmAnalysisResult.StructuralTheme
     let analysis: PsalmAnalysisResult
     
     var body: some View {

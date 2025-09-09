@@ -87,8 +87,8 @@ struct LinePairAnalysisView: View {
                             }
                             .padding(.bottom, 8)
                             
-                            if !analysis.themes.isEmpty {
-                                let filteredThemes = analysis.themes.filter { theme in
+                            if !analysis.structuralThemes.isEmpty {
+                                let filteredThemes = analysis.structuralThemes.filter { theme in
                                     guard let themeRange = theme.lineRange else { return false }
                                     // Check if theme range overlaps with the pair's range OR if the pair's range contains any part of the theme range
                                     return pair.startLine...pair.endLine ~= themeRange.lowerBound ||
@@ -103,6 +103,19 @@ struct LinePairAnalysisView: View {
 
                                 
                             }
+
+                            if let conceptualThemes = analysis.conceptualThemes, !conceptualThemes.isEmpty {
+                                LatinSectionView(title: "Conceptual Themes") {
+                                    ConceptualThemesView(
+                                        themes: conceptualThemes,
+                                        analysis: analysis
+                                    )
+                                }
+                            }
+                            else {
+                                Text("No conceptual themes")
+                            }
+
                             Section(header: Text("All Lemmas in Range")
                                         .font(.headline)
                                         .padding(.bottom, 4)) {
