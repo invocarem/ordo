@@ -84,17 +84,18 @@ struct ConceptualThemesView: View {
         switch category {
             // From God (divine sources)
             case .divine: return .blue       // Heavenly intervention
-            case .justice: return .green     // Divine justice, balance
+            case .justice: return .cyan     // Divine justice, balance
             
             // From humans (positive response to God)
-            case .worship: return .yellow    // Golden worship, praise
-            case .virtue: return .white      // Pure virtue, innocence
+            case .worship: return Color(red: 218/255, green: 165/255, blue: 32/255)    // Golden worship, praise
+            case .virtue: return .green      // Pure virtue, innocence
             
             // Wicked categories (hierarchy of severity)
             case .sin: return .purple        // Penance, could be redeemed (least severe)
-            case .conflict: return .orange   // Warning, physical danger (medium severity)
-            case .opposition: return .red    // Ultimate rebellion, spiritual enemies (most severe)
-            
+            case .conflict: return Color(red: 75/255, green: 0, blue: 130/255) // Dark violet Warning, physical danger (medium severity)
+            case .opposition: return Color(red: 128/255, green: 0, blue: 0)    // Dark red / maroon Ultimate rebellion, spiritual enemies (most severe)
+
+ 
             case .unknown: return Color(white: 0.9)
         }
     }
