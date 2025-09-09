@@ -3522,84 +3522,134 @@
         }
       ]
     },
+
     {
       "psalmNumber": 90,
       "category": "",
       "themes": [
         {
-          "name": "Dwelling → Trust",
-          "description": "Choosing God as one's habitation leads to confident declaration of trust in Him.",
-          "lemmas": ["habito", "adiutorium", "susceptor", "spero"],
+          "name": "Dwelling → Protection",
+          "description": "Abiding in God's help and finding shelter in the divine presence",
+          "lemmas": [
+            "habito",
+            "adiutorium",
+            "altissimus",
+            "protectio",
+            "commoror"
+          ],
           "startLine": 1,
           "endLine": 2,
-          "comment": "The psalm opens by blessing those who dwell in God's protection, leading to a personal confession of trust in Him as refuge and fortress.",
-          "comment2": "Augustine sees this dwelling as the soul's rest in God, which is the foundation of all true security and the opposite of restless seeking in the world (En. Ps. 90.1)."
+          "comment": "Whoever dwells in the help of the Most High abides under God's heavenly protection, declaring the Lord as their refuge and place of hope.",
+          "comment2": "Augustine sees this as the soul making its home in God's grace, finding eternal security in divine protection rather than earthly shelters."
         },
         {
-          "name": "Danger → Deliverance",
-          "description": "Threats from hidden traps and harsh words are met with divine rescue.",
-          "lemmas": ["libero", "laqueus", "verbum", "asper"],
+          "name": "Deliverance → Covering",
+          "description": "Rescue from hidden traps and shelter under God's protective wings",
+          "lemmas": ["libero", "laqueus", "venor", "obumbro", "penna"],
           "startLine": 3,
           "endLine": 4,
-          "comment": "The Lord delivers from the snare of the fowler and from destructive words, offering protection under His wings.",
-          "comment2": "Augustine interprets the fowler's snare as the devil's temptations and the harsh word as false accusations or blasphemies, from which God faithfully delivers (En. Ps. 90.3)."
+          "comment": "God delivers from the hunter's snare and harsh word, covering with His shoulders and providing shelter under His wings where we find hope.",
+          "comment2": "For Augustine, the hunter's snare represents hidden temptations, while God's wings signify the protective presence of the Holy Spirit."
         },
         {
-          "name": "Fear → Protection",
-          "description": "Nocturnal terrors and daily threats are overcome by God's shielding truth.",
-          "lemmas": ["scutum", "veritas", "timeo", "sagitta"],
+          "name": "Shield → Fearlessness",
+          "description": "Divine truth as protection against nocturnal fears and daily dangers",
+          "lemmas": [
+            "scutum",
+            "veritas",
+            "timeo",
+            "timor",
+            "nocturnus",
+            "sagitta"
+          ],
           "startLine": 5,
           "endLine": 6,
-          "comment": "God's faithfulness is a shield against night terrors, daytime arrows, and the pestilence that stalks in darkness.",
-          "comment2": "For Augustine, the 'shield' is faith in God's promises, which protects the mind from fear and the soul from the arrows of evil suggestion (En. Ps. 90.5)."
+          "comment": "God's truth surrounds like a shield, providing fearlessness against night terror, flying arrows, and dangers that walk in darkness.",
+          "comment2": "Augustine interprets God's truth as the ultimate protection against both physical dangers and spiritual attacks that come in darkness."
         },
         {
-          "name": "Disaster → Immunity",
-          "description": "Widespread disaster strikes others but is prevented from touching the one under divine protection.",
-          "lemmas": ["cado", "appropinquo", "considero", "retributio"],
+          "name": "Preservation → Observation",
+          "description": "Divine preservation amidst widespread falling and observation of justice",
+          "lemmas": [
+            "cado",
+            "mille",
+            "appropinquo",
+            "considero",
+            "retributio",
+            "peccatum"
+          ],
           "startLine": 7,
           "endLine": 8,
-          "comment": "Though a thousand fall at one's side and ten thousand at the right hand, the disaster will not come near; one will only observe and understand the punishment of the wicked.",
-          "comment2": "Augustine explains this immunity is a gift of grace, preserving the righteous to witness God's justice without themselves falling to the same fate (En. Ps. 90.7)."
+          "comment": "Though thousands fall at your side, evil shall not approach you, and your eyes will behold the just reward of sinners.",
+          "comment2": "Augustine sees this as God's particular preservation of the righteous amidst general destruction, granting them understanding of divine justice."
         },
         {
           "name": "Refuge → Immunity",
-          "description": "Making the Lord one's refuge results in a promised immunity from evil and harm.",
-          "lemmas": ["spes", "refugium", "malum", "flagellum"],
+          "description": "God as ultimate refuge providing immunity from evil and plague",
+          "lemmas": [
+            "spes",
+            "refugium",
+            "accedo",
+            "malum",
+            "flagellum",
+            "tabernaculum"
+          ],
           "startLine": 9,
           "endLine": 10,
-          "comment": "Because the Lord is his hope and refuge, no evil or plague is allowed to come near his dwelling.",
-          "comment2": "Augustine teaches that this 'immunity' is primarily spiritual, guarding the soul from the ultimate evil of sin and eternal death (En. Ps. 90.9)."
+          "comment": "Making the Most High your refuge ensures no evil shall befall you nor plague approach your dwelling, for the Lord is your hope.",
+          "comment2": "Augustine interprets this as the spiritual immunity granted to those who truly make God their dwelling place and source of hope."
         },
         {
-          "name": "Command → Guardianship",
-          "description": "A divine command to angels ensures constant care and physical safeguarding.",
-          "lemmas": ["angelus", "mando", "custodio", "offendo"],
+          "name": "Guardianship → Guidance",
+          "description": "Angelic protection in all ways and prevention from stumbling",
+          "lemmas": [
+            "angelus",
+            "mando",
+            "custodio",
+            "manus",
+            "porto",
+            "offendo"
+          ],
           "startLine": 11,
           "endLine": 12,
-          "comment": "God commands His angels to guard the believer in all their ways, to bear them up and prevent physical harm.",
-          "comment2": "Augustine affirms the ministry of angels as part of God's providence, guiding the steps of the righteous to prevent spiritual stumbling as well as physical (En. Ps. 90.11)."
+          "comment": "God commands His angels to guard you in all your ways, bearing you in their hands lest you strike your foot against a stone.",
+          "comment2": "Augustine sees the angelic guardianship as God's providential care through spiritual beings, ensuring safe passage through life's journey."
         },
         {
-          "name": "Conflict → Dominion",
-          "description": "Walking over deadly enemies demonstrates the authority given to the faithful.",
-          "lemmas": ["aspis", "basiliscus", "conculco", "draco"],
+          "name": "Dominion → Protection",
+          "description": "Authority over dangerous creatures through divine empowerment",
+          "lemmas": [
+            "aspis",
+            "basiliscus",
+            "conculco",
+            "leo",
+            "draco",
+            "protego"
+          ],
           "startLine": 13,
           "endLine": 14,
-          "comment": "The believer is given authority to tread upon serpents, adders, lions, and dragons—symbolic of overcoming powerful evils.",
-          "comment2": "Augustine interprets this as Christ's promise of authority over the power of the enemy, fulfilled in the Church (Luke 10:19) (En. Ps. 90.13)."
+          "comment": "You will tread upon venomous serpents and crush the lion and dragon underfoot, for God protects those who know His name.",
+          "comment2": "Augustine interprets the dangerous creatures as symbols of demonic powers conquered through Christ's authority given to the faithful."
         },
         {
-          "name": "Knowledge → Salvation",
-          "description": "Knowing God's name leads to deliverance, protection, and ultimate glorification.",
-          "lemmas": ["spero", "cognosco", "protego", "glorifico"],
+          "name": "Response → Glorification",
+          "description": "Divine answer in trouble leading to deliverance and ultimate glorification",
+          "lemmas": [
+            "clamo",
+            "exaudio",
+            "eripio",
+            "glorifico",
+            "longitudo",
+            "salutare"
+          ],
           "startLine": 15,
           "endLine": 16,
-          "comment": "Because he clings to God in love and knows His name, God promises to answer, be with him in trouble, deliver him, honor him, satisfy him with long life, and show him His salvation.",
-          "comment2": "Augustine sees the culmination of this psalm in the vision of God's salvation ('ostendam illi salutare meum'), which is ultimately the sight of Christ, our Savior, in eternity (En. Ps. 90.16)."
+          "comment": "When they call, God answers; He is with them in trouble, delivering and glorifying them, filling them with long life and showing His salvation.",
+          "comment2": "Augustine sees this as God's faithful response to prayer, resulting not only in temporal deliverance but eternal glorification and revelation of Christ, our salvation."
         }
       ]
     },
+
     {
       "psalmNumber": 91,
       "category": "",
