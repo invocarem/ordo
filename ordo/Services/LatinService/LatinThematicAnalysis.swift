@@ -167,7 +167,7 @@ extension LatinService {
     
     for theme in conceptualThemes {
         let allLemmas = Set(result.dictionary.keys)
-        let requiredLemmaCount = max(1, theme.lemmas.count / 2)
+        let requiredLemmaCount = 1 //max(1, theme.lemmas.count / 2)
         let matchingLemmaCount = theme.lemmas.filter { allLemmas.contains($0) }.count
         let isThemePresent = matchingLemmaCount >= requiredLemmaCount
         

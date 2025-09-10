@@ -261,7 +261,47 @@
         "comment": "The Lord has struck all who oppose without cause and shattered the teeth of sinners. Salvation belongs to the Lord, and His blessing is upon His people.",
         "comment2": "Augustine sees the shattered teeth as rendering malicious speech powerless. The final declaration affirms that salvation is God's sovereign work, and His blessing rests on those who belong to Him."
       }
-    ]
+    ],
+    
+      "conceptualThemes": [
+        {
+          "name": "Divine Protection",
+          "description": "God as shield and sustainer",
+          "category": "divine",
+          "lemmas": ["susceptor", "suscipio", "exalto", "circumdo"]
+        },
+        {
+          "name": "Opposition and Enemies",
+          "description": "Adversaries and trouble from opponents",
+          "category": "opposition",
+          "lemmas": ["tribulo", "insurgo", "adversor", "peccator", "multiplico"]
+        },
+        {
+          "name": "Trust in God",
+          "description": "Lack of fear through faith in God",
+          "category": "virtue",
+          "lemmas": ["timeo", "confido"]
+        },
+        {
+          "name": "Prayer and Divine Response",
+          "description": "Crying out to God and His answer",
+          "category": "worship",
+          "lemmas": ["clamo", "exaudio", "vox"]
+        },
+        {
+            "name": "Divine Salvation",
+          "description": "God's deliverance and blessing",
+          "category": "divine",
+          "lemmas": ["salus", "salvus", "benedictio"]
+        },
+        {
+          "name": "Divine Justice",
+          "description": "God's judgment against adversaries",
+          "category": "justice",
+          "lemmas": ["percutio", "contero"]
+        }
+      ]
+    
   },
 
   {
