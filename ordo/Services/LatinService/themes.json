@@ -2,6 +2,7 @@
   {
     "psalmNumber": 1,
     "category": "",
+
     "structuralThemes": [
       {
         "name": "Separation → Delight",
@@ -19,7 +20,7 @@
         "startLine": 3,
         "endLine": 4,
         "comment": "The just is like a tree planted by streams, yielding fruit in its season and not withering. This image emphasizes stability, growth, and enduring vitality through divine nourishment.",
-        "comment2": "Augustine reads the tree as one rooted in grace and Scripture, continually refreshed by Christ, the living water. Its fruit signifies good works in due season, prospering by God’s help (Enarr. Ps. 1.3)."
+        "comment2": "Augustine reads the tree as one rooted in grace and Scripture, continually refreshed by Christ, the living water. Its fruit signifies good works in due season, prospering by God's help (Enarr. Ps. 1.3)."
       },
       {
         "name": "Chaff → Separation",
@@ -42,12 +43,20 @@
         "name": "Divine Justice",
         "description": "God's righteous judgment",
         "category": "justice",
+        "lineRange": {
+          "start": 5,
+          "end": 7
+        },
         "lemmas": ["pereo", "resurgo", "proicio", "ventus", "pulvis", "terra"]
       },
       {
         "name": "Righteous Worship",
         "description": "The blessed man's devotion",
         "category": "worship",
+        "lineRange": {
+          "start": 2,
+          "end": 2
+        },
         "lemmas": ["meditor", "voluntas"]
       },
       {
@@ -68,25 +77,39 @@
         "name": "Spiritual Conflict",
         "description": "Walking in the way of sinners",
         "category": "conflict",
+        "lineRange": {
+          "start": 1,
+          "end": 1
+        },
         "lemmas": ["peccator", "sto"]
       },
       {
         "name": "Sinful Nature",
         "description": "Following counsel of wicked",
         "category": "sin",
+        "lineRange": {
+          "start": 1,
+          "end": 1
+        },
         "lemmas": ["impius", "abeo"]
       },
       {
         "name": "Worldly Opposition",
         "description": "Sitting in seat of pestilence",
         "category": "opposition",
+        "lineRange": {
+          "start": 1,
+          "end": 1
+        },
         "lemmas": ["pestilentia", "sedeo"]
       }
     ]
   },
+
   {
     "psalmNumber": 2,
     "category": "",
+
     "structuralThemes": [
       {
         "name": "Rage → Opposition",
@@ -99,11 +122,11 @@
       },
       {
         "name": "Chains → Laughter",
-        "description": "From rebellion against divine bonds to God’s derision from heaven",
+        "description": "From rebellion against divine bonds to God's derision from heaven",
         "lemmas": ["vinculum", "iugum", "irrideo"],
         "startLine": 3,
         "endLine": 4,
-        "comment": "The peoples reject the Lord’s yoke as bondage, but God responds not with fear but with laughter, revealing their revolt as powerless.",
+        "comment": "The peoples reject the Lord's yoke as bondage, but God responds not with fear but with laughter, revealing their revolt as powerless.",
         "comment2": "Augustine notes that what the proud see as 'chains' are in fact bonds of love and discipline; God mocks their rebellion as vain pretension (Enarr. Ps. 2.3–4)."
       },
       {
@@ -143,66 +166,108 @@
         "comment2": "Augustine interprets this as the movement from fear to love: discipline leads to true freedom, and blessedness belongs to all who cling to Christ in humble trust (Enarr. Ps. 2.11–12)."
       }
     ],
-
     "conceptualThemes": [
       {
-        "name": "Opposition to God",
-        "description": "Earthly powers rebelling against God's authority",
+        "name": "The Futile Rebellion",
+        "description": "The nations and kings conspire vainly against the Lord's authority.",
         "category": "opposition",
+        "lineRange": {
+          "start": 1,
+          "end": 3
+        },
         "lemmas": [
           "fremo",
-          "adversus",
-          "dirumpo",
-          "proicio",
+          "gens",
+          "populus",
+          "meditor",
+          "inanis",
           "convenio",
-          "asto",
-          "inanis"
+          "adversus"
         ]
       },
       {
-        "name": "Divine Judgment",
-        "description": "God's response to rebellion through derision and wrath",
+        "name": "Divine Derision & Warning",
+        "description": "God's initial response is not fear but mockery of the rebellion, followed by a terrifying warning.",
         "category": "justice",
-        "lemmas": [
-          "irrideo",
-          "subsanno",
-          "ira",
-          "furor",
-          "conturbo",
-          "confringo",
-          "irascor",
-          "pereo"
-        ]
+        "lineRange": {
+          "start": 4,
+          "end": 5
+        },
+        "lemmas": ["irrideo", "subsanno", "ira", "loquor", "furor", "conturbo"]
       },
       {
-        "name": "Divine Sovereignty",
-        "description": "God's authority and appointment of His Son as king",
+        "name": "The Decree of Sonship",
+        "description": "The core revelation: the King on Zion is declared the Son, given absolute authority over the nations.",
         "category": "divine",
+        "lineRange": {
+          "start": 6,
+          "end": 8
+        },
         "lemmas": [
           "constituo",
           "rex",
           "filius",
           "gigno",
-          "rego",
-          "virga",
-          "do",
           "hereditas",
-          "possessio"
+          "possessio",
+          "terminus"
         ]
       },
       {
-        "name": "Rightful Worship",
-        "description": "The call to serve and worship God with fear and joy",
-        "category": "worship",
+        "name": "The Iron Rule of the Messiah",
+        "description": "The Son's rule will be absolute and shattering to those who resist.",
+        "category": "justice",
+        "lineRange": {
+          "start": 9,
+          "end": 9
+        },
+        "lemmas": ["rego", "virga", "ferreus", "confringo", "vas", "figulus"]
+      },
+      {
+        "name": "The Admonition to the Rebels",
+        "description": "A direct call to the rebellious kings to act wisely and submit before it's too late.",
+        "category": "justice",
+        "lineRange": {
+          "start": 10,
+          "end": 12
+        },
         "lemmas": [
-          "servio",
-          "timor",
-          "exsulto",
-          "tremor",
-          "disciplina",
+          "intelligo",
+          "erudio",
+          "iudico",
           "apprehendo",
-          "confido"
+          "disciplina",
+          "irascor",
+          "pereo",
+          "via",
+          "iustus"
         ]
+      },
+      {
+        "name": "Paradoxical Worship",
+        "description": "The proper response to God's majesty: rejoicing with trembling, combining joy and holy fear.",
+        "category": "worship",
+        "lineRange": {
+          "start": 11,
+          "end": 11
+        },
+        "lemmas": ["servio", "timor", "exsulto", "tremor"]
+      },
+      {
+        "name": "The Blessed Refuge",
+        "description": "The final promise of blessing for those who take refuge in the Lord alone.",
+        "category": "virtue",
+        "lineRange": {
+          "start": 13,
+          "end": 13
+        },
+        "lemmas": ["beatus", "confido"]
+      },
+      {
+        "name": "The Sovereignty of God",
+        "description": "The ultimate theme of the psalm: God's supreme rule over human authorities.",
+        "category": "divine",
+        "lemmas": ["dominus", "rex", "constituo", "rego", "iudico", "servio"]
       }
     ]
   },
@@ -262,46 +327,45 @@
         "comment2": "Augustine sees the shattered teeth as rendering malicious speech powerless. The final declaration affirms that salvation is God's sovereign work, and His blessing rests on those who belong to Him."
       }
     ],
-    
-      "conceptualThemes": [
-        {
-          "name": "Divine Protection",
-          "description": "God as shield and sustainer",
-          "category": "divine",
-          "lemmas": ["susceptor", "suscipio", "exalto", "circumdo"]
-        },
-        {
-          "name": "Opposition and Enemies",
-          "description": "Adversaries and trouble from opponents",
-          "category": "opposition",
-          "lemmas": ["tribulo", "insurgo", "adversor", "peccator", "multiplico"]
-        },
-        {
-          "name": "Trust in God",
-          "description": "Lack of fear through faith in God",
-          "category": "virtue",
-          "lemmas": ["timeo", "confido"]
-        },
-        {
-          "name": "Prayer and Divine Response",
-          "description": "Crying out to God and His answer",
-          "category": "worship",
-          "lemmas": ["clamo", "exaudio", "vox"]
-        },
-        {
-            "name": "Divine Salvation",
-          "description": "God's deliverance and blessing",
-          "category": "divine",
-          "lemmas": ["salus", "salvus", "benedictio"]
-        },
-        {
-          "name": "Divine Justice",
-          "description": "God's judgment against adversaries",
-          "category": "justice",
-          "lemmas": ["percutio", "contero"]
-        }
-      ]
-    
+
+    "conceptualThemes": [
+      {
+        "name": "Divine Protection",
+        "description": "God as shield and sustainer",
+        "category": "divine",
+        "lemmas": ["susceptor", "suscipio", "exalto", "circumdo"]
+      },
+      {
+        "name": "Opposition and Enemies",
+        "description": "Adversaries and trouble from opponents",
+        "category": "opposition",
+        "lemmas": ["tribulo", "insurgo", "adversor", "peccator", "multiplico"]
+      },
+      {
+        "name": "Trust in God",
+        "description": "Lack of fear through faith in God",
+        "category": "virtue",
+        "lemmas": ["timeo", "confido"]
+      },
+      {
+        "name": "Prayer and Divine Response",
+        "description": "Crying out to God and His answer",
+        "category": "worship",
+        "lemmas": ["clamo", "exaudio", "vox"]
+      },
+      {
+        "name": "Divine Salvation",
+        "description": "God's deliverance and blessing",
+        "category": "divine",
+        "lemmas": ["salus", "salvus", "benedictio"]
+      },
+      {
+        "name": "Divine Justice",
+        "description": "God's judgment against adversaries",
+        "category": "justice",
+        "lemmas": ["percutio", "contero"]
+      }
+    ]
   },
 
   {

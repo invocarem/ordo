@@ -3,17 +3,20 @@ import XCTest
 @testable import LatinService
 
 class Psalm2Tests: XCTestCase {
-    private var latinService: LatinService!
+    // private var latinService: LatinService!
+    private let utilities = PsalmTestUtilities.self
+
     private let verbose = true
 
     override func setUp() {
         super.setUp()
-        latinService = LatinService.shared
+//        latinService = LatinService.shared
     }
 
     let id = PsalmIdentity(number: 2, category: nil)
 
     // MARK: - Test Data
+
     private let psalm2 = [
         "Quare fremuerunt gentes, et populi meditati sunt inania?",
         "Astiterunt reges terrae, et principes convenerunt in unum adversus Dominum, et adversus christum eius.",
@@ -46,108 +49,171 @@ class Psalm2Tests: XCTestCase {
         (13, ["beatus", "omnis", "confido"]),
     ]
 
-    private let themeKeyLemmas:
-        [(name: String, description: String, lemmas: [String], category: ThemeCategory)] = [
-            (
-                "Opposition to God",
-                "Earthly powers rebelling against God's authority",
-                ["fremo", "adversus", "dirumpo", "proicio", "convenio", "asto", "inanis"],
-                .opposition
-            ),
-            (
-                "Divine Judgment",
-                "God's response to rebellion through derision and wrath",
-                [
-                    "irrideo", "subsanno", "ira", "furor", "conturbo", "confringo", "irascor",
-                    "pereo",
-                ],
-                .justice
-            ),
-            (
-                "Divine Sovereignty",
-                "God's authority and appointment of His Son as king",
-                [
-                    "constituo", "rex", "filius", "gigno", "rego", "virga", "do", "hereditas",
-                    "possessio",
-                ],
-                .divine
-            ),
-            (
-                "Rightful Worship",
-                "The call to serve and worship God with fear and joy",
-                ["servio", "timor", "exsulto", "tremor", "disciplina", "apprehendo", "confido"],
-                .worship
-            ),
-        ]
+private let structuralThemes = [
+    (
+        "Rage → Opposition",
+        "From the turmoil of nations to defiance against the Lord and His Christ",
+        ["fremo", "inanis", "christus"],
+        1,
+        2,
+        "Nations rage in vanity, rulers set themselves against the Lord and His Anointed, revealing the futility of human power against divine kingship.",
+        "Augustine interprets this as the nations plotting against Christ and His Church, yet all human counsels are 'inania'—empty—before the eternal decree of God (Enarr. Ps. 2.1–2)."
+    ),
+    (
+        "Chains → Laughter",
+        "From rebellion against divine bonds to God's derision from heaven",
+        ["vinculum", "iugum", "irrideo"],
+        3,
+        4,
+        "The peoples reject the Lord's yoke as bondage, but God responds not with fear but with laughter, revealing their revolt as powerless.",
+        "Augustine notes that what the proud see as 'chains' are in fact bonds of love and discipline; God mocks their rebellion as vain pretension (Enarr. Ps. 2.3–4)."
+    ),
+    (
+        "Wrath → Installation",
+        "From divine anger to the establishment of the true King on Zion",
+        ["ira", "furor", "rex", "sion"],
+        5,
+        6,
+        "God answers with wrath, establishing His chosen king upon Zion, His holy mountain.",
+        "Augustine reads Zion as the Church, the place where Christ reigns despite worldly rage; God's anger here manifests as His unshakable justice (Enarr. Ps. 2.5–6)."
+    ),
+    (
+        "Sonship → Inheritance",
+        "From divine begetting to the universal rule of the Son",
+        ["filius", "gigno", "hereditas"],
+        7,
+        8,
+        "The Lord declares the King to be His begotten Son and grants Him all nations as inheritance and possession.",
+        "For Augustine, 'hodie genui te' refers to the eternal generation of the Son and also to the Resurrection; the inheritance is the Church drawn from all nations (Enarr. Ps. 2.7–8)."
+    ),
+    (
+        "Rod → Shattering",
+        "From rule with iron to the breaking of resistance",
+        ["virga", "ferreus", "confringo"],
+        9,
+        10,
+        "The Messiah rules with a rod of iron, shattering nations like fragile pottery, yet kings are called to wisdom and instruction.",
+        "Augustine notes the dual sense: the iron rod is both severe judgment and the firm, unbreakable discipline of Christ, which smashes pride but also reforms the humble (Enarr. Ps. 2.9–10)."
+    ),
+    (
+        "Service → Trust",
+        "From trembling service to blessed confidence in the Lord",
+        ["servio", "timor", "disciplina", "confido"],
+        11,
+        13,
+        "The psalm ends by exhorting rulers to serve with fear, rejoice with trembling, embrace discipline, and find blessing in trust.",
+        "Augustine interprets this as the movement from fear to love: discipline leads to true freedom, and blessedness belongs to all who cling to Christ in humble trust (Enarr. Ps. 2.11–12)."
+    )
+]
+
+    private let conceptualThemes = [
+        (
+            "The Futile Rebellion",
+            "The nations and kings conspire vainly against the Lord's authority.",
+            ["fremo", "gens", "populus", "meditor", "inanis", "convenio", "adversus"],
+            ThemeCategory.opposition,
+            1 ... 3 as ClosedRange<Int>?
+        ),
+        (
+            "Divine Derision & Warning",
+            "God's initial response is not fear but mockery of the rebellion, followed by a terrifying warning.",
+            ["irrideo", "subsanno", "ira", "loquor", "furor", "conturbo"],
+            .justice,
+            4 ... 5
+        ),
+        (
+            "The Decree of Sonship",
+            "The core revelation: the King on Zion is declared the Son, given absolute authority over the nations.",
+            ["constituo", "rex", "filius", "gigno", "hereditas", "possessio", "terminus"],
+            .divine,
+            6 ... 8
+        ),
+        (
+            "The Iron Rule of the Messiah",
+            "The Son's rule will be absolute and shattering to those who resist.",
+            ["rego", "virga", "ferreus", "confringo", "vas", "figulus"],
+            .justice,
+            9 ... 9
+        ),
+        (
+            "The Admonition to the Rebels",
+            "A direct call to the rebellious kings to act wisely and submit before it's too late.",
+            ["intelligo", "erudio", "iudico", "apprehendo", "disciplina", "irascor", "pereo", "via", "iustus"],
+            .justice,
+            10 ... 12
+        ),
+        ( // Changed from ConceptualTheme to tuple
+            "Paradoxical Worship",
+            "The proper response to God's majesty: rejoicing with trembling, combining joy and holy fear.",
+            ["servio", "timor", "exsulto", "tremor"],
+            .worship,
+            11 ... 11
+        ),
+        (
+            "The Blessed Refuge",
+            "The final promise of blessing for those who take refuge in the Lord alone.",
+            ["beatus", "confido"],
+            .virtue,
+            13 ... 13
+        ),
+        (
+            "The Sovereignty of God",
+            "The ultimate theme of the psalm: God's supreme rule over human authorities.",
+            ["dominus", "rex", "constituo", "rego", "iudico", "servio"],
+            .divine,
+            nil as ClosedRange<Int>?
+        ),
+    ]
+
     // MARK: - Line by Line Key Lemmas Test
 
     func testPsalm2LineByLineKeyLemmas() {
-        var allFailures: [String] = []
-
-        for (lineNumber, expectedLemmas) in lineKeyLemmas {
-            let line = psalm2[lineNumber - 1]
-            let analysis = latinService.analyzePsalm(id, text: line, startingLineNumber: lineNumber)
-
-            let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-            let foundLemmas = expectedLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-            let missingLemmas = expectedLemmas.filter { !detectedLemmas.contains($0.lowercased()) }
-
-            if verbose {
-                let status = missingLemmas.isEmpty ? "✅" : "❌"
-                print(
-                    "\(status) Line \(lineNumber): Found \(foundLemmas.count)/\(expectedLemmas.count) key lemmas: \(foundLemmas.joined(separator: ", "))"
-                )
-
-                if !missingLemmas.isEmpty {
-                    print("   MISSING: \(missingLemmas.joined(separator: ", "))")
-                    print("   Available: \(detectedLemmas.sorted().joined(separator: ", "))")
-                }
-            }
-
-            if !missingLemmas.isEmpty {
-                allFailures.append(
-                    "Line \(lineNumber): Missing lemmas: \(missingLemmas.joined(separator: ", "))")
-            }
-        }
-
-        if !allFailures.isEmpty {
-            XCTFail("Missing lemmas detected:\n" + allFailures.joined(separator: "\n"))
-        }
+        utilities.testLineByLineKeyLemmas(
+            psalmText: psalm2,
+            lineKeyLemmas: lineKeyLemmas,
+            psalmId: id,
+            verbose: verbose
+        )
     }
 
-    // MARK: - Theme Tests
+    func testPsalm2StructuralThemes() {
+    utilities.testStructuralThemes(
+        psalmText: psalm2,
+        structuralThemes: structuralThemes,
+        psalmId: id,
+        verbose: verbose
+    )
+}
 
-    func testPsalm2Themes() {
-        let analysis = latinService.analyzePsalm(id, text: psalm2.joined(separator: " "))
-        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-        var allFailures: [String] = []
-
-        for (themeName, themeDescription, themeLemmas, category) in themeKeyLemmas {
-            let foundLemmas = themeLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-            let missingLemmas = themeLemmas.filter { !detectedLemmas.contains($0.lowercased()) }
-
-            if verbose {
-                let status = missingLemmas.isEmpty ? "✅" : "❌"
-                let colorName = category.rawValue.uppercased()
-                print("\n\(status) [\(colorName)] \(themeName): \(themeDescription)")
-                print(
-                    "   Found \(foundLemmas.count)/\(themeLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))"
-                )
-
-                if !missingLemmas.isEmpty {
-                    print("   MISSING: \(missingLemmas.joined(separator: ", "))")
-                }
-            }
-
-            if !missingLemmas.isEmpty {
-                allFailures.append(
-                    "Theme \(themeName) (\(category.rawValue)): Missing \(missingLemmas.count) lemmas: \(missingLemmas.joined(separator: ", "))"
-                )
-            }
-        }
-
-        if !allFailures.isEmpty {
-            XCTFail("Theme lemma requirements not met:\n" + allFailures.joined(separator: "\n"))
-        }
+    func testPsalm2ConceptualThemes() {
+        utilities.testConceptualThemes(
+            psalmText: psalm2,
+            conceptualThemes: conceptualThemes,
+            psalmId: id,
+            verbose: verbose
+        )
     }
+
+func testSavePsalm2Themes() {
+    guard let jsonString = utilities.generateCompleteThemesJSONString(
+        psalmNumber: id.number,
+        conceptualThemes: conceptualThemes,
+        structuralThemes: structuralThemes
+    ) else {
+        XCTFail("Failed to generate complete themes JSON")
+        return
+    }
+
+    let success = utilities.saveToFile(
+        content: jsonString,
+        filename: "output_psalm2_themes.json"
+    )
+
+    if success {
+        print("✅ Complete themes JSON created successfully")
+    } else {
+        print("⚠️ Could not save complete themes file:")
+        print(jsonString)
+    }
+}
 }

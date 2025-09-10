@@ -13,10 +13,12 @@ public struct PsalmIdentity {
 public enum ThemeCategory: String, Codable {
     case divine
     case justice
+
     case worship
     case virtue
-    case conflict
+    
     case sin
+    case conflict
     case opposition
     
     case unknown
@@ -27,6 +29,13 @@ public enum ThemeCategory: String, Codable {
         let rawValue = try container.decode(String.self)
         self = ThemeCategory(rawValue: rawValue.lowercased()) ?? .unknown
     }
+}
+public struct ConceptualTheme: Codable {
+    public    let name: String
+    public        let description: String
+        public let lemmas: [String]
+        public let category: ThemeCategory
+        public let lineRange: ClosedRange<Int>? 
 }
 
 public typealias PsalmThemes = [PsalmThemeData]
@@ -47,13 +56,7 @@ public struct PsalmThemeData: Codable {
         let comment: String?
         let comment2: String?
     }
-    public struct ConceptualTheme: Codable {
-        let name: String
-        let description: String
-        let lemmas: [String]
-        let category: ThemeCategory
-    }
-}
+   }
 
 // MARK: - Theme Manager
 class PsalmThemeManager {
@@ -98,7 +101,7 @@ class PsalmThemeManager {
             .flatMap { $0.structuralThemes }
     }
     
-    func getConceptualThemes(for psalmNumber: Int, category: String = "") -> [PsalmThemeData.ConceptualTheme] {
+    func getConceptualThemes(for psalmNumber: Int, category: String = "") -> [ConceptualTheme] {
     return themeData
         .filter { $0.psalmNumber == psalmNumber && $0.category == category }
         .flatMap { $0.conceptualThemes ?? [] }  

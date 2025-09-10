@@ -16,3 +16,6 @@ build/
 .env
 *.swp
 *.bak
+
+# generated output file
+output_*
