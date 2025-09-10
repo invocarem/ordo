@@ -30,20 +30,45 @@ class Psalm3Tests: XCTestCase {
         (8, ["salus", "benedictio"]),
     ]
 
-    private let themeKeyLemmas = [
-        (
-            "Divine Protection", "God as shield and sustainer",
-            ["susceptor", "suscipio", "exalto", "circumdo"]
-        ),
-        (
-            "Enemies and Opposition", "Adversaries and trouble",
-            ["tribulo", "insurgo", "adversor", "peccator", "multiplico"]
-        ),
-        ("Trust and Confidence", "Lack of fear in God", ["timeo", "non"]),
-        ("Prayer and Response", "Crying out and God's answer", ["clamo", "exaudio", "vox"]),
-        ("Salvation and Deliverance", "God's saving action", ["salus", "salvus", "benedictio"]),
-        ("Divine Action", "God's powerful intervention", ["percutio", "contero"]),
-    ]
+    private let themeKeyLemmas:
+        [(name: String, description: String, lemmas: [String], category: ThemeCategory)] = [
+            (
+                "Divine Protection",
+                "God as shield and sustainer",
+                ["susceptor", "suscipio", "exalto"],
+                .divine
+            ),
+            (
+                "Enemies and Opposition",
+                "Adversaries and trouble",
+                ["tribulo", "insurgo", "adversor", "peccator", "multiplico", "circumdo"],
+                .opposition
+            ),
+            (
+                "Trust and Confidence",
+                "Lack of fear in God",
+                ["timeo"],
+                .virtue
+            ),
+            (
+                "Prayer and Response",
+                "Crying out and God's answer",
+                ["clamo", "exaudio", "vox"],
+                .worship
+            ),
+            (
+                "Salvation and Deliverance",
+                "God's saving action",
+                ["salus", "salvus", "benedictio"],
+                .divine
+            ),
+            (
+                "Divine Justice",
+                "God's powerful intervention against enemies",
+                ["percutio", "contero"],
+                .justice
+            ),
+        ]
 
     // MARK: - Setup
     override func setUp() {
@@ -91,13 +116,14 @@ class Psalm3Tests: XCTestCase {
         let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
         var allFailures: [String] = []
 
-        for (themeName, themeDescription, themeLemmas) in themeKeyLemmas {
+        for (themeName, themeDescription, themeLemmas, category) in themeKeyLemmas {
             let foundLemmas = themeLemmas.filter { detectedLemmas.contains($0.lowercased()) }
             let missingLemmas = themeLemmas.filter { !detectedLemmas.contains($0.lowercased()) }
 
             if verbose {
                 let status = missingLemmas.isEmpty ? "✅" : "❌"
-                print("\n\(status) \(themeName.uppercased()): \(themeDescription)")
+                let colorName = category.rawValue.uppercased()
+                print("\n\(status) [\(colorName)] \(themeName): \(themeDescription)")
                 print(
                     "   Found \(foundLemmas.count)/\(themeLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))"
                 )
@@ -109,7 +135,7 @@ class Psalm3Tests: XCTestCase {
 
             if !missingLemmas.isEmpty {
                 allFailures.append(
-                    "Theme \(themeName): Missing \(missingLemmas.count) lemmas: \(missingLemmas.joined(separator: ", "))"
+                    "Theme \(themeName) (\(category.rawValue)): Missing \(missingLemmas.count) lemmas: \(missingLemmas.joined(separator: ", "))"
                 )
             }
         }
@@ -118,4 +144,5 @@ class Psalm3Tests: XCTestCase {
             XCTFail("Theme lemma requirements not met:\n" + allFailures.joined(separator: "\n"))
         }
     }
+
 }
