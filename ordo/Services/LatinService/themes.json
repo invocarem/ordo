@@ -1149,14 +1149,16 @@
       }
     ]
   },
+
   {
     "psalmNumber": 13,
     "category": "",
+
     "structuralThemes": [
       {
         "name": "Folly → Corruption",
         "description": "The fool's denial of God leads to universal moral corruption and absence of good.",
-        "lemmas": ["insipiens", "corrumpo", "abominabilis", "bonum"],
+        "lemmas": ["insipiens", "corrumpo", "abominabilis", "bonus"],
         "startLine": 1,
         "endLine": 2,
         "comment": "The psalm begins with the fool's declaration that there is no God, which results in complete corruption and abominable deeds, with none doing good.",
@@ -1165,7 +1167,7 @@
       {
         "name": "Search → Turning Away",
         "description": "God's search for understanding among humanity reveals universal turning away from Him.",
-        "lemmas": ["prospicio", "intelligens", "requiro", "declino"],
+        "lemmas": ["prospicio", "intelligo", "requiro", "declino"],
         "startLine": 3,
         "endLine": 4,
         "comment": "The Lord looks down from heaven to see if any understand or seek God, but finds that all have turned aside and become corrupt.",
@@ -1205,9 +1207,117 @@
         "comment": "The wicked do not call upon the Lord but instead tremble with a groundless, misplaced fear. In contrast, the Lord is with the righteous generation. The counsel of the poor is confounded because the Lord is their hope. The psalm culminates in a hope for salvation from Zion, when God will restore the fortunes of His people, bringing joy and gladness.",
         "comment2": "Augustine contrasts the vain, chaotic fears of the godless with the well-placed hope of the righteous. The 'turning of the captivity' is interpreted spiritually as liberation from the bondage of sin, a restoration accomplished by Christ, the true 'salvation from Zion' (Enarr. Ps. 13.9-11)."
       }
+    ],
+    "conceptualThemes": [
+      {
+        "name": "Divine Observation",
+        "description": "God's search for understanding among humanity",
+        "category": "divine",
+        "lineRange": {
+          "start": 3,
+          "end": 4
+        },
+        "lemmas": ["prospicio", "intelligo", "requiro", "caelum"]
+      },
+      {
+        "name": "Moral Corruption",
+        "description": "Universal moral decay and absence of good",
+        "category": "sin",
+        "lineRange": {
+          "start": 1,
+          "end": 4
+        },
+        "lemmas": ["corrumpo", "abominabilis", "declino", "inutilis"]
+      },
+      {
+        "name": "Foolish Atheism",
+        "description": "The fool's denial of God and its consequences",
+        "category": "sin",
+        "lineRange": {
+          "start": 1,
+          "end": 2
+        },
+        "lemmas": ["insipiens", "deus", "bonus"]
+      },
+      {
+        "name": "Deceitful Speech",
+        "description": "Tongue that practices deception and violence",
+        "category": "sin",
+        "lineRange": {
+          "start": 5,
+          "end": 6
+        },
+        "lemmas": ["sepulcrum", "guttur", "venenum", "aspis", "dolosus"]
+      },
+      {
+        "name": "Violent Action",
+        "description": "Physical violence and bloodshed",
+        "category": "conflict",
+        "lineRange": {
+          "start": 6,
+          "end": 6
+        },
+        "lemmas": ["pes", "sanguis", "velox", "effundo"]
+      },
+      {
+        "name": "Destructive Ways",
+        "description": "Paths of ruin and ignorance of peace",
+        "category": "sin",
+        "lineRange": {
+          "start": 7,
+          "end": 8
+        },
+        "lemmas": [
+          "contritio",
+          "infelicitas",
+          "via",
+          "pax",
+          "cognosco",
+          "iniquitas"
+        ]
+      },
+      {
+        "name": "Oppression of the Righteous",
+        "description": "Devouring God's people like bread",
+        "category": "opposition",
+        "lineRange": {
+          "start": 8,
+          "end": 8
+        },
+        "lemmas": ["devoro", "plebs", "cibus", "panis"]
+      },
+      {
+        "name": "False Fear",
+        "description": "Wrongful terror and misplaced anxiety",
+        "category": "sin",
+        "lineRange": {
+          "start": 9,
+          "end": 9
+        },
+        "lemmas": ["trepido", "timor", "invoco"]
+      },
+      {
+        "name": "Divine Hope",
+        "description": "The Lord as the hope of the righteous",
+        "category": "virtue",
+        "lineRange": {
+          "start": 10,
+          "end": 10
+        },
+        "lemmas": ["inops", "confundo", "spes", "dominus"]
+      },
+      {
+        "name": "Salvation from Zion",
+        "description": "Future restoration and deliverance",
+        "category": "virtue",
+        "lineRange": {
+          "start": 11,
+          "end": 11
+        },
+        "lemmas": ["sion", "salus", "captivitas", "averto", "exsulto", "laetor"]
+      }
     ]
   },
-
   {
     "psalmNumber": 14,
     "category": "",

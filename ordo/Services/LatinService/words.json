@@ -1,32 +1,129 @@
 [
-  {
-  "lemma": "nihilum",
-  "part_of_speech": "noun",
-  "declension": 2,
-  "gender": "neuter",
-  "nominative": "nihilum",
-  "genitive": "nihili",
-  "translations": {
-    "en": "nothing, nothingness, a thing of no value",
-    "la": "nihilum, nihili"
-  }
-},
-  {
-  "lemma": "ingredior",
+ {
+  "lemma": "pateo",
   "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "ingredi",
-  "present": "ingredior",
-  "future": "ingrediar",
-  "perfect": "ingressus",
+  "conjugation": 2,
+  "infinitive": "patere",
+  "present": "pateo",
+  "future": "patebo",
+  "perfect": "patui",
+  "supine": "patitum",
   "translations": {
-    "en": "to enter, go in, undertake",
-    "la": "ingredior, ingredi, ingressus sum"
-  },
-  "forms": {
-    "present_3s": ["ingreditur"]
+    "en": "to be open, lie open, be accessible",
+    "la": "pateo, patere, patui, patitum"
   }
 },
+ 
+  {
+  "lemma": "ille",
+  "part_of_speech": "pronoun",
+  "declension": 0,
+  "gender": "masculine",
+  "nominative": "ille",
+  "genitive": "illius",
+  "translations": {
+    "en": "that, he, that person",
+    "la": "ille, illa, illud"
+  },
+   "forms": {
+    "adverb": ["illic"],
+    "nominative_f": ["illa"],
+    "nominative_n": ["illud"],
+     "accusative_m": ["illum"],
+    "accusative_f": ["illam"],
+    "accusative_n": ["illud"],
+    "ablative_m": ["illo"],
+    "ablative_f": ["illa"],
+    "ablative_n": ["illo"]
+  }
+},
+  {
+  "lemma": "simul",
+  "part_of_speech": "adverb",
+  "declension": 0,
+  "translations": {
+    "en": "at the same time, simultaneously, at once",
+    "la": "simul"
+  }
+},
+  {
+    "lemma": "intelligo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "intelligere",
+    "present": "intelligo",
+    "future": "intelligam",
+    "perfect": "intellexi",
+    "supine": "intellectum",
+    "translations": {
+      "en": "to understand, comprehend ",
+      "la": "intelligo, intelligere, intellexi, intellectum"
+    }
+  },
+  {
+    "lemma": "infelicitas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "infelicitas",
+    "genitive": "infelicitatis",
+    "translations": {
+      "en": "unhappiness, misfortune, bad luck",
+      "la": "infelicitas, infelicitatis"
+    }
+  },
+  {
+    "lemma": "contritio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "contritio",
+    "genitive": "contritionis",
+    "translations": {
+      "en": "contrition, crushing, brokenness",
+      "la": "contritio, contritionis"
+    }
+  },
+  {
+    "lemma": "venenum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "venenum",
+    "genitive": "veneni",
+    "translations": {
+      "en": "poison, venom; potion",
+      "la": "venenum, veneni"
+    }
+  },
+  {
+    "lemma": "nihilum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "nihilum",
+    "genitive": "nihili",
+    "translations": {
+      "en": "nothing, nothingness, a thing of no value",
+      "la": "nihilum, nihili"
+    }
+  },
+  {
+    "lemma": "ingredior",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "ingredi",
+    "present": "ingredior",
+    "future": "ingrediar",
+    "perfect": "ingressus",
+    "translations": {
+      "en": "to enter, go in, undertake",
+      "la": "ingredior, ingredi, ingressus sum"
+    },
+    "forms": {
+      "present_3s": ["ingreditur"]
+    }
+  },
   {
     "lemma": "decipio",
     "part_of_speech": "verb",
@@ -10954,6 +11051,20 @@
     },
     "notes": "Literal meaning: 'to look forward'. Often implies looking into the distance (physically or metaphorically), not necessarily 'down'."
   },
+
+  {
+    "lemma": "iacob",
+    "part_of_speech": "noun",
+    "gender": "masculine",
+    "declension": 3,
+    "nominative": "Jacob",
+    "genitive": "Jacobis",
+    "translations": {
+      "en": "Jacob (Biblical patriarch)",
+      "la": "Iacob"
+    },
+    "notes": "Hebrew origin; often appears in Vulgate as 'Jacob' (indeclinable in some texts)"
+  },
   {
     "lemma": "jacob",
     "part_of_speech": "noun",
@@ -11893,6 +12004,7 @@
     "perfect": "effudi",
     "supine": "effusum",
     "forms": {
+      "gerundive": ["effundendus", "effundenda", "effundendum"],
       "present": [
         "effundo",
         "effundis",
