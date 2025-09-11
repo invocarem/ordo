@@ -1,4 +1,20 @@
 [
+  {
+  "lemma": "benesonus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "benesonus",
+  "genitive": "benesoni",
+  "translations": {
+    "en": "well-sounding, resonant, melodious",
+    "la": "benesonus, benesona, benesonum"
+  },
+  "forms": {
+    "ablative_pl": ["benesonantibus"] 
+  }
+},
+ 
  {
   "lemma": "pateo",
   "part_of_speech": "verb",

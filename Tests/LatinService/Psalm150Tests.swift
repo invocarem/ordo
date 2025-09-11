@@ -1,92 +1,168 @@
-import XCTest
 @testable import LatinService
+import XCTest
 
 class Psalm150Tests: XCTestCase {
-    private var latinService: LatinService!
-    let verbose = true
-    
-    override func setUp() {
-        super.setUp()
-        latinService = LatinService.shared
-    }
-    
-    // MARK: - Test Data
-    let psalm150 = [
-        "Laudate Dominum in sanctis eius: laudate eum in firmamento virtutis eius.",
-        "Laudate eum in virtutibus eius: laudate eum secundum multitudinem magnitudinis eius.",
-        "Laudate eum in sono tubae: laudate eum in psalterio, et cithara.",
-        "Laudate eum in tympano, et choro: laudate eum in chordis, et organo.",
-        "Laudate eum in cymbalis benesonantibus: laudate eum in cymbalis iubilationis.",
-        "Omnis spiritus laudet Dominum."
-    ]
-    let id = PsalmIdentity(number: 150, category: nil)
-    
-    // MARK: - Test Cases
+  private var latinService: LatinService!
+  private let utilities = PsalmTestUtilities.self
 
-    func testThemeLemmas() {
-        let analysis = latinService.analyzePsalm(id, text: psalm150)
-        
-        // First theme (lines 1-2): Temple → Majesty
-        let templeTerms = [
-            ("sanctus", ["sanctis"], "holy"),
-            ("firmamentum", ["firmamento"], "firmament"),
-            ("virtus", ["virtutis", "virtutibus"], "power"),
-            ("magnitudo", ["magnitudinis"], "greatness")
-        ]
-        
-        // Second theme (lines 3-4): Instruments → Communion  
-        let instrumentTerms = [
-            ("tuba", ["tubae"], "trumpet"),
-            ("psalterium", ["psalterio"], "psaltery"),
-            ("cithara", ["cithara"], "harp"),
-            ("tympanum", ["tympano"], "tambourine"),
-            ("chorda", ["chordis"], "string"),
-            ("organum", ["organo"], "organ")
-        ]
-        
-        // Third theme (lines 5-6): Cymbals → Breath
-        let cymbalTerms = [
-            ("cymbalum", ["cymbalis"], "cymbal"),
-            ("iubilatio", ["iubilationis"], "jubilation"),
-            ("spiritus", ["spiritus"], "spirit"),
-            ("laudo", ["Laudate", "laudet"], "praise")
-        ]
-        
-        // Verify each theme group exactly like testPraiseVocabulary does
-        verifyWordsInAnalysis(analysis, confirmedWords: templeTerms)
-        verifyWordsInAnalysis(analysis, confirmedWords: instrumentTerms) 
-        verifyWordsInAnalysis(analysis, confirmedWords: cymbalTerms)
+  let verbose = true
+
+  override func setUp() {
+    super.setUp()
+    latinService = LatinService.shared
+  }
+
+  // MARK: - Test Data
+
+  let psalm150 = [
+    "Laudate Dominum in sanctis eius: laudate eum in firmamento virtutis eius.",
+    "Laudate eum in virtutibus eius: laudate eum secundum multitudinem magnitudinis eius.",
+    "Laudate eum in sono tubae: laudate eum in psalterio, et cithara.",
+    "Laudate eum in tympano, et choro: laudate eum in chordis, et organo.",
+    "Laudate eum in cymbalis benesonantibus: laudate eum in cymbalis iubilationis. Omnis spiritus laudet Dominum.",
+  ]
+  let id = PsalmIdentity(number: 150, category: nil)
+
+  // MARK: - Line-by-line key lemmas (Psalm 150)
+
+  private let lineKeyLemmas: [(Int, [String])] = [
+    (1, ["laudo", "dominus", "sanctus", "firmamentum", "virtus"]),
+    (2, ["laudo", "virtus", "multitudo", "magnitudo"]),
+    (3, ["laudo", "sonus", "tuba", "psalterium", "cithara"]),
+    (4, ["laudo", "tympanum", "chorus", "chorda", "organum"]),
+    (5, ["laudo", "cymbalum", "benesonus", "iubilatio", "omnis", "spiritus", "laudo", "dominus"]),
+  ]
+
+  // MARK: - Structural Themes
+
+  private let structuralThemes = [
+    (
+      "Sanctuary → Majesty",
+      "From holy places to divine greatness",
+      ["sanctus", "firmamentum", "virtus", "magnitudo"],
+      1,
+      2,
+      "The call to praise begins in God's holy places and extends to the cosmic firmament, emphasizing His power and immeasurable greatness.",
+      "Augustine sees this as praise moving from the earthly temple to the heavenly realm, where God's power and majesty are fully revealed. The 'sanctuary' represents the Church, while the 'firmament' signifies the celestial dwelling of God."
+    ),
+    (
+      "Instruments → Universal Praise",
+      "From musical instruments to all creation praising",
+      ["tuba", "psalterium", "cithara", "tympanum", "organum", "cymbalum", "spiritus"],
+      3,
+      5,
+      "The psalm progresses through various musical instruments, culminating in the call for every living spirit to praise the Lord, representing the universal scope of worship.",
+      "Augustine interprets the instruments as different aspects of the faithful soul: the trumpet as proclamation, psaltery as good works, harp as heavenly desire, etc. The final call for 'every spirit' to praise shows that all creation, both visible and invisible, should worship God."
+    ),
+  ]
+
+  // MARK: - Conceptual Themes
+
+  private let conceptualThemes = [
+    (
+      "Divine Worship",
+      "Praise and adoration of God",
+      ["laudo", "dominus"],
+      ThemeCategory.worship,
+      nil as ClosedRange<Int>?
+    ),
+    (
+      "Divine Majesty",
+      "God's power and greatness",
+      ["virtus", "magnitudo", "firmamentum"],
+      .divine,
+      1 ... 2
+    ),
+    (
+      "Sacred Space",
+      "Holy places and sanctuary",
+      ["sanctus"],
+      .worship,
+      1 ... 1
+    ),
+    (
+      "Musical Worship",
+      "Instruments of praise",
+      ["tuba", "psalterium", "cithara", "tympanum", "organum", "cymbalum"],
+      .worship,
+      3 ... 5
+    ),
+    (
+      "Universal Praise",
+      "All creation worshiping",
+      ["omnis", "spiritus"],
+      .worship,
+      5 ... 5
+    ),
+    (
+      "Joyful Worship",
+      "Exuberant celebration",
+      ["iubilatio", "benesonus"],
+      .worship,
+      5 ... 5
+    ),
+  ]
+
+  // MARK: - Test Cases
+
+  func testPsalm150Verses() {
+    XCTAssertEqual(psalm150.count, 5, "Psalm 150 should have 5 verses in the Benedictine Office")
+    // Also validate the orthography of the text for analysis consistency
+    let normalized = psalm150.map { PsalmTestUtilities.validateLatinText($0) }
+    XCTAssertEqual(
+      normalized,
+      psalm150,
+      "Normalized Latin text should match expected classical forms"
+    )
+  }
+
+  func testPsalm150LineByLineKeyLemmas() {
+    utilities.testLineByLineKeyLemmas(
+      psalmText: psalm150,
+      lineKeyLemmas: lineKeyLemmas,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testPsalm150StructuralThemes() {
+    utilities.testStructuralThemes(
+      psalmText: psalm150,
+      structuralThemes: structuralThemes,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testPsalm150ConceptualThemes() {
+    utilities.testConceptualThemes(
+      psalmText: psalm150,
+      conceptualThemes: conceptualThemes,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testSavePsalm150Themes() {
+    guard let jsonString = utilities.generateCompleteThemesJSONString(
+      psalmNumber: id.number,
+      conceptualThemes: conceptualThemes,
+      structuralThemes: structuralThemes
+    ) else {
+      XCTFail("Failed to generate complete themes JSON")
+      return
     }
-        
-   
-    // MARK: - Helper
-    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
-        for (lemma, forms, translation) in confirmedWords {
-            guard let entry = analysis.dictionary[lemma] else {
-                XCTFail("Missing lemma: \(lemma)")
-                continue
-            }
-            
-            // Verify semantic domain
-            XCTAssertTrue(
-                entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-                "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
-            )
-            
-            // Verify morphological coverage
-            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-            if !missingForms.isEmpty {
-                XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
-            }
-            
-            if verbose {
-                print("\n\(lemma.uppercased())")
-                print("  Translation: \(entry.translation ?? "?")")
-                forms.forEach { form in
-                    let count = entry.forms[form.lowercased()] ?? 0
-                    print("  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
-                }
-            }
-        }
+
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm150_themes.json"
+    )
+
+    if success {
+      print("✅ Complete themes JSON created successfully")
+    } else {
+      print("⚠️ Could not save complete themes file:")
+      print(jsonString)
     }
+  }
 }
