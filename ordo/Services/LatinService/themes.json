@@ -369,6 +369,7 @@
   {
     "psalmNumber": 4,
     "category": "",
+
     "structuralThemes": [
       {
         "name": "Invocation → Expansion",
@@ -414,6 +415,93 @@
         "endLine": 10,
         "comment": "From God's provision comes multiplication; in perfect peace and unity I will lie down and sleep, for the Lord alone establishes me in hope.",
         "comment2": "Augustine interprets 'in pace in idipsum' as the peace and unity found in the Body of Christ. The sleep is one of trust, and the hope is singularly placed in God, who alone establishes the soul in safety."
+      }
+    ],
+    "conceptualThemes": [
+      {
+        "name": "Prayer and Response",
+        "description": "God hearing and answering prayers",
+        "category": "worship",
+        "lineRange": {
+          "start": 1,
+          "end": 2
+        },
+        "lemmas": ["invoco", "exaudio", "oratio", "clamo", "misereor"]
+      },
+      {
+        "name": "Trust and Hope",
+        "description": "Trusting in God and finding hope",
+        "category": "virtue",
+        "lineRange": {
+          "start": 6,
+          "end": 10
+        },
+        "lemmas": ["spero", "spes", "constituo", "requiesco"]
+      },
+      {
+        "name": "Divine Provision",
+        "description": "God's material blessings and provision",
+        "category": "divine",
+        "lineRange": {
+          "start": 1,
+          "end": 8
+        },
+        "lemmas": [
+          "dilato",
+          "fructus",
+          "frumentum",
+          "vinum",
+          "oleum",
+          "multiplico"
+        ]
+      },
+      {
+        "name": "Divine Favor",
+        "description": "God's grace, light, and joyful presence",
+        "category": "divine",
+        "lineRange": {
+          "start": 7,
+          "end": 7
+        },
+        "lemmas": ["signo", "lumen", "vultus", "laetitia"]
+      },
+      {
+        "name": "Christological Fulfillment",
+        "description": "References to Christ as the ultimate Good and resurrection",
+        "category": "divine",
+        "lineRange": {
+          "start": 1,
+          "end": 6
+        },
+        "lemmas": ["bonus", "sanctus", "iustitia"]
+      },
+      {
+        "name": "Heart Examination",
+        "description": "Examination of inner thoughts and repentance",
+        "category": "virtue",
+        "lineRange": {
+          "start": 3,
+          "end": 6
+        },
+        "lemmas": [
+          "cor",
+          "gravis",
+          "compungo",
+          "cubile",
+          "dico",
+          "irascor",
+          "pecco"
+        ]
+      },
+      {
+        "name": "Human Folly",
+        "description": "Human tendency toward vanity, falsehood, and spiritual heaviness",
+        "category": "sin",
+        "lineRange": {
+          "start": 3,
+          "end": 3
+        },
+        "lemmas": ["vanitas", "mendacium", "gravis", "diligo", "quaero"]
       }
     ]
   },
