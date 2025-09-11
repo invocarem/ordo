@@ -1,10 +1,16 @@
-@testable import LatinService
 import XCTest
 
+@testable import LatinService
+
 class Psalm4Tests: XCTestCase {
-    private var latinService: LatinService!
+    private let utilities = PsalmTestUtilities.self
     private let verbose = true
-    let id = PsalmIdentity(number: 4, category: "")
+
+    override func setUp() {
+        super.setUp()
+    }
+
+    let id = PsalmIdentity(number: 4, category: nil)
 
     // MARK: - Test Data Properties
 
@@ -24,92 +30,179 @@ class Psalm4Tests: XCTestCase {
     private let lineKeyLemmas = [
         (1, ["invoco", "exaudio", "deus", "iustitia", "tribulatio", "dilato"]),
         (2, ["misereor", "exaudio", "oratio"]),
-        (3, ["filius", "homo", "usquequo", "gravis", "cor", "diligo", "vanitas", "quaero", "mendacium"]),
+        (
+            3,
+            [
+                "filius", "homo", "usquequo", "gravis", "cor", "diligo", "vanitas", "quaero",
+                "mendacium",
+            ]
+        ),
         (4, ["scio", "quoniam", "mirifico", "dominus", "sanctus", "exaudio", "clamo"]),
         (5, ["irascor", "pecco", "dico", "cor", "cubile", "compungo"]),
-        (6, ["sacrifico", "sacrificium", "iustitia", "spero", "dominus", "multus", "dico", "ostendo", "bonus"]),
+        (
+            6,
+            [
+                "sacrifico", "sacrificium", "iustitia", "spero", "dominus", "multus", "dico",
+                "ostendo", "bonus",
+            ]
+        ),
         (7, ["signo", "lumen", "vultus", "dominus", "do", "laetitia", "cor"]),
         (8, ["fructus", "frumentum", "vinum", "oleum", "multiplico"]),
         (9, ["pax", "idipsum", "dormio", "requiesco"]),
         (10, ["quoniam", "dominus", "singularis", "spes", "constituo"]),
     ]
 
-    private let themeKeyLemmas = [
-        ("Prayer and Response", "God hearing and answering prayers", ["invoco", "exaudio", "oratio", "clamo", "misereor"]),
-        ("Trust and Hope", "Trusting in God and finding hope", ["spero", "spes", "constituo", "requiesco"]),
-        ("Divine Provision", "God's material blessings and provision", ["dilato", "fructus", "frumentum", "vinum", "oleum", "multiplico"]),
-        ("Divine Favor", "God's grace, light, and joyful presence", ["signo", "lumen", "vultus", "laetitia"]),
-        ("Christological Fulfillment", "References to Christ as the ultimate Good and resurrection", ["bonus", "sanctus", "iustitia"]),
-        ("Heart Examination", "Examination of inner thoughts and repentance", ["cor", "gravis", "compungo", "cubile", "dico", "irascor", "pecco"]),
-        ("Human Folly", "Human tendency toward vanity, falsehood, and spiritual heaviness", ["vanitas", "mendacium", "gravis", "diligo", "quaero"]),
+    private let structuralThemes = [
+        (
+            "Invocation → Expansion",
+            "God's faithful response to prayer bringing deliverance in distress",
+            ["invoco", "exaudio", "iustitia", "tribulatio", "dilato"],
+            1,
+            2,
+            "When called upon, the God of justice hears and answers; in times of trouble He brings enlargement and relief, prompting the psalmist to plead for mercy.",
+            "Augustine sees this as the soul's cry to God who justifies. The 'dilatasti' represents God expanding the heart constrained by tribulation, making room for grace and peace."
+        ),
+        (
+            "Admonition → Recognition",
+            "Exhortation to turn from vanity to acknowledge God's wondrous works",
+            ["gravis", "vanitas", "mendacium", "mirifico", "sanctus"],
+            3,
+            4,
+            "The psalmist questions how long people will remain heavy-hearted, loving emptiness and seeking lies, urging them to know that God has shown wondrous favor to His faithful one.",
+            "For Augustine, the 'gravi corde' signifies souls weighed down by sin rather than lifted by God. The 'sanctum suum' prefigures Christ, the Holy One through whom God works marvels."
+        ),
+        (
+            "Examination → Sacrifice",
+            "Inner reflection leading to righteous offering and trust in God",
+            ["irascor", "compungo", "sacrificium", "iustitia", "spero"],
+            5,
+            6,
+            "Holy anger directed at one's own sin leads to compunction, the sacrifice of the old life, and the fundamental question: where is true good to be found?",
+            "Augustine interprets this as righteous anger against sin, leading to compunction and conversion. The 'sacrificium iustitiae' is the offering of a contrite heart, which replaces mere ritual sacrifice."
+        ),
+        (
+            "Favor → Gladness",
+            "The light of God's countenance bringing joy and abundance to the heart",
+            ["signo", "lumen", "vultus", "fructus", "multiplico"],
+            7,
+            8,
+            "The light of God's face is signed upon us, giving gladness of heart greater than any material abundance from grain, wine, and oil.",
+            "Augustine sees the 'lumen vultus tui' as the light of God's countenance in Christ. The joy He gives is spiritual and interior, surpassing all earthly increase and temporal blessings."
+        ),
+        (
+            "Provision → Peace",
+            "Divine provision yielding multiplication and resulting in perfect peace and rest",
+            ["pax", "idipsum", "dormio", "requiesco", "constituo"],
+            9,
+            10,
+            "From God's provision comes multiplication; in perfect peace and unity I will lie down and sleep, for the Lord alone establishes me in hope.",
+            "Augustine interprets 'in pace in idipsum' as the peace and unity found in the Body of Christ. The sleep is one of trust, and the hope is singularly placed in God, who alone establishes the soul in safety."
+        ),
     ]
 
-    // MARK: - Setup
-
-    override func setUp() {
-        super.setUp()
-        latinService = LatinService.shared
-    }
+    private let conceptualThemes = [
+        (
+            "Prayer and Response",
+            "God hearing and answering prayers",
+            ["invoco", "exaudio", "oratio", "clamo", "misereor"],
+            ThemeCategory.worship,
+            1...2
+        ),
+        (
+            "Trust and Hope",
+            "Trusting in God and finding hope",
+            ["spero", "spes", "constituo", "requiesco"],
+            .virtue,
+            6...10
+        ),
+        (
+            "Divine Provision",
+            "God's material blessings and provision",
+            ["dilato", "fructus", "frumentum", "vinum", "oleum", "multiplico"],
+            .divine,
+            1...8
+        ),
+        (
+            "Divine Favor",
+            "God's grace, light, and joyful presence",
+            ["signo", "lumen", "vultus", "laetitia"],
+            .divine,
+            7...7
+        ),
+        (
+            "Christological Fulfillment",
+            "References to Christ as the ultimate Good and resurrection",
+            ["bonus", "sanctus", "iustitia"],
+            .divine,
+            1...6
+        ),
+        (
+            "Heart Examination",
+            "Examination of inner thoughts and repentance",
+            ["cor", "gravis", "compungo", "cubile", "dico", "irascor", "pecco"],
+            .virtue,
+            3...6
+        ),
+        (
+            "Human Folly",
+            "Human tendency toward vanity, falsehood, and spiritual heaviness",
+            ["vanitas", "mendacium", "gravis", "diligo", "quaero"],
+            .sin,
+            3...3
+        ),
+    ]
 
     // MARK: - Line by Line Key Lemmas Test
 
     func testPsalm4LineByLineKeyLemmas() {
-        var allFailures: [String] = []
-
-        for (lineNumber, expectedLemmas) in lineKeyLemmas {
-            let line = psalm4[lineNumber - 1]
-            let analysis = latinService.analyzePsalm(id, text: line, startingLineNumber: lineNumber)
-
-            let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-            let foundLemmas = expectedLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-            let missingLemmas = expectedLemmas.filter { !detectedLemmas.contains($0.lowercased()) }
-
-            if verbose {
-                let status = missingLemmas.isEmpty ? "✅" : "❌"
-                print("\(status) Line \(lineNumber): Found \(foundLemmas.count)/\(expectedLemmas.count) key lemmas: \(foundLemmas.joined(separator: ", "))")
-
-                if !missingLemmas.isEmpty {
-                    print("   MISSING: \(missingLemmas.joined(separator: ", "))")
-                    print("   Available: \(detectedLemmas.sorted().joined(separator: ", "))")
-                }
-            }
-
-            if !missingLemmas.isEmpty {
-                allFailures.append("Line \(lineNumber): Missing lemmas: \(missingLemmas.joined(separator: ", "))")
-            }
-        }
-
-        if !allFailures.isEmpty {
-            XCTFail("Missing lemmas detected:\n" + allFailures.joined(separator: "\n"))
-        }
+        utilities.testLineByLineKeyLemmas(
+            psalmText: psalm4,
+            lineKeyLemmas: lineKeyLemmas,
+            psalmId: id,
+            verbose: verbose
+        )
     }
 
-    func testPsalm4Themes() {
-        let analysis = latinService.analyzePsalm(id, text: psalm4.joined(separator: " "))
-        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-        var allFailures: [String] = []
+    func testPsalm4StructuralThemes() {
+        utilities.testStructuralThemes(
+            psalmText: psalm4,
+            structuralThemes: structuralThemes,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
 
-        for (themeName, themeDescription, themeLemmas) in themeKeyLemmas {
-            let foundLemmas = themeLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-            let missingLemmas = themeLemmas.filter { !detectedLemmas.contains($0.lowercased()) }
+    func testPsalm4ConceptualThemes() {
+        utilities.testConceptualThemes(
+            psalmText: psalm4,
+            conceptualThemes: conceptualThemes,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
 
-            if verbose {
-                let status = foundLemmas.isEmpty ? "❌" : "✅"
-                print("\n\(status) \(themeName.uppercased()): \(themeDescription)")
-                print("   Found \(foundLemmas.count)/\(themeLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
-
-                if !missingLemmas.isEmpty {
-                    print("   MISSING: \(missingLemmas.joined(separator: ", "))")
-                }
-            }
-
-            if !missingLemmas.isEmpty {
-                allFailures.append("Theme \(themeName): Missing \(missingLemmas.count) lemmas: \(missingLemmas.joined(separator: ", "))")
-            }
+    func testSavePsalm4Themes() {
+        guard
+            let jsonString = utilities.generateCompleteThemesJSONString(
+                psalmNumber: id.number,
+                conceptualThemes: conceptualThemes,
+                structuralThemes: structuralThemes
+            )
+        else {
+            XCTFail("Failed to generate complete themes JSON")
+            return
         }
 
-        if !allFailures.isEmpty {
-            XCTFail("Theme lemma requirements not met:\n" + allFailures.joined(separator: "\n"))
+        let success = utilities.saveToFile(
+            content: jsonString,
+            filename: "output_psalm4_themes.json"
+        )
+
+        if success {
+            print("✅ Complete themes JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete themes file:")
+            print(jsonString)
         }
     }
 }
