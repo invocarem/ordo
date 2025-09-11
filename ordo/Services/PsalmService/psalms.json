@@ -464,15 +464,13 @@
     {
       "number": 14,
       "section": "",
-      "title": "The Just Man's Virtues",
       "text": [
         "Domine, quis habitabit in tabernaculo tuo? aut quis requiescet in monte sancto tuo?",
         "Qui ingreditur sine macula, et operatur iustitiam;",
         "Qui loquitur veritatem in corde suo, qui non egit dolum in lingua sua;",
         "Nec fecit proximo suo malum, et opprobrium non sustinuit adversus proximos suos;",
         "Ad nihilum deductus est in conspectu eius malignus, timentes autem Dominum glorificat;",
-        "Qui iurat proximo suo, et non decipit;",
-        "Qui pecuniam suam non dedit ad usuram, et munera super innocentem non accepit.",
+        "Qui iurat proximo suo, et non decipit; Qui pecuniam suam non dedit ad usuram, et munera super innocentem non accepit.",
         "Qui facit haec, non movebitur in aeternum."
       ],
       "englishText": [
@@ -481,8 +479,7 @@
         "He that speaketh truth in his heart, who hath not used deceit in his tongue;",
         "Nor hath done evil to his neighbor, nor taken up a reproach against his neighbors;",
         "In his sight the malignant is brought to nothing: but he glorifieth them that fear the Lord.",
-        "He that sweareth to his neighbor, and deceiveth not;",
-        "He that hath not put out his money to usury, nor taken bribes against the innocent.",
+        "He that sweareth to his neighbor, and deceiveth not; He that hath not put out his money to usury, nor taken bribes against the innocent.",
         "He that doth these things shall not be moved for ever."
       ],
       "verified": true

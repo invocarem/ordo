@@ -1,150 +1,212 @@
-import XCTest
 @testable import LatinService
+import XCTest
 
 class Psalm14Tests: XCTestCase {
-    private var latinService: LatinService!
-    let verbose = true
-    
-    override func setUp() {
-        super.setUp()
-        latinService = LatinService.shared
-    }
-    
-    // MARK: - Test Data (Psalm 14)
-    let psalm14 = [
-        "Domine, quis habitabit in tabernaculo tuo? aut quis requiescet in monte sancto tuo?",
-        "Qui ingreditur sine macula, et operatur justitiam;",
-        "Qui loquitur veritatem in corde suo, qui non egit dolum in lingua sua;",
-        "Nec fecit proximo suo malum, et opprobrium non sustinuit adversus proximos suos;",
-        "Ad nihilum deductus est in conspectu ejus malignus, timentes autem Dominum glorificat;",
-        "Qui jurat proximo suo, et non decipit;",
-        "Qui pecuniam suam non dedit ad usuram, et munera super innocentem non accepit.",
-        "Qui facit haec, non movebitur in aeternum."
-    ]
-    
-    // MARK: - Test Cases
-    
-    func testDwellingRequirements() {
-        let analysis = latinService.analyzePsalm(text: psalm14)
-        
-        let dwellingTerms = [
-            ("habito", ["habitabit"], "dwell"), // v.1
-            ("requiesco", ["requiescet"], "rest"), // v.1
-            ("tabernaculum", ["tabernaculo"], "tabernacle"), // v.1
-            ("mons", ["monte"], "mountain") // v.1
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: dwellingTerms)
-    }
-    
-    func testMoralQualifications() {
-        let analysis = latinService.analyzePsalm(text: psalm14)
-        
-        let moralTerms = [
-            ("macula", ["macula"], "blemish"), // v.2
-            ("justus", ["justitiam"], "justice"), // v.2
-            ("veritas", ["veritatem"], "truth"), // v.3
-            ("dolus", ["dolum"], "deceit") // v.3
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: moralTerms)
-    }
-    
-    func testSocialEthics() {
-        let analysis = latinService.analyzePsalm(text: psalm14)
-        
-        let socialTerms = [
-            ("proximus", ["proximo", "proximos", "proximo"], "neighbor"), // v.3, v.4, v.6
-            ("malum", ["malum"], "evil"), // v.4
-            ("opprobrium", ["opprobrium"], "reproach"), // v.4
-            ("juro", ["jurat"], "swear") // v.6
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: socialTerms)
-    }
-    
-    func testFinancialIntegrity() {
-        let analysis = latinService.analyzePsalm(text: psalm14)
-        
-        let financialTerms = [
-            ("pecunia", ["pecuniam"], "money"), // v.7
-            ("usura", ["usuram"], "interest"), // v.7
-            ("munus", ["munera"], "bribe"), // v.7
-            ("innocens", ["innocentem"], "innocent") // v.7
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: financialTerms)
-    }
-    
-    func testDivineRelationship() {
-        let analysis = latinService.analyzePsalm(text: psalm14)
-        
-        let divineTerms = [
-            ("malignus", ["malignus"], "wicked"), // v.5
-            ("timeo", ["timentes"], "fear"), // v.5
-            ("glorifico", ["glorificat"], "honor"), // v.5
-            ("dominus", ["dominum", "dominum"], "lord") // v.5, v.6
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: divineTerms)
-    }
-    
-    func testEternalStability() {
-        let analysis = latinService.analyzePsalm(text: psalm14)
-        
-        let stabilityTerms = [
-            ("aeternus", ["aeternum"], "forever"), // v.8
-            ("moveo", ["movebitur"], "be moved"), // v.8
-            ("facio", ["facit"], "do") // v.8
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: stabilityTerms)
-    }
-    func testsAnalysisSummary() {
-        let analysis = latinService.analyzePsalm(text: psalm14)
-        if verbose {
-            print("\n=== Full Analysis ===")
-            print("Total words:", analysis.totalWords)
-            print("Unique lemmas:", analysis.uniqueLemmas)
-            
-            print("'noster' forms:", analysis.dictionary["noster"]?.forms ?? [:])
-            print("'timeo' forms:", analysis.dictionary["timeo"]?.forms ?? [:])
+  // private var latinService: LatinService!
+  private let utilities = PsalmTestUtilities.self
 
-             print("'quis' forms:", analysis.dictionary["quis"]?.forms ?? [:])
-        }
-        XCTAssertLessThan(
-            analysis.totalWords, 
-            analysis.uniqueLemmas * 2,
-            "totalWords should be less than uniqueLemmas * 2 (was \(analysis.totalWords) vs \(analysis.uniqueLemmas * 2))"
-        )
+  private let verbose = true
+
+  override func setUp() {
+    super.setUp()
+//        latinService = LatinService.shared
+  }
+
+  // MARK: - Test Data (Psalm 14)
+
+  let psalm14 = [
+    "Domine, quis habitabit in tabernaculo tuo? aut quis requiescet in monte sancto tuo?",
+    "Qui ingreditur sine macula, et operatur iustitiam;",
+    "Qui loquitur veritatem in corde suo, qui non egit dolum in lingua sua;",
+    "Nec fecit proximo suo malum, et opprobrium non sustinuit adversus proximos suos;",
+    "Ad nihilum deductus est in conspectu eius malignus, timentes autem Dominum glorificat;",
+    "Qui iurat proximo suo, et non decipit; Qui pecuniam suam non dedit ad usuram, et munera super innocentem non accepit.",
+    "Qui facit haec, non movebitur in aeternum.",
+  ]
+
+  // MARK: - Line-by-line key lemmas (Psalm 14)
+
+  private let lineKeyLemmas: [(Int, [String])] = [
+    (1, ["habito", "tabernaculum", "requiesco", "mons", "sanctus"]),
+    (2, ["macula", "iustitia"]),
+    (3, ["veritas", "cor", "dolus", "lingua"]),
+    (4, ["proximus", "malum", "opprobrium"]),
+    (5, ["conspectus", "malignus", "timeo", "glorifico", "dominus"]),
+    (6, ["iuro", "proximus", "decipio", "pecunia", "usura", "munus", "innocens"]),
+    (7, ["moveo", "aeternum"]),
+  ]
+
+  // MARK: - Structural themes (Psalm 14) — from themes.json
+
+  private let structuralThemes: [(String, String, [String], Int, Int, String, String)] = [
+    (
+      "Dwelling → Holiness",
+      "From the question of who may dwell with God to the requirement of purity and justice",
+      ["habito", "tabernaculum", "requiesco", "mons", "sanctus", "macula", "iustitia"],
+      1,
+      2,
+      "The psalm begins by asking who is worthy to dwell with God. The answer: one who walks blamelessly and acts with justice.",
+      "Augustine reads the 'tabernacle' and 'holy mountain' as Christ and His Church. To inhabit them is to live in holiness, with actions aligned to God's justice (Enarr. Ps. 14.1–2)."
+    ),
+    (
+      "Truth → Integrity",
+      "From inward truth to outward integrity in speech and conduct",
+      ["veritas", "cor", "dolus", "lingua", "malum", "proximus"],
+      3,
+      4,
+      "The true worshipper speaks truth from the heart, avoids deceit, and does no harm to a neighbor.",
+      "Augustine emphasizes that it is not enough to avoid lying with the tongue; the heart itself must be purified, since God sees within (Enarr. Ps. 14.3–4)."
+    ),
+    (
+      "Reverence → Faithfulness",
+      "From despising the wicked to honoring the God-fearing, from swearing oaths to financial integrity",
+      ["malignus", "conspectus", "timeo", "glorifico", "iuro", "decipio", "pecunia", "usura", "munus", "innocens"],
+      5,
+      6,
+      "The righteous person despises evil, honors those who fear the Lord, keeps his word, and maintains financial integrity by refusing usury and bribes.",
+      "Augustine sees in this a picture of the Church: despising sin, honoring holiness, standing firm in truth without deception, and avoiding financial exploitation (Enarr. Ps. 14.5–6)."
+    ),
+    (
+      "Action → Stability",
+      "From doing what is right to the promise of eternal security",
+      ["facio", "moveo", "aeternum"],
+      7,
+      7,
+      "Those who do these things—who live according to God's standards—are promised immovable stability forever.",
+      "Augustine concludes that the one who embodies all these virtues, grounded in Christ, 'shall not be moved forever'—a promise of eternal security for the faithful (Enarr. Ps. 14.7)."
+    ),
+  ]
+
+  // MARK: - Conceptual themes (Psalm 14)
+
+  private let conceptualThemes = [
+    (
+      "Divine Holiness",
+      "God's sacred dwelling and holy requirements",
+      ["tabernaculum", "mons", "sanctus", "dominus"],
+      ThemeCategory.divine,
+      1 ... 1
+    ),
+    (
+      "Divine Judgment",
+      "God's righteous evaluation and justice",
+      ["conspectus", "malignus", "glorifico", "timeo"],
+      ThemeCategory.justice,
+      5 ... 5
+    ),
+    (
+      "Righteous Worship",
+      "Worthy approach to God's presence",
+      ["habito", "requiesco", "ingredior", "operatur"],
+      ThemeCategory.worship,
+      1 ... 2
+    ),
+    (
+      "Moral Virtue",
+      "Blameless character and truthful heart",
+      ["macula", "iustitia", "veritas", "cor"],
+      ThemeCategory.virtue,
+      2 ... 3
+    ),
+    (
+      "Social Virtue",
+      "Right relationships and neighborly love",
+      ["proximus", "malum", "opprobrium", "iuro"],
+      ThemeCategory.virtue,
+      3 ... 6
+    ),
+    (
+      "Deceitful Speech",
+      "Tongue that practices deception",
+      ["dolus", "lingua", "decipio"],
+      ThemeCategory.sin,
+      3 ... 6
+    ),
+    (
+      "Financial Corruption",
+      "Exploitative financial practices",
+      ["usura", "munus", "innocens"],
+      ThemeCategory.conflict,
+      6 ... 6
+    ),
+    (
+      "Wicked Opposition",
+      "Those rejected from God's presence",
+      ["malignus", "nihilum"],
+      ThemeCategory.opposition,
+      5 ... 5
+    ),
+    (
+      "Eternal Stability",
+      "Divine reward for the righteous",
+      ["moveo", "aeternum", "facio"],
+      ThemeCategory.virtue,
+      7 ... 7
+    ),
+  ]
+
+  let id = PsalmIdentity(number: 14, category: nil)
+
+  // MARK: - Test Cases
+
+  func testPsalm14Verses() {
+    XCTAssertEqual(psalm14.count, 7, "Psalm 14 should have 7 verses in the Benedictine Office")
+    // Also validate the orthography of the text for analysis consistency
+    let normalized = psalm14.map { PsalmTestUtilities.validateLatinText($0) }
+    XCTAssertEqual(
+      normalized,
+      psalm14,
+      "Normalized Latin text should match expected classical forms"
+    )
+  }
+
+  func testPsalm14LineByLineKeyLemmas() {
+    utilities.testLineByLineKeyLemmas(
+      psalmText: psalm14,
+      lineKeyLemmas: lineKeyLemmas,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testPsalm14StructuralThemes() {
+    utilities.testStructuralThemes(
+      psalmText: psalm14,
+      structuralThemes: structuralThemes,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testPsalm14ConceptualThemes() {
+    utilities.testConceptualThemes(
+      psalmText: psalm14,
+      conceptualThemes: conceptualThemes,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testSavePsalm14Themes() {
+    guard let jsonString = utilities.generateCompleteThemesJSONString(
+      psalmNumber: id.number,
+      conceptualThemes: conceptualThemes,
+      structuralThemes: structuralThemes
+    ) else {
+      XCTFail("Failed to generate complete themes JSON")
+      return
     }
-    
-    // MARK: - Helper
-    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
-        for (lemma, forms, translation) in confirmedWords {
-            guard let entry = analysis.dictionary[lemma] else {
-                XCTFail("Missing lemma: \(lemma)")
-                continue
-            }
-            
-            XCTAssertTrue(
-                entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-                "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
-            )
-            
-            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-            if !missingForms.isEmpty {
-                XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
-            }
-            let verbose = false
-            if verbose {
-                print("\n\(lemma.uppercased())")
-                print("  Translation: \(entry.translation ?? "?")")
-                forms.forEach { form in
-                    let count = entry.forms[form.lowercased()] ?? 0
-                    print("  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
-                }
-            }
-        }
+
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm14_themes.json"
+    )
+
+    if success {
+      print("✅ Complete themes JSON created successfully")
+    } else {
+      print("⚠️ Could not save complete themes file:")
+      print(jsonString)
     }
+  }
 }
