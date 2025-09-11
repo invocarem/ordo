@@ -9,10 +9,7 @@ class Psalm14Tests: XCTestCase {
 
   override func setUp() {
     super.setUp()
-//        latinService = LatinService.shared
   }
-
-  // MARK: - Test Data (Psalm 14)
 
   let psalm14 = [
     "Domine, quis habitabit in tabernaculo tuo? aut quis requiescet in monte sancto tuo?",
@@ -97,7 +94,7 @@ class Psalm14Tests: XCTestCase {
     (
       "Righteous Worship",
       "Worthy approach to God's presence",
-      ["habito", "requiesco", "ingredior", "operatur"],
+      ["habito", "requiesco", "ingredior", "operor"],
       ThemeCategory.worship,
       1 ... 2
     ),
@@ -130,12 +127,10 @@ class Psalm14Tests: XCTestCase {
       6 ... 6
     ),
     (
-      "Wicked Opposition",
-      "Those rejected from God's presence",
-      ["malignus", "nihilum"],
-      ThemeCategory.opposition,
-      5 ... 5
+      "Wicked Opposition", "Those rejected from God's presence", ["malignus", "nihilum"],
+      ThemeCategory.opposition, 5 ... 5
     ),
+
     (
       "Eternal Stability",
       "Divine reward for the righteous",
@@ -145,7 +140,7 @@ class Psalm14Tests: XCTestCase {
     ),
   ]
 
-  let id = PsalmIdentity(number: 14, category: nil)
+    let id =  PsalmIdentity(number: 14, category: nil)
 
   // MARK: - Test Cases
 

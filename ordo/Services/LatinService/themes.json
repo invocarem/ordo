@@ -1207,9 +1207,11 @@
       }
     ]
   },
+
   {
     "psalmNumber": 14,
     "category": "",
+
     "structuralThemes": [
       {
         "name": "Dwelling → Holiness",
@@ -1226,7 +1228,7 @@
         "startLine": 1,
         "endLine": 2,
         "comment": "The psalm begins by asking who is worthy to dwell with God. The answer: one who walks blamelessly and acts with justice.",
-        "comment2": "Augustine reads the 'tabernacle' and 'holy mountain' as Christ and His Church. To inhabit them is to live in holiness, with actions aligned to God’s justice (Enarr. Ps. 14.1–2)."
+        "comment2": "Augustine reads the 'tabernacle' and 'holy mountain' as Christ and His Church. To inhabit them is to live in holiness, with actions aligned to God's justice (Enarr. Ps. 14.1–2)."
       },
       {
         "name": "Truth → Integrity",
@@ -1239,38 +1241,128 @@
       },
       {
         "name": "Reverence → Faithfulness",
-        "description": "From despising the wicked to honoring the God-fearing, from swearing oaths to keeping them faithfully",
+        "description": "From despising the wicked to honoring the God-fearing, from swearing oaths to financial integrity",
         "lemmas": [
           "malignus",
           "conspectus",
           "timeo",
           "glorifico",
           "iuro",
-          "decipio"
-        ],
-        "startLine": 5,
-        "endLine": 6,
-        "comment": "The righteous person despises evil, honors those who fear the Lord, and keeps his word even when it costs him.",
-        "comment2": "Augustine sees in this a picture of the Church: despising sin, honoring holiness, and standing firm in truth without deception (Enarr. Ps. 14.5–6)."
-      },
-      {
-        "name": "Justice → Stability",
-        "description": "From refusing unjust gain to the promise of eternal security",
-        "lemmas": [
+          "decipio",
           "pecunia",
           "usura",
           "munus",
-          "innocens",
-          "moveo",
-          "aeternum"
+          "innocens"
         ],
+        "startLine": 5,
+        "endLine": 6,
+        "comment": "The righteous person despises evil, honors those who fear the Lord, keeps his word, and maintains financial integrity by refusing usury and bribes.",
+        "comment2": "Augustine sees in this a picture of the Church: despising sin, honoring holiness, standing firm in truth without deception, and avoiding financial exploitation (Enarr. Ps. 14.5–6)."
+      },
+      {
+        "name": "Action → Stability",
+        "description": "From doing what is right to the promise of eternal security",
+        "lemmas": ["facio", "moveo", "aeternum"],
         "startLine": 7,
-        "endLine": 8,
-        "comment": "The just do not exploit others through money or bribery, but live with clean hands. They are promised immovable stability forever.",
-        "comment2": "Augustine interprets refusal of usury and bribes as freedom from greed. Such a person, grounded in Christ, 'shall not be moved forever' (Enarr. Ps. 14.7–8)."
+        "endLine": 7,
+        "comment": "Those who do these things—who live according to God's standards—are promised immovable stability forever.",
+        "comment2": "Augustine concludes that the one who embodies all these virtues, grounded in Christ, 'shall not be moved forever'—a promise of eternal security for the faithful (Enarr. Ps. 14.7)."
+      }
+    ],
+    "conceptualThemes": [
+      {
+        "name": "Divine Holiness",
+        "description": "God's sacred dwelling and holy requirements",
+        "category": "divine",
+        "lineRange": {
+          "start": 1,
+          "end": 1
+        },
+        "lemmas": ["tabernaculum", "mons", "sanctus", "dominus"]
+      },
+      {
+        "name": "Divine Judgment",
+        "description": "God's righteous evaluation and justice",
+        "category": "justice",
+        "lineRange": {
+          "start": 5,
+          "end": 5
+        },
+        "lemmas": ["conspectus", "malignus", "glorifico", "timeo"]
+      },
+      {
+        "name": "Righteous Worship",
+        "description": "Worthy approach to God's presence",
+        "category": "worship",
+        "lineRange": {
+          "start": 1,
+          "end": 2
+        },
+        "lemmas": ["habito", "requiesco", "ingredior", "operor"]
+      },
+      {
+        "name": "Moral Virtue",
+        "description": "Blameless character and truthful heart",
+        "category": "virtue",
+        "lineRange": {
+          "start": 2,
+          "end": 3
+        },
+        "lemmas": ["macula", "iustitia", "veritas", "cor"]
+      },
+      {
+        "name": "Social Virtue",
+        "description": "Right relationships and neighborly love",
+        "category": "virtue",
+        "lineRange": {
+          "start": 3,
+          "end": 6
+        },
+        "lemmas": ["proximus", "malum", "opprobrium", "iuro"]
+      },
+      {
+        "name": "Deceitful Speech",
+        "description": "Tongue that practices deception",
+        "category": "sin",
+        "lineRange": {
+          "start": 3,
+          "end": 6
+        },
+        "lemmas": ["dolus", "lingua", "decipio"]
+      },
+      {
+        "name": "Financial Corruption",
+        "description": "Exploitative financial practices",
+        "category": "conflict",
+        "lineRange": {
+          "start": 6,
+          "end": 6
+        },
+        "lemmas": ["usura", "munus", "innocens"]
+      },
+      {
+        "name": "Wicked Opposition",
+        "description": "Those rejected from God's presence",
+        "category": "opposition",
+        "lineRange": {
+          "start": 5,
+          "end": 5
+        },
+        "lemmas": ["malignus", "nihilum"]
+      },
+      {
+        "name": "Eternal Stability",
+        "description": "Divine reward for the righteous",
+        "category": "virtue",
+        "lineRange": {
+          "start": 7,
+          "end": 7
+        },
+        "lemmas": ["moveo", "aeternum", "facio"]
       }
     ]
   },
+
   {
     "psalmNumber": 15,
     "category": "",

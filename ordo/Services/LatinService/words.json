@@ -1,5 +1,47 @@
 [
   {
+  "lemma": "nihilum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "nihilum",
+  "genitive": "nihili",
+  "translations": {
+    "en": "nothing, nothingness, a thing of no value",
+    "la": "nihilum, nihili"
+  }
+},
+  {
+  "lemma": "ingredior",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "ingredi",
+  "present": "ingredior",
+  "future": "ingrediar",
+  "perfect": "ingressus",
+  "translations": {
+    "en": "to enter, go in, undertake",
+    "la": "ingredior, ingredi, ingressus sum"
+  },
+  "forms": {
+    "present_3s": ["ingreditur"]
+  }
+},
+  {
+    "lemma": "decipio",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "decipere",
+    "present": "decipio",
+    "future": "decipiam",
+    "perfect": "decepi",
+    "supine": "deceptum",
+    "translations": {
+      "en": "to deceive, beguile, mislead",
+      "la": "decipio, decipere, decepi, deceptum"
+    }
+  },
+  {
     "lemma": "iniustitia",
     "part_of_speech": "noun",
     "declension": 1,
@@ -9408,7 +9450,7 @@
     "perfect_3sg": "novit",
     "supine": "notum",
     "translations": {
-      "en": "to know, recognize, become acquainted with",
+      "en": "to know, recognize",
       "la": "nosco, noscere, novi, notum"
     }
   },
