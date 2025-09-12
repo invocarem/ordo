@@ -6735,65 +6735,223 @@
       }
     ]
   },
+
   {
     "psalmNumber": 148,
     "category": "",
+
     "structuralThemes": [
       {
-        "name": "Heavens → Hosts",
-        "description": "From cosmic heights to angelic praise",
-        "lemmas": ["caelum", "excelsum", "angelus", "virtus"],
+        "name": "Heaven → Angels",
+        "description": "From the high heavens to the angelic hosts",
+        "lemmas": ["caelum", "excelsus", "angelus", "virtus"],
         "startLine": 1,
         "endLine": 2,
-        "comment": "Praise begins in the highest realms — 'de caelis' and 'in excelsis' — and descends through angels and celestial powers. Augustine sees this as the call of invisible creation to glorify its Creator (Enarr. Ps. 148.1–2)."
+        "comment": "Praise begins from the heavens above and moves to the angelic powers, showing the heavenly order's glorification of God.",
+        "comment2": "Augustine sees angels as ministers of God's will; their praise joins heaven itself, so that created spirits proclaim their Maker."
       },
       {
         "name": "Luminaries → Waters Above",
-        "description": "From sun and stars to upper waters praising the Lord",
-        "lemmas": ["sol", "luna", "astra", "aqua"],
+        "description": "From sun, moon, and stars to the heavenly waters",
+        "lemmas": ["sol", "luna", "stella", "lumen", "aqua"],
         "startLine": 3,
         "endLine": 4,
-        "comment": "The visible heavens respond in praise: sun, moon, stars, and the mysterious 'waters above the heavens' (Gen 1:7). Augustine allegorizes this as the harmony of creation reflecting divine order (Enarr. Ps. 148.3–4)."
+        "comment": "Celestial lights and cosmic waters join in glorifying the Creator.",
+        "comment2": "For Augustine, lights of heaven signify knowledge of truth, while waters above represent the spiritual, lifted above earthly corruption."
       },
       {
-        "name": "Command → Creation",
-        "description": "From divine utterance to the formation of all things",
-        "lemmas": ["dico", "creo", "praeceptum"],
+        "name": "Word Spoken → Eternal Law",
+        "description": "From creation by command to lasting decree",
+        "lemmas": [
+          "dico",
+          "facio",
+          "mando",
+          "creo",
+          "statuto",
+          "aeternum",
+          "praeceptum"
+        ],
         "startLine": 5,
         "endLine": 6,
-        "comment": "'He spoke, and they were made' — creation is traced back to God’s word and will. Augustine emphasizes the eternal stability granted to creation by God’s decree (Enarr. Ps. 148.5–6)."
+        "comment": "The psalm turns from creation at God's word to His eternal law, which cannot pass away.",
+        "comment2": "Augustine interprets the 'word' as Christ through whom all was made; the eternal statute is God's unchanging wisdom."
       },
       {
         "name": "Depths → Storms",
-        "description": "From abyssal monsters to obedient tempests",
-        "lemmas": ["draco", "abyssus", "spiritus", "verbum"],
+        "description": "From sea creatures to the forces of weather",
+        "lemmas": ["terra", "draco", "abyssus", "ignis", "procella", "verbum"],
         "startLine": 7,
         "endLine": 8,
-        "comment": "The earth joins the praise — including its most fearsome aspects: dragons, depths, fire, hail. Even storms are subject to God’s Word. Augustine sees all nature as under divine command, terrifying yet obedient (Enarr. Ps. 148.7–8)."
+        "comment": "From the abyss and monsters of the deep to the fire, hail, snow, and storm — all obey the Creator's word.",
+        "comment2": "Augustine sees these as signs of God's hidden power: even chaotic forces fulfill His will and serve His praise."
       },
       {
         "name": "Mountains → Beasts",
-        "description": "From immovable heights to creatures of the earth",
-        "lemmas": ["mons", "cedrus", "bestia", "serpens"],
+        "description": "From the heights of earth to animals of land and sky",
+        "lemmas": [
+          "mons",
+          "collis",
+          "lignum",
+          "cedrus",
+          "bestia",
+          "serpens",
+          "volucris"
+        ],
         "startLine": 9,
         "endLine": 10,
-        "comment": "Nature’s grandeur and wildness — trees and beasts — are summoned to praise. Augustine reads the fruitful and the fearsome alike as figures for souls transformed or untamed (Enarr. Ps. 148.9–10)."
+        "comment": "The material world — mountains, trees, and animals — participates in the universal praise.",
+        "comment2": "Augustine notes how irrational creatures also glorify God by existing in His order, showing His providence in all creation."
       },
       {
-        "name": "Rulers → Youth",
-        "description": "From kings to children united in praise",
-        "lemmas": ["rex", "iudex", "iuvenis", "senex"],
+        "name": "Rulers → All Humanity",
+        "description": "From kings and judges to all ages and states of humanity",
+        "lemmas": [
+          "rex",
+          "princeps",
+          "iudex",
+          "iuvenis",
+          "virgo",
+          "senex",
+          "iunior"
+        ],
         "startLine": 11,
         "endLine": 12,
-        "comment": "All human conditions and generations — rulers, judges, youth and elders — are drawn into the liturgy of creation. For Augustine, this symbolizes the unity of the Church transcending age and status (Enarr. Ps. 148.11–12)."
+        "comment": "All humanity is summoned: rulers, peoples, the young and old together, to praise the Lord's name which alone is exalted.",
+        "comment2": "For Augustine, this shows the unity of the Church: no distinction of age or status prevents one from praising God."
       },
       {
-        "name": "Name → People",
-        "description": "From God’s exalted name to His intimate people",
-        "lemmas": ["nomen", "confessio", "cornu", "populus"],
+        "name": "Universal Confession → Exaltation of God's People",
+        "description": "From God's glory over all creation to the exaltation of His people",
+        "lemmas": [
+          "confessio",
+          "caelum",
+          "terra",
+          "exalto",
+          "cornu",
+          "populus",
+          "hymnus",
+          "sanctus",
+          "israel"
+        ],
         "startLine": 13,
         "endLine": 14,
-        "comment": "The psalm ends in covenant joy: God’s name is exalted above all, yet His people are drawn close. Augustine interprets the 'horn' as Christ glorified in the midst of the saints (Enarr. Ps. 148.13–14)."
+        "comment": "The psalm concludes with God's glory confessed over all creation and His people raised up in strength and hymnody.",
+        "comment2": "Augustine reads this as Christ exalting His Church, whose praise unites Israel and all the saints who draw near to God."
+      }
+    ],
+    "conceptualThemes": [
+      {
+        "name": "Divine Creation",
+        "description": "God's creative power and authority",
+        "category": "divine",
+        "lineRange": {
+          "start": 5,
+          "end": 6
+        },
+        "lemmas": ["dico", "facio", "mando", "creo", "statuto"]
+      },
+      {
+        "name": "Divine Sovereignty",
+        "description": "God's eternal dominion and unchanging decrees",
+        "category": "divine",
+        "lineRange": {
+          "start": 6,
+          "end": 14
+        },
+        "lemmas": [
+          "aeternum",
+          "praeceptum",
+          "verbum",
+          "exalto",
+          "nomen",
+          "solus"
+        ]
+      },
+      {
+        "name": "Cosmic Worship",
+        "description": "All creation praising its Creator",
+        "category": "worship",
+        "lineRange": {
+          "start": 1,
+          "end": 14
+        },
+        "lemmas": ["laudo", "caelum", "terra", "nomen", "dominus"]
+      },
+      {
+        "name": "Angelic Praise",
+        "description": "Heavenly beings glorifying God",
+        "category": "worship",
+        "lineRange": {
+          "start": 1,
+          "end": 2
+        },
+        "lemmas": ["angelus", "virtus", "excelsus"]
+      },
+      {
+        "name": "Natural Order",
+        "description": "Creation obeying God's commands",
+        "category": "virtue",
+        "lineRange": {
+          "start": 3,
+          "end": 8
+        },
+        "lemmas": ["sol", "luna", "stella", "aqua", "ignis", "nix", "glacies"]
+      },
+      {
+        "name": "Living Creation",
+        "description": "All creatures fulfilling their purpose",
+        "category": "virtue",
+        "lineRange": {
+          "start": 9,
+          "end": 10
+        },
+        "lemmas": ["bestia", "pecus", "serpens", "volucris", "lignum", "cedrus"]
+      },
+      {
+        "name": "Human Unity in Praise",
+        "description": "All people united in worship regardless of age or status",
+        "category": "virtue",
+        "lineRange": {
+          "start": 11,
+          "end": 12
+        },
+        "lemmas": [
+          "rex",
+          "populus",
+          "princeps",
+          "iudex",
+          "iuvenis",
+          "virgo",
+          "senex",
+          "iunior"
+        ]
+      },
+      {
+        "name": "God's Exalted Name",
+        "description": "The unique exaltation of God's name over all creation",
+        "category": "divine",
+        "lineRange": {
+          "start": 12,
+          "end": 13
+        },
+        "lemmas": ["exalto", "nomen", "solus", "confessio", "caelum", "terra"]
+      },
+      {
+        "name": "Sanctified People",
+        "description": "God's chosen people exalted and drawing near to Him",
+        "category": "virtue",
+        "lineRange": {
+          "start": 13,
+          "end": 14
+        },
+        "lemmas": [
+          "sanctus",
+          "israel",
+          "appropinquo",
+          "cornu",
+          "hymnus",
+          "populus"
+        ]
       }
     ]
   },

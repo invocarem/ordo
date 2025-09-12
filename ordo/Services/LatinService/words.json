@@ -1,5 +1,57 @@
 [
   {
+  "lemma": "solus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "solus",
+  "genitive": "soli",
+  "translations": {
+    "en": "alone, only, sole, lonely",
+    "la": "solus, sola, solum"
+  }
+},
+  {
+  "lemma": "virgo",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "virgo",
+  "genitive": "virginis",
+  "translations": {
+    "en": "maiden, virgin, young woman, girl",
+    "la": "virgo, virginis"
+  }
+},
+  {
+  "lemma": "procella",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "procella",
+  "genitive": "procellae",
+  "translations": {
+    "en": "storm, tempest, tumult",
+    "la": "procella, procellae"
+  }
+},
+  {
+  "lemma": "excelsus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "excelsus",
+  "genitive": "excelsi",
+  "translations": {
+    "en": "high, lofty, elevated, exalted",
+    "la": "excelsus, excelsa, excelsum"
+  },
+  "forms_plural": {
+    "dative_m": ["excelsis"],
+    "ablative_m": ["excelsis"]
+  }
+},
+  {
     "lemma": "nobilis",
     "part_of_speech": "adjective",
     "declension": 3,
@@ -9832,18 +9884,6 @@
     }
   },
   {
-    "lemma": "solus",
-    "part_of_speech": "adjective",
-    "gender": "masculine",
-    "declension": 1,
-    "nominative": "solus",
-    "genitive": "soli",
-    "translations": {
-      "en": "alone, solitary, only",
-      "la": "solus, sola, solum"
-    }
-  },
-  {
     "lemma": "percutio",
     "part_of_speech": "verb",
     "conjugation": 3,
@@ -10977,18 +11017,7 @@
       "la": "murus"
     }
   },
-  {
-    "lemma": "excelsum",
-    "part_of_speech": "noun",
-    "declension": 2,
-    "gender": "neuter",
-    "nominative": "excelsum",
-    "genitive": "excelsi",
-    "translations": {
-      "en": "heights, lofty places",
-      "la": "excelsum"
-    }
-  },
+  
   {
     "lemma": "vehementer",
     "part_of_speech": "adverb",

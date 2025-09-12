@@ -44,4 +44,8 @@ security find-identity -v -p codesigning
 
 ```
 
+
 can you follow psalm150tests as a sample to update psalm149tests? a)  to test if the text has  a total  9 verses based on benedict office. b) line by line check lemmas for the 9 verses. c) create structure themes, that is every 2 verses make one theme, name is a -> b pattern, comment is for general meaning, comment 2 is for augustine's expositions.
+
+can you define conceptual themes?
+I have defined 7 categories in the level  good to bad: divine, justice,  worship, virtue, sin, conflict, opposition. divine and justice are for God, worship or virtual are for saints or freeman, sin, conflict and opposition are for slaves of god, opposition is worst.

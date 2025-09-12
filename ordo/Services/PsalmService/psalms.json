@@ -6901,46 +6901,46 @@
       "notes": "Vulgate Psalm 147 (Hebrew 147:12-20). Second half of the split psalm, praising God's covenant with Israel."
     },
     {
-      "number": 148,
-      "section": "",
-      "text": [
-        "Laudate Dominum de caelis: laudate eum in excelsis.",
-        "Laudate eum, omnes angeli eius: laudate eum, omnes virtutes eius.",
-        "Laudate eum, sol et luna: laudate eum, omnia astra et lumen.",
-        "Laudate eum, caeli caelorum: et aquae omnes, quae super caelos sunt, laudent nomen Domini.",
-        "Quia ipse dixit, et facta sunt: ipse mandavit, et creata sunt.",
-        "Statuit ea in aeternum, et in saeculum saeculi: praeceptum posuit, et non praeteribit.",
-        "Laudate Dominum de terra, dracones, et omnia abyssorum:",
-        "Ignis, grando, nix, glacies, spiritus procellarum: quae faciunt verbum eius:",
-        "Montes, et omnes colles: ligna fructifera, et omnes cedri:",
-        "Bestiae, et universa pecora: serpentes, et volucres pennatae:",
-        "Reges terrae, et omnes populi: principes, et omnes iudices terrae:",
-        "Iuvenes, et virgines: senes cum iunioribus laudent nomen Domini:",
-        "Quia exaltatum est nomen eius solius: confessio eius super caelum et terram.",
-        "Et exaltabit cornu populi sui: hymnus omnibus sanctis eius, filiis Israel, populo appropinquanti sibi."
-      ],
-      "englishText": [
-        "Praise ye the Lord from the heavens: praise ye him in the high places.",
-        "Praise ye him, all his angels: praise ye him, all his hosts.",
-        "Praise ye him, O sun and moon: praise him, all ye stars and light.",
-        "Praise him, ye heavens of heavens: and let all the waters that are above the heavens praise the name of the Lord.",
-        "For he spoke, and they were made: he commanded, and they were created.",
-        "He hath established them for ever, and for ages of ages: he hath made a decree, and it shall not pass away.",
-        "Praise the Lord from the earth, ye dragons, and all ye deeps:",
-        "Fire, hail, snow, ice, stormy winds, which fulfil his word:",
-        "Mountains and all hills, fruitful trees and all cedars:",
-        "Beasts and all cattle: serpents and feathered fowls:",
-        "Kings of the earth and all people: princes and all judges of the earth:",
-        "Young men and maidens: let the old with the younger praise the name of the Lord:",
-        "For his name alone is exalted: the praise of him is above heaven and earth.",
-        "And he shall exalt the horn of his people: a hymn to all his saints, to the children of Israel, a people approaching to him."
-      ],
-      "verified": true
-    },
-    {
+  "number": 148,
+  "section": "",
+  "text": [
+    "Laudate Dominum de caelis: laudate eum in excelsis.",
+    "Laudate eum, omnes angeli eius: laudate eum, omnes virtutes eius.",
+    "Laudate eum, sol et luna: laudate eum, omnes stellae et lumen.",
+    "Laudate eum, caeli caelorum: et aquae omnes, quae super caelos sunt, laudent nomen Domini.",
+    "Quia ipse dixit, et facta sunt: ipse mandavit, et creata sunt.",
+    "Statuit ea in aeternum, et in saeculum saeculi: praeceptum posuit, et non praeteribit.",
+    "Laudate Dominum de terra, dracones, et omnia abyssorum:",
+    "Ignis, grando, nix, glacies, spiritus procellarum: quae faciunt verbum eius:",
+    "Montes, et omnes colles: ligna fructifera, et omnes cedri:",
+    "Bestiae, et universa pecora: serpentes, et volucres pennatae:",
+    "Reges terrae, et omnes populi: principes, et omnes iudices terrae:",
+    "Iuvenes, et virgines: senes cum iunioribus laudent nomen Domini: quia exaltatum est nomen eius solius.",
+    "Confessio eius super caelum et terram: et exaltabit cornu populi sui.",
+    "Hymnus omnibus sanctis eius, filiis Israel, populo appropinquanti sibi."
+  ],
+  "englishText": [
+    "Praise ye the Lord from the heavens: praise ye him in the high places.",
+    "Praise ye him, all his angels: praise ye him, all his hosts.",
+    "Praise ye him, O sun and moon: praise him, all ye stars and light.",
+    "Praise him, ye heavens of heavens: and let all the waters that are above the heavens praise the name of the Lord.",
+    "For he spoke, and they were made: he commanded, and they were created.",
+    "He hath established them for ever, and for ages of ages: he hath made a decree, and it shall not pass away.",
+    "Praise the Lord from the earth, ye dragons, and all ye deeps:",
+    "Fire, hail, snow, ice, stormy winds, which fulfil his word:",
+    "Mountains and all hills, fruitful trees and all cedars:",
+    "Beasts and all cattle: serpents and feathered fowls:",
+    "Kings of the earth and all people: princes and all judges of the earth:",
+    "Young men and maidens: let the old with the younger praise the name of the Lord: for his name alone is exalted.",
+    "The praise of him is above heaven and earth: and he shall exalt the horn of his people.",
+    "A hymn to all his saints, to the children of Israel, a people approaching to him."
+  ],
+  "verified": true
+},
+
+     {
       "number": 149,
       "section": "",
-      "title": "The Song of God's Saints",
       "text": [
         "Cantate Domino canticum novum: laus eius in ecclesia sanctorum.",
         "Laetetur Israel in eo qui fecit eum: et filii Sion exsultent in rege suo.",
