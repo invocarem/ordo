@@ -1,147 +1,20 @@
 import XCTest
-@testable import LatinService
 
-class Psalm148Tests: XCTestCase {
-    private var latinService: LatinService!
-    let verbose = true
-    
-    override func setUp() {
-        super.setUp()
-        latinService = LatinService.shared
-    }
-    
-    // MARK: - Test Data
-    let psalm148 = [
-        "Laudate Dominum de caelis: laudate eum in excelsis.",
-        "Laudate eum, omnes angeli eius: laudate eum, omnes virtutes eius.",
-        "Laudate eum, sol et luna: laudate eum, omnia astra et lumen.",
-        "Laudate eum, caeli caelorum: et aquae omnes, quae super caelos sunt, laudent nomen Domini.",
-        "Quia ipse dixit, et facta sunt: ipse mandavit, et creata sunt.",
-        "Statuit ea in aeternum, et in saeculum saeculi: praeceptum posuit, et non praeteribit.",
-        "Laudate Dominum de terra, dracones, et omnia abyssorum:",
-        "Ignis, grando, nix, glacies, spiritus procellarum: quae faciunt verbum eius:",
-        "Montes, et omnes colles: ligna fructifera, et omnes cedri:",
-        "Bestiae, et universa pecora: serpentes, et volucres pennatae:",
-        "Reges terrae, et omnes populi: principes, et omnes iudices terrae:",
-        "Iuvenes, et virgines: senes cum iunioribus laudent nomen Domini:",
-        "Quia exaltatum est nomen eius solius: confessio eius super caelum et terram.",
-        "Et exaltabit cornu populi sui: hymnus omnibus sanctis eius, filiis Israel, populo appropinquanti sibi."
-    ]
-    let id = PsalmIdentity(number: 148, category: "Universal Praise")
-    
-    // MARK: - Test Cases
-    
-    func testThemeLemmas() {
-        let analysis = latinService.analyzePsalm(id, text: psalm148)
-        
-        // Theme 1: Heavens → Hosts
-        let heavensTerms = [
-            ("caelum", ["caelis", "caelos", "caelorum"], "heaven"),
-            ("excelsum", ["excelsis"], "height"),
-            ("angelus", ["angeli"], "angel"),
-            ("virtus", ["virtutes"], "power")
-        ]
-        
-        // Theme 2: Luminaries → Waters Above
-        let luminariesTerms = [
-            ("sol", ["sol"], "sun"),
-            ("luna", ["luna"], "moon"),
-            ("astrum", ["astra"], "star"),
-            ("aqua", ["aquae"], "water")
-        ]
-        
-        // Theme 3: Command → Creation
-        let commandTerms = [
-            ("dico", ["dixit"], "speak"),
-            ("creo", ["creata"], "create"),
-            ("praeceptum", ["praeceptum"], "command")
-        ]
-        
-        // Theme 4: Depths → Storms
-        let depthsTerms = [
-            ("draco", ["dracones"], "dragon"),
-            ("abyssus", ["abyssorum"], "abyss"),
-            ("spiritus", ["spiritus"], "spirit"),
-            ("verbum", ["verbum"], "word")
-        ]
-        
-        // Theme 5: Mountains → Beasts
-        let mountainsTerms = [
-            ("mons", ["Montes"], "mountain"),
-            ("cedrus", ["cedri"], "cedar"),
-            ("bestia", ["bestiae"], "beast"),
-            ("serpens", ["serpentes"], "serpent")
-        ]
-        
-        // Theme 6: Rulers → Youth
-        let rulersTerms = [
-            ("rex", ["Reges"], "king"),
-            ("iudex", ["iudices"], "judge"),
-            ("iuvenis", ["iuvenes"], "young"),
-            ("iunior", ["iunioribus"], "young"),
-            ("senex", ["senes"], "old")
-        ]
-        
-        // Theme 7: Name → People
-        let nameTerms = [
-            ("nomen", ["nomen", "nomen"], "name"),
-            ("confessio", ["confessio"], "confession"),
-            ("cornu", ["cornu"], "horn"),
-            ("populus", ["populi", "populo"], "people")
-        ]
-        
-        // Verify each theme group
-        verifyWordsInAnalysis(analysis, confirmedWords: heavensTerms)
-        verifyWordsInAnalysis(analysis, confirmedWords: luminariesTerms)
-        verifyWordsInAnalysis(analysis, confirmedWords: commandTerms)
-        verifyWordsInAnalysis(analysis, confirmedWords: depthsTerms)
-        verifyWordsInAnalysis(analysis, confirmedWords: mountainsTerms)
-        verifyWordsInAnalysis(analysis, confirmedWords: rulersTerms)
-        verifyWordsInAnalysis(analysis, confirmedWords: nameTerms)
-    }
-    
-    // MARK: - Helper
-    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
-        for (lemma, forms, translation) in confirmedWords {
-            guard let entry = analysis.dictionary[lemma] else {
-                XCTFail("Missing lemma: \(lemma)")
-                continue
-            }
-            
-            // Verify semantic domain
-            XCTAssertTrue(
-                entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-                "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
-            )
-            
-            // Verify morphological coverage
-            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-            if !missingForms.isEmpty {
-                XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
-            }
-            
-            if verbose {
-                print("\n\(lemma.uppercased())")
-                print("  Translation: \(entry.translation ?? "?")")
-                forms.forEach { form in
-                    let count = entry.forms[form.lowercased()] ?? 0
-                    print("  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
-                }
-            }
-        }
-    }
-}
+@testable import LatinService
 
 class Psalm149Tests: XCTestCase {
     private var latinService: LatinService!
+    private let utilities = PsalmTestUtilities.self
+
     let verbose = true
-    
+
     override func setUp() {
         super.setUp()
         latinService = LatinService.shared
     }
-    
+
     // MARK: - Test Data
+
     let psalm149 = [
         "Cantate Domino canticum novum: laus eius in ecclesia sanctorum.",
         "Laetetur Israel in eo qui fecit eum: et filii Sion exsultent in rege suo.",
@@ -151,98 +24,98 @@ class Psalm149Tests: XCTestCase {
         "Exaltationes Dei in gutture eorum: et gladii ancipites in manibus eorum:",
         "Ad faciendam vindictam in nationibus: increpationes in populis.",
         "Ad alligandos reges eorum in compedibus: et nobiles eorum in manicis ferreis.",
-        "Ut faciant in eis iudicium conscriptum: gloria haec est omnibus sanctis eius."
+        "Ut faciant in eis iudicium conscriptum: gloria haec est omnibus sanctis eius.",
     ]
     let id = PsalmIdentity(number: 149, category: nil)
-    
+
+    // MARK: - Line-by-line key lemmas (Psalm 149)
+
+    private let lineKeyLemmas: [(Int, [String])] = [
+        (1, ["canto", "dominus", "canticum", "novus", "laus", "ecclesia", "sanctus"]),
+        (2, ["laetor", "israel", "facio", "sion", "exsulto", "rex"]),
+        (3, ["laudo", "nomen", "chorus", "tympanum", "psalterium", "psallo"]),
+        (4, ["beneplacitum", "dominus", "populus", "exalto", "mansuetus", "salus"]),
+        (5, ["exsulto", "sanctus", "gloria", "laetor", "cubile"]),
+        (6, ["exaltatio", "deus", "guttur", "gladius", "anceps", "manus"]),
+        (7, ["facio", "vindicta", "natio", "increpatio", "populus"]),
+        (8, ["alligo", "rex", "compedes", "nobilis", "manicae", "ferreus"]),
+        (9, ["iudicium", "conscriptus", "gloria", "sanctus"]),
+    ]
+
+    // MARK: - Structural Themes
+
+    private let structuralThemes = [
+        (
+            "New Song → Holy Assembly",
+            "From a fresh hymn to communal worship",
+            ["canticum", "novus", "ecclesia", "sanctus"],
+            1,
+            2,
+            "The psalm begins with the call to sing a new song in the assembly, rejoicing in the Creator and King.",
+            "Augustine sees the 'new song' as the praise of the new man in Christ, sung by the whole Church gathered as the holy people of God."
+        ),
+        (
+            "Dance → Divine Favor",
+            "From festal dance to God’s delight in the meek",
+            ["chorus", "tympanum", "psalterium", "beneplacitum", "mansuetus"],
+            3,
+            4,
+            "Praise through dance and instruments is met with God’s favor, who lifts up the humble.",
+            "For Augustine, instruments symbolize virtues in action. The meek are exalted because their harmony with God is itself His delight."
+        ),
+        (
+            "Glorious Rest → Exalted Voice",
+            "From joy in rest to power in proclamation",
+            ["gloria", "cubile", "guttur", "exaltatio", "gladius"],
+            5,
+            6,
+            "The saints rejoice even in their resting places, but their throats also sound with God’s exaltation like a two-edged sword.",
+            "Augustine interprets this as the saints resting in hope yet proclaiming God’s word with piercing authority, sharper than any blade."
+        ),
+        (
+            "Judgment → Subjugation",
+            "From executing judgment to binding rulers",
+            ["vindicta", "increpatio", "rex", "compedes", "manicae"],
+            7,
+            8,
+            "The faithful enact God’s decreed judgment, binding nations and kings with fetters.",
+            "Augustine notes this as the spiritual victory of the Church, where proud rulers are subdued under Christ’s authority through the saints."
+        ),
+        (
+            "Written Judgment → Shared Glory",
+            "From decree fulfilled to honor for all saints",
+            ["iudicium", "conscriptus", "gloria", "sanctus"],
+            9,
+            9,
+            "The final verse declares the written judgment accomplished, granting glory to all the saints.",
+            "Augustine sees this as the consummation of God’s plan: His judgment executed in history becomes the eternal glory of His holy ones."
+        ),
+    ]
+
     // MARK: - Test Cases
-    
-    func testThemeLemmas() {
-        let analysis = latinService.analyzePsalm(id, text: psalm149)
-        
-        // Theme 1: New Song → Holy Assembly
-        let newSongTerms = [
-            ("canticum", ["canticum"], "song"),
-            ("novus", ["novum"], "new"),
-            ("ecclesia", ["ecclesia"], "assembly"),
-            ("laetor", ["Laetetur", "laetabuntur"], "rejoice"),
-            ("exsulto", ["exsultent", "exsultabunt"], "rejoice")
-        ]
-        
-        // Theme 2: Dance → Favor
-        let danceTerms = [
-            ("chorus", ["choro"], "dance"),
-            ("tympanum", ["tympano"], "tambourine"),
-            ("psalterium", ["psalterio"], "psaltery"),
-            ("beneplacitum", ["beneplacitum"], "pleasure"),
-            ("mansuetus", ["mansuetos"], "meek")
-        ]
-        
-        // Theme 3: Rest → Exaltation
-        let restTerms = [
-            ("gloria", ["gloria"], "glory"),
-            ("cubile", ["cubilibus"], "bed"),
-            ("guttur", ["gutture"], "throat"),
-            ("exaltatio", ["exaltationes"], "exaltation"),
-            ("gladius", ["gladii"], "sword"),
-            ("anceps", ["ancipites"], "two-edged")
-        ]
-        
-        // Theme 4: Judgment → Dominion
-        let judgmentTerms = [
-            ("vindicta", ["vindictam"], "vengeance"),
-            ("increpatio", ["increpationes"], "rebuke"),
-            ("natio", ["nationibus"], "nation"),
-            ("populus", ["populis", "populo"], "people"),
-            ("rex", ["reges"], "king"),
-            ("compedes", ["compedibus"], "fetters"),
-            ("manicae", ["manicis"], "chain")
-        ]
-        
-        // Theme 5: Written Judgment → Shared Glory
-        let writtenJudgmentTerms = [
-            ("iudicium", ["iudicium"], "judgment"),
-            ("conscriptus", ["conscriptum"], "written"),
-            ("gloria", ["gloria"], "glory"),
-            ("sanctus", ["sanctis", "sancti"], "holy")
-        ]
-        
-        // Verify each theme group
-        verifyWordsInAnalysis(analysis, confirmedWords: newSongTerms)
-        verifyWordsInAnalysis(analysis, confirmedWords: danceTerms)
-        verifyWordsInAnalysis(analysis, confirmedWords: restTerms)
-        verifyWordsInAnalysis(analysis, confirmedWords: judgmentTerms)
-        verifyWordsInAnalysis(analysis, confirmedWords: writtenJudgmentTerms)
+
+    func testPsalm149Verses() {
+        XCTAssertEqual(
+            psalm149.count, 9, "Psalm 149 should have 9 verses in the Benedictine Office")
+        let normalized = psalm149.map { PsalmTestUtilities.validateLatinText($0) }
+        XCTAssertEqual(normalized, psalm149, "Normalized Latin text should match expected forms")
     }
-    
-    // MARK: - Helper
-    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
-        for (lemma, forms, translation) in confirmedWords {
-            guard let entry = analysis.dictionary[lemma] else {
-                XCTFail("Missing lemma: \(lemma)")
-                continue
-            }
-            
-            // Verify semantic domain
-            XCTAssertTrue(
-                entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-                "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
-            )
-            
-            // Verify morphological coverage
-            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-            if !missingForms.isEmpty {
-                XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
-            }
-            
-            if verbose {
-                print("\n\(lemma.uppercased())")
-                print("  Translation: \(entry.translation ?? "?")")
-                forms.forEach { form in
-                    let count = entry.forms[form.lowercased()] ?? 0
-                    print("  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
-                }
-            }
-        }
+
+    func testPsalm149LineByLineKeyLemmas() {
+        utilities.testLineByLineKeyLemmas(
+            psalmText: psalm149,
+            lineKeyLemmas: lineKeyLemmas,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
+
+    func testPsalm149StructuralThemes() {
+        utilities.testStructuralThemes(
+            psalmText: psalm149,
+            structuralThemes: structuralThemes,
+            psalmId: id,
+            verbose: verbose
+        )
     }
 }

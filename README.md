@@ -44,4 +44,4 @@ security find-identity -v -p codesigning
 
 ```
 
-
+can you follow psalm150tests as a sample to update psalm149tests? a)  to test if the text has  a total  9 verses based on benedict office. b) line by line check lemmas for the 9 verses. c) create structure themes, that is every 2 verses make one theme, name is a -> b pattern, comment is for general meaning, comment 2 is for augustine's expositions.

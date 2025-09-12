@@ -6866,38 +6866,98 @@
   {
     "psalmNumber": 150,
     "category": "",
+
     "structuralThemes": [
       {
-        "name": "Temple → Majesty",
-        "description": "From sanctuary worship to awe before divine greatness",
+        "name": "Sanctuary → Majesty",
+        "description": "From holy places to divine greatness",
         "lemmas": ["sanctus", "firmamentum", "virtus", "magnitudo"],
         "startLine": 1,
         "endLine": 2,
-        "comment": "Praise begins in God's sancta — the temple — and extends to the firmament of His power. Augustine sees this as an ascent from visible liturgy to contemplation of divine majesty. God's mighty acts (virtutes) and immeasurable greatness (magnitudo) inspire reverent joy (Enarr. Ps. 150.1–2)."
+        "comment": "The call to praise begins in God's holy places and extends to the cosmic firmament, emphasizing His power and immeasurable greatness.",
+        "comment2": "Augustine sees this as praise moving from the earthly temple to the heavenly realm, where God's power and majesty are fully revealed. The 'sanctuary' represents the Church, while the 'firmament' signifies the celestial dwelling of God."
       },
       {
-        "name": "Instruments → Communion",
-        "description": "From diverse instruments to unified spiritual praise",
+        "name": "Instruments → Universal Praise",
+        "description": "From musical instruments to all creation praising",
         "lemmas": [
           "tuba",
           "psalterium",
           "cithara",
           "tympanum",
-          "chorus",
-          "chorda",
-          "organum"
+          "organum",
+          "cymbalum",
+          "spiritus"
         ],
         "startLine": 3,
-        "endLine": 4,
-        "comment": "The instruments — wind, string, and dance — symbolize various gifts and temperaments. Augustine sees harmony in their diversity: the Church praises with all members, each contributing uniquely in the Spirit’s unity (Enarr. Ps. 150.3–4)."
+        "endLine": 5,
+        "comment": "The psalm progresses through various musical instruments, culminating in the call for every living spirit to praise the Lord, representing the universal scope of worship.",
+        "comment2": "Augustine interprets the instruments as different aspects of the faithful soul: the trumpet as proclamation, psaltery as good works, harp as heavenly desire, etc. The final call for 'every spirit' to praise shows that all creation, both visible and invisible, should worship God."
+      }
+    ],
+    "conceptualThemes": [
+      {
+        "name": "Divine Worship",
+        "description": "Praise and adoration of God",
+        "category": "worship",
+        "lemmas": ["laudo", "dominus"]
       },
       {
-        "name": "Cymbals → Breath",
-        "description": "From jubilant sound to universal participation",
-        "lemmas": ["cymbalum", "iubilatio", "spiritus", "laudo"],
-        "startLine": 5,
-        "endLine": 6,
-        "comment": "The climax of praise is marked by 'jubilation' — a joy beyond words. Augustine notes that 'every spirit' (omnis spiritus) signifies the totality of redeemed creation praising God not only with music but with breath, life, and being itself (Enarr. Ps. 150.5–6)."
+        "name": "Divine Majesty",
+        "description": "God's power and greatness",
+        "category": "divine",
+        "lineRange": {
+          "start": 1,
+          "end": 2
+        },
+        "lemmas": ["virtus", "magnitudo", "firmamentum"]
+      },
+      {
+        "name": "Sacred Space",
+        "description": "Holy places and sanctuary",
+        "category": "worship",
+        "lineRange": {
+          "start": 1,
+          "end": 1
+        },
+        "lemmas": ["sanctus"]
+      },
+      {
+        "name": "Musical Worship",
+        "description": "Instruments of praise",
+        "category": "worship",
+        "lineRange": {
+          "start": 3,
+          "end": 5
+        },
+        "lemmas": [
+          "tuba",
+          "psalterium",
+          "cithara",
+          "tympanum",
+          "organum",
+          "cymbalum"
+        ]
+      },
+      {
+        "name": "Universal Praise",
+        "description": "All creation worshiping",
+        "category": "worship",
+        "lineRange": {
+          "start": 5,
+          "end": 5
+        },
+        "lemmas": ["omnis", "spiritus"]
+      },
+      {
+        "name": "Joyful Worship",
+        "description": "Exuberant celebration",
+        "category": "worship",
+        "lineRange": {
+          "start": 5,
+          "end": 5
+        },
+        "lemmas": ["iubilatio", "benesonus"]
       }
     ]
   }

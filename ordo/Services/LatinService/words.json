@@ -1,67 +1,100 @@
 [
   {
-  "lemma": "benesonus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "benesonus",
-  "genitive": "benesoni",
-  "translations": {
-    "en": "well-sounding, resonant, melodious",
-    "la": "benesonus, benesona, benesonum"
+    "lemma": "nobilis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "nobilis",
+    "genitive": "nobilis",
+    "translations": {
+      "en": "noble, well-known, famous, illustrious",
+      "la": "nobilis, nobile"
+    },
+    "forms_plural": {
+      "accusative_m": ["nobiles"],
+      "accusative_f": ["nobiles"]
+    }
   },
-  "forms": {
-    "ablative_pl": ["benesonantibus"] 
-  }
-},
- 
- {
-  "lemma": "pateo",
-  "part_of_speech": "verb",
-  "conjugation": 2,
-  "infinitive": "patere",
-  "present": "pateo",
-  "future": "patebo",
-  "perfect": "patui",
-  "supine": "patitum",
-  "translations": {
-    "en": "to be open, lie open, be accessible",
-    "la": "pateo, patere, patui, patitum"
-  }
-},
- 
   {
-  "lemma": "ille",
-  "part_of_speech": "pronoun",
-  "declension": 0,
-  "gender": "masculine",
-  "nominative": "ille",
-  "genitive": "illius",
-  "translations": {
-    "en": "that, he, that person",
-    "la": "ille, illa, illud"
+    "lemma": "alligo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "alligare",
+    "present": "alligo",
+    "future": "alligabo",
+    "perfect": "alligavi",
+    "supine": "alligatum",
+    "translations": {
+      "en": "to bind, tie, fasten, attach",
+      "la": "alligo, alligare, alligavi, alligatum"
+    },
+    "forms": {
+      "gerundive_masc_acc_pl": ["alligandos"]
+    }
   },
-   "forms": {
-    "adverb": ["illic"],
-    "nominative_f": ["illa"],
-    "nominative_n": ["illud"],
-     "accusative_m": ["illum"],
-    "accusative_f": ["illam"],
-    "accusative_n": ["illud"],
-    "ablative_m": ["illo"],
-    "ablative_f": ["illa"],
-    "ablative_n": ["illo"]
-  }
-},
   {
-  "lemma": "simul",
-  "part_of_speech": "adverb",
-  "declension": 0,
-  "translations": {
-    "en": "at the same time, simultaneously, at once",
-    "la": "simul"
-  }
-},
+    "lemma": "benesonus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "benesonus",
+    "genitive": "benesoni",
+    "translations": {
+      "en": "well-sounding, resonant, melodious",
+      "la": "benesonus, benesona, benesonum"
+    },
+    "forms": {
+      "ablative_pl": ["benesonantibus"]
+    }
+  },
+
+  {
+    "lemma": "pateo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "patere",
+    "present": "pateo",
+    "future": "patebo",
+    "perfect": "patui",
+    "supine": "patitum",
+    "translations": {
+      "en": "to be open, lie open, be accessible",
+      "la": "pateo, patere, patui, patitum"
+    }
+  },
+
+  {
+    "lemma": "ille",
+    "part_of_speech": "pronoun",
+    "declension": 0,
+    "gender": "masculine",
+    "nominative": "ille",
+    "genitive": "illius",
+    "translations": {
+      "en": "that, he, that person",
+      "la": "ille, illa, illud"
+    },
+    "forms": {
+      "adverb": ["illic"],
+      "nominative_f": ["illa"],
+      "nominative_n": ["illud"],
+      "accusative_m": ["illum"],
+      "accusative_f": ["illam"],
+      "accusative_n": ["illud"],
+      "ablative_m": ["illo"],
+      "ablative_f": ["illa"],
+      "ablative_n": ["illo"]
+    }
+  },
+  {
+    "lemma": "simul",
+    "part_of_speech": "adverb",
+    "declension": 0,
+    "translations": {
+      "en": "at the same time, simultaneously, at once",
+      "la": "simul"
+    }
+  },
   {
     "lemma": "intelligo",
     "part_of_speech": "verb",
@@ -24340,6 +24373,7 @@
     "perfect": "feci",
     "supine": "factum",
     "forms": {
+      "gerundive_fem_acc_sg": ["faciendam"],
       "gerundive_fem_acc_pl": ["faciendas"],
       "gerund_genitive": ["faciendi"],
       "present": ["facio", "facis", "facit", "facimus", "facitis", "faciunt"],
