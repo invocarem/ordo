@@ -119,6 +119,73 @@ class Psalm148Tests: XCTestCase {
             "Augustine reads the exaltation of the people as Christ exalting His Church, whose praise unites Israel and all the saints."
         ),
     ]
+    // MARK: - Conceptual Themes (Psalm 148)
+
+private let conceptualThemes = [
+    (
+        "Divine Creation",
+        "God's creative power and authority",
+        ["dico", "facio", "mando", "creo", "statuto"],
+        ThemeCategory.divine,
+        5...6
+    ),
+    (
+        "Divine Sovereignty",
+        "God's eternal dominion and unchanging decrees",
+        ["aeternum", "praeceptum", "verbum", "exalto", "nomen"],
+        ThemeCategory.divine,
+        6...14
+    ),
+    (
+        "Cosmic Worship",
+        "All creation praising its Creator",
+        ["laudo", "caelum", "terra", "nomen", "dominus"],
+        ThemeCategory.worship,
+        1...14
+    ),
+    (
+        "Angelic Praise",
+        "Heavenly beings glorifying God",
+        ["angelus", "virtus", "excelsus"],
+        ThemeCategory.worship,
+        1...2
+    ),
+    (
+        "Natural Order",
+        "Creation obeying God's commands",
+        ["sol", "luna", "astrum", "aqua", "ignis", "nix", "glacies"],
+        ThemeCategory.virtue,
+        3...8
+    ),
+    (
+        "Living Creation",
+        "All creatures fulfilling their purpose",
+        ["bestia", "pecus", "serpens", "volucris", "lignum", "cedrus"],
+        ThemeCategory.virtue,
+        9...10
+    ),
+    (
+        "Human Unity",
+        "All people united in praise",
+        ["rex", "populus", "princeps", "iudex", "iuvenis", "virgo", "senex"],
+        ThemeCategory.virtue,
+        11...12
+    ),
+    (
+        "Sanctified People",
+        "God's chosen people exalted",
+        ["sanctus", "israel", "appropinquo", "cornu", "hymnus"],
+        ThemeCategory.virtue,
+        14...14
+    ),
+    (
+        "Universal Confession",
+        "All creation acknowledging God's glory",
+        ["confessio", "laudo", "exalto"],
+        ThemeCategory.worship,
+        13...14
+    )
+]
 
     // MARK: - Test Cases
 
@@ -147,6 +214,7 @@ class Psalm148Tests: XCTestCase {
             verbose: verbose
         )
     }
+
 
     func testSavePsalm148Themes() {
         guard
