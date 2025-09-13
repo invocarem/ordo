@@ -49,3 +49,7 @@ can you follow psalm150tests as a sample to update psalm149tests? a)  to test if
 
 can you define conceptual themes?
 I have defined 7 categories in the level  good to bad: divine, justice,  worship, virtue, sin, conflict, opposition. divine and justice are for God, worship or virtual are for saints or freeman, sin, conflict and opposition are for slaves of god, opposition is worst.
+
+@Psalm148Tests.swift, verify line 6 the lemma for statuto? is it statuo?
+
+sk-ae7c4020c3f9482b9d9122525404712f

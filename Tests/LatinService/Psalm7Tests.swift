@@ -107,6 +107,12 @@ class Psalm7Tests: XCTestCase {
         latinService = LatinService.shared
     }
 
+    func testPsalm7Verses() {
+    XCTAssertEqual(psalm7.count, 18, "Psalm 7 should have 18 verses")
+    let normalized = psalm7.map { PsalmTestUtilities.validateLatinText($0) }
+    XCTAssertEqual(normalized, psalm7, "Normalized Latin text should match expected forms")
+}
+
     // MARK: - Line by Line Key Lemmas Test
 
     func testPsalm7LineByLineKeyLemmas() {
