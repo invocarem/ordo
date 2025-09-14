@@ -6689,6 +6689,176 @@
       }
     ]
   },
+
+  {
+    "psalmNumber": 142,
+    "category": "",
+
+    "structuralThemes": [
+      {
+        "name": "Petition → Justice",
+        "description": "Appeal to God's truth and justice in hearing prayer",
+        "lemmas": ["exaudio", "oratio", "veritas", "iustitia"],
+        "startLine": 1,
+        "endLine": 2,
+        "comment": "The psalmist begins with a plea for God to hear his prayer, acknowledging that no one is justified before God's judgment.",
+        "comment2": "Augustine sees this as the soul's recognition of its own unworthiness and complete dependence on God's mercy rather than human righteousness (Enarr. Ps. 142.1-2)."
+      },
+      {
+        "name": "Persecution → Desolation",
+        "description": "Enemy oppression leading to spiritual darkness and distress",
+        "lemmas": [
+          "persequor",
+          "inimicus",
+          "humilio",
+          "obscurus",
+          "mortuus",
+          "anxio"
+        ],
+        "startLine": 3,
+        "endLine": 4,
+        "comment": "The psalmist describes the enemy's persecution that has brought humiliation, darkness, and spiritual anguish.",
+        "comment2": "Augustine interprets this as the soul's experience of spiritual death and separation from God, where the enemy (sin/devil) seeks to destroy the spiritual life (Enarr. Ps. 142.3-4)."
+      },
+      {
+        "name": "Remembrance → Thirst",
+        "description": "Remembering God's works while experiencing spiritual dryness",
+        "lemmas": ["memor", "meditor", "opus", "expando", "terra", "aqua"],
+        "startLine": 5,
+        "endLine": 6,
+        "comment": "The psalmist recalls God's past works while expressing intense spiritual thirst like parched land.",
+        "comment2": "Augustine sees this as the soul's meditation on God's providence while experiencing the dryness of spiritual desert, longing for the living water of grace (Enarr. Ps. 142.5-6)."
+      },
+      {
+        "name": "Urgency → Desperation",
+        "description": "Immediate need for God's presence to avoid destruction",
+        "lemmas": ["velox", "deficio", "averto", "lacus", "descendo"],
+        "startLine": 7,
+        "endLine": 8,
+        "comment": "The psalmist urgently pleads for help as his spirit fails, fearing abandonment that would lead to the pit.",
+        "comment2": "Augustine emphasizes the soul's desperate need for God's immediate help to avoid spiritual death and descent into hell (Enarr. Ps. 142.7-8)."
+      },
+      {
+        "name": "Hope → Guidance",
+        "description": "Trust in God's mercy leading to prayer for direction",
+        "lemmas": ["audio", "misericordia", "spero", "notus", "via", "ambulo"],
+        "startLine": 9,
+        "endLine": 10,
+        "comment": "The psalmist expresses hope in God's mercy and asks for guidance in the right path.",
+        "comment2": "Augustine interprets this as the soul's morning prayer for enlightenment, seeking the way of truth after the night of tribulation (Enarr. Ps. 142.9-10)."
+      },
+      {
+        "name": "Refuge → Spirit",
+        "description": "Taking refuge in God and the guidance of the Holy Spirit",
+        "lemmas": [
+          "eripio",
+          "confugio",
+          "doceo",
+          "voluntas",
+          "deus",
+          "spiritus",
+          "bonus",
+          "deduco"
+        ],
+        "startLine": 11,
+        "endLine": 12,
+        "comment": "The psalmist flees to God for deliverance, asks to be taught God's will, and trusts in the Holy Spirit's guidance.",
+        "comment2": "Augustine sees this as the soul's complete surrender to God's will, recognizing that true deliverance comes through obedience to divine instruction and the guidance of the Holy Spirit (Enarr. Ps. 142.11-12)."
+      },
+      {
+        "name": "Deliverance → Vindication",
+        "description": "God's liberation from trouble and destruction of enemies",
+        "lemmas": ["educo", "tribulatio", "disperdo", "perdo", "servus"],
+        "startLine": 13,
+        "endLine": 14,
+        "comment": "The psalmist trusts God to deliver from tribulation and destroy all who trouble his soul, affirming his servant status.",
+        "comment2": "Augustine emphasizes God's power to revive the soul and destroy spiritual enemies through His mercy, culminating in the soul's affirmation of its servitude to God (Enarr. Ps. 142.13-14)."
+      }
+    ],
+    "conceptualThemes": [
+      {
+        "name": "Divine Mercy",
+        "description": "God's compassionate love and forgiveness",
+        "category": "divine",
+        "lineRange": {
+          "start": 1,
+          "end": 1
+        },
+        "lemmas": ["misericordia", "exaudio", "percipio"]
+      },
+      {
+        "name": "Divine Justice",
+        "description": "God's righteous judgment and fairness",
+        "category": "justice",
+        "lineRange": {
+          "start": 1,
+          "end": 2
+        },
+        "lemmas": ["iustitia", "iudicium", "iustifico", "aequitas"]
+      },
+      {
+        "name": "Divine Guidance",
+        "description": "God's direction and teaching through the Spirit",
+        "category": "divine",
+        "lineRange": {
+          "start": 10,
+          "end": 12
+        },
+        "lemmas": ["via", "doceo", "deduco", "spiritus", "bonus"]
+      },
+      {
+        "name": "Human Dependence",
+        "description": "Recognition of human need for God",
+        "category": "worship",
+        "lineRange": {
+          "start": 2,
+          "end": 11
+        },
+        "lemmas": ["servus", "spero", "confugio", "levo"]
+      },
+      {
+        "name": "Spiritual Thirst",
+        "description": "Longing for God's presence",
+        "category": "virtue",
+        "lineRange": {
+          "start": 6,
+          "end": 7
+        },
+        "lemmas": ["anima", "terra", "aqua", "deficio"]
+      },
+      {
+        "name": "Enemy Oppression",
+        "description": "Persecution by adversaries",
+        "category": "opposition",
+        "lineRange": {
+          "start": 3,
+          "end": 14
+        },
+        "lemmas": ["inimicus", "persequor", "tribulo", "disperdo", "perdo"]
+      },
+      {
+        "name": "Spiritual Desolation",
+        "description": "Experience of darkness and distress",
+        "category": "conflict",
+        "lineRange": {
+          "start": 4,
+          "end": 8
+        },
+        "lemmas": ["obscurus", "mortuus", "anxio", "turbo", "lacus"]
+      },
+      {
+        "name": "Meditative Prayer",
+        "description": "Remembering and contemplating God's works",
+        "category": "worship",
+        "lineRange": {
+          "start": 5,
+          "end": 6
+        },
+        "lemmas": ["memor", "meditor", "opus", "expando"]
+      }
+    ]
+  },
+
   {
     "psalmNumber": 144,
     "category": "a",

@@ -1,56 +1,157 @@
 [
   {
-  "lemma": "solus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "solus",
-  "genitive": "soli",
-  "translations": {
-    "en": "alone, only, sole, lonely",
-    "la": "solus, sola, solum"
-  }
-},
-  {
-  "lemma": "virgo",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "virgo",
-  "genitive": "virginis",
-  "translations": {
-    "en": "maiden, virgin, young woman, girl",
-    "la": "virgo, virginis"
-  }
-},
-  {
-  "lemma": "procella",
-  "part_of_speech": "noun",
-  "declension": 1,
-  "gender": "feminine",
-  "nominative": "procella",
-  "genitive": "procellae",
-  "translations": {
-    "en": "storm, tempest, tumult",
-    "la": "procella, procellae"
-  }
-},
-  {
-  "lemma": "excelsus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "excelsus",
-  "genitive": "excelsi",
-  "translations": {
-    "en": "high, lofty, elevated, exalted",
-    "la": "excelsus, excelsa, excelsum"
+    "lemma": "confugio",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "confugere",
+    "present": "confugio",
+    "future": "confugiam",
+    "perfect": "confugi",
+    "supine": "confugitum",
+    "translations": {
+      "en": "to flee for refuge, take shelter, escape",
+      "la": "confugio, confugere, confugi, confugitum"
+    }
   },
-  "forms_plural": {
-    "dative_m": ["excelsis"],
-    "ablative_m": ["excelsis"]
-  }
-},
+  {
+    "lemma": "anxio",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "anxiare",
+    "present": "anxio",
+    "future": "anxiabo",
+    "perfect": "anxiavi",
+    "supine": "anxiatum",
+    "translations": {
+      "en": "to trouble, distress, make anxious, vex",
+      "la": "anxio, anxiare, anxiavi, anxiatum"
+    },
+    "forms": {
+      "perfect_participle": ["anxiatus", "anxiata", "anxiatum"]
+    }
+  },
+  {
+    "lemma": "anxius",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "anxius",
+    "genitive": "anxii",
+    "translations": {
+      "en": "anxious, troubled, worried, distressed",
+      "la": "anxius, anxia, anxium"
+    }
+  },
+  {
+    "lemma": "obscurus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "obscurus",
+    "genitive": "obscuri",
+    "translations": {
+      "en": "dark, obscure, uncertain",
+      "la": "obscurus, obscura, obscurum"
+    }
+  },
+  {
+    "lemma": "colloco",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "collocare",
+    "present": "colloco",
+    "future": "collocabo",
+    "perfect": "collocavi",
+    "supine": "collocatum",
+    "translations": {
+      "en": "to place, arrange; employ",
+      "la": "colloco, collocare, collocavi, collocatum"
+    }
+  },
+  {
+    "lemma": "obsecratio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "obsecratio",
+    "genitive": "obsecrationis",
+    "translations": {
+      "en": "entreaty, earnest prayer, supplication, pleading",
+      "la": "obsecratio, obsecrationis"
+    },
+    "forms": {
+      "accusative_f": ["obsecrationem"]
+    }
+  },
+  {
+    "lemma": "percipio",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "percipere",
+    "present": "percipio",
+    "future": "percipiam",
+    "perfect": "percepi",
+    "supine": "perceptum",
+    "translations": {
+      "en": "to seize, grasp, perceive, receive, obtain",
+      "la": "percipio, percipere, percepi, perceptum"
+    },
+    "forms": {
+      "imperative_sg": ["percipe"]
+    }
+  },
+  {
+    "lemma": "solus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "solus",
+    "genitive": "soli",
+    "translations": {
+      "en": "alone, only, sole, lonely",
+      "la": "solus, sola, solum"
+    }
+  },
+  {
+    "lemma": "virgo",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "virgo",
+    "genitive": "virginis",
+    "translations": {
+      "en": "maiden, virgin, young woman, girl",
+      "la": "virgo, virginis"
+    }
+  },
+  {
+    "lemma": "procella",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "procella",
+    "genitive": "procellae",
+    "translations": {
+      "en": "storm, tempest, tumult",
+      "la": "procella, procellae"
+    }
+  },
+  {
+    "lemma": "excelsus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "excelsus",
+    "genitive": "excelsi",
+    "translations": {
+      "en": "high, lofty, elevated, exalted",
+      "la": "excelsus, excelsa, excelsum"
+    },
+    "forms_plural": {
+      "dative_m": ["excelsis"],
+      "ablative_m": ["excelsis"]
+    }
+  },
   {
     "lemma": "nobilis",
     "part_of_speech": "adjective",
@@ -11017,7 +11118,7 @@
       "la": "murus"
     }
   },
-  
+
   {
     "lemma": "vehementer",
     "part_of_speech": "adverb",
@@ -12879,62 +12980,7 @@
       "la": "educere"
     }
   },
-  {
-    "lemma": "collocare",
-    "part_of_speech": "verb",
-    "conjugation": 1,
-    "deponent": false,
-    "infinitive": "collocare",
-    "forms": {
-      "present": [
-        "colloco",
-        "collocas",
-        "collocat",
-        "collocamus",
-        "collocatis",
-        "collocant"
-      ],
-      "present_passive": [
-        "collocor",
-        "collocaris",
-        "collocatur",
-        "collocamur",
-        "collocamini",
-        "collocantur"
-      ],
-      "imperative": ["colloca", "collocate"],
-      "subjunctive": [
-        "collocem",
-        "colloces",
-        "collocet",
-        "collocemus",
-        "collocetis",
-        "collocent"
-      ],
-      "future_passive": [
-        "collocabor",
-        "collocaberis",
-        "collocabitur",
-        "collocabimur",
-        "collocabimini",
-        "collocabuntur"
-      ],
-      "present_participle": ["collocans"],
-      "perfect_passive_participle": ["collocatus", "collocata", "collocatum"],
-      "perfect_indicative_active": [
-        "collocavi",
-        "collocavisti",
-        "collocavit",
-        "collocavimus",
-        "collocavistis",
-        "collocaverunt"
-      ]
-    },
-    "translations": {
-      "en": "to place, to settle",
-      "la": "collocare"
-    }
-  },
+
   {
     "lemma": "mors",
     "part_of_speech": "noun",
@@ -19226,6 +19272,7 @@
       "la": "recte"
     }
   },
+
   {
     "lemma": "abundantia",
     "part_of_speech": "noun",
@@ -19233,10 +19280,6 @@
     "declension": 1,
     "nominative": "abundantia",
     "genitive": "abundantiae",
-    "dative": "abundantiae",
-    "accusative": "abundantiam",
-    "ablative": "abundantia",
-    "vocative": "abundantia",
     "translations": {
       "en": "abundance, plenty",
       "la": "abundantia"
@@ -21425,6 +21468,7 @@
     "perfect": "vixi",
     "supine": "victum",
     "forms": {
+      "present_participle": ["vivens"],
       "present": ["vivo", "vivis", "vivit", "vivimus", "vivitis", "vivunt"],
       "imperfect": [
         "vivebam",
@@ -21452,7 +21496,8 @@
         "vivamus",
         "vivatis",
         "vivant"
-      ]
+      ],
+      "gerund": ["vivendi", "vivendo", "vivendum", "vivendo"]
     },
     "translations": {
       "en": "live, be alive",
@@ -24910,8 +24955,11 @@
   {
     "lemma": "disperdo",
     "part_of_speech": "verb",
-    "perfect": "disperdidi",
+    "conjugation": 3,
     "infinitive": "disperdere",
+    "present": "disperdo",
+    "future": "disperdam",
+    "perfect": "disperdidi",
     "supine": "disperditum",
     "forms": {
       "present_passive_subjunctive": [

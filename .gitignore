@@ -3,6 +3,8 @@ DerivedData/
 *.xcuserstate
 Pods/
 
+.continue/agents/*
+
 # macOS
 .DS_Store
 

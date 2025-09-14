@@ -52,4 +52,8 @@ I have defined 7 categories in the level  good to bad: divine, justice,  worship
 
 @Psalm148Tests.swift, verify line 6 the lemma for statuto? is it statuo?
 
+```
+nohup ollama serve > ~/ollama.log 2>&1 &
+```
+
 sk-ae7c4020c3f9482b9d9122525404712f
