@@ -92,6 +92,64 @@ class Psalm149Tests: XCTestCase {
         ),
     ]
 
+ private let conceptualThemes: [(String, String, [String], ThemeCategory, ClosedRange<Int>?)] = [
+        (
+            "Divine Worship",
+            "Praise and adoration of God",
+            ["canto", "laudo", "laus", "psallo", "exsulto"],
+            ThemeCategory.worship,
+            1...3
+        ),
+        (
+            "Divine Favor",
+            "God's pleasure and delight in His people",
+            ["beneplacitum", "exalto", "salus"],
+            ThemeCategory.divine,
+            4...4
+        ),
+        (
+            "Saints' Glory",
+            "The honor and joy of the holy ones",
+            ["sanctus", "gloria", "exsulto", "laetor", "cubile"],
+            ThemeCategory.virtue,
+            1...5
+        ),
+        (
+            "Divine Judgment",
+            "God's righteous judgment and vengeance",
+            ["vindicta", "increpatio", "iudicium", "conscriptus"],
+            ThemeCategory.justice,
+            7...9
+        ),
+        (
+            "Spiritual Authority",
+            "Power and authority given to the saints",
+            ["gladius", "anceps", "alligo", "rex", "compedes", "nobilis"],
+            ThemeCategory.virtue,
+            6...8
+        ),
+        (
+            "Divine Exaltation",
+            "God's majesty and elevation",
+            ["exaltatio", "deus", "gloria"],
+            ThemeCategory.divine,
+            5...6
+        ),
+        (
+            "Communal Praise",
+            "Corporate worship and celebration",
+            ["ecclesia", "chorus", "populus"],
+            ThemeCategory.worship,
+            1...4
+        ),
+        (
+            "Earthly Opposition",
+            "Resistance from nations and rulers",
+            ["natio", "populus", "rex", "nobilis"],
+            ThemeCategory.opposition,
+            7...8
+        )
+    ]
     // MARK: - Test Cases
 
     func testPsalm149Verses() {
@@ -118,4 +176,35 @@ class Psalm149Tests: XCTestCase {
             verbose: verbose
         )
     }
+     func testPsalm149ConceptualThemes() {
+        utilities.testConceptualThemes(
+            psalmText: psalm149,
+            conceptualThemes: conceptualThemes,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
+    func testSavePsalm149Themes() {
+        guard let jsonString = utilities.generateCompleteThemesJSONString(
+            psalmNumber: id.number,
+            conceptualThemes: conceptualThemes,
+            structuralThemes: structuralThemes
+        ) else {
+            XCTFail("Failed to generate complete themes JSON")
+            return
+        }
+
+        let success = utilities.saveToFile(
+            content: jsonString,
+            filename: "output_psalm149_themes.json"
+        )
+
+        if success {
+            print("✅ Complete themes JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete themes file:")
+            print(jsonString)
+        }
+
+}
 }

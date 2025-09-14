@@ -116,9 +116,9 @@ private let conceptualThemes = [
     (
         "Divine Justice",
         "God's righteous judgment and fairness",
-        ["iustitia", "iudicium", "iustifico", "aequitas"],
-        .justice,
-        1...2
+        ["iustitia", "iudicium", "iustifico"],
+        ThemeCategory.justice,
+        1...2 as ClosedRange<Int>?
     ),
     (
         "Divine Mercy", 
@@ -130,7 +130,7 @@ private let conceptualThemes = [
     (
         "Divine Guidance",
         "God's direction and teaching through the Spirit",
-        ["via", "doceo", "deduco", "spiritus", "bonus"],
+        ["via", "doceo", "deduco", "spiritus", "bonus", "aequitas"],
         .divine,
         10...12
     ),
@@ -165,7 +165,7 @@ private let conceptualThemes = [
     (
         "Spiritual Desolation",
         "Experience of darkness, distress and abandonment",
-        ["obscurus", "mortuus", "anxio", "turbo", "lacus", "avertor"],
+        ["obscurus", "mortuus", "anxio", "turbo", "lacus", "averto"],
         .conflict,
         4...8
     ),
@@ -188,6 +188,12 @@ private let conceptualThemes = [
 
   func testPsalm142HasFourteenVerses() {
     XCTAssertEqual(psalm142.count, 14, "Psalm 142 should have 14 verses")
+    let normalized = psalm142.map { PsalmTestUtilities.validateLatinText($0) }
+    XCTAssertEqual(
+      normalized,
+      psalm142,
+      "Normalized Latin text should match expected classical forms"
+    )
   }
 
   func testPsalm142LineByLineKeyLemmas() {
