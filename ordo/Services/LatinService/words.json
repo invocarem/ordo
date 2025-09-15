@@ -1228,6 +1228,10 @@
     "translations": {
       "en": "to walk, go about, march",
       "la": "ambulō, ambulāre, ambulāvī, ambulātum"
+    },
+    "forms": {
+      "imperfect_3pl": ["ambulabant"],
+      "imperfect_1s": ["ambulabam"]
     }
   },
   {
@@ -14876,7 +14880,9 @@
         "deficimur",
         "deficimini",
         "deficiuntur"
-      ]
+      ],
+      "gerund_dative_ablative": ["deficiendo"],
+      "gerundive_dative_ablative_masc_neuter_sg": ["deficiendo"]
     },
     "forms_plural": {
       "imperative": ["deficite"]
