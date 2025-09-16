@@ -56,4 +56,4 @@ I have defined 7 categories in the level  good to bad: divine, justice,  worship
 nohup ollama serve > ~/ollama.log 2>&1 &
 ```
 
-sk-ae7c4020c3f9482b9d9122525404712f
+Generate @Psalm78Tests.swift following @Psalm1Tests.swift. psalm Latin text can be found in  PsalmService/psalms.json, englishText can be found in the same file. the first test is make sure verse total is 15 according to Benedictine Office. the second test is line by line lemma. The third test is build structural themes, that is group every two verses into one theme, 1-2,3-4,5-6,..., if the psalm has odd numbers, you can group last 3 as one theme. name as a->b pattern, description please do NOT use From..To pattern.  'comment' is general meaning of the 2 verses, 'comment2' is Augustine's theogy lens (expositions). The 4th test is build concepture themes,  which mean see the psalm as different images or concepts, we define 7 ThemeCategory from highest to lowest: divine, justice, worship, virtue, sin, conflict, opposition. The last test will be generate JSON file for texts and themes.
