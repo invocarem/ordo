@@ -3311,73 +3311,122 @@
       }
     ]
   },
+
   {
     "psalmNumber": 66,
     "category": "",
+
     "structuralThemes": [
       {
-        "name": "Divine Face Metaphor",
-        "description": "God's countenance shining upon His people",
-        "lemmas": ["vultus", "illumino", "super"],
+        "name": "Divine Blessing → Universal Recognition",
+        "description": "From God's mercy and blessing to worldwide acknowledgment of salvation",
+        "lemmas": [
+          "misereor",
+          "benedico",
+          "illumino",
+          "cognosco",
+          "salutare",
+          "omnis",
+          "gens"
+        ],
         "startLine": 1,
-        "endLine": 1,
-        "comment": "Illuminet vultum suum super nos - classic biblical metaphor for divine favor"
+        "endLine": 2,
+        "comment": "The psalm opens with a prayer for divine blessing and mercy, then expands to show how this blessing leads to universal recognition of God's way and salvation among all nations.",
+        "comment2": "Augustine sees this as the Church's prayer for divine illumination, where God's face shining upon us (illuminet vultum suum) represents the light of truth that enables all nations to recognize the way of salvation. The progression from personal blessing to universal knowledge reflects the Church's mission to make God known to all peoples (Enarr. Ps. 66.1-2)."
       },
       {
-        "name": "Agricultural Blessings",
-        "description": "Earth's fruitfulness as divine blessing",
-        "lemmas": ["terra", "fructus", "benedico"],
-        "startLine": 6,
+        "name": "Universal Confession → Joyful Judgment",
+        "description": "From all peoples confessing to God to nations rejoicing in divine justice",
+        "lemmas": [
+          "confiteor",
+          "populus",
+          "omnis",
+          "laetor",
+          "exsulto",
+          "iudico",
+          "aequitas",
+          "dirigo"
+        ],
+        "startLine": 3,
+        "endLine": 4,
+        "comment": "All peoples are called to confess and give glory to God, leading to universal joy as nations recognize God's just judgment and guidance over all peoples.",
+        "comment2": "Augustine interprets this as the Church's universal confession of faith, where all nations come to acknowledge God's sovereignty. The joy and exultation arise from recognizing that God judges with equity (aequitate) and directs nations according to his righteous will. This reflects the Church's understanding that true joy comes from living under God's just governance (Enarr. Ps. 66.3-4)."
+      },
+      {
+        "name": "Repeated Confession → Earthly Fruitfulness",
+        "description": "From continued universal praise to the earth yielding its fruit in response",
+        "lemmas": [
+          "confiteor",
+          "populus",
+          "omnis",
+          "terra",
+          "do",
+          "fructus",
+          "benedico",
+          "metuo"
+        ],
+        "startLine": 5,
         "endLine": 6,
-        "comment": "Terra dedit fructum suum - personification of earth yielding its produce"
+        "comment": "The repeated call for universal confession leads to the earth's response of fruitfulness, culminating in divine blessing that causes all the ends of the earth to fear God.",
+        "comment2": "Augustine sees this as the Church's persistent prayer and confession leading to God's blessing of creation itself. The earth giving fruit (terra dedit fructum suum) symbolizes the Church's spiritual fruitfulness when nations turn to God. The fear of God at the ends of the earth represents the universal reverence that comes from recognizing divine sovereignty over all creation (Enarr. Ps. 66.5-6)."
+      }
+    ],
+    "conceptualThemes": [
+      {
+        "name": "Divine Sovereignty",
+        "description": "God's authority and power over all creation",
+        "category": "divine",
+        "lemmas": ["deus", "iudico", "dirigo", "metuo"]
       },
       {
         "name": "Universal Worship",
-        "description": "All nations called to praise God",
-        "lemmas": ["omnis", "gens", "populus", "confiteor"],
-        "startLine": 3,
-        "endLine": 5,
-        "comment": "Repeated calls for global confession and praise"
+        "description": "All nations and peoples praising God",
+        "category": "worship",
+        "lineRange": {
+          "start": 3,
+          "end": 5
+        },
+        "lemmas": ["confiteor", "populus", "omnis", "gens", "laetor", "exsulto"]
       },
       {
-        "name": "Divine Guidance",
-        "description": "God's direction of nations and individuals",
-        "lemmas": ["via", "dirigo", "salutare"],
-        "startLine": 2,
-        "endLine": 4,
-        "comment": "Judging peoples with equity and guiding nations"
+        "name": "Divine Blessing",
+        "description": "God's mercy, blessing, and illumination",
+        "category": "worship",
+        "lineRange": {
+          "start": 1,
+          "end": 2
+        },
+        "lemmas": ["misereor", "benedico", "illumino", "salutare"]
       },
       {
-        "name": "Cosmic Benediction",
-        "description": "Global scope of God's blessing",
-        "lemmas": ["finis", "terra", "metuo"],
-        "startLine": 7,
-        "endLine": 7,
-        "comment": "Omnes fines terrae - hyperbolic expression of universal reverence"
+        "name": "Divine Justice",
+        "description": "God's righteous judgment and guidance",
+        "category": "justice",
+        "lineRange": {
+          "start": 4,
+          "end": 4
+        },
+        "lemmas": ["iudico", "aequitas", "dirigo"]
       },
       {
-        "name": "Joyful Judgment",
-        "description": "Righteous rule producing celebration",
-        "lemmas": ["laetor", "exsulto", "judico", "aequitas"],
-        "startLine": 4,
-        "endLine": 4,
-        "comment": "Paradox of nations rejoicing under divine judgment"
+        "name": "Earthly Fruitfulness",
+        "description": "The earth's response to divine blessing",
+        "category": "divine",
+        "lineRange": {
+          "start": 5,
+          "end": 6
+        },
+        "lemmas": ["terra", "fructus", "do", "finis"]
       },
       {
-        "name": "Liturgical Blessing",
-        "description": "Priestly benediction structure",
-        "lemmas": ["misereor", "benedico", "illumino"],
-        "startLine": 1,
-        "endLine": 1,
-        "comment": "Mirrors Aaronic blessing (Numbers 6:24-26)"
-      },
-      {
-        "name": "Ecological Obedience",
-        "description": "Earth's response to divine will",
-        "lemmas": ["terra", "fructus", "dedit"],
-        "startLine": 6,
-        "endLine": 6,
-        "comment": "Personification of creation fulfilling its purpose"
+        "name": "Universal Recognition",
+        "description": "All nations acknowledging God's way",
+        "category": "divine",
+        "lineRange": {
+          "start": 2,
+          "end": 2
+        },
+        "lemmas": ["cognosco", "via", "omnis", "gens", "salutare"]
       }
     ]
   },
