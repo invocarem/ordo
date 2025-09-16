@@ -2,21 +2,20 @@
 import XCTest
 
 class Psalm1Tests: XCTestCase {
-  // private var latinService: LatinService!
   private let utilities = PsalmTestUtilities.self
 
   private let verbose = true
 
   override func setUp() {
     super.setUp()
-//        latinService = LatinService.shared
   }
 
   let id = PsalmIdentity(number: 1, category: nil)
+  private let expectedVerseCount = 7
 
   // MARK: - Test Data
 
-  private let psalm1 = [
+  private let text = [
     "Beatus vir qui non abiit in consilio impiorum, et in via peccatorum non stetit, et in cathedra pestilentiae non sedit;",
     "Sed in lege Domini voluntas eius, et in lege eius meditabitur die ac nocte.",
     "Et erit tamquam lignum quod plantatum est secus decursus aquarum, quod fructum suum dabit in tempore suo:",
@@ -24,6 +23,16 @@ class Psalm1Tests: XCTestCase {
     "Non sic impii, non sic: sed tamquam pulvis, quem proicit ventus a facie terrae.",
     "Ideo non resurgent impii in iudicio, neque peccatores in concilio iustorum;",
     "Quoniam novit Dominus viam iustorum: et iter impiorum peribit.",
+  ]
+
+  private let englishText = [
+    "Blessed is the man who hath not walked in the counsel of the ungodly, nor stood in the way of sinners, nor sat in the chair of pestilence.",
+    "But his will is in the law of the Lord, and on his law he shall meditate day and night.",
+    "And he shall be like a tree which is planted near the running waters, which shall bring forth its fruit in due season.",
+    "And his leaf shall not fall off: and all whatsoever he shall do shall prosper.",
+    "Not so the wicked, not so: but like the dust which the wind driveth from the face of the earth.",
+    "Therefore the wicked shall not rise again in judgment: nor sinners in the council of the just;",
+    "For the Lord knoweth the way of the just: and the way of the wicked shall perish.",
   ]
 
   private let lineKeyLemmas = [
@@ -118,43 +127,53 @@ class Psalm1Tests: XCTestCase {
     ),
   ]
 
-  func testPsalm1HasSevenVerses_BenedictineOffice() {
-    XCTAssertEqual(psalm1.count, 7, "Psalm 1 should have 7 verses in the Benedictine Office")
+  func testTotalVerses() {
+    XCTAssertEqual(text.count, expectedVerseCount, "Psalm 1 should have \(expectedVerseCount) verses")
+    XCTAssertEqual(englishText.count, expectedVerseCount, "Psalm 1 English text should have \(expectedVerseCount) verses")
+    // Also validate the orthography of the text for analysis consistency
+    let normalized = text.map { PsalmTestUtilities.validateLatinText($0) }
+    XCTAssertEqual(
+      normalized,
+      text,
+      "Normalized Latin text should match expected classical forms"
+    )
   }
 
-  func testPsalm1LineByLineKeyLemmas() {
+  func testLineByLineKeyLemmas() {
     utilities.testLineByLineKeyLemmas(
-      psalmText: psalm1,
+      psalmText: text,
       lineKeyLemmas: lineKeyLemmas,
       psalmId: id,
       verbose: verbose
     )
   }
 
-  func testPsalm1StructuralThemes() {
+  func testStructuralThemes() {
     utilities.testStructuralThemes(
-      psalmText: psalm1,
+      psalmText: text,
       structuralThemes: structuralThemes,
       psalmId: id,
       verbose: verbose
     )
   }
 
-  func testPsalm1ConceptualThemes() {
+  func testConceptualThemes() {
     utilities.testConceptualThemes(
-      psalmText: psalm1,
+      psalmText: text,
       conceptualThemes: conceptualThemes,
       psalmId: id,
       verbose: verbose
     )
   }
 
-  func testSavePsalm1Themes() {
-    guard let jsonString = utilities.generateCompleteThemesJSONString(
-      psalmNumber: id.number,
-      conceptualThemes: conceptualThemes,
-      structuralThemes: structuralThemes
-    ) else {
+  func testSaveThemes() {
+    guard
+      let jsonString = utilities.generateCompleteThemesJSONString(
+        psalmNumber: id.number,
+        conceptualThemes: conceptualThemes,
+        structuralThemes: structuralThemes
+      )
+    else {
       XCTFail("Failed to generate complete themes JSON")
       return
     }
@@ -172,4 +191,24 @@ class Psalm1Tests: XCTestCase {
     }
   }
 
+  func testSaveTexts() {
+    let jsonString = utilities.generatePsalmTextsJSONString(
+      psalmNumber: id.number,
+      category: id.category ?? "",
+      text: text,
+      englishText: englishText
+    )
+
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm1_texts.json"
+    )
+
+    if success {
+      print("✅ Complete texts JSON created successfully")
+    } else {
+      print("⚠️ Could not save complete texts file:")
+      print(jsonString)
+    }
+  }
 }

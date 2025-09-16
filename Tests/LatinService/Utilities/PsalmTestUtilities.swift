@@ -274,6 +274,29 @@ public enum PsalmTestUtilities {
     return combinedJSON
   }
 
+  public static func generatePsalmTextsJSONString(
+    psalmNumber: Int,
+    category: String = "",
+    text: [String],
+    englishText: [String]
+  ) -> String {
+    let textJson = text.map { "\"\($0.replacingOccurrences(of: "\"", with: "\\\""))\"" }.joined(separator: ",\n    ")
+    let englishTextJson = englishText.map { "\"\($0.replacingOccurrences(of: "\"", with: "\\\""))\"" }.joined(separator: ",\n    ")
+
+    return """
+    {
+      "number": \(psalmNumber),
+      "section": "\(category)",
+      "text": [
+        \(textJson)
+      ],
+      "englishText": [
+        \(englishTextJson)
+      ]
+    }
+    """
+  }
+
   public static func saveToFile(
     content: String,
     filename: String

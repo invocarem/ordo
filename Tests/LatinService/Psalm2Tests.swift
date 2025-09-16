@@ -14,10 +14,11 @@ class Psalm2Tests: XCTestCase {
   }
 
   let id = PsalmIdentity(number: 2, category: nil)
+  private let expectedVerseCount = 13
 
   // MARK: - Test Data
 
-  private let psalm2 = [
+  private let text = [
     "Quare fremuerunt gentes, et populi meditati sunt inania?",
     "Astiterunt reges terrae, et principes convenerunt in unum adversus Dominum, et adversus christum eius.",
     "Dirumpamus vincula eorum, et proiciamus a nobis iugum ipsorum.",
@@ -31,6 +32,22 @@ class Psalm2Tests: XCTestCase {
     "Servite Domino in timore, et exsultate ei cum tremore.",
     "Apprehendite disciplinam, nequando irascatur Dominus, et pereatis de via iusta.",
     "Cum exarserit in brevi ira eius, beati omnes qui confidunt in eo.",
+  ]
+
+  private let englishText = [
+    "Why have the Gentiles raged, and the people devised vain things?",
+    "The kings of the earth stood up, and the princes met together, against the Lord, and against his Christ.",
+    "Let us break their bonds asunder: and let us cast away their yoke from us.",
+    "He that dwelleth in heaven shall laugh at them: and the Lord shall deride them.",
+    "Then shall he speak to them in his anger, and trouble them in his rage.",
+    "But I am appointed king by him over Sion his holy mountain, preaching his commandment.",
+    "The Lord hath said to me: Thou art my son, this day have I begotten thee.",
+    "Ask of me, and I will give thee the Gentiles for thy inheritance, and the utmost parts of the earth for thy possession.",
+    "Thou shalt rule them with a rod of iron, and shalt break them in pieces like a potter's vessel.",
+    "And now, O ye kings, understand: receive instruction, you that judge the earth.",
+    "Serve ye the Lord with fear: and rejoice unto him with trembling.",
+    "Embrace discipline, lest at any time the Lord be angry, and you perish from the just way.",
+    "When his wrath shall be kindled in a short time, blessed are all they that trust in him.",
   ]
 
   private let lineKeyLemmas = [
@@ -110,7 +127,7 @@ class Psalm2Tests: XCTestCase {
     (
       "The Futile Rebellion",
       "The nations and kings conspire vainly against the Lord's authority.",
-      ["fremo", "gens", "populus", "meditor", "inanis", "convenio", "adversus"],
+      ["fremo", "gens", "populus", "meditor", "inanis", "convenio", "adversus", "vinculum", "iugum", "dirumpo", "proicio"],
       ThemeCategory.opposition,
       1 ... 3 as ClosedRange<Int>?
     ),
@@ -165,41 +182,55 @@ class Psalm2Tests: XCTestCase {
     ),
   ]
 
-  // MARK: - Line by Line Key Lemmas Test
+  // MARK: - Test Cases
 
-  func testPsalm2LineByLineKeyLemmas() {
+  func testTotalVerses() {
+    XCTAssertEqual(text.count, expectedVerseCount, "Psalm 2 should have \(expectedVerseCount) verses")
+    XCTAssertEqual(englishText.count, expectedVerseCount, "Psalm 2 English text should have \(expectedVerseCount) verses")
+    // Also validate the orthography of the text for analysis consistency
+    let normalized = text.map { PsalmTestUtilities.validateLatinText($0) }
+    XCTAssertEqual(
+      normalized,
+      text,
+      "Normalized Latin text should match expected classical forms"
+    )
+  }
+
+  func testLineByLineKeyLemmas() {
     utilities.testLineByLineKeyLemmas(
-      psalmText: psalm2,
+      psalmText: text,
       lineKeyLemmas: lineKeyLemmas,
       psalmId: id,
       verbose: verbose
     )
   }
 
-  func testPsalm2StructuralThemes() {
+  func testStructuralThemes() {
     utilities.testStructuralThemes(
-      psalmText: psalm2,
+      psalmText: text,
       structuralThemes: structuralThemes,
       psalmId: id,
       verbose: verbose
     )
   }
 
-  func testPsalm2ConceptualThemes() {
+  func testConceptualThemes() {
     utilities.testConceptualThemes(
-      psalmText: psalm2,
+      psalmText: text,
       conceptualThemes: conceptualThemes,
       psalmId: id,
       verbose: verbose
     )
   }
 
-  func testSavePsalm2Themes() {
-    guard let jsonString = utilities.generateCompleteThemesJSONString(
-      psalmNumber: id.number,
-      conceptualThemes: conceptualThemes,
-      structuralThemes: structuralThemes
-    ) else {
+  func testSaveThemes() {
+    guard
+      let jsonString = utilities.generateCompleteThemesJSONString(
+        psalmNumber: id.number,
+        conceptualThemes: conceptualThemes,
+        structuralThemes: structuralThemes
+      )
+    else {
       XCTFail("Failed to generate complete themes JSON")
       return
     }
@@ -213,6 +244,27 @@ class Psalm2Tests: XCTestCase {
       print("✅ Complete themes JSON created successfully")
     } else {
       print("⚠️ Could not save complete themes file:")
+      print(jsonString)
+    }
+  }
+
+  func testSaveTexts() {
+    let jsonString = utilities.generatePsalmTextsJSONString(
+      psalmNumber: id.number,
+      category: id.category ?? "",
+      text: text,
+      englishText: englishText
+    )
+
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm2_texts.json"
+    )
+
+    if success {
+      print("✅ Complete texts JSON created successfully")
+    } else {
+      print("⚠️ Could not save complete texts file:")
       print(jsonString)
     }
   }

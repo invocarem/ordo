@@ -1,0 +1,14 @@
+{
+  "name": "Swift Development",
+  "image": "swift:6.0.3-jammy",
+  "workspaceFolder": "/app",
+  "remoteUser": "root",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "sswg.swift-lang",
+        "vknabel.vscode-swiftformat"
+      ]
+    }
+  }
+}
