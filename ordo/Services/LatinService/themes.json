@@ -1020,46 +1020,165 @@
   {
     "psalmNumber": 10,
     "category": "",
-    "structuralThemes": [
-      {
-        "name": "Trust → Persecution",
-        "description": "The psalmist's trust in the Lord is met with taunts and the threat of violent persecution.",
-        "lemmas": ["confido", "transvolo", "intendo", "sagitto", "obscuro"],
-        "startLine": 1,
-        "endLine": 2,
-        "comment": "The psalmist declares his trust in the Lord while others tell his soul to flee. The wicked prepare their bows and arrows to shoot the upright in heart under cover of darkness.",
-        "comment2": "Augustine interprets this as the Church's steadfast faith amidst the world's persecution, where the 'darkness' represents the obscurity of sin and error (Enarr. Ps. 10.1-2)."
-      },
-      {
-        "name": "Destruction → Sovereignty",
-        "description": "The destruction of the righteous by the wicked is contrasted with the Lord's sovereign reign from His holy temple and heaven.",
-        "lemmas": ["perficio", "destruo", "templum", "sedes"],
-        "startLine": 3,
-        "endLine": 4,
-        "comment": "The psalmist laments that the wicked have destroyed what God has perfected, questioning what the righteous can do. This is answered by the affirmation of the Lord's sovereignty from His holy temple and heavenly throne.",
-        "comment2": "Augustine sees this as the eternal perspective: though the righteous suffer temporarily, God's ultimate authority and order remain unchallenged in heaven (Enarr. Ps. 10.3-4)."
-      },
-      {
-        "name": "Observation → Judgment",
-        "description": "The Lord's careful observation of humanity leads to His just judgment of the righteous and the wicked.",
-        "lemmas": ["oculus", "respicio", "interrogo", "odi"],
-        "startLine": 5,
-        "endLine": 6,
-        "comment": "The Lord's eyes watch the poor and His eyelids test the sons of men. He examines both the righteous and the wicked, and whoever loves violence hates his own soul.",
-        "comment2": "Augustine explains that God's testing is an act of merciful judgment, meant to reveal the heart and call the wicked to repentance by showing them the self-destructive nature of sin (Enarr. Ps. 10.5-6)."
-      },
-      {
-        "name": "Judgment → Retribution",
-        "description": "The Lord's righteous judgment leads to a fitting retribution upon sinners.",
-        "lemmas": ["pluo", "laqueus", "iustus", "aequitas"],
-        "startLine": 7,
-        "endLine": 8,
-        "comment": "The Lord will rain snares upon the wicked; fire, brimstone, and a scorching wind will be their portion. For the Lord is righteous and loves justice; upright men will see His face.",
-        "comment2": "Augustine interprets this eschatologically: the 'snares' are the consequences of one's own sinful choices, and the fiery judgment represents the ultimate separation from God that sin demands (Enarr. Ps. 10.7-8)."
-      }
-    ]
-  },
-  {
+   
+     "structuralThemes": [
+       {
+         "name": "Trust → Violence",
+         "description": "The psalmist's confident trust in God meets the violent schemes of the wicked",
+         "lemmas": ["confido", "dominus", "anima", "peccator", "arcus", "sagitta", "obscurus"],
+         "startLine": 1,
+         "endLine": 2,
+         "comment": "The psalmist begins with confident trust in the Lord, but immediately confronts the reality of wicked men who prepare weapons to attack the upright in darkness.",
+         "comment2": "Augustine sees this as the contrast between the soul's flight to God (like a bird to the mountain) and the wicked who 'bend their bow' in the darkness of their hearts. The just soul seeks refuge in the Lord while the wicked plot violence (Enarr. Ps. 10.1–2)."
+       },
+       {
+         "name": "Destruction → Sovereignty",
+         "description": "Human wickedness destroys divine works while God remains enthroned in heaven",
+         "lemmas": ["perficio", "destruo", "iustus", "dominus", "templum", "caelum", "sedes"],
+         "startLine": 3,
+         "endLine": 4,
+         "comment": "The wicked have destroyed what God has perfected, but the just man's response is to acknowledge God's sovereignty in his holy temple and heavenly throne.",
+         "comment2": "Augustine interprets this as the contrast between human wickedness that destroys God's good works and the eternal stability of God's dwelling. The just man recognizes that while men may destroy, God remains enthroned in heaven (Enarr. Ps. 10.3–4)."
+       },
+       {
+         "name": "Examination → Testing",
+         "description": "God's compassionate observation of the poor leads to comprehensive testing of all humanity",
+         "lemmas": ["oculus", "pauper", "respicio", "palpebra", "interrogo", "iustus", "impius", "diligo", "iniquitas"],
+         "startLine": 5,
+         "endLine": 6,
+         "comment": "God's eyes behold the poor man with compassion, while his eyelids examine all humanity, testing both the just and the wicked, revealing who loves iniquity.",
+         "comment2": "Augustine emphasizes the anthropomorphic imagery of God's eyes and eyelids as symbols of divine omniscience. God 'examines' (interrogat) not with ignorance but with perfect knowledge, distinguishing those who love righteousness from those who love iniquity (Enarr. Ps. 10.5–6)."
+       },
+       {
+         "name": "Judgment → Justice",
+         "description": "Divine punishment rains down on sinners while God's perfect justice is established",
+         "lemmas": ["pluo", "laqueus", "ignis", "sulphur", "spiritus", "procella", "iustus", "iustitia", "aequitas", "video"],
+         "startLine": 7,
+         "endLine": 8,
+         "comment": "God will rain snares, fire, and brimstone upon sinners, but the Lord is just and loves justice, his countenance beholding righteousness.",
+         "comment2": "Augustine sees this as the final contrast between divine judgment and divine justice. The 'cup' of the wicked contains the portion of their punishment, while the Lord's countenance reflects perfect justice and righteousness (Enarr. Ps. 10.7–8)."
+       }
+     ]
+   ,
+   
+     "conceptualThemes": [
+       {
+         "name": "Divine Sovereignty",
+         "description": "God's authority and dwelling place",
+         "category": "divine",
+         "lemmas": [
+           "dominus",
+           "templum",
+           "caelum",
+           "sedes"
+         ]
+       },
+       {
+         "name": "Divine Justice",
+         "description": "God's righteous judgment and testing",
+         "category": "justice",
+         "lineRange": {
+           "start": 4,
+           "end": 8
+         },
+         "lemmas": [
+           "iustus",
+           "iustitia",
+           "aequitas",
+           "interrogo",
+           "video"
+         ]
+       },
+       {
+         "name": "Violence and Warfare",
+         "description": "Imagery of conflict and weapons",
+         "category": "conflict",
+         "lineRange": {
+           "start": 2,
+           "end": 7
+         },
+         "lemmas": [
+           "arcus",
+           "sagitta",
+           "sagitto",
+           "pharetra",
+           "laqueus",
+           "sulphur",
+           "ignis"
+         ]
+       },
+       {
+         "name": "Divine Examination",
+         "description": "God's scrutiny and testing of humanity",
+         "category": "divine",
+         "lineRange": {
+           "start": 4,
+           "end": 6
+         },
+         "lemmas": [
+           "oculus",
+           "respicio",
+           "palpebra",
+           "interrogo",
+           "pauper",
+           "homo"
+         ]
+       },
+       {
+         "name": "Human Trust and Vulnerability",
+         "description": "Human dependence on God",
+         "category": "virtue",
+         "lineRange": {
+           "start": 1,
+           "end": 5
+         },
+         "lemmas": [
+           "confido",
+           "anima",
+           "pauper",
+           "transvolo",
+           "passer"
+         ]
+       },
+       {
+         "name": "Sin and Iniquity",
+         "description": "Human wickedness and moral failure",
+         "category": "sin",
+         "lineRange": {
+           "start": 2,
+           "end": 6
+         },
+         "lemmas": [
+           "peccator",
+           "iniquitas",
+           "odi",
+           "impius"
+         ]
+       },
+       {
+         "name": "Divine Judgment",
+         "description": "God's punishment and retribution",
+         "category": "justice",
+         "lineRange": {
+           "start": 7,
+           "end": 7
+         },
+         "lemmas": [
+           "pluo",
+           "laqueus",
+           "ignis",
+           "sulphur",
+           "spiritus",
+           "procella",
+           "calix"
+         ]
+       }
+     ]
+   
+   },
+
+
+    {
     "psalmNumber": 11,
     "category": "",
     "structuralThemes": [

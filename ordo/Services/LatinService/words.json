@@ -1,5 +1,97 @@
 [
   {
+  "lemma": "sulphur",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "sulphur",
+  "genitive": "sulphuris",
+  "translations": {
+    "en": "sulfur, brimstone",
+    "la": "sulphur, sulphuris"
+  }
+},
+  {
+  "lemma": "sulfur",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "sulfur",
+  "genitive": "sulfuris",
+  "translations": {
+    "en": "sulfur, brimstone",
+    "la": "sulfur, sulfuris"
+  }
+},
+{
+  "lemma": "pharetra",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "pharetra",
+  "genitive": "pharetrae",
+  "translations": {
+    "en": "quiver, arrow-case",
+    "la": "pharetra, pharetrae"
+  }
+},
+  {
+  "lemma": "currus",
+  "part_of_speech": "noun",
+  "declension": 4,
+  "gender": "masculine",
+  "nominative": "currus",
+  "genitive": "currus",
+  "translations": {
+    "en": "chariot, wagon, carriage",
+    "la": "currus, currus"
+  }
+},
+  {
+  "lemma": "erigo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "erigere",
+  "present": "erigo",
+  "future": "erigam",
+  "perfect": "erexi",
+  "supine": "erectum",
+  "translations": {
+    "en": "to raise up, set upright, encourage",
+    "la": "erigo, erigere, erexi, erectum"
+  },
+  "forms": {
+    "perfect_passive_participle_m_nom_pl": ["erecti"],
+    "perfect_passive_participle_m_gen_sg": ["erecti"],
+    "perfect_passive_participle_n_gen_sg": ["erecti"]
+  }
+}
+,
+  {
+  "lemma": "pinguis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "pinguis",
+  "genitive": "pinguis",
+  "translations": {
+    "en": "fat, plump, fertile, rich, thick",
+    "la": "pinguis, pingue"
+  },
+  "forms": {
+    "nominative_n": ["pingue"],
+    "accusative_n": ["pingue"],
+    "accusative_m": ["pinguem"],
+    "accusative_f": ["pinguem"]
+  },
+  "forms_plural": {
+    "nominative_n": ["pinguia"],
+    "genitive_n": ["pinguium"],
+    "accusative_n": ["pinguia"]
+  }
+}
+,
+  {
   "lemma": "compes",
   "part_of_speech": "noun",
   "declension": 3,
@@ -23065,7 +23157,8 @@
     "nominative": "salus",
     "genitive": "salutis",
     "forms": {
-      "verbal_noun": ["salutare"]
+      "verbal_noun": ["salutare"],
+      "ablative_sg": ["salutari"]
     },
     "translations": {
       "en": "salvation, safety, health, greeting",
@@ -24498,9 +24591,12 @@
   {
     "lemma": "invoco",
     "part_of_speech": "verb",
-    "infinitive": "invocare",
-    "perfect": "invocavi",
-    "supine": "invocatum",
+     "conjugation": 1,
+  "infinitive": "invocare",
+  "present": "invoco",
+  "future": "invocabo",
+  "perfect": "invocavi",
+  "supine": "invocatum",
     "translations": {
       "en": "to call upon, invoke",
       "la": "invoco, invocare, invocavi, invocatum"
