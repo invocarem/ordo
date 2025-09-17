@@ -1,5 +1,14 @@
 [
   {
+  "lemma": "unde",
+  "part_of_speech": "adverb",
+  "declension": 0,
+  "translations": {
+    "en": "from where, whence, from which",
+    "la": "unde"
+  }
+},
+  {
     "lemma": "ad",
     "part_of_speech": "preposition",
     "forms": {

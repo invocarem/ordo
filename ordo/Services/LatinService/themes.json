@@ -5979,45 +5979,147 @@
 
 },
  
-  {
-    "psalmNumber": 120,
-    "category": "",
-    "structuralThemes": [
-      {
-        "name": "Gaze → Up",
-        "description": "The soul lifts its gaze from below to the heights, marking a new spiritual trajectory",
-        "lemmas": ["levo", "oculus", "mons"],
-        "startLine": 1,
-        "endLine": 2,
-        "comment": "Augustine reads this upward gaze as the soul’s first act of turning — not yet arriving, but desiring. The mountains represent the apostles or spiritual heights. This gesture initiates a journey: the eyes rise, the heart follows. It’s not help received that marks the change, but the will to look up (Enarr. Ps. 120.1–2). Augustine interprets the 'mountains' not as earthly peaks but as the spiritual heights of the apostles and Scriptures. The soul first looks up but realizes that true help does not come from created things—even lofty ones—but from the Lord, who made heaven and earth. This signals a shift from creaturely confidence to Creator-dependence (Enarr. Ps. 120.1–2)."
+{
+ "psalmNumber": 120,
+ "category": "",
+
+  "structuralThemes": [
+    {
+      "name": "Seeking → Assurance",
+      "description": "From looking to mountains for help to finding assurance in the Lord",
+      "lemmas": ["levo", "oculus", "mons", "auxilium", "facio"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalmist lifts his eyes to the mountains seeking help, but finds that his true help comes from the Lord who made heaven and earth.",
+      "comment2": "Augustine sees this as the soul's natural inclination to seek help from created things (mountains) before recognizing that all help ultimately comes from the Creator. The movement from created to Creator marks the beginning of true faith (Enarr. Ps. 120.1–2)."
+    },
+    {
+      "name": "Vigilance → Protection",
+      "description": "From the promise of divine watchfulness to comprehensive protection",
+      "lemmas": ["dormito", "custodio", "israel", "protectio", "manus"],
+      "startLine": 3,
+      "endLine": 5,
+      "comment": "The Lord who keeps Israel neither slumbers nor sleeps, providing protection over the right hand of the faithful.",
+      "comment2": "Augustine interprets this as God's constant vigilance over His people. The 'right hand' represents the active power of divine protection, while the sleepless guardian symbolizes God's eternal care that never fails (Enarr. Ps. 120.3–5)."
+    },
+    {
+      "name": "Elements → Preservation",
+      "description": "From natural dangers to divine preservation from all harm",
+      "lemmas": ["sol", "luna", "nox", "malus", "custodio"],
+      "startLine": 6,
+      "endLine": 7,
+      "comment": "Neither sun by day nor moon by night will harm the protected one, for the Lord keeps from all evil and preserves the soul.",
+      "comment2": "Augustine sees this as God's power over creation itself - the very elements that could cause harm become instruments of His protective care. The preservation of the soul (anima) represents the ultimate spiritual protection (Enarr. Ps. 120.6–7)."
+    },
+    {
+      "name": "Journey → Eternity",
+      "description": "From temporal comings and goings to eternal divine accompaniment",
+      "lemmas": ["introitus", "exitus", "custodio", "hic", "nunc", "usque", "saeculum"],
+      "startLine": 8,
+      "endLine": 8,
+      "comment": "The Lord will keep the going out and coming in from this time forth and forevermore.",
+      "comment2": "Augustine interprets this final verse as the comprehensive scope of divine protection - from the present moment (hic nunc) to eternity (usque in saeculum). Every movement of life is under God's watchful care (Enarr. Ps. 120.8)."
+    }
+  ]
+,
+
+  "conceptualThemes": [
+    {
+      "name": "Human Body Imagery",
+      "description": "References to physical body parts representing spiritual experience",
+      "category": "virtue",
+      "lineRange": {
+        "start": 1,
+        "end": 8
       },
-      {
-        "name": "Sleep → Vigilance",
-        "description": "Human instability is guarded by God’s tireless watch",
-        "lemmas": ["pes", "dormio", "dormito"],
-        "startLine": 3,
-        "endLine": 4,
-        "comment": "Augustine reads this as divine assurance for the soul: though our feet may falter, and though we sleep or forget, the Lord does not. The triple repetition — 'dormitet', 'dormitabit', 'dormiet' — insists that God’s watch never breaks. He keeps Israel, and each soul, through every lapse of human awareness (Enarr. Ps. 120.3–4)."
+      "lemmas": [
+        "oculus",
+        "pes",
+        "manus"
+      ]
+    },
+    {
+      "name": "Celestial Imagery",
+      "description": "Heavenly and earthly elements representing divine power and protection",
+      "category": "divine",
+      "lineRange": {
+        "start": 1,
+        "end": 8
       },
-      {
-        "name": "Protection → Peace",
-        "description": "God’s nearness shields the soul and brings rest from every threat",
-        "lemmas": ["dextera", "sol", "luna"],
-        "startLine": 5,
-        "endLine": 6,
-        "comment": "Augustine sees God's presence at the right hand as intimate and steadying. This protection brings peace — not just from physical harm, but from the fear of harm. The sun by day and moon by night represent total coverage: no time, condition, or influence escapes divine care. Peace flows from presence (Enarr. Ps. 120.5–6)."
+      "lemmas": [
+        "sol",
+        "luna",
+        "caelum",
+        "terra",
+        "mons"
+      ]
+    },
+    {
+      "name": "Protection Verbs",
+      "description": "Verbs describing divine guardianship and care",
+      "category": "virtue",
+      "lineRange": {
+        "start": 3,
+        "end": 7
       },
-      {
-        "name": "Peace → Permanence",
-        "description": "The soul's calm under God's care is extended into eternity",
-        "lemmas": ["custodio", "anima", "introitus", "exitus", "saeculum"],
-        "startLine": 7,
-        "endLine": 8,
-        "comment": "Augustine reads this as the sealing of divine care: the soul, already protected and at peace, now walks in confidence that every step — going out or coming in — is under God’s watch. And not just for today, but 'from now and forever.' What began with an upward gaze ends in eternal companionship (Enarr. Ps. 120.7–8)."
-      }
-    ]
-  },
-  {
+      "lemmas": [
+        "custodio",
+        "dormito",
+        "dormio",
+        "uro"
+      ]
+    },
+    {
+      "name": "Movement Imagery",
+      "description": "Verbs and nouns describing physical and spiritual movement",
+      "category": "virtue",
+      "lineRange": {
+        "start": 1,
+        "end": 8
+      },
+      "lemmas": [
+        "levo",
+        "venio",
+        "introitus",
+        "exitus"
+      ]
+    },
+    {
+      "name": "Divine Attributes",
+      "description": "Terms describing God's nature and relationship to creation",
+      "category": "divine",
+      "lineRange": {
+        "start": 1,
+        "end": 8
+      },
+      "lemmas": [
+        "auxilium",
+        "protectio",
+        "israel"
+      ]
+    },
+    {
+      "name": "Temporal References",
+      "description": "Words indicating time and duration of divine care",
+      "category": "divine",
+      "lineRange": {
+        "start": 6,
+        "end": 8
+      },
+      "lemmas": [
+        "dies",
+        "nox",
+        "hic",
+        "nunc",
+        "usque",
+        "saeculum"
+      ]
+    }
+  ]
+
+},
+  
+{
     "psalmNumber": 121,
     "category": "",
     "structuralThemes": [
