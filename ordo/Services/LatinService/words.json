@@ -1,299 +1,305 @@
 [
   {
-  "lemma": "sulphur",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "neuter",
-  "nominative": "sulphur",
-  "genitive": "sulphuris",
-  "translations": {
-    "en": "sulfur, brimstone",
-    "la": "sulphur, sulphuris"
-  }
-},
-  {
-  "lemma": "sulfur",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "neuter",
-  "nominative": "sulfur",
-  "genitive": "sulfuris",
-  "translations": {
-    "en": "sulfur, brimstone",
-    "la": "sulfur, sulfuris"
-  }
-},
-{
-  "lemma": "pharetra",
-  "part_of_speech": "noun",
-  "declension": 1,
-  "gender": "feminine",
-  "nominative": "pharetra",
-  "genitive": "pharetrae",
-  "translations": {
-    "en": "quiver, arrow-case",
-    "la": "pharetra, pharetrae"
-  }
-},
-  {
-  "lemma": "currus",
-  "part_of_speech": "noun",
-  "declension": 4,
-  "gender": "masculine",
-  "nominative": "currus",
-  "genitive": "currus",
-  "translations": {
-    "en": "chariot, wagon, carriage",
-    "la": "currus, currus"
-  }
-},
-  {
-  "lemma": "erigo",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "erigere",
-  "present": "erigo",
-  "future": "erigam",
-  "perfect": "erexi",
-  "supine": "erectum",
-  "translations": {
-    "en": "to raise up, set upright, encourage",
-    "la": "erigo, erigere, erexi, erectum"
+    "lemma": "ad",
+    "part_of_speech": "preposition",
+    "forms": {
+      "base_form": ["ad"]
+    },
+    "translations": {
+      "en": "to, towards, at, near, for",
+      "la": "ad"
+    }
   },
-  "forms": {
-    "perfect_passive_participle_m_nom_pl": ["erecti"],
-    "perfect_passive_participle_m_gen_sg": ["erecti"],
-    "perfect_passive_participle_n_gen_sg": ["erecti"]
-  }
-}
-,
   {
-  "lemma": "pinguis",
-  "part_of_speech": "adjective",
-  "declension": 3,
-  "gender": "masculine",
-  "nominative": "pinguis",
-  "genitive": "pinguis",
-  "translations": {
-    "en": "fat, plump, fertile, rich, thick",
-    "la": "pinguis, pingue"
+    "lemma": "sulphur",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "sulphur",
+    "genitive": "sulphuris",
+    "translations": {
+      "en": "sulfur, brimstone",
+      "la": "sulphur, sulphuris"
+    }
   },
-  "forms": {
-    "nominative_n": ["pingue"],
-    "accusative_n": ["pingue"],
-    "accusative_m": ["pinguem"],
-    "accusative_f": ["pinguem"]
+  {
+    "lemma": "sulfur",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "sulfur",
+    "genitive": "sulfuris",
+    "translations": {
+      "en": "sulfur, brimstone",
+      "la": "sulfur, sulfuris"
+    }
   },
-  "forms_plural": {
-    "nominative_n": ["pinguia"],
-    "genitive_n": ["pinguium"],
-    "accusative_n": ["pinguia"]
-  }
-}
-,
   {
-  "lemma": "compes",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "compes",
-  "genitive": "compedis",
-  "translations": {
-    "en": "fetter, shackle",
-    "la": "compes, compedis"
+    "lemma": "pharetra",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "pharetra",
+    "genitive": "pharetrae",
+    "translations": {
+      "en": "quiver, arrow-case",
+      "la": "pharetra, pharetrae"
+    }
   },
-  "forms_plural": {
-    "genitive_f": ["compeditorum"]
-  }
-}
-,
   {
-  "lemma": "propitius",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "propitius",
-  "genitive": "propitii",
-  "translations": {
-    "en": "favorable, gracious, merciful, propitious",
-    "la": "propitius, propitia, propitium"
+    "lemma": "currus",
+    "part_of_speech": "noun",
+    "declension": 4,
+    "gender": "masculine",
+    "nominative": "currus",
+    "genitive": "currus",
+    "translations": {
+      "en": "chariot, wagon, carriage",
+      "la": "currus, currus"
+    }
   },
-  "forms": {
-    "nominative_f": ["propitia"],
-    "nominative_n": ["propitium"],
-    "genitive_f": ["propitiae"],
-    "genitive_n": ["propitii"],
-    "accusative_m": ["propitium"],
-    "accusative_f": ["propitiam"],
-    "accusative_n": ["propitium"]
+  {
+    "lemma": "erigo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "erigere",
+    "present": "erigo",
+    "future": "erigam",
+    "perfect": "erexi",
+    "supine": "erectum",
+    "translations": {
+      "en": "to raise up, set upright, encourage",
+      "la": "erigo, erigere, erexi, erectum"
+    },
+    "forms": {
+      "perfect_passive_participle_m_nom_pl": ["erecti"],
+      "perfect_passive_participle_m_gen_sg": ["erecti"],
+      "perfect_passive_participle_n_gen_sg": ["erecti"]
+    }
   },
-  "forms_plural": {
-    "nominative_m": ["propitii"],
-    "nominative_f": ["propitiae"],
-    "nominative_n": ["propitia"],
-    "genitive_m": ["propitiorum"],
-    "genitive_f": ["propitiarum"],
-    "genitive_n": ["propitiorum"]
-  }
-}
-,
   {
-  "lemma": "innotesco",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "innotescere",
-  "present": "innotesco",
-  "future": "innotescam",
-  "perfect": "innotui",
-  "supine": "innotitum",
-  "translations": {
-    "en": "to become known, be distinguished, be recognized",
-    "la": "innotesco, innotescere, innotui, innotitum"
-  }
-}
-,
-  {
-  "lemma": "desolo",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "desolare",
-  "present": "desolo",
-  "future": "desolabo",
-  "perfect": "desolavi",
-  "supine": "desolatum",
-  "translations": {
-    "en": "to abandon, forsake,  devastate",
-    "la": "desolo, desolare, desolavi, desolatum"
-  }
-},
-  {
-  "lemma": "accendo",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "accendere",
-  "present": "accendo",
-  "future": "accendam",
-  "perfect": "accendi",
-  "supine": "accensum",
-  "translations": {
-    "en": "to kindle, ignite, excite",
-    "la": "accendo, accendere, accendi, accensum"
+    "lemma": "pinguis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "pinguis",
+    "genitive": "pinguis",
+    "translations": {
+      "en": "fat, plump, fertile, rich, thick",
+      "la": "pinguis, pingue"
+    },
+    "forms": {
+      "nominative_n": ["pingue"],
+      "accusative_n": ["pingue"],
+      "accusative_m": ["pinguem"],
+      "accusative_f": ["pinguem"]
+    },
+    "forms_plural": {
+      "nominative_n": ["pinguia"],
+      "genitive_n": ["pinguium"],
+      "accusative_n": ["pinguia"]
+    }
   },
-  "forms": {
-    "future_passive_3s": ["accendetur"]
-  }
-},
   {
-  "lemma": "subsannatio",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "subsannatio",
-  "genitive": "subsannationis",
-  "translations": {
-    "en": "mockery, derision, scorn",
-    "la": "subsannatio, subsannationis"
-  }
-},
-  {
-  "lemma": "volatilis",
-  "part_of_speech": "adjective",
-  "declension": 3,
-  "gender": "masculine",
-  "nominative": "volatilis",
-  "genitive": "volatilis",
-  "translations": {
-    "en": "winged, flying, volatile; (as noun) bird, flying creature",
-    "la": "volatilis, volatile"
+    "lemma": "compes",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "compes",
+    "genitive": "compedis",
+    "translations": {
+      "en": "fetter, shackle",
+      "la": "compes, compedis"
+    },
+    "forms_plural": {
+      "genitive_f": ["compeditorum"]
+    }
   },
-  "forms_plural": {
-    "dative_m": ["volatilibus"],
-    "ablative_m": ["volatilibus"]
-  }
-},
   {
-  "lemma": "anticipo",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "anticipare",
-  "present": "anticipo",
-  "future": "anticipabo",
-  "perfect": "anticipavi",
-  "supine": "anticipatum",
-  "translations": {
-    "en": "to anticipate, precede, prevent",
-    "la": "anticipo, anticipare, anticipavi, anticipatum"
-  }
-},
+    "lemma": "propitius",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "propitius",
+    "genitive": "propitii",
+    "translations": {
+      "en": "favorable, gracious, merciful, propitious",
+      "la": "propitius, propitia, propitium"
+    },
+    "forms": {
+      "nominative_f": ["propitia"],
+      "nominative_n": ["propitium"],
+      "genitive_f": ["propitiae"],
+      "genitive_n": ["propitii"],
+      "accusative_m": ["propitium"],
+      "accusative_f": ["propitiam"],
+      "accusative_n": ["propitium"]
+    },
+    "forms_plural": {
+      "nominative_m": ["propitii"],
+      "nominative_f": ["propitiae"],
+      "nominative_n": ["propitia"],
+      "genitive_m": ["propitiorum"],
+      "genitive_f": ["propitiarum"],
+      "genitive_n": ["propitiorum"]
+    }
+  },
   {
-  "lemma": "morticinum",
-  "part_of_speech": "noun",
-  "declension": 2,
-  "gender": "neuter",
-  "nominative": "morticinum",
-  "genitive": "morticini",
-  "translations": {
-    "en": "carrion, dead flesh, carcass, a dead body (of an animal)",
-    "la": "morticinum, morticini"
-  }
-},
+    "lemma": "innotesco",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "innotescere",
+    "present": "innotesco",
+    "future": "innotescam",
+    "perfect": "innotui",
+    "supine": "innotitum",
+    "translations": {
+      "en": "to become known, be distinguished, be recognized",
+      "la": "innotesco, innotescere, innotui, innotitum"
+    }
+  },
   {
-  "lemma": "esca",
-  "part_of_speech": "noun",
-  "declension": 1,
-  "gender": "feminine",
-  "nominative": "esca",
-  "genitive": "escae",
-  "translations": {
-    "en": "food, bait, nourishment",
-    "la": "esca, escae"
-  }
-},
+    "lemma": "desolo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "desolare",
+    "present": "desolo",
+    "future": "desolabo",
+    "perfect": "desolavi",
+    "supine": "desolatum",
+    "translations": {
+      "en": "to abandon, forsake,  devastate",
+      "la": "desolo, desolare, desolavi, desolatum"
+    }
+  },
   {
-  "lemma": "ultio",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "ultio",
-  "genitive": "ultionis",
-  "translations": {
-    "en": "vengeance, revenge, retribution, avenging",
-    "la": "ultio, ultionis"
-  }
-},
+    "lemma": "accendo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "accendere",
+    "present": "accendo",
+    "future": "accendam",
+    "perfect": "accendi",
+    "supine": "accensum",
+    "translations": {
+      "en": "to kindle, ignite, excite",
+      "la": "accendo, accendere, accendi, accensum"
+    },
+    "forms": {
+      "future_passive_3s": ["accendetur"]
+    }
+  },
   {
-  "lemma": "pomum",
-  "part_of_speech": "noun",
-  "declension": 2,
-  "gender": "neuter",
-  "nominative": "pomum",
-  "genitive": "pomi",
-  "translations": {
-    "en": "fruit, apple, fruit-tree",
-    "la": "pomum, pomi"
-  }
-},
+    "lemma": "subsannatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "subsannatio",
+    "genitive": "subsannationis",
+    "translations": {
+      "en": "mockery, derision, scorn",
+      "la": "subsannatio, subsannationis"
+    }
+  },
   {
-  "lemma": "vicinus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "vicinus",
-  "genitive": "vicini",
-  "translations": {
-    "en": "neighboring, nearby; (as noun) neighbor",
-    "la": "vicinus, vicina, vicinum"
-  }
-},
+    "lemma": "volatilis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "volatilis",
+    "genitive": "volatilis",
+    "translations": {
+      "en": "winged, flying, volatile; (as noun) bird, flying creature",
+      "la": "volatilis, volatile"
+    },
+    "forms_plural": {
+      "dative_m": ["volatilibus"],
+      "ablative_m": ["volatilibus"]
+    }
+  },
   {
-  "lemma": "cito",
-  "part_of_speech": "adverb",
-  "declension": 0,
-  "translations": {
-    "en": "quickly, swiftly, speedily, soon, hastily",
-    "la": "cito"
-  }
-}, 
+    "lemma": "anticipo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "anticipare",
+    "present": "anticipo",
+    "future": "anticipabo",
+    "perfect": "anticipavi",
+    "supine": "anticipatum",
+    "translations": {
+      "en": "to anticipate, precede, prevent",
+      "la": "anticipo, anticipare, anticipavi, anticipatum"
+    }
+  },
+  {
+    "lemma": "morticinum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "morticinum",
+    "genitive": "morticini",
+    "translations": {
+      "en": "carrion, dead flesh, carcass, a dead body (of an animal)",
+      "la": "morticinum, morticini"
+    }
+  },
+  {
+    "lemma": "esca",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "esca",
+    "genitive": "escae",
+    "translations": {
+      "en": "food, bait, nourishment",
+      "la": "esca, escae"
+    }
+  },
+  {
+    "lemma": "ultio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "ultio",
+    "genitive": "ultionis",
+    "translations": {
+      "en": "vengeance, revenge, retribution, avenging",
+      "la": "ultio, ultionis"
+    }
+  },
+  {
+    "lemma": "pomum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "pomum",
+    "genitive": "pomi",
+    "translations": {
+      "en": "fruit, apple, fruit-tree",
+      "la": "pomum, pomi"
+    }
+  },
+  {
+    "lemma": "vicinus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "vicinus",
+    "genitive": "vicini",
+    "translations": {
+      "en": "neighboring, nearby; (as noun) neighbor",
+      "la": "vicinus, vicina, vicinum"
+    }
+  },
+  {
+    "lemma": "cito",
+    "part_of_speech": "adverb",
+    "declension": 0,
+    "translations": {
+      "en": "quickly, swiftly, speedily, soon, hastily",
+      "la": "cito"
+    }
+  },
   {
     "lemma": "improperium",
     "part_of_speech": "noun",
@@ -331,27 +337,27 @@
       "en": "to bury, inter, lay to rest",
       "la": "sepelio, sepelire, sepelivi, sepultum"
     },
-      "forms": {
-    "imperfect_subjunctive_3s": ["sepeliret"]
-  }
+    "forms": {
+      "imperfect_subjunctive_3s": ["sepeliret"]
+    }
   },
   {
-  "lemma": "polluo",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "polluere",
-  "present": "polluo",
-  "future": "polluam",
-  "perfect": "pollui",
-  "supine": "pollutum",
-  "translations": {
-    "en": "to defile, pollute, stain",
-    "la": "polluo, polluere, pollui, pollutum"
+    "lemma": "polluo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "polluere",
+    "present": "polluo",
+    "future": "polluam",
+    "perfect": "pollui",
+    "supine": "pollutum",
+    "translations": {
+      "en": "to defile, pollute, stain",
+      "la": "polluo, polluere, pollui, pollutum"
+    },
+    "forms": {
+      "perfect_3pl": ["polluerunt"]
+    }
   },
-  "forms": {
-    "perfect_3pl": ["polluerunt"]
-  }
-},
   {
     "lemma": "confugio",
     "part_of_speech": "verb",
@@ -3406,11 +3412,11 @@
     "part_of_speech": "verb",
 
     "conjugation": 0,
-  "infinitive": "introire",
-  "present": "introeo",
-  "future": "introibo",
-  "perfect": "introii",
-  "supine": "introituum",
+    "infinitive": "introire",
+    "present": "introeo",
+    "future": "introibo",
+    "perfect": "introii",
+    "supine": "introituum",
 
     "forms": {
       "future": [
@@ -3437,7 +3443,7 @@
         "introivistis",
         "introiverunt"
       ],
-       "present_subjunctive_3s": ["introeat"]
+      "present_subjunctive_3s": ["introeat"]
     },
     "translations": {
       "en": "to enter, go into",
@@ -24591,12 +24597,12 @@
   {
     "lemma": "invoco",
     "part_of_speech": "verb",
-     "conjugation": 1,
-  "infinitive": "invocare",
-  "present": "invoco",
-  "future": "invocabo",
-  "perfect": "invocavi",
-  "supine": "invocatum",
+    "conjugation": 1,
+    "infinitive": "invocare",
+    "present": "invoco",
+    "future": "invocabo",
+    "perfect": "invocavi",
+    "supine": "invocatum",
     "translations": {
       "en": "to call upon, invoke",
       "la": "invoco, invocare, invocavi, invocatum"

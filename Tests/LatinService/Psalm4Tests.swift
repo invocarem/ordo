@@ -106,49 +106,49 @@ class Psalm4Tests: XCTestCase {
       "God hearing and answering prayers",
       ["invoco", "exaudio", "oratio", "clamo", "misereor"],
       ThemeCategory.worship,
-      1 ... 2
+      1...2
     ),
     (
       "Trust and Hope",
       "Trusting in God and finding hope",
       ["spero", "spes", "constituo", "requiesco"],
       .virtue,
-      6 ... 10
+      6...10
     ),
     (
       "Divine Provision",
       "God's material blessings and provision",
       ["dilato", "fructus", "frumentum", "vinum", "oleum", "multiplico"],
       .divine,
-      1 ... 8
+      1...8
     ),
     (
       "Divine Favor",
       "God's grace, light, and joyful presence",
       ["signo", "lumen", "vultus", "laetitia"],
       .divine,
-      7 ... 7
+      7...7
     ),
     (
       "Christological Fulfillment",
       "References to Christ as the ultimate Good and resurrection",
       ["bonus", "sanctus", "iustitia"],
       .divine,
-      1 ... 6
+      1...6
     ),
     (
       "Heart Examination",
       "Examination of inner thoughts and repentance",
       ["cor", "gravis", "compungo", "cubile", "dico", "irascor", "pecco"],
       .virtue,
-      3 ... 6
+      3...6
     ),
     (
       "Human Folly",
       "Human tendency toward vanity, falsehood, and spiritual heaviness",
       ["vanitas", "mendacium", "gravis", "diligo", "quaero"],
       .sin,
-      3 ... 3
+      3...3
     ),
   ]
 

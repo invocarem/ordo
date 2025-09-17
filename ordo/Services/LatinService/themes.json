@@ -1020,165 +1020,176 @@
   {
     "psalmNumber": 10,
     "category": "",
-   
-     "structuralThemes": [
-       {
-         "name": "Trust → Violence",
-         "description": "The psalmist's confident trust in God meets the violent schemes of the wicked",
-         "lemmas": ["confido", "dominus", "anima", "peccator", "arcus", "sagitta", "obscurus"],
-         "startLine": 1,
-         "endLine": 2,
-         "comment": "The psalmist begins with confident trust in the Lord, but immediately confronts the reality of wicked men who prepare weapons to attack the upright in darkness.",
-         "comment2": "Augustine sees this as the contrast between the soul's flight to God (like a bird to the mountain) and the wicked who 'bend their bow' in the darkness of their hearts. The just soul seeks refuge in the Lord while the wicked plot violence (Enarr. Ps. 10.1–2)."
-       },
-       {
-         "name": "Destruction → Sovereignty",
-         "description": "Human wickedness destroys divine works while God remains enthroned in heaven",
-         "lemmas": ["perficio", "destruo", "iustus", "dominus", "templum", "caelum", "sedes"],
-         "startLine": 3,
-         "endLine": 4,
-         "comment": "The wicked have destroyed what God has perfected, but the just man's response is to acknowledge God's sovereignty in his holy temple and heavenly throne.",
-         "comment2": "Augustine interprets this as the contrast between human wickedness that destroys God's good works and the eternal stability of God's dwelling. The just man recognizes that while men may destroy, God remains enthroned in heaven (Enarr. Ps. 10.3–4)."
-       },
-       {
-         "name": "Examination → Testing",
-         "description": "God's compassionate observation of the poor leads to comprehensive testing of all humanity",
-         "lemmas": ["oculus", "pauper", "respicio", "palpebra", "interrogo", "iustus", "impius", "diligo", "iniquitas"],
-         "startLine": 5,
-         "endLine": 6,
-         "comment": "God's eyes behold the poor man with compassion, while his eyelids examine all humanity, testing both the just and the wicked, revealing who loves iniquity.",
-         "comment2": "Augustine emphasizes the anthropomorphic imagery of God's eyes and eyelids as symbols of divine omniscience. God 'examines' (interrogat) not with ignorance but with perfect knowledge, distinguishing those who love righteousness from those who love iniquity (Enarr. Ps. 10.5–6)."
-       },
-       {
-         "name": "Judgment → Justice",
-         "description": "Divine punishment rains down on sinners while God's perfect justice is established",
-         "lemmas": ["pluo", "laqueus", "ignis", "sulphur", "spiritus", "procella", "iustus", "iustitia", "aequitas", "video"],
-         "startLine": 7,
-         "endLine": 8,
-         "comment": "God will rain snares, fire, and brimstone upon sinners, but the Lord is just and loves justice, his countenance beholding righteousness.",
-         "comment2": "Augustine sees this as the final contrast between divine judgment and divine justice. The 'cup' of the wicked contains the portion of their punishment, while the Lord's countenance reflects perfect justice and righteousness (Enarr. Ps. 10.7–8)."
-       }
-     ]
-   ,
-   
-     "conceptualThemes": [
-       {
-         "name": "Divine Sovereignty",
-         "description": "God's authority and dwelling place",
-         "category": "divine",
-         "lemmas": [
-           "dominus",
-           "templum",
-           "caelum",
-           "sedes"
-         ]
-       },
-       {
-         "name": "Divine Justice",
-         "description": "God's righteous judgment and testing",
-         "category": "justice",
-         "lineRange": {
-           "start": 4,
-           "end": 8
-         },
-         "lemmas": [
-           "iustus",
-           "iustitia",
-           "aequitas",
-           "interrogo",
-           "video"
-         ]
-       },
-       {
-         "name": "Violence and Warfare",
-         "description": "Imagery of conflict and weapons",
-         "category": "conflict",
-         "lineRange": {
-           "start": 2,
-           "end": 7
-         },
-         "lemmas": [
-           "arcus",
-           "sagitta",
-           "sagitto",
-           "pharetra",
-           "laqueus",
-           "sulphur",
-           "ignis"
-         ]
-       },
-       {
-         "name": "Divine Examination",
-         "description": "God's scrutiny and testing of humanity",
-         "category": "divine",
-         "lineRange": {
-           "start": 4,
-           "end": 6
-         },
-         "lemmas": [
-           "oculus",
-           "respicio",
-           "palpebra",
-           "interrogo",
-           "pauper",
-           "homo"
-         ]
-       },
-       {
-         "name": "Human Trust and Vulnerability",
-         "description": "Human dependence on God",
-         "category": "virtue",
-         "lineRange": {
-           "start": 1,
-           "end": 5
-         },
-         "lemmas": [
-           "confido",
-           "anima",
-           "pauper",
-           "transvolo",
-           "passer"
-         ]
-       },
-       {
-         "name": "Sin and Iniquity",
-         "description": "Human wickedness and moral failure",
-         "category": "sin",
-         "lineRange": {
-           "start": 2,
-           "end": 6
-         },
-         "lemmas": [
-           "peccator",
-           "iniquitas",
-           "odi",
-           "impius"
-         ]
-       },
-       {
-         "name": "Divine Judgment",
-         "description": "God's punishment and retribution",
-         "category": "justice",
-         "lineRange": {
-           "start": 7,
-           "end": 7
-         },
-         "lemmas": [
-           "pluo",
-           "laqueus",
-           "ignis",
-           "sulphur",
-           "spiritus",
-           "procella",
-           "calix"
-         ]
-       }
-     ]
-   
-   },
 
+    "structuralThemes": [
+      {
+        "name": "Trust → Violence",
+        "description": "The psalmist's confident trust in God meets the violent schemes of the wicked",
+        "lemmas": [
+          "confido",
+          "dominus",
+          "anima",
+          "peccator",
+          "arcus",
+          "sagitta",
+          "obscurus"
+        ],
+        "startLine": 1,
+        "endLine": 2,
+        "comment": "The psalmist begins with confident trust in the Lord, but immediately confronts the reality of wicked men who prepare weapons to attack the upright in darkness.",
+        "comment2": "Augustine sees this as the contrast between the soul's flight to God (like a bird to the mountain) and the wicked who 'bend their bow' in the darkness of their hearts. The just soul seeks refuge in the Lord while the wicked plot violence (Enarr. Ps. 10.1–2)."
+      },
+      {
+        "name": "Destruction → Sovereignty",
+        "description": "Human wickedness destroys divine works while God remains enthroned in heaven",
+        "lemmas": [
+          "perficio",
+          "destruo",
+          "iustus",
+          "dominus",
+          "templum",
+          "caelum",
+          "sedes"
+        ],
+        "startLine": 3,
+        "endLine": 4,
+        "comment": "The wicked have destroyed what God has perfected, but the just man's response is to acknowledge God's sovereignty in his holy temple and heavenly throne.",
+        "comment2": "Augustine interprets this as the contrast between human wickedness that destroys God's good works and the eternal stability of God's dwelling. The just man recognizes that while men may destroy, God remains enthroned in heaven (Enarr. Ps. 10.3–4)."
+      },
+      {
+        "name": "Examination → Testing",
+        "description": "God's compassionate observation of the poor leads to comprehensive testing of all humanity",
+        "lemmas": [
+          "oculus",
+          "pauper",
+          "respicio",
+          "palpebra",
+          "interrogo",
+          "iustus",
+          "impius",
+          "diligo",
+          "iniquitas"
+        ],
+        "startLine": 5,
+        "endLine": 6,
+        "comment": "God's eyes behold the poor man with compassion, while his eyelids examine all humanity, testing both the just and the wicked, revealing who loves iniquity.",
+        "comment2": "Augustine emphasizes the anthropomorphic imagery of God's eyes and eyelids as symbols of divine omniscience. God 'examines' (interrogat) not with ignorance but with perfect knowledge, distinguishing those who love righteousness from those who love iniquity (Enarr. Ps. 10.5–6)."
+      },
+      {
+        "name": "Judgment → Justice",
+        "description": "Divine punishment rains down on sinners while God's perfect justice is established",
+        "lemmas": [
+          "pluo",
+          "laqueus",
+          "ignis",
+          "sulphur",
+          "spiritus",
+          "procella",
+          "iustus",
+          "iustitia",
+          "aequitas",
+          "video"
+        ],
+        "startLine": 7,
+        "endLine": 8,
+        "comment": "God will rain snares, fire, and brimstone upon sinners, but the Lord is just and loves justice, his countenance beholding righteousness.",
+        "comment2": "Augustine sees this as the final contrast between divine judgment and divine justice. The 'cup' of the wicked contains the portion of their punishment, while the Lord's countenance reflects perfect justice and righteousness (Enarr. Ps. 10.7–8)."
+      }
+    ],
+    "conceptualThemes": [
+      {
+        "name": "Divine Sovereignty",
+        "description": "God's authority and dwelling place",
+        "category": "divine",
+        "lemmas": ["dominus", "templum", "caelum", "sedes"]
+      },
+      {
+        "name": "Divine Justice",
+        "description": "God's righteous judgment and testing",
+        "category": "justice",
+        "lineRange": {
+          "start": 4,
+          "end": 8
+        },
+        "lemmas": ["iustus", "iustitia", "aequitas", "interrogo", "video"]
+      },
+      {
+        "name": "Violence and Warfare",
+        "description": "Imagery of conflict and weapons",
+        "category": "conflict",
+        "lineRange": {
+          "start": 2,
+          "end": 7
+        },
+        "lemmas": [
+          "arcus",
+          "sagitta",
+          "sagitto",
+          "pharetra",
+          "laqueus",
+          "sulphur",
+          "ignis"
+        ]
+      },
+      {
+        "name": "Divine Examination",
+        "description": "God's scrutiny and testing of humanity",
+        "category": "divine",
+        "lineRange": {
+          "start": 4,
+          "end": 6
+        },
+        "lemmas": [
+          "oculus",
+          "respicio",
+          "palpebra",
+          "interrogo",
+          "pauper",
+          "homo"
+        ]
+      },
+      {
+        "name": "Human Trust and Vulnerability",
+        "description": "Human dependence on God",
+        "category": "virtue",
+        "lineRange": {
+          "start": 1,
+          "end": 5
+        },
+        "lemmas": ["confido", "anima", "pauper", "transvolo", "passer"]
+      },
+      {
+        "name": "Sin and Iniquity",
+        "description": "Human wickedness and moral failure",
+        "category": "sin",
+        "lineRange": {
+          "start": 2,
+          "end": 6
+        },
+        "lemmas": ["peccator", "iniquitas", "odi", "impius"]
+      },
+      {
+        "name": "Divine Judgment",
+        "description": "God's punishment and retribution",
+        "category": "justice",
+        "lineRange": {
+          "start": 7,
+          "end": 7
+        },
+        "lemmas": [
+          "pluo",
+          "laqueus",
+          "ignis",
+          "sulphur",
+          "spiritus",
+          "procella",
+          "calix"
+        ]
+      }
+    ]
+  },
 
-    {
+  {
     "psalmNumber": 11,
     "category": "",
     "structuralThemes": [
@@ -4067,199 +4078,262 @@
     ]
   },
 
-
   {
- "psalmNumber": 78,
- "category": "",
+    "psalmNumber": 78,
+    "category": "",
 
-  "structuralThemes": [
-    {
-      "name": "Desecration → Defilement",
-      "description": "From temple pollution to corpse desecration",
-      "lemmas": ["polluo", "templum", "sanctus", "pono", "ierusalem", "morticinum", "servus", "esca", "volatilis", "caro", "bestia"],
-      "startLine": 1,
-      "endLine": 2,
-      "comment": "The enemies have defiled God's holy temple and made Jerusalem desolate, then treated the dead bodies of God's servants as food for birds and beasts.",
-      "comment2": "Augustine sees this as the complete inversion of sacred order - the temple becomes a place of death rather than life, and the bodies of God's servants become carrion. This represents the ultimate desecration of what should be holy (Enarr. Ps. 78.1-2)."
-    },
-    {
-      "name": "Bloodshed → Shame",
-      "description": "From blood poured out to national humiliation",
-      "lemmas": ["effundo", "sanguis", "aqua", "circuitu", "sepelio", "opprobrium", "subsannatio", "illusio"],
-      "startLine": 3,
-      "endLine": 4,
-      "comment": "The blood of God's servants is poured out like water around Jerusalem with no one to bury them, making the people a reproach to their neighbors.",
-      "comment2": "Augustine interprets the blood like water as a reversal of the life-giving water of baptism and the temple rituals. The shame comes from being unable to properly bury the dead, showing the complete breakdown of social and religious order (Enarr. Ps. 78.3-4)."
-    },
-    {
-      "name": "Divine Wrath → Judgment",
-      "description": "From God's burning anger to call for vengeance on nations",
-      "lemmas": ["irascor", "zelus", "ignis", "effundo", "ira", "gens", "nosco", "regnum", "nomen", "invoco"],
-      "startLine": 5,
-      "endLine": 6,
-      "comment": "The people ask how long God's anger will burn, then call for Him to pour out His wrath on the nations that don't know Him.",
-      "comment2": "Augustine sees this as the people's recognition that only God's intervention can restore justice. The fire of God's zeal represents His passionate love for His people, and the call for judgment shows their faith in divine retribution (Enarr. Ps. 78.5-6)."
-    },
-    {
-      "name": "Devastation → Repentance",
-      "description": "From Jacob's destruction to plea for mercy",
-      "lemmas": ["comedo", "iacob", "locus", "desolo", "memini", "iniquitas", "antiquus", "misericordia", "anticipo", "pauper"],
-      "startLine": 7,
-      "endLine": 8,
-      "comment": "The enemies have devoured Jacob and laid waste his place, but the people now plead for God not to remember their former iniquities and to show mercy.",
-      "comment2": "Augustine interprets this as the people's recognition that their suffering is both external (enemy destruction) and internal (their own sin). The plea for mercy shows their repentance and understanding that only God's grace can restore them (Enarr. Ps. 78.7-8)."
-    },
-    {
-      "name": "Deliverance → Vindication",
-      "description": "From plea for help to call for divine retribution",
-      "lemmas": ["adiuvo", "salutaris", "gloria", "libero", "propitius", "peccatum", "forte", "dico", "gens", "deus", "innotesco"],
-      "startLine": 9,
-      "endLine": 10,
-      "comment": "The people ask for God's help and deliverance, then express concern that the nations might say 'Where is their God?'",
-      "comment2": "Augustine sees this as the people's faith that God will not only deliver them but also vindicate His name before the nations. Their concern about God's reputation shows their understanding of His glory and their role in manifesting it (Enarr. Ps. 78.9-10)."
-    },
-    {
-      "name": "Vengeance → Justice",
-      "description": "From call for blood vengeance to promise of divine retribution",
-      "lemmas": ["ultio", "sanguis", "servus", "effundo", "introeo", "conspectus", "gemitus", "compeditor", "secundum", "magnitudo", "brachium", "possideo", "filius", "mortifico"],
-      "startLine": 11,
-      "endLine": 12,
-      "comment": "The people call for vengeance for the blood of God's servants and ask that the sighing of prisoners come before God, then ask Him to take possession of the children of the slain according to His great arm.",
-      "comment2": "Augustine interprets this as the people's faith in God's complete justice. The call for vengeance is not personal revenge but divine retribution, and the reference to God's great arm shows their trust in His power to execute perfect judgment (Enarr. Ps. 78.11-12)."
-    },
-    {
-      "name": "Retribution → Praise",
-      "description": "From sevenfold repayment to eternal thanksgiving",
-      "lemmas": ["reddo", "vicinus", "septuplus", "sinus", "improperium", "exprobro", "populus", "ovis", "pascuum", "confiteor", "saeculum", "generatio", "annuntio", "laus"],
-      "startLine": 13,
-      "endLine": 15,
-      "comment": "The people ask God to render sevenfold the reproach to their neighbors, then affirm their identity as God's flock and promise eternal praise to all generations.",
-      "comment2": "Augustine sees this as the complete resolution - divine justice is executed through sevenfold retribution (perfect justice), and the people respond with eternal praise, showing that their suffering has deepened their relationship with God and their commitment to His glory (Enarr. Ps. 78.13-15)."
-    }
-  ]
-,
-
-  "conceptualThemes": [
-    {
-      "name": "Divine Sovereignty",
-      "description": "God's ultimate authority over all nations and His chosen people",
-      "category": "divine",
-      "lemmas": [
-        "deus",
-        "dominus",
-        "gloria",
-        "nomen",
-        "brachium",
-        "magnitudo"
-      ]
-    },
-    {
-      "name": "Divine Justice",
-      "description": "God's righteous judgment and retribution",
-      "category": "justice",
-      "lineRange": {
-        "start": 6,
-        "end": 13
+    "structuralThemes": [
+      {
+        "name": "Desecration → Defilement",
+        "description": "From temple pollution to corpse desecration",
+        "lemmas": [
+          "polluo",
+          "templum",
+          "sanctus",
+          "pono",
+          "ierusalem",
+          "morticinum",
+          "servus",
+          "esca",
+          "volatilis",
+          "caro",
+          "bestia"
+        ],
+        "startLine": 1,
+        "endLine": 2,
+        "comment": "The enemies have defiled God's holy temple and made Jerusalem desolate, then treated the dead bodies of God's servants as food for birds and beasts.",
+        "comment2": "Augustine sees this as the complete inversion of sacred order - the temple becomes a place of death rather than life, and the bodies of God's servants become carrion. This represents the ultimate desecration of what should be holy (Enarr. Ps. 78.1-2)."
       },
-      "lemmas": [
-        "ultio",
-        "reddo",
-        "septuplus",
-        "improperium",
-        "exprobro",
-        "ira",
-        "zelus",
-        "ignis"
-      ]
-    },
-    {
-      "name": "Righteous Worship",
-      "description": "The people's commitment to praise and thanksgiving",
-      "category": "worship",
-      "lineRange": {
-        "start": 14,
-        "end": 15
+      {
+        "name": "Bloodshed → Shame",
+        "description": "From blood poured out to national humiliation",
+        "lemmas": [
+          "effundo",
+          "sanguis",
+          "aqua",
+          "circuitu",
+          "sepelio",
+          "opprobrium",
+          "subsannatio",
+          "illusio"
+        ],
+        "startLine": 3,
+        "endLine": 4,
+        "comment": "The blood of God's servants is poured out like water around Jerusalem with no one to bury them, making the people a reproach to their neighbors.",
+        "comment2": "Augustine interprets the blood like water as a reversal of the life-giving water of baptism and the temple rituals. The shame comes from being unable to properly bury the dead, showing the complete breakdown of social and religious order (Enarr. Ps. 78.3-4)."
       },
-      "lemmas": [
-        "confiteor",
-        "laus",
-        "annuntio",
-        "generatio",
-        "saeculum"
-      ]
-    },
-    {
-      "name": "Virtuous Faith",
-      "description": "The people's trust in God's deliverance and mercy",
-      "category": "virtue",
-      "lineRange": {
-        "start": 8,
-        "end": 9
+      {
+        "name": "Divine Wrath → Judgment",
+        "description": "From God's burning anger to call for vengeance on nations",
+        "lemmas": [
+          "irascor",
+          "zelus",
+          "ignis",
+          "effundo",
+          "ira",
+          "gens",
+          "nosco",
+          "regnum",
+          "nomen",
+          "invoco"
+        ],
+        "startLine": 5,
+        "endLine": 6,
+        "comment": "The people ask how long God's anger will burn, then call for Him to pour out His wrath on the nations that don't know Him.",
+        "comment2": "Augustine sees this as the people's recognition that only God's intervention can restore justice. The fire of God's zeal represents His passionate love for His people, and the call for judgment shows their faith in divine retribution (Enarr. Ps. 78.5-6)."
       },
-      "lemmas": [
-        "adiuvo",
-        "salutaris",
-        "libero",
-        "propitius",
-        "misericordia",
-        "anticipo"
-      ]
-    },
-    {
-      "name": "Sinful Rebellion",
-      "description": "The people's acknowledgment of their former iniquities",
-      "category": "sin",
-      "lineRange": {
-        "start": 8,
-        "end": 9
+      {
+        "name": "Devastation → Repentance",
+        "description": "From Jacob's destruction to plea for mercy",
+        "lemmas": [
+          "comedo",
+          "iacob",
+          "locus",
+          "desolo",
+          "memini",
+          "iniquitas",
+          "antiquus",
+          "misericordia",
+          "anticipo",
+          "pauper"
+        ],
+        "startLine": 7,
+        "endLine": 8,
+        "comment": "The enemies have devoured Jacob and laid waste his place, but the people now plead for God not to remember their former iniquities and to show mercy.",
+        "comment2": "Augustine interprets this as the people's recognition that their suffering is both external (enemy destruction) and internal (their own sin). The plea for mercy shows their repentance and understanding that only God's grace can restore them (Enarr. Ps. 78.7-8)."
       },
-      "lemmas": [
-        "iniquitas",
-        "antiquus",
-        "peccatum",
-        "memini"
-      ]
-    },
-    {
-      "name": "Spiritual Conflict",
-      "description": "The struggle between God's people and the nations",
-      "category": "conflict",
-      "lineRange": {
-        "start": 6,
-        "end": 7
+      {
+        "name": "Deliverance → Vindication",
+        "description": "From plea for help to call for divine retribution",
+        "lemmas": [
+          "adiuvo",
+          "salutaris",
+          "gloria",
+          "libero",
+          "propitius",
+          "peccatum",
+          "forte",
+          "dico",
+          "gens",
+          "deus",
+          "innotesco"
+        ],
+        "startLine": 9,
+        "endLine": 10,
+        "comment": "The people ask for God's help and deliverance, then express concern that the nations might say 'Where is their God?'",
+        "comment2": "Augustine sees this as the people's faith that God will not only deliver them but also vindicate His name before the nations. Their concern about God's reputation shows their understanding of His glory and their role in manifesting it (Enarr. Ps. 78.9-10)."
       },
-      "lemmas": [
-        "gens",
-        "regnum",
-        "nosco",
-        "invoco",
-        "comedo",
-        "desolo"
-      ]
-    },
-    {
-      "name": "Worldly Opposition",
-      "description": "The nations' defilement and destruction of God's inheritance",
-      "category": "opposition",
-      "lineRange": {
-        "start": 1,
-        "end": 4
+      {
+        "name": "Vengeance → Justice",
+        "description": "From call for blood vengeance to promise of divine retribution",
+        "lemmas": [
+          "ultio",
+          "sanguis",
+          "servus",
+          "effundo",
+          "introeo",
+          "conspectus",
+          "gemitus",
+          "compeditor",
+          "secundum",
+          "magnitudo",
+          "brachium",
+          "possideo",
+          "filius",
+          "mortifico"
+        ],
+        "startLine": 11,
+        "endLine": 12,
+        "comment": "The people call for vengeance for the blood of God's servants and ask that the sighing of prisoners come before God, then ask Him to take possession of the children of the slain according to His great arm.",
+        "comment2": "Augustine interprets this as the people's faith in God's complete justice. The call for vengeance is not personal revenge but divine retribution, and the reference to God's great arm shows their trust in His power to execute perfect judgment (Enarr. Ps. 78.11-12)."
       },
-      "lemmas": [
-        "polluo",
-        "templum",
-        "sanctus",
-        "morticinum",
-        "effundo",
-        "sanguis",
-        "opprobrium",
-        "subsannatio",
-        "illusio"
-      ]
-    }
-  ]
-
-},
+      {
+        "name": "Retribution → Praise",
+        "description": "From sevenfold repayment to eternal thanksgiving",
+        "lemmas": [
+          "reddo",
+          "vicinus",
+          "septuplus",
+          "sinus",
+          "improperium",
+          "exprobro",
+          "populus",
+          "ovis",
+          "pascuum",
+          "confiteor",
+          "saeculum",
+          "generatio",
+          "annuntio",
+          "laus"
+        ],
+        "startLine": 13,
+        "endLine": 15,
+        "comment": "The people ask God to render sevenfold the reproach to their neighbors, then affirm their identity as God's flock and promise eternal praise to all generations.",
+        "comment2": "Augustine sees this as the complete resolution - divine justice is executed through sevenfold retribution (perfect justice), and the people respond with eternal praise, showing that their suffering has deepened their relationship with God and their commitment to His glory (Enarr. Ps. 78.13-15)."
+      }
+    ],
+    "conceptualThemes": [
+      {
+        "name": "Divine Sovereignty",
+        "description": "God's ultimate authority over all nations and His chosen people",
+        "category": "divine",
+        "lemmas": [
+          "deus",
+          "dominus",
+          "gloria",
+          "nomen",
+          "brachium",
+          "magnitudo"
+        ]
+      },
+      {
+        "name": "Divine Justice",
+        "description": "God's righteous judgment and retribution",
+        "category": "justice",
+        "lineRange": {
+          "start": 6,
+          "end": 13
+        },
+        "lemmas": [
+          "ultio",
+          "reddo",
+          "septuplus",
+          "improperium",
+          "exprobro",
+          "ira",
+          "zelus",
+          "ignis"
+        ]
+      },
+      {
+        "name": "Righteous Worship",
+        "description": "The people's commitment to praise and thanksgiving",
+        "category": "worship",
+        "lineRange": {
+          "start": 14,
+          "end": 15
+        },
+        "lemmas": ["confiteor", "laus", "annuntio", "generatio", "saeculum"]
+      },
+      {
+        "name": "Virtuous Faith",
+        "description": "The people's trust in God's deliverance and mercy",
+        "category": "virtue",
+        "lineRange": {
+          "start": 8,
+          "end": 9
+        },
+        "lemmas": [
+          "adiuvo",
+          "salutaris",
+          "libero",
+          "propitius",
+          "misericordia",
+          "anticipo"
+        ]
+      },
+      {
+        "name": "Sinful Rebellion",
+        "description": "The people's acknowledgment of their former iniquities",
+        "category": "sin",
+        "lineRange": {
+          "start": 8,
+          "end": 9
+        },
+        "lemmas": ["iniquitas", "antiquus", "peccatum", "memini"]
+      },
+      {
+        "name": "Spiritual Conflict",
+        "description": "The struggle between God's people and the nations",
+        "category": "conflict",
+        "lineRange": {
+          "start": 6,
+          "end": 7
+        },
+        "lemmas": ["gens", "regnum", "nosco", "invoco", "comedo", "desolo"]
+      },
+      {
+        "name": "Worldly Opposition",
+        "description": "The nations' defilement and destruction of God's inheritance",
+        "category": "opposition",
+        "lineRange": {
+          "start": 1,
+          "end": 4
+        },
+        "lemmas": [
+          "polluo",
+          "templum",
+          "sanctus",
+          "morticinum",
+          "effundo",
+          "sanguis",
+          "opprobrium",
+          "subsannatio",
+          "illusio"
+        ]
+      }
+    ]
+  },
   {
     "psalmNumber": 87,
     "category": "",
@@ -5788,9 +5862,11 @@
       }
     ]
   },
+
   {
     "psalmNumber": 119,
     "category": "",
+
     "structuralThemes": [
       {
         "name": "Distress → Deliverance",
@@ -5808,7 +5884,7 @@
         "startLine": 1,
         "endLine": 2,
         "comment": "The psalmist begins with a cry to the Lord in time of trouble and receives assurance of being heard, followed by a specific plea for deliverance from deceitful lips and a lying tongue.",
-        "comment2": "Augustine sees this as the cry of the soul caught in inner tribulation, not just external hardship. The deceitful tongue symbolizes confusion and heresy. God hears, not to shield physically, but to deliver the soul through truth. The movement from anguish to 'libera animam meam' marks grace’s work in pulling the soul out of lies and into light (Enarr. Ps. 119.1–2)."
+        "comment2": "Augustine sees this as the cry of the soul caught in inner tribulation, not just external hardship. The deceitful tongue symbolizes confusion and heresy. God hears, not to shield physically, but to deliver the soul through truth. The movement from anguish to 'libera animam meam' marks grace's work in pulling the soul out of lies and into light (Enarr. Ps. 119.1–2)."
       },
       {
         "name": "Deception → Purifying Judgment",
@@ -5830,7 +5906,7 @@
       },
       {
         "name": "Exile → Conflict",
-        "description": "Dwelling long among the ungodly deepens the soul’s sorrow",
+        "description": "Dwelling long among the ungodly deepens the soul's sorrow",
         "lemmas": [
           "heu",
           "incolatus",
@@ -5842,11 +5918,94 @@
         ],
         "startLine": 5,
         "endLine": 6,
-        "comment": "‘Heu mihi’ is Augustine’s sigh of the pilgrim soul exiled from its true home. To live in Kedar — a symbol of those who live in the flesh — is to be surrounded by hostility toward peace. The soul has dwelt too long here, not because of years, but because it feels the pain of separation from the City of God. ",
+        "comment": "'Heu mihi' is Augustine's sigh of the pilgrim soul exiled from its true home. To live in Kedar — a symbol of those who live in the flesh — is to be surrounded by hostility toward peace. The soul has dwelt too long here, not because of years, but because it feels the pain of separation from the City of God.",
         "comment2": "Augustine interprets this verse as the voice of Christ and His Church: always seeking peace, yet constantly met with opposition. The psalmist speaks kindly, yet is attacked 'gratis' — without cause. This unjust suffering anticipates the passion of Christ, who was hated for no reason."
+      }
+    ],
+    "conceptualThemes": [
+      {
+        "name": "Divine Response",
+        "description": "God's hearing and answering of prayers",
+        "category": "divine",
+        "lineRange": {
+          "start": 1,
+          "end": 2
+        },
+        "lemmas": ["exaudio", "clamo", "dominus"]
+      },
+      {
+        "name": "Deceitful Speech",
+        "description": "The harm and corruption of lying tongues",
+        "category": "sin",
+        "lineRange": {
+          "start": 2,
+          "end": 3
+        },
+        "lemmas": ["lingua", "dolosus", "iniquus", "labium"]
+      },
+      {
+        "name": "Divine Judgment",
+        "description": "God's purifying and corrective response to falsehood",
+        "category": "justice",
+        "lineRange": {
+          "start": 3,
+          "end": 4
+        },
+        "lemmas": ["sagitta", "potens", "acutus", "carbo", "desolatorius"]
+      },
+      {
+        "name": "Spiritual Exile",
+        "description": "The soul's separation from its true home",
+        "category": "virtue",
+        "lineRange": {
+          "start": 5,
+          "end": 5
+        },
+        "lemmas": ["incolatus", "prolongo", "cedar", "incola", "anima"]
+      },
+      {
+        "name": "Peace and Conflict",
+        "description": "The struggle between seeking peace and facing opposition",
+        "category": "conflict",
+        "lineRange": {
+          "start": 6,
+          "end": 6
+        },
+        "lemmas": ["pax", "quaero", "impugno", "gratis"]
+      },
+      {
+        "name": "Divine Deliverance",
+        "description": "God's liberation from spiritual bondage",
+        "category": "virtue",
+        "lineRange": {
+          "start": 1,
+          "end": 2
+        },
+        "lemmas": ["libero", "anima", "tribulor"]
+      },
+      {
+        "name": "Weapon Imagery",
+        "description": "Military metaphors for divine correction",
+        "category": "conflict",
+        "lineRange": {
+          "start": 4,
+          "end": 4
+        },
+        "lemmas": ["sagitta", "carbo", "potens", "acutus"]
+      },
+      {
+        "name": "Geographical Exile",
+        "description": "Physical and spiritual displacement from home",
+        "category": "opposition",
+        "lineRange": {
+          "start": 5,
+          "end": 5
+        },
+        "lemmas": ["cedar", "incolatus", "prolongo", "habito"]
       }
     ]
   },
+
   {
     "psalmNumber": 120,
     "category": "",
