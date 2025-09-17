@@ -177,6 +177,9 @@ public enum PsalmTestUtilities {
     for (index, theme) in structuralThemes.enumerated() {
       let (name, description, lemmas, startLine, endLine, comment, comment2) = theme
 
+      // Filter out common words from lemmas
+      let filteredLemmas = filterCommonWords(from: lemmas)
+
       // Escape quotes for JSON safety
       let escapedComment = comment.replacingOccurrences(of: "\"", with: "\\\"")
       let escapedComment2 = comment2.replacingOccurrences(of: "\"", with: "\\\"")
@@ -186,8 +189,8 @@ public enum PsalmTestUtilities {
       output += "      \"description\": \"\(description)\",\n"
       output += "      \"lemmas\": ["
 
-      // Add lemmas in a single line for compactness
-      let lemmaString = lemmas.map { "\"\($0)\"" }.joined(separator: ", ")
+      // Add filtered lemmas in a single line for compactness
+      let lemmaString = filteredLemmas.map { "\"\($0)\"" }.joined(separator: ", ")
       output += "\(lemmaString)],\n"
 
       output += "      \"startLine\": \(startLine),\n"
@@ -210,6 +213,9 @@ public enum PsalmTestUtilities {
     for (index, theme) in conceptualThemes.enumerated() {
       let (name, description, lemmas, category, lineRange) = theme
 
+      // Filter out common words from lemmas
+      let filteredLemmas = filterCommonWords(from: lemmas)
+
       output += "    {\n"
       output += "      \"name\": \"\(name)\",\n"
       output += "      \"description\": \"\(description)\",\n"
@@ -223,9 +229,9 @@ public enum PsalmTestUtilities {
       }
 
       output += "      \"lemmas\": [\n"
-      for (lemmaIndex, lemma) in lemmas.enumerated() {
+      for (lemmaIndex, lemma) in filteredLemmas.enumerated() {
         output += "        \"\(lemma)\""
-        output += lemmaIndex < lemmas.count - 1 ? ",\n" : "\n"
+        output += lemmaIndex < filteredLemmas.count - 1 ? ",\n" : "\n"
       }
       output += "      ]\n"
       output += "    }"
@@ -314,6 +320,28 @@ public enum PsalmTestUtilities {
     } catch {
       print("❌ Failed to save file: \(error)")
       return false
+    }
+  }
+
+  /// Filters out common words from theme lemmas to focus on more distinctive vocabulary
+  /// Removes: cor, anima, dominus, and words starting with "iudi" or "iust"
+  public static func filterCommonWords(from lemmas: [String]) -> [String] {
+    let commonWords = Set(["cor", "anima", "dominus"])
+
+    return lemmas.filter { lemma in
+      let lowercased = lemma.lowercased()
+
+      // Filter out common words
+      if commonWords.contains(lowercased) {
+        return false
+      }
+
+      // Filter out words starting with "iudi" or "iust"
+      if lowercased.hasPrefix("iudi") || lowercased.hasPrefix("iust") {
+        return false
+      }
+
+      return true
     }
   }
 }

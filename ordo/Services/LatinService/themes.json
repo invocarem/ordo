@@ -5864,148 +5864,121 @@
   },
 
   {
-    "psalmNumber": 119,
-    "category": "",
+ "psalmNumber": 119,
+ "category": "",
 
-    "structuralThemes": [
-      {
-        "name": "Distress → Deliverance",
-        "description": "From inner affliction to divine liberation from deceit",
-        "lemmas": [
-          "tribulor",
-          "clamo",
-          "exaudio",
-          "libero",
-          "labium",
-          "iniquus",
-          "lingua",
-          "dolosus"
-        ],
-        "startLine": 1,
-        "endLine": 2,
-        "comment": "The psalmist begins with a cry to the Lord in time of trouble and receives assurance of being heard, followed by a specific plea for deliverance from deceitful lips and a lying tongue.",
-        "comment2": "Augustine sees this as the cry of the soul caught in inner tribulation, not just external hardship. The deceitful tongue symbolizes confusion and heresy. God hears, not to shield physically, but to deliver the soul through truth. The movement from anguish to 'libera animam meam' marks grace's work in pulling the soul out of lies and into light (Enarr. Ps. 119.1–2)."
-      },
-      {
-        "name": "Deception → Purifying Judgment",
-        "description": "The harm of lies is answered by divine fire and piercing correction",
-        "lemmas": [
-          "do",
-          "appono",
-          "lingua",
-          "sagitta",
-          "potens",
-          "acutus",
-          "carbo",
-          "desolatorius"
-        ],
-        "startLine": 3,
-        "endLine": 4,
-        "comment": "The psalmist asks what punishment fits a deceitful tongue, answering with the metaphor of a warrior's sharp arrows and the desolating coals of juniper.",
-        "comment2": "Augustine reads these verses as the divine response to false speech. The tongue, which wounds through deceit, will receive 'sharp arrows' and 'desolating coals.' But these are not simply for destruction: they are purifying instruments. The 'coals' represent the burning power of charity, which scorches away sin and heals the deceived (Enarr. Ps. 119.3–5)."
-      },
-      {
-        "name": "Exile → Conflict",
-        "description": "Dwelling long among the ungodly deepens the soul's sorrow",
-        "lemmas": [
-          "heu",
-          "incolatus",
-          "prolongo",
-          "cedar",
-          "incola",
-          "impugno",
-          "gratis"
-        ],
-        "startLine": 5,
-        "endLine": 6,
-        "comment": "'Heu mihi' is Augustine's sigh of the pilgrim soul exiled from its true home. To live in Kedar — a symbol of those who live in the flesh — is to be surrounded by hostility toward peace. The soul has dwelt too long here, not because of years, but because it feels the pain of separation from the City of God.",
-        "comment2": "Augustine interprets this verse as the voice of Christ and His Church: always seeking peace, yet constantly met with opposition. The psalmist speaks kindly, yet is attacked 'gratis' — without cause. This unjust suffering anticipates the passion of Christ, who was hated for no reason."
-      }
-    ],
-    "conceptualThemes": [
-      {
-        "name": "Divine Response",
-        "description": "God's hearing and answering of prayers",
-        "category": "divine",
-        "lineRange": {
-          "start": 1,
-          "end": 2
-        },
-        "lemmas": ["exaudio", "clamo", "dominus"]
-      },
-      {
-        "name": "Deceitful Speech",
-        "description": "The harm and corruption of lying tongues",
-        "category": "sin",
-        "lineRange": {
-          "start": 2,
-          "end": 3
-        },
-        "lemmas": ["lingua", "dolosus", "iniquus", "labium"]
-      },
-      {
-        "name": "Divine Judgment",
-        "description": "God's purifying and corrective response to falsehood",
-        "category": "justice",
-        "lineRange": {
-          "start": 3,
-          "end": 4
-        },
-        "lemmas": ["sagitta", "potens", "acutus", "carbo", "desolatorius"]
-      },
-      {
-        "name": "Spiritual Exile",
-        "description": "The soul's separation from its true home",
-        "category": "virtue",
-        "lineRange": {
-          "start": 5,
-          "end": 5
-        },
-        "lemmas": ["incolatus", "prolongo", "cedar", "incola", "anima"]
-      },
-      {
-        "name": "Peace and Conflict",
-        "description": "The struggle between seeking peace and facing opposition",
-        "category": "conflict",
-        "lineRange": {
-          "start": 6,
-          "end": 6
-        },
-        "lemmas": ["pax", "quaero", "impugno", "gratis"]
-      },
-      {
-        "name": "Divine Deliverance",
-        "description": "God's liberation from spiritual bondage",
-        "category": "virtue",
-        "lineRange": {
-          "start": 1,
-          "end": 2
-        },
-        "lemmas": ["libero", "anima", "tribulor"]
-      },
-      {
-        "name": "Weapon Imagery",
-        "description": "Military metaphors for divine correction",
-        "category": "conflict",
-        "lineRange": {
-          "start": 4,
-          "end": 4
-        },
-        "lemmas": ["sagitta", "carbo", "potens", "acutus"]
-      },
-      {
-        "name": "Geographical Exile",
-        "description": "Physical and spiritual displacement from home",
-        "category": "opposition",
-        "lineRange": {
-          "start": 5,
-          "end": 5
-        },
-        "lemmas": ["cedar", "incolatus", "prolongo", "habito"]
-      }
-    ]
-  },
+  "structuralThemes": [
+    {
+      "name": "Distress → Deliverance",
+      "description": "From inner affliction to divine liberation from deceit",
+      "lemmas": ["tribulor", "clamo", "exaudio", "libero", "labium", "iniquus", "lingua", "dolosus"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalmist begins with a cry to the Lord in time of trouble and receives assurance of being heard, followed by a specific plea for deliverance from deceitful lips and a lying tongue.",
+      "comment2": "Augustine sees this as the cry of the soul caught in inner tribulation, not just external hardship. The deceitful tongue symbolizes confusion and heresy. God hears, not to shield physically, but to deliver the soul through truth. The movement from anguish to 'libera animam meam' marks grace's work in pulling the soul out of lies and into light (Enarr. Ps. 119.1–2)."
+    },
+    {
+      "name": "Deception → Purifying Judgment",
+      "description": "The harm of lies is answered by divine fire and piercing correction",
+      "lemmas": ["do", "appono", "lingua", "sagitta", "potens", "acutus", "carbo", "desolatorius"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The psalmist asks what punishment fits a deceitful tongue, answering with the metaphor of a warrior's sharp arrows and the desolating coals of juniper.",
+      "comment2": "Augustine reads these verses as the divine response to false speech. The tongue, which wounds through deceit, will receive 'sharp arrows' and 'desolating coals.' But these are not simply for destruction: they are purifying instruments. The 'coals' represent the burning power of charity, which scorches away sin and heals the deceived (Enarr. Ps. 119.3–5)."
+    },
+    {
+      "name": "Exile → Conflict",
+      "description": "Dwelling long among the ungodly deepens the soul's sorrow",
+      "lemmas": ["heu", "incolatus", "prolongo", "cedar", "incola", "impugno", "gratis"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "'Heu mihi' is Augustine's sigh of the pilgrim soul exiled from its true home. To live in Kedar — a symbol of those who live in the flesh — is to be surrounded by hostility toward peace. The soul has dwelt too long here, not because of years, but because it feels the pain of separation from the City of God.",
+      "comment2": "Augustine interprets this verse as the voice of Christ and His Church: always seeking peace, yet constantly met with opposition. The psalmist speaks kindly, yet is attacked 'gratis' — without cause. This unjust suffering anticipates the passion of Christ, who was hated for no reason."
+    }
+  ]
+,
 
+  "conceptualThemes": [
+    {
+      "name": "Weapon Imagery",
+      "description": "Military metaphors for divine correction and judgment",
+      "category": "conflict",
+      "lineRange": {
+        "start": 4,
+        "end": 4
+      },
+      "lemmas": [
+        "sagitta",
+        "carbo",
+        "potens",
+        "acutus",
+        "desolatorius"
+      ]
+    },
+    {
+      "name": "Geographical Exile",
+      "description": "Physical and spiritual displacement from home",
+      "category": "opposition",
+      "lineRange": {
+        "start": 5,
+        "end": 5
+      },
+      "lemmas": [
+        "cedar",
+        "incolatus",
+        "prolongo",
+        "habito",
+        "incola"
+      ]
+    },
+    {
+      "name": "Linguistic Imagery",
+      "description": "Speech and communication metaphors for deceit",
+      "category": "sin",
+      "lineRange": {
+        "start": 2,
+        "end": 6
+      },
+      "lemmas": [
+        "labium",
+        "lingua",
+        "loquor",
+        "dolosus"
+      ]
+    },
+    {
+      "name": "Persecution Terms",
+      "description": "Vocabulary of affliction and unjust attack",
+      "category": "sin",
+      "lineRange": {
+        "start": 1,
+        "end": 6
+      },
+      "lemmas": [
+        "tribulor",
+        "iniquus",
+        "impugno",
+        "desolatorius"
+      ]
+    },
+    {
+      "name": "Peaceful Image",
+      "description": "Terms representing peace and liberation",
+      "category": "virtue",
+      "lineRange": {
+        "start": 1,
+        "end": 6
+      },
+      "lemmas": [
+        "libero",
+        "pax",
+        "quaero"
+      ]
+    }
+  ]
+
+},
+ 
   {
     "psalmNumber": 120,
     "category": "",
