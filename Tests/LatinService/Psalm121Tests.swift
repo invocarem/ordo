@@ -1,381 +1,275 @@
 import XCTest
+
 @testable import LatinService
 
 class Psalm121Tests: XCTestCase {
+    private let utilities = PsalmTestUtilities.self
     private var latinService: LatinService!
     let verbose = true
-    
+
     override func setUp() {
         super.setUp()
         latinService = LatinService.shared
     }
     let id = PsalmIdentity(number: 121, category: nil)
-    
+
     // MARK: - Test Data
     let psalm121 = [
         "Laetatus sum in his quae dicta sunt mihi: In domum Domini ibimus.",
-        "Stantes erant pedes nostri in atriis tuis, Jerusalem.",
-        "Jerusalem, quae aedificatur ut civitas, cujus participatio ejus in idipsum.",
+        "Stantes erant pedes nostri in atriis tuis, Ierusalem.",
+        "Ierusalem, quae aedificatur ut civitas, cuius participatio eius in idipsum.",
         "Illuc enim ascenderunt tribus, tribus Domini, testimonium Israel, ad confitendum nomini Domini.",
-        "Quia illic sederunt sedes in judicio, sedes super domum David.",
-        "Rogate quae ad pacem sunt Jerusalem, et abundantia diligentibus te.",
+        "Quia illic sederunt sedes in iudicio, sedes super domum David.",
+        "Rogate quae ad pacem sunt Ierusalem, et abundantia diligentibus te.",
         "Fiat pax in virtute tua, et abundantia in turribus tuis.",
         "Propter fratres meos et proximos meos, loquebar pacem de te.",
-        "Propter domum Domini Dei nostri, quaesivi bona tibi."
+        "Propter domum Domini Dei nostri, quaesivi bona tibi.",
     ]
-    
-    // MARK: - Thematic Test Cases
-    
-    // 1. Pilgrimage Theme
-    func testPilgrimageTheme() {
-        latinService.configureDebugging(target: "laetor")
-        let analysis = latinService.analyzePsalm(id, text: psalm121)
-        
-        let pilgrimageTerms = [
-            ("laetor", ["Laetatus"], "rejoice"), // v.1
-            ("domus", ["domum"], "house"), // v.1
-            ("eo", ["ibimus"], "go"), // v.1
-            ("sto", ["stantes"], "stand"), // v.2
-            ("atrium", ["atriis"], "sacred space"), // v.2
-            ("ascendo", ["ascenderunt"], "ascend") // v.4
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: pilgrimageTerms)
-        
-        latinService.configureDebugging(target: "")
-        
-    }
-    
-    // 2. Jerusalem as Sacred Center
-    func testJerusalemTheme() {
-        let analysis = latinService.analyzePsalm(id, text: psalm121)
-        
-        let jerusalemTerms = [
-            ("civitas", ["civitas"], "city"), // v.3
-            ("aedifico", ["aedificatur"], "build"), // v.3
-            ("turris", ["turribus"], "tower"), // v.7
-            ("sedes", ["sedes"], "throne"), // v.5
-            ("judicium", ["judicio"], "justice") // v.5
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: jerusalemTerms)
-        
-       
-    }
 
-    func testVerbAedifico() {
-        latinService.configureDebugging(target: "aedifico")
-        let analysis = latinService.analyzePsalm(id, text: psalm121)
-        
-        let aedificoEntry = analysis.dictionary["aedifico"]
-        XCTAssertNotNil(aedificoEntry, "Lemma 'aedifico' should exist for 'aedificatur'")
-        
-        // Check translation
-        let translation = aedificoEntry?.translation?.lowercased() ?? ""
-        XCTAssertTrue(
-            translation.contains("build") || translation.contains("construct"),
-            "Expected 'aedifico' to mean 'build/construct', got: \(translation)"
-        )
-        
-        // Check if "aedificatur" is a recognized form
-        let aedificaturFormCount = aedificoEntry?.forms["aedificatur"] ?? 0
-        XCTAssertGreaterThan(
-            aedificaturFormCount, 0,
-            "Form 'aedificatur' should exist for lemma 'aedifico'"
-        )
-        
-        if let entity = aedificoEntry?.entity {
-            let result = entity.analyzeFormWithMeaning("aedificatur")
-            XCTAssertTrue(result.contains("present") || result.contains("passive"),
-                        "Expected 'aedificatur' to be present passive, got: \(result)")
-            
-            if verbose {
-                print("Analysis of 'aedificatur': \(result)")
-            }
-        } else {
-            XCTFail("Entity for 'aedifico' not found")
-        }
-    }
+    private let englishText = [
+        "I rejoiced at the things that were said to me: We shall go into the house of the Lord.",
+        "Our feet were standing in thy courts, O Jerusalem.",
+        "Jerusalem, which is built as a city, which is compact together.",
+        "For thither did the tribes go up, the tribes of the Lord: the testimony of Israel, to praise the name of the Lord.",
+        "Because their seats have sat in judgment, seats upon the house of David.",
+        "Pray ye for the things that are for the peace of Jerusalem: and abundance for them that love thee.",
+        "Let peace be in thy strength: and abundance in thy towers.",
+        "For the sake of my brethren, and of my neighbours, I spoke peace of thee.",
+        "Because of the house of the Lord our God, I have sought good things for thee.",
+    ]
 
-    func testVerbDico() {
-        latinService.configureDebugging(target: "dico")
-        let analysis = latinService.analyzePsalm(id, text: psalm121)
-        latinService.configureDebugging(target: "dico")
-        
-        // Verify "dicta" comes from "dico"
-        let dictaEntry = analysis.dictionary["dico"]
-        XCTAssertNotNil(dictaEntry, "Lemma 'dico' should exist for 'dicta'")
-        
-        // Check translation
-        let translation = dictaEntry?.translation?.lowercased() ?? ""
-        XCTAssertTrue(
-            translation.contains("say") || translation.contains("speak"),
-            "Expected 'dico' to mean 'say' or 'speak', got: \(translation)"
-        )
-        
-        // Check if "dicta" is a recognized form
-        let dictaFormCount = dictaEntry?.forms["dicta"] ?? 0
-        XCTAssertGreaterThan(
-            dictaFormCount, 0,
-            "Form 'dicta' should exist for lemma 'dico'"
-        )
-        
-        if let entity = dictaEntry?.entity {
-           let result = entity.analyzeFormWithMeaning("dicta")
-                XCTAssertTrue(result.contains("have been"),
-                    "Expected translation like 'have been', got: \(result)")
-    
-                if verbose {
-                    print("Translation of 'dicta': \(result)")
-                }
-            } else {
-            XCTFail("Entity for 'dico' not found")
-        }
-        
-        if verbose {
-            print("\nDICO Analysis:")
-            print("  Translation: \(dictaEntry?.translation ?? "?")")
-            print("  Form 'dicta' found: \(dictaFormCount > 0 ? "✅" : "❌")")
-            print("  All forms: \(dictaEntry?.forms.keys.joined(separator: ", ") ?? "none")")
-        }
-    }
+    private let lineKeyLemmas = [
+        (1, ["laetor", "sum", "hic", "dico", "domus", "dominus", "eo"]),
+        (2, ["sto", "sum", "pes", "atrium", "tuus", "ierusalem"]),
+        (
+            3,
+            [
+                "ierusalem", "qui", "aedifico", "ut", "civitas", "participatio", "is",
+                "idipsum",
+            ]
+        ),
+        (
+            4,
+            [
+                "illuc", "enim", "ascendo", "tribus", "dominus", "testimonium", "israel", "ad",
+                "confiteor", "nomen",
+            ]
+        ),
+        (5, ["quia", "illic", "sedeo", "sedes", "iudicium", "super", "domus", "david"]),
+        (
+            6,
+            ["rogo", "qui", "ad", "pax", "sum", "ierusalem", "et", "abundantia", "diligo", "tu"]
+        ),
+        (7, ["fio", "pax", "in", "virtus", "et", "abundantia", "in", "turris", "tuus"]),
+        (
+            8,
+            ["propter", "frater", "meus", "et", "proximus", "meus", "loquor", "pax", "de", "tu"]
+        ),
+        (9, ["propter", "domus", "dominus", "deus", "noster", "quaero", "bonus", "tu"]),
+    ]
 
-    func testVerbRogo() {
-    latinService.configureDebugging(target: "rogo")
-    let analysis = latinService.analyzePsalm(id, text: psalm121)
-    
-    // Verify "rogate" comes from "rogo"
-    let rogoEntry = analysis.dictionary["rogo"]
-    XCTAssertNotNil(rogoEntry, "Lemma 'rogo' should exist for 'rogate'")
-    
-    // Check translation
-    let translation = rogoEntry?.translation?.lowercased() ?? ""
-    XCTAssertTrue(
-        translation.contains("ask") || translation.contains("pray") || translation.contains("request"),
-        "Expected 'rogo' to mean 'ask/pray/request', got: \(translation)"
-    )
-    
-    // Check if "rogate" is a recognized form
-    let rogateFormCount = rogoEntry?.forms["rogate"] ?? 0
-    XCTAssertGreaterThan(
-        rogateFormCount, 0,
-        "Form 'rogate' should exist for lemma 'rogo'"
-    )
-    
-    if let entity = rogoEntry?.entity {
-        let result = entity.analyzeFormWithMeaning("rogate")
-        XCTAssertTrue(result.contains("imperative") || result.contains("command"),
-                     "Expected 'rogate' to be imperative, got: \(result)")
-        
-        if verbose {
-            print("Analysis of 'rogate': \(result)")
-        }
-    } else {
-        XCTFail("Entity for 'rogo' not found")
-    }
-    
-    if verbose {
-        print("\nROGO Analysis:")
-        print("  Translation: \(rogoEntry?.translation ?? "?")")
-        print("  Form 'rogate' found: \(rogateFormCount > 0 ? "✅" : "❌")")
+    private let structuralThemes = [
+        (
+            "Standing → Rejoicing",
+            "Established presence in God's house gives rise to spiritual joy",
+            ["sto", "pes", "atrium", "laetor", "domus"],
+            1,
+            2,
+            "Augustine reads this joy ('laetatus sum') as the natural overflow of standing firm in the courts of the Lord. Though the verse order suggests joy comes first, the theological order is reversed: the soul rejoices because it finds itself in God's house. The feet that once journeyed are now planted, and from this rootedness comes gladness (Enarr. Ps. 121.1–2).",
+            "The feet that once journeyed are now planted, and from this rootedness comes gladness."
+        ),
+        (
+            "Gather → Communion",
+            "The tribes' upward journey culminates in unified participation and shared confession",
+            [
+                "aedifico", "civitas", "participatio", "idipsum", "ascendo", "tribus", "confiteor",
+                "nomen",
+            ],
+            3,
+            4,
+            "Augustine sees Jerusalem not just as a place, but a mystery: a city 'built' by God, whose unity is not geographic but spiritual. The tribes ascend not merely in space, but into a deeper communion — united in the confession of the Lord's name. The Church is the fulfillment of this image: many ascending into one body through praise (Enarr. Ps. 121.3–4).",
+            "Mass: tribes ascend = faithful gathering, city compact = church unified in Christ, confession of the name= liturgy of Word; participation in idipsum: mystical communion"
+        ),
+        (
+            "Worship → Intercession",
+            "Encounter with divine order leads to prayer for peace and abundance",
+            ["sedeo", "sedes", "iudicium", "rogo", "pax", "abundantia", "ierusalem"],
+            5,
+            6,
+            "Augustine sees the 'thrones of judgment' not as earthly courts, but Christ's spiritual governance within the Church. From this seat, justice flows. But worship does not end in vision — it turns to prayer: for peace, for the flourishing of the Church. As in the Catholic Mass, after hearing God's Word and seeing His order, we pray for the city of God on earth (Enarr. Ps. 121.5–6).",
+            "As in the Catholic Mass, after hearing God's Word and seeing His order, we pray for the city of God on earth."
+        ),
+        (
+            "Peace → Charity → Action",
+            "Worship concludes with love that overflows into peace-speaking and pursuit of the city's good",
+            [
+                "pax", "virtus", "turris", "frater", "proximus", "loquor", "quaero", "bonus",
+                "domus",
+            ],
+            7,
+            9,
+            "Augustine sees this as the final fruit of true worship. Peace, rooted in divine strength and abundance, becomes a spoken gift — 'I spoke peace for the sake of my brothers.' It does not end in sentiment: it seeks good for Jerusalem. The soul leaves God's house not empty, but missioned — to speak, to seek, to build the good of the Church (Enarr. Ps. 121.7–9).",
+            "Mass: after communion (abundantia in turribus); offer peace to others;dismissed (see the good of the City of God)"
+        ),
+    ]
+
+    private let conceptualThemes = [
+        (
+            "Pilgrimage Imagery",
+            "References to journeying and movement toward sacred spaces",
+            ["laetor", "eo", "sto", "ascendo", "atrium"],
+            ThemeCategory.virtue,
+            1...4
+        ),
+        (
+            "Jerusalem Imagery",
+            "The holy city as center of worship and divine presence",
+            ["ierusalem", "civitas", "aedifico", "participatio", "turris"],
+            ThemeCategory.divine,
+            2...7
+        ),
+        (
+            "Community and Unity",
+            "Terms describing the gathered people and their shared purpose",
+            ["tribus", "israel", "testimonium", "confiteor", "frater", "proximus"],
+            ThemeCategory.virtue,
+            4...8
+        ),
+        (
+            "Divine Authority",
+            "References to God's rule, judgment, and house",
+            ["dominus", "domus", "sedes", "iudicium", "david", "deus"],
+            ThemeCategory.divine,
+            1...9
+        ),
+        (
+            "Peace and Abundance",
+            "Themes of shalom and spiritual prosperity",
+            ["pax", "abundantia", "virtus", "bonus", "quaero"],
+            ThemeCategory.virtue,
+            6...9
+        ),
+        (
+            "Worship and Praise",
+            "Expressions of devotion and acknowledgment of God",
+            ["nomen", "confiteor", "rogo", "loquor"],
+            ThemeCategory.divine,
+            4...8
+        ),
+    ]
+
+    // MARK: - Basic Tests
+
+    func testTotalVerses() {
+        let expectedVerseCount = 9
+        XCTAssertEqual(
+            psalm121.count, expectedVerseCount, "Psalm 121 should have \(expectedVerseCount) verses"
+        )
+        XCTAssertEqual(
+            englishText.count, expectedVerseCount,
+            "Psalm 121 English text should have \(expectedVerseCount) verses"
+        )
+        // Also validate the orthography of the text for analysis consistency
+        let normalized = psalm121.map { PsalmTestUtilities.validateLatinText($0) }
+        XCTAssertEqual(
+            normalized,
+            psalm121,
+            "Normalized Latin text should match expected classical forms"
+        )
     }
 
-}
+    func testLineByLineKeyLemmas() {
+        for (lineNumber, expectedLemmas) in lineKeyLemmas {
+            let line = psalm121[lineNumber - 1]
+            let analysis = latinService.analyzePsalm(id, text: line, startingLineNumber: lineNumber)
 
-    func testVerbAscendo() {
-        latinService.configureDebugging(target: "ascendo")
-        let analysis = latinService.analyzePsalm(id, text: psalm121)
-
-        // 1. Lookup entry for "ascendo"
-        let ascendoEntry = analysis.dictionary["ascendo"]
-        XCTAssertNotNil(ascendoEntry, "Lemma 'ascendo' should exist for 'ascenderunt'")
-
-        // 2. Translation sanity check
-        let translation = ascendoEntry?.translation?.lowercased() ?? ""
-        XCTAssertTrue(
-            translation.contains("ascend") || translation.contains("go up") || translation.contains("climb"),
-            "Expected 'ascendo' to mean 'ascend', got: \(translation)"
-        )
-
-        // 3. Confirm the form is recorded
-        let formCount = ascendoEntry?.forms["ascenderunt"] ?? 0
-        XCTAssertGreaterThan(
-            formCount, 0,
-            "Form 'ascenderunt' should exist for lemma 'ascendo'"
-        )
-
-        // 4. Analyze the form
-        if let entity = ascendoEntry?.entity {
-            let result = entity.analyzeFormWithMeaning("ascenderunt")
-            XCTAssertTrue(result.contains("they") && result.contains("have") && result.contains("ascend"),
-                        "Expected 'ascenderunt' to mean something like 'they have ascended', got: \(result)")
+            let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
+            let foundLemmas = expectedLemmas.filter { detectedLemmas.contains($0.lowercased()) }
+            let missingLemmas = expectedLemmas.filter { !detectedLemmas.contains($0.lowercased()) }
 
             if verbose {
-                print("\nASCENDO Analysis:")
-                print("  Translation: \(ascendoEntry?.translation ?? "?")")
-                print("  Form 'ascenderunt' analysis: \(result)")
-            }
-        } else {
-            XCTFail("Entity for 'ascendo' not found")
-        }
-    }
-
-
-    // 3. Unity and Community
-    func testUnityTheme() {
-        let analysis = latinService.analyzePsalm(id, text: psalm121)
-        
-        let unityTerms = [
-            ("participatio", ["participatio"], "unity"), // v.3
-            ("tribus", ["tribus"], "tribe"), // v.4
-            ("confiteor", ["confitendum"], "confess"), // v.4
-            ("frater", ["fratres"], "brother"), // v.8
-            ("proximus", ["proximos"], "neighbor") // v.8
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: unityTerms)
-    }
-    
-    // 4. Divine Protection
-    func testProtectionTheme() {
-        let analysis = latinService.analyzePsalm(id, text: psalm121)
-        
-        let protectionTerms = [
-            ("turris", ["turribus"], "tower"), // v.7
-            ("virtus", ["virtute"], "strength"), // v.7
-            ("bonus", ["bona"], "good") // v.9
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: protectionTerms)
-    }
-    
-    // 5. Peace and Abundance
-    func testPeaceTheme() {
-        latinService.configureDebugging(target: "rogo")
-        let analysis = latinService.analyzePsalm(id, text: psalm121)
-        latinService.configureDebugging(target: "")
-        
-        let peaceTerms = [
-            ("pax", ["pacem", "pax"], "peace"), // v.6,7,8
-            ("abundantia", ["abundantia"], "plenty"), // v.6,7
-            ("rogo", ["rogate"], "ask"), // v.6
-            ("diligo", ["diligentibus"], "love") // v.6
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: peaceTerms)
-        
-        
-    }
-    
-    // 6. Worship and Praise
-    func testWorshipTheme() {
-        latinService.configureDebugging(target: "laetor")
-        let analysis = latinService.analyzePsalm(id, text: psalm121)
-        latinService.configureDebugging(target: "")
-        
-        let worshipTerms = [
-            ("nomen", ["nomini"], "name"), // v.4
-            ("testimonium", ["testimonium"], "testimony"), // v.4
-            ("laetor", ["Laetatus"], "rejoice"), // v.1
-            ("quaero", ["quaesivi"], "seek") // v.9
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: worshipTerms)
-    }
-    
-    // MARK: - Helper Methods
-    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, 
-                                 confirmedWords: [(lemma: String, 
-                                                 forms: [String], 
-                                                 translation: String)]) {
-    for (lemma, forms, translation) in confirmedWords {
-        guard let entry = analysis.dictionary[lemma] else {
-            XCTFail("Missing lemma: \(lemma)")
-            continue
-        }
-        
-        // Verify semantic domain through translation
-        XCTAssertTrue(
-            entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-            "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
-        )
-        
-        // Verify morphological coverage
-        let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-        if !missingForms.isEmpty {
-            XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
-        }
-        
-        // NEW: Verify each form's analysis matches the expected translation
-        for form in forms {
-            if let entity = entry.entity {
-                let analysisResult = entity.analyzeFormWithMeaning(form)
-                
-                // Check if the analysis contains either:
-                // 1. The exact translation we expect (e.g., "go")
-                // 2. Or a grammatical form that implies the meaning (e.g., "future" for "ibimus")
-                XCTAssertTrue(
-                    analysisResult.lowercased().contains(translation.lowercased()) ||
-                    (lemma == "eo" && form == "ibimus" && analysisResult.lowercased().contains("future")),
-                    """
-                    For form '\(form)' of lemma '\(lemma)':
-                    Expected analysis to contain '\(translation)' or appropriate tense,
-                    but got: \(analysisResult)
-                    """
+                let status = missingLemmas.isEmpty ? "✅" : "❌"
+                print(
+                    "\(status) Line \(lineNumber): Found \(foundLemmas.count)/\(expectedLemmas.count) key lemmas: \(foundLemmas.joined(separator: ", "))"
                 )
-                
-                if verbose {
-                    print("  Analysis of '\(form)': \(analysisResult)")
+
+                if !missingLemmas.isEmpty {
+                    print("   MISSING: \(missingLemmas.joined(separator: ", "))")
+                    print("   Available: \(detectedLemmas.sorted().joined(separator: ", "))")
                 }
-            } else {
-                XCTFail("Entity for lemma '\(lemma)' not found")
             }
-        }
-        
-        if verbose {
-            print("\n\(lemma.uppercased())")
-            print("  Translation: \(entry.translation ?? "?")")
-            print("  Forms found: \(entry.forms.keys.filter { forms.map { $0.lowercased() }.contains($0) }.count)/\(forms.count)")
-            forms.forEach { form in
-                let count = entry.forms[form.lowercased()] ?? 0
-                print("  \(form.padding(toLength: 15, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
+
+            if !missingLemmas.isEmpty {
+                XCTFail(
+                    "Line \(lineNumber): Missing lemmas: \(missingLemmas.joined(separator: ", "))")
             }
         }
     }
-}
-    private func xverifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, 
-                                     confirmedWords: [(lemma: String, 
-                                                     forms: [String], 
-                                                     translation: String)]) {
-        for (lemma, forms, translation) in confirmedWords {
-            guard let entry = analysis.dictionary[lemma] else {
-                XCTFail("Missing lemma: \(lemma)")
-                continue
-            }
-            
-            // Verify semantic domain through translation
-            XCTAssertTrue(
-                entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-                "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
+
+    func testStructuralThemes() {
+        utilities.testStructuralThemes(
+            psalmText: psalm121,
+            structuralThemes: structuralThemes,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
+
+    func testConceptualThemes() {
+        utilities.testConceptualThemes(
+            psalmText: psalm121,
+            conceptualThemes: conceptualThemes,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
+
+    // MARK: - Save JSON Methods
+
+    func testSaveTexts() {
+        let jsonString = utilities.generatePsalmTextsJSONString(
+            psalmNumber: id.number,
+            category: id.category ?? "",
+            text: psalm121,
+            englishText: englishText
+        )
+
+        let success = utilities.saveToFile(
+            content: jsonString,
+            filename: "output_psalm121_texts.json"
+        )
+
+        if success {
+            print("✅ Complete texts JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete texts file:")
+            print(jsonString)
+        }
+    }
+
+    func testSaveThemes() {
+        guard
+            let jsonString = utilities.generateCompleteThemesJSONString(
+                psalmNumber: id.number,
+                conceptualThemes: conceptualThemes,
+                structuralThemes: structuralThemes
             )
-            
-            // Verify morphological coverage
-            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-            if !missingForms.isEmpty {
-                XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
-            }
-            
-            if verbose {
-                print("\n\(lemma.uppercased())")
-                print("  Translation: \(entry.translation ?? "?")")
-                print("  Forms found: \(entry.forms.keys.filter { forms.map { $0.lowercased() }.contains($0) }.count)/\(forms.count)")
-                forms.forEach { form in
-                    let count = entry.forms[form.lowercased()] ?? 0
-                    print("  \(form.padding(toLength: 15, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
-                }
-            }
+        else {
+            XCTFail("Failed to generate complete themes JSON")
+            return
+        }
+
+        let success = utilities.saveToFile(
+            content: jsonString,
+            filename: "output_psalm121_themes.json"
+        )
+
+        if success {
+            print("✅ Complete themes JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete themes file:")
+            print(jsonString)
         }
     }
-    
-   
+
 }

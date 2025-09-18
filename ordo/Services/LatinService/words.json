@@ -1,13 +1,22 @@
 [
   {
-  "lemma": "unde",
-  "part_of_speech": "adverb",
-  "declension": 0,
-  "translations": {
-    "en": "from where, whence, from which",
-    "la": "unde"
-  }
-},
+    "lemma": "illuc",
+    "part_of_speech": "adverb",
+    "declension": 0,
+    "translations": {
+      "en": "to that place, thither, there",
+      "la": "illuc"
+    }
+  },
+  {
+    "lemma": "unde",
+    "part_of_speech": "adverb",
+    "declension": 0,
+    "translations": {
+      "en": "from where, whence, from which",
+      "la": "unde"
+    }
+  },
   {
     "lemma": "ad",
     "part_of_speech": "preposition",
@@ -1249,7 +1258,9 @@
       "nominative_n": ["haec"],
       "accusative_m": ["hos"],
       "accusative_f": ["has"],
-      "accusative_n": ["haec"]
+      "accusative_n": ["haec"],
+      "dative_m": ["his"],
+      "ablative_m": ["his"]
     }
   },
   {

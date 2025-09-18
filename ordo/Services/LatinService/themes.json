@@ -5864,276 +5864,249 @@
   },
 
   {
- "psalmNumber": 119,
- "category": "",
+    "psalmNumber": 119,
+    "category": "",
 
-  "structuralThemes": [
-    {
-      "name": "Distress → Deliverance",
-      "description": "From inner affliction to divine liberation from deceit",
-      "lemmas": ["tribulor", "clamo", "exaudio", "libero", "labium", "iniquus", "lingua", "dolosus"],
-      "startLine": 1,
-      "endLine": 2,
-      "comment": "The psalmist begins with a cry to the Lord in time of trouble and receives assurance of being heard, followed by a specific plea for deliverance from deceitful lips and a lying tongue.",
-      "comment2": "Augustine sees this as the cry of the soul caught in inner tribulation, not just external hardship. The deceitful tongue symbolizes confusion and heresy. God hears, not to shield physically, but to deliver the soul through truth. The movement from anguish to 'libera animam meam' marks grace's work in pulling the soul out of lies and into light (Enarr. Ps. 119.1–2)."
-    },
-    {
-      "name": "Deception → Purifying Judgment",
-      "description": "The harm of lies is answered by divine fire and piercing correction",
-      "lemmas": ["do", "appono", "lingua", "sagitta", "potens", "acutus", "carbo", "desolatorius"],
-      "startLine": 3,
-      "endLine": 4,
-      "comment": "The psalmist asks what punishment fits a deceitful tongue, answering with the metaphor of a warrior's sharp arrows and the desolating coals of juniper.",
-      "comment2": "Augustine reads these verses as the divine response to false speech. The tongue, which wounds through deceit, will receive 'sharp arrows' and 'desolating coals.' But these are not simply for destruction: they are purifying instruments. The 'coals' represent the burning power of charity, which scorches away sin and heals the deceived (Enarr. Ps. 119.3–5)."
-    },
-    {
-      "name": "Exile → Conflict",
-      "description": "Dwelling long among the ungodly deepens the soul's sorrow",
-      "lemmas": ["heu", "incolatus", "prolongo", "cedar", "incola", "impugno", "gratis"],
-      "startLine": 5,
-      "endLine": 6,
-      "comment": "'Heu mihi' is Augustine's sigh of the pilgrim soul exiled from its true home. To live in Kedar — a symbol of those who live in the flesh — is to be surrounded by hostility toward peace. The soul has dwelt too long here, not because of years, but because it feels the pain of separation from the City of God.",
-      "comment2": "Augustine interprets this verse as the voice of Christ and His Church: always seeking peace, yet constantly met with opposition. The psalmist speaks kindly, yet is attacked 'gratis' — without cause. This unjust suffering anticipates the passion of Christ, who was hated for no reason."
-    }
-  ]
-,
+    "structuralThemes": [
+      {
+        "name": "Distress → Deliverance",
+        "description": "From inner affliction to divine liberation from deceit",
+        "lemmas": [
+          "tribulor",
+          "clamo",
+          "exaudio",
+          "libero",
+          "labium",
+          "iniquus",
+          "lingua",
+          "dolosus"
+        ],
+        "startLine": 1,
+        "endLine": 2,
+        "comment": "The psalmist begins with a cry to the Lord in time of trouble and receives assurance of being heard, followed by a specific plea for deliverance from deceitful lips and a lying tongue.",
+        "comment2": "Augustine sees this as the cry of the soul caught in inner tribulation, not just external hardship. The deceitful tongue symbolizes confusion and heresy. God hears, not to shield physically, but to deliver the soul through truth. The movement from anguish to 'libera animam meam' marks grace's work in pulling the soul out of lies and into light (Enarr. Ps. 119.1–2)."
+      },
+      {
+        "name": "Deception → Purifying Judgment",
+        "description": "The harm of lies is answered by divine fire and piercing correction",
+        "lemmas": [
+          "do",
+          "appono",
+          "lingua",
+          "sagitta",
+          "potens",
+          "acutus",
+          "carbo",
+          "desolatorius"
+        ],
+        "startLine": 3,
+        "endLine": 4,
+        "comment": "The psalmist asks what punishment fits a deceitful tongue, answering with the metaphor of a warrior's sharp arrows and the desolating coals of juniper.",
+        "comment2": "Augustine reads these verses as the divine response to false speech. The tongue, which wounds through deceit, will receive 'sharp arrows' and 'desolating coals.' But these are not simply for destruction: they are purifying instruments. The 'coals' represent the burning power of charity, which scorches away sin and heals the deceived (Enarr. Ps. 119.3–5)."
+      },
+      {
+        "name": "Exile → Conflict",
+        "description": "Dwelling long among the ungodly deepens the soul's sorrow",
+        "lemmas": [
+          "heu",
+          "incolatus",
+          "prolongo",
+          "cedar",
+          "incola",
+          "impugno",
+          "gratis"
+        ],
+        "startLine": 5,
+        "endLine": 6,
+        "comment": "'Heu mihi' is Augustine's sigh of the pilgrim soul exiled from its true home. To live in Kedar — a symbol of those who live in the flesh — is to be surrounded by hostility toward peace. The soul has dwelt too long here, not because of years, but because it feels the pain of separation from the City of God.",
+        "comment2": "Augustine interprets this verse as the voice of Christ and His Church: always seeking peace, yet constantly met with opposition. The psalmist speaks kindly, yet is attacked 'gratis' — without cause. This unjust suffering anticipates the passion of Christ, who was hated for no reason."
+      }
+    ],
+    "conceptualThemes": [
+      {
+        "name": "Weapon Imagery",
+        "description": "Military metaphors for divine correction and judgment",
+        "category": "conflict",
+        "lineRange": {
+          "start": 4,
+          "end": 4
+        },
+        "lemmas": ["sagitta", "carbo", "potens", "acutus", "desolatorius"]
+      },
+      {
+        "name": "Geographical Exile",
+        "description": "Physical and spiritual displacement from home",
+        "category": "opposition",
+        "lineRange": {
+          "start": 5,
+          "end": 5
+        },
+        "lemmas": ["cedar", "incolatus", "prolongo", "habito", "incola"]
+      },
+      {
+        "name": "Linguistic Imagery",
+        "description": "Speech and communication metaphors for deceit",
+        "category": "sin",
+        "lineRange": {
+          "start": 2,
+          "end": 6
+        },
+        "lemmas": ["labium", "lingua", "loquor", "dolosus"]
+      },
+      {
+        "name": "Persecution Terms",
+        "description": "Vocabulary of affliction and unjust attack",
+        "category": "sin",
+        "lineRange": {
+          "start": 1,
+          "end": 6
+        },
+        "lemmas": ["tribulor", "iniquus", "impugno", "desolatorius"]
+      },
+      {
+        "name": "Peaceful Image",
+        "description": "Terms representing peace and liberation",
+        "category": "virtue",
+        "lineRange": {
+          "start": 1,
+          "end": 6
+        },
+        "lemmas": ["libero", "pax", "quaero"]
+      }
+    ]
+  },
 
-  "conceptualThemes": [
-    {
-      "name": "Weapon Imagery",
-      "description": "Military metaphors for divine correction and judgment",
-      "category": "conflict",
-      "lineRange": {
-        "start": 4,
-        "end": 4
-      },
-      "lemmas": [
-        "sagitta",
-        "carbo",
-        "potens",
-        "acutus",
-        "desolatorius"
-      ]
-    },
-    {
-      "name": "Geographical Exile",
-      "description": "Physical and spiritual displacement from home",
-      "category": "opposition",
-      "lineRange": {
-        "start": 5,
-        "end": 5
-      },
-      "lemmas": [
-        "cedar",
-        "incolatus",
-        "prolongo",
-        "habito",
-        "incola"
-      ]
-    },
-    {
-      "name": "Linguistic Imagery",
-      "description": "Speech and communication metaphors for deceit",
-      "category": "sin",
-      "lineRange": {
-        "start": 2,
-        "end": 6
-      },
-      "lemmas": [
-        "labium",
-        "lingua",
-        "loquor",
-        "dolosus"
-      ]
-    },
-    {
-      "name": "Persecution Terms",
-      "description": "Vocabulary of affliction and unjust attack",
-      "category": "sin",
-      "lineRange": {
-        "start": 1,
-        "end": 6
-      },
-      "lemmas": [
-        "tribulor",
-        "iniquus",
-        "impugno",
-        "desolatorius"
-      ]
-    },
-    {
-      "name": "Peaceful Image",
-      "description": "Terms representing peace and liberation",
-      "category": "virtue",
-      "lineRange": {
-        "start": 1,
-        "end": 6
-      },
-      "lemmas": [
-        "libero",
-        "pax",
-        "quaero"
-      ]
-    }
-  ]
+  {
+    "psalmNumber": 120,
+    "category": "",
 
-},
- 
-{
- "psalmNumber": 120,
- "category": "",
+    "structuralThemes": [
+      {
+        "name": "Seeking → Assurance",
+        "description": "From looking to mountains for help to finding assurance in the Lord",
+        "lemmas": ["levo", "oculus", "mons", "auxilium", "facio"],
+        "startLine": 1,
+        "endLine": 2,
+        "comment": "The psalmist lifts his eyes to the mountains seeking help, but finds that his true help comes from the Lord who made heaven and earth.",
+        "comment2": "Augustine sees this as the soul's natural inclination to seek help from created things (mountains) before recognizing that all help ultimately comes from the Creator. The movement from created to Creator marks the beginning of true faith (Enarr. Ps. 120.1–2)."
+      },
+      {
+        "name": "Vigilance → Protection",
+        "description": "From the promise of divine watchfulness to comprehensive protection",
+        "lemmas": ["dormito", "custodio", "israel", "protectio", "manus"],
+        "startLine": 3,
+        "endLine": 5,
+        "comment": "The Lord who keeps Israel neither slumbers nor sleeps, providing protection over the right hand of the faithful.",
+        "comment2": "Augustine interprets this as God's constant vigilance over His people. The 'right hand' represents the active power of divine protection, while the sleepless guardian symbolizes God's eternal care that never fails (Enarr. Ps. 120.3–5)."
+      },
+      {
+        "name": "Elements → Preservation",
+        "description": "From natural dangers to divine preservation from all harm",
+        "lemmas": ["sol", "luna", "nox", "malus", "custodio"],
+        "startLine": 6,
+        "endLine": 7,
+        "comment": "Neither sun by day nor moon by night will harm the protected one, for the Lord keeps from all evil and preserves the soul.",
+        "comment2": "Augustine sees this as God's power over creation itself - the very elements that could cause harm become instruments of His protective care. The preservation of the soul (anima) represents the ultimate spiritual protection (Enarr. Ps. 120.6–7)."
+      },
+      {
+        "name": "Journey → Eternity",
+        "description": "From temporal comings and goings to eternal divine accompaniment",
+        "lemmas": [
+          "introitus",
+          "exitus",
+          "custodio",
+          "hic",
+          "nunc",
+          "usque",
+          "saeculum"
+        ],
+        "startLine": 8,
+        "endLine": 8,
+        "comment": "The Lord will keep the going out and coming in from this time forth and forevermore.",
+        "comment2": "Augustine interprets this final verse as the comprehensive scope of divine protection - from the present moment (hic nunc) to eternity (usque in saeculum). Every movement of life is under God's watchful care (Enarr. Ps. 120.8)."
+      }
+    ],
+    "conceptualThemes": [
+      {
+        "name": "Human Body Imagery",
+        "description": "References to physical body parts representing spiritual experience",
+        "category": "virtue",
+        "lineRange": {
+          "start": 1,
+          "end": 8
+        },
+        "lemmas": ["oculus", "pes", "manus"]
+      },
+      {
+        "name": "Celestial Imagery",
+        "description": "Heavenly and earthly elements representing divine power and protection",
+        "category": "divine",
+        "lineRange": {
+          "start": 1,
+          "end": 8
+        },
+        "lemmas": ["sol", "luna", "caelum", "terra", "mons"]
+      },
+      {
+        "name": "Protection Verbs",
+        "description": "Verbs describing divine guardianship and care",
+        "category": "virtue",
+        "lineRange": {
+          "start": 3,
+          "end": 7
+        },
+        "lemmas": ["custodio", "dormito", "dormio", "uro"]
+      },
+      {
+        "name": "Movement Imagery",
+        "description": "Verbs and nouns describing physical and spiritual movement",
+        "category": "virtue",
+        "lineRange": {
+          "start": 1,
+          "end": 8
+        },
+        "lemmas": ["levo", "venio", "introitus", "exitus"]
+      },
+      {
+        "name": "Divine Attributes",
+        "description": "Terms describing God's nature and relationship to creation",
+        "category": "divine",
+        "lineRange": {
+          "start": 1,
+          "end": 8
+        },
+        "lemmas": ["auxilium", "protectio", "israel"]
+      },
+      {
+        "name": "Temporal References",
+        "description": "Words indicating time and duration of divine care",
+        "category": "divine",
+        "lineRange": {
+          "start": 6,
+          "end": 8
+        },
+        "lemmas": ["dies", "nox", "hic", "nunc", "usque", "saeculum"]
+      }
+    ]
+  },
 
-  "structuralThemes": [
-    {
-      "name": "Seeking → Assurance",
-      "description": "From looking to mountains for help to finding assurance in the Lord",
-      "lemmas": ["levo", "oculus", "mons", "auxilium", "facio"],
-      "startLine": 1,
-      "endLine": 2,
-      "comment": "The psalmist lifts his eyes to the mountains seeking help, but finds that his true help comes from the Lord who made heaven and earth.",
-      "comment2": "Augustine sees this as the soul's natural inclination to seek help from created things (mountains) before recognizing that all help ultimately comes from the Creator. The movement from created to Creator marks the beginning of true faith (Enarr. Ps. 120.1–2)."
-    },
-    {
-      "name": "Vigilance → Protection",
-      "description": "From the promise of divine watchfulness to comprehensive protection",
-      "lemmas": ["dormito", "custodio", "israel", "protectio", "manus"],
-      "startLine": 3,
-      "endLine": 5,
-      "comment": "The Lord who keeps Israel neither slumbers nor sleeps, providing protection over the right hand of the faithful.",
-      "comment2": "Augustine interprets this as God's constant vigilance over His people. The 'right hand' represents the active power of divine protection, while the sleepless guardian symbolizes God's eternal care that never fails (Enarr. Ps. 120.3–5)."
-    },
-    {
-      "name": "Elements → Preservation",
-      "description": "From natural dangers to divine preservation from all harm",
-      "lemmas": ["sol", "luna", "nox", "malus", "custodio"],
-      "startLine": 6,
-      "endLine": 7,
-      "comment": "Neither sun by day nor moon by night will harm the protected one, for the Lord keeps from all evil and preserves the soul.",
-      "comment2": "Augustine sees this as God's power over creation itself - the very elements that could cause harm become instruments of His protective care. The preservation of the soul (anima) represents the ultimate spiritual protection (Enarr. Ps. 120.6–7)."
-    },
-    {
-      "name": "Journey → Eternity",
-      "description": "From temporal comings and goings to eternal divine accompaniment",
-      "lemmas": ["introitus", "exitus", "custodio", "hic", "nunc", "usque", "saeculum"],
-      "startLine": 8,
-      "endLine": 8,
-      "comment": "The Lord will keep the going out and coming in from this time forth and forevermore.",
-      "comment2": "Augustine interprets this final verse as the comprehensive scope of divine protection - from the present moment (hic nunc) to eternity (usque in saeculum). Every movement of life is under God's watchful care (Enarr. Ps. 120.8)."
-    }
-  ]
-,
-
-  "conceptualThemes": [
-    {
-      "name": "Human Body Imagery",
-      "description": "References to physical body parts representing spiritual experience",
-      "category": "virtue",
-      "lineRange": {
-        "start": 1,
-        "end": 8
-      },
-      "lemmas": [
-        "oculus",
-        "pes",
-        "manus"
-      ]
-    },
-    {
-      "name": "Celestial Imagery",
-      "description": "Heavenly and earthly elements representing divine power and protection",
-      "category": "divine",
-      "lineRange": {
-        "start": 1,
-        "end": 8
-      },
-      "lemmas": [
-        "sol",
-        "luna",
-        "caelum",
-        "terra",
-        "mons"
-      ]
-    },
-    {
-      "name": "Protection Verbs",
-      "description": "Verbs describing divine guardianship and care",
-      "category": "virtue",
-      "lineRange": {
-        "start": 3,
-        "end": 7
-      },
-      "lemmas": [
-        "custodio",
-        "dormito",
-        "dormio",
-        "uro"
-      ]
-    },
-    {
-      "name": "Movement Imagery",
-      "description": "Verbs and nouns describing physical and spiritual movement",
-      "category": "virtue",
-      "lineRange": {
-        "start": 1,
-        "end": 8
-      },
-      "lemmas": [
-        "levo",
-        "venio",
-        "introitus",
-        "exitus"
-      ]
-    },
-    {
-      "name": "Divine Attributes",
-      "description": "Terms describing God's nature and relationship to creation",
-      "category": "divine",
-      "lineRange": {
-        "start": 1,
-        "end": 8
-      },
-      "lemmas": [
-        "auxilium",
-        "protectio",
-        "israel"
-      ]
-    },
-    {
-      "name": "Temporal References",
-      "description": "Words indicating time and duration of divine care",
-      "category": "divine",
-      "lineRange": {
-        "start": 6,
-        "end": 8
-      },
-      "lemmas": [
-        "dies",
-        "nox",
-        "hic",
-        "nunc",
-        "usque",
-        "saeculum"
-      ]
-    }
-  ]
-
-},
-  
-{
+  {
     "psalmNumber": 121,
     "category": "",
+
     "structuralThemes": [
       {
         "name": "Standing → Rejoicing",
         "description": "Established presence in God's house gives rise to spiritual joy",
-        "lemmas": ["stantes", "pes", "atrium", "laetor", "domus"],
+        "lemmas": ["sto", "pes", "atrium", "laetor", "domus"],
         "startLine": 1,
         "endLine": 2,
-        "comment": "Augustine reads this joy ('laetatus sum') as the natural overflow of standing firm in the courts of the Lord. Though the verse order suggests joy comes first, the theological order is reversed: the soul rejoices because it finds itself in God's house. The feet that once journeyed are now planted, and from this rootedness comes gladness (Enarr. Ps. 121.1–2)."
+        "comment": "Augustine reads this joy ('laetatus sum') as the natural overflow of standing firm in the courts of the Lord. Though the verse order suggests joy comes first, the theological order is reversed: the soul rejoices because it finds itself in God's house. The feet that once journeyed are now planted, and from this rootedness comes gladness (Enarr. Ps. 121.1–2).",
+        "comment2": "The feet that once journeyed are now planted, and from this rootedness comes gladness."
       },
       {
         "name": "Gather → Communion",
-        "description": "The tribes’ upward journey culminates in unified participation and shared confession",
+        "description": "The tribes' upward journey culminates in unified participation and shared confession",
         "lemmas": [
           "aedifico",
           "civitas",
@@ -6146,23 +6119,17 @@
         ],
         "startLine": 3,
         "endLine": 4,
-        "comment": "Augustine sees Jerusalem not just as a place, but a mystery: a city 'built' by God, whose unity is not geographic but spiritual. The tribes ascend not merely in space, but into a deeper communion — united in the confession of the Lord’s name. The Church is the fulfillment of this image: many ascending into one body through praise (Enarr. Ps. 121.3–4). Mass: tribes ascend = faithful gathering, city compact = church unified in Christ, confession of the name= liturgy of Word; participation in idipsum: mystical communion"
+        "comment": "Augustine sees Jerusalem not just as a place, but a mystery: a city 'built' by God, whose unity is not geographic but spiritual. The tribes ascend not merely in space, but into a deeper communion — united in the confession of the Lord's name. The Church is the fulfillment of this image: many ascending into one body through praise (Enarr. Ps. 121.3–4).",
+        "comment2": "Mass: tribes ascend = faithful gathering, city compact = church unified in Christ, confession of the name= liturgy of Word; participation in idipsum: mystical communion"
       },
       {
         "name": "Worship → Intercession",
         "description": "Encounter with divine order leads to prayer for peace and abundance",
-        "lemmas": [
-          "sedeo",
-          "sedes",
-          "judicium",
-          "rogo",
-          "pax",
-          "abundantia",
-          "jerusalem"
-        ],
+        "lemmas": ["sedeo", "sedes", "rogo", "pax", "abundantia", "ierusalem"],
         "startLine": 5,
         "endLine": 6,
-        "comment": "Augustine sees the 'thrones of judgment' not as earthly courts, but Christ’s spiritual governance within the Church. From this seat, justice flows. But worship does not end in vision — it turns to prayer: for peace, for the flourishing of the Church. As in the Catholic Mass, after hearing God’s Word and seeing His order, we pray for the city of God on earth (Enarr. Ps. 121.5–6)."
+        "comment": "Augustine sees the 'thrones of judgment' not as earthly courts, but Christ's spiritual governance within the Church. From this seat, justice flows. But worship does not end in vision — it turns to prayer: for peace, for the flourishing of the Church. As in the Catholic Mass, after hearing God's Word and seeing His order, we pray for the city of God on earth (Enarr. Ps. 121.5–6).",
+        "comment2": "As in the Catholic Mass, after hearing God's Word and seeing His order, we pray for the city of God on earth."
       },
       {
         "name": "Peace → Charity → Action",
@@ -6180,10 +6147,81 @@
         ],
         "startLine": 7,
         "endLine": 9,
-        "comment": "Augustine sees this as the final fruit of true worship. Peace, rooted in divine strength and abundance, becomes a spoken gift — 'I spoke peace for the sake of my brothers.' It does not end in sentiment: it seeks good for Jerusalem. The soul leaves God’s house not empty, but missioned — to speak, to seek, to build the good of the Church (Enarr. Ps. 121.7–9). Mass: after communion (abundantia in turribus); offer peace to others;dismissed (see the good of the City of God)"
+        "comment": "Augustine sees this as the final fruit of true worship. Peace, rooted in divine strength and abundance, becomes a spoken gift — 'I spoke peace for the sake of my brothers.' It does not end in sentiment: it seeks good for Jerusalem. The soul leaves God's house not empty, but missioned — to speak, to seek, to build the good of the Church (Enarr. Ps. 121.7–9).",
+        "comment2": "Mass: after communion (abundantia in turribus); offer peace to others;dismissed (see the good of the City of God)"
+      }
+    ],
+    "conceptualThemes": [
+      {
+        "name": "Pilgrimage Imagery",
+        "description": "References to journeying and movement toward sacred spaces",
+        "category": "virtue",
+        "lineRange": {
+          "start": 1,
+          "end": 4
+        },
+        "lemmas": ["laetor", "eo", "sto", "ascendo", "atrium"]
+      },
+      {
+        "name": "Jerusalem Imagery",
+        "description": "The holy city as center of worship and divine presence",
+        "category": "divine",
+        "lineRange": {
+          "start": 2,
+          "end": 7
+        },
+        "lemmas": ["ierusalem", "civitas", "aedifico", "participatio", "turris"]
+      },
+      {
+        "name": "Community and Unity",
+        "description": "Terms describing the gathered people and their shared purpose",
+        "category": "virtue",
+        "lineRange": {
+          "start": 4,
+          "end": 8
+        },
+        "lemmas": [
+          "tribus",
+          "israel",
+          "testimonium",
+          "confiteor",
+          "frater",
+          "proximus"
+        ]
+      },
+      {
+        "name": "Divine Authority",
+        "description": "References to God's rule, judgment, and house",
+        "category": "divine",
+        "lineRange": {
+          "start": 1,
+          "end": 9
+        },
+        "lemmas": ["domus", "sedes", "david", "deus"]
+      },
+      {
+        "name": "Peace and Abundance",
+        "description": "Themes of shalom and spiritual prosperity",
+        "category": "virtue",
+        "lineRange": {
+          "start": 6,
+          "end": 9
+        },
+        "lemmas": ["pax", "abundantia", "virtus", "bonus", "quaero"]
+      },
+      {
+        "name": "Worship and Praise",
+        "description": "Expressions of devotion and acknowledgment of God",
+        "category": "divine",
+        "lineRange": {
+          "start": 4,
+          "end": 8
+        },
+        "lemmas": ["nomen", "confiteor", "rogo", "loquor"]
       }
     ]
   },
+
   {
     "psalmNumber": 122,
     "category": "",
