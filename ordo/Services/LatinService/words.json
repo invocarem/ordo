@@ -1,5 +1,14 @@
 [
   {
+  "lemma": "ultra",
+  "part_of_speech": "adverb",
+  "declension": 0,
+  "translations": {
+    "en": "beyond, further, more, longer, anymore, on the other side",
+    "la": "ultra"
+  }
+},
+  {
   "lemma": "intolerabilis",
   "part_of_speech": "adjective",
   "declension": 3,

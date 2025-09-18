@@ -90,16 +90,16 @@ class Psalm119Tests: XCTestCase {
     (
       "Geographical Exile",
       "Physical and spiritual displacement from home",
-      ["cedar", "incolatus", "prolongo", "habito", "incola"],
+      ["cedar", "incolatus", "prolongo", "habito", "incola", "heu"],
       ThemeCategory.opposition,
       5 ... 5
     ),
     (
       "Linguistic Imagery",
       "Speech and communication metaphors for deceit",
-      ["labium", "lingua", "loquor", "dolosus"],
+      ["labium", "lingua", "dolosus"],
       ThemeCategory.sin,
-      2 ... 6
+      2 ... 3
     ),
     (
       "Persecution Terms",
@@ -166,7 +166,6 @@ class Psalm119Tests: XCTestCase {
   }
 
   // MARK: - Test Cases
-
 
   func testSaveTexts() {
     let jsonString = utilities.generatePsalmTextsJSONString(

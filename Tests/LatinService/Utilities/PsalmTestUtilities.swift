@@ -344,4 +344,103 @@ public enum PsalmTestUtilities {
       return true
     }
   }
+
+  /// Verifies that all lemmas from a source set are present in a target set
+  ///
+  /// Usage examples:
+  /// ```swift
+  /// // Check if structural theme lemmas are in lineKeyLemmas
+  /// let isValid = utilities.verifyLemmasInSet(
+  ///   sourceLemmas: structuralThemes.flatMap { $0.2 },
+  ///   targetLemmas: lineKeyLemmas.flatMap { $0.1 },
+  ///   sourceName: "structural themes",
+  ///   targetName: "lineKeyLemmas"
+  /// )
+  ///
+  /// // Check if conceptual theme lemmas are in structural themes
+  /// utilities.testLemmasInSet(
+  ///   sourceLemmas: conceptualThemes.flatMap { $0.2 },
+  ///   targetLemmas: structuralThemes.flatMap { $0.2 },
+  ///   sourceName: "conceptual themes",
+  ///   targetName: "structural themes",
+  ///   failOnMissing: false // Don't fail test if missing
+  /// )
+  /// ```
+  ///
+  /// - Parameters:
+  ///   - sourceLemmas: The lemmas to check for presence
+  ///   - targetLemmas: The set that should contain the source lemmas
+  ///   - sourceName: Name of the source set for error reporting
+  ///   - targetName: Name of the target set for error reporting
+  ///   - verbose: Whether to print detailed information
+  /// - Returns: True if all source lemmas are present in target, false otherwise
+  public static func verifyLemmasInSet(
+    sourceLemmas: [String],
+    targetLemmas: [String],
+    sourceName: String,
+    targetName: String,
+    verbose: Bool = true
+  ) -> Bool {
+    let sourceSet = Set(sourceLemmas.map { $0.lowercased() })
+    let targetSet = Set(targetLemmas.map { $0.lowercased() })
+
+    let missingLemmas = sourceSet.subtracting(targetSet)
+
+    if !missingLemmas.isEmpty {
+      if verbose {
+        print("❌ Missing lemmas from \(sourceName) in \(targetName):")
+        for lemma in missingLemmas.sorted() {
+          print("  - \(lemma)")
+        }
+        print("  Total missing: \(missingLemmas.count) out of \(sourceSet.count)")
+      }
+      return false
+    }
+
+    if verbose {
+      print("✅ All \(sourceSet.count) lemmas from \(sourceName) are present in \(targetName)")
+    }
+
+    return true
+  }
+
+  /// Verifies lemmas between two sets with detailed analysis and XCTest integration
+  /// - Parameters:
+  ///   - sourceLemmas: The lemmas to check for presence
+  ///   - targetLemmas: The set that should contain the source lemmas
+  ///   - sourceName: Name of the source set for error reporting
+  ///   - targetName: Name of the target set for error reporting
+  ///   - verbose: Whether to print detailed information
+  ///   - failOnMissing: Whether to call XCTFail if lemmas are missing (default: true)
+  public static func testLemmasInSet(
+    sourceLemmas: [String],
+    targetLemmas: [String],
+    sourceName: String,
+    targetName: String,
+    verbose: Bool = true,
+    failOnMissing: Bool = true
+  ) {
+    let sourceSet = Set(sourceLemmas.map { $0.lowercased() })
+    let targetSet = Set(targetLemmas.map { $0.lowercased() })
+
+    let missingLemmas = sourceSet.subtracting(targetSet)
+
+    if !missingLemmas.isEmpty {
+      if verbose {
+        print("❌ Missing lemmas from \(sourceName) in \(targetName):")
+        for lemma in missingLemmas.sorted() {
+          print("  - \(lemma)")
+        }
+        print("  Total missing: \(missingLemmas.count) out of \(sourceSet.count)")
+      }
+
+      if failOnMissing {
+        XCTFail("Missing lemmas from \(sourceName) in \(targetName): \(Array(missingLemmas).sorted().joined(separator: ", "))")
+      }
+    } else {
+      if verbose {
+        print("✅ All \(sourceSet.count) lemmas from \(sourceName) are present in \(targetName)")
+      }
+    }
+  }
 }

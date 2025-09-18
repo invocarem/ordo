@@ -18,7 +18,7 @@ if [[ "$OSTYPE" == "msys" || "$OSTYPE" == "cygwin" ]]; then
      docker run --rm -it \
       -v "${HOST_PATH}:/app" \
       -w /app \
-      -p 8081:8080 \
+      -p 8083:8080 \
       swift:6.0.3-jammy \
       bash
 else
