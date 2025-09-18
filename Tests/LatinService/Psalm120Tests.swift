@@ -162,6 +162,19 @@ class Psalm120Tests: XCTestCase {
   }
 
   func testStructuralThemes() {
+    // First, verify that all structural theme lemmas are in lineKeyLemmas
+    let structuralLemmas = structuralThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: structuralLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "structural themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose
+    )
+
+    // Then run the standard structural themes test
     utilities.testStructuralThemes(
       psalmText: psalm120,
       structuralThemes: structuralThemes,
@@ -171,6 +184,20 @@ class Psalm120Tests: XCTestCase {
   }
 
   func testConceptualThemes() {
+    // First, verify that conceptual theme lemmas are in lineKeyLemmas
+    let conceptualLemmas = conceptualThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: conceptualLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "conceptual themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose,
+      failOnMissing: false // Conceptual themes may have additional imagery lemmas
+    )
+
+    // Then run the standard conceptual themes test
     utilities.testConceptualThemes(
       psalmText: psalm120,
       conceptualThemes: conceptualThemes,

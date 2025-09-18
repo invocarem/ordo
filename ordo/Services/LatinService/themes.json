@@ -362,14 +362,16 @@
       }
     ]
   },
+
   {
     "psalmNumber": 4,
     "category": "",
+
     "structuralThemes": [
       {
         "name": "Invocation → Expansion",
         "description": "God's faithful response to prayer bringing deliverance in distress",
-        "lemmas": ["invoco", "exaudio", "iustitia", "tribulatio", "dilato"],
+        "lemmas": ["invoco", "exaudio", "tribulatio", "dilato"],
         "startLine": 1,
         "endLine": 2,
         "comment": "When called upon, the God of justice hears and answers; in times of trouble He brings enlargement and relief, prompting the psalmist to plead for mercy.",
@@ -387,7 +389,7 @@
       {
         "name": "Examination → Sacrifice",
         "description": "Inner reflection leading to righteous offering and trust in God",
-        "lemmas": ["irascor", "compungo", "sacrificium", "iustitia", "spero"],
+        "lemmas": ["irascor", "compungo", "sacrificium", "spero"],
         "startLine": 5,
         "endLine": 6,
         "comment": "Holy anger directed at one's own sin leads to compunction, the sacrifice of the old life, and the fundamental question: where is true good to be found?",
@@ -421,7 +423,7 @@
           "start": 1,
           "end": 2
         },
-        "lemmas": ["invoco", "exaudio", "oratio", "clamo", "misereor"]
+        "lemmas": ["invoco", "exaudio", "oratio", "misereor"]
       },
       {
         "name": "Trust and Hope",
@@ -465,10 +467,10 @@
         "description": "References to Christ as the ultimate Good and resurrection",
         "category": "divine",
         "lineRange": {
-          "start": 1,
+          "start": 4,
           "end": 6
         },
-        "lemmas": ["bonus", "sanctus", "iustitia"]
+        "lemmas": ["bonus", "sanctus", "mirifico"]
       },
       {
         "name": "Heart Examination",
@@ -478,15 +480,7 @@
           "start": 3,
           "end": 6
         },
-        "lemmas": [
-          "cor",
-          "gravis",
-          "compungo",
-          "cubile",
-          "dico",
-          "irascor",
-          "pecco"
-        ]
+        "lemmas": ["compungo", "cubile", "dico", "irascor", "pecco"]
       },
       {
         "name": "Human Folly",
@@ -500,6 +494,7 @@
       }
     ]
   },
+
   {
     "psalmNumber": 5,
     "category": "",
@@ -6300,345 +6295,292 @@
   },
 
   {
- "psalmNumber": 123,
- "category": "",
+    "psalmNumber": 123,
+    "category": "",
 
-  "structuralThemes": [
-    {
-      "name": "Divine Presence → Human Threat",
-      "description": "The Lord's presence with Israel contrasted with the threat of being swallowed by enemies",
-      "lemmas": ["nisi", "sum", "israel", "exsurgo", "homo", "deglutio", "vivus"],
-      "startLine": 1,
-      "endLine": 2,
-      "comment": "The psalm opens with a conditional statement about the Lord's presence, immediately followed by the threat of being devoured alive by rising enemies.",
-      "comment2": "Augustine sees this as the fundamental contrast between divine protection and human vulnerability. The 'nisi quia Dominus' establishes the conditional nature of salvation, while the image of being swallowed alive represents the complete destruction that would occur without God's intervention (Enarr. Ps. 123.1-2)."
-    },
-    {
-      "name": "Wrath → Flood",
-      "description": "The fury of enemies manifested as overwhelming waters",
-      "lemmas": ["irascor", "furor", "is", "aqua", "absorbeo", "torrens", "pertransio", "intolerabilis"],
-      "startLine": 3,
-      "endLine": 4,
-      "comment": "The enemies' anger becomes a flood that would have overwhelmed the soul, but the torrent is passed through safely.",
-      "comment2": "For Augustine, the flood represents both external persecution and internal spiritual trials. The 'intolerable water' symbolizes the overwhelming nature of temptation and suffering, while passing through it demonstrates divine grace enabling endurance (Enarr. Ps. 123.3-4)."
-    },
-    {
-      "name": "Blessing → Deliverance",
-      "description": "Divine blessing prevents becoming prey, leading to liberation from the snare",
-      "lemmas": ["benedictus", "do", "captio", "dens", "passer", "ereptus", "laqueus"],
-      "startLine": 5,
-      "endLine": 6,
-      "comment": "The Lord is blessed for not giving Israel as prey to their teeth, and the soul is delivered like a sparrow from the fowler's snare.",
-      "comment2": "Augustine interprets the sparrow as the soul caught in the snares of temptation and sin. The broken snare represents Christ's victory over the devil's traps, while the blessing acknowledges God's protective mercy (Enarr. Ps. 123.5-6)."
-    },
-    {
-      "name": "Liberation → Divine Help",
-      "description": "Freedom from the broken snare leads to recognition of divine assistance",
-      "lemmas": ["laqueus", "contritus", "libero", "adiutorium", "nomen", "facio", "caelum", "terra"],
-      "startLine": 7,
-      "endLine": 8,
-      "comment": "The snare is broken and Israel is freed, leading to the declaration that their help is in the name of the Lord who made heaven and earth.",
-      "comment2": "Augustine sees this final movement as the soul's recognition of complete dependence on God. The broken snare represents the definitive victory over sin and death, while the cosmic scope of 'heaven and earth' emphasizes God's universal power and care (Enarr. Ps. 123.7-8)."
-    }
-  ]
-,
+    "structuralThemes": [
+      {
+        "name": "Divine Presence → Human Threat",
+        "description": "The Lord's presence with Israel contrasted with the threat of being swallowed by enemies",
+        "lemmas": [
+          "nisi",
+          "sum",
+          "israel",
+          "exsurgo",
+          "homo",
+          "deglutio",
+          "vivus"
+        ],
+        "startLine": 1,
+        "endLine": 2,
+        "comment": "The psalm opens with a conditional statement about the Lord's presence, immediately followed by the threat of being devoured alive by rising enemies.",
+        "comment2": "Augustine sees this as the fundamental contrast between divine protection and human vulnerability. The 'nisi quia Dominus' establishes the conditional nature of salvation, while the image of being swallowed alive represents the complete destruction that would occur without God's intervention (Enarr. Ps. 123.1-2)."
+      },
+      {
+        "name": "Wrath → Flood",
+        "description": "The fury of enemies manifested as overwhelming waters",
+        "lemmas": [
+          "irascor",
+          "furor",
+          "is",
+          "aqua",
+          "absorbeo",
+          "torrens",
+          "pertransio",
+          "intolerabilis"
+        ],
+        "startLine": 3,
+        "endLine": 4,
+        "comment": "The enemies' anger becomes a flood that would have overwhelmed the soul, but the torrent is passed through safely.",
+        "comment2": "For Augustine, the flood represents both external persecution and internal spiritual trials. The 'intolerable water' symbolizes the overwhelming nature of temptation and suffering, while passing through it demonstrates divine grace enabling endurance (Enarr. Ps. 123.3-4)."
+      },
+      {
+        "name": "Blessing → Deliverance",
+        "description": "Divine blessing prevents becoming prey, leading to liberation from the snare",
+        "lemmas": [
+          "benedictus",
+          "do",
+          "captio",
+          "dens",
+          "passer",
+          "ereptus",
+          "laqueus"
+        ],
+        "startLine": 5,
+        "endLine": 6,
+        "comment": "The Lord is blessed for not giving Israel as prey to their teeth, and the soul is delivered like a sparrow from the fowler's snare.",
+        "comment2": "Augustine interprets the sparrow as the soul caught in the snares of temptation and sin. The broken snare represents Christ's victory over the devil's traps, while the blessing acknowledges God's protective mercy (Enarr. Ps. 123.5-6)."
+      },
+      {
+        "name": "Liberation → Divine Help",
+        "description": "Freedom from the broken snare leads to recognition of divine assistance",
+        "lemmas": [
+          "laqueus",
+          "contritus",
+          "libero",
+          "adiutorium",
+          "nomen",
+          "facio",
+          "caelum",
+          "terra"
+        ],
+        "startLine": 7,
+        "endLine": 8,
+        "comment": "The snare is broken and Israel is freed, leading to the declaration that their help is in the name of the Lord who made heaven and earth.",
+        "comment2": "Augustine sees this final movement as the soul's recognition of complete dependence on God. The broken snare represents the definitive victory over sin and death, while the cosmic scope of 'heaven and earth' emphasizes God's universal power and care (Enarr. Ps. 123.7-8)."
+      }
+    ],
+    "conceptualThemes": [
+      {
+        "name": "Water Imagery",
+        "description": "Flood and torrent metaphors for overwhelming trials and divine protection",
+        "category": "opposition",
+        "lineRange": {
+          "start": 3,
+          "end": 4
+        },
+        "lemmas": ["aqua", "torrens", "absorbeo", "pertransio", "intolerabilis"]
+      },
+      {
+        "name": "Hunting Imagery",
+        "description": "Snare and fowler metaphors for temptation and deliverance",
+        "category": "sin",
+        "lineRange": {
+          "start": 6,
+          "end": 7
+        },
+        "lemmas": ["laqueus", "venator", "passer", "ereptus", "contritus"]
+      },
+      {
+        "name": "Divine Protection",
+        "description": "God's shielding presence and deliverance from enemies",
+        "category": "divine",
+        "lineRange": {
+          "start": 1,
+          "end": 8
+        },
+        "lemmas": ["nisi", "benedictus", "adiutorium", "nomen"]
+      },
+      {
+        "name": "Human Vulnerability",
+        "description": "Human weakness and dependence on divine intervention",
+        "category": "virtue",
+        "lineRange": {
+          "start": 1,
+          "end": 8
+        },
+        "lemmas": ["homo", "noster", "nos", "vivus"]
+      },
+      {
+        "name": "Threat and Violence",
+        "description": "Enemy aggression and destructive forces",
+        "category": "conflict",
+        "lineRange": {
+          "start": 2,
+          "end": 5
+        },
+        "lemmas": ["exsurgo", "deglutio", "irascor", "furor", "captio", "dens"]
+      },
+      {
+        "name": "Liberation and Freedom",
+        "description": "Deliverance from bondage and restoration of liberty",
+        "category": "virtue",
+        "lineRange": {
+          "start": 6,
+          "end": 8
+        },
+        "lemmas": ["libero", "ereptus", "contritus", "adiutorium"]
+      },
+      {
+        "name": "Cosmic Scope",
+        "description": "Universal and eternal dimensions of divine power",
+        "category": "divine",
+        "lineRange": {
+          "start": 8,
+          "end": 8
+        },
+        "lemmas": ["caelum", "terra", "facio"]
+      }
+    ]
+  },
 
-  "conceptualThemes": [
-    {
-      "name": "Water Imagery",
-      "description": "Flood and torrent metaphors for overwhelming trials and divine protection",
-      "category": "opposition",
-      "lineRange": {
-        "start": 3,
-        "end": 4
-      },
-      "lemmas": [
-        "aqua",
-        "torrens",
-        "absorbeo",
-        "pertransio",
-        "intolerabilis"
-      ]
-    },
-    {
-      "name": "Hunting Imagery",
-      "description": "Snare and fowler metaphors for temptation and deliverance",
-      "category": "sin",
-      "lineRange": {
-        "start": 6,
-        "end": 7
-      },
-      "lemmas": [
-        "laqueus",
-        "venator",
-        "passer",
-        "ereptus",
-        "contritus"
-      ]
-    },
-    {
-      "name": "Divine Protection",
-      "description": "God's shielding presence and deliverance from enemies",
-      "category": "divine",
-      "lineRange": {
-        "start": 1,
-        "end": 8
-      },
-      "lemmas": [
-        "nisi",
-        "benedictus",
-        "adiutorium",
-        "nomen"
-      ]
-    },
-    {
-      "name": "Human Vulnerability",
-      "description": "Human weakness and dependence on divine intervention",
-      "category": "virtue",
-      "lineRange": {
-        "start": 1,
-        "end": 8
-      },
-      "lemmas": [
-        "homo",
-        "noster",
-        "nos",
-        "vivus"
-      ]
-    },
-    {
-      "name": "Threat and Violence",
-      "description": "Enemy aggression and destructive forces",
-      "category": "conflict",
-      "lineRange": {
-        "start": 2,
-        "end": 5
-      },
-      "lemmas": [
-        "exsurgo",
-        "deglutio",
-        "irascor",
-        "furor",
-        "captio",
-        "dens"
-      ]
-    },
-    {
-      "name": "Liberation and Freedom",
-      "description": "Deliverance from bondage and restoration of liberty",
-      "category": "virtue",
-      "lineRange": {
-        "start": 6,
-        "end": 8
-      },
-      "lemmas": [
-        "libero",
-        "ereptus",
-        "contritus",
-        "adiutorium"
-      ]
-    },
-    {
-      "name": "Cosmic Scope",
-      "description": "Universal and eternal dimensions of divine power",
-      "category": "divine",
-      "lineRange": {
-        "start": 8,
-        "end": 8
-      },
-      "lemmas": [
-        "caelum",
-        "terra",
-        "facio"
-      ]
-    }
-  ]
+  {
+    "psalmNumber": 124,
+    "category": "",
 
-},
-
-{
- "psalmNumber": 124,
- "category": "",
-
-  "structuralThemes": [
-    {
-      "name": "Escaped → Dweller",
-      "description": "The soul transitions from being a rescued fugitive to a secure dweller in God's city",
-      "lemmas": ["confido", "mons", "habito", "circuitus", "ierusalem"],
-      "startLine": 1,
-      "endLine": 2,
-      "comment": "Augustine contrasts this with Psalm 123: the 'sparrow' (passer) freed from the snare now 'dwells' (habito) in Jerusalem. The 'mountain' (mons) is not geographic Zion but the soul's new stability in God. Divine encirclement (circuitus) replaces the broken snare (Enarr. Ps. 124.2–3).",
-      "comment2": "The soul transitions from being a rescued fugitive to a secure dweller in God's city"
-    },
-    {
-      "name": "Shielded → Blessed",
-      "description": "From potential domination by the wicked to divine protection and blessing",
-      "lemmas": ["relinquo", "virga", "benefacio", "rectus"],
-      "startLine": 3,
-      "endLine": 4,
-      "comment": "Augustine: God actively withholds the wicked's rod ('non relinquet') to preserve the righteous, then commands blessing ('Benefac') for the upright—not based on merit but grace (Enarr. Ps. 124.5-6).",
-      "comment2": "From potential domination by the wicked to divine protection and blessing"
-    },
-    {
-      "name": "Bending → Peace",
-      "description": "Those inclining toward sin are removed, while peace is declared",
-      "lemmas": ["declino", "obligatio", "pax", "israel"],
-      "startLine": 5,
-      "endLine": 5,
-      "comment": "Augustine: The 'Declinantes' follow their trajectory into sin, while 'Pax super Israel' is God's final word—a declarative gift mirroring the Church's eschatological hope (Enarr. Ps. 124.8).",
-      "comment2": "Those inclining toward sin are removed, while peace is declared"
-    }
-  ]
-,
-
-  "conceptualThemes": [
-    {
-      "name": "Mountain Imagery",
-      "description": "Symbolic representation of stability and divine protection through geological metaphors",
-      "category": "virtue",
-      "lineRange": {
-        "start": 1,
-        "end": 2
+    "structuralThemes": [
+      {
+        "name": "Escaped → Dweller",
+        "description": "The soul transitions from being a rescued fugitive to a secure dweller in God's city",
+        "lemmas": ["confido", "mons", "habito", "circuitus", "ierusalem"],
+        "startLine": 1,
+        "endLine": 2,
+        "comment": "Augustine contrasts this with Psalm 123: the 'sparrow' (passer) freed from the snare now 'dwells' (habito) in Jerusalem. The 'mountain' (mons) is not geographic Zion but the soul's new stability in God. Divine encirclement (circuitus) replaces the broken snare (Enarr. Ps. 124.2–3).",
+        "comment2": "The soul transitions from being a rescued fugitive to a secure dweller in God's city"
       },
-      "lemmas": [
-        "mons",
-        "sion",
-        "circuitus"
-      ]
-    },
-    {
-      "name": "Urban Dwelling Imagery",
-      "description": "Metaphors of city life, habitation, and permanent residence",
-      "category": "virtue",
-      "lineRange": {
-        "start": 1,
-        "end": 2
+      {
+        "name": "Shielded → Blessed",
+        "description": "From potential domination by the wicked to divine protection and blessing",
+        "lemmas": ["relinquo", "virga", "benefacio", "rectus"],
+        "startLine": 3,
+        "endLine": 4,
+        "comment": "Augustine: God actively withholds the wicked's rod ('non relinquet') to preserve the righteous, then commands blessing ('Benefac') for the upright—not based on merit but grace (Enarr. Ps. 124.5-6).",
+        "comment2": "From potential domination by the wicked to divine protection and blessing"
       },
-      "lemmas": [
-        "habito",
-        "ierusalem",
-        "populus"
-      ]
-    },
-    {
-      "name": "Agricultural/Shepherding Imagery",
-      "description": "Rural metaphors of farming, shepherding, and cultivation",
-      "category": "justice",
-      "lineRange": {
-        "start": 3,
-        "end": 3
+      {
+        "name": "Bending → Peace",
+        "description": "Those inclining toward sin are removed, while peace is declared",
+        "lemmas": ["declino", "obligatio", "pax", "israel"],
+        "startLine": 5,
+        "endLine": 5,
+        "comment": "Augustine: The 'Declinantes' follow their trajectory into sin, while 'Pax super Israel' is God's final word—a declarative gift mirroring the Church's eschatological hope (Enarr. Ps. 124.8).",
+        "comment2": "Those inclining toward sin are removed, while peace is declared"
+      }
+    ],
+    "conceptualThemes": [
+      {
+        "name": "Mountain Imagery",
+        "description": "Symbolic representation of stability and divine protection through geological metaphors",
+        "category": "virtue",
+        "lineRange": {
+          "start": 1,
+          "end": 2
+        },
+        "lemmas": ["mons", "sion", "circuitus"]
       },
-      "lemmas": [
-        "virga",
-        "sors",
-        "manus",
-        "extendo"
-      ]
-    },
-    {
-      "name": "Anatomical Imagery",
-      "description": "Body parts and physical attributes representing moral states",
-      "category": "virtue",
-      "lineRange": {
-        "start": 3,
-        "end": 4
+      {
+        "name": "Urban Dwelling Imagery",
+        "description": "Metaphors of city life, habitation, and permanent residence",
+        "category": "virtue",
+        "lineRange": {
+          "start": 1,
+          "end": 2
+        },
+        "lemmas": ["habito", "ierusalem", "populus"]
       },
-      "lemmas": [
-        "manus",
-        "rectus"
-      ]
-    },
-    {
-      "name": "Bondage and Liberation Imagery",
-      "description": "Metaphors of chains, bonds, and freedom from constraint",
-      "category": "sin",
-      "lineRange": {
-        "start": 5,
-        "end": 5
+      {
+        "name": "Agricultural/Shepherding Imagery",
+        "description": "Rural metaphors of farming, shepherding, and cultivation",
+        "category": "justice",
+        "lineRange": {
+          "start": 3,
+          "end": 3
+        },
+        "lemmas": ["virga", "sors", "manus", "extendo"]
       },
-      "lemmas": [
-        "obligatio",
-        "adduco",
-        "opero"
-      ]
-    },
-    {
-      "name": "Peace and Blessing Imagery",
-      "description": "Terms representing divine favor, tranquility, and national blessing",
-      "category": "virtue",
-      "lineRange": {
-        "start": 4,
-        "end": 5
+      {
+        "name": "Anatomical Imagery",
+        "description": "Body parts and physical attributes representing moral states",
+        "category": "virtue",
+        "lineRange": {
+          "start": 3,
+          "end": 4
+        },
+        "lemmas": ["manus", "rectus"]
       },
-      "lemmas": [
-        "pax",
-        "israel",
-        "benefacio",
-        "bonus"
-      ]
-    },
-    {
-      "name": "Trust and Faith Vocabulary",
-      "description": "Terms expressing confidence, reliance, and spiritual stability",
-      "category": "virtue",
-      "lineRange": {
-        "start": 1,
-        "end": 1
+      {
+        "name": "Bondage and Liberation Imagery",
+        "description": "Metaphors of chains, bonds, and freedom from constraint",
+        "category": "sin",
+        "lineRange": {
+          "start": 5,
+          "end": 5
+        },
+        "lemmas": ["obligatio", "adduco", "opero"]
       },
-      "lemmas": [
-        "confido",
-        "commoveo",
-        "aeternus"
-      ]
-    },
-    {
-      "name": "Divine Protection Terms",
-      "description": "Vocabulary of God's safeguarding and providential care",
-      "category": "virtue",
-      "lineRange": {
-        "start": 1,
-        "end": 5
+      {
+        "name": "Peace and Blessing Imagery",
+        "description": "Terms representing divine favor, tranquility, and national blessing",
+        "category": "virtue",
+        "lineRange": {
+          "start": 4,
+          "end": 5
+        },
+        "lemmas": ["pax", "israel", "benefacio", "bonus"]
       },
-      "lemmas": [
-        "circuitus",
-        "relinquo",
-        "benefacio",
-        "adduco"
-      ]
-    },
-    {
-      "name": "Moral Categories",
-      "description": "Distinction between righteous and wicked behavior patterns",
-      "category": "virtue",
-      "lineRange": {
-        "start": 3,
-        "end": 5
+      {
+        "name": "Trust and Faith Vocabulary",
+        "description": "Terms expressing confidence, reliance, and spiritual stability",
+        "category": "virtue",
+        "lineRange": {
+          "start": 1,
+          "end": 1
+        },
+        "lemmas": ["confido", "commoveo", "aeternus"]
       },
-      "lemmas": [
-        "peccator",
-        "bonus",
-        "rectus",
-        "iniquitas"
-      ]
-    },
-    {
-      "name": "Temporal and Eternal Terms",
-      "description": "Vocabulary expressing time, duration, and permanence",
-      "category": "virtue",
-      "lineRange": {
-        "start": 1,
-        "end": 2
+      {
+        "name": "Divine Protection Terms",
+        "description": "Vocabulary of God's safeguarding and providential care",
+        "category": "virtue",
+        "lineRange": {
+          "start": 1,
+          "end": 5
+        },
+        "lemmas": ["circuitus", "relinquo", "benefacio", "adduco"]
       },
-      "lemmas": [
-        "aeternus",
-        "nunc",
-        "saeculum"
-      ]
-    }
-  ]
-
-},
-   {
+      {
+        "name": "Moral Categories",
+        "description": "Distinction between righteous and wicked behavior patterns",
+        "category": "virtue",
+        "lineRange": {
+          "start": 3,
+          "end": 5
+        },
+        "lemmas": ["peccator", "bonus", "rectus", "iniquitas"]
+      },
+      {
+        "name": "Temporal and Eternal Terms",
+        "description": "Vocabulary expressing time, duration, and permanence",
+        "category": "virtue",
+        "lineRange": {
+          "start": 1,
+          "end": 2
+        },
+        "lemmas": ["aeternus", "nunc", "saeculum"]
+      }
+    ]
+  },
+  {
     "psalmNumber": 125,
     "category": "",
     "structuralThemes": [

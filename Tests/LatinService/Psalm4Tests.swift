@@ -11,6 +11,7 @@ class Psalm4Tests: XCTestCase {
   }
 
   let id = PsalmIdentity(number: 4, category: nil)
+  private let expectedVerseCount = 10
 
   // MARK: - Test Data Properties
 
@@ -25,6 +26,19 @@ class Psalm4Tests: XCTestCase {
     "A fructu frumenti, vini et olei sui multiplicati sunt.",
     "In pace in idipsum dormiam et requiescam;",
     "Quoniam tu, Domine, singulariter in spe constituisti me.",
+  ]
+
+  private let englishText = [
+    "When I called upon him, the God of my justice heard me: when I was in distress, thou hast enlarged me.",
+    "Have mercy on me: and hear my prayer.",
+    "O ye sons of men, how long will ye be dull of heart? why do ye love vanity, and seek after lying?",
+    "Know ye also that the Lord hath made his holy one wonderful: the Lord will hear me when I shall cry unto him.",
+    "Be ye angry, and sin not: the things ye say in your hearts, be sorry for them upon your beds.",
+    "Offer up the sacrifice of justice, and trust in the Lord; many say: Who sheweth us good things?",
+    "The light of thy countenance, O Lord, is signed upon us; thou hast given gladness in my heart.",
+    "By the fruit of their corn, their wine, and oil, they are multiplied.",
+    "In peace in the selfsame I will sleep, and I will rest;",
+    "For thou, O Lord, singularly hast settled me in hope.",
   ]
 
   private let lineKeyLemmas = [
@@ -104,53 +118,72 @@ class Psalm4Tests: XCTestCase {
     (
       "Prayer and Response",
       "God hearing and answering prayers",
-      ["invoco", "exaudio", "oratio", "clamo", "misereor"],
+      ["invoco", "exaudio", "oratio", "misereor"],
       ThemeCategory.worship,
-      1...2
+      1 ... 2
     ),
     (
       "Trust and Hope",
       "Trusting in God and finding hope",
       ["spero", "spes", "constituo", "requiesco"],
       .virtue,
-      6...10
+      6 ... 10
     ),
     (
       "Divine Provision",
       "God's material blessings and provision",
       ["dilato", "fructus", "frumentum", "vinum", "oleum", "multiplico"],
       .divine,
-      1...8
+      1 ... 8
     ),
     (
       "Divine Favor",
       "God's grace, light, and joyful presence",
       ["signo", "lumen", "vultus", "laetitia"],
       .divine,
-      7...7
+      7 ... 7
     ),
     (
       "Christological Fulfillment",
       "References to Christ as the ultimate Good and resurrection",
-      ["bonus", "sanctus", "iustitia"],
+      ["bonus", "sanctus", "mirifico"],
       .divine,
-      1...6
+      4 ... 6
     ),
     (
       "Heart Examination",
       "Examination of inner thoughts and repentance",
-      ["cor", "gravis", "compungo", "cubile", "dico", "irascor", "pecco"],
+      ["compungo", "cubile", "dico", "irascor", "pecco"],
       .virtue,
-      3...6
+      3 ... 6
     ),
     (
       "Human Folly",
       "Human tendency toward vanity, falsehood, and spiritual heaviness",
       ["vanitas", "mendacium", "gravis", "diligo", "quaero"],
       .sin,
-      3...3
+      3 ... 3
     ),
   ]
+
+  // MARK: - Test Methods
+
+  func testTotalVerses() {
+    XCTAssertEqual(
+      psalm4.count, expectedVerseCount, "Psalm 4 should have \(expectedVerseCount) verses"
+    )
+    XCTAssertEqual(
+      englishText.count, expectedVerseCount,
+      "Psalm 4 English text should have \(expectedVerseCount) verses"
+    )
+    // Also validate the orthography of the text for analysis consistency
+    let normalized = psalm4.map { PsalmTestUtilities.validateLatinText($0) }
+    XCTAssertEqual(
+      normalized,
+      psalm4,
+      "Normalized Latin text should match expected classical forms"
+    )
+  }
 
   // MARK: - Line by Line Key Lemmas Test
 
@@ -164,6 +197,19 @@ class Psalm4Tests: XCTestCase {
   }
 
   func testPsalm4StructuralThemes() {
+    // First, verify that all structural theme lemmas are in lineKeyLemmas
+    let structuralLemmas = structuralThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: structuralLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "structural themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose
+    )
+
+    // Then run the standard structural themes test
     utilities.testStructuralThemes(
       psalmText: psalm4,
       structuralThemes: structuralThemes,
@@ -173,12 +219,47 @@ class Psalm4Tests: XCTestCase {
   }
 
   func testPsalm4ConceptualThemes() {
+    // First, verify that conceptual theme lemmas are in lineKeyLemmas
+    let conceptualLemmas = conceptualThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: conceptualLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "conceptual themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose,
+      failOnMissing: false // Conceptual themes may have additional imagery lemmas
+    )
+
+    // Then run the standard conceptual themes test
     utilities.testConceptualThemes(
       psalmText: psalm4,
       conceptualThemes: conceptualThemes,
       psalmId: id,
       verbose: verbose
     )
+  }
+
+  func testSaveTexts() {
+    let jsonString = utilities.generatePsalmTextsJSONString(
+      psalmNumber: id.number,
+      category: id.category ?? "",
+      text: psalm4,
+      englishText: englishText
+    )
+
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm4_texts.json"
+    )
+
+    if success {
+      print("✅ Complete texts JSON created successfully")
+    } else {
+      print("⚠️ Could not save complete texts file:")
+      print(jsonString)
+    }
   }
 
   func testSavePsalm4Themes() {
