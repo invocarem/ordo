@@ -6456,37 +6456,189 @@
 
 },
 
-  {
-    "psalmNumber": 124,
-    "category": "",
-    "structuralThemes": [
-      {
-        "name": "Escaped → Dweller",
-        "description": "The soul transitions from being a rescued fugitive to a secure dweller in God's city",
-        "lemmas": ["confido", "mons", "habitat", "circuitu", "jerusalem"],
-        "startLine": 1,
-        "endLine": 2,
-        "comment": "Augustine contrasts this with Psalm 123: the 'sparrow' (passer) freed from the snare now 'dwells' (habitat) in Jerusalem. The 'mountain' (mons) is not geographic Zion but the soul's new stability in God. Divine encirclement (circuitu) replaces the broken snare (Enarr. Ps. 124.2–3)."
+{
+ "psalmNumber": 124,
+ "category": "",
+
+  "structuralThemes": [
+    {
+      "name": "Escaped → Dweller",
+      "description": "The soul transitions from being a rescued fugitive to a secure dweller in God's city",
+      "lemmas": ["confido", "mons", "habito", "circuitus", "ierusalem"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "Augustine contrasts this with Psalm 123: the 'sparrow' (passer) freed from the snare now 'dwells' (habito) in Jerusalem. The 'mountain' (mons) is not geographic Zion but the soul's new stability in God. Divine encirclement (circuitus) replaces the broken snare (Enarr. Ps. 124.2–3).",
+      "comment2": "The soul transitions from being a rescued fugitive to a secure dweller in God's city"
+    },
+    {
+      "name": "Shielded → Blessed",
+      "description": "From potential domination by the wicked to divine protection and blessing",
+      "lemmas": ["relinquo", "virga", "benefacio", "rectus"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "Augustine: God actively withholds the wicked's rod ('non relinquet') to preserve the righteous, then commands blessing ('Benefac') for the upright—not based on merit but grace (Enarr. Ps. 124.5-6).",
+      "comment2": "From potential domination by the wicked to divine protection and blessing"
+    },
+    {
+      "name": "Bending → Peace",
+      "description": "Those inclining toward sin are removed, while peace is declared",
+      "lemmas": ["declino", "obligatio", "pax", "israel"],
+      "startLine": 5,
+      "endLine": 5,
+      "comment": "Augustine: The 'Declinantes' follow their trajectory into sin, while 'Pax super Israel' is God's final word—a declarative gift mirroring the Church's eschatological hope (Enarr. Ps. 124.8).",
+      "comment2": "Those inclining toward sin are removed, while peace is declared"
+    }
+  ]
+,
+
+  "conceptualThemes": [
+    {
+      "name": "Mountain Imagery",
+      "description": "Symbolic representation of stability and divine protection through geological metaphors",
+      "category": "virtue",
+      "lineRange": {
+        "start": 1,
+        "end": 2
       },
-      {
-        "name": "Shielded → Blessed",
-        "description": "From potential domination by the wicked to divine protection and blessing",
-        "lemmas": ["relinquo", "virga", "benefacio", "rectus"],
-        "startLine": 3,
-        "endLine": 4,
-        "comment": "Augustine: God actively withholds the wicked's rod ('non relinquet') to preserve the righteous, then commands blessing ('Benefac') for the upright—not based on merit but grace (Enarr. Ps. 124.5-6)."
+      "lemmas": [
+        "mons",
+        "sion",
+        "circuitus"
+      ]
+    },
+    {
+      "name": "Urban Dwelling Imagery",
+      "description": "Metaphors of city life, habitation, and permanent residence",
+      "category": "virtue",
+      "lineRange": {
+        "start": 1,
+        "end": 2
       },
-      {
-        "name": "Bending → Peace",
-        "description": "Those inclining toward sin are removed, while peace is declared",
-        "lemmas": ["declino", "obligatio", "pax", "Israel"],
-        "startLine": 5,
-        "endLine": 5,
-        "comment": "Augustine: The 'Declinantes' follow their trajectory into sin, while 'Pax super Israel' is God's final word—a declarative gift mirroring the Church's eschatological hope (Enarr. Ps. 124.8)."
-      }
-    ]
-  },
-  {
+      "lemmas": [
+        "habito",
+        "ierusalem",
+        "populus"
+      ]
+    },
+    {
+      "name": "Agricultural/Shepherding Imagery",
+      "description": "Rural metaphors of farming, shepherding, and cultivation",
+      "category": "justice",
+      "lineRange": {
+        "start": 3,
+        "end": 3
+      },
+      "lemmas": [
+        "virga",
+        "sors",
+        "manus",
+        "extendo"
+      ]
+    },
+    {
+      "name": "Anatomical Imagery",
+      "description": "Body parts and physical attributes representing moral states",
+      "category": "virtue",
+      "lineRange": {
+        "start": 3,
+        "end": 4
+      },
+      "lemmas": [
+        "manus",
+        "rectus"
+      ]
+    },
+    {
+      "name": "Bondage and Liberation Imagery",
+      "description": "Metaphors of chains, bonds, and freedom from constraint",
+      "category": "sin",
+      "lineRange": {
+        "start": 5,
+        "end": 5
+      },
+      "lemmas": [
+        "obligatio",
+        "adduco",
+        "opero"
+      ]
+    },
+    {
+      "name": "Peace and Blessing Imagery",
+      "description": "Terms representing divine favor, tranquility, and national blessing",
+      "category": "virtue",
+      "lineRange": {
+        "start": 4,
+        "end": 5
+      },
+      "lemmas": [
+        "pax",
+        "israel",
+        "benefacio",
+        "bonus"
+      ]
+    },
+    {
+      "name": "Trust and Faith Vocabulary",
+      "description": "Terms expressing confidence, reliance, and spiritual stability",
+      "category": "virtue",
+      "lineRange": {
+        "start": 1,
+        "end": 1
+      },
+      "lemmas": [
+        "confido",
+        "commoveo",
+        "aeternus"
+      ]
+    },
+    {
+      "name": "Divine Protection Terms",
+      "description": "Vocabulary of God's safeguarding and providential care",
+      "category": "virtue",
+      "lineRange": {
+        "start": 1,
+        "end": 5
+      },
+      "lemmas": [
+        "circuitus",
+        "relinquo",
+        "benefacio",
+        "adduco"
+      ]
+    },
+    {
+      "name": "Moral Categories",
+      "description": "Distinction between righteous and wicked behavior patterns",
+      "category": "virtue",
+      "lineRange": {
+        "start": 3,
+        "end": 5
+      },
+      "lemmas": [
+        "peccator",
+        "bonus",
+        "rectus",
+        "iniquitas"
+      ]
+    },
+    {
+      "name": "Temporal and Eternal Terms",
+      "description": "Vocabulary expressing time, duration, and permanence",
+      "category": "virtue",
+      "lineRange": {
+        "start": 1,
+        "end": 2
+      },
+      "lemmas": [
+        "aeternus",
+        "nunc",
+        "saeculum"
+      ]
+    }
+  ]
+
+},
+   {
     "psalmNumber": 125,
     "category": "",
     "structuralThemes": [
