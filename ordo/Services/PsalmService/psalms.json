@@ -6030,33 +6030,30 @@
       "verified": true
     },
     {
-      "number": 123,
-      "section": "",
-      "text": [
-        "Nisi quia Dominus erat in nobis, dicat nunc Israel;",
-        "nisi quia Dominus erat in nobis, cum exsurgerent homines in nos,",
-        "forsitan vivos deglutissent nos.",
-        "Cum irasceretur furor eorum in nos, forsitan aqua absorbuisset nos.",
-        "Torrentem pertransivit anima nostra; forsitan pertransisset anima nostra aquam intolerabilem.",
-        "Benedictus Dominus, qui non dedit nos in captionem dentibus eorum.",
-        "Anima nostra sicut passer erepta est de laqueo venantium;",
-        "laqueus contritus est, et nos liberati sumus.",
-        "adiutorium nostrum in nomine Domini, qui fecit caelum et terram."
-      ],
-      "englishText": [
-        "If the Lord had not been on our side, let Israel now say;",
-        "if the Lord had not been on our side, when men rose up against us,",
-        "they would have swallowed us alive.",
-        "When their fury was enkindled against us, the waters would have overwhelmed us.",
-        "Our soul has passed through the torrent; our soul would have passed through the overwhelming water.",
-        "Blessed be the Lord, who has not given us as prey to their teeth.",
-        "Our soul has been delivered like a sparrow out of the fowler's snare;",
-        "the snare is broken, and we are delivered.",
-        "Our help is in the name of the Lord, who made heaven and earth."
-      ],
-      "verified": true
-    },
-    {
+  "number": 123,
+  "section": "",
+  "text": [
+    "Nisi quia Dominus erat in nobis, dicat nunc Israel; nisi quia Dominus erat in nobis",
+    "Cum exsurgerent homines in nos, forsitan vivos deglutissent nos.",
+    "Cum irasceretur furor eorum in nos, forsitan aqua absorbuisset nos.",
+    "Torrentem pertransivit anima nostra; forsitan pertransisset anima nostra aquam intolerabilem.",
+    "Benedictus Dominus, qui non dedit nos in captionem dentibus eorum.",
+    "Anima nostra sicut passer erepta est de laqueo venantium;",
+    "Laqueus contritus est, et nos liberati sumus.",
+    "Adiutorium nostrum in nomine Domini, qui fecit caelum et terram."
+  ],
+  "englishText": [
+    "If the Lord had not been on our side, let Israel now say; if the Lord had not been on our side,",
+    "when men rose up against us, they would have swallowed us alive.",
+    "When their fury was enkindled against us, the waters would have overwhelmed us.",
+    "Our soul has passed through the torrent; our soul would have passed through the overwhelming water.",
+    "Blessed be the Lord, who has not given us as prey to their teeth.",
+    "Our soul has been delivered like a sparrow out of the fowler's snare;",
+    "the snare is broken, and we are delivered.",
+    "Our help is in the name of the Lord, who made heaven and earth."
+  ]
+},
+     {
       "number": 124,
       "section": "",
       "title": "The Lord Surrounds His People",

@@ -6300,69 +6300,162 @@
   },
 
   {
-    "psalmNumber": 123,
-    "category": "",
-    "structuralThemes": [
-      {
-        "name": "Abandonment → Preservation",
-        "description": "If God had not been with us, we would have perished — but He was",
-        "lemmas": ["nisi", "dominus", "erat", "in", "nos", "dico"],
-        "startLine": 1,
-        "endLine": 2,
-        "comment": "Augustine sees this dual 'nisi quia Dominus' as the soul’s confession: not of victory, but of dependence. Without God, enemies would have risen and prevailed. With God, we still stand (Enarr. Ps. 123.1–2)."
+ "psalmNumber": 123,
+ "category": "",
+
+  "structuralThemes": [
+    {
+      "name": "Divine Presence → Human Threat",
+      "description": "The Lord's presence with Israel contrasted with the threat of being swallowed by enemies",
+      "lemmas": ["nisi", "sum", "israel", "exsurgo", "homo", "deglutio", "vivus"],
+      "startLine": 1,
+      "endLine": 2,
+      "comment": "The psalm opens with a conditional statement about the Lord's presence, immediately followed by the threat of being devoured alive by rising enemies.",
+      "comment2": "Augustine sees this as the fundamental contrast between divine protection and human vulnerability. The 'nisi quia Dominus' establishes the conditional nature of salvation, while the image of being swallowed alive represents the complete destruction that would occur without God's intervention (Enarr. Ps. 123.1-2)."
+    },
+    {
+      "name": "Wrath → Flood",
+      "description": "The fury of enemies manifested as overwhelming waters",
+      "lemmas": ["irascor", "furor", "is", "aqua", "absorbeo", "torrens", "pertransio", "intolerabilis"],
+      "startLine": 3,
+      "endLine": 4,
+      "comment": "The enemies' anger becomes a flood that would have overwhelmed the soul, but the torrent is passed through safely.",
+      "comment2": "For Augustine, the flood represents both external persecution and internal spiritual trials. The 'intolerable water' symbolizes the overwhelming nature of temptation and suffering, while passing through it demonstrates divine grace enabling endurance (Enarr. Ps. 123.3-4)."
+    },
+    {
+      "name": "Blessing → Deliverance",
+      "description": "Divine blessing prevents becoming prey, leading to liberation from the snare",
+      "lemmas": ["benedictus", "do", "captio", "dens", "passer", "ereptus", "laqueus"],
+      "startLine": 5,
+      "endLine": 6,
+      "comment": "The Lord is blessed for not giving Israel as prey to their teeth, and the soul is delivered like a sparrow from the fowler's snare.",
+      "comment2": "Augustine interprets the sparrow as the soul caught in the snares of temptation and sin. The broken snare represents Christ's victory over the devil's traps, while the blessing acknowledges God's protective mercy (Enarr. Ps. 123.5-6)."
+    },
+    {
+      "name": "Liberation → Divine Help",
+      "description": "Freedom from the broken snare leads to recognition of divine assistance",
+      "lemmas": ["laqueus", "contritus", "libero", "adiutorium", "nomen", "facio", "caelum", "terra"],
+      "startLine": 7,
+      "endLine": 8,
+      "comment": "The snare is broken and Israel is freed, leading to the declaration that their help is in the name of the Lord who made heaven and earth.",
+      "comment2": "Augustine sees this final movement as the soul's recognition of complete dependence on God. The broken snare represents the definitive victory over sin and death, while the cosmic scope of 'heaven and earth' emphasizes God's universal power and care (Enarr. Ps. 123.7-8)."
+    }
+  ]
+,
+
+  "conceptualThemes": [
+    {
+      "name": "Water Imagery",
+      "description": "Flood and torrent metaphors for overwhelming trials and divine protection",
+      "category": "opposition",
+      "lineRange": {
+        "start": 3,
+        "end": 4
       },
-      {
-        "name": "Devoured → Drowned",
-        "description": "The soul first faces human rage like a beast's mouth, then escalating into overwhelming flood",
-        "lemmas": [
-          "deglutio",
-          "vivus",
-          "homo",
-          "irascor",
-          "furor",
-          "aqua",
-          "absorbeo"
-        ],
-        "startLine": 3,
-        "endLine": 4,
-        "comment": "Augustine reads this as a two-stage escalation: first, the soul is in danger of being devoured — as if by men who rise up like beasts. Then wrath turns into a flood: fury becomes elemental, overwhelming, spiritual. The soul would have been utterly drowned if not for the Lord’s mercy (Enarr. Ps. 123.3–4)."
+      "lemmas": [
+        "aqua",
+        "torrens",
+        "absorbeo",
+        "pertransio",
+        "intolerabilis"
+      ]
+    },
+    {
+      "name": "Hunting Imagery",
+      "description": "Snare and fowler metaphors for temptation and deliverance",
+      "category": "sin",
+      "lineRange": {
+        "start": 6,
+        "end": 7
       },
-      {
-        "name": "Torrent → Survived",
-        "description": "The soul endured unbearable waters and escaped predation only by divine withholding",
-        "lemmas": [
-          "pertransit",
-          "anima",
-          "aqua",
-          "intolerabilis",
-          "dedit",
-          "captio",
-          "dens"
-        ],
-        "startLine": 5,
-        "endLine": 6,
-        "comment": "Augustine reads this as fragile grace. The soul crossed the intolerable waters not by power, but preservation. We were not given over to the enemy’s teeth — not because we fled, but because the Lord withheld us. Survival is mercy (Enarr. Ps. 123.5–6).  Augustine compares this to baptismal deliverance and Noah’s flood. The soul passed through what should have drowned it. 'Anima nostra pertransivit' marks spiritual preservation under divine mercy (Enarr. Ps. 123.5)."
+      "lemmas": [
+        "laqueus",
+        "venator",
+        "passer",
+        "ereptus",
+        "contritus"
+      ]
+    },
+    {
+      "name": "Divine Protection",
+      "description": "God's shielding presence and deliverance from enemies",
+      "category": "divine",
+      "lineRange": {
+        "start": 1,
+        "end": 8
       },
-      {
-        "name": "Trap → Deliverance",
-        "description": "The soul was caught like a bird in a trap, but the Lord shattered the snare and delivered it through His name",
-        "lemmas": [
-          "passer",
-          "laqueus",
-          "contritus",
-          "libero",
-          "adjutorium",
-          "nomen",
-          "dominus",
-          "caelum",
-          "terra"
-        ],
-        "startLine": 7,
-        "endLine": 9,
-        "comment": "Augustine interprets the sparrow as the humble believer nearly taken by the hunter’s deceit. Psalm 123 resolves the fear of Psalm 90: the laqueus is not only real — it is broken. Deliverance does not come by escape but by the name of the Lord, Creator of heaven and earth (Enarr. Ps. 123.7–9; cf. Ps. 90.3)."
-      }
-    ]
-  },
+      "lemmas": [
+        "nisi",
+        "benedictus",
+        "adiutorium",
+        "nomen"
+      ]
+    },
+    {
+      "name": "Human Vulnerability",
+      "description": "Human weakness and dependence on divine intervention",
+      "category": "virtue",
+      "lineRange": {
+        "start": 1,
+        "end": 8
+      },
+      "lemmas": [
+        "homo",
+        "noster",
+        "nos",
+        "vivus"
+      ]
+    },
+    {
+      "name": "Threat and Violence",
+      "description": "Enemy aggression and destructive forces",
+      "category": "conflict",
+      "lineRange": {
+        "start": 2,
+        "end": 5
+      },
+      "lemmas": [
+        "exsurgo",
+        "deglutio",
+        "irascor",
+        "furor",
+        "captio",
+        "dens"
+      ]
+    },
+    {
+      "name": "Liberation and Freedom",
+      "description": "Deliverance from bondage and restoration of liberty",
+      "category": "virtue",
+      "lineRange": {
+        "start": 6,
+        "end": 8
+      },
+      "lemmas": [
+        "libero",
+        "ereptus",
+        "contritus",
+        "adiutorium"
+      ]
+    },
+    {
+      "name": "Cosmic Scope",
+      "description": "Universal and eternal dimensions of divine power",
+      "category": "divine",
+      "lineRange": {
+        "start": 8,
+        "end": 8
+      },
+      "lemmas": [
+        "caelum",
+        "terra",
+        "facio"
+      ]
+    }
+  ]
+
+},
+
   {
     "psalmNumber": 124,
     "category": "",

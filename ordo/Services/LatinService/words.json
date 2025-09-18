@@ -1,5 +1,48 @@
 [
   {
+  "lemma": "intolerabilis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "intolerabilis",
+  "genitive": "intolerabilis",
+  "translations": {
+    "en": "unbearable, intolerable, unendurable",
+    "la": "intolerabilis, intolerabile"
+  },
+  "forms": {
+    "accusative_m": ["intolerabilem"],
+    "accusative_f": ["intolerabilem"]
+  }
+},
+  {
+  "lemma": "pertransio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "pertransire",
+  "present": "pertransio",
+  "future": "pertranseo", 
+  "perfect": "pertransii",
+  "supine": "pertransitum",
+  "translations": {
+    "en": "to go through, pass through, cross over, traverse",
+    "la": "pertransio, pertransire, pertransii, pertransitum"
+  },
+  "forms": {
+    "perfect_3s": ["pertransivit"],
+    "pluperfect_subjunctive_3s": ["pertransisset"]
+  }
+},
+  {
+  "lemma": "forsitan",
+  "part_of_speech": "adverb",
+  "declension": 0,
+  "translations": {
+    "en": "perhaps, maybe, perchance, by chance",
+    "la": "forsitan"
+  }
+},
+  {
     "lemma": "illuc",
     "part_of_speech": "adverb",
     "declension": 0,
