@@ -6225,20 +6225,21 @@
   {
     "psalmNumber": 122,
     "category": "",
+
     "structuralThemes": [
       {
         "name": "Gaze → Servitude",
         "description": "The lifting of eyes toward heaven is compared to the attentive gaze of a servant looking to their master's hand.",
-        "lemmas": ["levo", "oculus", "habito", "caelum", "servus", "dominus"],
+        "lemmas": ["levo", "oculus", "habito", "caelum", "servus"],
         "startLine": 1,
         "endLine": 2,
         "comment": "The psalmist directs his gaze upward to God who resides in the heavens. This posture is immediately compared to that of a servant (servus) looking to the hand of their master (dominus) for direction and provision.",
-        "comment2": "Augustine sees this as the soul’s deepening posture after worship: first lifting its eyes to the God who dwells in heaven, then fixing them like a servant on the master's hand. This movement sets the tone for the Christian's humble vigilance after leaving the liturgy (Enarr. Ps. 122.1–2)."
+        "comment2": "Augustine sees this as the soul's deepening posture after worship: first lifting its eyes to the God who dwells in heaven, then fixing them like a servant on the master's hand. This movement sets the tone for the Christian's humble vigilance after leaving the liturgy (Enarr. Ps. 122.1–2)."
       },
       {
         "name": "Attention → Plea",
         "description": "The attentive gaze of a maid to her mistress leads to a persistent plea for mercy.",
-        "lemmas": ["ancilla", "domina", "misereor"],
+        "lemmas": ["ancilla", "misereor"],
         "startLine": 3,
         "endLine": 4,
         "comment": "The metaphor deepens with the image of a female servant (ancilla) looking to the hand of her mistress (domina). This sustained attention fuels the repeated cry for mercy ('Miserere nostri, Domine, miserere nostri').",
@@ -6253,8 +6254,51 @@
         "comment": "The psalmist explains the reason for the desperate plea: the soul is overwhelmed, filled to the full with the contempt and reproach from those who are arrogant and abundant in pride.",
         "comment2": "Augustine reads this as the soul's confession: after the heights of worship, it re-enters a world where the proud abound. The soul is repleta — filled not with grace but with contempt. The psalm ends not with resolution, but with honesty about the weight believers carry in the flesh (Enarr. Ps. 122.5)."
       }
+    ],
+    "conceptualThemes": [
+      {
+        "name": "Servant Imagery",
+        "description": "Metaphors of servitude, gaze, and dependence on divine authority",
+        "category": "virtue",
+        "lineRange": {
+          "start": 1,
+          "end": 3
+        },
+        "lemmas": ["servus", "ancilla", "manus", "levo", "oculus"]
+      },
+      {
+        "name": "Divine Presence",
+        "description": "Terms describing God's heavenly habitation and divine attributes",
+        "category": "divine",
+        "lineRange": {
+          "start": 1,
+          "end": 3
+        },
+        "lemmas": ["habito", "caelum", "deus"]
+      },
+      {
+        "name": "Mercy and Supplication",
+        "description": "Vocabulary of supplication, divine compassion, and soul's condition",
+        "category": "virtue",
+        "lineRange": {
+          "start": 3,
+          "end": 5
+        },
+        "lemmas": ["misereor"]
+      },
+      {
+        "name": "Contempt and Pride",
+        "description": "Terms describing scorn, reproach, and the arrogance of the proud",
+        "category": "sin",
+        "lineRange": {
+          "start": 4,
+          "end": 5
+        },
+        "lemmas": ["despectio", "opprobrium", "repleo", "superbus", "abundo"]
+      }
     ]
   },
+
   {
     "psalmNumber": 123,
     "category": "",
