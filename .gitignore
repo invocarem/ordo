@@ -21,5 +21,6 @@ build/
 
 # generated output file
 output_*
-psalms.json
-themes.json
+**/psalms.json
+**/themes.json
+
