@@ -1,72 +1,128 @@
 [
   {
-  "lemma": "adversor",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "adversari",
-  "present": "adversor",
-  "future": "adversabor",
-  "perfect": "adversatus",
-  "translations": {
-    "en": "to oppose, resist, withstand, be adverse to, struggle against",
-    "la": "adversor, adversari, adversatus sum"
+    "lemma": "extremus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "extremus",
+    "genitive": "extremi",
+    "translations": {
+      "en": "outermost, extreme, final",
+      "la": "extremus, extrema, extremum"
+    }
   },
-  "forms": {
-    "present_participle": ["adversans", "adversantis", "adversantes"]
-  }
-},
   {
-  "lemma": "ultra",
-  "part_of_speech": "adverb",
-  "declension": 0,
-  "translations": {
-    "en": "beyond, further, more, longer, anymore, on the other side",
-    "la": "ultra"
-  }
-},
-  {
-  "lemma": "intolerabilis",
-  "part_of_speech": "adjective",
-  "declension": 3,
-  "gender": "masculine",
-  "nominative": "intolerabilis",
-  "genitive": "intolerabilis",
-  "translations": {
-    "en": "unbearable, intolerable, unendurable",
-    "la": "intolerabilis, intolerabile"
+    "lemma": "adsum",
+    "part_of_speech": "verb",
+    "conjugation": 0,
+    "infinitive": "adesse",
+    "present": "adsum",
+    "future": "adero",
+    "perfect": "adfui",
+    "translations": {
+      "en": "to be present, be here, be near",
+      "la": "adsum, adesse, adfui"
+    },
+    "forms": {
+      "present_2s": ["ades"]
+    }
   },
-  "forms": {
-    "accusative_m": ["intolerabilem"],
-    "accusative_f": ["intolerabilem"]
-  }
-},
   {
-  "lemma": "pertransio",
-  "part_of_speech": "verb",
-  "conjugation": 4,
-  "infinitive": "pertransire",
-  "present": "pertransio",
-  "future": "pertranseo", 
-  "perfect": "pertransii",
-  "supine": "pertransitum",
-  "translations": {
-    "en": "to go through, pass through, cross over, traverse",
-    "la": "pertransio, pertransire, pertransii, pertransitum"
+    "lemma": "descendo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "descendere",
+    "present": "descendo",
+    "future": "descendam",
+    "perfect": "descendi",
+    "supine": "descensum",
+    "translations": {
+      "en": "to descend, go down, climb down",
+      "la": "descendo, descendere, descendi, descensum"
+    }
   },
-  "forms": {
-    "perfect_3s": ["pertransivit"],
-    "pluperfect_subjunctive_3s": ["pertransisset"]
-  }
-},
   {
-  "lemma": "forsitan",
-  "part_of_speech": "adverb",
-  "declension": 0,
-  "translations": {
-    "en": "perhaps, maybe, perchance, by chance",
-    "la": "forsitan"
-  }
-},
+    "lemma": "sumo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "sumere",
+    "present": "sumo",
+    "future": "sumam",
+    "perfect": "sumpsi",
+    "supine": "sumptum",
+    "translations": {
+      "en": "to take, seize, assume, undertake, consume",
+      "la": "sumo, sumere, sumpsi, sumptum"
+    }
+  },
+  {
+    "lemma": "adversor",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "adversari",
+    "present": "adversor",
+    "future": "adversabor",
+    "perfect": "adversatus",
+    "translations": {
+      "en": "to oppose, resist, withstand, be adverse to, struggle against",
+      "la": "adversor, adversari, adversatus sum"
+    },
+    "forms": {
+      "present_participle": ["adversans", "adversantis", "adversantes"]
+    }
+  },
+  {
+    "lemma": "ultra",
+    "part_of_speech": "adverb",
+    "declension": 0,
+    "translations": {
+      "en": "beyond, further, more, longer, anymore, on the other side",
+      "la": "ultra"
+    }
+  },
+  {
+    "lemma": "intolerabilis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "intolerabilis",
+    "genitive": "intolerabilis",
+    "translations": {
+      "en": "unbearable, intolerable, unendurable",
+      "la": "intolerabilis, intolerabile"
+    },
+    "forms": {
+      "accusative_m": ["intolerabilem"],
+      "accusative_f": ["intolerabilem"]
+    }
+  },
+  {
+    "lemma": "pertransio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "pertransire",
+    "present": "pertransio",
+    "future": "pertranseo",
+    "perfect": "pertransii",
+    "supine": "pertransitum",
+    "translations": {
+      "en": "to go through, pass through, cross over, traverse",
+      "la": "pertransio, pertransire, pertransii, pertransitum"
+    },
+    "forms": {
+      "perfect_3s": ["pertransivit"],
+      "pluperfect_subjunctive_3s": ["pertransisset"]
+    }
+  },
+  {
+    "lemma": "forsitan",
+    "part_of_speech": "adverb",
+    "declension": 0,
+    "translations": {
+      "en": "perhaps, maybe, perchance, by chance",
+      "la": "forsitan"
+    }
+  },
   {
     "lemma": "illuc",
     "part_of_speech": "adverb",

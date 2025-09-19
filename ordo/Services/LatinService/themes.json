@@ -7310,113 +7310,166 @@
       }
     ]
   },
+
   {
     "psalmNumber": 138,
-    "category": "a",
+    "category": "A",
+
     "structuralThemes": [
       {
-        "name": "Personal Praise",
-        "description": "Individual confession and personal testimony",
-        "lemmas": ["cognosco", "intellego"],
-        "startLine": 1,
-        "endLine": 1,
-        "comment": "Complete knowledge, Deep understanding"
-      },
-      {
-        "name": "Human Experience",
-        "description": "Daily activities and life transitions",
-        "lemmas": ["sessio", "resurrectio"],
+        "name": "Testing → Understanding",
+        "description": "God's complete knowledge of the soul through testing and intimate understanding",
+        "lemmas": ["probo", "cognosco", "intellego", "cogitatio", "investigo"],
         "startLine": 1,
         "endLine": 2,
-        "comment": "From sitting to rising - encompassing all of life"
+        "comment": "The Lord has tested and known the psalmist completely, understanding his thoughts from afar and searching out his path and line with thorough investigation.",
+        "comment2": "Augustine sees this as God's omniscient knowledge of the soul's every movement. The 'probasti me' represents God's testing that reveals the heart's true state, while 'cognovisti' shows His intimate knowledge of our sitting and rising, our daily life and resurrection."
       },
       {
-        "name": "Divine Scrutiny",
-        "description": "God's thorough examination of the individual",
-        "lemmas": ["probo", "investigo"],
-        "startLine": 1,
-        "endLine": 2,
-        "comment": "Testing and searching of the heart"
-      },
-      {
-        "name": "Divine Foreknowledge",
-        "description": "God's complete foresight of human paths",
-        "lemmas": ["praevideo", "via"],
+        "name": "Foresight → Formation",
+        "description": "Divine foreknowledge leading to purposeful creation and divine touch",
+        "lemmas": [
+          "praevideo",
+          "via",
+          "sermo",
+          "lingua",
+          "formo",
+          "pono",
+          "manus"
+        ],
         "startLine": 3,
         "endLine": 4,
-        "comment": "All ways and paths are known beforehand"
+        "comment": "God has foreseen all ways before there is speech on the tongue, knowing all things from the beginning to the end, and has formed the psalmist with His own hand placed upon him.",
+        "comment2": "For Augustine, this reveals God's eternal knowledge that precedes all human thought and speech. The 'formasti me' points to God as the divine potter who shapes the soul, while 'posuisti super me manum tuam' signifies both creation and blessing, the divine touch that consecrates."
       },
       {
-        "name": "Creative Power",
-        "description": "God's formative action in human life",
-        "lemmas": ["formo", "pono"],
-        "startLine": 4,
-        "endLine": 4,
-        "comment": "Formation and purposeful placement"
-      },
-      {
-        "name": "Temporal Knowledge",
-        "description": "God's knowledge across all time",
-        "lemmas": ["novissimus", "antiquus"],
-        "startLine": 4,
-        "endLine": 4,
-        "comment": "From ancient times to the future"
-      },
-      {
-        "name": "Divine Knowledge",
-        "description": "The wonderful nature of God's understanding",
-        "lemmas": ["scientia", "mirabilis"],
+        "name": "Wonder → Inescapability",
+        "description": "The overwhelming nature of divine knowledge making escape impossible",
+        "lemmas": [
+          "mirabilis",
+          "scientia",
+          "conforto",
+          "possum",
+          "spiritus",
+          "facies",
+          "fugio"
+        ],
         "startLine": 5,
         "endLine": 6,
-        "comment": "Beyond human comprehension"
+        "comment": "God's knowledge has become wonderful and strengthened beyond the psalmist's ability to comprehend, raising the question of where one might flee from His Spirit or face.",
+        "comment2": "Augustine interprets this as the soul's recognition of God's inescapable presence. The 'mirabilis scientia' represents the overwhelming nature of divine wisdom, while the rhetorical questions about fleeing acknowledge that God's Spirit and countenance are everywhere present."
       },
       {
-        "name": "Divine Presence",
-        "description": "God's omnipresence in all places",
-        "lemmas": ["spiritus", "facies"],
-        "startLine": 6,
-        "endLine": 7,
-        "comment": "From heaven to hell, God is present"
+        "name": "Omnipresence → Guidance",
+        "description": "God's presence in all places leading to divine guidance and protection",
+        "lemmas": [
+          "ascendo",
+          "caelum",
+          "descendo",
+          "infernus",
+          "adsum",
+          "penna",
+          "diluculum",
+          "mare",
+          "manus",
+          "deduco",
+          "teneo",
+          "dexter"
+        ],
+        "startLine": 7,
+        "endLine": 9,
+        "comment": "Whether ascending to heaven or descending to hell, God is present; even with wings of dawn to the uttermost parts of the sea, His hand will lead and His right hand will hold.",
+        "comment2": "Augustine sees this as the ultimate expression of divine omnipresence and providence. The 'ascendero in caelum' and 'descendero in infernum' encompass all possible locations, while the 'pennae diluculo' suggests the swiftest possible movement. Yet even there, God's guiding hand and protective right hand are present, showing that no place or circumstance is beyond His care."
+      }
+    ],
+    "conceptualThemes": [
+      {
+        "name": "Perfect Knowledge",
+        "description": "God's complete and perfect knowledge of all things",
+        "category": "divine",
+        "lineRange": {
+          "start": 1,
+          "end": 6
+        },
+        "lemmas": ["cognosco", "intellego", "praevideo", "scientia"]
       },
       {
-        "name": "Human Limitation",
-        "description": "The boundaries of human ability",
-        "lemmas": ["possum", "fugio"],
-        "startLine": 5,
-        "endLine": 6,
-        "comment": "Inability to escape or fully comprehend"
+        "name": "Life Molding",
+        "description": "God as creator and shaper of human life",
+        "category": "divine",
+        "lineRange": {
+          "start": 1,
+          "end": 4
+        },
+        "lemmas": ["formo", "pono"]
       },
       {
         "name": "Omnipresence",
-        "description": "God's constant presence everywhere",
-        "lemmas": ["adsum", "caelum", "infernus"],
-        "startLine": 7,
-        "endLine": 8,
-        "comment": "From highest heaven to deepest hell"
-      },
-      {
-        "name": "Extreme Locations",
-        "description": "God's presence in the farthest places",
-        "lemmas": ["extremus", "mare"],
-        "startLine": 8,
-        "endLine": 8,
-        "comment": "Uttermost parts of the sea"
+        "description": "God's presence in all places and circumstances",
+        "category": "divine",
+        "lineRange": {
+          "start": 7,
+          "end": 9
+        },
+        "lemmas": [
+          "ascendo",
+          "caelum",
+          "descendo",
+          "infernus",
+          "adsum",
+          "mare",
+          "extremus"
+        ]
       },
       {
         "name": "Divine Guidance",
-        "description": "God's active leading in life",
-        "lemmas": ["deduco", "manus"],
-        "startLine": 9,
-        "endLine": 9,
-        "comment": "God's hand guides and directs"
+        "description": "God's active leading and protection of the soul",
+        "category": "divine",
+        "lineRange": {
+          "start": 1,
+          "end": 9
+        },
+        "lemmas": ["deduco", "teneo", "dexter", "investigo"]
       },
       {
-        "name": "Divine Protection",
-        "description": "God's secure holding of the believer",
-        "lemmas": ["teneo", "dexter"],
-        "startLine": 9,
-        "endLine": 9,
-        "comment": "Right hand as symbol of strength and protection"
+        "name": "Human Limitation",
+        "description": "Recognition of human inability to comprehend or escape God",
+        "category": "virtue",
+        "lineRange": {
+          "start": 5,
+          "end": 6
+        },
+        "lemmas": ["possum", "fugio", "mirabilis", "conforto"]
+      },
+      {
+        "name": "Divine Testing",
+        "description": "God's examination and proving of the human heart",
+        "category": "divine",
+        "lineRange": {
+          "start": 1,
+          "end": 2
+        },
+        "lemmas": ["probo", "cognosco", "intellego", "investigo"]
+      },
+      {
+        "name": "Eternal Knowledge",
+        "description": "God's knowledge that transcends time and space",
+        "category": "divine",
+        "lineRange": {
+          "start": 3,
+          "end": 4
+        },
+        "lemmas": ["novissimus", "antiquus", "omnis", "praevideo"]
+      },
+      {
+        "name": "Spiritual Journey",
+        "description": "The soul's movement through different states and locations",
+        "category": "virtue",
+        "lineRange": {
+          "start": 6,
+          "end": 8
+        },
+        "lemmas": ["ascendo", "descendo", "eo", "habito", "diluculum"]
       }
     ]
   },
