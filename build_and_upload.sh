@@ -16,6 +16,45 @@ SCHEME="ordo"
 ARCHIVE_PATH="./build/ordo.xcarchive"
 EXPORT_PATH="./build/ordo"
 
+# Check for newer files in Downloads folder
+echo "🔍 Checking for newer files in Downloads folder..."
+
+DOWNLOADS_DIR="$HOME/Downloads"
+REQUIRED_FILES=("psalms.json" "themes.json")
+FILES_UPDATED=false
+
+for file in "${REQUIRED_FILES[@]}"; do
+    if [ -f "$DOWNLOADS_DIR/$file" ]; then
+        # Determine target directory based on file type
+        if [ "$file" = "psalms.json" ]; then
+            TARGET_DIR="ordo/Services/PsalmService"
+        elif [ "$file" = "themes.json" ]; then
+            TARGET_DIR="ordo/Services/LatinService"
+        else
+            TARGET_DIR="."
+        fi
+        
+        TARGET_FILE="$TARGET_DIR/$file"
+        
+        # Check if Downloads file is newer than target file
+        if [ ! -f "$TARGET_FILE" ] || [ "$DOWNLOADS_DIR/$file" -nt "$TARGET_FILE" ]; then
+            echo "📁 Found newer $file in Downloads, copying to $TARGET_DIR..."
+            cp "$DOWNLOADS_DIR/$file" "$TARGET_FILE"
+            FILES_UPDATED=true
+        else
+            echo "ℹ️  Current $file in $TARGET_DIR is up to date"
+        fi
+    else
+        echo "ℹ️  No $file found in Downloads folder"
+    fi
+done
+
+if [ "$FILES_UPDATED" = true ]; then
+    echo "✅ Files updated from Downloads folder"
+else
+    echo "ℹ️  No newer files found in Downloads folder"
+fi
+
 echo "🚀 Cleaning old build..."
 rm -rf build
 

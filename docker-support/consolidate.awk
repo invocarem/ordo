@@ -84,15 +84,7 @@ function process_files(pattern, output_file, type) {
             print content >> output_file
             processed_count++
             
-            if (type == "themes") {
-                structural = count_objects(content, "structuralThemes")
-                conceptual = count_objects(content, "conceptualThemes")
-                print "     ✅ Loaded: " file " (Structural: " structural ", Conceptual: " conceptual ")"
-            } else {
-                text_verses = count_strings(content, "text")
-                english_verses = count_strings(content, "englishText")
-                print "     ✅ Loaded: " file " (Latin: " text_verses " verses, English: " english_verses " verses)"
-            }
+            print "     ✅ Loaded: " file
         } else {
             print "     ❌ Failed to load: " file " (empty file)"
         }
