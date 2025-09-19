@@ -95,16 +95,16 @@ class Psalm138ATests: XCTestCase {
 
     private let conceptualThemes = [
         (
-            "Perfect Knowledge",
+            "Divine Knowledge",
             "God's complete and perfect knowledge of all things",
-            ["cognosco", "intellego", "praevideo", "scientia"],
+            ["cognosco", "intellego", "praevideo", "scientia", "novissimus", "antiquus", "omnis"],
             ThemeCategory.divine,
             1...6
         ),
         (
             "Life Molding",
             "God as creator and shaper of human life",
-            ["formo", "pono"],  //"possideo", "suscipio"], psalm138b verse 3
+            ["formo", "pono", "manus"],
             ThemeCategory.divine,
             1...4
         ),
@@ -113,7 +113,7 @@ class Psalm138ATests: XCTestCase {
             "God's presence in all places and circumstances",
             ["ascendo", "caelum", "descendo", "infernus", "adsum", "mare", "extremus"],
             ThemeCategory.divine,
-            7...9
+            6...9
         ),
         (
             "Divine Guidance",
@@ -132,23 +132,9 @@ class Psalm138ATests: XCTestCase {
         (
             "Divine Testing",
             "God's examination and proving of the human heart",
-            ["probo", "cognosco", "intellego", "investigo"],
+            ["probo", "cogitatio", "semita", "funiculus"],
             ThemeCategory.divine,
             1...2
-        ),
-        (
-            "Eternal Knowledge",
-            "God's knowledge that transcends time and space",
-            ["novissimus", "antiquus", "omnis", "praevideo"],
-            ThemeCategory.divine,
-            3...4
-        ),
-        (
-            "Spiritual Journey",
-            "The soul's movement through different states and locations",
-            ["ascendo", "descendo", "eo", "habito", "diluculum"],
-            ThemeCategory.virtue,
-            6...8
         ),
     ]
 
@@ -296,9 +282,11 @@ class Psalm138BTests: XCTestCase {
 
     // MARK: - Test Data (Psalm 138B)
     let id = PsalmIdentity(number: 138, category: "B")
-    let psalm138B = [
+    private let expectedVerseCount = 14
+
+    private let text = [
         "Et dixi: Forsitan tenebrae conculcabunt me: et nox illuminatio mea in deliciis meis.",
-        "Quia tenebrae non obscurabuntur a te, et nox sicut dies illuminabitur: sicut tenebrae ejus, ita et lumen ejus.",
+        "Quia tenebrae non obscurabuntur a te, et nox sicut dies illuminabitur: sicut tenebrae eius, ita et lumen eius.",
         "Quia tu possedisti renes meos: suscepisti me de utero matris meae.",
         "Confitebor tibi, quia terribiliter magnificatus es: mirabilia opera tua, et anima mea cognoscit nimis.",
         "Non est occultatum os meum a te, quod fecisti in occulto: et substantia mea in inferioribus terrae.",
@@ -313,11 +301,307 @@ class Psalm138BTests: XCTestCase {
         "Et vide si via iniquitatis in me est: et deduc me in via aeterna.",
     ]
 
+    private let englishText = [
+        "And I said: Perhaps darkness shall cover me: and night shall be my light in my pleasures.",
+        "But darkness shall not be dark to thee, and night shall be light as the day: the darkness thereof, and the light thereof are alike to thee.",
+        "For thou hast possessed my reins: thou hast protected me from my mother's womb.",
+        "I will praise thee, for thou art fearfully magnified: wonderful are thy works, and my soul knoweth right well.",
+        "My bone is not hidden from thee, which thou hast made in secret: and my substance in the lower parts of the earth.",
+        "Thy eyes did see my imperfect being, and in thy book all shall be written: days shall be formed, and no one in them.",
+        "But to me thy friends, O God, are made exceedingly honourable: their principality is exceedingly strengthened.",
+        "I will number them, and they shall be multiplied above the sand: I rose up and am still with thee.",
+        "If thou wilt kill the wicked, O God, ye men of blood, depart from me.",
+        "Because you say in thought: They shall receive thy cities in vain.",
+        "Have I not hated them, O Lord, that hated thee: and pined away because of thy enemies?",
+        "I have hated them with a perfect hatred: and they are become to me as enemies.",
+        "Prove me, O God, and know my heart: examine me, and know my paths.",
+        "And see if there be in me the way of iniquity: and lead me in the eternal way.",
+    ]
+
+    private let lineKeyLemmas = [
+        (1, ["dico", "forsitan", "tenebrae", "conculco", "nox", "illuminatio", "deliciae"]),
+        (2, ["tenebrae", "obscuro", "nox", "dies", "illumino", "lumen"]),
+        (3, ["possideo", "ren", "suscipio", "uterus", "mater"]),
+        (4, ["confiteor", "terribilis", "magnifico", "mirabilis", "opus", "anima", "cognosco"]),
+        (5, ["occulto", "os", "facio", "substantia", "inferior", "terra"]),
+        (6, ["imperfectus", "oculus", "video", "liber", "scribo", "dies", "formo"]),
+        (7, ["honoro", "amicus", "deus", "conforto", "principatus"]),
+        (8, ["dinumero", "arena", "multiplico", "exsurgo", "adhuc", "sum"]),
+        (9, ["occido", "deus", "peccator", "vir", "sanguis", "declino"]),
+        (10, ["dico", "cogitatio", "accipio", "vanitas", "civitas"]),
+        (11, ["odi", "dominus", "tabesco", "inimicus"]),
+        (12, ["perfectus", "odi", "inimicus", "facio"]),
+        (13, ["probo", "deus", "scio", "cor", "interrogo", "cognosco", "semita"]),
+        (14, ["video", "via", "iniquitas", "deduco", "aeternus"]),
+    ]
+
+    private let structuralThemes = [
+        (
+            "Darkness → Light",
+            "The transformation of darkness into divine illumination and protection",
+            [
+                "dico", "forsitan", "tenebrae", "conculco", "nox", "illuminatio", "deliciae",
+                "obscuro", "dies", "illumino", "lumen",
+            ],
+            1,
+            2,
+            "The psalmist's initial fear of darkness being overcome by God's light, where even night becomes as bright as day through divine presence.",
+            "Augustine sees this as the soul's journey from spiritual darkness to divine illumination. The 'forsitan' (perhaps) shows human uncertainty, while God's light transforms even the deepest darkness, symbolizing how divine grace penetrates the darkest corners of the human heart."
+        ),
+        (
+            "Formation → Praise",
+            "Divine creation and formation leading to heartfelt praise and recognition",
+            [
+                "possideo", "ren", "suscipio", "uterus", "mater", "confiteor", "terribilis",
+                "magnifico", "mirabilis", "opus", "anima", "cognosco",
+            ],
+            3,
+            4,
+            "God's intimate knowledge and formation of the psalmist from the womb, inspiring awe-filled praise for His wonderful works and fearful magnificence.",
+            "For Augustine, this represents God's providential care from conception. The 'renes' (kidneys) symbolize the innermost being, while 'terribiliter magnificatus' shows the soul's proper response to divine majesty - not fear but reverent awe that leads to praise."
+        ),
+        (
+            "Hidden → Revealed",
+            "Divine omniscience revealing what is hidden and recording all in the book of life",
+            [
+                "occulto", "os", "facio", "substantia", "inferior", "terra", "imperfectus",
+                "oculus", "video", "liber", "scribo", "dies", "formo",
+            ],
+            5,
+            6,
+            "Nothing is hidden from God's sight - not bones made in secret nor substance in the earth's depths, with all things recorded in His eternal book.",
+            "Augustine interprets this as God's complete knowledge of human nature, both physical and spiritual. The 'liber' represents the book of predestination, where God has written all the days of each person's life before they are formed, showing His eternal foreknowledge and providence."
+        ),
+        (
+            "Honor → Multiplication",
+            "Divine friendship and honor leading to abundant blessing and constant presence",
+            [
+                "honoro", "amicus", "deus", "conforto", "principatus", "dinumero", "arena",
+                "multiplico", "exsurgo", "adhuc", "sum",
+            ],
+            7,
+            8,
+            "God's friends are highly honored and strengthened, their number multiplied beyond counting like sand, with the psalmist rising to remain in God's presence.",
+            "Augustine sees this as the Church's blessed state - those who are God's friends through grace receive honor and strength. The multiplication 'super arenam' represents the Church's growth throughout history, while 'exsurrexi' points to resurrection and eternal life with God."
+        ),
+        (
+            "Judgment → Separation",
+            "Divine judgment against the wicked and separation from those who speak vainly",
+            [
+                "occido", "deus", "peccator", "vir", "sanguis", "declino", "dico", "cogitatio",
+                "accipio", "vanitas", "civitas",
+            ],
+            9,
+            10,
+            "A plea for God to destroy sinners and men of blood, with separation from those who speak vainly about receiving cities in vain.",
+            "Augustine interprets this as the psalmist's desire for divine justice and separation from the wicked. The 'viri sanguinum' represent those who shed innocent blood, while the vain thoughts about cities show the emptiness of worldly ambition contrasted with divine blessing."
+        ),
+        (
+            "Hatred → Enmity",
+            "Righteous hatred of God's enemies leading to perfect enmity and separation",
+            ["odi", "dominus", "tabesco", "inimicus", "perfectus", "facio"],
+            11,
+            12,
+            "The psalmist's perfect hatred for those who hate God, causing him to waste away with grief, making them his enemies.",
+            "For Augustine, this represents the soul's proper response to evil - not personal hatred but righteous rejection of what opposes God. The 'perfecto odio' is not sinful but a complete separation from evil, while 'tabesco' shows the soul's grief over sin and its effects."
+        ),
+        (
+            "Examination → Guidance",
+            "Divine testing and examination leading to eternal guidance and the way of life",
+            [
+                "probo", "deus", "scio", "cor", "interrogo", "cognosco", "semita", "video", "via",
+                "iniquitas", "deduco", "aeternus",
+            ],
+            13,
+            14,
+            "A request for God to test and know the heart, examine and know the paths, leading to eternal guidance away from iniquity.",
+            "Augustine sees this as the soul's final prayer for purification and guidance. The examination of heart and paths represents the process of sanctification, while the request for eternal guidance shows the soul's desire to walk in God's ways forever, away from the path of iniquity."
+        ),
+    ]
+
+    private let conceptualThemes = [
+        (
+            "Light and Darkness",
+            "The transformation of darkness into divine illumination",
+            ["illuminatio", "illumino", "lumen", "tenebrae", "nox", "obscuro"],
+            ThemeCategory.divine,
+            1...2
+        ),
+        (
+            "Life Formation",
+            "God's intimate creation and shaping of human life from conception",
+            ["possideo", "ren", "suscipio", "uterus", "mater", "formo"],
+            ThemeCategory.divine,
+            3...6
+        ),
+        (
+            "Divine Knowledge",
+            "God's complete omniscience and eternal record-keeping",
+            ["cognosco", "scio", "oculus", "liber", "scribo", "imperfectus"],
+            ThemeCategory.divine,
+            1...14
+        ),
+        (
+            "Divine Friendship",
+            "The blessed state of being God's friend with honor and multiplication",
+            ["honoro", "amicus", "conforto", "principatus", "dinumero", "arena", "multiplico"],
+            ThemeCategory.divine,
+            7...8
+        ),
+        (
+            "Righteous Separation",
+            "Divine judgment and separation from the wicked",
+            ["occido", "peccator", "vir", "sanguis", "declino", "odi", "inimicus", "perfectus"],
+            ThemeCategory.justice,
+            9...12
+        ),
+        (
+            "Heart Testing",
+            "Divine examination and guidance of the human heart",
+            ["probo", "cor", "interrogo", "semita", "via", "deduco", "aeternus"],
+            ThemeCategory.divine,
+            13...14
+        ),
+        (
+            "Praise and Worship",
+            "The soul's response of praise and recognition of God's works",
+            ["confiteor", "terribilis", "magnifico", "mirabilis", "opus", "anima"],
+            ThemeCategory.worship,
+            4...4
+        ),
+    ]
+
+    // MARK: - Test Methods
+
+    func testTotalVerses() {
+        XCTAssertEqual(
+            text.count, expectedVerseCount, "Psalm 138B should have \(expectedVerseCount) verses"
+        )
+        XCTAssertEqual(
+            englishText.count, expectedVerseCount,
+            "Psalm 138B English text should have \(expectedVerseCount) verses"
+        )
+        // Also validate the orthography of the text for analysis consistency
+        let normalized = text.map { PsalmTestUtilities.validateLatinText($0) }
+        XCTAssertEqual(
+            normalized,
+            text,
+            "Normalized Latin text should match expected classical forms"
+        )
+    }
+
+    func testLineByLineKeyLemmas() {
+        let utilities = PsalmTestUtilities.self
+        utilities.testLineByLineKeyLemmas(
+            psalmText: text,
+            lineKeyLemmas: lineKeyLemmas,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
+
+    func testSaveTexts() {
+        let utilities = PsalmTestUtilities.self
+        let jsonString = utilities.generatePsalmTextsJSONString(
+            psalmNumber: id.number,
+            category: id.category ?? "",
+            text: text,
+            englishText: englishText
+        )
+
+        let success = utilities.saveToFile(
+            content: jsonString,
+            filename: "output_psalm138B_texts.json"
+        )
+
+        if success {
+            print("✅ Complete texts JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete texts file:")
+            print(jsonString)
+        }
+    }
+
+    func testStructuralThemes() {
+        let utilities = PsalmTestUtilities.self
+
+        // First, verify that all structural theme lemmas are in lineKeyLemmas
+        let structuralLemmas = structuralThemes.flatMap { $0.2 }
+        let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+        utilities.testLemmasInSet(
+            sourceLemmas: structuralLemmas,
+            targetLemmas: lineKeyLemmasFlat,
+            sourceName: "structural themes",
+            targetName: "lineKeyLemmas",
+            verbose: verbose
+        )
+
+        // Then run the standard structural themes test
+        utilities.testStructuralThemes(
+            psalmText: text,
+            structuralThemes: structuralThemes,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
+
+    func testConceptualThemes() {
+        let utilities = PsalmTestUtilities.self
+
+        // First, verify that conceptual theme lemmas are in lineKeyLemmas
+        let conceptualLemmas = conceptualThemes.flatMap { $0.2 }
+        let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+        utilities.testLemmasInSet(
+            sourceLemmas: conceptualLemmas,
+            targetLemmas: lineKeyLemmasFlat,
+            sourceName: "conceptual themes",
+            targetName: "lineKeyLemmas",
+            verbose: verbose
+        )
+
+        // Then run the standard conceptual themes test
+        utilities.testConceptualThemes(
+            psalmText: text,
+            conceptualThemes: conceptualThemes,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
+
+    func testSavePsalm138BThemes() {
+        let utilities = PsalmTestUtilities.self
+        guard
+            let jsonString = utilities.generateCompleteThemesJSONString(
+                psalmNumber: id.number,
+                category: id.category ?? "",
+                conceptualThemes: conceptualThemes,
+                structuralThemes: structuralThemes
+            )
+        else {
+            XCTFail("Failed to generate complete themes JSON")
+            return
+        }
+
+        let success = utilities.saveToFile(
+            content: jsonString,
+            filename: "output_psalm138B_themes.json"
+        )
+
+        if success {
+            print("✅ Complete themes JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete themes file:")
+            print(jsonString)
+        }
+    }
+
     // MARK: - Grouped Line Tests
 
     func testPsalm138BLines1and2() {
-        let line1 = psalm138B[0]  // "Et dixi: Forsitan tenebrae conculcabunt me: et nox illuminatio mea in deliciis meis."
-        let line2 = psalm138B[1]  // "Quia tenebrae non obscurabuntur a te, et nox sicut dies illuminabitur: sicut tenebrae ejus, ita et lumen ejus."
+        let line1 = text[0]  // "Et dixi: Forsitan tenebrae conculcabunt me: et nox illuminatio mea in deliciis meis."
+        let line2 = text[1]  // "Quia tenebrae non obscurabuntur a te, et nox sicut dies illuminabitur: sicut tenebrae eius, ita et lumen eius."
         let combinedText = line1 + " " + line2
         latinService.configureDebugging(target: "illuminatio")
         let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 1)
@@ -375,8 +659,8 @@ class Psalm138BTests: XCTestCase {
     }
 
     func testPsalm138BLines3and4() {
-        let line3 = psalm138B[2]  // "Quia tu possedisti renes meos: suscepisti me de utero matris meae."
-        let line4 = psalm138B[3]  // "Confitebor tibi, quia terribiliter magnificatus es: mirabilia opera tua, et anima mea cognoscit nimis."
+        let line3 = text[2]  // "Quia tu possedisti renes meos: suscepisti me de utero matris meae."
+        let line4 = text[3]  // "Confitebor tibi, quia terribiliter magnificatus es: mirabilia opera tua, et anima mea cognoscit nimis."
         let combinedText = line3 + " " + line4
         let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 3)
 
@@ -433,8 +717,8 @@ class Psalm138BTests: XCTestCase {
     }
 
     func testPsalm138BLines5and6() {
-        let line5 = psalm138B[4]  // "Non est occultatum os meum a te, quod fecisti in occulto: et substantia mea in inferioribus terrae."
-        let line6 = psalm138B[5]  // "Imperfectum meum viderunt oculi tui, et in libro tuo omnia scribentur: dies formabuntur, et nemo in eis."
+        let line5 = text[4]  // "Non est occultatum os meum a te, quod fecisti in occulto: et substantia mea in inferioribus terrae."
+        let line6 = text[5]  // "Imperfectum meum viderunt oculi tui, et in libro tuo omnia scribentur: dies formabuntur, et nemo in eis."
         let combinedText = line5 + " " + line6
         latinService.configureDebugging(target: "liber")
         let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 5)
@@ -493,8 +777,8 @@ class Psalm138BTests: XCTestCase {
     }
 
     func testPsalm138BLines7and8() {
-        let line7 = psalm138B[6]  // "Mihi autem nimis honorati sunt amici tui, Deus: nimis confortatus est principatus eorum."
-        let line8 = psalm138B[7]  // "Dinumerabo eos, et super arenam multiplicabuntur: exsurrexi, et adhuc sum tecum."
+        let line7 = text[6]  // "Mihi autem nimis honorati sunt amici tui, Deus: nimis confortatus est principatus eorum."
+        let line8 = text[7]  // "Dinumerabo eos, et super arenam multiplicabuntur: exsurrexi, et adhuc sum tecum."
         let combinedText = line7 + " " + line8
         let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 7)
 
@@ -550,8 +834,8 @@ class Psalm138BTests: XCTestCase {
     }
 
     func testPsalm138BLines9and10() {
-        let line9 = psalm138B[8]  // "Si occideris, Deus, peccatores: viri sanguinum, declinate a me."
-        let line10 = psalm138B[9]  // "Quia dicitis in cogitatione: Accipient in vanitate civitates tuas."
+        let line9 = text[8]  // "Si occideris, Deus, peccatores: viri sanguinum, declinate a me."
+        let line10 = text[9]  // "Quia dicitis in cogitatione: Accipient in vanitate civitates tuas."
         let combinedText = line9 + " " + line10
         latinService.configureDebugging(target: "accipio")
         let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 9)
@@ -608,8 +892,8 @@ class Psalm138BTests: XCTestCase {
     }
 
     func testPsalm138BLines11and12() {
-        let line11 = psalm138B[10]  // "Nonne qui oderunt te, Domine, oderam? et super inimicos tuos tabescebam?"
-        let line12 = psalm138B[11]  // "Perfecto odio oderam illos: inimici facti sunt mihi."
+        let line11 = text[10]  // "Nonne qui oderunt te, Domine, oderam? et super inimicos tuos tabescebam?"
+        let line12 = text[11]  // "Perfecto odio oderam illos: inimici facti sunt mihi."
         let combinedText = line11 + " " + line12
 
         latinService.configureDebugging(target: "facio")
@@ -659,8 +943,8 @@ class Psalm138BTests: XCTestCase {
     }
 
     func testPsalm138BLines13and14() {
-        let line13 = psalm138B[12]  // "Proba me, Deus, et scito cor meum: interroga me, et cognosce semitas meas."
-        let line14 = psalm138B[13]  // "Et vide si via iniquitatis in me est: et deduc me in via aeterna."
+        let line13 = text[12]  // "Proba me, Deus, et scito cor meum: interroga me, et cognosce semitas meas."
+        let line14 = text[13]  // "Et vide si via iniquitatis in me est: et deduc me in via aeterna."
         let combinedText = line13 + " " + line14
         let analysis = latinService.analyzePsalm(id, text: combinedText, startingLineNumber: 13)
 

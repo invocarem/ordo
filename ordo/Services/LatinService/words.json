@@ -1,5 +1,22 @@
 [
   {
+    "lemma": "deliciae",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "deliciae",
+    "genitive": "deliciarum",
+    "translations": {
+      "en": "delight, pleasure, luxury; (pl.) charms, delights, pleasures, luxuries",
+      "la": "deliciae, deliciarum"
+    },
+    "forms_plural": {
+      "dative_f": ["deliciis"],
+      "ablative_f": ["deliciis"]
+    },
+    "notes": "only plural forms"
+  },
+  {
     "lemma": "extremus",
     "part_of_speech": "adjective",
     "declension": 1,
