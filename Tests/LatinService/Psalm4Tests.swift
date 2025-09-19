@@ -15,7 +15,7 @@ class Psalm4Tests: XCTestCase {
 
   // MARK: - Test Data Properties
 
-  private let psalm4 = [
+  private let text = [
     "Cum invocarem exaudivit me Deus iustitiae meae; in tribulatione dilatasti mihi.",
     "Miserere mei, et exaudi orationem meam.",
     "Filii hominum, usquequo gravi corde? ut quid diligitis vanitatem, et quaeritis mendacium?",
@@ -125,7 +125,7 @@ class Psalm4Tests: XCTestCase {
     (
       "Trust and Hope",
       "Trusting in God and finding hope",
-      ["spero", "spes", "constituo", "requiesco"],
+      ["spero", "spes", "constituo", "requiesco", "pax", "dormio"],
       .virtue,
       6 ... 10
     ),
@@ -170,17 +170,17 @@ class Psalm4Tests: XCTestCase {
 
   func testTotalVerses() {
     XCTAssertEqual(
-      psalm4.count, expectedVerseCount, "Psalm 4 should have \(expectedVerseCount) verses"
+      text.count, expectedVerseCount, "Psalm 4 should have \(expectedVerseCount) verses"
     )
     XCTAssertEqual(
       englishText.count, expectedVerseCount,
       "Psalm 4 English text should have \(expectedVerseCount) verses"
     )
     // Also validate the orthography of the text for analysis consistency
-    let normalized = psalm4.map { PsalmTestUtilities.validateLatinText($0) }
+    let normalized = text.map { PsalmTestUtilities.validateLatinText($0) }
     XCTAssertEqual(
       normalized,
-      psalm4,
+      text,
       "Normalized Latin text should match expected classical forms"
     )
   }
@@ -189,7 +189,7 @@ class Psalm4Tests: XCTestCase {
 
   func testPsalm4LineByLineKeyLemmas() {
     utilities.testLineByLineKeyLemmas(
-      psalmText: psalm4,
+      psalmText: text,
       lineKeyLemmas: lineKeyLemmas,
       psalmId: id,
       verbose: verbose
@@ -211,7 +211,7 @@ class Psalm4Tests: XCTestCase {
 
     // Then run the standard structural themes test
     utilities.testStructuralThemes(
-      psalmText: psalm4,
+      psalmText: text,
       structuralThemes: structuralThemes,
       psalmId: id,
       verbose: verbose
@@ -234,7 +234,7 @@ class Psalm4Tests: XCTestCase {
 
     // Then run the standard conceptual themes test
     utilities.testConceptualThemes(
-      psalmText: psalm4,
+      psalmText: text,
       conceptualThemes: conceptualThemes,
       psalmId: id,
       verbose: verbose
@@ -245,7 +245,7 @@ class Psalm4Tests: XCTestCase {
     let jsonString = utilities.generatePsalmTextsJSONString(
       psalmNumber: id.number,
       category: id.category ?? "",
-      text: psalm4,
+      text: text,
       englishText: englishText
     )
 

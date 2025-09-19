@@ -1,5 +1,21 @@
 [
   {
+  "lemma": "adversor",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "adversari",
+  "present": "adversor",
+  "future": "adversabor",
+  "perfect": "adversatus",
+  "translations": {
+    "en": "to oppose, resist, withstand, be adverse to, struggle against",
+    "la": "adversor, adversari, adversatus sum"
+  },
+  "forms": {
+    "present_participle": ["adversans", "adversantis", "adversantes"]
+  }
+},
+  {
   "lemma": "ultra",
   "part_of_speech": "adverb",
   "declension": 0,
@@ -950,19 +966,7 @@
       "la": "soporor, soporari, soporatus sum"
     }
   },
-  {
-    "lemma": "adversor",
-    "part_of_speech": "verb",
-    "conjugation": 1,
-    "infinitive": "adversari",
-    "present": "adversor",
-    "future": "adversabor",
-    "perfect": "adversatus",
-    "translations": {
-      "en": "to oppose, resist, withstand",
-      "la": "adversor, adversari, adversatus sum"
-    }
-  },
+
   {
     "lemma": "venor",
     "part_of_speech": "verb",

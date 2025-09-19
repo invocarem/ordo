@@ -10,10 +10,11 @@ class Psalm3Tests: XCTestCase {
   }
 
   let id = PsalmIdentity(number: 3, category: nil)
+  private let expectedVerseCount = 8
 
   // MARK: - Test Data
 
-  private let psalm3 = [
+  private let text = [
     "Domine, quid multiplicati sunt qui tribulant me? multi insurgunt adversum me.",
     "Multi dicunt animae meae: Non est salus ipsi in Deo eius.",
     "Tu autem, Domine, susceptor meus es, gloria mea, et exaltans caput meum.",
@@ -22,6 +23,17 @@ class Psalm3Tests: XCTestCase {
     "Non timebo milia populi circumdantis me: exsurge, Domine; salvum me fac, Deus meus.",
     "Quoniam tu percussisti omnes adversantes mihi sine causa; dentes peccatorum contrivisti.",
     "Domini est salus; et super populum tuum benedictio tua.",
+  ]
+
+  private let englishText = [
+    "O Lord, how are they multiplied that trouble me? Many rise up against me.",
+    "Many say to my soul: There is no salvation for him in his God.",
+    "But thou, O Lord, art my protector, my glory, and the lifter up of my head.",
+    "I have cried to the Lord with my voice: and he hath heard me from his holy hill.",
+    "I have slept and have taken my rest: and I have risen up, because the Lord hath sustained me.",
+    "I will not fear thousands of the people surrounding me: arise, O Lord; save me, O my God.",
+    "For thou hast struck all them who are my adversaries without cause: thou hast broken the teeth of sinners.",
+    "Salvation is of the Lord: and thy blessing is upon thy people.",
   ]
 
   private let lineKeyLemmas = [
@@ -119,33 +131,100 @@ class Psalm3Tests: XCTestCase {
     ),
   ]
 
+  // MARK: - Test Methods
+
+  func testTotalVerses() {
+    XCTAssertEqual(
+      text.count, expectedVerseCount, "Psalm 3 should have \(expectedVerseCount) verses"
+    )
+    XCTAssertEqual(
+      englishText.count, expectedVerseCount,
+      "Psalm 3 English text should have \(expectedVerseCount) verses"
+    )
+    // Also validate the orthography of the text for analysis consistency
+    let normalized = text.map { PsalmTestUtilities.validateLatinText($0) }
+    XCTAssertEqual(
+      normalized,
+      text,
+      "Normalized Latin text should match expected classical forms"
+    )
+  }
+
   // MARK: - Line by Line Key Lemmas Test
 
   func testPsalm3LineByLineKeyLemmas() {
     utilities.testLineByLineKeyLemmas(
-      psalmText: psalm3,
+      psalmText: text,
       lineKeyLemmas: lineKeyLemmas,
       psalmId: id,
       verbose: verbose
     )
   }
 
-  func testPsalm3StructuralThemes() {
+  func testStructuralThemes() {
+    // First, verify that all structural theme lemmas are in lineKeyLemmas
+    let structuralLemmas = structuralThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: structuralLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "structural themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose
+    )
+
+    // Then run the standard structural themes test
     utilities.testStructuralThemes(
-      psalmText: psalm3,
+      psalmText: text,
       structuralThemes: structuralThemes,
       psalmId: id,
       verbose: verbose
     )
   }
 
-  func testPsalm3ConceptualThemes() {
+  func testConceptualThemes() {
+    // First, verify that conceptual theme lemmas are in lineKeyLemmas
+    let conceptualLemmas = conceptualThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: conceptualLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "conceptual themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose,
+      failOnMissing: false // Conceptual themes may have additional imagery lemmas
+    )
+
+    // Then run the standard conceptual themes test
     utilities.testConceptualThemes(
-      psalmText: psalm3,
+      psalmText: text,
       conceptualThemes: conceptualThemes,
       psalmId: id,
       verbose: verbose
     )
+  }
+
+  func testSaveTexts() {
+    let jsonString = utilities.generatePsalmTextsJSONString(
+      psalmNumber: id.number,
+      category: id.category ?? "",
+      text: text,
+      englishText: englishText
+    )
+
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm3_texts.json"
+    )
+
+    if success {
+      print("✅ Complete texts JSON created successfully")
+    } else {
+      print("⚠️ Could not save complete texts file:")
+      print(jsonString)
+    }
   }
 
   func testSavePsalm3Themes() {
