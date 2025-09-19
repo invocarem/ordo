@@ -1,5 +1,6 @@
-@testable import LatinService
 import XCTest
+
+@testable import LatinService
 
 public enum PsalmTestUtilities {
   public static let latinService = LatinService.shared
@@ -23,15 +24,17 @@ public enum PsalmTestUtilities {
     return result
   }
 
-  private static func replaceCaseInsensitive(in text: String, target: String, replacement: String) -> String {
+  private static func replaceCaseInsensitive(in text: String, target: String, replacement: String)
+    -> String
+  {
     let options: String.CompareOptions = [.caseInsensitive, .diacriticInsensitive]
     var output = text
-    var searchRange = output.startIndex ..< output.endIndex
+    var searchRange = output.startIndex..<output.endIndex
 
     while let range = output.range(of: target, options: options, range: searchRange) {
       output.replaceSubrange(range, with: replacement)
       let nextStart = output.index(range.lowerBound, offsetBy: replacement.count)
-      searchRange = nextStart ..< output.endIndex
+      searchRange = nextStart..<output.endIndex
     }
     return output
   }
@@ -87,7 +90,7 @@ public enum PsalmTestUtilities {
       let (name, description, lemmas, startLine, endLine, comment, comment2) = theme
 
       // Extract the relevant lines
-      let lines = psalmText[startLine - 1 ..< endLine]
+      let lines = psalmText[startLine - 1..<endLine]
       let textToAnalyze = lines.joined(separator: " ")
 
       let analysis = latinService.analyzePsalm(psalmId, text: textToAnalyze)
@@ -100,7 +103,9 @@ public enum PsalmTestUtilities {
         let status = missingLemmas.isEmpty ? "✅" : "❌"
         print("\n\(status) [STRUCTURAL] \(name) (Lines \(startLine)-\(endLine))")
         print("   \(description)")
-        print("   Found \(foundLemmas.count)/\(lemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
+        print(
+          "   Found \(foundLemmas.count)/\(lemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))"
+        )
 
         if !missingLemmas.isEmpty {
           print("   MISSING: \(missingLemmas.joined(separator: ", "))")
@@ -111,12 +116,15 @@ public enum PsalmTestUtilities {
       }
 
       if !missingLemmas.isEmpty {
-        allFailures.append("Structural theme '\(name)': Missing \(missingLemmas.count) lemmas: \(missingLemmas.joined(separator: ", "))")
+        allFailures.append(
+          "Structural theme '\(name)': Missing \(missingLemmas.count) lemmas: \(missingLemmas.joined(separator: ", "))"
+        )
       }
     }
 
     if !allFailures.isEmpty {
-      XCTFail("Structural theme lemma requirements not met:\n" + allFailures.joined(separator: "\n"))
+      XCTFail(
+        "Structural theme lemma requirements not met:\n" + allFailures.joined(separator: "\n"))
     }
   }
 
@@ -132,7 +140,7 @@ public enum PsalmTestUtilities {
       let (name, description, lemmas, category, lineRange) = theme
       let textToAnalyze: String
       if let lineRange = lineRange {
-        let lines = psalmText[lineRange.lowerBound - 1 ... lineRange.upperBound - 1]
+        let lines = psalmText[lineRange.lowerBound - 1...lineRange.upperBound - 1]
         textToAnalyze = lines.joined(separator: " ")
       } else {
         textToAnalyze = psalmText.joined(separator: " ")
@@ -147,8 +155,12 @@ public enum PsalmTestUtilities {
       if verbose {
         let status = missingLemmas.isEmpty ? "✅" : "❌"
         let rangeDescription = lineRange.map { "Lines \($0)" } ?? "Entire Psalm"
-        print("\n\(status) [\(category.rawValue.uppercased())] \(name) (\(rangeDescription)): \(description)")
-        print("   Found \(foundLemmas.count)/\(lemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
+        print(
+          "\n\(status) [\(category.rawValue.uppercased())] \(name) (\(rangeDescription)): \(description)"
+        )
+        print(
+          "   Found \(foundLemmas.count)/\(lemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))"
+        )
 
         if !missingLemmas.isEmpty {
           print("   MISSING: \(missingLemmas.joined(separator: ", "))")
@@ -156,7 +168,9 @@ public enum PsalmTestUtilities {
       }
 
       if !missingLemmas.isEmpty {
-        allFailures.append("Theme \(name) (\(category.rawValue)): Missing \(missingLemmas.count) lemmas: \(missingLemmas.joined(separator: ", "))")
+        allFailures.append(
+          "Theme \(name) (\(category.rawValue)): Missing \(missingLemmas.count) lemmas: \(missingLemmas.joined(separator: ", "))"
+        )
       }
     }
 
@@ -249,33 +263,36 @@ public enum PsalmTestUtilities {
     structuralThemes: [(String, String, [String], Int, Int, String, String)]
   ) -> String? {
     // Generate individual JSON strings
-    guard let conceptualJSON = generateConceptualThemesJSONString(conceptualThemes: conceptualThemes),
-          let structuralJSON = generateStructuralThemesJSONString(structuralThemes: structuralThemes)
+    guard
+      let conceptualJSON = generateConceptualThemesJSONString(conceptualThemes: conceptualThemes),
+      let structuralJSON = generateStructuralThemesJSONString(structuralThemes: structuralThemes)
     else {
       print("❌ Failed to generate individual theme JSONs")
       return nil
     }
 
     // Remove the outer braces from both JSON strings
-    let conceptualContent = conceptualJSON
+    let conceptualContent =
+      conceptualJSON
       .trimmingCharacters(in: .whitespacesAndNewlines)
-      .dropFirst() // Remove first {
-      .dropLast() // Remove last }
+      .dropFirst()  // Remove first {
+      .dropLast()  // Remove last }
 
-    let structuralContent = structuralJSON
+    let structuralContent =
+      structuralJSON
       .trimmingCharacters(in: .whitespacesAndNewlines)
-      .dropFirst() // Remove first {
-      .dropLast() // Remove last }
+      .dropFirst()  // Remove first {
+      .dropLast()  // Remove last }
 
     // Combine them into a single JSON object
     let combinedJSON = """
-    {
-     "psalmNumber": \(psalmNumber),
-     "category": "\(category)",
-    \(structuralContent),
-    \(conceptualContent)
-    }
-    """
+      {
+       "psalmNumber": \(psalmNumber),
+       "category": "\(category.lowercased())",
+      \(structuralContent),
+      \(conceptualContent)
+      }
+      """
 
     return combinedJSON
   }
@@ -286,21 +303,24 @@ public enum PsalmTestUtilities {
     text: [String],
     englishText: [String]
   ) -> String {
-    let textJson = text.map { "\"\($0.replacingOccurrences(of: "\"", with: "\\\""))\"" }.joined(separator: ",\n    ")
-    let englishTextJson = englishText.map { "\"\($0.replacingOccurrences(of: "\"", with: "\\\""))\"" }.joined(separator: ",\n    ")
+    let textJson = text.map { "\"\($0.replacingOccurrences(of: "\"", with: "\\\""))\"" }.joined(
+      separator: ",\n    ")
+    let englishTextJson = englishText.map {
+      "\"\($0.replacingOccurrences(of: "\"", with: "\\\""))\""
+    }.joined(separator: ",\n    ")
 
     return """
-    {
-      "number": \(psalmNumber),
-      "section": "\(category)",
-      "text": [
-        \(textJson)
-      ],
-      "englishText": [
-        \(englishTextJson)
-      ]
-    }
-    """
+      {
+        "number": \(psalmNumber),
+        "section": "\(category)",
+        "text": [
+          \(textJson)
+        ],
+        "englishText": [
+          \(englishTextJson)
+        ]
+      }
+      """
   }
 
   public static func saveToFile(
@@ -435,7 +455,9 @@ public enum PsalmTestUtilities {
       }
 
       if failOnMissing {
-        XCTFail("Missing lemmas from \(sourceName) in \(targetName): \(Array(missingLemmas).sorted().joined(separator: ", "))")
+        XCTFail(
+          "Missing lemmas from \(sourceName) in \(targetName): \(Array(missingLemmas).sorted().joined(separator: ", "))"
+        )
       }
     } else {
       if verbose {
