@@ -19,7 +19,15 @@ RUN swift build -Xswiftc -enable-testing
 # ✅ Step 2: Run tests
 RUN swift test
 
-# ✅ Step 3: Build release (only if tests pass)
+# ✅ Step 3: Consolidate psalm files (if any were generated)
+RUN if ls output_psalm*_themes.json 1> /dev/null 2>&1 || ls output_psalm*_texts.json 1> /dev/null 2>&1; then \
+    echo "📁 Found psalm files, consolidating..."; \
+    gawk -f docker-support/consolidate.awk; \
+    else \
+    echo "ℹ️  No psalm files found to consolidate"; \
+    fi
+
+# ✅ Step 4: Build release (only if tests pass)
 RUN swift build -c release --product LiturgicalDocker --static-swift-stdlib
 
 # Stage 2: Runtime
