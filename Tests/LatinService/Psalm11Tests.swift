@@ -24,6 +24,60 @@ class Psalm11Tests: XCTestCase {
         "Tu, Domine, servabis nos: et custodies nos a generatione hac in aeternum.",
         "In circuitu impii ambulant; secundum altitudinem tuam multiplicasti filios hominum."
     ]
+
+    private let englishText = [
+        "Save me, O Lord, for there is no saint left: truths are diminished among the children of men.",
+        "They have spoken vain things each to his neighbor: with deceitful lips, and with a double heart have they spoken.",
+        "May the Lord destroy all deceitful lips, and the tongue that speaks proud things.",
+        "Who have said: We will magnify our tongue; our lips are our own; who is lord over us?",
+        "Because of the misery of the needy, and the groans of the poor, now will I arise, says the Lord.",
+        "I will set him in safety; I will deal confidently for him.",
+        "The words of the Lord are pure words: as silver tried by fire, purified in the earth, refined seven times.",
+        "Thou, O Lord, wilt preserve us: and keep us from this generation forever.",
+        "The wicked walk round about: according to thy greatness thou hast multiplied the children of men."
+    ]
+
+    // MARK: - Test Methods
+
+    func testTotalVerses() {
+        let expectedVerseCount = 9
+        XCTAssertEqual(
+            psalm11.count, expectedVerseCount, "Psalm 11 should have \(expectedVerseCount) verses"
+        )
+        XCTAssertEqual(
+            englishText.count, expectedVerseCount,
+            "Psalm 11 English text should have \(expectedVerseCount) verses"
+        )
+        // Also validate the orthography of the text for analysis consistency
+        let normalized = psalm11.map { PsalmTestUtilities.validateLatinText($0) }
+        XCTAssertEqual(
+            normalized,
+            psalm11,
+            "Normalized Latin text should match expected classical forms"
+        )
+    }
+
+    func testSaveTexts() {
+        let utilities = PsalmTestUtilities.self
+        let jsonString = utilities.generatePsalmTextsJSONString(
+            psalmNumber: id.number,
+            category: id.category ?? "",
+            text: psalm11,
+            englishText: englishText
+        )
+
+        let success = utilities.saveToFile(
+            content: jsonString,
+            filename: "output_psalm11_texts.json"
+        )
+
+        if success {
+            print("✅ Complete texts JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete texts file:")
+            print(jsonString)
+        }
+    }
     
     // MARK: - Test Cases
     

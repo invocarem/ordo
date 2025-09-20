@@ -21,6 +21,57 @@ class Psalm12Tests: XCTestCase {
         "Ego autem in misericordia tua speravi. Exsultabit cor meum in salutari tuo; cantabo Domino qui bona tribuit mihi, et psallam nomini Domini altissimi."
     ]
 
+    private let englishText = [
+        "How long, O Lord, wilt thou forget me unto the end? how long dost thou turn away thy face from me?",
+        "How long shall I take counsel in my soul, sorrow in my heart all the day?",
+        "How long shall my enemy be exalted over me?",
+        "Consider, and hear me, O Lord my God. Enlighten my eyes, lest I sleep the sleep of death;",
+        "Lest at any time my enemy say: I have prevailed against him. They that trouble me will rejoice when I am moved;",
+        "But I have trusted in thy mercy. My heart shall rejoice in thy salvation: I will sing to the Lord, who giveth me good things: yea I will sing to the name of the Lord the most high."
+    ]
+
+    // MARK: - Test Methods
+
+    func testTotalVerses() {
+        let expectedVerseCount = 6
+        XCTAssertEqual(
+            psalm12.count, expectedVerseCount, "Psalm 12 should have \(expectedVerseCount) verses"
+        )
+        XCTAssertEqual(
+            englishText.count, expectedVerseCount,
+            "Psalm 12 English text should have \(expectedVerseCount) verses"
+        )
+        // Also validate the orthography of the text for analysis consistency
+        let normalized = psalm12.map { PsalmTestUtilities.validateLatinText($0) }
+        XCTAssertEqual(
+            normalized,
+            psalm12,
+            "Normalized Latin text should match expected classical forms"
+        )
+    }
+
+    func testSaveTexts() {
+        let utilities = PsalmTestUtilities.self
+        let jsonString = utilities.generatePsalmTextsJSONString(
+            psalmNumber: id.number,
+            category: id.category ?? "",
+            text: psalm12,
+            englishText: englishText
+        )
+
+        let success = utilities.saveToFile(
+            content: jsonString,
+            filename: "output_psalm12_texts.json"
+        )
+
+        if success {
+            print("✅ Complete texts JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete texts file:")
+            print(jsonString)
+        }
+    }
+
     // MARK: - Theme Tests
 func testAllThemes() {
     let analysis = latinService.analyzePsalm(id, text: psalm12)
