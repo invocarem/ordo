@@ -2,9 +2,9 @@ import Foundation
 
 public struct Psalm: Codable {
   public let number: Int
-  public let section: String? // Optional (e.g., "A", "Aleph")
+  public let section: String?  // Optional (e.g., "A", "Aleph")
   public let title: String?
-  public let text: [String] // Array of verses
+  public let text: [String]  // Array of verses
   public let englishText: [String]?
   public let verified: Bool?
 }
@@ -18,15 +18,22 @@ public class PsalmService {
   }
 
   private func loadPsalms() {
-    let bundlesToCheck: [Bundle] = {
-      #if SWIFT_PACKAGE
-        // Docker/SwiftPM environment (uses Bundle.module)
-        return [Bundle.module]
-      #else
-        // Xcode environment (uses Bundle.main or Bundle(for:))
-        return [Bundle.main, Bundle(for: Self.self)]
-      #endif
-    }()
+    // Try different bundle sources in order of preference
+    var bundlesToCheck: [Bundle] = []
+
+    // Add Bundle.main (works in Xcode and most environments)
+    bundlesToCheck.append(Bundle.main)
+
+    // Add Bundle(for: Self.self) (works when the class is in a framework/module)
+    bundlesToCheck.append(Bundle(for: Self.self))
+
+    // Try to add Bundle.module if available (Swift Package Manager)
+    // This is the safest way to check for Bundle.module availability
+    if let moduleBundle = Bundle(identifier: "org.swift.swiftpm.PackageDescription")
+      ?? Bundle(identifier: Bundle.main.bundleIdentifier ?? "")
+    {
+      bundlesToCheck.insert(moduleBundle, at: 0)
+    }
 
     for bundle in bundlesToCheck {
       if let url = bundle.url(forResource: "psalms", withExtension: "json") {
@@ -57,8 +64,7 @@ public class PsalmService {
   public func getPsalm(number: Int, section: String? = nil) -> Psalm? {
     if let section = section {
       return psalms.first {
-        $0.number == number &&
-          $0.section?.caseInsensitiveCompare(section) == .orderedSame
+        $0.number == number && $0.section?.caseInsensitiveCompare(section) == .orderedSame
       }
     } else {
       return psalms.first { $0.number == number }
