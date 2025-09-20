@@ -1,8 +1,8 @@
 #!/bin/bash
 set -e
 
-# Simple script to copy production files to iMac via Tailscale Taildrop
-# Copies psalms.json and themes.json to iMac Downloads folder
+# Simple script to copy production files to iMac via SSH
+# Copies psalms.json and themes.json to iMac target folder
 
 # Colors for output
 GREEN='\033[0;32m'
@@ -29,9 +29,14 @@ if [ -f .env ]; then
 fi
 
 # Configuration
-IMAC_DEVICE_NAME=${IMAC_DEVICE_NAME:-"chens-imac"}
+IMAC_HOST=${IMAC_HOST:-"chens-imac.local"}
+IMAC_USER=${IMAC_USER:-"chen"}
+IMAC_TARGET_DIR=${IMAC_TARGET_DIR:-"~/Downloads"}
+IMAC_PROJECT_DIR=${IMAC_PROJECT_DIR:-"~/code/ordo"}
+IMAC_PSALM_SERVICE_DIR=${IMAC_PSALM_SERVICE_DIR:-"~/code/ordo/ordo/Services/PsalmService"}
+IMAC_LATIN_SERVICE_DIR=${IMAC_LATIN_SERVICE_DIR:-"~/code/ordo/ordo/Services/LatinService"}
 
-print_status "🚀 Copying production files to iMac via Taildrop..."
+print_status "🚀 Copying production files to iMac via SSH..."
 
 # Check if required files exist
 REQUIRED_FILES=("psalms.json" "themes.json")
@@ -52,34 +57,54 @@ if [ ${#MISSING_FILES[@]} -ne 0 ]; then
     exit 1
 fi
 
-# Check if Tailscale is available
-if ! command -v tailscale &> /dev/null; then
-    print_error "Tailscale command not found"
-    print_status "Please install Tailscale: https://tailscale.com/download"
+# Check if SSH is available
+if ! command -v ssh &> /dev/null; then
+    print_error "SSH command not found"
+    print_status "Please install OpenSSH client"
     exit 1
 fi
 
-# Test connection to iMac
-print_status "🔌 Testing connection to $IMAC_DEVICE_NAME..."
-if ! tailscale ping $IMAC_DEVICE_NAME > /dev/null 2>&1; then
-    print_error "Cannot reach iMac"
-    print_status "Please ensure Tailscale is running on both machines"
+# Test SSH connection to iMac
+print_status "🔌 Testing SSH connection to $IMAC_USER@$IMAC_HOST..."
+if ! ssh -o ConnectTimeout=10 -o BatchMode=yes "$IMAC_USER@$IMAC_HOST" "echo 'SSH connection successful'" > /dev/null 2>&1; then
+    print_error "Cannot connect to iMac via SSH"
+    print_status "Please ensure:"
+    echo "  1. SSH is enabled on iMac (System Preferences > Sharing > Remote Login)"
+    echo "  2. SSH key is set up or password authentication is enabled"
+    echo "  3. iMac is reachable on the network"
+    echo "  4. Correct hostname/IP and username in .env file"
     exit 1
 fi
 
-# Copy files using Taildrop
-print_status "📤 Sending files to iMac Downloads folder..."
+print_success "SSH connection established"
 
-for file in "${REQUIRED_FILES[@]}"; do
-    print_status "Sending $file..."
-    if tailscale file cp "$file" "$IMAC_DEVICE_NAME:"; then
-        print_success "Sent $file"
-    else
-        print_error "Failed to send $file"
-        exit 1
-    fi
-done
+# Create service directories if they don't exist
+print_status "📁 Ensuring service directories exist..."
+ssh "$IMAC_USER@$IMAC_HOST" "mkdir -p $IMAC_PSALM_SERVICE_DIR $IMAC_LATIN_SERVICE_DIR"
 
-print_success "🎉 All files sent to iMac Downloads folder!"
-print_status "Files: psalms.json, themes.json"
-print_status "Next: Move files to project directory and run build on iMac"
+# Copy files to their specific service directories
+print_status "📤 Copying files to iMac service directories..."
+
+# Copy psalms.json to PsalmService directory
+print_status "Copying psalms.json to PsalmService..."
+if scp "psalms.json" "$IMAC_USER@$IMAC_HOST:$IMAC_PSALM_SERVICE_DIR/"; then
+    print_success "Copied psalms.json to PsalmService"
+else
+    print_error "Failed to copy psalms.json"
+    exit 1
+fi
+
+# Copy themes.json to LatinService directory
+print_status "Copying themes.json to LatinService..."
+if scp "themes.json" "$IMAC_USER@$IMAC_HOST:$IMAC_LATIN_SERVICE_DIR/"; then
+    print_success "Copied themes.json to LatinService"
+else
+    print_error "Failed to copy themes.json"
+    exit 1
+fi
+
+print_success "🎉 All files copied to iMac!"
+print_status "Files copied to service directories:"
+print_status "  psalms.json → $IMAC_PSALM_SERVICE_DIR"
+print_status "  themes.json → $IMAC_LATIN_SERVICE_DIR"
+print_status "Next: Run build on iMac"

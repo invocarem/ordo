@@ -21,6 +21,15 @@ class Psalm150Tests: XCTestCase {
     "Laudate eum in tympano, et choro: laudate eum in chordis, et organo.",
     "Laudate eum in cymbalis benesonantibus: laudate eum in cymbalis iubilationis. Omnis spiritus laudet Dominum.",
   ]
+
+  let englishText = [
+    "Praise ye the Lord in his holy places: praise ye him in the firmament of his power.",
+    "Praise ye him for his mighty acts: praise ye him according to the multitude of his greatness.",
+    "Praise him with sound of trumpet: praise him with psaltery and harp.",
+    "Praise him with timbrel and choir: praise him with strings and organs.",
+    "Praise him on high sounding cymbals: praise him on cymbals of joy. Let every spirit praise the Lord.",
+  ]
+
   let id = PsalmIdentity(number: 150, category: nil)
 
   // MARK: - Line-by-line key lemmas (Psalm 150)
@@ -105,8 +114,15 @@ class Psalm150Tests: XCTestCase {
 
   // MARK: - Test Cases
 
-  func testPsalm150Verses() {
-    XCTAssertEqual(psalm150.count, 5, "Psalm 150 should have 5 verses in the Benedictine Office")
+  func testTotalVerses() {
+    let expectedVerseCount = 5
+    XCTAssertEqual(
+      psalm150.count, expectedVerseCount, "Psalm 150 should have \(expectedVerseCount) verses"
+    )
+    XCTAssertEqual(
+      englishText.count, expectedVerseCount,
+      "Psalm 150 English text should have \(expectedVerseCount) verses"
+    )
     // Also validate the orthography of the text for analysis consistency
     let normalized = psalm150.map { PsalmTestUtilities.validateLatinText($0) }
     XCTAssertEqual(
@@ -116,7 +132,7 @@ class Psalm150Tests: XCTestCase {
     )
   }
 
-  func testPsalm150LineByLineKeyLemmas() {
+  func testLineByLineKeyLemmas() {
     utilities.testLineByLineKeyLemmas(
       psalmText: psalm150,
       lineKeyLemmas: lineKeyLemmas,
@@ -125,7 +141,28 @@ class Psalm150Tests: XCTestCase {
     )
   }
 
-  func testPsalm150StructuralThemes() {
+  func testSaveTexts() {
+    let jsonString = utilities.generatePsalmTextsJSONString(
+      psalmNumber: id.number,
+      category: id.category ?? "",
+      text: psalm150,
+      englishText: englishText
+    )
+
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm150_texts.json"
+    )
+
+    if success {
+      print("✅ Complete texts JSON created successfully")
+    } else {
+      print("⚠️ Could not save complete texts file:")
+      print(jsonString)
+    }
+  }
+
+  func testStructuralThemes() {
     utilities.testStructuralThemes(
       psalmText: psalm150,
       structuralThemes: structuralThemes,
@@ -134,7 +171,7 @@ class Psalm150Tests: XCTestCase {
     )
   }
 
-  func testPsalm150ConceptualThemes() {
+  func testConceptualThemes() {
     utilities.testConceptualThemes(
       psalmText: psalm150,
       conceptualThemes: conceptualThemes,
