@@ -19,6 +19,17 @@ class Psalm118BethTests: XCTestCase {
         "In iustificationibus tuis meditabor, non obliviscar sermones tuos."
     ]
     
+    private let englishText = [
+        "Wherewith shall a young man correct his way? By observing thy words.",
+        "With my whole heart have I sought after thee: let me not stray from thy commandments.",
+        "Thy words have I hidden in my heart, that I may not sin against thee.",
+        "Blessed art thou, O Lord: teach me thy justifications.",
+        "With my lips I have pronounced all the judgments of thy mouth.",
+        "I have been delighted in the way of thy testimonies, as in all riches.",
+        "I will meditate on thy commandments, and I will consider thy ways.",
+        "I will think of thy justifications: I will not forget thy words."
+    ]
+    
     private let lineKeyLemmas = [
         (1, ["corrigo", "adolescens", "custodio", "sermo"]),
         (2, ["totus", "exquiro", "repello", "mandatum"]),
@@ -30,11 +41,74 @@ class Psalm118BethTests: XCTestCase {
         (8, ["iustificatio", "meditor", "obliviscor", "sermo"])
     ]
     
-    private let themeKeyLemmas = [
-        ("Instruction", "Focus on correction, teaching, and meditation", ["corrigo", "doceo", "pronuntio", "considero", "meditor"]),
-        ("Delight", "Emphasis on delighting in God's word and blessings", ["delecto", "divitiae", "benedictus", "exquiro", "abscondo"]),
-        ("Divine Word", "References to God's words, statutes, and judgments", ["sermo", "eloquium", "iustificatio", "testimonium", "iudicium", "mandatum"]),
-        ("Protection", "Themes of guarding, protecting, and not forgetting", ["custodio", "repello", "abscondo", "obliviscor", "pecco", "adolescentior"])
+    private let structuralThemes = [
+        (
+            "Correction → Adherence",
+            "The young person's path correction through keeping God's words",
+            ["corrigo", "adolescentior", "custodio", "sermo", "repello"],
+            1,
+            2,
+            "The psalmist asks how a young man can correct his path—by keeping God's words. He has sought God with his whole heart and begs not to be rejected from His commandments.",
+            "Augustine sees this as the beginning of spiritual life—the correction from worldly ways through adherence to God's word. The whole-hearted seeking reflects the first commandment of loving God completely."
+        ),
+        (
+            "Treasure → Preservation",
+            "Hiding God's words in the heart as protection against sin",
+            ["abscondo", "eloquium", "pecco", "benedictus", "doceo"],
+            3,
+            4,
+            "God's words are hidden in the heart to avoid sin. The psalmist blesses the Lord and asks to be taught His justifications.",
+            "For Augustine, hiding God's word in the heart represents internalizing Scripture through meditation and memory. This becomes protection against temptation and the foundation for ongoing divine instruction."
+        ),
+        (
+            "Proclamation → Delight",
+            "Speaking God's judgments and delighting in His testimonies",
+            ["pronuntio", "iudicium", "delecto", "testimonium", "divitiae"],
+            5,
+            6,
+            "The psalmist has pronounced all God's judgments with his lips and delights in His testimonies as in all riches.",
+            "Augustine sees this as the natural progression from internal meditation to external proclamation. The delight in God's word surpasses all earthly wealth, showing the soul's true treasure."
+        ),
+        (
+            "Meditation → Memory",
+            "Exercising in commandments and meditating on justifications without forgetting",
+            ["exerceo", "mandatum", "considero", "meditor", "obliviscor"],
+            7,
+            8,
+            "The psalmist will exercise in God's commandments, consider His ways, meditate on His justifications, and not forget His words.",
+            "For Augustine, this represents the complete spiritual discipline—active engagement with God's law, contemplation of His ways, and the grace of memory that preserves divine teaching in the heart."
+        )
+    ];
+
+    private let conceptualThemes = [
+        (
+            "Instruction",
+            "Focus on correction, teaching, and meditation",
+            ["corrigo", "doceo", "pronuntio", "considero", "meditor"],
+            ThemeCategory.virtue,
+            1...8
+        ),
+        (
+            "Delight",
+            "Emphasis on delighting in God's word and blessings",
+            ["delecto", "divitiae", "benedictus", "exquiro", "abscondo"],
+            ThemeCategory.virtue,
+            1...8
+        ),
+        (
+            "Divine Word",
+            "References to God's words, statutes, and judgments",
+            ["sermo", "eloquium", "iustificatio", "testimonium", "iudicium", "mandatum"],
+            ThemeCategory.divine,
+            1...8
+        ),
+        (
+            "Protection",
+            "Themes of guarding, protecting, and not forgetting",
+            ["custodio", "repello", "abscondo", "obliviscor", "pecco", "adolescentior"],
+            ThemeCategory.virtue,
+            1...8
+        )
     ]
     
     // MARK: - Setup
@@ -43,65 +117,129 @@ class Psalm118BethTests: XCTestCase {
         latinService = LatinService.shared
     }
     
-    // MARK: - Line by Line Key Lemmas Test
-    func testPsalm118BethLineByLineKeyLemmas() {
-        var allFailures: [String] = []
-        
-        for (lineNumber, expectedLemmas) in lineKeyLemmas {
-            let line = psalm118Beth[lineNumber - 1]
-            let analysis = latinService.analyzePsalm(id, text: line, startingLineNumber: lineNumber)
-            
-            let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-            let foundLemmas = expectedLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-            let missingLemmas = expectedLemmas.filter { !detectedLemmas.contains($0.lowercased()) }
-            
-            if verbose {
-                let status = missingLemmas.isEmpty ? "✅" : "❌"
-                print("\(status) Line \(lineNumber): Found \(foundLemmas.count)/\(expectedLemmas.count) key lemmas: \(foundLemmas.joined(separator: ", "))")
-                
-                if !missingLemmas.isEmpty {
-                    print("   MISSING: \(missingLemmas.joined(separator: ", "))")
-                    print("   Available: \(detectedLemmas.sorted().joined(separator: ", "))")
-                }
-            }
-            
-            if !missingLemmas.isEmpty {
-                allFailures.append("Line \(lineNumber): Missing lemmas: \(missingLemmas.joined(separator: ", "))")
-            }
-        }
-        
-        if !allFailures.isEmpty {
-            XCTFail("Missing lemmas detected:\n" + allFailures.joined(separator: "\n"))
+    // MARK: - Test Cases
+    
+    func testTotalVerses() {
+        XCTAssertEqual(
+            psalm118Beth.count, 8, "Psalm 118 Beth should have 8 verses"
+        )
+        XCTAssertEqual(
+            englishText.count, 8,
+            "Psalm 118 Beth English text should have 8 verses"
+        )
+        // Also validate the orthography of the text for analysis consistency
+        let normalized = psalm118Beth.map { PsalmTestUtilities.validateLatinText($0) }
+        XCTAssertEqual(
+            normalized,
+            psalm118Beth,
+            "Normalized Latin text should match expected classical forms"
+        )
+    }
+    
+    func testSaveTexts() {
+        let utilities = PsalmTestUtilities.self
+        let jsonString = utilities.generatePsalmTextsJSONString(
+            psalmNumber: id.number,
+            category: id.category ?? "",
+            text: psalm118Beth,
+            englishText: englishText
+        )
+
+        let success = utilities.saveToFile(
+            content: jsonString,
+            filename: "output_psalm118Beth_texts.json"
+        )
+
+        if success {
+            print("✅ Complete texts JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete texts file:")
+            print(jsonString)
         }
     }
+    
+    func testSaveThemes() {
+        let utilities = PsalmTestUtilities.self
+        guard
+            let jsonString = utilities.generateCompleteThemesJSONString(
+                psalmNumber: id.number,
+                category: id.category ?? "",
+                conceptualThemes: conceptualThemes,
+                structuralThemes: structuralThemes
+            )
+        else {
+            XCTFail("Failed to generate complete themes JSON")
+            return
+        }
 
-    // MARK: - Combined Theme Test
-    func testPsalm118BethThemes() {
-        let analysis = latinService.analyzePsalm(id, text: psalm118Beth.joined(separator: " "))
-        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-        var allFailures: [String] = []
-        
-        for (themeName, themeDescription, themeLemmas) in themeKeyLemmas {
-            let foundLemmas = themeLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-            let missingLemmas = themeLemmas.filter { !detectedLemmas.contains($0.lowercased()) }
-            
-            if verbose {
-                let status = foundLemmas.count >= minimumLemmasPerTheme ? "✅" : "❌"
-                print("\n\(status) \(themeName.uppercased()): \(themeDescription)")
-                print("   Found \(foundLemmas.count)/\(themeLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
-                
-                if !missingLemmas.isEmpty {
-                    print("   MISSING: \(missingLemmas.joined(separator: ", "))")
-                }
-            }
-            
-            if foundLemmas.count < minimumLemmasPerTheme {
-                allFailures.append("Theme \(themeName): Found only \(foundLemmas.count) lemmas (needed \(minimumLemmasPerTheme)): \(foundLemmas.joined(separator: ", "))")
-            }
+        let success = utilities.saveToFile(
+            content: jsonString,
+            filename: "output_psalm118Beth_themes.json"
+        )
+
+        if success {
+            print("✅ Complete themes JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete themes file:")
+            print(jsonString)
         }
-        
-        if !allFailures.isEmpty {
-            XCTFail("Theme lemma requirements not met:\n" + allFailures.joined(separator: "\n"))
-        }
+    }
+    
+    func testLineByLineKeyLemmas() {
+        let utilities = PsalmTestUtilities.self
+        utilities.testLineByLineKeyLemmas(
+            psalmText: psalm118Beth,
+            lineKeyLemmas: lineKeyLemmas,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
+
+    func testStructuralThemes() {
+        let utilities = PsalmTestUtilities.self
+
+        // First, verify that all structural theme lemmas are in lineKeyLemmas
+        let structuralLemmas = structuralThemes.flatMap { $0.2 }
+        let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+        utilities.testLemmasInSet(
+            sourceLemmas: structuralLemmas,
+            targetLemmas: lineKeyLemmasFlat,
+            sourceName: "structural themes",
+            targetName: "lineKeyLemmas",
+            verbose: verbose
+        )
+
+        // Then run the standard structural themes test
+        utilities.testStructuralThemes(
+            psalmText: psalm118Beth,
+            structuralThemes: structuralThemes,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
+
+    func testConceptualThemes() {
+        let utilities = PsalmTestUtilities.self
+
+        // First, verify that conceptual theme lemmas are in lineKeyLemmas
+        let conceptualLemmas = conceptualThemes.flatMap { $0.2 }
+        let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+        utilities.testLemmasInSet(
+            sourceLemmas: conceptualLemmas,
+            targetLemmas: lineKeyLemmasFlat,
+            sourceName: "conceptual themes",
+            targetName: "lineKeyLemmas",
+            verbose: verbose
+        )
+
+        // Then run the standard conceptual themes test
+        utilities.testConceptualThemes(
+            psalmText: psalm118Beth,
+            conceptualThemes: conceptualThemes,
+            psalmId: id,
+            verbose: verbose
+        )
     }
 }

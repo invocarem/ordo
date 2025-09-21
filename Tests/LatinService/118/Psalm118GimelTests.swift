@@ -19,6 +19,17 @@ class Psalm118GimelTests: XCTestCase {
         "Nam et testimonia tua meditatio mea est, et consilium meum iustificationes tuae."
     ]
     
+    private let englishText = [
+        "Deal bountifully with thy servant, that I may live and keep thy words.",
+        "Open thou mine eyes, that I may behold the wondrous things of thy law.",
+        "I am a stranger on the earth: hide not thy commandments from me.",
+        "My soul breaketh for the longing it hath unto thy judgments at all times.",
+        "Thou hast rebuked the proud that are cursed, which do err from thy commandments.",
+        "Remove from me reproach and contempt; for I have kept thy testimonies.",
+        "Princes also did sit and speak against me: but thy servant did meditate in thy statutes.",
+        "Thy testimonies also are my delight and my counsellors."
+    ]
+    
     private let lineKeyLemmas = [
         (1, ["retribuo", "servus", "vivifico", "custodio", "sermo"]),
         (2, ["revelo", "oculus", "considero", "mirabilis", "lex"]),
@@ -30,11 +41,74 @@ class Psalm118GimelTests: XCTestCase {
         (8, ["nam", "testimonium", "meditatio", "consilium", "iustificatio"])
     ]
     
-    private let themeKeyLemmas = [
-        ("Petition", "Requests for God's action and intervention", ["retribuo", "vivifico", "revelo", "abscondo", "aufero", "concupisco"]),
-        ("Opposition", "References to enemies, pride, and opposition", ["superbus", "maledictus", "increpo", "opprobrium", "contemptus", "princeps", "adversus"]),
-        ("Devotion", "Expressions of commitment, exercise, and meditation", ["custodio", "considero", "exquiro", "exerceo", "meditatio", "desidero"]),
-        ("Divine Word", "References to God's law, statutes, and testimonies", ["sermo", "lex", "mandatum", "iustificatio", "testimonium", "mirabilis"])
+    private let structuralThemes = [
+        (
+            "Servant Identity",
+            "The psalmist's self-understanding as God's servant",
+            ["servus", "vivifico", "custodio", "exerceo", "incola"],
+            1,
+            3,
+            "Repeated servant language with active obedience",
+            "The psalmist identifies as God's servant seeking life through keeping His words, asking for divine revelation, and acknowledging his status as a stranger on earth."
+        ),
+        (
+            "Divine Illumination",
+            "Prayers for spiritual understanding",
+            ["revelo", "oculus", "considero", "mirabilis", "lex"],
+            2,
+            3,
+            "Vision metaphors for Torah comprehension",
+            "The psalmist asks God to open his eyes to see the wondrous things of His law, recognizing his need for divine illumination to understand God's commandments."
+        ),
+        (
+            "Exilic Longing",
+            "The soul's intense desire for God's judgments",
+            ["concupisco", "anima", "desidero", "iustificatio", "tempus"],
+            4,
+            4,
+            "Intense spiritual longing and desire",
+            "The psalmist's soul breaks with longing for God's judgments at all times, expressing the deep spiritual hunger of one who seeks divine wisdom."
+        ),
+        (
+            "Opposition → Vindication",
+            "The contrast between the proud who oppose and the servant who meditates",
+            ["superbus", "increpo", "opprobrium", "princeps", "adversus", "meditatio", "consilium"],
+            5,
+            8,
+            "Contrast between enemies and faithful servant",
+            "The psalmist describes how the proud are rebuked and princes speak against him, but he remains faithful as God's servant, finding delight and counsel in God's testimonies."
+        )
+    ];
+
+    private let conceptualThemes = [
+        (
+            "Petition",
+            "Requests for God's action and intervention",
+            ["retribuo", "vivifico", "revelo", "abscondo", "aufero", "concupisco"],
+            ThemeCategory.virtue,
+            1...8
+        ),
+        (
+            "Opposition",
+            "References to enemies, pride, and opposition",
+            ["superbus", "maledictus", "increpo", "opprobrium", "contemptus", "princeps", "adversus"],
+            ThemeCategory.virtue,
+            1...8
+        ),
+        (
+            "Devotion",
+            "Expressions of commitment, exercise, and meditation",
+            ["custodio", "considero", "exquiro", "exerceo", "meditatio", "desidero"],
+            ThemeCategory.virtue,
+            1...8
+        ),
+        (
+            "Divine Word",
+            "References to God's law, statutes, and testimonies",
+            ["sermo", "lex", "mandatum", "iustificatio", "testimonium", "mirabilis"],
+            ThemeCategory.divine,
+            1...8
+        )
     ]
     
     // MARK: - Setup
@@ -43,65 +117,129 @@ class Psalm118GimelTests: XCTestCase {
         latinService = LatinService.shared
     }
     
-    // MARK: - Line by Line Key Lemmas Test
-    func testPsalm118GimelLineByLineKeyLemmas() {
-        var allFailures: [String] = []
-        
-        for (lineNumber, expectedLemmas) in lineKeyLemmas {
-            let line = psalm118Gimel[lineNumber - 1]
-            let analysis = latinService.analyzePsalm(id, text: line, startingLineNumber: lineNumber)
-            
-            let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-            let foundLemmas = expectedLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-            let missingLemmas = expectedLemmas.filter { !detectedLemmas.contains($0.lowercased()) }
-            
-            if verbose {
-                let status = missingLemmas.isEmpty ? "✅" : "❌"
-                print("\(status) Line \(lineNumber): Found \(foundLemmas.count)/\(expectedLemmas.count) key lemmas: \(foundLemmas.joined(separator: ", "))")
-                
-                if !missingLemmas.isEmpty {
-                    print("   MISSING: \(missingLemmas.joined(separator: ", "))")
-                    print("   Available: \(detectedLemmas.sorted().joined(separator: ", "))")
-                }
-            }
-            
-            if !missingLemmas.isEmpty {
-                allFailures.append("Line \(lineNumber): Missing lemmas: \(missingLemmas.joined(separator: ", "))")
-            }
-        }
-        
-        if !allFailures.isEmpty {
-            XCTFail("Missing lemmas detected:\n" + allFailures.joined(separator: "\n"))
+    // MARK: - Test Cases
+    
+    func testTotalVerses() {
+        XCTAssertEqual(
+            psalm118Gimel.count, 8, "Psalm 118 Gimel should have 8 verses"
+        )
+        XCTAssertEqual(
+            englishText.count, 8,
+            "Psalm 118 Gimel English text should have 8 verses"
+        )
+        // Also validate the orthography of the text for analysis consistency
+        let normalized = psalm118Gimel.map { PsalmTestUtilities.validateLatinText($0) }
+        XCTAssertEqual(
+            normalized,
+            psalm118Gimel,
+            "Normalized Latin text should match expected classical forms"
+        )
+    }
+    
+    func testSaveTexts() {
+        let utilities = PsalmTestUtilities.self
+        let jsonString = utilities.generatePsalmTextsJSONString(
+            psalmNumber: id.number,
+            category: id.category ?? "",
+            text: psalm118Gimel,
+            englishText: englishText
+        )
+
+        let success = utilities.saveToFile(
+            content: jsonString,
+            filename: "output_psalm118Gimel_texts.json"
+        )
+
+        if success {
+            print("✅ Complete texts JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete texts file:")
+            print(jsonString)
         }
     }
+    
+    func testSaveThemes() {
+        let utilities = PsalmTestUtilities.self
+        guard
+            let jsonString = utilities.generateCompleteThemesJSONString(
+                psalmNumber: id.number,
+                category: id.category ?? "",
+                conceptualThemes: conceptualThemes,
+                structuralThemes: structuralThemes
+            )
+        else {
+            XCTFail("Failed to generate complete themes JSON")
+            return
+        }
 
-    // MARK: - Combined Theme Test
-    func testPsalm118GimelThemes() {
-        let analysis = latinService.analyzePsalm(id, text: psalm118Gimel.joined(separator: " "))
-        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-        var allFailures: [String] = []
-        
-        for (themeName, themeDescription, themeLemmas) in themeKeyLemmas {
-            let foundLemmas = themeLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-            let missingLemmas = themeLemmas.filter { !detectedLemmas.contains($0.lowercased()) }
-            
-            if verbose {
-                let status = foundLemmas.count >= minimumLemmasPerTheme ? "✅" : "❌"
-                print("\n\(status) \(themeName.uppercased()): \(themeDescription)")
-                print("   Found \(foundLemmas.count)/\(themeLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
-                
-                if !missingLemmas.isEmpty {
-                    print("   MISSING: \(missingLemmas.joined(separator: ", "))")
-                }
-            }
-            
-            if foundLemmas.count < minimumLemmasPerTheme {
-                allFailures.append("Theme \(themeName): Found only \(foundLemmas.count) lemmas (needed \(minimumLemmasPerTheme)): \(foundLemmas.joined(separator: ", "))")
-            }
+        let success = utilities.saveToFile(
+            content: jsonString,
+            filename: "output_psalm118Gimel_themes.json"
+        )
+
+        if success {
+            print("✅ Complete themes JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete themes file:")
+            print(jsonString)
         }
-        
-        if !allFailures.isEmpty {
-            XCTFail("Theme lemma requirements not met:\n" + allFailures.joined(separator: "\n"))
-        }
+    }
+    
+    func testLineByLineKeyLemmas() {
+        let utilities = PsalmTestUtilities.self
+        utilities.testLineByLineKeyLemmas(
+            psalmText: psalm118Gimel,
+            lineKeyLemmas: lineKeyLemmas,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
+
+    func testStructuralThemes() {
+        let utilities = PsalmTestUtilities.self
+
+        // First, verify that all structural theme lemmas are in lineKeyLemmas
+        let structuralLemmas = structuralThemes.flatMap { $0.2 }
+        let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+        utilities.testLemmasInSet(
+            sourceLemmas: structuralLemmas,
+            targetLemmas: lineKeyLemmasFlat,
+            sourceName: "structural themes",
+            targetName: "lineKeyLemmas",
+            verbose: verbose
+        )
+
+        // Then run the standard structural themes test
+        utilities.testStructuralThemes(
+            psalmText: psalm118Gimel,
+            structuralThemes: structuralThemes,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
+
+    func testConceptualThemes() {
+        let utilities = PsalmTestUtilities.self
+
+        // First, verify that conceptual theme lemmas are in lineKeyLemmas
+        let conceptualLemmas = conceptualThemes.flatMap { $0.2 }
+        let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+        utilities.testLemmasInSet(
+            sourceLemmas: conceptualLemmas,
+            targetLemmas: lineKeyLemmasFlat,
+            sourceName: "conceptual themes",
+            targetName: "lineKeyLemmas",
+            verbose: verbose
+        )
+
+        // Then run the standard conceptual themes test
+        utilities.testConceptualThemes(
+            psalmText: psalm118Gimel,
+            conceptualThemes: conceptualThemes,
+            psalmId: id,
+            verbose: verbose
+        )
     }
 }
