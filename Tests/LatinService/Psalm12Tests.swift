@@ -30,6 +30,88 @@ class Psalm12Tests: XCTestCase {
         "But I have trusted in thy mercy. My heart shall rejoice in thy salvation: I will sing to the Lord, who giveth me good things: yea I will sing to the name of the Lord the most high."
     ]
 
+    private let conceptualThemes = [
+        (
+            "Lament in Suffering",
+            "The psalmist's cry of anguish and questioning in times of distress, including temporal expressions and lament verbs",
+            ["usquequo", "obliviscor", "dolor", "quandiu", "averto", "facies", "pono", "respiro", "exaudio", "per", "umquam"],
+            ThemeCategory.virtue,
+            1...4
+        ),
+        (
+            "Enemy Threat",
+            "The presence and exaltation of adversaries causing distress",
+            ["exalto", "inimicus", "praevaleo", "tribulo"],
+            ThemeCategory.justice,
+            3...5
+        ),
+        (
+            "Petition for Help",
+            "Urgent requests for divine attention, hearing, and illumination",
+            ["respicio", "exaudio", "illumino", "obdormio"],
+            ThemeCategory.divine,
+            4...4
+        ),
+        (
+            "Trust Transition",
+            "The movement from despair to hope through divine mercy",
+            ["misericordia", "spero", "salutaris"],
+            ThemeCategory.virtue,
+            6...6
+        ),
+        (
+            "Promise of Praise",
+            "The commitment to joyful worship and singing in response to salvation",
+            ["exsulto", "cano", "psallo", "bona", "altissimus"],
+            ThemeCategory.worship,
+            6...6
+        ),
+        (
+            "Temporal Distress",
+            "The prolonged nature of suffering and the question of duration",
+            ["usquequo", "quandiu", "per", "diem"],
+            ThemeCategory.virtue,
+            1...2
+        ),
+        (
+            "Physical Faculties",
+            "The physical faculties (soul, heart, eyes, face) through which the psalmist experiences and expresses his relationship with God",
+            ["animus", "cor", "oculus", "vultus"],
+            ThemeCategory.virtue,
+            1...6
+        ),
+    ]
+
+    private let structuralThemes = [
+        (
+            "Abandonment → Anguish",
+            "A feeling of divine forgetfulness leads to deep internal anguish and questioning",
+            ["obliviscor", "avertor", "pono", "dolor"],
+            1,
+            2,
+            "The psalmist repeatedly questions how long God will forget him and hide His face, describing how he must continually harbor sorrow and grief in his heart.",
+            "Augustine sees this as the soul's cry in spiritual desolation, feeling the absence of God's comfort while grappling with persistent inner pain."
+        ),
+        (
+            "Oppression → Plea",
+            "The exaltation of enemies leads to a desperate plea for God's attention and illumination",
+            ["exalto", "respicio", "illumino", "obdormio"],
+            3,
+            4,
+            "The psalmist asks how long his enemy will be exalted over him, then urgently pleads for God to look upon him, hear him, and bring light to his eyes lest he sleep in death.",
+            "For Augustine, this represents the turn from lament to petition—asking God to replace the darkness of oppression with His illuminating grace to prevent spiritual death."
+        ),
+        (
+            "Defeat → Hope",
+            "The fear of enemy triumph is overcome by hope in divine mercy and salvation",
+            ["praevaleo", "exsulto", "spero", "salus"],
+            5,
+            6,
+            "The psalmist fears his enemies' triumph and exultation should he fall, but declares his personal hope in God's mercy and the future joy of His salvation.",
+            "Augustine interprets this as the crucial movement from fear to faith, where trust in God's character overcomes anxiety about circumstances."
+        ),
+    ]
+
     // MARK: - Test Methods
 
     func testTotalVerses() {
@@ -72,86 +154,108 @@ class Psalm12Tests: XCTestCase {
         }
     }
 
+    func testConceptualThemes() {
+        let utilities = PsalmTestUtilities.self
+
+        // Run the standard conceptual themes test
+        utilities.testConceptualThemes(
+            psalmText: psalm12,
+            conceptualThemes: conceptualThemes,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
+
+    func testStructuralThemes() {
+        let utilities = PsalmTestUtilities.self
+
+        // Run the standard structural themes test
+        utilities.testStructuralThemes(
+            psalmText: psalm12,
+            structuralThemes: structuralThemes,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
+
+    func testSavePsalm12Themes() {
+        let utilities = PsalmTestUtilities.self
+
+        // Generate and save themes JSON
+        guard let themesJSON = utilities.generateCompleteThemesJSONString(
+            psalmNumber: 12,
+            conceptualThemes: conceptualThemes,
+            structuralThemes: structuralThemes
+        ) else {
+            XCTFail("Failed to generate complete themes JSON")
+            return
+        }
+
+        // Save to file
+        let success = utilities.saveToFile(
+            content: themesJSON,
+            filename: "output_psalm12_themes.json"
+        )
+
+        if success {
+            print("✅ Complete themes JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete themes file:")
+            print(themesJSON)
+        }
+    }
+
     // MARK: - Theme Tests
-func testAllThemes() {
-    let analysis = latinService.analyzePsalm(id, text: psalm12)
-    
-    // All themes from your JSON
-    let allThemes = [
-        ("Lament in Suffering", ["usquequo", "obliviscor", "dolor"]),
-        ("Divine Hiddenness", ["averto", "facies"]),
-        ("Enemy Threat", ["exalto", "inimicus", "praevaleo"]),
-        ("Petition for Help", ["respicio", "exaudio", "illumino"]),
-        ("Trust Transition", ["misericordia", "spero"]),
-        ("Promise of Praise", ["exsulto", "cano", "psallo"])
-    ]
-    
-    var failedChecks = [String]()
-    
-    for (themeName, requiredLemmas) in allThemes {
-        let missing = requiredLemmas.filter { !analysis.dictionary.keys.contains($0) }
-        if !missing.isEmpty {
-            failedChecks.append("\(themeName): \(missing.joined(separator: ", "))")
-        }
-    }
-    
-    if !failedChecks.isEmpty {
-        XCTFail("Missing lemmas:\n" + failedChecks.joined(separator: "\n"))
-    }
-}
 
-
-func testThemeLineCoverage() {
-    let analysis = latinService.analyzePsalm(id, text: psalm12)
-    
-    // Verify every line has at least one theme
-    psalm12.enumerated().forEach { lineIndex, lineText in
-        let lineNumber = lineIndex + 1
-        let lineThemes = analysis.themes.compactMap { theme in
-            theme.lineRange?.contains(lineNumber) == true ? theme : nil
-        }
+    func testThemeLineCoverage() {
+        let analysis = latinService.analyzePsalm(id, text: psalm12)
         
-        XCTAssertFalse(
-            lineThemes.isEmpty,
-            "Line \(lineNumber) has no associated themes: '\(lineText)'"
-        )
-        
-        if verbose && !lineThemes.isEmpty {
-            print("\nLine \(lineNumber) themes:")
-            lineThemes.forEach { print("- \($0.name) (lines \($0.lineRange?.description ?? "nil"))") }
-        }
-    }
-}
-
-func testThemeLemmaPresence() {
-    let analysis = latinService.analyzePsalm(id, text: psalm12)
-    
-    // First build a set of all lemmas that exist in the analysis
-    let existingLemmas = Set(analysis.dictionary.keys)
-    
-    for theme in analysis.themes {
-        // Verify all supporting lemmas exist in the dictionary
-        let missingLemmas = theme.supportingLemmas.filter { !existingLemmas.contains($0) }
-        XCTAssertTrue(
-            missingLemmas.isEmpty,
-            "Theme '\(theme.name)' references missing lemmas: \(missingLemmas.joined(separator: ", "))"
-        )
-        
-        // If we have line ranges, do additional verification
-        if let lineRange = theme.lineRange {
-            // For this simple test, we'll just confirm the lemmas exist
-            // More advanced line-based verification would require modifying PsalmAnalysisResult
-            // to include word-to-line mapping information
-            if verbose {
-                print("\nTheme '\(theme.name)' (lines \(lineRange)) has lemmas:")
-                theme.supportingLemmas.forEach { print("- \($0)") }
+        // Verify every line has at least one theme
+        psalm12.enumerated().forEach { lineIndex, lineText in
+            let lineNumber = lineIndex + 1
+            let lineThemes = analysis.themes.compactMap { theme in
+                theme.lineRange?.contains(lineNumber) == true ? theme : nil
+            }
+            
+            XCTAssertFalse(
+                lineThemes.isEmpty,
+                "Line \(lineNumber) has no associated themes: '\(lineText)'"
+            )
+            
+            if verbose && !lineThemes.isEmpty {
+                print("\nLine \(lineNumber) themes:")
+                lineThemes.forEach { print("- \($0.name) (lines \($0.lineRange?.description ?? "nil"))") }
             }
         }
     }
-}
 
+    func testThemeLemmaPresence() {
+        let analysis = latinService.analyzePsalm(id, text: psalm12)
+        
+        // First build a set of all lemmas that exist in the analysis
+        let existingLemmas = Set(analysis.dictionary.keys)
+        
+        for theme in analysis.themes {
+            // Verify all supporting lemmas exist in the dictionary
+            let missingLemmas = theme.supportingLemmas.filter { !existingLemmas.contains($0) }
+            XCTAssertTrue(
+                missingLemmas.isEmpty,
+                "Theme '\(theme.name)' references missing lemmas: \(missingLemmas.joined(separator: ", "))"
+            )
+            
+            // If we have line ranges, do additional verification
+            if let lineRange = theme.lineRange {
+                // For this simple test, we'll just confirm the lemmas exist
+                // More advanced line-based verification would require modifying PsalmAnalysisResult
+                // to include word-to-line mapping information
+                if verbose {
+                    print("\nTheme '\(theme.name)' (lines \(lineRange)) has lemmas:")
+                    theme.supportingLemmas.forEach { print("- \($0)") }
+                }
+            }
+        }
+    }
 
-   
     // MARK: - Test Cases
     func testAnalysis() {
         let analysis = latinService.analyzePsalm(id, text: psalm12)
@@ -210,19 +314,6 @@ func testThemeLemmaPresence() {
         ]
         
         verifyWordsInAnalysis(analysis, confirmedWords: enemyTerms)
-    }
-    
-    func testSpiritualFaculties() {
-        let analysis = latinService.analyzePsalm(id, text: psalm12)
-        
-        let facultyTerms = [
-            ("animus", ["anima"], "soul"), // v.2
-            ("cor", ["corde", "cor"], "heart"), // v.2, v.6
-            ("oculus", ["oculos"], "eye"), // v.4
-            ("vultus", ["faciem", "faciem"], "face") // v.1, v.4
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: facultyTerms)
     }
     
     func testHopeTransition() {

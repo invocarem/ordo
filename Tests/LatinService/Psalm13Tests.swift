@@ -12,6 +12,7 @@ class Psalm13Tests: XCTestCase {
   }
 
   let id = PsalmIdentity(number: 13, category: nil)
+  private let expectedVerseCount = 11
 
   private let psalm13 = [
     "Dixit insipiens in corde suo: Non est Deus.",
@@ -19,12 +20,28 @@ class Psalm13Tests: XCTestCase {
     "Dominus de caelo prospexit super filios hominum, ut videat si est intelligens, aut requirens Deum.",
     "Omnes declinaverunt, simul inutiles facti sunt; non est qui faciat bonum, non est usque ad unum.",
     "Sepulcrum patens est guttur eorum; linguis suis dolose agebant, venenum aspidum sub labiis eorum.",
+    
     "Quorum os maledictione et amaritudine plenum est, veloces pedes eorum ad effundendum sanguinem.",
     "Contritio et infelicitas in viis eorum, et viam pacis non cognoverunt; non est timor Dei ante oculos eorum.",
     "Nonne scient omnes qui operantur iniquitatem, qui devorant plebem meam ut cibum panis?",
     "Dominum non invocaverunt; illic trepidaverunt timore, ubi non erat timor.",
     "Quoniam Dominus in generatione iusta est, consilium inopis confudistis, quoniam Dominus spes eius est.",
+
     "Quis dabit ex Sion salutare Israel? cum averterit Dominus captivitatem plebis suae, exsultabit Iacob, et laetabitur Israel.",
+  ]
+
+  private let englishText = [
+    "The fool hath said in his heart: There is no God.",
+    "They are corrupt, and are become abominable in their ways: there is none that doth good, no not one.",
+    "The Lord hath looked down from heaven upon the children of men, to see if there be any that understand and seek God.",
+    "They are all gone aside, they are become unprofitable together: there is none that doth good, no not one.",
+    "Their throat is an open sepulchre; with their tongues they acted deceitfully; the poison of asps is under their lips.",
+    "Whose mouth is full of cursing and bitterness; their feet are swift to shed blood.",
+    "Destruction and unhappiness in their ways; and the way of peace they have not known: there is no fear of God before their eyes.",
+    "Shall not all the workers of iniquity know, who eat up my people as they eat bread?",
+    "They have not called upon the Lord: there have they trembled for fear, where there was no fear.",
+    "For the Lord is in the just generation: you have confounded the counsel of the poor man; but the Lord is his hope.",
+    "Who shall give out of Sion the salvation of Israel? when the Lord shall have turned away the captivity of his people, Jacob shall rejoice, and Israel shall be glad."
   ]
 
   // MARK: - Line-by-line key lemmas (Psalm 13)
@@ -172,8 +189,14 @@ class Psalm13Tests: XCTestCase {
 
   // MARK: - Test Cases
 
-  func testPsalm13Verses() {
-    XCTAssertEqual(psalm13.count, 11, "Psalm 13 should have 11 verses in the Benedictine Office")
+  func testTotalVerses() {
+    XCTAssertEqual(
+      psalm13.count, expectedVerseCount, "Psalm 13 should have \(expectedVerseCount) verses"
+    )
+    XCTAssertEqual(
+      englishText.count, expectedVerseCount,
+      "Psalm 13 English text should have \(expectedVerseCount) verses"
+    )
     // Also validate the orthography of the text for analysis consistency
     let normalized = psalm13.map { PsalmTestUtilities.validateLatinText($0) }
     XCTAssertEqual(
@@ -210,12 +233,35 @@ class Psalm13Tests: XCTestCase {
     )
   }
 
-  func testSavePsalm13Themes() {
-    guard let jsonString = utilities.generateCompleteThemesJSONString(
+  func testSaveTexts() {
+    let jsonString = utilities.generatePsalmTextsJSONString(
       psalmNumber: id.number,
-      conceptualThemes: conceptualThemes,
-      structuralThemes: structuralThemes
-    ) else {
+      category: id.category ?? "",
+      text: psalm13,
+      englishText: englishText
+    )
+
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm13_texts.json"
+    )
+
+    if success {
+      print("✅ Complete texts JSON created successfully")
+    } else {
+      print("⚠️ Could not save complete texts file:")
+      print(jsonString)
+    }
+  }
+
+  func testSaveThemes() {
+    guard
+      let jsonString = utilities.generateCompleteThemesJSONString(
+        psalmNumber: id.number,
+        conceptualThemes: conceptualThemes,
+        structuralThemes: structuralThemes
+      )
+    else {
       XCTFail("Failed to generate complete themes JSON")
       return
     }

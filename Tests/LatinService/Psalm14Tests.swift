@@ -21,16 +21,26 @@ class Psalm14Tests: XCTestCase {
     "Qui facit haec, non movebitur in aeternum.",
   ]
 
+  private let englishText = [
+    "Lord, who shall dwell in thy tabernacle? or who shall rest in thy holy hill?",
+    "He that walketh without blemish, and worketh justice;",
+    "He that speaketh truth in his heart, who hath not used deceit in his tongue;",
+    "Nor hath done evil to his neighbor, nor taken up a reproach against his neighbors;",
+    "In his sight the malignant is brought to nothing: but he glorifieth them that fear the Lord.",
+    "He that sweareth to his neighbor, and deceiveth not; He that hath not put out his money to usury, nor taken bribes against the innocent.",
+    "He that doth these things shall not be moved for ever."
+  ]
+
   // MARK: - Line-by-line key lemmas (Psalm 14)
 
   private let lineKeyLemmas: [(Int, [String])] = [
-    (1, ["habito", "tabernaculum", "requiesco", "mons", "sanctus"]),
-    (2, ["macula", "iustitia"]),
-    (3, ["veritas", "cor", "dolus", "lingua"]),
-    (4, ["proximus", "malum", "opprobrium"]),
-    (5, ["conspectus", "malignus", "timeo", "glorifico", "dominus"]),
-    (6, ["iuro", "proximus", "decipio", "pecunia", "usura", "munus", "innocens"]),
-    (7, ["moveo", "aeternum"]),
+    (1, ["dominus", "habito", "tabernaculum", "requiesco", "mons", "sanctus"]),
+    (2, ["ingredior", "sine", "macula", "operor", "iustitia"]),
+    (3, ["loquor", "veritas", "cor", "ago", "dolus", "lingua"]),
+    (4, ["facio", "proximus", "malum", "opprobrium", "sustineo", "adversus"]),
+    (5, ["nihilum", "deduco", "conspectus", "malignus", "timentes", "dominus", "glorifico"]),
+    (6, ["iuro", "proximus", "decipio", "pecunia", "do", "usura", "munus", "innocens", "accipio"]),
+    (7, ["facio", "moveo", "aeternum"]),
   ]
 
   // MARK: - Structural themes (Psalm 14) — from themes.json
@@ -144,8 +154,15 @@ class Psalm14Tests: XCTestCase {
 
   // MARK: - Test Cases
 
-  func testPsalm14Verses() {
-    XCTAssertEqual(psalm14.count, 7, "Psalm 14 should have 7 verses in the Benedictine Office")
+  func testTotalVerses() {
+    let expectedVerseCount = 7
+    XCTAssertEqual(
+      psalm14.count, expectedVerseCount, "Psalm 14 should have \(expectedVerseCount) verses"
+    )
+    XCTAssertEqual(
+      englishText.count, expectedVerseCount,
+      "Psalm 14 English text should have \(expectedVerseCount) verses"
+    )
     // Also validate the orthography of the text for analysis consistency
     let normalized = psalm14.map { PsalmTestUtilities.validateLatinText($0) }
     XCTAssertEqual(
@@ -153,6 +170,27 @@ class Psalm14Tests: XCTestCase {
       psalm14,
       "Normalized Latin text should match expected classical forms"
     )
+  }
+
+  func testSaveTexts() {
+    let jsonString = utilities.generatePsalmTextsJSONString(
+      psalmNumber: id.number,
+      category: id.category ?? "",
+      text: psalm14,
+      englishText: englishText
+    )
+
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm14_texts.json"
+    )
+
+    if success {
+      print("✅ Complete texts JSON created successfully")
+    } else {
+      print("⚠️ Could not save complete texts file:")
+      print(jsonString)
+    }
   }
 
   func testPsalm14LineByLineKeyLemmas() {

@@ -1,5 +1,49 @@
 [
   {
+  "lemma": "cherubim",
+  "part_of_speech": "noun",
+  "declension": 0,
+  "gender": "masculine",
+  "number": "plural",
+  "nominative": "cherubim",
+  "translations": {
+    "en": "cherubim (an order of angels)",
+    "la": "cherubim"
+  }
+},
+  {
+  "lemma": "prae",
+  "part_of_speech": "preposition",
+  "case_governed": "ablative",
+  "translations": {
+    "en": "because of, on account of, in front of",
+    "la": "prae"
+  }
+},
+  {
+  "lemma": "fulgor",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "fulgor",
+  "genitive": "fulgoris",
+  "translations": {
+    "en": "brightness, flash, dazzling light",
+    "la": "fulgor, fulgoris"
+  }},
+  {
+  "lemma": "iratus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "iratus",
+  "genitive": "irati",
+  "translations": {
+    "en": "angry, wrathful, furious",
+    "la": "iratus, irata, iratum"
+  }
+},
+  {
     "lemma": "deliciae",
     "part_of_speech": "noun",
     "declension": 1,

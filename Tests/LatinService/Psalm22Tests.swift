@@ -14,13 +14,50 @@ class Psalm22Tests: XCTestCase {
     
     // MARK: - Test Data
     let psalm22 = [
-        "Dominus regit me, et nihil mihi deerit:",
-        "in loco pascuae ibi me collocavit; super aquam refectionis educavit me.",
-        "Animam meam convertit; deduxit me super semitas justitiae propter nomen suum.",
-        "Nam etsi ambulavero in medio umbrae mortis, non timebo mala, quoniam tu mecum es; virga tua et baculus tuus, ipsa me consolata sunt.",
-        "Parasti in conspectu meo mensam adversus eos qui tribulant me; impinguasti in oleo caput meum, et calix meus inebrians quam praeclarus est!",
-        "Et misericordia tua subsequetur me omnibus diebus vitae meae; et ut inhabitem in domo Domini in longitudinem dierum."
+        "Dominus regit me, et nihil mihi deerit: in loco pascuae ibi me collocavit;", 
+        "Super aquam refectionis educavit me. Animam meam convertit;", 
+        "Deduxit me super semitas iustitiae propter nomen suum.",
+        "Nam et si ambulavero in medio umbrae mortis, non timebo mala, quoniam tu mecum es;",
+        "Virga tua et baculus tuus, ipsa me consolata sunt.",
+        "Parasti in conspectu meo mensam adversus eos qui tribulant me; ",
+        "Impinguasti in oleo caput meum, et calix meus inebrians quam praeclarus est!",
+        "Et misericordia tua subsequetur me omnibus diebus vitae meae; ",
+        "Et ut inhabitem in domo Domini in longitudinem dierum."
     ]
+    
+    private let englishText = [
+        "The Lord is my shepherd, and I shall want nothing: in a place of pasture there he hath set me;",
+        "He hath brought me up on the water of refreshment: he hath converted my soul.",
+        "He hath led me on the paths of justice, for his own name's sake.",
+        "For though I should walk in the midst of the shadow of death, I will fear no evils, for thou art with me;",
+        "Thy rod and thy staff, they have comforted me.",
+        "Thou hast prepared a table before me against them that afflict me;",
+        "Thou hast anointed my head with oil; and my chalice which inebriateth me, how goodly is it!",
+        "And thy mercy will follow me all the days of my life;",
+        "And that I may dwell in the house of the Lord unto length of days."
+    ]
+    func testSaveTexts() {
+        let utilities = PsalmTestUtilities.self
+        let jsonString = utilities.generatePsalmTextsJSONString(
+            psalmNumber: id.number,
+            category: id.category ?? "",
+            text: psalm22,
+            englishText: englishText
+        )
+
+        let success = utilities.saveToFile(
+            content: jsonString,
+            filename: "output_psalm22_texts.json"
+        )
+
+        if success {
+            print("✅ Complete texts JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete texts file:")
+            print(jsonString)
+        }
+    }
+    
     func testDeeritInPsalm22() {
     let analysis = latinService.analyzePsalm(id, text: psalm22)
     
