@@ -1,8 +1,21 @@
 [
   {
+  "lemma": "reminiscor",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "reminisci",
+  "present": "reminiscor",
+  "future": "reminiscar",
+  "perfect": "reminitus",
+  "supine": "reminitum",
+  "translations": {
+    "en": "to remember, recall, recollect",
+    "la": "reminiscor, reminiscī, reminitus sum, reminutum"
+  }
+},
+  {
   "lemma": "cherubim",
   "part_of_speech": "noun",
-  "declension": 0,
   "gender": "masculine",
   "number": "plural",
   "nominative": "cherubim",
@@ -30,7 +43,8 @@
   "translations": {
     "en": "brightness, flash, dazzling light",
     "la": "fulgor, fulgoris"
-  }},
+  }
+},
   {
   "lemma": "iratus",
   "part_of_speech": "adjective",

@@ -18,12 +18,12 @@ BEGIN {
     
     # Process themes if requested
     if (themes == 1) {
-        process_files("output_psalm*_themes.json", "themes.json", "themes")
+        process_files("output/output_psalm*_themes.json", "themes.json", "themes")
     }
     
     # Process texts if requested
     if (texts == 1) {
-        process_files("output_psalm*_texts.json", "psalms.json", "texts")
+        process_files("output/output_psalm*_texts.json", "psalms.json", "texts")
     }
     
     print ""

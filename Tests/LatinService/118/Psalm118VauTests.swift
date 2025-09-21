@@ -24,105 +24,221 @@ class Psalm118VauTests: XCTestCase {
         "Et levavi manus meas ad mandata tua quae dilexi, et exercebar in iustificationibus tuis."
     ]
     
-    // MARK: - Line by Line Key Lemmas Test (STRICT - fails for any missing lemma)
-    func testPsalm118VauLineByLineKeyLemmas() {
-        // Test that each line contains ALL expected BASE LEMMAS including rare words
-        let lineTests = [
-            (1, ["venio", "super", "misericordia", "dominus", "salutare", "secundum", "eloquium"]),
-            (2, ["respondeo", "exprobro", "verbum", "spero", "sermo"]),
-            (3, ["aufero", "os", "verbum", "veritas", "usquequaque", "iudicium", "superspero"]),
-            (4, ["custodio", "lex", "semper", "saeculum"]),
-            (5, ["ambulo", "latitudo", "mandatum", "exquiro"]),
-            (6, ["loquor", "testimonium", "conspectus", "rex", "confundo"]),
-            (7, ["meditor", "mandatum", "diligo"]),
-            (8, ["levo", "manus", "mandatum", "diligo", "exerceo", "iustificatio"])
-        ]
-        
-        var allFailures: [String] = []
-        
-        for (lineNumber, expectedLemmas) in lineTests {
-            let line = psalm118Vau[lineNumber - 1]
-            let analysis = latinService.analyzePsalm(id, text: line, startingLineNumber: lineNumber)
-            
-            let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-            let foundLemmas = expectedLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-            let missingLemmas = expectedLemmas.filter { !detectedLemmas.contains($0.lowercased()) }
-            
-            if verbose {
-                let status = missingLemmas.isEmpty ? "✅" : "❌"
-                print("\(status) Line \(lineNumber): Found \(foundLemmas.count)/\(expectedLemmas.count) key lemmas: \(foundLemmas.joined(separator: ", "))")
-                
-                if !missingLemmas.isEmpty {
-                    print("   MISSING: \(missingLemmas.joined(separator: ", "))")
-                    print("   Available: \(detectedLemmas.sorted().joined(separator: ", "))")
-                }
-            }
-            
-            if !missingLemmas.isEmpty {
-                allFailures.append("Line \(lineNumber): Missing lemmas: \(missingLemmas.joined(separator: ", "))")
-            }
-        }
-        
-        if !allFailures.isEmpty {
-            XCTFail("Missing lemmas detected:\n" + allFailures.joined(separator: "\n"))
+    private let englishText = [
+        "Let thy mercies come also unto me, O Lord, even thy salvation, according to thy word.",
+        "So shall I have wherewith to answer him that reproacheth me: for I trust in thy word.",
+        "And take not the word of truth utterly out of my mouth; for I have hoped in thy judgments.",
+        "So shall I keep thy law continually for ever and ever.",
+        "And I will walk at liberty: for I seek thy precepts.",
+        "I will speak of thy testimonies also before kings, and will not be ashamed.",
+        "And I will delight myself in thy commandments, which I have loved.",
+        "My hands also will I lift up unto thy commandments, which I have loved; and I will meditate in thy statutes."
+    ]
+    
+    private let lineKeyLemmas = [
+        (1, ["venio", "super", "misericordia", "dominus", "salutare", "secundum", "eloquium"]),
+        (2, ["respondeo", "exprobro", "verbum", "spero", "sermo"]),
+        (3, ["aufero", "os", "verbum", "veritas", "usquequaque", "iudicium", "superspero"]),
+        (4, ["custodio", "lex", "semper", "saeculum"]),
+        (5, ["ambulo", "latitudo", "mandatum", "exquiro"]),
+        (6, ["loquor", "testimonium", "conspectus", "rex", "confundo"]),
+        (7, ["meditor", "mandatum", "diligo"]),
+        (8, ["levo", "manus", "mandatum", "diligo", "exerceo", "iustificatio"])
+    ]
+    
+    private let structuralThemes = [
+        (
+            "Divine Mercy → Trust",
+            "The psalmist's request for divine mercy and his trust in God's word",
+            ["venio", "misericordia", "salutare", "eloquium", "spero", "sermo"],
+            1,
+            2,
+            "The psalmist asks for God's mercy and salvation to come upon him according to His word, and expresses his trust in God's word as he responds to those who reproach him.",
+            "Augustine sees this as the soul's fundamental dependence on divine mercy and its trust in God's promises. The 'veniat' (let it come) shows the soul's openness to divine grace, while 'speravi' (I have hoped) demonstrates the faith that undergirds all spiritual life."
+        ),
+        (
+            "Truth Preservation → Eternal Obedience",
+            "The psalmist's plea for truth to remain in his mouth and his commitment to eternal obedience",
+            ["aufero", "verbum", "veritas", "usquequaque", "custodio", "lex", "semper", "saeculum"],
+            3,
+            4,
+            "The psalmist asks that the word of truth not be taken from his mouth, for he has hoped in God's judgments, and commits to keeping God's law continually forever.",
+            "For Augustine, this represents the soul's desire to be preserved in truth and its commitment to eternal obedience. The 'usquequaque' (utterly) shows the completeness of the psalmist's dependence on divine truth, while 'saeculum saeculi' (forever and ever) expresses the eternal nature of God's law."
+        ),
+        (
+            "Liberty → Bold Witness",
+            "The psalmist's experience of walking in liberty and his bold witness before kings",
+            ["ambulo", "latitudo", "mandatum", "exquiro", "loquor", "testimonium", "rex", "confundo"],
+            5,
+            6,
+            "The psalmist walks at liberty because he seeks God's precepts, and speaks of God's testimonies before kings without being ashamed.",
+            "Augustine interprets this as the true freedom that comes from obedience to God's law and the boldness that flows from divine confidence. The 'latitudine' (liberty) is not license but the freedom of the soul that walks in God's ways, while the bold witness before kings shows the power of divine truth."
+        ),
+        (
+            "Love → Devotion",
+            "The psalmist's love for God's commandments and his devoted meditation",
+            ["meditor", "mandatum", "diligo", "levo", "manus", "exerceo", "iustificatio"],
+            7,
+            8,
+            "The psalmist delights in and loves God's commandments, lifting up his hands to them and meditating in God's statutes.",
+            "For Augustine, this represents the highest form of spiritual life—love for God's law that leads to devoted meditation and active engagement. The 'dilexi' (I have loved) shows the heart's affection for divine truth, while the lifting of hands and meditation express the soul's complete devotion to God's will."
+        )
+    ];
+
+    private let conceptualThemes = [
+        (
+            "Divine Mercy and Salvation",
+            "References to God's mercy, salvation, and trust in His word",
+            ["misericordia", "salutare", "eloquium", "spero", "superspero", "venio"],
+            ThemeCategory.divine,
+            1...8
+        ),
+        (
+            "Word and Truth",
+            "Emphasis on God's word, truth, and testimonies",
+            ["verbum", "veritas", "eloquium", "sermo", "testimonium", "mandatum"],
+            ThemeCategory.divine,
+            1...8
+        ),
+        (
+            "Faithful Obedience",
+            "Themes of keeping, walking, seeking, and meditating on God's law",
+            ["custodio", "ambulo", "exquiro", "loquor", "meditor", "exerceo", "levo"],
+            ThemeCategory.virtue,
+            1...8
+        ),
+        (
+            "Protection and Confidence",
+            "Requests for protection and expressions of confidence in God",
+            ["respondeo", "confundo", "rex", "conspectus", "usquequaque", "latitudo"],
+            ThemeCategory.virtue,
+            1...8
+        )
+    ]
+    
+    // MARK: - Test Cases
+    
+    func testTotalVerses() {
+        XCTAssertEqual(
+            psalm118Vau.count, 8, "Psalm 118 Vau should have 8 verses"
+        )
+        XCTAssertEqual(
+            englishText.count, 8,
+            "Psalm 118 Vau English text should have 8 verses"
+        )
+        // Also validate the orthography of the text for analysis consistency
+        let normalized = psalm118Vau.map { PsalmTestUtilities.validateLatinText($0) }
+        XCTAssertEqual(
+            normalized,
+            psalm118Vau,
+            "Normalized Latin text should match expected classical forms"
+        )
+    }
+    
+    func testSaveTexts() {
+        let utilities = PsalmTestUtilities.self
+        let jsonString = utilities.generatePsalmTextsJSONString(
+            psalmNumber: id.number,
+            category: id.category ?? "",
+            text: psalm118Vau,
+            englishText: englishText
+        )
+
+        let success = utilities.saveToFile(
+            content: jsonString,
+            filename: "output_psalm118Vau_texts.json"
+        )
+
+        if success {
+            print("✅ Complete texts JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete texts file:")
+            print(jsonString)
         }
     }
     
-    // MARK: - Thematic Tests
-    
-    func testDivineMercyAndSalvationTheme() {
-        let analysis = latinService.analyzePsalm(id, text: psalm118Vau.joined(separator: " "))
-        
-        let mercyLemmas = ["misericordia", "salutare", "eloquium", "spero", "superspero", "venio"]
-        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-        let foundLemmas = mercyLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-        
-        if verbose {
-            print("\nDIVINE MERCY THEME: Found \(foundLemmas.count)/\(mercyLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
+    func testSaveThemes() {
+        let utilities = PsalmTestUtilities.self
+        guard
+            let jsonString = utilities.generateCompleteThemesJSONString(
+                psalmNumber: id.number,
+                category: id.category ?? "",
+                conceptualThemes: conceptualThemes,
+                structuralThemes: structuralThemes
+            )
+        else {
+            XCTFail("Failed to generate complete themes JSON")
+            return
         }
-        
-        XCTAssertTrue(foundLemmas.count >= 4, "Should find at least 4 divine mercy/salvation lemmas. Found: \(foundLemmas.joined(separator: ", "))")
+
+        let success = utilities.saveToFile(
+            content: jsonString,
+            filename: "output_psalm118Vau_themes.json"
+        )
+
+        if success {
+            print("✅ Complete themes JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete themes file:")
+            print(jsonString)
+        }
     }
     
-    func testWordAndTruthTheme() {
-        let analysis = latinService.analyzePsalm(id, text: psalm118Vau.joined(separator: " "))
-        
-        let wordLemmas = ["verbum", "veritas", "eloquium", "sermo", "testimonium", "mandatum"]
-        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-        let foundLemmas = wordLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-        
-        if verbose {
-            print("\nWORD AND TRUTH THEME: Found \(foundLemmas.count)/\(wordLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
-        }
-        
-        XCTAssertTrue(foundLemmas.count >= 4, "Should find at least 4 word/truth lemmas. Found: \(foundLemmas.joined(separator: ", "))")
+    func testLineByLineKeyLemmas() {
+        let utilities = PsalmTestUtilities.self
+        utilities.testLineByLineKeyLemmas(
+            psalmText: psalm118Vau,
+            lineKeyLemmas: lineKeyLemmas,
+            psalmId: id,
+            verbose: verbose
+        )
     }
-    
-    func testFaithfulObedienceTheme() {
-        let analysis = latinService.analyzePsalm(id, text: psalm118Vau.joined(separator: " "))
-        
-        let obedienceLemmas = ["custodio", "ambulo", "exquiro", "loquor", "meditor", "exerceo", "levo"]
-        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-        let foundLemmas = obedienceLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-        
-        if verbose {
-            print("\nOBEDIENCE THEME: Found \(foundLemmas.count)/\(obedienceLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
-        }
-        
-        XCTAssertTrue(foundLemmas.count >= 4, "Should find at least 4 obedience/action lemmas. Found: \(foundLemmas.joined(separator: ", "))")
+
+    func testStructuralThemes() {
+        let utilities = PsalmTestUtilities.self
+
+        // First, verify that all structural theme lemmas are in lineKeyLemmas
+        let structuralLemmas = structuralThemes.flatMap { $0.2 }
+        let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+        utilities.testLemmasInSet(
+            sourceLemmas: structuralLemmas,
+            targetLemmas: lineKeyLemmasFlat,
+            sourceName: "structural themes",
+            targetName: "lineKeyLemmas",
+            verbose: verbose
+        )
+
+        // Then run the standard structural themes test
+        utilities.testStructuralThemes(
+            psalmText: psalm118Vau,
+            structuralThemes: structuralThemes,
+            psalmId: id,
+            verbose: verbose
+        )
     }
-    
-    func testProtectionAndConfidenceTheme() {
-        let analysis = latinService.analyzePsalm(id, text: psalm118Vau.joined(separator: " "))
-        
-        let confidenceLemmas = ["respondeo", "confundo", "rex", "conspectus", "usquequaque", "latitudo"]
-        let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
-        let foundLemmas = confidenceLemmas.filter { detectedLemmas.contains($0.lowercased()) }
-        
-        if verbose {
-            print("\nCONFIDENCE THEME: Found \(foundLemmas.count)/\(confidenceLemmas.count) lemmas: \(foundLemmas.joined(separator: ", "))")
-        }
-        
-        XCTAssertTrue(foundLemmas.count >= 3, "Should find at least 3 confidence/protection lemmas. Found: \(foundLemmas.joined(separator: ", "))")
+
+    func testConceptualThemes() {
+        let utilities = PsalmTestUtilities.self
+
+        // First, verify that conceptual theme lemmas are in lineKeyLemmas
+        let conceptualLemmas = conceptualThemes.flatMap { $0.2 }
+        let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+        utilities.testLemmasInSet(
+            sourceLemmas: conceptualLemmas,
+            targetLemmas: lineKeyLemmasFlat,
+            sourceName: "conceptual themes",
+            targetName: "lineKeyLemmas",
+            verbose: verbose
+        )
+
+        // Then run the standard conceptual themes test
+        utilities.testConceptualThemes(
+            psalmText: psalm118Vau,
+            conceptualThemes: conceptualThemes,
+            psalmId: id,
+            verbose: verbose
+        )
     }
 }

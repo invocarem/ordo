@@ -328,8 +328,12 @@ public enum PsalmTestUtilities {
     filename: String
   ) -> Bool {
     do {
-      // Always use /app directory (mounted from host)
-      let fileURL = URL(fileURLWithPath: "/app").appendingPathComponent(filename)
+      // Always use /app/output directory (mounted from host)
+      let outputDir = URL(fileURLWithPath: "/app/output")
+      let fileURL = outputDir.appendingPathComponent(filename)
+
+      // Create output directory if it doesn't exist
+      try FileManager.default.createDirectory(at: outputDir, withIntermediateDirectories: true, attributes: nil)
 
       // Write content to file
       try content.write(to: fileURL, atomically: true, encoding: .utf8)
