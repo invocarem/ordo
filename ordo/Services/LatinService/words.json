@@ -1,12 +1,107 @@
 [
   {
-  "lemma": "quomodo",
-  "part_of_speech": "adverb",
+  "lemma": "spolium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "spolium",
+  "genitive": "spolii",
   "translations": {
-    "en": "how?, in what way?, by what means?",
-    "la": "quomodo"
+    "en": "skin, hide; booty",
+    "la": "spolium, spolii"
   }
 },
+  {
+  "lemma": "servo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "servare",
+  "present": "servo",
+  "future": "servabo",
+  "perfect": "servavi",
+  "supine": "servatum",
+  "translations": {
+    "en": "to save, preserve, watch over",
+    "la": "servo, servare, servavi, servatum"
+  }
+},
+  {
+  "lemma": "septies",
+  "part_of_speech": "adverb",
+  "declension": 0,
+  "translations": {
+    "en": "seven times",
+    "la": "septies"
+  }
+},
+  {
+  "lemma": "formido",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "formidare",
+  "present": "formido",
+  "future": "formidabo",
+  "perfect": "formidavi",
+  "supine": "formidatum",
+  "translations": {
+    "en": "to dread, be terrified of, shudder at",
+    "la": "formido, formidare, formidavi, formidatum"
+  }
+},
+  {
+  "lemma": "postulatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "postulatio",
+  "genitive": "postulationis",
+  "translations": {
+    "en": "demand, request, petition",
+    "la": "postulatio, postulationis"
+  }
+},
+  {
+    "lemma": "iuxta",
+    "part_of_speech": "preposition",
+    "case_governed": "accusative",
+    "translations": {
+      "en": "near, close to,  according to",
+      "la": "iuxta"
+    }
+  },
+  {
+    "lemma": "adolescentulus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "adolescentulus",
+    "genitive": "adolescentuli",
+    "translations": {
+      "en": "a young lad, very young man",
+      "la": "adolescentulus, adolescentuli"
+    }
+  },
+  {
+    "lemma": "angustia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "angustia",
+    "genitive": "angustiae",
+    "translations": {
+      "en": "narrowness, straits, anguish",
+      "la": "angustia, angustiae"
+    }
+  },
+
+  {
+    "lemma": "quomodo",
+    "part_of_speech": "adverb",
+    "translations": {
+      "en": "how?, in what way?, by what means?",
+      "la": "quomodo"
+    }
+  },
 
   {
     "lemma": "lac",
@@ -20,108 +115,108 @@
       "la": "lac, lactis"
     }
   },
-  
-  {
-  "lemma": "coagulo",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "coagulare",
-  "present": "coagulo",
-  "future": "coagulabo",
-  "perfect": "coagulavi",
-  "supine": "coagulatum",
-  "translations": {
-    "en": "to curdle, coagulate, thicken",
-    "la": "coagulo, coagulare, coagulavi, coagulatum"
-  }
-},
 
   {
-  "lemma": "delinquo",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "delinquere",
-  "present": "delinquo",
-  "future": "delinquam",
-  "perfect": "deliqui",
-  "supine": "delictum",
-  "translations": {
-    "en": "to fail, offend, transgress",
-    "la": "delinquo, delinquere, deliqui, delictum"
-  }
-},
+    "lemma": "coagulo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "coagulare",
+    "present": "coagulo",
+    "future": "coagulabo",
+    "perfect": "coagulavi",
+    "supine": "coagulatum",
+    "translations": {
+      "en": "to curdle, coagulate, thicken",
+      "la": "coagulo, coagulare, coagulavi, coagulatum"
+    }
+  },
+
   {
-  "lemma": "credo",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "credere",
-  "present": "credo",
-  "future": "credam",
-  "perfect": "credidi",
-  "supine": "creditum",
-  "translations": {
-    "en": "to believe, trust",
-    "la": "credo, credere, credidi, creditum"
-  }
-},
- {
-  "lemma": "reminiscor",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "reminisci",
-  "present": "reminiscor",
-  "future": "reminiscar",
-  "perfect": "reminitus",
-  "supine": "reminitum",
-  "translations": {
-    "en": "to remember, recall, recollect",
-    "la": "reminiscor, reminiscī, reminitus sum, reminutum"
-  }
-},
+    "lemma": "delinquo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "delinquere",
+    "present": "delinquo",
+    "future": "delinquam",
+    "perfect": "deliqui",
+    "supine": "delictum",
+    "translations": {
+      "en": "to fail, offend, transgress",
+      "la": "delinquo, delinquere, deliqui, delictum"
+    }
+  },
   {
-  "lemma": "cherubim",
-  "part_of_speech": "noun",
-  "gender": "masculine",
-  "number": "plural",
-  "nominative": "cherubim",
-  "translations": {
-    "en": "cherubim (an order of angels)",
-    "la": "cherubim"
-  }
-},
+    "lemma": "credo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "credere",
+    "present": "credo",
+    "future": "credam",
+    "perfect": "credidi",
+    "supine": "creditum",
+    "translations": {
+      "en": "to believe, trust",
+      "la": "credo, credere, credidi, creditum"
+    }
+  },
   {
-  "lemma": "prae",
-  "part_of_speech": "preposition",
-  "case_governed": "ablative",
-  "translations": {
-    "en": "because of, on account of, in front of",
-    "la": "prae"
-  }
-},
+    "lemma": "reminiscor",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "reminisci",
+    "present": "reminiscor",
+    "future": "reminiscar",
+    "perfect": "reminitus",
+    "supine": "reminitum",
+    "translations": {
+      "en": "to remember, recall, recollect",
+      "la": "reminiscor, reminiscī, reminitus sum, reminutum"
+    }
+  },
   {
-  "lemma": "fulgor",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "masculine",
-  "nominative": "fulgor",
-  "genitive": "fulgoris",
-  "translations": {
-    "en": "brightness, flash, dazzling light",
-    "la": "fulgor, fulgoris"
-  }
-},
+    "lemma": "cherubim",
+    "part_of_speech": "noun",
+    "gender": "masculine",
+    "number": "plural",
+    "nominative": "cherubim",
+    "translations": {
+      "en": "cherubim (an order of angels)",
+      "la": "cherubim"
+    }
+  },
   {
-  "lemma": "iratus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "iratus",
-  "genitive": "irati",
-  "translations": {
-    "en": "angry, wrathful, furious",
-    "la": "iratus, irata, iratum"
-  }
-},
+    "lemma": "prae",
+    "part_of_speech": "preposition",
+    "case_governed": "ablative",
+    "translations": {
+      "en": "because of, on account of, in front of",
+      "la": "prae"
+    }
+  },
+  {
+    "lemma": "fulgor",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "fulgor",
+    "genitive": "fulgoris",
+    "translations": {
+      "en": "brightness, flash, dazzling light",
+      "la": "fulgor, fulgoris"
+    }
+  },
+  {
+    "lemma": "iratus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "iratus",
+    "genitive": "irati",
+    "translations": {
+      "en": "angry, wrathful, furious",
+      "la": "iratus, irata, iratum"
+    }
+  },
   {
     "lemma": "deliciae",
     "part_of_speech": "noun",
@@ -18211,7 +18306,7 @@
         "oderitis",
         "oderint"
       ],
-      "perfect": ["odivi","oderunt"]
+      "perfect": ["odivi", "oderunt"]
     },
     "translations": {
       "en": "to hate (defective)",
@@ -19026,6 +19121,8 @@
     "part_of_speech": "verb",
     "conjugation": 3,
     "infinitive": "tabescere",
+    "present": "tabesco",
+    "future": "tabescam",
     "perfect": "tabui",
     "supine": null,
     "translations": {
@@ -22707,12 +22804,12 @@
         "obliviscentur"
       ],
       "perfect": [
-        "oblitus sum",
-        "oblitus es",
-        "oblitus est",
-        "obliti sumus",
-        "obliti estis",
-        "obliti sunt"
+        "oblitus",
+        "oblitus",
+        "oblitus",
+        "obliti",
+        "obliti",
+        "obliti"
       ],
       "present_subjunctive": [
         "obliviscar",
@@ -22722,7 +22819,10 @@
         "obliviscamini",
         "obliviscantur"
       ],
-      "imperative": ["obliviscere", "obliviscimini"]
+      "imperative": ["obliviscere", "obliviscimini"],
+      "perfect_participle_m_nom_pl": ["obliti"],
+      "perfect_participle_n_nom_pl": ["oblita"],
+      "perfect_participle_f_nom_pl": ["oblitae"]
     },
     "translations": {
       "en": "to forget",
@@ -25954,8 +26054,15 @@
     "translations": {
       "en": "many, much",
       "la": "multus"
-    }
-  },
+    },
+     "forms": {
+      "nominative_f": ["multa"],    
+    },
+    "forms_plural": {
+      "accusative_n": ["multa"]     
+    } 
+  }
+,
   {
     "lemma": "nolo",
     "part_of_speech": "verb",

@@ -20,7 +20,7 @@ let package = Package(
                 "LiturgicalService", "HoursService", "PsalmService", "PsalmProgressTracker",
             ],
             path: "docker-support",
-            exclude: ["Dockerfile", "Dockerfile.test"],
+            exclude: ["Dockerfile", "Dockerfile.test", "consolidate.awk"],
             sources: ["main.swift"]
         ),
 
@@ -51,6 +51,7 @@ let package = Package(
             name: "PsalmService",
             dependencies: [],
             path: "ordo/Services/PsalmService",
+            exclude: ["psalms_classic.json"],
             sources: ["PsalmService.swift"],
             resources: [.process("psalms.json")]
         ),
@@ -58,6 +59,7 @@ let package = Package(
             name: "LatinService",
             dependencies: [],
             path: "ordo/Services/LatinService",
+            exclude: ["themes_classic.json"],
             sources: [
                 "LatinService.swift",
                 "LatinWordEntity.swift",
@@ -171,6 +173,9 @@ let package = Package(
                 "118/Psalm118SadeTests.swift",
                 "118/Psalm118CophTests.swift",
                 "118/Psalm118ResTests.swift",
+                "118/Psalm118SinTests.swift",
+                "118/Psalm118TauTests.swift",
+
                 "Psalm119Tests.swift",
                 "Psalm120Tests.swift",
                 "Psalm121Tests.swift",
