@@ -2,7 +2,7 @@
 import XCTest
 
 class Psalm118TauTests: XCTestCase {
-  private var latinService: LatinService!
+  private let utilities = PsalmTestUtilities.self
   private let verbose = true
   let id = PsalmIdentity(number: 118, category: "tau")
 
@@ -115,7 +115,6 @@ class Psalm118TauTests: XCTestCase {
 
   override func setUp() {
     super.setUp()
-    latinService = LatinService.shared
   }
 
   // MARK: - Test Cases

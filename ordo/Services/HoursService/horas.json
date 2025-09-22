@@ -458,7 +458,7 @@
       ],
       "psalms": {
         "sunday": ["118 caph", "118 lamed", "118 mem"],
-        "monday": ["118 res", "118 sin", "118 thau"],
+        "monday": ["118 res", "118 sin", "118 tau"],
         "default": ["125", "126", "127"],
         "notes": "Each psalm ends with Gloria Patri."
       },

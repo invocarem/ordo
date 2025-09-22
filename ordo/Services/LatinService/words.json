@@ -1,5 +1,184 @@
 [
   {
+  "lemma": "dirigo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "dirigere",
+  "present": "dirigo",
+  "future": "dirigam",
+  "perfect": "direxi",
+  "supine": "directum",
+  "translations": {
+    "en": "to direct, guide",
+    "la": "dirigo, dirigere, direxi, directum"
+  },
+  "forms": {
+   "perfect_participle": ["directus", "directa", "directum"],
+   "perfect_participle_neuter_ablative": ["directo"]
+  }
+},
+  {
+  "lemma": "peto",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "petere",
+  "present": "peto",
+  "future": "petam",
+  "perfect": "petivi",
+  "supine": "petitum",
+  "translations": {
+    "en": "to seek, ask, request",
+    "la": "peto, petere, petivi, petitum"
+  },
+  "forms": {
+    "perfect_3sg_eccl": ["petiit"]
+  }
+},
+  {
+  "lemma": "pretiosus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "pretiosus",
+  "genitive": "pretiosi",
+  "translations": {
+    "en": "precious, valuable, costly",
+    "la": "pretiosus, pretiosa, pretiosum"
+  }
+},
+  {
+  "lemma": "caput",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "caput",
+  "genitive": "capitis",
+  "translations": {
+    "en": "head, chapter",
+    "la": "caput, capitis"
+  },
+  "forms": {
+    "ablative_sg": ["capite"]
+  }
+},
+  {
+  "lemma": "fraudo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "fraudare",
+  "present": "fraudo",
+  "future": "fraudabo",
+  "perfect": "fraudavi",
+  "supine": "fraudatum",
+  "translations": {
+    "en": "to cheat, steal from",
+    "la": "fraudo, fraudare, fraudavi, fraudatum"
+  },
+  "forms": {
+    "perfect_2sg_eccl": ["fraudasti"]
+  }
+},
+  {
+  "lemma": "expello",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "expellere",
+  "present": "expello",
+  "future": "expellam",
+  "perfect": "expuli",
+  "supine": "expulsum",
+  "translations": {
+    "en": "to drive out, expel, banish",
+    "la": "expello, expellere, expuli, expulsum"
+  }
+},
+
+  {
+  "lemma": "impietas",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "impietas",
+  "genitive": "impietatis",
+  "translations": {
+    "en": "impiety, ungodliness, irreverence",
+    "la": "impietas, impietatis"
+  },
+  "forms_plural": {
+    "genitive_f": ["impietatum"]
+  }
+}
+,
+
+  {
+  "lemma": "iniustus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "iniustus",
+  "genitive": "iniusti",
+  "translations": {
+    "en": "unjust, wrongful, unfair",
+    "la": "iniustus, iniusta, iniustum"
+  },
+  "forms": {
+    "genitive_m": ["iniusti"]
+  },
+  "forms_plural": {
+    "nominative_m": ["iniusti"],
+    "nominative_f": ["iniustae"],
+    "nominative_n": ["iniusta"]
+  }
+}
+,
+  {
+  "lemma": "glacies",
+  "part_of_speech": "noun",
+  "declension": 5,
+  "gender": "feminine",
+  "nominative": "glacies",
+  "genitive": "glaciei",
+  "translations": {
+    "en": "ice",
+    "la": "glacies, glaciei"
+  }
+},
+  {
+  "lemma": "fructifer",
+  "part_of_speech": "adjective",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "fructifer",
+  "genitive": "fructiferi",
+  "translations": {
+    "en": "fruitful, fruit-bearing, productive",
+    "la": "fructifer, fructifera, fructiferum"
+  },
+   "forms": {
+    "nominative_f": ["fructifera"]
+  }
+},
+  {
+  "lemma": "pennatus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "pennatus",
+  "genitive": "pennati",
+  "translations": {
+    "en": "feathered, winged, having wings",
+    "la": "pennatus, pennata, pennatum"
+  },
+   "forms": {
+    "genitive_f_sg": ["pennatae"],
+    "dative_f_sg": ["pennatae"]
+   },
+   "forms_plural": {
+    "nominative_f": ["pennatae"],
+    "vocative_f": ["pennatae"]
+  }
+},
+  {
   "lemma": "spolium",
   "part_of_speech": "noun",
   "declension": 2,
@@ -842,11 +1021,16 @@
     "declension": 1,
     "gender": "masculine",
     "nominative": "solus",
-    "genitive": "soli",
+    "genitive": "solius",
     "translations": {
       "en": "alone, only, sole, lonely",
       "la": "solus, sola, solum"
-    }
+    },
+     "forms": {
+    "genitive_m": ["solius"],
+    "genitive_f": ["solius"],
+    "genitive_n": ["solius"]
+  }
   },
   {
     "lemma": "virgo",
@@ -1722,6 +1906,7 @@
       "la": "praetereō, praeterīre, praeteriī, praeteritum"
     },
     "forms": {
+      "future_3s": ["praeteribit"],
       "present_subjunctive": [
         "praeteream",
         "praetereas",
@@ -9641,7 +9826,10 @@
     "translations": {
       "en": "stone, rock",
       "la": "lapis, lapidis"
-    }
+    },
+     "forms": {
+    "ablative_sg": ["lapide"]
+  }
   },
   {
     "lemma": "decem",
@@ -9663,7 +9851,11 @@
     "supine": "volatum",
     "forms": {
       "present_participle": ["volante"],
-      "pluperfect_subjunctive": ["voluisses"]
+      "pluperfect_subjunctive": ["voluisses"],
+       "present_participle_nom_sg_m": ["volens"],
+        "present_participle_nom_sg_f": ["volens"],
+        "present_participle_acc_sg_n": ["volens"],
+        "genitive_sg": ["volentis"]
     },
     "translations": {
       "en": "to fly, will, wish",
@@ -11235,6 +11427,7 @@
     },
     "forms_plural": {
       "nominative_m": ["viri"],
+      "dative_m": ["viris"],
       "accusative_m": ["viros"]
     },
     "translations": {
@@ -12640,7 +12833,7 @@
       "la": "psallo"
     },
     "forms": {
-      "future": ["psallam"],
+     "future": [ "psallam", "psalles", "psallet", "psallemus", "psalletis", "psallent" ],
       "imperative": ["psallite"]
     },
     "notes": "Biblical/Liturgical Latin; often refers to musical worship."
@@ -20321,6 +20514,7 @@
     "nominative": "dolus",
     "genitive": "doli",
     "forms": {
+      "adverb": ["dolose"],
       "nominative": ["dolus"],
       "vocative": ["dole"],
       "accusative": ["dolum", "dolosum"],
@@ -26043,22 +26237,15 @@
     "gender": "masculine",
     "nominative": "multus",
     "genitive": "multi",
-    "dative": "multo",
-    "accusative": "multum",
-    "ablative": "multo",
-    "nominative_plural": "multi",
-    "genitive_plural": "multorum",
-    "dative_plural": "multis",
-    "accusative_plural": "multos",
-    "ablative_plural": "multis",
     "translations": {
       "en": "many, much",
       "la": "multus"
     },
      "forms": {
-      "nominative_f": ["multa"],    
+      "nominative_f": ["multa"]    
     },
     "forms_plural": {
+      "nominative_f": ["multae"],
       "accusative_n": ["multa"]     
     } 
   }
@@ -26066,8 +26253,11 @@
   {
     "lemma": "nolo",
     "part_of_speech": "verb",
+    "conjugation": 0,
     "perfect": "nolui",
     "infinitive": "nolle",
+    "present": "nolo",
+    "future": "nolam",
     "forms": {
       "present": [
         "nolo",

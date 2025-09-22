@@ -3,20 +3,14 @@ import XCTest
 @testable import LatinService
 
 class Psalm148Tests: XCTestCase {
-  private var latinService: LatinService!
   private let utilities = PsalmTestUtilities.self
+  private let verbose = true
+  let id = PsalmIdentity(number: 148, category: "")
 
-  let verbose = true
+  // MARK: - Test Data Properties
 
-  override func setUp() {
-    super.setUp()
-    latinService = LatinService.shared
-  }
-
-  // MARK: - Test Data
-
-  let psalm148 = [
-   "Laudate Dominum de caelis: laudate eum in excelsis.",
+  private let psalm148 = [
+    "Laudate Dominum de caelis: laudate eum in excelsis.",
     "Laudate eum, omnes angeli eius: laudate eum, omnes virtutes eius.",
     "Laudate eum, sol et luna: laudate eum, omnes stellae et lumen.",
     "Laudate eum, caeli caelorum: et aquae omnes, quae super caelos sunt, laudent nomen Domini.",
@@ -29,20 +23,33 @@ class Psalm148Tests: XCTestCase {
     "Reges terrae, et omnes populi: principes, et omnes iudices terrae:",
     "Iuvenes, et virgines: senes cum iunioribus laudent nomen Domini: quia exaltatum est nomen eius solius.",
     "Confessio eius super caelum et terram: et exaltabit cornu populi sui.",
-    "Hymnus omnibus sanctis eius, filiis Israel, populo appropinquanti sibi."
-
+    "Hymnus omnibus sanctis eius, filiis Israel, populo appropinquanti sibi.",
   ]
-  let id = PsalmIdentity(number: 148, category: nil)
 
-  // MARK: - Line-by-line key lemmas (Psalm 148) - Updated for Benedictine Office
+  private let englishText = [
+    "Praise ye the Lord from the heavens: praise ye him in the high places.",
+    "Praise ye him, all his angels: praise ye him, all his hosts.",
+    "Praise ye him, O sun and moon: praise him, all ye stars and light.",
+    "Praise him, ye heavens of heavens: and let all the waters that are above the heavens praise the name of the Lord.",
+    "For he spoke, and they were made: he commanded, and they were created.",
+    "He hath established them for ever, and for ages of ages: he hath made a decree, and it shall not pass away.",
+    "Praise the Lord from the earth, ye dragons, and all ye deeps:",
+    "Fire, hail, snow, ice, stormy winds which fulfill his word:",
+    "Mountains and all hills, fruitful trees and all cedars:",
+    "Beasts and all cattle: serpents and feathered fowls:",
+    "Kings of the earth and all people: princes and all judges of the earth:",
+    "Young men and maidens: let the old with the younger, praise the name of the Lord: for his name alone is exalted.",
+    "The praise of him is above heaven and earth: and he hath exalted the horn of his people.",
+    "A hymn to all his saints: to the children of Israel, a people approaching to him.",
+  ]
 
-  private let lineKeyLemmas: [(Int, [String])] = [
+  private let lineKeyLemmas = [
     (1, ["laudo", "dominus", "caelum", "excelsus"]),
     (2, ["laudo", "angelus", "virtus"]),
     (3, ["laudo", "sol", "luna", "stella", "lumen"]),
     (4, ["caelum", "aqua", "laudo", "nomen", "dominus"]),
     (5, ["dico", "facio", "mando", "creo"]),
-    (6, ["statuto", "aeternum", "praeceptum", "non", "praetereo"]),
+    (6, ["statuo", "aeternum", "praeceptum", "non", "praetereo"]),
     (7, ["laudo", "terra", "draco", "abyssus"]),
     (8, ["ignis", "grando", "nix", "glacies", "spiritus", "procella", "verbum"]),
     (9, ["mons", "collis", "lignum", "fructifer", "cedrus"]),
@@ -53,13 +60,11 @@ class Psalm148Tests: XCTestCase {
     (14, ["hymnus", "sanctus", "israel", "populus", "appropinquo"]),
   ]
 
-  // MARK: - Structural Themes (every 2 verses) - Updated for Benedictine Office
-
   private let structuralThemes = [
     (
       "Heaven → Angels",
       "From the high heavens to the angelic hosts",
-      ["caelum", "excelsus", "angelus", "virtus"],
+      ["laudo", "dominus", "caelum", "excelsus", "angelus", "virtus"],
       1,
       2,
       "Praise begins from the heavens above and moves to the angelic powers, showing the heavenly order's glorification of God.",
@@ -68,7 +73,7 @@ class Psalm148Tests: XCTestCase {
     (
       "Luminaries → Waters Above",
       "From sun, moon, and stars to the heavenly waters",
-      ["sol", "luna", "stella", "lumen", "aqua"],
+      ["laudo", "sol", "luna", "stella", "lumen", "caelum", "aqua", "nomen", "dominus"],
       3,
       4,
       "Celestial lights and cosmic waters join in glorifying the Creator.",
@@ -77,7 +82,7 @@ class Psalm148Tests: XCTestCase {
     (
       "Word Spoken → Eternal Law",
       "From creation by command to lasting decree",
-      ["dico", "facio", "mando", "creo", "statuto", "aeternum", "praeceptum"],
+      ["dico", "facio", "mando", "creo", "statuo", "aeternum", "praeceptum", "non", "praetereo"],
       5,
       6,
       "The psalm turns from creation at God's word to His eternal law, which cannot pass away.",
@@ -86,7 +91,7 @@ class Psalm148Tests: XCTestCase {
     (
       "Depths → Storms",
       "From sea creatures to the forces of weather",
-      ["terra", "draco", "abyssus", "ignis", "procella", "verbum"],
+      ["laudo", "terra", "draco", "abyssus", "ignis", "grando", "nix", "glacies", "spiritus", "procella", "verbum"],
       7,
       8,
       "From the abyss and monsters of the deep to the fire, hail, snow, and storm — all obey the Creator's word.",
@@ -95,7 +100,7 @@ class Psalm148Tests: XCTestCase {
     (
       "Mountains → Beasts",
       "From the heights of earth to animals of land and sky",
-      ["mons", "collis", "lignum", "cedrus", "bestia", "serpens", "volucris"],
+      ["mons", "collis", "lignum", "fructifer", "cedrus", "bestia", "pecus", "serpens", "volucris", "pennatus"],
       9,
       10,
       "The material world — mountains, trees, and animals — participates in the universal praise.",
@@ -104,7 +109,7 @@ class Psalm148Tests: XCTestCase {
     (
       "Rulers → All Humanity",
       "From kings and judges to all ages and states of humanity",
-      ["rex", "princeps", "iudex", "iuvenis", "virgo", "senex", "iunior"],
+      ["rex", "terra", "populus", "princeps", "iudex", "iuvenis", "virgo", "senex", "iunior", "laudo", "nomen", "dominus", "exalto", "solus"],
       11,
       12,
       "All humanity is summoned: rulers, peoples, the young and old together, to praise the Lord's name which alone is exalted.",
@@ -113,7 +118,7 @@ class Psalm148Tests: XCTestCase {
     (
       "Universal Confession → Exaltation of God's People",
       "From God's glory over all creation to the exaltation of His people",
-      ["confessio", "caelum", "terra", "exalto", "cornu", "populus", "hymnus", "sanctus", "israel"],
+      ["confessio", "caelum", "terra", "exalto", "cornu", "populus", "hymnus", "sanctus", "israel", "appropinquo"],
       13,
       14,
       "The psalm concludes with God's glory confessed over all creation and His people raised up in strength and hymnody.",
@@ -121,13 +126,11 @@ class Psalm148Tests: XCTestCase {
     ),
   ]
 
-  // MARK: - Conceptual Themes (Psalm 148) - Updated for Benedictine Office
-
   private let conceptualThemes = [
     (
       "Divine Creation",
       "God's creative power and authority",
-      ["dico", "facio", "mando", "creo", "statuto"],
+      ["dico", "facio", "mando", "creo", "statuo"],
       ThemeCategory.divine,
       5 ... 6
     ),
@@ -191,7 +194,7 @@ class Psalm148Tests: XCTestCase {
 
   // MARK: - Test Cases
 
-  func testPsalm148Verses() {
+  func testTotalVerses() {
     XCTAssertEqual(
       psalm148.count, 14, "Psalm 148 should have 14 verses in the Benedictine Office"
     )
@@ -201,7 +204,7 @@ class Psalm148Tests: XCTestCase {
     )
   }
 
-  func testPsalm148LineByLineKeyLemmas() {
+  func testLineByLineKeyLemmas() {
     utilities.testLineByLineKeyLemmas(
       psalmText: psalm148,
       lineKeyLemmas: lineKeyLemmas,
@@ -210,7 +213,7 @@ class Psalm148Tests: XCTestCase {
     )
   }
 
-  func testPsalm148StructuralThemes() {
+  func testStructuralThemes() {
     utilities.testStructuralThemes(
       psalmText: psalm148,
       structuralThemes: structuralThemes,
@@ -219,7 +222,7 @@ class Psalm148Tests: XCTestCase {
     )
   }
 
-  func testPsalm148ConceptualThemes() {
+  func testConceptualThemes() {
     utilities.testConceptualThemes(
       psalmText: psalm148,
       conceptualThemes: conceptualThemes,
@@ -228,7 +231,7 @@ class Psalm148Tests: XCTestCase {
     )
   }
 
-  func testSavePsalm148Themes() {
+  func testSaveThemes() {
     guard
       let jsonString = utilities.generateCompleteThemesJSONString(
         psalmNumber: id.number,
