@@ -1,5 +1,70 @@
 [
   {
+  "lemma": "quomodo",
+  "part_of_speech": "adverb",
+  "translations": {
+    "en": "how?, in what way?, by what means?",
+    "la": "quomodo"
+  }
+},
+
+  {
+    "lemma": "lac",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "lac",
+    "genitive": "lactis",
+    "translations": {
+      "en": "milk",
+      "la": "lac, lactis"
+    }
+  },
+  
+  {
+  "lemma": "coagulo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "coagulare",
+  "present": "coagulo",
+  "future": "coagulabo",
+  "perfect": "coagulavi",
+  "supine": "coagulatum",
+  "translations": {
+    "en": "to curdle, coagulate, thicken",
+    "la": "coagulo, coagulare, coagulavi, coagulatum"
+  }
+},
+
+  {
+  "lemma": "delinquo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "delinquere",
+  "present": "delinquo",
+  "future": "delinquam",
+  "perfect": "deliqui",
+  "supine": "delictum",
+  "translations": {
+    "en": "to fail, offend, transgress",
+    "la": "delinquo, delinquere, deliqui, delictum"
+  }
+},
+  {
+  "lemma": "credo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "credere",
+  "present": "credo",
+  "future": "credam",
+  "perfect": "credidi",
+  "supine": "creditum",
+  "translations": {
+    "en": "to believe, trust",
+    "la": "credo, credere, credidi, creditum"
+  }
+},
+ {
   "lemma": "reminiscor",
   "part_of_speech": "verb",
   "conjugation": 3,
@@ -18146,7 +18211,7 @@
         "oderitis",
         "oderint"
       ],
-      "perfect": ["oderunt"]
+      "perfect": ["odivi","oderunt"]
     },
     "translations": {
       "en": "to hate (defective)",
