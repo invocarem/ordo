@@ -1,319 +1,540 @@
 [
   {
-  "lemma": "propono",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "proponere",
-  "present": "propono",
-  "future": "proponam",
-  "perfect": "proposui",
-  "supine": "propositum",
-  "translations": {
-    "en": "to put forward, propose, intend",
-    "la": "propono, proponere, proposui, propositum"
-  }
-},
-  {
-  "lemma": "abduco",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "abducere",
-  "present": "abduco",
-  "future": "abducam",
-  "perfect": "abduxi",
-  "supine": "abductum",
-  "translations": {
-    "en": "to lead away, take away, remove ",
-    "la": "abduco, abducere, abduxi, abductum"
-  }
-},
-  {
-  "lemma": "cantio",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "cantio",
-  "genitive": "cantonis",
-  "translations": {
-    "en": "song, chant, magic spell",
-    "la": "cantio, cantonis"
+    "lemma": "produco",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "producere",
+    "present": "produco",
+    "future": "producam",
+    "perfect": "produxi",
+    "supine": "productum",
+    "translations": {
+      "en": "to lead forth, produce, extend",
+      "la": "produco, producere, produxi, productum"
+    },
+    "forms": {
+      "future_1s": ["producam"]
+    }
   },
-   "forms_plural": {
-    "nominative_f": ["cantiones"],
-    "genitive_f": ["cantionum"],
-    "dative_f": ["cantionibus"],
-    "accusative_f": ["cantiones"],
-    "ablative_f": ["cantionibus"]
-  }
-},
   {
-  "lemma": "duco",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "ducere",
-  "present": "duco",
-  "future": "ducam",
-  "perfect": "duxi",
-  "supine": "ductum",
-  "translations": {
-    "en": "to lead, guide",
-    "la": "duco, ducere, duxi, ductum"
-  }
-},
-  {
-  "lemma": "suspendo",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "suspendere",
-  "present": "suspendo",
-  "future": "suspendam",
-  "perfect": "suspendi",
-  "supine": "suspensum",
-  "translations": {
-    "en": "to hang up, suspend, hang",
-    "la": "suspendo, suspendere, suspendi, suspensum"
-  }
-},
-  {
-  "lemma": "dirigo",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "dirigere",
-  "present": "dirigo",
-  "future": "dirigam",
-  "perfect": "direxi",
-  "supine": "directum",
-  "translations": {
-    "en": "to direct, guide",
-    "la": "dirigo, dirigere, direxi, directum"
+    "lemma": "ora",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "ora",
+    "genitive": "orae",
+    "translations": {
+      "en": "coast, region, border",
+      "la": "ora, orae"
+    }
   },
-  "forms": {
-   "perfect_participle": ["directus", "directa", "directum"],
-   "perfect_participle_neuter_ablative": ["directo"]
-  }
-},
   {
-  "lemma": "peto",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "petere",
-  "present": "peto",
-  "future": "petam",
-  "perfect": "petivi",
-  "supine": "petitum",
-  "translations": {
-    "en": "to seek, ask, request",
-    "la": "peto, petere, petivi, petitum"
+    "lemma": "barba",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "barba",
+    "genitive": "barbae",
+    "translations": {
+      "en": "beard",
+      "la": "barba, barbae"
+    }
   },
-  "forms": {
-    "perfect_3sg_eccl": ["petiit"]
-  }
-},
   {
-  "lemma": "pretiosus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "pretiosus",
-  "genitive": "pretiosi",
-  "translations": {
-    "en": "precious, valuable, costly",
-    "la": "pretiosus, pretiosa, pretiosum"
-  }
-},
-  {
-  "lemma": "caput",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "neuter",
-  "nominative": "caput",
-  "genitive": "capitis",
-  "translations": {
-    "en": "head, chapter",
-    "la": "caput, capitis"
+    "lemma": "semino",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "seminare",
+    "present": "semino",
+    "future": "seminabo",
+    "perfect": "seminavi",
+    "supine": "seminatum",
+    "translations": {
+      "en": "to sow, plant, scatter seed",
+      "la": "semino, seminare, seminavi, seminatum"
+    },
+    "forms": {
+      "present_3pl": ["seminant"]
+    }
   },
-  "forms": {
-    "ablative_sg": ["capite"]
-  }
-},
   {
-  "lemma": "fraudo",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "fraudare",
-  "present": "fraudo",
-  "future": "fraudabo",
-  "perfect": "fraudavi",
-  "supine": "fraudatum",
-  "translations": {
-    "en": "to cheat, steal from",
-    "la": "fraudo, fraudare, fraudavi, fraudatum"
+    "lemma": "frustra",
+    "part_of_speech": "adverb",
+    "declension": 0,
+    "translations": {
+      "en": "in vain, uselessly, without success",
+      "la": "frustra"
+    }
   },
-  "forms": {
-    "perfect_2sg_eccl": ["fraudasti"]
-  }
-},
   {
-  "lemma": "expello",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "expellere",
-  "present": "expello",
-  "future": "expellam",
-  "perfect": "expuli",
-  "supine": "expulsum",
-  "translations": {
-    "en": "to drive out, expel, banish",
-    "la": "expello, expellere, expuli, expulsum"
-  }
-},
+    "lemma": "cantatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "cantatio",
+    "genitive": "cantationis",
+    "translations": {
+      "en": "singing, song, chant",
+      "la": "cantatio, cantationis"
+    }
+  },
+  {
+    "lemma": "malus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "malus",
+    "genitive": "mali",
+    "translations": {
+      "en": "bad, evil, wicked, harmful",
+      "la": "malus, mala, malum"
+    },
+    "forms": {
+      "nominative_f": ["mala"],
+      "nominative_n": ["malum"]
+    },
+    "forms_plural": {
+      "accusative_f": ["malas"]
+    }
+  },
+  {
+    "lemma": "magnalia",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "number": "plural",
+    "nominative": "magnalia",
+    "genitive": "magnalium",
+    "translations": {
+      "en": "great things, mighty works",
+      "la": "magnalia, magnalium"
+    }
+  },
+  {
+    "lemma": "litteratura",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "litteratura",
+    "genitive": "litteraturae",
+    "translations": {
+      "en": "writing, letters, literature",
+      "la": "litteratura, litteraturae"
+    },
+    "forms": {
+      "accusative_sg": ["litteraturam"]
+    }
+  },
+  {
+    "lemma": "prodigium",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "prodigium",
+    "genitive": "prodigii",
+    "translations": {
+      "en": "omen, portent, unnatural event",
+      "la": "prodigium, prodigii"
+    }
+  },
+  {
+    "lemma": "addo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "addere",
+    "present": "addo",
+    "future": "addam",
+    "perfect": "addidi",
+    "supine": "additum",
+    "translations": {
+      "en": "to add, attach, join",
+      "la": "addo, addere, addidi, additum"
+    },
+    "forms": {
+      "future_1sg_eccl": ["adiciam"]
+    }
+  },
+  {
+    "lemma": "senium",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "senium",
+    "genitive": "senii",
+    "translations": {
+      "en": "decline of age, senility, decay",
+      "la": "senium, senii"
+    }
+  },
+  {
+    "lemma": "reduco",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "reducere",
+    "present": "reduco",
+    "future": "reduciam",
+    "perfect": "reduxi",
+    "supine": "reductum",
+    "translations": {
+      "en": "to lead back, bring back, restore",
+      "la": "reduco, reducere, reduxi, reductum"
+    }
+  },
 
   {
-  "lemma": "impietas",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "impietas",
-  "genitive": "impietatis",
-  "translations": {
-    "en": "impiety, ungodliness, irreverence",
-    "la": "impietas, impietatis"
+    "lemma": "enutrio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "enutrire",
+    "present": "enutrio",
+    "future": "enutriam",
+    "perfect": "enutrivi",
+    "supine": "enutritum",
+    "translations": {
+      "en": "to nourish, bring up, raise",
+      "la": "enutrio, enutrire, enutrivi, enutritum"
+    }
   },
-  "forms_plural": {
-    "genitive_f": ["impietatum"]
-  }
-}
-,
+  {
+    "lemma": "detraho",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "detrahere",
+    "present": "detraho",
+    "future": "detraham",
+    "perfect": "detraxi",
+    "supine": "detractum",
+    "translations": {
+      "en": "to drag down, remove, take away ",
+      "la": "detraho, detrahere, detraxi, detractum"
+    }
+  },
+  {
+    "lemma": "operio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "operire",
+    "present": "operio",
+    "future": "operiam",
+    "perfect": "operui",
+    "supine": "opertum",
+    "translations": {
+      "en": "to cover, conceal, overwhelm",
+      "la": "operio, operire, operui, opertum"
+    }
+  },
+  {
+    "lemma": "propono",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "proponere",
+    "present": "propono",
+    "future": "proponam",
+    "perfect": "proposui",
+    "supine": "propositum",
+    "translations": {
+      "en": "to put forward, propose, intend",
+      "la": "propono, proponere, proposui, propositum"
+    }
+  },
+  {
+    "lemma": "abduco",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "abducere",
+    "present": "abduco",
+    "future": "abducam",
+    "perfect": "abduxi",
+    "supine": "abductum",
+    "translations": {
+      "en": "to lead away, take away, remove ",
+      "la": "abduco, abducere, abduxi, abductum"
+    }
+  },
+  {
+    "lemma": "cantio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "cantio",
+    "genitive": "cantonis",
+    "translations": {
+      "en": "song, chant, magic spell",
+      "la": "cantio, cantonis"
+    },
+    "forms_plural": {
+      "nominative_f": ["cantiones"],
+      "genitive_f": ["cantionum"],
+      "dative_f": ["cantionibus"],
+      "accusative_f": ["cantiones"],
+      "ablative_f": ["cantionibus"]
+    }
+  },
+  {
+    "lemma": "duco",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "ducere",
+    "present": "duco",
+    "future": "ducam",
+    "perfect": "duxi",
+    "supine": "ductum",
+    "translations": {
+      "en": "to lead, guide",
+      "la": "duco, ducere, duxi, ductum"
+    }
+  },
+  {
+    "lemma": "suspendo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "suspendere",
+    "present": "suspendo",
+    "future": "suspendam",
+    "perfect": "suspendi",
+    "supine": "suspensum",
+    "translations": {
+      "en": "to hang up, suspend, hang",
+      "la": "suspendo, suspendere, suspendi, suspensum"
+    }
+  },
+  {
+    "lemma": "dirigo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "dirigere",
+    "present": "dirigo",
+    "future": "dirigam",
+    "perfect": "direxi",
+    "supine": "directum",
+    "translations": {
+      "en": "to direct, guide",
+      "la": "dirigo, dirigere, direxi, directum"
+    },
+    "forms": {
+      "perfect_participle": ["directus", "directa", "directum"],
+      "perfect_participle_neuter_ablative": ["directo"]
+    }
+  },
+  {
+    "lemma": "peto",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "petere",
+    "present": "peto",
+    "future": "petam",
+    "perfect": "petivi",
+    "supine": "petitum",
+    "translations": {
+      "en": "to seek, ask, request",
+      "la": "peto, petere, petivi, petitum"
+    },
+    "forms": {
+      "perfect_3sg_eccl": ["petiit"]
+    }
+  },
+  {
+    "lemma": "pretiosus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "pretiosus",
+    "genitive": "pretiosi",
+    "translations": {
+      "en": "precious, valuable, costly",
+      "la": "pretiosus, pretiosa, pretiosum"
+    }
+  },
+  {
+    "lemma": "caput",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "caput",
+    "genitive": "capitis",
+    "translations": {
+      "en": "head, chapter",
+      "la": "caput, capitis"
+    },
+    "forms": {
+      "ablative_sg": ["capite"]
+    }
+  },
+  {
+    "lemma": "fraudo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "fraudare",
+    "present": "fraudo",
+    "future": "fraudabo",
+    "perfect": "fraudavi",
+    "supine": "fraudatum",
+    "translations": {
+      "en": "to cheat, steal from",
+      "la": "fraudo, fraudare, fraudavi, fraudatum"
+    },
+    "forms": {
+      "perfect_2sg_eccl": ["fraudasti"]
+    }
+  },
+  {
+    "lemma": "expello",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "expellere",
+    "present": "expello",
+    "future": "expellam",
+    "perfect": "expuli",
+    "supine": "expulsum",
+    "translations": {
+      "en": "to drive out, expel, banish",
+      "la": "expello, expellere, expuli, expulsum"
+    }
+  },
 
   {
-  "lemma": "iniustus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "iniustus",
-  "genitive": "iniusti",
-  "translations": {
-    "en": "unjust, wrongful, unfair",
-    "la": "iniustus, iniusta, iniustum"
+    "lemma": "impietas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "impietas",
+    "genitive": "impietatis",
+    "translations": {
+      "en": "impiety, ungodliness, irreverence",
+      "la": "impietas, impietatis"
+    },
+    "forms_plural": {
+      "genitive_f": ["impietatum"]
+    }
   },
-  "forms": {
-    "genitive_m": ["iniusti"]
+  {
+    "lemma": "iniustus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "iniustus",
+    "genitive": "iniusti",
+    "translations": {
+      "en": "unjust, wrongful, unfair",
+      "la": "iniustus, iniusta, iniustum"
+    },
+    "forms": {
+      "genitive_m": ["iniusti"]
+    },
+    "forms_plural": {
+      "nominative_m": ["iniusti"],
+      "nominative_f": ["iniustae"],
+      "nominative_n": ["iniusta"]
+    }
   },
-  "forms_plural": {
-    "nominative_m": ["iniusti"],
-    "nominative_f": ["iniustae"],
-    "nominative_n": ["iniusta"]
-  }
-}
-,
   {
-  "lemma": "glacies",
-  "part_of_speech": "noun",
-  "declension": 5,
-  "gender": "feminine",
-  "nominative": "glacies",
-  "genitive": "glaciei",
-  "translations": {
-    "en": "ice",
-    "la": "glacies, glaciei"
-  }
-},
-  {
-  "lemma": "fructifer",
-  "part_of_speech": "adjective",
-  "declension": 2,
-  "gender": "masculine",
-  "nominative": "fructifer",
-  "genitive": "fructiferi",
-  "translations": {
-    "en": "fruitful, fruit-bearing, productive",
-    "la": "fructifer, fructifera, fructiferum"
+    "lemma": "glacies",
+    "part_of_speech": "noun",
+    "declension": 5,
+    "gender": "feminine",
+    "nominative": "glacies",
+    "genitive": "glaciei",
+    "translations": {
+      "en": "ice",
+      "la": "glacies, glaciei"
+    }
   },
-   "forms": {
-    "nominative_f": ["fructifera"]
-  }
-},
   {
-  "lemma": "pennatus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "pennatus",
-  "genitive": "pennati",
-  "translations": {
-    "en": "feathered, winged, having wings",
-    "la": "pennatus, pennata, pennatum"
+    "lemma": "fructifer",
+    "part_of_speech": "adjective",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "fructifer",
+    "genitive": "fructiferi",
+    "translations": {
+      "en": "fruitful, fruit-bearing, productive",
+      "la": "fructifer, fructifera, fructiferum"
+    },
+    "forms": {
+      "nominative_f": ["fructifera"]
+    }
   },
-   "forms": {
-    "genitive_f_sg": ["pennatae"],
-    "dative_f_sg": ["pennatae"]
-   },
-   "forms_plural": {
-    "nominative_f": ["pennatae"],
-    "vocative_f": ["pennatae"]
-  }
-},
   {
-  "lemma": "spolium",
-  "part_of_speech": "noun",
-  "declension": 2,
-  "gender": "neuter",
-  "nominative": "spolium",
-  "genitive": "spolii",
-  "translations": {
-    "en": "skin, hide; booty",
-    "la": "spolium, spolii"
-  }
-},
+    "lemma": "pennatus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "pennatus",
+    "genitive": "pennati",
+    "translations": {
+      "en": "feathered, winged, having wings",
+      "la": "pennatus, pennata, pennatum"
+    },
+    "forms": {
+      "genitive_f_sg": ["pennatae"],
+      "dative_f_sg": ["pennatae"]
+    },
+    "forms_plural": {
+      "nominative_f": ["pennatae"],
+      "vocative_f": ["pennatae"]
+    }
+  },
   {
-  "lemma": "servo",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "servare",
-  "present": "servo",
-  "future": "servabo",
-  "perfect": "servavi",
-  "supine": "servatum",
-  "translations": {
-    "en": "to save, preserve, watch over",
-    "la": "servo, servare, servavi, servatum"
-  }
-},
+    "lemma": "spolium",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "spolium",
+    "genitive": "spolii",
+    "translations": {
+      "en": "skin, hide; booty",
+      "la": "spolium, spolii"
+    }
+  },
   {
-  "lemma": "septies",
-  "part_of_speech": "adverb",
-  "declension": 0,
-  "translations": {
-    "en": "seven times",
-    "la": "septies"
-  }
-},
+    "lemma": "servo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "servare",
+    "present": "servo",
+    "future": "servabo",
+    "perfect": "servavi",
+    "supine": "servatum",
+    "translations": {
+      "en": "to save, preserve, watch over",
+      "la": "servo, servare, servavi, servatum"
+    }
+  },
   {
-  "lemma": "formido",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "formidare",
-  "present": "formido",
-  "future": "formidabo",
-  "perfect": "formidavi",
-  "supine": "formidatum",
-  "translations": {
-    "en": "to dread, be terrified of, shudder at",
-    "la": "formido, formidare, formidavi, formidatum"
-  }
-},
+    "lemma": "septies",
+    "part_of_speech": "adverb",
+    "declension": 0,
+    "translations": {
+      "en": "seven times",
+      "la": "septies"
+    }
+  },
   {
-  "lemma": "postulatio",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "postulatio",
-  "genitive": "postulationis",
-  "translations": {
-    "en": "demand, request, petition",
-    "la": "postulatio, postulationis"
-  }
-},
+    "lemma": "formido",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "formidare",
+    "present": "formido",
+    "future": "formidabo",
+    "perfect": "formidavi",
+    "supine": "formidatum",
+    "translations": {
+      "en": "to dread, be terrified of, shudder at",
+      "la": "formido, formidare, formidavi, formidatum"
+    }
+  },
+  {
+    "lemma": "postulatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "postulatio",
+    "genitive": "postulationis",
+    "translations": {
+      "en": "demand, request, petition",
+      "la": "postulatio, postulationis"
+    }
+  },
   {
     "lemma": "iuxta",
     "part_of_speech": "preposition",
@@ -1101,11 +1322,11 @@
       "en": "alone, only, sole, lonely",
       "la": "solus, sola, solum"
     },
-     "forms": {
-    "genitive_m": ["solius"],
-    "genitive_f": ["solius"],
-    "genitive_n": ["solius"]
-  }
+    "forms": {
+      "genitive_m": ["solius"],
+      "genitive_f": ["solius"],
+      "genitive_n": ["solius"]
+    }
   },
   {
     "lemma": "virgo",
@@ -2455,7 +2676,8 @@
         "custodiverunt"
       ],
       "imperative_singular": ["custodi"],
-      "present_infinitive_passive": ["custodiri"]
+      "present_infinitive_passive": ["custodiri"],
+      "future_perfect_3pl": ["custodierint"]
     },
     "forms_plural": {
       "imperative": ["custodite"],
@@ -4140,6 +4362,8 @@
     "perfect": "reveritus",
     "supine": "reveritum",
     "forms": {
+      "perfect_participle_nom_pl_m": ["reveriti"],
+      "perfect_participle_gen_sg": ["reveriti"],
       "present_subjunctive": [
         "reverear",
         "revereare",
@@ -9259,6 +9483,12 @@
     "translations": {
       "en": "high, deep, lofty",
       "la": "altus, -a, -um"
+    },
+    "forms": {
+      "superlative_f_nom_sg": ["altissima"],
+      "superlative_f_abl_sg": ["altissima"],
+      "superlative_n_nom_pl": ["altissima"],
+      "superlative_n_acc_pl": ["altissima"]
     }
   },
   {
@@ -9902,9 +10132,9 @@
       "en": "stone, rock",
       "la": "lapis, lapidis"
     },
-     "forms": {
-    "ablative_sg": ["lapide"]
-  }
+    "forms": {
+      "ablative_sg": ["lapide"]
+    }
   },
   {
     "lemma": "decem",
@@ -9927,10 +10157,10 @@
     "forms": {
       "present_participle": ["volante"],
       "pluperfect_subjunctive": ["voluisses"],
-       "present_participle_nom_sg_m": ["volens"],
-        "present_participle_nom_sg_f": ["volens"],
-        "present_participle_acc_sg_n": ["volens"],
-        "genitive_sg": ["volentis"]
+      "present_participle_nom_sg_m": ["volens"],
+      "present_participle_nom_sg_f": ["volens"],
+      "present_participle_acc_sg_n": ["volens"],
+      "genitive_sg": ["volentis"]
     },
     "translations": {
       "en": "to fly, will, wish",
@@ -12650,13 +12880,18 @@
     "part_of_speech": "verb",
     "conjugation": 4,
     "infinitive": "venire",
+    "present": "venio",
+    "future": "veniam",
     "perfect": "veni",
     "supine": "ventum",
     "forms": {
-      "present_subjunctive": ["veniat"]
+      "present_subjunctive": ["veniat"],
+      "future_active_participle_nom_f": ["ventura"]
     },
     "forms_plural": {
-      "nominative_present_particle": ["venientes"]
+      "nominative_present_particle": ["venientes"],
+      "future_active_participle_nom_n": ["ventura"],
+      "future_active_participle_acc_n": ["ventura"]
     },
     "translations": {
       "en": "to come, arrive",
@@ -12908,7 +13143,14 @@
       "la": "psallo"
     },
     "forms": {
-     "future": [ "psallam", "psalles", "psallet", "psallemus", "psalletis", "psallent" ],
+      "future": [
+        "psallam",
+        "psalles",
+        "psallet",
+        "psallemus",
+        "psalletis",
+        "psallent"
+      ],
       "imperative": ["psallite"]
     },
     "notes": "Biblical/Liturgical Latin; often refers to musical worship."
@@ -24866,6 +25108,9 @@
     "translations": {
       "en": "we, us",
       "la": "nos"
+    },
+    "forms": {
+      "pronoun_preposition_phrase": ["nobiscum"]
     }
   },
   {
@@ -25775,18 +26020,21 @@
     "lemma": "multiplico",
     "part_of_speech": "verb",
     "conjugation": 1,
-    "perfect": "multiplicavi",
     "infinitive": "multiplicare",
+    "present": "multiplico",
+    "future": "multiplicabo",
+    "perfect": "multiplicavi",
     "supine": "multiplicatum",
     "forms": {
       "perfect": [
         "multiplicavi",
-        "multiplicavisti/multiplicasti",
+        "multiplicavisti",
         "multiplicavit",
         "multiplicavimus",
         "multiplicavistis",
         "multiplicaverunt"
-      ]
+      ],
+      "perfect_2sg_eccl": ["multiplicasti"]
     },
     "forms_plural": {
       "perfect_participle_f": ["multiplicatae"]
@@ -26316,15 +26564,15 @@
       "en": "many, much",
       "la": "multus"
     },
-     "forms": {
-      "nominative_f": ["multa"]    
+    "forms": {
+      "nominative_f": ["multa"]
     },
     "forms_plural": {
       "nominative_f": ["multae"],
-      "accusative_n": ["multa"]     
-    } 
-  }
-,
+      "accusative_n": ["multa"],
+      "accusative_f": ["multas"]
+    }
+  },
   {
     "lemma": "nolo",
     "part_of_speech": "verb",
@@ -28293,22 +28541,6 @@
     "translations": {
       "en": "pay attention",
       "la": "intende"
-    }
-  },
-  {
-    "lemma": "malus",
-    "part_of_speech": "adjective",
-    "declension": 1,
-    "gender": "masculine",
-    "nominative": "malus",
-    "genitive": "mali",
-    "forms": {
-      "nominative_f": ["mala"],
-      "nominative_n": ["malum"]
-    },
-    "translations": {
-      "en": "bad, evil",
-      "la": "malus"
     }
   },
   {

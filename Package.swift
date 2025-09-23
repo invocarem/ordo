@@ -129,6 +129,15 @@ let package = Package(
 
                 "Psalm66Tests.swift",
 
+                "Psalm69Tests.swift",
+
+                "Psalm70Tests.swift",
+                "Psalm71Tests.swift",
+                "Psalm72Tests.swift",
+                "Psalm73Tests.swift",
+                "Psalm74Tests.swift",
+
+
                 "Psalm75Tests.swift",
 
                 "Psalm78Tests.swift",
@@ -179,24 +188,24 @@ let package = Package(
                 "118/Psalm118SinTests.swift",
                 "118/Psalm118TauTests.swift",
 
-                "Psalm119Tests.swift",
-                "Psalm120Tests.swift",
-                "Psalm121Tests.swift",
-                "Psalm122Tests.swift",
-                "Psalm123Tests.swift",
-                "Psalm124Tests.swift",
+                "Gradual/Psalm119Tests.swift",
+                "Gradual/Psalm120Tests.swift",
+                "Gradual/Psalm121Tests.swift",
+                "Gradual/Psalm122Tests.swift",
+                "Gradual/Psalm123Tests.swift",
+                "Gradual/Psalm124Tests.swift",
 
-                "Psalm125Tests.swift",
-                "Psalm126Tests.swift",
-                "Psalm127Tests.swift",
-                "Psalm128Tests.swift",
+                "Gradual/Psalm125Tests.swift",
+                "Gradual/Psalm126Tests.swift",
+                "Gradual/Psalm127Tests.swift",
+                "Gradual/Psalm128Tests.swift",
 
-                "Psalm129Tests.swift",
-                "Psalm130Tests.swift",
-                "Psalm131Tests.swift",
-                "Psalm132Tests.swift",
+                "Gradual/Psalm129Tests.swift",
+                "Gradual/Psalm130Tests.swift",
+                "Gradual/Psalm131Tests.swift",
+                "Gradual/Psalm132Tests.swift",
 
-                "Psalm133Tests.swift",
+                "Gradual/Psalm133Tests.swift",
 
                 "Psalm136Tests.swift",
                 "Psalm138Tests.swift",

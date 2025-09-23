@@ -8,7 +8,8 @@ class Psalm25Tests: XCTestCase {
 
   // MARK: - Test Data Properties
 
-  private let psalm25 = [
+  private let expectedVerseCount = 12
+  private let text = [
     "Iudica me, Domine, quoniam ego in innocentia mea ingressus sum, et in Domino sperans non infirmabor.",
     "Proba me, Domine, et tenta me; ure renes meos et cor meum.",
     "Quoniam misericordia tua ante oculos meos est, et complacui in veritate tua.",
@@ -104,7 +105,7 @@ class Psalm25Tests: XCTestCase {
     (
       "Innocent Walking → Steadfast Standing",
       "Walking in innocence and asking for redemption, leading to steadfast standing and blessing in the assembly",
-      ["innocentia", "ingredior", "redimo", "pes", "sto", "dirigo" ],
+      ["innocentia", "ingredior", "redimo", "pes", "sto", "dirigo"],
       11,
       12,
       "The psalmist has walked in his innocence and asks for redemption and mercy, then declares that his foot has stood in the right way and he will bless the Lord in the churches.",
@@ -174,17 +175,17 @@ class Psalm25Tests: XCTestCase {
 
   func testTotalVerses() {
     XCTAssertEqual(
-      psalm25.count, 12, "Psalm 25 should have 12 verses"
+      text.count, expectedVerseCount, "Psalm 25 should have \(expectedVerseCount) verses"
     )
     XCTAssertEqual(
-      englishText.count, 12,
-      "Psalm 25 English text should have 12 verses"
+      englishText.count, expectedVerseCount,
+      "Psalm 25 English text should have \(expectedVerseCount) verses"
     )
     // Also validate the orthography of the text for analysis consistency
-    let normalized = psalm25.map { PsalmTestUtilities.validateLatinText($0) }
+    let normalized = text.map { PsalmTestUtilities.validateLatinText($0) }
     XCTAssertEqual(
       normalized,
-      psalm25,
+      text,
       "Normalized Latin text should match expected classical forms"
     )
   }
@@ -194,7 +195,7 @@ class Psalm25Tests: XCTestCase {
     let jsonString = utilities.generatePsalmTextsJSONString(
       psalmNumber: id.number,
       category: id.category ?? "",
-      text: psalm25,
+      text: text,
       englishText: englishText
     )
 
@@ -241,7 +242,7 @@ class Psalm25Tests: XCTestCase {
   func testLineByLineKeyLemmas() {
     let utilities = PsalmTestUtilities.self
     utilities.testLineByLineKeyLemmas(
-      psalmText: psalm25,
+      psalmText: text,
       lineKeyLemmas: lineKeyLemmas,
       psalmId: id,
       verbose: verbose
@@ -265,7 +266,7 @@ class Psalm25Tests: XCTestCase {
 
     // Then run the standard structural themes test
     utilities.testStructuralThemes(
-      psalmText: psalm25,
+      psalmText: text,
       structuralThemes: structuralThemes,
       psalmId: id,
       verbose: verbose
@@ -289,7 +290,7 @@ class Psalm25Tests: XCTestCase {
 
     // Then run the standard conceptual themes test
     utilities.testConceptualThemes(
-      psalmText: psalm25,
+      psalmText: text,
       conceptualThemes: conceptualThemes,
       psalmId: id,
       verbose: verbose
