@@ -1,5 +1,80 @@
 [
   {
+  "lemma": "propono",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "proponere",
+  "present": "propono",
+  "future": "proponam",
+  "perfect": "proposui",
+  "supine": "propositum",
+  "translations": {
+    "en": "to put forward, propose, intend",
+    "la": "propono, proponere, proposui, propositum"
+  }
+},
+  {
+  "lemma": "abduco",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "abducere",
+  "present": "abduco",
+  "future": "abducam",
+  "perfect": "abduxi",
+  "supine": "abductum",
+  "translations": {
+    "en": "to lead away, take away, remove ",
+    "la": "abduco, abducere, abduxi, abductum"
+  }
+},
+  {
+  "lemma": "cantio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "cantio",
+  "genitive": "cantonis",
+  "translations": {
+    "en": "song, chant, magic spell",
+    "la": "cantio, cantonis"
+  },
+   "forms_plural": {
+    "nominative_f": ["cantiones"],
+    "genitive_f": ["cantionum"],
+    "dative_f": ["cantionibus"],
+    "accusative_f": ["cantiones"],
+    "ablative_f": ["cantionibus"]
+  }
+},
+  {
+  "lemma": "duco",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "ducere",
+  "present": "duco",
+  "future": "ducam",
+  "perfect": "duxi",
+  "supine": "ductum",
+  "translations": {
+    "en": "to lead, guide",
+    "la": "duco, ducere, duxi, ductum"
+  }
+},
+  {
+  "lemma": "suspendo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "suspendere",
+  "present": "suspendo",
+  "future": "suspendam",
+  "perfect": "suspendi",
+  "supine": "suspensum",
+  "translations": {
+    "en": "to hang up, suspend, hang",
+    "la": "suspendo, suspendere, suspendi, suspensum"
+  }
+},
+  {
   "lemma": "dirigo",
   "part_of_speech": "verb",
   "conjugation": 3,
