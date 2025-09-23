@@ -77,7 +77,7 @@ class Psalm25Tests: XCTestCase {
     (
       "Hating Evil Assembly → Ritual Purity",
       "Hating the assembly of the wicked and washing hands in innocence to approach God's altar",
-      ["odi", "ecclesia", "malignus", "lavo", "innocens", "altare"],
+      ["odi", "ecclesia", "malignor", "lavo", "innocens", "altare"],
       5,
       6,
       "The psalmist has hated the assembly of the malignant and will wash his hands among the innocent and encompass God's altar, approaching in purity.",
@@ -130,7 +130,7 @@ class Psalm25Tests: XCTestCase {
     (
       "Innocence and Integrity",
       "The psalmist's claim to moral purity and righteous living",
-      ["innocentia", "probo", "innocens", "directus"],
+      ["innocentia", "probo", "innocens", "dirigo"],
       ThemeCategory.virtue,
       1 ... 12
     ),
@@ -144,7 +144,7 @@ class Psalm25Tests: XCTestCase {
     (
       "Separation from Evil",
       "Deliberate avoidance of the wicked and their counsel",
-      ["vanitas", "iniquus", "malignus", "impius", "sanguis", "iniquitas"],
+      ["vanitas", "iniquus", "malignor", "impius", "sanguis", "iniquitas"],
       ThemeCategory.sin,
       4 ... 10
     ),
@@ -158,7 +158,7 @@ class Psalm25Tests: XCTestCase {
     (
       "Divine Mercy",
       "God's compassion and faithfulness to the righteous",
-      ["misericordia", "veritas", "redimo", "miserere"],
+      ["misericordia", "veritas", "redimo", "misereor"],
       ThemeCategory.divine,
       3 ... 11
     ),
