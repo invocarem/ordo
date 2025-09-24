@@ -1,5 +1,39 @@
 [
   {
+  "lemma": "sentio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "sentire",
+  "present": "sentio",
+  "future": "sentiam",
+  "perfect": "sensi",
+  "supine": "sensum",
+  "translations": {
+    "en": "to feel, perceive, think",
+    "la": "sentio, sentire, sensi, sensum"
+  },
+  "forms": {
+    "imperfect_1s": ["sentiebam"]
+  }
+},
+  {
+  "lemma": "copiosus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "copiosus",
+  "genitive": "copiosi",
+  "translations": {
+    "en": "abundant, plentiful",
+    "la": "copiosus, copiosa, copiosum"
+  },
+  "forms": {
+    "nominative_f": ["copiosa"],
+    "nominative_n": ["copiosum"],
+    "accusative_n": ["copiosum"]
+  }
+},
+  {
     "lemma": "produco",
     "part_of_speech": "verb",
     "conjugation": 3,
