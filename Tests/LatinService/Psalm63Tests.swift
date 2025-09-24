@@ -1,201 +1,287 @@
-import XCTest
 @testable import LatinService
+import XCTest
 
 class Psalm63Tests: XCTestCase {
-    private var latinService: LatinService!
-    let verbose = true
+  private let utilities = PsalmTestUtilities.self
+  private let verbose = true
+  let id = PsalmIdentity(number: 63, category: "")
+
+  // MARK: - Setup
+
+  override func setUp() {
+    super.setUp()
+  }
     
-    override func setUp() {
-        super.setUp()
-        latinService = LatinService.shared
+  // MARK: - Test Data Properties
+
+  private let expectedVerseCount = 11
+  private let text = [
+    "Exaudi, Deus, orationem meam cum deprecor; a timore inimici eripe animam meam.",
+    "Protexisti me a conventu malignantium, a multitudine operantium iniquitatem.",
+    "Quia exacuerunt ut gladium linguas suas; intenderunt arcum rem amaram, Ut sagittent in occultis immaculatum.",
+    "Subito sagittabunt eum, et non timebunt; firmaverunt sibi sermonem nequam.",
+    "Narrabunt ut abscondant laqueos; dixerunt: Quis videbit eos?",
+    
+    "Scrutati sunt iniquitates; defecerunt scrutantes scrutinio.",
+    "Accedet homo ad cor altum, et exaltabitur Deus.",
+    "Sagittae parvulorum factae sunt plagae eorum, et infirmatae sunt contra eos linguae eorum.",
+    "Conturbati sunt omnes qui videbant eos; Et timuit omnis homo. ", 
+    "Et annuntiaverunt opera Dei, et facta ejus intellexerunt.",
+    
+    "Laetabitur justus in Domino, et sperabit in eo; et laudabuntur omnes recti corde."
+  ]
+
+  private let englishText = [
+    "Hear my prayer, O God, when I make supplication to thee; from fear of the enemy deliver my soul.",
+    "Thou hast protected me from the assembly of the malignant; from the multitude of the workers of iniquity.",
+    "For they have whetted their tongues like a sword; they have bent their bow a bitter thing, That they may shoot in secret at the upright of heart.",
+    "They will shoot at him on a sudden, and will not fear: they are resolute in wickedness.",
+    "They have talked of hiding snares; they have said: Who shall see them?",
+    "They have searched after iniquities: they have failed in their search.",
+    "Man shall come to a deep heart: and God shall be exalted.",
+    "The arrows of children are their wounds, and their tongues are weakened against thee.",
+    "All that saw them have been troubled; And every man was afraid.",
+    "And they declared the works of God, and understood his doings.",
+    "The just shall rejoice in the Lord, and shall hope in him; and all the upright of heart shall be praised."
+  ]
+
+  private let lineKeyLemmas = [
+    (1, ["exaudio", "deus", "oratio", "deprecor", "timor", "inimicus", "eripio", "anima"]),
+    (2, ["protego", "conventus", "malignor", "multitudo", "operor", "iniquitas"]),
+    (3, ["exacuo", "gladius", "lingua", "intendo", "arcus", "amarus", "sagitto", "occultus", "immaculatus"]),
+    (4, ["subito", "sagitto", "timeo", "firmo", "sermo", "nequam"]),
+    (5, ["narro", "abscondo", "laqueus", "dico", "video"]),
+    (6, ["scrutor", "iniquitas", "deficio", "scrutinium"]),
+    (7, ["accedo", "homo", "cor", "altus", "exalto", "deus"]),
+    (8, ["sagitta", "parvulus", "plaga", "infirmo", "lingua"]),
+    (9, ["conturbo", "video", "timeo"]),
+    (10, ["annuntio", "opus", "deus", "factum", "intellego"]),
+    (11, ["laetor", "justus", "dominus", "spero", "laudo", "rectus", "cor"])
+  ]
+
+  private let structuralThemes = [
+    (
+      "Prayer for Protection → Divine Shield",
+      "The psalmist's prayer for deliverance and God's protection from enemies",
+      ["exaudio", "deprecor", "protego", "eripio"],
+      1,
+      2,
+      "The psalmist begins with a prayer for God to hear his supplication and deliver his soul from fear of the enemy, then acknowledges God's protection from the assembly of the malignant.",
+      "Augustine sees this as the soul's confident appeal to divine protection. Those who pray earnestly can trust in God's shield against both external enemies and internal fears."
+    ),
+    (
+      "Enemy Weapons → Secret Attacks",
+      "The enemies' preparation of weapons and their secret plotting",
+      ["exacuo", "gladius", "lingua", "intendo", "arcus", "amarus", "sagitto", "occultus", "immaculatus", "subito", "timeo", "firmo", "sermo", "nequam"],
+      3,
+      4,
+      "The enemies sharpen their tongues like swords and bend their bows to shoot in secret at the upright, then suddenly shoot at them without fear, strengthening their wicked words.",
+      "For Augustine, the enemies' weapons represent the spiritual attacks of the wicked, and their secret plotting reveals their cowardly and deceitful nature."
+    ),
+    (
+      "Failed Schemes → Failed Investigation",
+      "The enemies' failed plotting and their failed search for iniquities",
+      ["narro", "abscondo", "laqueus", "dico", "video", "scrutor", "iniquitas", "deficio", "scrutinium"],
+      5,
+      6,
+      "The enemies talk of hiding snares and ask who shall see them, but they search after iniquities and fail in their search.",
+      "Augustine sees this as the soul's recognition that the wicked operate in darkness and secrecy, but their schemes ultimately fail because God sees all and their investigations come to nothing."
+    ),
+    (
+      "Divine Exaltation → Children's Arrows",
+      "God's exaltation contrasted with the weakened arrows of children",
+      ["accedo", "homo", "cor", "altus", "exalto", "deus", "sagitta", "parvulus", "plaga", "infirmo", "lingua"],
+      7,
+      8,
+      "Man comes to a deep heart and God shall be exalted, while the arrows of children are their wounds and their tongues are weakened.",
+      "For Augustine, this represents the contrast between divine exaltation and the feeble attacks of the wicked, showing God's ultimate victory over all opposition."
+    ),
+    (
+      "Human Disturbance → Divine Revelation",
+      "The disturbance of those who see contrasted with divine works being declared and understood",
+      ["conturbo", "video", "timeo", "annuntio", "opus", "deus", "factum", "intellego"],
+      9,
+      10,
+      "All that saw the enemies have been troubled and every man was afraid, but they declared the works of God and understood His doings.",
+      "Augustine sees this as the contrast between human fear and divine revelation. Those who witness God's works can understand His truth despite the initial disturbance."
+    ),
+    (
+      "Just Rejoicing",
+      "The just rejoicing and hope in the Lord",
+      ["laetor", "justus", "dominus", "spero", "laudo", "rectus", "cor"],
+      11,
+      11,
+      "The just shall rejoice in the Lord, and shall hope in him; and all the upright of heart shall be praised.",
+      "For Augustine, this represents the ultimate victory of the righteous who trust in God's protection and find joy in His presence, being praised for their upright hearts."
+    )
+  ]
+
+  private let conceptualThemes = [
+    (
+      "Divine Protection",
+      "God's shielding and deliverance of the righteous",
+      ["protego", "eripio", "exaudio", "deprecor"],
+      ThemeCategory.divine,
+      1...2
+    ),
+    (
+      "Enemy Warfare",
+      "The weapons and tactics used by enemies against the righteous",
+      ["gladius", "arcus", "sagitto", "lingua", "sermo", "laqueus"],
+      ThemeCategory.sin,
+      3...6
+    ),
+    (
+      "Secret and Deceit",
+      "The hidden and deceptive nature of evil attacks",
+      ["occultus", "subito", "nequam", "abscondo", "scrutor"],
+      ThemeCategory.sin,
+      4...7
+    ),
+    (
+      "Divine Exaltation",
+      "God's ultimate victory and exaltation over enemies",
+      ["exalto", "deus", "accedo", "altus", "intellego"],
+      ThemeCategory.divine,
+      8...10
+    ),
+    (
+      "Righteous Response",
+      "The just rejoicing and hope in the Lord",
+      ["justus", "laetor", "spero", "laudo", "rectus"],
+      ThemeCategory.virtue,
+      11...11
+    ),
+    (
+      "Human Vulnerability",
+      "References to human weakness and divine strength",
+      ["parvulus", "infirmo", "conturbo", "timeo", "anima"],
+      ThemeCategory.virtue,
+      8...10
+    )
+  ]
+
+  func testTotalVerses() {
+    XCTAssertEqual(
+      text.count, expectedVerseCount, "Psalm 63 should have \(expectedVerseCount) verses"
+    )
+    XCTAssertEqual(
+      englishText.count, expectedVerseCount,
+      "Psalm 63 English text should have \(expectedVerseCount) verses"
+    )
+    // Also validate the orthography of the text for analysis consistency
+    let normalized = text.map { PsalmTestUtilities.validateLatinText($0) }
+    XCTAssertEqual(
+      normalized,
+      text,
+      "Normalized Latin text should match expected classical forms"
+    )
+  }
+
+  func testSaveTexts() {
+    let utilities = PsalmTestUtilities.self
+    let jsonString = utilities.generatePsalmTextsJSONString(
+      psalmNumber: id.number,
+      category: id.category ?? "",
+      text: text,
+      englishText: englishText
+    )
+
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm63_texts.json"
+    )
+
+    if success {
+      print("✅ Complete texts JSON created successfully")
+    } else {
+      print("⚠️ Could not save complete texts file:")
+      print(jsonString)
     }
-    let id = PsalmIdentity(number: 63, category: nil)
-    
-    // MARK: - Test Data
-    let psalm63 = [
-        "Exaudi, Deus, orationem meam cum deprecor; a timore inimici eripe animam meam.",
-        "Protexisti me a conventu malignantium, a multitudine operantium iniquitatem.",
-        "Quia exacuerunt ut gladium linguas suas; intenderunt arcum rem amaram,",
-        "Ut sagittent in occultis immaculatum.",
-        "Subito sagittabunt eum, et non timebunt; firmaverunt sibi sermonem nequam.",
-        "Narrabunt ut abscondant laqueos; dixerunt: Quis videbit eos?",
-        "Scrutati sunt iniquitates; defecerunt scrutantes scrutinio.",
-        "Accedet homo ad cor altum, et exaltabitur Deus.",
-        "Sagittae parvulorum factae sunt plagae eorum,",
-        "Et infirmatae sunt contra eos linguae eorum. Conturbati sunt omnes qui videbant eos;",
-        "Et timuit omnis homo. Et annuntiaverunt opera Dei, et facta ejus intellexerunt.",
-        "Laetabitur justus in Domino, et sperabit in eo; et laudabuntur omnes recti corde."
-    ]
-    
-    // MARK: - Thematic Test Cases
-    
-    // 1. Divine Protection Theme
-    func testDivineProtectionTheme() {
-        latinService.configureDebugging(target: "protego")
-        let analysis = latinService.analyzePsalm(id, text: psalm63)
-        
-        let protectionTerms = [
-            ("exaudio", ["Exaudi"], "hear"), // v.1
-            ("eripio", ["eripe"], "rescue"), // v.1
-            ("protego", ["Protexisti"], "protect"), // v.2
-            ("firmo", ["firmaverunt"], "strengthen") // v.5
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: protectionTerms)
-    }
-    
-    // 2. Enemy Attacks Theme
-    func testEnemyAttacksTheme() {
-        let analysis = latinService.analyzePsalm(id, text: psalm63)
-        
-        let enemyTerms = [
-            ("inimicus", ["inimici"], "enemy"), // v.1
-            ("gladius", ["gladium"], "sword"), // v.3
-            ("arcus", ["arcum"], "bow"), // v.3
-            ("sagitto", ["sagittent", "sagittabunt"], "arrow"), // v.4,5,
-            ("sagitta", ["Sagittae"], "arrow"), // 9
-            ("laqueus", ["laqueos"], "snare") // v.6
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: enemyTerms)
-    }
-    
-    // 3. Justice Theme
-    func testJusticeTheme() {
-        let analysis = latinService.analyzePsalm(id, text: psalm63)
-        
-        let justiceTerms = [
-            ("justus", ["justus"], "righteous"), // v.12
-            ("rectus", ["recti"], "upright"), // v.12
-            ("iniquitas", ["iniquitatem", "iniquitates"], "wickedness"), // v.2,7
-            ("scrutor", ["Scrutati", "scrutantes" ], "examine") // v.7
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: justiceTerms)
-    }
-    
-    // 4. Trust in God Theme
-    func testTrustTheme() {
-        latinService.configureDebugging(target: "spero")
-        let analysis = latinService.analyzePsalm(id, text: psalm63)
-        
-        let trustTerms = [
-            ("spero", ["sperabit"], "hope"), // v.12
-            ("laetor", ["Laetabitur"], "rejoice"), // v.12
-            ("laudo", ["laudabuntur"], "praise"), // v.12
-            ("exalto", ["exaltabitur"], "exalt") // v.8
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: trustTerms)
-    }
-    
-    // MARK: - Verb Tests
-    
-    func testVerbExaudio() {
-        latinService.configureDebugging(target: "exaudio")
-        let analysis = latinService.analyzePsalm(id, text: psalm63)
-        
-        let exaudioEntry = analysis.dictionary["exaudio"]
-        XCTAssertNotNil(exaudioEntry, "Lemma 'exaudio' should exist for 'Exaudi'")
-        
-        let translation = exaudioEntry?.translation?.lowercased() ?? ""
-        XCTAssertTrue(
-            translation.contains("hear") || translation.contains("listen"),
-            "Expected 'exaudio' to mean 'hear/listen', got: \(translation)"
-        )
-        
-        let formCount = exaudioEntry?.forms["exaudi"] ?? 0
-        XCTAssertGreaterThan(formCount, 0, "Form 'Exaudi' should exist for lemma 'exaudio'")
-        
-        if let entity = exaudioEntry?.entity {
-            let result = entity.analyzeFormWithMeaning("Exaudi")
-            XCTAssertTrue(result.contains("imperative") || result.contains("command"),
-                         "Expected 'Exaudi' to be imperative, got: \(result)")
-        }
-    }
-    
-    func testVerbSagitto() {
-        latinService.configureDebugging(target: "sagitto")
-        let analysis = latinService.analyzePsalm(id, text: psalm63)
-        
-        let sagittoEntry = analysis.dictionary["sagitto"]
-        XCTAssertNotNil(sagittoEntry, "Lemma 'sagitto' should exist for 'sagittent'")
-        
-        let translation = sagittoEntry?.translation?.lowercased() ?? ""
-        XCTAssertTrue(
-            translation.contains("shoot") || translation.contains("arrow"),
-            "Expected 'sagitto' to relate to shooting arrows, got: \(translation)"
-        )
-        
-        let formsToCheck = ["sagittent", "sagittabunt" ]
-        for form in formsToCheck {
-            let formCount = sagittoEntry?.forms[form.lowercased()] ?? 0
-            XCTAssertGreaterThan(formCount, 0, "Form '\(form)' should exist for lemma 'sagitto'")
-        }
-    }
-    
-    // MARK: - Helper Methods
-    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, 
-                                     confirmedWords: [(lemma: String, 
-                                                     forms: [String], 
-                                                     translation: String)]) {
-        for (lemma, forms, translation) in confirmedWords {
-            guard let entry = analysis.dictionary[lemma] else {
-                XCTFail("Missing lemma: \(lemma)")
-                continue
-            }
-            
-            // Verify semantic domain through translation
-            XCTAssertTrue(
-                entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-                "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
-            )
-            
-            // Verify morphological coverage
-            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-            if !missingForms.isEmpty {
-                XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
-            }
-            
-            // NEW: Verify each form's grammatical analysis
-            for form in forms {
-                if let entity = entry.entity {
-                    let result = entity.analyzeFormWithMeaning(form)
-                    
-                    // Check if analysis contains either:
-                    // 1. The exact translation we expect
-                    // 2. Or appropriate grammatical markers
-                    XCTAssertTrue(
-                        result.lowercased().contains(translation.lowercased()) ||
-                        result.lowercased().contains("verb") ||
-                        result.lowercased().contains("participle") ||
-                        result.lowercased().contains("noun"),
-                        """
-                        For form '\(form)' of lemma '\(lemma)':
-                        Expected analysis to contain '\(translation)' or grammatical info,
-                        but got: \(result)
-                        """
-                    )
-                    
-                    if verbose {
-                        print("  Analysis of '\(form)': \(result)")
-                    }
-                } else {
-                    XCTFail("Entity for lemma '\(lemma)' not found")
-                }
-            }
-            
-            if verbose {
-                print("\n\(lemma.uppercased())")
-                print("  Translation: \(entry.translation ?? "?")")
-                print("  Forms found: \(entry.forms.keys.filter { forms.map { $0.lowercased() }.contains($0) }.count)/\(forms.count)")
-                forms.forEach { form in
-                    let count = entry.forms[form.lowercased()] ?? 0
-                    print("  \(form.padding(toLength: 15, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
-                }
-            }
-        }
+  }
+
+  func testSaveThemes() {
+    let utilities = PsalmTestUtilities.self
+    guard
+      let jsonString = utilities.generateCompleteThemesJSONString(
+        psalmNumber: id.number,
+        category: id.category ?? "",
+        conceptualThemes: conceptualThemes,
+        structuralThemes: structuralThemes
+      )
+    else {
+      XCTFail("Failed to generate complete themes JSON")
+      return
     }
 
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm63_themes.json"
+    )
 
- }
+    if success {
+      print("✅ Complete themes JSON created successfully")
+    } else {
+      print("⚠️ Could not save complete themes file:")
+      print(jsonString)
+    }
+  }
+
+  func testLineByLineKeyLemmas() {
+    let utilities = PsalmTestUtilities.self
+    utilities.testLineByLineKeyLemmas(
+      psalmText: text,
+      lineKeyLemmas: lineKeyLemmas,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testStructuralThemes() {
+    let utilities = PsalmTestUtilities.self
+
+    // First, verify that all structural theme lemmas are in lineKeyLemmas
+    let structuralLemmas = structuralThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: structuralLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "structural themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose
+    )
+
+    // Then run the standard structural themes test
+    utilities.testStructuralThemes(
+      psalmText: text,
+      structuralThemes: structuralThemes,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testConceptualThemes() {
+    let utilities = PsalmTestUtilities.self
+
+    // First, verify that conceptual theme lemmas are in lineKeyLemmas
+    let conceptualLemmas = conceptualThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: conceptualLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "conceptual themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose
+    )
+
+    // Then run the standard conceptual themes test
+    utilities.testConceptualThemes(
+      psalmText: text,
+      conceptualThemes: conceptualThemes,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+}
