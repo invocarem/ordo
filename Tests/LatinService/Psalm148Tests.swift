@@ -9,7 +9,8 @@ class Psalm148Tests: XCTestCase {
 
   // MARK: - Test Data Properties
 
-  private let psalm148 = [
+  private let expectedVerseCount = 14
+  private let text = [
     "Laudate Dominum de caelis: laudate eum in excelsis.",
     "Laudate eum, omnes angeli eius: laudate eum, omnes virtutes eius.",
     "Laudate eum, sol et luna: laudate eum, omnes stellae et lumen.",
@@ -196,45 +197,49 @@ class Psalm148Tests: XCTestCase {
 
   func testTotalVerses() {
     XCTAssertEqual(
-      psalm148.count, 14, "Psalm 148 should have 14 verses in the Benedictine Office"
+      text.count, expectedVerseCount, "Psalm 148 should have \(expectedVerseCount) verses"
     )
-    let normalized = psalm148.map { PsalmTestUtilities.validateLatinText($0) }
     XCTAssertEqual(
-      normalized, psalm148, "Normalized Latin text should match expected classical forms"
+      englishText.count, expectedVerseCount,
+      "Psalm 148 English text should have \(expectedVerseCount) verses"
+    )
+    // Also validate the orthography of the text for analysis consistency
+    let normalized = text.map { PsalmTestUtilities.validateLatinText($0) }
+    XCTAssertEqual(
+      normalized,
+      text,
+      "Normalized Latin text should match expected classical forms"
     )
   }
 
-  func testLineByLineKeyLemmas() {
-    utilities.testLineByLineKeyLemmas(
-      psalmText: psalm148,
-      lineKeyLemmas: lineKeyLemmas,
-      psalmId: id,
-      verbose: verbose
+  func testSaveTexts() {
+    let utilities = PsalmTestUtilities.self
+    let jsonString = utilities.generatePsalmTextsJSONString(
+      psalmNumber: id.number,
+      category: id.category ?? "",
+      text: text,
+      englishText: englishText
     )
-  }
 
-  func testStructuralThemes() {
-    utilities.testStructuralThemes(
-      psalmText: psalm148,
-      structuralThemes: structuralThemes,
-      psalmId: id,
-      verbose: verbose
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm148_texts.json"
     )
-  }
 
-  func testConceptualThemes() {
-    utilities.testConceptualThemes(
-      psalmText: psalm148,
-      conceptualThemes: conceptualThemes,
-      psalmId: id,
-      verbose: verbose
-    )
+    if success {
+      print("✅ Complete texts JSON created successfully")
+    } else {
+      print("⚠️ Could not save complete texts file:")
+      print(jsonString)
+    }
   }
 
   func testSaveThemes() {
+    let utilities = PsalmTestUtilities.self
     guard
       let jsonString = utilities.generateCompleteThemesJSONString(
         psalmNumber: id.number,
+        category: id.category ?? "",
         conceptualThemes: conceptualThemes,
         structuralThemes: structuralThemes
       )
@@ -254,5 +259,63 @@ class Psalm148Tests: XCTestCase {
       print("⚠️ Could not save complete themes file:")
       print(jsonString)
     }
+  }
+
+  func testLineByLineKeyLemmas() {
+    let utilities = PsalmTestUtilities.self
+    utilities.testLineByLineKeyLemmas(
+      psalmText: text,
+      lineKeyLemmas: lineKeyLemmas,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testStructuralThemes() {
+    let utilities = PsalmTestUtilities.self
+
+    // First, verify that all structural theme lemmas are in lineKeyLemmas
+    let structuralLemmas = structuralThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: structuralLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "structural themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose
+    )
+
+    // Then run the standard structural themes test
+    utilities.testStructuralThemes(
+      psalmText: text,
+      structuralThemes: structuralThemes,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testConceptualThemes() {
+    let utilities = PsalmTestUtilities.self
+
+    // First, verify that conceptual theme lemmas are in lineKeyLemmas
+    let conceptualLemmas = conceptualThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: conceptualLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "conceptual themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose
+    )
+
+    // Then run the standard conceptual themes test
+    utilities.testConceptualThemes(
+      psalmText: text,
+      conceptualThemes: conceptualThemes,
+      psalmId: id,
+      verbose: verbose
+    )
   }
 }
