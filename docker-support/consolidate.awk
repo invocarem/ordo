@@ -109,6 +109,25 @@ function process_files(pattern, output_file, type) {
     }
     
     print "   ✅ " type " verification successful!"
+    
+    # Copy to service folder
+    if (type == "texts") {
+        copy_cmd = "cp " output_file " ordo/Services/PsalmService/"
+        copy_result = system(copy_cmd)
+        if (copy_result == 0) {
+            print "   📋 Copied " output_file " to ordo/Services/PsalmService/"
+        } else {
+            print "   ❌ Failed to copy " output_file " to ordo/Services/PsalmService/"
+        }
+    } else if (type == "themes") {
+        copy_cmd = "cp " output_file " ordo/Services/LatinService/"
+        copy_result = system(copy_cmd)
+        if (copy_result == 0) {
+            print "   📋 Copied " output_file " to ordo/Services/LatinService/"
+        } else {
+            print "   ❌ Failed to copy " output_file " to ordo/Services/LatinService/"
+        }
+    }
 }
 
 function count_objects(json, array_name) {
