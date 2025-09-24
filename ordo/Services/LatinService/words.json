@@ -1,5 +1,299 @@
 [
   {
+  "lemma": "paupertas",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "paupertas",
+  "genitive": "paupertatis",
+  "translations": {
+    "en": "poverty, humble condition, need",
+    "la": "paupertas, paupertatis"
+  },
+  "forms": {
+    "ablative_singular": ["paupertate"]
+  }
+}
+,
+  {
+  "lemma": "foras",
+  "part_of_speech": "adverb",
+  "declension": 0,
+  "translations": {
+    "en": "out, outside, out of doors",
+    "la": "foras"
+  }
+},
+  {
+  "lemma": "consilior",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "consiliari",
+  "present": "consilior",
+  "future": "consiliabor",
+  "perfect": "consiliatus sum",
+  "translations": {
+    "en": "to take counsel, consult ",
+    "la": "consilior, consiliari, consiliatus sum"
+  },
+  "forms": {
+    "perfect_participle_masc_nom_pl": ["consiliati"],
+    "perfect_participle_fem_nom_pl": ["consiliata"],
+    "perfect_participle_neut_nom_pl": ["consiliatum"],
+    "perfect_participle_masc_acc_pl": ["consiliata"],
+    "perfect_participle_fem_acc_pl": ["consiliata"],
+    "perfect_participle_neut_acc_pl": ["consiliatum"],
+    "perfect_participle_masc_gen_pl": ["consiliatorum"],
+    "future_active_indicative_3sg": ["consiliabit"],
+    "future_active_imperative_2sg": ["consiliabile"],
+    "present_active_indicative_2sg": ["consiliabile"],
+    "present_active_imperative_2sg": ["consiliabile"],
+    "present_active_participle_3sg": ["consiliabile"],
+    "perfect_participle": ["consiliatus", "consiliata", "consiliatum"]
+  }
+},
+  {
+  "lemma": "abusio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "abusio",
+  "genitive": "abusiosis",
+  "translations": {
+    "en": "abuse, misuse, improper use",
+    "la": "abusio, abusiosis"
+  },
+  "forms": {
+    "ablative_f": ["abusione"]
+  }
+},
+  {
+  "lemma": "perditus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "perditus",
+  "genitive": "perditi",
+  "translations": {
+    "en": "lost, ruined, destroyed, desperate, corrupt",
+    "la": "perditus, perdita, perditum"
+  }, 
+  "forms": {
+    "nominative_n": ["perditum"],
+    "accusative_n": ["perditum"]
+  }
+},
+  {
+  "lemma": "vituperatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "vituperatio",
+  "genitive": "vituperationis",
+  "translations": {
+    "en": "blame, censure, reproach, criticism",
+    "la": "vituperatio, vituperationis"
+  }},
+  {
+  "lemma": "absconditum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "absconditum",
+  "genitive": "absconditi",
+  "translations": {
+    "en": "a hiding place, secrecy",
+    "la": "absconditum, absconditi"
+  }}
+,
+  {
+  "lemma": "spatiosus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "spatiosus",
+  "genitive": "spatiosi",
+  "translations": {
+    "en": "spacious, extensive, wide",
+    "la": "spatiosus, spatiosa, spatiosum"
+  }
+},
+  {
+  "lemma": "necessitas",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "necessitas",
+  "genitive": "necessitatis",
+  "translations": {
+    "en": "necessity, need, compulsion, constraint",
+    "la": "necessitas, necessitatis"
+  }},
+  {
+  "lemma": "mutus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "mutus",
+  "genitive": "muti",
+  "translations": {
+    "en": "mute, silent, dumb, speechless",
+    "la": "mutus, muta, mutum"
+  },
+  "forms": {
+    "nominative_f": ["muta"],
+    "nominative_n": ["mutum"],
+    "accusative_n": ["mutum"]
+  }
+},
+  {
+  "lemma": "illustro",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "illustrare",
+  "present": "illustro",
+  "future": "illustrabo",
+  "perfect": "illustravi",
+  "supine": "illustratum",
+  "translations": {
+    "en": "to light up, make clear, explain, glorify",
+    "la": "illustro, illustrare, illustravi, illustratum"
+  },
+  "forms": {
+    "present_active_indicative_2sg": ["illustra"],
+    "present_active_imperative_2sg": ["illustra"]
+  }
+}
+,
+  {
+  "lemma": "conturbatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "conturbatio",
+  "genitive": "conturbationis",
+  "translations": {
+    "en": "confusion, disturbance, disorder",
+    "la": "conturbatio, conturbationis"
+  },
+  "forms": {
+    "ablative_f": ["conturbatione"]
+  }
+}
+,
+  {
+  "lemma": "contradictio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "contradictio",
+  "genitive": "contradictionis",
+  "translations": {
+    "en": "contradiction, opposition, denial",
+    "la": "contradictio, contradictionis"
+  },
+  "forms": {
+    "ablative_f": ["contradictione"]
+  }
+}
+,
+  {
+  "lemma": "mens",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "mens",
+  "genitive": "mentis",
+  "translations": {
+    "en": "mind, intellect, thought, intention",
+    "la": "mens, mentis"
+  },
+  "forms": {
+    "genitive_singular": ["mentis"]
+  }
+}
+,{
+  "lemma": "munio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "munire",
+  "present": "munio",
+  "future": "muniam",
+  "perfect": "munivi",
+  "supine": "munitum",
+  "translations": {
+    "en": "to fortify, defend, protect",
+    "la": "munio, munire, munivi, munitum"
+  },
+  "forms": {
+    "perfect_passive_participle_feminine_singular": ["munita"]
+  }
+}
+,
+  {
+  "lemma": "commendo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "commendare",
+  "present": "commendo",
+  "future": "commendabo",
+  "perfect": "commendavi",
+  "supine": "commendatum",
+  "translations": {
+    "en": "to entrust, recommend, commit",
+    "la": "commendo, commendare, commendavi, commendatum"
+  }
+}
+,
+  {
+  "lemma": "excessus",
+  "part_of_speech": "noun",
+  "declension": 4,
+  "gender": "masculine",
+  "nominative": "excessus",
+  "genitive": "excessus",
+  "translations": {
+    "en": "departure, death, withdrawal, deviation",
+    "la": "excessus, excessus"
+  },
+  "forms": {
+    "ablative_sg": ["excessu"]
+  }
+},
+  {
+  "lemma": "immitto",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "immittere",
+  "present": "immitto",
+  "future": "immittam",
+  "perfect": "immisi",
+  "supine": "immissum",
+  "translations": {
+    "en": "to send in, let in, insert, unleash",
+    "la": "immitto, immittere, immisi, immissum"
+  },
+  "forms": {
+    "future_active_indicative_3sg": ["immittet"]
+  }
+}
+,
+  {
+  "lemma": "virilis",
+  "part_of_speech": "adjective",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "virilis",
+  "genitive": "virilis",
+  "translations": {
+    "en": "manly, vigorous, courageous, adult",
+    "la": "virilis, virile"
+  },
+  "forms": {
+    "adverb": ["viriliter"]
+  }
+},
+  {
   "lemma": "annuo",
   "part_of_speech": "verb",
   "conjugation": 3,
@@ -11301,7 +11595,8 @@
     "perfect": "proieci",
     "supine": "proiectum",
     "forms": {
-      "present_subjunctive_2sg": ["proiicias"]
+      "present_subjunctive_2sg": ["proiicias"],
+      "perfect_participle": ["proiectus", "proiecta", "proiectum"]
     },
     "translations": {
       "en": "to scatter, cast away, abandon",
@@ -17457,6 +17752,8 @@
     "lemma": "spero",
     "part_of_speech": "verb",
     "infinitive": "sperare",
+     "present": "spero",
+  "future": "sperabo",
     "perfect": "speravi",
     "supine": "speratum",
     "translations": {
@@ -17464,7 +17761,16 @@
       "la": "spero"
     },
     "forms": {
-      "present": [
+      "imperative": ["spera", "sperate"],
+      "subjunctive": [
+        "sperem",
+        "speres",
+        "speret",
+        "speremus",
+        "speretis",
+        "sperent"
+      ],
+       "present": [
         "spero",
         "speras",
         "sperat",
@@ -17496,7 +17802,6 @@
         "speravistis",
         "speraverunt"
       ],
-      "imperative": ["spera"],
       "present_passive": [
         "speror",
         "speraris",
@@ -17505,6 +17810,7 @@
         "speramini",
         "sperantur"
       ]
+
     },
     "forms_plural": {
       "imperative": ["sperate"]
@@ -18901,37 +19207,8 @@
       "la": "retributio"
     }
   },
-  {
-    "lemma": "spero",
-    "part_of_speech": "verb",
-    "conjugation": 1,
-    "deponent": false,
-    "infinitive": "sperare",
-    "forms": {
-      "present": [
-        "spero",
-        "speras",
-        "sperat",
-        "speramus",
-        "speratis",
-        "sperant"
-      ],
-      "imperative": ["spera", "sperate"],
-      "subjunctive": [
-        "sperem",
-        "speres",
-        "speret",
-        "speremus",
-        "speretis",
-        "sperent"
-      ]
-    },
-    "translations": {
-      "en": "to hope",
-      "la": "spero"
-    }
-  },
-  {
+
+ {
     "lemma": "insipientia",
     "part_of_speech": "noun",
     "declension": 1,
@@ -25389,29 +25666,7 @@
       "la": "funis"
     }
   },
-  {
-    "lemma": "spero",
-    "part_of_speech": "verb",
-    "perfect": "speravi",
-    "infinitive": "sperare",
-    "forms": {
-      "present": [
-        "spero",
-        "speras",
-        "sperat",
-        "speramus",
-        "speratis",
-        "sperant"
-      ],
-      "imperative_singular": ["spera"],
-      "imperative_plural": ["sperate"]
-    },
-    "translations": {
-      "en": "hope, expect",
-      "la": "spero"
-    }
-  },
-  {
+ {
     "lemma": "spes",
     "part_of_speech": "noun",
     "declension": 5,
@@ -27737,6 +27992,7 @@
     "future": "conveniam",
     "supine": "conventum",
     "forms": {
+      "imperfect_subjunctive_3pl": ["convenirent"],
       "gerund_ablative": ["conveniendo"]
     },
     "translations": {
@@ -28643,6 +28899,7 @@
     "perfect": "salvavi",
     "supine": "salvatum",
     "forms": {
+      "perfect_2s_eccl": ["salvasti"],
       "present": ["salvo", "salvas", "salvat"],
       "imperfect": ["salvabam", "salvabas", "salvabat"],
       "future": ["salvabo", "salvabis", "salvabit"],

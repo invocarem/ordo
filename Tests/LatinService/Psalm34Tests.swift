@@ -4,7 +4,7 @@ import XCTest
 class Psalm34Tests: XCTestCase {
   private let utilities = PsalmTestUtilities.self
   private let verbose = true
-  let id = PsalmIdentity(number: 34, category: "prayer")
+  let id = PsalmIdentity(number: 34, category: "")
 
   // MARK: - Test Data Properties
 
@@ -220,15 +220,6 @@ class Psalm34Tests: XCTestCase {
       "Enemies hate without cause and speak peaceably while devising guile, opening their mouths wide in mockery, while the righteous rejoice and are glad, always saying 'Let the Lord be magnified.'",
       "For Augustine, this represents the fundamental contrast between hypocritical evil and genuine righteousness - false peace versus true joy, mockery versus authentic praise."
     ),
-    (
-      "Continual Meditation → Daily Praise",
-      "The psalmist's commitment to meditating on God's justice and praising Him daily",
-      ["lingua", "meditor", "iustitia", "totus", "dies", "laus"],
-      32,
-      32,
-      "The psalmist's tongue will meditate on God's justice and His praise all day long.",
-      "Augustine sees this as the culmination of the righteous life - constant meditation on divine justice and unceasing praise, transforming the tongue into an instrument of continual worship."
-    ),
   ]
 
   private let conceptualThemes = [
@@ -237,7 +228,7 @@ class Psalm34Tests: XCTestCase {
       "God's judgment and righteous intervention against enemies",
       ["iudico", "expugno", "confundo", "revereor", "erubesco", "retribuo"],
       ThemeCategory.divine,
-      1 ... 32
+      1 ... 31
     ),
     (
       "Divine Protection",
@@ -279,14 +270,14 @@ class Psalm34Tests: XCTestCase {
       "Confession and praise in the assembly",
       ["confiteor", "ecclesia", "laudo", "magnus", "loquor", "exsulto", "laetor", "meditor", "laus"],
       ThemeCategory.worship,
-      21 ... 32
+      21 ... 31
     ),
     (
       "Speech and Tongue",
       "References to speech, tongue, and words as instruments of good or evil",
       ["lingua", "dico", "loquor", "euge", "meditor", "laus"],
       ThemeCategory.virtue,
-      1 ... 32
+      1 ... 31
     ),
     (
       "Weapons and Warfare",
