@@ -120,8 +120,10 @@ let package = Package(
                 "Psalm47Tests.swift",
 
                 "Psalm50Tests.swift",
+                "Psalm51Tests.swift",
 
                 "Psalm56Tests.swift",
+                "Psalm57Tests.swift",
 
                 "Psalm62Tests.swift",
                 "Psalm63Tests.swift",

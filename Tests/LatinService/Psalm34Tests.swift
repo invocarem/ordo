@@ -1,652 +1,520 @@
-import XCTest
 @testable import LatinService
+import XCTest
 
 class Psalm34Tests: XCTestCase {
-    private var latinService: LatinService!
-    let verbose = true
-    
-    override func setUp() {
-        super.setUp()
-        latinService = LatinService.shared
+  private let utilities = PsalmTestUtilities.self
+  private let verbose = true
+  let id = PsalmIdentity(number: 34, category: "prayer")
+
+  // MARK: - Test Data Properties
+
+  private let expectedVerseCount = 32
+
+  // MARK: - Setup
+
+  override func setUp() {
+    super.setUp()
+  }
+
+  // MARK: - Test Data
+
+  private let text = [
+    "Iudica, Domine, nocentes me; expugna impugnantes me.",
+    "Apprehende arma et scutum, et exsurge in adiutorium mihi.",
+    "Effunde frameam, et conclude adversus eos qui persequuntur me; dic animae meae: Salus tua ego sum.",
+    "Confundantur et revereantur qui quaerunt animam meam; ",
+    "Avertantur retrorsum et erubescant qui cogitant mihi mala.",
+
+    "Fiant tamquam pulvis ante faciem venti; et angelus Domini coarctans eos.",
+    "Fiat via illorum tenebrae et lubricum; et angelus Domini persequens eos.",
+    "Quoniam gratis absconderunt mihi interitum laquei sui; supervacue exprobraverunt animam meam.",
+    "Veniat illi laqueus quem ignorat; et captio quam abscondit apprehendat eum, et in laqueum cadat in ipsum.",
+    "Anima autem mea exsultabit in Domino; et delectabitur super salutari suo.",
+
+    "Omnia ossa mea dicent: Domine, quis similis tui?",
+    "Eripiens inopem de manu fortiorum eius; egenum et pauperem a diripientibus eum.",
+    "Surgentes testes iniqui, quae ignorabam interrogabant me.",
+    "Retribuebant mihi mala pro bonis; sterilitatem animae meae.",
+    "Ego autem cum mihi molesti essent, induebar cilicio; ",
+
+    "Humiliabam in ieiunio animam meam, et oratio mea in sinu meo convertetur.",
+    "Quasi proximum, et quasi fratrem nostrum, sic complacebam; quasi lugens et contristatus, sic humiliabar.",
+    "Et adversum me laetati sunt, et convenerunt; congregata sunt super me flagella, et ignoravi.",
+    "Dissipati sunt, nec compuncti; tentaverunt me, subsannaverunt me subsannatione, frenduerunt super me dentibus suis.",
+    "Domine, quando respicies? restitue animam meam a malignitate eorum, a leonibus unicam meam.",
+
+    "Confitebor tibi in ecclesia magna, in populo gravi laudabo te.",
+    "Non supergaudeant mihi qui adversantur mihi inique; qui oderunt me gratis, et annuunt oculis.",
+    "Quoniam mihi quidem pacifice loquebantur; et in iracundia terrae loquentes, dolos cogitabant.",
+    "Et dilataverunt super me os suum; dixerunt: Euge, euge, viderunt oculi nostri.",
+    "Vidisti, Domine, ne sileas; Domine, ne discedas a me.",
+
+    "Exsurge, et intende iudicio meo; Deus meus, et Dominus meus, in causam meam.",
+    "Iudica me secundum iustitiam tuam, Domine Deus meus; et non supergaudeant mihi.",
+    "Non dicant in cordibus suis: Euge, euge, animae nostrae; nec dicant: Devoravimus eum.",
+    "Erubescant et revereantur simul, qui gratulantur malis meis;",
+    "Induantur pudore et confusione, qui magna loquuntur super me.",
+
+    "Exsultent et laetentur qui volunt iustitiam meam; et dicant semper: Magnificetur Dominus, qui volunt pacem servi eius.",
+    "Et lingua mea meditabitur iustitiam tuam; tota die laudem tuam.",
+  ]
+
+  private let englishText = [
+    "Judge thou, O Lord, them that wrong me: overthrow them that fight against me.",
+    "Take hold of arms and shield: and rise up to help me.",
+    "Bring out the sword, and shut up the way against them that persecute me: say to my soul: I am thy salvation.",
+    "Let them be confounded and ashamed that seek after my soul.",
+    "Let them be turned back and be ashamed that devise evil against me.",
+    "Let them become as dust before the wind: and let the angel of the Lord straiten them.",
+    "Let their way become dark and slippery; and let the angel of the Lord pursue them.",
+    "For without cause they have hidden their net for me unto destruction: without cause have they upbraided my soul.",
+    "Let the snare which he knoweth not come upon him: and let the net which he hath hidden catch him: and into that very snare let them fall.",
+    "But my soul shall rejoice in the Lord; and shall be delighted in his salvation.",
+    "All my bones shall say: Lord, who is like to thee?",
+    "Delivering the poor from the hand of the stronger: and the needy and the poor from them that strip them.",
+    "Unjust witnesses rising up have asked me of things I knew not.",
+    "They repaid me evil for good: to the depriving me of my soul.",
+    "But as for me, when they were troublesome to me, I was clothed with haircloth.",
+    "I humbled my soul with fasting; and my prayer shall be turned into my bosom.",
+    "As a neighbour and as an own brother, so did I please: as one mourning and sorrowful so was I humbled.",
+    "But they rejoiced against me, and came together: scourges were gathered together upon me, and I knew not.",
+    "They were scattered, but they repented not: they tempted me, they scoffed at me with scorn: they gnashed upon me with their teeth.",
+    "Lord, when wilt thou look upon me? rescue thou my soul from their malice: my only one from the lions.",
+    "I will give thanks to thee in a great church; I will praise thee in a strong people.",
+    "Let not them that are my enemies wrongfully rejoice over me: who have hated me without cause, and wink with the eyes.",
+    "For they spoke indeed peaceably to me; and speaking in the anger of the earth they devised guile.",
+    "And they opened their mouth wide against me; they said: Well done, well done, our eyes have seen it.",
+    "Thou hast seen, O Lord, be not thou silent: O Lord, depart not from me.",
+    "Arise, and be attentive to my judgment: to my cause, my God, and my Lord.",
+    "Judge me, O Lord my God according to thy justice, and let them not rejoice over me.",
+    "Let them not say in their hearts: It is well, it is well, to our mind: neither let them say: We have swallowed him up.",
+    "Let them blush: and be ashamed together, who rejoice at my evils.",
+    "Let them be clothed with shame and confusion, who speak great things against me.",
+    "Let them rejoice and be glad, who are willing my justice: and may they always say: The Lord be magnified, who will the peace of his servant.",
+    "And my tongue shall meditate thy justice, thy praise all the day long.",
+  ]
+
+  private let lineKeyLemmas = [
+    (1, ["iudico", "dominus", "noceo", "expugno", "impugno"]),
+    (2, ["apprehendo", "arma", "scutum", "exsurgo", "adiutorium"]),
+    (3, ["effundo", "framea", "concludo", "persequor", "dico", "anima", "salus"]),
+    (4, ["confundo", "revereor", "quaero"]),
+    (5, ["averto", "erubesco", "cogito", "malus"]),
+    (6, ["pulvis", "facies", "ventus", "angelus", "dominus", "coarcto"]),
+    (7, ["via", "tenebrae", "lubricus", "angelus", "dominus", "persequor"]),
+    (8, ["gratis", "abscondo", "interitus", "laqueus", "supervacue", "exprobro", "anima"]),
+    (9, ["venio", "laqueus", "ignoro", "captio", "abscondo", "apprehendo", "cado"]),
+    (10, ["anima", "exsulto", "dominus", "delector", "salutaris"]),
+    (11, ["omnis", "os", "dico", "dominus", "similis"]),
+    (12, ["eripio", "inops", "manus", "fortis", "egenus", "pauper", "diripio"]),
+    (13, ["surgo", "testis", "iniquus", "ignoro", "interrogo"]),
+    (14, ["retribuo", "malus", "bonus", "sterilitas", "anima"]),
+    (15, ["molestus", "induo", "cilicium"]),
+    (16, ["humilio", "ieiunio", "anima", "oratio", "sinus", "converto"]),
+    (17, ["proximus", "frater", "complaceo", "lugeo", "contristo", "humilio"]),
+    (18, ["adversus", "laetor", "convenio", "congrego", "flagellum", "ignoro"]),
+    (19, ["dissipo", "compungo", "tento", "subsanno", "frendo", "dens"]),
+    (20, ["dominus", "respicio", "restituo", "anima", "malignitas", "leo", "unicus"]),
+    (21, ["confiteor", "ecclesia", "magnus", "populus", "gravis", "laudo"]),
+    (22, ["supergaudeo", "adverso", "inique", "odi", "gratis", "annuo", "oculus"]),
+    (23, ["pacificus", "loquor", "iracundia", "terra", "loquor", "dolus", "cogito"]),
+    (24, ["dilato", "os", "dico", "euge", "video", "oculus"]),
+    (25, ["video", "dominus", "sileo", "dominus", "discedo"]),
+    (26, ["exsurgo", "intendo", "iudicium", "deus", "dominus", "causa"]),
+    (27, ["iudico", "secundum", "iustitia", "dominus", "deus", "supergaudeo"]),
+    (28, ["dico", "cor", "euge", "anima", "devoro"]),
+    (29, ["erubesco", "revereor", "simul", "gratulor", "malus"]),
+    (30, ["induo", "pudor", "confusio", "magnus", "loquor", "super"]),
+    (31, ["exsulto", "laetor", "volo", "iustitia", "dico", "semper", "magnifico", "dominus", "volo", "pax", "servus"]),
+    (32, ["lingua", "meditor", "iustitia", "totus", "dies", "laus"]),
+  ]
+
+  private let structuralThemes = [
+    (
+      "Divine Justice → Divine Protection",
+      "Call for divine judgment and protection against enemies",
+      ["iudico", "expugno", "apprehendo", "arma", "scutum", "exsurgo", "adiutorium"],
+      1,
+      2,
+      "The psalmist calls for God to judge his enemies and fight against them, then asks God to take up weapons and shield and arise to help him.",
+      "Augustine sees this as the soul's appeal to divine justice combined with trust in God's protective power, recognizing that only divine intervention can overcome spiritual enemies."
+    ),
+    (
+      "Divine Warfare → Enemy Shame",
+      "God's military intervention leading to enemy confusion and shame",
+      ["effundo", "framea", "concludo", "persequor", "confundo", "revereor", "averto", "erubesco"],
+      3,
+      5,
+      "God is asked to pour out the sword and confine those who persecute, while enemies are to be confounded, ashamed, and turned back.",
+      "For Augustine, this represents God's sovereign power to both actively fight for His people and cause their enemies to be spiritually disgraced and defeated."
+    ),
+    (
+      "Enemy Destruction → Angelic Intervention",
+      "Enemies scattered like dust while angels of the Lord pursue them",
+      ["pulvis", "ventus", "angelus", "dominus", "coarcto", "tenebrae", "lubricus", "persequor"],
+      6,
+      7,
+      "Enemies become like dust before the wind, while the angel of the Lord harasses them and their way becomes dark and slippery as the angel pursues them.",
+      "Augustine sees this as divine judgment where natural forces and angelic beings work together to scatter and pursue the wicked, making their path treacherous."
+    ),
+    (
+      "Unjust Attacks → Poetic Justice",
+      "Enemies' unjust snares and traps leading to their own downfall",
+      ["gratis", "interitus", "laqueus", "supervacue", "exprobro", "captio", "cado"],
+      8,
+      9,
+      "Enemies have hidden destruction and snares without cause, but their own snare and trap will catch them and they will fall into it.",
+      "Augustine interprets this as divine justice where the wicked's own devices become their downfall, demonstrating that evil ultimately destroys itself."
+    ),
+    (
+      "Joyful Trust → Bodily Praise",
+      "The psalmist's rejoicing in God's salvation and bodily declaration of praise",
+      ["anima", "exsulto", "dominus", "delector", "salutaris", "os", "dico", "similis"],
+      10,
+      11,
+      "The psalmist's soul will rejoice in the Lord and delight in His salvation, while all his bones will declare that none is like the Lord.",
+      "Augustine sees this as the soul's response to divine deliverance - both spiritual joy and physical declaration of God's incomparable greatness."
+    ),
+    (
+      "Divine Rescue → False Witnesses",
+      "God's deliverance of the poor contrasted with unjust witnesses",
+      ["eripio", "inops", "fortis", "egenus", "pauper", "testis", "iniquus", "interrogo"],
+      12,
+      13,
+      "God rescues the needy from the strong and delivers the poor from robbers, while unjust witnesses rise up and question the psalmist about things he doesn't know.",
+      "For Augustine, this shows God's care for the oppressed while highlighting the contrast with false accusers who seek to harm the innocent."
+    ),
+    (
+      "Repaid Evil → Penitential Response",
+      "Enemies repaying evil for good while the psalmist responds with penitential practices",
+      ["retribuo", "malus", "bonus", "sterilitas", "cilicium", "humilio", "ieiunio", "oratio"],
+      14,
+      16,
+      "Enemies repaid evil for good and caused bereavement, while the psalmist wore sackcloth, humbled himself with fasting, and turned his prayer inward.",
+      "Augustine sees this as the contrast between wicked retaliation and righteous penitence - the psalmist's spiritual discipline in response to unjust treatment."
+    ),
+    (
+      "False Friendship → Betrayal",
+      "Pretended friendship and brotherhood leading to betrayal and mockery",
+      ["proximus", "frater", "complaceo", "lugeo", "contristo", "convenio", "flagellum", "dissipo", "subsanno", "frendo"],
+      17,
+      19,
+      "The psalmist treated enemies as neighbors and brothers, mourning and humbling himself, but they rejoiced against him, assembled, and mocked him with scorn and gnashing teeth.",
+      "Augustine interprets this as the ultimate betrayal - those who appeared as friends and brothers became the psalmist's greatest enemies, mocking his piety and seeking his destruction."
+    ),
+    (
+      "Divine Intervention → Public Praise",
+      "Call for divine help leading to public confession and praise",
+      ["dominus", "respicio", "restituo", "malignitas", "confiteor", "ecclesia", "laudo"],
+      20,
+      21,
+      "The psalmist calls for God to look upon him and rescue his soul from malice, then commits to confessing and praising God in the great assembly.",
+      "Augustine sees this as the soul's progression from desperate plea to confident praise - recognizing God's deliverance leads to public declaration of His goodness."
+    ),
+    (
+      "Enemy Mockery → Righteous Joy",
+      "Enemies' hypocritical speech and mockery contrasted with righteous celebration",
+      ["supergaudeo", "adverso", "odi", "pacificus", "iracundia", "dolus", "dilato", "euge", "exsulto", "laetor", "iustitia", "magnus", "loquor"],
+      22,
+      31,
+      "Enemies hate without cause and speak peaceably while devising guile, opening their mouths wide in mockery, while the righteous rejoice and are glad, always saying 'Let the Lord be magnified.'",
+      "For Augustine, this represents the fundamental contrast between hypocritical evil and genuine righteousness - false peace versus true joy, mockery versus authentic praise."
+    ),
+    (
+      "Continual Meditation → Daily Praise",
+      "The psalmist's commitment to meditating on God's justice and praising Him daily",
+      ["lingua", "meditor", "iustitia", "totus", "dies", "laus"],
+      32,
+      32,
+      "The psalmist's tongue will meditate on God's justice and His praise all day long.",
+      "Augustine sees this as the culmination of the righteous life - constant meditation on divine justice and unceasing praise, transforming the tongue into an instrument of continual worship."
+    ),
+  ]
+
+  private let conceptualThemes = [
+    (
+      "Divine Justice",
+      "God's judgment and righteous intervention against enemies",
+      ["iudico", "expugno", "confundo", "revereor", "erubesco", "retribuo"],
+      ThemeCategory.divine,
+      1 ... 32
+    ),
+    (
+      "Divine Protection",
+      "God's military and angelic protection of His people",
+      ["arma", "scutum", "exsurgo", "adiutorium", "framea", "angelus", "coarcto", "persequor"],
+      ThemeCategory.divine,
+      1 ... 7
+    ),
+    (
+      "Enemy Shame",
+      "Confusion, shame, and defeat of the wicked",
+      ["confundo", "revereor", "erubesco", "averto", "dissipo", "pulvis", "tenebrae", "lubricus"],
+      ThemeCategory.sin,
+      4 ... 19
+    ),
+    (
+      "Personal Lament",
+      "The psalmist's suffering, humiliation, and penitential response",
+      ["anima", "humilio", "ieiunio", "oratio", "cilicium", "lugeo", "contristo"],
+      ThemeCategory.virtue,
+      10 ... 17
+    ),
+    (
+      "False Friendship",
+      "Hypocritical relationships and betrayal by false friends",
+      ["proximus", "frater", "complaceo", "convenio", "pacificus", "dolus", "dilato", "euge"],
+      ThemeCategory.sin,
+      17 ... 24
+    ),
+    (
+      "Divine Rescue",
+      "God's deliverance of the poor and needy",
+      ["eripio", "inops", "fortis", "egenus", "pauper", "restituo", "malignitas"],
+      ThemeCategory.divine,
+      12 ... 20
+    ),
+    (
+      "Public Praise",
+      "Confession and praise in the assembly",
+      ["confiteor", "ecclesia", "laudo", "magnus", "loquor", "exsulto", "laetor", "meditor", "laus"],
+      ThemeCategory.worship,
+      21 ... 32
+    ),
+    (
+      "Speech and Tongue",
+      "References to speech, tongue, and words as instruments of good or evil",
+      ["lingua", "dico", "loquor", "euge", "meditor", "laus"],
+      ThemeCategory.virtue,
+      1 ... 32
+    ),
+    (
+      "Weapons and Warfare",
+      "Military imagery and divine warfare",
+      ["arma", "scutum", "framea", "concludo", "persequor", "coarcto"],
+      ThemeCategory.divine,
+      1 ... 7
+    ),
+    (
+      "Angelic Intervention",
+      "Angels of the Lord acting on behalf of the righteous",
+      ["angelus", "dominus", "coarcto", "persequor"],
+      ThemeCategory.divine,
+      6 ... 7
+    ),
+  ]
+
+  // MARK: - Test Cases
+
+  func testTotalVerses() {
+    XCTAssertEqual(
+      text.count, expectedVerseCount, "Psalm 34 should have \(expectedVerseCount) verses"
+    )
+    XCTAssertEqual(
+      englishText.count, expectedVerseCount,
+      "Psalm 34 English text should have \(expectedVerseCount) verses"
+    )
+    // Also validate the orthography of the text for analysis consistency
+    let normalized = text.map { PsalmTestUtilities.validateLatinText($0) }
+    XCTAssertEqual(
+      normalized,
+      text,
+      "Normalized Latin text should match expected classical forms"
+    )
+  }
+
+  func testSaveTexts() {
+    let utilities = PsalmTestUtilities.self
+    let jsonString = utilities.generatePsalmTextsJSONString(
+      psalmNumber: id.number,
+      category: id.category ?? "",
+      text: text,
+      englishText: englishText
+    )
+
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm34_texts.json"
+    )
+
+    if success {
+      print("✅ Complete texts JSON created successfully")
+    } else {
+      print("⚠️ Could not save complete texts file:")
+      print(jsonString)
+    }
+  }
+
+  func testSaveThemes() {
+    let utilities = PsalmTestUtilities.self
+    guard
+      let jsonString = utilities.generateCompleteThemesJSONString(
+        psalmNumber: id.number,
+        category: id.category ?? "",
+        conceptualThemes: conceptualThemes,
+        structuralThemes: structuralThemes
+      )
+    else {
+      XCTFail("Failed to generate complete themes JSON")
+      return
     }
 
-    let identity = PsalmIdentity(number: 34, category: "prayer")
-    
-    // MARK: - Test Data (Psalm 34)
-    let psalm34 = [
-        "Iudica, Domine, nocentes me; expugna impugnantes me.",
-        "Apprehende arma et scutum, et exsurge in adiutorium mihi.",
-        "Effunde frameam, et conclude adversus eos qui persequuntur me; dic animae meae: Salus tua ego sum.",
-        "Confundantur et revereantur qui quaerunt animam meam; avertantur retrorsum et erubescant qui cogitant mihi mala.",
-        "Fiant tamquam pulvis ante faciem venti; et angelus Domini coarctans eos.",
-        "Fiat via illorum tenebrae et lubricum; et angelus Domini persequens illos.",
-        "Quoniam gratis absconderunt mihi interitum laquei sui; supervacue exprobraverunt animam meam.",
-        "Veniat illi laqueus quem ignorat; et captio quam abscondit apprehendat eum, et in laqueum cadat in ipsum.",
-        "Anima autem mea exsultabit in Domino; et delectabitur super salutari suo.",
-        "Omnia ossa mea dicent: Domine, quis similis tui?",
-        "Eripiens inopem de manu fortiorum eius; egenum et pauperem a diripientibus eum.",
-        "Surgentes testes iniqui, quae ignorabam interrogabant me.",
-        "Retribuebant mihi mala pro bonis; sterilitatem animae meae.",
-        "Ego autem cum mihi molesti essent, induebar cilicio; humiliabam in ieiunio animam meam, et oratio mea in sinu meo convertetur.",
-        "Quasi proximum, et quasi fratrem nostrum, sic complacebam; quasi lugens et contristatus, sic humiliabar.",
-        "Et adversum me laetati sunt, et convenerunt; congregata sunt super me flagella, et ignoravi.",
-        "Dissipati sunt, nec compuncti; tentaverunt me, subsannaverunt me subsannatione, frenduerunt super me dentibus suis.",
-        "Domine, quando respicies? restitue animam meam a malignitate eorum, a leonibus unicam meam.",
-        "Confitebor tibi in ecclesia magna, in populo gravi laudabo te.",
-        "Non supergaudeant mihi qui adversantur mihi inique; qui oderunt me gratis, et annuunt oculis.",
-        "Quoniam mihi quidem pacifice loquebantur; et in iracundia terrae loquentes, dolos cogitabant.",
-        "Et dilataverunt super me os suum; dixerunt: Euge, euge, viderunt oculi nostri.",
-        "Vidisti, Domine, ne sileas; Domine, ne discedas a me.",
-        "Exsurge, et intende iudicio meo; Deus meus, et Dominus meus, in causam meam.",
-        "Iudica me secundum iustitiam tuam, Domine Deus meus; et non supergaudeant mihi.",
-        "Non dicant in cordibus suis: Euge, euge, animae nostrae; nec dicant: Devoravimus eum.",
-        "Erubescant et revereantur simul, qui gratulantur malis meis; induantur pudore et confusione, qui magnificuntur super me.",
-        "Exsultent et laetentur qui volunt iustitiam meam; et dicant semper: Magnificetur Dominus, qui volunt pacem servi eius.",
-        "Et lingua mea meditabitur iustitiam tuam; tota die laudem tuam."
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm34_themes.json"
+    )
+
+    if success {
+      print("✅ Complete themes JSON created successfully")
+    } else {
+      print("⚠️ Could not save complete themes file:")
+      print(jsonString)
+    }
+  }
+
+  func testLineByLineKeyLemmas() {
+    let utilities = PsalmTestUtilities.self
+    utilities.testLineByLineKeyLemmas(
+      psalmText: text,
+      lineKeyLemmas: lineKeyLemmas,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testStructuralThemes() {
+    let utilities = PsalmTestUtilities.self
+
+    // First, verify that all structural theme lemmas are in lineKeyLemmas
+    let structuralLemmas = structuralThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: structuralLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "structural themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose
+    )
+
+    // Then run the standard structural themes test
+    utilities.testStructuralThemes(
+      psalmText: text,
+      structuralThemes: structuralThemes,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testConceptualThemes() {
+    let utilities = PsalmTestUtilities.self
+
+    // First, verify that conceptual theme lemmas are in lineKeyLemmas
+    let conceptualLemmas = conceptualThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: conceptualLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "conceptual themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose
+    )
+
+    // Then run the standard conceptual themes test
+    utilities.testConceptualThemes(
+      psalmText: text,
+      conceptualThemes: conceptualThemes,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  // MARK: - Thematic Tests
+
+  func testDivineJusticeTheme() {
+    let latinService = LatinService.shared
+    let analysis = latinService.analyzePsalm(id, text: text)
+
+    let terms = [
+      ("iudico", ["Iudica"], "judge"),
+      ("expugno", ["expugna"], "fight against"),
+      ("confundo", ["Confundantur"], "confound"),
+      ("retribuo", ["Retribuebant"], "repay"),
     ]
-    
-    // MARK: - Test Cases
-    // MARK: - Line Pair Tests
-    func testPsalm34Lines1and2() {
-        let line1 = psalm34[0]
-        let line2 = psalm34[1]
-        let combinedText = line1 + " " + line2
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 1)
-        
-        let testLemmas = [
-            ("iudico", ["iudica"], "judge"),
-            ("noceo", ["nocentes"], "harm"),
-            ("expugno", ["expugna"], "fight against"),
-            ("apprehendo", ["Apprehende"], "take up"),
-            ("arma", ["arma"], "weapons"),
-            ("scutum", ["scutum"], "shield"),
-            ("exsurgo", ["exsurge"], "arise")
-        ]
-        
-        if verbose {
-            print("\nPSALM 34:1-2 ANALYSIS:")
-            print("1: \"\(line1)\"")
-            print("2: \"\(line2)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Divine Justice: Iudica (judge) + expugna (fight against)")
-            print("2. Divine Protection: arma (weapons) + scutum (shield)")
-        }
-        
-        XCTAssertNotNil(analysis.dictionary["iudico"], "Should find 'judge' reference")
-        XCTAssertEqual(analysis.dictionary["exsurgo"]?.forms["exsurge"], 1, "Should find 'arise' verb")
-    }
-    
-    func testPsalm34Lines3and4() {
-        let line3 = psalm34[2]
-        let line4 = psalm34[3]
-        let combinedText = line3 + " " + line4
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 3)
-        
-        let testLemmas = [
-            ("effundo", ["Effunde"], "pour out"),
-            ("framea", ["frameam"], "sword"),
-            ("concludo", ["conclude"], "confine"),
-            ("persequor", ["persequuntur"], "persecute"),
-            ("salus", ["Salus"], "salvation"),
-            ("confundo", ["confundantur"], "be confounded"),
-            ("revereor", ["revereantur"], "be put to shame")
-        ]
-        
-        if verbose {
-            print("\nPSALM 34:3-4 ANALYSIS:")
-            print("3: \"\(line3)\"")
-            print("4: \"\(line4)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Divine Warfare: frameam (sword) + conclude (confine)")
-            print("2. Enemy Shame: Confundantur (be confounded) + revereantur (be ashamed)")
-        }
-        
-        XCTAssertNotNil(analysis.dictionary["framea"], "Should find 'sword' reference")
-        XCTAssertEqual(analysis.dictionary["confundo"]?.forms["confundantur"], 1, "Should find 'be confounded' verb")
-    }
-    
-    func testPsalm34Lines5and6() {
-        let line5 = psalm34[4]
-        let line6 = psalm34[5]
-        let combinedText = line5 + " " + line6
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 5)
-        
-        let testLemmas = [
-            ("pulvis", ["pulvis"], "dust"),
-            ("ventus", ["venti"], "wind"),
-            ("angelus", ["angelus"], "angel"),
-            ("coarcto", ["coarctans"], "harass"),
-            ("tenebrae", ["tenebrae"], "darkness"),
-            ("lubricus", ["lubricum"], "slippery"),
-            ("persequor", ["persequens"], "pursue")
-        ]
-        
-        if verbose {
-            print("\nPSALM 34:5-6 ANALYSIS:")
-            print("5: \"\(line5)\"")
-            print("6: \"\(line6)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Enemy Destruction: pulvis (dust) + venti (wind)")
-            print("2. Angelic Intervention: angelus Domini (angel of the Lord) + persequens (pursuing)")
-        }
-        
-        XCTAssertNotNil(analysis.dictionary["angelus"], "Should find 'angel' reference")
-        XCTAssertEqual(analysis.dictionary["persequor"]?.forms["persequens"], 1, "Should find 'pursue' verb")
-    }
-    
-    func testPsalm34Lines7and8() {
-        let line7 = psalm34[6]
-        let line8 = psalm34[7]
-        let combinedText = line7 + " " + line8
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 7)
-        
-        let testLemmas = [
-            ("gratis", ["gratis"], "without cause"),
-            ("interitus", ["interitum"], "destruction"),
-            ("laqueus", ["laquei", "laqueus", "laqueum"], "snare"),
-            ("supervacue", ["supervacue"], "vainly"),
-            ("exprobro", ["exprobraverunt"], "reproach"),
-            ("captio", ["captio"], "trap"),
-            ("cado", ["cadat"], "fall")
-        ]
-        
-        if verbose {
-            print("\nPSALM 34:7-8 ANALYSIS:")
-            print("7: \"\(line7)\"")
-            print("8: \"\(line8)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Unjust Attacks: gratis (without cause) + supervacue (vainly)")
-            print("2. Poetic Justice: laqueus (snare) + cadat (may fall)")
-        }
-        
-        XCTAssertEqual(analysis.dictionary["laqueus"]?.forms["laquei"], 1, "Should find 'snare' reference")
-        XCTAssertEqual(analysis.dictionary["cado"]?.forms["cadat"], 1, "Should find 'fall' verb")
-    }
-    
-    func testPsalm34Lines9and10() {
-        let line9 = psalm34[8]
-        let line10 = psalm34[9]
-        let combinedText = line9 + " " + line10
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 9)
-        
-        let testLemmas = [
-            ("exsulto", ["exsultabit"], "rejoice"),
-            ("delector", ["delectabitur"], "delight"),
-            ("salutaris", ["salutari"], "salvation"),
-            ("os", ["ossa"], "bones"),
-            ("similis", ["similis"], "like")
-        ]
-        
-        if verbose {
-            print("\nPSALM 34:9-10 ANALYSIS:")
-            print("9: \"\(line9)\"")
-            print("10: \"\(line10)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Joyful Trust: exsultabit (rejoice) + delectabitur (delight)")
-            print("2. Bodily Praise: ossa (bones) + dicent (will say)")
-        }
-        
-        XCTAssertEqual(analysis.dictionary["exsulto"]?.forms["exsultabit"], 1, "Should find 'rejoice' verb")
-        XCTAssertNotNil(analysis.dictionary["salutaris"], "Should find 'salvation' reference")
-    }
-    
-    func testPsalm34Lines11and12() {
-        let line11 = psalm34[10]
-        let line12 = psalm34[11]
-        let combinedText = line11 + " " + line12
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 11)
-        
-        let testLemmas = [
-            ("eripio", ["eripiens"], "rescue"),
-            ("inops", ["inopem"], "needy"),
-            ("fortis", ["fortiorum"], "strong"),
-            ("egenus", ["egenum"], "poor"),
-            ("testis", ["testes"], "witness"),
-            ("interrogo", ["interrogabant"], "question")
-        ]
-        
-        if verbose {
-            print("\nPSALM 34:11-12 ANALYSIS:")
-            print("11: \"\(line11)\"")
-            print("12: \"\(line12)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Divine Rescue: Eripiens (rescuing) + inopem (needy)")
-            print("2. False Accusation: testes (witnesses) + interrogabant (questioned)")
-        }
-        
-        XCTAssertEqual(analysis.dictionary["eripio"]?.forms["eripiens"], 1, "Should find 'rescue' verb")
-        XCTAssertNotNil(analysis.dictionary["testis"], "Should find 'witness' reference")
-    }
-    
-    func testPsalm34Lines13and14() {
-        let line13 = psalm34[12]
-        let line14 = psalm34[13]
-        let combinedText = line13 + " " + line14
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 13)
-        
-        let testLemmas = [
-            ("retribuo", ["Retribuebant"], "repay"),
-            ("malum", ["mala"], "evil"),
-            ("sterilitas", ["sterilitatem"], "bereavement"),
-            ("cilicium", ["cilicio"], "sackcloth"),
-            ("humilio", ["humiliabam"], "humble"),
-            ("ieiunio", ["ieiunio"], "fast")
-        ]
-        
-        if verbose {
-            print("\nPSALM 34:13-14 ANALYSIS:")
-            print("13: \"\(line13)\"")
-            print("14: \"\(line14)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Repaid Evil: Retribuebant (they repaid) + mala (evil)")
-            print("2. Penitential Practices: cilicio (sackcloth) + ieiunio (fasting)")
-        }
-        
-        XCTAssertEqual(analysis.dictionary["retribuo"]?.forms["retribuebant"], 1, "Should find 'repay' verb")
-        XCTAssertNotNil(analysis.dictionary["humilio"], "Should find 'humble' reference")
-    }
-    
-    func testPsalm34Lines15and16() {
-        let line15 = psalm34[14]
-        let line16 = psalm34[15]
-        let combinedText = line15 + " " + line16
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 15)
-        
-        let testLemmas = [
-            ("proximus", ["proximum"], "neighbor"),
-            ("frater", ["fratrem"], "brother"),
-            ("complaceo", ["complacebam"], "please"),
-            ("lugeo", ["lugens"], "mourn"),
-            ("contristo", ["contristatus"], "sadden"),
-            ("convenio", ["convenerunt"], "assemble")
-        ]
-        
-        if verbose {
-            print("\nPSALM 34:15-16 ANALYSIS:")
-            print("15: \"\(line15)\"")
-            print("16: \"\(line16)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. False Friendship: proximum (neighbor) + fratrem (brother)")
-            print("2. Betrayal: convenerunt (they assembled) + adversum me (against me)")
-        }
-        
-        XCTAssertNotNil(analysis.dictionary["frater"], "Should find 'brother' reference")
-        XCTAssertEqual(analysis.dictionary["convenio"]?.forms["convenerunt"], 1, "Should find 'assemble' verb")
-    }
-    
-    // MARK: - Test Cases (continued)
-    func testPsalm34Lines17and18() {
-        let line17 = psalm34[16]
-        let line18 = psalm34[17]
-        let combinedText = line17 + " " + line18
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 17)
-        
-        let testLemmas = [
-            ("dissipo", ["Dissipati"], "scatter"),
-            ("compungo", ["compuncti"], "prick"),
-            ("tento", ["tentaverunt"], "tempt"),
-            ("subsanno", ["subsannaverunt", "subsannatione"], "mock"),
-            ("frendo", ["frenduerunt"], "gnash"),
-            ("respicio", ["respicies"], "look"),
-            ("malignitas", ["malignitate"], "malice")
-        ]
-        
-        if verbose {
-            print("\nPSALM 34:17-18 ANALYSIS:")
-            print("17: \"\(line17)\"")
-            print("18: \"\(line18)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Enemy Mockery: subsannaverunt (mocked) + frenduerunt (gnashed)")
-            print("2. Divine Intervention: respicies (look) + restitue (restore)")
-        }
-        
-        XCTAssertEqual(analysis.dictionary["subsanno"]?.forms["subsannaverunt"], 1, "Should find 'mock' verb")
-        XCTAssertNotNil(analysis.dictionary["malignitas"], "Should find 'malice' reference")
-    }
-    
-    func testPsalm34Lines19and20() {
-        let line19 = psalm34[18]
-        let line20 = psalm34[19]
-        let combinedText = line19 + " " + line20
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 19)
-        
-        let testLemmas = [
-            ("confiteor", ["confitebor"], "praise"),
-            ("ecclesia", ["ecclesia"], "assembly"),
-            ("laudo", ["laudabo"], "praise"),
-            ("supergaudeo", ["supergaudeant"], "rejoice over"),
-            ("adverso", ["adversantur"], "oppose"),
-            ("odi", ["oderunt"], "hate")
-        ]
-        
-        if verbose {
-            print("\nPSALM 34:19-20 ANALYSIS:")
-            print("19: \"\(line19)\"")
-            print("20: \"\(line20)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Public Praise: Confitebor (I will praise) + laudabo (I will praise)")
-            print("2. Unjust Enemies: adversantur (oppose) + oderunt (hate)")
-        }
-        
-        XCTAssertEqual(analysis.dictionary["confiteor"]?.forms["confitebor"], 1, "Should find 'praise' verb")
-        XCTAssertEqual(analysis.dictionary["odi"]?.forms["oderunt"], 1, "Should find 'hate' verb")
-    }
-    
-    func testPsalm34Lines21and22() {
-        let line21 = psalm34[20]
-        let line22 = psalm34[21]
-        let combinedText = line21 + " " + line22
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 21)
-        
-        let testLemmas = [
-            ("pacificus", ["pacifice"], "peacefully"),
-            ("iracundia", ["iracundia"], "anger"),
-            ("dolus", ["dolos"], "deceit"),
-            ("dilato", ["dilataverunt"], "open wide"),
-            ("euge", ["Euge", "euge"], "aha")
-        ]
-        
-        if verbose {
-            print("\nPSALM 34:21-22 ANALYSIS:")
-            print("21: \"\(line21)\"")
-            print("22: \"\(line22)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Hypocritical Speech: pacifice (peacefully) + iracundia (anger)")
-            print("2. Mocking Gestures: dilataverunt (opened wide) + Euge (Aha)")
-        }
-        
-        XCTAssertNotNil(analysis.dictionary["dolus"], "Should find 'deceit' reference")
-    }
-    
-    func testPsalm34Lines23and24() {
-        let line23 = psalm34[22]
-        let line24 = psalm34[23]
-        let combinedText = line23 + " " + line24
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 23)
-        
-        let testLemmas = [
-            ("video", ["Vidisti"], "see"),
-            ("sileo", ["sileas"], "be silent"),
-            ("discedo", ["discedas"], "depart"),
-            ("intendo", ["intende"], "attend"),
-            ("causa", ["causam"], "case")
-        ]
-        
-        if verbose {
-            print("\nPSALM 34:23-24 ANALYSIS:")
-            print("23: \"\(line23)\"")
-            print("24: \"\(line24)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Urgent Petition: ne sileas (do not be silent) + ne discedas (do not depart)")
-            print("2. Judicial Appeal: intende (attend) + causam (case)")
-        }
-        
-        XCTAssertEqual(analysis.dictionary["sileo"]?.forms["sileas"], 1, "Should find 'be silent' verb")
-        XCTAssertNotNil(analysis.dictionary["causa"], "Should find 'case' reference")
-    }
-    
-    func testPsalm34Lines25and26() {
-        let line25 = psalm34[24]
-        let line26 = psalm34[25]
-        let combinedText = line25 + " " + line26
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 25)
-        
-        let testLemmas = [
-            ("iustitia", ["iustitiam"], "justice"),
-            ("supergaudeo", ["supergaudeant"], "rejoice over"),
-            ("cor", ["cordibus"], "heart"),
-            ("devoro", ["Devoravimus"], "devour")
-        ]
-        
-        if verbose {
-            print("\nPSALM 34:25-26 ANALYSIS:")
-            print("25: \"\(line25)\"")
-            print("26: \"\(line26)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Righteous Judgment: iustitiam (justice) + iudica (judge)")
-            print("2. Enemy Boasting: cordibus (hearts) + Devoravimus (we have devoured)")
-        }
-        
-        XCTAssertNotNil(analysis.dictionary["iustitia"], "Should find 'justice' reference")
-        XCTAssertEqual(analysis.dictionary["devoro"]?.forms["devoravimus"], 1, "Should find 'devour' verb")
-    }
-    
-    func testPsalm34Lines27and28() {
-        let line27 = psalm34[26]
-        let line28 = psalm34[27]
-        let combinedText = line27 + " " + line28
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 27)
-        
-        let testLemmas = [
-            ("erubesco", ["Erubescant"], "ashamed"),
-            ("revereor", ["revereantur"], "be dismayed"),
-            ("gratulor", ["gratulantur"], "rejoice"),
-            ("induo", ["induantur"], "clothe"),
-            ("magnifico", ["magnificetur"], "be magnified")
-        ]
-        
-        if verbose {
-            print("\nPSALM 34:27-28 ANALYSIS:")
-            print("27: \"\(line27)\"")
-            print("28: \"\(line28)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Enemy Shame: Erubescant (be ashamed) + revereantur (be dismayed)")
-            print("2. Righteous Joy: exsultent (rejoice) + magnificetur (be magnified)")
-        }
-        
-        XCTAssertEqual(analysis.dictionary["erubesco"]?.forms["erubescant"], 1, "Should find 'be ashamed' verb")
-        XCTAssertEqual(analysis.dictionary["magnifico"]?.forms["magnificetur"], 1, "Should find 'be magnified' verb")
-    }
-    
-    func testPsalm34Line29() {
-        let line29 = psalm34[28]
-        let analysis = latinService.analyzePsalm(identity, text: line29, startingLineNumber: 29)
-        
-        let testLemmas = [
-            ("lingua", ["lingua"], "tongue"),
-            ("meditor", ["meditabitur"], "meditate"),
-            ("iustitia", ["iustitiam"], "justice"),
-            ("laus", ["laudem"], "praise")
-        ]
-        
-        if verbose {
-            print("\nPSALM 34:29 ANALYSIS:")
-            print("29: \"\(line29)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Continual Praise: meditabitur (will meditate) + laudem (praise)")
-            print("2. Daily Devotion: tota die (all day) + iustitiam (justice)")
-        }
-        
-        XCTAssertEqual(analysis.dictionary["meditor"]?.forms["meditabitur"], 1, "Should find 'meditate' verb")
-        XCTAssertNotNil(analysis.dictionary["laus"], "Should find 'praise' reference")
-    }
 
- 
-    
-    // MARK: - Thematic Tests
-    func testDivineJusticeTheme() {
-        let analysis = latinService.analyzePsalm(identity, text: psalm34)
-        
-        let terms = [
-            ("iudico", ["Iudica"], "judge"),
-            ("expugno", ["expugna"], "fight against"),
-            ("confundo", ["Confundantur"], "confound"),
-            ("retribuo", ["Retribuebant"], "repay")
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: terms)
-    }
-    
-    func testEnemyShameTheme() {
-        let analysis = latinService.analyzePsalm(identity, text: psalm34)
-        
-        let terms = [
-            ("revereor", ["revereantur"], "fear"),
-            ("erubesco", ["erubescant"], "shame"),
-            ("confusio", ["confusione"], "confusion"),
-            ("pudor", ["pudore"], "shame")
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: terms)
-    }
-    
-    func testDivineProtectionTheme() {
-        let analysis = latinService.analyzePsalm(identity, text: psalm34)
-        
-        let terms = [
-            ("arma", ["arma"], "weapons"),
-            ("scutum", ["scutum"], "shield"),
-            ("angelus", ["angelus"], "angel"),
-            ("adiutorium", ["adiutorium"], "help")
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: terms)
-    }
-    
-    func testPersonalLamentTheme() {
-        let analysis = latinService.analyzePsalm(identity, text: psalm34)
-        
-        let terms = [
-            ("anima", ["animae", "animam", "animae", "animam"] , "soul"),
-            ("humilio", ["humiliabam", "humiliabar"], "humble"),
-            ("oratio", ["oratio"], "prayer"),
-            ("ieiumium", ["ieiunio"], "fasting")
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: terms)
-    }
-    
-    // MARK: - Helper
-    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
-        for (lemma, forms, translation) in confirmedWords {
-            guard let entry = analysis.dictionary[lemma] else {
-                XCTFail("Missing lemma: \(lemma)")
-                continue
-            }
-            
-            XCTAssertTrue(
-                entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-                "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
-            )
-            
-            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-            if !missingForms.isEmpty {
-                XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
-            }
-            
-            if verbose {
-                print("\n\(lemma.uppercased())")
-                print("  Translation: \(entry.translation ?? "?")")
-                forms.forEach { form in
-                    let count = entry.forms[form.lowercased()] ?? 0
-                    print("  \(form.padding(toLength: 15, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
-                }
-            }
+    verifyWordsInAnalysis(analysis, confirmedWords: terms)
+  }
+
+  func testEnemyShameTheme() {
+    let latinService = LatinService.shared
+    let analysis = latinService.analyzePsalm(id, text: text)
+
+    let terms = [
+      ("revereor", ["revereantur"], "fear"),
+      ("erubesco", ["erubescant"], "shame"),
+      ("confusio", ["confusione"], "confusion"),
+      ("pudor", ["pudore"], "shame"),
+    ]
+
+    verifyWordsInAnalysis(analysis, confirmedWords: terms)
+  }
+
+  func testDivineProtectionTheme() {
+    let latinService = LatinService.shared
+    let analysis = latinService.analyzePsalm(id, text: text)
+
+    let terms = [
+      ("arma", ["arma"], "weapons"),
+      ("scutum", ["scutum"], "shield"),
+      ("angelus", ["angelus"], "angel"),
+      ("adiutorium", ["adiutorium"], "help"),
+    ]
+
+    verifyWordsInAnalysis(analysis, confirmedWords: terms)
+  }
+
+  func testPersonalLamentTheme() {
+    let latinService = LatinService.shared
+    let analysis = latinService.analyzePsalm(id, text: text)
+
+    let terms = [
+      ("anima", ["animae", "animam", "animae", "animam"], "soul"),
+      ("humilio", ["humiliabam", "humiliabar"], "humble"),
+      ("oratio", ["oratio"], "prayer"),
+      ("ieiumium", ["ieiunio"], "fasting"),
+    ]
+
+    verifyWordsInAnalysis(analysis, confirmedWords: terms)
+  }
+
+  // MARK: - Helper
+
+  private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
+    for (lemma, forms, translation) in confirmedWords {
+      guard let entry = analysis.dictionary[lemma] else {
+        XCTFail("Missing lemma: \(lemma)")
+        continue
+      }
+
+      XCTAssertTrue(
+        entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
+        "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
+      )
+
+      let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
+      if !missingForms.isEmpty {
+        XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
+      }
+
+      if verbose {
+        print("\n\(lemma.uppercased())")
+        print("  Translation: \(entry.translation ?? "?")")
+        for form in forms {
+          let count = entry.forms[form.lowercased()] ?? 0
+          print("  \(form.padding(toLength: 15, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
         }
+      }
     }
+  }
 }

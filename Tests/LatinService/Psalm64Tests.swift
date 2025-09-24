@@ -1,271 +1,308 @@
-import XCTest
 @testable import LatinService
+import XCTest
 
 class Psalm64Tests: XCTestCase {
-    private var latinService: LatinService!
-    let verbose = false
-    
-    override func setUp() {
-        super.setUp()
-        latinService = LatinService.shared
-    }
-    let id = PsalmIdentity(number: 64, category: nil)
-    
-    // MARK: - Test Data
-    let psalm64 = [
-        "Te decet hymnus, Deus, in Sion; et tibi reddetur votum in Jerusalem.",
-        "Exaudi orationem meam; ad te omnis caro veniet.",
-        "Verba iniquorum praevaluerunt super nos; et impietatibus nostris tu propitiaberis.",
-        "Beatus quem elegisti et assumpsisti; inhabitabit in atriis tuis.",
-        "Replebimur in bonis domus tuae; sanctum est templum tuum, mirabile in aequitate.",
-        "Exaudi nos, Deus, salutaris noster; spes omnium finium terrae et in mari longe.",
-        "Praeparans montes in virtute tua, accinctus potentia;",
-        "Qui conturbas profundum maris, sonum fluctuum ejus. Turbabuntur gentes,",
-        "Et timebunt qui habitant terminos a signis tuis; exitus matutini et vespere delectabis.",
-        "Visitasti terram, et inebriasti eam; multiplicasti locupletare eam.",
-        "Flumen Dei repletum est aquis; parasti cibum illorum, quoniam ita est praeparatio ejus.",
-        "Rivos ejus inebria, multiplica genimina ejus; in stillicidiis ejus laetabitur germinans.",
-        "Benedices coronae anni benignitatis tuae; et campi tui replebuntur ubertate.",
-        "Pinguescent speciosa deserti; et exsultatione colles accingentur.",
-        "Induti sunt arietes ovium, et valles abundabunt frumento; clamabunt, etenim hymnum dicent."
-    ]
-    
-    // MARK: - Thematic Test Cases
-    
-    // 1. Divine Worship Theme
-    func testWorshipTheme() {
-        latinService.configureDebugging(target: "hymnus")
-        let analysis = latinService.analyzePsalm(id, text: psalm64)
-        
-        let worshipTerms = [
-            ("hymnus", ["hymnus"], "hymn"), // v.1
-            ("votum", ["votum"], "vow"), // v.1
-            ("sanctus", ["sanctum"], "holy"), // v.5
-            ("templum", ["templum"], "temple"), // v.5
-            ("benedico", ["Benedices"], "bless") // v.13
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: worshipTerms)
-    }
-    
-    // 2. Divine Power Theme
-    func testDivinePowerTheme() {
-        latinService.configureDebugging(target: "praeparo")
-        let analysis = latinService.analyzePsalm(id, text: psalm64)
-        
-        let powerTerms = [
-            ("virtus", ["virtute"], "power"), // v.7
-            ("potentia", ["potentia"], "might"), // v.7
-            ("conturbo", ["conturbas" ], "disturb"), // v.8
-            ("praeparatio", ["praeparatio"], "preparation") ,
-            ("praeparo", ["Praeparans" ], "prepare") // v.7,11
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: powerTerms)
-    }
-    
-    // 3. Agricultural Abundance Theme
-    func testAbundanceTheme() {
-        latinService.configureDebugging(target: "genimen")
-        let analysis = latinService.analyzePsalm(id, text: psalm64)
-        
-        let abundanceTerms = [
-            ("repleo", ["Replebimur", "repletum", "replebuntur"], "fill"), // v.5,11,13
-            ("genimen", ["genimina"], "produce"), // v.12
-            ("uber", ["ubertate"], "breast"), // v.13
-            ("frumentum", ["frumento"], "grain"), // v.15
-            ("germino", ["germinans"], "sprout") // v.12
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: abundanceTerms)
-    }
-    
-    // 4. Prayer and Response Theme
-    func testPrayerTheme() {
-        let analysis = latinService.analyzePsalm(id, text: psalm64)
-        
-        let prayerTerms = [
-            ("exaudio", ["Exaudi"], "hear"), // v.2,6
-            ("oratio", ["orationem"], "prayer"), // v.2
-            ("propitior", ["propitiaberis"], "appease"), // v.3
-            ("visito", ["Visitasti"], "visit") // v.10
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: prayerTerms)
-    }
-    
-    // MARK: - Verb Tests
-    
-    func testVerbRepleo() {
-        latinService.configureDebugging(target: "repleo")
-        let analysis = latinService.analyzePsalm(id, text: psalm64)
-        
-        let repleoEntry = analysis.dictionary["repleo"]
-        XCTAssertNotNil(repleoEntry, "Lemma 'repleo' should exist")
-        
-        let translation = repleoEntry?.translation?.lowercased() ?? ""
-        XCTAssertTrue(
-            translation.contains("fill") || translation.contains("replenish"),
-            "Expected 'repleo' to mean 'to fill', got: \(translation)"
-        )
-        
-        let formsToCheck = [
-            ("Replebimur", "we shall be filled", "future passive"), // v.5
-            ("repletum", "filled", "perfect passive participle"), // v.11
-            ("replebuntur", "they shall be filled", "future passive") // v.13
-        ]
-        
-        for (form, expectedMeaning, expectedGrammar) in formsToCheck {
-            let formCount = repleoEntry?.forms[form.lowercased()] ?? 0
-            XCTAssertGreaterThan(formCount, 0, "Form '\(form)' should exist")
-            
-            if let entity = repleoEntry?.entity {
-                let result = entity.analyzeFormWithMeaning(form)
-                XCTAssertTrue(
-                    result.contains(expectedMeaning) || result.contains(expectedGrammar),
-                    "For '\(form)': expected \(expectedMeaning)/\(expectedGrammar), got \(result)"
-                )
-            }
-        }
-    }
-    func testVerbTurbo() {
-    latinService.configureDebugging(target: "turbo")
-    let analysis = latinService.analyzePsalm(id, text: psalm64)
-    
-    // 1. Verify lemma exists
-    let turboEntry = analysis.dictionary["turbo"]
-    XCTAssertNotNil(turboEntry, "Lemma 'turbo' should exist for 'turbabuntur'")
-    
-    // 2. Check base verb meaning
-    let translation = turboEntry?.translation?.lowercased() ?? ""
-    XCTAssertTrue(
-        translation.contains("disturb") || translation.contains("agitate"),
-        "Expected 'turbo' to mean 'to disturb/agitate', got: \(translation)"
+  private let utilities = PsalmTestUtilities.self
+  private let verbose = true
+  let id = PsalmIdentity(number: 64, category: "")
+
+  // MARK: - Test Data Properties
+
+  private let expectedVerseCount = 14
+
+  // MARK: - Setup
+
+  override func setUp() {
+    super.setUp()
+  }
+
+  // MARK: - Test Data
+
+  private let text = [
+    "Te decet hymnus, Deus, in Sion; et tibi reddetur votum in Ierusalem.",
+    "Exaudi orationem meam; ad te omnis caro veniet.",
+    "Verba iniquorum praevaluerunt super nos; et impietatibus nostris tu propitiaberis.",
+    "Beatus quem elegisti et assumpsisti; inhabitabit in atriis tuis.",
+    "Replebimur in bonis domus tuae; sanctum est templum tuum, mirabile in aequitate.",
+
+    "Exaudi nos, Deus, salutaris noster; spes omnium finium terrae et in mari longe.",
+    "Praeparans montes in virtute tua, accinctus potentia; Qui conturbas profundum maris, sonum fluctuum eius.",
+    "Turbabuntur gentes, et timebunt qui habitant terminos a signis tuis; exitus matutini et vespere delectabis.",
+    "Visitasti terram, et inebriasti eam; multiplicasti locupletare eam.",
+    "Flumen Dei repletum est aquis; parasti cibum illorum, quoniam ita est praeparatio eius.",
+
+    "Rivos eius inebria, multiplica genimina eius; in stillicidiis eius laetabitur germinans.",
+    "Benedices coronae anni benignitatis tuae; et campi tui replebuntur ubertate.",
+    "Pinguescent speciosa deserti; et exsultatione colles accingentur.",
+    "Induti sunt arietes ovium, et valles abundabunt frumento; clamabunt, etenim hymnum dicent.",
+  ]
+
+  private let englishText = [
+    "A hymn, O God, becometh thee in Sion; and a vow shall be paid to thee in Jerusalem.",
+    "O hear my prayer; all flesh shall come to thee.",
+    "The words of the wicked have prevailed over us; and thou wilt pardon our transgressions.",
+    "Blessed is he whom thou hast chosen and taken to thee; he shall dwell in thy courts.",
+    "We shall be filled with the good things of thy house; holy is thy temple, wonderful in equity.",
+    "Hear us, O God our saviour, who art the hope of all the ends of the earth, and in the sea afar off.",
+    "Thou who preparest the mountains by thy strength, being girded with power: Who troublest the depth of the sea, the noise of its waves.",
+    "The Gentiles shall be troubled, and they that dwell in the uttermost parts shall be afraid at thy signs: thou shalt make the outgoings of the morning and of the evening to be joyful.",
+    "Thou hast visited the earth, and hast made it drunk: thou hast multiplied its riches.",
+    "The river of God is filled with water, thou hast prepared their food: for so is its preparation.",
+    "Fill up plentifully the streams thereof, multiply its fruits; it shall spring up and rejoice in its showers.",
+    "Thou shalt bless the crown of the year of thy goodness: and thy fields shall be filled with plenty.",
+    "The beautiful places of the wilderness shall grow fat: and the hills shall be girded about with joy,",
+    "The rams of the flock are clothed, and the vales shall abound with corn: they shall shout, yea they shall sing a hymn.",
+  ]
+
+  private let lineKeyLemmas = [
+    (1, ["decet", "hymnus", "deus", "sion", "reddo", "votum", "ierusalem"]),
+    (2, ["exaudio", "oratio", "caro", "venio"]),
+    (3, ["verbum", "iniquus", "praevaleo", "impietas", "propitior"]),
+    (4, ["beatus", "eligo", "assumo", "inhabito", "atrium"]),
+    (5, ["repleo", "bonus", "domus", "sanctus", "templum", "mirabilis", "aequitas"]),
+    (6, ["exaudio", "deus", "salutaris", "spes", "finis", "terra", "mare"]),
+    (7, ["praeparo", "mons", "virtus", "accingo", "potentia", "conturbo", "profundus", "mare", "sonus", "fluctus"]),
+    (8, ["turbo", "timeo", "habito", "terminus", "signum", "exitus", "matutinus", "vesper", "delecto"]),
+    (9, ["visito", "terra", "inebrio", "multiplico", "locupleto"]),
+    (10, ["flumen", "deus", "repleo", "aqua", "paro", "cibus", "praeparatio"]),
+    (11, ["rivus", "inebrio", "multiplico", "genimen", "stillicidium", "laetor", "germino"]),
+    (12, ["benedico", "corona", "annus", "benignitas", "campus", "repleo", "uber"]),
+    (13, ["pinguesco", "speciosus", "desertum", "exsultatio", "collis", "accingo"]),
+    (14, ["induo", "aries", "ovis", "vallis", "abundo", "frumentum", "clamo", "hymnus", "dico"]),
+  ]
+
+  private let structuralThemes = [
+    (
+      "Divine Worship → Prayer Response",
+      "The psalmist's call to worship and God's response to prayer",
+      ["hymnus", "votum", "exaudio", "oratio", "sanctus", "templum"],
+      1,
+      6,
+      "The psalmist declares that hymns and vows are fitting for God in Zion and Jerusalem, then calls for God to hear his prayer as all flesh comes to Him, and describes the blessed dwelling in God's holy temple.",
+      "Augustine sees this as the soul's recognition that true worship requires both external praise and internal prayer, leading to blessed communion with God in His holy dwelling."
+    ),
+    (
+      "Divine Power → Natural Disturbance",
+      "God's power over mountains and seas causing natural phenomena and fear among nations",
+      ["praeparo", "mons", "virtus", "potentia", "conturbo", "profundus", "mare", "turbo"],
+      7,
+      8,
+      "God prepares mountains with His strength and power, troubles the depths of the sea and its waves, causing the nations to be disturbed and those dwelling in remote places to fear His signs.",
+      "For Augustine, this represents God's sovereign power over creation, where His divine activity causes both natural phenomena and spiritual awakening among all peoples."
+    ),
+    (
+      "Earthly Visitation → Agricultural Abundance",
+      "God's visitation of the earth leading to agricultural fertility and abundance",
+      ["visito", "terra", "inebrio", "flumen", "aqua", "genimen", "germino", "frumentum"],
+      9,
+      14,
+      "God has visited and made the earth drunk, filling the river of God with water and preparing food, causing streams to multiply and produce to spring up, leading to abundant grain and joyful celebration.",
+      "Augustine sees this as God's providential care for His creation, where divine visitation results in natural abundance that sustains life and leads to grateful celebration."
+    ),
+  ]
+
+  private let conceptualThemes = [
+    (
+      "Divine Worship",
+      "Praise, hymns, and sacred offerings to God",
+      ["hymnus", "votum", "sanctus", "templum", "benedico", "clamo"],
+      ThemeCategory.worship,
+      1 ... 14
+    ),
+    (
+      "Divine Power",
+      "God's strength and authority over creation",
+      ["virtus", "potentia", "praeparo", "conturbo", "turbo"],
+      ThemeCategory.divine,
+      7 ... 8
+    ),
+    (
+      "Natural Abundance",
+      "Agricultural fertility and natural prosperity",
+      ["repleo", "genimen", "uber", "frumentum", "germino", "abundo"],
+      ThemeCategory.virtue,
+      9 ... 14
+    ),
+    (
+      "Prayer and Response",
+      "Human supplication and divine hearing",
+      ["exaudio", "oratio", "propitior", "visito"],
+      ThemeCategory.divine,
+      1 ... 9
+    ),
+    (
+      "Blessedness and Election",
+      "Divine choice and blessed dwelling",
+      ["beatus", "eligo", "assumo", "inhabito", "atrium"],
+      ThemeCategory.virtue,
+      4 ... 5
+    ),
+    (
+      "Natural Phenomena",
+      "Mountains, seas, and natural elements",
+      ["mons", "mare", "profundus", "flumen", "aqua", "rivus"],
+      ThemeCategory.divine,
+      7 ... 11
+    ),
+  ]
+
+  func testTotalVerses() {
+    XCTAssertEqual(
+      text.count, expectedVerseCount, "Psalm 64 should have \(expectedVerseCount) verses"
     )
-    
-    // 3. Verify form exists
-    let formCount = turboEntry?.forms["turbabuntur"] ?? 0
-    XCTAssertGreaterThan(
-        formCount, 0,
-        "Form 'turbabuntur' should exist for lemma 'turbo'"
+    XCTAssertEqual(
+      englishText.count, expectedVerseCount,
+      "Psalm 64 English text should have \(expectedVerseCount) verses"
     )
-    
-    // 4. Detailed analysis with multiple verification points
-    if let entity = turboEntry?.entity {
-        let analysisResult = entity.analyzeFormWithMeaning("turbabuntur")
-        
-        // Semantic check
-        XCTAssertTrue(
-            analysisResult.lowercased().contains("they will be disturbed") ||
-            analysisResult.lowercased().contains("will be agitated"),
-            "Expected meaning about future disturbance, got: \(analysisResult)"
-        )
-        
-        // Grammatical checks
-        XCTAssertTrue(
-            analysisResult.contains("future passive") ,
-            "Expected future passive 3rd plural, got: \(analysisResult)"
-        )
-        
-                
-        if verbose {
-            print("\nTURBABUNTUR Analysis:")
-            print("Full output: \(analysisResult)")
-            print("Breakdown:")
-            print("- Tense: \(analysisResult.contains("future") ? "✅" : "❌")")
-            print("- Voice: \(analysisResult.contains("passive") ? "✅" : "❌")")
-        }
+    // Also validate the orthography of the text for analysis consistency
+    let normalized = text.map { PsalmTestUtilities.validateLatinText($0) }
+    XCTAssertEqual(
+      normalized,
+      text,
+      "Normalized Latin text should match expected classical forms"
+    )
+  }
+
+  func testSaveTexts() {
+    let utilities = PsalmTestUtilities.self
+    let jsonString = utilities.generatePsalmTextsJSONString(
+      psalmNumber: id.number,
+      category: id.category ?? "",
+      text: text,
+      englishText: englishText
+    )
+
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm64_texts.json"
+    )
+
+    if success {
+      print("✅ Complete texts JSON created successfully")
     } else {
-        XCTFail("Entity for 'turbo' not found")
+      print("⚠️ Could not save complete texts file:")
+      print(jsonString)
     }
-    
-}
-    
-    func testVerbConturbo() {
-        latinService.configureDebugging(target: "conturbo")
-        let analysis = latinService.analyzePsalm(id, text: psalm64)
-        
-        let conturboEntry = analysis.dictionary["conturbo"]
-        XCTAssertNotNil(conturboEntry, "Lemma 'conturbo' should exist")
-        
-        let translation = conturboEntry?.translation?.lowercased() ?? ""
+  }
+
+  func testSaveThemes() {
+    let utilities = PsalmTestUtilities.self
+    guard
+      let jsonString = utilities.generateCompleteThemesJSONString(
+        psalmNumber: id.number,
+        category: id.category ?? "",
+        conceptualThemes: conceptualThemes,
+        structuralThemes: structuralThemes
+      )
+    else {
+      XCTFail("Failed to generate complete themes JSON")
+      return
+    }
+
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm64_themes.json"
+    )
+
+    if success {
+      print("✅ Complete themes JSON created successfully")
+    } else {
+      print("⚠️ Could not save complete themes file:")
+      print(jsonString)
+    }
+  }
+
+  func testLineByLineKeyLemmas() {
+    let utilities = PsalmTestUtilities.self
+    utilities.testLineByLineKeyLemmas(
+      psalmText: text,
+      lineKeyLemmas: lineKeyLemmas,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testStructuralThemes() {
+    let utilities = PsalmTestUtilities.self
+
+    // First, verify that all structural theme lemmas are in lineKeyLemmas
+    let structuralLemmas = structuralThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: structuralLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "structural themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose
+    )
+
+    // Then run the standard structural themes test
+    utilities.testStructuralThemes(
+      psalmText: text,
+      structuralThemes: structuralThemes,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testConceptualThemes() {
+    let utilities = PsalmTestUtilities.self
+
+    // First, verify that conceptual theme lemmas are in lineKeyLemmas
+    let conceptualLemmas = conceptualThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: conceptualLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "conceptual themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose
+    )
+
+    // Then run the standard conceptual themes test
+    utilities.testConceptualThemes(
+      psalmText: text,
+      conceptualThemes: conceptualThemes,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  // MARK: - Verb Tests
+
+  func testVerbRepleo() {
+    let latinService = LatinService.shared
+    latinService.configureDebugging(target: "repleo")
+    let analysis = latinService.analyzePsalm(id, text: text)
+
+    let repleoEntry = analysis.dictionary["repleo"]
+    XCTAssertNotNil(repleoEntry, "Lemma 'repleo' should exist")
+
+    let translation = repleoEntry?.translation?.lowercased() ?? ""
+    XCTAssertTrue(
+      translation.contains("fill") || translation.contains("replenish"),
+      "Expected 'repleo' to mean 'to fill', got: \(translation)"
+    )
+
+    let formsToCheck = [
+      ("Replebimur", "we shall be [fill]", "future passive"), // v.5
+      ("repletum", "[fill]", "perfect passive participle"), // v.11
+      ("replebuntur", "they shall be [fill]", "future passive"), // v.13
+    ]
+
+    for (form, expectedMeaning, expectedGrammar) in formsToCheck {
+      let formCount = repleoEntry?.forms[form.lowercased()] ?? 0
+      XCTAssertGreaterThan(formCount, 0, "Form '\(form)' should exist")
+
+      if let entity = repleoEntry?.entity {
+        let result = entity.analyzeFormWithMeaning(form)
         XCTAssertTrue(
-            translation.contains("disturb") || translation.contains("confuse"),
-            "Expected 'conturbo' to mean 'to disturb', got: \(translation)"
+          result.contains(expectedMeaning) || result.contains(expectedGrammar),
+          "For '\(form)': expected \(expectedMeaning)/\(expectedGrammar), got \(result)"
         )
-        
-        let formsToCheck = [
-            ("conturbas", "you disturb", "present active 2nd singular"), // v.8
-        ]
-        
-        for (form, expectedMeaning, expectedGrammar) in formsToCheck {
-            let formCount = conturboEntry?.forms[form.lowercased()] ?? 0
-            XCTAssertGreaterThan(formCount, 0, "Form '\(form)' should exist")
-        }
+      }
     }
-    
-    // MARK: - Helper Methods
-    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, 
-                                     confirmedWords: [(lemma: String, 
-                                                     forms: [String], 
-                                                     translation: String)]) {
-        for (lemma, forms, translation) in confirmedWords {
-            guard let entry = analysis.dictionary[lemma] else {
-                XCTFail("Missing lemma: \(lemma)")
-                continue
-            }
-            
-            // Verify semantic domain through translation
-            XCTAssertTrue(
-                entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-                "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
-            )
-            
-            // Verify morphological coverage
-            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-            if !missingForms.isEmpty {
-                XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
-            }
-            
-            // NEW: Verify each form's grammatical analysis
-            for form in forms {
-                if let entity = entry.entity {
-                    let result = entity.analyzeFormWithMeaning(form)
-                    
-                    // Check if analysis contains either:
-                    // 1. The exact translation we expect
-                    // 2. Or appropriate grammatical markers
-                    XCTAssertTrue(
-                        result.lowercased().contains(translation.lowercased()) ||
-                        result.lowercased().contains("verb") ||
-                        result.lowercased().contains("participle") ||
-                        result.lowercased().contains("noun"),
-                        """
-                        For form '\(form)' of lemma '\(lemma)':
-                        Expected analysis to contain '\(translation)' or grammatical info,
-                        but got: \(result)
-                        """
-                    )
-                    
-                    if verbose {
-                        print("  Analysis of '\(form)': \(result)")
-                    }
-                } else {
-                    XCTFail("Entity for lemma '\(lemma)' not found")
-                }
-            }
-            
-            if verbose {
-                print("\n\(lemma.uppercased())")
-                print("  Translation: \(entry.translation ?? "?")")
-                print("  Forms found: \(entry.forms.keys.filter { forms.map { $0.lowercased() }.contains($0) }.count)/\(forms.count)")
-                forms.forEach { form in
-                    let count = entry.forms[form.lowercased()] ?? 0
-                    print("  \(form.padding(toLength: 15, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
-                }
-            }
-        }
-    }
-
-
+  }
 }
