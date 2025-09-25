@@ -115,7 +115,7 @@ class Psalm30Tests: XCTestCase {
     (
       "Initial Trust → Urgent Plea",
       "The psalmist's foundational trust in God leading to an urgent cry for deliverance",
-      ["spero", "confundo", "iustitia", "libero", "inclino", "accelero", "eripio"],
+      ["spero", "confundor", "iustitia", "libero", "inclino", "accelero", "eripio"],
       1,
       2,
       "The psalm begins with declaration of trust in God and plea not to be confounded, immediately followed by urgent requests for God to incline His ear and hasten to deliver.",
@@ -123,57 +123,138 @@ class Psalm30Tests: XCTestCase {
     ),
     (
       "Divine Protection → Redemptive Trust",
-      "Appealing to God as protector and refuge, culminating in commending spirit to God",
-      ["protector", "refugium", "deduco", "enutrio", "educo", "commendo", "spiritus", "redimo"],
+      "Appealing to God as protector and refuge, trusting in His strength and guidance",
+      ["deus", "protector", "refugium", "salvus", "facio", "fortitudo", "nomen", "deduco", "enutrio"],
       3,
-      6,
-      "The psalmist asks God to be his protector and refuge, trusting in divine guidance and nourishment, then commits his spirit to God who has redeemed him.",
+      4,
+      "The psalmist asks God to be his protector and refuge, trusting in divine guidance and nourishment, recognizing God as his strength.",
       "For Augustine, this progression shows the soul moving from seeking external protection to complete spiritual surrender, recognizing God as the ultimate redeemer."
+    ),
+    (
+      "Deliverance from Snare → Spirit Committed",
+      "From divine rescue from hidden traps to entrusting one's spirit to God",
+      ["educo", "laqueus", "abscondo", "protector", "manus", "commendo", "spiritus", "redimo", "veritas"],
+      5,
+      6,
+      "The psalmist trusts God to bring him out of the hidden snare and commits his spirit into God's hands, recognizing Him as the God of truth who has redeemed him.",
+      "Augustine sees this as the movement from external deliverance to internal surrender, showing complete trust in God's redemptive power and truth."
     ),
     (
       "Rejection of Vanity → Joy in Mercy",
       "Hating vain idols and choosing hope in God, resulting in joy and deliverance",
-      ["odi", "vanitas", "spero", "exsulto", "laetor", "misericordia", "respicio", "salvo"],
+      ["odi", "vanitas", "supervacue", "spero", "exsulto", "laetor", "misericordia"],
       7,
       8,
       "The psalmist rejects those who follow vain things and places hope in the Lord, leading to exultation and joy in God's mercy that has regarded his humility.",
       "Augustine interprets this as the necessary rejection of worldly attachments before experiencing the full joy of divine mercy and salvation."
     ),
     (
-      "Deliverance Remembered → Present Affliction",
-      "Recalling past deliverance contrasted with current suffering and isolation",
-      ["concludo", "statuo", "spatiosus", "misereor", "tribulor", "conturbo", "deficio", "opprobrium"],
+      "Divine Regard → Spacious Deliverance",
+      "From God's attention to humility to being set in a spacious place",
+      ["respicio", "humilitas", "salvo", "necessitas", "anima", "concludo", "inimicus", "statuo", "spatiosus", "pes"],
       9,
+      10,
+      "The psalmist recalls how God regarded his humility and saved his soul from distress, not shutting him up in the enemy's hands but setting his feet in a spacious place.",
+      "Augustine sees this as the contrast between constriction by enemies and the freedom God provides when the soul humbles itself before Him."
+    ),
+    (
+      "Present Affliction → Life in Grief",
+      "Current suffering and the wasting away of life in sorrow",
+      ["misereor", "tribulor", "conturbo", "ira", "oculus", "anima", "venter", "deficio", "dolor", "vita", "annus", "gemitus"],
+      11,
+      12,
+      "The psalmist describes his current affliction with troubled eyes, soul, and belly, and how his life is wasted with grief and his years in sighs.",
+      "For Augustine, this represents the honest acknowledgment of present suffering, which is necessary before experiencing divine comfort and restoration."
+    ),
+    (
+      "Physical Weakness → Social Reproach",
+      "From bodily infirmity to becoming a reproach among enemies and neighbors",
+      ["infirmo", "paupertas", "virtus", "os", "conturbo", "inimicus", "opprobrium", "vicinus", "timor", "notus"],
       13,
-      "The psalmist remembers how God set his feet in a spacious place, but now describes current affliction, grief, weakness, and becoming a reproach to enemies.",
-      "Augustine sees this as the typical pattern of spiritual life: remembering God's past faithfulness while honestly presenting current struggles."
-    ),
-    (
-      "Depth of Suffering → Renewed Trust",
-      "Describing profound isolation and threat, then reaffirming trust in God",
-      ["oblivio", "mortuus", "vas", "perditus", "convenio", "adversum", "spero", "deus"],
       14,
+      "The psalmist's strength is weakened through poverty and his bones disturbed, while he has become a reproach among all his enemies and a fear to his acquaintances.",
+      "Augustine sees this as the complete picture of human vulnerability - both physical weakness and social isolation that can drive the soul to complete dependence on God."
+    ),
+    (
+      "Forgotten Like Dead → Broken Vessel",
+      "From feeling forgotten as the dead to being like a destroyed vessel",
+      ["video", "foras", "fugio", "oblivio", "mortuus", "cor", "vas", "perditus", "audio", "vituperatio", "multus", "commoror", "circuitus"],
+      15,
+      16,
+      "Those who saw him fled from him, and he feels forgotten like one dead from the heart, like a broken vessel, hearing the blame of many dwelling round about.",
+      "Augustine interprets this as the depths of human abandonment and brokenness that can only be healed by divine intervention and restoration."
+    ),
+    (
+      "Enemy Conspiracy → Trust in God",
+      "From enemies conspiring to take life to reaffirming trust in God",
+      ["convenio", "adversus", "accipio", "anima", "consilior", "spero", "dominus", "dico", "deus", "manus", "sors"],
       17,
-      "The psalmist feels forgotten like the dead, like a broken vessel, with enemies conspiring against his life, yet reaffirms his trust that God is his God.",
-      "For Augustine, this represents the soul's ability to maintain faith even when feeling completely abandoned and threatened by overwhelming forces."
-    ),
-    (
-      "Confident Prayer → Divine Vindication",
-      "Praying for deliverance and vindication against enemies",
-      ["manus", "eripio", "illumino", "salvus", "confundo", "impius", "infernum", "mutus", "labium"],
       18,
-      21,
-      "The psalmist places his lot in God's hands, asks for divine illumination and salvation, and prays for the confusion and silencing of wicked accusers.",
-      "Augustine sees this as the proper prayer attitude: trusting God's timing while asking for justice against those who speak evil against the righteous."
+      "While enemies assembled together against him and consulted to take away his life, the psalmist reaffirms his trust in God and places his lot in God's hands.",
+      "For Augustine, this shows the soul's ability to maintain faith even when facing the most dire threats, trusting in God's ultimate protection and guidance."
     ),
     (
-      "Divine Goodness → Exhortation to Saints",
-      "Celebrating God's hidden goodness and exhorting all saints to hope",
-      ["dulcedo", "abscondo", "perficio", "protego", "benedictus", "mirifico", "diligo", "viriliter", "conforto"],
+      "Prayer for Deliverance → Divine Illumination",
+      "From asking for rescue from enemies to seeking God's face to shine",
+      ["manus", "eripio", "inimicus", "persequor", "illustro", "facies", "servus", "salvus", "misericordia", "confundor", "invoco"],
+      19,
+      20,
+      "The psalmist asks to be delivered from the hands of enemies and persecutors, and for God's face to shine upon His servant for salvation in mercy.",
+      "Augustine sees this as the proper progression from seeking external deliverance to desiring the inner illumination of God's countenance."
+    ),
+    (
+      "Shame for Wicked → Silence Deceitful Lips",
+      "From praying for wicked to be ashamed to asking for deceitful lips to be made dumb",
+      ["erubesco", "impius", "deduco", "infernus", "mutus", "labium", "dolosus", "loquor", "adversus", "iustus", "iniquitas", "superbia", "abusio"],
+      21,
       22,
+      "The psalmist prays for the wicked to be ashamed and brought down to hell, and for deceitful lips that speak iniquity against the just to be made dumb.",
+      "Augustine interprets this as the prayer for divine justice against those who speak evil against the righteous, trusting in God's vindication."
+    ),
+    (
+      "Divine Sweetness → Perfection for Hopers",
+      "From marveling at God's hidden sweetness to His perfecting work for those who hope",
+      ["magnus", "multitudo", "dulcedo", "dominus", "abscondo", "timeo", "perficio", "spero", "conspectus", "filius", "homo"],
+      23,
+      24,
+      "The psalmist marvels at the greatness of God's sweetness hidden for those who fear Him, and how He perfects it for those who hope in Him in the sight of men.",
+      "For Augustine, this reveals God's hidden goodness reserved for the faithful and His public vindication of those who trust in Him."
+    ),
+    (
+      "Hidden Protection → Tabernacle Shelter",
+      "From God hiding His people from disturbance to protecting them in His tabernacle",
+      ["abscondo", "absconditum", "facies", "conturbatio", "homo", "protego", "tabernaculum", "contradictio", "lingua"],
+      25,
+      26,
+      "God hides His people in the secret of His face from the disturbance of men, and protects them in His tabernacle from the contradiction of tongues.",
+      "Augustine sees this as the double protection God provides - both from external disturbance and from the contradiction of false tongues."
+    ),
+    (
+      "Blessed Mercy → Cast Away in Mind",
+      "From blessing God's wonderful mercy to feeling cast away from God's sight",
+      ["benedico", "dominus", "mirifico", "misericordia", "civitas", "munio", "dico", "excessus", "mens", "proicio", "facies", "oculus"],
+      27,
+      28,
+      "The psalmist blesses the Lord for showing wonderful mercy in a fortified city, but then says he was cast away from God's sight in the excess of his mind.",
+      "Augustine interprets this as the oscillation between gratitude for past mercies and the present feeling of abandonment, showing the human struggle with faith."
+    ),
+    (
+      "Prayer Heard → Love and Truth",
+      "From God hearing prayer to exhortation to love the Lord and seek truth",
+      ["exaudio", "vox", "oratio", "dum", "clamo", "diligo", "dominus", "omnis", "sanctus", "veritas", "requiro", "retribuo", "superbia"],
+      29,
+      30,
+      "God heard the voice of prayer when the psalmist cried to Him, and now he exhorts all saints to love the Lord who requires truth and repays those who act proudly.",
+      "Augustine sees this as the transition from personal petition to communal exhortation, sharing the discovered truth about God's character with all believers."
+    ),
+    (
+      "Final Exhortation",
+      "The concluding call to be strong and take courage in the Lord",
+      ["virilis", "ago", "conforto", "cor", "omnis", "spero", "dominus"],
       31,
-      "The psalmist marvels at God's hidden sweetness for the faithful, celebrates mercy received, and exhorts all saints to love God and be strengthened in hope.",
-      "Augustine interprets this conclusion as the soul's transition from personal petition to communal encouragement, sharing the discovered goodness of God with all believers."
+      31,
+      "The psalm concludes with an exhortation to act manfully and let hearts be strengthened, all who hope in the Lord.",
+      "Augustine interprets this final verse as the ultimate encouragement to persevere in faith and courage, recognizing that strength comes from hope in the Lord."
     ),
   ]
 
