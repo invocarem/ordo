@@ -1,665 +1,731 @@
 [
   {
-  "lemma": "paupertas",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "paupertas",
-  "genitive": "paupertatis",
-  "translations": {
-    "en": "poverty, humble condition, need",
-    "la": "paupertas, paupertatis"
+    "lemma": "collaudatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "collaudatio",
+    "genitive": "collaudationis",
+    "translations": {
+      "en": "praise, commendation",
+      "la": "collaudatio, collaudationis"
+    }
   },
-  "forms": {
-    "ablative_singular": ["paupertate"]
-  }
-}
-,
   {
-  "lemma": "foras",
-  "part_of_speech": "adverb",
-  "declension": 0,
-  "translations": {
-    "en": "out, outside, out of doors",
-    "la": "foras"
-  }
-},
-  {
-  "lemma": "consilior",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "consiliari",
-  "present": "consilior",
-  "future": "consiliabor",
-  "perfect": "consiliatus sum",
-  "translations": {
-    "en": "to take counsel, consult ",
-    "la": "consilior, consiliari, consiliatus sum"
+    "lemma": "fames",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "fames",
+    "genitive": "famis",
+    "translations": {
+      "en": "hunger, famine",
+      "la": "fames, famis"
+    }
   },
-  "forms": {
-    "perfect_participle_masc_nom_pl": ["consiliati"],
-    "perfect_participle_fem_nom_pl": ["consiliata"],
-    "perfect_participle_neut_nom_pl": ["consiliatum"],
-    "perfect_participle_masc_acc_pl": ["consiliata"],
-    "perfect_participle_fem_acc_pl": ["consiliata"],
-    "perfect_participle_neut_acc_pl": ["consiliatum"],
-    "perfect_participle_masc_gen_pl": ["consiliatorum"],
-    "future_active_indicative_3sg": ["consiliabit"],
-    "future_active_imperative_2sg": ["consiliabile"],
-    "present_active_indicative_2sg": ["consiliabile"],
-    "present_active_imperative_2sg": ["consiliabile"],
-    "present_active_participle_3sg": ["consiliabile"],
-    "perfect_participle": ["consiliatus", "consiliata", "consiliatum"]
-  }
-},
-  {
-  "lemma": "abusio",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "abusio",
-  "genitive": "abusiosis",
-  "translations": {
-    "en": "abuse, misuse, improper use",
-    "la": "abusio, abusiosis"
-  },
-  "forms": {
-    "ablative_f": ["abusione"]
-  }
-},
-  {
-  "lemma": "perditus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "perditus",
-  "genitive": "perditi",
-  "translations": {
-    "en": "lost, ruined, destroyed, desperate, corrupt",
-    "la": "perditus, perdita, perditum"
-  }, 
-  "forms": {
-    "nominative_n": ["perditum"],
-    "accusative_n": ["perditum"]
-  }
-},
-  {
-  "lemma": "vituperatio",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "vituperatio",
-  "genitive": "vituperationis",
-  "translations": {
-    "en": "blame, censure, reproach, criticism",
-    "la": "vituperatio, vituperationis"
-  }},
-  {
-  "lemma": "absconditum",
-  "part_of_speech": "noun",
-  "declension": 2,
-  "gender": "neuter",
-  "nominative": "absconditum",
-  "genitive": "absconditi",
-  "translations": {
-    "en": "a hiding place, secrecy",
-    "la": "absconditum, absconditi"
-  }}
-,
-  {
-  "lemma": "spatiosus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "spatiosus",
-  "genitive": "spatiosi",
-  "translations": {
-    "en": "spacious, extensive, wide",
-    "la": "spatiosus, spatiosa, spatiosum"
-  }
-},
-  {
-  "lemma": "necessitas",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "necessitas",
-  "genitive": "necessitatis",
-  "translations": {
-    "en": "necessity, need, compulsion, constraint",
-    "la": "necessitas, necessitatis"
-  }},
-  {
-  "lemma": "mutus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "mutus",
-  "genitive": "muti",
-  "translations": {
-    "en": "mute, silent, dumb, speechless",
-    "la": "mutus, muta, mutum"
-  },
-  "forms": {
-    "nominative_f": ["muta"],
-    "nominative_n": ["mutum"],
-    "accusative_n": ["mutum"]
-  }
-},
-  {
-  "lemma": "illustro",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "illustrare",
-  "present": "illustro",
-  "future": "illustrabo",
-  "perfect": "illustravi",
-  "supine": "illustratum",
-  "translations": {
-    "en": "to light up, make clear, explain, glorify",
-    "la": "illustro, illustrare, illustravi, illustratum"
-  },
-  "forms": {
-    "present_active_indicative_2sg": ["illustra"],
-    "present_active_imperative_2sg": ["illustra"]
-  }
-}
-,
-  {
-  "lemma": "conturbatio",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "conturbatio",
-  "genitive": "conturbationis",
-  "translations": {
-    "en": "confusion, disturbance, disorder",
-    "la": "conturbatio, conturbationis"
-  },
-  "forms": {
-    "ablative_f": ["conturbatione"]
-  }
-}
-,
-  {
-  "lemma": "contradictio",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "contradictio",
-  "genitive": "contradictionis",
-  "translations": {
-    "en": "contradiction, opposition, denial",
-    "la": "contradictio, contradictionis"
-  },
-  "forms": {
-    "ablative_f": ["contradictione"]
-  }
-}
-,
-  {
-  "lemma": "mens",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "mens",
-  "genitive": "mentis",
-  "translations": {
-    "en": "mind, intellect, thought, intention",
-    "la": "mens, mentis"
-  },
-  "forms": {
-    "genitive_singular": ["mentis"]
-  }
-}
-,{
-  "lemma": "munio",
-  "part_of_speech": "verb",
-  "conjugation": 4,
-  "infinitive": "munire",
-  "present": "munio",
-  "future": "muniam",
-  "perfect": "munivi",
-  "supine": "munitum",
-  "translations": {
-    "en": "to fortify, defend, protect",
-    "la": "munio, munire, munivi, munitum"
-  },
-  "forms": {
-    "perfect_passive_participle_feminine_singular": ["munita"]
-  }
-}
-,
-  {
-  "lemma": "commendo",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "commendare",
-  "present": "commendo",
-  "future": "commendabo",
-  "perfect": "commendavi",
-  "supine": "commendatum",
-  "translations": {
-    "en": "to entrust, recommend, commit",
-    "la": "commendo, commendare, commendavi, commendatum"
-  }
-}
-,
-  {
-  "lemma": "excessus",
-  "part_of_speech": "noun",
-  "declension": 4,
-  "gender": "masculine",
-  "nominative": "excessus",
-  "genitive": "excessus",
-  "translations": {
-    "en": "departure, death, withdrawal, deviation",
-    "la": "excessus, excessus"
-  },
-  "forms": {
-    "ablative_sg": ["excessu"]
-  }
-},
-  {
-  "lemma": "immitto",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "immittere",
-  "present": "immitto",
-  "future": "immittam",
-  "perfect": "immisi",
-  "supine": "immissum",
-  "translations": {
-    "en": "to send in, let in, insert, unleash",
-    "la": "immitto, immittere, immisi, immissum"
-  },
-  "forms": {
-    "future_active_indicative_3sg": ["immittet"]
-  }
-}
-,
-  {
-  "lemma": "virilis",
-  "part_of_speech": "adjective",
-  "declension": 3,
-  "gender": "masculine",
-  "nominative": "virilis",
-  "genitive": "virilis",
-  "translations": {
-    "en": "manly, vigorous, courageous, adult",
-    "la": "virilis, virile"
-  },
-  "forms": {
-    "adverb": ["viriliter"]
-  }
-},
-  {
-  "lemma": "annuo",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "annuere",
-  "present": "annuo",
-  "future": "annuam",
-  "perfect": "annui",
-  "supine": "annutum",
-  "translations": {
-    "en": "to nod, assent, agree",
-    "la": "annuo, annuere, annui, annutum"
-  },
-  "forms": {
-    "present_3pl": ["annuunt"]
-  }
-},
-  {
-  "lemma": "ignoro",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "ignorare",
-  "present": "ignoro",
-  "future": "ignorabo",
-  "perfect": "ignoravi",
-  "supine": "ignoratum",
-  "translations": {
-    "en": "to not know, be ignorant of, disregard",
-    "la": "ignoro, ignorare, ignoravi, ignoratum"
-  },
-  "forms": {
-    "perfect_1s": ["ignoravi"]
-  }
-},
-  {
-  "lemma": "emigro",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "emigrare",
-  "present": "emigro",
-  "future": "emigrabo",
-  "perfect": "emigravi",
-  "supine": "emigratum",
-  "translations": {
-    "en": "to emigrate, move away, depart",
-    "la": "emigro, emigrare, emigravi, emigratum"
-  }
-},
-  {
-  "lemma": "diripio",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "diripere",
-  "present": "diripio",
-  "future": "diripiam",
-  "perfect": "diripui",
-  "supine": "direptum",
-  "translations": {
-    "en": "to plunder, tear apart, ravage",
-    "la": "diripio, diripere, diripui, direptum"
-  },
-  "forms_plural":{
-    "present_active_participle_datative": ["diripientibus"]
-  }
-},
-  {
-  "lemma": "praecipitatio",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "praecipitatio",
-  "genitive": "praecipitationis",
-  "translations": {
-    "en": "precipitation, falling headlong, rashness",
-    "la": "praecipitatio, praecipitationis"
-  }
-},
-  {
-  "lemma": "rideo",
-  "part_of_speech": "verb",
-  "conjugation": 2,
-  "infinitive": "ridere",
-  "present": "rideo",
-  "future": "ridebo",
-  "perfect": "risi",
-  "supine": "risum",
-  "translations": {
-    "en": "to laugh, smile, laugh at",
-    "la": "rideo, ridere, risi, risum"
-  },
-  "forms": {
-    "future_3pl": ["ridebunt"]
-  }
-},
 
   {
-  "lemma": "quam",
-  "part_of_speech": "adverb",
-  "declension": 0,
-  "translations": {
-    "en": "than, as, how",
-    "la": "quam"
-  }
-},
-  {
-  "lemma": "magis",
-  "part_of_speech": "adverb",
-  "declension": 0,
-  "translations": {
-    "en": "more, rather, to a greater degree",
-    "la": "magis"
-  }
-},
-  {
-  "lemma": "novacula",
-  "part_of_speech": "noun",
-  "declension": 1,
-  "gender": "feminine",
-  "nominative": "novacula",
-  "genitive": "novaculae",
-  "translations": {
-    "en": "razor, sharp knife",
-    "la": "novacula, novaculae"
-  }
-},
-  {
-  "lemma": "malitia",
-  "part_of_speech": "noun",
-  "declension": 1,
-  "gender": "feminine",
-  "nominative": "malitia",
-  "genitive": "malitiae",
-  "translations": {
-    "en": "wickedness, malice",
-    "la": "malitia, malitiae"
-  }
- },
-  {
-  "lemma": "speciosus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "speciosus",
-  "genitive": "speciosi",
-  "translations": {
-    "en": "beautiful, handsome, splendid, showy",
-    "la": "speciosus, speciosa, speciosum"
+    "lemma": "alo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "alere",
+    "present": "alo",
+    "future": "alam",
+    "perfect": "alui",
+    "supine": "alitum",
+    "translations": {
+      "en": "to nourish, feed, sustain, support",
+      "la": "alo, alere, alui, alitum"
+    },
+    "forms": {
+      "present_subjunctive_active_3sg": ["alat"]
+    }
   },
-  "forms": {
-    "nominative_feminine_singular": ["speciosa"],
-    "nominative_neuter_plural": ["speciosa"]
-  }
-},
+  {
+    "lemma": "eruo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "eruere",
+    "present": "eruo",
+    "future": "eruam",
+    "perfect": "erui",
+    "supine": "erutum",
+    "translations": {
+      "en": "to dig up, rescue, pluck out",
+      "la": "eruo, eruere, erui, erutum"
+    },
+    "forms": {
+      "present_subjunctive_active_3sg": ["eruat"]
+    }
+  },
+  {
+    "lemma": "fallax",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "nominative": "fallax",
+    "genitive": "fallacis",
+    "translations": {
+      "en": "deceitful, deceptive, treacherous, false",
+      "la": "fallax, fallacis"
+    },
+    "forms": {
+      "nominative_plural_m": ["fallaces"],
+      "nominative_plural_f": ["fallaces"],
+      "nominative_plural_n": ["fallacia"],
+      "genitive_plural": ["fallacium"]
+    }
+  },
 
   {
-  "lemma": "ovis",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "ovis",
-  "genitive": "ovis",
-  "translations": {
-    "en": "sheep",
-    "la": "ovis, ovis"
+    "lemma": "paupertas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "paupertas",
+    "genitive": "paupertatis",
+    "translations": {
+      "en": "poverty, humble condition, need",
+      "la": "paupertas, paupertatis"
+    },
+    "forms": {
+      "ablative_singular": ["paupertate"]
+    }
   },
-  "forms_plural": {
-    "genitive_f": ["ovium"]
-  }
-}
-,
   {
-  "lemma": "locupleto",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "locupletare",
-  "present": "locupleto",
-  "future": "locupletabo",
-  "perfect": "locupletavi",
-  "supine": "locupletatum",
-  "translations": {
-    "en": "to enrich, make rich, make wealthy",
-    "la": "locupleto, locupletare, locupletavi, locupletatum"
+    "lemma": "foras",
+    "part_of_speech": "adverb",
+    "declension": 0,
+    "translations": {
+      "en": "out, outside, out of doors",
+      "la": "foras"
+    }
   },
-  "forms": {
-    "infinitive": ["locupletare"]
-  }
-},
   {
-  "lemma": "benignitas",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "benignitas",
-  "genitive": "benignitatis",
-  "translations": {
-    "en": "kindness, benevolence, goodness",
-    "la": "benignitas, benignitatis"
-  }
-},
-{
-  "lemma": "pinguesco",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "pinguescere",
-  "present": "pinguesco",
-  "perfect": "pingui",
-  "supine": null,
-  "translations": {
-    "en": "to become fat, to grow rich, to thrive",
-    "la": "pinguesco, pinguescere, pingui"
-  }
-},
-{
-  "lemma": "speciosus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "speciosus",
-  "genitive": "speciosi",
-  "translations": {
-    "en": "beautiful, handsome, splendid, showy",
-    "la": "speciosus, speciosa, speciosum"
-  }
-},
-{
-  "lemma": "ovis",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "ovis",
-  "genitive": "ovis",
-  "translations": {
-    "en": "sheep",
-    "la": "ovis, ovis"
-  }
-},
-{
-  "lemma": "vallis",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "vallis",
-  "genitive": "vallis",
-  "translations": {
-    "en": "valley",
-    "la": "vallis, vallis"
-  }
-}
-,
-  {
-  "lemma": "inebrio",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "inebriare",
-  "present": "inebrio",
-  "future": "inebriabo",
-  "perfect": "inebriavi",
-  "supine": "inebriatum",
-  "translations": {
-    "en": "to intoxicate, make drunk, saturate",
-    "la": "inebrio, inebriare, inebriavi, inebriatum"
+    "lemma": "consilior",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "consiliari",
+    "present": "consilior",
+    "future": "consiliabor",
+    "perfect": "consiliatus sum",
+    "translations": {
+      "en": "to take counsel, consult ",
+      "la": "consilior, consiliari, consiliatus sum"
+    },
+    "forms": {
+      "perfect_participle_masc_nom_pl": ["consiliati"],
+      "perfect_participle_fem_nom_pl": ["consiliata"],
+      "perfect_participle_neut_nom_pl": ["consiliatum"],
+      "perfect_participle_masc_acc_pl": ["consiliata"],
+      "perfect_participle_fem_acc_pl": ["consiliata"],
+      "perfect_participle_neut_acc_pl": ["consiliatum"],
+      "perfect_participle_masc_gen_pl": ["consiliatorum"],
+      "future_active_indicative_3sg": ["consiliabit"],
+      "future_active_imperative_2sg": ["consiliabile"],
+      "present_active_indicative_2sg": ["consiliabile"],
+      "present_active_imperative_2sg": ["consiliabile"],
+      "present_active_participle_3sg": ["consiliabile"],
+      "perfect_participle": ["consiliatus", "consiliata", "consiliatum"]
+    }
   },
-  "forms": {
-    "perfect_2sg_eccl": ["inebriasti"] 
-  }
-},
   {
-  "lemma": "decet",
-  "part_of_speech": "verb",
-  "conjugation": 2,
-  "infinitive": "decere",
-  "present": "decet",
-  "translations": {
-    "en": "it is fitting, it is proper, it becomes",
-    "la": "decet, decere, decuit"
-  }
-},
-  {
-  "lemma": "inebrio",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "inebriare",
-  "present": "inebrio",
-  "future": "inebriabo",
-  "perfect": "inebriavi",
-  "supine": "inebriatum",
-  "translations": {
-    "en": "to intoxicate, make drunk, saturate",
-    "la": "inebrio, inebriare, inebriavi, inebriatum"
-  }
-}
-,
-  {
-  "lemma": "stillicidium",
-  "part_of_speech": "noun",
-  "declension": 2,
-  "gender": "neuter",
-  "nominative": "stillicidium",
-  "genitive": "stillicidii",
-  "translations": {
-    "en": "dripping, drop, drip of rainwater",
-    "la": "stillicidium, stillicidii"
-  }
-}
-,
-  {
-  "lemma": "rivus",
-  "part_of_speech": "noun",
-  "declension": 2,
-  "gender": "masculine",
-  "nominative": "rivus",
-  "genitive": "rivi",
-  "translations": {
-    "en": "stream, brook, small river",
-    "la": "rivus, rivi"
-  }
-}
-,
-  {
-  "lemma": "accingo",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "accingere",
-  "present": "accingo",
-  "future": "accingam",
-  "perfect": "accinxi",
-  "supine": "accinctum",
-  "translations": {
-    "en": "to gird, equip, arm, prepare",
-    "la": "accingo, accingere, accinxi, accinctum"
-  }
-}
-,
-  {
-  "lemma": "sentio",
-  "part_of_speech": "verb",
-  "conjugation": 4,
-  "infinitive": "sentire",
-  "present": "sentio",
-  "future": "sentiam",
-  "perfect": "sensi",
-  "supine": "sensum",
-  "translations": {
-    "en": "to feel, perceive, think",
-    "la": "sentio, sentire, sensi, sensum"
+    "lemma": "abusio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "abusio",
+    "genitive": "abusiosis",
+    "translations": {
+      "en": "abuse, misuse, improper use",
+      "la": "abusio, abusiosis"
+    },
+    "forms": {
+      "ablative_f": ["abusione"]
+    }
   },
-  "forms": {
-    "imperfect_1s": ["sentiebam"]
-  }
-},
   {
-  "lemma": "copiosus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "copiosus",
-  "genitive": "copiosi",
-  "translations": {
-    "en": "abundant, plentiful",
-    "la": "copiosus, copiosa, copiosum"
+    "lemma": "perditus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "perditus",
+    "genitive": "perditi",
+    "translations": {
+      "en": "lost, ruined, destroyed, desperate, corrupt",
+      "la": "perditus, perdita, perditum"
+    },
+    "forms": {
+      "nominative_n": ["perditum"],
+      "accusative_n": ["perditum"]
+    }
   },
-  "forms": {
-    "nominative_f": ["copiosa"],
-    "nominative_n": ["copiosum"],
-    "accusative_n": ["copiosum"]
-  }
-},
+  {
+    "lemma": "vituperatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "vituperatio",
+    "genitive": "vituperationis",
+    "translations": {
+      "en": "blame, censure, reproach, criticism",
+      "la": "vituperatio, vituperationis"
+    }
+  },
+  {
+    "lemma": "absconditum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "absconditum",
+    "genitive": "absconditi",
+    "translations": {
+      "en": "a hiding place, secrecy",
+      "la": "absconditum, absconditi"
+    }
+  },
+  {
+    "lemma": "spatiosus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "spatiosus",
+    "genitive": "spatiosi",
+    "translations": {
+      "en": "spacious, extensive, wide",
+      "la": "spatiosus, spatiosa, spatiosum"
+    }
+  },
+  {
+    "lemma": "necessitas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "necessitas",
+    "genitive": "necessitatis",
+    "translations": {
+      "en": "necessity, need, compulsion, constraint",
+      "la": "necessitas, necessitatis"
+    }
+  },
+  {
+    "lemma": "mutus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "mutus",
+    "genitive": "muti",
+    "translations": {
+      "en": "mute, silent, dumb, speechless",
+      "la": "mutus, muta, mutum"
+    },
+    "forms": {
+      "nominative_f": ["muta"],
+      "nominative_n": ["mutum"],
+      "accusative_n": ["mutum"]
+    }
+  },
+  {
+    "lemma": "illustro",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "illustrare",
+    "present": "illustro",
+    "future": "illustrabo",
+    "perfect": "illustravi",
+    "supine": "illustratum",
+    "translations": {
+      "en": "to light up, make clear, explain, glorify",
+      "la": "illustro, illustrare, illustravi, illustratum"
+    },
+    "forms": {
+      "present_active_indicative_2sg": ["illustra"],
+      "present_active_imperative_2sg": ["illustra"]
+    }
+  },
+  {
+    "lemma": "conturbatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "conturbatio",
+    "genitive": "conturbationis",
+    "translations": {
+      "en": "confusion, disturbance, disorder",
+      "la": "conturbatio, conturbationis"
+    },
+    "forms": {
+      "ablative_f": ["conturbatione"]
+    }
+  },
+  {
+    "lemma": "contradictio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "contradictio",
+    "genitive": "contradictionis",
+    "translations": {
+      "en": "contradiction, opposition, denial",
+      "la": "contradictio, contradictionis"
+    },
+    "forms": {
+      "ablative_f": ["contradictione"]
+    }
+  },
+  {
+    "lemma": "mens",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "mens",
+    "genitive": "mentis",
+    "translations": {
+      "en": "mind, intellect, thought, intention",
+      "la": "mens, mentis"
+    },
+    "forms": {
+      "genitive_singular": ["mentis"]
+    }
+  },
+  {
+    "lemma": "munio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "munire",
+    "present": "munio",
+    "future": "muniam",
+    "perfect": "munivi",
+    "supine": "munitum",
+    "translations": {
+      "en": "to fortify, defend, protect",
+      "la": "munio, munire, munivi, munitum"
+    },
+    "forms": {
+      "perfect_passive_participle_feminine_singular": ["munita"]
+    }
+  },
+  {
+    "lemma": "commendo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "commendare",
+    "present": "commendo",
+    "future": "commendabo",
+    "perfect": "commendavi",
+    "supine": "commendatum",
+    "translations": {
+      "en": "to entrust, recommend, commit",
+      "la": "commendo, commendare, commendavi, commendatum"
+    }
+  },
+  {
+    "lemma": "excessus",
+    "part_of_speech": "noun",
+    "declension": 4,
+    "gender": "masculine",
+    "nominative": "excessus",
+    "genitive": "excessus",
+    "translations": {
+      "en": "departure, death, withdrawal, deviation",
+      "la": "excessus, excessus"
+    },
+    "forms": {
+      "ablative_sg": ["excessu"]
+    }
+  },
+  {
+    "lemma": "immitto",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "immittere",
+    "present": "immitto",
+    "future": "immittam",
+    "perfect": "immisi",
+    "supine": "immissum",
+    "translations": {
+      "en": "to send in, let in, insert, unleash",
+      "la": "immitto, immittere, immisi, immissum"
+    },
+    "forms": {
+      "future_active_indicative_3sg": ["immittet"]
+    }
+  },
+  {
+    "lemma": "virilis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "virilis",
+    "genitive": "virilis",
+    "translations": {
+      "en": "manly, vigorous, courageous, adult",
+      "la": "virilis, virile"
+    },
+    "forms": {
+      "adverb": ["viriliter"]
+    }
+  },
+  {
+    "lemma": "annuo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "annuere",
+    "present": "annuo",
+    "future": "annuam",
+    "perfect": "annui",
+    "supine": "annutum",
+    "translations": {
+      "en": "to nod, assent, agree",
+      "la": "annuo, annuere, annui, annutum"
+    },
+    "forms": {
+      "present_3pl": ["annuunt"]
+    }
+  },
+  {
+    "lemma": "ignoro",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "ignorare",
+    "present": "ignoro",
+    "future": "ignorabo",
+    "perfect": "ignoravi",
+    "supine": "ignoratum",
+    "translations": {
+      "en": "to not know, be ignorant of, disregard",
+      "la": "ignoro, ignorare, ignoravi, ignoratum"
+    },
+    "forms": {
+      "perfect_1s": ["ignoravi"]
+    }
+  },
+  {
+    "lemma": "emigro",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "emigrare",
+    "present": "emigro",
+    "future": "emigrabo",
+    "perfect": "emigravi",
+    "supine": "emigratum",
+    "translations": {
+      "en": "to emigrate, move away, depart",
+      "la": "emigro, emigrare, emigravi, emigratum"
+    }
+  },
+  {
+    "lemma": "diripio",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "diripere",
+    "present": "diripio",
+    "future": "diripiam",
+    "perfect": "diripui",
+    "supine": "direptum",
+    "translations": {
+      "en": "to plunder, tear apart, ravage",
+      "la": "diripio, diripere, diripui, direptum"
+    },
+    "forms_plural": {
+      "present_active_participle_datative": ["diripientibus"]
+    }
+  },
+  {
+    "lemma": "praecipitatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "praecipitatio",
+    "genitive": "praecipitationis",
+    "translations": {
+      "en": "precipitation, falling headlong, rashness",
+      "la": "praecipitatio, praecipitationis"
+    }
+  },
+  {
+    "lemma": "rideo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "ridere",
+    "present": "rideo",
+    "future": "ridebo",
+    "perfect": "risi",
+    "supine": "risum",
+    "translations": {
+      "en": "to laugh, smile, laugh at",
+      "la": "rideo, ridere, risi, risum"
+    },
+    "forms": {
+      "future_3pl": ["ridebunt"]
+    }
+  },
+
+  {
+    "lemma": "quam",
+    "part_of_speech": "adverb",
+    "declension": 0,
+    "translations": {
+      "en": "than, as, how",
+      "la": "quam"
+    }
+  },
+  {
+    "lemma": "magis",
+    "part_of_speech": "adverb",
+    "declension": 0,
+    "translations": {
+      "en": "more, rather, to a greater degree",
+      "la": "magis"
+    }
+  },
+  {
+    "lemma": "novacula",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "novacula",
+    "genitive": "novaculae",
+    "translations": {
+      "en": "razor, sharp knife",
+      "la": "novacula, novaculae"
+    }
+  },
+  {
+    "lemma": "malitia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "malitia",
+    "genitive": "malitiae",
+    "translations": {
+      "en": "wickedness, malice",
+      "la": "malitia, malitiae"
+    }
+  },
+  {
+    "lemma": "speciosus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "speciosus",
+    "genitive": "speciosi",
+    "translations": {
+      "en": "beautiful, handsome, splendid, showy",
+      "la": "speciosus, speciosa, speciosum"
+    },
+    "forms": {
+      "nominative_feminine_singular": ["speciosa"],
+      "nominative_neuter_plural": ["speciosa"]
+    }
+  },
+
+  {
+    "lemma": "ovis",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "ovis",
+    "genitive": "ovis",
+    "translations": {
+      "en": "sheep",
+      "la": "ovis, ovis"
+    },
+    "forms_plural": {
+      "genitive_f": ["ovium"]
+    }
+  },
+  {
+    "lemma": "locupleto",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "locupletare",
+    "present": "locupleto",
+    "future": "locupletabo",
+    "perfect": "locupletavi",
+    "supine": "locupletatum",
+    "translations": {
+      "en": "to enrich, make rich, make wealthy",
+      "la": "locupleto, locupletare, locupletavi, locupletatum"
+    },
+    "forms": {
+      "infinitive": ["locupletare"]
+    }
+  },
+  {
+    "lemma": "benignitas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "benignitas",
+    "genitive": "benignitatis",
+    "translations": {
+      "en": "kindness, benevolence, goodness",
+      "la": "benignitas, benignitatis"
+    }
+  },
+  {
+    "lemma": "pinguesco",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "pinguescere",
+    "present": "pinguesco",
+    "perfect": "pingui",
+    "supine": null,
+    "translations": {
+      "en": "to become fat, to grow rich, to thrive",
+      "la": "pinguesco, pinguescere, pingui"
+    }
+  },
+  {
+    "lemma": "speciosus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "speciosus",
+    "genitive": "speciosi",
+    "translations": {
+      "en": "beautiful, handsome, splendid, showy",
+      "la": "speciosus, speciosa, speciosum"
+    }
+  },
+  {
+    "lemma": "ovis",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "ovis",
+    "genitive": "ovis",
+    "translations": {
+      "en": "sheep",
+      "la": "ovis, ovis"
+    }
+  },
+  {
+    "lemma": "vallis",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "vallis",
+    "genitive": "vallis",
+    "translations": {
+      "en": "valley",
+      "la": "vallis, vallis"
+    }
+  },
+  {
+    "lemma": "inebrio",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "inebriare",
+    "present": "inebrio",
+    "future": "inebriabo",
+    "perfect": "inebriavi",
+    "supine": "inebriatum",
+    "translations": {
+      "en": "to intoxicate, make drunk, saturate",
+      "la": "inebrio, inebriare, inebriavi, inebriatum"
+    },
+    "forms": {
+      "perfect_2sg_eccl": ["inebriasti"]
+    }
+  },
+  {
+    "lemma": "decet",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "decere",
+    "present": "decet",
+    "translations": {
+      "en": "it is fitting, it is proper, it becomes",
+      "la": "decet, decere, decuit"
+    }
+  },
+  {
+    "lemma": "inebrio",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "inebriare",
+    "present": "inebrio",
+    "future": "inebriabo",
+    "perfect": "inebriavi",
+    "supine": "inebriatum",
+    "translations": {
+      "en": "to intoxicate, make drunk, saturate",
+      "la": "inebrio, inebriare, inebriavi, inebriatum"
+    }
+  },
+  {
+    "lemma": "stillicidium",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "stillicidium",
+    "genitive": "stillicidii",
+    "translations": {
+      "en": "dripping, drop, drip of rainwater",
+      "la": "stillicidium, stillicidii"
+    }
+  },
+  {
+    "lemma": "rivus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "rivus",
+    "genitive": "rivi",
+    "translations": {
+      "en": "stream, brook, small river",
+      "la": "rivus, rivi"
+    }
+  },
+  {
+    "lemma": "accingo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "accingere",
+    "present": "accingo",
+    "future": "accingam",
+    "perfect": "accinxi",
+    "supine": "accinctum",
+    "translations": {
+      "en": "to gird, equip, arm, prepare",
+      "la": "accingo, accingere, accinxi, accinctum"
+    }
+  },
+  {
+    "lemma": "sentio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "sentire",
+    "present": "sentio",
+    "future": "sentiam",
+    "perfect": "sensi",
+    "supine": "sensum",
+    "translations": {
+      "en": "to feel, perceive, think",
+      "la": "sentio, sentire, sensi, sensum"
+    },
+    "forms": {
+      "imperfect_1s": ["sentiebam"]
+    }
+  },
+  {
+    "lemma": "copiosus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "copiosus",
+    "genitive": "copiosi",
+    "translations": {
+      "en": "abundant, plentiful",
+      "la": "copiosus, copiosa, copiosum"
+    },
+    "forms": {
+      "nominative_f": ["copiosa"],
+      "nominative_n": ["copiosum"],
+      "accusative_n": ["copiosum"]
+    }
+  },
   {
     "lemma": "produco",
     "part_of_speech": "verb",
@@ -3792,21 +3858,21 @@
   },
 
   {
-  "lemma": "signum",
-  "part_of_speech": "noun",
-  "declension": 2,
-  "gender": "neuter",
-  "nominative": "signum",
-  "genitive": "signi",
-  "translations": {
-    "en": "sign, mark, standard, signal, miracle",
-    "la": "signum, signi"
+    "lemma": "signum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "signum",
+    "genitive": "signi",
+    "translations": {
+      "en": "sign, mark, standard, signal, miracle",
+      "la": "signum, signi"
+    },
+    "forms_plural": {
+      "dative_n": ["signis"],
+      "ablative_": ["signis"]
+    }
   },
-  "forms_plural": {
-    "dative_n": ["signis"],
-    "ablative_": ["signis"]
-  }
-},
   {
     "lemma": "inhabito",
     "part_of_speech": "verb",
@@ -3821,7 +3887,14 @@
       "la": "inhabito, habitare"
     },
     "forms": {
-       "future": [ "inhabitabo", "inhabitabis", "inhabitabit", "inhabitabimus", "inhabitabitis", "inhabitabunt" ]
+      "future": [
+        "inhabitabo",
+        "inhabitabis",
+        "inhabitabit",
+        "inhabitabimus",
+        "inhabitabitis",
+        "inhabitabunt"
+      ]
     }
   },
   {
@@ -11943,9 +12016,9 @@
       "en": "to prepare, arrange, provide",
       "la": "paro, parare, paravi, paratum"
     },
-     "forms": {
-    "perfect_active_indicative_2sg": ["parasti"]
-  }
+    "forms": {
+      "perfect_active_indicative_2sg": ["parasti"]
+    }
   },
   {
     "lemma": "fortis",
@@ -14473,7 +14546,11 @@
         "metueremus",
         "metueretis",
         "metuerent"
-      ]
+      ],
+      "present_participle_nominative_plural_mf": ["metuentes"],
+      "present_participle_accusative_plural_mf": ["metuentes"],
+      "present_participle_nominative_plural_n": ["metuentia"],
+      "present_participle_accusative_plural_n": ["metuentia"]
     }
   },
   {
@@ -17752,8 +17829,8 @@
     "lemma": "spero",
     "part_of_speech": "verb",
     "infinitive": "sperare",
-     "present": "spero",
-  "future": "sperabo",
+    "present": "spero",
+    "future": "sperabo",
     "perfect": "speravi",
     "supine": "speratum",
     "translations": {
@@ -17770,7 +17847,7 @@
         "speretis",
         "sperent"
       ],
-       "present": [
+      "present": [
         "spero",
         "speras",
         "sperat",
@@ -17810,7 +17887,6 @@
         "speramini",
         "sperantur"
       ]
-
     },
     "forms_plural": {
       "imperative": ["sperate"]
@@ -19208,7 +19284,7 @@
     }
   },
 
- {
+  {
     "lemma": "insipientia",
     "part_of_speech": "noun",
     "declension": 1,
@@ -19814,14 +19890,14 @@
         "magnificatis",
         "magnificant"
       ],
-       "present_passive": [
-      "magnificor",
-      "magnificaris",
-      "magnificatur",
-      "magnificamur",
-      "magnificamini",
-      "magnificantur"
-    ],
+      "present_passive": [
+        "magnificor",
+        "magnificaris",
+        "magnificatur",
+        "magnificamur",
+        "magnificamini",
+        "magnificantur"
+      ],
       "imperative": ["magnifica", "magnificate"],
       "subjunctive": [
         "magnificem",
@@ -20200,7 +20276,7 @@
         "eripietis",
         "eripient"
       ],
-      "present_active participle_nom_masc": ["eripiens"] 
+      "present_active participle_nom_masc": ["eripiens"]
     }
   },
   {
@@ -25666,7 +25742,7 @@
       "la": "funis"
     }
   },
- {
+  {
     "lemma": "spes",
     "part_of_speech": "noun",
     "declension": 5,
