@@ -1,5 +1,17 @@
 [
   {
+    "lemma": "pater",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "pater",
+    "genitive": "patris",
+    "translations": {
+      "en": "father",
+      "la": "pater, patris"
+    }
+  },
+  {
     "lemma": "collaudatio",
     "part_of_speech": "noun",
     "declension": 3,
@@ -26020,6 +26032,7 @@
     "part_of_speech": "verb",
     "conjugation": 4,
     "infinitive": "audire",
+    "present": "audio",
     "perfect": "audivi",
     "supine": "auditum",
     "translations": {
@@ -26076,7 +26089,9 @@
         "audiretis",
         "audirent"
       ],
-      "imperative": ["audi", "audite"]
+      "imperative": ["audi", "audite"],
+      "perfect_subjunctive_active_2pl": ["audieritis"],
+      "future_perfect_indicative_active_2pl": ["audieritis"]
     }
   },
   {
