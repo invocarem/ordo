@@ -112,6 +112,8 @@ let package = Package(
         "Psalm21Tests.swift",
 
         "Psalm22Tests.swift",
+        "Psalm23Tests.swift",
+        "Psalm24Tests.swift",
 
         "Psalm25Tests.swift",
 
@@ -132,6 +134,10 @@ let package = Package(
         "Psalm36BTests.swift",
 
         "Psalm37Tests.swift",
+
+        "Psalm42Tests.swift",
+
+        "Psalm44Tests.swift",
 
         "Psalm47Tests.swift",
 

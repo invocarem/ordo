@@ -1,5 +1,214 @@
 [
   {
+  "lemma": "salvatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "salvatio",
+  "genitive": "salvationis",
+  "translations": {
+    "en": "salvation, deliverance",
+    "la": "salvatio, salvationis"
+  }
+},
+
+  {
+  "lemma": "refloreo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "reflorere",
+  "present": "refloreo",
+  "future": "reflorebo",
+  "perfect": "reflorui",
+  "supine": null,
+  "translations": {
+    "en": "to bloom again, to flourish anew",
+    "la": "refloreo, reflorere, reflorui"
+  }
+},
+  {
+  "lemma": "adinventio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "adinventio",
+  "genitive": "adinventionis",
+  "translations": {
+    "en": "discovery, invention, contrivance",
+    "la": "adinventio, adinventionis"
+  }
+},
+
+  {
+  "lemma": "opero",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "operare",
+  "present": "opero",
+  "future": "operabo",
+  "perfect": "operavi",
+  "supine": "operatum",
+  "translations": {
+    "en": "to work, labor, cultivate",
+    "la": "opero, operare, operavi, operatum"
+  },
+  "forms": {
+    "present_participle": ["operans", "operantis"],
+    "present_participle_dative_ablative_plural": ["operantibus"]
+  }
+},
+{
+  "lemma": "operor",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "operari",
+  "present": "operor",
+  "future": "operabor",
+  "perfect": "operatus sum",
+  "supine": "operatum",
+  "translations": {
+    "en": "to work, be busy, devote oneself",
+    "la": "operor, operari, operatus sum"
+  },
+  "forms": {
+    "present_passive": ["operor", "operaris", "operatur", "operamur", "operamini", "operantur"]
+  }
+},
+  {
+  "lemma": "traho",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "trahere",
+  "present": "traho",
+  "future": "traham",
+  "perfect": "traxi",
+  "supine": "tractum",
+  "translations": {
+    "en": "to drag, draw, pull",
+    "la": "traho, trahere, traxi, tractum"
+  }
+},
+  {
+  "lemma": "assimilo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "assimilare",
+  "present": "assimilo",
+  "future": "assimilabo",
+  "perfect": "assimilavi",
+  "supine": "assimilatum",
+  "translations": {
+    "en": "to make similar, compare, imitate",
+    "la": "assimilo, assimilare, assimilavi, assimilatum"
+  }
+},
+  {
+  "lemma": "taceo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "tacere",
+  "present": "taceo",
+  "future": "tacebo",
+  "perfect": "tacui",
+  "supine": "tacitum",
+  "translations": {
+    "en": "to be silent, be quiet",
+    "la": "taceo, tacere, tacui, tacitum"
+  },
+  "forms": {
+    "present_active_subjunctive": ["taceam", "taceas", "taceat", "taceamus", "taceatis", "taceant"]
+  }
+},
+  {
+  "lemma": "praesto",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "praestare",
+  "present": "praesto",
+  "future": "praestabo",
+  "perfect": "praestiti",
+  "supine": "praestitum",
+  "translations": {
+    "en": "to excel, surpass, fulfill, exhibit",
+    "la": "praesto, praestare, praestiti, praestitum"
+  },
+  "forms": {
+    "perfect_active": ["praestiti", "praestitisti", "praestitit", "praestitimus", "praestitistis", "praestiterunt"]
+  }
+},
+  {
+  "lemma": "demoror",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "demorari",
+  "present": "demoror",
+  "future": "demorabor",
+  "perfect": "demoratus sum",
+  "supine": "demoratum",
+  "translations": {
+    "en": "to delay, detain, linger",
+    "la": "demoror, demorari, demoratus sum"
+  },
+  "forms": {
+    "future_passive": ["demorabor", "demoraberis", "demorabitur", "demorabimur", "demorabimini", "demorabuntur"]
+  }
+},
+  {
+  "lemma": "utilitas",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "utilitas",
+  "genitive": "utilitatis",
+  "translations": {
+    "en": "usefulness, advantage, benefit",
+    "la": "utilitas"
+  }
+},
+  {
+  "lemma": "plango",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "plangere",
+  "present": "plango",
+  "future": "plangam",
+  "perfect": "planxi",
+  "supine": "planctum",
+  "translations": {
+    "en": "to lament, mourn, beat (the breast)",
+    "la": "plango, plangere, planxi, planctum"
+  },
+  "forms": {
+    "perfect_passive_participle": ["planctus", "plancta", "planctum"]
+  }
+},
+  {
+  "lemma": "saccus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "saccus",
+  "genitive": "sacci",
+  "translations": {
+    "en": "sack, bag, sackcloth",
+    "la": "saccus"
+  }
+},
+  {
+  "lemma": "conscindo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "conscindere",
+  "present": "conscindo",
+  "future": "conscindam",
+  "perfect": "conscidi",
+  "supine": "conscissum",
+  "translations": {
+    "en": "to tear to pieces, rend, cut up",
+    "la": "conscindo, conscindere, conscidi, conscissum"
+  }
+},
+  {
   "lemma": "stillo",
   "part_of_speech": "verb",
   "conjugation": 1,
@@ -5586,7 +5795,10 @@
     "translations": {
       "en": "to help, assist, support",
       "la": "adiuvō, adiuvāre, adiūvī, adiūtum"
-    }
+    },
+    "forms": {
+    "perfect_passive_participle": ["adiutus", "adiuta", "adiutum"]
+  }
   },
   {
     "lemma": "adiutor",
@@ -9289,19 +9501,6 @@
     "translations": {
       "en": "to do good, benefit",
       "la": "benefacio, benefacere, benefeci, benefactum"
-    }
-  },
-  {
-    "lemma": "opero",
-    "part_of_speech": "verb",
-    "conjugation": 1,
-    "infinitive": "operare",
-    "present": "opero",
-    "perfect": "operavi",
-    "supine": "operatum",
-    "translations": {
-      "en": "to work, do, labor",
-      "la": "opero, operare, operavi, operatum"
     }
   },
   {
@@ -21711,8 +21910,11 @@
       "la": "extollo"
     },
     "forms": {
-      "imperative": ["extollite"]
-    }
+    "imperative_2sg": ["extolle"],
+    "imperative_3sg": ["extollat"],
+    "imperative_2pl": ["extollite"],
+    "imperative_3pl": ["extollant"]
+  }
   },
   {
     "lemma": "contero",
@@ -21917,6 +22119,7 @@
     "conjugation": 2,
     "deponent": true,
     "infinitive": "misereri",
+    "present": "misereor",
     "perfect": "miseritus",
     "supine": "miseritum",
     "translations": {
@@ -21980,7 +22183,8 @@
         "miserērēminī",
         "miserērentur"
       ],
-      "imperative": ["miserere", "miseremini"]
+      "imperative": ["miserere", "miseremini"],
+      "perfect_participle": ["misertus", "miserta", "miseritum"]
     }
   },
   {
@@ -30362,7 +30566,10 @@
     "translations": {
       "en": "to heal, cure",
       "la": "sano, sanare"
-    }
+    },
+     "forms": {
+    "perfect_active_2sg_eccl": ["sanasti"]
+   }
   },
   {
     "lemma": "universus",
