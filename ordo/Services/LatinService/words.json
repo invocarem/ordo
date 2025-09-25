@@ -1,5 +1,13 @@
 [
   {
+    "lemma": "ibi",
+    "part_of_speech": "adverb",
+    "translations": {
+      "en": "there, in that place",
+      "la": "ibi"
+    }
+  },
+  {
     "lemma": "pater",
     "part_of_speech": "noun",
     "declension": 3,
