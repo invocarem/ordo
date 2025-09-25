@@ -1,307 +1,896 @@
 [
   {
-  "lemma": "vis",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "vis",
-  "genitive": "vis",
-  "translations": {
-    "en": "force, power, violence, strength",
-    "la": "vis"
-  }, 
-  "forms": {
-    "accusative_f": ["vim"]
-
-  }
-},{
-  "lemma": "rugio",
-  "part_of_speech": "verb",
-  "conjugation": 4,
-  "infinitive": "rugire",
-  "present": "rugio",
-  "future": "rugiam",
-  "perfect": "rugivi",
-  "supine": "rugitum",
-  "translations": {
-    "en": "to roar, bellow",
-    "la": "rugio, rugire, rugivi, rugitum"
-  }
-},
-  {
-  "lemma": "curvo",
+  "lemma": "stillo",
   "part_of_speech": "verb",
   "conjugation": 1,
-  "infinitive": "curvare",
-  "present": "curvo",
-  "future": "curvabo",
-  "perfect": "curvavi",
-  "supine": "curvatum",
+  "infinitive": "stillare",
+  "present": "stillo",
+  "future": "stillabo",
+  "perfect": "stillavi",
+  "supine": "stillatum",
   "translations": {
-    "en": "to bend, curve, arch",
-    "la": "curvo, curvare, curvavi, curvatum"
-  }
-},
-  {
-  "lemma": "gravo",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "gravare",
-  "present": "gravo",
-  "future": "gravabo",
-  "perfect": "gravavi",
-  "supine": "gravatum",
-  "translations": {
-    "en": "to burden, weigh down, oppress",
-    "la": "gravo, gravare, gravavi, gravatum"
-  }
-},
-  {
-  "lemma": "confirmo",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "confirmare",
-  "present": "confirmo",
-  "future": "confirmabo",
-  "perfect": "confirmavi",
-  "supine": "confirmatum",
-  "translations": {
-    "en": "to strengthen, confirm, establish, assert",
-    "la": "confirmo, confirmare, confirmavi, confirmatum"
+    "en": "to drip, drop, trickle",
+    "la": "stillo, stillare, stillavi, stillatum"
   },
   "forms": {
-    "perfect_2sg_eccl": ["confirmasti"] 
-  }
+    "present_participle": ["stillans", "stillantis"],
+    "perfect_passive_participle": ["stillatus", "stillata", "stillatum"],
+    "present_participle_neuter_plural": ["stillantia"]
+   }
 },
   {
-  "lemma": "cicatrix",
+  "lemma": "Aethiops",
   "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "cicatrix",
-  "genitive": "cicatricis",
-  "translations": {
-    "en": "scar, cicatrix",
-    "la": "cicatrix, cicatricis"
-  }
-},
-{
-  "lemma": "redargutio",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "redargutio",
-  "genitive": "redargutionis",
-  "translations": {
-    "en": "refutation, reproof, conviction",
-    "la": "redargutio, redargutionis"
-  }
-},
-
-
-  {
-  "lemma": "putreo",
-  "part_of_speech": "verb",
-  "conjugation": 2,
-  "infinitive": "putrere",
-  "present": "putreo",
-  "future": "putream",
-  "perfect": "putrui",
-  "supine": null,
-  "translations": {
-    "en": "to rot, decay, putrefy",
-    "la": "putreo, putrere, putrui"
-  }
-},
-
-  {
-  "lemma": "onus",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "neuter",
-  "nominative": "onus",
-  "genitive": "oneris",
-  "translations": {
-    "en": "burden, load, weight",
-    "la": "onus, oneris"
-  }
-},
-
-  {
-  "lemma": "gravis",
-  "part_of_speech": "adjective",
   "declension": 3,
   "gender": "masculine",
-  "nominative_masc_fem": "gravis",
-  "nominative_neut": "grave",
-  "genitive": "gravis",
+  "nominative": "Aethiops",
+  "genitive": "Aethiopis",
   "translations": {
-    "en": "heavy, serious, important",
-    "la": "gravis, grave"
+    "en": "Ethiopian, dark-skinned person",
+    "la": "Aethiops, Aethiopis"
   },
   "forms": {
-    "nominative_n": ["grave"],
-    "accusative_n": ["grave"],
-    "vocative_n": ["grave"]
+    "nominative_plural": ["Aethiopes"],
+    "genitive_plural": ["Aethiopum"]
   }
-}
-,
-  {
-  "lemma": "supergredior",
+},
+{
+  "lemma": "lingo",
   "part_of_speech": "verb",
   "conjugation": 3,
-  "type": "deponent",
-  "infinitive": "supergredi",
-  "present": "supergredior",
-  "future": "supergrediar",
-  "perfect": "supergressus sum",
-  "supine": null,
+  "infinitive": "lingere",
+  "present": "lingo",
+  "future": "lingam",
+  "perfect": "linxi",
+  "supine": "lictum",
   "translations": {
-    "en": "to go beyond, surpass, transgress",
-    "la": "supergredior, supergredi, supergressus sum"
+    "en": "to lick",
+    "la": "lingo, lingere, linxi, lictum"
   },
   "forms": {
-    "perfect_participle_fem_nom_pl": ["supergressae"]
-  }
-},
-
-  {
-  "lemma": "sequor",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "sequi",
-  "present": "sequor",
-  "future": "sequam",
-  "perfect": "secutus",
-  "supine": null,
-  "translations": {
-    "en": "to follow",
-    "la": "sequor, sequi, secutus sum"
-  }
-},
-
-  {
-  "lemma": "confirmo",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "tense": "perfect",
-  "voice": "active",
-  "mood": "indicative",
-  "person": 2,
-  "number": "singular",
-  "translations": {
-    "en": "confirm, strengthened",
-    "la": "confirmasti"
+    "present_participle": ["lingens", "lingentis"],
+    "perfect_passive_participle": ["lictus", "licta", "lictum"]
   }
 },
 {
-  "lemma": "sanitas",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "sanitas",
-  "genitive": "sanitatis",
-  "translations": {
-    "en": "health, soundness, sanity",
-    "la": "sanitas, sanitatis"
-  }
-},
-
-  {
-  "lemma": "voluptas",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "voluptas",
-  "genitive": "voluptatis",
-  "translations": {
-    "en": "pleasure, delight, enjoyment",
-    "la": "voluptas, voluptatis"
-  }
-},
-
-  {
-  "lemma": "ubertas",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "ubertas",
-  "genitive": "ubertatis",
-  "translations": {
-    "en": "fertility, richness, abundance",
-    "la": "ubertas, ubertatis"
-  }
-},
-
-
-{
-  "lemma": "poto",
+  "lemma": "orior",
   "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "potare",
-  "present": "poto",
-  "future": "potabo",
-  "perfect": "potavi",
-  "supine": "potatum",
+  "conjugation": 4,
+  "infinitive": "oriri",
+  "present": "orior",
+  "future": "oriar",
+  "perfect": "ortus",
+  "supine": "ortum",
   "translations": {
-    "en": "to drink",
-    "la": "poto, potare, potavi, potatum"
-  }
-},
-
-  {
-  "lemma": "praetendo",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "praetendere",
-  "present": "praetendo",
-  "future": "praetendam",
-  "perfect": "praetendi",
-  "supine": "praetentum",
-  "translations": {
-    "en": "to stretch out before, hold forth",
-    "la": "praetendo, praetendere, praetendi, praetentum"
+    "en": "to rise, appear, originate",
+    "la": "orior, oriri, ortus sum"
+  },
+  "forms": {
+    "present_participle": ["oriens", "orientis"],
+    "perfect_participle": ["ortus", "orta", "ortum"],
+    "present_passive": ["orior", "oreris", "oritur", "orimur", "orimini", "oriuntur"],
+    "future_passive": ["oriar", "orieris", "orietur", "oriemur", "oriemini", "orientur"]
   }
 },
 
 {
-  "lemma": "tegmen",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "neuter",
-  "nominative": "tegmen",
-  "genitive": "tegminis",
-  "translations": {
-    "en": "covering, garment, protection",
-    "la": "tegmen, tegminis"
-  }
-},
-
-  {
-  "lemma": "iumentum",
-  "part_of_speech": "noun",
-  "declension": 2,
-  "gender": "neuter",
-  "nominative": "iumentum",
-  "genitive": "iumenti",
-  "translations": {
-    "en": "beast of burden, draft animal",
-    "la": "iumentum, iumenti"
-  }
-}
-,
-{
-  "lemma": "miseria",
+  "lemma": "pluvia",
   "part_of_speech": "noun",
   "declension": 1,
   "gender": "feminine",
-  "nominative": "miseria",
-  "genitive": "miseriae",
+  "nominative": "pluvia",
+  "genitive": "pluviae",
   "translations": {
-    "en": "misery, distress",
-    "la": "miseria, miseriae"
+    "en": "rain",
+    "la": "pluvia, pluviae"
+  },
+  "forms_plural": {
+    "nominative_f": ["pluviae"],
+    "genitive_f": ["pluviarum"]
   }
 },
+{
+  "lemma": "vellus",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "neuter",
+  "nominative": "vellus",
+  "genitive": "velleris",
+  "translations": {
+    "en": "fleece, wool, hide",
+    "la": "vellus, velleris"
+  },
+  "forms_plural": {
+    "nominative_n": ["vellera"],
+    "genitive_n": ["vellerum"]
+  }
+},
+
+{
+  "lemma": "calumniator",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "masculine",
+  "nominative": "calumniator",
+  "genitive": "calumniatoris",
+  "translations": {
+    "en": "slanderer, false accuser",
+    "la": "calumniator, calumniatoris"
+  },
+  "forms_plural": {
+    "nominative_m": ["calumniatores"],
+    "genitive_m": ["calumniatorum"]
+  }
+}
+,
+  {
+  "lemma": "offero",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "offerre",
+  "present": "offero",
+  "future": "offeram",
+  "perfect": "obtuli",
+  "supine": "oblatum",
+  "translations": {
+    "en": "to offer, present",
+    "la": "offero, offerre, obtuli, oblatum"
+  },
+  "forms": {
+    "future_active_indicative_3pl": ["offerent"]
+  }
+},
+  {
+    "lemma": "honorabilis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "honorabilis",
+    "genitive": "honorabilis",
+    "translations": {
+      "en": "honorable, respected",
+      "la": "honorabilis"
+    }
+  },
+  {
+    "lemma": "parco",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "parcere",
+    "present": "parco",
+    "future": "parcam",
+    "perfect": "peperci",
+    "supine": "parsum",
+    "translations": {
+      "en": "to spare, be sparing, obey",
+      "la": "parco, parcere, peperci, parsum"
+    }
+  },
+  {
+    "lemma": "tharsis",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "tharsis",
+    "genitive": "tharsis",
+    "translations": {
+      "en": "Tarshish (a distant land)",
+      "la": "tharsis"
+    }
+  },
+  {
+    "lemma": "insula",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "insula",
+    "genitive": "insulae",
+    "translations": {
+      "en": "island",
+      "la": "insula"
+    }
+  },
+ {
+    "lemma": "saba",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "saba",
+    "genitive": "sabae",
+    "translations": {
+      "en": "Sheba (the kingdom)",
+      "la": "saba"
+    }
+  },
+  {
+    "lemma": "donum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "donum",
+    "genitive": "doni",
+    "translations": {
+      "en": "gift, present",
+      "la": "donum"
+    }
+  },
+  {
+    "lemma": "superextollo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "superextollere",
+    "present": "superextollo",
+    "future": "superextollam",
+    "perfect": "superextuli",
+    "supine": "superextultum",
+    "translations": {
+      "en": "to lift up on high, raise exceedingly",
+      "la": "superextollo, superextollere, superextuli, superextultum"
+    }
+  },
+  {
+    "lemma": "arabs",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "arabs",
+    "genitive": "arabis",
+    "translations": {
+      "en": "Arab, Arabian",
+      "la": "arabs"
+    }
+  },
+  {
+    "lemma": "arabia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "arabia",
+    "genitive": "arabiae",
+    "translations": {
+      "en": "Arabia (the region)",
+      "la": "arabia"
+    }
+  },
+  {
+    "lemma": "libanus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "libanus",
+    "genitive": "libani",
+    "translations": {
+      "en": "Lebanon, cedar of Lebanon",
+      "la": "libanus"
+    }
+  },
+  {
+    "lemma": "maiestas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "maiestas",
+    "genitive": "maiestatis",
+    "translations": {
+      "en": "majesty, grandeur, dignity",
+      "la": "maiestas"
+    }
+  },
+  {
+    "lemma": "apud",
+    "part_of_speech": "preposition",
+    "case_governed": "accusative",
+    "translations": {
+      "en": "at, near, among, at the house of",
+      "la": "apud"
+    }
+  },
+  {
+    "lemma": "desolatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "desolatio",
+    "genitive": "desolationis",
+    "translations": {
+      "en": "desolation, loneliness, devastation",
+      "la": "desolatio"
+    }
+  },
+  {
+    "lemma": "velut",
+    "part_of_speech": "adverb",
+    "translations": {
+      "en": "just as, as if, like",
+      "la": "velut"
+    }
+  },
+  {
+    "lemma": "somnium",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "somnium",
+    "genitive": "somniī",
+    "translations": {
+      "en": "dream",
+      "la": "somnium"
+    }
+  },
+  {
+    "lemma": "surgo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "surgere",
+    "present": "surgo",
+    "future": "surgam",
+    "perfect": "surrexi",
+    "supine": "surrectum",
+    "translations": {
+      "en": "to rise, get up, arise",
+      "la": "surgo, surgere, surrexi, surrectum"
+    },
+    "forms": {
+      "present_participle": ["surgens", "surgentis"]
+    }
+  },
+  {
+    "lemma": "imago",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "imago",
+    "genitive": "imaginis",
+    "translations": {
+      "en": "image, likeness, statue, ghost",
+      "la": "imago"
+    }
+  },
+  {
+    "lemma": "redigo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "redigere",
+    "present": "redigo",
+    "future": "redigam",
+    "perfect": "redegi",
+    "supine": "redactum",
+    "translations": {
+      "en": "to drive back, reduce, bring back",
+      "la": "redigo, redigere, redegi, redactum"
+    }
+  },
+  {
+    "lemma": "adhaereo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "adhaerere",
+    "present": "adhaereo",
+    "future": "adhaerebo",
+    "perfect": "adhaesi",
+    "supine": "adhaesum",
+    "translations": {
+      "en": "to cling to, stick to, adhere",
+      "la": "adhaereo, adhaerere, adhaesi, adhaesum"
+    },
+    "forms": {
+      "present_infinitive": ["adhaerere"]
+    }
+  },
+  {
+    "lemma": "praedicatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "praedicatio",
+    "genitive": "praedicationis",
+    "translations": {
+      "en": "proclamation, preaching, declaration",
+      "la": "praedicatio"
+    }
+  },
+  {
+    "lemma": "abs",
+    "part_of_speech": "preposition",
+    "case_governed": "ablative",
+    "translations": {
+      "en": "from, away from (archaic form of 'ab')",
+      "la": "abs"
+    }
+  },
+  {
+    "lemma": "fornicor",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "fornicari",
+    "present": "fornicor",
+    "future": "fornicabor",
+    "perfect": "fornicatus",
+    "supine": "fornicatum",
+    "translations": {
+      "en": "to fornicate, commit lewdness",
+      "la": "fornicor, fornicari, fornicatus sum"
+    }
+  },
+  {
+    "lemma": "zelor",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "zelari",
+    "present": "zelor",
+    "future": "zelabor",
+    "perfect": "zelatus sum",
+    "supine": "zelatum",
+    "translations": {
+      "en": "to be jealous, to be zealous, to emulate",
+      "la": "zelor, zelari, zelatus sum"
+    },
+    "forms": {
+      "present_passive": [
+        "zelor",
+        "zelaris",
+        "zelatur",
+        "zelamur",
+        "zelamini",
+        "zelantur"
+      ],
+      "imperfect_passive": [
+        "zelabar",
+        "zelabaris",
+        "zelabatur",
+        "zelabamur",
+        "zelabamini",
+        "zelabantur"
+      ]
+    }
+  },
+  {
+    "lemma": "ethan",
+    "part_of_speech": "noun",
+    "declension": 0,
+    "gender": "masculine",
+    "nominative": "ethan",
+    "genitive": null,
+    "translations": {
+      "en": "Ethan (a proper name)",
+      "la": "ethan"
+    }
+  },
+  {
+    "lemma": "fluvius",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "fluvius",
+    "genitive": "fluvii",
+    "translations": {
+      "en": "river, stream",
+      "la": "fluvius"
+    }
+  },
+  {
+    "lemma": "sicco",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "siccare",
+    "present": "sicco",
+    "future": "siccabo",
+    "perfect": "siccavi",
+    "supine": "siccatum",
+    "translations": {
+      "en": "to dry, dry up",
+      "la": "sicco, siccare, siccavi, siccatum"
+    }
+  },
+  {
+    "lemma": "incito",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "incitare",
+    "present": "incito",
+    "future": "incitabo",
+    "perfect": "incitavi",
+    "supine": "incitatum",
+    "translations": {
+      "en": "to urge on, incite, stimulate, accelerate",
+      "la": "incito, incitare, incitavi, incitatum"
+    },
+    "forms": {
+      "perfect_active": [
+        "incitavi",
+        "incitavisti",
+        "incitavit",
+        "incitavimus",
+        "incitavistis",
+        "incitaverunt"
+      ]
+    }
+  },
+  {
+    "lemma": "ascia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "ascia",
+    "genitive": "asciae",
+    "translations": {
+      "en": "carpenter's axe, hatchet",
+      "la": "ascia"
+    }
+  },
+  {
+    "lemma": "excido",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "excidere",
+    "present": "excido",
+    "future": "excidam",
+    "perfect": "excidi",
+    "supine": "excasum",
+    "translations": {
+      "en": "to fall out, fall from, escape",
+      "la": "excido, excidere, excidi, excasum"
+    },
+    "forms": {
+      "perfect_active": [
+        "excidi",
+        "excidisti",
+        "excidit",
+        "excidimus",
+        "excidistis",
+        "exciderunt"
+      ]
+    }
+  },
+  {
+    "lemma": "ianua",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "ianua",
+    "genitive": "ianuae",
+    "translations": {
+      "en": "door, entrance, gate",
+      "la": "ianua"
+    }
+  },
+  {
+    "lemma": "deicio",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "deicere",
+    "present": "deicio",
+    "future": "deiciam",
+    "perfect": "deieci",
+    "supine": "deiectum",
+    "translations": {
+      "en": "to throw down, cast down, demolish",
+      "la": "deicio, deicere, deieci, deiectum"
+    }
+  },
+  {
+    "lemma": "medius",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "medius",
+    "genitive": "medii",
+    "translations": {
+      "en": "middle, central, midway",
+      "la": "medius"
+    },
+    "forms_plural": {
+      "accusative_m": ["medios"],
+      "nominative_m": ["medii"],
+      "accusative_n": ["media"],
+      "accusative_f": ["medias"]
+    },
+    "forms": {
+      "nominative_f": ["media"],
+      "nominative_n": ["medium"],
+      "ablative_m_n": ["medio"],
+      "dative_m_n": ["medio"]
+    }
+  },
+  {
+    "lemma": "vis",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "vis",
+    "genitive": "vis",
+    "translations": {
+      "en": "force, power, violence, strength",
+      "la": "vis"
+    },
+    "forms": {
+      "accusative_f": ["vim"]
+    }
+  },
+  {
+    "lemma": "rugio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "rugire",
+    "present": "rugio",
+    "future": "rugiam",
+    "perfect": "rugivi",
+    "supine": "rugitum",
+    "translations": {
+      "en": "to roar, bellow",
+      "la": "rugio, rugire, rugivi, rugitum"
+    }
+  },
+  {
+    "lemma": "curvo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "curvare",
+    "present": "curvo",
+    "future": "curvabo",
+    "perfect": "curvavi",
+    "supine": "curvatum",
+    "translations": {
+      "en": "to bend, curve, arch",
+      "la": "curvo, curvare, curvavi, curvatum"
+    }
+  },
+  {
+    "lemma": "gravo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "gravare",
+    "present": "gravo",
+    "future": "gravabo",
+    "perfect": "gravavi",
+    "supine": "gravatum",
+    "translations": {
+      "en": "to burden, weigh down, oppress",
+      "la": "gravo, gravare, gravavi, gravatum"
+    }
+  },
+  {
+    "lemma": "confirmo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "confirmare",
+    "present": "confirmo",
+    "future": "confirmabo",
+    "perfect": "confirmavi",
+    "supine": "confirmatum",
+    "translations": {
+      "en": "to strengthen, confirm, establish, assert",
+      "la": "confirmo, confirmare, confirmavi, confirmatum"
+    },
+    "forms": {
+      "perfect_2sg_eccl": ["confirmasti"]
+    }
+  },
+  {
+    "lemma": "cicatrix",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "cicatrix",
+    "genitive": "cicatricis",
+    "translations": {
+      "en": "scar, cicatrix",
+      "la": "cicatrix, cicatricis"
+    }
+  },
+  {
+    "lemma": "redargutio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "redargutio",
+    "genitive": "redargutionis",
+    "translations": {
+      "en": "refutation, reproof, conviction",
+      "la": "redargutio, redargutionis"
+    }
+  },
+
+  {
+    "lemma": "putreo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "putrere",
+    "present": "putreo",
+    "future": "putream",
+    "perfect": "putrui",
+    "supine": null,
+    "translations": {
+      "en": "to rot, decay, putrefy",
+      "la": "putreo, putrere, putrui"
+    }
+  },
+
+  {
+    "lemma": "onus",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "onus",
+    "genitive": "oneris",
+    "translations": {
+      "en": "burden, load, weight",
+      "la": "onus, oneris"
+    }
+  },
+
+  {
+    "lemma": "gravis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative_masc_fem": "gravis",
+    "nominative_neut": "grave",
+    "genitive": "gravis",
+    "translations": {
+      "en": "heavy, serious, important",
+      "la": "gravis, grave"
+    },
+    "forms": {
+      "nominative_n": ["grave"],
+      "accusative_n": ["grave"],
+      "vocative_n": ["grave"]
+    }
+  },
+  {
+    "lemma": "supergredior",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "type": "deponent",
+    "infinitive": "supergredi",
+    "present": "supergredior",
+    "future": "supergrediar",
+    "perfect": "supergressus sum",
+    "supine": null,
+    "translations": {
+      "en": "to go beyond, surpass, transgress",
+      "la": "supergredior, supergredi, supergressus sum"
+    },
+    "forms": {
+      "perfect_participle_fem_nom_pl": ["supergressae"]
+    }
+  },
+
+  {
+    "lemma": "sequor",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "sequi",
+    "present": "sequor",
+    "future": "sequam",
+    "perfect": "secutus",
+    "supine": null,
+    "translations": {
+      "en": "to follow",
+      "la": "sequor, sequi, secutus sum"
+    }
+  },
+
+  {
+    "lemma": "confirmo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "tense": "perfect",
+    "voice": "active",
+    "mood": "indicative",
+    "person": 2,
+    "number": "singular",
+    "translations": {
+      "en": "confirm, strengthened",
+      "la": "confirmasti"
+    }
+  },
+  {
+    "lemma": "sanitas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "sanitas",
+    "genitive": "sanitatis",
+    "translations": {
+      "en": "health, soundness, sanity",
+      "la": "sanitas, sanitatis"
+    }
+  },
+
+  {
+    "lemma": "voluptas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "voluptas",
+    "genitive": "voluptatis",
+    "translations": {
+      "en": "pleasure, delight, enjoyment",
+      "la": "voluptas, voluptatis"
+    }
+  },
+
+  {
+    "lemma": "ubertas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "ubertas",
+    "genitive": "ubertatis",
+    "translations": {
+      "en": "fertility, richness, abundance",
+      "la": "ubertas, ubertatis"
+    }
+  },
+
+  {
+    "lemma": "poto",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "potare",
+    "present": "poto",
+    "future": "potabo",
+    "perfect": "potavi",
+    "supine": "potatum",
+    "translations": {
+      "en": "to drink",
+      "la": "poto, potare, potavi, potatum"
+    }
+  },
+
+  {
+    "lemma": "praetendo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "praetendere",
+    "present": "praetendo",
+    "future": "praetendam",
+    "perfect": "praetendi",
+    "supine": "praetentum",
+    "translations": {
+      "en": "to stretch out before, hold forth",
+      "la": "praetendo, praetendere, praetendi, praetentum"
+    }
+  },
+
+  {
+    "lemma": "tegmen",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "tegmen",
+    "genitive": "tegminis",
+    "translations": {
+      "en": "covering, garment, protection",
+      "la": "tegmen, tegminis"
+    }
+  },
+
+  {
+    "lemma": "iumentum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "iumentum",
+    "genitive": "iumenti",
+    "translations": {
+      "en": "beast of burden, draft animal",
+      "la": "iumentum, iumenti"
+    }
+  },
+  {
+    "lemma": "miseria",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "miseria",
+    "genitive": "miseriae",
+    "translations": {
+      "en": "misery, distress",
+      "la": "miseria, miseriae"
+    }
+  },
   {
     "lemma": "ibi",
     "part_of_speech": "adverb",
@@ -6681,7 +7270,8 @@
         "auferamus",
         "auferatis",
         "auferant"
-      ]
+      ],
+      "present_passive_subjunctive": ["auferar", "auferaris", "auferatur", "auferamur", "auferamini", "auferantur"]
     },
     "translations": {
       "en": "to take away, carry off, remove",
@@ -12715,8 +13305,26 @@
     "perfect": "confudi",
     "supine": "confusum",
     "translations": {
-      "en": "to confuse, to mix up, to confound",
+      "en": "to confuse, mix up, confound",
       "la": "confundo, confundere"
+    },
+    "forms": {
+      "present_passive": [
+        "confundor",
+        "confunderis",
+        "confunditur",
+        "confundimur",
+        "confundimini",
+        "confunduntur"
+      ],
+      "imperfect_passive": [
+        "confundebar",
+        "confundebaris",
+        "confundebatur",
+        "confundebamur",
+        "confundebamini",
+        "confundebantur"
+      ]
     }
   },
   {
@@ -12740,7 +13348,8 @@
     "translations": {
       "en": "to be confused, ashamed, dismayed",
       "la": "confundor, confundi, confusus sum"
-    }
+    },
+    "notes": "This is the same as the perfect participle of confundo, which is confusus. (this one aim to remove later)"
   },
   {
     "lemma": "respondeo",
@@ -17907,7 +18516,8 @@
         "habitamur",
         "habitamini",
         "habitantur"
-      ]
+      ],
+      "perfect_2sg_eccl": ["habitasti"]
     },
     "forms_plural": {
       "imperative": ["habitate"],
@@ -26500,7 +27110,7 @@
       "la": "impollutus, -a, -um"
     }
   },
- {
+  {
     "lemma": "homo",
     "part_of_speech": "noun",
     "declension": 3,
@@ -26739,13 +27349,55 @@
       "present": ["facio", "facis", "facit", "facimus", "facitis", "faciunt"],
       "present_passive": ["fior", "fieris", "fit", "fimur", "fimini", "fiunt"],
       "imperative": ["fac", "facite"],
-      "imperfect": [ "faciebam", "faciebas", "faciebat", "faciebamus", "faciebatis", "faciebant" ],
-      "subjunctive": [ "faciam", "facias", "faciat", "faciamus", "faciatis", "faciant" ],
-      "future": [ "faciam", "facies", "faciet", "faciemus", "facietis", "facient" ], 
-      "future_passive": [ "fiar", "fieris", "fietur", "fiemur", "fiemini", "fientur" ],
+      "imperfect": [
+        "faciebam",
+        "faciebas",
+        "faciebat",
+        "faciebamus",
+        "faciebatis",
+        "faciebant"
+      ],
+      "subjunctive": [
+        "faciam",
+        "facias",
+        "faciat",
+        "faciamus",
+        "faciatis",
+        "faciant"
+      ],
+      "future": [
+        "faciam",
+        "facies",
+        "faciet",
+        "faciemus",
+        "facietis",
+        "facient"
+      ],
+      "future_passive": [
+        "fiar",
+        "fieris",
+        "fietur",
+        "fiemur",
+        "fiemini",
+        "fientur"
+      ],
       "present_participle": ["faciens"],
-      "perfect_passive_participle": [ "factus", "facta", "factum", "facti", "factae", "facta" ],
-      "perfect_indicative_active": [ "feci", "fecisti", "fecit", "fecimus", "fecistis", "fecerunt" ]
+      "perfect_passive_participle": [
+        "factus",
+        "facta",
+        "factum",
+        "facti",
+        "factae",
+        "facta"
+      ],
+      "perfect_indicative_active": [
+        "feci",
+        "fecisti",
+        "fecit",
+        "fecimus",
+        "fecistis",
+        "fecerunt"
+      ]
     },
     "translations": {
       "en": "to make, do",
