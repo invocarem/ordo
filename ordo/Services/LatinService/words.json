@@ -1,354 +1,476 @@
 [
   {
-  "lemma": "salvatio",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "salvatio",
-  "genitive": "salvationis",
-  "translations": {
-    "en": "salvation, deliverance",
-    "la": "salvatio, salvationis"
-  }
-},
+    "lemma": "vanus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "vanus",
+    "genitive": "vani",
+    "translations": {
+      "en": "vain, empty, idle, useless",
+      "la": "vanus, vana, vanum"
+    }
+  },
+  {
+    "lemma": "mare",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "mare",
+    "genitive": "maris",
+    "translations": {
+      "en": "sea",
+      "la": "mare, maris"
+    },
+    "forms_plural": {
+      "nominative_f": ["maria"],
+      "accusative_f": ["maria"]
+    }
+  },
+  {
+    "lemma": "plenitudo",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "plenitudo",
+    "genitive": "plenitudinis",
+    "translations": {
+      "en": "fullness, abundance, completeness",
+      "la": "plenitudo, plenitudinis"
+    },
+    "forms_plural": {
+      "nominative_f": ["plenitudines"],
+      "genitive_f": ["plenitudinum"]
+    }
+  },
 
   {
-  "lemma": "refloreo",
-  "part_of_speech": "verb",
-  "conjugation": 2,
-  "infinitive": "reflorere",
-  "present": "refloreo",
-  "future": "reflorebo",
-  "perfect": "reflorui",
-  "supine": null,
-  "translations": {
-    "en": "to bloom again, to flourish anew",
-    "la": "refloreo, reflorere, reflorui"
-  }
-},
-  {
-  "lemma": "adinventio",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "adinventio",
-  "genitive": "adinventionis",
-  "translations": {
-    "en": "discovery, invention, contrivance",
-    "la": "adinventio, adinventionis"
-  }
-},
+    "lemma": "aeternalis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "aeternalis",
+    "genitive": "aeternalis",
+    "translations": {
+      "en": "eternal, everlasting",
+      "la": "aeternalis, aeternale"
+    },
+    "forms": {
+      "nominative_plural_m": ["aeternales"],
+      "accusative_plural_m": ["aeternales"],
+      "nominative_plural_n": ["aeternalia"]
+    }
+  },
 
   {
-  "lemma": "opero",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "operare",
-  "present": "opero",
-  "future": "operabo",
-  "perfect": "operavi",
-  "supine": "operatum",
-  "translations": {
-    "en": "to work, labor, cultivate",
-    "la": "opero, operare, operavi, operatum"
+    "lemma": "attollo",
+    "part_of_speech": "verb",
+    "conjugation": 0,
+    "infinitive": "attollere",
+    "present": "attollo",
+    "future": "attollam",
+    "perfect": null,
+    "supine": null,
+    "translations": {
+      "en": "to lift up, raise, exalt",
+      "la": "attollo, attollere"
+    },
+    "forms": {
+      "imperative_2pl": ["attollite"]
+    }
   },
-  "forms": {
-    "present_participle": ["operans", "operantis"],
-    "present_participle_dative_ablative_plural": ["operantibus"]
-  }
-},
-{
-  "lemma": "operor",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "operari",
-  "present": "operor",
-  "future": "operabor",
-  "perfect": "operatus sum",
-  "supine": "operatum",
-  "translations": {
-    "en": "to work, be busy, devote oneself",
-    "la": "operor, operari, operatus sum"
-  },
-  "forms": {
-    "present_passive": ["operor", "operaris", "operatur", "operamur", "operamini", "operantur"]
-  }
-},
-  {
-  "lemma": "traho",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "trahere",
-  "present": "traho",
-  "future": "traham",
-  "perfect": "traxi",
-  "supine": "tractum",
-  "translations": {
-    "en": "to drag, draw, pull",
-    "la": "traho, trahere, traxi, tractum"
-  }
-},
-  {
-  "lemma": "assimilo",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "assimilare",
-  "present": "assimilo",
-  "future": "assimilabo",
-  "perfect": "assimilavi",
-  "supine": "assimilatum",
-  "translations": {
-    "en": "to make similar, compare, imitate",
-    "la": "assimilo, assimilare, assimilavi, assimilatum"
-  }
-},
-  {
-  "lemma": "taceo",
-  "part_of_speech": "verb",
-  "conjugation": 2,
-  "infinitive": "tacere",
-  "present": "taceo",
-  "future": "tacebo",
-  "perfect": "tacui",
-  "supine": "tacitum",
-  "translations": {
-    "en": "to be silent, be quiet",
-    "la": "taceo, tacere, tacui, tacitum"
-  },
-  "forms": {
-    "present_active_subjunctive": ["taceam", "taceas", "taceat", "taceamus", "taceatis", "taceant"]
-  }
-},
-  {
-  "lemma": "praesto",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "praestare",
-  "present": "praesto",
-  "future": "praestabo",
-  "perfect": "praestiti",
-  "supine": "praestitum",
-  "translations": {
-    "en": "to excel, surpass, fulfill, exhibit",
-    "la": "praesto, praestare, praestiti, praestitum"
-  },
-  "forms": {
-    "perfect_active": ["praestiti", "praestitisti", "praestitit", "praestitimus", "praestitistis", "praestiterunt"]
-  }
-},
-  {
-  "lemma": "demoror",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "demorari",
-  "present": "demoror",
-  "future": "demorabor",
-  "perfect": "demoratus sum",
-  "supine": "demoratum",
-  "translations": {
-    "en": "to delay, detain, linger",
-    "la": "demoror, demorari, demoratus sum"
-  },
-  "forms": {
-    "future_passive": ["demorabor", "demoraberis", "demorabitur", "demorabimur", "demorabimini", "demorabuntur"]
-  }
-},
-  {
-  "lemma": "utilitas",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "utilitas",
-  "genitive": "utilitatis",
-  "translations": {
-    "en": "usefulness, advantage, benefit",
-    "la": "utilitas"
-  }
-},
-  {
-  "lemma": "plango",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "plangere",
-  "present": "plango",
-  "future": "plangam",
-  "perfect": "planxi",
-  "supine": "planctum",
-  "translations": {
-    "en": "to lament, mourn, beat (the breast)",
-    "la": "plango, plangere, planxi, planctum"
-  },
-  "forms": {
-    "perfect_passive_participle": ["planctus", "plancta", "planctum"]
-  }
-},
-  {
-  "lemma": "saccus",
-  "part_of_speech": "noun",
-  "declension": 2,
-  "gender": "masculine",
-  "nominative": "saccus",
-  "genitive": "sacci",
-  "translations": {
-    "en": "sack, bag, sackcloth",
-    "la": "saccus"
-  }
-},
-  {
-  "lemma": "conscindo",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "conscindere",
-  "present": "conscindo",
-  "future": "conscindam",
-  "perfect": "conscidi",
-  "supine": "conscissum",
-  "translations": {
-    "en": "to tear to pieces, rend, cut up",
-    "la": "conscindo, conscindere, conscidi, conscissum"
-  }
-},
-  {
-  "lemma": "stillo",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "stillare",
-  "present": "stillo",
-  "future": "stillabo",
-  "perfect": "stillavi",
-  "supine": "stillatum",
-  "translations": {
-    "en": "to drip, drop, trickle",
-    "la": "stillo, stillare, stillavi, stillatum"
-  },
-  "forms": {
-    "present_participle": ["stillans", "stillantis"],
-    "perfect_passive_participle": ["stillatus", "stillata", "stillatum"],
-    "present_participle_neuter_plural": ["stillantia"]
-   }
-},
-  {
-  "lemma": "Aethiops",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "masculine",
-  "nominative": "Aethiops",
-  "genitive": "Aethiopis",
-  "translations": {
-    "en": "Ethiopian, dark-skinned person",
-    "la": "Aethiops, Aethiopis"
-  },
-  "forms": {
-    "nominative_plural": ["Aethiopes"],
-    "genitive_plural": ["Aethiopum"]
-  }
-},
-{
-  "lemma": "lingo",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "lingere",
-  "present": "lingo",
-  "future": "lingam",
-  "perfect": "linxi",
-  "supine": "lictum",
-  "translations": {
-    "en": "to lick",
-    "la": "lingo, lingere, linxi, lictum"
-  },
-  "forms": {
-    "present_participle": ["lingens", "lingentis"],
-    "perfect_passive_participle": ["lictus", "licta", "lictum"]
-  }
-},
-{
-  "lemma": "orior",
-  "part_of_speech": "verb",
-  "conjugation": 4,
-  "infinitive": "oriri",
-  "present": "orior",
-  "future": "oriar",
-  "perfect": "ortus",
-  "supine": "ortum",
-  "translations": {
-    "en": "to rise, appear, originate",
-    "la": "orior, oriri, ortus sum"
-  },
-  "forms": {
-    "present_participle": ["oriens", "orientis"],
-    "perfect_participle": ["ortus", "orta", "ortum"],
-    "present_passive": ["orior", "oreris", "oritur", "orimur", "orimini", "oriuntur"],
-    "future_passive": ["oriar", "orieris", "orietur", "oriemur", "oriemini", "orientur"]
-  }
-},
 
-{
-  "lemma": "pluvia",
-  "part_of_speech": "noun",
-  "declension": 1,
-  "gender": "feminine",
-  "nominative": "pluvia",
-  "genitive": "pluviae",
-  "translations": {
-    "en": "rain",
-    "la": "pluvia, pluviae"
-  },
-  "forms_plural": {
-    "nominative_f": ["pluviae"],
-    "genitive_f": ["pluviarum"]
-  }
-},
-{
-  "lemma": "vellus",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "neuter",
-  "nominative": "vellus",
-  "genitive": "velleris",
-  "translations": {
-    "en": "fleece, wool, hide",
-    "la": "vellus, velleris"
-  },
-  "forms_plural": {
-    "nominative_n": ["vellera"],
-    "genitive_n": ["vellerum"]
-  }
-},
-
-{
-  "lemma": "calumniator",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "masculine",
-  "nominative": "calumniator",
-  "genitive": "calumniatoris",
-  "translations": {
-    "en": "slanderer, false accuser",
-    "la": "calumniator, calumniatoris"
-  },
-  "forms_plural": {
-    "nominative_m": ["calumniatores"],
-    "genitive_m": ["calumniatorum"]
-  }
-}
-,
   {
-  "lemma": "offero",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "offerre",
-  "present": "offero",
-  "future": "offeram",
-  "perfect": "obtuli",
-  "supine": "oblatum",
-  "translations": {
-    "en": "to offer, present",
-    "la": "offero, offerre, obtuli, oblatum"
+    "lemma": "salvatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "salvatio",
+    "genitive": "salvationis",
+    "translations": {
+      "en": "salvation, deliverance",
+      "la": "salvatio, salvationis"
+    }
   },
-  "forms": {
-    "future_active_indicative_3pl": ["offerent"]
-  }
-},
+
+  {
+    "lemma": "refloreo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "reflorere",
+    "present": "refloreo",
+    "future": "reflorebo",
+    "perfect": "reflorui",
+    "supine": null,
+    "translations": {
+      "en": "to bloom again, to flourish anew",
+      "la": "refloreo, reflorere, reflorui"
+    }
+  },
+  {
+    "lemma": "adinventio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "adinventio",
+    "genitive": "adinventionis",
+    "translations": {
+      "en": "discovery, invention, contrivance",
+      "la": "adinventio, adinventionis"
+    }
+  },
+
+  {
+    "lemma": "opero",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "operare",
+    "present": "opero",
+    "future": "operabo",
+    "perfect": "operavi",
+    "supine": "operatum",
+    "translations": {
+      "en": "to work, labor, cultivate",
+      "la": "opero, operare, operavi, operatum"
+    },
+    "forms": {
+      "present_participle": ["operans", "operantis"],
+      "present_participle_dative_ablative_plural": ["operantibus"]
+    }
+  },
+  {
+    "lemma": "operor",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "operari",
+    "present": "operor",
+    "future": "operabor",
+    "perfect": "operatus sum",
+    "supine": "operatum",
+    "translations": {
+      "en": "to work, be busy, devote oneself",
+      "la": "operor, operari, operatus sum"
+    },
+    "forms": {
+      "present_passive": [
+        "operor",
+        "operaris",
+        "operatur",
+        "operamur",
+        "operamini",
+        "operantur"
+      ]
+    }
+  },
+  {
+    "lemma": "traho",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "trahere",
+    "present": "traho",
+    "future": "traham",
+    "perfect": "traxi",
+    "supine": "tractum",
+    "translations": {
+      "en": "to drag, draw, pull",
+      "la": "traho, trahere, traxi, tractum"
+    }
+  },
+  {
+    "lemma": "assimilo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "assimilare",
+    "present": "assimilo",
+    "future": "assimilabo",
+    "perfect": "assimilavi",
+    "supine": "assimilatum",
+    "translations": {
+      "en": "to make similar, compare, imitate",
+      "la": "assimilo, assimilare, assimilavi, assimilatum"
+    }
+  },
+  {
+    "lemma": "taceo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "tacere",
+    "present": "taceo",
+    "future": "tacebo",
+    "perfect": "tacui",
+    "supine": "tacitum",
+    "translations": {
+      "en": "to be silent, be quiet",
+      "la": "taceo, tacere, tacui, tacitum"
+    },
+    "forms": {
+      "present_active_subjunctive": [
+        "taceam",
+        "taceas",
+        "taceat",
+        "taceamus",
+        "taceatis",
+        "taceant"
+      ]
+    }
+  },
+  {
+    "lemma": "praesto",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "praestare",
+    "present": "praesto",
+    "future": "praestabo",
+    "perfect": "praestiti",
+    "supine": "praestitum",
+    "translations": {
+      "en": "to excel, surpass, fulfill, exhibit",
+      "la": "praesto, praestare, praestiti, praestitum"
+    },
+    "forms": {
+      "perfect_active": [
+        "praestiti",
+        "praestitisti",
+        "praestitit",
+        "praestitimus",
+        "praestitistis",
+        "praestiterunt"
+      ]
+    }
+  },
+  {
+    "lemma": "demoror",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "demorari",
+    "present": "demoror",
+    "future": "demorabor",
+    "perfect": "demoratus sum",
+    "supine": "demoratum",
+    "translations": {
+      "en": "to delay, detain, linger",
+      "la": "demoror, demorari, demoratus sum"
+    },
+    "forms": {
+      "future_passive": [
+        "demorabor",
+        "demoraberis",
+        "demorabitur",
+        "demorabimur",
+        "demorabimini",
+        "demorabuntur"
+      ]
+    }
+  },
+  {
+    "lemma": "utilitas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "utilitas",
+    "genitive": "utilitatis",
+    "translations": {
+      "en": "usefulness, advantage, benefit",
+      "la": "utilitas"
+    }
+  },
+  {
+    "lemma": "plango",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "plangere",
+    "present": "plango",
+    "future": "plangam",
+    "perfect": "planxi",
+    "supine": "planctum",
+    "translations": {
+      "en": "to lament, mourn, beat (the breast)",
+      "la": "plango, plangere, planxi, planctum"
+    },
+    "forms": {
+      "perfect_passive_participle": ["planctus", "plancta", "planctum"]
+    }
+  },
+  {
+    "lemma": "saccus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "saccus",
+    "genitive": "sacci",
+    "translations": {
+      "en": "sack, bag, sackcloth",
+      "la": "saccus"
+    }
+  },
+  {
+    "lemma": "conscindo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "conscindere",
+    "present": "conscindo",
+    "future": "conscindam",
+    "perfect": "conscidi",
+    "supine": "conscissum",
+    "translations": {
+      "en": "to tear to pieces, rend, cut up",
+      "la": "conscindo, conscindere, conscidi, conscissum"
+    }
+  },
+  {
+    "lemma": "stillo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "stillare",
+    "present": "stillo",
+    "future": "stillabo",
+    "perfect": "stillavi",
+    "supine": "stillatum",
+    "translations": {
+      "en": "to drip, drop, trickle",
+      "la": "stillo, stillare, stillavi, stillatum"
+    },
+    "forms": {
+      "present_participle": ["stillans", "stillantis"],
+      "perfect_passive_participle": ["stillatus", "stillata", "stillatum"],
+      "present_participle_neuter_plural": ["stillantia"]
+    }
+  },
+  {
+    "lemma": "Aethiops",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "Aethiops",
+    "genitive": "Aethiopis",
+    "translations": {
+      "en": "Ethiopian, dark-skinned person",
+      "la": "Aethiops, Aethiopis"
+    },
+    "forms": {
+      "nominative_plural": ["Aethiopes"],
+      "genitive_plural": ["Aethiopum"]
+    }
+  },
+  {
+    "lemma": "lingo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "lingere",
+    "present": "lingo",
+    "future": "lingam",
+    "perfect": "linxi",
+    "supine": "lictum",
+    "translations": {
+      "en": "to lick",
+      "la": "lingo, lingere, linxi, lictum"
+    },
+    "forms": {
+      "present_participle": ["lingens", "lingentis"],
+      "perfect_passive_participle": ["lictus", "licta", "lictum"]
+    }
+  },
+  {
+    "lemma": "orior",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "oriri",
+    "present": "orior",
+    "future": "oriar",
+    "perfect": "ortus",
+    "supine": "ortum",
+    "translations": {
+      "en": "to rise, appear, originate",
+      "la": "orior, oriri, ortus sum"
+    },
+    "forms": {
+      "present_participle": ["oriens", "orientis"],
+      "perfect_participle": ["ortus", "orta", "ortum"],
+      "present_passive": [
+        "orior",
+        "oreris",
+        "oritur",
+        "orimur",
+        "orimini",
+        "oriuntur"
+      ],
+      "future_passive": [
+        "oriar",
+        "orieris",
+        "orietur",
+        "oriemur",
+        "oriemini",
+        "orientur"
+      ]
+    }
+  },
+
+  {
+    "lemma": "pluvia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "pluvia",
+    "genitive": "pluviae",
+    "translations": {
+      "en": "rain",
+      "la": "pluvia, pluviae"
+    },
+    "forms_plural": {
+      "nominative_f": ["pluviae"],
+      "genitive_f": ["pluviarum"]
+    }
+  },
+  {
+    "lemma": "vellus",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "vellus",
+    "genitive": "velleris",
+    "translations": {
+      "en": "fleece, wool, hide",
+      "la": "vellus, velleris"
+    },
+    "forms_plural": {
+      "nominative_n": ["vellera"],
+      "genitive_n": ["vellerum"]
+    }
+  },
+
+  {
+    "lemma": "calumniator",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "calumniator",
+    "genitive": "calumniatoris",
+    "translations": {
+      "en": "slanderer, false accuser",
+      "la": "calumniator, calumniatoris"
+    },
+    "forms_plural": {
+      "nominative_m": ["calumniatores"],
+      "genitive_m": ["calumniatorum"]
+    }
+  },
+  {
+    "lemma": "offero",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "offerre",
+    "present": "offero",
+    "future": "offeram",
+    "perfect": "obtuli",
+    "supine": "oblatum",
+    "translations": {
+      "en": "to offer, present",
+      "la": "offero, offerre, obtuli, oblatum"
+    },
+    "forms": {
+      "future_active_indicative_3pl": ["offerent"]
+    }
+  },
   {
     "lemma": "honorabilis",
     "part_of_speech": "adjective",
@@ -399,7 +521,7 @@
       "la": "insula"
     }
   },
- {
+  {
     "lemma": "saba",
     "part_of_speech": "noun",
     "declension": 1,
@@ -5797,8 +5919,8 @@
       "la": "adiuvō, adiuvāre, adiūvī, adiūtum"
     },
     "forms": {
-    "perfect_passive_participle": ["adiutus", "adiuta", "adiutum"]
-  }
+      "perfect_passive_participle": ["adiutus", "adiuta", "adiutum"]
+    }
   },
   {
     "lemma": "adiutor",
@@ -7483,7 +7605,14 @@
         "auferatis",
         "auferant"
       ],
-      "present_passive_subjunctive": ["auferar", "auferaris", "auferatur", "auferamur", "auferamini", "auferantur"]
+      "present_passive_subjunctive": [
+        "auferar",
+        "auferaris",
+        "auferatur",
+        "auferamur",
+        "auferamini",
+        "auferantur"
+      ]
     },
     "translations": {
       "en": "to take away, carry off, remove",
@@ -10507,6 +10636,9 @@
     "future": "accipiam",
     "perfect": "accepi",
     "supine": "acceptum",
+    "forms": {
+      "future_indicative": ["accipiam", "accipiet"]
+    },
     "forms_plural": {
       "future_2nd_eccl": ["acceptabis"],
       "future_3rd_eccl": ["accipient"]
@@ -21910,11 +22042,11 @@
       "la": "extollo"
     },
     "forms": {
-    "imperative_2sg": ["extolle"],
-    "imperative_3sg": ["extollat"],
-    "imperative_2pl": ["extollite"],
-    "imperative_3pl": ["extollant"]
-  }
+      "imperative_2sg": ["extolle"],
+      "imperative_3sg": ["extollat"],
+      "imperative_2pl": ["extollite"],
+      "imperative_3pl": ["extollant"]
+    }
   },
   {
     "lemma": "contero",
@@ -30567,9 +30699,9 @@
       "en": "to heal, cure",
       "la": "sano, sanare"
     },
-     "forms": {
-    "perfect_active_2sg_eccl": ["sanasti"]
-   }
+    "forms": {
+      "perfect_active_2sg_eccl": ["sanasti"]
+    }
   },
   {
     "lemma": "universus",
