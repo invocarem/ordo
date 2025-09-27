@@ -1,5 +1,23 @@
 [
   {
+    "lemma": "claudico",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "claudicare",
+    "present": "claudico",
+    "future": "claudicabo",
+    "perfect": "claudicavi",
+    "supine": "claudicatum",
+    "translations": {
+      "en": "to limp, halt, be lame",
+      "la": "claudico, claudicare, claudicavi, claudicatum"
+    },
+    "forms": {
+      "present_participle": ["claudicans", "claudicantis"],
+      "perfect_participle": ["claudicatus", "claudicata", "claudicatum"]
+    }
+  },
+  {
     "lemma": "aereus",
     "part_of_speech": "adjective",
     "declension": 1,
@@ -529,7 +547,7 @@
     "perfect": "comminui",
     "supine": "comminutum",
     "translations": {
-      "en": "to break into pieces, to crush, shatter",
+      "en": "to break into pieces, crush, shatter, scatter",
       "la": "comminuo, comminuere, comminui, comminutum"
     }
   },
@@ -13050,7 +13068,7 @@
     "perfect": "praeoccupavi",
     "supine": "praeoccupatum",
     "translations": {
-      "en": "to seize beforehand, anticipate, preoccupy",
+      "en": "prevent, anticipate",
       "la": "praeoccupo, praeoccupare, praeoccupavi, praeoccupatum"
     }
   },
@@ -20313,7 +20331,7 @@
     "perfect": "conturbavi",
     "supine": "conturbatum",
     "translations": {
-      "en": "to disturb, terrify, confuse",
+      "en": "disturb, trouble, terrify",
       "la": "conturbo, conturbare, conturbavi, conturbatum"
     },
     "forms": {
@@ -27484,7 +27502,7 @@
     "accusative_plural": "dolores",
     "ablative_plural": "doloribus",
     "translations": {
-      "en": "pain, grief",
+      "en": "pain, grief, sorrow",
       "la": "dolor"
     },
     "notes": "Psalm 37:18: 'Quoniam ego in flagella paratus sum, et dolor meus in conspectu meo semper' ('For I am ready for scourging, and my pain is ever before me')"

@@ -497,8 +497,16 @@ public enum PsalmTestUtilities {
       // Check if the lemma is detected
       let lemmaFound = detectedLemmas.contains(lemma.lowercased())
 
+      // Check if the translation is correct
+      var translationCorrect = false
+      var actualTranslation = ""
+      if lemmaFound {
+        actualTranslation = analysis.dictionary[lemma]?.translation ?? ""
+        translationCorrect = actualTranslation.lowercased().contains(translation.lowercased())
+      }
+
       if verbose {
-        let status = lemmaFound ? "✅" : "❌"
+        let status = (lemmaFound && translationCorrect) ? "✅" : "❌"
         print("\(status) \(lemma) (\(translation)): \(lemmaFound ? "Found" : "Missing")")
 
         if lemmaFound {
@@ -506,11 +514,21 @@ public enum PsalmTestUtilities {
           let actualForms = analysis.dictionary[lemma]?.forms ?? [:]
           let formStrings = actualForms.map { "\($0.key): \($0.value)" }.joined(separator: ", ")
           print("   Forms: \(formStrings)")
+
+          // Show translation verification
+          let translationStatus = translationCorrect ? "✅" : "❌"
+          print(
+            "   Translation: \(translationStatus) Expected: '\(translation)' | Actual: '\(actualTranslation)'"
+          )
         }
       }
 
       if !lemmaFound {
         allFailures.append("Missing lemma: \(lemma) (\(translation))")
+      } else if !translationCorrect {
+        allFailures.append(
+          "Incorrect translation for \(lemma): expected '\(translation)', got '\(actualTranslation)'"
+        )
       }
     }
 

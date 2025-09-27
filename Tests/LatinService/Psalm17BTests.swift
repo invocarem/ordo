@@ -1,76 +1,95 @@
 import XCTest
+
 @testable import LatinService
 
 class Psalm17BTests: XCTestCase {
-    private var latinService: LatinService!
+    private let utilities = PsalmTestUtilities.self
     let verbose = true
-    
-    override func setUp() {
-        super.setUp()
-        latinService = LatinService.shared
-    }
-    
+
     let id = PsalmIdentity(number: 17, category: "b")
 
     let psalm17B = [
-    /* 1 */ "Cum sancto sanctus eris, et cum viro innocente innocens eris,",
-    /* 2 */ "et cum electo electus eris, et cum perverso perverteris.",
-    /* 3 */ "Quoniam tu populum humilem salvum facies, et oculos superborum humiliabis.",
-    /* 4 */ "Quoniam tu illuminas lucernam meam, Domine; Deus meus, illumina tenebras meas.",
-    /* 5 */ "Quoniam in te eripiar a tentatione, et in Deo meo transgrediar murum.",
-    /* 6 */ "Deus meus, impolluta via eius; eloquia Domini igne examinata;",
-    /* 7 */ "Quoniam quis Deus praeter Dominum? aut quis Deus praeter Deum nostrum?",
-    /* 8 */ "Deus qui praecinxit me virtute, et posuit immaculatam viam meam;",
-    /* 9 */ "qui perfecit pedes meos tamquam cervorum, et super excelsa statuens me;",
-    /* 10 */ "qui docet manus meas ad praelium, et posuisti arcum aereum brachia mea.",
-    /* 11 */ "Et dedisti mihi protectionem salutis tuae, et dextera tua suscepit me:",
-    /* 12 */ "et disciplina tua correxit me in finem, et disciplina tua ipsa me docebit.",
-    /* 13 */ "Dilatasti gressus meos subtus me, et non sunt infirmata vestigia mea.",
-    /* 14 */ "Persequar inimicos meos, et comprehendam illos; et non convertar donec deficiant.",
-    /* 15 */ "Confringam illos, nec poterunt stare; cadent subtus pedes meos.",
-    /* 16 */ "Et praecinxisti me virtute ad bellum; supplantasti insurgentes in me subtus me.",
-    /* 17 */ "Et inimicos meos dedisti mihi dorsum, et odientes me disperdidisti.",
-    /* 18 */ "Clamaverunt, nec erat qui salvos faceret; ad Dominum, nec exaudivit eos.",
-    /* 19 */ "Et comminuam eos ut pulverem ante faciem venti; ut lutum platearum delebo eos.",
-    /* 20 */ "Eripies me de contradictionibus populi; constitues me in caput gentium.",
-    /* 21 */ "Populus quem non cognovi servivit mihi; in auditu auris obedivit mihi.",
-    /* 22 */ "Filii alieni mentiti sunt mihi, filii alieni inveterati sunt,",
-    /* 23 */ "Vivit Dominus, et benedictus Deus meus, et exaltetur Deus salutis meae.",
-    /* 24 */ "Deus qui dat vindictas mihi, et subicit populos sub me,",
-    /* 25 */ "Et ab insurgentibus in me exaltabis me; a viro iniquo eripies me.",
-    /* 26 */ "Propterea confitebor tibi in nationibus, Domine, et nomini tuo psalmum cantabo:",
-    /* 27 */ "magnificans salutes regis eius, et faciens misericordiam christo suo David, et semini eius usque in saeculum."
-];
+        /* 1 */ "Cum sancto sanctus eris, et cum viro innocente innocens eris,",
+        /* 2 */ "et cum electo electus eris, et cum perverso perverteris.",
+        /* 3 */ "Quoniam tu populum humilem salvum facies, et oculos superborum humiliabis.",
+        /* 4 */ "Quoniam tu illuminas lucernam meam, Domine; Deus meus, illumina tenebras meas.",
+        /* 5 */ "Quoniam in te eripiar a tentatione, et in Deo meo transgrediar murum.",
+        /* 6 */ "Deus meus, impolluta via eius; eloquia Domini igne examinata;",
+        /* 7 */ "Quoniam quis Deus praeter Dominum? aut quis Deus praeter Deum nostrum?",
+        /* 8 */ "Deus qui praecinxit me virtute, et posuit immaculatam viam meam;",
+        /* 9 */ "qui perfecit pedes meos tamquam cervorum, et super excelsa statuens me;",
+        /* 10 */ "qui docet manus meas ad praelium, et posuisti arcum aereum brachia mea.",
+        /* 11 */ "Et dedisti mihi protectionem salutis tuae, et dextera tua suscepit me:",
+        /* 12 */ "et disciplina tua correxit me in finem, et disciplina tua ipsa me docebit.",
+        /* 13 */ "Dilatasti gressus meos subtus me, et non sunt infirmata vestigia mea.",
+        /* 14 */
+        "Persequar inimicos meos, et comprehendam illos; et non convertar donec deficiant.",
+        /* 15 */ "Confringam illos, nec poterunt stare; cadent subtus pedes meos.",
+        /* 16 */ "Et praecinxisti me virtute ad bellum; supplantasti insurgentes in me subtus me.",
+        /* 17 */ "Et inimicos meos dedisti mihi dorsum, et odientes me disperdidisti.",
+        /* 18 */ "Clamaverunt, nec erat qui salvos faceret; ad Dominum, nec exaudivit eos.",
+        /* 19 */ "Et comminuam eos ut pulverem ante faciem venti; ut lutum platearum delebo eos.",
+        /* 20 */ "Eripies me de contradictionibus populi; constitues me in caput gentium.",
+        /* 21 */ "Populus quem non cognovi servivit mihi; in auditu auris obedivit mihi.",
+        /* 22 */
+        "Filii alieni mentiti sunt mihi, filii alieni inveterati sunt, et claudicaverunt a semitis suis.",
+        /* 23 */ "Vivit Dominus, et benedictus Deus meus, et exaltetur Deus salutis meae.",
+        /* 24 */ "Deus qui dat vindictas mihi, et subicit populos sub me,",
+        /* 25 */ "Et ab insurgentibus in me exaltabis me; a viro iniquo eripies me.",
+        /* 26 */ "Propterea confitebor tibi in nationibus, Domine, et nomini tuo psalmum cantabo:",
+        /* 27 */
+        "magnificans salutes regis eius, et faciens misericordiam christo suo David, et semini eius usque in saeculum.",
+    ]
 
     private let englishText = [
-        /* 1 */ "With the holy thou wilt be holy, and with the innocent man thou wilt be innocent,",
-        /* 2 */ "And with the elect thou wilt be elect, and with the perverse thou wilt be perverted.",
+        /* 1 */
+        "With the holy thou wilt be holy, and with the innocent man thou wilt be innocent,",
+        /* 2 */
+        "And with the elect thou wilt be elect, and with the perverse thou wilt be perverted.",
         /* 3 */ "For thou wilt save the humble people; but wilt bring down the eyes of the proud.",
         /* 4 */ "For thou lightest my lamp, O Lord: O my God, enlighten my darkness.",
-        /* 5 */ "For by thee I shall be delivered from temptation; and through my God I shall go over a wall.",
+        /* 5 */
+        "For by thee I shall be delivered from temptation; and through my God I shall go over a wall.",
         /* 6 */ "As for my God, his way is undefiled: the words of the Lord are fire-tried:",
         /* 7 */ "For who is God but the Lord? or who is God but our God?",
         /* 8 */ "God, who hath girt me with strength; and made my way blameless.",
-        /* 9 */ "Who hath made my feet like the feet of harts: and who setteth me upon high places.",
+        /* 9 */
+        "Who hath made my feet like the feet of harts: and who setteth me upon high places.",
         /* 10 */ "Who teacheth my hands to war: and thou hast made my arms like a brazen bow.",
-        /* 11 */ "And thou hast given me the protection of thy salvation: and thy right hand hath received me:",
-        /* 12 */ "And thy discipline hath corrected me unto the end: and thy discipline, the same shall teach me.",
+        /* 11 */
+        "And thou hast given me the protection of thy salvation: and thy right hand hath received me:",
+        /* 12 */
+        "And thy discipline hath corrected me unto the end: and thy discipline, the same shall teach me.",
         /* 13 */ "Thou hast enlarged my steps under me; and my feet are not weakened.",
-        /* 14 */ "I will pursue after my enemies, and overtake them: and I will not turn again till they are consumed.",
-        /* 15 */ "I will break them, and they shall not be able to stand: they shall fall under my feet.",
-        /* 16 */ "And thou hast girded me with strength unto battle; and hast subdued under me them that rose up against me.",
-        /* 17 */ "And thou hast made my enemies turn their back upon me, and hast destroyed them that hated me.",
-        /* 18 */ "They cried, but there was none to save them, to the Lord: but he heard them not.",
-        /* 19 */ "And I shall beat them as small as the dust before the wind; I shall bring them to nought, like the dirt in the streets.",
-        /* 20 */ "Thou wilt deliver me from the contradictions of the people; thou wilt make me head of the Gentiles.",
-        /* 21 */ "A people which I knew not, hath served me: at the hearing of the ear they have obeyed me.",
-        /* 22 */ "The children that are strangers have lied to me, strange children have faded away, and have halted from their paths.",
-        /* 23 */ "The Lord liveth, and blessed be my God, and let the God of my salvation be exalted:",
-        /* 24 */ "O God, who avengest me, and subduest the people under me, my deliverer from my enemies:",
-        /* 25 */ "And thou wilt lift me up above them that rise up against me: from the unjust man thou wilt deliver me.",
-        /* 26 */ "Therefore will I give glory to thee, O Lord, among the Gentiles, and sing to thy name:",
-        /* 27 */ "Magnifying the salvation of his king, and shewing mercy to David his anointed, and to his seed for ever."
-    ];
+        /* 14 */
+        "I will pursue after my enemies, and overtake them: and I will not turn again till they are consumed.",
+        /* 15 */
+        "I will break them, and they shall not be able to stand: they shall fall under my feet.",
+        /* 16 */
+        "And thou hast girded me with strength unto battle; and hast subdued under me them that rose up against me.",
+        /* 17 */
+        "And thou hast made my enemies turn their back upon me, and hast destroyed them that hated me.",
+        /* 18 */
+        "They cried, but there was none to save them, to the Lord: but he heard them not.",
+        /* 19 */
+        "And I shall beat them as small as the dust before the wind; I shall bring them to nought, like the dirt in the streets.",
+        /* 20 */
+        "Thou wilt deliver me from the contradictions of the people; thou wilt make me head of the Gentiles.",
+        /* 21 */
+        "A people which I knew not, hath served me: at the hearing of the ear they have obeyed me.",
+        /* 22 */
+        "The children that are strangers have lied to me, strange children have faded away, and have halted from their paths.",
+        /* 23 */
+        "The Lord liveth, and blessed be my God, and let the God of my salvation be exalted:",
+        /* 24 */
+        "O God, who avengest me, and subduest the people under me, my deliverer from my enemies:",
+        /* 25 */
+        "And thou wilt lift me up above them that rise up against me: from the unjust man thou wilt deliver me.",
+        /* 26 */
+        "Therefore will I give glory to thee, O Lord, among the Gentiles, and sing to thy name:",
+        /* 27 */
+        "Magnifying the salvation of his king, and shewing mercy to David his anointed, and to his seed for ever.",
+    ]
 
     private let lineKeyLemmas: [(Int, [String])] = [
         (1, ["sanctus", "vir", "innocens"]),
@@ -94,13 +113,16 @@ class Psalm17BTests: XCTestCase {
         (19, ["comminuo", "pulvis", "facies", "ventus", "lutum", "platea", "deleo"]),
         (20, ["eripio", "contradictio", "populus", "constituo", "caput", "gens"]),
         (21, ["populus", "cognosco", "servio", "auditus", "auris", "obedio"]),
-        (22, ["filius", "alienus", "mentior", "invetero"]),
+        (22, ["filius", "alienus", "mentior", "invetero", "claudico", "semita"]),
         (23, ["vivo", "dominus", "benedico", "deus", "exalto", "salus"]),
         (24, ["deus", "vindicta", "subicio", "populus"]),
         (25, ["insurgo", "exalto", "vir", "iniquus", "eripio"]),
         (26, ["confiteor", "natio", "dominus", "nomen", "psalmus", "canto"]),
-        (27, ["magnifico", "salus", "rex", "misericordia", "christus", "david", "semen", "saeculum"])
-    ];
+        (
+            27,
+            ["magnifico", "salus", "rex", "misericordia", "christus", "david", "semen", "saeculum"]
+        ),
+    ]
 
     private let structuralThemes = [
         (
@@ -219,8 +241,8 @@ class Psalm17BTests: XCTestCase {
             27,
             "Gratitude extends outward to the nations and forward to David's seed.",
             "Augustine sees this fulfilled in Christ, the true David, whose mercy extends to all nations and whose covenant endures in His eternal seed."
-        )
-    ];
+        ),
+    ]
 
     private let conceptualThemes = [
         (
@@ -261,7 +283,10 @@ class Psalm17BTests: XCTestCase {
         (
             "Victory Over Enemies",
             "Divine empowerment leading to complete victory over opposition",
-            ["dilato", "vestigium", "persequor", "confringo", "cado", "pes", "supplanto", "disperdo", "sto"],
+            [
+                "dilato", "vestigium", "persequor", "confringo", "cado", "pes", "supplanto",
+                "disperdo", "sto",
+            ],
             ThemeCategory.virtue,
             13...18
         ),
@@ -275,7 +300,10 @@ class Psalm17BTests: XCTestCase {
         (
             "Gentile Mission",
             "The spread of God's kingdom to unknown peoples and the failure of false believers",
-            ["populus", "cognosco", "servio", "auditus", "oboedio", "alienus", "mentior", "invetero"],
+            [
+                "populus", "cognosco", "servio", "auditus", "oboedio", "alienus", "mentior",
+                "invetero",
+            ],
             ThemeCategory.virtue,
             21...22
         ),
@@ -289,28 +317,37 @@ class Psalm17BTests: XCTestCase {
         (
             "Covenant Faithfulness",
             "God's mercy to His anointed and the eternal nature of His covenant",
-            ["insurgo", "exalto", "vir", "iniquus", "eripio", "confiteor", "natio", "psalmus", "misericordia", "christus", "semen", "saeculum"],
+            [
+                "insurgo", "exalto", "vir", "iniquus", "eripio", "confiteor", "natio", "psalmus",
+                "misericordia", "christus", "semen", "saeculum",
+            ],
             ThemeCategory.divine,
             25...27
         ),
         (
             "Divine Justice",
             "The contrast between God's treatment of the righteous and the wicked",
-            ["salvus", "humilio", "eripio", "persequor", "confringo", "comminuo", "pulvis", "vindicta"],
+            [
+                "salvus", "humilio", "eripio", "persequor", "confringo", "comminuo", "pulvis",
+                "vindicta",
+            ],
             ThemeCategory.justice,
             1...27
         ),
         (
             "Spiritual Transformation",
             "God's work of changing weakness into strength and darkness into light",
-            ["illumino", "tenebrae", "eripio", "tentatio", "transgredior", "praecingo", "virtus", "doceo", "praelium"],
+            [
+                "illumino", "tenebrae", "eripio", "tentatio", "transgredior", "praecingo", "virtus",
+                "doceo", "praelium",
+            ],
             ThemeCategory.virtue,
             3...10
-        )
-    ];
+        ),
+    ]
 
     // MARK: - Test Data
-   
+
     // MARK: - Test Cases
 
     func testTotalVerses() {
@@ -339,7 +376,7 @@ class Psalm17BTests: XCTestCase {
             verbose: verbose
         )
     }
-    
+
     func testSaveTexts() {
         let utilities = PsalmTestUtilities.self
         let jsonString = utilities.generatePsalmTextsJSONString(
@@ -361,7 +398,7 @@ class Psalm17BTests: XCTestCase {
             print(jsonString)
         }
     }
-    
+
     func testSaveThemes() {
         let utilities = PsalmTestUtilities.self
         guard
@@ -388,164 +425,124 @@ class Psalm17BTests: XCTestCase {
             print(jsonString)
         }
     }
-    
-    // MARK: - Test Cases
-    func testAnalysisSummary() {
-        let analysis = latinService.analyzePsalm(text: psalm17B)
-        if verbose {
-            print("\n=== Full Analysis ===")
-            print("Total words:", analysis.totalWords)
-            print("Unique lemmas:", analysis.uniqueLemmas)
-            
-            print("'noster' forms:", analysis.dictionary["noster"]?.forms ?? [:])
-            
 
-            
-        }
-        XCTAssertLessThan(
-            analysis.totalWords, 
-            analysis.uniqueLemmas * 2,
-            "totalWords should be less than uniqueLemmas * 2 (was \(analysis.totalWords) vs \(analysis.uniqueLemmas * 2))"
+    // MARK: - Test Cases
+
+    func testBodyParts() {
+        let bodyParts = [
+            ("pes", ["pedes", "pedibus"], "foot"),
+            ("manus", ["manus"], "hand"),
+            ("brachium", ["brachia"], "arm"),
+            ("oculus", ["oculos"], "eye"),
+            ("dorsum", ["dorsum"], "back"),
+        ]
+
+        utilities.testTerms(
+            psalmText: psalm17B,
+            psalmId: id,
+            terms: bodyParts,
+            verbose: verbose
         )
     }
 
-    func testBodyParts() {
-    let analysis = latinService.analyzePsalm(text: psalm17B)
-    
-    let bodyParts = [
-        ("pes", ["pedes", "pedibus"], "foot"),
-        ("manus", ["manus"], "hand"),
-        ("brachium", ["brachia"], "arm"),
-        ("oculus", ["oculos"], "eye"),
-        ("dorsum", ["dorsum"], "back")
-    ]
-    
-    verifyWordsInAnalysis(analysis, confirmedWords: bodyParts)
-}
+    func testNatureImagery() {
+        let natureTerms = [
+            ("pulvis", ["pulverem"], "dust"),
+            ("ventus", ["venti"], "wind"),
+            ("lutum", ["lutum"], "mud"),
+            ("murus", ["murum"], "wall"),
+            ("excelsus", ["excelsa"], "high"),
+        ]
 
-func testNatureImagery() {
-    let analysis = latinService.analyzePsalm(text: psalm17B)
-    
-    let natureTerms = [
-        ("pulvis", ["pulverem"], "dust"),
-        ("ventus", ["venti"], "wind"),
-        ("lutum", ["lutum"], "mud"),
-        ("murus", ["murum"], "wall"),
-        ("excelsus", ["excelsa"], "high")
-    ]
-    
-    verifyWordsInAnalysis(analysis, confirmedWords: natureTerms)
-}
-func testMilitaryVicotoryReferences() {
-    let analysis = latinService.analyzePsalm(text: psalm17B)
-    let militaryTerms = [
-    ("praecingo", ["praecinxit", "praecinxisti"], "gird"), // Should be "praecingo" (3rd conj)
-    ("praelium", ["praelium"], "battle"),               // Correct (2nd neuter)
-    ("arcus", ["arcum"], "bow"),                        // Correct (4th masc)
-    ("supplanto", ["supplantasti"], "tripping"),        // Should be "supplanto" (1st conj)
-    ("vindicta", ["vindictas"], "vengeance")            // Correct (1st fem)
-]
-    
-    
-    verifyWordsInAnalysis(analysis, confirmedWords: militaryTerms)
+        utilities.testTerms(
+            psalmText: psalm17B,
+            psalmId: id,
+            terms: natureTerms,
+            verbose: verbose
+        )
+    }
+    func testMilitaryVicotoryReferences() {
+        let militaryTerms = [
+            ("praecingo", ["praecinxit", "praecinxisti"], "gird"),  // Should be "praecingo" (3rd conj)
+            ("praelium", ["praelium"], "battle"),  // Correct (2nd neuter)
+            ("arcus", ["arcum"], "bow"),  // Correct (4th masc)
+            ("supplanto", ["supplantasti"], "trip"),  // Should be "supplanto" (1st conj)
+            ("vindicta", ["vindictas"], "vengeance"),  // Correct (1st fem)
+        ]
 
-    let victoryTerms = [
-    ("contero", ["Conteram"], "crush"),                 // Correct (3rd conj)
-    ("comminuo", ["comminuam"], "pulverize"),           // Correct (3rd conj)
-    ("deleo", ["delebo"], "wipe out"),                  // Correct (2nd conj)
-    ("persequor", ["persequar"], "pursue"),             // Correct (deponent)
-    ("subicio", ["subicit"], "subdue")                 // Should be "subicio" (3rd conj)
-]
-   verifyWordsInAnalysis(analysis, confirmedWords: victoryTerms)
-}
-    
+        utilities.testTerms(
+            psalmText: psalm17B,
+            psalmId: id,
+            terms: militaryTerms,
+            verbose: verbose
+        )
+
+        let victoryTerms = [
+            //("contero", ["Conteram"], "crush"),  // this is in psalm2?
+            ("comminuo", ["comminuam"], "scatter"),  // Correct (3rd conj)
+            ("deleo", ["delebo"], "wipe out"),  // Correct (2nd conj)
+            ("persequor", ["persequar"], "pursue"),  // Correct (deponent)
+            ("subicio", ["subicit"], "subdue"),  // Should be "subicio" (3rd conj)
+        ]
+
+        utilities.testTerms(
+            psalmText: psalm17B,
+            psalmId: id,
+            terms: victoryTerms,
+            verbose: verbose
+        )
+    }
+
     func testDivineReciprocity() {
-        let analysis = latinService.analyzePsalm(text: psalm17B)
-        
         let reciprocityTerms = [
             ("sanctus", ["sancto", "sanctus"], "holy"),
             ("innocens", ["innocente", "innocens"], "blameless"),
             ("perversus", ["perverso"], "twisted"),
             ("electus", ["electo", "electus"], "chosen"),
-            ("humilis", ["humilem"], "humble")
+            ("humilis", ["humilem"], "humble"),
         ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: reciprocityTerms)
+
+        utilities.testTerms(
+            psalmText: psalm17B,
+            psalmId: id,
+            terms: reciprocityTerms,
+            verbose: verbose
+        )
     }
-    
-   
-    
+
     func testCovenantalLanguage() {
-        let analysis = latinService.analyzePsalm(text: psalm17B)
-        
         let covenantTerms = [
             ("christus", ["christo"], "anointed"),
             ("semen", ["semini"], "seed"),
             ("saeculum", ["saeculum"], "age"),
             ("misericordia", ["misericordiam"], "mercy"),
-            ("confiteor", ["confitebor"], "praise")
+            ("confiteor", ["confitebor"], "praise"),
         ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: covenantTerms)
+
+        utilities.testTerms(
+            psalmText: psalm17B,
+            psalmId: id,
+            terms: covenantTerms,
+            verbose: verbose
+        )
     }
-    
+
     func testPhysiologicalMetaphors() {
-        let analysis = latinService.analyzePsalm(text: psalm17B)
-        
         let bodyTerms = [
             ("cervus", ["cervorum"], "deer"),
             ("vestigium", ["vestigia"], "footstep"),
             ("claudico", ["claudicaverunt"], "limp"),
             ("dextera", ["dextera"], "right hand"),
             ("auris", ["auris"], "ear"),
-            ("auditus", ["auditu"], "hearing")
+            ("auditus", ["auditu"], "hearing"),
         ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: bodyTerms)
+
+        utilities.testTerms(
+            psalmText: psalm17B,
+            psalmId: id,
+            terms: bodyTerms,
+            verbose: verbose
+        )
     }
-    
-    // MARK: - Helper
-    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
-        for (lemma, forms, translation) in confirmedWords {
-            guard let entry = analysis.dictionary[lemma] else {
-                XCTFail("Missing lemma: \(lemma)")
-                continue
-            }
-            
-            // Verify semantic domain
-            XCTAssertTrue(
-                entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-                "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
-            )
-            
-            // Verify morphological coverage
-            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-            if !missingForms.isEmpty {
-                XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
-            }
-            
-            if verbose {
-                print("\n\(lemma.uppercased())")
-                print("  Translation: \(entry.translation ?? "?")")
-                forms.forEach { form in
-                    let count = entry.forms[form.lowercased()] ?? 0
-                    print("  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
-                }
-            }
-        }
-    }
-    private func verifyThematicElements(analysis: PsalmAnalysisResult, expectedThemes: [String: [(lemma: String, description: String)]]) {
-    for (theme, elements) in expectedThemes {
-        for (lemma, description) in elements {
-            guard analysis.dictionary[lemma] != nil else {
-                XCTFail("Missing lemma for theme verification: \(lemma) (theme: \(theme))")
-                continue
-            }
-            
-            if verbose {
-                print("VERIFIED THEME: \(theme) - \(lemma) (\(description))")
-            }
-        }
-    }
-}
+
 }
