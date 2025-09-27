@@ -1,5 +1,41 @@
 [
   {
+    "lemma": "saturo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "saturare",
+    "present": "saturo",
+    "future": "saturabo",
+    "perfect": "saturavi",
+    "supine": "saturatum",
+    "translations": {
+      "en": "to satisfy, to fill",
+      "la": "saturo, saturare, saturavi, saturatum"
+    },
+    "forms": {
+      "future_passive": [
+        "saturabor",
+        "saturaberis",
+        "saturabitur",
+        "saturabimur",
+        "saturabimini",
+        "saturabuntur"
+      ]
+    }
+  },
+  {
+    "lemma": "abiectio",
+    "part_of_speech": "noun",
+    "gender": "feminine",
+    "declension": 3,
+    "nominative": "abiectio",
+    "genitive": "abiectionis",
+    "translations": {
+      "en": "casting down, humiliation, abjection",
+      "la": "abiectio"
+    }
+  },
+  {
     "lemma": "liquesco",
     "part_of_speech": "verb",
     "conjugation": 3,
@@ -19682,6 +19718,7 @@
         "liberaverunt"
       ],
       "imperative": ["libera"],
+      "perfect_2sg_eccl": ["liberasti"],
       "present_passive": [
         "liberor",
         "liberaris",

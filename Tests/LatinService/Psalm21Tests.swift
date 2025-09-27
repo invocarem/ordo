@@ -112,7 +112,7 @@ class Psalm21Tests: XCTestCase {
     (25, ["timeo", "semen", "israel", "sperno", "despicio", "deprecatio", "pauper"]),
     (26, ["averto", "facies", "clamo", "exaudio"]),
     (27, ["laus", "ecclesia", "votum", "reddo", "conspectus", "timeo"]),
-    (28, ["edo", "pauper", "satur", "laudo", "dominus", "requiro", "vivo", "cor", "saeculum"]),
+    (28, ["edo", "pauper", "saturo", "laudo", "dominus", "requiro", "vivo", "cor", "saeculum"]),
     (29, ["reminiscor", "converto", "dominus", "universus", "finis", "terra"]),
     (30, ["adoro", "conspectus", "universus", "familia", "gens"]),
     (31, ["quoniam", "dominus", "regnum", "ipse", "dominor", "gens"]),
