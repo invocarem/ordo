@@ -1,5 +1,503 @@
 [
   {
+    "lemma": "quotidie",
+    "part_of_speech": "adverb",
+    "translations": {
+      "en": "daily, every day",
+      "la": "quotidie"
+    }
+  },
+  {
+    "lemma": "modicus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "modicus",
+    "genitive": "modici",
+    "translations": {
+      "en": "moderate, small, modest",
+      "la": "modicus"
+    }
+  },
+  {
+    "lemma": "cataracta",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "cataracta",
+    "genitive": "cataractae",
+    "translations": {
+      "en": "waterfall, cataract, floodgate",
+      "la": "cataracta"
+    }
+  },
+  {
+    "lemma": "hermon",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "hermon",
+    "genitive": "hermonis",
+    "translations": {
+      "en": "Hermon (mount)",
+      "la": "hermon"
+    },
+    "forms_plural": {
+      "accusative_m": ["hermoniim"]
+    }
+  },
+  {
+    "lemma": "iordanes",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "iordanes",
+    "genitive": "iordanis",
+    "translations": {
+      "en": "Jordan (the river)",
+      "la": "iordanes"
+    }
+  },
+  {
+    "lemma": "epulor",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "epulari",
+    "present": "epulor",
+    "future": "epulabor",
+    "perfect": "epulatus sum",
+    "supine": "epulatum",
+    "translations": {
+      "en": "to feast, dine, banquet",
+      "la": "epulor, epulari, epulatus sum"
+    },
+    "forms": {
+      "present_participle": ["epulans", "epulantis"]
+    }
+  },
+  {
+    "lemma": "tristis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "tristis",
+    "genitive": "tristis",
+    "translations": {
+      "en": "sad, sorrowful, grim",
+      "la": "tristis"
+    }
+  },
+  {
+    "lemma": "advena",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "advena",
+    "genitive": "advenae",
+    "translations": {
+      "en": "stranger, foreigner, newcomer",
+      "la": "advena"
+    }
+  },
+  {
+    "lemma": "intra",
+    "part_of_speech": "preposition",
+    "case_governed": "accusative",
+    "translations": {
+      "en": "within, inside, during",
+      "la": "intra"
+    }
+  },
+  {
+    "lemma": "concalesco",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "concalescere",
+    "present": "concalesco",
+    "future": "concalescam",
+    "perfect": "concalu",
+    "supine": null,
+    "translations": {
+      "en": "to grow warm, become hot",
+      "la": "concalesco, concalescere, concalu"
+    },
+    "forms": {
+      "perfect_active": [
+        "concalu",
+        "concaluisti",
+        "concaluit",
+        "concaluimus",
+        "concaluistis",
+        "concaluerunt"
+      ]
+    }
+  },
+  {
+    "lemma": "obmutuesco",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "obmutuescere",
+    "present": "obmutuesco",
+    "future": "obmutuescam",
+    "perfect": "obmutui",
+    "supine": null,
+    "translations": {
+      "en": "to become mute, fall silent",
+      "la": "obmutuesco, obmutuescere, obmutui"
+    },
+    "forms": {
+      "perfect_active": [
+        "obmutui",
+        "obmutuisti",
+        "obmutuit",
+        "obmutuimus",
+        "obmutuistis",
+        "obmutuerunt"
+      ]
+    }
+  },
+  {
+    "lemma": "refrigero",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "refrigerare",
+    "present": "refrigero",
+    "future": "refrigerabo",
+    "perfect": "refrigeravi",
+    "supine": "refrigeratum",
+    "translations": {
+      "en": "to cool, refresh, revive",
+      "la": "refrigero, refrigerare, refrigeravi, refrigeratum"
+    },
+    "forms": {
+      "present_passive_subjunctive": [
+        "refrigerer",
+        "refrigereris",
+        "refrigeretur",
+        "refrigeremur",
+        "refrigeremini",
+        "refrigerentur"
+      ]
+    }
+  },
+  {
+    "lemma": "remitto",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "remittere",
+    "present": "remitto",
+    "future": "remittam",
+    "perfect": "remisi",
+    "supine": "remissum",
+    "translations": {
+      "en": "to send back, release, forgive, allow",
+      "la": "remitto, remittere, remisi, remissum"
+    }
+  },
+  {
+    "lemma": "condensus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "condensus",
+    "genitive": "condensi",
+    "translations": {
+      "en": "thick, dense, close-packed",
+      "la": "condensus"
+    },
+    "forms_plural": {
+      "accusative_m": ["condensos"],
+      "nominative_m": ["condensi"],
+      "accusative_n": ["condensa"],
+      "accusative_f": ["condensas"]
+    },
+    "forms": {
+      "nominative_f": ["condensa"],
+      "nominative_n": ["condensum"]
+    }
+  },
+  {
+    "lemma": "cades",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "cades",
+    "genitive": "cades",
+    "translations": {
+      "en": "Kadesh (a place name)",
+      "la": "cades"
+    }
+  },
+  {
+    "lemma": "concutio",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "concutere",
+    "present": "concutio",
+    "future": "concutiam",
+    "perfect": "concussi",
+    "supine": "concussum",
+    "translations": {
+      "en": "to shake, shatter, agitate",
+      "la": "concutio, concutere, concussi, concussum"
+    },
+    "forms": {
+      "present_participle": ["concutiens", "concutientis"]
+    }
+  },
+  {
+    "lemma": "affero",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "afferre",
+    "present": "affero",
+    "future": "afferam",
+    "perfect": "attuli",
+    "supine": "allatum",
+    "translations": {
+      "en": "to bring, to carry to, to bear",
+      "la": "affero, afferre, attuli, allatum"
+    },
+    "forms": {
+      "present_active": [
+        "affero",
+        "affers",
+        "affert",
+        "afferimus",
+        "affertis",
+        "afferunt"
+      ],
+      "present_imperative_plural": ["afferte"]
+    }
+  },
+  {
+    "lemma": "comminuo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "comminuere",
+    "present": "comminuo",
+    "future": "comminuam",
+    "perfect": "comminui",
+    "supine": "comminutum",
+    "translations": {
+      "en": "to break into pieces, to crush, shatter",
+      "la": "comminuo, comminuere, comminui, comminutum"
+    }
+  },
+  {
+    "lemma": "unicornis",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "unicornis",
+    "genitive": "unicornis",
+    "translations": {
+      "en": "unicorn, wild ox",
+      "la": "unicornis, unicornis"
+    },
+    "forms_plural": {
+      "genitive_m": ["unicornium"]
+    }
+  },
+  {
+    "lemma": "condensus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "condensus",
+    "genitive": "condensi",
+    "translations": {
+      "en": "thick, dense, condensed",
+      "la": "condensus, condensa, condensum"
+    },
+    "forms": {
+      "nominative_n": ["condensum"]
+    }
+  },
+  {
+    "lemma": "diluvium",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "diluvium",
+    "genitive": "diluvii",
+    "translations": {
+      "en": "flood, deluge",
+      "la": "diluvium, diluvii"
+    },
+    "forms": {}
+  },
+  {
+    "lemma": "intercido",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "intercidere",
+    "present": "intercido",
+    "future": "intercidam",
+    "perfect": "intercidi",
+    "supine": "intercisum",
+    "translations": {
+      "en": "to cut down, destroy, perish",
+      "la": "intercido, intercidere, intercidi, intercisum"
+    },
+    "forms": {}
+  },
+  {
+    "lemma": "flamma",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "flamma",
+    "genitive": "flammae",
+    "translations": {
+      "en": "flame, fire, blaze",
+      "la": "flamma, flammae"
+    },
+    "forms": {}
+  },
+
+  {
+    "lemma": "consisto",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "consistere",
+    "present": "consisto",
+    "future": "consistam",
+    "perfect": "constiti",
+    "supine": "constitutum",
+    "translations": {
+      "en": "to stand, halt, consist",
+      "la": "consisto, consistere, constiti, constitutum"
+    }
+  },
+  {
+    "lemma": "edo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "edere",
+    "present": "edo",
+    "future": "edam",
+    "perfect": "edi",
+    "supine": "esum",
+    "translations": {
+      "en": "to eat, consume",
+      "la": "edo, edere, edi, esum"
+    }
+  },
+  {
+    "lemma": "appropio",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "appropiare",
+    "present": "appropio",
+    "future": "appropiabo",
+    "perfect": "appropiavi",
+    "supine": "appropiatum",
+    "translations": {
+      "en": "to approach, draw near",
+      "la": "appropio, appropiare, appropiavi, appropiatum"
+    }
+  },
+  {
+    "lemma": "allevo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "allevare",
+    "present": "allevo",
+    "future": "allevabo",
+    "perfect": "allevavi",
+    "supine": "allevatum",
+    "translations": {
+      "en": "to lift up, lighten, relieve",
+      "la": "allevo, allevare, allevavi, allevatum"
+    },
+    "forms": {
+      "present_indicative": ["allevo"]
+    }
+  },
+  {
+    "lemma": "elido",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "elidere",
+    "present": "elido",
+    "future": "elidam",
+    "perfect": "elisi",
+    "supine": "elisum",
+    "translations": {
+      "en": "to crush, strike out, destroy",
+      "la": "elido, elidere, elisi, elisum"
+    },
+    "forms": {
+      "present_indicative": ["elido"]
+    }
+  },
+  {
+    "lemma": "corruo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "corruere",
+    "present": "corruo",
+    "future": "corruram",
+    "perfect": "corrui",
+    "supine": "corruitum",
+    "translations": {
+      "en": "to fall down, collapse, perish",
+      "la": "corruo, corruere, corrui, corruitum"
+    },
+    "forms": {
+      "present_indicative": ["corruo"]
+    }
+  },
+  {
+    "lemma": "fidelis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "fidelis",
+    "genitive": "fidelis",
+    "translations": {
+      "en": "faithful, loyal, trustworthy",
+      "la": "fidelis, fidele"
+    },
+    "forms": {
+      "nominative_m": ["fidelis"],
+      "nominative_f": ["fidele"],
+      "accusative_m": ["fidelem"]
+    }
+  },
+  {
+    "lemma": "animal",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "animal",
+    "genitive": "animalis",
+    "translations": {
+      "en": "living being, creature, animal",
+      "la": "animal, animalis"
+    }
+  },
+  {
+    "lemma": "opportunus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "nominative": "opportunus",
+    "genitive": "opportuni",
+    "translations": {
+      "en": "suitable, favorable, convenient",
+      "la": "opportunus, opportuna, opportunum"
+    },
+    "forms": {
+      "nominative_m": ["opportunus"],
+      "nominative_f": ["opportuna"],
+      "nominative_n": ["opportunum"],
+      "dative_singular_m": ["opportuno"],
+      "ablative_m": ["opportuno"]
+    }
+  },
+
+  {
     "lemma": "vanus",
     "part_of_speech": "adjective",
     "declension": 1,
@@ -2300,6 +2798,7 @@
       "la": "peto, petere, petivi, petitum"
     },
     "forms": {
+      "perfect_1sg": ["petii"],
       "perfect_3sg_eccl": ["petiit"]
     }
   },
@@ -3336,6 +3835,14 @@
     "forms_plural": {
       "dative_m": ["excelsis"],
       "ablative_m": ["excelsis"]
+    },
+    "forms": {
+      "nominative_f": ["excelsa"],
+      "genitive_f": ["excelsae"],
+      "dative_f": ["excelsae"],
+      "accusative_f": ["excelsam"],
+      "ablative_f": ["excelsa"],
+      "vocative_f": ["excelsa"]
     }
   },
   {
@@ -4584,15 +5091,19 @@
     }
   },
   {
-    "lemma": "castra",
+    "lemma": "castrum",
     "part_of_speech": "noun",
     "declension": 2,
     "gender": "neuter",
-    "nominative": "castra",
-    "genitive": "castrorum",
+    "nominative": "castrum",
+    "genitive": "castri",
     "translations": {
-      "en": "military camp, encampment",
-      "la": "castra, castrorum"
+      "en": "fort; (plural) military camp",
+      "la": "castrum"
+    },
+    "forms_plural": {
+      "nominative_n": ["castra"],
+      "accusative_n": ["castra"]
     }
   },
   {
@@ -7580,6 +8091,14 @@
     "perfect": "abstuli",
     "supine": "ablatum",
     "forms": {
+      "present_active": [
+        "aufero",
+        "aufers",
+        "aufert",
+        "auferimus",
+        "aufertis",
+        "auferunt"
+      ],
       "imperative_active": ["aufer", "auferte"],
       "future_passive_indicative": [
         "auferar",
@@ -10155,7 +10674,8 @@
     "nominative": "senectus",
     "genitive": "senectutis",
     "forms": {
-      "nominative_sg": ["senectus"]
+      "nominative_f": ["senectus"],
+      "ablative_f": ["senecta"]
     },
     "translations": {
       "en": "old age, seniority",
@@ -12875,6 +13395,9 @@
     "translations": {
       "en": "one, single",
       "la": "unus, -a, -um"
+    },
+    "forms": {
+      "accusative_n": ["unum"]
     }
   },
   {
@@ -13761,13 +14284,25 @@
   {
     "lemma": "abeo",
     "part_of_speech": "verb",
-    "conjugation": 0,
+    "conjugation": 4,
     "infinitive": "abire",
+    "present": "abeo",
+    "future": "abibo",
     "perfect": "abii",
     "supine": "abitum",
     "translations": {
       "en": "to go away, depart",
       "la": "abeo, abire, abii, abitum"
+    },
+    "forms": {
+      "present_active_subjunctive": [
+        "abeam",
+        "abeas",
+        "abeat",
+        "abeamus",
+        "abeatis",
+        "abeant"
+      ]
     }
   },
   {
@@ -14503,15 +15038,15 @@
     "notes": "Hebrew origin; typically indeclinable in Latin (but some texts use genitive 'Israelis')"
   },
   {
-    "lemma": "judaea",
+    "lemma": "iudaea",
     "part_of_speech": "noun",
     "declension": 1,
     "gender": "feminine",
-    "nominative": "judaea",
-    "genitive": "judaeae",
+    "nominative": "iudaea",
+    "genitive": "iudaeae",
     "translations": {
       "en": "Judah, Judea (the southern kingdom of Israel)",
-      "la": "Judaea"
+      "la": "Iudaea"
     }
   },
   {
@@ -15317,7 +15852,15 @@
     "nominative": "notus",
     "genitive": "noti",
     "forms_plural": {
+      "accusative_m": ["notos"],
+      "nominative_m": ["noti"],
+      "accusative_n": ["nota"],
       "accusative_f": ["notas"]
+    },
+    "forms": {
+      "nominative_f": ["nota"],
+      "nominative_n": ["notum"],
+      "accusative_f": ["notam"]
     },
     "translations": {
       "en": "known, well-known",
@@ -21984,19 +22527,6 @@
     }
   },
   {
-    "lemma": "hermon",
-    "part_of_speech": "noun",
-    "declension": 3,
-    "gender": "masculine",
-    "nominative": "hermon",
-    "genitive": "hermonis",
-    "translations": {
-      "en": "hermon (mountain name)",
-      "la": "hermon, hermonis"
-    },
-    "note": "Proper noun (3rd declension Greek origin)"
-  },
-  {
     "lemma": "ros",
     "part_of_speech": "noun",
     "gender": "masculine",
@@ -24273,8 +24803,12 @@
     "nominative": "malignus",
     "genitive": "maligni",
     "translations": {
-      "en": "wicked",
-      "la": "malignus"
+      "en": "wicked, evil, malignant",
+      "la": "malignus, maligna, malignum"
+    },
+    "forms_plural": {
+      "dative_m": ["malignantibus"],
+      "ablative_m": ["malignantibus"]
     }
   },
   {
@@ -26458,8 +26992,12 @@
   {
     "lemma": "confiteor",
     "part_of_speech": "verb",
-    "perfect": "confessus sum",
+    "conjugation": 2,
     "infinitive": "confiteri",
+    "present": "confiteor",
+    "future": "confitebor",
+    "perfect": "confessus sum",
+    "supine": "confessum",
     "forms": {
       "present": [
         "confiteor",
@@ -31153,6 +31691,72 @@
     "translations": {
       "en": "deception, sophism, trap (logical)",
       "la": "captio, captionis"
+    }
+  },
+  {
+    "lemma": "incedo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "present_indicative": {
+      "first_singular": "incedo",
+      "second_singular": "incedis",
+      "third_singular": "incedit",
+      "first_plural": "incedimus",
+      "second_plural": "inceditis",
+      "third_plural": "incedunt"
+    },
+    "infinitive": "incedere",
+    "perfect": "incessi",
+    "supine": "incessum",
+    "translations": {
+      "en": "to go, walk, advance, proceed",
+      "la": "incedo, incedere, incessi, incessum"
+    }
+  },
+  {
+    "lemma": "admirabilis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "admirabilis",
+    "genitive": "admirabilis",
+    "translations": {
+      "en": "admirable, wonderful, marvelous, worthy of admiration",
+      "la": "admirabilis, admirabilis, admirabile"
+    },
+    "forms": {
+      "nominative_f": ["admirabilis"],
+      "genitive_f": ["admirabilis"],
+      "dative_f": ["admirabili"],
+      "accusative_f": ["admirabilem"],
+      "ablative_f": ["admirabili"],
+      "vocative_f": ["admirabilis"],
+      "nominative_n": ["admirabile"],
+      "genitive_n": ["admirabilis"],
+      "dative_n": ["admirabili"],
+      "accusative_n": ["admirabile"],
+      "ablative_n": ["admirabili"],
+      "vocative_n": ["admirabile"]
+    }
+  },
+  {
+    "lemma": "palma",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "palma",
+    "genitive": "palmae",
+    "translations": {
+      "en": "palm tree, palm branch, victory, triumph",
+      "la": "palma, palmae"
+    },
+    "forms": {
+      "nominative_f": ["palma"],
+      "genitive_f": ["palmae"],
+      "dative_f": ["palmae"],
+      "accusative_f": ["palmam"],
+      "ablative_f": ["palma"],
+      "vocative_f": ["palma"]
     }
   }
 ]

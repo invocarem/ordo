@@ -1,278 +1,318 @@
-import XCTest
 @testable import LatinService
+import XCTest
 
 class Psalm75Tests: XCTestCase {
-    private var latinService: LatinService!
-    let verbose = true
-    
-    override func setUp() {
-        super.setUp()
-        latinService = LatinService.shared
-    }
-    
-    // MARK: - Test Data
-    let psalm75 = [ "Notus in Judaea Deus; in Israel magnum nomen ejus.",
-                "Et factus est in pace locus ejus, et habitatio ejus in Sion.",
-                "Ibi confregit potentias arcuum, scutum, gladium, et bellum.",
-                "Illuminas tu mirabiliter a montibus aeternis.",
-                "Turbati sunt omnes insipientes corde; dormierunt somnum suum, et nihil invenerunt omnes viri divitiarum in manibus suis.",
-                "Ab increpatione tua, Deus Jacob, dormitaverunt qui ascenderunt equos.",
-                "Tu terribilis es, et quis resistet tibi? ex tunc ira tua.",
-                "De caelo auditum fecisti judicium; terra tremuit et quievit.",
-                "Cum exsurgeret in judicium Deus, ut salvos faceret omnes mansuetos terrae.",
-                "Quoniam cogitatio hominis confitebitur tibi, et reliquiae cogitationis diem festum agent tibi."
-    ]
-// MARK: - Grouped Line Tests for Psalm 75
-func testPsalm75Lines1and2() {
-    let line1 = psalm75[0] // "Notus in Judaea Deus; in Israel magnum nomen ejus."
-    let line2 = psalm75[1] // "Et factus est in pace locus ejus, et habitatio ejus in Sion."
-    let combinedText = line1 + " " + line2
-    let analysis = latinService.analyzePsalm(text: combinedText)
-    
-    let testLemmas = [
-        ("notus", ["notus"], "known"),
-        ("judaea", ["judaea"], "Judah"),
-        ("deus", ["deus"], "God"),
-        ("israel", ["israel"], "Israel"),
-        ("nomen", ["nomen"], "name"),
-        ("pax", ["pace"], "peace"),
-        ("locus", ["locus"], "place"),
-        ("habitatio", ["habitatio"], "dwelling"),
-        ("sion", ["sion"], "Zion")
-    ]
-    
-    if verbose {
-        print("\nPSALM 75:1-2 ANALYSIS:")
-        print("1: \"\(line1)\"")
-        print("2: \"\(line2)\"")
-        
-        print("\nLEMMA VERIFICATION:")
-        testLemmas.forEach { lemma, forms, translation in
-            let found = analysis.dictionary[lemma] != nil
-            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-        }
-        
-        print("\nKEY THEMES:")
-        print("1. Divine Recognition: 'Notus in Judaea Deus' (God is known in Judah)")
-        print("2. Sacred Geography: Movement from Judah/Israel to specific dwelling in Zion")
-        print("3. Peaceful Establishment: 'factus est in pace locus ejus' (His place was made in peace)")
-    }
-    
-    // Geographic assertions
-    XCTAssertEqual(analysis.dictionary["judaea"]?.forms["judaea"], 1, "Should find Judah reference")
-    XCTAssertEqual(analysis.dictionary["sion"]?.forms["sion"], 1, "Should find Zion reference")
-    
-    // Divine presence
-    XCTAssertEqual(analysis.dictionary["habitatio"]?.forms["habitatio"], 1, "Should find dwelling reference")
-    XCTAssertEqual(analysis.dictionary["locus"]?.forms["locus"], 1, "Should find place reference")
-    
-    // Peace establishment
-    XCTAssertEqual(analysis.dictionary["pax"]?.forms["pace"], 1, "Should find peace reference")
-}
+  private let utilities = PsalmTestUtilities.self
+  private let verbose = true
+  let id = PsalmIdentity(number: 75, category: "")
 
-func testPsalm75Lines3and4() {
-    let line3 = psalm75[2] // "Ibi confregit potentias arcuum, scutum, gladium, et bellum."
-    let line4 = psalm75[3] // "Illuminas tu mirabiliter a montibus aeternis."
-    let combinedText = line3 + " " + line4
-    let analysis = latinService.analyzePsalm(text: combinedText)
-    
-    let testLemmas = [
-        ("confringo", ["confregit"], "shatter"),
-        ("potentia", ["potentias"], "power"),
-        ("arcus", ["arcuum"], "bow"),
-        ("scutum", ["scutum"], "shield"),
-        ("gladius", ["gladium"], "sword"),
-        ("bellum", ["bellum"], "war"),
-        ("illumino", ["illuminas"], "illuminate"),
-        ("mirabilis", ["mirabiliter"], "wonderfully"),
-        ("mons", ["montibus"], "mountain"),
-        ("aeternus", ["aeternis"], "eternal")
-    ]
-    
-    if verbose {
-        print("\nPSALM 75:3-4 ANALYSIS:")
-        print("3: \"\(line3)\"")
-        print("4: \"\(line4)\"")
-        
-        print("\nLEMMA VERIFICATION:")
-        testLemmas.forEach { lemma, forms, translation in
-            let found = analysis.dictionary[lemma] != nil
-            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-        }
-        
-        print("\nKEY THEMES:")
-        print("1. Divine Warrior: Shattering weapons of war (v3)")
-        print("2. Divine Light: Miraculous illumination from eternal mountains (v4)")
-        print("3. Contrast: Destruction of human weapons vs. establishment of divine light")
-    }
-    
-    // War imagery
-    XCTAssertEqual(analysis.dictionary["confringo"]?.forms["confregit"], 1, "Should find shattering verb")
-    XCTAssertEqual(analysis.dictionary["bellum"]?.forms["bellum"], 1, "Should find war reference")
-    
-    // Light imagery
-    XCTAssertEqual(analysis.dictionary["illumino"]?.forms["illuminas"], 1, "Should find illumination verb")
-    XCTAssertEqual(analysis.dictionary["mirabilis"]?.forms["mirabiliter"], 1, "Should find wonderfully adverb")
-    
-    // Test weapon terms
-    let weaponTerms = ["arcuum", "scutum", "gladium"].reduce(0) {
-        $0 + (analysis.dictionary["arcus"]?.forms[$1] ?? 0)
-        + (analysis.dictionary["scutum"]?.forms[$1] ?? 0)
-        + (analysis.dictionary["gladius"]?.forms[$1] ?? 0)
-    }
-    XCTAssertEqual(weaponTerms, 3, "Should find all weapon references")
-}
+  // MARK: - Test Data Properties
 
-func testPsalm75Lines5and6() {
-    let line5 = psalm75[4] // "Turbati sunt omnes insipientes corde; dormierunt somnum suum, et nihil invenerunt omnes viri divitiarum in manibus suis."
-    let line6 = psalm75[5] // "Ab increpatione tua, Deus Jacob, dormitaverunt qui ascenderunt equos."
-    let combinedText = line5 + " " + line6
-    let analysis = latinService.analyzePsalm(text: combinedText)
-    
-    let testLemmas = [
-        ("turbo", ["turbati"], "disturb"),
-        ("insipiens", ["insipientes"], "foolish"),
-        ("cor", ["corde"], "heart"),
-        ("dormio", ["dormierunt", "dormitaverunt"], "sleep"),
-        ("somnus", ["somnum"], "sleep"),
-        ("invenio", ["invenerunt"], "find"),
-        ("vir", ["viri"], "man"),
-        ("divitiae", ["divitiarum"], "riches"),
-        ("manus", ["manibus"], "hand"),
-        ("increpatio", ["increpatione"], "rebuke"),
-        ("ascendo", ["ascenderunt"], "ascend"),
-        ("equus", ["equos"], "horse")
-    ]
-    
-    if verbose {
-        print("\nPSALM 75:5-6 ANALYSIS:")
-        print("5: \"\(line5)\"")
-        print("6: \"\(line6)\"")
-        
-        print("\nLEMMA VERIFICATION:")
-        testLemmas.forEach { lemma, forms, translation in
-            let found = analysis.dictionary[lemma] != nil
-            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-        }
-        
-        print("\nKEY THEMES:")
-        print("1. Foolishness Exposed: 'insipientes corde' (foolish in heart)")
-        print("2. Divine Rebuke: Sleep as metaphor for judgment")
-        print("3. Military Futility: Horsemen put to sleep by God's rebuke")
-    }
-    
-    // Foolishness assertions
-    XCTAssertEqual(analysis.dictionary["insipiens"]?.forms["insipientes"], 1, "Should find foolish reference")
-    XCTAssertEqual(analysis.dictionary["turbo"]?.forms["turbati"], 1, "Should find disturbance verb")
-    
-    // Sleep imagery
-    let sleepVerbs = ["dormierunt", "dormitaverunt"].reduce(0) {
-        $0 + (analysis.dictionary["dormio"]?.forms[$1] ?? 0)
-    }
-    XCTAssertEqual(sleepVerbs, 2, "Should find both sleep verbs")
-    
-    // Military reference
-    XCTAssertEqual(analysis.dictionary["equus"]?.forms["equos"], 1, "Should find horses reference")
-}
+  private let expectedVerseCount = 12
+  private let text = [
+    "Notus in Iudaea Deus; in Israel magnum nomen eius.",
+    "Et factus est in pace locus eius, et habitatio eius in Sion.",
+    "Ibi confregit potentias arcuum, scutum, gladium, et bellum.",
+    "Illuminas tu mirabiliter a montibus aeternis. Turbati sunt omnes insipientes corde; ",
+    "Dormierunt somnum suum, et nihil invenerunt omnes viri divitiarum in manibus suis.", /* 5 */
+    "Ab increpatione tua, Deus Iacob, dormitaverunt qui ascenderunt equos.",
+    "Tu terribilis es, et quis resistet tibi? ex tunc ira tua.",
+    "De caelo auditum fecisti iudicium; terra tremuit et quievit.",
+    "Cum exsurgeret in iudicium Deus, ut salvos faceret omnes mansuetos terrae.",
+    "Quoniam cogitatio hominis confitebitur tibi, et reliquiae cogitationis diem festum agent tibi.",
+    "Vovete, et reddite Domino Deo vestro: omnes, qui in circuitu eius affertis munera.",
+    "Terribili et ei qui aufert spiritum principum, terribili apud reges terrae.",
+  ]
 
-func testPsalm75Lines7and8() {
-    let line7 = psalm75[6] // "Tu terribilis es, et quis resistet tibi? ex tunc ira tua."
-    let line8 = psalm75[7] // "De caelo auditum fecisti judicium; terra tremuit et quievit."
-    let combinedText = line7 + " " + line8
-    let analysis = latinService.analyzePsalm(text: combinedText)
-    
-    let testLemmas = [
-        ("terribilis", ["terribilis"], "terrible"),
-        ("resisto", ["resistet"], "resist"),
-        ("ira", ["ira"], "wrath"),
-        ("caelum", ["caelo"], "heaven"),
-        ("auditus", ["auditum"], "hearing"),
-        ("facio", ["fecisti"], "make"),
-        ("judicium", ["judicium"], "judgment"),
-        ("terra", ["terra"], "earth"),
-        ("tremo", ["tremuit"], "tremble"),
-        ("quiesco", ["quievit"], "be still")
-    ]
-    
-    if verbose {
-        print("\nPSALM 75:7-8 ANALYSIS:")
-        print("7: \"\(line7)\"")
-        print("8: \"\(line8)\"")
-        
-        print("\nLEMMA VERIFICATION:")
-        testLemmas.forEach { lemma, forms, translation in
-            let found = analysis.dictionary[lemma] != nil
-            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-        }
-        
-        print("\nKEY THEMES:")
-        print("1. Divine Terror: Rhetorical question about resisting God")
-        print("2. Cosmic Judgment: Heaven to earth judicial movement")
-        print("3. Earth's Response: Trembling then stillness as proper response")
-    }
-    
-    // Divine nature
-    XCTAssertEqual(analysis.dictionary["terribilis"]?.forms["terribilis"], 1, "Should find terrible description")
-    XCTAssertEqual(analysis.dictionary["ira"]?.forms["ira"], 1, "Should find wrath reference")
-    
-    // Judicial process
-    XCTAssertEqual(analysis.dictionary["judicium"]?.forms["judicium"], 1, "Should find judgment reference")
-    XCTAssertEqual(analysis.dictionary["caelum"]?.forms["caelo"], 1, "Should find heaven reference")
-    
-    // Earth's reaction
-    XCTAssertEqual(analysis.dictionary["tremo"]?.forms["tremuit"], 1, "Should find trembling verb")
-    XCTAssertEqual(analysis.dictionary["quiesco"]?.forms["quievit"], 1, "Should find stillness verb")
-}
+  private let englishText = [
+    "In Judea God is known; his name is great in Israel.",
+    "And his place is in peace, and his abode in Sion.",
+    "There hath he broken the powers of bows, the shield, the sword, and the battle.",
+    "Thou enlightenest wonderfully from the everlasting hills. All the foolish of heart were troubled;",
+    "They have slept their sleep, and all the men of riches have found nothing in their hands.",
+    "At thy rebuke, O God of Jacob, they have all slumbered that mounted on horseback.",
+    "Thou art terrible, and who shall resist thee? from that time thy wrath.",
+    "Thou hast caused judgment to be heard from heaven; the earth trembled and was still.",
+    "When God arose in judgment, to save all the meek of the earth.",
+    "For the thought of man shall give praise to thee, and the remainders of the thought shall keep holiday to thee.",
+    "Vow ye, and pay to the Lord your God: all you that are round about him bring presents.",
+    "To him who takes away the spirit of princes: to the terrible with the kings of the earth.",
+  ]
 
-func testPsalm75Lines9and10() {
-    let line9 = psalm75[8] // "Cum exsurgeret in judicium Deus, ut salvos faceret omnes mansuetos terrae."
-    let line10 = psalm75[9] // "Quoniam cogitatio hominis confitebitur tibi, et reliquiae cogitationis diem festum agent tibi."
-    let combinedText = line9 + " " + line10
-    let analysis = latinService.analyzePsalm(text: combinedText)
-    
-    let testLemmas = [
-        ("exsurgo", ["exsurgeret"], "rise up"),
-        ("judicium", ["judicium"], "judgment"),
-        ("salvus", ["salvos"], "save"),
-        ("facio", ["faceret"], "make"),
-        ("mansuetus", ["mansuetos"], "meek"),
-        ("cogitatio", ["cogitatio", "cogitationis"], "thought"),
-        ("homo", ["hominis"], "man"),
-        ("confiteor", ["confitebitur"], "confess"),
-        ("reliquiae", ["reliquiae"], "remnant"),
-        ("dies", ["diem"], "day"),
-        ("festus", ["festum"], "festal"),
-        ("ago", ["agent"], "keep")
-    ]
-    
-    if verbose {
-        print("\nPSALM 75:9-10 ANALYSIS:")
-        print("9: \"\(line9)\"")
-        print("10: \"\(line10)\"")
-        
-        print("\nLEMMA VERIFICATION:")
-        testLemmas.forEach { lemma, forms, translation in
-            let found = analysis.dictionary[lemma] != nil
-            print("- \(lemma.padding(toLength: 12, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-        }
-        
-        print("\nKEY THEMES:")
-        print("1. Saving Justice: Judgment that saves the meek")
-        print("2. Human Response: Confession and festal celebration")
-        print("3. Eschatological Hope: Remnant theology in 'reliquiae cogitationis'")
+  private let lineKeyLemmas = [
+    (1, ["notus", "iudaea", "deus", "israel", "nomen"]),
+    (2, ["facio", "pax", "locus", "habitatio", "sion"]),
+    (3, ["confringo", "potentia", "arcus", "scutum", "gladius", "bellum"]),
+    (4, ["illumino", "mirabilis", "mons", "aeternus", "turbo", "insipiens", "cor"]),
+    (5, ["dormio", "somnus", "invenio", "vir", "divitiae", "manus"]),
+    (6, ["increpatio", "deus", "iacob", "dormio", "ascendo", "equus"]),
+    (7, ["terribilis", "resisto", "ira"]),
+    (8, ["caelum", "auditus", "facio", "iudicium", "terra", "tremo", "quiesco"]),
+    (9, ["exsurgo", "iudicium", "deus", "salvus", "facio", "mansuetus", "terra"]),
+    (10, ["cogitatio", "homo", "confiteor", "reliquiae", "dies", "festus", "ago"]),
+    (11, ["voveo", "reddo", "dominus", "deus", "omnis", "circuitus", "affero", "munus"]),
+    (12, ["terribilis", "aufero", "spiritus", "princeps", "terribilis", "rex", "terra"]),
+  ]
+
+  private let structuralThemes = [
+    (
+      "Divine Recognition → Sacred Geography",
+      "God's recognition in Judah/Israel leading to His peaceful establishment in Zion",
+      ["notus", "judaea", "deus", "israel", "pax", "locus", "habitatio", "sion"],
+      1,
+      2,
+      "God is known in Judah and His name is great in Israel, and His place is established in peace with His dwelling in Zion.",
+      "Augustine sees this as the progression from divine revelation to sacred geography - God's self-disclosure leads to His establishment of a holy dwelling place where His people can encounter Him."
+    ),
+    (
+      "Divine Warrior → Eternal Light",
+      "God's destruction of weapons of war contrasted with His eternal illumination",
+      ["confringo", "potentia", "arcus", "scutum", "gladius", "bellum", "illumino", "mirabilis", "mons", "aeternus"],
+      3,
+      4,
+      "God shatters the powers of bows, shields, swords, and war, while illuminating wonderfully from the eternal mountains.",
+      "For Augustine, this represents God's power over human warfare and His eternal nature - He destroys temporal weapons while providing eternal light from His everlasting dwelling."
+    ),
+    (
+      "Foolish Disturbance → Divine Rebuke",
+      "The foolish are troubled and sleep, while God's rebuke affects the mighty",
+      ["turbo", "insipiens", "cor", "dormio", "somnus", "increpatio", "deus", "iacob", "ascendo", "equus"],
+      5,
+      6,
+      "All the foolish of heart are troubled and sleep their sleep, while at God's rebuke those who mounted horses slumber.",
+      "Augustine sees this as divine judgment on both the foolish and the powerful - the foolish are disturbed in their sleep, while even the mighty horsemen are put to sleep by God's rebuke."
+    ),
+    (
+      "Divine Terror → Cosmic Judgment",
+      "God's terrifying nature leading to cosmic judgment from heaven to earth",
+      ["terribilis", "resisto", "ira", "caelum", "auditus", "facio", "iudicium", "terra", "tremo", "quiesco"],
+      7,
+      8,
+      "God is terrible and none can resist Him, and He has caused judgment to be heard from heaven while the earth trembled and was still.",
+      "Augustine sees this as the progression from divine awe to cosmic response - God's terrifying nature leads to heavenly judgment that causes the earth to tremble then be still in submission."
+    ),
+    (
+      "Saving Judgment → Human Praise",
+      "God's judgment that saves the meek leading to human confession and celebration",
+      ["exsurgo", "iudicium", "deus", "salvus", "facio", "mansuetus", "cogitatio", "homo", "confiteor", "reliquiae", "dies", "festus", "ago"],
+      9,
+      10,
+      "When God arose in judgment to save all the meek of the earth, the thought of man shall give praise to Him and the remainders of thought shall keep holiday to Him.",
+      "For Augustine, this represents the eschatological hope - God's final judgment saves the meek, and all human thought will ultimately confess and celebrate His goodness."
+    ),
+    (
+      "Vows and Offerings → Divine Terror",
+      "Human vows and offerings to God contrasted with His terrifying power over princes and kings",
+      ["voveo", "reddo", "dominus", "deus", "omnis", "circuitus", "affero", "munus", "terribilis", "aufero", "spiritus", "princeps", "rex", "terra"],
+      11,
+      12,
+      "All are called to vow and pay to the Lord their God and bring presents, while God is terrible to him who takes away the spirit of princes and is terrible with the kings of the earth.",
+      "Augustine sees this as the proper response to divine judgment - humans should offer vows and gifts to God, recognizing His terrifying power over all earthly rulers and authorities."
+    ),
+  ]
+
+  private let conceptualThemes = [
+    (
+      "Divine Names and Titles",
+      "Various names and titles for God throughout the psalm",
+      ["deus", "iacob", "dominus"],
+      ThemeCategory.divine,
+      1 ... 12
+    ),
+    (
+      "Geographic References",
+      "Sacred geography from Judah/Israel to Zion",
+      ["iudaea", "israel", "sion", "terra"],
+      ThemeCategory.divine,
+      1 ... 12
+    ),
+    (
+      "War and Weapons",
+      "Imagery of warfare and divine power over weapons",
+      ["confringo", "potentia", "arcus", "scutum", "gladius", "bellum", "ascendo", "equus"],
+      ThemeCategory.divine,
+      3 ... 6
+    ),
+    (
+      "Light and Illumination",
+      "Divine light and eternal illumination",
+      ["illumino", "mirabilis", "mons", "aeternus"],
+      ThemeCategory.divine,
+      4 ... 4
+    ),
+    (
+      "Sleep and Rest",
+      "Sleep as metaphor for judgment and divine action",
+      ["dormio", "somnus", "dormitaverunt"],
+      ThemeCategory.justice,
+      5 ... 6
+    ),
+    (
+      "Divine Judgment",
+      "God's judicial power and cosmic judgment",
+      ["terribilis", "ira", "iudicium", "exsurgo"],
+      ThemeCategory.justice,
+      7 ... 9
+    ),
+    (
+      "Human Response",
+      "Human confession, praise, and celebration",
+      ["cogitatio", "homo", "confiteor", "reliquiae", "dies", "festus", "ago"],
+      ThemeCategory.worship,
+      10 ... 10
+    ),
+    (
+      "Salvation and Mercy",
+      "God's saving action for the meek",
+      ["salvus", "facio", "mansuetus"],
+      ThemeCategory.justice,
+      9 ... 9
+    ),
+    (
+      "Vows and Offerings",
+      "Human vows and offerings to God",
+      ["voveo", "reddo", "affero", "munus"],
+      ThemeCategory.worship,
+      11 ... 11
+    ),
+    (
+      "Divine Power over Rulers",
+      "God's terrifying power over earthly princes and kings",
+      ["terribilis", "aufero", "spiritus", "princeps", "rex"],
+      ThemeCategory.divine,
+      12 ... 12
+    ),
+  ]
+
+  // MARK: - Setup
+
+  override func setUp() {
+    super.setUp()
+  }
+
+  // MARK: - Test Cases
+
+  func testTotalVerses() {
+    XCTAssertEqual(
+      text.count, expectedVerseCount, "Psalm 75 should have \(expectedVerseCount) verses"
+    )
+    XCTAssertEqual(
+      englishText.count, expectedVerseCount,
+      "Psalm 75 English text should have \(expectedVerseCount) verses"
+    )
+    // Also validate the orthography of the text for analysis consistency
+    let normalized = text.map { PsalmTestUtilities.validateLatinText($0) }
+    XCTAssertEqual(
+      normalized,
+      text,
+      "Normalized Latin text should match expected classical forms"
+    )
+  }
+
+  func testSaveTexts() {
+    let utilities = PsalmTestUtilities.self
+    let jsonString = utilities.generatePsalmTextsJSONString(
+      psalmNumber: id.number,
+      category: id.category ?? "",
+      text: text,
+      englishText: englishText
+    )
+
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm75_texts.json"
+    )
+
+    if success {
+      print("✅ Complete texts JSON created successfully")
+    } else {
+      print("⚠️ Could not save complete texts file:")
+      print(jsonString)
     }
-    
-    // Salvation assertions
-    XCTAssertEqual(analysis.dictionary["salvus"]?.forms["salvos"], 1, "Should find salvation reference")
-    XCTAssertEqual(analysis.dictionary["mansuetus"]?.forms["mansuetos"], 1, "Should find meek reference")
-    
-    // Human response
-    XCTAssertEqual(analysis.dictionary["confiteor"]?.forms["confitebitur"], 1, "Should find confession verb")
-    XCTAssertEqual(analysis.dictionary["festus"]?.forms["festum"], 1, "Should find festal reference")
-    
-    // Test verb tenses
-    let subjunctiveVerb = analysis.dictionary["exsurgo"]?.forms["exsurgeret"] ?? 0
-    let futureVerb = analysis.dictionary["confiteor"]?.forms["confitebitur"] ?? 0
-    XCTAssertEqual(subjunctiveVerb + futureVerb, 2, "Should find both subjunctive and future verbs")
-}
+  }
+
+  func testSaveThemes() {
+    let utilities = PsalmTestUtilities.self
+    guard
+      let jsonString = utilities.generateCompleteThemesJSONString(
+        psalmNumber: id.number,
+        category: id.category ?? "",
+        conceptualThemes: conceptualThemes,
+        structuralThemes: structuralThemes
+      )
+    else {
+      XCTFail("Failed to generate complete themes JSON")
+      return
+    }
+
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm75_themes.json"
+    )
+
+    if success {
+      print("✅ Complete themes JSON created successfully")
+    } else {
+      print("⚠️ Could not save complete themes file:")
+      print(jsonString)
+    }
+  }
+
+  func testLineByLineKeyLemmas() {
+    let utilities = PsalmTestUtilities.self
+    utilities.testLineByLineKeyLemmas(
+      psalmText: text,
+      lineKeyLemmas: lineKeyLemmas,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testStructuralThemes() {
+    let utilities = PsalmTestUtilities.self
+
+    // First, verify that all structural theme lemmas are in lineKeyLemmas
+    let structuralLemmas = structuralThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: structuralLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "structural themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose
+    )
+
+    // Then run the standard structural themes test
+    utilities.testStructuralThemes(
+      psalmText: text,
+      structuralThemes: structuralThemes,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testConceptualThemes() {
+    let utilities = PsalmTestUtilities.self
+
+    // First, verify that conceptual theme lemmas are in lineKeyLemmas
+    let conceptualLemmas = conceptualThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: conceptualLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "conceptual themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose
+    )
+
+    // Then run the standard conceptual themes test
+    utilities.testConceptualThemes(
+      psalmText: text,
+      conceptualThemes: conceptualThemes,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
 }
