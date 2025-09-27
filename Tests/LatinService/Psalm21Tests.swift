@@ -90,7 +90,7 @@ class Psalm21Tests: XCTestCase {
     (3, ["sanctus", "habito", "laus", "israel"]),
     (4, ["spero", "pater", "libero"]),
     (5, ["clamo", "salvus", "spero", "confundo"]),
-    (6, ["vermis", "homo", "opprobrium", "abjectio", "plebs"]),
+    (6, ["vermis", "homo", "opprobrium", "abiectio", "plebs"]),
     (7, ["video", "derideo", "labium", "moveo", "caput"]),
     (8, ["spero", "dominus", "eripio", "salvus", "volo"]),
     (9, ["extraho", "venter", "spes", "uber", "mater"]),
@@ -120,7 +120,7 @@ class Psalm21Tests: XCTestCase {
     (33, ["anima", "vivo", "semen", "servio"]),
     (
       34,
-      ["annuntio", "dominus", "generatio", "venturus", "iustitia", "populus", "nascor", "facio"]
+      ["annuntio", "dominus", "generatio", "venio", "iustitia", "populus", "nascor", "facio"]
     ),
   ]
 
@@ -293,7 +293,7 @@ class Psalm21Tests: XCTestCase {
     (
       "Future Generation → Divine Justice",
       "The proclamation to future generations and the revelation of divine justice",
-      ["annuntio", "dominus", "generatio", "venturus", "iustitia", "populus", "nascor", "facio"],
+      ["annuntio", "dominus", "generatio", "venio", "iustitia", "populus", "nascor", "facio"],
       31,
       32,
       "A generation to come will be declared to the Lord, and they will proclaim his justice to a people yet to be born, whom the Lord has made.",
@@ -302,7 +302,7 @@ class Psalm21Tests: XCTestCase {
     (
       "Eternal Proclamation → Divine Creation",
       "The eternal proclamation of God's justice and the creation of a new people",
-      ["annuntio", "dominus", "generatio", "venturus", "iustitia", "populus", "nascor", "facio"],
+      ["annuntio", "dominus", "generatio", "venio", "iustitia", "populus", "nascor", "facio"],
       33,
       34,
       "The Lord's generation will be proclaimed forever, and they will declare his justice to a people that will be born, whom the Lord has made.",

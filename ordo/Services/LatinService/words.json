@@ -15439,7 +15439,7 @@
     "supine": "ventum",
     "forms": {
       "present_subjunctive": ["veniat"],
-      "future_active_participle_nom_f": ["ventura"]
+      "future_active_participle": ["venturus", "ventura", "venturum"]
     },
     "forms_plural": {
       "nominative_present_particle": ["venientes"],
