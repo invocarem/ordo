@@ -1,5 +1,51 @@
 [
   {
+    "lemma": "liquesco",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "liquescere",
+    "present": "liquesco",
+    "future": "liquescam",
+    "perfect": "liqui",
+    "supine": null,
+    "translations": {
+      "en": "to become liquid, melt, melt away",
+      "la": "liquesco, liquescere, liqui"
+    },
+    "forms": {
+      "present_participle": ["liquescens", "liquescentis"]
+    }
+  },
+  {
+    "lemma": "taurus",
+    "part_of_speech": "noun",
+    "gender": "masculine",
+    "declension": 2,
+    "nominative": "taurus",
+    "genitive": "tauri",
+    "translations": {
+      "en": "bull, ox",
+      "la": "taurus"
+    }
+  },
+  {
+    "lemma": "conspicio",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "conspicere",
+    "present": "conspicio",
+    "future": "conspiciam",
+    "perfect": "conspexi",
+    "supine": "conspectum",
+    "translations": {
+      "en": "to look at, observe, perceive, notice",
+      "la": "conspicio, conspicere, conspexi, conspectum"
+    },
+    "forms": {
+      "present_participle": ["conspiciens", "conspicientis"]
+    }
+  },
+  {
     "lemma": "quotidie",
     "part_of_speech": "adverb",
     "translations": {
@@ -15720,6 +15766,23 @@
       "la": "narro"
     },
     "notes": "Often used for formal storytelling or reporting."
+  },
+  {
+    "lemma": "nascor",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "nasci",
+    "present": "nascor",
+    "future": "nascetur",
+    "perfect": "natus sum",
+    "supine": "natum",
+    "translations": {
+      "en": "to be born, arise, spring from",
+      "la": "nascor, nasci, natus sum"
+    },
+    "forms": {
+      "present_participle": ["nascens", "nascentis"]
+    }
   },
   {
     "lemma": "legislator",
