@@ -1,5 +1,59 @@
 [
   {
+    "lemma": "exeo",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "exire",
+    "present": "exeo",
+    "future": "exibo",
+    "perfect": "exii",
+    "supine": "exitum",
+    "translations": {
+      "en": "to go out, exit, leave",
+      "la": "exeo, exire, exii, exitum"
+    },
+    "forms": {
+      "perfect_active": [
+        "exii",
+        "existi",
+        "exivit",
+        "exiimus",
+        "existis",
+        "exierunt"
+      ]
+    }
+  },
+  {
+    "lemma": "loquela",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "loquela",
+    "genitive": "loquelae",
+    "translations": {
+      "en": "speech, utterance, way of speaking",
+      "la": "loquela"
+    }
+  },
+  {
+    "lemma": "indico",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "indicare",
+    "present": "indico",
+    "future": "indicabo",
+    "perfect": "indicavi",
+    "supine": "indicatum",
+    "translations": {
+      "en": "to point out, indicate, show, declare",
+      "la": "indico, indicare, indicavi, indicatum"
+    },
+    "forms": {
+      "present_participle": ["indicans", "indicantis"],
+      "perfect_participle": ["indicatus", "indicata", "indicatum"]
+    }
+  },
+  {
     "lemma": "saturo",
     "part_of_speech": "verb",
     "conjugation": 1,
