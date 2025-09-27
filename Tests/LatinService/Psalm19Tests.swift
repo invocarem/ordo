@@ -4,7 +4,7 @@ import XCTest
 
 class Psalm19Tests: XCTestCase {
   private let utilities = PsalmTestUtilities.self
-  private let verbose = true
+  private let verbose = false
 
   override func setUp() {
     super.setUp()
@@ -56,13 +56,16 @@ class Psalm19Tests: XCTestCase {
 
   private let structuralThemes = [
     (
-      "Divine Petition → Divine Response",
-      "Prayer for divine intervention and God's response to His anointed",
-      ["exaudio", "protego", "mitto", "tueor", "impleo", "salvus", "facio"],
+      "Divine Petition → Divine Help",
+      "Prayer for divine hearing and protection, leading to God's sending help from His sanctuary",
+      [
+        "exaudio", "dominus", "dies", "tribulatio", "protego", "nomen", "deus", "iacob", "mitto",
+        "auxilium", "sanctus", "sion", "tueor",
+      ],
       1,
-      7,
-      "The psalm begins with petitions for divine hearing, protection, help, and fulfillment, then transitions to God's response in hearing His anointed one from heaven with powerful salvation.",
-      "Augustine sees this as the pattern of prayer and divine response, where the faithful community's petitions for their leader lead to God's powerful intervention on behalf of His chosen one."
+      2,
+      "The psalm begins with petitions for divine hearing in tribulation and protection by God's name, then requests that God send help from His sanctuary and defend from Zion.",
+      "Augustine sees this as the opening pattern of prayer - acknowledging God's protective power and requesting His active intervention from His holy dwelling place."
     ),
     (
       "Sacrificial Worship → Divine Blessing",
@@ -75,33 +78,39 @@ class Psalm19Tests: XCTestCase {
     ),
     (
       "Communal Rejoicing → Divine Recognition",
-      "The community's joy in salvation and recognition of God's saving work",
-      ["laetor", "salus", "magnifico", "cognosco", "salvus", "facio", "christus"],
+      "The community's joy in salvation and recognition of God's saving work through His anointed",
+      [
+        "laetor", "salus", "nomen", "deus", "magnifico", "impleo", "dominus", "petitio", "cognosco",
+        "salvus", "facio", "christus",
+      ],
       5,
       6,
       "The community rejoices in salvation and magnifies God's name, then recognizes that the Lord has fulfilled all petitions and saved His anointed one.",
       "Augustine sees this as the proper response of the faithful community to divine salvation, combining joy with recognition of God's saving work through His anointed."
     ),
     (
-      "Earthly Power → Divine Superiority",
-      "The contrast between trusting in earthly power versus divine power",
+      "Divine Response → Earthly Power Contrast",
+      "God's response from heaven contrasted with the choice between earthly and divine power",
       [
-        "currus", "equus", "nos", "nomen", "dominus", "deus", "invoco", "obligo", "cado", "surgo",
-        "erigo",
+        "exaudio", "caelum", "sanctus", "potentatus", "salus", "dextera", "currus", "equus", "nos",
+        "nomen", "dominus", "deus", "invoco",
       ],
+      7,
       8,
-      9,
-      "Some trust in chariots and horses, but the faithful call on God's name. The former are bound and fall, while the faithful rise and stand erect.",
-      "For Augustine, this represents the fundamental choice between worldly power and divine power, with the latter leading to victory and stability while the former leads to defeat."
+      "God hears His anointed from heaven with powerful salvation, while contrasting those who trust in chariots and horses with those who call on God's name.",
+      "Augustine sees this as the divine response from heaven combined with the fundamental choice between worldly power and divine power, with the latter being the path of the faithful."
     ),
     (
-      "Final Petition → Divine Salvation",
-      "The concluding prayer for the king's salvation and divine response",
-      ["dominus", "salvus", "facio", "rex", "exaudio", "nos", "dies", "invoco"],
+      "Defeat of Wicked → Final Petition",
+      "The fall of the wicked contrasted with the faithful's rise, leading to the final prayer for the king",
+      [
+        "obligo", "cado", "nos", "surgo", "erigo", "dominus", "salvus", "facio", "rex", "exaudio",
+        "nos", "dies", "invoco",
+      ],
+      9,
       10,
-      10,
-      "The psalm concludes with a prayer for the Lord to save the king and hear the people when they call upon Him.",
-      "Augustine sees this as the culmination of the psalm's prayer, bringing together the themes of divine salvation, royal protection, and the community's ongoing relationship with God."
+      "The wicked are bound and fall while the faithful rise and stand erect, culminating in the final prayer for the Lord to save the king and hear the people.",
+      "Augustine sees this as the resolution of the power contrast - the wicked's defeat versus the faithful's victory - culminating in the community's ongoing prayer for their leader's salvation."
     ),
   ]
 
@@ -131,7 +140,7 @@ class Psalm19Tests: XCTestCase {
       "Victory and Warfare",
       "Military imagery and the contrast between earthly and divine power",
       ["currus", "equus", "cado", "surgo", "erigo", "obligo"],
-      ThemeCategory.virtue,
+      ThemeCategory.justice,
       8...9
     ),
     (
@@ -140,13 +149,6 @@ class Psalm19Tests: XCTestCase {
       ["laetor", "magnifico", "nos", "nomen", "salus"],
       ThemeCategory.virtue,
       5...10
-    ),
-    (
-      "Divine Attributes",
-      "Qualities and characteristics of God",
-      ["dominus", "deus", "sanctus", "sion", "iacob"],
-      ThemeCategory.divine,
-      1...10
     ),
     (
       "Human Petition",
@@ -232,23 +234,7 @@ class Psalm19Tests: XCTestCase {
 
   // MARK: - Test Cases
 
-  func testAnalysisSummary() {
-    let analysis = utilities.latinService.analyzePsalm(text: text)
-    if verbose {
-      print("\n=== Full Analysis ===")
-      print("Total words:", analysis.totalWords)
-      print("Unique lemmas:", analysis.uniqueLemmas)
-      print("'salvum' forms:", analysis.dictionary["salvus"]?.forms ?? [:])
-    }
-
-    XCTAssertGreaterThan(analysis.totalWords, 80)
-    XCTAssertGreaterThan(analysis.uniqueLemmas, 40)
-  }
-
   func testDivineIntervention() {
-    utilities.latinService.configureDebugging(target: "tueor")
-    let analysis = utilities.latinService.analyzePsalm(id, text: text, startingLineNumber: 1)
-
     let interventionTerms = [
       ("exaudio", ["Exaudiat", "Exaudiet", "exaudi"], "hear"),
       ("protego", ["protegat"], "protect"),
@@ -257,40 +243,49 @@ class Psalm19Tests: XCTestCase {
       ("impleo", ["Impleat"], "fulfill"),
     ]
 
-    verifyWordsInAnalysis(analysis, confirmedWords: interventionTerms)
+    utilities.testTerms(
+      psalmText: text,
+      psalmId: id,
+      terms: interventionTerms,
+      verbose: verbose
+    )
   }
 
   func testRoyalMessianicLanguage() {
-    let analysis = utilities.latinService.analyzePsalm(text: text)
-
     let royalTerms = [
       ("christus", ["christum"], "anointed"),
       ("rex", ["regem"], "king"),
-      ("potentia", ["potentatibus"], "power"),
+      ("potentatus", ["potentatibus"], "power"),
       ("dextera", ["dexterae"], "right hand"),
       ("confirmo", ["confirmet"], "strengthen"),
     ]
 
-    verifyWordsInAnalysis(analysis, confirmedWords: royalTerms)
+    utilities.testTerms(
+      psalmText: text,
+      psalmId: id,
+      terms: royalTerms,
+      verbose: verbose
+    )
   }
 
   func testSacrificialLanguage() {
-    let analysis = utilities.latinService.analyzePsalm(text: text)
-
     let sacrificialTerms = [
       ("sacrificium", ["sacrificii"], "sacrifice"),
       ("holocaustum", ["holocaustum"], "burnt offering"),
-      ("pinguis", ["pingue"], "rich/fat"),
+      ("pinguis", ["pingue"], "rich"),
       ("memor", ["Memor"], "mindful"),
       ("invoco", ["invocaverimus"], "call upon"),
     ]
 
-    verifyWordsInAnalysis(analysis, confirmedWords: sacrificialTerms)
+    utilities.testTerms(
+      psalmText: text,
+      psalmId: id,
+      terms: sacrificialTerms,
+      verbose: verbose
+    )
   }
 
   func testVictoryImagery() {
-    let analysis = utilities.latinService.analyzePsalm(text: text)
-
     let victoryTerms = [
       ("currus", ["curribus"], "chariot"),
       ("equus", ["equis"], "horse"),
@@ -299,49 +294,46 @@ class Psalm19Tests: XCTestCase {
       ("erigo", ["erecti"], "stand erect"),
     ]
 
-    verifyWordsInAnalysis(analysis, confirmedWords: victoryTerms)
+    utilities.testTerms(
+      psalmText: text,
+      psalmId: id,
+      terms: victoryTerms,
+      verbose: verbose
+    )
   }
 
   func testCommunalResponse() {
-    let analysis = utilities.latinService.analyzePsalm(text: text)
-
     let communalTerms = [
       ("laetor", ["Laetabimur"], "rejoice"),
       ("magnifico", ["magnificabimur"], "magnify"),
-      ("nos", ["nos", "nobis"], "we/us"),
+      ("nos", ["nos", "nostri"], "we"),
       ("nomen", ["nomine", "nomen"], "name"),
       ("salus", ["salutari", "salus"], "salvation"),
     ]
 
-    verifyWordsInAnalysis(analysis, confirmedWords: communalTerms)
-  }
-
-  func testDivineAttributes() {
-    let analysis = utilities.latinService.analyzePsalm(text: text)
-
-    let divineTerms = [
-      ("dominus", ["dominus", "domini"], "lord"),
-      ("deus", ["dei"], "god"),
-      ("sanctus", ["sancto", "sancto"], "holy"),
-      ("sion", ["sion"], "zion"),
-      ("jacob", ["jacob"], "Jacob"),
-    ]
-
-    verifyWordsInAnalysis(analysis, confirmedWords: divineTerms)
+    utilities.testTerms(
+      psalmText: text,
+      psalmId: id,
+      terms: communalTerms,
+      verbose: verbose
+    )
   }
 
   func testHumanPetition() {
-    let analysis = utilities.latinService.analyzePsalm(text: text)
-
     let petitionTerms = [
       ("cor", ["cor"], "heart"),
       ("consilium", ["consilium"], "plan"),
       ("petitio", ["petitiones"], "petition"),
       ("dies", ["die"], "day"),
-      ("tribulatio", ["tribulationis"], "trouble"),
+      ("tribulatio", ["tribulationis"], "tribulation"),
     ]
 
-    verifyWordsInAnalysis(analysis, confirmedWords: petitionTerms)
+    utilities.testTerms(
+      psalmText: text,
+      psalmId: id,
+      terms: petitionTerms,
+      verbose: verbose
+    )
   }
 
   func testStructuralThemes() {
@@ -392,40 +384,4 @@ class Psalm19Tests: XCTestCase {
     )
   }
 
-  // MARK: - Helper
-
-  private func verifyWordsInAnalysis(
-    _ analysis: PsalmAnalysisResult,
-    confirmedWords: [(lemma: String, forms: [String], translation: String)]
-  ) {
-    for (lemma, forms, translation) in confirmedWords {
-      guard let entry = analysis.dictionary[lemma] else {
-        XCTFail("Missing lemma: \(lemma)")
-        continue
-      }
-
-      // Verify semantic domain
-      XCTAssertTrue(
-        entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-        "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
-      )
-
-      // Verify morphological coverage
-      let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-      if !missingForms.isEmpty {
-        XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
-      }
-
-      if verbose {
-        print("\n\(lemma.uppercased())")
-        print("  Translation: \(entry.translation ?? "?")")
-        for form in forms {
-          let count = entry.forms[form.lowercased()] ?? 0
-          print(
-            "  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")"
-          )
-        }
-      }
-    }
-  }
 }

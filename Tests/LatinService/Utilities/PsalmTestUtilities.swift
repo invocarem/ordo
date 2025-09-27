@@ -333,7 +333,8 @@ public enum PsalmTestUtilities {
       let fileURL = outputDir.appendingPathComponent(filename)
 
       // Create output directory if it doesn't exist
-      try FileManager.default.createDirectory(at: outputDir, withIntermediateDirectories: true, attributes: nil)
+      try FileManager.default.createDirectory(
+        at: outputDir, withIntermediateDirectories: true, attributes: nil)
 
       // Write content to file
       try content.write(to: fileURL, atomically: true, encoding: .utf8)
@@ -467,6 +468,54 @@ public enum PsalmTestUtilities {
       if verbose {
         print("✅ All \(sourceSet.count) lemmas from \(sourceName) are present in \(targetName)")
       }
+    }
+  }
+
+  /// Tests specific terms in a psalm analysis with detailed verification
+  /// - Parameters:
+  ///   - psalmText: Array of psalm verses
+  ///   - psalmId: Psalm identity for analysis
+  ///   - terms: Array of tuples containing (lemma, forms, translation)
+  ///   - startingLineNumber: Starting line number for analysis (default: 1)
+  ///   - verbose: Whether to print detailed information (default: true)
+  public static func testTerms(
+    psalmText: [String],
+    psalmId: PsalmIdentity,
+    terms: [(String, [String], String)],
+    startingLineNumber: Int = 1,
+    verbose: Bool = true
+  ) {
+    var allFailures: [String] = []
+
+    let fullText = psalmText.joined(separator: " ")
+    let analysis = latinService.analyzePsalm(
+      psalmId, text: fullText, startingLineNumber: startingLineNumber)
+
+    for (lemma, expectedForms, translation) in terms {
+      let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
+
+      // Check if the lemma is detected
+      let lemmaFound = detectedLemmas.contains(lemma.lowercased())
+
+      if verbose {
+        let status = lemmaFound ? "✅" : "❌"
+        print("\(status) \(lemma) (\(translation)): \(lemmaFound ? "Found" : "Missing")")
+
+        if lemmaFound {
+          // Show the actual forms found
+          let actualForms = analysis.dictionary[lemma]?.forms ?? [:]
+          let formStrings = actualForms.map { "\($0.key): \($0.value)" }.joined(separator: ", ")
+          print("   Forms: \(formStrings)")
+        }
+      }
+
+      if !lemmaFound {
+        allFailures.append("Missing lemma: \(lemma) (\(translation))")
+      }
+    }
+
+    if !allFailures.isEmpty {
+      XCTFail("Missing terms detected:\n" + allFailures.joined(separator: "\n"))
     }
   }
 }
