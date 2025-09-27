@@ -1,5 +1,118 @@
 [
   {
+    "lemma": "aereus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "aereus",
+    "genitive": "aerei",
+    "translations": {
+      "en": "made of bronze, made of copper",
+      "la": "aereus"
+    },
+    "forms_plural": {
+      "accusative_m": ["aereos"],
+      "nominative_m": ["aerei"],
+      "accusative_n": ["aerea"],
+      "accusative_f": ["aereas"]
+    },
+    "forms": {
+      "nominative_f": ["aerea"],
+      "nominative_n": ["aereum"]
+    }
+  },
+  {
+    "lemma": "platea",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "platea",
+    "genitive": "plateae",
+    "translations": {
+      "en": "broad street, plaza",
+      "la": "platea"
+    },
+    "forms_plural": {
+      "genitive_f": ["platearum"],
+      "nominative_f": ["plateae"],
+      "accusative_f": ["plateas"]
+    },
+    "forms": {
+      "dative_f": ["plateae"],
+      "ablative_f": ["platea"]
+    }
+  },
+  {
+    "lemma": "obedio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "obedire",
+    "present": "obedio",
+    "future": "obediam",
+    "perfect": "obedivi",
+    "supine": "obeditum",
+    "translations": {
+      "en": "to obey, listen",
+      "la": "obedio, obedire, obedivi, obeditum"
+    },
+    "forms": {
+      "perfect_active": [
+        "obedivi",
+        "obedivisti",
+        "obedivit",
+        "obedivimus",
+        "obedivistis",
+        "obediverunt"
+      ]
+    }
+  },
+  {
+    "lemma": "sponsus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "sponsus",
+    "genitive": "sponsi",
+    "translations": {
+      "en": "bridegroom, fiancé",
+      "la": "sponsus"
+    }
+  },
+  {
+    "lemma": "thalamus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "thalamus",
+    "genitive": "thalami",
+    "translations": {
+      "en": "inner room, chamber",
+      "la": "thalamus"
+    }
+  },
+  {
+    "lemma": "maximus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "maximus",
+    "genitive": "maximi",
+    "translations": {
+      "en": "greatest, maximum",
+      "la": "maximus"
+    },
+    "forms_plural": {
+      "accusative_m": ["maximos"],
+      "nominative_m": ["maximi"],
+      "accusative_n": ["maxima"],
+      "accusative_f": ["maximas"]
+    },
+    "forms": {
+      "nominative_f": ["maxima"],
+      "nominative_n": ["maximum"]
+    }
+  },
+  {
     "lemma": "exeo",
     "part_of_speech": "verb",
     "conjugation": 4,
@@ -15673,19 +15786,6 @@
     }
   },
   {
-    "lemma": "supplanto",
-    "part_of_speech": "verb",
-    "conjugation": 1,
-    "infinitive": "supplantare",
-    "perfect": "supplantavi",
-    "supine": "supplantatum",
-    "translations": {
-      "en": "to trip up, overthrow, supplant",
-      "la": "supplanto"
-    },
-    "notes": "Literally 'to trip by the sole' (sub + planta). Used both literally and metaphorically."
-  },
-  {
     "lemma": "christus",
     "part_of_speech": "noun",
     "gender": "masculine",
@@ -23877,6 +23977,14 @@
       "la": "supplanto"
     },
     "forms": {
+      "perfect_active": [
+        "supplantavi",
+        "supplantasti",
+        "supplantavit",
+        "supplantavimus",
+        "supplantavistis",
+        "supplantaverunt"
+      ],
       "future_passive": [
         "supplantabor",
         "supplantaberis",

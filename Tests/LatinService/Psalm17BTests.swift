@@ -81,15 +81,15 @@ class Psalm17BTests: XCTestCase {
         (6, ["deus", "impollutus", "via", "eloquium", "ignis", "examino"]),
         (7, ["quis", "deus", "dominus", "noster"]),
         (8, ["deus", "praecingo", "virtus", "pono", "immaculatus", "via"]),
-        (9, ["perficio", "pes", "cervus", "excelsum", "statuo"]),
+        (9, ["perficio", "pes", "cervus", "excelsus", "statuo"]),
         (10, ["doceo", "manus", "praelium", "pono", "arcus", "aereus", "brachium"]),
-        (11, ["protego", "salus", "dexter", "suscipio"]),
+        (11, ["protectio", "salus", "dexter", "suscipio"]),
         (12, ["disciplina", "corrigo", "finis", "doceo"]),
         (13, ["dilato", "gressus", "infirmo", "vestigium"]),
         (14, ["persequor", "inimicus", "comprehendo", "converto", "deficio"]),
-        (15, ["confringo", "possum", "stare", "cado", "pes"]),
+        (15, ["confringo", "possum", "sto", "cado", "pes"]),
         (16, ["praecingo", "virtus", "bellum", "supplanto", "insurgo"]),
-        (17, ["inimicus", "dorsum", "odium", "disperdo"]),
+        (17, ["inimicus", "dorsum", "odi", "disperdo"]),
         (18, ["clamo", "salvus", "dominus", "exaudio"]),
         (19, ["comminuo", "pulvis", "facies", "ventus", "lutum", "platea", "deleo"]),
         (20, ["eripio", "contradictio", "populus", "constituo", "caput", "gens"]),
@@ -169,7 +169,7 @@ class Psalm17BTests: XCTestCase {
         (
             "Armed → Overthrown",
             "God arms for war and causes foes to collapse beneath His servant.",
-            ["praecingo", "virtus", "supplanto", "disperdo"],
+            ["praecingo", "virtus", "supplanto", "disperdo", "sto"],
             15,
             16,
             "Victory flows not from self, but from God's enabling strength.",
@@ -247,7 +247,7 @@ class Psalm17BTests: XCTestCase {
         (
             "Spiritual Warfare",
             "God's training and equipping for battle against spiritual enemies",
-            ["doceo", "praelium", "arcus", "aereus", "cervus", "statuo", "excelsum"],
+            ["doceo", "praelium", "arcus", "aereus", "cervus", "statuo", "excelsus"],
             ThemeCategory.divine,
             9...10
         ),
@@ -261,7 +261,7 @@ class Psalm17BTests: XCTestCase {
         (
             "Victory Over Enemies",
             "Divine empowerment leading to complete victory over opposition",
-            ["dilato", "vestigium", "persequor", "confringo", "cado", "pes", "supplanto", "disperdo"],
+            ["dilato", "vestigium", "persequor", "confringo", "cado", "pes", "supplanto", "disperdo", "sto"],
             ThemeCategory.virtue,
             13...18
         ),
@@ -431,7 +431,7 @@ func testNatureImagery() {
         ("ventus", ["venti"], "wind"),
         ("lutum", ["lutum"], "mud"),
         ("murus", ["murum"], "wall"),
-        ("excelsum", ["excelsa"], "heights")
+        ("excelsus", ["excelsa"], "high")
     ]
     
     verifyWordsInAnalysis(analysis, confirmedWords: natureTerms)
