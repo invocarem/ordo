@@ -1,5 +1,17 @@
 [
   {
+    "lemma": "pascua",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "pascua",
+    "genitive": "pascuae",
+    "translations": {
+      "en": "pasture, grazing land",
+      "la": "pascua"
+    }
+  },
+  {
     "lemma": "fidelis",
     "part_of_speech": "adjective",
     "declension": 3,
@@ -4288,6 +4300,9 @@
     },
     "forms": {
       "adverb": ["illic"],
+      "dative_m": ["illi"],
+      "dative_f": ["illi"],
+      "nominative_m_pl": ["illi"],
       "nominative_f": ["illa"],
       "nominative_n": ["illud"],
       "accusative_m": ["illum"],
@@ -7166,6 +7181,7 @@
         "introivistis",
         "introiverunt"
       ],
+      "imperative_2pl": ["introite"],
       "present_subjunctive_3s": ["introeat"]
     },
     "translations": {
