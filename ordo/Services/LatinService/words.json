@@ -1,5 +1,41 @@
 [
   {
+    "lemma": "ager",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "ager",
+    "genitive": "agri",
+    "translations": {
+      "en": "field, land, farm",
+      "la": "ager"
+    }
+  },
+  {
+    "lemma": "aquila",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "aquila",
+    "genitive": "aquilae",
+    "dative": "aquilae",
+    "accusative": "aquilam",
+    "ablative": "aquila",
+    "vocative": "aquila",
+    "translations": {
+      "en": "eagle",
+      "la": "aquila, aquilae"
+    },
+    "forms": {
+      "nominative_plural": ["aquilae"],
+      "genitive_plural": ["aquilarum"],
+      "dative_plural": ["aquilis"],
+      "accusative_plural": ["aquilas"],
+      "ablative_plural": ["aquilis"],
+      "vocative_plural": ["aquilae"]
+    }
+  },
+  {
     "lemma": "claudico",
     "part_of_speech": "verb",
     "conjugation": 1,
@@ -3234,6 +3270,16 @@
     "translations": {
       "en": "to save, preserve, watch over",
       "la": "servo, servare, servavi, servatum"
+    },
+    "forms": {
+      "present_active": [
+        "servo",
+        "servas",
+        "servat",
+        "servamus",
+        "servatis",
+        "servant"
+      ]
     }
   },
   {
@@ -28173,7 +28219,8 @@
       ],
       "imperative": ["audi", "audite"],
       "perfect_subjunctive_active_2pl": ["audieritis"],
-      "future_perfect_indicative_active_2pl": ["audieritis"]
+      "future_perfect_indicative_active_2pl": ["audieritis"],
+      "gerundive_accusative_f": ["audiendam"]
     }
   },
   {
@@ -28497,6 +28544,8 @@
     "perfect": "feci",
     "supine": "factum",
     "forms": {
+      "gerund": ["faciendi", "faciendo", "faciendum", "faciendo"],
+      "gerundive": ["faciendus", "facienda", "faciendum"],
       "gerundive_fem_acc_sg": ["faciendam"],
       "gerundive_fem_acc_pl": ["faciendas"],
       "gerund_genitive": ["faciendi"],
@@ -28551,7 +28600,8 @@
         "fecimus",
         "fecistis",
         "fecerunt"
-      ]
+      ],
+      "present_participle_m_pl": ["facientes"]
     },
     "translations": {
       "en": "to make, do",
