@@ -177,10 +177,15 @@ let package = Package(
 
         "Psalm94Tests.swift",
 
+
+        "Psalm99Tests.swift",
+        "Psalm100Tests.swift",
+
         "Psalm101Tests.swift",
         "Psalm102Tests.swift",
 
         "Psalm109Tests.swift",
+        "Psalm110Tests.swift",
 
         "Psalm113Tests.swift",
 

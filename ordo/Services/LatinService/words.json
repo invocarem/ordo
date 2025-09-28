@@ -1,5 +1,58 @@
 [
   {
+    "lemma": "fidelis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "fidelis",
+    "genitive": "fidelis",
+    "translations": {
+      "en": "faithful, loyal, trustworthy",
+      "la": "fidelis"
+    },
+    "forms": {
+      "nominative_f": ["fidelis"],
+      "nominative_n": ["fidele"],
+      "nominative_n_pl": ["fidelia"]
+    }
+  },
+  {
+    "lemma": "fidelia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "fidelia",
+    "genitive": "fideliae",
+    "translations": {
+      "en": "pot, jar, vessel (for liquid)",
+      "la": "fidelia"
+    }
+  },
+  {
+    "lemma": "maneo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "manere",
+    "present": "maneo",
+    "future": "manebo",
+    "perfect": "mansi",
+    "supine": "mansum",
+    "translations": {
+      "en": "to remain, stay, abide, wait for",
+      "la": "maneo, manere, mansi, mansum"
+    },
+    "forms": {
+      "present_active": [
+        "maneo",
+        "manes",
+        "manet",
+        "manemus",
+        "manetis",
+        "manent"
+      ]
+    }
+  },
+  {
     "lemma": "ager",
     "part_of_speech": "noun",
     "declension": 2,
@@ -26661,6 +26714,7 @@
         "exquisivistis",
         "exquisiverunt"
       ],
+      "perfect_passive_participle": ["exquisitus", "exquisita", "exquisitum"],
       "perfect_3pl": ["exquisierunt"],
       "imperative_singular": ["exquire"],
       "imperative_plural": ["exquirite"],
@@ -28601,7 +28655,8 @@
         "fecistis",
         "fecerunt"
       ],
-      "present_participle_m_pl": ["facientes"]
+      "present_participle_m_pl": ["facientes"],
+      "present_participle_dative_ablative_pl": ["facientibus"]
     },
     "translations": {
       "en": "to make, do",
