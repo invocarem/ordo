@@ -1,4 +1,31 @@
 [
+ 
+  {
+    "lemma": "discerno",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "discernere",
+    "present": "discerno",
+    "future": "discernam",
+    "perfect": "discrevi",
+    "supine": "discretum",
+    "translations": {
+      "en": "to separate, distinguish, discern, decide",
+      "la": "discerno, discernere, discrevi, discretum"
+    },
+    "forms": {
+      "present_active": [
+        "discerno",
+        "discernis",
+        "discernit",
+        "discernimus",
+        "discernitis",
+        "discernunt"
+      ],
+      "present_participle": ["discernens", "discernentis"],
+      "perfect_participle": ["discretus", "discreta", "discretum"]
+    }
+  },
   {
     "lemma": "pascua",
     "part_of_speech": "noun",
@@ -5021,11 +5048,12 @@
     "nominative": "iuventus",
     "genitive": "iuventutis",
     "translations": {
-      "en": "youth, young manhood, the young (as a group)",
+      "en": "youth, young manhood",
       "la": "iuventus, iuventutis"
     },
     "forms": {
-      "ablative_sg": ["iuventute"]
+      "accusative_f": ["iuventutem"],
+      "ablative_f": ["iuventute"]
     }
   },
   {
