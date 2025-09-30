@@ -140,6 +140,7 @@ let package = Package(
         "Psalm41Tests.swift",
 
         "Psalm42Tests.swift",
+        "Psalm43Tests.swift",
 
         "Psalm44Tests.swift",
 

@@ -1,5 +1,116 @@
 [
   {
+  "lemma": "verecundia",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "verecundia",
+  "genitive": "verecundiae",
+  "translations": {
+    "en": "modesty, shame, respect, reverence",
+    "la": "verecundia"
+  }
+},
+  {
+  "lemma": "vendo",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "vendere",
+  "present": "vendo",
+  "future": "vendam",
+  "perfect": "vendidi",
+  "supine": "venditum",
+  "translations": {
+    "en": "to sell, offer for sale",
+    "la": "vendo, vendere, vendidi, venditum"
+  }
+},
+  {
+  "lemma": "occisio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "occisio",
+  "genitive": "occisionis",
+  "translations": {
+    "en": "slaughter, massacre, killing",
+    "la": "occisio"
+  }
+},
+  {
+  "lemma": "conglutino",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "conglutinare",
+  "present": "conglutino",
+  "future": "conglutinabo",
+  "perfect": "conglutinavi",
+  "supine": "conglutinatum",
+  "translations": {
+    "en": "to glue together, join, unite",
+    "la": "conglutino, conglutinare, conglutinavi, conglutinatum"
+  }
+},
+  {
+  "lemma": "obdormio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "obdormire",
+  "present": "obdormio",
+  "future": "obdormiam",
+  "perfect": "obdormivi",
+  "supine": "obdormitum",
+  "translations": {
+    "en": "to fall asleep",
+    "la": "obdormio, obdormire, obdormivi, obdormitum"
+  }
+},
+{
+  "lemma": "cooperio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "cooperire",
+  "present": "cooperio",
+  "future": "cooperiam",
+  "perfect": "cooperui",
+  "supine": "coopertum",
+  "translations": {
+    "en": "to cover, overwhelm",
+    "la": "cooperio, cooperire, cooperui, coopertum"
+  }
+},
+  {
+  "lemma": "diripio",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "diripere",
+  "present": "diripio",
+  "future": "diripiam",
+  "perfect": "diripui",
+  "supine": "direptum",
+  "translations": {
+    "en": "to plunder, tear apart, seize",
+    "la": "diripio, diripere, diripui, direptum"
+  },
+  "forms": {
+    "imperfect_active": ["diripiebam", "diripiebas", "diripiebat", "diripiebamus", "diripiebatis", "diripiebant"]
+  }
+},
+  {
+  "lemma": "ventilo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "ventilare",
+  "present": "ventilo",
+  "future": "ventilabo",
+  "perfect": "ventilavi",
+  "supine": "ventilatum",
+  "translations": {
+    "en": "to fan, winnow, brandish",
+    "la": "ventilo, ventilare, ventilavi, ventilatum"
+  }
+},
+  {
     "lemma": "evello",
     "part_of_speech": "verb",
     "conjugation": 3,
@@ -7766,10 +7877,10 @@
       ],
       "perfect": [
         "complacui",
-        "complacuis",
+        "complacuisti",
         "complacuit",
-        "complacumus",
-        "complacustis",
+        "complacuimus",
+        "complacuistis",
         "complacuerunt"
       ]
     },
@@ -14828,6 +14939,9 @@
     "translations": {
       "en": "to plant, fix in place",
       "la": "planto, plantare, plantatum, plantatum"
+    },
+    "forms": {
+      "perfect_active": ["plantavi", "plantasti", "plantavit", "plantavimus", "plantavistis", "plantaverunt"]
     }
   },
   {
