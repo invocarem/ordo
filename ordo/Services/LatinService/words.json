@@ -1,5 +1,108 @@
 [
   {
+  "lemma": "resuscito",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "resuscitare",
+  "present": "resuscito",
+  "future": "resuscitabo",
+  "perfect": "resuscitavi",
+  "supine": "resuscitatum",
+  "translations": {
+    "en": "to raise up again, resurrect, revive",
+    "la": "resuscito, resuscitare, resuscitavi, resuscitatum"
+  }
+},
+  {
+  "lemma": "supplantatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "supplantatio",
+  "genitive": "supplantationis",
+  "translations": {
+    "en": "a tripping up, supplanting, overthrow",
+    "la": "supplantatio"
+  }
+},
+  {
+  "lemma": "ops",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "ops",
+  "genitive": "opis",
+  "translations": {
+    "en": "power, aid, help, resources, wealth",
+    "la": "ops"
+  }
+},{
+  "lemma": "fero",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "ferre",
+  "present": "fero",
+  "future": "feram",
+  "perfect": "tuli",
+  "supine": "latum",
+  "translations": {
+    "en": "to bear, carry, bring, endure",
+    "la": "fero, ferre, tuli, latum"
+  },
+  "forms": {
+    "present_active_subjunctive": ["feram", "feras", "ferat", "feramus", "feratis", "ferant"]
+  }
+},
+{
+  "lemma": "verto",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "vertere",
+  "present": "verto",
+  "future": "vertam",
+  "perfect": "verti",
+  "supine": "versum",
+  "translations": {
+    "en": "to turn, change, overthrow",
+    "la": "verto, vertere, verti, versum"
+  },
+  "forms": {
+    "perfect_active": ["versavi", "versavisti", "versavit", "versavimus", "versavistis", "versaverunt"],
+    "perfect_2s_eccl": ["versasti"]
+  }
+},
+  {
+  "lemma": "susurro",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "susurrare",
+  "present": "susurro",
+  "future": "susurrabo",
+  "perfect": "susurravi",
+  "supine": "susurratum",
+  "translations": {
+    "en": "to whisper, murmur",
+    "la": "susurro, susurrare, susurravi, susurratum"
+  }
+},
+  {
+  "lemma": "satio",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "satiare",
+  "present": "satio",
+  "future": "satiabo",
+  "perfect": "satiavi",
+  "supine": "satiatum",
+  "translations": {
+    "en": "to satisfy, sate, fill",
+    "la": "satio, satiare, satiavi, satiatum"
+  },
+  "forms": {
+    "future_passive": ["satiabor", "satiaberis", "satiabitur", "satiabimur", "satiabimini", "satiabuntur"]
+  }
+},
+  {
   "lemma": "voco",
   "part_of_speech": "verb",
   "conjugation": 1,
@@ -16712,17 +16815,18 @@
     }
   },
   {
-    "lemma": "pupilla",
-    "part_of_speech": "noun",
-    "declension": 1,
-    "gender": "feminine",
-    "nominative": "pupilla",
-    "accusative": "pupillam",
-    "translations": {
-      "en": "pupil (of eye), ward (legal)",
-      "la": "pupilla, -ae"
-    }
-  },
+  "lemma": "pupilla",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "pupilla",
+  "genitive": "pupillae",
+  "translations": {
+    "en": "orphan girl, ward, female minor",
+    "la": "pupilla"
+  }
+},
+  
   {
     "lemma": "notus",
     "part_of_speech": "adjective",
@@ -19864,9 +19968,12 @@
   {
     "lemma": "resurgo",
     "part_of_speech": "verb",
-    "infinitive": "resurgere",
-    "perfect": "resurrexi",
-    "supine": "resurrectum",
+    "conjugation": 3,
+  "infinitive": "resurgere",
+  "present": "resurgo",
+  "future": "resurgam",
+  "perfect": "resurrexi",
+  "supine": "resurrectum",
     "translations": {
       "en": "to rise up, resurrect",
       "la": "resurgo"

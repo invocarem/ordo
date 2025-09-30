@@ -29,12 +29,12 @@ public enum PsalmTestUtilities {
   {
     let options: String.CompareOptions = [.caseInsensitive, .diacriticInsensitive]
     var output = text
-    var searchRange = output.startIndex..<output.endIndex
+    var searchRange = output.startIndex ..< output.endIndex
 
     while let range = output.range(of: target, options: options, range: searchRange) {
       output.replaceSubrange(range, with: replacement)
       let nextStart = output.index(range.lowerBound, offsetBy: replacement.count)
-      searchRange = nextStart..<output.endIndex
+      searchRange = nextStart ..< output.endIndex
     }
     return output
   }
@@ -90,7 +90,7 @@ public enum PsalmTestUtilities {
       let (name, description, lemmas, startLine, endLine, comment, comment2) = theme
 
       // Extract the relevant lines
-      let lines = psalmText[startLine - 1..<endLine]
+      let lines = psalmText[startLine - 1 ..< endLine]
       let textToAnalyze = lines.joined(separator: " ")
 
       let analysis = latinService.analyzePsalm(psalmId, text: textToAnalyze)
@@ -140,7 +140,7 @@ public enum PsalmTestUtilities {
       let (name, description, lemmas, category, lineRange) = theme
       let textToAnalyze: String
       if let lineRange = lineRange {
-        let lines = psalmText[lineRange.lowerBound - 1...lineRange.upperBound - 1]
+        let lines = psalmText[lineRange.lowerBound - 1 ... lineRange.upperBound - 1]
         textToAnalyze = lines.joined(separator: " ")
       } else {
         textToAnalyze = psalmText.joined(separator: " ")
@@ -274,25 +274,25 @@ public enum PsalmTestUtilities {
     // Remove the outer braces from both JSON strings
     let conceptualContent =
       conceptualJSON
-      .trimmingCharacters(in: .whitespacesAndNewlines)
-      .dropFirst()  // Remove first {
-      .dropLast()  // Remove last }
+        .trimmingCharacters(in: .whitespacesAndNewlines)
+        .dropFirst() // Remove first {
+        .dropLast() // Remove last }
 
     let structuralContent =
       structuralJSON
-      .trimmingCharacters(in: .whitespacesAndNewlines)
-      .dropFirst()  // Remove first {
-      .dropLast()  // Remove last }
+        .trimmingCharacters(in: .whitespacesAndNewlines)
+        .dropFirst() // Remove first {
+        .dropLast() // Remove last }
 
     // Combine them into a single JSON object
     let combinedJSON = """
-      {
-       "psalmNumber": \(psalmNumber),
-       "category": "\(category.lowercased())",
-      \(structuralContent),
-      \(conceptualContent)
-      }
-      """
+    {
+     "psalmNumber": \(psalmNumber),
+     "category": "\(category.lowercased())",
+    \(structuralContent),
+    \(conceptualContent)
+    }
+    """
 
     return combinedJSON
   }
@@ -310,17 +310,17 @@ public enum PsalmTestUtilities {
     }.joined(separator: ",\n    ")
 
     return """
-      {
-        "number": \(psalmNumber),
-        "section": "\(category)",
-        "text": [
-          \(textJson)
-        ],
-        "englishText": [
-          \(englishTextJson)
-        ]
-      }
-      """
+    {
+      "number": \(psalmNumber),
+      "section": "\(category)",
+      "text": [
+        \(textJson)
+      ],
+      "englishText": [
+        \(englishTextJson)
+      ]
+    }
+    """
   }
 
   public static func saveToFile(
@@ -334,7 +334,8 @@ public enum PsalmTestUtilities {
 
       // Create output directory if it doesn't exist
       try FileManager.default.createDirectory(
-        at: outputDir, withIntermediateDirectories: true, attributes: nil)
+        at: outputDir, withIntermediateDirectories: true, attributes: nil
+      )
 
       // Write content to file
       try content.write(to: fileURL, atomically: true, encoding: .utf8)
@@ -489,7 +490,8 @@ public enum PsalmTestUtilities {
 
     let fullText = psalmText.joined(separator: " ")
     let analysis = latinService.analyzePsalm(
-      psalmId, text: fullText, startingLineNumber: startingLineNumber)
+      psalmId, text: fullText, startingLineNumber: startingLineNumber
+    )
 
     for (lemma, expectedForms, translation) in terms {
       let detectedLemmas = Set(analysis.dictionary.keys.map { $0.lowercased() })
@@ -500,20 +502,40 @@ public enum PsalmTestUtilities {
       // Check if the translation is correct
       var translationCorrect = false
       var actualTranslation = ""
+      var formsCorrect = false
+      var actualForms: [String] = []
+
       if lemmaFound {
         actualTranslation = analysis.dictionary[lemma]?.translation ?? ""
-        translationCorrect = actualTranslation.lowercased().contains(translation.lowercased())
+        actualForms = analysis.dictionary[lemma]?.forms.keys.map { String($0) } ?? []
+
+        // Split translation by "/" and check if any part matches
+        let translationParts = translation.lowercased().split(separator: "/")
+        let actualLowercased = actualTranslation.lowercased()
+        translationCorrect = translationParts.contains { part in
+          actualLowercased.contains(part.trimmingCharacters(in: .whitespaces))
+        }
+
+        // Check if expected forms are found
+        let expectedFormsSet = Set(expectedForms.map { $0.lowercased() })
+        let actualFormsSet = Set(actualForms.map { $0.lowercased() })
+        let foundExpectedForms = expectedFormsSet.intersection(actualFormsSet)
+        formsCorrect = !foundExpectedForms.isEmpty
       }
 
       if verbose {
-        let status = (lemmaFound && translationCorrect) ? "✅" : "❌"
+        let status = (lemmaFound && translationCorrect && formsCorrect) ? "✅" : "❌"
         print("\(status) \(lemma) (\(translation)): \(lemmaFound ? "Found" : "Missing")")
 
         if lemmaFound {
           // Show the actual forms found
-          let actualForms = analysis.dictionary[lemma]?.forms ?? [:]
-          let formStrings = actualForms.map { "\($0.key): \($0.value)" }.joined(separator: ", ")
+          let formStrings = actualForms.joined(separator: ", ")
           print("   Forms: \(formStrings)")
+
+          // Show forms verification
+          let formsStatus = formsCorrect ? "✅" : "❌"
+          let foundExpectedForms = Set(expectedForms.map { $0.lowercased() }).intersection(Set(actualForms.map { $0.lowercased() }))
+          print("   Expected Forms: \(formsStatus) Expected: \(expectedForms.joined(separator: ", ")) | Found: \(Array(foundExpectedForms).joined(separator: ", "))")
 
           // Show translation verification
           let translationStatus = translationCorrect ? "✅" : "❌"
@@ -528,6 +550,11 @@ public enum PsalmTestUtilities {
       } else if !translationCorrect {
         allFailures.append(
           "Incorrect translation for \(lemma): expected '\(translation)', got '\(actualTranslation)'"
+        )
+      } else if !formsCorrect {
+        let foundExpectedForms = Set(expectedForms.map { $0.lowercased() }).intersection(Set(actualForms.map { $0.lowercased() }))
+        allFailures.append(
+          "Missing expected forms for \(lemma): expected \(expectedForms.joined(separator: ", ")), found \(Array(foundExpectedForms).joined(separator: ", "))"
         )
       }
     }

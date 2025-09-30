@@ -240,14 +240,14 @@ class Psalm49Tests: XCTestCase {
       "Hypocritical Religion",
       "Professing God's covenant while rejecting His discipline",
       ["peccator", "enarro", "iustitia", "testamentum", "odi", "disciplina", "proicio", "sermo"],
-      ThemeCategory.vice,
+      ThemeCategory.sin,
       16 ... 17
     ),
     (
       "Complicity with Evil",
       "Association with thieves, adulterers, and deceit",
       ["fur", "curro", "adulter", "malitia", "lingua", "dolus"],
-      ThemeCategory.vice,
+      ThemeCategory.sin,
       18 ... 19
     ),
     (

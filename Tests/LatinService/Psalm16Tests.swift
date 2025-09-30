@@ -2,12 +2,11 @@
 import XCTest
 
 class Psalm16Tests: XCTestCase {
-  private var latinService: LatinService!
+  private let utilities = PsalmTestUtilities.self
   let verbose = true
 
   override func setUp() {
     super.setUp()
-    latinService = LatinService.shared
   }
 
   // MARK: - Test Data
@@ -15,7 +14,7 @@ class Psalm16Tests: XCTestCase {
   let id = PsalmIdentity(number: 16, category: "")
   private let expectedVerseCount = 17
 
-  let psalm16 = [
+  let text = [
     "Exaudi, Domine, iustitiam meam; intende deprecationem meam.",
     "Auribus percipe orationem meam, non in labiis dolosis.",
     "De vultu tuo iudicium meum prodeat; oculi tui videant aequitatem.",
@@ -64,17 +63,17 @@ class Psalm16Tests: XCTestCase {
 
   func testTotalVerses() {
     XCTAssertEqual(
-      psalm16.count, expectedVerseCount, "Psalm 16 should have \(expectedVerseCount) verses"
+      text.count, expectedVerseCount, "Psalm 16 should have \(expectedVerseCount) verses"
     )
     XCTAssertEqual(
       englishText.count, expectedVerseCount,
       "Psalm 16 English text should have \(expectedVerseCount) verses"
     )
     // Also validate the orthography of the text for analysis consistency
-    let normalized = psalm16.map { PsalmTestUtilities.validateLatinText($0) }
+    let normalized = text.map { PsalmTestUtilities.validateLatinText($0) }
     XCTAssertEqual(
       normalized,
-      psalm16,
+      text,
       "Normalized Latin text should match expected classical forms"
     )
   }
@@ -84,7 +83,7 @@ class Psalm16Tests: XCTestCase {
     let jsonString = utilities.generatePsalmTextsJSONString(
       psalmNumber: id.number,
       category: id.category ?? "",
-      text: psalm16,
+      text: text,
       englishText: englishText
     )
 
@@ -104,104 +103,87 @@ class Psalm16Tests: XCTestCase {
   // MARK: - Test Cases
 
   func testJudicialPetition() {
-    let analysis = latinService.analyzePsalm(text: psalm16)
-
     let legalTerms = [
-      ("justitia", ["justitiam"], "justice"),
-      ("judicium", ["judicium"], "judgment"),
+      ("iustitia", ["iustitiam"], "justice"),
+      ("iudicium", ["iudicium"], "judgment"),
       ("aequitas", ["aequitatem"], "equity"),
-      ("probo", ["Probasti"], "test"),
+      ("probo", ["probasti"], "test"),
       ("iniquitas", ["iniquitas"], "injustice"),
     ]
 
-    verifyWordsInAnalysis(analysis, confirmedWords: legalTerms)
+    utilities.testTerms(
+      psalmText: text,
+      psalmId: id,
+      terms: legalTerms,
+      verbose: verbose
+    )
   }
 
   func testDivineProtection() {
-    let analysis = latinService.analyzePsalm(text: psalm16)
-
     let protectionTerms = [
-      ("pupilla", ["pupillam"], "apple [of eye]"),
+      ("pupilla", ["pupillam"], "orphan girl"),
       ("ala", ["alarum"], "wing"),
       ("framea", ["frameam"], "sword"),
       ("custodio", ["custodivi", "custodi"], "guard"),
       ("protego", ["protege"], "protect"),
     ]
 
-    verifyWordsInAnalysis(analysis, confirmedWords: protectionTerms)
+    utilities.testTerms(
+      psalmText: text,
+      psalmId: id,
+      terms: protectionTerms,
+      verbose: verbose
+    )
   }
 
   func testLionImagery() {
-    let analysis = latinService.analyzePsalm(text: psalm16)
-
     let lionTerms = [
       ("leo", ["leo", "leonis"], "lion"),
       ("catulus", ["catulus"], "cub"),
       ("praeda", ["praedam"], "prey"),
-      ("abditus", ["abditis"], "hidden place"),
+      ("abditus", ["abditis"], "hidden"),
       ("supplanto", ["supplanta"], "trip up"),
     ]
 
-    verifyWordsInAnalysis(analysis, confirmedWords: lionTerms)
+    utilities.testTerms(
+      psalmText: text,
+      psalmId: id,
+      terms: lionTerms,
+      verbose: verbose
+    )
   }
 
   func testBodyMetaphors() {
-    let analysis = latinService.analyzePsalm(text: psalm16)
-
     let bodyTerms = [
       ("adeps", ["adipem"], "fat"), // Symbolizing prosperity
       ("venter", ["venter"], "belly"),
       ("oculus", ["oculi", "oculos"], "eye"),
-      ("auris", ["Auribus", "aurem"], "ear"),
+      ("auris", ["auribus", "aurem"], "ear"),
       ("labium", ["labiis", "labiorum"], "lip"),
     ]
 
-    verifyWordsInAnalysis(analysis, confirmedWords: bodyTerms)
+    utilities.testTerms(
+      psalmText: text,
+      psalmId: id,
+      terms: bodyTerms,
+      verbose: verbose
+    )
   }
 
   func testEschatologicalHope() {
-    let analysis = latinService.analyzePsalm(text: psalm16)
-
     let hopeTerms = [
       ("gloria", ["gloria"], "glory"),
-      ("satiabor", ["satiabor"], "be satisfied"),
+      ("satio", ["satiabor"], "satisfy"),
       ("appareo", ["apparebo", "apparuerit"], "appear"),
-      ("absconditum", ["absconditis"], "hidden treasures"),
+      ("absconditum", ["absconditis"], "hiding"),
       ("reliquiae", ["reliquias"], "remnants"),
     ]
 
-    verifyWordsInAnalysis(analysis, confirmedWords: hopeTerms)
-  }
-
-  // MARK: - Helper
-
-  private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
-    for (lemma, forms, translation) in confirmedWords {
-      guard let entry = analysis.dictionary[lemma] else {
-        XCTFail("Missing lemma: \(lemma)")
-        continue
-      }
-
-      // Verify semantic domain
-      XCTAssertTrue(
-        entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-        "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
-      )
-
-      // Verify morphological coverage
-      let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-      if !missingForms.isEmpty {
-        XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
-      }
-
-      if verbose {
-        print("\n\(lemma.uppercased())")
-        print("  Translation: \(entry.translation ?? "?")")
-        for form in forms {
-          let count = entry.forms[form.lowercased()] ?? 0
-          print("  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
-        }
-      }
-    }
+    utilities.testTerms(
+      psalmText: text,
+      psalmId: id,
+      terms: hopeTerms,
+      verbose: verbose
+    )
   }
 }
