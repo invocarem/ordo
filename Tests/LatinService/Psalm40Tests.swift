@@ -180,14 +180,14 @@ class Psalm40Tests: XCTestCase {
       "Enemy Opposition",
       "Various forms of persecution, mockery, and conspiracy",
       ["inimicus", "malus", "morior", "pereo", "nomen", "susurro", "cogito"],
-      ThemeCategory.virtue,
+      ThemeCategory.opposition,
       5 ... 9
     ),
     (
       "Betrayal Trauma",
       "Violation of trust by intimate associates",
       ["homo", "pax", "spero", "edo", "panis", "supplantatio"],
-      ThemeCategory.virtue,
+      ThemeCategory.opposition,
       10 ... 11
     ),
     (

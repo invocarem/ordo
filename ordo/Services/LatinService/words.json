@@ -1,5 +1,83 @@
 [
   {
+  "lemma": "tardo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "tardare",
+  "present": "tardo",
+  "future": "tardabo",
+  "perfect": "tardavi",
+  "supine": "tardatum",
+  "translations": {
+    "en": "to delay, hinder, slow down",
+    "la": "tardo, tardare, tardavi, tardatum"
+  }
+},
+  {
+  "lemma": "sollicitus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "sollicitus",
+  "genitive": "solliciti",
+  "translations": {
+    "en": "anxious, troubled, concerned, worried",
+    "la": "sollicitus"
+  }
+},{
+  "lemma": "mendicus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "mendicus",
+  "genitive": "mendici",
+  "translations": {
+    "en": "beggar, mendicant",
+    "la": "mendicus"
+  }
+},
+  {
+  "lemma": "faex",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "faex",
+  "genitive": "faecis",
+  "translations": {
+    "en": "sediment, grounds, refuse",
+    "la": "faex"
+  }
+},
+  {
+  "lemma": "expecto",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "expectare",
+  "present": "expecto",
+  "future": "expectabo",
+  "perfect": "expectavi",
+  "supine": "expectatum",
+  "translations": {
+    "en": "to await, wait for, hope for, expect",
+    "la": "expecto, expectare, expectavi, expectatum"
+  },
+  "forms": {
+    "perfect_active": ["expectavi", "expectavisti", "expectavit", "expectavimus", "expectavistis", "expectaverunt"]
+  }
+},
+  {
+  "lemma": "capillus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "capillus",
+  "genitive": "capilli",
+  "translations": {
+    "en": "hair (of the head)",
+    "la": "capillus"
+  }
+},
+  {
   "lemma": "resuscito",
   "part_of_speech": "verb",
   "conjugation": 1,
