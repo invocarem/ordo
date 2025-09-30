@@ -1,115 +1,284 @@
 [
   {
-  "lemma": "verecundia",
-  "part_of_speech": "noun",
-  "declension": 1,
-  "gender": "feminine",
-  "nominative": "verecundia",
-  "genitive": "verecundiae",
+  "lemma": "voco",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "vocare",
+  "present": "voco",
+  "future": "vocabo",
+  "perfect": "vocavi",
+  "supine": "vocatum",
   "translations": {
-    "en": "modesty, shame, respect, reverence",
-    "la": "verecundia"
+    "en": "to call, summon, name",
+    "la": "voco, vocare, vocavi, vocatum"
   }
 },
   {
-  "lemma": "vendo",
+  "lemma": "depasco",
   "part_of_speech": "verb",
   "conjugation": 3,
-  "infinitive": "vendere",
-  "present": "vendo",
-  "future": "vendam",
-  "perfect": "vendidi",
-  "supine": "venditum",
+  "infinitive": "depascere",
+  "present": "depasco",
+  "future": "depascam",
+  "perfect": "depavi",
+  "supine": "depastum",
   "translations": {
-    "en": "to sell, offer for sale",
-    "la": "vendo, vendere, vendidi, venditum"
+    "en": "to feed, pasture, consume, graze",
+    "la": "depasco, depascere, depavi, depastum"
   }
 },
   {
-  "lemma": "occisio",
+  "lemma": "placatio",
   "part_of_speech": "noun",
   "declension": 3,
   "gender": "feminine",
-  "nominative": "occisio",
-  "genitive": "occisionis",
+  "nominative": "placatio",
+  "genitive": "placationis",
   "translations": {
-    "en": "slaughter, massacre, killing",
-    "la": "occisio"
+    "en": "appeasement, pacification, calming",
+    "la": "placatio"
   }
 },
   {
-  "lemma": "conglutino",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "conglutinare",
-  "present": "conglutino",
-  "future": "conglutinabo",
-  "perfect": "conglutinavi",
-  "supine": "conglutinatum",
+  "lemma": "pretium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "pretium",
+  "genitive": "pretii",
   "translations": {
-    "en": "to glue together, join, unite",
-    "la": "conglutino, conglutinare, conglutinavi, conglutinatum"
+    "en": "price, value, reward, wages",
+    "la": "pretium"
   }
 },
   {
-  "lemma": "obdormio",
-  "part_of_speech": "verb",
-  "conjugation": 4,
-  "infinitive": "obdormire",
-  "present": "obdormio",
-  "future": "obdormiam",
-  "perfect": "obdormivi",
-  "supine": "obdormitum",
+  "lemma": "calcaneum",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "calcaneum",
+  "genitive": "calcanei",
   "translations": {
-    "en": "to fall asleep",
-    "la": "obdormio, obdormire, obdormivi, obdormitum"
-  }
-},
-{
-  "lemma": "cooperio",
-  "part_of_speech": "verb",
-  "conjugation": 4,
-  "infinitive": "cooperire",
-  "present": "cooperio",
-  "future": "cooperiam",
-  "perfect": "cooperui",
-  "supine": "coopertum",
-  "translations": {
-    "en": "to cover, overwhelm",
-    "la": "cooperio, cooperire, cooperui, coopertum"
+    "en": "heel",
+    "la": "calcaneum"
   }
 },
   {
-  "lemma": "diripio",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "diripere",
-  "present": "diripio",
-  "future": "diripiam",
-  "perfect": "diripui",
-  "supine": "direptum",
-  "translations": {
-    "en": "to plunder, tear apart, seize",
-    "la": "diripio, diripere, diripui, direptum"
+    "lemma": "morior",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "mori",
+    "present": "morior",
+    "future": "morior",
+    "perfect": "mortuus sum",
+    "supine": "mortuum",
+    "translations": {
+      "en": "to die, perish",
+      "la": "morior, mori, mortuus sum"
+    },
+    "forms": {
+      "present_participle": ["moriens", "morientis"],
+      "present_participle_m_pl": ["morientes"],
+      "present_participle_f_pl": ["morientes"]
+    }
   },
-  "forms": {
-    "imperfect_active": ["diripiebam", "diripiebas", "diripiebat", "diripiebamus", "diripiebatis", "diripiebant"]
-  }
-},
   {
-  "lemma": "ventilo",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "ventilare",
-  "present": "ventilo",
-  "future": "ventilabo",
-  "perfect": "ventilavi",
-  "supine": "ventilatum",
-  "translations": {
-    "en": "to fan, winnow, brandish",
-    "la": "ventilo, ventilare, ventilavi, ventilatum"
-  }
-},
+    "lemma": "enigma",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "enigma",
+    "genitive": "enigmatis",
+    "translations": {
+      "en": "riddle, enigma",
+      "la": "enigma"
+    }
+  },
+  {
+    "lemma": "prudentia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "prudentia",
+    "genitive": "prudentiae",
+    "translations": {
+      "en": "prudence, foresight, wisdom",
+      "la": "prudentia"
+    }
+  },
+  {
+    "lemma": "terrigena",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "terrigena",
+    "genitive": "terrigenae",
+    "translations": {
+      "en": "earth-born, mortal",
+      "la": "terrigena"
+    }
+  },
+  {
+    "lemma": "comparo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "comparare",
+    "present": "comparo",
+    "future": "comparabo",
+    "perfect": "comparavi",
+    "supine": "comparatum",
+    "translations": {
+      "en": "to prepare, provide, compare, arrange",
+      "la": "comparo, comparare, comparavi, comparatum"
+    },
+    "forms": {
+      "perfect_passive_participle": ["comparatus", "comparata", "comparatum"]
+    }
+  },
+  {
+    "lemma": "sapiens",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "sapiens",
+    "genitive": "sapientis",
+    "translations": {
+      "en": "wise, sensible, judicious",
+      "la": "sapiens"
+    }
+  },
+  {
+    "lemma": "veterasco",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "veterascere",
+    "present": "veterasco",
+    "future": "veterascam",
+    "perfect": "veteravi",
+    "supine": null,
+    "translations": {
+      "en": "to grow old, become aged",
+      "la": "veterasco, veterascere, veteravi"
+    }
+  },
+  {
+    "lemma": "verecundia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "verecundia",
+    "genitive": "verecundiae",
+    "translations": {
+      "en": "modesty, shame, respect, reverence",
+      "la": "verecundia"
+    }
+  },
+  {
+    "lemma": "vendo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "vendere",
+    "present": "vendo",
+    "future": "vendam",
+    "perfect": "vendidi",
+    "supine": "venditum",
+    "translations": {
+      "en": "to sell, offer for sale",
+      "la": "vendo, vendere, vendidi, venditum"
+    }
+  },
+  {
+    "lemma": "occisio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "occisio",
+    "genitive": "occisionis",
+    "translations": {
+      "en": "slaughter, massacre, killing",
+      "la": "occisio"
+    }
+  },
+  {
+    "lemma": "conglutino",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "conglutinare",
+    "present": "conglutino",
+    "future": "conglutinabo",
+    "perfect": "conglutinavi",
+    "supine": "conglutinatum",
+    "translations": {
+      "en": "to glue together, join, unite",
+      "la": "conglutino, conglutinare, conglutinavi, conglutinatum"
+    }
+  },
+  {
+    "lemma": "obdormio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "obdormire",
+    "present": "obdormio",
+    "future": "obdormiam",
+    "perfect": "obdormivi",
+    "supine": "obdormitum",
+    "translations": {
+      "en": "to fall asleep",
+      "la": "obdormio, obdormire, obdormivi, obdormitum"
+    }
+  },
+  {
+    "lemma": "cooperio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "cooperire",
+    "present": "cooperio",
+    "future": "cooperiam",
+    "perfect": "cooperui",
+    "supine": "coopertum",
+    "translations": {
+      "en": "to cover, overwhelm",
+      "la": "cooperio, cooperire, cooperui, coopertum"
+    }
+  },
+  {
+    "lemma": "diripio",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "diripere",
+    "present": "diripio",
+    "future": "diripiam",
+    "perfect": "diripui",
+    "supine": "direptum",
+    "translations": {
+      "en": "to plunder, tear apart, seize",
+      "la": "diripio, diripere, diripui, direptum"
+    },
+    "forms": {
+      "imperfect_active": [
+        "diripiebam",
+        "diripiebas",
+        "diripiebat",
+        "diripiebamus",
+        "diripiebatis",
+        "diripiebant"
+      ]
+    }
+  },
+  {
+    "lemma": "ventilo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "ventilare",
+    "present": "ventilo",
+    "future": "ventilabo",
+    "perfect": "ventilavi",
+    "supine": "ventilatum",
+    "translations": {
+      "en": "to fan, winnow, brandish",
+      "la": "ventilo, ventilare, ventilavi, ventilatum"
+    }
+  },
   {
     "lemma": "evello",
     "part_of_speech": "verb",
@@ -14941,7 +15110,14 @@
       "la": "planto, plantare, plantatum, plantatum"
     },
     "forms": {
-      "perfect_active": ["plantavi", "plantasti", "plantavit", "plantavimus", "plantavistis", "plantaverunt"]
+      "perfect_active": [
+        "plantavi",
+        "plantasti",
+        "plantavit",
+        "plantavimus",
+        "plantavistis",
+        "plantaverunt"
+      ]
     }
   },
   {
@@ -22625,6 +22801,10 @@
     "conjugation": 3,
     "deponent": false,
     "infinitive": "relinquere",
+  "present": "relinquo",
+  "future": "relinquam",
+  "perfect": "reliqui",
+  "supine": "relictum",
     "forms": {
       "present": [
         "relinquo",
@@ -22643,7 +22823,7 @@
         "relinquatis",
         "relinquont"
       ],
-      "future": ["relinquet"]
+      "future_active": ["relinquam", "relinques", "relinquet", "relinquemus", "relinquetis", "relinquent"]
     },
     "translations": {
       "en": "to leave, abandon",
