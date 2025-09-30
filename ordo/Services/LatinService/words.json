@@ -1,5 +1,193 @@
 [
- 
+  {
+    "lemma": "evello",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "evellere",
+    "present": "evello",
+    "future": "evellam",
+    "perfect": "evelli",
+    "supine": "evulsum",
+    "translations": {
+      "en": "to pull out, pluck out, tear out",
+      "la": "evello, evellere, evelli, evulsum"
+    },
+    "forms": {
+      "future_active": [
+        "evellam",
+        "evelles",
+        "evellet",
+        "evellemus",
+        "evelletis",
+        "evellent"
+      ]
+    }
+  },
+  {
+    "lemma": "unicus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "unicus",
+    "genitive": "unici",
+    "translations": {
+      "en": "only, sole, single, unique",
+      "la": "unicus"
+    },
+    "forms_plural": {
+      "accusative_m": ["unicos"],
+      "nominative_m": ["unici"],
+      "accusative_n": ["unica"],
+      "accusative_f": ["unicas"]
+    },
+    "forms": {
+      "nominative_f": ["unica"],
+      "nominative_n": ["unicum"]
+    }
+  },
+  {
+    "lemma": "propitio",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "propitiare",
+    "present": "propitio",
+    "future": "propitiabo",
+    "perfect": "propitiavi",
+    "supine": "propitiatum",
+    "translations": {
+      "en": "to appease, forgive, be merciful",
+      "la": "propitio, propitiare, propitiavi, propitiatum"
+    },
+    "forms": {
+      "future_passive": [
+        "propitiabor",
+        "propitiaberis",
+        "propitiabitur",
+        "propitiabimur",
+        "propitiabimini",
+        "propitiabuntur"
+      ]
+    }
+  },
+  {
+    "lemma": "universus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "universus",
+    "genitive": "universi",
+    "translations": {
+      "en": "all together, entire, whole, universal",
+      "la": "universus"
+    },
+    "forms_plural": {
+      "accusative_m": ["universos"],
+      "nominative_m": ["universi"],
+      "accusative_n": ["universa"],
+      "accusative_f": ["universas"]
+    },
+    "forms": {
+      "nominative_f": ["universa"],
+      "nominative_n": ["universum"],
+      "genitive_f": ["universae"],
+      "genitive_n": ["universi"],
+      "dative_f": ["universae"],
+      "dative_n": ["universo"],
+      "accusative_f": ["universam"],
+      "accusative_n": ["universum"],
+      "ablative_f": ["universa"],
+      "ablative_n": ["universo"],
+      "vocative_f": ["universa"],
+      "vocative_n": ["universum"]
+    }
+  },
+  {
+    "lemma": "ignorantia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "ignorantia",
+    "genitive": "ignorantiae",
+    "translations": {
+      "en": "ignorance, lack of knowledge",
+      "la": "ignorantia"
+    }
+  },
+  {
+    "lemma": "salvator",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "salvator",
+    "genitive": "salvatoris",
+    "translations": {
+      "en": "savior, deliverer",
+      "la": "salvator"
+    }
+  },
+  {
+    "lemma": "edoceo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "edocere",
+    "present": "edoceo",
+    "future": "edocebo",
+    "perfect": "edocui",
+    "supine": "edoctum",
+    "translations": {
+      "en": "to teach thoroughly, instruct fully",
+      "la": "edoceo, edocere, edocui, edoctum"
+    }
+  },
+  {
+    "lemma": "demonstro",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "demonstrare",
+    "present": "demonstro",
+    "future": "demonstrabo",
+    "perfect": "demonstravi",
+    "supine": "demonstratum",
+    "translations": {
+      "en": "to show, point out, demonstrate",
+      "la": "demonstro, demonstrare, demonstravi, demonstratum"
+    }
+  },
+  {
+    "lemma": "dimitto",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "dimittere",
+    "present": "dimitto",
+    "future": "dimittam",
+    "perfect": "dimisi",
+    "supine": "dimissum",
+    "translations": {
+      "en": "to send away, dismiss, forgive, leave",
+      "la": "dimitto, dimittere, dimisi, dimissum"
+    },
+    "forms": {
+      "imperative_2sg": ["dimitte"]
+    }
+  },
+  {
+    "lemma": "reminiscor",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "reminisci",
+    "present": "reminiscor",
+    "future": "reminiscar",
+    "perfect": "reminitus sum",
+    "supine": null,
+    "translations": {
+      "en": "to remember, recollect",
+      "la": "reminiscor, reminisci, reminitu sum"
+    },
+    "forms": {
+      "imperative_2sg": ["reminiscere"]
+    }
+  },
+
   {
     "lemma": "discerno",
     "part_of_speech": "verb",
@@ -3508,20 +3696,7 @@
       "la": "credo, credere, credidi, creditum"
     }
   },
-  {
-    "lemma": "reminiscor",
-    "part_of_speech": "verb",
-    "conjugation": 3,
-    "infinitive": "reminisci",
-    "present": "reminiscor",
-    "future": "reminiscar",
-    "perfect": "reminitus",
-    "supine": "reminitum",
-    "translations": {
-      "en": "to remember, recall, recollect",
-      "la": "reminiscor, reminiscī, reminitus sum, reminutum"
-    }
-  },
+
   {
     "lemma": "cherubim",
     "part_of_speech": "noun",
@@ -16324,8 +16499,11 @@
   {
     "lemma": "erubesco",
     "part_of_speech": "verb",
+    "conjugation": 3,
     "infinitive": "erubescere",
+    "future": "erubescam",
     "perfect": "erubui",
+    "supine": null,
     "translations": {
       "en": "be ashamed, blush",
       "la": "erubesco"
@@ -32126,14 +32304,6 @@
     "lemma": "incedo",
     "part_of_speech": "verb",
     "conjugation": 3,
-    "present_indicative": {
-      "first_singular": "incedo",
-      "second_singular": "incedis",
-      "third_singular": "incedit",
-      "first_plural": "incedimus",
-      "second_plural": "inceditis",
-      "third_plural": "incedunt"
-    },
     "infinitive": "incedere",
     "perfect": "incessi",
     "supine": "incessum",
@@ -32186,6 +32356,41 @@
       "accusative_f": ["palmam"],
       "ablative_f": ["palma"],
       "vocative_f": ["palma"]
+    }
+  },
+  {
+    "lemma": "mitis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "mitis",
+    "genitive": "mitis",
+    "translations": {
+      "en": "gentle, meek, mild, soft, tender, kind",
+      "la": "mitis, mitis, mite"
+    },
+    "forms": {
+      "nominative_f": ["mitis"],
+      "nominative_n": ["mite"],
+      "genitive_f": ["mitis"],
+      "genitive_n": ["mitis"],
+      "accusative_m": ["mitem"],
+      "accusative_f": ["mitem"],
+      "accusative_n": ["mite"],
+      "ablative_m": ["miti"],
+      "ablative_f": ["miti"],
+      "ablative_n": ["miti"]
+    },
+    "forms_plural": {
+      "nominative_m": ["mites"],
+      "nominative_f": ["mites"],
+      "nominative_n": ["mitia"],
+      "genitive_m": ["mitium"],
+      "genitive_f": ["mitium"],
+      "genitive_n": ["mitium"],
+      "accusative_m": ["mites"],
+      "accusative_f": ["mites"],
+      "accusative_n": ["mitia"]
     }
   }
 ]
