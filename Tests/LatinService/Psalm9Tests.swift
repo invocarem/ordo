@@ -388,21 +388,6 @@ class Psalm9ATests: XCTestCase {
       }
     }
   }
-
-  private func verifyThematicElements(analysis: PsalmAnalysisResult, expectedThemes: [String: [(lemma: String, description: String)]]) {
-    for (theme, elements) in expectedThemes {
-      for (lemma, description) in elements {
-        guard analysis.dictionary[lemma] != nil else {
-          XCTFail("Missing lemma for theme verification: \(lemma) (theme: \(theme))")
-          continue
-        }
-
-        if verbose {
-          print("VERIFIED THEME: \(theme) - \(lemma) (\(description))")
-        }
-      }
-    }
-  }
 }
 
 class Psalm9BTests: XCTestCase {
@@ -685,8 +670,6 @@ class Psalm9BTests: XCTestCase {
   // MARK: - Grouped Line Tests for Psalm 9B
 
   func testDivineIntervention() {
-    let analysis = latinService.analyzePsalm(id, text: psalm9B)
-
     let interventionTerms = [
       ("exsurgo", ["exsurge", "exsurge"], "arise"), // v.1, v.16
       ("iudico", ["iudicentur"], "judge"), // v.1
@@ -694,12 +677,15 @@ class Psalm9BTests: XCTestCase {
       ("contero", ["contere"], "crush"), // v.20
     ]
 
-    verifyWordsInAnalysis(analysis, confirmedWords: interventionTerms)
+    utilities.testTerms(
+      psalmText: psalm9B,
+      psalmId: id,
+      terms: interventionTerms,
+      verbose: verbose
+    )
   }
 
   func testWickedCharacteristics() {
-    let analysis = latinService.analyzePsalm(id, text: psalm9B)
-
     let wickedTerms = [
       ("impius", ["impius", "impius"], "wicked"), // v.4, v.17
       ("peccator", ["peccator", "peccatoris"], "sinner"), // v.5, v.20
@@ -709,12 +695,15 @@ class Psalm9BTests: XCTestCase {
       ("insidior", ["insidiatur", "insidiatur"], "ambush"), // v.12, v.13
     ]
 
-    verifyWordsInAnalysis(analysis, confirmedWords: wickedTerms)
+    utilities.testTerms(
+      psalmText: psalm9B,
+      psalmId: id,
+      terms: wickedTerms,
+      verbose: verbose
+    )
   }
 
   func testPoorAndOppressed() {
-    let analysis = latinService.analyzePsalm(id, text: psalm9B)
-
     let poorTerms = [
       ("pauper", ["pauper", "pauperem", "pauperum", "pauperum"], "poor"), // v.4, v.12, v.14, v.16
       ("innocens", ["innocentem"], "innocent"), // v.11
@@ -722,12 +711,15 @@ class Psalm9BTests: XCTestCase {
       ("humilis", ["humili"], "humble"), // v.23
     ]
 
-    verifyWordsInAnalysis(analysis, confirmedWords: poorTerms)
+    utilities.testTerms(
+      psalmText: psalm9B,
+      psalmId: id,
+      terms: poorTerms,
+      verbose: verbose
+    )
   }
 
   func testDivineAttributes() {
-    let analysis = latinService.analyzePsalm(id, text: psalm9B)
-
     let attributeTerms = [
       ("legislator", ["legislatorem"], "lawgiver"), // v.2
       ("regno", ["regnabit"], "reign"), // v.21
@@ -735,12 +727,15 @@ class Psalm9BTests: XCTestCase {
       ("obliviscor", ["obliviscaris"], "forget"), // v.16 (negative)
     ]
 
-    verifyWordsInAnalysis(analysis, confirmedWords: attributeTerms)
+    utilities.testTerms(
+      psalmText: psalm9B,
+      psalmId: id,
+      terms: attributeTerms,
+      verbose: verbose
+    )
   }
 
   func testEschatologicalHope() {
-    let analysis = latinService.analyzePsalm(id, text: psalm9B)
-
     let hopeTerms = [
       ("aeternus", ["aeternum"], "forever"), // v.21
       ("saeculum", ["saeculum"], "age"), // v.21
@@ -748,7 +743,12 @@ class Psalm9BTests: XCTestCase {
       ("exaudio", ["exaudivit"], "hear"), // v.22
     ]
 
-    verifyWordsInAnalysis(analysis, confirmedWords: hopeTerms)
+    utilities.testTerms(
+      psalmText: psalm9B,
+      psalmId: id,
+      terms: hopeTerms,
+      verbose: verbose
+    )
   }
 
   // MARK: - Line Key Lemmas Tests
@@ -854,69 +854,6 @@ class Psalm9BTests: XCTestCase {
     } else {
       print("⚠️ Could not save complete themes file:")
       print(jsonString)
-    }
-  }
-
-  // MARK: - Helper
-
-  private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
-    let caseInsensitiveDict = Dictionary(uniqueKeysWithValues:
-      analysis.dictionary.map { ($0.key.lowercased(), $0.value) }
-    )
-    for (lemma, _, _) in confirmedWords {
-      guard caseInsensitiveDict[lemma.lowercased()] != nil else {
-        print("\n!!! ❌ MISSING LEMMA IN DICTIONARY: \(lemma)")
-        XCTFail("Missing lemma: \(lemma)")
-        continue
-      }
-    }
-
-    for (lemma, forms, translation) in confirmedWords {
-      guard let entry = caseInsensitiveDict[lemma.lowercased()] else {
-        print("\n❌ MISSING LEMMA IN DICTIONARY: \(lemma)")
-        XCTFail("Missing lemma: \(lemma)")
-        continue
-      }
-
-      // Verify semantic domain
-      XCTAssertTrue(
-        entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-        "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
-      )
-
-      // Verify morphological coverage (case-insensitive)
-      let entryFormsLowercased = Dictionary(uniqueKeysWithValues:
-        entry.forms.map { ($0.key.lowercased(), $0.value) }
-      )
-
-      let missingForms = forms.filter { entryFormsLowercased[$0.lowercased()] == nil }
-      if !missingForms.isEmpty {
-        XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
-      }
-
-      if verbose {
-        print("\n\(lemma.uppercased())")
-        print("  Translation: \(entry.translation ?? "?")")
-        for form in forms {
-          let count = entryFormsLowercased[form.lowercased()] ?? 0
-          print("  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
-        }
-      }
-    }
-  }
-
-  private func verifyThematicElements(analysis: PsalmAnalysisResult, expectedThemes: [String: [(lemma: String, description: String)]]) {
-    for (theme, elements) in expectedThemes {
-      for (lemma, description) in elements {
-        guard analysis.dictionary[lemma] != nil else {
-          XCTFail("Missing lemma for theme verification: \(lemma) (theme: \(theme))")
-          continue
-        }
-
-        if verbose {
-          print("VERIFIED THEME: \(theme) - \(lemma) (\(description))")
-        }
-      }
     }
   }
 }
