@@ -1,5 +1,49 @@
 [
   {
+  "lemma": "prodeo",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "prodire",
+  "present": "prodeo",
+  "future": "prodibo",
+  "perfect": "prodii",
+  "supine": "proditum",
+  "translations": {
+    "en": "to go forth, come out, appear",
+    "la": "prodeo, prodire, prodii, proditum"
+  },
+  "forms": {
+    "present_active_subjunctive": ["prodeam", "prodeas", "prodeat", "prodeamus", "prodeatis", "prodeant"]
+  }
+},
+  {
+  "lemma": "paucus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "paucus",
+  "genitive": "pauci",
+  "translations": {
+    "en": "few, little",
+    "la": "paucus"
+  }
+ 
+},
+  {
+  "lemma": "adimpleo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "adimplere",
+  "present": "adimpleo",
+  "future": "adimplebo",
+  "perfect": "adimplevi",
+  "supine": "adimpletum",
+  "translations": {
+    "en": "to fill up, fulfill, complete",
+    "la": "adimpleo, adimplere, adimplevi, adimpletum"
+  }
+},
+  {
   "lemma": "tardo",
   "part_of_speech": "verb",
   "conjugation": 1,
@@ -14481,7 +14525,10 @@
     "perfect": "proieci",
     "supine": "proiectum",
     "forms": {
+      "present_subjunctive_1pl": ["proiiciamus"],
       "present_subjunctive_2sg": ["proiicias"],
+      "present_participle_m_plural": ["proicientes"],
+      "present_participle_f_plural": ["proicientes"],
       "perfect_participle": ["proiectus", "proiecta", "proiectum"]
     },
     "translations": {
@@ -20703,6 +20750,7 @@
   {
     "lemma": "spero",
     "part_of_speech": "verb",
+    "conjugation": 1,
     "infinitive": "sperare",
     "present": "spero",
     "future": "sperabo",
