@@ -14,50 +14,44 @@ class Psalm16Tests: XCTestCase {
   let id = PsalmIdentity(number: 16, category: "")
   private let expectedVerseCount = 17
 
-  let text = [
-    "Exaudi, Domine, iustitiam meam; intende deprecationem meam.",
-    "Auribus percipe orationem meam, non in labiis dolosis.",
-    "De vultu tuo iudicium meum prodeat; oculi tui videant aequitatem.",
-    "Probasti cor meum, et visitasti nocte; igne me examinasti, et non est inventa in me iniquitas.",
-    "Ut non loquatur os meum opera hominum; propter verba labiorum tuorum ego custodivi vias duras.",
+let text = [
+/*  1 */ "Exaudi, Domine, iustitiam meam; intende deprecationem meam.",
+/*  2 */ "Auribus percipe orationem meam, non in labiis dolosis.",
+/*  3 */ "De vultu tuo iudicium meum prodeat; oculi tui videant aequitatem.",
+/*  4 */ "Probasti cor meum, et visitasti nocte; igne me examinasti, et non est inventa in me iniquitas.",
+/*  5 */ "Ut non loquatur os meum opera hominum; propter verba labiorum tuorum ego custodivi vias duras.",
+/*  6 */ "Perfice gressus meos in semitis tuis, ut non moveantur vestigia mea.",
+/*  7 */ "Ego clamavi, quoniam exaudisti me, Deus; inclina aurem tuam mihi, et exaudi verba mea.",
+/*  8 */ "Mirifica misericordias tuas, qui salvos facis sperantes in te.",
+/*  9 */ "A resistentibus dexterae tuae custodi me, ut pupillam oculi.",
+/* 10 */ "Sub umbra alarum tuarum protege me, a facie impiorum qui me afflixerunt.",
+/* 11 */ "Inimici mei animam meam circumdederunt; adipem suum concluserunt, os eorum locutum est superbiam.",
+/* 12 */ "Proicientes me nunc circumdederunt me; oculos suos statuerunt declinare in terram.",
+/* 13 */ "Susceperunt me sicut leo paratus ad praedam, et sicut catulus leonis habitans in abditis.",
+/* 14 */ "Exsurge, Domine, praeveni eos, et supplanta eos. Eripe animam meam ab impio, frameam tuam ab inimicis manus tuae.",
+/* 15 */ "Domine, a paucis de terra divide eos in vita eorum; de absconditis tuis adimpletus est venter eorum.",
+/* 16 */ "Saturati sunt filiis, et dimiserunt reliquias suas parvulis suis.",
+/* 17 */ "Ego autem in iustitia apparebo conspectui tuo; satiabor cum apparuerit gloria tua.",
+]
 
-    "Perfice gressus meos in semitis tuis, ut non moveantur vestigia mea.",
-    "Ego clamavi, quoniam exaudisti me, Deus; inclina aurem tuam mihi, et exaudi verba mea.",
-    "Mirifica misericordias tuas, qui salvos facis sperantes in te.",
-    "A resistentibus dexterae tuae custodi me, ut pupillam oculi.",
-    "Sub umbra alarum tuarum protege me, a facie impiorum qui me afflixerunt.",
 
-    "Inimici mei animam meam circumdederunt; adipem suum concluserunt, os eorum locutum est superbiam.",
-    "Proicientes me nunc circumdederunt me; oculos suos statuerunt declinare in terram.",
-    "Susceperunt me sicut leo paratus ad praedam, et sicut catulus leonis habitans in abditis.",
-    "Exsurge, Domine, praeveni eos, et supplanta eos. Eripe animam meam ab impio, frameam tuam ab inimicis manus tuae.",
-    "Domine, a paucis de terra divide eos in vita eorum; de absconditis tuis adimpletus est venter eorum.",
-    "Saturati sunt filiis, et dimiserunt reliquias suas parvulis suis.",
-    "Ego autem in iustitia apparebo conspectui tuo; satiabor cum apparuerit gloria tua.",
-  ]
-
-  private let englishText = [
-    "Hear, O Lord, my justice: attend to my supplication.",
-    "Give ear unto my prayer, which proceedeth not from deceitful lips.",
-    "Let my judgment come forth from thy countenance: let thy eyes behold the things that are equitable.",
-    "Thou hast proved my heart, and visited it by night, thou hast tried me by fire: and iniquity hath not been found in me.",
-    "That my mouth may not speak the works of men: for the sake of the words of thy lips, I have kept hard ways.",
-
-    "Perfect thou my goings in thy paths: that my footsteps be not moved.",
-    "I have cried to thee, for thou, O God, hast heard me: O incline thy ear unto me, and hear my words.",
-    "Shew forth thy wonderful mercies; thou who savest them that trust in thee.",
-    "From them that resist thy right hand keep me, as the apple of thy eye.",
-    "Protect me under the shadow of thy wings, from the face of the wicked who have afflicted me.",
-
-    "My enemies have surrounded my soul: they have shut up their fat: their mouth hath spoken proudly.",
-    "They have cast me forth and now they have surrounded me: they have set their eyes to cast me down to the earth.",
-    "They have taken me, as a lion prepared for the prey; and as a young lion dwelling in secret places.",
-    "Arise, O Lord, disappoint them and supplant them; deliver my soul from the wicked one; thy sword from the enemies of thy hand.",
-    "O Lord, divide them in their number: and scatter them in their vanity.",
-
-    "Let their belly be filled with thy hidden things: and let their children be satisfied, and leave the rest to their little ones.",
-    "But as for me, I will appear before thy sight in justice: I shall be satisfied when thy glory shall appear.",
-  ]
+ private let englishText = [ /* 1 */ "Hear, O Lord, my justice: attend to my supplication.",
+                           /* 2 */ "Give ear unto my prayer, which proceedeth not from deceitful lips.",
+                           /* 3 */ "Let my judgment come forth from thy countenance: let thy eyes behold the things that are equitable.",
+                           /* 4 */ "Thou hast proved my heart, and visited it by night, thou hast tried me by fire: and iniquity hath not been found in me.",
+                           /* 5 */ "That my mouth may not speak the works of men: for the sake of the words of thy lips, I have kept hard ways.",
+                           /* 6 */ "Perfect thou my goings in thy paths: that my footsteps be not moved.",
+                           /* 7 */ "I have cried to thee, for thou, O God, hast heard me: O incline thy ear unto me, and hear my words.",
+                           /* 8 */ "Shew forth thy wonderful mercies; thou who savest them that trust in thee.",
+                           /* 9 */ "From them that resist thy right hand keep me, as the apple of thy eye.",
+                           /* 10 */ "Protect me under the shadow of thy wings, from the face of the wicked who have afflicted me.",
+                           /* 11 */ "My enemies have surrounded my soul: they have shut up their fat: their mouth hath spoken proudly.",
+                           /* 12 */ "They have cast me forth and now they have surrounded me: they have set their eyes to cast me down to the earth.",
+                           /* 13 */ "They have taken me, as a lion prepared for the prey; and as a young lion dwelling in secret places.",
+                           /* 14 */ "Arise, O Lord, disappoint them and supplant them; deliver my soul from the wicked one; thy sword from the enemies of thy hand.",
+                           /* 15 */ "O Lord, divide them in their number: and scatter them in their vanity.",
+                           /* 16 */ "Let their belly be filled with thy hidden things: and let their children be satisfied, and leave the rest to their little ones.",
+                           /* 17 */ "But as for me, I will appear before thy sight in justice: I shall be satisfied when thy glory shall appear."]
 
   private let lineKeyLemmas: [(Int, [String])] = [
     (1, ["exaudio", "dominus", "iustitia", "intendo", "deprecatio"]),
@@ -72,10 +66,10 @@ class Psalm16Tests: XCTestCase {
     (10, ["umbra", "ala", "protego", "facies", "impius", "affligo"]),
     (11, ["inimicus", "anima", "circumdo", "adeps", "concludo", "superbia"]),
     (12, ["proicio", "circumdo", "oculus", "statuo", "declino", "terra"]),
-    (13, ["suscipio", "leo", "paratus", "praeda", "catulus", "habito", "abditus"]),
+    (13, ["suscipio", "leo", "paro", "praeda", "catulus", "habito", "abditus"]),
     (14, ["exsurgo", "dominus", "praevenio", "supplanto", "eripio", "anima", "impius", "framea", "inimicus", "manus"]),
     (15, ["dominus", "paucus", "terra", "divido", "vita", "absconditum", "adimpleo", "venter"]),
-    (16, ["saturatus", "filius", "dimitto", "reliquiae", "parvulus"]),
+    (16, ["saturo", "filius", "dimitto", "reliquiae", "parvulus"]),
     (17, ["ego", "iustitia", "appareo", "conspectus", "satio", "appareo", "gloria"]),
   ]
 
@@ -146,7 +140,7 @@ class Psalm16Tests: XCTestCase {
     (
       "Division → Satisfaction",
       "Divine judgment dividing enemies leads to the satisfaction of the righteous",
-      ["divido", "absconditum", "saturatus", "reliquiae", "satio"],
+      ["divido", "absconditum", "saturo", "reliquiae"],
       15,
       16,
       "God divides enemies in their life while filling their bellies with hidden things, and the psalmist will be satisfied when God's glory appears.",

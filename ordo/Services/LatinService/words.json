@@ -1,293 +1,598 @@
 [
   {
-  "lemma": "prodeo",
-  "part_of_speech": "verb",
-  "conjugation": 4,
-  "infinitive": "prodire",
-  "present": "prodeo",
-  "future": "prodibo",
-  "perfect": "prodii",
-  "supine": "proditum",
-  "translations": {
-    "en": "to go forth, come out, appear",
-    "la": "prodeo, prodire, prodii, proditum"
+    "lemma": "voluntarius",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "voluntarius",
+    "genitive": "voluntaris",
+    "translations": {
+      "en": "willing, voluntary",
+      "la": "voluntārius, voluntāris"
+    },
+    "forms": {
+      "accusative_f": ["voluntariam"],
+      "nominative_f": ["voluntaria"],
+      "nominative_n": ["voluntarium"],
+      "genitive_f": ["voluntariae"],
+      "genitive_n": ["voluntaris"]
+    }
   },
-  "forms": {
-    "present_active_subjunctive": ["prodeam", "prodeas", "prodeat", "prodeamus", "prodeatis", "prodeant"]
-  }
-},
   {
-  "lemma": "paucus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "paucus",
-  "genitive": "pauci",
-  "translations": {
-    "en": "few, little",
-    "la": "paucus"
-  }
- 
-},
-  {
-  "lemma": "adimpleo",
-  "part_of_speech": "verb",
-  "conjugation": 2,
-  "infinitive": "adimplere",
-  "present": "adimpleo",
-  "future": "adimplebo",
-  "perfect": "adimplevi",
-  "supine": "adimpletum",
-  "translations": {
-    "en": "to fill up, fulfill, complete",
-    "la": "adimpleo, adimplere, adimplevi, adimpletum"
-  }
-},
-  {
-  "lemma": "tardo",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "tardare",
-  "present": "tardo",
-  "future": "tardabo",
-  "perfect": "tardavi",
-  "supine": "tardatum",
-  "translations": {
-    "en": "to delay, hinder, slow down",
-    "la": "tardo, tardare, tardavi, tardatum"
-  }
-},
-  {
-  "lemma": "sollicitus",
-  "part_of_speech": "adjective",
-  "declension": 1,
-  "gender": "masculine",
-  "nominative": "sollicitus",
-  "genitive": "solliciti",
-  "translations": {
-    "en": "anxious, troubled, concerned, worried",
-    "la": "sollicitus"
-  }
-},{
-  "lemma": "mendicus",
-  "part_of_speech": "noun",
-  "declension": 2,
-  "gender": "masculine",
-  "nominative": "mendicus",
-  "genitive": "mendici",
-  "translations": {
-    "en": "beggar, mendicant",
-    "la": "mendicus"
-  }
-},
-  {
-  "lemma": "faex",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "faex",
-  "genitive": "faecis",
-  "translations": {
-    "en": "sediment, grounds, refuse",
-    "la": "faex"
-  }
-},
-  {
-  "lemma": "expecto",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "expectare",
-  "present": "expecto",
-  "future": "expectabo",
-  "perfect": "expectavi",
-  "supine": "expectatum",
-  "translations": {
-    "en": "to await, wait for, hope for, expect",
-    "la": "expecto, expectare, expectavi, expectatum"
+    "lemma": "segrego",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "segregare",
+    "present": "segrego",
+    "future": "segregabo",
+    "perfect": "segregavi",
+    "supine": "segregatum",
+    "translations": {
+      "en": "to separate, set apart, segregate",
+      "la": "segregō, segregat, segregāvi"
+    },
+    "forms": {
+      "imperfect_passive_subjunctive": [
+        "segregeretur",
+        "segregeremur",
+        "segregeremini",
+        "segregerentur"
+      ]
+    }
   },
-  "forms": {
-    "perfect_active": ["expectavi", "expectavisti", "expectavit", "expectavimus", "expectavistis", "expectaverunt"]
-  }
-},
   {
-  "lemma": "capillus",
-  "part_of_speech": "noun",
-  "declension": 2,
-  "gender": "masculine",
-  "nominative": "capillus",
-  "genitive": "capilli",
-  "translations": {
-    "en": "hair (of the head)",
-    "la": "capillus"
-  }
-},
-  {
-  "lemma": "resuscito",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "resuscitare",
-  "present": "resuscito",
-  "future": "resuscitabo",
-  "perfect": "resuscitavi",
-  "supine": "resuscitatum",
-  "translations": {
-    "en": "to raise up again, resurrect, revive",
-    "la": "resuscito, resuscitare, resuscitavi, resuscitatum"
-  }
-},
-  {
-  "lemma": "supplantatio",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "supplantatio",
-  "genitive": "supplantationis",
-  "translations": {
-    "en": "a tripping up, supplanting, overthrow",
-    "la": "supplantatio"
-  }
-},
-  {
-  "lemma": "ops",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "ops",
-  "genitive": "opis",
-  "translations": {
-    "en": "power, aid, help, resources, wealth",
-    "la": "ops"
-  }
-},{
-  "lemma": "fero",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "ferre",
-  "present": "fero",
-  "future": "feram",
-  "perfect": "tuli",
-  "supine": "latum",
-  "translations": {
-    "en": "to bear, carry, bring, endure",
-    "la": "fero, ferre, tuli, latum"
+    "lemma": "pertranseo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "pertransire",
+    "present": "pertranseo",
+    "future": "pertransio",
+    "perfect": "pertransivi",
+    "supine": "pertransitum",
+    "translations": {
+      "en": "to pass through, to go across, to cross",
+      "la": "pertranseo, pertransire, pertransivi, pertransitum"
+    },
+    "forms": {
+      "imperfect_passive_subjunctive": [
+        "pertransirem",
+        "pertransires",
+        "pertransiretur"
+      ]
+    }
   },
-  "forms": {
-    "present_active_subjunctive": ["feram", "feras", "ferat", "feramus", "feratis", "ferant"]
-  }
-},
-{
-  "lemma": "verto",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "vertere",
-  "present": "verto",
-  "future": "vertam",
-  "perfect": "verti",
-  "supine": "versum",
-  "translations": {
-    "en": "to turn, change, overthrow",
-    "la": "verto, vertere, verti, versum"
+  {
+    "lemma": "egredior",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "egrediare",
+    "present": "egredior",
+    "future": "egrediam",
+    "perfect": "egressus sum",
+    "supine": "egressum",
+    "translations": {
+      "en": "to go out; to depart",
+      "la": "egredior, egrediare, egressus sum, egressum"
+    },
+    "forms": {
+      "imperfect_1sg": ["egrediebar"],
+      "imperfect_passive_subjunctive": [
+        "egrederer",
+        "egredereris",
+        "egrederetur",
+        "egrederemur",
+        "egrederemini",
+        "egrederentur"
+      ]
+    }
   },
-  "forms": {
-    "perfect_active": ["versavi", "versavisti", "versavit", "versavimus", "versavistis", "versaverunt"],
-    "perfect_2s_eccl": ["versasti"]
-  }
-},
   {
-  "lemma": "susurro",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "susurrare",
-  "present": "susurro",
-  "future": "susurrabo",
-  "perfect": "susurravi",
-  "supine": "susurratum",
-  "translations": {
-    "en": "to whisper, murmur",
-    "la": "susurro, susurrare, susurravi, susurratum"
-  }
-},
-  {
-  "lemma": "satio",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "satiare",
-  "present": "satio",
-  "future": "satiabo",
-  "perfect": "satiavi",
-  "supine": "satiatum",
-  "translations": {
-    "en": "to satisfy, sate, fill",
-    "la": "satio, satiare, satiavi, satiatum"
+    "lemma": "occasus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "occasus",
+    "genitive": "occasi",
+    "translations": {
+      "en": "the west; sunset",
+      "la": "occasus"
+    }
   },
-  "forms": {
-    "future_passive": ["satiabor", "satiaberis", "satiabitur", "satiabimur", "satiabimini", "satiabuntur"]
-  }
-},
   {
-  "lemma": "voco",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "vocare",
-  "present": "voco",
-  "future": "vocabo",
-  "perfect": "vocavi",
-  "supine": "vocatum",
-  "translations": {
-    "en": "to call, summon, name",
-    "la": "voco, vocare, vocavi, vocatum"
-  }
-},
+    "lemma": "capio",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "capere",
+    "present": "capio",
+    "future": "capiam",
+    "perfect": "cepi",
+    "supine": "captum",
+    "translations": {
+      "en": "to take, seize, capture",
+      "la": "capio, capere, cepi, captum"
+    }
+  },
   {
-  "lemma": "depasco",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "depascere",
-  "present": "depasco",
-  "future": "depascam",
-  "perfect": "depavi",
-  "supine": "depastum",
-  "translations": {
-    "en": "to feed, pasture, consume, graze",
-    "la": "depasco, depascere, depavi, depastum"
-  }
-},
+    "lemma": "altum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "altum",
+    "genitive": "alti",
+    "translations": {
+      "en": "the deep, the sea, height",
+      "la": "altum"
+    }
+  },
+
   {
-  "lemma": "placatio",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "placatio",
-  "genitive": "placationis",
-  "translations": {
-    "en": "appeasement, pacification, calming",
-    "la": "placatio"
-  }
-},
+    "lemma": "vidua",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "vidua",
+    "genitive": "viduae",
+    "translations": {
+      "en": "widow",
+      "la": "vidua"
+    }
+  },
   {
-  "lemma": "pretium",
-  "part_of_speech": "noun",
-  "declension": 2,
-  "gender": "neuter",
-  "nominative": "pretium",
-  "genitive": "pretii",
-  "translations": {
-    "en": "price, value, reward, wages",
-    "la": "pretium"
-  }
-},
+    "lemma": "mos",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "mos",
+    "genitive": "moris",
+    "translations": {
+      "en": "custom, habit, manner",
+      "la": "mos"
+    }
+  },
   {
-  "lemma": "calcaneum",
-  "part_of_speech": "noun",
-  "declension": 2,
-  "gender": "neuter",
-  "nominative": "calcaneum",
-  "genitive": "calcanei",
-  "translations": {
-    "en": "heel",
-    "la": "calcaneum"
-  }
-},
+    "lemma": "exaspero",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "exasperare",
+    "present": "exaspero",
+    "future": "exasperabo",
+    "perfect": "exasperavi",
+    "supine": "exasperatum",
+    "translations": {
+      "en": "to make rough, irritate, provoke",
+      "la": "exaspero, exasperare, exasperavi, exasperatum"
+    }
+  },
+
+  {
+    "lemma": "coagulo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "coagulare",
+    "present": "coagulo",
+    "future": "coagulabo",
+    "perfect": "coagulavi",
+    "supine": "coagulatum",
+    "translations": {
+      "en": "to curdle, coagulate",
+      "la": "coagulo, coagulare, coagulavi, coagulatum"
+    },
+    "forms": {
+      "perfect_passive_participle": ["coagulatus", "coagulata", "coagulatum"]
+    }
+  },
+  {
+    "lemma": "evangelizo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "evangelizare",
+    "present": "evangelizo",
+    "future": "evangelizabo",
+    "perfect": "evangelizavi",
+    "supine": "evangelizatum",
+    "translations": {
+      "en": "to preach the gospel, evangelize",
+      "la": "evangelizo, evangelizare, evangelizavi, evangelizatum"
+    }
+  },
+  {
+    "lemma": "clerus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "clerus",
+    "genitive": "cleri",
+    "translations": {
+      "en": "clergy, cleric",
+      "la": "clerus"
+    }
+  },
+  {
+    "lemma": "columba",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "columba",
+    "genitive": "columbae",
+    "translations": {
+      "en": "dove, pigeon",
+      "la": "columba"
+    }
+  },
+  {
+    "lemma": "deargento",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "deargentare",
+    "present": "deargento",
+    "future": "deargentabo",
+    "perfect": "deargentavi",
+    "supine": "deargentatum",
+    "translations": {
+      "en": "to silver-plate, cover with silver",
+      "la": "deargento, deargentare, deargentavi, deargentatum"
+    },
+    "forms": {
+      "perfect_passive_participle": [
+        "deargentatus",
+        "deargentata",
+        "deargentatum"
+      ]
+    }
+  },
+  {
+    "lemma": "posterior",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "posterior",
+    "genitive": "posterioris",
+    "translations": {
+      "en": "later, subsequent, rear",
+      "la": "posterior"
+    },
+    "forms": {
+      "nominative_f": ["posterior"],
+      "nominative_n": ["posterius"]
+    }
+  },
+  {
+    "lemma": "pallor",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "pallor",
+    "genitive": "palloris",
+    "translations": {
+      "en": "paleness, pallor, wanness",
+      "la": "pallor"
+    }
+  },
+  {
+    "lemma": "prodeo",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "prodire",
+    "present": "prodeo",
+    "future": "prodibo",
+    "perfect": "prodii",
+    "supine": "proditum",
+    "translations": {
+      "en": "to go forth, come out, appear",
+      "la": "prodeo, prodire, prodii, proditum"
+    },
+    "forms": {
+      "present_active_subjunctive": [
+        "prodeam",
+        "prodeas",
+        "prodeat",
+        "prodeamus",
+        "prodeatis",
+        "prodeant"
+      ]
+    }
+  },
+  {
+    "lemma": "paucus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "paucus",
+    "genitive": "pauci",
+    "translations": {
+      "en": "few, little",
+      "la": "paucus"
+    }
+  },
+  {
+    "lemma": "adimpleo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "adimplere",
+    "present": "adimpleo",
+    "future": "adimplebo",
+    "perfect": "adimplevi",
+    "supine": "adimpletum",
+    "translations": {
+      "en": "to fill up, fulfill, complete",
+      "la": "adimpleo, adimplere, adimplevi, adimpletum"
+    }
+  },
+  {
+    "lemma": "tardo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "tardare",
+    "present": "tardo",
+    "future": "tardabo",
+    "perfect": "tardavi",
+    "supine": "tardatum",
+    "translations": {
+      "en": "to delay, hinder, slow down",
+      "la": "tardo, tardare, tardavi, tardatum"
+    }
+  },
+  {
+    "lemma": "sollicitus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "sollicitus",
+    "genitive": "solliciti",
+    "translations": {
+      "en": "anxious, troubled, concerned, worried",
+      "la": "sollicitus"
+    }
+  },
+  {
+    "lemma": "mendicus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "mendicus",
+    "genitive": "mendici",
+    "translations": {
+      "en": "beggar, mendicant",
+      "la": "mendicus"
+    }
+  },
+  {
+    "lemma": "faex",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "faex",
+    "genitive": "faecis",
+    "translations": {
+      "en": "sediment, grounds, refuse",
+      "la": "faex"
+    }
+  },
+  {
+    "lemma": "expecto",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "expectare",
+    "present": "expecto",
+    "future": "expectabo",
+    "perfect": "expectavi",
+    "supine": "expectatum",
+    "translations": {
+      "en": "to await, wait for, hope for, expect",
+      "la": "expecto, expectare, expectavi, expectatum"
+    },
+    "forms": {
+      "perfect_active": [
+        "expectavi",
+        "expectavisti",
+        "expectavit",
+        "expectavimus",
+        "expectavistis",
+        "expectaverunt"
+      ]
+    }
+  },
+  {
+    "lemma": "capillus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "capillus",
+    "genitive": "capilli",
+    "translations": {
+      "en": "hair (of the head)",
+      "la": "capillus"
+    }
+  },
+  {
+    "lemma": "resuscito",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "resuscitare",
+    "present": "resuscito",
+    "future": "resuscitabo",
+    "perfect": "resuscitavi",
+    "supine": "resuscitatum",
+    "translations": {
+      "en": "to raise up again, resurrect, revive",
+      "la": "resuscito, resuscitare, resuscitavi, resuscitatum"
+    }
+  },
+  {
+    "lemma": "supplantatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "supplantatio",
+    "genitive": "supplantationis",
+    "translations": {
+      "en": "a tripping up, supplanting, overthrow",
+      "la": "supplantatio"
+    }
+  },
+  {
+    "lemma": "ops",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "ops",
+    "genitive": "opis",
+    "translations": {
+      "en": "power, aid, help, resources, wealth",
+      "la": "ops"
+    }
+  },
+  {
+    "lemma": "fero",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "ferre",
+    "present": "fero",
+    "future": "feram",
+    "perfect": "tuli",
+    "supine": "latum",
+    "translations": {
+      "en": "to bear, carry, bring, endure",
+      "la": "fero, ferre, tuli, latum"
+    },
+    "forms": {
+      "present_active_subjunctive": [
+        "feram",
+        "feras",
+        "ferat",
+        "feramus",
+        "feratis",
+        "ferant"
+      ]
+    }
+  },
+  {
+    "lemma": "verto",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "vertere",
+    "present": "verto",
+    "future": "vertam",
+    "perfect": "verti",
+    "supine": "versum",
+    "translations": {
+      "en": "to turn, change, overthrow",
+      "la": "verto, vertere, verti, versum"
+    },
+    "forms": {
+      "perfect_active": [
+        "versavi",
+        "versavisti",
+        "versavit",
+        "versavimus",
+        "versavistis",
+        "versaverunt"
+      ],
+      "perfect_2s_eccl": ["versasti"]
+    }
+  },
+  {
+    "lemma": "susurro",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "susurrare",
+    "present": "susurro",
+    "future": "susurrabo",
+    "perfect": "susurravi",
+    "supine": "susurratum",
+    "translations": {
+      "en": "to whisper, murmur",
+      "la": "susurro, susurrare, susurravi, susurratum"
+    }
+  },
+  {
+    "lemma": "satio",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "satiare",
+    "present": "satio",
+    "future": "satiabo",
+    "perfect": "satiavi",
+    "supine": "satiatum",
+    "translations": {
+      "en": "to satisfy, sate, fill",
+      "la": "satio, satiare, satiavi, satiatum"
+    },
+    "forms": {
+      "future_passive": [
+        "satiabor",
+        "satiaberis",
+        "satiabitur",
+        "satiabimur",
+        "satiabimini",
+        "satiabuntur"
+      ]
+    }
+  },
+  {
+    "lemma": "voco",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "vocare",
+    "present": "voco",
+    "future": "vocabo",
+    "perfect": "vocavi",
+    "supine": "vocatum",
+    "translations": {
+      "en": "to call, summon, name",
+      "la": "voco, vocare, vocavi, vocatum"
+    }
+  },
+  {
+    "lemma": "depasco",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "depascere",
+    "present": "depasco",
+    "future": "depascam",
+    "perfect": "depavi",
+    "supine": "depastum",
+    "translations": {
+      "en": "to feed, pasture, consume, graze",
+      "la": "depasco, depascere, depavi, depastum"
+    }
+  },
+  {
+    "lemma": "placatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "placatio",
+    "genitive": "placationis",
+    "translations": {
+      "en": "appeasement, pacification, calming",
+      "la": "placatio"
+    }
+  },
+  {
+    "lemma": "pretium",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "pretium",
+    "genitive": "pretii",
+    "translations": {
+      "en": "price, value, reward, wages",
+      "la": "pretium"
+    }
+  },
+  {
+    "lemma": "calcaneum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "calcaneum",
+    "genitive": "calcanei",
+    "translations": {
+      "en": "heel",
+      "la": "calcaneum"
+    }
+  },
   {
     "lemma": "morior",
     "part_of_speech": "verb",
@@ -1564,6 +1869,10 @@
     "translations": {
       "en": "living being, creature, animal",
       "la": "animal, animalis"
+    },
+    "forms_plural": {
+      "nominative_n": ["animalia"],
+      "accusative_n": ["animalia"]
     }
   },
   {
@@ -9067,23 +9376,6 @@
     }
   },
   {
-    "lemma": "egredior",
-    "part_of_speech": "verb",
-    "conjugation": 3,
-    "infinitive": "egredi",
-    "present": "egredior",
-    "future": "egrediar",
-    "perfect": "egressus",
-    "supine": "egressum",
-    "forms": {
-      "imperfect_1sg": ["egrediebar"]
-    },
-    "translations": {
-      "en": "go out, depart",
-      "la": "egredior, egredi"
-    }
-  },
-  {
     "lemma": "abominatio",
     "part_of_speech": "noun",
     "declension": 3,
@@ -16130,6 +16422,16 @@
     "notes": "Hebrew origin; often appears in Vulgate as 'Jacob' (indeclinable in some texts)"
   },
   {
+    "lemma": "sinai",
+    "part_of_speech": "noun",
+    "gender": "masculine",
+    "nominative": "sinai",
+    "translations": {
+      "en": "Mount Sinai",
+      "la": "Sinaï"
+    }
+  },
+  {
     "lemma": "israel",
     "part_of_speech": "noun",
     "gender": "masculine",
@@ -16940,18 +17242,18 @@
     }
   },
   {
-  "lemma": "pupilla",
-  "part_of_speech": "noun",
-  "declension": 1,
-  "gender": "feminine",
-  "nominative": "pupilla",
-  "genitive": "pupillae",
-  "translations": {
-    "en": "orphan girl, ward, female minor",
-    "la": "pupilla"
-  }
-},
-  
+    "lemma": "pupilla",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "pupilla",
+    "genitive": "pupillae",
+    "translations": {
+      "en": "orphan girl, ward, female minor",
+      "la": "pupilla"
+    }
+  },
+
   {
     "lemma": "notus",
     "part_of_speech": "adjective",
@@ -20094,11 +20396,11 @@
     "lemma": "resurgo",
     "part_of_speech": "verb",
     "conjugation": 3,
-  "infinitive": "resurgere",
-  "present": "resurgo",
-  "future": "resurgam",
-  "perfect": "resurrexi",
-  "supine": "resurrectum",
+    "infinitive": "resurgere",
+    "present": "resurgo",
+    "future": "resurgam",
+    "perfect": "resurrexi",
+    "supine": "resurrectum",
     "translations": {
       "en": "to rise up, resurrect",
       "la": "resurgo"
@@ -23034,10 +23336,10 @@
     "conjugation": 3,
     "deponent": false,
     "infinitive": "relinquere",
-  "present": "relinquo",
-  "future": "relinquam",
-  "perfect": "reliqui",
-  "supine": "relictum",
+    "present": "relinquo",
+    "future": "relinquam",
+    "perfect": "reliqui",
+    "supine": "relictum",
     "forms": {
       "present": [
         "relinquo",
@@ -23056,7 +23358,14 @@
         "relinquatis",
         "relinquont"
       ],
-      "future_active": ["relinquam", "relinques", "relinquet", "relinquemus", "relinquetis", "relinquent"]
+      "future_active": [
+        "relinquam",
+        "relinques",
+        "relinquet",
+        "relinquemus",
+        "relinquetis",
+        "relinquent"
+      ]
     },
     "translations": {
       "en": "to leave, abandon",
