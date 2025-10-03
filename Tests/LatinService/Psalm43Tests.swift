@@ -142,7 +142,7 @@ class Psalm43Tests: XCTestCase {
     (12, ["averto", "retrorsum", "inimicus", "odi", "diripio"]),
     (13, ["do", "ovis", "esca", "gens", "dispergo"]),
     (14, ["vendo", "populus", "pretium", "multitudo", "commutatio"]),
-    (15, ["pono", "opprobrium", "vicinus", "subsannatio", "derisus", "circuitus"]),
+    (15, ["pono", "opprobrium", "vicinus", "subsannatio", "derideo", "circuitus"]),
     (16, ["pono", "similitudo", "gens", "commotio", "caput", "populus"]),
     (17, ["totus", "dies", "verecundia", "confusio", "vultus", "cooperio"]),
     (18, ["vox", "exprobro", "obloquor", "facies", "inimicus", "persequor"]),

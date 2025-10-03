@@ -1,5 +1,57 @@
 [
   {
+  "lemma": "commutatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "commutatio",
+  "genitive": "commutationis",
+  "translations": {
+    "en": "change, alteration, exchange",
+    "la": "commutatio"
+  }
+},
+  {
+  "lemma": "derideo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "deridere",
+  "present": "derideo",
+  "future": "deridebo",
+  "perfect": "derisi",
+  "supine": "derisum",
+  "translations": {
+    "en": "to laugh at, mock, deride",
+    "la": "derideo, deridere, derisi, derisum"
+  }
+  
+},
+  {
+  "lemma": "retro",
+  "part_of_speech": "adverb",
+  "translations": {
+    "en": "backwards, back, behind",
+    "la": "retro"
+  }
+},
+  {
+  "lemma": "obloquor",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "obloqui",
+  "present": "obloquor",
+  "future": "obloquar",
+  "perfect": "oblocutus sum",
+  "supine": null,
+  "translations": {
+    "en": "to speak against, contradict, interrupt",
+    "la": "obloquor, obloqui, oblocutus sum"
+  },
+  "forms": {
+    "present_participle": ["obloquens", "obloquentis"]
+  }
+},
+  {
     "lemma": "voluntarius",
     "part_of_speech": "adjective",
     "declension": 1,
@@ -16569,7 +16621,11 @@
     "translations": {
       "en": "turn aside, turn away, deviate",
       "la": "declino, declinare"
-    }
+    },
+    "forms": {
+      "perfect_2sg_eccl": ["declinasti"],
+    "perfect_active": ["declinavi", "declinavisti", "declinavit", "declinavimus", "declinavistis", "declinaverunt"]
+  }
   },
   {
     "lemma": "panis",
