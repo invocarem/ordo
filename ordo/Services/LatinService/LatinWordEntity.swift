@@ -35,6 +35,7 @@ public struct LatinWordEntity: Codable {
     public let present: String?
     public let perfect: String?
     public let infinitive: String?
+    public let future: String?
     public let supine: String?
 
     public let conjugation: Int?
@@ -86,6 +87,7 @@ public struct LatinWordEntity: Codable {
         present: String? = nil,
         perfect: String? = nil,
         infinitive: String? = nil,
+        future: String? = nil,
         supine: String? = nil,
         conjugation: Int? = nil,
         forms: [String: [String]]? = nil,
@@ -114,6 +116,7 @@ public struct LatinWordEntity: Codable {
         self.present = present
         self.perfect = perfect
         self.infinitive = infinitive
+        self.future = future
         self.supine = supine
         self.conjugation = conjugation
         self.forms = forms
@@ -138,7 +141,7 @@ public struct LatinWordEntity: Codable {
         case accusative_plural = "accusative_plural"
         case ablative_plural = "ablative_plural"
         case possessive
-        case present,perfect, infinitive, forms
+        case present,perfect, infinitive, forms, future
         case supine
         case conjugation
         case formsPlural = "forms_plural"

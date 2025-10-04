@@ -33,6 +33,31 @@ final class LatinWordTests: XCTestCase {
     func testTranslationsAreLoaded() {
         XCTAssertFalse(latinService.getTranslations().isEmpty, "Should have loaded translations")
     }
+func testTransferoFuturePassive() {
+    let testText = [
+        "et transferentur montes in cor maris.",
+    ]
+    let identity = PsalmIdentity(number: 45, category: nil)
+    latinService.configureDebugging(target: "transfero")
+    let analysis = latinService.analyzePsalm(identity, text: testText)
+    let entry = analysis.dictionary["transfero"]
+    // Safely unwrap the optional
+    guard let entry = entry else {
+        XCTFail("Entry is nil")
+        return
+    }
+    
+    // Check if transferentur was found and counted
+    let transferenturCount = entry.forms["transferentur"] ?? 0
+    XCTAssertEqual(transferenturCount, 1, "Should find 'transferentur' once in the text")
+    
+    // Also check if it's recognized as a future_passive form
+    print("\nAll found forms for transfero:")
+    for form in entry.forms.sorted(by: { $0.key < $1.key }) {
+        print("\(form.key): \(form.value)")
+    }
+}
+ 
     func testAnalyzeLevo() {
     // Setup test data - using Vulgate verses that contain 'levo' and its forms
     let testText = [
@@ -246,6 +271,7 @@ func testDominor() {
         present: "dominor",
         perfect: "dominatus",
         infinitive: "dominari",
+        future: "dominabo",
         supine: "dominatum",
         conjugation: 1
     )

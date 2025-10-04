@@ -52,7 +52,10 @@ extension LatinWordEntity {
         generateParticipleForms(conjugation: conjugation, stems: stems, addForm: addForm)
         generateSubjunctiveForms(conjugation: conjugation, stems: stems, isDeponent: isDeponent, addForm: addForm)
         generatePresentPassiveForms(conjugation: conjugation, stems: stems, addForm: addForm)
-        generateFuturePassiveForms(conjugation: conjugation, stems: stems, addForm: addForm)
+        
+        // In generatedVerbForms() function, add:
+        generateFuturePassiveFromFutureStem(conjugation: conjugation, stems: stems, addForm: addForm)
+        //generateFuturePassiveForms(conjugation: conjugation, stems: stems, addForm: addForm)
         generateImperfectPassiveForms(conjugation: conjugation, stems: stems, addForm: addForm)
 
         // Apply manual overrides if any
@@ -646,6 +649,73 @@ private func generatePresentPassiveForms(conjugation: Int, stems: VerbStems, add
     }
     
     addForm("present_passive", presentPassive)
+}
+
+
+private func generateFuturePassiveFromFutureStem(conjugation: Int, stems: VerbStems, addForm: (String, [String]) -> Void) {
+    guard let futureForm = future?.lowercased() else { return }
+    
+    // Extract future stem from future form (e.g., "transferam" -> "transfer")
+    let futureStem = String(futureForm.dropLast(2)) // drop "am"
+    
+    let futurePassive: [String]
+    switch conjugation {
+    case 1:
+        futurePassive = [
+            futureStem + "bor",       // transferbor
+            futureStem + "beris",     // transferberis
+            futureStem + "bitur",     // transferbitur
+            futureStem + "bimur",     // transferbimur
+            futureStem + "bimini",    // transferbimini
+            futureStem + "buntur"     // transferbuntur
+        ]
+    case 2:
+        futurePassive = [
+            futureStem + "bor",      // monebor
+            futureStem + "beris",    // moneberis
+            futureStem + "bitur",    // monebitur
+            futureStem + "bimur",    // monebimur
+            futureStem + "bimini",   // monebimini
+            futureStem + "buntur"    // monebuntur
+        ]
+    case 3:
+        let isThirdIO = conjugation == 3 && self.present?.hasSuffix("io") == true
+        
+        if isThirdIO {
+            // 3rd-io verbs follow 4th conjugation pattern
+            futurePassive = [
+                futureStem + "ar",       // capiar
+                futureStem + "eris",     // capieris
+                futureStem + "etur",     // capietur
+                futureStem + "emur",     // capiemur
+                futureStem + "emini",    // capiemini
+                futureStem + "entur"     // capientur
+            ]
+        } else {
+            // Regular 3rd conjugation
+            futurePassive = [
+                futureStem + "ar",        // transferar
+                futureStem + "eris",      // transfereris
+                futureStem + "etur",      // transferetur
+                futureStem + "emur",      // transferemur
+                futureStem + "emini",     // transferemini
+                futureStem + "entur"      // transferentur
+            ]
+        }
+    case 4:
+        futurePassive = [
+            futureStem + "ar",       // audiar
+            futureStem + "eris",     // audieris
+            futureStem + "etur",     // audietur
+            futureStem + "emur",     // audiemur
+            futureStem + "emini",    // audiemini
+            futureStem + "entur"     // audientur
+        ]
+    default:
+        futurePassive = []
+    }
+    
+    addForm("future_passive", futurePassive)
 }
 }
 

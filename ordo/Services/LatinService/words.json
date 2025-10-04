@@ -1,5 +1,33 @@
 [
   {
+    "lemma": "transfero",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "transferre",
+    "present": "transfero",
+    "future": "transferam",
+    "perfect": "transtuli",
+    "supine": "translatum",
+    "translations": {
+      "en": "to carry across, transfer, translate",
+      "la": "transfero, transferre, transtuli, translatum"
+    } 
+   },
+  {
+  "lemma": "sono",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "sonare",
+  "present": "sono",
+  "future": "sonabo",
+  "perfect": "sonui",
+  "supine": "sonitum",
+  "translations": {
+    "en": "to sound, make a noise, resound",
+    "la": "sono, sonare, sonui, sonitum"
+  }
+},
+  {
   "lemma": "commutatio",
   "part_of_speech": "noun",
   "declension": 3,
@@ -8266,6 +8294,7 @@
     "infinitive": "dominari",
     "present": "dominor",
     "perfect": "dominatus",
+    "future": "dominabor",
     "supine": "dominatum",
     "translations": {
       "en": "to rule, to dominate",
