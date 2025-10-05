@@ -33,6 +33,31 @@ final class LatinWordTests: XCTestCase {
     func testTranslationsAreLoaded() {
         XCTAssertFalse(latinService.getTranslations().isEmpty, "Should have loaded translations")
     }
+
+    func testInfirmoFuture() {
+    let testText = [
+        "et in Domino sperans non infirmabor.",
+    ]
+    let identity = PsalmIdentity(number: 25, category: nil)
+    latinService.configureDebugging(target: "infirmo")
+    let analysis = latinService.analyzePsalm(identity, text: testText)
+    let entry = analysis.dictionary["infirmo"]
+    // Safely unwrap the optional
+    guard let entry = entry else {
+        XCTFail("Entry is nil")
+        return
+    }
+    
+    // Check if infirmabor was found and counted
+    let infirmaborCount = entry.forms["infirmabor"] ?? 0
+    XCTAssertEqual(infirmaborCount, 1, "Should find 'infirmabor' once in the text")
+    
+    // Also check if it's recognized as a future_passive form
+    print("\nAll found forms for infirmo:")
+    for form in entry.forms.sorted(by: { $0.key < $1.key }) {
+        print("\(form.key): \(form.value)")
+    }
+}
 func testTransferoFuturePassive() {
     let testText = [
         "et transferentur montes in cor maris.",

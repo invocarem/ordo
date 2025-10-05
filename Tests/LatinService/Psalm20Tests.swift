@@ -8,6 +8,7 @@ class Psalm20Tests: XCTestCase {
 
   // MARK: - Test Data Properties
 
+  private let expectedVerseCount = 13
   private let psalm20 = [
     "Domine, in virtute tua laetabitur rex, et super salutare tuum exsultabit vehementer.",
     "Desiderium cordis eius tribuisti ei, et voluntatem labiorum eius non fraudasti eum.",
@@ -59,102 +60,66 @@ class Psalm20Tests: XCTestCase {
   private let structuralThemes = [
     (
       "Divine Favor → Royal Joy",
-      "The king's rejoicing in God's strength and salvation",
-      ["dominus", "virtus", "laetor", "rex", "salutare", "exsulto", "vehementer"],
+      "The king's rejoicing in God's strength and salvation leading to fulfilled heart's desires",
+      ["dominus", "virtus", "laetor", "rex", "salutare", "exsulto", "desiderium", "cor", "tribuo", "voluntas", "labium", "fraudo"],
       1,
-      1,
-      "The psalm begins with the king rejoicing in the Lord's strength and exulting greatly in His salvation.",
-      "Augustine sees this as the soul's joy in divine power, where the king represents Christ or the righteous soul finding strength in God rather than earthly power."
-    ),
-    (
-      "Heart's Desire → Divine Response",
-      "God granting the desires of the heart and not withholding the request of the lips",
-      ["desiderium", "cor", "tribuo", "voluntas", "labium", "fraudo"],
       2,
-      2,
-      "God has granted the desire of the heart and has not denied the request of the lips.",
-      "For Augustine, this represents God's faithfulness to those who pray with pure hearts, fulfilling both their spoken and unspoken petitions."
+      "The psalm begins with the king rejoicing in the Lord's strength and exulting greatly in His salvation, followed by God granting the desires of the heart and not withholding the request of the lips.",
+      "Augustine sees this as the soul's joy in divine power, where the king represents Christ or the righteous soul finding strength in God rather than earthly power, and God's faithfulness to those who pray with pure hearts."
     ),
     (
-      "Blessings → Coronation",
-      "Divine blessings of sweetness leading to precious crown",
-      ["praevenio", "benedictio", "dulcedo", "pono", "caput", "corona", "lapis", "pretiosus"],
+      "Blessings → Eternal Life",
+      "Divine blessings of sweetness and coronation leading to eternal life promise",
+      ["praevenio", "benedictio", "dulcedo", "pono", "caput", "corona", "lapis", "pretiosus", "vita", "peto", "tribuo", "longitudo", "dies", "saeculum"],
       3,
-      3,
-      "God has met the king with blessings of sweetness and placed on his head a crown of precious stone.",
-      "Augustine interprets the crown of precious stone as the eternal crown of righteousness, while the blessings of sweetness represent God's gracious favor."
-    ),
-    (
-      "Life Request → Eternal Promise",
-      "Petition for life resulting in length of days forever",
-      ["vita", "peto", "tribuo", "longitudo", "dies", "saeculum"],
       4,
-      4,
-      "The king asked for life from God, and He gave him length of days forever and ever.",
-      "Augustine sees this as the soul's prayer for eternal life being granted through Christ, who is the source of everlasting life."
+      "God has met the king with blessings of sweetness and placed on his head a crown of precious stone, and when the king asked for life from God, He gave him length of days forever and ever.",
+      "Augustine interprets the crown of precious stone as the eternal crown of righteousness, while the blessings of sweetness represent God's gracious favor, and the eternal life promise points to Christ as the source of everlasting life."
     ),
     (
-      "Glory → Exaltation",
-      "Great glory in salvation leading to divine exaltation",
-      ["magnus", "gloria", "salutare", "decor", "impono"],
+      "Glory → Joyful Presence",
+      "Great glory in salvation leading to eternal blessing and joy in God's presence",
+      ["magnus", "gloria", "salutare", "decor", "impono", "do", "benedictio", "saeculum", "laetifico", "gaudium", "vultus"],
       5,
-      5,
-      "Great is his glory in God's salvation; God will impose glory and great splendor upon him.",
-      "For Augustine, this represents the glory that comes from divine salvation, where God Himself becomes the source and giver of true glory."
-    ),
-    (
-      "Eternal Blessing → Joyful Presence",
-      "Eternal blessing resulting in joy in God's presence",
-      ["do", "benedictio", "saeculum", "laetifico", "gaudium", "vultus"],
       6,
-      6,
-      "God will give him as a blessing forever; He will gladden him with joy in His presence.",
-      "Augustine interprets this as the eternal blessing of divine fellowship, where true joy is found in God's presence rather than earthly pleasures."
+      "Great is his glory in God's salvation; God will impose glory and great splendor upon him, and God will give him as a blessing forever, gladdening him with joy in His presence.",
+      "For Augustine, this represents the glory that comes from divine salvation, where God Himself becomes the source and giver of true glory, and the eternal blessing of divine fellowship where true joy is found in God's presence."
     ),
     (
-      "Royal Trust → Divine Stability",
-      "The king's trust in the Lord ensuring he will not be moved",
-      ["rex", "spero", "dominus", "misericordia", "altissimus", "commoveo"],
+      "Royal Trust → Divine Victory",
+      "The king's trust in the Lord ensuring stability while God's hand finds all enemies",
+      ["rex", "spero", "dominus", "misericordia", "altissimus", "commoveo", "invenio", "manus", "omnis", "inimicus", "dexter", "odi"],
       7,
-      7,
-      "The king trusts in the Lord, and in the mercy of the Most High he will not be moved.",
-      "Augustine sees this as the stability that comes from placing complete trust in God's mercy, making one immovable in the face of trials."
-    ),
-    (
-      "Divine Victory → Enemy Defeat",
-      "God's hand finding all enemies and turning them back",
-      ["invenio", "manus", "omnis", "inimicus", "dexter", "odi", "pono", "dorsum", "reliquiae", "praeparo"],
       8,
-      12,
-      "May God's hand be found by all His enemies; may His right hand find all who hate Him. God will set them as a furnace of fire and turn their backs.",
-      "For Augustine, this represents God's complete victory over spiritual enemies, where His righteous judgment brings about their ultimate defeat and shame."
+      "The king trusts in the Lord and in the mercy of the Most High he will not be moved, while God's hand will be found by all His enemies and His right hand will find all who hate Him.",
+      "Augustine sees this as the stability that comes from placing complete trust in God's mercy, making one immovable in the face of trials, while God's victory over spiritual enemies brings about their ultimate defeat."
     ),
     (
       "Divine Wrath → Complete Destruction",
-      "God's anger and fire consuming the enemies completely",
-      ["clibanus", "ignis", "tempus", "vultus", "dominus", "ira", "conturbo", "devoro", "fructus", "terra", "perdo", "semen", "filius", "homo"],
+      "God's anger and fire consuming enemies and destroying their fruit from the earth",
+      ["pono", "clibanus", "ignis", "tempus", "vultus", "dominus", "ira", "conturbo", "devoro", "fructus", "terra", "perdo", "semen", "filius", "homo"],
       9,
       10,
       "God will set them as a furnace of fire in the time of His anger; the Lord will trouble them in His wrath, and fire will devour them. He will destroy their fruit from the earth and their seed from among the children of men.",
-      "Augustine interprets this as the complete destruction of evil, where God's righteous anger consumes all that is opposed to Him, leaving no trace of wickedness."
+      "Augustine interprets this as the complete destruction of evil, where God's righteous anger consumes all that is opposed to Him, leaving no trace of wickedness and ensuring the final victory of righteousness."
     ),
     (
       "Failed Schemes → Divine Preparation",
       "Enemy plans that cannot be established versus God's preparation of their downfall",
-      ["declino", "malum", "cogito", "consilium", "possum", "stabilio"],
+      ["declino", "malum", "cogito", "consilium", "possum", "stabilio", "pono", "dorsum", "reliquiae", "praeparo", "vultus"],
       11,
-      11,
-      "For they have turned aside toward evil; they have devised plans that they could not establish.",
-      "Augustine sees this as the futility of evil schemes against God's people, where human plans against divine will inevitably fail and collapse."
+      12,
+      "For they have turned aside toward evil; they have devised plans that they could not establish. God will set them as a back; in His remnants He will prepare their face.",
+      "Augustine sees this as the futility of evil schemes against God's people, where human plans against divine will inevitably fail and collapse, and God prepares the final defeat of all who oppose Him."
     ),
     (
       "Divine Exaltation → Praise",
-      "God exalted in His strength leading to joyful praise",
+      "God exalted in His strength leading to joyful praise and singing",
       ["exalto", "dominus", "virtus", "canto", "psallo", "virtus"],
       13,
       13,
       "Be exalted, O Lord, in Your strength; we will sing and praise Your mighty deeds.",
-      "For Augustine, this represents the soul's response to God's exaltation, where recognition of divine power leads naturally to joyful worship and praise."
+      "For Augustine, this represents the soul's response to God's exaltation, where recognition of divine power leads naturally to joyful worship and praise, completing the psalm's cycle from petition to thanksgiving."
     ),
   ]
 
@@ -213,11 +178,11 @@ class Psalm20Tests: XCTestCase {
 
   func testTotalVerses() {
     XCTAssertEqual(
-      psalm20.count, 13, "Psalm 20 should have 13 verses"
+      psalm20.count, expectedVerseCount, "Psalm 20 should have \(expectedVerseCount) verses"
     )
     XCTAssertEqual(
-      englishText.count, 13,
-      "Psalm 20 English text should have 13 verses"
+      englishText.count, expectedVerseCount,
+      "Psalm 20 English text should have \(expectedVerseCount) verses"
     )
     // Also validate the orthography of the text for analysis consistency
     let normalized = psalm20.map { PsalmTestUtilities.validateLatinText($0) }

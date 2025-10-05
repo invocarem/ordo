@@ -28142,6 +28142,7 @@
     "conjugation": 1,
     "perfect": "infirmavi",
     "infinitive": "infirmare",
+    "future": "infirmabor",
     "supine": "infirmatum",
     "forms": {
       "perfect_passive": ["infirmatus"],
