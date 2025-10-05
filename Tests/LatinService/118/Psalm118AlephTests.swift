@@ -31,13 +31,13 @@ class Psalm118AlephTests: XCTestCase {
   ]
 
   private let lineKeyLemmas = [
-    (1, ["beatus", "immaculatus", "ambulo", "dominus"]),
-    (2, ["beatus", "scrutor", "testimonium", "totus", "exquiro"]),
-    (3, ["enim", "operor", "iniquitas", "ambulo"]),
+    (1, ["beatus", "immaculatus", "via", "ambulo", "lex", "dominus"]),
+    (2, ["beatus", "scrutor", "testimonium", "totus", "cor", "exquiro"]),
+    (3, ["enim", "operor", "iniquitas", "via", "ambulo"]),
     (4, ["mando", "mandatum", "custodio", "nimis"]),
-    (5, ["utinam", "dirigo", "custodio", "iustificatio"]),
+    (5, ["utinam", "dirigo", "via", "custodio", "iustificatio"]),
     (6, ["tunc", "confundo", "perspicio", "omnis", "praeceptum"]),
-    (7, ["confiteor", "directio", "disco", "iudicium", "iustitia"]),
+    (7, ["confiteor", "directio", "cor", "disco", "iudicium", "iustitia"]),
     (8, ["iustificatio", "custodio", "derelinquo", "usquequaque"]),
   ]
 

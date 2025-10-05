@@ -44,12 +44,12 @@ class Psalm118BethTests: XCTestCase {
     private let structuralThemes = [
         (
             "Correction → Adherence",
-            "The young person's path correction through keeping God's words",
-            ["corrigo", "adolescentior", "custodio", "sermo", "repello"],
+            "The young person's path correction through keeping God's words and pleading not to be rejected",
+            ["corrigo", "adolescens", "custodio", "sermo", "repello"],
             1,
             2,
-            "The psalmist asks how a young man can correct his path—by keeping God's words. He has sought God with his whole heart and begs not to be rejected from His commandments.",
-            "Augustine sees this as the beginning of spiritual life—the correction from worldly ways through adherence to God's word. The whole-hearted seeking reflects the first commandment of loving God completely."
+            "The psalmist asks how a young man can correct his path—by keeping God's words. He has sought God with his whole heart and begs not to be rejected ('ne repellas me') from His commandments.",
+            "Augustine sees this as the beginning of spiritual life—the correction from worldly ways through adherence to God's word. The 'repello' reveals the psalmist's deep fear of divine rejection and his desperate plea to remain within God's covenant boundaries, showing the soul's recognition of its complete dependence on divine mercy."
         ),
         (
             "Treasure → Preservation",
@@ -104,8 +104,8 @@ class Psalm118BethTests: XCTestCase {
         ),
         (
             "Protection",
-            "Themes of guarding, protecting, and not forgetting",
-            ["custodio", "repello", "abscondo", "obliviscor", "pecco", "adolescentior"],
+            "Themes of guarding, protecting, and avoiding divine rejection",
+            ["custodio", "repello", "abscondo", "obliviscor", "pecco", "adolescens"],
             ThemeCategory.virtue,
             1...8
         )
