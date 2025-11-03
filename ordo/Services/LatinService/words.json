@@ -1,5 +1,68 @@
 [
   {
+    "lemma": "contestror",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "contestari",
+    "present": "contestror",
+    "future": "contestabor",
+    "perfect": "contestatus sum",
+    "forms": {
+      "future": [
+        "contestabor",
+        "contestaberis",
+        "contestabitur",
+        "contestabimur",
+        "contestabimini",
+        "contestabuntur"
+      ]
+    },
+    "translations": {
+      "en": "to call to witness, attest, declare, prove",
+      "la": "contestror, contestari, contestatus sum"
+    }
+  },
+
+  {
+    "lemma": "Iosephus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "Iosephus",
+    "genitive": "Iosephi",
+    "translations": {
+      "en": "Joseph",
+      "la": "Iosephus"
+    }
+  },
+
+  {
+  "lemma": "Aegyptus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "feminine",
+  "nominative": "Aegyptus",
+  "genitive": "Aegypti",
+  "translations": {
+    "en": "Egypt",
+    "la": "Aegyptus"
+  }
+},
+ {
+  "lemma": "cibo",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "cibare",
+  "present": "cibo",
+  "future": "cibabo",
+  "perfect": "cibavi",
+  "supine": "cibatum",
+  "translations": {
+    "en": "to feed, nourish",
+    "la": "cibo, cibare"
+  }
+},
+  {
     "lemma": "nonne",
     "part_of_speech": "adverb",
     "translations": {
@@ -6398,7 +6461,15 @@
       "en": "to walk, go about, march",
       "la": "ambulō, ambulāre, ambulāvī, ambulātum"
     },
-    "forms": {
+    "forms": {"pluperfect_subjunctive": [
+      "ambulassem",
+      "ambulasses",
+      "ambulasset",
+      "ambulassemus",
+      "ambulassetis",
+      "ambulassent"
+    ],
+     
       "imperfect_3pl": ["ambulabant"],
       "imperfect_1s": ["ambulabam"]
     }
@@ -21299,7 +21370,15 @@
       "la": "mitto"
     },
     "forms": {
-      "present": [
+       "pluperfect_subjunctive": [
+      "misissem",
+      "misisses",
+      "misisset",
+      "misissemus",
+      "misissetis",
+      "misissent"
+    ],
+    "present": [
         "mitto",
         "mittis",
         "mittit",
@@ -29380,6 +29459,14 @@
       "la": "audio, audire, audivi, auditum"
     },
     "forms": {
+       "pluperfect_subjunctive": [
+      "audissem",
+      "audisses",
+      "audisset",
+      "audissemus",
+      "audissetis",
+      "audissent"
+    ],
       "present": ["audio", "audis", "audit", "audimus", "auditis", "audiunt"],
       "imperfect": [
         "audiebam",
@@ -29581,6 +29668,9 @@
         "invocabimus",
         "invocabitis",
         "invocabunt"
+      ],
+      "perfect_2sg_eccl": [
+        "invocasti"
       ],
       "perfect": [
         "invocavi",
@@ -33058,6 +33148,14 @@
     "perfect": "humiliavi",
     "supine": "humiliatum",
     "forms": {
+      "pluperfect_subjunctive": [
+      "humiliassem",
+      "humiliasses",
+      "humiliasset",
+      "humiliassemus",
+      "humiliassetis",
+      "humiliassent"
+    ],
       "present": [
         "humilio",
         "humilias",
