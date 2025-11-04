@@ -1,0 +1,114 @@
+@Empty I am a Latin bot. Please follow the examples below to generate JSON (wrapped in a markdown code block).
+
+CRITICAL INSTRUCTIONS:
+
+1. Output Format: Your response must be a single JSON object wrapped in a markdown code block.
+2. Character Set: Use English-friendly characters only (e.g., use 'occasus' instead of 'occāsus').
+3. Lemma Identification:
+   - For verbs: lemma is the first-person singular present active indicative form (e.g., 'timeo')
+   - For nouns/adjectives: lemma is the masculine nominative singular form (e.g., lemma for 'infirmae' is 'infirmus')
+
+4. Principal Parts Fields:
+   - FOR VERBS:
+     - "present" field must contain the first-person singular form (the lemma itself)
+     - "future" field must contain the first-person singular future form  
+     - "perfect" field must contain the first-person singular perfect form
+     - Do NOT put third-person forms in these principal parts fields
+   - FOR ADJECTIVES/NOUNS:
+     - "nominative" field contains the masculine nominative singular form
+     - "genitive" field contains the genitive singular form
+
+5. Forms Fields:
+   - 'forms' for singular forms
+   - 'forms_plural' for plural forms
+   - Use suffixes _m (masculine), _f (feminine), _n (neuter) for gender
+   - For verbs: third-person forms go in the 'forms' object
+   - For adjectives/nouns: include common case forms in the appropriate forms objects
+
+6. Translations Field:
+   - For verbs: include all principal parts in the "la" translation (present, infinitive, perfect, supine)
+   - For adjectives: include all gender forms in the "la" translation (masculine, feminine, neuter)
+   - For nouns: include the nominative form in the "la" translation
+
+EXAMPLES:
+
+Verb Example:
+{
+  "lemma": "timeo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "timere",
+  "present": "timeo",
+  "future": "timebo",
+  "perfect": "timui",
+  "supine": null,
+  "translations": {
+    "en": "to fear, be afraid",
+    "la": "timeo, timere, timui"
+  },
+  "forms": {
+    "present_participle": ["timens", "timentis"]
+  },
+  "forms_plural": {
+    "present_participle_m": ["timentes"],
+    "present_participle_f": ["timentes"]
+  }
+}
+
+Adjective Example:
+{
+  "lemma": "infirmus",
+  "part_of_speech": "adjective",
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "infirmus",
+  "genitive": "infirmi",
+  "translations": {
+    "en": "weak, sick, feeble, infirm, powerless",
+    "la": "īnfirmus, īnfirma, īnfirmum"
+  },
+  "forms": {
+    "nominative_f": ["infirma"],
+    "nominative_n": ["infirmum"],
+    "genitive_f": ["infirmae"],
+    "genitive_n": ["infirmi"],
+    "accusative_m": ["infirmum"],
+    "accusative_f": ["infirmam"],
+    "accusative_n": ["infirmum"]
+  },
+  "forms_plural": {
+    "nominative_m": ["infirmi"],
+    "nominative_f": ["infirmae"],
+    "nominative_n": ["infirma"],
+    "genitive_m": ["infirmorum"],
+    "genitive_f": ["infirmarum"],
+    "genitive_n": ["infirmorum"]
+  }
+}
+
+Noun Example:
+{
+  "lemma": "altum",
+  "part_of_speech": "noun", 
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "altum",
+  "genitive": "alti",
+  "translations": {
+    "en": "the deep, the sea, height",
+    "la": "altum"
+  },
+  "forms": {
+    "accusative": ["altum"],
+    "ablative": ["alto"]
+  },
+  "forms_plural": {
+    "nominative": ["alta"],
+    "genitive": ["altorum"],
+    "accusative": ["alta"]
+  }
+}
+
+Verse: "timentes autem Dominum glorificat;"
+
+Now generate the JSON object for the lemma of 'glorificat'

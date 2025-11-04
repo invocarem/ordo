@@ -1,14 +1,16 @@
 @testable import LatinService
 import XCTest
 
-class Psalm15Tests: XCTestCase {
+class Psalm15Tests: XCTestCase
+{
   private let utilities = PsalmTestUtilities.self
   private let verbose = true
   let id = PsalmIdentity(number: 15, category: "")
 
   // MARK: - Setup
 
-  override func setUp() {
+  override func setUp()
+  {
     super.setUp()
   }
 
@@ -17,19 +19,17 @@ class Psalm15Tests: XCTestCase {
   private let expectedVerseCount = 11
 
   private let text = [
-    "Conserva me, Domine, quoniam in te speravi; Dixi Domino: Deus meus es tu, quoniam bonorum meorum non eges.",
-    "Sanctis qui sunt in terra eius, mirificavit omnes voluntates meas in eis.",
-    "Multiplicatae sunt infirmitates eorum; postea acceleraverunt.",
-    "Non congregabo conventicula eorum de sanguinibus, nec memor ero nominum eorum per labia mea.",
-    "Dominus pars hereditatis meae, et calicis mei: tu es qui restitues hereditatem meam mihi.",
-
-    "Funes ceciderunt mihi in praeclaris; etenim hereditas mea praeclara est mihi.",
-    "Benedicam Dominum qui tribuit mihi intellectum; insuper et usque ad noctem increpuerunt me renes mei.",
-    "Providebam Dominum in conspectu meo semper: quoniam a dextris est mihi, ne commovear.",
-    "Propter hoc laetatum est cor meum, et exsultavit lingua mea: insuper et caro mea requiescet in spe.",
-    "Quoniam non derelinques animam meam in inferno, nec dabis sanctum tuum videre corruptionem.",
-
-    "Notas mihi fecisti vias vitae; adimplebis me laetitia cum vultu tuo: delectationes in dextera tua usque in finem.",
+    /* 1 */ "Conserva me, Domine, quoniam in te speravi; Dixi Domino: Deus meus es tu, quoniam bonorum meorum non eges.",
+    /* 2 */ "Sanctis qui sunt in terra eius, mirificavit omnes voluntates meas in eis.",
+    /* 3 */ "Multiplicatae sunt infirmitates eorum; postea acceleraverunt.",
+    /* 4 */ "Non congregabo conventicula eorum de sanguinibus, nec memor ero nominum eorum per labia mea.",
+    /* 5 */ "Dominus pars hereditatis meae, et calicis mei: tu es qui restitues hereditatem meam mihi.",
+    /* 6 */ "Funes ceciderunt mihi in praeclaris; etenim hereditas mea praeclara est mihi.",
+    /* 7 */ "Benedicam Dominum qui tribuit mihi intellectum; insuper et usque ad noctem increpuerunt me renes mei.",
+    /* 8 */ "Providebam Dominum in conspectu meo semper: quoniam a dextris est mihi, ne commovear.",
+    /* 9 */ "Propter hoc laetatum est cor meum, et exsultavit lingua mea: insuper et caro mea requiescet in spe.",
+    /* 10 */ "Quoniam non derelinques animam meam in inferno, nec dabis sanctum tuum videre corruptionem.",
+    /* 11 */ "Notas mihi fecisti vias vitae; adimplebis me laetitia cum vultu tuo: delectationes in dextera tua usque in finem."
   ]
 
   private let englishText = [
@@ -43,7 +43,7 @@ class Psalm15Tests: XCTestCase {
     "I set the Lord always in my sight: for he is at my right hand, that I be not moved.",
     "Therefore my heart hath been glad, and my tongue hath rejoiced: moreover, my flesh also shall rest in hope.",
     "Because thou wilt not leave my soul in hell; nor wilt thou give thy holy one to see corruption.",
-    "Thou hast made known to me the ways of life, thou shalt fill me with joy with thy countenance: at thy right hand are delights even to the end.",
+    "Thou hast made known to me the ways of life, thou shalt fill me with joy with thy countenance: at thy right hand are delights even to the end."
   ]
 
   private let lineKeyLemmas = [
@@ -57,7 +57,7 @@ class Psalm15Tests: XCTestCase {
     (8, ["provideo", "dominus", "conspectus", "dexter", "commoveo"]),
     (9, ["laetor", "cor", "exsulto", "lingua", "caro", "requiesco", "spes"]),
     (10, ["derelinquo", "anima", "infernus", "sanctus", "corruptio"]),
-    (11, ["notus", "via", "vita", "adimpleo", "laetitia", "vultus", "delectatio", "finis"]),
+    (11, ["notus", "via", "vita", "adimpleo", "laetitia", "vultus", "delectatio", "finis"])
   ]
 
   private let structuralThemes = [
@@ -114,7 +114,7 @@ class Psalm15Tests: XCTestCase {
       11,
       "The psalmist declares that God has made known to him the paths of life and will fill him with joy in His presence, with pleasures at God's right hand forever.",
       "For Augustine, this represents the culmination of the spiritual journey where knowledge of divine paths leads to complete joy and eternal delight in God's presence, the ultimate goal of the faithful soul."
-    ),
+    )
   ]
 
   private let conceptualThemes = [
@@ -173,12 +173,13 @@ class Psalm15Tests: XCTestCase {
       ["infernus", "corruptio", "derelinquo", "finis"],
       ThemeCategory.divine,
       10 ... 11
-    ),
+    )
   ]
 
   // MARK: - Test Methods
 
-  func testTotalVerses() {
+  func testTotalVerses()
+  {
     XCTAssertEqual(
       text.count, expectedVerseCount, "Psalm 15 should have \(expectedVerseCount) verses"
     )
@@ -195,7 +196,8 @@ class Psalm15Tests: XCTestCase {
     )
   }
 
-  func testSaveTexts() {
+  func testSaveTexts()
+  {
     let utilities = PsalmTestUtilities.self
     let jsonString = utilities.generatePsalmTextsJSONString(
       psalmNumber: id.number,
@@ -209,15 +211,19 @@ class Psalm15Tests: XCTestCase {
       filename: "output_psalm15_texts.json"
     )
 
-    if success {
+    if success
+    {
       print("✅ Complete texts JSON created successfully")
-    } else {
+    }
+    else
+    {
       print("⚠️ Could not save complete texts file:")
       print(jsonString)
     }
   }
 
-  func testSaveThemes() {
+  func testSaveThemes()
+  {
     let utilities = PsalmTestUtilities.self
     guard
       let jsonString = utilities.generateCompleteThemesJSONString(
@@ -226,7 +232,8 @@ class Psalm15Tests: XCTestCase {
         conceptualThemes: conceptualThemes,
         structuralThemes: structuralThemes
       )
-    else {
+    else
+    {
       XCTFail("Failed to generate complete themes JSON")
       return
     }
@@ -236,15 +243,19 @@ class Psalm15Tests: XCTestCase {
       filename: "output_psalm15_themes.json"
     )
 
-    if success {
+    if success
+    {
       print("✅ Complete themes JSON created successfully")
-    } else {
+    }
+    else
+    {
       print("⚠️ Could not save complete themes file:")
       print(jsonString)
     }
   }
 
-  func testLineByLineKeyLemmas() {
+  func testLineByLineKeyLemmas()
+  {
     let utilities = PsalmTestUtilities.self
     utilities.testLineByLineKeyLemmas(
       psalmText: text,
@@ -254,7 +265,8 @@ class Psalm15Tests: XCTestCase {
     )
   }
 
-  func testStructuralThemes() {
+  func testStructuralThemes()
+  {
     let utilities = PsalmTestUtilities.self
 
     // First, verify that all structural theme lemmas are in lineKeyLemmas
@@ -278,7 +290,8 @@ class Psalm15Tests: XCTestCase {
     )
   }
 
-  func testConceptualThemes() {
+  func testConceptualThemes()
+  {
     let utilities = PsalmTestUtilities.self
 
     // First, verify that conceptual theme lemmas are in lineKeyLemmas
@@ -304,9 +317,13 @@ class Psalm15Tests: XCTestCase {
 
   // MARK: - Helper
 
-  private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
-    for (lemma, forms, translation) in confirmedWords {
-      guard let entry = analysis.dictionary[lemma] else {
+  private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)])
+  {
+    for (lemma, forms, translation) in confirmedWords
+    {
+      guard let entry = analysis.dictionary[lemma]
+      else
+      {
         XCTFail("Missing lemma: \(lemma)")
         continue
       }
@@ -319,14 +336,17 @@ class Psalm15Tests: XCTestCase {
 
       // Verify morphological coverage
       let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-      if !missingForms.isEmpty {
+      if !missingForms.isEmpty
+      {
         XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
       }
 
-      if verbose {
+      if verbose
+      {
         print("\n\(lemma.uppercased())")
         print("  Translation: \(entry.translation ?? "?")")
-        for form in forms {
+        for form in forms
+        {
           let count = entry.forms[form.lowercased()] ?? 0
           print("  \(form.padding(toLength: 12, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
         }

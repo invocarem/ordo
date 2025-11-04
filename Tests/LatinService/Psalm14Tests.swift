@@ -38,7 +38,7 @@ class Psalm14Tests: XCTestCase {
     (2, ["ingredior", "sine", "macula", "operor", "iustitia"]),
     (3, ["loquor", "veritas", "cor", "ago", "dolus", "lingua"]),
     (4, ["facio", "proximus", "malum", "opprobrium", "sustineo", "adversus"]),
-    (5, ["nihilum", "deduco", "conspectus", "malignus", "timentes", "dominus", "glorifico"]),
+    (5, ["nihilum", "deduco", "conspectus", "malignus", "timeo", "dominus", "glorifico"]),
     (6, ["iuro", "proximus", "decipio", "pecunia", "do", "usura", "munus", "innocens", "accipio"]),
     (7, ["facio", "moveo", "aeternum"]),
   ]

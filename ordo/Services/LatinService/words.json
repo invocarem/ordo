@@ -1,5 +1,22 @@
 [
   {
+    "lemma": "buccino",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "buccinare",
+    "present": "buccino",
+    "future": "buccinabo",
+    "perfect": "buccinavi",
+    "supine": "buccinatum",
+    "forms": {
+      "imperative": ["buccina", "buccinate"]
+    },
+    "translations": {
+      "en": "to blow a trumpet, sound a signal",
+      "la": "buccino, buccinare, buccinavi, buccinatum"
+    }
+  },
+  {
     "lemma": "contestror",
     "part_of_speech": "verb",
     "conjugation": 1,
@@ -37,31 +54,31 @@
   },
 
   {
-  "lemma": "Aegyptus",
-  "part_of_speech": "noun",
-  "declension": 2,
-  "gender": "feminine",
-  "nominative": "Aegyptus",
-  "genitive": "Aegypti",
-  "translations": {
-    "en": "Egypt",
-    "la": "Aegyptus"
-  }
-},
- {
-  "lemma": "cibo",
-  "part_of_speech": "verb",
-  "conjugation": 1,
-  "infinitive": "cibare",
-  "present": "cibo",
-  "future": "cibabo",
-  "perfect": "cibavi",
-  "supine": "cibatum",
-  "translations": {
-    "en": "to feed, nourish",
-    "la": "cibo, cibare"
-  }
-},
+    "lemma": "Aegyptus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "feminine",
+    "nominative": "Aegyptus",
+    "genitive": "Aegypti",
+    "translations": {
+      "en": "Egypt",
+      "la": "Aegyptus"
+    }
+  },
+  {
+    "lemma": "cibo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "cibare",
+    "present": "cibo",
+    "future": "cibabo",
+    "perfect": "cibavi",
+    "supine": "cibatum",
+    "translations": {
+      "en": "to feed, nourish",
+      "la": "cibo, cibare"
+    }
+  },
   {
     "lemma": "nonne",
     "part_of_speech": "adverb",
@@ -6461,15 +6478,16 @@
       "en": "to walk, go about, march",
       "la": "ambulō, ambulāre, ambulāvī, ambulātum"
     },
-    "forms": {"pluperfect_subjunctive": [
-      "ambulassem",
-      "ambulasses",
-      "ambulasset",
-      "ambulassemus",
-      "ambulassetis",
-      "ambulassent"
-    ],
-     
+    "forms": {
+      "pluperfect_subjunctive": [
+        "ambulassem",
+        "ambulasses",
+        "ambulasset",
+        "ambulassemus",
+        "ambulassetis",
+        "ambulassent"
+      ],
+
       "imperfect_3pl": ["ambulabant"],
       "imperfect_1s": ["ambulabam"]
     }
@@ -21370,15 +21388,15 @@
       "la": "mitto"
     },
     "forms": {
-       "pluperfect_subjunctive": [
-      "misissem",
-      "misisses",
-      "misisset",
-      "misissemus",
-      "misissetis",
-      "misissent"
-    ],
-    "present": [
+      "pluperfect_subjunctive": [
+        "misissem",
+        "misisses",
+        "misisset",
+        "misissemus",
+        "misissetis",
+        "misissent"
+      ],
+      "present": [
         "mitto",
         "mittis",
         "mittit",
@@ -29459,14 +29477,14 @@
       "la": "audio, audire, audivi, auditum"
     },
     "forms": {
-       "pluperfect_subjunctive": [
-      "audissem",
-      "audisses",
-      "audisset",
-      "audissemus",
-      "audissetis",
-      "audissent"
-    ],
+      "pluperfect_subjunctive": [
+        "audissem",
+        "audisses",
+        "audisset",
+        "audissemus",
+        "audissetis",
+        "audissent"
+      ],
       "present": ["audio", "audis", "audit", "audimus", "auditis", "audiunt"],
       "imperfect": [
         "audiebam",
@@ -29669,9 +29687,7 @@
         "invocabitis",
         "invocabunt"
       ],
-      "perfect_2sg_eccl": [
-        "invocasti"
-      ],
+      "perfect_2sg_eccl": ["invocasti"],
       "perfect": [
         "invocavi",
         "invocavisti",
@@ -33149,13 +33165,13 @@
     "supine": "humiliatum",
     "forms": {
       "pluperfect_subjunctive": [
-      "humiliassem",
-      "humiliasses",
-      "humiliasset",
-      "humiliassemus",
-      "humiliassetis",
-      "humiliassent"
-    ],
+        "humiliassem",
+        "humiliasses",
+        "humiliasset",
+        "humiliassemus",
+        "humiliassetis",
+        "humiliassent"
+      ],
       "present": [
         "humilio",
         "humilias",

@@ -1,7 +1,8 @@
 @testable import LatinService
 import XCTest
 
-class Psalm75Tests: XCTestCase {
+class Psalm75Tests: XCTestCase
+{
   private let utilities = PsalmTestUtilities.self
   private let verbose = true
   let id = PsalmIdentity(number: 75, category: "")
@@ -9,34 +10,35 @@ class Psalm75Tests: XCTestCase {
   // MARK: - Test Data Properties
 
   private let expectedVerseCount = 12
+
   private let text = [
-    "Notus in Iudaea Deus; in Israel magnum nomen eius.",
-    "Et factus est in pace locus eius, et habitatio eius in Sion.",
-    "Ibi confregit potentias arcuum, scutum, gladium, et bellum.",
-    "Illuminas tu mirabiliter a montibus aeternis. Turbati sunt omnes insipientes corde; ",
-    "Dormierunt somnum suum, et nihil invenerunt omnes viri divitiarum in manibus suis.", /* 5 */
-    "Ab increpatione tua, Deus Iacob, dormitaverunt qui ascenderunt equos.",
-    "Tu terribilis es, et quis resistet tibi? ex tunc ira tua.",
-    "De caelo auditum fecisti iudicium; terra tremuit et quievit.",
-    "Cum exsurgeret in iudicium Deus, ut salvos faceret omnes mansuetos terrae.",
-    "Quoniam cogitatio hominis confitebitur tibi, et reliquiae cogitationis diem festum agent tibi.",
-    "Vovete, et reddite Domino Deo vestro: omnes, qui in circuitu eius affertis munera.",
-    "Terribili et ei qui aufert spiritum principum, terribili apud reges terrae.",
+    /* 1 */ "Notus in Iudaea Deus; in Israel magnum nomen eius.",
+    /* 2 */ "Et factus est in pace locus eius, et habitatio eius in Sion.",
+    /* 3 */ "Ibi confregit potentias arcuum, scutum, gladium, et bellum.",
+    /* 4 */ "Illuminas tu mirabiliter a montibus aeternis. Turbati sunt omnes insipientes corde;",
+    /* 5 */ "Dormierunt somnum suum, et nihil invenerunt omnes viri divitiarum in manibus suis.",
+    /* 6 */ "Ab increpatione tua, Deus Iacob, dormitaverunt qui ascenderunt equos.",
+    /* 7 */ "Tu terribilis es, et quis resistet tibi? ex tunc ira tua.",
+    /* 8 */ "De caelo auditum fecisti iudicium; terra tremuit et quievit.",
+    /* 9 */ "Cum exsurgeret in iudicium Deus, ut salvos faceret omnes mansuetos terrae.",
+    /* 10 */ "Quoniam cogitatio hominis confitebitur tibi, et reliquiae cogitationis diem festum agent tibi.",
+    /* 11 */ "Vovete, et reddite Domino Deo vestro: omnes, qui in circuitu eius affertis munera.",
+    /* 12 */ "Terribili et ei qui aufert spiritum principum, terribili apud reges terrae."
   ]
 
   private let englishText = [
-    "In Judea God is known; his name is great in Israel.",
-    "And his place is in peace, and his abode in Sion.",
-    "There hath he broken the powers of bows, the shield, the sword, and the battle.",
-    "Thou enlightenest wonderfully from the everlasting hills. All the foolish of heart were troubled;",
-    "They have slept their sleep, and all the men of riches have found nothing in their hands.",
-    "At thy rebuke, O God of Jacob, they have all slumbered that mounted on horseback.",
-    "Thou art terrible, and who shall resist thee? from that time thy wrath.",
-    "Thou hast caused judgment to be heard from heaven; the earth trembled and was still.",
-    "When God arose in judgment, to save all the meek of the earth.",
-    "For the thought of man shall give praise to thee, and the remainders of the thought shall keep holiday to thee.",
-    "Vow ye, and pay to the Lord your God: all you that are round about him bring presents.",
-    "To him who takes away the spirit of princes: to the terrible with the kings of the earth.",
+    /* 1 */ "In Judea God is known; his name is great in Israel.",
+    /* 2 */ "And his place is in peace, and his abode in Sion.",
+    /* 3 */ "There hath he broken the powers of bows, the shield, the sword, and the battle.",
+    /* 4 */ "Thou enlightenest wonderfully from the everlasting hills. All the foolish of heart were troubled;",
+    /* 5 */ "They have slept their sleep, and all the men of riches have found nothing in their hands.",
+    /* 6 */ "At thy rebuke, O God of Jacob, they have all slumbered that mounted on horseback.",
+    /* 7 */ "Thou art terrible, and who shall resist thee? from that time thy wrath.",
+    /* 8 */ "Thou hast caused judgment to be heard from heaven; the earth trembled and was still.",
+    /* 9 */ "When God arose in judgment, to save all the meek of the earth.",
+    /* 10 */ "For the thought of man shall give praise to thee, and the remainders of the thought shall keep holiday to thee.",
+    /* 11 */ "Vow ye, and pay to the Lord your God: all you that are round about him bring presents.",
+    /* 12 */ "To him who takes away the spirit of princes: to the terrible with the kings of the earth."
   ]
 
   private let lineKeyLemmas = [
@@ -51,7 +53,7 @@ class Psalm75Tests: XCTestCase {
     (9, ["exsurgo", "iudicium", "deus", "salvus", "facio", "mansuetus", "terra"]),
     (10, ["cogitatio", "homo", "confiteor", "reliquiae", "dies", "festus", "ago"]),
     (11, ["voveo", "reddo", "dominus", "deus", "omnis", "circuitus", "affero", "munus"]),
-    (12, ["terribilis", "aufero", "spiritus", "princeps", "terribilis", "rex", "terra"]),
+    (12, ["terribilis", "aufero", "spiritus", "princeps", "terribilis", "rex", "terra"])
   ]
 
   private let structuralThemes = [
@@ -108,7 +110,7 @@ class Psalm75Tests: XCTestCase {
       12,
       "All are called to vow and pay to the Lord their God and bring presents, while God is terrible to him who takes away the spirit of princes and is terrible with the kings of the earth.",
       "Augustine sees this as the proper response to divine judgment - humans should offer vows and gifts to God, recognizing His terrifying power over all earthly rulers and authorities."
-    ),
+    )
   ]
 
   private let conceptualThemes = [
@@ -181,18 +183,20 @@ class Psalm75Tests: XCTestCase {
       ["terribilis", "aufero", "spiritus", "princeps", "rex"],
       ThemeCategory.divine,
       12 ... 12
-    ),
+    )
   ]
 
   // MARK: - Setup
 
-  override func setUp() {
+  override func setUp()
+  {
     super.setUp()
   }
 
   // MARK: - Test Cases
 
-  func testTotalVerses() {
+  func testTotalVerses()
+  {
     XCTAssertEqual(
       text.count, expectedVerseCount, "Psalm 75 should have \(expectedVerseCount) verses"
     )
@@ -209,7 +213,8 @@ class Psalm75Tests: XCTestCase {
     )
   }
 
-  func testSaveTexts() {
+  func testSaveTexts()
+  {
     let utilities = PsalmTestUtilities.self
     let jsonString = utilities.generatePsalmTextsJSONString(
       psalmNumber: id.number,
@@ -223,15 +228,19 @@ class Psalm75Tests: XCTestCase {
       filename: "output_psalm75_texts.json"
     )
 
-    if success {
+    if success
+    {
       print("✅ Complete texts JSON created successfully")
-    } else {
+    }
+    else
+    {
       print("⚠️ Could not save complete texts file:")
       print(jsonString)
     }
   }
 
-  func testSaveThemes() {
+  func testSaveThemes()
+  {
     let utilities = PsalmTestUtilities.self
     guard
       let jsonString = utilities.generateCompleteThemesJSONString(
@@ -240,7 +249,8 @@ class Psalm75Tests: XCTestCase {
         conceptualThemes: conceptualThemes,
         structuralThemes: structuralThemes
       )
-    else {
+    else
+    {
       XCTFail("Failed to generate complete themes JSON")
       return
     }
@@ -250,15 +260,19 @@ class Psalm75Tests: XCTestCase {
       filename: "output_psalm75_themes.json"
     )
 
-    if success {
+    if success
+    {
       print("✅ Complete themes JSON created successfully")
-    } else {
+    }
+    else
+    {
       print("⚠️ Could not save complete themes file:")
       print(jsonString)
     }
   }
 
-  func testLineByLineKeyLemmas() {
+  func testLineByLineKeyLemmas()
+  {
     let utilities = PsalmTestUtilities.self
     utilities.testLineByLineKeyLemmas(
       psalmText: text,
@@ -268,7 +282,8 @@ class Psalm75Tests: XCTestCase {
     )
   }
 
-  func testStructuralThemes() {
+  func testStructuralThemes()
+  {
     let utilities = PsalmTestUtilities.self
 
     // First, verify that all structural theme lemmas are in lineKeyLemmas
@@ -292,7 +307,8 @@ class Psalm75Tests: XCTestCase {
     )
   }
 
-  func testConceptualThemes() {
+  func testConceptualThemes()
+  {
     let utilities = PsalmTestUtilities.self
 
     // First, verify that conceptual theme lemmas are in lineKeyLemmas
