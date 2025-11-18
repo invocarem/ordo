@@ -42,7 +42,7 @@ class Psalm53Tests: XCTestCase {
     (3, ["alienus","insurro","adversus","fortis","quaero","anima","propono","deus","conspectus"]),
     (4, ["deus","adiuvo","dominus","susceptor","anima"]),
     (5, ["averto","malus","inimicus","veritas","disperdo"]),
-    (6, ["volenter","sacrifico","confiteor","nomen","dominus","bonus"]),
+    (6, ["voluntarius","sacrifico","confiteor","nomen","dominus","bonus"]),
     (7, ["tribulatio","eripio","inimicus","despicio","oculus"])
   ]
 

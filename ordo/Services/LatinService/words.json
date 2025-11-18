@@ -178,6 +178,7 @@
       "la": "voluntārius, voluntāris"
     },
     "forms": {
+      "adverb": ["voluntarie"],
       "accusative_f": ["voluntariam"],
       "nominative_f": ["voluntaria"],
       "nominative_n": ["voluntarium"],
@@ -18692,6 +18693,26 @@
       "la": "dens"
     }
   },
+{
+  "lemma": "insurro",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "insurrare",
+  "present": "insurro",
+  "future": "insurro",
+  "perfect": "insurrexi",
+  "supine": null,
+  "translations": {
+    "en": "to rise up, revolt",
+    "la": "insurro, insurrare, insurrexi"
+  },
+  "forms": {
+    "perfect_active_indicative_plural": [
+      "insurrexerunt"
+    ]
+  }
+},
+
   {
     "lemma": "insurgo",
     "part_of_speech": "verb",
@@ -29125,8 +29146,13 @@
   {
     "lemma": "sacrifico",
     "part_of_speech": "verb",
-    "infinitive": "sacrificare",
-    "perfect": "sacrificavi",
+ "conjugation": 1,
+  "infinitive": "sacrificare",
+  "present": "sacrifico",
+  "future": "sacrificabo",
+  "perfect": "sacrificavi",
+  "supine": "sacrificatum",
+
     "forms": {
       "imperative": ["sacrifica", "sacrificate"],
       "present": [
