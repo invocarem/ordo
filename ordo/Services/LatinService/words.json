@@ -1,5 +1,24 @@
 [
   {
+  "lemma": "dimido",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "dimidere",
+  "present": "dimido",
+  "future": "dimidam",
+  "perfect": "dimidiavi",
+  "supine": "dimissum",
+  "translations": {
+    "en": "to halve, cut in half",
+    "la": "dimido, dimidere, dimidiavi"
+  },
+  "forms": {
+    "future_active_indicative_plural": [
+      "dimidiabunt"
+    ]
+  }
+},
+  {
     "lemma": "buccino",
     "part_of_speech": "verb",
     "conjugation": 1,
