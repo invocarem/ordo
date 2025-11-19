@@ -1,5 +1,55 @@
 [
   {
+  "lemma": "fluctuatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "fluctuatio",
+  "genitive": "fluctuationis",
+  "translations": {
+    "en": "wavering, change, disturbance",
+    "la": "fluctuatio, fluctuationis"
+  
+}
+},
+
+  {
+  "lemma": "cura",
+  "part_of_speech": "noun",
+  "declension": 1,
+  "gender": "feminine",
+  "nominative": "cura",
+  "genitive": "curae",
+  "translations": {
+    "en": "care, concern, anxiety",
+    "la": "cura, curae"
+  }
+},
+
+  {
+  "lemma": "iacio",
+  "part_of_speech": "verb",
+  "conjugation": 4,
+  "infinitive": "iacere",
+  "present": "iacio",
+  "future": "iaciam",
+  "perfect": "iaci",
+  "supine": "iactum",
+  "translations": {
+    "en": "to throw, hurl, cast",
+    "la": "iacio, iacere, iaci, iactum"
+  },
+  "forms": {
+    "future_active_indicative_singular": [
+      "iaciam"
+    ],
+    "perfect_active_indicative_plural": [
+      "iacerunt"
+    ]
+  }
+},
+
+  {
   "lemma": "dimido",
   "part_of_speech": "verb",
   "conjugation": 2,
