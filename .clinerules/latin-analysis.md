@@ -1,26 +1,204 @@
-# Latin Word Analysis Rules
+# Latin Word Analysis Rules (JSON Specification)
+These rules apply whenever analyzing a Latin word (verb, noun,
+adjective, particle, numeral, etc.).\
+All output **must be valid JSON** and follow the structure below.
 
-These rules apply whenever I ask to analyze a Latin verb or Latin vocabulary.
+------------------------------------------------------------------------
 
-## 1. Lemma
-- For verbs, always provide the **lemma in first-person singular, present active indicative** (e.g., *amo*, *video*, *capio*, *sum*).
+## 1. General JSON Structure
 
-## 2. Conjugation
-- State the **conjugation number** clearly (1st, 2nd, 3rd, 3rd-io, or 4th).
-- For irregular verbs, mark as **irregular** instead of a number.
+Every analyzed entry must be a JSON object.
 
-## 3. Meaning / Translation
-- Provide a **short translation only** (1–3 words).
-- Avoid long descriptive phrases or sentences.
+### Required top-level fields:
 
-## 4. Output Format
-Always use the following structure:
+-   **lemma** --- canonical dictionary form
+    -   For verbs: *1st person singular, present active indicative*
+        (e.g., **amo**, **video**, **capio**, **sum**)\
+    -   For nouns: **nominative singular**\
+    -   For adjectives: **nominative singular masculine**\
+    -   For particles / fixed forms: exact dictionary lemma
+-   **part_of_speech** --- one of:
+    -   *verb*, *noun*, *adjective*, *adverb*, *pronoun*, *preposition*,
+        *conjunction*, *interjection*, *numeral*, *participle*,
+        *particle*, etc.
+-   **translations** (object):
+    -   **en**: short English meaning(s), 1--3 words when possible
+    -   **la**: full Latin principal parts or dictionary info
 
-**Lemma:**  
-**Conjugation:**  
-**Meaning:**
+Example:
 
-Example output:
-- **Lemma:** *amo*  
-- **Conjugation:** 1
-- **Meaning:** love
+``` json
+"translations": {
+  "en": "stone, rock",
+  "la": "lapis, lapidis"
+}
+```
+
+------------------------------------------------------------------------
+
+## 2. Nouns
+
+### Required fields:
+
+-   **declension** --- number 1--5; 0 for indeclinable nouns\
+-   **gender** --- masculine, feminine, neuter\
+-   **nominative** --- nominative singular\
+-   Optional: **accusative**, **genitive**, **ablative**, etc.\
+-   **forms** --- an object mapping grammatical tags → list of forms
+
+### Forms notation:
+
+-   Tags such as:
+    -   `ablative_sg`
+    -   `genitive_pl`
+    -   `dative_sg`
+
+Suffixes: - `_m` → masculine\
+- `_f` → feminine\
+- `_n` → neuter
+
+Example:
+
+``` json
+"forms": {
+  "ablative_sg": ["lapide"]
+}
+```
+
+------------------------------------------------------------------------
+
+## 3. Verbs
+
+### Required fields:
+
+-   **conjugation** --- 1, 2, 3, 3-io, 4, or `"irregular"`
+-   **infinitive**
+-   **present**
+-   **future**
+-   Optional principal parts:
+    -   **perfect**
+    -   **supine**
+-   **forms** --- grammatical tag → list of forms
+
+Verb lemma **must always** be 1st person singular present active
+indicative.
+
+Forms examples: - `present_participle` - `pluperfect_subjunctive` -
+`present_indicative_1sg` - `present_participle_nom_sg_m`
+
+Example:
+
+``` json
+"forms": {
+  "present_participle": ["volante"],
+  "pluperfect_subjunctive": ["voluisses"],
+  "present_participle_nom_sg_m": ["volens"],
+  "genitive_sg": ["volentis"]
+}
+```
+
+------------------------------------------------------------------------
+
+## 4. Numerals
+
+### Required fields:
+
+-   **part_of_speech**: "numeral"
+-   **type**: cardinal / ordinal / distributive / adverbial
+-   **declension**:
+    -   0 for indeclinable
+    -   number if declined
+
+Example:
+
+``` json
+{
+  "lemma": "decem",
+  "part_of_speech": "numeral",
+  "declension": 0,
+  "type": "cardinal",
+  "nominative": "decem",
+  "translations": {
+    "en": "ten",
+    "la": "decem"
+  }
+}
+```
+
+------------------------------------------------------------------------
+
+## 5. Optional Fields
+
+Optional: - **type**\
+- **stem**\
+- **note**\
+- **irregularities**
+
+No commentary outside JSON.
+
+------------------------------------------------------------------------
+
+## 6. Output Format
+
+Output must always be: - A single JSON object **or** a list of JSON
+objects\
+- Strict JSON syntax\
+- No trailing commas\
+- No prose outside JSON unless explicitly asked
+
+------------------------------------------------------------------------
+
+## 7. Example Output
+
+``` json
+[
+  {
+    "lemma": "lapis",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "lapis",
+    "accusative": "lapidem",
+    "translations": {
+      "en": "stone, rock",
+      "la": "lapis, lapidis"
+    },
+    "forms": {
+      "ablative_sg": ["lapide"]
+    }
+  },
+  {
+    "lemma": "decem",
+    "part_of_speech": "numeral",
+    "declension": 0,
+    "type": "cardinal",
+    "nominative": "decem",
+    "translations": {
+      "en": "ten",
+      "la": "decem"
+    }
+  },
+  {
+    "lemma": "volo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+      "infinitive": "volare",
+      "present": "volo",
+      "future": "volam",
+    "perfect": "volavi",
+    "supine": "volatum",
+    "forms": {
+      "present_participle": ["volante"],
+      "pluperfect_subjunctive": ["voluisses"],
+      "present_participle_nom_sg_m": ["volens"],
+      "present_participle_nom_sg_f": ["volens"],
+      "present_participle_acc_sg_n": ["volens"],
+      "genitive_sg": ["volentis"]
+    },
+    "translations": {
+      "en": "to fly, will, wish",
+      "la": "volo"
+    }
+  },
+  {
+    "lemma": "negotium",
