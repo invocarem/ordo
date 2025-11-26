@@ -1,4 +1,5 @@
 # Latin Word Analysis Rules (JSON Specification)
+
 These rules apply whenever analyzing a Latin word (verb, noun,
 adjective, particle, numeral, etc.).\
 All output **must be valid JSON** and follow the structure below.
@@ -71,13 +72,12 @@ Example:
 
 ### Required fields:
 
--   **conjugation** --- 1, 2, 3, 3-io, 4, or `"irregular"`
+-   **conjugation** --- 1, 2, 3, 3, 4, or 0 f   `"irregular"`
 -   **infinitive**
 -   **present**
 -   **future**
--   Optional principal parts:
-    -   **perfect**
-    -   **supine**
+-   **perfect**
+-   **supine**
 -   **forms** --- grammatical tag → list of forms
 
 Verb lemma **must always** be 1st person singular present active
@@ -182,9 +182,7 @@ objects\
     "lemma": "volo",
     "part_of_speech": "verb",
     "conjugation": 1,
-      "infinitive": "volare",
-      "present": "volo",
-      "future": "volam",
+    "infinitive": "volare",
     "perfect": "volavi",
     "supine": "volatum",
     "forms": {
@@ -197,8 +195,20 @@ objects\
     },
     "translations": {
       "en": "to fly, will, wish",
-      "la": "volo"
+      "la": "volo, volare, volavi, volatum"
     }
   },
   {
     "lemma": "negotium",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "negotium",
+    "ablative": "negotio",
+    "translations": {
+      "en": "business, task; pestilence",
+      "la": "negotium, -ii"
+    }
+  }
+]
+```
