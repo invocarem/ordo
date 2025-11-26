@@ -4,6 +4,26 @@ These rules apply whenever analyzing a Latin word (verb, noun,
 adjective, particle, numeral, etc.).\
 All output **must be valid JSON** and follow the structure below.
 
+
+# ------------------------------------------------------------------------
+# AUTOMATIC WHITAKER LOOKUP
+# ------------------------------------------------------------------------
+# Whenever a Latin word is requested, **always** execute the MCP tool
+#   analyze_latin  {"word": "<lemma>"}
+# first.  Use the returned raw lines to populate the fields below:
+#   - lemma          → take from Whitaker header line
+#   - part_of_speech → map Whitaker part-of-speech abbreviations
+#                       (V → verb, N → noun, ADJ → adjective, etc.)
+#   - translations.en → first English gloss(es) shown by Whitaker
+#   - translations.la → principal parts (verbs) or genitive (nouns)
+#   - declension/gender/conjugation → parse Whitaker codes
+#   - forms          → build the tag→list object from every form line
+#
+# If Whitaker returns multiple head-words, output **one JSON object per head-word**
+# in a top-level array, each object still obeying the rules below.
+# ------------------------------------------------------------------------
+
+
 ------------------------------------------------------------------------
 
 ## 1. General JSON Structure
