@@ -265,4 +265,88 @@ class Psalm80Tests: XCTestCase
       verbose: verbose
     )
   }
+
+  // MARK: - Theme Tests
+
+  func testStructuralThemes()
+  {
+    let utilities = PsalmTestUtilities.self
+
+    // First, verify that all structural theme lemmas are in lineKeyLemmas
+    let structuralLemmas = structuralThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: structuralLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "structural themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose
+    )
+
+    // Then run the standard structural themes test
+    utilities.testStructuralThemes(
+      psalmText: text,
+      structuralThemes: structuralThemes,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testConceptualThemes()
+  {
+    let utilities = PsalmTestUtilities.self
+
+    // First, verify that conceptual theme lemmas are in lineKeyLemmas
+    let conceptualLemmas = conceptualThemes.flatMap { $0.2 }
+    let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+    utilities.testLemmasInSet(
+      sourceLemmas: conceptualLemmas,
+      targetLemmas: lineKeyLemmasFlat,
+      sourceName: "conceptual themes",
+      targetName: "lineKeyLemmas",
+      verbose: verbose
+    )
+
+    // Then run the standard conceptual themes test
+    utilities.testConceptualThemes(
+      psalmText: text,
+      conceptualThemes: conceptualThemes,
+      psalmId: id,
+      verbose: verbose
+    )
+  }
+
+  func testSaveThemes()
+  {
+    let utilities = PsalmTestUtilities.self
+    guard
+      let jsonString = utilities.generateCompleteThemesJSONString(
+        psalmNumber: id.number,
+        category: id.category ?? "",
+        conceptualThemes: conceptualThemes,
+        structuralThemes: structuralThemes
+      )
+    else
+    {
+      XCTFail("Failed to generate complete themes JSON")
+      return
+    }
+
+    let success = utilities.saveToFile(
+      content: jsonString,
+      filename: "output_psalm80_themes.json"
+    )
+
+    if success
+    {
+      print("✅ Complete themes JSON created successfully")
+    }
+    else
+    {
+      print("⚠️ Could not save complete themes file:")
+      print(jsonString)
+    }
+  }
 }
