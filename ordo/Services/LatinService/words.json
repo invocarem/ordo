@@ -1,5 +1,21 @@
 [
   {
+  "lemma": "supercado",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "supercadere",
+  "present": "supercado",
+  "perfect": "supercecidi",
+  "supine": "supercasum",
+  "translations": {
+    "en": "fall upon, drop down on",
+    "la": "supercado, supercadere, supercecidi, supercasus"
+  },
+  "forms": {
+    "perfect_indicative_3sg": ["supercecidit"]
+  }
+},
+  {
   "lemma": "fluctuatio",
   "part_of_speech": "noun",
   "declension": 3,
