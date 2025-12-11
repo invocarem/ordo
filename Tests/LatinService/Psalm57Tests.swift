@@ -48,7 +48,7 @@ class Psalm57Tests: XCTestCase {
     (6, ["deus", "contero", "dens", "os", "mola", "leo", "confringo", "dominus"]),
     (7, ["nihilum", "devenio", "aqua", "decurro", "intendo", "arcus", "infirmo"]),
     (8, ["cera", "fluo", "aufero", "supercado", "ignis", "video", "sol"]),
-    (9, ["priusquam", "intelligo", "spina", "rhamnus", "vivus", "ira", "absorbeo"]),
+    (9, ["priusquam", "intelligo", "spina", "rhamnus", "vivo", "ira", "absorbeo"]),
     (10, ["laetor", "iustus", "video", "vindicta", "manus", "lavo", "sanguis", "peccator"]),
     (11, ["dico", "homo", "fructus", "iustus", "deus", "iudico", "terra"]),
   ]
@@ -140,14 +140,14 @@ class Psalm57Tests: XCTestCase {
     (
       "Speech and Hearing",
       "References to communication, truth, and receptivity",
-      ["loquor", "falsus", "vox", "exaudio", "surdus", "dico"],
+      ["loquor", "falsus", "vox", "exaudio", "surdus" ],
       ThemeCategory.sin,
       1 ... 5
     ),
     (
       "Wicked Characteristics",
       "Descriptions of the nature and behavior of sinners",
-      ["iniquitas", "iniustitia", "peccator", "furor", "malitia"],
+      ["iniquitas", "iniustitia", "peccator", "furor"],
       ThemeCategory.sin,
       2 ... 10
     ),

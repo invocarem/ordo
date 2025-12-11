@@ -1,4 +1,43 @@
-[
+[ {
+    "lemma": "numero",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "numerare",
+    "present": "numero",
+    "perfect": "numeravi",
+    "supine": "numeratus",
+    "translations": {
+      "en": "count, number, reckon",
+      "la": "numero, numerare, numeravi, numeratus"
+    },
+    "forms": {
+      "present_indicative_1sg": ["numero"],
+      "present_indicative_2sg": ["numeras"],
+      "present_indicative_3sg": ["numerat"],
+      "present_indicative_1pl": ["numeramus"],
+      "present_indicative_2pl": ["numeratis"],
+      "present_indicative_3pl": ["numerant"],
+      "infinitive_present": ["numerare"],
+      "perfect_indicative_1sg": ["numeravi"]
+    }
+  },
+
+  {
+  "lemma": "supercado",
+  "part_of_speech": "verb",
+  "conjugation": 3,
+  "infinitive": "supercadere",
+  "present": "supercado",
+  "perfect": "supercecidi",
+  "supine": "supercasum",
+  "translations": {
+    "en": "fall upon, drop down on",
+    "la": "supercado, supercadere, supercecidi, supercasus"
+  },
+  "forms": {
+    "perfect_indicative_3sg": ["supercecidit"]
+  }
+},
   {
   "lemma": "fluctuatio",
   "part_of_speech": "noun",
