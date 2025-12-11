@@ -4,6 +4,7 @@ DerivedData/
 Pods/
 
 .continue/agents/*
+.continue/mcpServers/*
 
 # macOS
 .DS_Store
