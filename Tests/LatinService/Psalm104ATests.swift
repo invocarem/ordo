@@ -71,10 +71,10 @@ class Psalm104ATests: XCTestCase {
 
   private let lineKeyLemmas = [
     (1, ["confiteor", "dominus", "invoco", "nomen", "annuntio", "gens", "opera"]),
-    (2, ["canto", "psallo", "narratio", "mirabilis", "omnis"]),
-    (3, ["laudatio", "nomen", "sanctus", "laetor", "cor", "quaero", "dominus"]),
+    (2, ["canto", "psallo", "narro", "mirabilis", "omnis"]),
+    (3, ["laudo", "nomen", "sanctus", "laetor", "cor", "quaero", "dominus"]),
     (4, ["quaero", "dominus", "confirmo", "facies", "semper"]),
-    (5, ["memento", "mirabilis", "facio", "prodigium", "iudicium", "os"]),
+    (5, ["memini", "mirabilis", "facio", "prodigium", "iudicium", "os"]),
     (6, ["semen", "abraham", "servus", "filius", "iacob", "eligo"]),
     (7, ["ipse", "dominus", "deus", "noster", "universus", "terra", "iudicium"]),
     (8, ["memor", "saeculum", "testamentum", "verbum", "mando", "mille", "generatio"]),
@@ -126,72 +126,72 @@ class Psalm104ATests: XCTestCase {
       "God's identity as Lord and God of Israel leads to affirmation of His universal judgment",
       ["ipse", "dominus", "deus", "noster", "universus", "terra", "iudicium"],
       7,
-      7,
-      "The declaration 'He is the Lord our God' is immediately followed by the affirmation that His judgments are in all the earth.",
-      "Augustine emphasizes that God's covenantal relationship with Israel does not limit His sovereignty over all creation (Enarr. Ps. 104.7)."
+      8,
+      "The declaration 'He is the Lord our God' is immediately followed by the affirmation that His covenant is remembered for eternity and commanded to a thousand generations.",
+      "Augustine emphasizes that God's covenantal relationship with Israel reflects His universal sovereignty (Enarr. Ps. 104.7-8)."
     ),
     (
       "Covenant → Eternal Promise",
       "God's covenant is remembered for eternity, established through generations",
       ["memor", "saeculum", "testamentum", "verbum", "mando", "mille", "generatio", "dispono", "abraham", "iuramentum", "isaac"],
-      8,
       9,
-      "God's covenant is remembered for all ages, the word He commanded to a thousand generations, established with Abraham and His oath to Isaac.",
-      "Augustine sees this as the unbreakable promise of God's faithfulness across generations (Enarr. Ps. 104.8-9)."
+      10,
+      "God's covenant is remembered for all ages, the word He commanded to a thousand generations, established with Abraham and His oath to Isaac, and appointed as law for Jacob and testament for Israel.",
+      "Augustine sees this as the unbreakable promise of God's faithfulness across generations (Enarr. Ps. 104.9-10)."
     ),
     (
       "Covenant → Law and Testament",
       "The covenant is established as law for Jacob and eternal testament for Israel",
-      ["statuo", "iacob", "praeceptum", "israel", "testamentum", "aeternus", "dico", "tibi", "dabo", "terra", "chanaan", "funiculus", "hereditas"],
-      10,
+      ["statuo", "iacob", "praeceptum", "israel", "testamentum", "aeternus", "dico", "tu", "do", "terra", "chanaan", "funiculus", "hereditas"],
       11,
-      "God establishes His covenant as a law for Jacob and an eternal testament for Israel, promising the land of Canaan as their inheritance.",
-      "Augustine interprets this as the divine foundation of Israel's identity and destiny (Enarr. Ps. 104.10-11)."
+      12,
+      "God establishes His covenant as a law for Jacob and an eternal testament for Israel, promising the land of Canaan as their inheritance, even when they were few and sojourners.",
+      "Augustine interprets this as the divine foundation of Israel's identity and destiny (Enarr. Ps. 104.11-12)."
     ),
     (
       "Exile → Divine Protection",
       "Israel's small numbers and exile are met with divine protection from enemies",
       ["cum", "numero", "brevi", "paucissimus", "incola", "pertransio", "gens", "regnum", "populus", "alter", "relinquo", "homo", "nocere", "corripio", "rex"],
-      12,
+      13,
       14,
       "Though Israel was few and sojourners, passing from nation to nation, God did not allow any man to harm them and rebuked kings on their behalf.",
-      "Augustine sees this as God's providential care for His people even in their weakest state (Enarr. Ps. 104.12-14)."
+      "Augustine sees this as God's providential care for His people even in their weakest state (Enarr. Ps. 104.13-14)."
     ),
     (
       "Divine Command → Prophetic Boundaries",
       "God's command not to touch His anointed and prophets establishes sacred boundaries",
       ["nolite", "tango", "christus", "propheta", "maligno"],
       15,
-      15,
-      "The psalmist issues a divine command: 'Touch not my anointed, and do no evil to my prophets.'",
-      "Augustine interprets this as the inviolability of God's chosen servants and the seriousness of opposing divine authority (Enarr. Ps. 104.15)."
-    ),
-    (
-      "Famine → Divine Discipline",
-      "God calls famine upon the land and breaks the support of bread as discipline",
-      ["voco", "fames", "terra", "firmamentum", "panis", "contrideo"],
       16,
-      16,
-      "God calls a famine upon the land and breaks all support of bread, a sign of divine discipline and preparation for deliverance.",
-      "Augustine sees this as God's means of humbling and preparing His people for greater purposes (Enarr. Ps. 104.16)."
+      "God commands: 'Touch not my anointed, and do no evil to my prophets.' He calls a famine upon the land and breaks all support of bread as discipline.",
+      "Augustine interprets this as the inviolability of God's chosen servants and the seriousness of opposing divine authority (Enarr. Ps. 104.15-16)."
     ),
     (
       "Joseph → Divine Preparation",
       "God sends Joseph as a servant, humiliated and bound, to prepare for Israel's deliverance",
-      ["mitto", "vir", "servus", "venundatio", "ioseph", "humilio", "compes", "pes", "ferrum", "pertransio", "anima", "donec", "venio", "verbum", "elocutio", "dominus", "inflammo"],
+      ["mitto", "vir", "servus", "venundatio", "ioseph", "humilio", "compes", "pes", "ferrum", "pertransio", "anima", "donec", "venio", "verbum"],
       17,
-      19,
-      "God sends Joseph before them, sold as a slave, his feet bound in fetters, his soul pierced by iron, until the word of the Lord came and inflamed him.",
-      "Augustine interprets Joseph's suffering as the necessary path to divine exaltation and the fulfillment of God's plan (Enarr. Ps. 104.17-19)."
+      18,
+      "God sends Joseph before them, sold as a slave, his feet bound in fetters, his soul pierced by iron, until the word of the Lord came.",
+      "Augustine interprets Joseph's suffering as the necessary path to divine exaltation and the fulfillment of God's plan (Enarr. Ps. 104.17-18)."
     ),
     (
-      "Deliverance → Exaltation",
-      "God delivers Joseph from prison and exalts him to rule over all his possessions",
-      ["mitto", "rex", "solvio", "princeps", "populus", "dimittio", "constituo", "dominus", "domus", "princeps", "possessio", "erudio", "princeps", "semetipsum", "senex", "prudentia", "doceo"],
+      "Divine Word → Deliverance",
+      "The word of the Lord inflames Joseph, leading to his release and exaltation",
+      ["elocutio", "dominus", "inflammo", "mitto", "rex", "solvio", "princeps", "populus", "dimittio"],
+      19,
       20,
+      "The word of the Lord inflames Joseph; the king sends and releases him, the ruler of the people sets him free. He makes him master of his house and ruler of all his possessions.",
+      "Augustine sees this as the pivotal moment when divine timing fulfills Joseph's destiny (Enarr. Ps. 104.19-20)."
+    ),
+    (
+      "Exaltation → Instruction",
+      "Joseph is exalted to rule and entrusted with instructing the princes and elders",
+      ["constituo", "dominus", "domus", "princeps", "possessio", "erudio", "princeps", "semetipsum", "senex", "prudentia", "doceo"],
       21,
-      "The king sends and releases him; the ruler of the people sets him free. He makes him master of his house and ruler of all his possessions, to instruct his princes and teach his elders wisdom.",
-      "Augustine sees this as the fulfillment of God's promise: the humble are exalted, and the suffering become instruments of divine wisdom (Enarr. Ps. 104.20-22)."
+      21,
+      "He instructs his princes as himself and teaches his elders wisdom.",
+      "Augustine interprets this as the fulfillment of God's promise: the humble are exalted, and the suffering become instruments of divine wisdom (Enarr. Ps. 104.21)."
     ),
   ]
 
@@ -362,4 +362,4 @@ func testSaveThemes() {
   }
 }
 
-} 
+}

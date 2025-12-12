@@ -1,4 +1,40 @@
-[ {
+[
+  {
+    "lemma": "semetipsum",
+    "part_of_speech": "pronoun",
+    "declension": 6,
+    "gender": "neuter",
+    "nominative": "semetipsum",
+    "accusative": "semetipsum",
+    "translations": {
+      "en": "itself; he himself, she herself, they themselves",
+      "la": "semetipse, semetipsa, semetipsum"
+    },
+    "forms": {
+      "nominative_sg_n": ["semetipsum"],
+      "accusative_sg_m": ["semetipsum"],
+      "accusative_sg_n": ["semetipsum"]
+    }
+  },
+
+  {
+    "lemma": "erudio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "erudire",
+    "present": "erudio",
+    "perfect": "erudivi",
+    "supine": "eruditus",
+    "translations": {
+      "en": "educate, teach, instruct",
+      "la": "erudio, erudire, erudivi, eruditus"
+    },
+    "forms": {
+      "imperfect_subjunctive_3sg": ["erudiret"]
+    }
+  },
+  
+  {
     "lemma": "numero",
     "part_of_speech": "verb",
     "conjugation": 1,
@@ -21,7 +57,22 @@
       "perfect_indicative_1sg": ["numeravi"]
     }
   },
-
+{
+    "lemma": "opera",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "opera",
+    "translations": {
+      "en": "work, care; aid; service",
+      "la": "opera, operae"
+    },
+    "forms": {
+      "nominative_sg": ["opera"],
+      "vocative_sg": ["opera"],
+      "ablative_sg": ["opera"]
+    }
+  },
   {
   "lemma": "supercado",
   "part_of_speech": "verb",
@@ -9439,6 +9490,21 @@
       "ablative_sg": ["lingua"]
     }
   },
+{
+    "lemma": "mirabilis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "mirabilis",
+    "translations": {
+      "en": "wonderful, marvelous, astonishing",
+      "la": "mirabilis, mirabilis, mirabile"
+    },
+    "forms": {
+      "genitive_pl": ["mirabilium"]
+    }
+  },
+
   {
     "lemma": "memini",
     "part_of_speech": "verb",
