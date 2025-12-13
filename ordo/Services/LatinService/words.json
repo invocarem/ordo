@@ -1,5 +1,21 @@
 [
   {
+    "lemma": "venundo",
+    "part_of_speech": "participle",
+    "conjugation": 1,
+    "infinitive": "venundare",
+    "perfect": "venundedi",
+    "supine": "venundatus",
+    "forms": {
+      "perfect_passive_participle_nominative_singular_masculine": ["venundatus"]
+    },
+    "translations": {
+      "en": "sell, offer for sale",
+      "la": "venundo, venundare, venundedi, venundatus"
+    }
+},
+
+  {
     "lemma": "Ioseph",
     "part_of_speech": "noun",
     "declension": 0,
