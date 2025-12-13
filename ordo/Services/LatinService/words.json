@@ -1,5 +1,133 @@
 [
   {
+    "lemma": "Ioseph",
+    "part_of_speech": "noun",
+    "declension": 0,
+    "gender": "masculine",
+    "nominative": "Ioseph",
+    "translations": {
+      "en": "Joseph (biblical name)",
+      "la": "Ioseph"
+    }
+  },
+
+  {
+    "lemma": "Abraham",
+    "part_of_speech": "noun",
+    "declension": 0,
+    "gender": "masculine",
+    "nominative": "Abraham",
+    "translations": {
+      "en": "Abraham (biblical name)",
+      "la": "Abraham"
+    }
+  },
+  {
+    "lemma": "Isaac",
+    "part_of_speech": "noun",
+    "declension": 0,
+    "gender": "masculine",
+    "nominative": "Isaac",
+    "translations": {
+      "en": "Isaac (biblical name)",
+      "la": "Isaac"
+    }
+  },
+  {
+    "lemma": "Chanaan",
+    "part_of_speech": "noun",
+    "declension": 9,
+    "gender": "feminine",
+    "nominative": "Chanaan",
+    "translations": {
+      "en": "Canaan/Palestine",
+      "la": "Chanaan"
+    },
+    "note": "Late Latin form of Canaan; undeclined proper noun referring to the land."
+  },
+
+  {
+    "lemma": "dispono",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "disponere",
+    "present": "dispono",
+    "perfect": "disposui",
+    "supine": "dispositus",
+    "forms": {
+      "perfect_indicative_3sg": ["disposuit"]
+    },
+    "translations": {
+      "en": "dispose, distribute, arrange, appoint, assign",
+      "la": "dispono, disponere, disposui, dispositus"
+    }
+  },
+  
+  {
+    "lemma": "possessio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "possessio",
+    "genitive": "possessionis",
+    "translations": {
+      "en": "possession, property",
+      "la": "possessio, possessionis"
+    }
+  },
+
+  {
+    "lemma": "inflammo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "inflammare",
+    "present": "inflammo",
+    "perfect": "inflammavi",
+    "supine": "inflammatus",
+    "forms": {
+      "perfect_indicative_3sg": ["inflammavit"]
+    },
+    "translations": {
+      "en": "set on fire, inflame, kindle, excite",
+      "la": "inflammo, inflammare, inflammavi, inflammatus"
+    }
+  },
+
+  {
+    "lemma": "dimitto",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "dimittere",
+    "present": "dimitto",
+    "perfect": "dimisi",
+    "supine": "dimissus",
+    "forms": {
+      "perfect_indicative_3sg": ["dimisit"],
+      "imperative_2sg": ["dimitte"]
+    },
+    "translations": {
+      "en": "send away, dismiss, release, set free, abandon",
+      "la": "dimitto, dimittere, dimisi, dimissus"
+    }
+  },
+  {
+    "lemma": "solvo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "solvere",
+    "present": "solvo",
+    "perfect": "solvi",
+    "supine": "solutus",
+    "forms": {
+      "present_indicative_3sg": ["solvit"],
+      "perfect_indicative_3sg": ["solvit"]
+    },
+    "translations": {
+      "en": "loosen, release, unbind, untie, free",
+      "la": "solvo, solvere, solvi, solutus"
+    }
+  },
+  {
     "lemma": "semetipsum",
     "part_of_speech": "pronoun",
     "declension": 6,
@@ -1288,23 +1416,6 @@
     "translations": {
       "en": "to show, point out, demonstrate",
       "la": "demonstro, demonstrare, demonstravi, demonstratum"
-    }
-  },
-  {
-    "lemma": "dimitto",
-    "part_of_speech": "verb",
-    "conjugation": 3,
-    "infinitive": "dimittere",
-    "present": "dimitto",
-    "future": "dimittam",
-    "perfect": "dimisi",
-    "supine": "dimissum",
-    "translations": {
-      "en": "to send away, dismiss, forgive, leave",
-      "la": "dimitto, dimittere, dimisi, dimissum"
-    },
-    "forms": {
-      "imperative_2sg": ["dimitte"]
     }
   },
   {
@@ -17206,6 +17317,7 @@
     "perfect": "veni",
     "supine": "ventum",
     "forms": {
+      "imperfect_subjunctive_3sg": ["veniret"],
       "present_subjunctive": ["veniat"],
       "future_active_participle": ["venturus", "ventura", "venturum"]
     },

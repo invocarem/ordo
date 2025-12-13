@@ -23,11 +23,11 @@ class Psalm104ATests: XCTestCase {
     "Quaerite Dominum, et confirmamini; quaerite faciem eius semper.",
     "Mementote mirabilium eius quae fecit, prodigia eius, et iudicia oris eius,",
     
-    "semen Abraham servi eius, filii Jacob electi eius.",
+    "semen Abraham servi eius, filii Iacob electi eius.",
     "Ipse Dominus Deus noster; in universa terra iudicia eius.",
     "Memor fuit in saeculum testamenti sui, verbi quod mandavit in mille generationes,",
-    "quod disposuit ad Abraham, et juramenti sui ad Isaac.",
-    "Et statuit illud Jacob in praeceptum, et Israel in testamentum aeternum,",
+    "quod disposuit ad Abraham, et iuramenti sui ad Isaac.",
+    "Et statuit illud Iacob in praeceptum, et Israel in testamentum aeternum,",
     
     
     "dicens: Tibi dabo terram Chanaan, funiculum hereditatis vestrae.",
@@ -37,7 +37,7 @@ class Psalm104ATests: XCTestCase {
     "Nolite tangere christos meos, et in prophetis meis nolite malignari.",
    
     "Et vocavit famem super terram, et omne firmamentum panis contrivit.",
-    "Misit ante eos virum; in servum venundatus est Joseph.",
+    "Misit ante eos virum; in servum venundatus est Ioseph.",
     "Humiliaverunt in compedibus pedes eius, ferrum pertransiit animam eius, donec veniret verbum eius. ",
     "Eloquium Domini inflammavit eum. Misit rex, et solvit eum; princeps populorum, et dimisit eum.",
     "Constituit eum dominum domus suae, et principem omnis possessionis suae,",
@@ -69,6 +69,7 @@ class Psalm104ATests: XCTestCase {
     "That he might instruct his princes as himself, and teach his ancients wisdom."
   ]
 
+  
   private let lineKeyLemmas = [
     (1, ["confiteor", "dominus", "invoco", "nomen", "annuntio", "gens", "opera"]),
     (2, ["canto", "psallo", "narro", "mirabilis", "omnis"]),
@@ -84,15 +85,14 @@ class Psalm104ATests: XCTestCase {
     (12, ["cum", "numero", "brevis", "paucissimus", "incola"]),
     (13, ["pertransio", "gens", "regnum", "populus", "alter"]),
     (14, ["relinquo", "homo", "nocere", "corripio", "rex"]),
-    (15, ["nolite", "tango", "christus", "propheta", "maligno"]),
-    (16, ["voco", "fames", "terra", "firmamentum", "panis", "contrideo"]),
-    (17, ["mitto", "vir", "servus", "venundatio", "ioseph"]),
-    (18, ["humilio", "compes", "pes", "ferrum", "pertransio", "anima", "donec", "venio", "verbum"]), 
-    (19, ["elocutio", "dominus", "inflammo", "mitto", "rex", "solvio", "princeps", "populus", "dimittio"]),
+    (15, ["nolo", "tango", "christus", "propheta", "malignor"]),
+    (16, ["voco", "fames", "terra", "firmamentum", "panis", "contero"]),
+    (17, ["mitto", "vir", "servus", "venundo", "ioseph"]),
+    (18, ["humilio", "compes", "pes", "ferrum", "pertransio", "anima", "donec", "venio", "verbum"]),
+    (19, ["eloquium", "dominus", "inflammo", "mitto", "rex", "solvo", "princeps", "populus", "dimitto"]),
     (20, ["constituo", "dominus", "domus", "princeps", "possessio"]),
     (21, ["erudio", "princeps", "semetipsum", "senex", "prudentia", "doceo"]),
   ]
-
   private let structuralThemes = [
     (
       "Praise → Proclamation",
@@ -363,3 +363,4 @@ func testSaveThemes() {
 }
 
 }
+
