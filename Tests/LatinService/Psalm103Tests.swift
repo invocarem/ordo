@@ -203,7 +203,7 @@ class Psalm103ATests: XCTestCase
       "God's wisdom in creation and providence",
       ["sapientia", "facio", "terra", "impleo", "possessio"],
       ThemeCategory.divine,
-      26
+      26 ... 26
     ),
     (
       "Personal Praise",
@@ -224,7 +224,7 @@ class Psalm103ATests: XCTestCase
       "Human work and labor as part of God's creation",
       ["exeo", "homo", "opus", "labor", "vesper"],
       ThemeCategory.divine,
-      25
+      25 ... 25
     )
   ]
 
