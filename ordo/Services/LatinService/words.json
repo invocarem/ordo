@@ -1,5 +1,96 @@
 [
   {
+    "lemma": "Cham",
+    "part_of_speech": "noun",
+    "declension": 0,
+    "gender": "masculine",
+    "nominative": "Cham",
+    "translations": {
+      "en": "Ham",
+      "la": "Cham"
+    },
+    "forms": {
+      "nominative_sg": ["Cham"]
+    }
+  },
+  {
+    "lemma": "accola",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "accola",
+    "accusative": "accolam",
+    "translations": {
+      "en": "neighbor",
+      "la": "accola, acolae"
+    }
+  },
+
+  {
+    "lemma": "regio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "regio",
+    "accusative": "regionem",
+    "translations": {
+      "en": "region, district",
+      "la": "regio, regionis"
+    },
+    "forms": {
+      "nominative_pl": ["regiones"]
+    }
+  },
+  {
+    "lemma": "puer",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "puer",
+    "accusative": "puerum",
+    "translations": {
+      "en": "boy",
+      "la": "puer, pueri"
+    },
+    "forms": {
+      "accusative_sg": ["puerum"]
+    }
+  },
+  {
+    "lemma": "odeo",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "odire",
+    "present": "odeo",
+    "future": "odiam",
+    "perfect": "odivi",
+    "forms": {
+      "imperfect_subjunctive_3pl": ["odirent"]
+    },
+    "translations": {
+      "en": "hate; dislike",
+      "la": "odeo, odire, odivi, -"
+    }
+  },
+  {
+    "lemma": "augeo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "augere",
+    "present": "augeo",
+    "future": "aument",
+    "perfect": "auxi",
+    "supine": "auctus",
+    "forms": {
+      "perfect_indicative_3sg": ["auxit"]
+    },
+    "translations": {
+      "en": "increase, enlarge, augment",
+      "la": "augeo, augere, auxi, auctus"
+    }
+  },
+
+  {
     "lemma": "paucus",
     "part_of_speech": "adjective",
     "declension": 1,
@@ -84,7 +175,7 @@
       "en": "sell, offer for sale",
       "la": "venundo, venundare, venundedi, venundatus"
     }
-},
+  },
 
   {
     "lemma": "Ioseph",
@@ -149,7 +240,7 @@
       "la": "dispono, disponere, disposui, dispositus"
     }
   },
-  
+
   {
     "lemma": "possessio",
     "part_of_speech": "noun",
@@ -248,7 +339,7 @@
       "imperfect_subjunctive_3sg": ["erudiret"]
     }
   },
-  
+
   {
     "lemma": "numero",
     "part_of_speech": "verb",
@@ -272,7 +363,7 @@
       "perfect_indicative_1sg": ["numeravi"]
     }
   },
-{
+  {
     "lemma": "opera",
     "part_of_speech": "noun",
     "declension": 1,
@@ -289,90 +380,83 @@
     }
   },
   {
-  "lemma": "supercado",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "supercadere",
-  "present": "supercado",
-  "perfect": "supercecidi",
-  "supine": "supercasum",
-  "translations": {
-    "en": "fall upon, drop down on",
-    "la": "supercado, supercadere, supercecidi, supercasus"
+    "lemma": "supercado",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "supercadere",
+    "present": "supercado",
+    "perfect": "supercecidi",
+    "supine": "supercasum",
+    "translations": {
+      "en": "fall upon, drop down on",
+      "la": "supercado, supercadere, supercecidi, supercasus"
+    },
+    "forms": {
+      "perfect_indicative_3sg": ["supercecidit"]
+    }
   },
-  "forms": {
-    "perfect_indicative_3sg": ["supercecidit"]
-  }
-},
   {
-  "lemma": "fluctuatio",
-  "part_of_speech": "noun",
-  "declension": 3,
-  "gender": "feminine",
-  "nominative": "fluctuatio",
-  "genitive": "fluctuationis",
-  "translations": {
-    "en": "wavering, change, disturbance",
-    "la": "fluctuatio, fluctuationis"
-  
-}
-},
+    "lemma": "fluctuatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "fluctuatio",
+    "genitive": "fluctuationis",
+    "translations": {
+      "en": "wavering, change, disturbance",
+      "la": "fluctuatio, fluctuationis"
+    }
+  },
 
   {
-  "lemma": "cura",
-  "part_of_speech": "noun",
-  "declension": 1,
-  "gender": "feminine",
-  "nominative": "cura",
-  "genitive": "curae",
-  "translations": {
-    "en": "care, concern, anxiety",
-    "la": "cura, curae"
-  }
-},
+    "lemma": "cura",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "cura",
+    "genitive": "curae",
+    "translations": {
+      "en": "care, concern, anxiety",
+      "la": "cura, curae"
+    }
+  },
 
   {
-  "lemma": "iacio",
-  "part_of_speech": "verb",
-  "conjugation": 4,
-  "infinitive": "iacere",
-  "present": "iacio",
-  "future": "iaciam",
-  "perfect": "iaci",
-  "supine": "iactum",
-  "translations": {
-    "en": "to throw, hurl, cast",
-    "la": "iacio, iacere, iaci, iactum"
+    "lemma": "iacio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "iacere",
+    "present": "iacio",
+    "future": "iaciam",
+    "perfect": "iaci",
+    "supine": "iactum",
+    "translations": {
+      "en": "to throw, hurl, cast",
+      "la": "iacio, iacere, iaci, iactum"
+    },
+    "forms": {
+      "future_active_indicative_singular": ["iaciam"],
+      "perfect_active_indicative_plural": ["iacerunt"]
+    }
   },
-  "forms": {
-    "future_active_indicative_singular": [
-      "iaciam"
-    ],
-    "perfect_active_indicative_plural": [
-      "iacerunt"
-    ]
-  }
-},
 
   {
-  "lemma": "dimido",
-  "part_of_speech": "verb",
-  "conjugation": 2,
-  "infinitive": "dimidere",
-  "present": "dimido",
-  "future": "dimidam",
-  "perfect": "dimidiavi",
-  "supine": "dimissum",
-  "translations": {
-    "en": "to halve, cut in half",
-    "la": "dimido, dimidere, dimidiavi"
+    "lemma": "dimido",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "dimidere",
+    "present": "dimido",
+    "future": "dimidam",
+    "perfect": "dimidiavi",
+    "supine": "dimissum",
+    "translations": {
+      "en": "to halve, cut in half",
+      "la": "dimido, dimidere, dimidiavi"
+    },
+    "forms": {
+      "future_active_indicative_plural": ["dimidiabunt"]
+    }
   },
-  "forms": {
-    "future_active_indicative_plural": [
-      "dimidiabunt"
-    ]
-  }
-},
   {
     "lemma": "buccino",
     "part_of_speech": "verb",
@@ -9688,7 +9772,7 @@
       "ablative_sg": ["lingua"]
     }
   },
-{
+  {
     "lemma": "mirabilis",
     "part_of_speech": "adjective",
     "declension": 3,
@@ -15534,8 +15618,10 @@
     "declension": 3,
     "gender": "masculine",
     "nominative": "piscis",
-    "nominative_plural": "pisces",
     "genitive": "piscis",
+    "forms": {
+      "nominative_pl": ["pisces"]
+    },
     "translations": {
       "en": "fish",
       "la": "piscis, piscis"
@@ -19066,25 +19152,23 @@
       "la": "dens"
     }
   },
-{
-  "lemma": "insurro",
-  "part_of_speech": "verb",
-  "conjugation": 3,
-  "infinitive": "insurrare",
-  "present": "insurro",
-  "future": "insurro",
-  "perfect": "insurrexi",
-  "supine": null,
-  "translations": {
-    "en": "to rise up, revolt",
-    "la": "insurro, insurrare, insurrexi"
+  {
+    "lemma": "insurro",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "insurrare",
+    "present": "insurro",
+    "future": "insurro",
+    "perfect": "insurrexi",
+    "supine": null,
+    "translations": {
+      "en": "to rise up, revolt",
+      "la": "insurro, insurrare, insurrexi"
+    },
+    "forms": {
+      "perfect_active_indicative_plural": ["insurrexerunt"]
+    }
   },
-  "forms": {
-    "perfect_active_indicative_plural": [
-      "insurrexerunt"
-    ]
-  }
-},
 
   {
     "lemma": "insurgo",
@@ -29521,12 +29605,12 @@
   {
     "lemma": "sacrifico",
     "part_of_speech": "verb",
- "conjugation": 1,
-  "infinitive": "sacrificare",
-  "present": "sacrifico",
-  "future": "sacrificabo",
-  "perfect": "sacrificavi",
-  "supine": "sacrificatum",
+    "conjugation": 1,
+    "infinitive": "sacrificare",
+    "present": "sacrifico",
+    "future": "sacrificabo",
+    "perfect": "sacrificavi",
+    "supine": "sacrificatum",
 
     "forms": {
       "imperative": ["sacrifica", "sacrificate"],

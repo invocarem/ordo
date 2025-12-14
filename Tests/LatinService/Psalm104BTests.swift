@@ -73,32 +73,32 @@ class Psalm104BTests: XCTestCase {
         "And he gave them the lands of the Gentiles: and they possessed the labours of the people,",
         "That they might observe his justifications, and seek after his law."
     ]
-
-    private let lineKeyLemmas = [
-        (1, ["intravit", "israel", "aegyptum", "jacobs", "accola", "terra", "cham"]),
-        (2, ["auxit", "populus", "vehementer", "firmavit", "inimicus"]),
-        (3, ["convertit", "cor", "odirent", "populus", "dolum", "facio", "servus"]),
-        (4, ["misit", "moyses", "servus", "aaron", "elegio", "ipsum"]),
-        (5, ["posuit", "verbum", "signum", "prodigium", "terra", "cham"]),
-        (6, ["misit", "tenebrae", "obscuravit", "exacerbavit", "sermo"]),
-        (7, ["convertit", "aqua", "sanguis", "occido", "pisces"]),
-        (8, ["edidit", "terra", "rana", "penetralis", "rex"]),
-        (9, ["dixit", "venio", "coenomyia", "ciniphes", "finis"]),
-        (10, ["posuit", "pluvia", "grandinem", "ignis", "comburo", "terra"]),
-        (11, ["percussit", "vinea", "ficulnea", "contrivit", "lignum", "finis"]),
-        (12, ["dixit", "venio", "locusta", "bruchus", "numerus"]),
-        (13, ["comedit", "foenum", "terra", "fructus", "terra"]),
-        (14, ["percussit", "primogenitum", "terra", "primitia", "labor"]),
-        (15, ["eduxit", "argento", "auro", "infirma", "tribus"]),
-        (16, ["laetatus", "aegyptus", "profectio", "incubuit", "timor"]),
-        (17, ["expandit", "nubes", "protego", "ignis", "lucere", "nocte"]),
-        (18, ["petio", "coturnix", "panis", "caelum", "saturavit"]),
-        (19, ["dirupit", "petra", "fluxus", "aqua", "abio", "torrentes", "sicco"]),
-        (20, ["memor", "verbum", "sanctus", "abraham", "puer"]),
-        (21, ["eduxit", "populus", "exsultatio", "electus", "laetitia"]),
-        (22, ["dedit", "regio", "gentium", "labor", "populus", "possideo"]),
-        (23, ["custodio", "iustificatio", "lex", "requiro"])
-    ]
+private let lineKeyLemmas = [
+    (1, ["intro", "israel", "aegyptus", "Iacob", "accola", "terra", "Cham"]),
+    (2, ["augeo", "populus", "vehementer", "firmo", "inimicus"]),
+    (3, ["converto", "cor", "odeo", "populus", "dolus", "facio", "servus"]),
+    (4, ["mitto", "moyses", "servus", "aaron", "eligo", "ipsum"]),
+    (5, ["pono", "verbum", "signum", "prodigium", "terra", "Cham"]),
+    (6, ["mitto", "tenebrae", "obscuro", "exacerbo", "sermo"]),
+    (7, ["converto", "aqua", "sanguis", "occido", "piscis"]),
+    (8, ["edo", "terra", "rana", "penetralis", "rex"]),
+    (9, ["dico", "venio", "coenomyia", "ciniphes", "finis"]),
+    (10, ["pono", "pluvia", "grando", "ignis", "comburo", "terra"]),
+    (11, ["percutio", "vinea", "ficulnea", "contero", "lignum", "finis"]),
+    (12, ["dico", "venio", "locusta", "bruchus", "numerus"]),
+    (13, ["comedo", "foenum", "terra", "fructus", "terra"]),
+    (14, ["percutio", "primogenitum", "terra", "primitia", "labor"]),
+    (15, ["educo", "argentum", "aurum", "infirma", "tribus"]),
+    (16, ["laeto", "aegyptus", "profectio", "incubo", "timor"]),
+    (17, ["expando", "nubes", "protego", "ignis", "luceo", "nox"]),
+    (18, ["peto", "coturnix", "panis", "caelum", "saturo"]),
+    (19, ["dirumpo", "petra", "fluo", "aqua", "abeo", "torrens", "sicco"]),
+    (20, ["memor", "verbum", "sanctus", "Abraham", "puer"]),
+    (21, ["educo", "populus", "exsultatio", "eligo", "laetitia"]),
+    (22, ["do", "regio", "gens", "labor", "populus", "possideo"]),
+    (23, ["custodio", "iustificatio", "lex", "requiro"])
+]
+   
     private let structuralThemes = [
     (
         "Oppression → Deliverance",
