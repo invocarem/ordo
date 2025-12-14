@@ -1,7 +1,78 @@
 [
   {
+    "lemma": "paucus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "translations": {
+      "en": "few, very few, scarcely any",
+      "la": "paucus, pauca, paucum"
+    },
+    "forms": {
+      "superlative_masculine_sg_nominative": ["paucissimus"],
+      "superlative_feminine_sg_nominative": ["paucissima"],
+      "superlative_neuter_sg_nominative": ["paucissimum"],
+      "superlative_masculine_pl_nominative": ["paucissimi"],
+      "superlative_feminine_pl_nominative": ["paucissimae"],
+      "superlative_neuter_pl_nominative": ["paucissima"]
+    }
+  },
+  {
+    "lemma": "tango",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "tangere",
+    "present": "tango",
+    "perfect": "tetigi",
+    "supine": "tactus",
+    "translations": {
+      "en": "touch, strike, influence, mention",
+      "la": "tango, tangere, tetigi, tactus"
+    },
+    "forms": {
+      "infinitive_active": ["tangere"],
+      "imperative_passive_2sg": ["tangere"],
+      "future_passive_indicative_2sg": ["tangere"]
+    }
+  },
+  {
+    "lemma": "propheta",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "propheta",
+    "genitive": "prophet�",
+    "translations": {
+      "en": "prophet, spokesman, interpreter of a god",
+      "la": "propheta, prophet�"
+    },
+    "forms": {
+      "dative_plural": ["prophetis"],
+      "ablative_plural": ["prophetis"],
+      "locative_plural": ["prophetis"]
+    }
+  },
+  {
+    "lemma": "iuramentum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "iuramentum",
+    "genitive": "iuramenti",
+    "locative": "iuramenti",
+    "translations": {
+      "en": "oath",
+      "la": "iuramentum, iuramenti"
+    },
+    "note": "Spelling with initial “i” (iuramentum) is a variant of the more common juramentum; meaning “oath”.",
+    "forms": {
+      "genitive_sg": ["iuramenti"],
+      "locative_sg": ["iuramenti"]
+    }
+  },
+  {
     "lemma": "venundo",
-    "part_of_speech": "participle",
+    "part_of_speech": "verb",
     "conjugation": 1,
     "infinitive": "venundare",
     "perfect": "venundedi",
@@ -27860,8 +27931,10 @@
     "lemma": "eligo",
     "part_of_speech": "verb",
     "conjugation": 3,
-    "perfect": "elegi",
     "infinitive": "eligere",
+    "present": "eligo",
+    "perfect": "elegi",
+    "supine": "electus",
     "forms": {
       "present": [
         "eligo",

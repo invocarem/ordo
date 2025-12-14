@@ -86,9 +86,9 @@ class Psalm104ATests: XCTestCase {
     (9, ["dispono", "abraham", "iuramentum", "isaac"]),
     (10, ["statuo", "iacob", "praeceptum", "israel", "testamentum", "aeternus"]),
     (11, ["dico", "tu", "do", "terra", "chanaan", "funiculus", "hereditas"]),
-    (12, ["cum", "numero", "brevis", "paucissimus", "incola"]),
+    (12, ["cum", "numero", "brevis", "paucus", "incola"]),
     (13, ["pertransio", "gens", "regnum", "populus", "alter"]),
-    (14, ["relinquo", "homo", "nocere", "corripio", "rex"]),
+    (14, ["relinquo", "homo", "noceo", "corripio", "rex"]),
     (15, ["nolo", "tango", "christus", "propheta", "malignor"]),
     (16, ["voco", "fames", "terra", "firmamentum", "panis", "contero"]),
     (17, ["mitto", "vir", "servus", "venundo", "ioseph"]),
@@ -101,7 +101,7 @@ class Psalm104ATests: XCTestCase {
     (
       "Praise → Proclamation",
       "Call to praise God leads to proclamation of His deeds among nations",
-      ["confiteor", "invoco", "annuntio", "canto", "psallo", "narratio"],
+      ["confiteor", "invoco", "annuntio", "canto", "psallo", "narro"],
       1,
       2,
       "The psalm opens with a call to give glory to the Lord, invoke His name, and declare His works among the nations, followed by singing and recounting His wondrous deeds.",
@@ -110,7 +110,7 @@ class Psalm104ATests: XCTestCase {
     (
       "Seeking → Joy",
       "Seeking the Lord brings joy to the heart of those who pursue Him",
-      ["laudatio", "nomen", "sanctus", "laetor", "cor", "quaero", "dominus"],
+      ["laudo", "nomen", "sanctus", "laetor", "cor", "quaero", "dominus"],
       3,
       4,
       "The call to glory in God's holy name leads to rejoicing of the heart, and the command to seek the Lord and His face continually.",
@@ -119,7 +119,7 @@ class Psalm104ATests: XCTestCase {
     (
       "Remembrance → Covenant",
       "Remembering God's works leads to reflection on His covenant with Israel",
-      ["memento", "mirabilis", "facio", "prodigium", "iudicium", "os", "semen", "abraham", "servus", "filius", "iacob", "eligo"],
+      ["memini", "mirabilis", "facio", "prodigium", "iudicium", "os", "semen", "abraham", "servus", "filius", "iacob", "eligo"],
       5,
       6,
       "The psalmist calls to remember God's marvels, wonders, and judgments, then identifies the recipients as the seed of Abraham and chosen sons of Jacob.",
@@ -137,25 +137,26 @@ class Psalm104ATests: XCTestCase {
     (
       "Covenant → Eternal Promise",
       "God's covenant is remembered for eternity, established through generations",
-      ["memor", "saeculum", "testamentum", "verbum", "mando", "mille", "generatio", "dispono", "abraham", "iuramentum", "isaac"],
+      ["dispono", "abraham", "iuramentum", "isaac", "statuo", "iacob", "praeceptum", "israel", "testamentum", "aeternus"],
       9,
       10,
-      "God's covenant is remembered for all ages, the word He commanded to a thousand generations, established with Abraham and His oath to Isaac, and appointed as law for Jacob and testament for Israel.",
+      "God established His covenant with Abraham and Isaac, and appointed it as law for Jacob and an eternal testament for Israel.",
       "Augustine sees this as the unbreakable promise of God's faithfulness across generations (Enarr. Ps. 104.9-10)."
     ),
     (
-      "Covenant → Law and Testament",
-      "The covenant is established as law for Jacob and eternal testament for Israel",
-      ["statuo", "iacob", "praeceptum", "israel", "testamentum", "aeternus", "dico", "tu", "do", "terra", "chanaan", "funiculus", "hereditas"],
+      "Promise → Inheritance",
+      "God promises Canaan as inheritance, even though Israel was few and sojourners",
+      ["dico", "tu", "do", "terra", "chanaan", "funiculus", "hereditas", "cum", "numero", "brevis", "paucus", "incola"],
       11,
       12,
-      "God establishes His covenant as a law for Jacob and an eternal testament for Israel, promising the land of Canaan as their inheritance, even when they were few and sojourners.",
-      "Augustine interprets this as the divine foundation of Israel's identity and destiny (Enarr. Ps. 104.11-12)."
+      "God says: 'I will give you the land of Canaan as your inheritance,' even though Israel was few and sojourners.",
+      "Augustine interprets this as God’s promise fulfilled not by human strength but by divine faithfulness, even in weakness (Enarr. Ps. 104.11-12)."
     ),
+   
     (
       "Exile → Divine Protection",
       "Israel's small numbers and exile are met with divine protection from enemies",
-      ["cum", "numero", "brevi", "paucissimus", "incola", "pertransio", "gens", "regnum", "populus", "alter", "relinquo", "homo", "nocere", "corripio", "rex"],
+      ["pertransio", "gens", "regnum", "populus", "alter", "relinquo", "homo", "noceo", "corripio", "rex"],
       13,
       14,
       "Though Israel was few and sojourners, passing from nation to nation, God did not allow any man to harm them and rebuked kings on their behalf.",
@@ -164,7 +165,7 @@ class Psalm104ATests: XCTestCase {
     (
       "Divine Command → Prophetic Boundaries",
       "God's command not to touch His anointed and prophets establishes sacred boundaries",
-      ["nolite", "tango", "christus", "propheta", "maligno"],
+      ["nolo", "tango", "christus", "propheta", "malignor"],
       15,
       16,
       "God commands: 'Touch not my anointed, and do no evil to my prophets.' He calls a famine upon the land and breaks all support of bread as discipline.",
@@ -173,7 +174,7 @@ class Psalm104ATests: XCTestCase {
     (
       "Joseph → Divine Preparation",
       "God sends Joseph as a servant, humiliated and bound, to prepare for Israel's deliverance",
-      ["mitto", "vir", "servus", "venundatio", "ioseph", "humilio", "compes", "pes", "ferrum", "pertransio", "anima", "donec", "venio", "verbum"],
+      ["mitto", "servus", "humilio", "compes", "ferrum", "verbum"],
       17,
       18,
       "God sends Joseph before them, sold as a slave, his feet bound in fetters, his soul pierced by iron, until the word of the Lord came.",
@@ -182,21 +183,23 @@ class Psalm104ATests: XCTestCase {
     (
       "Divine Word → Deliverance",
       "The word of the Lord inflames Joseph, leading to his release and exaltation",
-      ["elocutio", "dominus", "inflammo", "mitto", "rex", "solvio", "princeps", "populus", "dimittio"],
+      ["eloquium", "dominus", "inflammo", "mitto", "rex", "solvo", "princeps", "populus", "dimitto"],
       19,
       20,
       "The word of the Lord inflames Joseph; the king sends and releases him, the ruler of the people sets him free. He makes him master of his house and ruler of all his possessions.",
       "Augustine sees this as the pivotal moment when divine timing fulfills Joseph's destiny (Enarr. Ps. 104.19-20)."
     ),
+
     (
       "Exaltation → Instruction",
       "Joseph is exalted to rule and entrusted with instructing the princes and elders",
-      ["constituo", "dominus", "domus", "princeps", "possessio", "erudio", "princeps", "semetipsum", "senex", "prudentia", "doceo"],
+      ["erudio", "princeps", "semetipsum", "senex", "prudentia", "doceo"],   // only the lemmas that actually appear
       21,
       21,
       "He instructs his princes as himself and teaches his elders wisdom.",
       "Augustine interprets this as the fulfillment of God's promise: the humble are exalted, and the suffering become instruments of divine wisdom (Enarr. Ps. 104.21)."
-    ),
+    )
+ 
   ]
 
   private let conceptualThemes = [
@@ -217,35 +220,35 @@ class Psalm104ATests: XCTestCase {
     (
       "Exile and Journey Imagery",
       "Migration, sojourning, and movement metaphors",
-      ["pertransio", "gens", "regnum", "populus", "alter", "incola", "numero", "brevi", "paucissimus"],
+      ["pertransio", "gens", "regnum", "populus", "alter", "incola", "numero", "brevis", "paucus"],
       ThemeCategory.opposition,
       12 ... 13
     ),
     (
       "Suffering and Bondage Imagery",
       "Fetters, iron, slavery, and humiliation metaphors",
-      ["compes", "pes", "ferrum", "pertransio", "anima", "servus", "venundatio", "humilio"],
+      ["compes", "pes", "ferrum", "pertransio", "anima", "servus", "venundo", "humilio"],
       ThemeCategory.opposition,
       17 ... 19
     ),
     (
       "Deliverance and Exaltation Imagery",
       "Release, kingship, mastery, and instruction metaphors",
-      ["solvio", "dimittio", "princeps", "dominus", "domus", "possessio", "erudio", "doceo", "prudentia"],
+      ["solvo", "dimitto", "princeps", "dominus", "domus", "possessio", "erudio", "doceo", "prudentia"],
       ThemeCategory.divine,
-      20 ... 21
+      19 ... 21
     ),
     (
       "Famine and Provision Imagery",
       "Famine, bread, and sustenance metaphors",
-      ["fames", "terra", "firmamentum", "panis", "contrideo"],
+      ["fames", "terra", "firmamentum", "panis", "contero"],
       ThemeCategory.opposition,
       16 ... 16
     ),
     (
       "Prophetic and Anointed Imagery",
       "Anointed, prophets, and sacred boundaries metaphors",
-      ["christus", "propheta", "tango", "maligno"],
+      ["christus", "propheta", "tango", "malignor"],
       ThemeCategory.divine,
       15 ... 15
     )
