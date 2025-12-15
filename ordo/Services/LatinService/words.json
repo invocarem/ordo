@@ -1,5 +1,339 @@
 [
   {
+    "lemma": "comburo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "comburere",
+    "perfect": "combusi",
+    "supine": "combustus",
+    "translations": {
+      "en": "burn up, consume, destroy with fire",
+      "la": "comburo, comburere, combusi, combustus"
+    },
+    "forms": {
+      "present_participle_acc_sg_neuter": ["comburentem"]
+    }
+  },
+
+  {
+    "lemma": "coenomyia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "coenomyia",
+    "genitive": "coenomyiae",
+    "translations": {
+      "en": "common fly",
+      "la": "coenomyia, coenomyiae"
+    },
+    "forms": {
+      "nominative_sg": ["coenomyia"],
+      "vocative_sg": ["coenomyia"],
+      "ablative_sg": ["coenomyia"]
+    }
+  },
+  {
+    "lemma": "ciniphs",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "ciniphs",
+    "genitive": "ciniphis",
+    "translations": {
+      "en": "kind of stinging insects; very small flies, gnats; lice/flies/others",
+      "la": "ciniphs, ciniphis"
+    },
+    "forms": {
+      "nominative_pl": ["ciniphes"],
+      "vocative_pl": ["ciniphes"],
+      "accusative_pl": ["ciniphes"]
+    }
+  },
+
+  {
+    "lemma": "bruchus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "bruchus",
+    "genitive": "bruchi",
+    "translations": {
+      "en": "locust; kind of wingless locust",
+      "la": "bruchus, bruchi"
+    },
+    "forms": {
+      "nominative_sg": ["bruchus"]
+    }
+  },
+  {
+    "lemma": "numerus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "numerus",
+    "genitive": "numeri",
+    "translations": {
+      "en": "number, sum, total, rank; rhythm, meter",
+      "la": "numerus, numeri"
+    },
+    "forms": {
+      "nominative_sg": ["numerus"]
+    }
+  },
+  {
+    "lemma": "ficulneus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "ficulneus",
+    "genitive": "ficulnei",
+    "translations": {
+      "en": "of the fig or fig tree, fig-",
+      "la": "ficulneus, ficulnea, ficulneum"
+    },
+    "forms": {
+      "accusative_pl_feminine": ["ficulneas"]
+    }
+  },
+  {
+    "lemma": "vinea",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "vinea",
+    "genitive": "vineae",
+    "translations": {
+      "en": "vines in a vineyard; vine; bower-like shelter",
+      "la": "vinea, vineae"
+    },
+    "forms": {
+      "accusative_pl_feminine": ["vineas"]
+    }
+  },
+  {
+    "lemma": "vineus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "vineus",
+    "genitive": "vinei",
+    "translations": {
+      "en": "made of, belonging to wine, wine-",
+      "la": "vineus, vinea, vineum"
+    },
+    "forms": {
+      "accusative_pl_feminine": ["vineas"]
+    }
+  },
+
+  {
+    "lemma": "locusta",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "locusta",
+    "genitive": "locustae",
+    "translations": {
+      "en": "locust; crustacean, lobster",
+      "la": "locusta, locustae"
+    },
+    "forms": {
+      "nominative_sg": ["locusta"],
+      "vocative_sg": ["locusta"],
+      "ablative_sg": ["locusta"]
+    }
+  },
+
+  {
+    "lemma": "primogenitus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "primogenitus",
+    "accusative": "primogenitum",
+    "genitive": "primogeniti",
+    "translations": {
+      "en": "first-born; oldest (child)",
+      "la": "primogenitus, primogenita, primogenitum"
+    },
+    "forms": {
+      "nominative_sg_m": ["primogenitus"],
+      "nominative_sg_f": ["primogenita"],
+      "nominative_sg_n": ["primogenitum"],
+      "accusative_sg_m": ["primogenitum"],
+      "accusative_sg_f": ["primogenitam"],
+      "accusative_sg_n": ["primogenitum"],
+      "genitive_sg_m": ["primogeniti"],
+      "genitive_sg_f": ["primogenitae"],
+      "genitive_sg_n": ["primogeniti"],
+      "dative_sg_m": ["primogenito"],
+      "dative_sg_f": ["primogenitae"],
+      "dative_sg_n": ["primogenito"],
+      "ablative_sg_m": ["primogenito"],
+      "ablative_sg_f": ["primogenitā"],
+      "ablative_sg_n": ["primogenito"]
+    },
+    "note": "Late Latin form; classical 1st/2nd-declension adjective with three genders. Used substantively to mean 'the first-born'."
+  },
+  {
+    "lemma": "primitia",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "primitia",
+    "translations": {
+      "en": "first-fruits; first offerings; beginnings",
+      "la": "primitia, primitiae"
+    },
+    "forms": {
+      "accusative_pl": ["primitias"]
+    },
+    "note": "Always used in plural form 'primitiae' in classical Latin; 'primitias' is the accusative plural, commonly found in ecclesiastical and Vulgate Latin contexts."
+  },
+  {
+    "lemma": "tribus",
+    "part_of_speech": "noun",
+    "declension": 4,
+    "gender": "feminine",
+    "nominative": "tribus",
+    "translations": {
+      "en": "tribe; third part of the Roman people",
+      "la": "tribus, tribus"
+    },
+    "forms": {
+      "dative_pl": ["tribubus"],
+      "ablative_pl": ["tribubus"]
+    },
+    "note": "An irregular fourth-declension noun with identical nominative and ablative singular forms. 'Tribubus' is the dative/ablative plural form, used in early and classical Latin to refer to the three original tribes of Rome: Ramnes, Tities, and Luceres."
+  },
+  {
+    "lemma": "profectio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "profectio",
+    "translations": {
+      "en": "departure",
+      "la": "profectio, profectionis"
+    },
+    "forms": {
+      "dative_sg": ["profectione"],
+      "ablative_sg": ["profectione"],
+      "locative_sg": ["profectione"]
+    }
+  },
+  {
+    "lemma": "protectio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "protectio",
+    "accusative": "protectionem",
+    "translations": {
+      "en": "protection; shelter",
+      "la": "protectio, protectionis"
+    },
+    "forms": {
+      "accusative_sg": ["protectionem"]
+    }
+  },
+  {
+    "lemma": "incubo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "incubare",
+    "present": "incubo",
+    "future": "incubabo",
+    "perfect": "incubui",
+    "supine": "incubitus",
+    "translations": {
+      "en": "lie upon; brood over; sit on",
+      "la": "incubo, incubare, incubui, incubitus"
+    },
+    "forms": {
+      "perfect_indicative_3sg": ["incubuit"]
+    }
+  },
+  {
+    "lemma": "luceo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "lucere",
+    "present": "luceo",
+    "future": "lucere",
+    "perfect": "luxi",
+    "translations": {
+      "en": "shine; emit light; be clear or evident",
+      "la": "luceo, lucere, luxi, -"
+    },
+    "forms": {
+      "imperfect_subjunctive_3sg": ["luceret"]
+    }
+  },
+  {
+    "lemma": "coturnix",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "coturnix",
+    "vocative": "coturnix",
+    "translations": {
+      "en": "quail",
+      "la": "coturnix, coturnicis"
+    },
+    "forms": {
+      "nominative_sg": ["coturnix"],
+      "vocative_sg": ["coturnix"],
+      "genitive_sg": ["coturnicis"]
+    }
+  },
+  {
+    "lemma": "penetrale",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "penetrale",
+    "translations": {
+      "en": "innermost part; sanctuary; inner shrine",
+      "la": "penetrale, penetralis"
+    },
+    "forms": {
+      "dative_pl": ["penetralibus"],
+      "ablative_pl": ["penetralibus"],
+      "locative_pl": ["penetralibus"]
+    }
+  },
+  {
+    "lemma": "rana",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "rana",
+    "accusative": "ranas",
+    "translations": {
+      "en": "frog",
+      "la": "rana, ranae"
+    },
+    "forms": {
+      "accusative_pl": ["ranas"]
+    }
+  },
+  {
+    "lemma": "Moyses",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "Moyses",
+    "accusative": "Moysen",
+    "translations": {
+      "en": "Moses",
+      "la": "Moyses, Moysis"
+    },
+    "forms": {
+      "accusative_sg": ["Moysen"]
+    }
+  },
+  {
     "lemma": "Cham",
     "part_of_speech": "noun",
     "declension": 0,
@@ -2381,6 +2715,9 @@
     "future": "edam",
     "perfect": "edi",
     "supine": "esum",
+    "forms": {
+      "perfect_indicative_3sg": ["edidit"]
+    },
     "translations": {
       "en": "to eat, consume",
       "la": "edo, edere, edi, esum"
@@ -4805,7 +5142,8 @@
     },
     "forms": {
       "perfect_1sg": ["petii"],
-      "perfect_3sg_eccl": ["petiit"]
+      "perfect_3sg_eccl": ["petiit"],
+      "perfect_indicative_3pl": ["petierunt"]
     }
   },
   {
