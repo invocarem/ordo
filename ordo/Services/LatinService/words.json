@@ -1,5 +1,140 @@
 [
   {
+    "lemma": "reverto",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "revertere",
+    "present": "reverto",
+    "future": "revertentur",
+    "perfect": "reverti",
+    "translations": {
+      "en": "return, turn back",
+      "la": "reverto, revertere, reverti, -"
+    },
+    "forms": {
+      "future_passive_indicative_3pl": ["revertentur"],
+      "perfect_indicative_1sg": ["reverti"]
+    }
+  },
+
+  {
+    "lemma": "fumigo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "fumigare",
+    "present": "fumigo",
+    "future": "fumigabo",
+    "perfect": "fumigavi",
+    "supine": "fumigatus",
+    "translations": {
+      "en": "smoke, fumigate",
+      "la": "fumigo, fumigare, fumigavi, fumigatus"
+    },
+    "forms": {
+      "present_indicative_3pl": ["fumigant"],
+      "perfect_participle": ["fumigatus"]
+    }
+  },
+  {
+    "lemma": "illudo",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "illudere",
+    "present": "illudo",
+    "future": "illudam",
+    "perfect": "illusi",
+    "supine": "illusus",
+    "translations": {
+      "en": "mock, ridicule, dupe",
+      "la": "illudo, illudere, illusi, illusus"
+    },
+    "forms": {
+      "future_passive_participle_nom_sg_n": ["illudendum"],
+      "future_passive_participle_voc_sg_n": ["illudendum"],
+      "future_passive_participle_acc_sg_m": ["illudendum"],
+      "future_passive_participle_acc_sg_n": ["illudendum"]
+    }
+  },
+
+  {
+    "lemma": "pertranseo",
+    "part_of_speech": "verb",
+    "conjugation": 6,
+    "infinitive": "pertransire",
+    "present": "pertranseo",
+    "future": "pertransibunt",
+    "perfect": "pertransivi",
+    "supine": "pertransitus",
+    "translations": {
+      "en": "pass through, cross",
+      "la": "pertranseo, pertransire, pertransivi, pertransitus"
+    },
+    "forms": {
+      "future_indicative_3pl": ["pertransibunt"],
+      "perfect_indicative_1sg": ["pertransivi"],
+      "perfect_participle": ["pertransitus"]
+    }
+  },
+
+  {
+    "lemma": "navis",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "navis",
+    "translations": {
+      "en": "ship",
+      "la": "navis, navis"
+    },
+    "forms": {
+      "nominative_pl": ["naves"],
+      "vocative_pl": ["naves"],
+      "accusative_pl": ["naves"],
+      "genitive_sg": ["navis"],
+      "dative_sg": ["navi"],
+      "ablative_sg": ["navi"]
+    }
+  },
+  {
+    "lemma": "pusillus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "pusillus",
+    "translations": {
+      "en": "tiny, very small",
+      "la": "pusillus, pusilla -um, pusillior -or -us, pusillissimus -a -um"
+    },
+    "forms": {
+      "nominative_sg_m": ["pusillus"],
+      "nominative_sg_f": ["pusilla"],
+      "nominative_sg_n": ["pusillum"],
+      "accusative_pl_n": ["pusilla"],
+      "vocative_pl_n": ["pusilla"],
+      "ablative_sg_f": ["pusilla"]
+    }
+  },
+  {
+    "lemma": "reptile",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "neuter",
+    "nominative": "reptile",
+    "forms": {
+      "nominative_pl": ["reptilia"],
+      "vocative_pl": ["reptilia"],
+      "accusative_pl": ["reptilia"],
+      "genitive_pl": ["reptilium"],
+      "dative_pl": ["reptilibus"],
+      "ablative_pl": ["reptilibus"]
+    },
+    "translations": {
+      "en": "reptile",
+      "la": "reptile, reptilis"
+    }
+  },
+
+  {
     "lemma": "comburo",
     "part_of_speech": "verb",
     "conjugation": 3,
@@ -9057,7 +9192,10 @@
         "respiciunt"
       ],
       "imperative": ["respice"],
-      "perfect_indicative": ["respexit"]
+      "perfect_indicative": ["respexit"],
+      "present_indicative_3sg": ["respicit"],
+      "perfect_indicative_1sg": ["respexi"],
+      "perfect_participle": ["respectus"]
     },
     "translations": {
       "en": "to look back, regard, consider",
@@ -33637,6 +33775,7 @@
     "perfect": "turbavi",
     "supine": "turbatum",
     "forms": {
+      "future_passive_indicative_3pl": ["turbabuntur"],
       "perfect_passive_participle_m_nom_sg": ["turbatus"],
       "perfect_passive_m": ["turbatus"],
       "perfect_passive_f": ["turbata"]

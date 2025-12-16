@@ -19,28 +19,30 @@ class Psalm103ATests: XCTestCase
     "Extendens caelum sicut pellem, qui tegis aquis superiora eius.",
     "Qui ponis nubem ascensum tuum, qui ambulas super pennas ventorum.",
     "Qui facis angelos tuos spiritus, et ministros tuos ignem urentem.",
+
     "Qui fundasti terram super stabilitatem suam, non inclinabitur in saeculum saeculi.",
     "Abyssus sicut vestimentum amictus eius; super montes stabunt aquae.",
     "Ab increpatione tua fugient, a voce tonitrui tui formidabunt.",
     "Ascendunt montes, et descendunt campi in locum quem fundasti eis.",
     "Terminum posuisti quem non transgredientur, neque convertentur operire terram.",
+
     "Qui emittis fontes in convallibus; inter medium montums pertransibunt aquae.",
     "Potabunt omnes bestiae agri; expectabunt onagri in siti sua.",
     "Super ea volucres caeli habitabunt, de medio petrarum dabunt voces.",
     "Rigans montes de superioribus suis, de fructu operum tuorum satiabitur terra.",
     "Producens foenum jumentis, et herbam servituti hominum,",
+
     "ut educas panem de terra, et vinum laetificet cor hominis.",
     "Ut exhilaret faciem in oleo, et panis cor hominis confirmet.",
-    "Saturabuntur ligna campi, et cedri Libani quas plantavit.",
-    "Illic passeres nidificabunt; herodii domus dux est eorum.",
-    "Montes excelsi cervis, petra refugium herinaciis.",
+    "Saturabuntur ligna campi, et cedri Libani quas plantavit. Illic passeres nidificabunt; ",
+    "herodii domus dux est eorum. Montes excelsi cervis, petra refugium herinaciis.",
     "Fecit lunam in tempora; sol cognovit occasum suum.",
+
     "Posuisti tenebras, et facta est nox; in ipsa pertransibunt omnes bestiae silvae.",
     "Catuli leonum rugientes ut rapiant, et quaerant a Deo escam sibi.",
     "Ortus est sol, et congregati sunt, et in cubilibus suis collocabuntur.",
     "Exibit homo ad opus suum, et ad operationem suum usque ad vesperum.",
-    "Quam magnificata sunt opera tua, Domine! omnia in sapientia fecisti;",
-    "impleta est terra possessione tua."
+    "Quam magnificata sunt opera tua, Domine! omnia in sapientia fecisti; impleta est terra possessione tua."
   ]
 
   private let englishText = [
@@ -49,28 +51,30 @@ class Psalm103ATests: XCTestCase
     "Who stretchest out the heaven like a pavilion: who coverest the higher rooms thereof with water.",
     "Who makest the clouds thy chariot: who walkest upon the wings of the winds.",
     "Who makest thy angels spirits: and thy ministers a burning fire.",
+
     "Who hast founded the earth upon its own bases: it shall not be moved for ever and ever.",
     "The deep like a garment is its clothing: above the mountains shall the waters stand.",
     "At thy rebuke they shall flee: at the voice of thy thunder they shall fear.",
     "The mountains ascend, and the plains descend into the place which thou hast founded for them.",
     "Thou hast set a bound which they shall not pass over; neither shall they return to cover the earth.",
+
     "Thou sendest forth springs in the vales: between the midst of the hills the waters shall pass.",
     "All the beasts of the field shall drink: the wild asses shall expect in their thirst.",
     "Over them the birds of the air shall dwell: from the midst of the rocks they shall give forth their voices.",
     "Thou waterest the hills from thy upper rooms: the earth shall be filled with the fruit of thy works.",
     "Bringing forth grass for cattle, and herb for the service of men,",
+
     "That thou mayst bring bread out of the earth: and that wine may cheer the heart of man.",
     "That he may make the face cheerful with oil: and that bread may strengthen man’s heart.",
-    "The trees of the field shall be filled, and the cedars of Libanus which he hath planted:",
-    "There the sparrows shall make their nests. The highest of them is the house of the heron.",
-    "The high hills are a refuge for the harts, the rock for the hedgehogs.",
+    "The trees of the field shall be filled, and the cedars of Libanus which he hath planted: There the sparrows shall make their nests. ",
+    "The highest of them is the house of the heron. The high hills are a refuge for the harts, the rock for the hedgehogs.",
     "He hath made the moon for seasons: the sun knoweth his going down.",
+
     "Thou hast appointed darkness, and it is night: in it shall all the beasts of the woods go about:",
     "The young lions roaring after their prey, and seeking their meat from God.",
     "The sun ariseth, and they are gathered together: and they shall lie down in their dens.",
     "Man shall go forth to his work, and to his labour until the evening.",
-    "How great are thy works, O Lord! thou hast made all things in wisdom:",
-    "the earth is filled with thy riches."
+    "How great are thy works, O Lord! thou hast made all things in wisdom: the earth is filled with thy riches."
   ]
 
   private let lineKeyLemmas: [(Int, [String])] = [
@@ -433,5 +437,3 @@ class Psalm103ATests: XCTestCase
     }
   }
 }
-
-

@@ -40,13 +40,14 @@ These rules apply whenever testing a psalm from 1 to 150. All test files must fo
 ## 6. Structural Themes
 - Each structural theme covers exactly two consecutive verses (1-2, 3-4, 5-6, etc.)
 - For odd-numbered psalms, the final theme covers the last three verses (e.g., 5-7 for Psalm 1)
-- Each theme is a tuple with 6 elements:
+- Each theme is a tuple with 7 elements:
   1. **name**: "A → B" format describing the transformation (e.g., "Separation → Delight")
-  2. **comment**: brief general meaning of the two verses
+  2. **description**: brief description of the theme
   3. **lemmas**: array of key Latin lemmas from these verses
   4. **startVerse**: first verse number in the theme
   5. **endVerse**: last verse number in the theme
-  6. **augustineQuote**: theological interpretation from Augustine's Expositions on the Psalms (Enarr. Ps. X.Y)
+  6. **comment**: brief general meaning of the two verses
+  7. **comment2**: theological interpretation from Augustine's Expositions on the Psalms or other works (city of God, confessions etc)
 - Themes must reflect the narrative progression or theological development across the verses
 
 ## 7. Conceptual Themes

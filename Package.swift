@@ -10,14 +10,14 @@ let package = Package(
     .library(name: "HoursService", targets: ["HoursService"]),
     .library(name: "PsalmService", targets: ["PsalmService"]),
     .library(name: "PsalmProgressTracker", targets: ["PsalmProgressTracker"]),
-    .executable(name: "LiturgicalDocker", targets: ["LiturgicalDocker"]),
+    .executable(name: "LiturgicalDocker", targets: ["LiturgicalDocker"])
   ],
 
   targets: [
     .executableTarget(
       name: "LiturgicalDocker",
       dependencies: [
-        "LiturgicalService", "HoursService", "PsalmService", "PsalmProgressTracker",
+        "LiturgicalService", "HoursService", "PsalmService", "PsalmProgressTracker"
       ],
       path: "docker-support",
       exclude: ["Dockerfile", "Dockerfile.test", "consolidate.awk", "README_consolidation.md"],
@@ -66,10 +66,10 @@ let package = Package(
         "LatinWordAnalysis.swift",
         "LatinThematicAnalysis.swift",
         "LatinWordVerbForms.swift",
-        "LemmaMapping.swift",
+        "LemmaMapping.swift"
       ],
       resources: [
-        .process("words.json"), .process("translations.json"), .process("themes.json"),
+        .process("words.json"), .process("translations.json"), .process("themes.json")
       ]
     ),
     .testTarget(
@@ -181,7 +181,6 @@ let package = Package(
         "Psalm80Tests.swift",
         "Psalm81Tests.swift",
 
-
         "Psalm87Tests.swift",
 
         "Psalm89Tests.swift",
@@ -190,13 +189,13 @@ let package = Package(
 
         "Psalm94Tests.swift",
 
-
         "Psalm99Tests.swift",
         "Psalm100Tests.swift",
 
         "Psalm101Tests.swift",
         "Psalm102Tests.swift",
-        "Psalm103Tests.swift",
+        "Psalm103ATests.swift",
+        "Psalm103BTests.swift",
         "Psalm104ATests.swift",
         "Psalm104BTests.swift",
 
@@ -264,12 +263,12 @@ let package = Package(
 
         "Psalm148Tests.swift",
         "Psalm149Tests.swift",
-        "Psalm150Tests.swift",
+        "Psalm150Tests.swift"
       ],
       resources: [
         .copy("../../ordo/Services/LatinService/words.json"),
         .copy("../../ordo/Services/LatinService/translations.json"),
-        .copy("../../ordo/Services/LatinService/themes.json"),
+        .copy("../../ordo/Services/LatinService/themes.json")
       ]
     ),
 
@@ -304,14 +303,14 @@ let package = Package(
         "LiturgicalService",
         "HoursService",
         "PsalmService",
-        "PsalmProgressTracker",
+        "PsalmProgressTracker"
       ],
       path: "Tests/IntegrationTests",
       sources: ["DailyPrayerFlowTests.swift", "DailyPsalmsProgressTests.swift"],
       resources: [
         .copy("../../ordo/Services/LiturgicalService/liturgical_calendar.json"),
-        .copy("../../ordo/Services/PsalmService/psalms.json"),
+        .copy("../../ordo/Services/PsalmService/psalms.json")
       ]
-    ),
+    )
   ]
 )
