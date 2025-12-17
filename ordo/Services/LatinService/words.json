@@ -1,5 +1,58 @@
 [
   {
+    "lemma": "pellis",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "pellis",
+    "vocative": "pellis",
+    "genitive": "pellis",
+    "translations": {
+      "en": "skin, hide; pelt",
+      "la": "pellis, pellis"
+    },
+    "forms": {
+      "nominative_sg": ["pellis"],
+      "vocative_sg": ["pellis"],
+      "genitive_sg": ["pellis"],
+      "accusative_pl": ["pellis"]
+    }
+  },
+  
+  {
+    "lemma": "minister",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "accusative": "ministros",
+    "translations": {
+      "en": "attendant, servant, waiter; agent, aide; accomplice",
+      "la": "minister, ministri"
+    },
+    "forms": {
+      "accusative_pl": ["ministros"]
+    }
+  },
+
+  
+  {
+    "lemma": "tego",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "tegere",
+    "present": "tegis",
+    "perfect": "texi",
+    "supine": "tectus",
+    "forms": {
+      "present_indicative_2sg": ["tegis"]
+    },
+    "translations": {
+      "en": "cover, protect; defend; hide",
+      "la": "tego, tegere, texi, tectus"
+    }
+  },
+
+  {
     "lemma": "reverto",
     "part_of_speech": "verb",
     "conjugation": 3,

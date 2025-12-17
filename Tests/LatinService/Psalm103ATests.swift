@@ -11,7 +11,7 @@ class Psalm103ATests: XCTestCase
   // MARK: - Test Data
 
   let id = PsalmIdentity(number: 103, category: "A")
-  private let expectedVerseCount = 22
+  private let expectedVerseCount = 25
 
   private let text = [
     "Benedic, anima mea, Domino. Domine Deus meus, magnificatus es vehementer.",
@@ -30,7 +30,7 @@ class Psalm103ATests: XCTestCase
     "Potabunt omnes bestiae agri; expectabunt onagri in siti sua.",
     "Super ea volucres caeli habitabunt, de medio petrarum dabunt voces.",
     "Rigans montes de superioribus suis, de fructu operum tuorum satiabitur terra.",
-    "Producens foenum jumentis, et herbam servituti hominum,",
+    "Producens foenum iumentis, et herbam servituti hominum,",
 
     "ut educas panem de terra, et vinum laetificet cor hominis.",
     "Ut exhilaret faciem in oleo, et panis cor hominis confirmet.",
@@ -77,35 +77,36 @@ class Psalm103ATests: XCTestCase
     "How great are thy works, O Lord! thou hast made all things in wisdom: the earth is filled with thy riches."
   ]
 
+
   private let lineKeyLemmas: [(Int, [String])] = [
-    (1, ["benedico", "anima", "dominus"]),
-    (2, ["confessio", "decor", "induo", "lumina", "vestimentum"]),
-    (3, ["extendo", "caelum", "tego", "aqua"]),
-    (4, ["pono", "nubes", "ascendo", "ambo", "penna", "ventus"]),
+    (1, ["benedico", "anima", "dominus", "magnifico", "vehementer"]),
+    (2, ["confessio", "decor", "induo", "lumen", "vestimentum"]),
+    (3, ["extendo", "caelum", "pellis", "tego", "aqua", "superus"]),
+    (4, ["pono", "nubes", "ascendo", "ambulo", "penna", "ventus"]),
     (5, ["facio", "angelus", "spiritus", "minister", "ignis", "uro"]),
     (6, ["fundo", "terra", "stabilitas", "inclino"]),
     (7, ["abyssus", "vestimentum", "mons", "aqua", "sto"]),
     (8, ["increpatio", "fugo", "vox", "tonitrus", "formido"]),
-    (9, ["ascendo", "mons", "campus", "descendo", "fundamentum"]),
-    (10, ["terminus", "transgredo", "converto", "opero", "terra"]),
-    (11, ["emitto", "fons", "convallis", "medium", "transeo"]),
+    (9, ["ascendo", "mons", "campus", "descendo", "fundo"]),
+    (10, ["terminus", "pono", "transgredior", "converto", "opero", "terra"]),
+    (11, ["emitto", "fons", "convallis", "medium", "mons", "transeo", "aqua"]),
     (12, ["poto", "bestia", "ager", "expecto", "onager", "sitis"]),
-    (13, ["super", "volucris", "caelum", "habito", "petra", "do", "vox"]),
-    (14, ["rigo", "mons", "superior", "fructus", "opus", "satio"]),
-    (15, ["produco", "foenum", "jumentum", "herba", "servitus", "homo"]),
+    (13, ["volucris", "caelum", "habito", "petra", "do", "vox"]),
+    (14, ["rigo", "mons", "superus", "fructus", "opus", "satio", "terra"]),
+    (15, ["produco", "foenum", "iumentum", "herba", "servitus", "homo"]),
     (16, ["educo", "panis", "terra", "vinum", "laetifico", "cor"]),
     (17, ["exhilaro", "facies", "oleum", "confirmo"]),
-    (18, ["satio", "lignum", "campus", "cedrus", "Libanus", "planto"]),
-    (19, ["passer", "nido", "herodius", "domus", "dux"]),
-    (20, ["excelsus", "cervus", "petra", "refugium", "herinacius"]),
-    (21, ["facio", "luna", "tempus", "sol", "cognosco", "occasus"]),
-    (22, ["pono", "tenebrae", "nox", "bestia", "silva", "circumeo"]),
-    (23, ["catulus", "leo", "rugio", "rapio", "quaero", "escam", "Deus"]),
-    (24, ["orior", "sol", "congrego", "cubiculum", "colloco"]),
-    (25, ["exeo", "homo", "opus", "labor", "vesper"]),
-    (26, ["magnifico", "opus", "sapientia", "facio", "terra", "impleo", "possessio"])
+    (18, ["satio", "lignum", "campus", "cedrus", "Libanus", "planto", "passer", "nido"]),
+    (19, ["herodius", "domus", "dux", "mons", "excelsus", "cervus", "petra", "refugium", "herinacius"]),
+    (20, ["facio", "luna", "tempus", "sol", "cognosco", "occasus"]),
+    (21, ["pono", "tenebrae", "nox", "transeo", "bestia", "silva"]),
+    (22, ["catulus", "leo", "rugio", "rapio", "quaero", "escua", "Deus"]),
+    (23, ["orior", "sol", "congrego", "cubiculum", "colloco"]),
+    (24, ["exeo", "homo", "opus", "operatio", "vesper"]),
+    (25, ["magnifico", "opus", "dominus", "omnis", "sapientia", "facio", "impleo", "terra", "possessio"])
   ]
-
+  
+ 
   private let structuralThemes = [
     (
       "Praise → Creation",
@@ -156,7 +157,7 @@ class Psalm103ATests: XCTestCase
         "opus", "labor", "vesper"
       ],
       17,
-      25,
+      24,
       "God's provision of habitats and the cycle of day and night",
       "These verses describe God's provision of habitats for various creatures and the cycle of day and night. The trees of the field are filled, and the cedars of Lebanon are planted. The moon is made for seasons, and the sun knows its going down. The cycle of day and night provides a rhythm for all living things, including humans who go forth to their work."
     ),
@@ -166,8 +167,8 @@ class Psalm103ATests: XCTestCase
       [
         "magnifico", "opus", "sapientia", "facio", "terra", "impleo", "possessio"
       ],
-      26,
-      26,
+      25,
+      25,
       "The greatness of God's works and His wisdom in creation",
       "The psalm concludes with a magnification of God's works and His wisdom in creation. All things are made in wisdom, and the earth is filled with His riches. This final verse summarizes the psalmist's awe and admiration for God's creative work and providential care."
     )
