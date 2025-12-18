@@ -1,4 +1,206 @@
 [
+  
+  {
+    "lemma": "servitus",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "servitus",
+    "genitive": "servitutis",
+    "dative": "servituti",
+    "locative": "servituti",
+    "translations": {
+      "en": "slavery, servitude, slaves",
+      "la": "servitus, servitutis"
+    },
+    "forms": {
+      "dative_sg": ["servituti"],
+      "locative_sg": ["servituti"]
+    }
+  },
+
+  {
+    "lemma": "herodius",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "herodius",
+    "genitive": "herodii",
+    "locative": "herodii",
+    "translations": {
+      "en": "bird (unidentified), possibly stork, little owl, heron",
+      "la": "herodius, herodii"
+    },
+    "forms": {
+      "genitive_sg": ["herodii"],
+      "locative_sg": ["herodii"],
+      "nominative_pl": ["herodii"],
+      "vocative_pl": ["herodii"]
+    }
+  },
+
+  {
+    "lemma": "herinacius",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "herinacius",
+    "genitive": "herinacii",
+    "translations": {
+      "en": "hedgehog, porcupine",
+      "la": "herinacius, herinacii"
+    },
+    "forms": {
+      "locative_pl": ["herinaciis"],
+      "dative_pl": ["herinaciis"],
+      "ablative_pl": ["herinaciis"]
+    }
+  },
+ 
+  {
+    "lemma": "stabilitas",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "stabilitas",
+    "accusative": "stabilitatem",
+    "translations": {
+      "en": "stability, steadiness",
+      "la": "stabilitas, stabilitatis"
+    }
+  },
+ 
+  {
+    "lemma": "superus",
+    "part_of_speech": "adjective",
+    "gender": "masculine",
+    "comparative": "superior",
+    "superlative": "supremus",
+    "translations": {
+      "en": "higher, upper, above, greatest",
+      "la": "superus, supera, superum"
+    },
+    "forms": {
+      "nominative_pl_n": ["superiora"],
+      "vocative_pl_n": ["superiora"],
+      "accusative_pl_n": ["superiora"],
+      "dative_pl": ["superioribus"],
+      "ablative_pl": ["superioribus"]
+    }
+  },
+
+
+  {
+    "lemma": "onager",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "nominative": "onager",
+    "genitive": "onagri",
+    "locative": "onagri",
+    "nominative_plural": "onagri",
+    "vocative_plural": "onagri",
+    "translations": {
+      "en": "wild ass",
+      "la": "onager, onagri"
+    },
+    "forms": {
+      "genitive_sg": ["onagri"],
+      "locative_sg": ["onagri"],
+      "nominative_pl": ["onagri"],
+      "vocative_pl": ["onagri"]
+    }
+  },
+
+  
+  {
+    "lemma": "dux",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "dux",
+    "vocative": "dux",
+    "genitive": "ducis",
+    "translations": {
+      "en": "leader, guide, commander, general, duke",
+      "la": "dux, ducis"
+    }
+  },
+
+ 
+  {
+    "lemma": "pertranseo",
+    "part_of_speech": "verb",
+    "conjugation": 0,
+    "infinitive": "pertransire",
+    "present": "pertranseo",
+    "future": "pertransibo",
+    "perfect": "pertransivi",
+    "supine": "pertransitus",
+    "forms": {
+      "future_active_indicative_3pl": ["pertransibunt"]
+    },
+    "translations": {
+      "en": "pass right through, go by, cross",
+      "la": "pertranseo, pertransire, pertransivi, pertransitus"
+    }
+  },
+ 
+  
+  {
+    "lemma": "exhilaro",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "exhilarare",
+    "present": "exhilaro",
+    "present_subjunctive_3sg": "exhilaret",
+    "perfect": "exhilaravi",
+    "supine": "exhilaratus",
+    "forms": {
+      "present_subjunctive_3sg": ["exhilaret"]
+    },
+    "translations": {
+      "en": "gladden, cheer, brighten, spruce up",
+      "la": "exhilaro, exhilarare, exhilaravi, exhilaratus"
+    }
+  },
+
+  {
+    "lemma": "nidifico",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "nidificare",
+    "present": "nidifico",
+    "future": "nidificabo",
+    "future_active": "nidificabunt",
+    "perfect": "nidificavi",
+    "supine": "nidificatus",
+    "forms": {
+      "future_active_indicative_3pl": ["nidificabunt"]
+    },
+    "translations": {
+      "en": "build a nest",
+      "la": "nidifico, nidificare, nidificavi, nidificatus"
+    }
+  },
+
+  
+  {
+    "lemma": "operatio",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "operatio",
+    "accusative": "operationem",
+    "translations": {
+      "en": "operation, activity",
+      "la": "operatio, operationis"
+    },
+    "forms": {
+      "accusative_sg": ["operationem"]
+    }
+  },
+
   {
     "lemma": "pellis",
     "part_of_speech": "noun",
@@ -2401,6 +2603,7 @@
       "la": "exeo, exire, exii, exitum"
     },
     "forms": {
+      "future_indicative_3sg": ["exibit"],
       "perfect_active": [
         "exii",
         "existi",
