@@ -1,5 +1,55 @@
 [
-  
+  {
+    "lemma": "convallis",
+    "part_of_speech": "noun",
+    "declension": 3,
+    "gender": "feminine",
+    "nominative": "convallis",
+    "translations": {
+      "en": "valley, ravine, glen",
+      "la": "convallis, convallis"
+    },
+    "forms": {
+      "locative_pl": ["convallibus"],
+      "dative_pl": ["convallibus"],
+      "ablative_pl": ["convallibus"]
+    }
+  },
+
+  {
+    "lemma": "operio",
+    "part_of_speech": "verb",
+    "conjugation": 4,
+    "infinitive": "operire",
+    "present": "operio",
+    "future": "operiam",
+    "perfect": "operui",
+    "supine": "opertus",
+    "translations": {
+      "en": "cover, hide, bury",
+      "la": "operio, operire, operui, opertus"
+    },
+    "forms": {
+      "present_active_infinitive": ["operire"],
+      "present_passive_imperative_2sg": ["operire"],
+      "present_active_indicative_1sg": ["operio"]
+    }
+  },
+  {
+    "lemma": "tonitrus",
+    "part_of_speech": "noun",
+    "declension": 4,
+    "gender": "masculine",
+    "nominative": "tonitrus",
+    "translations": {
+      "en": "thunder",
+      "la": "tonitrus, tonitrus"
+    },
+    "forms": {
+      "dative_sg": ["tonitruī"]
+    }
+  },
+
   {
     "lemma": "servitus",
     "part_of_speech": "noun",
@@ -56,7 +106,7 @@
       "ablative_pl": ["herinaciis"]
     }
   },
- 
+
   {
     "lemma": "stabilitas",
     "part_of_speech": "noun",
@@ -69,7 +119,7 @@
       "la": "stabilitas, stabilitatis"
     }
   },
- 
+
   {
     "lemma": "superus",
     "part_of_speech": "adjective",
@@ -88,7 +138,6 @@
       "ablative_pl": ["superioribus"]
     }
   },
-
 
   {
     "lemma": "onager",
@@ -112,7 +161,6 @@
     }
   },
 
-  
   {
     "lemma": "dux",
     "part_of_speech": "noun",
@@ -127,7 +175,6 @@
     }
   },
 
- 
   {
     "lemma": "pertranseo",
     "part_of_speech": "verb",
@@ -145,8 +192,7 @@
       "la": "pertranseo, pertransire, pertransivi, pertransitus"
     }
   },
- 
-  
+
   {
     "lemma": "exhilaro",
     "part_of_speech": "verb",
@@ -184,7 +230,6 @@
     }
   },
 
-  
   {
     "lemma": "operatio",
     "part_of_speech": "noun",
@@ -220,7 +265,7 @@
       "accusative_pl": ["pellis"]
     }
   },
-  
+
   {
     "lemma": "minister",
     "part_of_speech": "noun",
@@ -236,7 +281,6 @@
     }
   },
 
-  
   {
     "lemma": "tego",
     "part_of_speech": "verb",
@@ -24214,7 +24258,7 @@
     "vocative": "foenum",
     "ablative_plural": "foenis",
     "translations": {
-      "en": "hay",
+      "en": "hay, grass",
       "la": "foenum"
     }
   },
@@ -24671,7 +24715,7 @@
       "genitive": ["montium"]
     },
     "translations": {
-      "en": "mountain",
+      "en": "mountain, hill",
       "la": "mons"
     }
   },

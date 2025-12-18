@@ -43,7 +43,7 @@ These rules apply whenever testing a psalm from 1 to 150. All test files must fo
 - Each theme is a tuple with 7 elements:
   1. **name**: "A → B" format describing the transformation (e.g., "Separation → Delight")
   2. **description**: brief description of the theme
-  3. **lemmas**: array of key Latin lemmas from these verses
+  3. **lemmas**: array of key Latin lemmas from these verses (do not include common words, maximum 7)
   4. **startVerse**: first verse number in the theme
   5. **endVerse**: last verse number in the theme
   6. **comment**: brief general meaning of the two verses

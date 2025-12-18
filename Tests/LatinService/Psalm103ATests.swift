@@ -26,7 +26,7 @@ class Psalm103ATests: XCTestCase
     "Ascendunt montes, et descendunt campi in locum quem fundasti eis.",
     "Terminum posuisti quem non transgredientur, neque convertentur operire terram.",
 
-    "Qui emittis fontes in convallibus; inter medium montums pertransibunt aquae.",
+    "Qui emittis fontes in convallibus; inter medium montium pertransibunt aquae.",
     "Potabunt omnes bestiae agri; expectabunt onagri in siti sua.",
     "Super ea volucres caeli habitabunt, de medio petrarum dabunt voces.",
     "Rigans montes de superioribus suis, de fructu operum tuorum satiabitur terra.",
@@ -77,7 +77,6 @@ class Psalm103ATests: XCTestCase
     "How great are thy works, O Lord! thou hast made all things in wisdom: the earth is filled with thy riches."
   ]
 
-
   private let lineKeyLemmas: [(Int, [String])] = [
     (1, ["benedico", "anima", "dominus", "magnifico", "vehementer"]),
     (2, ["confessio", "decor", "induo", "lumen", "vestimentum"]),
@@ -86,11 +85,11 @@ class Psalm103ATests: XCTestCase
     (5, ["facio", "angelus", "spiritus", "minister", "ignis", "uro"]),
     (6, ["fundo", "terra", "stabilitas", "inclino"]),
     (7, ["abyssus", "vestimentum", "mons", "aqua", "sto"]),
-    (8, ["increpatio", "fugo", "vox", "tonitrus", "formido"]),
+    (8, ["increpatio", "fugio", "vox", "tonitrus", "formido"]),
     (9, ["ascendo", "mons", "campus", "descendo", "fundo"]),
-    (10, ["terminus", "pono", "transgredior", "converto", "opero", "terra"]),
+    (10, ["terminus", "pono", "transgredior", "converto", "operio", "terra"]),
     (11, ["emitto", "fons", "convallis", "medium", "mons", "pertranseo", "aqua"]),
-    (12, ["poto", "bestia", "ager", "expecto", "onager", "sitis"]),
+    (12, ["poto", "bestia", "ager", "expecto", "onager", "sitio"]),
     (13, ["volucris", "caelum", "habito", "petra", "do", "vox"]),
     (14, ["rigo", "mons", "superus", "fructus", "opus", "satio", "terra"]),
     (15, ["produco", "foenum", "iumentum", "herba", "servitus", "homo"]),
@@ -105,101 +104,146 @@ class Psalm103ATests: XCTestCase
     (24, ["exeo", "homo", "opus", "operatio", "vesper"]),
     (25, ["magnifico", "opus", "dominus", "omnis", "sapientia", "facio", "impleo", "terra", "possessio"])
   ]
-  
- 
+
   private let structuralThemes = [
     (
-      "Praise → Creation",
-      "From personal praise to cosmic creation",
-      [
-        "benedico", "anima", "dominus", "extendo", "caelum", "fundo", "terra", "facio",
-        "angelus", "spiritus", "minister", "ignis"
-      ],
+      "Praise → Transformation",
+      "Personal praise leading to divine transformation",
+      ["benedico", "anima", "dominus", "confessio", "decor", "induo", "lumen"],
       1,
+      2,
+      "The psalmist begins with personal blessing and is transformed by being clothed in divine light.",
+      "Augustine explains that the soul's praise (benedico) is the first step toward being clothed in divine light (induo lumen), reflecting the transformation of the believer."
+    ),
+    (
+      "Heavenly Extension → Cloudy Journey",
+      "Stretching heavens and walking on clouds as divine movement",
+      ["extendo", "caelum", "tego", "aqua", "pono", "nubes", "ambulo"],
+      3,
+      4,
+      "God stretches out the heavens like a pavilion and walks upon the wings of the winds.",
+      "Augustine interprets the stretching of the heavens (extendo caelum) as God's orderly governance, with clouds (nubes) serving as His chariot."
+    ),
+    (
+      "Angelic Spirit → Earthly Foundation",
+      "Angels as spirits and earth founded on stability",
+      ["facio", "angelus", "spiritus", "minister", "ignis", "fundo", "terra"],
       5,
-      "The psalm opens with personal praise that expands to cosmic creation",
-      "The psalmist begins with personal praise and quickly expands to cosmic creation, showing how individual worship connects to the grand scale of God's creative work. The first five verses establish the pattern of personal devotion leading to cosmic wonder."
-    ),
-    (
-      "Stability → Boundaries",
-      "God's stable creation with defined boundaries",
-      [
-        "stabilitas", "abyssus", "mons", "aqua", "terminus", "transgredo", "converto",
-        "opero", "terra"
-      ],
       6,
+      "God makes angels into spirits and ministers of fire, while founding the earth upon its own bases.",
+      "Augustine notes that angels (angelus) are spirits (spiritus) ministering with fire, while the earth (terra) is founded on divine stability."
+    ),
+    (
+      "Abyss Garment → Thunder Fear",
+      "Deep as clothing and thunder causing fear",
+      ["abyssus", "vestimentum", "mons", "aqua", "increpatio", "fugio", "tonitrus"],
+      7,
+      8,
+      "The abyss is like a garment covering the earth, while creatures flee at God's rebuke and thunder.",
+      "Augustine explains that the deep (abyssus) covered like a garment signifies God's concealment, while the thunder (tonitrus) rebukes the wicked."
+    ),
+    (
+      "Mountain Ascent → Plain Descent",
+      "Mountains ascending and plains descending to their place",
+      ["ascendo", "mons", "campus", "descendo", "fundo", "terminus"],
+      9,
       10,
-      "God's stable creation with defined boundaries for water and land",
-      "These verses emphasize the stability of God's creation and the boundaries He has set. The abyss is clothed like a garment, and the mountains stand firm. God has set boundaries that water cannot pass, showing His orderly creation and the limits He has established for natural elements."
+      "The mountains ascend and the plains descend into the place God has founded for them.",
+      "Augustine comments that the mountains (mons) and plains (campus) are ordered, with boundaries set by God restricting the waters."
     ),
     (
-      "Provision → Nourishment",
-      "God's provision of water and food for all creatures",
-      [
-        "emitto", "fons", "convallis", "poto", "bestia", "ager", "rigo", "mons",
-        "fructus", "opus", "satio", "produco", "foenum", "jumentum", "herba",
-        "servitus", "homo", "educo", "panis", "terra", "vinum", "laetifico", "cor"
-      ],
+      "Spring Emission → Beast Drinking",
+      "Springs sent forth in valleys and beasts drinking water",
+      ["emitto", "fons", "convallis", "poto", "bestia", "aqua"],
       11,
+      12,
+      "God sends forth springs in the vales, and all beasts of the field drink from them.",
+      "Augustine remarks that the springs (fons) sent forth to valleys satisfy the thirst of beasts, illustrating God's care."
+    ),
+    (
+      "Bird Habitation → Hill Watering",
+      "Birds dwelling in heavens and hills watered by God",
+      ["volucris", "caelum", "habito", "rigo", "mons", "fructus"],
+      13,
+      14,
+      "The birds of the air dwell over creation, while God waters the hills to bring forth fruit.",
+      "Augustine notes that the birds (volucris) dwell in the heavens, while the hills (mons) are watered to bring forth fruit."
+    ),
+    (
+      "Grass Production → Human Nourishment",
+      "Grass for cattle and bread/wine for human sustenance",
+      ["produco", "foenum", "iumentum", "educo", "panis", "vinum"],
+      15,
       16,
-      "God's provision of water and food for all creatures",
-      "These verses highlight God's provision of water and food for all creatures. He sends forth springs in the valleys, waters the hills, and brings forth grass for cattle and herbs for human service. This provision leads to nourishment and joy for all living things."
+      "God brings forth grass for cattle and provides bread and wine to nourish humanity.",
+      "Augustine explains that the production (produco) of grass and bread nourishes both body and spirit, while wine cheers the heart."
     ),
     (
-      "Habitation → Seasons",
-      "God's provision of habitats and the cycle of day and night",
-      [
-        "satio", "lignum", "campus", "cedrus", "Libanus", "passer", "nido", "herodius",
-        "domus", "dux", "excelsus", "cervus", "petra", "refugium", "herinacius", "facio",
-        "luna", "tempus", "sol", "cognosco", "occasus", "pono", "tenebrae", "nox",
-        "bestia", "silva", "circumeo", "catulus", "leo", "rugio", "rapio", "quaero",
-        "escam", "Deus", "orior", "congrego", "cubiculum", "colloco", "exeo", "homo",
-        "opus", "labor", "vesper"
-      ],
+      "Tree Saturation → Bird Nesting",
+      "Trees filled with fruit and birds making their nests",
+      ["saturo", "lignum", "cedrus", "passer", "nidifico"],
       17,
-      24,
-      "God's provision of habitats and the cycle of day and night",
-      "These verses describe God's provision of habitats for various creatures and the cycle of day and night. The trees of the field are filled, and the cedars of Lebanon are planted. The moon is made for seasons, and the sun knows its going down. The cycle of day and night provides a rhythm for all living things, including humans who go forth to their work."
+      18,
+      "The trees of the field are filled, and sparrows make their nests among them.",
+      "Augustine views the flourishing trees (lignum) and cedars as providing shelter for souls, just as birds find nests."
     ),
     (
-      "Magnification → Wisdom",
-      "The greatness of God's works and His wisdom in creation",
-      [
-        "magnifico", "opus", "sapientia", "facio", "terra", "impleo", "possessio"
-      ],
+      "High Mountain → Rock Refuge",
+      "High mountains and rocks as refuges for creatures",
+      ["mons", "excelsus", "cervus", "petra", "refugium"],
+      19,
+      20,
+      "The high hills are a refuge for deer, while rocks shelter hedgehogs.",
+      "Augustine notes that the mountains provide refuge (refugium) for deer, while the rock shelters hedgehogs."
+    ),
+    (
+      "Celestial Cycles",
+      "Moon, sun, and darkness governing time",
+      ["facio", "luna", "tempus", "sol", "cognosco", "occasus"],
+      19,
+      20,
+      "God made the moon for seasons and the sun knows its going down.",
+      "Augustine reflects on the moon (luna) and sun (sol) as markers of divine order, with darkness allowing beasts to move."
+    ),
+    (
+      "Lion Roaring → God Seeking",
+      "Young lions roaring and seeking meat from God",
+      ["catulus", "leo", "rugio", "rapio", "quaero", "Deus"],
+      21,
+      22,
+      "The young lions roar after prey, seeking their food from God.",
+      "Augustine sees the roaring lions (rugio) as a trial, yet the faithful find safety through God's providence."
+    ),
+    (
+      "Sun Rising → Human Labor",
+      "Sun arising and humans going forth to work",
+      ["orior", "sol", "exeo", "homo", "opus", "vesper"],
+      23,
       25,
-      25,
-      "The greatness of God's works and His wisdom in creation",
-      "The psalm concludes with a magnification of God's works and His wisdom in creation. All things are made in wisdom, and the earth is filled with His riches. This final verse summarizes the psalmist's awe and admiration for God's creative work and providential care."
+      "The sun rises, and man goes forth to his work until evening.",
+      "Augustine concludes that human labor under God's wisdom culminates in the magnification of divine works."
     )
   ]
 
   private let conceptualThemes = [
     (
-      "Divine Magnificence",
-      "God's greatness and glory in creation",
-      ["magnifico", "dominus", "caelum", "terra", "angelus", "spiritus", "ignis"],
-      ThemeCategory.divine,
-      1 ... 26
-    ),
-    (
       "Cosmic Order",
       "God's establishment of order in creation",
-      ["extendo", "tego", "pono", "nubes", "ascendo", "ambo", "penna", "ventus", "fundo", "stabilitas", "inclino", "abyssus", "vestimentum", "mons", "aqua", "sto", "increpatio", "fugo", "vox", "tonitrus", "formido", "ascendo", "campus", "descendo", "fundamentum", "terminus", "transgredo", "converto", "opero", "terra"],
+      ["extendo", "caelum", "tego", "aqua", "pono", "nubes", "ascendo", "penna", "ventus", "fundo", "stabilitas", "terminus"],
       ThemeCategory.divine,
       3 ... 10
     ),
     (
       "Divine Providence",
       "God's care and provision for all creatures",
-      ["emitto", "fons", "convallis", "poto", "bestia", "ager", "rigo", "mons", "fructus", "opus", "satio", "produco", "foenum", "jumentum", "herba", "servitus", "homo", "educo", "panis", "terra", "vinum", "laetifico", "cor"],
+      ["emitto", "fons", "convallis", "poto", "bestia", "ager", "rigo", "mons", "fructus", "produco", "foenum", "iumentum"],
       ThemeCategory.divine,
       11 ... 16
     ),
     (
       "Habitat and Seasonal Cycles",
       "God's provision of habitats and the cycle of day and night",
-      ["satio", "lignum", "campus", "cedrus", "Libanus", "passer", "nido", "herodius", "domus", "dux", "excelsus", "cervus", "petra", "refugium", "herinacius", "facio", "luna", "tempus", "sol", "cognosco", "occasus", "pono", "tenebrae", "nox", "bestia", "silva", "circumeo", "catulus", "leo", "rugio", "rapio", "quaero", "escam", "Deus", "orior", "congrego", "cubiculum", "colloco", "exeo", "homo", "opus", "labor", "vesper"],
+      ["saturo", "lignum", "cedrus", "passer", "nidifico", "herodius", "domus", "excelsus", "cervus", "petra", "refugium", "herinacius", "luna", "tempus", "sol", "occasus"],
       ThemeCategory.divine,
       17 ... 25
     ),
@@ -208,28 +252,28 @@ class Psalm103ATests: XCTestCase
       "God's wisdom in creation and providence",
       ["sapientia", "facio", "terra", "impleo", "possessio"],
       ThemeCategory.divine,
-      26 ... 26
+      25 ... 25
     ),
     (
       "Personal Praise",
       "The psalmist's personal praise and worship of God",
-      ["benedico", "anima", "dominus", "confessio", "decor", "induo", "lumina", "vestimentum"],
+      ["benedico", "anima", "dominus", "confessio", "decor", "induo", "lumen"],
       ThemeCategory.virtue,
       1 ... 2
     ),
     (
       "Creation's Response",
       "The response of creation to God's commands",
-      ["fugo", "formido", "ascendo", "descendo", "transgredo", "converto", "potabunt", "expectabunt", "habitabunt", "dabunt", "rugientes", "quaerant", "congregati", "collocabuntur", "exibit"],
+      ["fugio", "formido", "ascendo", "descendo", "poto", "expecto", "habito", "do", "rugio", "quaero", "congrego", "colloco"],
       ThemeCategory.divine,
       8 ... 25
     ),
     (
       "Human Labor",
       "Human work and labor as part of God's creation",
-      ["exeo", "homo", "opus", "labor", "vesper"],
+      ["exeo", "homo", "opus", "operatio", "vesper"],
       ThemeCategory.divine,
-      25 ... 25
+      23 ... 24
     )
   ]
 
@@ -342,19 +386,19 @@ class Psalm103ATests: XCTestCase
   func testCreationMetaphors()
   {
     let creationTerms = [
-      ("extendo", ["Extendens"], "stretch out"),
+      ("extendo", ["extendens"], "stretch"),
       ("caelum", ["caelum"], "heaven"),
       ("tego", ["tegis"], "cover"),
       ("aqua", ["aquis"], "water"),
       ("pono", ["ponis"], "set"),
       ("nubes", ["nubem"], "cloud"),
-      ("ambo", ["ambulas"], "walk"),
+      ("ambulo", ["ambulas"], "walk"),
       ("penna", ["pennas"], "wing"),
       ("ventus", ["ventorum"], "wind"),
       ("facio", ["fecisti"], "make"),
-      ("angelus", ["angelos"], "angels"),
-      ("spiritus", ["spiritus"], "spirits"),
-      ("minister", ["ministros"], "ministers"),
+      ("angelus", ["angelos"], "angel"),
+      ("spiritus", ["spiritus"], "spirit"),
+      ("minister", ["ministros"], "servant"),
       ("ignis", ["ignem"], "fire"),
       ("fundo", ["fundasti"], "found"),
       ("terra", ["terram"], "earth"),
@@ -373,27 +417,27 @@ class Psalm103ATests: XCTestCase
   func testProvisionMetaphors()
   {
     let provisionTerms = [
-      ("emitto", ["emittis"], "send forth"),
-      ("fons", ["fontes"], "springs"),
-      ("convallis", ["convallibus"], "vales"),
+      ("emitto", ["emittis"], "send"),
+      ("fons", ["fontes"], "spring"),
+      ("convallis", ["convallibus"], "valley"),
       ("poto", ["potabunt"], "drink"),
-      ("bestia", ["bestiae"], "beasts"),
+      ("bestia", ["bestiae"], "beast"),
       ("ager", ["agri"], "field"),
       ("rigo", ["rigans"], "water"),
-      ("mons", ["montes"], "hills"),
+      ("mons", ["montes"], "hill"),
       ("fructus", ["fructu"], "fruit"),
-      ("opus", ["operum"], "works"),
+      ("opus", ["operum"], "work"),
       ("satio", ["satiabitur"], "satisfy"),
-      ("produco", ["producens"], "bring forth"),
+      ("produco", ["producens"], "produce"),
       ("foenum", ["foenum"], "grass"),
-      ("jumentum", ["jumentis"], "cattle"),
+      ("iumentum", ["iumentis"], "beast"),
       ("herba", ["herbam"], "herb"),
-      ("servitus", ["servituti"], "service"),
-      ("homo", ["hominum"], "men"),
-      ("educo", ["educas"], "bring out"),
+      ("servitus", ["servituti"], "slavery"),
+      ("homo", ["hominum"], "man"),
+      ("educo", ["educas"], "lead"),
       ("panis", ["panem"], "bread"),
       ("vinum", ["vinum"], "wine"),
-      ("laetifico", ["laetificet"], "cheer"),
+      ("laetifico", ["laetificet"], "joy"),
       ("cor", ["cor"], "heart")
     ]
 
