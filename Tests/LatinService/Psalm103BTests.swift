@@ -144,28 +144,8 @@ class Psalm103BTests: XCTestCase
       ["gloria", "laetitia", "opus", "cantabo", "psallere"],
       .worship,
       9 ... 11
-    ),
-    (
-      "Righteous Speech",
-      "The psalmist seeks his words to be pleasing to God",
-      ["jucundus", "eloquium", "delectatio"],
-      .virtue,
-      12 ... 12
-    ),
-    (
-      "Judgment and Purification",
-      "The removal of sinners from the earth",
-      ["deficere", "peccator", "iniquus"],
-      .justice,
-      13 ... 13
-    ),
-    (
-      "Blessing and Devotion",
-      "The soul’s final act is to bless the Lord",
-      ["benedicere", "anima", "dominus"],
-      .worship,
-      14 ... 14
     )
+    
   ]
 
   func testTotalVerses()

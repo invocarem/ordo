@@ -1,12 +1,18 @@
 ---
-description: Swift coding rule
+description: Common rule
 ---
 
-# Swift Coding Standards
+Always apply this rule for any task, do **not** bypass. That is **restate the problem** and provide **code snippets**.
 
----
+## Always Clarify the problem
 
-## Primary Directive: Code Snippets Only
+Before providing any code or solution, you **MUST** :
+
+- **Restate my problem** - Paraphrase my request in your own words to show understanding
+- **Brief my code** - Briefly mention any assumptions you are making about my code context
+- **Proceed to solution** - provide the code solution after clarification
+
+## Code Snippets 
 
 - **Always provide code snippets**, never attempt to modify, edit, or replace existing files.  
 - The AI agent does not have the capability to safely perform file edits — all changes must be manually reviewed and applied by the developer.  

@@ -62,20 +62,21 @@ Example:
 
 ------------------------------------------------------------------------
 
-## 2. Nouns
+## 2. Nouns (or Adjectives)
 
 ### Required fields:
 
--   **declension** --- number 1--5; 0 for indeclinable nouns\
--   **gender** --- masculine, feminine, neuter\
--   **nominative** --- nominative singular\
--   Optional: **accusative**, **genitive**, **ablative**, etc.\
+-   **declension** --- number 1--5; 0 for indeclinable nouns
+-   **gender** --- masculine, feminine, neuter
+-   **nominative** --- nominative singular
+-   **genitive**,  --- genitive singular
 -   **forms** --- an object mapping grammatical tags → list of forms
 
 ### Forms notation:
 
 -   Tags such as:
     -   `ablative_sg`
+    -   `accusative_sg`
     -   `genitive_pl`
     -   `dative_sg`
 
@@ -97,7 +98,7 @@ Example:
 
 ### Required fields:
 
--   **conjugation** --- 1, 2, 3, 3, 4, or 0 f   `"irregular"`
+-   **conjugation** --- 1, 2, 3, 3, 4, or 0 for `"irregular"`
 -   **infinitive**
 -   **present**
 -   **future**
@@ -115,10 +116,15 @@ Example:
 
 ``` json
 "forms": {
-  "present_participle": ["volante"],
-  "pluperfect_subjunctive": ["voluisses"],
-  "present_participle_nom_sg_m": ["volens"],
-  "genitive_sg": ["volentis"]
+  "present": [
+    "infirmo",
+    "infirmas",
+    "infirmat",
+    "infirmamus",
+    "infirmatis",
+    "infirmant"
+  ],
+  "future_passive_3rd_pl": ["infirmabuntur"]
 }
 ```
 
@@ -178,21 +184,6 @@ objects\
 ``` json
 [
   {
-    "lemma": "lapis",
-    "part_of_speech": "noun",
-    "declension": 3,
-    "gender": "masculine",
-    "nominative": "lapis",
-    "accusative": "lapidem",
-    "translations": {
-      "en": "stone, rock",
-      "la": "lapis, lapidis"
-    },
-    "forms": {
-      "ablative_sg": ["lapide"]
-    }
-  },
-  {
     "lemma": "decem",
     "part_of_speech": "numeral",
     "declension": 0,
@@ -203,33 +194,40 @@ objects\
       "la": "decem"
     }
   },
+
   {
-    "lemma": "volo",
+    "lemma": "infirmo",
     "part_of_speech": "verb",
     "conjugation": 1,
-    "infinitive": "volare",
-    "perfect": "volavi",
-    "supine": "volatum",
+    "present": "infirmo",
+    "perfect": "infirmavi",
+    "infinitive": "infirmare",
+    "future": "infirmabor",
+    "supine": "infirmatum",
     "forms": {
-      "present_participle": ["volante"],
-      "pluperfect_subjunctive": ["voluisses"],
-      "present_participle_nom_sg_m": ["volens"],
-      "present_participle_nom_sg_f": ["volens"],
-      "present_participle_acc_sg_n": ["volens"],
-      "genitive_sg": ["volentis"]
+      "present": [
+        "infirmo",
+        "infirmas",
+        "infirmat",
+        "infirmamus",
+        "infirmatis",
+        "infirmant"
+      ],
+      "future_passive_3rd_pl": ["infirmabuntur"]
     },
     "translations": {
-      "en": "to fly, will, wish",
-      "la": "volo, volare, volavi, volatum"
+        "en": "weaken, enfeeble",
+        "la": "infirmo"
     }
   },
+   
   {
     "lemma": "negotium",
     "part_of_speech": "noun",
     "declension": 2,
     "gender": "neuter",
     "nominative": "negotium",
-    "ablative": "negotio",
+    "genitive": "negotii",
     "translations": {
       "en": "business, task; pestilence",
       "la": "negotium, -ii"

@@ -15560,19 +15560,27 @@
       "la": "somnus, -i"
     }
   },
+
+  
   {
     "lemma": "invenio",
     "part_of_speech": "verb",
     "conjugation": 4,
     "infinitive": "invenire",
+    "present": "invenio",
+    "future": "inveniam",
     "perfect": "inveni",
-    "perfect_3pl": "invenerunt",
     "supine": "inventum",
+    "forms": {
+      "future_passive_indicative_3sg": ["invenietur"]
+    },
     "translations": {
-      "en": "to find, discover",
-      "la": "invenio, invenire, inveni, inventum"
+      "en": "discover, find",
+      "la": "invenio, invenire, inveni, inventus"
     }
   },
+  
+ 
   {
     "lemma": "protector",
     "part_of_speech": "noun",
