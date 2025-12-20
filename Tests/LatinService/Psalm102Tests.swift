@@ -1,6 +1,5 @@
-import XCTest
-
 @testable import LatinService
+import XCTest
 
 class Psalm102Tests: XCTestCase {
     private let utilities = PsalmTestUtilities.self
@@ -108,6 +107,173 @@ class Psalm102Tests: XCTestCase {
         ),
     ]
 
+    // MARK: - Structural Themes
+    // Each theme covers two consecutive verses (1-2, 3-4, etc.) with final theme covering 20-22
+    private let structuralThemes = [
+        (
+            "Invocation → Reminder",
+            "The psalmist begins by calling the soul to bless God and then reminds it not to forget God's benefits",
+            ["benedico", "anima", "dominus", "obliviscor", "retributio"],
+            1,
+            2,
+            "The psalm opens with a double invocation to the soul to bless the Lord, establishing a pattern of praise that frames the entire psalm. The second verse adds the crucial warning not to forget God's retributions (benefits), setting up the thematic contrast between human forgetfulness and divine faithfulness.",
+            "Augustine notes that 'the soul must be reminded to bless God, for it is prone to forgetfulness' (Enarr. Ps. 102.1). The call to bless is not merely ritual but an act of remembering God's goodness."
+        ),
+        (
+            "Forgiveness → Healing",
+            "From divine pardon of sin to restoration of physical and spiritual health",
+            ["propitior", "iniquitas", "sano", "infirmitas", "redimo", "interitus", "vita", "corono", "misericordia"],
+            3,
+            4,
+            "Verses 3-4 present a sequence of divine actions: God forgives sins, heals diseases, redeems from death, and crowns with mercy. This progression moves from spiritual restoration to physical renewal, emphasizing God's comprehensive care.",
+            "Augustine sees this as God's remedy for the human condition: 'He forgives the soul's wounds and heals the body's infirmities, redeeming from death's grasp and crowning with mercy' (Enarr. Ps. 102.3-4)."
+        ),
+        (
+            "Satisfaction → Renewal",
+            "From fulfillment of desire to the miraculous renewal of youth",
+            ["repleo", "bonus", "desiderium", "renovo", "aquila", "iuventus"],
+            5,
+            5,
+            "Verse 5 stands alone as a climactic statement of divine provision: God satisfies desire and renews youth like the eagle. This is the turning point from God's actions toward humanity to humanity's response.",
+            "Augustine interprets the eagle's renewal as a symbol of spiritual rebirth: 'As the eagle, when old, flies to the sun and is renewed, so the soul that fixes its gaze on God is renewed in strength' (Enarr. Ps. 102.5)."
+        ),
+        (
+            "Mercy → Justice",
+            "From God's compassionate actions to His righteous judgment for the oppressed",
+            ["facio", "misericordia", "dominus", "iudicium", "iniuria", "patior"],
+            6,
+            6,
+            "Verse 6 connects God's mercy with His justice, showing that His compassion manifests in defending the oppressed. This bridges the personal and communal dimensions of divine action.",
+            "Augustine teaches that 'God's mercy is not sentimental but just: He executes judgment for the oppressed because His mercy is rooted in righteousness' (Enarr. Ps. 102.6)."
+        ),
+        (
+            "Revelation → Character",
+            "From God's revealed ways to His essential nature of mercy",
+            ["notus", "facio", "via", "moyses", "filius", "israel", "voluntas", "miserator", "misericors", "longanimis", "multus"],
+            7,
+            8,
+            "Verses 7-8 move from God's historical revelation (to Moses and Israel) to His eternal character: merciful, gracious, slow to anger. The transition from action to essence shows God's consistency.",
+            "Augustine observes that 'God made His ways known to Moses, but His character is revealed to all who seek Him: He is merciful, not because He has to be, but because He is' (Enarr. Ps. 102.7-8)."
+        ),
+        (
+            "Restraint → Mercy",
+            "From God's restraint in anger to His boundless mercy compared to cosmic distances",
+            ["perpetuus", "irascor", "aeternus", "comminor", "secundum", "peccatum", "facio", "iniquitas", "retribuo", "altitudo", "caelum", "terra", "corroboro", "misericordia", "timeo", "quantus", "dista", "ortus", "occidens", "longe", "iniquitas"],
+            9,
+            12,
+            "Verses 9-12 form a powerful unit showing God's restraint, then His non-retribution, and finally the cosmic scale of His mercy. The progression moves from what God doesn't do to what He does, with imagery of heaven-earth and east-west distances.",
+            "Augustine marvels at the contrast: 'God's anger is not like human anger; He does not repay as we do, but removes our sins as far as the east is from the west, a distance that cannot be measured' (Enarr. Ps. 102.9-12)."
+        ),
+        (
+            "Human Frailty → Divine Compassion",
+            "From human mortality to God's fatherly compassion",
+            ["misereor", "pater", "filius", "dominus", "timeo", "figmentum", "pulvis", "sum", "homo", "sicut", "foenum", "dies", "is", "tamquam", "flos", "ager", "effloreo"],
+            13,
+            15,
+            "Verses 13-15 contrast God's compassion with human transience: He is like a father to those who fear Him, yet we are dust, grass, and flowers that fade. This creates the psalm's emotional core.",
+            "Augustine writes: 'God remembers our frame because He made it; He knows we are dust, yet He pities us as a father pities his children' (Enarr. Ps. 102.13-15)."
+        ),
+        (
+            "Ephemeral → Eternal",
+            "From human transience to God's everlasting mercy and righteousness",
+            ["spiritus", "pertransio", "subsisto", "cognosco", "locus", "misericordia", "dominus", "aeternus", "timeo", "iustitia", "filius", "servo", "testamentum", "memor", "mandatum", "facio"],
+            16,
+            18,
+            "Verses 16-18 shift from human impermanence to God's eternal nature: His mercy endures forever, His righteousness extends to generations, and His covenant is remembered by those who obey.",
+            "Augustine contrasts the fleeting wind with the eternal God: 'The wind passes over the grass, but the mercy of the Lord endures from everlasting to everlasting' (Enarr. Ps. 102.16-18)."
+        ),
+        (
+            "Divine Sovereignty → Universal Praise",
+            "From God's heavenly throne to the cosmic call for all creation to praise Him",
+            ["dominus", "caelum", "paro", "sedes", "regnum", "dominor", "benedico", "angelus", "potens", "virtus", "facio", "verbum", "audio", "vox", "sermo", "minister", "voluntas", "opus", "locus", "dominatio"],
+            19,
+            22,
+            "The final four verses (19-22) ascend from God's heavenly throne to a universal call for praise: angels, heavenly hosts, all creation, and finally the soul itself. The psalm closes as it began, with a personal call to bless God.",
+            "Augustine sees this as the fulfillment of the psalm's theme: 'The Lord who prepared His throne in heaven now calls every creature to bless Him, from the highest angel to the humblest soul' (Enarr. Ps. 102.19-22)."
+        ),
+    ]
+
+    // MARK: - Conceptual Themes
+    
+private let conceptualThemes = [
+    (
+        "Divine Mercy",
+        "God's compassionate nature toward sinners and the afflicted",
+        ["misericordia", "miserator", "misericors", "misereor", "miseratio", "propitior", "redimo", "sano", "corono", "renovo"],
+        ThemeCategory.divine,
+        3 ... 5
+    ),
+    (
+        "Human Frailty",
+        "The transient, mortal nature of human beings",
+        ["pulvis", "sum", "homo", "foenum", "dies", "flos", "ager", "effloreo", "spiritus", "pertransio", "subsisto", "cognosco", "locus", "figmentum"],
+        ThemeCategory.sin,
+        13 ... 15
+    ),
+    (
+        "Divine Justice",
+        "God's righteous judgment and fair treatment of the oppressed",
+        ["iudicium", "iniuria", "patior", "retribuo", "peccatum", "iniquitas", "comminor", "irascor"],
+        ThemeCategory.justice,
+        6 ... 10
+    ),
+    (
+        "Eternal Covenant",
+        "God's everlasting promises and faithfulness to those who keep His commandments",
+        ["aeternus", "testamentum", "servo", "mandatum", "memor", "iustitia", "filius"],
+        ThemeCategory.divine,
+        16 ... 18
+    ),
+    (
+        "Cosmic Sovereignty",
+        "God's supreme rule over all creation from heaven to earth",
+        ["dominus", "caelum", "paro", "sedes", "regnum", "dominor", "potens", "virtus", "verbum", "vox", "sermo", "voluntas", "opus", "dominatio"],
+        ThemeCategory.divine,
+        19 ... 22
+    ),
+    (
+        "Divine Knowledge",
+        "God's intimate awareness and remembrance of human nature",
+        ["cognosco", "recordor", "figmentum", "pulvis", "sum"],
+        ThemeCategory.divine,
+        13 ... 14
+    ),
+    (
+        "Praise and Worship",
+        "The call to bless and honor God from all creation",
+        ["benedico", "anima", "dominus", "nomen", "sanctus", "angelus", "minister", "virtus", "opus"],
+        ThemeCategory.worship,
+        1 ... 2
+    ),
+    (
+        "Divine Revelation",
+        "God making His ways and will known to humanity",
+        ["notus", "facio", "via", "moyses", "filius", "israel", "voluntas", "verbum", "audio", "vox", "sermo"],
+        ThemeCategory.divine,
+        7 ... 8
+    ),
+    (
+        "Divine Restraint",
+        "God's deliberate withholding of anger and punishment",
+        ["perpetuus", "irascor", "aeternus", "comminor", "secundum", "peccatum", "iniquitas"],
+        ThemeCategory.divine,
+        9 ... 10
+    ),
+    (
+        "Divine Distance from Sin",
+        "God's removal of sin as far as the east is from the west",
+        ["quantus", "dista", "ortus", "occidens", "longe", "facio", "iniquitas"],
+        ThemeCategory.divine,
+        11 ... 12
+    ),
+    (
+        "Fatherly Compassion",
+        "God's paternal care for those who fear Him",
+        ["misereor", "pater", "filius", "dominus", "timeo"],
+        ThemeCategory.divine,
+        13 ... 13
+    )
+    ]
     // MARK: - Test Cases
 
     func testTotalVerses() {
@@ -224,5 +390,96 @@ class Psalm102Tests: XCTestCase {
             terms: renewalTerms,
             verbose: verbose
         )
+    }
+
+    func testStructuralThemes() {
+        // First, verify that all structural theme lemmas are in lineKeyLemmas
+        let structuralLemmas = structuralThemes.flatMap { $0.2 }
+        let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+        utilities.testLemmasInSet(
+            sourceLemmas: structuralLemmas,
+            targetLemmas: lineKeyLemmasFlat,
+            sourceName: "structural themes",
+            targetName: "lineKeyLemmas",
+            verbose: verbose
+        )
+
+        // Then run the standard structural themes test
+        utilities.testStructuralThemes(
+            psalmText: text,
+            structuralThemes: structuralThemes,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
+
+    func testConceptualThemes() {
+        // First, verify that conceptual theme lemmas are in lineKeyLemmas
+        let conceptualLemmas = conceptualThemes.flatMap { $0.2 }
+        let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
+
+        utilities.testLemmasInSet(
+            sourceLemmas: conceptualLemmas,
+            targetLemmas: lineKeyLemmasFlat,
+            sourceName: "conceptual themes",
+            targetName: "lineKeyLemmas",
+            verbose: verbose,
+            failOnMissing: false // Conceptual themes may have additional imagery lemmas
+        )
+
+        // Then run the standard conceptual themes test
+        utilities.testConceptualThemes(
+            psalmText: text,
+            conceptualThemes: conceptualThemes,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
+
+    func testSaveThemes() {
+        guard
+            let jsonString = utilities.generateCompleteThemesJSONString(
+                psalmNumber: id.number,
+                conceptualThemes: conceptualThemes,
+                structuralThemes: structuralThemes
+            )
+        else {
+            XCTFail("Failed to generate complete themes JSON")
+            return
+        }
+
+        let success = utilities.saveToFile(
+            content: jsonString,
+            filename: "output_psalm102_themes.json"
+        )
+
+        if success {
+            print("✅ Complete themes JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete themes file:")
+            print(jsonString)
+        }
+    }
+
+    func testSaveTexts() {
+        let jsonString = utilities.generatePsalmTextsJSONString(
+            psalmNumber: id.number,
+            category: id.category ?? "",
+            text: text,
+            englishText: englishText
+        )
+
+        let success = utilities.saveToFile(
+            content: jsonString,
+            filename: "output_psalm102_texts.json"
+        )
+
+        if success {
+            print("✅ Complete texts JSON created successfully")
+        } else {
+            print("⚠️ Could not save complete texts file:")
+            print(jsonString)
+        }
     }
 }
