@@ -1,5 +1,229 @@
 [
+  {
+    "lemma": "memorialis",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "memoriale",
+    "genitive": "memorialis",
+    "translations": {
+      "en": "memorial, serving as a reminder, record",
+      "la": "memorialis, memoriale"
+    },
+    "forms": {
+      "nominative_sg_n": ["memoriale"],
+      "genitive_sg_n": ["memorialis"],
+      "accusative_sg_n": ["memoriale"],
+      "vocative_sg_n": ["memoriale"],
+      "nominative_sg_m": ["memorialis"],
+      "genitive_sg_m": ["memorialis"],
+      "accusative_sg_m": ["memorialem"],
+      "vocative_sg_m": ["memorialis"],
+      "nominative_sg_f": ["memorialis"],
+      "genitive_sg_f": ["memorialis"],
+      "accusative_sg_f": ["memorialem"],
+      "vocative_sg_f": ["memorialis"]
+    }
+  },
+  {
+    "lemma": "pellicanus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "pellicanus",
+    "genitive": "pellicani",
+    "translations": {
+      "en": "of or belonging to a mistress; pertaining to a concubine",
+      "la": "pellicanus, -a, -um"
+    },
+    "forms": {
+      "accusative_sg_m": ["pellicanum"],
+      "accusative_sg_f": ["pellicanam"],
+      "nominative_sg_f": ["pellicana"],
+      "dative_sg_m": ["pellicano"],
+      "dative_sg_n": ["pellicano"],
+      "ablative_sg_m": ["pellicano"],
+      "ablative_sg_n": ["pellicano"]
+    }
+  },
+  
+  {
+    "lemma": "oblitus",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "oblitus",
+    "genitive": "obliti",
+    "translations": {
+      "en": "forgetful",
+      "la": "oblitus, oblita, oblitum"
+    },
+    "forms": {
+      "nominative_sg_m": ["oblitus"],
+      "nominative_sg_f": ["oblita"],
+      "nominative_sg_n": ["oblitum"],
+      "genitive_sg_m": ["obliti"],
+      "genitive_sg_f": ["oblitae"],
+      "genitive_sg_n": ["obliti"]
+    }
+  },
+  {
+    "lemma": "velociter",
+    "part_of_speech": "adverb",
+    "translations": {
+      "en": "swiftly, quickly, with speed",
+      "la": "velociter, velocius, velocissime"
+    }
+  },
+  {
+  "lemma": "areo",
+  "part_of_speech": "verb",
+  "conjugation": 2,
+  "infinitive": "arere",
+  "present": "areo",
+  "future": "arebo",
+  "perfect": "arui",
+  "supine": null,
+  "forms": {
+    "perfect_indicative_3pl": ["aruerunt"]
+  },
+  "translations": {
+    "en": "be dry, be parched, be thirsty, be withered",
+    "la": "areo, arere, arui"
+  },
+  "note": "The form “aruerunt” can also arise from the 3rd‑conjugation verb “aresco, arescere, arui” (meaning “become dry, wither”), but the standard classical lemma for this perfect form is the intransitive verb “areo”."
+},
+  
+  {
+    "lemma": "excelsus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "translations": {
+      "en": "lofty, high, exalted, noble",
+      "la": "excelsus, excelsa, excelsum"
+    },
+    "forms": {
+      "dative_sg_m": ["excelso"],
+      "dative_sg_n": ["excelso"],
+      "ablative_sg_m": ["excelso"],
+      "ablative_sg_n": ["excelso"]
+    }
+  },
+  {
+    "lemma": "compeditus",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "masculine",
+    "translations": {
+      "en": "fettered slave",
+      "la": "compeditus, compediti"
+    },
+    "forms": {
+      "genitive_pl_m": ["compeditorum"]
+    }
+  },
+  {
+    "lemma": "interemptus",
+    "part_of_speech": "adjective",
+    "declension": 2,
+    "gender": "masculine",
+    "translations": {
+      "en": "killed, destroyed, put to death",
+      "la": "interemptus, interempta, interemptum"
+    },
+    "forms": {
+      "genitive_pl_m": ["interemptorum"]
+    }
+  },
+
+  {
+  "lemma": "paucitas",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "paucitas",
+  "genitive": "paucitatis",
+  "translations": {
+    "en": "scarcity, lack",
+    "la": "paucitas, paucitatis"
+  },
+  "forms": {
+    "accusative_singular": ["paucitatem"]
+  }
+},
+  
+  {
+    "lemma": "revoco",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "revocare",
+    "present": "revoco",
+    "future": "revocabo",
+    "perfect": "revocavi",
+    "supine": "revocatus",
+    "forms": {
+      "present_active_subjunctive_2sg": ["revoces"]
+    },
+    "translations": {
+      "en": "recall",
+      "la": "revoco, revocare, revocavi, revocatus"
+    }
+  },
+  {
+    "lemma": "dimidium",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "dimidium",
+    "genitive": "dimidii",
+    "translations": {
+      "en": "half",
+      "la": "dimidium, dimidii"
+    },
+    "forms": {
+      "dative_singular": ["dimidio"],
+      "ablative_singular": ["dimidio"]
+    }
+  },
  
+  {
+  "lemma": "opertorium",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "opertorium",
+  "genitive": "opertori",
+  "translations": {
+    "en": "blanket",
+    "la": "opertorium, opertori"
+  },
+  "forms": {
+    "nominative_singular": ["opertorium"],
+    "vocative_singular": ["opertorium"],
+    "accusative_singular": ["opertorium"],
+    "genitive_plural": ["opertori"]
+  }
+},
+  {
+  "lemma": "muto",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "mutare",
+  "present": "muto",
+  "future": "mutabo",
+  "perfect": "mutavi",
+  "supine": "mutatum",
+  "forms": {
+    "future_active_indicative_2sg": ["mutabis"],
+    "future_passive_indicative_3pl": ["mutabuntur"]
+  },
+  "translations": {
+    "en": "move, change, shift",
+    "la": "muto, mutare, mutavi, mutatus"
+  }
+},
+
   {
     "lemma": "figmentum",
     "part_of_speech": "noun",
@@ -15539,7 +15763,13 @@
       "la": "lapis, lapidis"
     },
     "forms": {
-      "ablative_sg": ["lapide"]
+      "ablative_sg": ["lapide"],
+      "nominative_pl": ["lapides"],
+      "genitive_pl": ["lapidum"],
+      "dative_pl": ["lapidibus"],
+      "accusative_pl": ["lapides"],
+      "ablative_pl": ["lapidibus"],
+      "vocative_pl": ["lapides"]
     }
   },
   {
@@ -16539,7 +16769,10 @@
         "elevati",
         "elevati"
       ],
-      "perfect_nominative_participle_f": ["elevata"]
+      "perfect_nominative_participle_f": ["elevata"],
+       "present_active_participle_nominative_sg": ["elevans"],
+    "present_active_participle_vocative_sg": ["elevans"],
+    "present_active_participle_accusative_sg_neuter": ["elevans"]
     },
     "translations": {
       "en": "to lift up, raise, elevate",
@@ -17475,7 +17708,7 @@
     "nominative": "cremium",
     "genitive": "cremii",
     "translations": {
-      "en": "burning trash, ashes",
+      "en": "fire-wood, burning trash, ashes",
       "la": "cremium"
     }
   },
@@ -28123,8 +28356,12 @@
   {
     "lemma": "video",
     "part_of_speech": "verb",
-    "perfect": "vidi",
+    "conjugation": 2,
     "infinitive": "videre",
+    "present": "video",
+    "future": "videbo",
+    "perfect": "vidi",
+    "supine": "visum",
     "forms": {
       "present": ["video", "vides", "videt", "videmus", "videtis", "vident"],
       "imperfect": [
@@ -28183,6 +28420,7 @@
         "videretis",
         "viderent"
       ],
+      "future_passive_3sg": ["videbitur"],
       "imperative_singular": ["vide"],
       "imperative_plural": ["videte"],
       "present_participle": ["videns"],
@@ -29224,6 +29462,7 @@
     "part_of_speech": "verb",
     "conjugation": 3,
     "infinitive": "aspicere",
+    "present": "aspicio",
     "perfect": "aspexi",
     "supine": "aspectum",
     "translations": {
@@ -31106,6 +31345,19 @@
     "notes": "Compound of 'id' (it) + 'ipsum' (self), often found in Vulgate Latin"
   },
   {
+  "lemma": "idem",
+  "part_of_speech": "pronoun",
+  "translations": {
+    "en": "same",
+    "la": "idem, eadem, idem"
+  },
+  "forms": {
+    "nominative_masculine_singular": ["idem"],
+    "nominative_neuter_singular": ["idem"],
+    "accusative_neuter_singular": ["idem"]
+  }
+},
+  {
     "lemma": "inimicus",
     "part_of_speech": "noun",
     "declension": 2,
@@ -31882,8 +32134,12 @@
   {
     "lemma": "iuro",
     "part_of_speech": "verb",
+    "conjugation": 1,
     "perfect": "iuravi",
+    "future": "iurabo",
+    "present": "iuro",
     "infinitive": "iurare",
+    "supine":"iuratus",
     "forms": {
       "perfect": [
         "iuravi",
@@ -31893,7 +32149,8 @@
         "iuravistis",
         "iuraverunt"
       ],
-      "present": ["iuro", "iuras", "iurat", "iuramus", "iuratis", "iurant"]
+      "present": ["iuro", "iuras", "iurat", "iuramus", "iuratis", "iurant"],
+      "imperfect_indicative_3pl": ["iurabant"]
     },
     "translations": {
       "en": "swear, take an oath",

@@ -39,7 +39,7 @@ class Psalm101Tests: XCTestCase {
         "Scribantur haec in generatione altera, et populus qui creabitur laudabit Dominum.",
         /* 20 */ "Quia prospexit de excelso sancto suo; Dominus de caelo in terram aspexit,",
         "ut audiret gemitus compeditorum, ut solveret filios interemptorum,",
-        "ut annuntient in Sion nomen Domini, et laudem eius in Jerusalem,",
+        "ut annuntient in Sion nomen Domini, et laudem eius in Ierusalem,",
         "in conveniendo populos in unum, et reges ut serviant Domino.",
         "Respondit ei in via virtutis suae: Paucitatem dierum meorum nuntia mihi.",
         /* 25 */ "Ne revoces me in dimidio dierum meorum; in generationem et generationem anni tui.",
@@ -86,33 +86,33 @@ class Psalm101Tests: XCTestCase {
     // --------------------------------------------------------------------
    private let lineKeyLemmas = [
     (1, ["exaudio", "oratio", "clamor", "dominus", "venio"]),
-    (2, ["averto", "facies", "tribulor", "inclino", "aurem"]),
-    (3, ["invoco", "exaudio", "celeriter"]),
-    (4, ["deficio", "fumus", "dies", "cremor", "os", "aruere"]),
-    (5, ["percutio", "foenum", "aruere", "cor", "oblitus", "edo", "panis"]),
+    (2, ["averto", "facies", "tribulor", "inclino", "auris"]),
+    (3, ["invoco", "exaudio", "velox"]),
+    (4, ["deficio", "fumus", "dies", "cremium", "os", "areo"]),
+    (5, ["percutio", "foenum", "areo", "cor", "oblitus", "comedo", "panis"]),
     (6, ["gemitus", "adhaereo", "os", "caro"]),
-    (7, ["similis", "pellicano", "solitudo", "nycticorax", "domicilium"]),
+    (7, ["similis", "pellicanus", "solitudo", "nycticorax", "domicilium"]),
     (8, ["vigilo", "passer", "solitarius", "tectum"]),
     (9, ["exprobro", "inimicus", "laudo", "iuro"]),
     (10, ["cinis", "panis", "manduco", "potus", "fletus", "misceo"]),
-    (11, ["ira", "indignatio", "elevare", "allido"]),
-    (12, ["dies", "umbra", "declino", "foenum", "aruere"]),
-    (13, ["aeternus", "permanere", "memoriale", "generatio"]),
+    (11, ["ira", "indignatio", "elevo", "allido"]),
+    (12, ["dies", "umbra", "declino", "foenum", "areo"]),
+    (13, ["aeternus", "permaneo", "memorialis", "generatio"]),
     (14, ["exsurgo", "misereor", "sion", "tempus", "venio"]),
     (15, ["lapis", "servus", "terra", "misereor", "placeo"]),
-    (16, ["timeo", "nomen", "dominus", "reges", "gloria", "gens", "terra"]),
+    (16, ["timeo", "nomen", "dominus", "rex", "gloria", "gens", "terra"]),
     (17, ["aedifico", "sion", "gloria", "video"]),
-    (18, ["respicio", "oratio", "humilis", "spreto"]),
+    (18, ["respicio", "oratio", "humilis", "sperno"]),
     (19, ["scribo", "generatio", "alter", "creo", "laudo", "dominus"]),
-    (20, ["prospicio", "excelsum", "sanctus", "dominus", "aspero", "exspicio"]),
-    (21, ["gemitus", "compedio", "interemptor"]),
-    (22, ["annuncio", "nomen", "dominus", "sion", "laudo", "jerusalem"]),
-    (23, ["convenio", "populus", "reges", "servio", "dominus"]),
+    (20, ["prospicio", "excelsus", "sanctus", "dominus", "aspicio"]),
+    (21, ["gemitus", "compeditus", "interemptus"]),
+    (22, ["annuntio", "nomen", "dominus", "sion", "laudo", "ierusalem"]),
+    (23, ["convenio", "populus", "rex", "servio", "dominus"]),
     (24, ["respondeo", "via", "virtus", "paucitas", "dies"]),
     (25, ["revoco", "dimidium", "dies", "annus"]),
     (26, ["initium", "dominus", "terra", "opera", "manus"]),
-    (27, ["perire", "vestimentum", "veterasco"]),
-    (28, ["opertorium", "mutare", "idem", "ipse", "annus", "deficio"]),
+    (27, ["pereo", "vestimentum", "veterasco"]),
+    (28, ["opertorium", "muto", "idem", "ipse", "annus", "deficio"]),
     (29, ["filius", "servus", "semen", "saeculum", "dirigo"])
 ]
 
@@ -132,7 +132,7 @@ class Psalm101Tests: XCTestCase {
         (
             "Suffering → Decay",
             "Physical and spiritual decline contrasted with divine constancy",
-            ["percutio", "foenum", "aruo", "cor", "oblitus", "panis"],
+            ["percutio", "foenum", "areo", "cor", "oblitus", "panis"],
             5,
             6,
             "The psalmist describes personal ruin—grass‑like, withered heart—mirroring the psalm’s dark imagery.",
@@ -141,7 +141,7 @@ class Psalm101Tests: XCTestCase {
         (
             "Divine Judgment",
             "God’s judgment against the wicked and promise of restoration",
-            ["exprobro", "inimicus", "laudo", "adversus", "interemptor"],
+            ["exprobro", "inimicus", "laudo", "adversus", "interemptus"],
             9,
             10,
             "Enemies mock while the psalmist notes the fate of the wicked, yet God’s justice looms.",
@@ -150,7 +150,7 @@ class Psalm101Tests: XCTestCase {
         (
             "Divine Sovereignty",
             "God’s eternal reign versus human frailty",
-            ["aeternum", "permanere", "memoriale", "generatio"],
+            ["aeternum", "permaneo", "memorialis", "generatio"],
             13,
             14,
             "The Lord’s everlasting nature stands opposite to human transience.",
@@ -159,7 +159,7 @@ class Psalm101Tests: XCTestCase {
         (
             "Hope & Restoration",
             "Future hope for the faithful and the people of Sion",
-            ["sion", "exsurgens", "misereor", "sion"],
+            ["sion", "exsurgo", "misereor", "sion"],
             13,
             15,
             "God’s compassion for Sion offers a future restoration for the faithful.",
@@ -168,7 +168,7 @@ class Psalm101Tests: XCTestCase {
         (
             "Final Victory",
             "God’s ultimate triumph over death and decay",
-            ["mutare", "mutabuntur", "mutare"],
+            ["muto"],
             27,
             28,
             "The psalmist warns that all will change, but God remains unchanged.",
@@ -190,35 +190,35 @@ class Psalm101Tests: XCTestCase {
         (
             "Human Frailty",
             "Physical decay and spiritual emptiness",
-            ["foenum", "aruo", "cor", "oblitus", "panis"],
+            ["foenum", "areo", "cor", "oblitus", "panis"],
             .sin,
             5 ... 6
         ),
         (
             "Divine Judgment",
             "God’s justice against the wicked",
-            ["exprobro", "inimicus", "laudo", "adversus", "interemptor"],
+            ["exprobro", "inimicus", "laudo", "adversus", "interemptus"],
             .justice,
             9 ... 10
         ),
         (
             "Eternal Sovereignty",
             "God’s unchanging nature",
-            ["aeternum", "permanere", "memoriale", "generatio"],
+            ["aeternum", "permaneo", "memorialis", "generatio"],
             .divine,
             13 ... 14
         ),
         (
             "Hope for Sion",
             "Future restoration of the faithful",
-            ["sion", "exsurgens", "misereor", "sion"],
+            ["sion", "exsurgo", "misereor", "sion"],
             .virtue,
             13 ... 15
         ),
         (
             "Worldly Transience",
             "Human mortality and decay",
-            ["mutare", "mutabuntur", "mutare"],
+            ["muto"],
             .sin,
             27 ... 28
         )

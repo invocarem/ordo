@@ -48,7 +48,7 @@ Every analyzed entry must be a JSON object.
         *conjunction*, *interjection*, *numeral*, *participle*,
         *particle*, etc.
 -   **translations** (object):
-    -   **en**: short English meaning(s), 1--3 words when possible
+    -   **en**: short English meaning(s)
     -   **la**: full Latin principal parts or dictionary info
 
 Example:
@@ -100,9 +100,9 @@ Example:
 
 -   **conjugation** --- 1, 2, 3, 3, 4, or 0 for `"irregular"`
 -   **infinitive**
--   **present**
--   **future**
--   **perfect**
+-   **present**  
+-   **future**   --- first person future, use active not passive
+-   **perfect**  
 -   **supine**
 -   **forms** --- grammatical tag → list of forms
 
