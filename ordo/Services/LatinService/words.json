@@ -1,4 +1,99 @@
 [
+ 
+  {
+    "lemma": "figmentum",
+    "part_of_speech": "noun",
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "figmentum",
+    "genitive": "figmenti",
+    "translations": {
+      "en": "fiction, invention, unreality, image",
+      "la": "figmentum, figmenti"
+    },
+    "forms": {
+      "nominative_sg": ["figmentum"],
+      "vocative_sg": ["figmentum"],
+      "accusative_sg": ["figmentum"],
+      "genitive_pl": ["figmentorum"] 
+    }
+  },
+ 
+  {
+    "lemma": "disto",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "distare",
+    "present": "distat",
+    "future": null,
+    "perfect": null,
+    "supine": null,
+    "translations": {
+      "en": "stand apart, be distant; be different",
+      "la": "disto, distare"
+    },
+    "forms": {
+      "present_indicative_3sg": ["distat"]
+    }
+  },
+  {
+    "lemma": "tamquam",
+    "part_of_speech": "conjunction",
+    "translations": {
+      "en": "as, just as, just as if; as it were, so to speak; as much as; so as",
+      "la": "tamquam"
+    }
+  },
+
+  {
+    "lemma": "perpetuus",
+    "part_of_speech": "adjective",
+    "declension": 1,
+    "gender": "masculine",
+    "translations": {
+      "en": "continuous, whole, perpetual, lasting, everlasting",
+      "la": "perpetuus, perpetua, perpetuum"
+    },
+    "forms": {
+      "nominative_neuter_sg": ["perpetuum"],
+      "vocative_neuter_sg": ["perpetuum"],
+      "accusative_masculine_sg": ["perpetuum"],
+      "accusative_neuter_sg": ["perpetuum"]
+    }
+  },
+  {
+    "lemma": "patior",
+    "part_of_speech": "verb",
+    "conjugation": 3,
+    "infinitive": "pati",
+    "present": "patior",
+    "future": null,
+    "perfect": "passus sum",
+    "supine": null,
+    "translations": {
+      "en": "suffer; allow; undergo, endure; permit",
+      "la": "patior, pati, passus sum"
+    },
+    "forms": {
+      "present_participle_dative_pl": ["patientibus"],
+      "present_participle_ablative_pl": ["patientibus"]
+    }
+  },
+  {
+    "lemma": "iniuria",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "iniuria",
+    "genitive": "iniuriae",
+    "translations": {
+      "en": "injury; injustice, wrong",
+      "la": "iniuria, iniuriae"
+    },
+    "forms": {
+      "accusative_sg": ["iniuriam"]
+    }
+  },
   {
     "lemma": "convallis",
     "part_of_speech": "noun",
@@ -758,6 +853,7 @@
     "declension": 3,
     "gender": "masculine",
     "nominative": "Moyses",
+    "genitive": "Moysi",
     "accusative": "Moysen",
     "translations": {
       "en": "Moses",
@@ -8760,7 +8856,10 @@
     },
     "forms": {
       "nominative_plural": ["miserationes"],
-      "genitive_n": ["miserationum"]
+      "genitive_n": ["miserationum"],
+      "locative_pl": ["miserationibus"],
+      "dative_pl": ["miserationibus"],
+      "ablative_pl": ["miserationibus"]
     }
   },
   {

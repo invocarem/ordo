@@ -15,7 +15,7 @@ class Psalm102Tests: XCTestCase {
         /* 4 */
         "Qui redimit de interitu vitam tuam, qui coronat te in misericordia et miserationibus.",
         /* 5 */ "Qui replet in bonis desiderium tuum; renovabitur ut aquilae iuventus tua.",
-        /* 6 */ "Faciens misericordias Dominus, et iudicium omnibus injuriam patientibus.",
+        /* 6 */ "Faciens misericordias Dominus, et iudicium omnibus iniuriam patientibus.",
         /* 7 */ "Notas fecit vias suas Moysi, filiis Israel voluntates suas.",
         /* 8 */ "Miserator et misericors Dominus, longanimis et multum misericors.",
         /* 9 */ "Non in perpetuum irascetur, neque in aeternum comminabitur.",
@@ -68,7 +68,7 @@ class Psalm102Tests: XCTestCase {
     ]
 
     private let lineKeyLemmas: [(Int, [String])] = [
-        (1, ["benedico", "anima", "dominus", "omnia", "intra", "nomen", "sanctus"]),
+        (1, ["benedico", "anima", "dominus", "omnis", "intra", "nomen", "sanctus"]),
         (2, ["benedico", "anima", "dominus", "obliviscor", "retributio"]),
         (3, ["propitior", "iniquitas", "sano", "infirmitas"]),
         (4, ["redimo", "interitus", "vita", "corono", "misericordia", "miseratio"]),
@@ -79,8 +79,8 @@ class Psalm102Tests: XCTestCase {
         (9, ["perpetuus", "irascor", "aeternus", "comminor"]),
         (10, ["secundum", "peccatum", "facio", "iniquitas", "retribuo"]),
         (11, ["altitudo", "caelum", "terra", "corroboro", "misericordia", "timeo"]),
-        (12, ["quantus", "dista", "ortus", "occidens", "longe", "facio", "iniquitas"]),
-        (13, ["misereor", "pater", "filius", "dominus", "timeo"]),
+        (12, ["quantus", "disto", "ortus", "occidens", "longe", "facio", "iniquitas"]),
+        (13, ["misereor", "pater", "filius", "dominus", "timeo", "figmentum"]),
         (
             14,
             [
@@ -107,91 +107,115 @@ class Psalm102Tests: XCTestCase {
         ),
     ]
 
-    // MARK: - Structural Themes
-    // Each theme covers two consecutive verses (1-2, 3-4, etc.) with final theme covering 20-22
-    private let structuralThemes = [
-        (
-            "Invocation → Reminder",
-            "The psalmist begins by calling the soul to bless God and then reminds it not to forget God's benefits",
-            ["benedico", "anima", "dominus", "obliviscor", "retributio"],
-            1,
-            2,
-            "The psalm opens with a double invocation to the soul to bless the Lord, establishing a pattern of praise that frames the entire psalm. The second verse adds the crucial warning not to forget God's retributions (benefits), setting up the thematic contrast between human forgetfulness and divine faithfulness.",
-            "Augustine notes that 'the soul must be reminded to bless God, for it is prone to forgetfulness' (Enarr. Ps. 102.1). The call to bless is not merely ritual but an act of remembering God's goodness."
-        ),
-        (
-            "Forgiveness → Healing",
-            "From divine pardon of sin to restoration of physical and spiritual health",
-            ["propitior", "iniquitas", "sano", "infirmitas", "redimo", "interitus", "vita", "corono", "misericordia"],
-            3,
-            4,
-            "Verses 3-4 present a sequence of divine actions: God forgives sins, heals diseases, redeems from death, and crowns with mercy. This progression moves from spiritual restoration to physical renewal, emphasizing God's comprehensive care.",
-            "Augustine sees this as God's remedy for the human condition: 'He forgives the soul's wounds and heals the body's infirmities, redeeming from death's grasp and crowning with mercy' (Enarr. Ps. 102.3-4)."
-        ),
-        (
-            "Satisfaction → Renewal",
-            "From fulfillment of desire to the miraculous renewal of youth",
-            ["repleo", "bonus", "desiderium", "renovo", "aquila", "iuventus"],
-            5,
-            5,
-            "Verse 5 stands alone as a climactic statement of divine provision: God satisfies desire and renews youth like the eagle. This is the turning point from God's actions toward humanity to humanity's response.",
-            "Augustine interprets the eagle's renewal as a symbol of spiritual rebirth: 'As the eagle, when old, flies to the sun and is renewed, so the soul that fixes its gaze on God is renewed in strength' (Enarr. Ps. 102.5)."
-        ),
-        (
-            "Mercy → Justice",
-            "From God's compassionate actions to His righteous judgment for the oppressed",
-            ["facio", "misericordia", "dominus", "iudicium", "iniuria", "patior"],
-            6,
-            6,
-            "Verse 6 connects God's mercy with His justice, showing that His compassion manifests in defending the oppressed. This bridges the personal and communal dimensions of divine action.",
-            "Augustine teaches that 'God's mercy is not sentimental but just: He executes judgment for the oppressed because His mercy is rooted in righteousness' (Enarr. Ps. 102.6)."
-        ),
-        (
-            "Revelation → Character",
-            "From God's revealed ways to His essential nature of mercy",
-            ["notus", "facio", "via", "moyses", "filius", "israel", "voluntas", "miserator", "misericors", "longanimis", "multus"],
-            7,
-            8,
-            "Verses 7-8 move from God's historical revelation (to Moses and Israel) to His eternal character: merciful, gracious, slow to anger. The transition from action to essence shows God's consistency.",
-            "Augustine observes that 'God made His ways known to Moses, but His character is revealed to all who seek Him: He is merciful, not because He has to be, but because He is' (Enarr. Ps. 102.7-8)."
-        ),
-        (
-            "Restraint → Mercy",
-            "From God's restraint in anger to His boundless mercy compared to cosmic distances",
-            ["perpetuus", "irascor", "aeternus", "comminor", "secundum", "peccatum", "facio", "iniquitas", "retribuo", "altitudo", "caelum", "terra", "corroboro", "misericordia", "timeo", "quantus", "dista", "ortus", "occidens", "longe", "iniquitas"],
-            9,
-            12,
-            "Verses 9-12 form a powerful unit showing God's restraint, then His non-retribution, and finally the cosmic scale of His mercy. The progression moves from what God doesn't do to what He does, with imagery of heaven-earth and east-west distances.",
-            "Augustine marvels at the contrast: 'God's anger is not like human anger; He does not repay as we do, but removes our sins as far as the east is from the west, a distance that cannot be measured' (Enarr. Ps. 102.9-12)."
-        ),
-        (
-            "Human Frailty → Divine Compassion",
-            "From human mortality to God's fatherly compassion",
-            ["misereor", "pater", "filius", "dominus", "timeo", "figmentum", "pulvis", "sum", "homo", "sicut", "foenum", "dies", "is", "tamquam", "flos", "ager", "effloreo"],
-            13,
-            15,
-            "Verses 13-15 contrast God's compassion with human transience: He is like a father to those who fear Him, yet we are dust, grass, and flowers that fade. This creates the psalm's emotional core.",
-            "Augustine writes: 'God remembers our frame because He made it; He knows we are dust, yet He pities us as a father pities his children' (Enarr. Ps. 102.13-15)."
-        ),
-        (
-            "Ephemeral → Eternal",
-            "From human transience to God's everlasting mercy and righteousness",
-            ["spiritus", "pertransio", "subsisto", "cognosco", "locus", "misericordia", "dominus", "aeternus", "timeo", "iustitia", "filius", "servo", "testamentum", "memor", "mandatum", "facio"],
-            16,
-            18,
-            "Verses 16-18 shift from human impermanence to God's eternal nature: His mercy endures forever, His righteousness extends to generations, and His covenant is remembered by those who obey.",
-            "Augustine contrasts the fleeting wind with the eternal God: 'The wind passes over the grass, but the mercy of the Lord endures from everlasting to everlasting' (Enarr. Ps. 102.16-18)."
-        ),
-        (
-            "Divine Sovereignty → Universal Praise",
-            "From God's heavenly throne to the cosmic call for all creation to praise Him",
-            ["dominus", "caelum", "paro", "sedes", "regnum", "dominor", "benedico", "angelus", "potens", "virtus", "facio", "verbum", "audio", "vox", "sermo", "minister", "voluntas", "opus", "locus", "dominatio"],
-            19,
-            22,
-            "The final four verses (19-22) ascend from God's heavenly throne to a universal call for praise: angels, heavenly hosts, all creation, and finally the soul itself. The psalm closes as it began, with a personal call to bless God.",
-            "Augustine sees this as the fulfillment of the psalm's theme: 'The Lord who prepared His throne in heaven now calls every creature to bless Him, from the highest angel to the humblest soul' (Enarr. Ps. 102.19-22)."
-        ),
-    ]
+   // MARK: - Structural Themes
+// Each theme now covers exactly two consecutive verses (1‑2, 3‑4, …, 21‑22)
+private let structuralThemes = [
+    (
+        "Invocation → Reminder",
+        "The psalmist begins by calling the soul to bless God and then reminds it not to forget God's benefits",
+        ["benedico", "anima", "dominus", "obliviscor", "retributio"],
+        1,
+        2,
+        "The psalm opens with a double invocation to the soul to bless the Lord, establishing a pattern of praise that frames the entire psalm. The second line adds the crucial warning not to forget God's retributions (benefits), setting up the thematic contrast between human forgetfulness and divine faithfulness.",
+        "Augustine notes that 'the soul must be reminded to bless God, for it is prone to forgetfulness' (Enarr. Ps. 102.1)."
+    ),
+    (
+        "Forgiveness → Healing",
+        "Divine pardon of sin followed by restoration of physical health",
+        ["propitior", "iniquitas", "sano", "infirmitas"],
+        3,
+        4,
+        "A sequence of divine actions: God forgives sins and heals diseases, then redeems life and crowns with mercy. The progression moves from spiritual restoration to physical renewal.",
+        "Augustine sees this as God's remedy for the human condition: 'He forgives the soul's wounds and heals the body's infirmities, redeeming from death's grasp and crowning with mercy' (Enarr. Ps. 102.3‑4)."
+    ),
+    (
+        "Satisfaction → Renewal",
+        "Divine provision satisfies desire and renews youth like an eagle",
+        ["repleo", "bonus", "desiderium", "renovo", "aquila", "iuventus"],
+        5,
+        6,
+        "The promise of fulfilled desire is followed by the Lord’s execution of righteousness for the oppressed, showing how mercy leads to renewal.",
+        "Augustine interprets the eagle’s renewal as a symbol of spiritual rebirth (Enarr. Ps. 102.5)."
+    ),
+    (
+        "Revelation → Character",
+        "God’s ways revealed to Moses and Israel, then His merciful character",
+        ["notus", "facio", "via", "moyses", "filius", "israel", "voluntas",
+         "miserator", "misericors", "longanimis", "multus"],
+        7,
+        8,
+        "Historical revelation (to Moses and Israel) is followed by the eternal character of God—merciful, gracious, slow to anger.",
+        "Augustine observes that 'God made His ways known to Moses, but His character is revealed to all who seek Him' (Enarr. Ps. 102.7‑8)."
+    ),
+    (
+        "Restraint → Mercy I",
+        "God’s restraint in anger and His non‑retribution",
+        ["perpetuus", "irascor", "aeternus", "comminor", "secundum", "peccatum", "retribuo"],
+        9,
+        10,
+        "What God does not do (hold perpetual anger, repay according to sin) highlights divine restraint.",
+        "Augustine marvels at the contrast: 'God's anger is not like human anger; He does not repay as we do' (Enarr. Ps. 102.9‑10)."
+    ),
+    (
+        "Cosmic Mercy",
+        "Heaven‑earth comparison and removal of iniquities",
+        ["altitudo", "caelum", "terra", "corroboro", "misericordia", "timeo",
+         "quantus", "disto", "ortus", "occidens", "longe", "iniquitas"],
+        11,
+        12,
+        "The cosmic scale of God’s mercy is illustrated by the height of heaven versus earth and the distance of east from west, showing how far He removes our sins.",
+        "Augustine says the distance ‘cannot be measured’ (Enarr. Ps. 102.11‑12)."
+    ),
+    (
+        "Fatherly Compassion → Human Frailty",
+        "Divine paternal care contrasted with human mortality",
+        ["misereor", "pater", "filius", "dominus", "timeo",
+         "pulvis", "sum", "homo", "sicut", "foenum", "dies", "flos", "ager", "effloreo"],
+        13,
+        14,
+        "Divine compassion is set against the fleeting nature of humanity (dust, grass, flower).",
+        "Augustine writes: 'God remembers our frame because He made it; He knows we are dust, yet He pities us as a father pities his children' (Enarr. Ps. 102.13‑14)."
+    ),
+    (
+        "Transience → Eternal Mercy",
+        "Human impermanence versus everlasting divine mercy",
+        ["spiritus", "pertransio", "subsisto", "cognosco", "locus",
+         "misericordia", "dominus", "aeternus", "timeo"],
+        15,
+        16,
+        "The wind passing over the grass is juxtaposed with the Lord’s mercy that endures forever, contrasting transience with eternity.",
+        "Augustine contrasts the fleeting wind with the eternal mercy of the Lord (Enarr. Ps. 102.15‑16)."
+    ),
+    (
+        "Righteousness → Covenant",
+        "Divine justice extending to future generations and covenant obedience",
+        ["iustitia", "filius", "servo", "testamentum", "memor", "mandatum", "facio"],
+        17,
+        18,
+        "God’s righteousness reaches children’s children, and those who keep the covenant are remembered.",
+        "Augustine notes that ‘His righteousness is a legacy for the faithful’ (Enarr. Ps. 102.17‑18)."
+    ),
+    (
+        "Divine Sovereignty → Universal Praise I",
+        "God’s heavenly throne and the call for angelic praise",
+        ["dominus", "caelum", "paro", "sedes", "regnum", "dominor",
+         "benedico", "angelus", "potens", "virtus", "facio", "verbum", "audio", "vox", "sermo"],
+        19,
+        20,
+        "The prepared throne in heaven leads to angels who excel in strength and proclaim His word.",
+        "Augustine sees this as the beginning of universal worship (Enarr. Ps. 102.19‑20)."
+    ),
+    (
+        "Divine Sovereignty → Universal Praise II",
+        "All creation joins the final blessing, ending as it began",
+        ["benedico", "dominus", "virtus", "minister", "voluntas",
+         "opus", "locus", "dominatio", "anima"],
+        21,
+        22,
+        "Every host and work is called to bless the Lord, concluding with the personal benediction of the psalmist’s soul, mirroring the opening.",
+        "Augustine concludes: 'The Lord who prepared His throne now calls every creature to bless Him, from the highest angel to the humblest soul' (Enarr. Ps. 102.21‑22)."
+    ),
+] 
 
     // MARK: - Conceptual Themes
     
@@ -199,7 +223,7 @@ private let conceptualThemes = [
     (
         "Divine Mercy",
         "God's compassionate nature toward sinners and the afflicted",
-        ["misericordia", "miserator", "misericors", "misereor", "miseratio", "propitior", "redimo", "sano", "corono", "renovo"],
+        ["misericordia", "miseratio", "propitior", "redimo", "sano", "corono", "renovo"],
         ThemeCategory.divine,
         3 ... 5
     ),
@@ -241,14 +265,14 @@ private let conceptualThemes = [
     (
         "Praise and Worship",
         "The call to bless and honor God from all creation",
-        ["benedico", "anima", "dominus", "nomen", "sanctus", "angelus", "minister", "virtus", "opus"],
+        ["benedico", "anima", "dominus", "nomen", "sanctus"],
         ThemeCategory.worship,
         1 ... 2
     ),
     (
         "Divine Revelation",
         "God making His ways and will known to humanity",
-        ["notus", "facio", "via", "moyses", "filius", "israel", "voluntas", "verbum", "audio", "vox", "sermo"],
+        ["notus", "facio", "via", "moyses", "filius", "israel", "voluntas"],
         ThemeCategory.divine,
         7 ... 8
     ),
@@ -262,7 +286,7 @@ private let conceptualThemes = [
     (
         "Divine Distance from Sin",
         "God's removal of sin as far as the east is from the west",
-        ["quantus", "dista", "ortus", "occidens", "longe", "facio", "iniquitas"],
+        ["quantus", "disto", "ortus", "occidens", "longe", "facio", "iniquitas"],
         ThemeCategory.divine,
         11 ... 12
     ),
@@ -323,7 +347,7 @@ private let conceptualThemes = [
     // 2. Human Frailty Metaphors
     func testFrailtyMetaphors() {
         let frailtyTerms = [
-            ("figmentum", ["figmentum"], "clay form"),  // Psalm 102:14 (Creation metaphor)
+            ("figmentum", ["figmentum"], "image"),  // Psalm 102:14 (Creation metaphor)
             ("effloreo", ["efflorebit"], "fade"),  // Psalm 102:15 (Unique floral verb)
             ("pertransio", ["pertransibit"], "pass through"),  // Psalm 102:16 (Transience)
             ("pulvis", ["pulvis"], "dust"),  // Psalm 102:14
@@ -359,7 +383,7 @@ private let conceptualThemes = [
     // 4. Angelic Hierarchy Terms
     func testAngelicTerms() {
         let angelicTerms = [
-            ("potens", ["potentes"], "mighty one"),  // Psalm 102:20 (Angelic attribute)
+            ("potens", ["potentes"], "mighty"),  // Psalm 102:20 (Angelic attribute)
             ("minister", ["ministri"], "servant"),  // Psalm 102:21
             ("virtus", ["virtutes"], "heavenly host"),  // Psalm 102:21 (≠ "virtue")
             ("sedes", ["sedem"], "throne"),  // Psalm 102:19
