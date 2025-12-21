@@ -218,86 +218,91 @@ private let structuralThemes = [
 ] 
 
     // MARK: - Conceptual Themes
+    private let conceptualThemes = [
+        (
+            "Divine Mercy",
+            "God's compassionate nature toward sinners and the afflicted",
+            ["misericordia", "miseratio", "propitior", "redimo", "sano", "corono", "renovo"],
+            ThemeCategory.divine,
+            3 ... 5
+        ),
+        (
+            "Human Frailty",
+            "The transient, mortal nature of human beings",
+            ["pulvis", "homo", "foenum", "dies", "flos", "ager", "effloreo",
+            "spiritus", "pertransio", "subsisto", "cognosco", "locus", "figmentum"],
+            ThemeCategory.sin,
+            13 ... 15
+        ),
+        (
+            "Divine Justice",
+            "God's righteous judgment and fair treatment of the oppressed",
+            ["iudicium", "iniuria", "patior", "retribuo", "peccatum",
+            "iniquitas", "comminor", "irascor"],
+            ThemeCategory.justice,
+            6 ... 10
+        ),
+        (
+            "Eternal Covenant",
+            "God's everlasting promises and faithfulness to those who keep His commandments",
+            ["aeternus", "testamentum", "servo", "mandatum", "memor", "iustitia", "filius"],
+            ThemeCategory.divine,
+            16 ... 18
+        ),
+        (
+            "Cosmic Sovereignty",
+            "God's supreme rule over all creation from heaven to earth",
+            ["dominus", "caelum", "paro", "sedes", "regnum", "dominor",
+            "potens", "virtus", "verbum", "vox", "sermo", "voluntas",
+            "opus", "dominatio"],
+            ThemeCategory.divine,
+            19 ... 22
+        ),
+        (
+            "Divine Knowledge",
+            "God's intimate awareness and remembrance of human nature",
+            ["cognosco", "recordor", "figmentum", "pulvis"],
+            ThemeCategory.divine,
+            13 ... 14
+        ),
+        (
+            "Praise and Worship",
+            "The call to bless and honor God from all creation",
+            ["benedico", "anima", "dominus", "nomen", "sanctus"],
+            ThemeCategory.worship,
+            1 ... 2
+        ),
+        (
+            "Divine Revelation",
+            "God making His ways and will known to humanity",
+            ["notus", "facio", "via", "moyses", "filius", "israel", "voluntas"],
+            ThemeCategory.divine,
+            7 ... 8
+        ),
+        (
+            "Divine Restraint",
+            "God's deliberate withholding of anger and punishment",
+            ["perpetuus", "irascor", "aeternus", "comminor", "secundum",
+            "peccatum", "iniquitas"],
+            ThemeCategory.divine,
+            9 ... 10
+        ),
+        (
+            "Divine Distance from Sin",
+            "God's removal of sin as far as the east is from the west",
+            ["quantus", "disto", "ortus", "occidens", "longe", "facio", "iniquitas"],
+            ThemeCategory.divine,
+            11 ... 12
+        ),
+        (
+            "Fatherly Compassion",
+            "God's paternal care for those who fear Him",
+            ["misereor", "pater", "filius", "dominus", "timeo"],
+            ThemeCategory.divine,
+            13 ... 13
+        )
+    ]   
     
-private let conceptualThemes = [
-    (
-        "Divine Mercy",
-        "God's compassionate nature toward sinners and the afflicted",
-        ["misericordia", "miseratio", "propitior", "redimo", "sano", "corono", "renovo"],
-        ThemeCategory.divine,
-        3 ... 5
-    ),
-    (
-        "Human Frailty",
-        "The transient, mortal nature of human beings",
-        ["pulvis", "sum", "homo", "foenum", "dies", "flos", "ager", "effloreo", "spiritus", "pertransio", "subsisto", "cognosco", "locus", "figmentum"],
-        ThemeCategory.sin,
-        13 ... 15
-    ),
-    (
-        "Divine Justice",
-        "God's righteous judgment and fair treatment of the oppressed",
-        ["iudicium", "iniuria", "patior", "retribuo", "peccatum", "iniquitas", "comminor", "irascor"],
-        ThemeCategory.justice,
-        6 ... 10
-    ),
-    (
-        "Eternal Covenant",
-        "God's everlasting promises and faithfulness to those who keep His commandments",
-        ["aeternus", "testamentum", "servo", "mandatum", "memor", "iustitia", "filius"],
-        ThemeCategory.divine,
-        16 ... 18
-    ),
-    (
-        "Cosmic Sovereignty",
-        "God's supreme rule over all creation from heaven to earth",
-        ["dominus", "caelum", "paro", "sedes", "regnum", "dominor", "potens", "virtus", "verbum", "vox", "sermo", "voluntas", "opus", "dominatio"],
-        ThemeCategory.divine,
-        19 ... 22
-    ),
-    (
-        "Divine Knowledge",
-        "God's intimate awareness and remembrance of human nature",
-        ["cognosco", "recordor", "figmentum", "pulvis", "sum"],
-        ThemeCategory.divine,
-        13 ... 14
-    ),
-    (
-        "Praise and Worship",
-        "The call to bless and honor God from all creation",
-        ["benedico", "anima", "dominus", "nomen", "sanctus"],
-        ThemeCategory.worship,
-        1 ... 2
-    ),
-    (
-        "Divine Revelation",
-        "God making His ways and will known to humanity",
-        ["notus", "facio", "via", "moyses", "filius", "israel", "voluntas"],
-        ThemeCategory.divine,
-        7 ... 8
-    ),
-    (
-        "Divine Restraint",
-        "God's deliberate withholding of anger and punishment",
-        ["perpetuus", "irascor", "aeternus", "comminor", "secundum", "peccatum", "iniquitas"],
-        ThemeCategory.divine,
-        9 ... 10
-    ),
-    (
-        "Divine Distance from Sin",
-        "God's removal of sin as far as the east is from the west",
-        ["quantus", "disto", "ortus", "occidens", "longe", "facio", "iniquitas"],
-        ThemeCategory.divine,
-        11 ... 12
-    ),
-    (
-        "Fatherly Compassion",
-        "God's paternal care for those who fear Him",
-        ["misereor", "pater", "filius", "dominus", "timeo"],
-        ThemeCategory.divine,
-        13 ... 13
-    )
-    ]
     // MARK: - Test Cases
 
     func testTotalVerses() {
