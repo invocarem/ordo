@@ -1,5 +1,13 @@
 [
   {
+  "lemma": "quacumque",
+  "part_of_speech": "adverb",
+  "translations": {
+    "en": "wherever, in whatever way",
+    "la": "quacumque"
+  }
+},
+  {
     "lemma": "memorialis",
     "part_of_speech": "adjective",
     "declension": 3,

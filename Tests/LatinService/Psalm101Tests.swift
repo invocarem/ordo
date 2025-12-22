@@ -87,9 +87,9 @@ class Psalm101Tests: XCTestCase {
    private let lineKeyLemmas = [
     (1, ["exaudio", "oratio", "clamor", "dominus", "venio"]),
     (2, ["averto", "facies", "tribulor", "inclino", "auris"]),
-    (3, ["invoco", "exaudio", "velox"]),
+    (3, ["invoco", "exaudio", "velox" , "quacumque", "dies"]),
     (4, ["deficio", "fumus", "dies", "cremium", "os", "areo"]),
-    (5, ["percutio", "foenum", "areo", "cor", "oblitus", "comedo", "panis"]),
+    (5, ["percutio", "foenum", "areo", "cor", "obliviscor", "comedo", "panis"]),
     (6, ["gemitus", "adhaereo", "os", "caro"]),
     (7, ["similis", "pellicanus", "solitudo", "nycticorax", "domicilium"]),
     (8, ["vigilo", "passer", "solitarius", "tectum"]),
@@ -132,7 +132,7 @@ class Psalm101Tests: XCTestCase {
         (
             "Suffering → Decay",
             "Physical and spiritual decline contrasted with divine constancy",
-            ["percutio", "foenum", "areo", "cor", "oblitus", "panis"],
+            ["percutio", "foenum", "areo", "cor", "obliviscor", "panis"],
             5,
             6,
             "The psalmist describes personal ruin—grass‑like, withered heart—mirroring the psalm’s dark imagery.",
@@ -190,7 +190,7 @@ class Psalm101Tests: XCTestCase {
         (
             "Human Frailty",
             "Physical decay and spiritual emptiness",
-            ["foenum", "areo", "cor", "oblitus", "panis"],
+            ["foenum", "areo", "cor", "obliviscor", "panis"],
             .sin,
             5 ... 6
         ),
@@ -247,7 +247,7 @@ class Psalm101Tests: XCTestCase {
         )
     }
 
-    func testPsalm101StructuralThemes() {
+    func testStructuralThemes() {
         // Verify structural theme lemmas exist in lineKeyLemmas
         let structuralLemmas = structuralThemes.flatMap { $0.2 }
         let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
@@ -268,7 +268,7 @@ class Psalm101Tests: XCTestCase {
         )
     }
 
-    func testPsalm101ConceptualThemes() {
+    func testConceptualThemes() {
         // Verify conceptual theme lemmas exist in lineKeyLemmas (non‑fatal)
         let conceptualLemmas = conceptualThemes.flatMap { $0.2 }
         let lineKeyLemmasFlat = lineKeyLemmas.flatMap { $0.1 }
