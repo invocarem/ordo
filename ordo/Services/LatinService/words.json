@@ -17767,6 +17767,7 @@
       "la": "laetor, laetari"
     },
     "forms": {
+      "gerundive_accusative_sg": [ "laetandum" ],
       "future_passive_indicative": [
         "laetabor",
         "laetaberis",
@@ -28371,6 +28372,7 @@
     "perfect": "vidi",
     "supine": "visum",
     "forms": {
+      "gerundive_accusative_sg": ["videndum"],
       "present": ["video", "vides", "videt", "videmus", "videtis", "vident"],
       "imperfect": [
         "videbam",
