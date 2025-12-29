@@ -120,7 +120,7 @@ class Psalm105ATests: XCTestCase {
     (26, ["non", "exaudio", "vox", "dominus", "elevo", "manus", "desertum"]),
     (27, ["deicio", "semen", "natio", "dispergo", "terra"]),
     (28, ["initio", "Beelphegor", "edo", "sacrificium", "mortuus"]),
-    (29, ["irritor", "invention", "multiplico", "ruina"]),
+    (29, ["irrito", "adinventio", "multiplico", "ruina"]),
     (30, ["sto", "Phinees", "placo", "cesso", "quassatio"]),
     (31, ["reputo", "iustitia", "generatio", "sempiternus"])
 ]
