@@ -1,5 +1,18 @@
 [
   {
+    "lemma": "Phinees",
+    "part_of_speech": "noun",
+    "declension": 0,
+    "gender": "masculine",
+    "nominative": "Phinees",
+    "genitive": "Phinees",
+    "translations": {
+      "en": "Phinehas",
+      "la": "Phinees"
+    },
+    "notes": "Biblical proper name (Vulgate), indeclinable or treated as a Greek/Latin 3rd declension noun in some texts. It is the Latinized form of Hebrew 'Phinehas' (a priest, grandson of Aaron). In the Vulgate, it remains mostly unchanged across cases (indeclinable)."
+  },
+  {
     "lemma": "quaero",
     "part_of_speech": "verb",
     "translations": {
