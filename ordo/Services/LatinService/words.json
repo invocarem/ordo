@@ -1,5 +1,66 @@
 [
   {
+    "lemma": "placo",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "placare",
+    "present": "placo",
+    "future": "placabo",
+    "perfect": "placavi",
+    "supine": "placatum",
+    "forms": {
+      "perfect_indicative_3sg": [
+        "placavit"
+      ]
+    },
+    "translations": {
+      "en": "appease; placate; reconcile",
+      "la": "placo, placare, placavi, placatum"
+    }
+  },
+  {
+    "lemma": "sempiternus",
+    "part_of_speech": "adjective",
+    "translations": {
+      "en": "perpetual, everlasting, permanent, eternal",
+      "la": "sempiternus, -a, -um"
+    },
+    "declension": 1,
+    "gender": "masculine",
+    "nominative": "sempiternus",
+    "genitive": "sempiterni",
+    "forms": {
+      "nominative_sg_m": [
+        "sempiternus"
+      ],
+      "nominative_sg_f": [
+        "sempiterna"
+      ],
+      "nominative_sg_n": [
+        "sempiternum"
+      ],
+      "vocative_sg_m": [
+        "sempiternus"
+      ],
+      "vocative_sg_f": [
+        "sempiterna"
+      ],
+      "vocative_sg_n": [
+        "sempiternum"
+      ],
+      "accusative_sg_m": [
+        "sempiternum"
+      ],
+      "accusative_sg_f": [
+        "sempiternam"
+      ],
+      "accusative_sg_n": [
+        "sempiternum"
+      ]
+    }
+  },
+
+  {
   "lemma": "quacumque",
   "part_of_speech": "adverb",
   "translations": {

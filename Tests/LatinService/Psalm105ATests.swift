@@ -45,7 +45,7 @@ class Psalm105ATests: XCTestCase {
         "Et initiati sunt Beelphegor, et comederunt sacrificia mortuorum.",
         "Et irritaverunt eum in adinventionibus suis, et multiplicata est in eis ruina.",
         /* 30 */ "Et stetit Phinees, et placavit, et cessavit quassatio.",
-        "Et reputatum est ei ad iustitiam in generationem et generationem usque in aeternum."
+        "Et reputatum est ei ad iustitiam in generationem et generationem usque in sempiternum."
     ]
 
 
@@ -115,14 +115,14 @@ class Psalm105ATests: XCTestCase {
     (21, ["obliviscor", "Deus", "salvo", "facere", "magnus", "Aegyptus"]),
     (22, ["miraculum", "terra", "Cham", "terribilis", "mare", "Rubrum"]),
     (23, ["dico", "disperdo", "Moses", "electus", "stare", "fractio", "conspectus"]),
-    (24, ["averto", "ira", "disperdo"]),
+    (24, ["averto", "ira", "is", "dispero", "nihil", "habeo", "terra", "desiderabilis"]),
     (25, ["non", "credere", "verbum", "murmurō", "tabernaculum"]),
     (26, ["non", "exaudio", "vox", "dominus", "elevo", "manus", "desertum"]),
     (27, ["deicio", "semen", "natio", "dispergo", "terra"]),
     (28, ["initio", "Beelphegor", "edo", "sacrificium", "mortuus"]),
     (29, ["irritor", "invention", "multiplico", "ruina"]),
     (30, ["sto", "Phinees", "placo", "cesso", "quassatio"]),
-    (31, ["reputo", "iustitia", "generatio", "aeternum"])
+    (31, ["reputo", "iustitia", "generatio", "sempiternus"])
 ]
     // ------------------------------------------------------------------------
     // Structural themes – none defined (empty array)
