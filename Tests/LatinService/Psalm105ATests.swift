@@ -20,7 +20,7 @@ class Psalm105ATests: XCTestCase {
         "Beati qui custodiunt iudicium, et faciunt iustitiam in omni tempore.",
         "Memento nostri, Domine, in beneplacito populi tui; visita nos in salutari tuo,",
         /* 5 */ "ad videndum in bonitate electorum tuorum, ad laetandum in laetitia gentis tuae, ut lauderis cum haereditate tua.",
-        "Peccavimus cum patribus nostris, injuste egimus, iniquitatem fecimus.",
+        "Peccavimus cum patribus nostris, iniuste egimus, iniquitatem fecimus.",
         "Patres nostri in Aegypto non intellexerunt mirabilia tua; non fuerunt memores multitudinis misericordiae tuae.",
         "Et irritaverunt ascendentes in mare, mare Rubrum; et salvavit eos propter nomen suum,",
         "ut notam faceret potentiam suam. Et increpuit mare Rubrum, et exsiccatum est;",
@@ -96,7 +96,7 @@ class Psalm105ATests: XCTestCase {
     (2, ["quis", "loquor", "potentia", "dominus", "laus"]),
     (3, ["beatus", "custodio", "iudicium", "iustitia", "tempus"]),
     (4, ["memini", "dominus", "beneplacitum", "populus", "visito", "salus"]),
-    (5, ["video", "bonitas", "electus", "laetor", "laetitia", "gentes", "laudo", "haereditas"]),
+    (5, ["video", "bonitas", "electus", "laetor", "laetitia", "gens", "laudo", "haereditas"]),
     (6, ["pecco", "pater", "iniquus", "iniquitas"]),
     (7, ["pater", "Aegyptus", "miraculum", "memoro", "multitudo", "misericordia"]),
     (8, ["irritor", "ascendo", "mare", "Rubrum", "salvo", "nomen"]),
@@ -128,16 +128,26 @@ class Psalm105ATests: XCTestCase {
     // Structural themes – none defined (empty array)
     // ------------------------------------------------------------------------
     private let structuralThemes = [
-    (
-      "Separation → Delight",
-      "From avoidance of the wicked to joy in God's law",
-      ["sto", "abeo", "sedeo", "lex", "meditor"],
-      1,
-      2,
-      "",
-      ""
-    )
+        (
+            "Praise → Power",
+            "From giving thanks for the Lord’s goodness to declaring His mighty deeds",
+            ["confiteor", "dominus", "bonus", "potentia", "laus"],
+            1,      // start verse
+            2,      // end verse
+            "Verse 1‑2 celebrate gratitude for God’s perpetual goodness and mercy, then move to proclaiming His sovereign power over creation.",
+            "Augustine reads this as an affirmation of God’s immutable goodness (De Deum) and the psalmist’s proper worship—praise that arises from recognizing the unchanging nature of divine mercy."
+        ),
+        (
+            "Justice → Remembrance",
+            "Keeping judgment and remembering God’s favor in the people’s salvation",
+            ["beatus", "custodio", "iudicium", "iustitia", "memini", "visito", "salus"],
+            3,      // start verse
+            4,      // end verse
+            "Verses 3‑4 link the blessed state of those who uphold justice with a communal prayer that God remembers and saves His people.",
+            "In Augustine’s exposition, justice reflects the love of neighbor rooted in divine law, while the plea for remembrance underscores the grace‑filled relationship between God and the covenant community."
+        )
     ]
+
     // ------------------------------------------------------------------------
     // Conceptual themes – none defined (empty array)
     // ------------------------------------------------------------------------

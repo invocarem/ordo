@@ -1,5 +1,47 @@
 [
   {
+  "lemma": "quassatio",
+  "part_of_speech": "noun",
+  "declension": 3,
+  "gender": "feminine",
+  "nominative": "quassatio",
+  "genitive": "quassationis",
+  "translations": {
+    "en": "violent shaking",
+    "la": "quassatio, -tionis"
+  },
+  "forms": {
+    "nominative_sg": [
+      "quassatio"
+    ],
+    "vocative_sg": [
+      "quassatio"
+    ],
+    "genitive_sg": [
+      "quassationis"
+    ]
+  }
+},
+  {
+  "lemma": "cesso",
+  "part_of_speech": "verb",
+  "conjugation": 1,
+  "infinitive": "cessare",
+  "present": "cesso",
+  "future": "cessabo",
+  "perfect": "cessavi",
+  "supine": "cessatum",
+  "forms": {
+    "perfect_indicative_3sg": [
+      "cessavit"
+    ]
+  },
+  "translations": {
+    "en": "to cease, stop",
+    "la": "cesso, cessare, cessavi, cessatus"
+  }
+},
+  {
     "lemma": "Phinees",
     "part_of_speech": "noun",
     "declension": 0,
