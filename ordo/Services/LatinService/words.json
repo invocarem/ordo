@@ -1,5 +1,215 @@
 [
   {
+    "lemma": "remaneo",
+    "part_of_speech": "verb",
+    "conjugation": 2,
+    "infinitive": "remanere",
+    "present": "remaneo",
+    "future": "remanebo",
+    "perfect": "remansi",
+    "supine": "remansum",
+    "translations": {
+      "en": "stay behind, continue, remain",
+      "la": "remaneo, remanere, remansi, remansus"
+    },
+    "forms": {
+      "present_indicative_1sg": [
+        "remaneo"
+      ],
+      "future_indicative_1sg": [
+        "remanebo"
+      ],
+      "perfect_indicative_1sg": [
+        "remansi"
+      ]
+    }
+  },
+  {
+    "lemma": "exsicco",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "exsiccare",
+    "present": "exsicco",
+    "perfect": "exsiccavi",
+    "supine": "exsiccatus",
+    "translations": {
+      "en": "dry up; empty (vessel)",
+      "la": "exsicco, exsiccare, exsiccavi, exsiccatus"
+    },
+    "forms": {
+      "perfect_passive_participle_nominative_neuter_singular": [
+        "exsiccatum"
+      ],
+      "perfect_passive_participle_vocative_neuter_singular": [
+        "exsiccatum"
+      ],
+      "perfect_passive_participle_accusative_masculine_singular": [
+        "exsiccatum"
+      ],
+      "perfect_passive_participle_accusative_neuter_singular": [
+        "exsiccatum"
+      ],
+      "supine_accusative_neuter": [
+        "exsiccatum"
+      ]
+    }
+  },
+
+  {
+    "lemma": "rubrum",
+    "part_of_speech": "adjective",
+    "translations": {
+      "en": "red, ruddy, painted red",
+      "la": "ruber, rubra, rubrum"
+    },
+    "declension": 2,
+    "gender": "neuter",
+    "nominative": "rubrum",
+    "genitive": "rubri",
+    "forms": {
+      "nominative_sg_m": [
+        "ruber"
+      ],
+      "nominative_sg_f": [
+        "rubra"
+      ],
+      "nominative_sg_n": [
+        "rubrum"
+      ],
+      "vocative_sg_n": [
+        "rubrum"
+      ],
+      "accusative_sg_m": [
+        "rubrum"
+      ],
+      "accusative_sg_n": [
+        "rubrum"
+      ]
+    }
+  },
+  {
+    "lemma": "memor",
+    "part_of_speech": "adjective",
+    "declension": 3,
+    "gender": "masculine",
+    "nominative": "memor",
+    "genitive": "memoris",
+    "translations": {
+      "en": "mindful, remembering",
+      "la": "memor, -is"
+    },
+    "forms": {
+      "nominative_sg_m": [
+        "memor"
+      ],
+      "nominative_sg_f": [
+        "memora"
+      ],
+      "nominative_sg_n": [
+        "memorem"
+      ],
+      "nominative_pl_m": [
+        "memores"
+      ],
+      "nominative_pl_f": [
+        "memores"
+      ],
+      "nominative_pl_n": [
+        "memora"
+      ],
+      "vocative_sg_m": [
+        "memor"
+      ],
+      "vocative_sg_f": [
+        "memora"
+      ],
+      "vocative_sg_n": [
+        "memorem"
+      ],
+      "vocative_pl_m": [
+        "memores"
+      ],
+      "vocative_pl_f": [
+        "memores"
+      ],
+      "vocative_pl_n": [
+        "memora"
+      ],
+      "accusative_sg_m": [
+        "memor"
+      ],
+      "accusative_sg_f": [
+        "memoram"
+      ],
+      "accusative_sg_n": [
+        "memorem"
+      ],
+      "accusative_pl_m": [
+        "memores"
+      ],
+      "accusative_pl_f": [
+        "memoras"
+      ],
+      "accusative_pl_n": [
+        "memora"
+      ]
+    }
+  },
+  {
+    "lemma": "memoro",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "memorare",
+    "present": "memoro",
+    "future": "memorabo",
+    "perfect": "memoravi",
+    "supine": "memoratum",
+    "translations": {
+      "en": "remember, be mindful of",
+      "la": "memoro, memorare, memoravi, memoratus"
+    },
+    "forms": {
+      "present_indicative_1sg": [
+        "memoro"
+      ],
+      "present_indicative_2sg": [
+        "memorās"
+      ],
+      "present_indicative_3sg": [
+        "memorat"
+      ],
+      "present_indicative_1pl": [
+        "memorāmus"
+      ],
+      "present_indicative_2pl": [
+        "memorātis"
+      ],
+      "present_indicative_3pl": [
+        "memorant"
+      ],
+      "present_subjunctive_1sg": [
+        "memorē"
+      ],
+      "present_subjunctive_2sg": [
+        "memorēs"
+      ],
+      "present_subjunctive_3sg": [
+        "memorēt"
+      ],
+      "present_subjunctive_1pl": [
+        "memorēmus"
+      ],
+      "present_subjunctive_2pl": [
+        "memorētis"
+      ],
+      "present_subjunctive_3pl": [
+        "memorent"
+      ]
+    }
+  },
+
+
+  {
   "lemma": "quassatio",
   "part_of_speech": "noun",
   "declension": 3,
@@ -128,6 +338,7 @@
       "perfect_indicative_3rd_pl": [
         "irritaverunt"
       ]
+     
     },
     "translations": {
       "en": "irritate, provoke",
@@ -33472,8 +33683,11 @@
   {
     "lemma": "concupio",
     "part_of_speech": "verb",
-    "perfect": "concupivi",
+    "conjugation": 3,
     "infinitive": "concupere",
+    "present": "concupio",
+    "perfect": "concupivi",
+    "supine": "concupitum",
     "forms": {
       "present": [
         "concupio",
@@ -33514,7 +33728,11 @@
         "concupiamus",
         "concupiatis",
         "concupiant"
+      ],
+      "present_indicative_3pl": [
+          "concupierunt"
       ]
+
     },
     "translations": {
       "en": "desire eagerly, covet",

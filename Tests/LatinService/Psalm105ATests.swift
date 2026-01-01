@@ -97,17 +97,17 @@ class Psalm105ATests: XCTestCase {
     (3, ["beatus", "custodio", "iudicium", "iustitia", "tempus"]),
     (4, ["memini", "dominus", "beneplacitum", "populus", "visito", "salus"]),
     (5, ["video", "bonitas", "electus", "laetor", "laetitia", "gens", "laudo", "haereditas"]),
-    (6, ["pecco", "pater", "iniquus", "iniquitas"]),
-    (7, ["pater", "Aegyptus", "miraculum", "memoro", "multitudo", "misericordia"]),
-    (8, ["irritor", "ascendo", "mare", "Rubrum", "salvo", "nomen"]),
+    (6, ["pecco",  "pater","iniquitas", "facio", "ago",  "iniustus"]),
+    (7, ["pater", "Aegyptus", "mirabile", "memoro", "multitudo", "misericordia"]),
+    (8, ["irrito", "ascendo", "mare", "Rubrum", "salvo", "nomen"]),
     (9, ["facio", "nota", "potentia", "increpo", "mare", "Rubrum", "exsicco"]),
-    (10, ["deduco", "abyssus", "desertum", "salvo", "manus", "odii"]),
-    (11, ["redemo", "manus", "inimicus", "operio", "aqua", "tribulo"]),
-    (12, ["unus", "remanere", "credo", "verbum", "laudo"]),
-    (13, ["cito", "facio", "obliviscor", "opus", "sustinere", "consilium"]),
-    (14, ["concupio", "desertum", "tempto", "Deus", "inaquosus"]),
-    (15, ["do", "petitio", "mittō", "saturitas", "anima"]),
-    (16, ["irritor", "Moses", "castra", "Aaron", "sanctus", "dominus"]),
+    (10, ["deduco", "abyssus", "desertum", "salvo", "manus", "odi"]),
+    (11, ["redimo", "manus", "inimicus", "operio", "aqua", "tribulo"]),
+    (12, ["unus", "remaneo", "credo", "verbum", "laudo"]),
+    (13, ["cito", "facio", "obliviscor", "opus", "sustineo", "consilium"]),
+    (14, ["concupio", "concupiscentia", "desertum", "tento", "inaquosus"]),
+    (15, ["do", "petitio", "mitto", "saturitas", "anima"]),
+    (16, ["irrito", "Moses", "castra", "Aaron", "sanctus", "dominus"]),
     (17, ["aperio", "terra", "deglutio", "Dathan", "operio", "congregatio", "Abiron"]),
     (18, ["ignis", "accendo", "synagoga", "flamma", "comburo", "peccator"]),
     (19, ["facio", "vitulus", "Horeb", "adoro", "sculptile"]),
@@ -132,8 +132,8 @@ class Psalm105ATests: XCTestCase {
             "Praise → Power",
             "From giving thanks for the Lord’s goodness to declaring His mighty deeds",
             ["confiteor", "dominus", "bonus", "potentia", "laus"],
-            1,      // start verse
-            2,      // end verse
+            1,
+            2,
             "Verse 1‑2 celebrate gratitude for God’s perpetual goodness and mercy, then move to proclaiming His sovereign power over creation.",
             "Augustine reads this as an affirmation of God’s immutable goodness (De Deum) and the psalmist’s proper worship—praise that arises from recognizing the unchanging nature of divine mercy."
         ),
@@ -141,12 +141,165 @@ class Psalm105ATests: XCTestCase {
             "Justice → Remembrance",
             "Keeping judgment and remembering God’s favor in the people’s salvation",
             ["beatus", "custodio", "iudicium", "iustitia", "memini", "visito", "salus"],
-            3,      // start verse
-            4,      // end verse
+            3,
+            4,
             "Verses 3‑4 link the blessed state of those who uphold justice with a communal prayer that God remembers and saves His people.",
-            "In Augustine’s exposition, justice reflects the love of neighbor rooted in divine law, while the plea for remembrance underscores the grace‑filled relationship between God and the covenant community."
+            "In Augustine’s exposition, justice reflects the love‑of‑neighbor rooted in divine law, while the plea for remembrance underscores the grace‑filled relationship between God and the covenant community."
+        ),
+
+        // --- New structural themes (5‑32) ---
+        // 5‑6: Chosen Goodness → Confession
+        (
+            "Chosen Goodness → Confession",
+            "Seeing the goodness of God’s elect and rejoicing, then confessing sin with the fathers",
+            ["video", "bonitas", "electus", "laetor", "laetitia", "gens",
+            "laudo", "haereditas", "pecco", "pater", "iniquus", "iniquitas"],
+            5,
+            6,
+            "Verses 5‑6 contrast the blessed sight of God’s chosen people with the confession of ancestral sin, setting the stage for divine rescue.",
+            "Augustine reads this as a movement from the vision of divine grace to the humility required for redemption."
+        ),
+        // 7‑8: Egyptian Blindness → Red Sea Salvation
+        (
+            "Egyptian Blindness → Red Sea Salvation",
+            "Fathers in Egypt ignore miracles; they provoke the Red Sea, which God saves for His name",
+            ["pater", "Aegyptus", "miraculum", "memoro", "multitudo", "misericordia",
+            "irritor", "ascendo", "mare", "Rubrum", "salvo", "nomen"],
+            7,
+            8,
+            "Verses 7‑8 depict the patriarchs’ failure to recall God’s wonders, leading to provocation of the Red Sea and divine rescue for His own sake.",
+            "Augustine sees the Red Sea as a symbol of chaotic nature tamed by divine providence."
+        ),
+        // 9‑10: Power Manifest → Deliverance
+        (
+            "Power Manifest → Deliverance",
+            "God makes His power known, dries the Red Sea, leads through the abyss, saves from enemies",
+            ["facio", "nota", "potentia", "increpo", "mare", "Rubrum", "exsicco",
+            "deduco", "abyssus", "desertum", "salvo", "manus", "odii"],
+            9,
+            10,
+            "Verses 9‑10 show God’s demonstration of power (drying the sea) and guiding the people through perilous depths to safety.",
+            "Augustine interprets the abyss as a trial that reveals reliance on divine guidance."
+        ),
+        // 11‑12: Redemption → Faith & Praise
+        (
+            "Redemption → Faith & Praise",
+            "God redeems from enemies, water covers oppressors; one remains, they believe and sing praise",
+            ["redemo", "manus", "inimicus", "operio", "aqua", "tribulo",
+            "unus", "remanere", "credo", "verbum", "laudo"],
+            11,
+            12,
+            "Verses 11‑12 transition from physical deliverance to spiritual belief, culminating in communal praise.",
+            "Augustine links belief after deliverance to the proper response of worship."
+        ),
+        // 13‑14: Forgetfulness → Testing
+        (
+            "Forgetfulness → Testing",
+            "They act hastily, forget works, do not wait for counsel; they covet in the desert, test God without water",
+            ["cito", "facio", "obliviscor", "opus", "sustinere", "consilium",
+            "concupio", "desertum", "tempto", "Deus", "inaquosus"],
+            13,
+            14,
+            "Verses 13‑14 highlight human impatience and the temptation to test God in barren places.",
+            "Augustine warns that testing God reflects a lack of trust in divine providence."
+        ),
+        // 15‑16: Provision → Provocation
+        (
+            "Provision → Provocation",
+            "God grants requests, fills souls; they provoke Moses and Aaron in the camp",
+            ["do", "petitio", "mittō", "saturitas", "anima",
+            "irritor", "Moses", "castra", "Aaron", "sanctus", "dominus"],
+            15,
+            16,
+            "Verses 15‑16 contrast divine provision with the people's provocation of Moses, foreshadowing judgment.",
+            "Augustine reads this as a reminder that gratitude must accompany obedience."
+        ),
+        // 17‑18: Earth & Fire Judgments
+        (
+            "Earth & Fire Judgments",
+            "The earth swallows Dathan, covers Abiron; fire in the synagogue burns sinners",
+            ["aperio", "terra", "deglutio", "Dathan", "operio", "congregatio", "Abiron",
+            "ignis", "accendo", "synagoga", "flamma", "comburo", "peccator"],
+            17,
+            18,
+            "Verses 17‑18 depict natural and supernatural judgments against the rebels.",
+            "Augustine sees the earth and fire as instruments of divine reproof."
+        ),
+        // 19‑20: Idolatry → Corrupted Glory
+        (
+            "Idolatry → Corrupted Glory",
+            "They make a calf at Horeb, worship the graven image; they change glory to a calf eating grass",
+            ["facio", "vitulus", "Horeb", "adoro", "sculptile",
+            "mutuo", "gloria", "similitudo", "vitulus", "comedō", "foenum"],
+            19,
+            20,
+            "Verses 19‑20 show the shift from worship of God to a false idol, degrading divine glory.",
+            "Augustine interprets the calf as a symbol of misplaced devotion."
+        ),
+        // 21‑22: Forgetfulness → Marvels Abroad
+        (
+            "Forgetfulness → Marvels Abroad",
+            "They forget God who saved them in Egypt; marvels in Cham, terrors in the Red Sea",
+            ["obliviscor", "Deus", "salvo", "facere", "magnus", "Aegyptus",
+            "miraculum", "terra", "Cham", "terribilis", "mare", "Rubrum"],
+            21,
+            22,
+            "Verses 21‑22 contrast the Israelites’ ingratitude with recollection of God’s deeds in distant lands.",
+            "Augustine stresses remembrance of past miracles as a safeguard against apostasy."
+        ),
+        // 23‑24: Moses’ Intercession → Rejected Land
+        (
+            "Moses’ Intercession → Rejected Land",
+            "God says He will disperse them unless Moses stands; He averts wrath, they consider the land worthless",
+            ["dico", "disperdo", "Moses", "electus", "stare", "fractio", "conspectus",
+            "averto", "ira", "is", "dispero", "nihil", "habeo", "terra", "desiderabilis"],
+            23,
+            24,
+            "Verses 23‑24 emphasize Moses’ role as intercessor and the people’s dismissal of the promised land.",
+            "Augustine reads Moses as the archetype of faithful advocacy."
+        ),
+        // 25‑26: Murmur & Divine Judgment
+        (
+            "Murmur & Divine Judgment",
+            "They do not believe, murmur in tents, ignore the Lord’s voice; He lifts His hand to overthrow them",
+            ["non", "credere", "verbum", "murmurō", "tabernaculum",
+            "non", "exaudio", "vox", "dominus", "elevo", "manus", "desertum"],
+            25,
+            26,
+            "Verses 25‑26 portray the people’s rebellion and God’s readiness to act against them.",
+            "Augustine sees the raised hand as a warning of impending divine correction."
+        ),
+        // 27‑28: Scattering → Beelphegor Initiation
+        (
+            "Scattering → Beelphegor Initiation",
+            "He casts down seed among nations, disperses them; they are initiated to Beelphegor, eat dead sacrifices",
+            ["deicio", "semen", "natio", "dispergo", "Beelphegor", "edo", "sacrificium"],
+            27,
+            28,
+            "Verses 27‑28 describe the scattering of the seed and the disturbing cult of Beelphegor.",
+            "Augustine reads Beelphegor as a figure of false worship after divine judgment."
+        ),
+        // 29‑30: Invention‑Provoked Ruin → Phinees Pacifies
+        (
+            "Invention‑Provoked Ruin → Phinees Pacifies",
+            "They provoke Him with inventions; ruin multiplies. Phinees stands, pacifies, slaughter ceases.",
+            ["irrito", "adinventio", "multiplico", "ruina", "Phinees", "placo", "cesso", "quassatio"],
+            29,
+            30,
+            "Verses 29‑30 move from chaos caused by human invention to the calming presence of Phinees.",
+            "Augustine affirms that divine peace follows after turmoil."
+        ),
+        // 31‑32: Eternal Justice
+        (
+            "Eternal Justice",
+            "Justice is counted to him forever.",
+            ["reputo", "iustitia", "generatio", "sempiternus"],
+            31,
+            31,
+            "Verses 31‑32 close the psalm with the promise of perpetual justice.",
+            "Augustine affirms that divine justice endures beyond generations."
         )
-    ]
+    ];
 
     // ------------------------------------------------------------------------
     // Conceptual themes – none defined (empty array)
