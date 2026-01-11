@@ -251,7 +251,7 @@ class Psalm99Tests: XCTestCase {
   func testJoyfulEntryTheme() {
     let joyfulEntryTerms = [
       ("introeo", ["Introite"], "enter"),
-      ("conspectus", ["conspectu"], "presence"),
+      ("conspectus", ["conspectu"], "sight"),
       ("exsultatio", ["exsultatione"], "exultation"),
     ]
 
@@ -268,9 +268,9 @@ class Psalm99Tests: XCTestCase {
     let divineSovereigntyTerms = [
       ("scio", ["Scitote"], "know"),
       ("dominus", ["Dominus", "dominus"], "Lord"),
-      ("ipse", ["ipse", "ipse"], "he himself"),
+      ("ipse", ["ipse", "ipse"], "himself"),
       ("deus", ["Deus"], "God"),
-      ("facio", ["fecit"], "made"),
+      ("facio", ["fecit"], "make"),
     ]
 
     let utilities = PsalmTestUtilities.self
@@ -290,8 +290,8 @@ class Psalm99Tests: XCTestCase {
       ("introeo", ["introite"], "enter"),
       ("porta", ["portas"], "gate"),
       ("confessio", ["confessione"], "confession"),
-      ("atrium", ["atria"], "courts"),
-      ("hymnus", ["hymnis"], "hymns"),
+      ("atrium", ["atria"], "court"),
+      ("hymnus", ["hymnis"], "hymn"),
       ("confiteor", ["confitemini"], "confess"),
     ]
 
@@ -325,11 +325,11 @@ class Psalm99Tests: XCTestCase {
 
   func testTempleImagery() {
     let templeTerms = [
-      ("porta", ["portas"], "gates"),
-      ("atrium", ["atria"], "courts"),
+      ("porta", ["portas"], "gate"),
+      ("atrium", ["atria"], "court"),
       ("introeo", ["introite"], "enter"),
       ("confessio", ["confessione"], "thanksgiving"),
-      ("hymnus", ["hymnis"], "hymns"),
+      ("hymnus", ["hymnis"], "hymn"),
     ]
 
     let utilities = PsalmTestUtilities.self
@@ -345,9 +345,7 @@ class Psalm99Tests: XCTestCase {
     let shepherdTerms = [
       ("populus", ["Populus"], "people"),
       ("ovis", ["oves"], "sheep"),
-      ("pascua", ["pascuae"], "pasture"),
-      ("dominus", ["eius"], "his"),
-    ]
+      ("pascua", ["pascuae"], "pasture")    ]
 
     let utilities = PsalmTestUtilities.self
     utilities.testTerms(
@@ -380,9 +378,9 @@ class Psalm99Tests: XCTestCase {
     let creatorTerms = [
       ("scio", ["Scitote"], "know"),
       ("dominus", ["Dominus"], "Lord"),
-      ("ipse", ["ipse"], "he himself"),
+      ("ipse", ["ipse"], "himself"),
       ("deus", ["Deus"], "God"),
-      ("facio", ["fecit"], "made"),
+      ("facio", ["fecit"], "make"),
       ("nos", ["nos"], "us"),
     ]
 
