@@ -13,7 +13,7 @@ class Psalm98Tests: XCTestCase {
 
   // MARK: - Psalm Identity & Verse Count
   private let id = PsalmIdentity(number: 98, category: nil)
-  private let expectedVerseCount = 9
+  private let expectedVerseCount = 10
 
   // MARK: - Latin Text
   private let text = [
@@ -26,7 +26,7 @@ class Psalm98Tests: XCTestCase {
     "Moyses et Aaron in sacerdotibus eius, et Samuel inter eos qui invocant nomen eius; ",
     "Invocabant Dominum, et ipse exaudiebat eos. In columna nubis loquebatur ad eos; ",
     "custodierunt testimonia eius, et praeceptum quod dedit illis.",
-    "Domine Deus noster, tu exaudiebas eos; Deus, tu propitius fuisti eis, et ulciscens in omnes adinventiones eorum.",
+    "Domine Deus noster, tu exaudabas eos; Deus, tu propitius fuisti eis, et ulciscens in omnes adinventiones eorum.",
     "Exaltate Dominum Deum nostrum, et adorate in monte sancto eius, quoniam sanctus Dominus Deus noster."
   ]
 
@@ -55,7 +55,8 @@ class Psalm98Tests: XCTestCase {
     (6, ["moyses", "aaron", "sacerdos", "samuel", "invoco", "nomen", "exaudio"]),
     (7, ["invoco", "dominus", "exaudio", "columna", "nubes", "loquor"]),
     (8, ["custodio", "testimonium", "praeceptum", "do"]),
-    (9, ["dominus", "deus", "noster", "exaudio", "propitius", "ulciscor", "inventio"])
+    (9, ["dominus", "deus", "noster", "exaudio", "propitius", "ulciscor", "inventio"]),
+    (10, ["exalto", "dominus", "deus", "noster", "adoro", "mons", "sanctus"])
   ]
 
   // MARK: - Structural Themes (pairs, final triple)
@@ -90,9 +91,18 @@ class Psalm98Tests: XCTestCase {
     (
       "Divine Guidance → Vengeance",
       "God speaks through the cloud, gives commandments, hears the faithful, and enacts righteous vengeance.",
-      ["columna", "nubes", "loquor", "custodio", "testimonium", "praeceptum", "domine", "exaudio", "propitius", "ulciscor", "inventio"],
+      ["columna", "nubes", "loquor", "custodio", "testimonium", "praeceptum", "exaudio"],
       7,
+      8,
+      "God speaks through the cloud, gives commandments, hears the faithful, and enacts righteous vengeance.",
+      "Augustine reads the closing three verses as the culmination of divine guidance, mercy, and just retribution toward the wicked (Enarr. Ps. 98.7‑9)."
+    ),
+    (
+      "Divine Guidance → Vengeance",
+      "God speaks through the cloud, gives commandments, hears the faithful, and enacts righteous vengeance.",
+      ["domine", "exaudio", "propitius", "ulciscor", "inventio"],
       9,
+      10,
       "God speaks through the cloud, gives commandments, hears the faithful, and enacts righteous vengeance.",
       "Augustine reads the closing three verses as the culmination of divine guidance, mercy, and just retribution toward the wicked (Enarr. Ps. 98.7‑9)."
     )
