@@ -1,4 +1,50 @@
 [
+
+  {
+  "lemma": "transeo",
+  "part_of_speech": "verb",
+  "translations": {
+    "en": "go over, cross",
+    "la": "transeo, transire, transivi, transitus"
+  },
+  "conjugation": 4,
+  "infinitive": "transire",
+  "present": "transeo",
+  "future": "transibo",
+  "perfect": "transivi",
+  "supine": "transitus",
+  "forms": {
+    "perfect_indicative_1pl": [
+      "transivimus"
+    ],
+    "present_subjunctive": [
+        "transeam",
+        "transeas",
+        "transeat",
+        "transeamus",
+        "transeatis",
+        "transeant"
+      ]
+  }
+},
+
+  {
+    "lemma": "arida",
+    "part_of_speech": "noun",
+    "declension": 1,
+    "gender": "feminine",
+    "nominative": "arida",
+    "genitive": "aridae",
+    "translations": {
+      "en": "dry land, dry place, dryness",
+      "la": "arida, aridae"
+    },
+    "forms": {
+      "accusative_sg_f": [
+        "aridam"
+      ]
+    }
+  },
   {
     "lemma": "remaneo",
     "part_of_speech": "verb",
@@ -10938,6 +10984,15 @@
     "forms": {
       "genitive_pl": [
         "terribilium"
+      ],
+        "nominative_plural_n": [
+        "terribilia"
+      ],
+      "vocative_plural_n": [
+        "terribilia"
+      ],
+      "accusative_plural_n": [
+        "terribilia"
       ]
     }
   },
@@ -17882,29 +17937,6 @@
     "translations": {
       "en": "yesterday's, of yesterday",
       "la": "hesternus, -a, -um"
-    }
-  },
-  {
-    "lemma": "transeo",
-    "part_of_speech": "verb",
-    "conjugation": 0,
-    "infinitive": "transire",
-    "present": "transeo",
-    "perfect": "transii",
-    "supine": "transitum",
-    "forms": {
-      "present_subjunctive": [
-        "transeam",
-        "transeas",
-        "transeat",
-        "transeamus",
-        "transeatis",
-        "transeant"
-      ]
-    },
-    "translations": {
-      "en": "pass away, cross over, go across",
-      "la": "transeo, transire"
     }
   },
   {

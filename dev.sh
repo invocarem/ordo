@@ -28,7 +28,7 @@ else
     docker run --rm -it \
       -v "${HOST_PATH}:/app" \
       -w /app \
-      -p 8084:8080 \
+      -p 8085:8080 \
       swift:6.0.3-jammy \
       bash
 fi
