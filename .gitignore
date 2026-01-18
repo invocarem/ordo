@@ -21,6 +21,8 @@ build/
 *.swp
 *.bak
 
+implementation_step_*.json
+
 # generated output file
 output_*
 **/psalms.json
