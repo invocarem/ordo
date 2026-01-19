@@ -1,5 +1,79 @@
 [
-
+{
+  "lemma": "medullatus",
+  "part_of_speech": "adjective",
+  "translations": {
+    "en": "marrow‑filled, having marrow",
+    "la": "medullātus, -a, -um"
+  },
+  "declension": 1,
+  "gender": "masculine",
+  "nominative": "medullatus",
+  "forms": {
+    "nominative_sg_m": [
+      "medullatus"
+    ],
+    "vocative_sg_m": [
+      "medullatus"
+    ],
+    "ablative_sg_f": [
+      "medullata"
+    ],
+    "nominative_pl_n": [
+      "medullata"
+    ],
+    "vocative_pl_n": [
+      "medullata"
+    ],
+    "accusative_pl_n": [
+      "medullata"
+    ]
+  }
+},
+  {
+  "lemma": "refrigerium",
+  "part_of_speech": "noun",
+  "translations": {
+    "en": "rest; relief; cooling; consolation",
+    "la": "refrigerium, refrigeri"
+  },
+  "declension": 2,
+  "gender": "neuter",
+  "nominative": "refrigerium",
+  "genitive": "refrigeri",
+  "forms": {
+    "nominative_sg": [
+      "refrigerium"
+    ],
+    "vocative_sg": [
+      "refrigerium"
+    ],
+    "accusative_sg": [
+      "refrigerium"
+    ],
+    "genitive_sg": [
+      "refrigeri"
+    ]
+  }
+},
+{
+  "lemma": "distinguo",
+  "part_of_speech": "verb",
+  "translations": {
+    "en": "distinguish, separate; adorn, decorate",
+    "la": "distinguo, distinguere, distinxi, distinctus"
+  },
+  "conjugation": 3,
+  "present": "distinguo",
+  "infinitive": "distinguere",
+  "perfect": "distinxi",
+  "supine": "distinctum",
+  "forms": {
+    "future_active_3rd_pl": [
+      "distinxerunt"
+    ]
+  }
+},
   {
   "lemma": "transeo",
   "part_of_speech": "verb",
@@ -17241,6 +17315,53 @@
     "translations": {
       "en": "burn, inflame, excite",
       "la": "incendo, incendere"
+    },
+     "forms": {
+      "present_participle_nom_sg_m": [
+        "incensus"
+      ],
+      "present_participle_nom_sg_f": [
+        "incensa"
+      ],
+      "present_participle_nom_sg_n": [
+        "incensum"
+      ],
+      "present_participle_gen_sg_m": [
+        "incensus"
+      ],
+      "present_participle_gen_sg_f": [
+        "incensa"
+      ],
+      "present_participle_gen_sg_n": [
+        "incensī"
+      ],
+      "present_participle_acc_sg_m": [
+        "incensum"
+      ],
+      "present_participle_acc_sg_f": [
+        "incensam"
+      ],
+      "present_participle_acc_sg_n": [
+        "incensum"
+      ],
+      "present_participle_abl_sg_m": [
+        "incensō"
+      ],
+      "present_participle_abl_sg_f": [
+        "incensa"
+      ],
+      "present_participle_abl_sg_n": [
+        "incensō"
+      ],
+      "present_participle_dat_sg_m": [
+        "incensō"
+      ],
+      "present_participle_dat_sg_f": [
+        "incensa"
+      ],
+      "present_participle_dat_sg_n": [
+        "incensō"
+      ]
     }
   },
   {
