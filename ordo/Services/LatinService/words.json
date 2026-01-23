@@ -1,4 +1,36 @@
 [
+  {
+    "lemma": "motus",
+    "part_of_speech": "noun",
+    "declension": 4,
+    "gender": "masculine",
+    "nominative": "motus",
+    "genitive": "motus",
+    "forms": {
+      "nominative_sg": [
+        "motus"
+      ],
+      "vocative_sg": [
+        "motus"
+      ],
+      "genitive_sg": [
+        "motus"
+      ],
+      "nominative_pl": [
+        "motus"
+      ],
+      "vocative_pl": [
+        "motus"
+      ],
+      "accusative_pl": [
+        "motus"
+      ]
+    },
+    "translations": {
+      "en": "movement, motion; riot, commotion, disturbance; gesture; emotion",
+      "la": "motus, -us"
+    }
+  },
 {
   "lemma": "medullatus",
   "part_of_speech": "adjective",
@@ -27457,6 +27489,12 @@
         "exaltamur",
         "exaltamini",
         "exaltantur"
+      ],
+      "future_passive_3rd_sg": [
+        "exaltabitur"
+      ],
+      "future_passive_3rd_pl": [
+        "exaltabuntur"
       ]
     },
     "forms_plural": {

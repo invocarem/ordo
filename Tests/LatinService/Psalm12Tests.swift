@@ -15,26 +15,34 @@ class Psalm12Tests: XCTestCase {
     let psalm12 = [
         "Usquequo, Domine, oblivisceris me in finem? usquequo avertis faciem tuam a me?",
         "Quandiu ponam consilia in anima mea, dolorem in corde meo per diem?",
-        "Usquequo exaltabitur inimicus meus super me?",
-        "Respice, et exaudi me, Domine Deus meus. Illumina oculos meos, ne umquam obdormiam in morte;",
-        "Nequando dicat inimicus meus: Praevalui adversus eum. Qui tribulant me, exsultabunt si motus fuero;",
-        "Ego autem in misericordia tua speravi. Exsultabit cor meum in salutari tuo; cantabo Domino qui bona tribuit mihi, et psallam nomini Domini altissimi."
+        "Usquequo exaltabitur inimicus meus super me? Respice, et exaudi me, Domine Deus meus. ",
+        "Illumina oculos meos, ne umquam obdormiam in morte; Nequando dicat inimicus meus: Praevalui adversus eum. ",
+        "Qui tribulant me, exsultabunt si motus fuero; Ego autem in misericordia tua speravi. ",
+        "Exsultabit cor meum in salutari tuo; cantabo Domino qui bona tribuit mihi, et psallam nomini Domini altissimi."
     ]
 
     private let englishText = [
         "How long, O Lord, wilt thou forget me unto the end? how long dost thou turn away thy face from me?",
         "How long shall I take counsel in my soul, sorrow in my heart all the day?",
-        "How long shall my enemy be exalted over me?",
-        "Consider, and hear me, O Lord my God. Enlighten my eyes, lest I sleep the sleep of death;",
-        "Lest at any time my enemy say: I have prevailed against him. They that trouble me will rejoice when I am moved;",
-        "But I have trusted in thy mercy. My heart shall rejoice in thy salvation: I will sing to the Lord, who giveth me good things: yea I will sing to the name of the Lord the most high."
+        "How long shall my enemy be exalted over me? Consider, and hear me, O Lord my God. ",
+        "Enlighten my eyes, lest I sleep the sleep of death; Lest at any time my enemy say: I have prevailed against him. ",
+        "They that trouble me will rejoice when I am moved; But I have trusted in thy mercy. ",
+        "My heart shall rejoice in thy salvation: I will sing to the Lord, who giveth me good things: yea I will sing to the name of the Lord the most high."
     ]
-
+   private let lineKeyLemmas = [
+        (1, ["usquequo", "obliviscor", "finis", "averto", "facies", "meus"]),
+        (2, ["quandiu", "pono", "consilium", "anima", "dolor", "cor", "per", "dies"]),
+        (3, ["usquequo", "exalto", "inimicus", "super", "respicio", "exaudio", "dominus", "deus"]),
+        (4, ["illumino", "oculus", "ne", "umquam", "obdormio", "mors", "nequando", "praevaleo", "adversus"]),
+        (5, ["tribulo", "exsulto", "motus", "ego", "misericordia", "spero"]),
+        (6, ["exsulto", "cor", "salus", "canto", "dominus", "bonus", "psallo", "altissimus"])
+    ]
+    
     private let conceptualThemes = [
         (
             "Lament in Suffering",
             "The psalmist's cry of anguish and questioning in times of distress, including temporal expressions and lament verbs",
-            ["usquequo", "obliviscor", "dolor", "quandiu", "averto", "facies", "pono", "respiro", "exaudio", "per", "umquam"],
+            ["usquequo", "obliviscor", "dolor", "quandiu", "averto", "facies", "pono", "respicio", "exaudio", "per", "umquam"],
             ThemeCategory.virtue,
             1...4
         ),
@@ -131,7 +139,16 @@ class Psalm12Tests: XCTestCase {
             "Normalized Latin text should match expected classical forms"
         )
     }
-
+    
+    func testLineByLineKeyLemmas() {
+        let utilities = PsalmTestUtilities.self
+        utilities.testLineByLineKeyLemmas(
+            psalmText: psalm12,
+            lineKeyLemmas: lineKeyLemmas,
+            psalmId: id,
+            verbose: verbose
+        )
+    }
     func testSaveTexts() {
         let utilities = PsalmTestUtilities.self
         let jsonString = utilities.generatePsalmTextsJSONString(
@@ -283,7 +300,7 @@ class Psalm12Tests: XCTestCase {
             ("obliviscor", ["oblivisceris"], "forget"), // v.1
             ("averto", ["avertis"], "turn away"), // v.1
             ("pono", ["ponam"], "place"), // v.2
-            ("respiro", ["respice"], "look"), // v.4
+            ("respicio", ["respice"], "look"), // v.4
             ("exaudio", ["exaudi"], "hear") // v.4
         ]
         
