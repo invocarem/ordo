@@ -1,4 +1,17 @@
 [
+{
+  "lemma": "hircus",
+  "part_of_speech": "noun",
+  "declension": 2,
+  "gender": "masculine",
+  "nominative": "hircus",
+  "genitive": "hirci",
+  "translations": {
+    "en": "he‑goat",
+    "la": "hircus, hirci"
+  }
+ },
+
   {
     "lemma": "motus",
     "part_of_speech": "noun",
