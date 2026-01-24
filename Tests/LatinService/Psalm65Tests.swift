@@ -89,20 +89,142 @@ class Psalm65Tests: XCTestCase {
         (19, ["benedictus", "Deus", "amoveo", "oratio", "misericordia"])
     ]
 
-    // MARK: - Structural Themes (placeholder – to be filled later)
     private let structuralThemes = [
-    (
-      "Divine Worship → Prayer Response",
-      "The psalmist's call to worship and God's response to prayer",
-      ["hymnus", "votum", "exaudio", "oratio", "sanctus", "templum"],
-      1,
-      6,
-      "The psalmist declares that hymns and vows are fitting for God in Zion and Jerusalem, then calls for God to hear his prayer as all flesh comes to Him, and describes the blessed dwelling in God's holy temple.",
-      "Augustine sees this as the soul's recognition that true worship requires both external praise and internal prayer, leading to blessed communion with God in His holy dwelling."
-    )]
-  
-    // MARK: - Conceptual Themes (placeholder values)
-    private let conceptualThemes: [(String, String, [String], ThemeCategory, ClosedRange<Int>?)] = []
+        (
+            "Praise → Divine Majesty",
+            "The earth’s call to worship and the declaration of God’s mighty works",
+            ["iubilo", "Deus", "terra", "psalmus", "nomen", "gloria", "laus", "dico", "terribilis", "opus"],
+            1,
+            2,
+            "Verses 1‑2 invite all creation to rejoice and proclaim the awe‑inspiring deeds of God.",
+            "Augustine sees the universal hymn as the soul’s first response to divine grandeur (Enarr. Ps. 65.1‑2)."
+        ),
+        (
+            "Universal Worship → Adoration",
+            "All the earth worships and sings a psalm to God’s name",
+            ["terra", "adoro", "psallo", "psalmus", "nomen", "venio", "video", "opus", "terribilis", "consilium"],
+            3,
+            4,
+            "Verses 3‑4 describe the whole earth’s adoration and a call to behold God’s wondrous counsel.",
+            "Augustine interprets this as the mind’s recognition of God’s counsel in creation (Enarr. Ps. 65.3‑4)."
+        ),
+        (
+            "Creation’s Transformation → Joy",
+            "God turns sea to dry land and the people rejoice",
+            ["converto", "mare", "arida", "flumen", "pertranseo", "pes", "laetor", "dominor", "virtus", "aeternus"],
+            5,
+            6,
+            "Verses 5‑6 portray God’s power over nature and the everlasting rule that brings joy.",
+            "Augustine links the transformation of the sea to the soul’s conversion (Enarr. Ps. 65.5‑6)."
+        ),
+        (
+            "Universal Praise → Blessing",
+            "Gentiles bless God and hear His praise",
+            ["benedico", "gens", "Deus", "noster", "vox", "laus", "pono", "anima", "vita", "commotio"],
+            7,
+            8,
+            "Verses 7‑8 call the nations to bless God and acknowledge the life He gives.",
+            "Augustine reads the Gentile’s blessing as the universal call to worship (Enarr. Ps. 65.7‑8)."
+        ),
+        (
+            "Divine Testing → Refinement",
+            "God tests us by fire like silver",
+            ["probo", "Deus", "ignis", "examino", "argentum", "induco", "laqueus", "tribulatio", "dorsum"],
+            9,
+            10,
+            "Verses 9‑10 compare divine testing to the refining of silver.",
+            "Augustine explains the fire as the trial that purifies the soul (Enarr. Ps. 65.9‑10)."
+        ),
+        (
+            "Deliverance Through Trials → Refreshment",
+            "God sets men over heads, leads through fire and water to refreshment",
+            ["impono", "homo", "caput", "transeo", "ignis", "aqua", "refrigerium", "introeo", "domus", "holocaustum"],
+            11,
+            12,
+            "Verses 11‑12 show God’s guidance through trials to a place of worship.",
+            "Augustine sees the passage through fire and water as the soul’s journey to the divine house (Enarr. Ps. 65.11‑12)."
+        ),
+        (
+            "Vow & Petition → Commitment",
+            "The psalmist offers vows and speaks of trouble",
+            ["distinguo", "labium", "loquor", "os", "tribulatio", "holocaustum", "medullatus", "offero", "incendo", "aries"],
+            13,
+            14,
+            "Verses 13‑14 present the psalmist’s vows and sacrificial offerings.",
+            "Augustine interprets the vows as the soul’s earnest petition (Enarr. Ps. 65.13‑14)."
+        ),
+        (
+            "Proclamation → Faithful Witness",
+            "Call to hear God’s deeds and the psalmist’s testimony",
+            ["venio", "audio", "narro", "timeo", "Deus", "facio", "anima", "ad", "os", "clamo"],
+            15,
+            16,
+            "Verses 15‑16 invite listeners to hear God’s mighty works and the psalmist’s testimony.",
+            "Augustine reads this as the faithful witness proclaiming God’s deeds (Enarr. Ps. 65.15‑16)."
+        ),
+        (
+            "Confession → Divine Mercy",
+            "Confession of sin, God’s hearing, and blessing",
+            ["iniquitas", "aspicio", "cor", "exaudio", "Dominus", "propterea", "exaudio", "Deus", "attendo", "vox", "deprecatio", "benedictus", "Deus", "oratio", "misericordia"],
+            17,
+            19,
+            "Verses 17‑19 confess iniquity, note God’s attentive hearing, and end with blessing.",
+            "Augustine sees the confession and divine mercy as the soul’s final reconciliation (Enarr. Ps. 65.17‑19)."
+        )
+    ]
+
+    private let conceptualThemes: [(String, String, [String], ThemeCategory, ClosedRange?)] = [
+        (
+            "Divine Majesty",
+            "God’s awe‑inspiring power and glory displayed throughout the psalm.",
+            ["terribilis","opus","Deus","Dominus","virtus","gloria","laus"],
+            .divine,
+            nil
+        ),
+        (
+            "Universal Worship",
+            "All creation joins in praising God, offering psalms and blessings.",
+            ["iubilo","terra","psalmus","nomen","laus","benedico","gens","vox"],
+            .worship,
+            nil
+        ),
+        (
+            "Creation’s Transformation",
+            "God transforms sea to dry land and orders fire and water, showing sovereign control.",
+            ["converto","mare","arida","flumen","ignis","aqua","refrigerium","argentum"],
+            .divine,
+            nil
+        ),
+        (
+            "Divine Testing & Refinement",
+            "God tests the people by fire and refines them like silver.",
+            ["probo","ignis","examino","argentum","laqueus","tribulatio","dorsum"],
+            .justice,
+            9...10
+        ),
+        (
+            "Deliverance & Refreshment",
+            "Through fire and water the people are led to a place of refreshment and worship.",
+            ["transeo","ignis","aqua","refrigerium","introeo","domus","holocaustum"],
+            .virtue,
+            11...12
+        ),
+        (
+            "Vow & Petition",
+            "The psalmist offers vows and sacrifices, seeking God’s favor.",
+            ["votum","holocaustum","offero","incendo","aries","bos","hircus","medullatus"],
+            .worship,
+            12...14
+        ),
+        (
+            "Confession & Mercy",
+            "Confession of sin and God’s attentive mercy bring blessing.",
+            ["iniquitas","aspicio","cor","exaudio","Dominus","Deus","attendo","vox","deprecatio","benedictus","oratio","misericordia"],
+            .opposition,
+            17...19
+        )
+    ]
+    
 
     // MARK: - Test Methods
 
