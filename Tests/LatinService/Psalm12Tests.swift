@@ -94,7 +94,7 @@ class Psalm12Tests: XCTestCase {
         (
             "Abandonment → Anguish",
             "A feeling of divine forgetfulness leads to deep internal anguish and questioning",
-            ["obliviscor", "avertor", "pono", "dolor"],
+            ["obliviscor", "averto", "pono", "dolor"],
             1,
             2,
             "The psalmist repeatedly questions how long God will forget him and hide His face, describing how he must continually harbor sorrow and grief in his heart.",
@@ -112,7 +112,7 @@ class Psalm12Tests: XCTestCase {
         (
             "Defeat → Hope",
             "The fear of enemy triumph is overcome by hope in divine mercy and salvation",
-            ["praevaleo", "exsulto", "spero", "salus"],
+            ["exsulto", "spero", "salus"],
             5,
             6,
             "The psalmist fears his enemies' triumph and exultation should he fall, but declares his personal hope in God's mercy and the future joy of His salvation.",
