@@ -67,7 +67,7 @@ class Psalm131Tests: XCTestCase {
     (8, ["surgo", "requies", "arca", "sanctificatio"]),
     (9, ["sacerdos", "induo", "iustitia", "sanctus", "exsulto"]),
     (10, ["propter", "david", "servus", "averto", "facies", "christus"]),
-    (11, ["iuro", "veritas", "frustror", "fructus", "venter", "pono", "sedes"]),
+    (11, ["iuro", "veritas", "frustro", "fructus", "venter", "pono", "sedes"]),
     (12, ["si", "custodio", "filius", "testamentum", "testimonium", "doceo"]),
     (13, ["filius", "usque", "saeculum", "sedeo", "sedes"]),
     (14, ["quoniam", "eligo", "sion", "habitatio"]),
@@ -88,6 +88,35 @@ class Psalm131Tests: XCTestCase {
       "The psalm opens with a plea to remember David and his meekness, then recounts how he swore sacred vows to the Lord and vowed to the God of Jacob.",
       "Augustine sees this as establishing the foundation of the Davidic covenant - David's humility and faithfulness become the basis for divine promises that extend through generations."
     ),
+
+    (
+      "Sacrificial Conditions → Personal Renunciation",
+      "David's conditional vows of renouncing personal comforts for God's service",
+      ["si", "introeo", "tabernaculum", "domus", "ascendo", "lectus", "stratum", "do", "somnus", "oculus", "palpebra", "dormitatio"],
+      3,
+      4,
+      "David makes specific conditional pledges about entering his home and going to bed, giving sleep to eyes, and slumber to eyelids, representing his commitment to subordinate personal life to sacred purpose.",
+      "Augustine reads these as the soul's preparation for encounter with God - each 'if' statement represents a deliberate setting aside of worldly attachments, creating space for divine presence through holy intentionality."
+    ),
+(
+  "Divine Quest → Sacred Discovery", 
+  "David's search for God's dwelling leading to the temple discovery in Ephrata", 
+  ["donec", "invenio", "locus", "tabernaculum", "ecce", "audio", "ephrata", "invenio"], 
+  5, 
+  6, 
+  "Verse 5 shows David committed to seeking God's tabernacle until he finds a place for the Lord, while verse 6 recounts hearing about it in Ephrata and finding it in the fields of the wood - connecting personal quest with divine revelation.", 
+  "Augustine sees this as the soul's journey from intentional seeking to gracious revelation. David's patient waiting ('donec') becomes the pattern for how God reveals Himself to those who diligently seek His presence."
+),
+(
+  "Worship Declaration → Ark Petition", 
+  "Community worship commitment followed by call for God to arise with His ark", 
+  ["introeo", "tabernaculum", "adoro", "locus", "sto", "pes", "surgo", "requies", "arca", "sanctificatio"], 
+  7,
+  8,
+"Verse 7 declares the community's intention to enter God's tabernacle and adore where His feet stood, while verse 8 calls for God to arise into His resting place with the ark of sanctification - moving from human response to divine action.",
+"Augustine interprets this as the full cycle of worship: first comes the faithful commitment (verse 7), then the divine response that enables true worship (verse 8). The ark represents God's covenant presence making worship possible."
+),
+
     (
       "Personal Sacrifice → Divine Dwelling Quest",
       "David's personal sacrifice and commitment to finding a place for God's dwelling",
@@ -118,7 +147,7 @@ class Psalm131Tests: XCTestCase {
     (
       "Davidic Intercession → Unbreakable Covenant",
       "Appeal based on David's service leading to divine covenant promises",
-      ["propter", "david", "servus", "averto", "facies", "christus", "iuro", "veritas", "frustror", "fructus", "venter", "pono", "sedes"],
+      ["propter", "david", "servus", "averto", "facies", "christus", "iuro", "veritas", "frustro", "fructus", "venter", "pono", "sedes"],
       10,
       11,
       "The psalm appeals for God not to turn away from His anointed for David's sake, then declares God's unbreakable oath to David regarding his offspring on the throne.",

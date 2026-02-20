@@ -1,4 +1,23 @@
 [
+   {
+    "lemma": "frustro",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "infinitive": "frustrare",
+    "present": "frustro",
+    "perfect": "frustravi",
+    "supine": "frustratus",
+    "future": "frustrabor",
+    "forms": {
+      "passive_3rd_sg_fut_indicative": [
+        "frustrabitur"
+      ]
+    },
+    "translations": {
+      "en": "disappoint, frustrate, deceive with false hope; escape/elude; baffle/evade; fail; reject; delay; rob/defraud/cheat; pretend; refute argument; corrupt/falsify",
+      "la": "frustro, frustrare, frustravi, frustratus"
+    }
+  },
 {
   "lemma": "hircus",
   "part_of_speech": "noun",

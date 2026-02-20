@@ -2,7 +2,7 @@
 DerivedData/
 *.xcuserstate
 Pods/
-
+.nimis
 .continue/agents/*
 .continue/mcpServers/*
 
