@@ -1,4 +1,35 @@
 [
+  {
+    "lemma": "lapsus",
+    "part_of_speech": "noun",
+    "declension": 4,
+    "gender": "masculine",
+    "nominative": "lapsus",
+    "genitive": "lapsus",
+    "translations": {
+      "en": "gliding slipping fall",
+      "la": "lapsus, lapsus"
+    }
+  },
+  {
+    "lemma": "bello",
+    "part_of_speech": "verb",
+    "conjugation": 1,
+    "present": "bello",
+    "infinitive": "bellare",
+    "perfect": "bellavi",
+    "supine": "bellatus",
+    "forms": {
+      "present_participle_nom_voc_acc_pl_common": [
+        "bellantes"
+      ]
+    },
+    "translations": {
+      "en": "fight wage war struggle",
+      "la": "bello, bellare, bellavi, bellatus"
+    }
+  },
+
    {
     "lemma": "frustro",
     "part_of_speech": "verb",

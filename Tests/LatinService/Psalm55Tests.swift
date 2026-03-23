@@ -47,14 +47,14 @@ final class Psalm55Tests: XCTestCase {
         (3, ["altitudo", "timeo", "spero"]),
         (4, ["laudo", "sermo", "spero", "timeo", "caro"]),
         (5, ["execror", "verbum", "cogito", "malus"]),
-        (6, ["inhabito", "abscondo", "calcaneus", "observo"]),
+        (6, ["inhabito", "abscondo", "calcaneum", "observo"]),
         (7, ["sustinero", "anima", "salvo", "ira", "populus", "confringo"]),
         (8, ["vita", "annuntio", "lacrima", "conspectus"]),
         (9, ["promissio", "convertor", "inimicus", "retrorsum"]),
         (10, ["invoco", "cognosco", "deus"]),
         (11, ["laudo", "verbum", "dominus", "spero", "timeo", "homo"]),
-        (12, ["votum", "reddo", "laus"]),
-        (13, ["eripio", "anima", "mors", "pes", "lapsus", "placeo", "lux", "vivens"])
+        (12, ["votum", "reddo", "laudatio"]),
+        (13, ["eripio", "anima", "mors", "pes", "lapsus", "placeo", "lumen", "vivo"])
     ]
 
     private let structuralThemes: [(String, String, [String], Int, Int, String, String)] = [
@@ -79,7 +79,7 @@ final class Psalm55Tests: XCTestCase {
         (
             "Plot → Deliverance",
             "From hidden plots of enemies to divine intervention and eternal life",
-            ["execror", "cogito", "malus", "inhabito", "calcaneus", "sustinero", "anima", "salvo", "confringo", "lacrima", "conspectus", "invoco", "cognosco", "eripio", "lux", "vivens"],
+            ["execror", "cogito", "malus", "inhabito", "calcaneus", "sustinero", "anima", "salvo", "confringo", "lacrima", "conspectus", "invoco", "cognosco", "eripio", "lumen", "vivens"],
             5,
             13,
             "The enemies plot, lie in wait, and watch for the psalmist's fall, but God hears his cries, records his tears, and delivers him from death into the light of life.",
