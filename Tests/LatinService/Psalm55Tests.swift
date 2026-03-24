@@ -48,9 +48,9 @@ final class Psalm55Tests: XCTestCase {
         (4, ["laudo", "sermo", "spero", "timeo", "caro"]),
         (5, ["execror", "verbum", "cogito", "malus"]),
         (6, ["inhabito", "abscondo", "calcaneum", "observo"]),
-        (7, ["sustinero", "anima", "salvo", "ira", "populus", "confringo"]),
+        (7, ["sustineo", "anima", "salvus", "ira", "populus", "confringo"]),
         (8, ["vita", "annuntio", "lacrima", "conspectus"]),
-        (9, ["promissio", "convertor", "inimicus", "retrorsum"]),
+        (9, ["promissio", "converto", "inimicus", "retrorsum"]),
         (10, ["invoco", "cognosco", "deus"]),
         (11, ["laudo", "verbum", "dominus", "spero", "timeo", "homo"]),
         (12, ["votum", "reddo", "laudatio"]),
@@ -77,13 +77,40 @@ final class Psalm55Tests: XCTestCase {
             "Augustine teaches that true fear is not of man's height but of God's absence — to hope in Him is to transcend all terror (Enarr. Ps. 55.3)."
         ),
         (
-            "Plot → Deliverance",
-            "From hidden plots of enemies to divine intervention and eternal life",
-            ["execror", "cogito", "malus", "inhabito", "calcaneus", "sustinero", "anima", "salvo", "confringo", "lacrima", "conspectus", "invoco", "cognosco", "eripio", "lumen", "vivens"],
+            "Malice → Conspiracy",
+            "From detestation of words to hidden plots and ambush",
+            ["execror", "verbum", "cogito", "malus", "inhabito", "abscondo", "calcaneum", "observo"],
             5,
+            6,
+            "The enemies detest the psalmist's words, plotting evil and hiding to watch for his downfall. This reveals the depth of their conspiracy.",
+            "Augustine notes that the wicked not only hate but actively scheme — they hide and watch the heel, waiting for the slightest stumble to destroy (Enarr. Ps. 55.5)."
+        ),
+        (
+            "Wrath → Remembrance",
+            "From divine judgment on enemies to God's tender remembrance of tears",
+            ["sustineo", "anima", "salvus", "ira", "populus", "confringo", "vita", "annuntio", "lacrima", "conspectus"],
+            7,
+            8,
+            "God will not save those who waited for the psalmist's soul but will break them in wrath; yet He has set the psalmist's tears in His sight.",
+            "Augustine contrasts God's wrath against the wicked with His tender remembrance of the afflicted — our tears are not hidden but placed before His eyes (Enarr. Ps. 55.7)."
+        ),
+        (
+            "Promise → Recognition",
+            "From God's promise of enemies' retreat to the psalmist's knowing God",
+            ["promissio", "converto", "inimicus", "retrorsum", "invoco", "cognosco", "deus"],
+            9,
+            10,
+            "In God's promise the enemies will be turned back; in every call upon Him the psalmist knows He is his God.",
+            "Augustine teaches that God's promise is the anchor of faith — when we call, we know He answers, and in that knowing we truly know Him (Enarr. Ps. 55.9)."
+        ),
+        (
+            "Praise → Deliverance",
+            "From vows of praise to deliverance from death into the light of life",
+            ["laudo", "verbum", "dominus", "spero", "timeo", "homo", "votum", "reddo", "laudatio", "eripio", "mors", "pes", "lapsus", "placeo", "lumen", "vivo"],
+            11,
             13,
-            "The enemies plot, lie in wait, and watch for the psalmist's fall, but God hears his cries, records his tears, and delivers him from death into the light of life.",
-            "Augustine sees this as the soul's journey from despair to revelation: when the wicked seem triumphant, God's justice unfolds — He sees, hears, and redeems those who call upon Him (Enarr. Ps. 55.13)."
+            "The psalmist praises God, pays his vows, and is delivered from death and falling to walk in the light of the living.",
+            "Augustine sees this as the culmination of the psalm — the soul delivered from death's shadow into the light of eternal life, fulfilling its vows of praise (Enarr. Ps. 55.13)."
         )
     ]
 
@@ -98,14 +125,14 @@ final class Psalm55Tests: XCTestCase {
         (
             "Divine Justice",
             "God's wrath against the wicked and deliverance of the just",
-            ["confringo", "ira", "salvo", "inimicus"],
+            ["confringo", "ira", "salvus", "inimicus"],
             .justice,
             5 ... 13
         ),
         (
             "Life vs. Death",
             "From the shadow of death to the light of eternal life",
-            ["vita", "lux", "vivens", "mors"],
+            ["lumen", "vivo", "mors"],
             .virtue,
             13 ... 13
         ),
@@ -121,7 +148,7 @@ final class Psalm55Tests: XCTestCase {
             "The psalmist's praise, trust, and vows as acts of faith",
             ["laudo", "spero", "votum", "reddo"],
             .worship,
-            4 ... 4
+            4 ... 12
         ),
         (
             "Spiritual Opposition",
