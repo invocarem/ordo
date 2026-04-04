@@ -1,0 +1,10 @@
+{
+  "tests": [
+    {
+      "id": "psalm55",
+      "promptPath": "bench/psalm55.md",
+      "outputPath": "bench/psalm55Tests.swift",
+      "timeout": 120000
+    }
+  ]
+}

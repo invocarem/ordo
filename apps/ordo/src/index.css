@@ -1,0 +1,35 @@
+:root {
+  color-scheme: light dark;
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.45;
+  --fg: #1a1a14;
+  --muted: #5c5a52;
+  --border: #c9c4b8;
+  --panel: #faf8f3;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fg: #ece8dc;
+    --muted: #a39e90;
+    --border: #4a4740;
+    --panel: #1e1d19;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--fg);
+  background: var(--panel);
+}
+
+#root {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 1.25rem 1rem 3rem;
+}

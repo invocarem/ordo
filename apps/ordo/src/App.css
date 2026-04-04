@@ -1,0 +1,206 @@
+.app-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.app-header h1 {
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+}
+
+.app-header p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 0.75rem;
+}
+
+.controls label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.controls select {
+  font: inherit;
+  padding: 0.35rem 0.5rem;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: var(--panel);
+  color: var(--fg);
+}
+
+.psalm-block {
+  margin-bottom: 0;
+}
+
+.psalm-block h2 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 0.25rem;
+}
+
+.psalm-context {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: 0 0 0.85rem;
+}
+
+.psalm-block .subtitle {
+  font-size: 0.88rem;
+  color: var(--muted);
+  margin: -0.35rem 0 0.85rem;
+}
+
+.verses {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.verse-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.35rem;
+}
+
+@media (min-width: 36rem) {
+  .verse-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+}
+
+.verse-num {
+  font-size: 0.75rem;
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  min-width: 1.5rem;
+}
+
+.la {
+  font-style: italic;
+}
+
+.en {
+  color: var(--muted);
+}
+
+.missing {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px dashed var(--border);
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.psalm-stack {
+  margin-bottom: 2.25rem;
+}
+
+.theme-section {
+  margin-top: 1rem;
+  padding: 0.5rem 0 0;
+  border-top: 1px solid var(--border);
+}
+
+.theme-section summary {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+.theme-group {
+  margin-top: 1rem;
+}
+
+.theme-group-title {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin: 0 0 0.5rem;
+}
+
+.theme-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.theme-card {
+  padding: 0.65rem 0.75rem;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+  background: color-mix(in srgb, var(--panel) 92%, var(--fg) 8%);
+}
+
+.theme-card-title {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin: 0 0 0.35rem;
+}
+
+.theme-card-desc {
+  font-size: 0.88rem;
+  margin: 0 0 0.35rem;
+  color: var(--muted);
+}
+
+.theme-meta {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin: 0 0 0.35rem;
+}
+
+.theme-lemmas {
+  font-size: 0.78rem;
+  margin: 0.35rem 0 0;
+  line-height: 1.4;
+}
+
+.theme-lemmas-label {
+  color: var(--muted);
+}
+
+.lemma-tag {
+  display: inline-block;
+  margin: 0.15rem 0.35rem 0 0;
+  padding: 0.1rem 0.35rem;
+  border-radius: 4px;
+  font-family: ui-monospace, monospace;
+  background: color-mix(in srgb, var(--border) 40%, transparent);
+}
+
+.theme-comment {
+  font-size: 0.85rem;
+  margin: 0.5rem 0 0;
+  line-height: 1.45;
+}
+
+.theme-comment2 {
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.theme-category-pill {
+  font-size: 0.72rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 0.12rem 0.4rem;
+  border-radius: 4px;
+  border: 1px solid var(--border);
+  vertical-align: middle;
+}
