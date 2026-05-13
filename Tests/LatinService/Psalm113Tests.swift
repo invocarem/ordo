@@ -1,455 +1,379 @@
-import XCTest
 @testable import LatinService
+import XCTest
 
 class Psalm113Tests: XCTestCase {
     private var latinService: LatinService!
-    let verbose = true
-    
+    private let verbose = true
+    let id = PsalmIdentity(number: 113, category: "exodus")
+
+    // MARK: - Test Data Properties
+
+    private let psalm113 = [
+      "In exitu Israel de Aegypto, domus Iacob de populo barbaro,",
+      "Facta est Iudaea sanctificatio eius, Israel potestas eius.",
+      "Mare vidit et fugit; Iordanis conversus est retrorsum.",
+      "Montes exsultaverunt ut arietes, et colles sicut agni ovium.",
+      "Quid est tibi, mare, quod fugisti? et tu, Iordanis, quia conversus es retrorsum?",
+      "Montes, exsultastis sicut arietes? et colles, sicut agni ovium?",
+      "A facie Domini mota est terra, a facie Dei Iacob.",
+      "Qui convertit petram in stagna aquarum, et rupem in fontes aquarum.",
+      "Non nobis, Domine, non nobis: sed nomini tuo da gloriam.",
+      "Super misericordia tua, et veritate tua: nequando dicant gentes: Ubi est Deus eorum?",
+      "Deus autem noster in caelo: omnia quaecumque voluit, fecit.",
+      "Simulacra gentium argentum et aurum, opera manuum hominum.",
+      "Os habent, et non loquentur: oculos habent, et non videbunt.",
+      "Aures habent, et non audient: nares habent, et non odorabunt.",
+      "Manus habent, et non palpabunt: pedes habent, et non ambulabunt: non clamabunt in gutture suo.",
+      "Similes illis fiant qui faciunt ea: et omnes qui confidunt in eis.",
+      "Domus Israel speravit in Domino: adiutor eorum et protector eorum est.",
+      "Domus Aaron speravit in Domino: adiutor eorum et protector eorum est.",
+      "Qui timent Dominum, speraverunt in Domino: adiutor eorum et protector eorum est.",
+      "Dominus memor fuit nostri: et benedixit nobis.",
+      "Benedixit domui Israel: benedixit domui Aaron.",
+      "Benedixit omnibus qui timent Dominum, pusillis cum maioribus.",
+      "Adiiciat Dominus super vos: super vos, et super filios vestros.",
+      "Benedicti vos a Domino, qui fecit caelum et terram.",
+      "Caelum caeli Domino: terram autem dedit filiis hominum.",
+      "Non mortui laudabunt te, Domine: neque omnes qui descendunt in infernum.",
+      "Sed nos qui vivimus, benedicimus Domino, ex hoc nunc et usque in saeculum.",
+    ]
+
+    private let englishText = [
+      "When Israel went out of Egypt, the house of Jacob from a barbarous people:",
+      "Judea was made his sanctuary, Israel his dominion.",
+      "The sea saw and fled: Jordan was turned back.",
+      "The mountains skipped like rams, and the hills like the lambs of the flock.",
+      "What ailed thee, O thou sea, that thou didst flee: and thou, O Jordan, that thou wast turned back?",
+      "Ye mountains, that ye skipped like rams: and ye hills, like lambs of the flock?",
+      "At the presence of the Lord the earth was moved, at the presence of the God of Jacob:",
+      "Who turned the rock into pools of water, the sharp rock into fountains of waters.",
+      "Not to us, O Lord, not to us; but to thy name give glory.",
+      "For thy mercy, and for thy truth's sake: lest the gentiles should say, Where is their God?",
+      "But our God is in heaven: he hath done all things whatsoever he would.",
+      "The idols of the gentiles are silver and gold, the works of the hands of men.",
+      "They have mouths, and speak not: they have eyes, and see not.",
+      "They have ears, and hear not: they have noses, and smell not.",
+      "They have hands, and feel not: they have feet, and walk not: neither shall they cry out through their throat.",
+      "Let them that make them become like unto them: and all such as trust in them.",
+      "The house of Israel hath hoped in the Lord: he is their helper and their protector.",
+      "The house of Aaron hath hoped in the Lord: he is their helper and their protector.",
+      "They that fear the Lord have hoped in the Lord: he is their helper and their protector.",
+      "The Lord hath been mindful of us, and hath blessed us.",
+      "He hath blessed the house of Israel: he hath blessed the house of Aaron.",
+      "He hath blessed all that fear the Lord, both little and great.",
+      "May the Lord add blessings upon you: upon you, and upon your children.",
+      "Blessed are you of the Lord, who made heaven and earth.",
+      "The heaven of heaven is the Lord's: but the earth he hath given to the children of men.",
+      "The dead shall not praise thee, O Lord: nor any of them that go down into hell.",
+      "But we that live bless the Lord: from this time now and for ever.",
+    ]
+
+    private let lineKeyLemmas = [
+      (1, ["exitus", "israel", "aegyptus", "domus", "iacob", "barbarus"]),
+      (2, ["sum", "iudaea", "sanctificatio", "israel", "potestas", "facio"]),
+      (3, ["mare", "fugio", "iordanes", "converto", "retrorsum"]),
+      (4, ["mons", "exsulto", "aries", "collis", "agnus", "ovis"]),
+      (5, ["mare", "fugio", "iordanes", "converto"]),
+      (6, ["mons", "exsulto", "aries", "collis"]),
+      (7, ["facies", "dominus", "moveo", "terra", "deus", "iacob"]),
+      (8, ["converto", "petra", "stagnum", "aqua", "rupes", "fons"]),
+      (9, ["dominus", "nomen", "gloria"]),
+      (10, ["misericordia", "veritas", "nequando", "gens", "deus"]),
+      (11, ["deus", "caelum", "volo", "facio", "omnis"]),
+      (12, ["simulacrum", "gens", "argentum", "aurum", "opus", "manus", "homo"]),
+      (13, ["os", "loquor", "oculus", "video"]),
+      (14, ["auris", "audio", "naris", "odoror"]),
+      (15, ["manus", "palpo", "pes", "ambulo", "guttur"]),
+      (16, ["similis", "confido", "facio"]),
+      (17, ["domus", "israel", "spero", "dominus", "adiutor", "protector"]),
+      (18, ["domus", "aaron", "spero", "dominus", "adiutor", "protector"]),
+      (19, ["timeo", "dominus", "spero", "adiutor", "protector"]),
+      (20, ["dominus", "memor", "benedico"]),
+      (21, ["benedico", "domus", "israel", "aaron"]),
+      (22, ["benedico", "timeo", "dominus", "pusillus"]),
+      (23, ["dominus", "super", "vos", "filius", "vester"]),
+      (24, ["benedico", "dominus", "facio", "caelum", "terra"]),
+      (25, ["caelum", "dominus", "terra", "do", "filius", "homo"]),
+      (26, ["mortuus", "laudo", "dominus", "descendo", "infernus"]),
+      (27, ["vivo", "benedico", "dominus", "saeculum"]),
+    ]
+
+    private let structuralThemes = [
+      (
+        "Exodus → Sanctification",
+        "Israel's departure from Egypt and Judah's consecration as God's domain",
+        ["exitus", "aegyptus", "iacob", "barbarus", "sanctificatio", "potestas"],
+        1,
+        2,
+        "The psalm opens with Israel's exodus from Egypt and the house of Jacob from a foreign people, then declares Judah God's sanctuary and Israel his dominion.",
+        "Augustine reads the exodus as the soul's liberation from sin's bondage, with sanctified Judah as the Church set apart for God."
+      ),
+      (
+        "Waters Flee → Hills Rejoice",
+        "The sea and Jordan retreat while mountains and hills leap like flock animals",
+        ["mare", "fugio", "iordanes", "converto", "mons", "exsulto", "aries", "collis"],
+        3,
+        4,
+        "Creation itself responds to God: the sea flees, the Jordan turns back, and mountains and hills exult like rams and lambs.",
+        "For Augustine, inanimate creation figures the conversion of the nations and the joy of the righteous at God's mighty deeds."
+      ),
+      (
+        "Rhetorical Questions → Cosmic Submission",
+        "The psalmist questions sea and Jordan, then mountains and hills, pressing creation's obedient wonder",
+        ["mare", "fugio", "iordanes", "converto", "mons", "exsulto"],
+        5,
+        6,
+        "Why did you flee, O sea, and turn back, O Jordan? Why did mountains and hills leap like lambs at the Lord's presence?",
+        "Augustine sees these questions as awakening the soul to recognize that all creation bows before the Creator's word."
+      ),
+      (
+        "Earth Trembles → Rock to Water",
+        "The Lord's face moves the earth and transforms rock into springs",
+        ["facies", "dominus", "moveo", "terra", "deus", "iacob", "converto", "petra", "stagnum", "fons"],
+        7,
+        8,
+        "Before the Lord the earth quakes, and the God of Jacob turns rock into pools and cliffs into fountains.",
+        "Augustine interprets the rock made water as grace flowing from Christ, the spiritual rock from which the faithful drink."
+      ),
+      (
+        "Glory to God's Name → Mercy and Truth",
+        "Refusal of self-glory and appeal to God's mercy lest the nations mock",
+        ["dominus", "nomen", "gloria", "misericordia", "veritas", "gens", "deus"],
+        9,
+        10,
+        "The faithful give glory not to themselves but to God's name, grounding that plea in his mercy and truth so the nations cannot ask where God is.",
+        "Augustine teaches that true humility ascribes all honor to God, while mercy and truth silence the scoffing of unbelievers."
+      ),
+      (
+        "Heavenly Sovereignty → Lifeless Idols",
+        "The living God does all he wills in heaven, contrasted with silver and gold idols fashioned by hands",
+        ["deus", "caelum", "volo", "facio", "simulacrum", "argentum", "aurum", "opus", "manus"],
+        11,
+        12,
+        "Our God is in heaven and accomplishes his will, unlike the nations' idols of silver and gold, mere works of human hands.",
+        "Augustine contrasts God's omnipotence with idols that have being only from human craft, exposing the folly of trusting creatures."
+      ),
+      (
+        "Idol Senses: Speech and Sight",
+        "Idols have mouths and eyes yet cannot speak or see",
+        ["os", "loquor", "oculus", "video"],
+        13,
+        14,
+        "Silver and gold idols possess mouths and eyes but neither speak nor see, exposing their lifelessness.",
+        "Augustine sees in this the spiritual deadness of false worship: outward form without the inward life that true speech and vision require."
+      ),
+      (
+        "Idol Senses: Hearing and Trust",
+        "Idols cannot hear or smell; makers and trusters become like them",
+        ["auris", "audio", "naris", "odoror", "similis", "confido", "manus", "palpo", "pes", "ambulo", "guttur"],
+        15,
+        16,
+        "Idols lack hearing and smell, cannot feel or walk or cry out; those who make or trust them are made like them.",
+        "Augustine warns that complete sensory impotence in the idol reflects the soul's fate when it abandons the living God for dead images."
+      ),
+      (
+        "House of Israel → House of Aaron",
+        "Both houses hope in the Lord as helper and protector",
+        ["domus", "israel", "spero", "dominus", "adiutor", "protector", "aaron"],
+        17,
+        18,
+        "The house of Israel and the house of Aaron each trust in the Lord, who is their helper and protector.",
+        "Augustine reads the double confession as the union of the whole people with their priesthood in one hope placed in Christ the true protector."
+      ),
+      (
+        "God-Fearers → Divine Remembrance",
+        "Those who fear the Lord hope in him; the Lord remembers and blesses",
+        ["timeo", "dominus", "spero", "adiutor", "protector", "memor", "benedico"],
+        19,
+        20,
+        "All who fear the Lord hope in him as helper and protector, and the Lord remembers his own and blesses them.",
+        "Augustine joins fear of the Lord with divine remembrance: reverent hope receives the blessing that flows from God's faithful memory of his people."
+      ),
+      (
+        "Blessing the Houses → All Who Fear",
+        "Blessing on Israel and Aaron, then on all who fear the Lord, small and great",
+        ["benedico", "domus", "israel", "aaron", "timeo", "dominus", "pusillus"],
+        21,
+        22,
+        "God blesses the houses of Israel and Aaron, then every soul that fears him, the least together with the greatest.",
+        "Augustine sees an ascending wideness of mercy: from covenant lines to the entire company of the humble and the great who fear the Lord."
+      ),
+      (
+        "Blessing on Posterity → Blessed by the Creator",
+        "The Lord adds blessing upon his servants and their children; the blessed are blessed by heaven's Maker",
+        ["dominus", "super", "vos", "filius", "vester", "benedico", "facio", "caelum", "terra"],
+        23,
+        24,
+        "The Lord multiplies blessing on his people and their children, and those blessed are blessed by him who made heaven and earth.",
+        "Augustine links fruitfulness in offspring to creation's Lord: every blessing descends from the Maker of the cosmos."
+      ),
+      (
+        "Heaven and Earth → Silence of Sheol",
+        "Heaven belongs to the Lord; the dead in the depths do not praise",
+        ["caelum", "dominus", "terra", "do", "homo", "mortuus", "laudo", "descendo", "infernus"],
+        25,
+        26,
+        "The heaven of heavens is the Lord's, yet the earth is given to the sons of men; the dead descend to silence and do not praise God.",
+        "Augustine contrasts the Lord's exalted heaven with Sheol's silence, where no voice can rise to bless the name that the living must extol."
+      ),
+      (
+        "Living Praise Forever",
+        "We who live bless the Lord from now unto eternity",
+        ["vivo", "benedico", "dominus", "saeculum"],
+        27,
+        27,
+        "But we the living bless the Lord from this moment forever, completing the psalm's turn from idols and death to true endless praise.",
+        "Augustine urges the Church to seize the present life as the time of praise, for only the living can bless God until glory makes that praise unending."
+      ),
+    ]
+
+    private let conceptualThemes = [
+      (
+        "Exodus and Election",
+        "Departure from Egypt and God's holy possession of his people",
+        ["exitus", "aegyptus", "iacob", "israel", "iudaea", "sanctificatio", "potestas"],
+        ThemeCategory.divine,
+        1 ... 2
+      ),
+      (
+        "Cosmic Theophany",
+        "Creation's response to the Lord's presence",
+        ["mare", "iordanes", "converto", "mons", "exsulto", "terra", "moveo", "petra", "fons"],
+        ThemeCategory.divine,
+        3 ... 8
+      ),
+      (
+        "True Worship versus Idolatry",
+        "Glory to God's name and the vanity of idols",
+        ["gloria", "nomen", "misericordia", "veritas", "simulacrum", "argentum", "aurum", "confido"],
+        ThemeCategory.worship,
+        9 ... 16
+      ),
+      (
+        "Hope in Divine Aid",
+        "Trust in the Lord as helper and protector",
+        ["spero", "adiutor", "protector", "domus", "timeo"],
+        ThemeCategory.virtue,
+        17 ... 19
+      ),
+      (
+        "Covenant Blessing",
+        "Remembrance, blessing, and fruitfulness",
+        ["memor", "benedico", "dominus", "israel", "aaron", "filius", "vos"],
+        ThemeCategory.divine,
+        20 ... 23
+      ),
+      (
+        "Creation and Praise",
+        "Heaven and earth, mortality, and enduring praise",
+        ["caelum", "terra", "facio", "mortuus", "infernus", "vivo", "saeculum", "laudo"],
+        ThemeCategory.worship,
+        24 ... 27
+      ),
+    ]
+
+    // MARK: - Setup
+
     override func setUp() {
-        super.setUp()
-        latinService = LatinService.shared
+      super.setUp()
+      latinService = LatinService.shared
     }
 
-    let identity = PsalmIdentity(number: 113, category: "exodus")
-    
-    // MARK: - Test Data (Psalm 113)
-    let psalm113 = [
-        "In exitu Israel de Aegypto, domus Jacob de populo barbaro,",
-        "Facta est Judaea sanctificatio ejus, Israel potestas ejus.",
-        "Mare vidit et fugit; Jordanis conversus est retrorsum.",
-        "Montes exsultaverunt ut arietes, et colles sicut agni ovium.",
-        "Quid est tibi, mare, quod fugisti? et tu, Jordanis, quia conversus es retrorsum?",
-        "Montes, exsultastis sicut arietes? et colles, sicut agni ovium?",
-        "A facie Domini mota est terra, a facie Dei Jacob.",
-        "Qui convertit petram in stagna aquarum, et rupem in fontes aquarum.",
-        "Non nobis, Domine, non nobis: sed nomini tuo da gloriam.",
-        "Super misericordia tua, et veritate tua: nequando dicant gentes: Ubi est Deus eorum?",
-        "Deus autem noster in caelo: omnia quaecumque voluit, fecit.",
-        "Simulacra gentium argentum et aurum, opera manuum hominum.",
-        "Os habent, et non loquentur: oculos habent, et non videbunt.",
-        "Aures habent, et non audient: nares habent, et non odorabunt.",
-        "Manus habent, et non palpabunt: pedes habent, et non ambulabunt: non clamabunt in gutture suo.",
-        "Similes illis fiant qui faciunt ea: et omnes qui confidunt in eis.",
-        "Domus Israel speravit in Domino: adjutor eorum et protector eorum est.",
-        "Domus Aaron speravit in Domino: adjutor eorum et protector eorum est.",
-        "Qui timent Dominum, speraverunt in Domino: adjutor eorum et protector eorum est.",
-        "Dominus memor fuit nostri: et benedixit nobis.",
-        "Benedixit domui Israel: benedixit domui Aaron.",
-        "Benedixit omnibus qui timent Dominum, pusillis cum majoribus.",
-        "Adjiciat Dominus super vos: super vos, et super filios vestros.",
-        "Benedicti vos a Domino, qui fecit caelum et terram.",
-        "Caelum caeli Domino: terram autem dedit filiis hominum.",
-        "Non mortui laudabunt te, Domine: neque omnes qui descendunt in infernum.",
-        "Sed nos qui vivimus, benedicimus Domino, ex hoc nunc et usque in saeculum."
-    ]
-    
-   
-    // MARK: - Thematic Tests
-    func testExodusTheme() {
-        let analysis = latinService.analyzePsalm(identity, text: psalm113)
-        
-        let terms = [
-            ("exitus", ["exitu"], "departure"),
-            ("aegyptus", ["aegypto"], "Egypt"),
-            ("israel", ["israel"], "Israel"),
-            ("jacob", ["jacob"], "Jacob")
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: terms)
+    // MARK: - Test Methods
+
+    func testTotalVerses() {
+      let expectedVerseCount = 27
+      XCTAssertEqual(
+        psalm113.count, expectedVerseCount, "Psalm 113 should have \(expectedVerseCount) verses"
+      )
+      XCTAssertEqual(
+        englishText.count, expectedVerseCount,
+        "Psalm 113 English text should have \(expectedVerseCount) verses"
+      )
+      let normalized = psalm113.map { PsalmTestUtilities.validateLatinText($0) }
+      XCTAssertEqual(
+        normalized,
+        psalm113,
+        "Normalized Latin text should match expected classical forms"
+      )
     }
-    
-    func testNatureMiracleTheme() {
-        let analysis = latinService.analyzePsalm(identity, text: psalm113)
-        
-        let terms = [
-            ("mare", ["mare"], "sea"),
-            ("jordanis", ["Jordanis"], "Jordan"),
-            ("converto", ["conversus", "conversus", "convertit"], "turn"),
-            ("petra", ["petram"], "rock"),
-            ("stagnum", ["stagna"], "pool")
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: terms)
+
+    func testLineByLineKeyLemmas() {
+      let utilities = PsalmTestUtilities.self
+      utilities.testLineByLineKeyLemmas(
+        psalmText: psalm113,
+        lineKeyLemmas: lineKeyLemmas,
+        psalmId: id,
+        verbose: verbose
+      )
     }
-    
-    func testIdolContrastTheme() {
-        let analysis = latinService.analyzePsalm(identity, text: psalm113)
-        
-        let terms = [
-            ("simulacrum", ["simulacra"], "idols"),
-            ("argentum", ["argentum"], "silver"),
-            ("aurum", ["aurum"], "gold"),
-            ("os", ["os"], "mouth"),
-            ("oculus", ["oculos"], "eyes"),
-            ("auris", ["aures"], "ears")
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: terms)
+
+    func testStructuralThemes() {
+      let utilities = PsalmTestUtilities.self
+      utilities.testStructuralThemes(
+        psalmText: psalm113,
+        structuralThemes: structuralThemes,
+        psalmId: id,
+        verbose: verbose
+      )
     }
-    
-    func testBlessingTheme() {
-        let analysis = latinService.analyzePsalm(identity, text: psalm113)
-        
-        let terms = [
-            ("benedico", ["benedixit", "benedixit", "benedixit", "benedicimus"] , "bless"),
-            ("spero", ["speravit", "speravit", "speraverunt"], "hope"),
-            ("adjutor", ["adjutor"], "helper"),
-            ("protector", ["protector"], "protector")
-        ]
-        
-        verifyWordsInAnalysis(analysis, confirmedWords: terms)
+
+    func testConceptualThemes() {
+      let utilities = PsalmTestUtilities.self
+      utilities.testConceptualThemes(
+        psalmText: psalm113,
+        conceptualThemes: conceptualThemes,
+        psalmId: id,
+        verbose: verbose
+      )
     }
-    
-    // MARK: - Test Cases
-    // MARK: - Line Pair Tests
-    func testPsalm113Lines1and2() {
-        let line1 = psalm113[0]
-        let line2 = psalm113[1]
-        let combinedText = line1 + " " + line2
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 1)
-        
-        let testLemmas = [
-            ("exitus", ["exitu"], "departure"),
-            ("aegyptus", ["aegypto"], "Egypt"),
-            ("jacob", ["jacob"], "Jacob"),
-            ("sanctificatio", ["sanctificatio"], "sanctification"),
-            ("potestas", ["potestas"], "power")
-        ]
-        
-        if verbose {
-            print("\nPSALM 113:1-2 ANALYSIS:")
-            print("1: \"\(line1)\"")
-            print("2: \"\(line2)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Exodus Narrative: exitu (departure) + Aegypto (Egypt)")
-            print("2. Divine Election: sanctificatio (sanctification) + potestas (power)")
-        }
-        
-        XCTAssertNotNil(analysis.dictionary["exitus"], "Should find 'departure' reference")
-        XCTAssertNotNil(analysis.dictionary["aegyptus"], "Should find 'Egypt' reference")
+
+    func testSaveTexts() {
+      let utilities = PsalmTestUtilities.self
+      let jsonString = utilities.generatePsalmTextsJSONString(
+        psalmNumber: id.number,
+        category: id.category ?? "",
+        text: psalm113,
+        englishText: englishText
+      )
+
+      let success = utilities.saveToFile(
+        content: jsonString,
+        filename: "output_psalm113_texts.json"
+      )
+
+      if success {
+        print("✅ Complete texts JSON created successfully")
+      } else {
+        print("⚠️ Could not save complete texts file:")
+        print(jsonString)
+      }
     }
-    
-    func testPsalm113Lines3and4() {
-        let line3 = psalm113[2]
-        let line4 = psalm113[3]
-        let combinedText = line3 + " " + line4
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 3)
-        
-        let testLemmas = [
-            ("mare", ["mare"], "sea"),
-            ("fugio", ["fugit"], "flee"),
-            ("jordanis", ["jordanis"], "Jordan"),
-            ("converto", ["conversus"], "turn back"),
-            ("mons", ["montes"], "mountains"),
-            ("exsulto", ["exsultaverunt"], "leap"),
-            ("collis", ["colles"], "hill")
-        ]
-        
-        if verbose {
-            print("\nPSALM 113:3-4 ANALYSIS:")
-            print("3: \"\(line3)\"")
-            print("4: \"\(line4)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Nature's Flight: mare (sea) + fugit (fled)")
-            print("2. Cosmic Rejoicing: montes (mountains) exsultaverunt (leaped)")
-        }
-        
-        XCTAssertNotNil(analysis.dictionary["mare"], "Should find 'sea' reference")
-        XCTAssertEqual(analysis.dictionary["fugio"]?.forms["fugit"], 1, "Should find 'flee' verb")
-    }
-    
-    func testPsalm113Lines5and6() {
-        let line5 = psalm113[4]
-        let line6 = psalm113[5]
-        let combinedText = line5 + " " + line6
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 5)
-        
-        let testLemmas = [
-            ("mare", ["mare"], "sea"),
-            ("fugio", ["fugisti"], "flee"),
-            ("Jordanis", ["Jordanis"], "Jordan"),
-            ("converto", ["conversus"], "turn back"),
-            ("mons", ["montes"], "mountains"),
-            ("exsulto", ["exsultastis"], "leap"),
-            ("collis", ["colles"], "hills")
-        ]
-        
-        if verbose {
-            print("\nPSALM 113:5-6 ANALYSIS:")
-            print("5: \"\(line5)\"")
-            print("6: \"\(line6)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Rhetorical Questions: quid est tibi (why is it to you) + quia (because)")
-            print("2. Nature's Submission: fugisti (you fled) + conversus es (you turned)")
-        }
-        
-        XCTAssertEqual(analysis.dictionary["fugio"]?.forms["fugisti"], 1, "Should find 'fled' verb")
-        XCTAssertEqual(analysis.dictionary["exsulto"]?.forms["exsultastis"], 1, "Should find 'leaped' verb")
-    }
-    
-    func testPsalm113Lines7and8() {
-        let line7 = psalm113[6]
-        let line8 = psalm113[7]
-        let combinedText = line7 + " " + line8
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 7)
-        
-        let testLemmas = [
-            ("facies", ["facie", "facie"], "presence"),
-            ("moveo", ["mota"], "shake"),
-            ("terra", ["terra"], "earth"),
-            ("converto", ["convertit"], "turn"),
-            ("petra", ["petram"], "rock"),
-            ("stagnum", ["stagna"], "pool"),
-            ("rupes", ["rupem"], "cliff"),
-            ("fons", ["fontes"], "spring")
-        ]
-        
-        if verbose {
-            print("\nPSALM 113:7-8 ANALYSIS:")
-            print("7: \"\(line7)\"")
-            print("8: \"\(line8)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Divine Presence: facie Domini (Lord's presence) + mota est terra (earth trembled)")
-            print("2. Miraculous Transformation: convertit (turned) + petram (rock) in stagna (pools)")
-        }
-        
-        XCTAssertNotNil(analysis.dictionary["facies"], "Should find 'presence' reference")
-        XCTAssertEqual(analysis.dictionary["moveo"]?.forms["mota"], 1, "Should find 'shake' verb")
-    }
-    
-    func testPsalm113Lines9and10() {
-        let line9 = psalm113[8]
-        let line10 = psalm113[9]
-        let combinedText = line9 + " " + line10
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 9)
-        
-        let testLemmas = [
-            ("nomen", ["nomini"], "name"),
-            ("gloria", ["gloriam"], "glory"),
-            ("misericordia", ["misericordia"], "mercy"),
-            ("veritas", ["veritate"], "truth"),
-            ("gens", ["gentes"], "nations")
-        ]
-        
-        if verbose {
-            print("\nPSALM 113:9-10 ANALYSIS:")
-            print("9: \"\(line9)\"")
-            print("10: \"\(line10)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Divine Glory: nomini tuo (your name) + da gloriam (give glory)")
-            print("2. Covenant Faithfulness: misericordia (mercy) + veritate (truth)")
-        }
-        
-        XCTAssertNotNil(analysis.dictionary["gloria"], "Should find 'glory' reference")
-        XCTAssertNotNil(analysis.dictionary["misericordia"], "Should find 'mercy' reference")
-    }
-    
-    func testPsalm113Lines11and12() {
-        let line11 = psalm113[10]
-        let line12 = psalm113[11]
-        let combinedText = line11 + " " + line12
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 11)
-        
-        let testLemmas = [
-            ("caelum", ["caelo"], "heaven"),
-            ("volo", ["voluit"], "will"),
-            ("facio", ["fecit"], "do"),
-            ("simulacrum", ["simulacra"], "idol"),
-            ("argentum", ["argentum"], "silver"),
-            ("aurum", ["aurum"], "gold"),
-            ("opus", ["opera"], "work"),
-            ("manus", ["manuum"], "hands")
-        ]
-        
-        if verbose {
-            print("\nPSALM 113:11-12 ANALYSIS:")
-            print("11: \"\(line11)\"")
-            print("12: \"\(line12)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Divine Sovereignty: in caelo (in heaven) + omnia...fecit (all he wills)")
-            print("2. Idol Contrast: simulacra (idols) + opera manuum (work of hands)")
-        }
-        
-        XCTAssertNotNil(analysis.dictionary["caelum"], "Should find 'heaven' reference")
-        XCTAssertEqual(analysis.dictionary["facio"]?.forms["fecit"], 1, "Should find 'do/make' verb")
-    }
-    
-    func testPsalm113Lines13and14() {
-        let line13 = psalm113[12]
-        let line14 = psalm113[13]
-        let combinedText = line13 + " " + line14
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 13)
-        
-        let testLemmas = [
-            ("os", ["os"], "mouth"),
-            ("loquor", ["loquentur"], "speak"),
-            ("oculus", ["oculos"], "eyes"),
-            ("video", ["videbunt"], "see"),
-            ("auris", ["aures"], "ears"),
-            ("audio", ["audient"], "hear"),
-            ("naris", ["nares"], "nostrils"),
-            ("odoror", ["odorabunt"], "smell")
-        ]
-        
-        if verbose {
-            print("\nPSALM 113:13-14 ANALYSIS:")
-            print("13: \"\(line13)\"")
-            print("14: \"\(line14)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Idol Impotence: habent...non (have...not) pattern")
-            print("2. Sensory Deprivation: non loquentur (don't speak) + non videbunt (don't see)")
-        }
-        
-        XCTAssertEqual(analysis.dictionary["os"]?.forms["os"], 1, "Should find 'mouth' reference")
-        XCTAssertEqual(analysis.dictionary["video"]?.forms["videbunt"], 1, "Should find 'see' verb")
-    }
-    
-    func testPsalm113Lines15and16() {
-        let line15 = psalm113[14]
-        let line16 = psalm113[15]
-        let combinedText = line15 + " " + line16
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 15)
-        
-        let testLemmas = [
-            ("manus", ["manus"], "hands"),
-            ("palpo", ["palpabunt"], "feel"),
-            ("pes", ["pedes"], "feet"),
-            ("ambulo", ["ambulabunt"], "walk"),
-            ("guttur", ["gutture"], "throat"),
-            ("similis", ["similes"], "like"),
-            ("confido", ["confidunt"], "trust")
-        ]
-        
-        if verbose {
-            print("\nPSALM 113:15-16 ANALYSIS:")
-            print("15: \"\(line15)\"")
-            print("16: \"\(line16)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Complete Impotence: non palpabunt (don't feel) + non ambulabunt (don't walk)")
-            print("2. Idol Maker's Fate: similes illis (like them) + confidunt in eis (trust in them)")
-        }
-        
-        XCTAssertEqual(analysis.dictionary["ambulo"]?.forms["ambulabunt"], 1, "Should find 'walk' verb")
-        XCTAssertEqual(analysis.dictionary["confido"]?.forms["confidunt"], 1, "Should find 'trust' verb")
-    }
-    
-    func testPsalm113Lines17and18() {
-        let line17 = psalm113[16]
-        let line18 = psalm113[17]
-        let combinedText = line17 + " " + line18
-        let analysis = latinService.analyzePsalm(identity, text: combinedText, startingLineNumber: 17)
-        
-        let testLemmas = [
-            ("domus", ["domus"], "house"),
-            ("spero", ["speravit"], "hope"),
-            ("adjutor", ["adjutor"], "helper"),
-            ("protector", ["protector"], "protector"),
-            ("aaron", ["aaron"], "Aaron")
-        ]
-        
-        if verbose {
-            print("\nPSALM 113:17-18 ANALYSIS:")
-            print("17: \"\(line17)\"")
-            print("18: \"\(line18)\"")
-            
-            print("\nLEMMA VERIFICATION:")
-            testLemmas.forEach { lemma, forms, translation in
-                let found = analysis.dictionary[lemma] != nil
-                print("- \(lemma.padding(toLength: 14, withPad: " ", startingAt: 0)): \(found ? "✅" : "❌") \(translation)")
-            }
-            
-            print("\nTHEMES:")
-            print("1. Covenant Trust: domus Israel (house of Israel) + speravit (hoped)")
-            print("2. Divine Protection: adjutor (helper) + protector (protector)")
-        }
-        
-        XCTAssertEqual(analysis.dictionary["spero"]?.forms["speravit"], 1, "Should find 'hope' verb")
-        XCTAssertNotNil(analysis.dictionary["adjutor"], "Should find 'helper' reference")
-    }
-    
-   
-    // MARK: - Helper
-    private func verifyWordsInAnalysis(_ analysis: PsalmAnalysisResult, confirmedWords: [(lemma: String, forms: [String], translation: String)]) {
-        for (lemma, forms, translation) in confirmedWords {
-            guard let entry = analysis.dictionary[lemma] else {
-                XCTFail("Missing lemma: \(lemma)")
-                continue
-            }
-            
-            XCTAssertTrue(
-                entry.translation?.lowercased().contains(translation.lowercased()) ?? false,
-                "\(lemma) should imply '\(translation)', got '\(entry.translation ?? "nil")'"
-            )
-            
-            let missingForms = forms.filter { entry.forms[$0.lowercased()] == nil }
-            if !missingForms.isEmpty {
-                XCTFail("\(lemma) missing forms: \(missingForms.joined(separator: ", "))")
-            }
-            
-            if verbose {
-                print("\n\(lemma.uppercased())")
-                print("  Translation: \(entry.translation ?? "?")")
-                forms.forEach { form in
-                    let count = entry.forms[form.lowercased()] ?? 0
-                    print("  \(form.padding(toLength: 15, withPad: " ", startingAt: 0)) – \(count > 0 ? "✅" : "❌")")
-                }
-            }
-        }
+
+    func testSaveThemes() {
+      let utilities = PsalmTestUtilities.self
+      guard
+        let jsonString = utilities.generateCompleteThemesJSONString(
+          psalmNumber: id.number,
+          category: id.category ?? "",
+          conceptualThemes: conceptualThemes,
+          structuralThemes: structuralThemes
+        )
+      else {
+        XCTFail("Failed to generate complete themes JSON")
+        return
+      }
+
+      let success = utilities.saveToFile(
+        content: jsonString,
+        filename: "output_psalm113_themes.json"
+      )
+
+      if success {
+        print("✅ Complete themes JSON created successfully")
+      } else {
+        print("⚠️ Could not save complete themes file:")
+        print(jsonString)
+      }
     }
 }
