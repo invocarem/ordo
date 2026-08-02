@@ -5060,8 +5060,7 @@
     "part_of_speech": "adjective",
     "declension": 3,
     "gender": "masculine",
-    "nominative_masc_fem": "gravis",
-    "nominative_neut": "grave",
+    "nominative": "gravis",
     "genitive": "gravis",
     "translations": {
       "en": "heavy, serious, important",
